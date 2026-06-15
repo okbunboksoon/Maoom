@@ -2327,6 +2327,7 @@ function enableRectEditing(highlight, comment, page, viewerWindow){
         handle.style.borderRadius = '50%';
         handle.style.boxSizing = 'border-box';
         handle.style.zIndex = '2';
+        handle.style.display = 'none';
         positionRectHandle(handle, direction);
         handle.style.cursor = direction + '-resize';
 
@@ -2802,6 +2803,11 @@ function selectHighlight(commentId){
             item.style.outline = '';
             item.style.outlineOffset = '';
             item.style.filter = '';
+            item.querySelectorAll(
+                '.pdf-rect-resize-handle'
+            ).forEach(handle => {
+                handle.style.display = 'none';
+            });
 
         });
 
@@ -2817,9 +2823,30 @@ function selectHighlight(commentId){
         target.style.outlineOffset = '2px';
         target.style.filter =
             'drop-shadow(0 0 2px rgba(255,31,31,.75))';
+        target.querySelectorAll(
+            '.pdf-rect-resize-handle'
+        ).forEach(handle => {
+            handle.style.display = 'block';
+        });
 
     }
 
+}
+
+function clearSelectedComment(){
+    selectedCommentId = null;
+
+    document.querySelectorAll('.comment-item')
+        .forEach(item =>
+            item.classList.remove('selected-comment')
+        );
+
+    const viewer =
+        document.getElementById('pdfViewer');
+
+    if(viewer.contentWindow){
+        selectHighlight(null);
+    }
 }
 
 // 펼쳐진 댓글의 답글 목록을 조회하고 수정/삭제 UI를 구성한다.
@@ -4075,7 +4102,7 @@ function showApiError(error){
 
 }
 
-// ESC 입력 시 작성 모드와 아직 게시하지 않은 주석 미리보기를 취소한다.
+// ESC 입력 시 작성 모드, 미리보기와 현재 코멘트 선택을 취소한다.
 function handleAnnotationEscape(event){
 
     if(event.key !== 'Escape'){
@@ -4085,12 +4112,14 @@ function handleAnnotationEscape(event){
     if(commentMode === 'SELECT'
             && !selectedCommentData
             && !rectStartData
-            && !drawingStartData){
+            && !drawingStartData
+            && selectedCommentId === null){
         return;
     }
 
     consumeAnnotationShortcut(event);
     cancelPendingAnnotation();
+    clearSelectedComment();
 }
 
 // 주석 단축키가 PDF.js의 검색, 회전 등 기본 단축키로 전달되지 않게 막는다.
