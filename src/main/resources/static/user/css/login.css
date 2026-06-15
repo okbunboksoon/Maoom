@@ -1,0 +1,267 @@
+/* 기본 로그인 화면의 레이아웃, 입력 필드와 버튼 스타일 */
+*{
+    box-sizing:border-box;
+}
+
+html,
+body{
+    margin:0;
+    min-width:320px;
+    min-height:100%;
+}
+
+body{
+    min-height:100vh;
+    background:#fff;
+    color:#111;
+    font-family:Arial, "Noto Sans KR", sans-serif;
+}
+
+.login-page{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:48px;
+}
+
+.login-logo{
+    margin:0 0 28px;
+    font-size:48px;
+    font-family:"Arial Rounded MT Bold", "Segoe UI", sans-serif;
+    font-weight:600;
+    letter-spacing:3px;
+}
+
+.login-card{
+    position:relative;
+    width:460px;
+    padding:77px 24px 32px;
+    border:1px solid #d8dde5;
+    border-radius:13px;
+    background:#fff;
+}
+
+.login-inputs{
+    overflow:hidden;
+    border:1px solid #c7cdd7;
+    border-radius:9px;
+    background:#fff;
+}
+
+.input-field{
+    position:relative;
+    height:59px;
+    padding:9px 15px 6px;
+}
+
+.input-field + .input-field{
+    border-top:1px solid #c7cdd7;
+}
+
+.input-field:focus-within{
+    z-index:1;
+    margin:-1px;
+    border:2px solid #19a84a;
+}
+
+.input-field label{
+    display:block;
+    color:#727b89;
+    font-size:13px;
+    line-height:18px;
+}
+
+.input-field input{
+    width:100%;
+    height:27px;
+    padding:0 40px 0 0;
+    border:0;
+    outline:0;
+    background:transparent;
+    color:#111;
+    font-size:16px;
+}
+
+.password-masked{
+    -webkit-text-security:disc;
+}
+
+.password-masked.password-visible{
+    -webkit-text-security:none;
+}
+
+.password-toggle{
+    position:absolute;
+    right:10px;
+    bottom:8px;
+    width:36px;
+    height:32px;
+    padding:0;
+    border:0;
+    background:transparent;
+    color:#7b8491;
+    cursor:pointer;
+}
+
+.password-toggle svg{
+    display:block;
+    width:22px;
+    height:22px;
+    margin:auto;
+    fill:none;
+    stroke:#59636f;
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.password-toggle:hover svg{
+    stroke:#202832;
+}
+
+.password-toggle:focus-visible{
+    border-radius:6px;
+    outline:2px solid rgba(25,168,74,.35);
+    outline-offset:1px;
+}
+
+.password-toggle.password-shown .eye-slash{
+    display:none;
+}
+
+.save-id{
+    display:flex;
+    align-items:center;
+    width:max-content;
+    margin:13px 0 21px;
+    color:#737c89;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.save-id input{
+    position:absolute;
+    opacity:0;
+    pointer-events:none;
+}
+
+.check-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:21px;
+    height:21px;
+    margin-right:8px;
+    border:2px solid #aab1ba;
+    border-radius:50%;
+    color:transparent;
+    font-size:11px;
+}
+
+.save-id input:checked + .check-icon{
+    border-color:#19a84a;
+    background:#19a84a;
+    color:#fff;
+}
+
+.login-button{
+    width:100%;
+    height:51px;
+    border:0;
+    border-radius:8px;
+    background:#aeb7c5;
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:background-color .2s;
+}
+
+.login-button:hover{
+    background:#909aaa;
+}
+
+.login-error-backdrop{
+    position:fixed;
+    z-index:1000;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    background:rgba(15,23,42,.38);
+}
+
+.login-error-dialog{
+    width:min(360px, 100%);
+    padding:28px 28px 24px;
+    border:1px solid #e1e5ea;
+    border-radius:14px;
+    background:#fff;
+    box-shadow:0 20px 50px rgba(15,23,42,.25);
+    text-align:center;
+}
+
+.login-error-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:48px;
+    height:48px;
+    margin:0 auto 14px;
+    border-radius:50%;
+    background:#fff0f0;
+    color:#d83b3b;
+    font-size:22px;
+}
+
+.login-error-dialog h2{
+    margin:0 0 9px;
+    color:#20252b;
+    font-size:20px;
+}
+
+.login-error-dialog p{
+    margin:0 0 22px;
+    color:#656d76;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.login-error-dialog button{
+    width:100%;
+    height:42px;
+    border:0;
+    border-radius:8px;
+    background:#19a84a;
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.login-error-dialog button:hover{
+    background:#168f40;
+}
+
+.login-error-dialog button:focus-visible{
+    outline:3px solid rgba(25,168,74,.25);
+    outline-offset:2px;
+}
+
+@media(max-width:520px){
+
+    .login-page{
+        padding-top:36px;
+    }
+
+    .login-logo{
+        font-size:42px;
+    }
+
+    .login-card{
+        width:calc(100% - 32px);
+        padding:55px 20px 28px;
+    }
+
+}

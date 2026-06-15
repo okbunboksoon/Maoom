@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!-- Google Drive 폴더를 재귀 탐색하여 PDF 선택 목록을 표시한다. -->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF 목록</title>
+<link rel="stylesheet" href="/user/css/PdfList.css?v=drive-refresh-1">
+</head>
+<body>
+
+<main class="pdf-list-page">
+    <header class="pdf-list-header">
+        <div>
+            <h1>DITA스터디</h1>
+            <p>폴더를 펼치고 검토할 PDF 문서를 선택하세요.</p>
+        </div>
+        <div class="pdf-list-header-actions">
+            <span class="drive-badge">Google Drive</span>
+            <button id="driveRefreshButton"
+                    class="drive-refresh-button"
+                    type="button"
+                    title="Google Drive에서 최신 목록 불러오기">
+                새로고침
+            </button>
+        </div>
+    </header>
+
+    <ul id="folderTree">
+        <li class="tree-loading">PDF 목록을 불러오는 중입니다.</li>
+    </ul>
+</main>
+
+<script>
+
+const ROOT_FOLDER_ID = '0ANjwWGzgwzlhUk9PVA';
+const DRIVE_CACHE_DURATION = 5 * 60 * 1000;
+const driveItemCache = new Map();
+const driveItemRequests = new Map();
+let forceDriveRefresh = true;
+
+// 최초 진입 시 서비스에서 사용하는 Drive 루트 폴더를 불러온다.
+window.addEventListener('load', function(){
+    loadTree(
+        ROOT_FOLDER_ID,
+        document.getElementById('folderTree'),
+        true
+    );
+});
+
+document.getElementById(
+    'driveRefreshButton'
+).addEventListener('click', refreshDriveTree);
+
+// 폴더별 응답은 현재 PDFLIST 화면의 메모리에만 잠시 저장한다.
+function getDriveItems(folderId){
+
+    const memoryCache = driveItemCache.get(folderId);
+
+    if(
+        memoryCache
+        && Date.now() - memoryCache.savedAt < DRIVE_CACHE_DURATION
+    ){
+        return Promise.resolve(memoryCache.items);
+    }
+
+    if(driveItemRequests.has(folderId)){
+        return driveItemRequests.get(folderId);
+    }
+
+    const refreshParameter =
+        forceDriveRefresh ? '&refresh=true' : '';
+    const request =
+        fetch(
+            '/api/drive/items?folderId='
+            + encodeURIComponent(folderId)
+            + refreshParameter
+        )
+        .then(handleDriveResponse)
+        .then(items => {
+            const cachedValue = {
+                items,
+                savedAt : Date.now()
+            };
+
+            driveItemCache.set(folderId, cachedValue);
+
+            return items;
+        })
+        .finally(() => driveItemRequests.delete(folderId));
+
+    driveItemRequests.set(folderId, request);
+    return request;
+}
+
+function refreshDriveTree(){
+    const refreshButton =
+        document.getElementById('driveRefreshButton');
+    const folderTree =
+        document.getElementById('folderTree');
+
+    refreshButton.disabled = true;
+    refreshButton.textContent = '불러오는 중...';
+    driveItemCache.clear();
+    driveItemRequests.clear();
+    forceDriveRefresh = true;
+    folderTree.innerHTML =
+        '<li class="tree-loading">최신 목록을 불러오는 중입니다.</li>';
+
+    getDriveItems(ROOT_FOLDER_ID)
+    .then(items => renderDriveItems(
+        ROOT_FOLDER_ID,
+        folderTree,
+        items
+    ))
+    .then(prefetchTopFolders)
+    .catch(error => showDriveError(error, folderTree))
+    .finally(() => {
+        refreshButton.disabled = false;
+        refreshButton.textContent = '새로고침';
+    });
+}
+
+// 폴더를 펼칠 때 하위 폴더와 PDF를 지연 조회한다.
+function loadTree(folderId, parentElement, isRoot = false){
+
+    getDriveItems(folderId)
+    .then(items => renderDriveItems(
+        folderId,
+        parentElement,
+        items
+    ))
+    .then(items => {
+        if(isRoot){
+            prefetchTopFolders(items);
+        }
+    })
+    .catch(error => showDriveError(error, parentElement));
+}
+
+// 한 번의 DOM 반영으로 폴더와 PDF 목록을 그린다.
+function renderDriveItems(folderId, parentElement, items){
+
+    const fragment = document.createDocumentFragment();
+    const folders = items.filter(item => item.type === 'folder');
+    const pdfs = items.filter(item => item.type === 'pdf');
+
+    folders.forEach(folder => {
+        const li = document.createElement('li');
+        const toggle = document.createElement('button');
+
+        toggle.type = 'button';
+        toggle.className = 'folder-toggle';
+        toggle.textContent = folder.name;
+
+        toggle.addEventListener('click', function(){
+            const childTree = li.querySelector(':scope > ul');
+
+            if(childTree){
+                childTree.remove();
+                toggle.classList.remove('expanded');
+                return;
+            }
+
+            toggle.classList.add('expanded');
+
+            const childUl = document.createElement('ul');
+            childUl.innerHTML =
+                '<li class="tree-loading">불러오는 중...</li>';
+            li.appendChild(childUl);
+            loadTree(folder.id, childUl);
+        });
+
+        li.appendChild(toggle);
+        fragment.appendChild(li);
+    });
+
+    drawPdfList(folderId, fragment, pdfs);
+
+    if(folders.length === 0 && pdfs.length === 0){
+        const emptyItem = document.createElement('li');
+        emptyItem.className = 'tree-empty';
+        emptyItem.textContent = '이 폴더에는 PDF가 없습니다.';
+        fragment.appendChild(emptyItem);
+    }
+
+    parentElement.replaceChildren(fragment);
+    return items;
+}
+
+// 첫 화면에서 자주 열 가능성이 높은 상위 폴더만 유휴 시간에 미리 조회한다.
+function prefetchTopFolders(items){
+
+    const prefetch = function(){
+        items
+        .filter(item => item.type === 'folder')
+        .slice(0, 4)
+        .forEach(folder => getDriveItems(folder.id));
+    };
+
+    if('requestIdleCallback' in window){
+        requestIdleCallback(prefetch, { timeout : 1500 });
+        return;
+    }
+
+    setTimeout(prefetch, 300);
+}
+
+// 선택한 PDF를 현재 폴더 정보와 함께 뷰어로 연결한다.
+function drawPdfList(folderId, target, pdfs){
+
+    pdfs.forEach(pdf => {
+        const pdfLi = document.createElement('li');
+        const link = document.createElement('a');
+
+        link.href =
+            '/pdf/view?fileId='
+            + encodeURIComponent(pdf.id)
+            + '&folderId='
+            + encodeURIComponent(folderId);
+        link.textContent = pdf.name;
+        link.addEventListener('click', openPdfViewerMaximized);
+
+        pdfLi.appendChild(link);
+        target.appendChild(pdfLi);
+    });
+}
+
+// PDF 뷰어로 이동하기 전에 현재 팝업을 사용 가능한 화면 영역만큼 확장한다.
+function openPdfViewerMaximized(event){
+
+    event.preventDefault();
+
+    const viewerUrl = event.currentTarget.href;
+
+    const left = screen.availLeft || 0;
+    const top = screen.availTop || 0;
+    const features = [
+        'popup=yes',
+        'left=' + left,
+        'top=' + top,
+        'width=' + screen.availWidth,
+        'height=' + screen.availHeight,
+        'resizable=yes',
+        'scrollbars=yes'
+    ].join(',');
+
+    const viewerWindow =
+        window.open(
+            viewerUrl,
+            'maoomPdfViewer',
+            features
+        );
+
+    if(viewerWindow){
+        viewerWindow.moveTo(left, top);
+        viewerWindow.resizeTo(
+            screen.availWidth,
+            screen.availHeight
+        );
+        viewerWindow.focus();
+        window.close();
+        return;
+    }
+
+    window.location.href = viewerUrl;
+}
+
+// Drive API 오류를 목록 안에 표시한다.
+function handleDriveResponse(response){
+
+    if(response.ok){
+        return response.json();
+    }
+
+    throw new Error('Google Drive 목록을 불러오지 못했습니다.');
+}
+
+function showDriveError(error, targetElement){
+
+    targetElement.innerHTML =
+        '<li class="tree-error">' + error.message + '</li>';
+}
+
+</script>
+
+</body>
+</html>

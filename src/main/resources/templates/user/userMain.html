@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!-- 로그인 후 PDF 리뷰, 정제, 배치 기능으로 이동하는 메인 메뉴 화면. -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/user/css/UserMain.css?v=account-profile-image-1">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="account-actions">
+    <button id="accountMenuButton"
+            class="current-user-name"
+            type="button"
+            aria-haspopup="dialog"
+            aria-controls="accountDialog"
+            onclick="openAccountDialog()">
+        <span class="account-menu-avatar">
+            <img id="accountMenuAvatarImage"
+                 th:src="@{/api/user/profile-image(userId=${currentUserId})}"
+                 alt=""
+                 onerror="this.hidden=true">
+            <i class="fa-solid fa-user"></i>
+        </span>
+        <strong id="currentUserName"
+                th:text="${currentUserName}">사용자</strong>님
+        <i class="fa-solid fa-chevron-down account-chevron"></i>
+    </button>
+    <form class="logout-form" action="/logout" method="post">
+        <button class="logout-btn" type="submit">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            로그아웃
+        </button>
+    </form>
+</div>
+
+<div id="accountDialogBackdrop"
+     class="account-dialog-backdrop"
+     hidden>
+    <section id="accountDialog"
+             class="account-dialog"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="accountDialogTitle">
+        <div class="account-dialog-header">
+            <div>
+                <h2 id="accountDialogTitle">사용자 정보</h2>
+                <p>이름과 비밀번호를 변경할 수 있습니다.</p>
+            </div>
+            <button class="account-close-btn"
+                    type="button"
+                    aria-label="닫기"
+                    onclick="closeAccountDialog()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <form id="accountForm">
+            <div class="account-profile-editor">
+                <span class="account-profile-preview">
+                    <img id="accountProfilePreview"
+                         th:src="@{/api/user/profile-image(userId=${currentUserId})}"
+                         alt="프로필 이미지"
+                         onerror="this.hidden=true">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                <div class="account-profile-controls">
+                    <strong>프로필 이미지</strong>
+                    <span>PNG, JPG, GIF, WebP · 최대 5MB</span>
+                    <div>
+                        <label class="account-image-select-btn"
+                               for="accountProfileFile">이미지 변경</label>
+                        <input id="accountProfileFile"
+                               type="file"
+                               accept="image/png,image/jpeg,image/gif,image/webp"
+                               hidden>
+                        <button id="accountImageDeleteButton"
+                                class="account-image-delete-btn"
+                                type="button">삭제</button>
+                    </div>
+                </div>
+            </div>
+            <label class="account-field">
+                <span>이름</span>
+                <input id="accountUserName"
+                       type="text"
+                       maxlength="20"
+                       th:value="${currentUserName}"
+                       required>
+            </label>
+
+            <label class="account-field">
+                <span>아이디</span>
+                <input id="accountUserId"
+                       type="text"
+                       th:value="${currentUserId}"
+                       readonly>
+            </label>
+
+            <label class="account-field">
+                <span>비밀번호</span>
+                <input id="accountPassword"
+                       type="password"
+                       minlength="6"
+                       maxlength="72"
+                       autocomplete="new-password"
+                       placeholder="변경할 때만 입력">
+                <small>입력하지 않으면 기존 비밀번호가 유지됩니다.</small>
+            </label>
+
+            <p id="accountFormError"
+               class="account-form-error"
+               role="alert"></p>
+
+            <div class="account-dialog-actions">
+                <button class="account-cancel-btn"
+                        type="button"
+                        onclick="closeAccountDialog()">취소</button>
+                <button id="accountSaveButton"
+                        class="account-save-btn"
+                        type="submit">수정</button>
+            </div>
+        </form>
+    </section>
+</div>
+
+<div class="menu-box">
+    <button class="menu-btn" onclick="openPdfPopup()">PDF 리뷰</button>
+    <button class="menu-btn" onclick="openRevisionPopup()">정제</button>
+    <button class="menu-btn" onclick="location.href='/page/calc'">배치</button>
+</div>
+
+<script>
+const accountBackdrop =
+    document.getElementById('accountDialogBackdrop');
+const accountForm =
+    document.getElementById('accountForm');
+const accountUserId =
+    document.getElementById('accountUserId').value;
+const accountProfileFile =
+    document.getElementById('accountProfileFile');
+
+function profileImageUrl(version){
+    return '/api/user/profile-image?userId='
+        + encodeURIComponent(accountUserId)
+        + (version ? '&v=' + version : '');
+}
+
+function refreshProfileImages(){
+    const url = profileImageUrl(Date.now());
+
+    [
+        document.getElementById('accountMenuAvatarImage'),
+        document.getElementById('accountProfilePreview')
+    ].forEach(image => {
+        image.hidden = false;
+        image.src = url;
+    });
+}
+
+function hideProfileImages(){
+    document.getElementById(
+        'accountMenuAvatarImage'
+    ).hidden = true;
+    document.getElementById(
+        'accountProfilePreview'
+    ).hidden = true;
+}
+
+function readErrorMessage(response, fallback){
+    return response.text().then(text => {
+        if(response.ok){
+            return text ? JSON.parse(text) : {};
+        }
+
+        try{
+            const body = JSON.parse(text);
+            throw new Error(
+                body.message || body.error || fallback
+            );
+        }catch(error){
+            if(error instanceof SyntaxError){
+                throw new Error(text || fallback);
+            }
+            throw error;
+        }
+    });
+}
+
+function openAccountDialog(){
+    accountBackdrop.hidden = false;
+    document.body.classList.add('dialog-open');
+    document.getElementById('accountUserName').focus();
+}
+
+function closeAccountDialog(){
+    accountBackdrop.hidden = true;
+    document.body.classList.remove('dialog-open');
+    document.getElementById('accountPassword').value = '';
+    document.getElementById('accountFormError').textContent = '';
+}
+
+accountBackdrop.addEventListener('click', function(event){
+    if(event.target === accountBackdrop){
+        closeAccountDialog();
+    }
+});
+
+accountProfileFile.addEventListener('change', function(){
+    const file = accountProfileFile.files[0];
+
+    if(!file){
+        return;
+    }
+
+    const errorElement =
+        document.getElementById('accountFormError');
+    const formData = new FormData();
+    formData.append('file', file);
+    errorElement.textContent = '';
+
+    fetch('/api/user/profile-image', {
+        method:'POST',
+        body:formData
+    })
+    .then(response => readErrorMessage(
+        response,
+        '프로필 이미지 변경에 실패했습니다.'
+    ))
+    .then(() => {
+        refreshProfileImages();
+    })
+    .catch(error => {
+        errorElement.textContent = error.message;
+    })
+    .finally(() => {
+        accountProfileFile.value = '';
+    });
+});
+
+document.getElementById(
+    'accountImageDeleteButton'
+).addEventListener('click', function(){
+    const errorElement =
+        document.getElementById('accountFormError');
+    errorElement.textContent = '';
+
+    fetch('/api/user/profile-image', {
+        method:'DELETE'
+    })
+    .then(response => readErrorMessage(
+        response,
+        '프로필 이미지 삭제에 실패했습니다.'
+    ))
+    .then(() => {
+        hideProfileImages();
+    })
+    .catch(error => {
+        errorElement.textContent = error.message;
+    });
+});
+
+document.addEventListener('keydown', function(event){
+    if(event.key === 'Escape' && !accountBackdrop.hidden){
+        closeAccountDialog();
+    }
+});
+
+accountForm.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    const saveButton =
+        document.getElementById('accountSaveButton');
+    const errorElement =
+        document.getElementById('accountFormError');
+    const userName =
+        document.getElementById('accountUserName').value.trim();
+    const newPassword =
+        document.getElementById('accountPassword').value;
+
+    errorElement.textContent = '';
+    saveButton.disabled = true;
+    saveButton.textContent = '수정 중...';
+
+    fetch('/api/user/account', {
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({
+            userName:userName,
+            newPassword:newPassword
+        })
+    })
+    .then(async response => {
+        const text = await response.text();
+
+        if(!response.ok){
+            try{
+                const body = JSON.parse(text);
+                throw new Error(
+                    body.message || body.error || text
+                );
+            }catch(error){
+                if(error instanceof SyntaxError){
+                    throw new Error(text || '수정에 실패했습니다.');
+                }
+                throw error;
+            }
+        }
+
+        return text ? JSON.parse(text) : {};
+    })
+    .then(user => {
+        document.getElementById(
+            'currentUserName'
+        ).textContent = user.userName;
+        document.getElementById(
+            'accountUserName'
+        ).value = user.userName;
+        closeAccountDialog();
+    })
+    .catch(error => {
+        errorElement.textContent = error.message;
+    })
+    .finally(() => {
+        saveButton.disabled = false;
+        saveButton.textContent = '수정';
+    });
+});
+
+// PDF 목록은 별도 팝업 창으로 열어 메인 메뉴를 유지한다.
+function openPdfPopup(){
+    window.open(
+        '/pdf/list',
+        'pdfPopup',
+        'width=600,height=800'
+    );
+}
+
+// 정제 설정도 PDF 목록과 같은 크기의 별도 팝업 창으로 연다.
+function openRevisionPopup(){
+    window.open(
+        '/revision/list',
+        'revisionPopup',
+        'width=600,height=800'
+    );
+}
+</script>
+
+</body>
+</html>

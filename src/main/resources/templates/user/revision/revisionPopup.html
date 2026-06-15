@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- 정제 옵션과 입출력 경로를 선택하는 팝업 화면. -->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>정제</title>
+<link rel="stylesheet" href="/user/css/RevisionPopup.css">
+</head>
+<body>
+
+<main class="revision-page">
+    <header class="revision-header">
+        <div>
+            <h1>정제</h1>
+            <p>정제 항목과 입출력 경로를 선택하세요.</p>
+        </div>
+        <span class="revision-badge">Setting</span>
+    </header>
+
+    <section class="option-section" aria-label="정제 항목 선택">
+        <div class="option-toolbar">
+            <button type="button" id="toggleAllOptions" class="toggle-all-button">전체 선택</button>
+        </div>
+        <div class="option-grid">
+            <label class="option-item"><input type="checkbox" name="revisionOption" value="1"><span>이미지속성</span></label>
+            <label class="option-item"><input type="checkbox" name="revisionOption" value="2"><span>테이블속성</span></label>
+            <label class="option-item"><input type="checkbox" name="revisionOption" value="3"><span>파일명변환</span></label>
+            <label class="option-item"><input type="checkbox" name="revisionOption" value="4"><span>1</span></label>
+            <label class="option-item"><input type="checkbox" name="revisionOption" value="5"><span>2</span></label>
+            <label class="option-item"><input type="checkbox" name="revisionOption" value="6"><span>3</span></label>
+            <label class="option-item"><input type="checkbox" name="revisionOption" value="7"><span>4</span></label>
+            <label class="option-item"><input type="checkbox" name="revisionOption" value="8"><span>5</span></label>
+            <label class="option-item"><input type="checkbox" name="revisionOption" value="9"><span>6</span></label>
+        </div>
+    </section>
+
+    <section class="path-section">
+        <div class="path-field">
+            <label for="inputPath">Input</label>
+            <div class="path-row">
+                <input type="text" id="inputPath" placeholder="입력 경로를 붙여넣으세요.">
+                <button type="button" class="path-button" data-target="inputPath" data-picker="inputPicker">경로 선택</button>
+                <input type="file" id="inputPicker" class="directory-picker" webkitdirectory directory>
+            </div>
+        </div>
+
+        <div class="path-field">
+            <label for="outputPath">Output</label>
+            <div class="path-row">
+                <input type="text" id="outputPath" placeholder="출력 경로를 붙여넣으세요.">
+                <button type="button" class="path-button" data-target="outputPath" data-picker="outputPicker">경로 선택</button>
+                <input type="file" id="outputPicker" class="directory-picker" webkitdirectory directory>
+            </div>
+        </div>
+    </section>
+
+    <div class="popup-actions">
+        <button type="button" class="action-button primary">실행</button>
+        <button type="button" class="action-button" onclick="window.close()">취소</button>
+    </div>
+</main>
+
+<script>
+const revisionOptions =
+    Array.from(document.querySelectorAll('input[name="revisionOption"]'));
+const toggleAllOptions = document.getElementById('toggleAllOptions');
+
+function updateToggleAllButton(){
+    const allChecked =
+        revisionOptions.every(function(option){
+            return option.checked;
+        });
+
+    toggleAllOptions.textContent =
+        allChecked ? '전체 해제' : '전체 선택';
+}
+
+toggleAllOptions.addEventListener('click', function(){
+    const shouldCheck =
+        !revisionOptions.every(function(option){
+            return option.checked;
+        });
+
+    revisionOptions.forEach(function(option){
+        option.checked = shouldCheck;
+    });
+
+    updateToggleAllButton();
+});
+
+revisionOptions.forEach(function(option){
+    option.addEventListener('change', updateToggleAllButton);
+});
+
+document.querySelectorAll('.path-button').forEach(function(button){
+    const picker = document.getElementById(button.dataset.picker);
+    const pathInput = document.getElementById(button.dataset.target);
+
+    button.addEventListener('click', function(){
+        picker.click();
+    });
+
+    picker.addEventListener('change', function(){
+        if(!picker.files.length){
+            return;
+        }
+
+        const relativePath = picker.files[0].webkitRelativePath;
+        pathInput.value = relativePath
+            ? relativePath.split('/')[0]
+            : picker.files[0].name;
+    });
+});
+</script>
+
+</body>
+</html>

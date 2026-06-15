@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!-- 일반 계정 로그인 화면과 아이디 저장, 비밀번호 표시 기능을 제공한다. -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MAOOM Login</title>
+	<link rel="stylesheet" href="/user/css/login.css?v=password-eye-1">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<main class="login-page">
+
+		<h1 class="login-logo">MAOOM</h1>
+
+		<section class="login-card">
+			<form id="loginUser"
+			      action="/login"
+			      method="post"
+			      autocomplete="off">
+
+				<div class="login-inputs">
+					<div class="input-field">
+						<label for="username">아이디 또는 전화번호</label>
+						<input type="text"
+						       id="username"
+						       name="username"
+						       data-label="아이디"
+						       autocomplete="username">
+					</div>
+
+					<div class="input-field">
+						<label for="loginSecret">비밀번호</label>
+						<input type="text"
+						       id="loginSecret"
+						       name="loginSecret"
+						       class="password-masked"
+						       data-label="비밀번호"
+						       autocomplete="off"
+						       autocapitalize="none"
+						       spellcheck="false">
+						<input type="hidden"
+						       id="password"
+						       name="password">
+						<button type="button"
+						        id="passwordToggle"
+						        class="password-toggle"
+						        aria-label="비밀번호 표시">
+							<svg viewBox="0 0 24 24"
+							     aria-hidden="true">
+								<path class="eye-shape"
+								      d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"/>
+								<circle cx="12"
+								        cy="12"
+								        r="2.7"/>
+								<path class="eye-slash"
+								      d="M4 4l16 16"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+
+				<label class="save-id">
+					<input type="checkbox" id="saveId">
+					<span class="check-icon">
+						<i class="fa-solid fa-check"></i>
+					</span>
+					<span>아이디 저장</span>
+				</label>
+
+				<button id="submitBtn"
+				        class="login-button"
+				        type="submit">로그인</button>
+
+			</form>
+		</section>
+
+	</main>
+
+	<div id="loginErrorBackdrop"
+	     class="login-error-backdrop"
+	     th:if="${msg}"
+	     role="presentation">
+		<section class="login-error-dialog"
+		         role="alertdialog"
+		         aria-modal="true"
+		         aria-labelledby="loginErrorTitle"
+		         aria-describedby="loginErrorMessage">
+			<div class="login-error-icon">
+				<i class="fa-solid fa-exclamation"></i>
+			</div>
+			<h2 id="loginErrorTitle">로그인 실패</h2>
+			<p id="loginErrorMessage"
+			   th:text="${msg}">아이디 또는 비밀번호가 틀립니다.</p>
+			<button id="loginErrorConfirm"
+			        type="button">확인</button>
+		</section>
+	</div>
+
+	<script>
+	$(function(){
+
+		const savedId =
+			localStorage.getItem('savedLoginId');
+
+		if(savedId){
+			$('#username').val(savedId);
+			$('#saveId').prop('checked', true);
+		}
+
+		function validateValue(checkValue){
+			return typeof checkValue === 'undefined'
+				|| checkValue === null
+				|| checkValue.trim() === '';
+		}
+
+		$('#passwordToggle').click(function(){
+
+			const password =
+				document.getElementById('loginSecret');
+
+			const showPassword =
+				!password.classList.contains(
+					'password-visible'
+				);
+
+			password.classList.toggle(
+				'password-visible',
+				showPassword
+			);
+
+			$(this)
+				.toggleClass(
+					'password-shown',
+					showPassword
+				)
+				.attr(
+					'aria-label',
+					showPassword
+						? '비밀번호 숨기기'
+						: '비밀번호 표시'
+				);
+
+		});
+
+		$('#loginUser').submit(function(e){
+
+			let isSubmit = true;
+
+			$('#password').val(
+				$('#loginSecret').val()
+			);
+
+			$('#loginUser input[type="text"],'
+				+ '#loginUser input[type="password"]')
+				.each(function(){
+
+					if(validateValue($(this).val())){
+						alert($(this).data('label') + '를 입력해주세요.');
+						$(this).focus();
+						isSubmit = false;
+						return false;
+					}
+
+				});
+
+			if(!isSubmit){
+				e.preventDefault();
+				return;
+			}
+
+			if($('#saveId').is(':checked')){
+				localStorage.setItem(
+					'savedLoginId',
+					$('#username').val()
+				);
+			}else{
+				localStorage.removeItem('savedLoginId');
+			}
+
+		});
+
+	});
+
+	window.addEventListener(
+		'pageshow',
+		function(event){
+
+			if(event.persisted){
+				window.location.reload();
+			}
+
+		}
+	);
+	</script>
+
+	<script th:if="${msg}">
+		const loginErrorBackdrop =
+			document.getElementById('loginErrorBackdrop');
+		const loginErrorConfirm =
+			document.getElementById('loginErrorConfirm');
+
+		function closeLoginError(){
+			loginErrorBackdrop.remove();
+			document.getElementById('loginSecret').focus();
+		}
+
+		loginErrorConfirm.addEventListener(
+			'click',
+			closeLoginError
+		);
+
+		loginErrorBackdrop.addEventListener(
+			'click',
+			function(event){
+				if(event.target === loginErrorBackdrop){
+					closeLoginError();
+				}
+			}
+		);
+
+		document.addEventListener(
+			'keydown',
+			function(event){
+				if(event.key === 'Escape'
+						&& document.body.contains(
+							loginErrorBackdrop
+						)){
+					closeLoginError();
+				}
+			}
+		);
+
+		loginErrorConfirm.focus();
+	</script>
+
+</body>
+</html>

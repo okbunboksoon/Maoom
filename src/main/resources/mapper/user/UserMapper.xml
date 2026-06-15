@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="maoomWeb.ire.user.mapper.UserMapper">
+
+<!-- 로그인, 권한, Slack 연동에 필요한 사용자 컬럼을 매핑한다. -->
+<resultMap id="UserResultMap" type="User">
+    <id property="userId" column="user_id"/>
+    <result property="userPw" column="user_pw"/>
+    <result property="userName" column="user_name"/>
+    <result property="userEmail" column="user_email"/>
+    <result property="userRole" column="user_role"/>
+    <result property="slackUserId" column="slack_user_id"/>
+    <result property="profileImageStoredName" column="profile_image_stored_name"/>
+    <result property="profileImageContentType" column="profile_image_content_type"/>
+</resultMap>
+
+<select id="getUserInfoById"
+        resultMap="UserResultMap"
+        parameterType="String">
+
+    SELECT
+        user_id,
+        user_pw,
+        user_name,
+        user_email,
+        user_role,
+        slack_user_id,
+        profile_image_stored_name,
+        profile_image_content_type
+    FROM tb_user
+    WHERE user_id = #{userId}
+
+</select>
+
+<select id="getMentionUsers"
+        resultMap="UserResultMap">
+
+    SELECT
+        user_id,
+        user_name,
+        user_email,
+        user_role
+    FROM tb_user
+    ORDER BY user_name, user_id
+
+</select>
+
+<select id="getSlackUserIdByMention"
+        parameterType="String"
+        resultType="String">
+
+    SELECT slack_user_id
+    FROM tb_user
+    WHERE user_name = #{mention}
+       OR user_id = #{mention}
+    ORDER BY
+        CASE
+            WHEN user_name = #{mention} THEN 0
+            ELSE 1
+        END
+    LIMIT 1
+
+</select>
+
+<update id="updatePassword">
+
+    UPDATE tb_user
+    SET user_pw = #{userPw}
+    WHERE user_id = #{userId}
+
+</update>
+
+<update id="updateUserName">
+
+    UPDATE tb_user
+    SET user_name = #{userName}
+    WHERE user_id = #{userId}
+
+</update>
+
+<update id="updateProfileImage">
+
+    UPDATE tb_user
+    SET profile_image_stored_name = #{storedName},
+        profile_image_content_type = #{contentType}
+    WHERE user_id = #{userId}
+
+</update>
+
+<update id="clearProfileImage">
+
+    UPDATE tb_user
+    SET profile_image_stored_name = NULL,
+        profile_image_content_type = NULL
+    WHERE user_id = #{userId}
+
+</update>
+
+</mapper>

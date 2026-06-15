@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="maoomWeb.ire.user.mapper.CommentMapper">
+
+<!-- 댓글/답글 테이블 컬럼을 화면용 DTO 필드에 매핑한다. -->
+<resultMap id="CommentResultMap" type="CommentDto">
+    <id property="commentId" column="comment_id"/>
+    <result property="commentCode" column="comment_code"/>
+    <result property="pdfId" column="pdf_id"/>
+    <result property="pageNum" column="page_num"/>
+    <result property="posX" column="pos_x"/>
+    <result property="posY" column="pos_y"/>
+    <result property="commentText" column="comment_text"/>
+    <result property="userId" column="user_id"/>
+    <result property="status" column="status"/>
+    <result property="commentType" column="comment_type"/>
+    <result property="selectedText" column="selected_text"/>
+    <result property="rectX" column="rect_x"/>
+    <result property="rectY" column="rect_y"/>
+    <result property="rectW" column="rect_w"/>
+    <result property="rectH" column="rect_h"/>
+    <result property="drawingPath" column="drawing_path"/>
+    <result property="createDt" column="create_dt"/>
+	<result property="updateDt" column="update_dt"/>
+</resultMap>
+
+<resultMap id="CommentAttachmentResultMap"
+           type="maoomWeb.ire.user.dto.CommentAttachmentDto">
+    <id property="attachmentId" column="attachment_id"/>
+    <result property="commentId" column="comment_id"/>
+    <result property="replyId" column="reply_id"/>
+    <result property="originalName" column="original_name"/>
+    <result property="storedName" column="stored_name"/>
+    <result property="contentType" column="content_type"/>
+    <result property="fileSize" column="file_size"/>
+    <result property="uploaderId" column="uploader_id"/>
+    <result property="createDt" column="create_dt"/>
+</resultMap>
+
+<resultMap id="CommentReplyResultMap"
+           type="maoomWeb.ire.user.dto.CommentReplyDto">
+
+    <id property="replyId" column="reply_id"/>
+    <result property="commentId" column="comment_id"/>
+    <result property="replyText" column="reply_text"/>
+    <result property="userId" column="user_id"/>
+    <result property="createDt" column="create_dt"/>
+
+</resultMap>
+
+<select id="getCommentList"
+        resultMap="CommentResultMap">
+
+    SELECT *
+    FROM tb_comment
+    WHERE pdf_id = #{pdfId}
+    <if test="status != null and status != '' and status != 'ALL'">
+        AND status = #{status}
+    </if>
+    ORDER BY create_dt DESC
+
+</select>
+
+<select id="getComment"
+        resultMap="CommentResultMap"
+        parameterType="Long">
+
+    SELECT *
+    FROM tb_comment
+    WHERE comment_id = #{commentId}
+
+</select>
+
+<select id="lockPdf"
+        parameterType="Long"
+        resultType="Long">
+
+    SELECT pdf_id
+    FROM tb_pdf
+    WHERE pdf_id = #{pdfId}
+    FOR UPDATE
+
+</select>
+
+<select id="getNextCommentNumber"
+        parameterType="Long"
+        resultType="int">
+
+    SELECT COALESCE(
+        MAX(
+            CAST(
+                SUBSTRING(comment_code, 3)
+                AS UNSIGNED
+            )
+        ) + 1,
+        0
+    )
+    FROM tb_comment
+    WHERE pdf_id = #{pdfId}
+
+</select>
+
+<insert id="addComment"
+        useGeneratedKeys="true"
+        keyProperty="commentId">
+
+INSERT INTO tb_comment
+(
+    pdf_id,
+    page_num,
+    pos_x,
+    pos_y,
+    comment_text,
+    user_id,
+    status,
+    comment_type,
+    selected_text,
+    rect_x,
+    rect_y,
+    rect_w,
+    rect_h,
+    drawing_path,
+    comment_code
+)
+VALUES
+(
+    #{pdfId},
+    #{pageNum},
+    #{posX},
+    #{posY},
+    #{commentText},
+    #{userId},
+    #{status},
+    #{commentType},
+    #{selectedText},
+    #{rectX},
+    #{rectY},
+    #{rectW},
+    #{rectH},
+    #{drawingPath},
+    #{commentCode}
+)
+
+</insert>
+
+<insert id="addAttachment"
+        useGeneratedKeys="true"
+        keyProperty="attachmentId">
+
+    INSERT INTO tb_comment_attachment
+    (
+        comment_id,
+        reply_id,
+        original_name,
+        stored_name,
+        content_type,
+        file_size,
+        uploader_id
+    )
+    VALUES
+    (
+        #{commentId},
+        #{replyId},
+        #{originalName},
+        #{storedName},
+        #{contentType},
+        #{fileSize},
+        #{uploaderId}
+    )
+
+</insert>
+
+<select id="getAttachmentList"
+        parameterType="Long"
+        resultMap="CommentAttachmentResultMap">
+
+    SELECT *
+    FROM tb_comment_attachment
+    WHERE comment_id = #{commentId}
+      AND reply_id IS NULL
+    ORDER BY create_dt, attachment_id
+
+</select>
+
+<select id="getAllAttachmentList"
+        parameterType="Long"
+        resultMap="CommentAttachmentResultMap">
+
+    SELECT *
+    FROM tb_comment_attachment
+    WHERE comment_id = #{commentId}
+    ORDER BY create_dt, attachment_id
+
+</select>
+
+<select id="getReplyAttachmentList"
+        parameterType="Long"
+        resultMap="CommentAttachmentResultMap">
+
+    SELECT *
+    FROM tb_comment_attachment
+    WHERE reply_id = #{replyId}
+    ORDER BY create_dt, attachment_id
+
+</select>
+
+<select id="getAttachmentListByCommentIds"
+        resultMap="CommentAttachmentResultMap">
+
+    SELECT *
+    FROM tb_comment_attachment
+    WHERE comment_id IN
+    <foreach collection="commentIds"
+             item="commentId"
+             open="("
+             separator=","
+             close=")">
+        #{commentId}
+    </foreach>
+      AND reply_id IS NULL
+    ORDER BY comment_id, create_dt, attachment_id
+
+</select>
+
+<select id="getAttachmentListByReplyIds"
+        resultMap="CommentAttachmentResultMap">
+
+    SELECT *
+    FROM tb_comment_attachment
+    WHERE reply_id IN
+    <foreach collection="replyIds"
+             item="replyId"
+             open="("
+             separator=","
+             close=")">
+        #{replyId}
+    </foreach>
+    ORDER BY reply_id, create_dt, attachment_id
+
+</select>
+
+<select id="getAttachment"
+        parameterType="Long"
+        resultMap="CommentAttachmentResultMap">
+
+    SELECT *
+    FROM tb_comment_attachment
+    WHERE attachment_id = #{attachmentId}
+
+</select>
+
+<update id="updateComment">
+
+    UPDATE tb_comment
+    SET comment_text = #{commentText},
+        update_dt = CURRENT_TIMESTAMP
+    WHERE comment_id = #{commentId}
+      AND user_id = #{userId}
+
+</update>
+
+<update id="updateCommentGeometry">
+
+    UPDATE tb_comment
+    SET rect_x = #{rectX},
+        rect_y = #{rectY},
+        rect_w = #{rectW},
+        rect_h = #{rectH},
+        update_dt = CURRENT_TIMESTAMP
+    WHERE comment_id = #{commentId}
+      AND user_id = #{userId}
+      AND comment_type IN ('RECT', 'CALLOUT')
+
+</update>
+
+<update id="updateCommentStatus">
+
+    UPDATE tb_comment
+    SET status = #{status},
+        update_dt = CURRENT_TIMESTAMP
+    WHERE comment_id = #{commentId}
+      AND user_id = #{userId}
+
+</update>
+
+<delete id="deleteRepliesByCommentId"
+        parameterType="map">
+
+    DELETE FROM tb_comment_reply
+    WHERE comment_id = #{commentId}
+      AND EXISTS (
+          SELECT 1
+          FROM tb_comment
+          WHERE comment_id = #{commentId}
+            AND user_id = #{userId}
+      )
+
+</delete>
+
+<delete id="deleteComment"
+        parameterType="map">
+
+    DELETE FROM tb_comment
+    WHERE comment_id = #{commentId}
+      AND user_id = #{userId}
+
+</delete>
+
+<delete id="deleteAttachmentsByCommentId"
+        parameterType="Long">
+
+    DELETE FROM tb_comment_attachment
+    WHERE comment_id = #{commentId}
+
+</delete>
+
+<delete id="deleteAttachmentsByReplyId"
+        parameterType="Long">
+
+    DELETE FROM tb_comment_attachment
+    WHERE reply_id = #{replyId}
+
+</delete>
+
+<select id="getReplyList"
+        parameterType="long"
+        resultMap="CommentReplyResultMap">
+
+    SELECT *
+    FROM tb_comment_reply
+    WHERE comment_id = #{commentId}
+    ORDER BY create_dt
+
+</select>
+
+<select id="getReply"
+        parameterType="Long"
+        resultMap="CommentReplyResultMap">
+
+    SELECT *
+    FROM tb_comment_reply
+    WHERE reply_id = #{replyId}
+
+</select>
+
+<select id="getReplyListByCommentIds"
+        resultMap="CommentReplyResultMap">
+
+    SELECT *
+    FROM tb_comment_reply
+    WHERE comment_id IN
+    <foreach collection="commentIds"
+             item="commentId"
+             open="("
+             separator=","
+             close=")">
+        #{commentId}
+    </foreach>
+    ORDER BY comment_id, create_dt, reply_id
+
+</select>
+
+<insert id="addReply"
+        useGeneratedKeys="true"
+        keyProperty="replyId">
+
+    INSERT INTO tb_comment_reply
+    (
+        comment_id,
+        reply_text,
+        user_id
+    )
+    VALUES
+    (
+        #{commentId},
+        #{replyText},
+        #{userId}
+    )
+
+</insert>
+
+<update id="updateReply">
+
+    UPDATE tb_comment_reply
+    SET reply_text = #{replyText}
+    WHERE reply_id = #{replyId}
+      AND user_id = #{userId}
+
+</update>
+
+<delete id="deleteReply"
+        parameterType="map">
+
+    DELETE FROM tb_comment_reply
+    WHERE reply_id = #{replyId}
+      AND user_id = #{userId}
+
+</delete>
+
+<select id="getPdfIdByReplyId"
+        parameterType="Long"
+        resultType="Long">
+
+    SELECT c.pdf_id
+    FROM tb_comment_reply r
+    JOIN tb_comment c
+      ON c.comment_id = r.comment_id
+    WHERE r.reply_id = #{replyId}
+
+</select>
+
+<select id="getCommentIdByReplyId"
+        parameterType="Long"
+        resultType="Long">
+
+    SELECT comment_id
+    FROM tb_comment_reply
+    WHERE reply_id = #{replyId}
+
+</select>
+
+</mapper>

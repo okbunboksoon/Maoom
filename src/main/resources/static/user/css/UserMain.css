@@ -1,0 +1,344 @@
+/* 로그인 후 기능 선택 메인 화면 스타일 */
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f1f3f5;
+}
+
+.account-actions{
+    position:fixed;
+    top:20px;
+    right:24px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.current-user-name{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    height:38px;
+    padding:0 12px;
+    border:1px solid #d9dde2;
+    border-radius:8px;
+    background:#fff;
+    color:#4d5359;
+    box-sizing:border-box;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.current-user-name:hover{
+    border-color:#aab4c0;
+    background:#f8fafc;
+}
+
+.current-user-name > i{
+    color:#1473e6;
+    font-size:17px;
+}
+
+.account-menu-avatar,
+.account-profile-preview{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    flex:0 0 auto;
+    border-radius:50%;
+    background:#73777c;
+    color:#fff;
+}
+
+.account-menu-avatar{
+    width:24px;
+    height:24px;
+    font-size:11px;
+}
+
+.account-menu-avatar img,
+.account-profile-preview img{
+    position:absolute;
+    z-index:1;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.account-menu-avatar i{
+    color:#fff;
+    font-size:11px;
+}
+
+.current-user-name .account-chevron{
+    margin-left:2px;
+    color:#7b838c;
+    font-size:10px;
+}
+
+body.dialog-open{
+    overflow:hidden;
+}
+
+.account-dialog-backdrop{
+    position:fixed;
+    z-index:1000;
+    inset:0;
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-end;
+    padding:70px 24px 24px;
+    background:rgba(15,23,42,.28);
+    box-sizing:border-box;
+}
+
+.account-dialog-backdrop[hidden]{
+    display:none;
+}
+
+.account-dialog{
+    width:min(390px, calc(100vw - 32px));
+    padding:22px;
+    border:1px solid #d9dee5;
+    border-radius:12px;
+    background:#fff;
+    box-shadow:0 18px 45px rgba(15,23,42,.22);
+    box-sizing:border-box;
+}
+
+.account-dialog-header{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:20px;
+}
+
+.account-dialog-header h2{
+    margin:0 0 5px;
+    color:#20252b;
+    font-size:19px;
+}
+
+.account-dialog-header p{
+    margin:0;
+    color:#757d86;
+    font-size:12px;
+}
+
+.account-close-btn{
+    width:30px;
+    height:30px;
+    border:0;
+    border-radius:6px;
+    background:transparent;
+    color:#69717a;
+    cursor:pointer;
+}
+
+.account-close-btn:hover{
+    background:#eef1f4;
+}
+
+.account-profile-editor{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:20px;
+    padding:14px;
+    border:1px solid #e1e5ea;
+    border-radius:10px;
+    background:#f8fafc;
+}
+
+.account-profile-preview{
+    width:64px;
+    height:64px;
+    font-size:24px;
+}
+
+.account-profile-controls{
+    min-width:0;
+    flex:1;
+}
+
+.account-profile-controls > strong,
+.account-profile-controls > span{
+    display:block;
+}
+
+.account-profile-controls > strong{
+    color:#30363d;
+    font-size:13px;
+}
+
+.account-profile-controls > span{
+    margin:4px 0 10px;
+    color:#858c94;
+    font-size:11px;
+}
+
+.account-profile-controls > div{
+    display:flex;
+    gap:7px;
+}
+
+.account-image-select-btn,
+.account-image-delete-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    height:31px;
+    padding:0 10px;
+    border-radius:6px;
+    box-sizing:border-box;
+    font-size:12px;
+    cursor:pointer;
+}
+
+.account-image-select-btn{
+    border:1px solid #1473e6;
+    background:#1473e6;
+    color:#fff;
+}
+
+.account-image-delete-btn{
+    border:1px solid #cfd5dc;
+    background:#fff;
+    color:#626a73;
+}
+
+.account-field{
+    display:block;
+    margin-bottom:15px;
+}
+
+.account-field > span{
+    display:block;
+    margin-bottom:6px;
+    color:#373d44;
+    font-size:13px;
+    font-weight:700;
+}
+
+.account-field input{
+    width:100%;
+    height:40px;
+    padding:0 11px;
+    border:1px solid #cfd5dc;
+    border-radius:7px;
+    background:#fff;
+    color:#252a30;
+    box-sizing:border-box;
+    font-size:14px;
+    outline:none;
+}
+
+.account-field input:focus{
+    border-color:#1473e6;
+    box-shadow:0 0 0 3px rgba(20,115,230,.12);
+}
+
+.account-field input[readonly]{
+    background:#f2f4f6;
+    color:#737a82;
+    cursor:not-allowed;
+}
+
+.account-field small{
+    display:block;
+    margin-top:6px;
+    color:#858c94;
+    font-size:11px;
+}
+
+.account-form-error{
+    min-height:18px;
+    margin:0 0 8px;
+    color:#c62828;
+    font-size:12px;
+}
+
+.account-dialog-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:8px;
+}
+
+.account-dialog-actions button{
+    min-width:72px;
+    height:36px;
+    border-radius:7px;
+    font-size:13px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.account-cancel-btn{
+    border:1px solid #cfd5dc;
+    background:#fff;
+    color:#555d66;
+}
+
+.account-save-btn{
+    border:1px solid #1473e6;
+    background:#1473e6;
+    color:#fff;
+}
+
+.account-save-btn:disabled{
+    opacity:.6;
+    cursor:wait;
+}
+
+.logout-form{
+    margin:0;
+}
+
+.logout-btn{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    height:38px;
+    padding:0 15px;
+    border:1px solid #cfcfcf;
+    border-radius:8px;
+    background:#fff;
+    color:#444;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.logout-btn:hover{
+    border-color:#999;
+    background:#ececec;
+}
+
+.menu-box{
+    width:700px;
+    padding:40px;
+    background:#ffffff;
+    border-radius:10px;
+    border:1px solid #dcdcdc;
+    display:flex;
+    justify-content:space-around;
+}
+.menu-btn{
+    width:140px;
+    height:55px;
+    border:1px solid #cfcfcf;
+    border-radius:10px;
+    background:#f8f8f8;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+.menu-btn:hover{
+    background:#ececec;
+}

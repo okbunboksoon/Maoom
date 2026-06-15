@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="maoomWeb.ire.user.mapper.PdfMapper">
+
+    <!-- Google Drive 파일과 내부 PDF 관리 레코드를 매핑한다. -->
+    <resultMap id="PdfResultMap" type="maoomWeb.ire.user.dto.PdfDto">
+        <id property="pdfId" column="pdf_id"/>
+        <result property="fileName" column="file_name"/>
+        <result property="driveFileId" column="drive_file_id"/>
+        <result property="filePath" column="file_path"/>
+        <result property="regUserId" column="reg_user_id"/>
+        <result property="createDt" column="create_dt"/>
+    </resultMap>
+
+    <select id="getPdfById"
+            parameterType="Long"
+            resultMap="PdfResultMap">
+
+        SELECT
+            pdf_id,
+            file_name,
+            drive_file_id,
+            file_path,
+            reg_user_id,
+            create_dt
+        FROM tb_pdf
+        WHERE pdf_id = #{pdfId}
+
+    </select>
+
+    <select id="getPdfByDriveFileId"
+            parameterType="String"
+            resultMap="PdfResultMap">
+
+        SELECT
+            pdf_id,
+            file_name,
+            drive_file_id,
+            file_path,
+            reg_user_id,
+            create_dt
+        FROM tb_pdf
+        WHERE drive_file_id = #{driveFileId}
+
+    </select>
+    
+<select id="findByDriveFileId"
+        resultMap="PdfResultMap">
+
+    SELECT
+        pdf_id,
+        file_name,
+        drive_file_id,
+        file_path,
+        reg_user_id,
+        create_dt
+    FROM tb_pdf
+    WHERE drive_file_id = #{driveFileId}
+
+</select>
+	
+	<insert id="insertPdf"
+	        useGeneratedKeys="true"
+	        keyProperty="pdfId">
+	    INSERT INTO tb_pdf
+	    (
+	        file_name,
+	        drive_file_id,
+	        file_path,
+	        reg_user_id
+	    )
+	    VALUES
+	    (
+	        #{fileName},
+	        #{driveFileId},
+	        #{filePath},
+	        #{regUserId}
+	    )
+	</insert>
+
+    <update id="updateFileName">
+        UPDATE tb_pdf
+        SET file_name = #{fileName}
+        WHERE pdf_id = #{pdfId}
+    </update>
+
+    <update id="updateFileInfo">
+        UPDATE tb_pdf
+        SET file_name = #{fileName},
+            file_path = #{filePath}
+        WHERE pdf_id = #{pdfId}
+    </update>
+</mapper>

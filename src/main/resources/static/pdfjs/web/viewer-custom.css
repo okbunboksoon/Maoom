@@ -1,0 +1,63 @@
+:root{
+  --toolbar-height:46px;
+  --toolbar-horizontal-padding:4px;
+  --toolbar-vertical-padding:4px;
+  --icon-size:21px;
+}
+
+html[data-toolbar-density="compact"],
+html[data-toolbar-density="touch"]{
+  --toolbar-height:46px;
+}
+
+#toolbarContainer{
+  --menuitem-height:38px;
+}
+
+.toolbarButton,
+.toolbarButtonWithContainer{
+  min-width:38px;
+}
+
+.toolbarButton{
+  border-radius:5px;
+}
+
+.toolbarField{
+  min-height:32px;
+  padding:6px 9px;
+  margin:3px 2px;
+  font-size:14px;
+  line-height:18px;
+}
+
+#pageNumber{
+  width:52px;
+}
+
+#scaleSelectContainer{
+  min-width:150px;
+  height:34px;
+}
+
+#scaleSelect{
+  min-height:34px;
+  padding-inline:10px 28px;
+  font-size:14px;
+}
+
+#toolbarContainer #toolbarViewer #toolbarViewerLeft{
+  margin-inline-start:10px;
+}
+
+#toolbarContainer #toolbarViewer .toolbarButtonSpacer{
+  width:38px;
+}
+
+.toolbarLabel{
+  font-size:14px;
+}
+
+.verticalToolbarSeparator{
+  margin:5px 5px;
+}
