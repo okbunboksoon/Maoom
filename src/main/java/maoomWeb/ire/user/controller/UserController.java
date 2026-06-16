@@ -170,6 +170,11 @@ public class UserController {
         return "user/pdf/pdfUpload";
     }
 
+    @GetMapping("/pdf/color-check")
+    public String colorCheck() {
+        return "user/pdf/colorCheck";
+    }
+
     @GetMapping("/api/user/me")
     @ResponseBody
     /** 현재 로그인 사용자의 ID와 표시 이름을 반환한다. */

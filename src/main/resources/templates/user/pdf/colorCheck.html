@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF 컬러체크</title>
+    <link rel="stylesheet" href="/user/css/ColorCheck.css?v=ui-1">
+    <script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<main class="color-check-wrap">
+    <header class="color-check-header">
+        <h1>PDF 컬러체크</h1>
+    </header>
+
+    <section class="color-check-panel" aria-label="PDF 컬러체크 엑셀 생성">
+        <div class="path-row">
+            <label for="pdfPath">PDF</label>
+            <input id="pdfPath" type="text" placeholder="PDF 경로" readonly>
+            <button class="select-btn" type="button" data-target="pdfFile">
+                선택
+            </button>
+            <input id="pdfFile" type="file" accept="application/pdf,.pdf" hidden>
+            <button class="run-btn" type="button">실행1</button>
+        </div>
+
+        <div class="path-row">
+            <label for="outputPath">엑셀 생성 위치</label>
+            <input id="outputPath" type="text" placeholder="엑셀경로" readonly>
+            <button class="select-btn" type="button" data-target="outputFile">
+                선택
+            </button>
+            <input id="outputFile" type="file" webkitdirectory directory hidden>
+        </div>
+
+        <div class="path-row">
+            <label for="reviewExcelPath">엑셀</label>
+            <input id="reviewExcelPath" type="text" placeholder="엑셀경로" readonly>
+            <button class="select-btn" type="button" data-target="reviewExcelFile">
+                선택
+            </button>
+            <input id="reviewExcelFile" type="file" accept=".xlsx,.xls" hidden>
+        </div>
+
+        <footer class="color-check-actions">
+            <button class="run-btn" type="button">실행2</button>
+            <button class="close-btn" type="button" onclick="window.close()">닫기</button>
+        </footer>
+    </section>
+</main>
+
+<script>
+document.querySelectorAll('.select-btn').forEach(button => {
+    button.addEventListener('click', function(){
+        document.getElementById(this.dataset.target).click();
+    });
+});
+
+document.getElementById('pdfFile').addEventListener('change', function(){
+    document.getElementById('pdfPath').value =
+        this.files[0] ? this.files[0].name : '';
+});
+
+document.getElementById('outputFile').addEventListener('change', function(){
+    document.getElementById('outputPath').value =
+        this.files[0] ? this.files[0].webkitRelativePath.split('/')[0] : '';
+});
+
+document.getElementById('reviewExcelFile').addEventListener('change', function(){
+    document.getElementById('reviewExcelPath').value =
+        this.files[0] ? this.files[0].name : '';
+});
+</script>
+</body>
+</html>
