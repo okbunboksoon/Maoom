@@ -130,6 +130,7 @@
 
 <div class="menu-box">
     <button class="menu-btn" onclick="openPdfPopup()">PDF 리뷰</button>
+    <button class="menu-btn" onclick="openColorCheckPopup()">컬러체크</button>
     <button class="menu-btn" onclick="openRevisionPopup()">정제</button>
     <button class="menu-btn" onclick="location.href='/page/calc'">배치</button>
 </div>
@@ -339,6 +340,15 @@ function openPdfPopup(){
         '/pdf/list',
         'pdfPopup',
         'width=600,height=800'
+    );
+}
+
+// PDF 도안 컬러체크 엑셀 생성 화면을 별도 팝업으로 연다.
+function openColorCheckPopup(){
+    window.open(
+        '/pdf/color-check',
+        'colorCheckPopup',
+        'width=760,height=560'
     );
 }
 
