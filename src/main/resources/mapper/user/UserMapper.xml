@@ -4,7 +4,13 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="maoomWeb.ire.user.mapper.UserMapper">
 
-<!-- 로그인, 권한, Slack 연동에 필요한 사용자 컬럼을 매핑한다. -->
+<!--
+    사용자 기능의 DB 입출력 모음.
+    로그인/계정/프로필/멘션 화면 -> UserController -> UserService 또는
+    UserProfileImageService -> UserMapper.java -> 이 SQL 순서로 호출된다.
+-->
+
+<!-- tb_user의 로그인, 권한, Slack과 프로필 컬럼을 User DTO에 연결한다. -->
 <resultMap id="UserResultMap" type="User">
     <id property="userId" column="user_id"/>
     <result property="userPw" column="user_pw"/>
@@ -16,6 +22,7 @@
     <result property="profileImageContentType" column="profile_image_content_type"/>
 </resultMap>
 
+<!-- 로그인 검증과 현재 사용자 정보 조회에 사용하는 사용자 한 건 조회. -->
 <select id="getUserInfoById"
         resultMap="UserResultMap"
         parameterType="String">
@@ -34,6 +41,7 @@
 
 </select>
 
+<!-- PDF 댓글 입력창의 @멘션 자동완성 목록. 비밀번호와 Slack ID는 반환하지 않는다. -->
 <select id="getMentionUsers"
         resultMap="UserResultMap">
 
@@ -47,6 +55,7 @@
 
 </select>
 
+<!-- @사용자명 또는 @아이디를 실제 Slack 멤버 ID로 연결한다. 이름 일치를 우선한다. -->
 <select id="getSlackUserIdByMention"
         parameterType="String"
         resultType="String">
@@ -64,6 +73,7 @@
 
 </select>
 
+<!-- 평문 마이그레이션과 계정 변경에서 생성한 BCrypt 해시를 저장한다. -->
 <update id="updatePassword">
 
     UPDATE tb_user
@@ -72,6 +82,7 @@
 
 </update>
 
+<!-- 계정 설정에서 변경한 화면 표시 이름을 저장한다. -->
 <update id="updateUserName">
 
     UPDATE tb_user
@@ -80,6 +91,7 @@
 
 </update>
 
+<!-- 실제 파일 저장 성공 후 프로필 이미지 파일명과 MIME 타입을 사용자와 연결한다. -->
 <update id="updateProfileImage">
 
     UPDATE tb_user
@@ -89,6 +101,7 @@
 
 </update>
 
+<!-- 프로필 이미지 삭제 시 DB의 파일 연결 정보만 NULL로 초기화한다. -->
 <update id="clearProfileImage">
 
     UPDATE tb_user

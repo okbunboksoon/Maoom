@@ -1,9 +1,9 @@
 package maoomWeb.ire.user.controller;
 
-import java.util.Map;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Collections;
+import java.util.Map;
 
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -28,33 +28,40 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import maoomWeb.ire.user.service.ColorCheckOutputPathService;
 import maoomWeb.ire.user.service.UserService;
 import maoomWeb.ire.user.dto.User;
 import maoomWeb.ire.user.dto.UserAccountUpdateDto;
 import maoomWeb.ire.user.service.CurrentUserService;
 import maoomWeb.ire.user.service.UserProfileImageService;
 
-
-
-@Controller
 /**
- * 로그인 처리와 주요 사용자 화면 이동, 사용자 정보 API를 담당한다.
+ * 로그인 처리, 주요 화면 이동과 사용자 계정·프로필 API를 담당한다.
+ *
+ * <p>화면 이동 요청은 Thymeleaf 템플릿 이름을 반환하고, {@code /api/user/*}
+ * 요청은 UserService 또는 UserProfileImageService에 업무 처리를 위임한다.
+ * 로그인 성공 시에는 Spring Security의 Authentication과 세션 Context를 직접 만든다.</p>
  */
+@Controller
 public class UserController {
-	
-	private final UserService userService;
+
+    private final UserService userService;
 	private final CurrentUserService currentUserService;
 	private final UserProfileImageService userProfileImageService;
+    private final ColorCheckOutputPathService colorCheckOutputPathService;
 	
     public UserController(
             UserService userService,
             CurrentUserService currentUserService,
-            UserProfileImageService userProfileImageService) {
+            UserProfileImageService userProfileImageService,
+            ColorCheckOutputPathService colorCheckOutputPathService) {
         this.userService = userService;
         this.currentUserService = currentUserService;
         this.userProfileImageService = userProfileImageService;
+        this.colorCheckOutputPathService = colorCheckOutputPathService;
     }
 	
+    /** 이미 로그인한 사용자는 메인으로 보내고, 그 외에는 기본 로그인 화면을 표시한다. */
 	@GetMapping("/")
 	public String login(Authentication authentication) {
 
@@ -68,14 +75,15 @@ public class UserController {
 	    return "index";
 	}
 	
+    /**
+     * 로그인 폼의 ID/비밀번호를 검증하고 성공 시 Spring Security 세션을 생성한다.
+     * 실패 메시지는 RedirectAttributes에 담아 다시 index.html에서 표시한다.
+     */
 	@PostMapping("/login")
 	public String login(@RequestParam String username,
 	                    @RequestParam String password,
 	                    RedirectAttributes reAttr,
 	                    HttpServletRequest request) {
-
-		System.out.println(username);
-		System.out.println(password);
 		
 		Map<String,Object> checkResult=userService.checkLogin(username,password);	
 		
@@ -134,7 +142,29 @@ public class UserController {
         model.addAttribute(
                 "currentUserId",
                 currentUserService.getUserId(authentication));
+        model.addAttribute(
+                "administrator",
+                currentUserService.isAdministrator(authentication));
         return "user/userMain";
+    }
+
+    @GetMapping("/admin/main")
+    /** 관리자 메인 화면을 표시한다. */
+    public String adminMain(
+            Authentication authentication,
+            Model model) {
+
+        if(!currentUserService.isAdministrator(authentication)){
+            return "redirect:/main";
+        }
+
+        model.addAttribute(
+                "currentUserName",
+                currentUserService.getUserName(authentication));
+        model.addAttribute(
+                "currentUserId",
+                currentUserService.getUserId(authentication));
+        return "admin/adminMain";
     }
     
     @GetMapping("/pdf/list")
@@ -144,6 +174,7 @@ public class UserController {
     }
 
     @GetMapping("/revision/list")
+    /** DITA 정제 옵션과 실행 결과를 제공하는 팝업 화면을 표시한다. */
     public String pdfList2() {
         return "user/revision/revisionPopup";
     }
@@ -162,12 +193,66 @@ public class UserController {
         model.addAttribute("fileId", fileId);
         model.addAttribute("folderId", folderId);
 
-        return "user/pdf/pdfView";
+        return "user/pdf/pdfview";
     }
 
     @GetMapping("/pdf/upload")
     public String pdfUpload() {
         return "user/pdf/pdfUpload";
+    }
+
+    @GetMapping("/pdf/color-check")
+    /**
+     * 컬러체크 팝업 화면을 연다.
+     *
+     * <p>화면에 실제 저장 위치를 표시할 수 있도록 서버 PC의
+     * 바탕화면/temp 전체 경로를 Thymeleaf 모델에 함께 넣는다.
+     * PDF 분석이나 DB 작업은 이 메서드가 아니라
+     * {@link ColorCheckController}의 API가 처리한다.</p>
+     */
+    public String colorCheck(Model model) {
+        model.addAttribute(
+                "colorCheckOutputPath",
+                colorCheckOutputPathService.getOutputDirectory().toString());
+        return "user/pdf/colorCheck";
+    }
+
+    @GetMapping("/pdf/ber")
+    /** BER 반영 팝업 화면을 연다. */
+    public String ber(Model model) {
+        model.addAttribute(
+                "colorCheckOutputPath",
+                colorCheckOutputPathService.getOutputDirectory().toString());
+        return "user/pdf/ber";
+    }
+    @GetMapping("/ditamap-builder")
+    /** DITAMAP Builder 작업 경로 입력 화면을 표시한다. */
+    public String ditamapBuilder() {
+        return "user/ditamapBuilder";
+    }
+
+    @GetMapping("/ditamap-builder/view")
+    /** DITAMAP Builder 트리 조회 결과 화면을 표시한다. */
+    public String ditamapBuilderView() {
+        return "user/ditamapBuilderView";
+    }
+
+    @GetMapping("/ditamap-builder/diff")
+    /** 1안 테스트용: 법규 마스터와 실제 매뉴얼을 비교하는 DITAMAP Builder 화면을 표시한다. */
+    public String ditamapBuilderDiff() {
+        return "user/ditamapBuilderDiff";
+    }
+
+    @GetMapping("/ditamap-builder/realtime")
+    /** 2안 테스트용: DB 대상 파일명을 기준으로 실시간 반영하는 DITAMAP Builder 화면을 표시한다. */
+    public String ditamapBuilderRealtime() {
+        return "user/ditamapBuilderRealtime";
+    }
+
+    @GetMapping("/ditamap-builder/legal-editor")
+    /** 선택한 기준 topic을 법규용 DITAMAP 구조에 배치하는 팝업 화면을 표시한다. */
+    public String ditamapLegalEditor() {
+        return "user/ditamapLegalEditor";
     }
 
     @GetMapping("/api/user/me")
@@ -214,6 +299,7 @@ public class UserController {
 
     @PostMapping("/api/user/profile-image")
     @ResponseBody
+    /** 로그인 사용자의 새 프로필 이미지 파일을 저장하고 계정에 연결한다. */
     public Map<String,String> uploadProfileImage(
             @RequestParam("file") MultipartFile file,
             Authentication authentication) {
@@ -226,6 +312,7 @@ public class UserController {
 
     @DeleteMapping("/api/user/profile-image")
     @ResponseBody
+    /** 로그인 사용자의 프로필 이미지 DB 연결과 실제 저장 파일을 삭제한다. */
     public Map<String,String> deleteProfileImage(
             Authentication authentication) {
 
@@ -236,6 +323,10 @@ public class UserController {
 
     @GetMapping("/api/user/profile-image")
     @ResponseBody
+    /**
+     * 지정 사용자의 프로필 이미지를 브라우저에 반환한다.
+     * 댓글 작성자 아바타와 메인 계정 메뉴가 같은 API를 사용한다.
+     */
     public ResponseEntity<Resource> getProfileImage(
             @RequestParam String userId) {
 
@@ -255,3 +346,7 @@ public class UserController {
                 .body(image.resource());
     }
 }
+
+
+
+

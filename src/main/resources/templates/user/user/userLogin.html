@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<!-- 이전 로그인 화면 시안. 현재 기본 로그인은 templates/index.html을 사용한다. -->
+<!--
+	이전 로그인 화면 시안으로 현재 로그인 경로에서는 사용하지 않는다.
+	실제 기본 로그인은 templates/index.html -> POST /login 흐름을 사용한다.
+	향후 이 파일을 다시 사용하려면 현재 인증 처리 방식에 맞게
+	action="/login"과 Spring Security 세션 생성을 연결해야 한다.
+-->
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -38,6 +43,7 @@ body{
 <div class="login-box">
     <h2>Maoom</h2>
 
+    <!-- 현재는 라우팅되지 않는 시안 form이며 운영 로그인 처리와 연결되어 있지 않다. -->
     <form action="/main" method="post">
         <input type="text" name="username" placeholder="ID">
         <input type="password" name="password" placeholder="PW">

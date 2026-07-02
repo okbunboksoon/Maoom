@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,6 +25,9 @@ import maoomWeb.ire.user.mapper.UserMapper;
  */
 public class UserService {
 
+    private static final Logger log =
+            LoggerFactory.getLogger(UserService.class);
+
     private final UserMapper userMapper;
     private final PasswordEncoder passwordEncoder;
 
@@ -33,24 +38,18 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @Transactional
     /**
      * 아이디와 비밀번호를 검증한다.
      * 기존 평문 비밀번호가 확인되면 BCrypt로 변환하여 점진적으로 마이그레이션한다.
      */
+    @Transactional
     public Map<String,Object> checkLogin(String username, String password){
 
         Map<String,Object> resultMap = new HashMap<String,Object>();
         boolean result = false;
-        
-        // System.out.println(result);
-        
+
         User user = userMapper.getUserInfoById(username);
-        
-        // System.out.println("if밖 " + user);
-        
-		// System.out.println("userservice " + username);
-		
+
         if(user != null){
             String checkPw = user.getUserPw();
 
@@ -78,10 +77,9 @@ public class UserService {
 
                 }catch(RuntimeException e){
 
-                    System.err.println(
-                            "BCrypt password migration failed. "
-                            + "Run migrate_user_password_to_bcrypt.sql: "
-                            + e.getMessage());
+                    log.warn(
+                            "BCrypt password migration failed. Run migrate_user_password_to_bcrypt.sql",
+                            e);
                 }
             }
         }

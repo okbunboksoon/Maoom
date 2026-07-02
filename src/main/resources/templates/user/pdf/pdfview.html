@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<!-- PDF 열람, 영역 댓글, 답글, 실시간 공동 작업을 제공하는 메인 뷰어 화면. -->
+<!--
+    PDF 리뷰 메인 화면의 연결 흐름
+
+    1. URL의 Drive fileId를 /api/pdf/find-by-drive-file-id로 보내 내부 pdfId를 얻는다.
+    2. 가운데 iframe은 PDF.js를 열고 /api/drive/pdf에서 원본 PDF를 읽는다.
+    3. 오른쪽 패널은 /api/comment/* REST API로 댓글·답글·첨부를 조회하고 저장한다.
+    4. 주석 좌표는 페이지 크기 기준 0~1 비율로 저장해 확대 배율과 무관하게 다시 그린다.
+    5. /ws/pdf WebSocket은 변경 사실만 알리고, 화면은 REST API로 최신 데이터를 재조회한다.
+    6. 내보내기 버튼은 CommentExportService 또는 CommentPdfExportService와 연결된다.
+
+    이 파일은 화면 상태와 사용자 조작을 담당한다. DB 규칙과 권한 검사는 Java 서비스가 담당한다.
+-->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/user/css/PdfView.css?v=highlight-autosave-1">
+	<link rel="stylesheet" href="/user/css/PdfView.css?v=annotation-highlight-fix-4">
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
@@ -16,7 +27,7 @@
 	<div class="left-panel">
 	    <div class="pdf-tree-header">
 	        <div>
-	            <h3>DITA스터디</h3>
+	            <h3>PDF리뷰</h3>
 	            <p>PDF 문서 탐색</p>
 	        </div>
 	        <span class="pdf-tree-badge">Drive</span>
@@ -51,9 +62,10 @@
             </div>
             <div class="comment-header-icons">
                 <button type="button"
+                        id="pdfExportBtn"
                         class="export-btn pdf-export-btn"
-                        title="PDF 다운로드"
-                        onclick="downloadCurrentPdf()">
+                        title="코멘트 포함 PDF 내보내기"
+                        onclick="downloadCurrentPdf(this)">
                     <span class="export-file-icon" aria-hidden="true">PDF</span>
                     <span>PDF</span>
                 </button>
@@ -150,7 +162,11 @@
 </div>
 
 <script>
-	// 현재 PDF, 댓글 선택 상태, 필터와 WebSocket 연결 상태를 보관한다.
+    /*
+     * 화면 전체에서 공유하는 상태.
+     * currentPdfId는 댓글 API의 기준 ID이고, fileId는 Drive 원본 파일 조회용 ID다.
+     * 좌표 작성 상태와 첨부 대기 목록은 서버에 저장되기 전까지만 브라우저에 보관한다.
+     */
 	let selectedCommentId = null;
 	let currentPdfId = null;
 	let selectedCommentData = null;
@@ -160,6 +176,8 @@
 	let annotationSaveInProgress = false;
 	const commentSaveInProgress = new Set();
 	const commentBlurActions = new Map();
+	const replySaveInProgress = new Set();
+	const replyBlurActions = new Map();
 	let rectStartData = null;
 	let drawingStartData = null;
 	let currentUser = null;
@@ -169,16 +187,26 @@
 	let commentSearchTimer = null;
 	let pendingAttachments = [];
 	const pendingReplyAttachments = new Map();
+	const pendingCommentEditAttachments = new Map();
+	const pendingReplyEditAttachments = new Map();
 	let collaborationSocket = null;
+    let collaborationReconnectTimer = null;
+    let collaborationClosedByPage = false;
 	let commentRequestController = null;
 	let commentReloadTimer = null;
+	let highlightRedrawTimer = null;
+    let highlightRedrawFull = false;
+    const highlightRedrawPages = new Set();
 	let lastCommentLoadAt = 0;
 	let loadedComments = [];
-	const ROOT_FOLDER_ID = '0ANjwWGzgwzlhUk9PVA';
+	const ROOT_FOLDER_ID = '18WFt3vOuVQarQQDiZVP2Y2WeyoXgk1Qb';
 	const DRIVE_CACHE_DURATION = 5 * 60 * 1000;
+	const DRIVE_CACHE_PREFIX = 'driveItems:' + ROOT_FOLDER_ID + ':';
+	const OPENED_FOLDERS_KEY = 'openedFolders:' + ROOT_FOLDER_ID;
 	const driveItemCache = new Map();
 	const driveItemRequests = new Map();
-	let openedFolders = JSON.parse(sessionStorage.getItem('openedFolders') || '[]');
+	let openedFolders =
+	    JSON.parse(sessionStorage.getItem(OPENED_FOLDERS_KEY) || '[]');
 	let collapsedCommentIds =
 	    JSON.parse(
 	        sessionStorage.getItem(
@@ -189,6 +217,11 @@
 const fileId =
 document.getElementById("fileId").value;
 
+/*
+ * 화면 초기화 순서:
+ * Drive fileId를 내부 pdfId로 연결하고 로그인 사용자를 확인한 뒤
+ * 댓글 목록과 같은 PDF 사용자의 WebSocket 연결을 시작한다.
+ */
 Promise.all([
     fetch(
         '/api/pdf/find-by-drive-file-id?fileId='
@@ -219,6 +252,10 @@ fetch('/api/user/mention-list')
 });
 
 document.getElementById('pdfViewer').src =
+/*
+ * PDF.js에는 서버 API 주소를 file 파라미터로 전달한다.
+ * PDF.js가 Range 요청을 보내면 DriveController가 캐시된 PDF의 해당 구간을 반환한다.
+ */
 '/pdfjs/web/viewer.html?file=' +
 encodeURIComponent(
     window.location.origin +
@@ -235,6 +272,21 @@ document.getElementById('pdfViewer').onload = function(){
 
     const app =
         viewerWindow.PDFViewerApplication;
+    let defaultPdfViewApplied = false;
+
+    function applyDefaultPdfView(){
+        const pdfViewer =
+            app.pdfViewer;
+
+        if(defaultPdfViewApplied || !pdfViewer){
+            return;
+        }
+
+        defaultPdfViewApplied = true;
+        pdfViewer.scrollMode = 3;
+        pdfViewer.spreadMode = 0;
+        pdfViewer.currentScaleValue = 'page-fit';
+    }
 
     initializePdfAnnotationToolbar(viewerWindow);
 
@@ -258,11 +310,23 @@ document.getElementById('pdfViewer').onload = function(){
         'wheel',
         function(e){
 
-            e.preventDefault();
+            const pdfViewer =
+                app.pdfViewer;
+            const pageScrollMode = 3;
 
-            if(app.page === undefined){
+            // PDF.js의 페이지 단위 모드에서만 휠로 페이지를 전환한다.
+            // 세로/가로/연속 모드에서는 기본 스크롤을 막지 않는다.
+            if(
+                !pdfViewer
+                || pdfViewer.scrollMode !== pageScrollMode
+                || e.ctrlKey
+                || e.metaKey
+                || app.page === undefined
+            ){
                 return;
             }
+
+            e.preventDefault();
 
             if(e.deltaY > 0){
 
@@ -457,10 +521,7 @@ document.getElementById('pdfViewer').onload = function(){
 
 	        drawSelectedCommentPreview(selectedCommentData);
 	        resetCommentMode();
-	        saveVisualAnnotationComment(
-	            selectedCommentData,
-	            '사각형'
-	        );
+	        saveVisualAnnotationComment(selectedCommentData);
 
 	    }
 	);
@@ -509,10 +570,7 @@ document.getElementById('pdfViewer').onload = function(){
 
 	        drawSelectedCommentPreview(selectedCommentData);
 	        resetCommentMode();
-	        saveVisualAnnotationComment(
-	            selectedCommentData,
-	            '말풍선'
-	        );
+	        saveVisualAnnotationComment(selectedCommentData);
 
 	    }
 	);
@@ -639,42 +697,68 @@ document.getElementById('pdfViewer').onload = function(){
 
 	        drawSelectedCommentPreview(selectedCommentData);
 	        resetCommentMode();
-	        saveVisualAnnotationComment(
-	            selectedCommentData,
-	            '자유 그리기'
-	        );
+	        saveVisualAnnotationComment(selectedCommentData);
 	    }
 	);
 	
 	viewerWindow.PDFViewerApplication.eventBus.on(
+	    'pagesinit',
+	    applyDefaultPdfView
+	);
+
+	viewerWindow.PDFViewerApplication.eventBus.on(
 	    'pagesloaded',
 	    function(){
-	        drawHighlights(loadedComments);
+	        applyDefaultPdfView();
+	        scheduleHighlightRedraw(40);
 	    }
 	);
+
+	viewerWindow.PDFViewerApplication.eventBus.on(
+	    'pagerendered',
+	    function(event){
+	        scheduleHighlightRedraw(20, event.pageNumber);
+	    }
+	);
+
+	[
+	    'scalechanging',
+	    'scalechanged'
+	].forEach(eventName => {
+	    viewerWindow.PDFViewerApplication.eventBus.on(
+	        eventName,
+	        function(){
+	            scheduleHighlightRedraw(420);
+	        }
+	    );
+	});
 	};
 
 let currentPathIds = [];
 
-// 현재 PDF의 상위 경로를 먼저 확인해 해당 폴더를 자동으로 펼친다.
-fetch(
-    '/api/drive/path?fileId='
-    + encodeURIComponent(fileId)
-)
-.then(handleDriveResponse)
-.then(pathList => {
-	currentPathIds = pathList.map(item => item.id);
-    loadTree(
-        ROOT_FOLDER_ID,
-        document.getElementById('folderTree')
-    );
-})
-.catch(error =>
-    showViewerTreeError(
-        error,
-        document.getElementById('folderTree')
+setTimeout(loadViewerDriveTree, 900);
+
+// 현재 PDF 표시를 먼저 시작한 뒤 왼쪽 Drive 트리를 늦게 불러온다.
+function loadViewerDriveTree(){
+    fetch(
+        '/api/drive/path?fileId='
+        + encodeURIComponent(fileId)
     )
-);
+    .then(handleDriveResponse)
+    .then(pathList => {
+	    currentPathIds = pathList.map(item => item.id);
+        loadTree(
+            ROOT_FOLDER_ID,
+            document.getElementById('folderTree')
+        );
+    })
+    .catch(error =>
+        showViewerTreeError(
+            error,
+            document.getElementById('folderTree')
+        )
+    );
+}
 
 // 폴더별 응답을 재사용해 자동 펼침과 수동 재확장에서 중복 호출을 막는다.
 function getDriveItems(folderId){
@@ -688,7 +772,7 @@ function getDriveItems(folderId){
         return Promise.resolve(memoryCache.items);
     }
 
-    const storageKey = 'driveItems:' + folderId;
+    const storageKey = DRIVE_CACHE_PREFIX + folderId;
 
     try{
         const storedCache =
@@ -841,7 +925,7 @@ function rememberOpenedFolder(folderId){
 
 function saveOpenedFolders(){
     sessionStorage.setItem(
-        'openedFolders',
+        OPENED_FOLDERS_KEY,
         JSON.stringify(openedFolders)
     );
 }
@@ -1033,7 +1117,10 @@ document.getElementById('commentBtn').onclick = function(){
 		    rectX:selectedCommentData ? selectedCommentData.rectX : null,
 		    rectY:selectedCommentData ? selectedCommentData.rectY : null,
 		    rectW:selectedCommentData ? selectedCommentData.rectW : null,
-		    rectH:selectedCommentData ? selectedCommentData.rectH : null
+		    rectH:selectedCommentData ? selectedCommentData.rectH : null,
+		    drawingPath:selectedCommentData
+		        ? (selectedCommentData.drawingPath || null)
+		        : null
 		})
     })
     .then(handleJsonResponse)
@@ -1094,7 +1181,9 @@ function loadComments(){
 
         loadedComments = comments;
         lastCommentLoadAt = Date.now();
-        renderComments();
+        renderComments({
+            redrawHighlights:true
+        });
     })
     .catch(error => {
         if(error.name !== 'AbortError'){
@@ -1109,10 +1198,13 @@ function loadComments(){
 }
 
 // 검색어 변경은 이미 받은 댓글 데이터만 다시 필터링해 불필요한 API 호출을 막는다.
-function renderComments(){
+function renderComments(options = {}){
 
         const comments = loadedComments;
-        drawHighlights(comments);
+
+        if(options.redrawHighlights){
+            drawHighlights(comments);
+        }
 
         const searchQuery =
             document.getElementById('commentSearch')
@@ -1132,6 +1224,9 @@ function renderComments(){
                         .toLowerCase()
                         .includes(searchQuery)
                     || String(comment.userId || '')
+                        .toLowerCase()
+                        .includes(searchQuery)
+                    || String(comment.userName || '')
                         .toLowerCase()
                         .includes(searchQuery);
                 const commentNumber =
@@ -1202,11 +1297,10 @@ function renderComments(){
             if(isOwner(comment.userId)){
 
                 ownerActions =
-                    '<button class="comment-action-btn" title="' + statusLabel + '" onclick="event.stopPropagation();changeCommentStatus('
+                    '<button class="comment-action-btn" id="commentEditBtn-' + comment.commentId + '"'
+                    + ' title="수정" onclick="event.stopPropagation();startEditComment('
                     + comment.commentId
-                    + ',\'' + statusAction + '\')">'
-                    + '<i class="fa-solid fa-check"></i> ' + statusLabel
-                    + '</button>'
+                    + ')"><i class="fa-regular fa-pen-to-square"></i> 수정</button>'
                     + '<button class="comment-action-btn" id="commentSaveBtn-' + comment.commentId + '"'
                     + ' style="display:none;"'
                     + ' onmousedown="prepareCommentBlurAction('
@@ -1219,8 +1313,15 @@ function renderComments(){
                     + comment.commentId + ',\'cancel\')"'
                     + ' onclick="event.stopPropagation();cancelEditComment('
                     + comment.commentId + ')">취소</button>'
-                    + '<button class="comment-action-btn danger" title="삭제" onclick="event.stopPropagation();deleteComment('
-                    + comment.commentId + ')"><i class="fa-regular fa-trash-can"></i> 삭제</button>';
+                    + '<button class="comment-action-btn danger" id="commentDeleteBtn-' + comment.commentId + '"'
+                    + ' title="삭제" onclick="event.stopPropagation();deleteComment('
+                    + comment.commentId + ')"><i class="fa-regular fa-trash-can"></i> 삭제</button>'
+                    + '<button class="comment-action-btn" id="commentStatusBtn-' + comment.commentId + '"'
+                    + ' title="' + statusLabel + '" onclick="event.stopPropagation();changeCommentStatus('
+                    + comment.commentId
+                    + ',\'' + statusAction + '\')">'
+                    + '<i class="fa-solid fa-check"></i> ' + statusLabel
+                    + '</button>';
             }
 
 			html +=
@@ -1233,7 +1334,7 @@ function renderComments(){
 			    + '<div class="comment-card-header">'
 			    + createUserAvatar(comment.userId, 'comment-avatar')
 			    + '<div class="comment-author-wrap">'
-				+ '<b>' + comment.userId + '</b>'
+				+ '<b>' + escapeHtml(comment.userName || comment.userId) + '</b>'
 				+ '<span class="comment-date">'
 				+ formatCommentDate(comment.createDt)
                 + ' · '
@@ -1257,7 +1358,23 @@ function renderComments(){
 			        : '')
 			    + '"></div>'
 			    + '<textarea id="commentEditText-' + comment.commentId + '"'
-			    + ' class="comment-edit-text" style="display:none;"></textarea>'
+			    + ' class="comment-edit-text" style="display:none;"'
+                + ' placeholder="코멘트 내용을 입력하세요."></textarea>'
+                + '<div id="commentEditAttachmentZone-' + comment.commentId + '"'
+                + ' class="edit-attachment-zone" style="display:none;"'
+                + ' onclick="event.stopPropagation();">'
+                + '<div class="edit-attachment-tools">'
+                + '<label for="commentEditAttachments-' + comment.commentId + '"'
+                + ' class="attachment-select-btn">'
+                + '<i class="fa-solid fa-paperclip"></i> 파일 선택'
+                + '</label>'
+                + '<input id="commentEditAttachments-' + comment.commentId + '"'
+                + ' class="attachment-file-input" type="file" multiple>'
+                + '<span>붙여넣기 또는 끌어 놓기</span>'
+                + '</div>'
+                + '<div id="commentEditAttachmentList-' + comment.commentId + '"'
+                + ' class="reply-attachment-list"></div>'
+                + '</div>'
 			    + '<div id="attachmentList-' + comment.commentId + '"'
 			    + ' class="comment-attachment-list"></div>'
 			    + '<div class="comment-actions">'
@@ -1326,9 +1443,12 @@ function renderComments(){
                     comment.commentId);
             };
 
-            document.getElementById(
-                'commentEditText-' + comment.commentId
-            ).onblur = function(){
+            const commentEditText =
+                document.getElementById(
+                    'commentEditText-'
+                    + comment.commentId
+                );
+            commentEditText.onblur = function(){
                 sendEditing(
                     false,
                     comment.commentId);
@@ -1336,12 +1456,40 @@ function renderComments(){
                     comment.commentId
                 );
             };
-
-            setupMentionAutocomplete(
-                document.getElementById(
-                    'commentEditText-'
-                    + comment.commentId
+            setupMentionAutocomplete(commentEditText);
+            setupClipboardImagePaste(
+                commentEditText,
+                files => addCommentEditPendingAttachments(
+                    comment.commentId,
+                    files
                 )
+            );
+            initializeEditAttachmentDrop(
+                document.getElementById(
+                    'commentEditAttachmentZone-'
+                    + comment.commentId
+                ),
+                files => addCommentEditPendingAttachments(
+                    comment.commentId,
+                    files
+                ),
+                commentEditText
+            );
+            const commentEditFileInput =
+                document.getElementById(
+                    'commentEditAttachments-'
+                    + comment.commentId
+                );
+            commentEditFileInput.onchange = function(){
+                addCommentEditPendingAttachments(
+                    comment.commentId,
+                    [...this.files]
+                );
+                this.value = '';
+                commentEditText.focus();
+            };
+            renderCommentEditPendingAttachments(
+                comment.commentId
             );
             setupMentionAutocomplete(
                 document.getElementById(
@@ -1540,7 +1688,7 @@ function navigateUnresolved(direction){
     .catch(showApiError);
 }
 
-function startEditComment(commentId){
+function startEditComment(commentId, options = {}){
 
     document.getElementById(
         'commentTextView-' + commentId
@@ -1551,6 +1699,10 @@ function startEditComment(commentId){
     );
     editText.dataset.originalValue = editText.value;
     setMentionInputVisible(editText, true);
+    document.getElementById(
+        'commentEditAttachmentZone-' + commentId
+    ).style.display = 'block';
+    renderCommentEditPendingAttachments(commentId);
 
     document.getElementById(
         'commentSaveBtn-' + commentId
@@ -1560,8 +1712,96 @@ function startEditComment(commentId){
         'commentCancelBtn-' + commentId
     ).style.display = 'inline-block';
 
-    editText.focus();
+    setCommentCreationEditingUi(
+        commentId,
+        Boolean(options.creation)
+    );
 
+    const editButton =
+        document.getElementById(
+            'commentEditBtn-' + commentId
+        );
+
+    if(editButton){
+        editButton.style.display = 'none';
+    }
+
+    editText.focus();
+    editText.setSelectionRange(
+        editText.value.length,
+        editText.value.length
+    );
+
+}
+
+function focusCreatedAnnotationComment(commentId){
+    const normalizedId =
+        Number(commentId);
+    const commentElement =
+        document.querySelector(
+            '[data-comment-id="'
+            + normalizedId
+            + '"]'
+        );
+
+    selectedCommentId = normalizedId;
+
+    document.querySelectorAll('.comment-item')
+        .forEach(item =>
+            item.classList.remove('selected-comment')
+        );
+
+    if(commentElement){
+        commentElement.classList.add('selected-comment');
+        commentElement.scrollIntoView({
+            behavior:'smooth',
+            block:'center'
+        });
+    }
+
+    selectHighlight(normalizedId);
+
+    if(document.getElementById(
+            'commentTextView-' + normalizedId
+    )){
+        startEditComment(
+            normalizedId,
+            {
+                creation:true
+            }
+        );
+    }
+}
+
+function setCommentCreationEditingUi(commentId, enabled){
+    const displayValue =
+        enabled ? 'none' : '';
+    const commentItem =
+        document.querySelector(
+            '.comment-item[data-comment-id="'
+            + commentId
+            + '"]'
+        );
+
+    commentItem?.classList.toggle(
+        'creating-comment',
+        enabled
+    );
+
+    [
+        'commentEditBtn-',
+        'commentStatusBtn-',
+        'commentDeleteBtn-',
+        'replyList-',
+        'replyComposerZone-'
+    ].forEach(prefix => {
+        const element =
+            document.getElementById(prefix + commentId);
+
+        if(element){
+            element.style.display = displayValue;
+        }
+    });
 }
 
 function prepareCommentBlurAction(commentId, action){
@@ -1595,25 +1835,140 @@ function scheduleCommentAutoSave(commentId){
             return;
         }
 
+        const attachmentZone =
+            document.getElementById(
+                'commentEditAttachmentZone-'
+                + normalizedId
+            );
+
+        if(shouldKeepEditOpen(
+                editText,
+                attachmentZone)){
+            return;
+        }
+
         const currentValue = editText.value.trim();
         const originalValue =
             String(
                 editText.dataset.originalValue || ''
             ).trim();
+        const files =
+            pendingCommentEditAttachments.get(normalizedId)
+            || [];
 
         if(currentValue.length === 0){
+            if(originalValue.length === 0){
+                cancelEditComment(normalizedId);
+                return;
+            }
+
             alert('댓글 내용을 입력해주세요.');
             editText.focus();
             return;
         }
 
-        if(currentValue === originalValue){
+        if(currentValue === originalValue
+                && files.length === 0){
             cancelEditComment(normalizedId);
             return;
         }
 
         saveComment(normalizedId);
-    }, 0);
+    }, 250);
+}
+
+function prepareReplyBlurAction(replyId, action){
+    replyBlurActions.set(Number(replyId), action);
+}
+
+function scheduleReplyAutoSave(replyId, commentId){
+    const normalizedReplyId = Number(replyId);
+
+    setTimeout(() => {
+        const blurAction =
+            replyBlurActions.get(normalizedReplyId);
+        replyBlurActions.delete(normalizedReplyId);
+
+        if(blurAction === 'save'
+                || blurAction === 'cancel'){
+            return;
+        }
+
+        const editText =
+            document.getElementById(
+                'replyEditText-'
+                + normalizedReplyId
+            );
+        const wrapper =
+            editText?.closest('.mention-input-wrap');
+        const editingVisible =
+            wrapper
+            ? wrapper.style.display !== 'none'
+            : editText?.style.display !== 'none';
+
+        if(!editText || !editingVisible){
+            return;
+        }
+
+        const attachmentZone =
+            document.getElementById(
+                'replyEditAttachmentZone-'
+                + normalizedReplyId
+            );
+
+        if(shouldKeepEditOpen(
+                editText,
+                attachmentZone)){
+            return;
+        }
+
+        const currentValue = editText.value.trim();
+        const originalValue =
+            String(
+                editText.dataset.originalValue || ''
+            ).trim();
+        const files =
+            pendingReplyEditAttachments.get(
+                normalizedReplyId
+            ) || [];
+
+        if(currentValue.length === 0){
+            alert('답글 내용을 입력해주세요.');
+            editText.focus();
+            return;
+        }
+
+        if(currentValue === originalValue
+                && files.length === 0){
+            cancelEditReply(
+                normalizedReplyId,
+                commentId
+            );
+            return;
+        }
+
+        saveReply(
+            normalizedReplyId,
+            commentId
+        );
+    }, 250);
+}
+
+function shouldKeepEditOpen(editText, attachmentZone){
+    const activeElement = document.activeElement;
+    const blockedUntil =
+        Number(
+            attachmentZone?.dataset
+            .autoSaveBlockedUntil || 0
+        );
+
+    return activeElement === editText
+        || Boolean(
+            attachmentZone
+            && activeElement
+            && attachmentZone.contains(activeElement)
+        )
+        || Date.now() < blockedUntil;
 }
 
 function isOwner(userId){
@@ -1693,6 +2048,7 @@ function changeCommentStatus(commentId,status){
 function cancelEditComment(commentId){
 
     commentBlurActions.delete(Number(commentId));
+    pendingCommentEditAttachments.delete(Number(commentId));
 
     const textView =
         document.getElementById(
@@ -1708,6 +2064,10 @@ function cancelEditComment(commentId){
     renderMentionInputHighlight(editText);
     textView.style.display = 'block';
     setMentionInputVisible(editText, false);
+    document.getElementById(
+        'commentEditAttachmentZone-' + commentId
+    ).style.display = 'none';
+    renderCommentEditPendingAttachments(commentId);
 
     document.getElementById(
         'commentSaveBtn-' + commentId
@@ -1717,6 +2077,17 @@ function cancelEditComment(commentId){
         'commentCancelBtn-' + commentId
     ).style.display = 'none';
 
+    setCommentCreationEditingUi(commentId, false);
+
+    const editButton =
+        document.getElementById(
+            'commentEditBtn-' + commentId
+        );
+
+    if(editButton){
+        editButton.style.display = '';
+    }
+
     sendEditing(false, commentId);
 
 }
@@ -1724,6 +2095,8 @@ function cancelEditComment(commentId){
 function saveComment(commentId){
 
     const normalizedId = Number(commentId);
+    const files =
+        pendingCommentEditAttachments.get(normalizedId) || [];
 
     if(commentSaveInProgress.has(normalizedId)){
         return;
@@ -1752,8 +2125,15 @@ function saveComment(commentId){
         })
     })
     .then(handleApiResponse)
-    .then(result => {
+    .then(() =>
+        uploadAttachments(
+            normalizedId,
+            files
+        )
+    )
+    .then(() => {
 
+        pendingCommentEditAttachments.delete(normalizedId);
         sendEditing(false, commentId);
         return loadComments();
 
@@ -1766,9 +2146,10 @@ function saveComment(commentId){
 
 }
 
-function deleteComment(commentId){
+function deleteComment(commentId, options = {}){
 
-    if(!confirm('댓글을 삭제하시겠습니까?')){
+    if(!options.skipConfirm
+            && !confirm('댓글을 삭제하시겠습니까?')){
         return;
     }
 
@@ -1824,7 +2205,12 @@ function handleSelectedCommentDelete(event){
     }
 
     consumeAnnotationShortcut(event);
-    deleteComment(selectedComment.commentId);
+    deleteComment(
+        selectedComment.commentId,
+        {
+            skipConfirm:true
+        }
+    );
 }
 
 function isTextEditingTarget(target){
@@ -1838,21 +2224,53 @@ function isTextEditingTarget(target){
 
 
 // PDF.js 문서 위에 댓글 위치 또는 선택 영역 하이라이트를 표시한다.
-function drawHighlights(comments){
+function drawHighlights(comments, pageNumbers){
 	
     const viewer =
         document.getElementById('pdfViewer');
 
     const viewerWindow =
         viewer.contentWindow;
+    const pageNumberSet =
+        pageNumbers && pageNumbers.size > 0
+        ? new Set(
+            Array.from(pageNumbers)
+            .map(Number)
+        )
+        : null;
+    if(pageNumberSet){
+        pageNumberSet.forEach(pageNumber => {
+            const page =
+                viewerWindow.document.querySelector(
+                    '[data-page-number="' + pageNumber + '"]'
+                );
 
-	viewerWindow.document
-	    .querySelectorAll(
-	        '.pdf-comment-highlight, .pdf-comment-preview'
-	    )
-	    .forEach(e => e.remove());
+            if(!page){
+                return;
+            }
+
+            page.querySelectorAll(
+                '.pdf-comment-highlight, .pdf-comment-preview, '
+                + '.pdf-text-highlight-selection-outline, '
+                + '.pdf-comment-hover-popup'
+            ).forEach(e => e.remove());
+        });
+    }else{
+        viewerWindow.document
+            .querySelectorAll(
+                '.pdf-comment-highlight, .pdf-comment-preview, '
+                + '.pdf-text-highlight-selection-outline, '
+                + '.pdf-comment-hover-popup'
+            )
+            .forEach(e => e.remove());
+    }
 
     comments.forEach(comment => {
+
+        if(pageNumberSet
+                && !pageNumberSet.has(Number(comment.pageNum))){
+            return;
+        }
 
 		if(
 		    comment.commentType !== 'TEXT'
@@ -1874,6 +2292,21 @@ function drawHighlights(comments){
             return;
         }
 
+        if(comment.commentType === 'TEXT'){
+            const textRects =
+                parseTextHighlightRects(comment.drawingPath);
+
+            if(textRects.length > 0){
+                drawTextHighlightFragments(
+                    comment,
+                    page,
+                    viewerWindow,
+                    textRects
+                );
+                return;
+            }
+        }
+
         const highlight =
             viewerWindow.document.createElement('div');
 
@@ -1882,6 +2315,8 @@ function drawHighlights(comments){
 			
 		highlight.dataset.commentId =
 		    comment.commentId;
+        highlight.dataset.commentType =
+            comment.commentType;
 
 		highlight.style.pointerEvents =
 		    'auto';
@@ -1919,10 +2354,41 @@ function drawHighlights(comments){
 		if(comment.commentType === 'TEXT'){
 
 		    highlight.style.background =
-		        'yellow';
+		        '#ffcca2';
+            highlight.style.mixBlendMode =
+                'darken';
 
 		    highlight.style.opacity =
-		        '0.4';
+		        '1';
+
+            const textBounds =
+                getExpandedTextHighlightRect(
+                    {
+                        x:Number(comment.rectX),
+                        y:Number(comment.rectY),
+                        w:Number(comment.rectW),
+                        h:Number(comment.rectH)
+                    },
+                    page
+                );
+            highlight.style.left =
+                (textBounds.x * 100) + '%';
+            highlight.style.top =
+                (textBounds.y * 100) + '%';
+            highlight.style.width =
+                (textBounds.w * 100) + '%';
+            highlight.style.height =
+                (textBounds.h * 100) + '%';
+            storeTextHighlightBounds(
+                highlight,
+                textBounds
+            );
+
+            attachCommentHoverPopup(
+                highlight,
+                comment,
+                viewerWindow
+            );
 
 		}
 		else if(comment.commentType === 'RECT'){
@@ -1996,10 +2462,9 @@ function drawHighlights(comments){
 		else if(comment.commentType === 'CALLOUT'){
 
 		    const icon =
-		        viewerWindow.document.createElement('span');
-
-		    icon.innerHTML = '&#128172;';
-		    icon.className = 'pdf-callout-icon';
+		        createCalloutIconElement(
+                    viewerWindow.document
+                );
 
 		    const popup =
 		        viewerWindow.document.createElement('div');
@@ -2024,7 +2489,7 @@ function drawHighlights(comments){
 
 		    popupUser.style.fontWeight = 'bold';
 		    popupUser.style.marginBottom = '8px';
-		    popupUser.textContent = comment.userId;
+		    popupUser.textContent = comment.userName || comment.userId;
 
 		    const popupText =
 		        viewerWindow.document.createElement('div');
@@ -2039,7 +2504,7 @@ function drawHighlights(comments){
 		    highlight.style.background = 'transparent';
 		    highlight.style.border = 'none';
 		    highlight.style.fontSize = '28px';
-		    highlight.style.color = '#8b5cf6';
+		    highlight.style.color = '#e11d2e';
 		    highlight.style.width = '30px';
 		    highlight.style.height = '30px';
 		    highlight.style.overflow = 'visible';
@@ -2073,6 +2538,336 @@ function drawHighlights(comments){
         selectHighlight(selectedCommentId);
     }
 
+}
+
+function scheduleHighlightRedraw(delay, pageNumber){
+    clearTimeout(highlightRedrawTimer);
+
+    if(Number.isFinite(Number(pageNumber))
+            && !highlightRedrawFull){
+        highlightRedrawPages.add(Number(pageNumber));
+    }else{
+        highlightRedrawFull = true;
+        highlightRedrawPages.clear();
+    }
+
+    highlightRedrawTimer = setTimeout(function(){
+        requestAnimationFrame(function(){
+            const pageNumbers =
+                highlightRedrawFull
+                ? null
+                : new Set(highlightRedrawPages);
+
+            highlightRedrawFull = false;
+            highlightRedrawPages.clear();
+
+            drawHighlights(loadedComments, pageNumbers);
+        });
+    }, delay || 40);
+}
+
+function drawTextHighlightFragments(
+        comment,
+        page,
+        viewerWindow,
+        textRects){
+
+    textRects.forEach(rect => {
+        const textBounds =
+            getExpandedTextHighlightRect(
+                rect,
+                page
+            );
+        const highlight =
+            viewerWindow.document.createElement('div');
+
+        highlight.className =
+            'pdf-comment-highlight pdf-text-highlight-fragment';
+        highlight.dataset.commentId =
+            comment.commentId;
+        highlight.dataset.commentType =
+            comment.commentType;
+        highlight.style.position =
+            'absolute';
+        highlight.style.left =
+            (textBounds.x * 100) + '%';
+        highlight.style.top =
+            (textBounds.y * 100) + '%';
+        highlight.style.width =
+            (textBounds.w * 100) + '%';
+        highlight.style.height =
+            (textBounds.h * 100) + '%';
+        storeTextHighlightBounds(
+            highlight,
+            textBounds
+        );
+        highlight.style.background =
+            '#ffcca2';
+        highlight.style.mixBlendMode =
+            'darken';
+        highlight.style.opacity =
+            '1';
+        highlight.style.pointerEvents =
+            'auto';
+
+        highlight.onclick = function(){
+            moveToComment(
+                comment.commentId,
+                comment.pageNum,
+                comment.posY
+            );
+        };
+
+        attachCommentHoverPopup(
+            highlight,
+            comment,
+            viewerWindow
+        );
+
+        page.appendChild(highlight);
+    });
+}
+
+function storeTextHighlightBounds(target, bounds){
+    target.dataset.highlightX = String(bounds.x);
+    target.dataset.highlightY = String(bounds.y);
+    target.dataset.highlightW = String(bounds.w);
+    target.dataset.highlightH = String(bounds.h);
+}
+
+function readTextHighlightBounds(target){
+    const x =
+        Number(target.dataset.highlightX);
+    const y =
+        Number(target.dataset.highlightY);
+    const w =
+        Number(target.dataset.highlightW);
+    const h =
+        Number(target.dataset.highlightH);
+
+    if(
+        !Number.isFinite(x)
+        || !Number.isFinite(y)
+        || !Number.isFinite(w)
+        || !Number.isFinite(h)
+        || w <= 0
+        || h <= 0
+    ){
+        return null;
+    }
+
+    return {
+        x:x,
+        y:y,
+        w:w,
+        h:h
+    };
+}
+
+function getExpandedTextHighlightRect(rect, page){
+    const pageRect =
+        page && page.getBoundingClientRect
+        ? page.getBoundingClientRect()
+        : null;
+    const horizontalPadding =
+        pageRect && pageRect.width > 0
+        ? 12 / pageRect.width
+        : 0;
+    const verticalPadding =
+        pageRect && pageRect.height > 0
+        ? 1.5 / pageRect.height
+        : 0;
+    const verticalOffset =
+        pageRect && pageRect.height > 0
+        ? 3 / pageRect.height
+        : 0;
+    const x1 =
+        clampRatio(Number(rect.x) - horizontalPadding);
+    const y1 =
+        clampRatio(
+            Number(rect.y)
+            - verticalPadding
+            - verticalOffset
+        );
+    const x2 =
+        clampRatio(
+            Number(rect.x)
+            + Number(rect.w)
+            + horizontalPadding
+        );
+    const y2 =
+        clampRatio(
+            Number(rect.y)
+            + Number(rect.h)
+            + verticalPadding
+            - verticalOffset
+        );
+
+    return {
+        x:x1,
+        y:y1,
+        w:Math.max(0.001, x2 - x1),
+        h:Math.max(0.001, y2 - y1)
+    };
+}
+
+function parseTextHighlightRects(drawingPath){
+    if(!drawingPath){
+        return [];
+    }
+
+    try{
+        const data = JSON.parse(drawingPath);
+        const rects =
+            Array.isArray(data)
+            ? data
+            : data && Array.isArray(data.rects)
+                ? data.rects
+                : [];
+
+        return rects.filter(rect =>
+            Number.isFinite(Number(rect.x))
+            && Number.isFinite(Number(rect.y))
+            && Number.isFinite(Number(rect.w))
+            && Number.isFinite(Number(rect.h))
+            && Number(rect.w) > 0
+            && Number(rect.h) > 0
+        ).map(rect => ({
+            x:Number(rect.x),
+            y:Number(rect.y),
+            w:Number(rect.w),
+            h:Number(rect.h)
+        }));
+    }catch(error){
+        return [];
+    }
+}
+
+function attachCommentHoverPopup(
+        highlight,
+        comment,
+        viewerWindow){
+
+    const hoverText =
+        String(
+            comment.commentText
+            || comment.selectedText
+            || ''
+        ).trim();
+
+    if(!hoverText){
+        return;
+    }
+
+    const popup =
+        viewerWindow.document.createElement('div');
+
+    popup.className = 'pdf-comment-hover-popup';
+    popup.innerHTML =
+        '<div class="pdf-comment-hover-author">'
+        + escapeHtml(comment.userName || comment.userId)
+        + '</div>'
+        + '<div class="pdf-comment-hover-text">'
+        + escapeHtml(hoverText)
+        + '</div>';
+
+    highlight.addEventListener('mouseenter', function(){
+        const page =
+            highlight.closest('.page');
+
+        if(!page){
+            return;
+        }
+
+        if(!popup.isConnected){
+            page.appendChild(popup);
+        }
+
+        popup.classList.add('visible');
+        positionCommentHoverPopup(popup, highlight);
+    });
+
+    highlight.addEventListener('mouseleave', function(){
+        popup.classList.remove('visible');
+    });
+}
+
+function positionCommentHoverPopup(popup, highlight){
+    const page =
+        highlight.closest('.page');
+
+    if(!page){
+        return;
+    }
+
+    const pageRect =
+        page.getBoundingClientRect();
+    const highlightRect =
+        highlight.getBoundingClientRect();
+    const pagePadding = 8;
+    const popupWidth =
+        Math.max(
+            220,
+            Math.min(330, pageRect.width - (pagePadding * 2))
+        );
+    const preferredLeft =
+        highlightRect.left;
+    const clampedLeft =
+        Math.min(
+            Math.max(
+                preferredLeft,
+                pageRect.left + pagePadding
+            ),
+            pageRect.right - popupWidth - pagePadding
+        );
+
+    popup.style.width = popupWidth + 'px';
+    popup.style.left =
+        (clampedLeft - pageRect.left) + 'px';
+    popup.style.right = 'auto';
+    popup.style.top =
+        (highlightRect.bottom - pageRect.top + 4) + 'px';
+    popup.style.bottom = 'auto';
+
+    const popupRect =
+        popup.getBoundingClientRect();
+    const fitsAbove =
+        highlightRect.top
+        - popupRect.height
+        - 4
+        >= pageRect.top + pagePadding;
+
+    if(popupRect.bottom > pageRect.bottom - pagePadding
+            && fitsAbove){
+        popup.style.top =
+            (
+                highlightRect.top
+                - pageRect.top
+                - popupRect.height
+                - 4
+            ) + 'px';
+    }
+}
+
+function createCalloutIconElement(viewerDocument){
+    const icon =
+        viewerDocument.createElement('span');
+
+    icon.className = 'pdf-callout-icon';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.innerHTML = getCalloutIconSvg();
+
+    return icon;
+}
+
+function getCalloutIconSvg(){
+    return '<svg viewBox="0 0 32 32" focusable="false">'
+        + '<path class="pdf-callout-icon-fill" d="M5 6.5h22v14H14.5L7 26.5v-6H5z"></path>'
+        + '<path class="pdf-callout-icon-stroke" d="M5 6.5h22v14H14.5L7 26.5v-6H5z"></path>'
+        + '<circle cx="12" cy="13.8" r="1.6"></circle>'
+        + '<circle cx="16" cy="13.8" r="1.6"></circle>'
+        + '<circle cx="20" cy="13.8" r="1.6"></circle>'
+        + '</svg>';
 }
 
 // 작성자가 말풍선 아이콘을 끌어 PDF 페이지 안에서 위치를 변경한다.
@@ -2512,6 +3307,40 @@ function drawSelectedCommentPreview(commentData){
         return;
     }
 
+    if(commentData.commentType === 'TEXT'){
+        const textRects =
+            parseTextHighlightRects(commentData.drawingPath);
+
+        if(textRects.length > 0){
+            textRects.forEach(rect => {
+                const textBounds =
+                    getExpandedTextHighlightRect(rect, page);
+                const fragment =
+                    viewerWindow.document.createElement('div');
+
+                fragment.className =
+                    'pdf-comment-preview pdf-text-highlight-preview';
+                fragment.style.position = 'absolute';
+                fragment.style.left =
+                    (textBounds.x * 100) + '%';
+                fragment.style.top =
+                    (textBounds.y * 100) + '%';
+                fragment.style.width =
+                    (textBounds.w * 100) + '%';
+                fragment.style.height =
+                    (textBounds.h * 100) + '%';
+                fragment.style.background =
+                    '#ffcca2';
+                fragment.style.mixBlendMode = 'darken';
+                fragment.style.pointerEvents = 'none';
+                fragment.style.zIndex = '1000';
+
+                page.appendChild(fragment);
+            });
+            return;
+        }
+    }
+
     const preview =
         viewerWindow.document.createElement('div');
 
@@ -2525,14 +3354,27 @@ function drawSelectedCommentPreview(commentData){
     preview.style.zIndex = '1000';
 
     if(commentData.commentType === 'TEXT'){
+        const textBounds =
+            getExpandedTextHighlightRect(
+                {
+                    x:Number(commentData.rectX),
+                    y:Number(commentData.rectY),
+                    w:Number(commentData.rectW),
+                    h:Number(commentData.rectH)
+                },
+                page
+            );
         preview.style.left =
-            ((commentData.rectX * 100) - 0.3) + '%';
+            (textBounds.x * 100) + '%';
+        preview.style.top =
+            (textBounds.y * 100) + '%';
         preview.style.width =
-            ((commentData.rectW * 100) + 0.5) + '%';
+            (textBounds.w * 100) + '%';
         preview.style.height =
-            (commentData.rectH * 100) + '%';
-        preview.style.background = 'yellow';
-        preview.style.opacity = '0.4';
+            (textBounds.h * 100) + '%';
+        preview.style.background = '#ffcca2';
+        preview.style.mixBlendMode = 'darken';
+        preview.style.opacity = '1';
         preview.style.pointerEvents = 'none';
     }
 
@@ -2552,12 +3394,13 @@ function drawSelectedCommentPreview(commentData){
     }
 
     if(commentData.commentType === 'CALLOUT'){
-        preview.innerHTML = '&#128172;';
+        preview.classList.add('pdf-callout-icon');
+        preview.innerHTML = getCalloutIconSvg();
         preview.style.width = '30px';
         preview.style.height = '30px';
         preview.style.fontSize = '28px';
         preview.style.lineHeight = '30px';
-        preview.style.color = '#8b5cf6';
+        preview.style.color = '#e11d2e';
         preview.style.pointerEvents = 'none';
     }
 
@@ -2748,16 +3591,16 @@ function moveToComment(commentId,pageNum,posY){
     document.querySelectorAll('.comment-item')
         .forEach(item => item.classList.remove('selected-comment'));
 
-    document.querySelectorAll('.comment-item')
-        .forEach(item => {
+    const commentItem =
+        document.querySelector(
+            '.comment-item[data-comment-id="'
+            + commentId
+            + '"]'
+        );
 
-            if(item.getAttribute('onclick')
-                .includes('moveToComment(' + commentId + ',')){
-
-                item.classList.add('selected-comment');
-            }
-
-        });
+    if(commentItem){
+        commentItem.classList.add('selected-comment');
+    }
 
     const viewerWindow =
         document.getElementById('pdfViewer').contentWindow;
@@ -2797,12 +3640,25 @@ function selectHighlight(commentId){
         document.getElementById('pdfViewer').contentWindow;
 
     viewerWindow.document
+        .querySelectorAll('.pdf-text-highlight-selection-outline')
+        .forEach(item => item.remove());
+
+    viewerWindow.document
         .querySelectorAll('.pdf-comment-highlight')
         .forEach(item => {
 
+            item.classList.remove('selected-pdf-comment-highlight');
             item.style.outline = '';
             item.style.outlineOffset = '';
             item.style.filter = '';
+            item.style.boxShadow = '';
+            clearTextHighlightSelectionBorder(item);
+            if(item.dataset.commentType === 'TEXT'){
+                item.style.background =
+                    '#ffcca2';
+                item.style.mixBlendMode =
+                    'darken';
+            }
             item.querySelectorAll(
                 '.pdf-rect-resize-handle'
             ).forEach(handle => {
@@ -2811,26 +3667,256 @@ function selectHighlight(commentId){
 
         });
 
-    const target =
-        viewerWindow.document.querySelector(
+    const targets =
+        viewerWindow.document.querySelectorAll(
             '[data-comment-id="' + commentId + '"]'
         );
 
-    if(target){
+    const targetList =
+        Array.from(targets);
+    const textTargets =
+        targetList.filter(target =>
+            target.dataset.commentType === 'TEXT'
+        );
 
-        target.style.outline =
-            '4px solid #ff1f1f';
-        target.style.outlineOffset = '2px';
-        target.style.filter =
-            'drop-shadow(0 0 2px rgba(255,31,31,.75))';
+    targetList.forEach(target => {
+        target.classList.add('selected-pdf-comment-highlight');
+
+        if(target.dataset.commentType === 'TEXT'){
+            target.style.background =
+                '#ffcca2';
+            target.style.mixBlendMode =
+                'darken';
+        }else{
+            target.style.outline =
+                '1px solid #ff1f1f';
+            target.style.outlineOffset = '2px';
+            target.style.filter =
+                'drop-shadow(0 0 1px rgba(255,31,31,.45))';
+            target.style.boxShadow =
+                '0 0 0 1px rgba(255,31,31,.55)';
+        }
+
         target.querySelectorAll(
             '.pdf-rect-resize-handle'
         ).forEach(handle => {
             handle.style.display = 'block';
         });
 
+    });
+
+    applyTextHighlightSelectionBorder(textTargets);
+
+}
+
+function clearTextHighlightSelectionBorder(target){
+    if(!target || target.dataset.commentType !== 'TEXT'){
+        return;
     }
 
+    target.style.borderColor = '';
+    target.style.borderStyle = '';
+    target.style.borderWidth = '';
+    target.style.borderRadius = '';
+    target.style.boxSizing = '';
+}
+
+function applyTextHighlightSelectionBorder(targets){
+    if(!targets || targets.length === 0){
+        return;
+    }
+
+    const page =
+        targets[0].closest('.page');
+
+    if(!page){
+        return;
+    }
+
+    const pageWidth =
+        page.clientWidth;
+    const pageHeight =
+        page.clientHeight;
+
+    if(pageWidth <= 0 || pageHeight <= 0){
+        return;
+    }
+
+    const normalizedRows =
+        mergeLineRects(
+            targets
+                .map(readTextHighlightBounds)
+                .filter(Boolean)
+        );
+
+    if(normalizedRows.length === 0){
+        return;
+    }
+
+    const rowBounds =
+        normalizedRows.map(rect => ({
+            left:rect.x * pageWidth,
+            top:rect.y * pageHeight,
+            right:(rect.x + rect.w) * pageWidth,
+            bottom:(rect.y + rect.h) * pageHeight
+        }));
+    const outline =
+        page.ownerDocument.createElementNS(
+            'http://www.w3.org/2000/svg',
+            'svg'
+        );
+    const path =
+        page.ownerDocument.createElementNS(
+            'http://www.w3.org/2000/svg',
+            'path'
+        );
+
+    outline.classList.add(
+        'pdf-text-highlight-selection-outline'
+    );
+    outline.setAttribute(
+        'viewBox',
+        '0 0 ' + pageWidth + ' ' + pageHeight
+    );
+    outline.setAttribute('preserveAspectRatio', 'none');
+    outline.style.position = 'absolute';
+    outline.style.inset = '0';
+    outline.style.width = '100%';
+    outline.style.height = '100%';
+    outline.style.overflow = 'visible';
+    outline.style.pointerEvents = 'none';
+    outline.style.zIndex = '1002';
+
+    path.setAttribute(
+        'd',
+        buildTextHighlightOutlinePath(
+            rowBounds,
+            pageWidth,
+            pageHeight
+        )
+    );
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke', '#1473e6');
+    path.setAttribute('stroke-width', '2');
+    path.setAttribute('stroke-linejoin', 'round');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('vector-effect', 'non-scaling-stroke');
+
+    outline.appendChild(path);
+    page.appendChild(outline);
+}
+
+function buildTextHighlightOutlinePath(
+        rows,
+        pageWidth,
+        pageHeight){
+    if(!rows || rows.length === 0){
+        return '';
+    }
+
+    const horizontalPadding = 0;
+    const topPadding = 0;
+    const bottomPadding = 0;
+    const minimumX = 1;
+    const minimumY = 1;
+    const maximumX =
+        Number.isFinite(pageWidth)
+        ? Math.max(minimumX, pageWidth - 1)
+        : Number.POSITIVE_INFINITY;
+    const maximumY =
+        Number.isFinite(pageHeight)
+        ? Math.max(minimumY, pageHeight - 1)
+        : Number.POSITIVE_INFINITY;
+    const sorted =
+        rows
+            .map(row => ({
+                left:Math.max(
+                    minimumX,
+                    row.left - horizontalPadding
+                ),
+                top:Math.max(
+                    minimumY,
+                    row.top - topPadding
+                ),
+                right:Math.min(
+                    maximumX,
+                    row.right + horizontalPadding
+                ),
+                bottom:Math.min(
+                    maximumY,
+                    row.bottom + bottomPadding
+                )
+            }))
+            .sort((a, b) =>
+                a.top - b.top || a.left - b.left
+            );
+
+    if(sorted.length === 1){
+        const row = sorted[0];
+
+        return [
+            'M' + row.left.toFixed(2)
+                + ' ' + row.top.toFixed(2),
+            'L' + row.right.toFixed(2)
+                + ' ' + row.top.toFixed(2),
+            'L' + row.right.toFixed(2)
+                + ' ' + row.bottom.toFixed(2),
+            'L' + row.left.toFixed(2)
+                + ' ' + row.bottom.toFixed(2),
+            'Z'
+        ].join(' ');
+    }
+
+    const boundaries =
+        sorted.slice(0, -1).map((row, index) =>
+            (row.bottom + sorted[index + 1].top) / 2
+        );
+    const points = [
+        [sorted[0].left, sorted[0].top],
+        [sorted[0].right, sorted[0].top]
+    ];
+
+    sorted.forEach((row, index) => {
+        const bottom =
+            index < boundaries.length
+            ? boundaries[index]
+            : row.bottom;
+
+        points.push([row.right, bottom]);
+
+        if(index < sorted.length - 1){
+            points.push([sorted[index + 1].right, bottom]);
+        }
+    });
+
+    points.push([
+        sorted[sorted.length - 1].left,
+        sorted[sorted.length - 1].bottom
+    ]);
+
+    for(let index = sorted.length - 1; index >= 0; index--){
+        const row = sorted[index];
+        const top =
+            index > 0
+            ? boundaries[index - 1]
+            : row.top;
+
+        points.push([row.left, top]);
+
+        if(index > 0){
+            points.push([sorted[index - 1].left, top]);
+        }
+    }
+
+    return points
+        .map((point, index) =>
+            (index === 0 ? 'M' : 'L')
+            + point[0].toFixed(2)
+            + ' '
+            + point[1].toFixed(2)
+        )
+        .join(' ')
+        + ' Z';
 }
 
 function clearSelectedComment(){
@@ -2873,10 +3959,14 @@ function renderReplies(commentId, replies){
                     + reply.replyId + ',' + commentId + ')">수정</button>'
                     + '<button class="reply-action-btn" id="replySaveBtn-' + reply.replyId + '"'
                     + ' style="display:none;"'
+                    + ' onmousedown="prepareReplyBlurAction('
+                    + reply.replyId + ',\'save\')"'
                     + ' onclick="event.stopPropagation();saveReply('
                     + reply.replyId + ',' + commentId + ')">저장</button>'
                     + '<button class="reply-action-btn" id="replyCancelBtn-' + reply.replyId + '"'
                     + ' style="display:none;"'
+                    + ' onmousedown="prepareReplyBlurAction('
+                    + reply.replyId + ',\'cancel\')"'
                     + ' onclick="event.stopPropagation();cancelEditReply('
                     + reply.replyId + ',' + commentId + ')">취소</button>'
                     + '<button class="reply-action-btn danger" onclick="event.stopPropagation();deleteReply('
@@ -2890,7 +3980,7 @@ function renderReplies(commentId, replies){
 			    + '<div class="reply-header">'
 			    + createUserAvatar(reply.userId, 'reply-avatar')
 			    + '<b>'
-			    + reply.userId
+			    + escapeHtml(reply.userName || reply.userId)
 			    + '</b>'
 			    + ' <span class="reply-date">'
 			    + formatCommentDate(reply.createDt)
@@ -2901,6 +3991,21 @@ function renderReplies(commentId, replies){
 			    + ' class="comment-attachment-list reply-attachment-list"></div>'
 			    + '<textarea id="replyEditText-' + reply.replyId + '"'
 			    + ' style="display:none;"></textarea>'
+                + '<div id="replyEditAttachmentZone-' + reply.replyId + '"'
+                + ' class="edit-attachment-zone" style="display:none;"'
+                + ' onclick="event.stopPropagation();">'
+                + '<div class="edit-attachment-tools">'
+                + '<label for="replyEditAttachments-' + reply.replyId + '"'
+                + ' class="attachment-select-btn">'
+                + '<i class="fa-solid fa-paperclip"></i> 파일 선택'
+                + '</label>'
+                + '<input id="replyEditAttachments-' + reply.replyId + '"'
+                + ' class="attachment-file-input" type="file" multiple>'
+                + '<span>붙여넣기 또는 끌어 놓기</span>'
+                + '</div>'
+                + '<div id="replyEditAttachmentList-' + reply.replyId + '"'
+                + ' class="reply-attachment-list"></div>'
+                + '</div>'
 			    + '<div class="reply-actions">'
 			    + ownerActions
 			    + '</div>'
@@ -2934,19 +4039,54 @@ function renderReplies(commentId, replies){
                     commentId);
             };
 
-            document.getElementById(
-                'replyEditText-' + reply.replyId
-            ).onblur = function(){
-                sendEditing(
-                    false,
-                    commentId);
-            };
-
-            setupMentionAutocomplete(
+            const replyEditText =
                 document.getElementById(
                     'replyEditText-'
                     + reply.replyId
+                );
+            replyEditText.onblur = function(){
+                sendEditing(
+                    false,
+                    commentId);
+                scheduleReplyAutoSave(
+                    reply.replyId,
+                    commentId
+                );
+            };
+            setupMentionAutocomplete(replyEditText);
+            setupClipboardImagePaste(
+                replyEditText,
+                files => addReplyEditPendingAttachments(
+                    reply.replyId,
+                    files
                 )
+            );
+            initializeEditAttachmentDrop(
+                document.getElementById(
+                    'replyEditAttachmentZone-'
+                    + reply.replyId
+                ),
+                files => addReplyEditPendingAttachments(
+                    reply.replyId,
+                    files
+                ),
+                replyEditText
+            );
+            const replyEditFileInput =
+                document.getElementById(
+                    'replyEditAttachments-'
+                    + reply.replyId
+                );
+            replyEditFileInput.onchange = function(){
+                addReplyEditPendingAttachments(
+                    reply.replyId,
+                    [...this.files]
+                );
+                this.value = '';
+                replyEditText.focus();
+            };
+            renderReplyEditPendingAttachments(
+                reply.replyId
             );
             renderAttachmentItems(
                 document.getElementById(
@@ -2969,7 +4109,12 @@ function startEditReply(replyId,commentId){
     const editText = document.getElementById(
         'replyEditText-' + replyId
     );
+    editText.dataset.originalValue = editText.value;
     setMentionInputVisible(editText, true);
+    document.getElementById(
+        'replyEditAttachmentZone-' + replyId
+    ).style.display = 'block';
+    renderReplyEditPendingAttachments(replyId);
 
     document.getElementById(
         'replySaveBtn-' + replyId
@@ -2985,6 +4130,9 @@ function startEditReply(replyId,commentId){
 
 function cancelEditReply(replyId,commentId){
 
+    replyBlurActions.delete(Number(replyId));
+    pendingReplyEditAttachments.delete(Number(replyId));
+
     const textView =
         document.getElementById(
             'replyTextView-' + replyId
@@ -2999,6 +4147,10 @@ function cancelEditReply(replyId,commentId){
     renderMentionInputHighlight(editText);
     textView.style.display = 'inline';
     setMentionInputVisible(editText, false);
+    document.getElementById(
+        'replyEditAttachmentZone-' + replyId
+    ).style.display = 'none';
+    renderReplyEditPendingAttachments(replyId);
 
     document.getElementById(
         'replySaveBtn-' + replyId
@@ -3014,6 +4166,14 @@ function cancelEditReply(replyId,commentId){
 
 function saveReply(replyId,commentId){
 
+    const normalizedReplyId = Number(replyId);
+
+    if(replySaveInProgress.has(normalizedReplyId)){
+        return;
+    }
+
+    const files =
+        pendingReplyEditAttachments.get(normalizedReplyId) || [];
     const replyText =
         document.getElementById(
             'replyEditText-' + replyId
@@ -3023,6 +4183,8 @@ function saveReply(replyId,commentId){
         alert('답글 내용을 입력해주세요.');
         return;
     }
+
+    replySaveInProgress.add(normalizedReplyId);
 
     fetch('/api/comment/reply/update',{
         method:'POST',
@@ -3035,13 +4197,25 @@ function saveReply(replyId,commentId){
         })
     })
     .then(handleJsonResponse)
-    .then(result => {
+    .then(() =>
+        uploadAttachments(
+            commentId,
+            files,
+            normalizedReplyId
+        )
+    )
+    .then(() => {
 
+        pendingReplyEditAttachments.delete(normalizedReplyId);
         sendEditing(false, commentId);
         loadReplies(commentId);
 
     })
-    .catch(showApiError);
+    .catch(showApiError)
+    .finally(() => {
+        replySaveInProgress.delete(normalizedReplyId);
+        replyBlurActions.delete(normalizedReplyId);
+    });
 
 }
 
@@ -3401,6 +4575,184 @@ function setupClipboardImagePaste(textarea, addFiles){
         event.preventDefault();
         addFiles(imageFiles);
     });
+}
+
+// 수정 중인 코멘트와 답글은 저장 전까지 별도의 첨부 대기 목록을 유지한다.
+function addCommentEditPendingAttachments(commentId, files){
+    addEditPendingAttachments(
+        pendingCommentEditAttachments,
+        Number(commentId),
+        files,
+        () => renderCommentEditPendingAttachments(commentId)
+    );
+}
+
+function addReplyEditPendingAttachments(replyId, files){
+    addEditPendingAttachments(
+        pendingReplyEditAttachments,
+        Number(replyId),
+        files,
+        () => renderReplyEditPendingAttachments(replyId)
+    );
+}
+
+function addEditPendingAttachments(
+        pendingMap,
+        itemId,
+        files,
+        render){
+
+    const savedFiles = pendingMap.get(itemId) || [];
+
+    files.forEach(file => {
+        const duplicate =
+            savedFiles.some(savedFile =>
+                savedFile.name === file.name
+                && savedFile.size === file.size
+                && savedFile.lastModified === file.lastModified);
+
+        if(!duplicate){
+            savedFiles.push(file);
+        }
+    });
+
+    if(savedFiles.length > 0){
+        pendingMap.set(itemId, savedFiles);
+    }
+
+    render();
+}
+
+function renderCommentEditPendingAttachments(commentId){
+    renderEditPendingAttachments(
+        document.getElementById(
+            'commentEditAttachmentList-' + commentId
+        ),
+        pendingCommentEditAttachments,
+        Number(commentId),
+        () => renderCommentEditPendingAttachments(commentId)
+    );
+}
+
+function renderReplyEditPendingAttachments(replyId){
+    renderEditPendingAttachments(
+        document.getElementById(
+            'replyEditAttachmentList-' + replyId
+        ),
+        pendingReplyEditAttachments,
+        Number(replyId),
+        () => renderReplyEditPendingAttachments(replyId)
+    );
+}
+
+function renderEditPendingAttachments(
+        container,
+        pendingMap,
+        itemId,
+        render){
+
+    if(!container){
+        return;
+    }
+
+    const files = pendingMap.get(itemId) || [];
+    container.replaceChildren();
+
+    files.forEach((file, index) => {
+        const item = document.createElement('span');
+        const name = document.createElement('span');
+        const remove = document.createElement('button');
+
+        item.className = 'selected-attachment';
+        name.textContent = file.name;
+        remove.type = 'button';
+        remove.textContent = '×';
+        remove.title = '첨부 취소';
+        remove.addEventListener('mousedown', event =>
+            event.preventDefault());
+        remove.addEventListener('click', function(event){
+            event.stopPropagation();
+            files.splice(index, 1);
+
+            if(files.length === 0){
+                pendingMap.delete(itemId);
+            }
+
+            render();
+        });
+
+        item.append(name, remove);
+        container.appendChild(item);
+    });
+}
+
+// 외부 파일을 끌 때 textarea가 포커스를 잃어도 수정 모드를 유지한다.
+function initializeEditAttachmentDrop(
+        zone,
+        addFiles,
+        editText){
+
+    if(!zone || zone.dataset.dropReady === 'true'){
+        return;
+    }
+
+    zone.dataset.dropReady = 'true';
+    let dragDepth = 0;
+    const targets = [zone, editText].filter(Boolean);
+
+    zone.addEventListener('mousedown', function(){
+        markEditAttachmentInteraction(zone);
+    });
+    zone.addEventListener('click', function(){
+        markEditAttachmentInteraction(zone);
+    });
+
+    targets.forEach(target => {
+        target.addEventListener('dragenter', function(event){
+            event.preventDefault();
+            event.stopPropagation();
+            markEditAttachmentInteraction(zone);
+            dragDepth++;
+            zone.classList.add('attachment-drag-over');
+        });
+
+        target.addEventListener('dragover', function(event){
+            event.preventDefault();
+            event.stopPropagation();
+            event.dataTransfer.dropEffect = 'copy';
+        });
+
+        target.addEventListener('dragleave', function(event){
+            event.preventDefault();
+            event.stopPropagation();
+            dragDepth--;
+
+            if(dragDepth <= 0){
+                dragDepth = 0;
+                zone.classList.remove('attachment-drag-over');
+            }
+        });
+
+        target.addEventListener('drop', function(event){
+            event.preventDefault();
+            event.stopPropagation();
+            markEditAttachmentInteraction(zone);
+            dragDepth = 0;
+            zone.classList.remove('attachment-drag-over');
+            addFiles([...event.dataTransfer.files]);
+            editText?.focus();
+        });
+    });
+}
+
+function markEditAttachmentInteraction(
+        zone,
+        duration = 1500){
+
+    if(zone){
+        zone.dataset.autoSaveBlockedUntil =
+            String(Date.now() + duration);
+    }
 }
 
 function setupMentionAutocomplete(textarea){
@@ -3854,12 +5206,36 @@ function hideAttachmentImagePreview(){
     preview.setAttribute('aria-hidden', 'true');
 }
 
-function downloadCurrentPdf(){
-    window.location.href =
-        '/api/drive/pdf/download?fileId='
-        + encodeURIComponent(fileId);
+// 현재 댓글 좌표를 표준 PDF 주석으로 합친 새 PDF를 생성해 내려받는다.
+function downloadCurrentPdf(button){
+    if(!currentPdfId){
+        alert('PDF 정보를 불러오는 중입니다.');
+        return;
+    }
+
+    const activePdf =
+        document.querySelector(
+            '#folderTree a.active-pdf'
+        );
+    const pdfFileName =
+        activePdf
+        ? activePdf.textContent.trim()
+        : 'PDF';
+
+    downloadBinaryFile(
+        '/api/comment/pdf/export?pdfId='
+        + encodeURIComponent(currentPdfId)
+        + '&fileId='
+        + encodeURIComponent(fileId)
+        + '&fileName='
+        + encodeURIComponent(pdfFileName),
+        'PDF 다운로드에 실패했습니다.',
+        button,
+        'PDF 생성 중...'
+    );
 }
 
+// 댓글, 답글과 첨부 이미지를 검토 가능한 Excel 목록으로 내려받는다.
 function exportCommentsToExcel(){
 
     if(!currentPdfId){
@@ -3876,11 +5252,106 @@ function exportCommentsToExcel(){
         ? activePdf.textContent.trim()
         : 'PDF';
 
-    window.location.href =
+    downloadBinaryFile(
         '/api/comment/export?pdfId='
         + encodeURIComponent(currentPdfId)
         + '&fileName='
-        + encodeURIComponent(pdfFileName);
+        + encodeURIComponent(pdfFileName),
+        'Excel 다운로드에 실패했습니다.'
+    );
+}
+
+/*
+ * 두 내보내기 버튼이 공유하는 다운로드 처리.
+ * fetch 응답의 Content-Disposition에서 서버가 만든 파일명을 읽어 Blob으로 저장한다.
+ */
+function downloadBinaryFile(
+        url,
+        errorMessage,
+        button,
+        loadingText){
+
+    const originalHtml =
+        button ? button.innerHTML : '';
+
+    if(button){
+        button.disabled = true;
+        button.classList.add('loading');
+        button.innerHTML =
+            '<i class="fa-solid fa-spinner fa-spin"></i>'
+            + '<span>'
+            + escapeHtml(loadingText || '생성 중...')
+            + '</span>';
+    }
+
+    return fetch(url, {
+        credentials:'same-origin'
+    })
+    .then(response => {
+        if(!response.ok){
+            throw new Error(errorMessage);
+        }
+
+        const disposition =
+            response.headers.get('Content-Disposition') || '';
+        const fileName =
+            getDownloadFileName(disposition);
+
+        return response.blob()
+        .then(blob => ({
+            blob:blob,
+            fileName:fileName
+        }));
+    })
+    .then(download => {
+        const objectUrl =
+            URL.createObjectURL(download.blob);
+        const link =
+            document.createElement('a');
+
+        link.href = objectUrl;
+
+        if(download.fileName){
+            link.download = download.fileName;
+        }
+
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(objectUrl);
+    })
+    .catch(error => {
+        alert(error.message || errorMessage);
+    })
+    .finally(() => {
+        if(button){
+            button.disabled = false;
+            button.classList.remove('loading');
+            button.innerHTML = originalHtml;
+        }
+    });
+}
+
+function getDownloadFileName(contentDisposition){
+    const encodedMatch =
+        contentDisposition.match(/filename\*=UTF-8''([^;]+)/i);
+
+    if(encodedMatch){
+        try{
+            return decodeURIComponent(encodedMatch[1]);
+        }catch(error){
+            return encodedMatch[1];
+        }
+    }
+
+    const quotedMatch =
+        contentDisposition.match(/filename="([^"]+)"/i);
+
+    if(quotedMatch){
+        return quotedMatch[1];
+    }
+
+    return '';
 }
 
 function initializeCommentPanelResize(){
@@ -3974,11 +5445,22 @@ function initializeCommentPanelResize(){
     });
 }
 
-// 같은 PDF를 보고 있는 사용자와 댓글 편집 상태를 WebSocket으로 동기화한다.
+/*
+ * 같은 PDF를 보고 있는 사용자와 댓글 편집 상태를 WebSocket으로 동기화한다.
+ * WebSocket에는 댓글 본문 전체를 싣지 않고 COMMENT_CHANGED 신호만 전달한다.
+ * 신호를 받은 화면은 loadComments()로 DB의 최신 내용을 다시 읽는다.
+ */
 function connectCollaboration(){
 
     if(!currentPdfId){
         return;
+    }
+
+    collaborationClosedByPage = false;
+
+    if(collaborationReconnectTimer){
+        clearTimeout(collaborationReconnectTimer);
+        collaborationReconnectTimer = null;
     }
 
     if(collaborationSocket
@@ -3992,7 +5474,7 @@ function connectCollaboration(){
         ? 'wss:'
         : 'ws:';
 
-    collaborationSocket =
+    const socket =
         new WebSocket(
             protocol
             + '//'
@@ -4001,11 +5483,22 @@ function connectCollaboration(){
             + currentPdfId
         );
 
-    collaborationSocket.onmessage =
+    collaborationSocket = socket;
+
+    socket.onmessage =
     function(message){
 
-        const event =
-            JSON.parse(message.data);
+        if(socket !== collaborationSocket){
+            return;
+        }
+
+        let event = null;
+
+        try{
+            event = JSON.parse(message.data);
+        }catch(error){
+            return;
+        }
 
         if(event.type === 'COMMENT_CHANGED'){
             scheduleCommentReload();
@@ -4013,18 +5506,74 @@ function connectCollaboration(){
 
     };
 
-    collaborationSocket.onclose =
+    socket.onclose =
     function(){
 
-        setTimeout(
-            connectCollaboration,
-            2000
-        );
+        if(socket === collaborationSocket){
+            collaborationSocket = null;
+        }
 
+        scheduleCollaborationReconnect();
+
+    };
+
+    socket.onerror =
+    function(){
+        if(socket.readyState === WebSocket.OPEN
+                || socket.readyState === WebSocket.CONNECTING){
+            socket.close();
+        }
     };
 
 }
 
+// 탭이 보이는 동안만 2초 뒤 재연결해 백그라운드 탭의 불필요한 연결 반복을 막는다.
+function scheduleCollaborationReconnect(){
+
+    if(collaborationClosedByPage
+            || document.hidden
+            || collaborationReconnectTimer){
+        return;
+    }
+
+    collaborationReconnectTimer =
+        setTimeout(function(){
+            collaborationReconnectTimer = null;
+            connectCollaboration();
+        }, 2000);
+}
+
+document.addEventListener(
+    'visibilitychange',
+    function(){
+        if(!document.hidden
+                && currentPdfId
+                && (!collaborationSocket
+                    || collaborationSocket.readyState
+                    > WebSocket.OPEN)){
+            connectCollaboration();
+        }
+    }
+);
+
+window.addEventListener(
+    'beforeunload',
+    function(){
+        collaborationClosedByPage = true;
+
+        if(collaborationReconnectTimer){
+            clearTimeout(collaborationReconnectTimer);
+            collaborationReconnectTimer = null;
+        }
+
+        if(collaborationSocket){
+            collaborationSocket.close();
+            collaborationSocket = null;
+        }
+    }
+);
+
+// 짧은 시간에 변경 신호가 여러 번 와도 댓글 API는 한 번만 호출한다.
 function scheduleCommentReload(){
 
     const changeReceivedAt = Date.now();
@@ -4038,6 +5587,7 @@ function scheduleCommentReload(){
         }, 120);
 }
 
+// 편집 시작/종료 상태를 같은 PDF 방에 보내 다른 사용자의 동시 편집을 표시한다.
 function sendEditing(editing,commentId){
 
     if(!collaborationSocket
@@ -4046,14 +5596,19 @@ function sendEditing(editing,commentId){
         return;
     }
 
-    collaborationSocket.send(
-        JSON.stringify({
-            type:editing
-                ? 'EDITING_START'
-                : 'EDITING_STOP',
-            commentId:commentId
-        })
-    );
+    try{
+        collaborationSocket.send(
+            JSON.stringify({
+                type:editing
+                    ? 'EDITING_START'
+                    : 'EDITING_STOP',
+                commentId:commentId
+            })
+        );
+    }catch(error){
+        collaborationSocket = null;
+        scheduleCollaborationReconnect();
+    }
 
 }
 
@@ -4161,6 +5716,10 @@ function handleAnnotationShortcut(event){
     }
 }
 
+/*
+ * PDF.js iframe의 텍스트 선택 영역을 페이지 기준 0~1 좌표로 변환한다.
+ * 여러 줄 선택은 줄별 사각형을 drawingPath에 저장해 다시 그릴 때 빈 영역까지 칠하지 않는다.
+ */
 function getPdfTextSelection(viewerWindow){
     const selection = viewerWindow.getSelection();
 
@@ -4174,7 +5733,7 @@ function getPdfTextSelection(viewerWindow){
 
     const range = selection.getRangeAt(0);
     const startElement =
-        range.startContainer.nodeType === Node.ELEMENT_NODE
+        range.startContainer.nodeType === 1
         ? range.startContainer
         : range.startContainer.parentElement;
     const pageElement =
@@ -4184,27 +5743,197 @@ function getPdfTextSelection(viewerWindow){
         return null;
     }
 
-    const rect = range.getBoundingClientRect();
     const pageRect = pageElement.getBoundingClientRect();
+    let rects = [];
 
-    if(rect.width <= 0 || rect.height <= 0){
+    try{
+        rects =
+            getSelectionLineRects(range, pageElement, pageRect);
+    }catch(error){
+        rects = [];
+    }
+
+    if(rects.length === 0){
+        const fallbackRect =
+            toNormalizedSelectionRect(
+                range.getBoundingClientRect(),
+                pageRect
+            );
+
+        if(fallbackRect){
+            rects = [fallbackRect];
+        }
+    }
+
+    if(rects.length === 0){
         return null;
     }
+
+    const bounds =
+        getRectBounds(rects);
 
     return {
         commentType:'TEXT',
         selectedText:selection.toString().trim(),
         pageNum:Number(pageElement.dataset.pageNumber),
-        rectX:(rect.left - pageRect.left) / pageRect.width,
-        rectY:(rect.top - pageRect.top) / pageRect.height,
-        rectW:rect.width / pageRect.width,
-        rectH:rect.height / pageRect.height
+        rectX:bounds.x,
+        rectY:bounds.y,
+        rectW:bounds.w,
+        rectH:bounds.h,
+        drawingPath:JSON.stringify({
+            type:'text-highlight-rects',
+            rects:rects
+        })
+    };
+}
+
+function getSelectionLineRects(range, pageElement, pageRect){
+    const rawRects =
+        Array.from(range.getClientRects())
+        .filter(rect =>
+            rect.width > 0
+            && rect.height > 0
+            && rect.bottom >= pageRect.top
+            && rect.top <= pageRect.bottom
+            && rect.right >= pageRect.left
+            && rect.left <= pageRect.right
+        )
+        .map(rect => toNormalizedSelectionRect(rect, pageRect))
+        .filter(Boolean);
+
+    return mergeLineRects(rawRects);
+}
+
+function toNormalizedSelectionRect(rect, pageRect){
+    if(
+        !rect
+        || !pageRect
+        || pageRect.width <= 0
+        || pageRect.height <= 0
+    ){
+        return null;
+    }
+
+    const x1 =
+        clampRatio((rect.left - pageRect.left) / pageRect.width);
+    const y1 =
+        clampRatio((rect.top - pageRect.top) / pageRect.height);
+    const x2 =
+        clampRatio((rect.right - pageRect.left) / pageRect.width);
+    const y2 =
+        clampRatio((rect.bottom - pageRect.top) / pageRect.height);
+    const width = x2 - x1;
+    const height = y2 - y1;
+
+    if(width <= 0 || height <= 0){
+        return null;
+    }
+
+    return {
+        x:x1,
+        y:y1,
+        w:width,
+        h:height
+    };
+}
+
+function clampRatio(value){
+    if(!Number.isFinite(value)){
+        return 0;
+    }
+
+    return Math.min(
+        Math.max(value, 0),
+        1
+    );
+}
+
+// 같은 텍스트 줄에서 잘게 나뉜 브라우저 선택 사각형을 하나의 줄 영역으로 합친다.
+function mergeLineRects(rects){
+    const lineTolerance = 0.004;
+    const lines = [];
+
+    rects
+    .sort((a,b) => a.y - b.y || a.x - b.x)
+    .forEach(rect => {
+        const rectCenterY =
+            rect.y + (rect.h / 2);
+        const line =
+            lines.find(item =>
+                {
+                    const overlap =
+                        Math.max(
+                            0,
+                            Math.min(
+                                item.y + item.h,
+                                rect.y + rect.h
+                            )
+                            - Math.max(item.y, rect.y)
+                        );
+                    const minimumHeight =
+                        Math.min(item.h, rect.h);
+                    const centerDistance =
+                        Math.abs(
+                            (item.y + (item.h / 2))
+                            - rectCenterY
+                        );
+
+                    return (
+                        minimumHeight > 0
+                        && overlap / minimumHeight >= 0.55
+                    )
+                    || centerDistance
+                        <= Math.max(
+                            lineTolerance,
+                            minimumHeight * 0.35
+                        );
+                }
+            );
+
+        if(!line){
+            lines.push({...rect});
+            return;
+        }
+
+        const x1 = Math.min(line.x, rect.x);
+        const y1 = Math.min(line.y, rect.y);
+        const x2 = Math.max(line.x + line.w, rect.x + rect.w);
+        const y2 = Math.max(line.y + line.h, rect.y + rect.h);
+        line.x = x1;
+        line.y = y1;
+        line.w = x2 - x1;
+        line.h = y2 - y1;
+    });
+
+    return lines;
+}
+
+function getRectBounds(rects){
+    const x1 = Math.min(...rects.map(rect => rect.x));
+    const y1 = Math.min(...rects.map(rect => rect.y));
+    const x2 = Math.max(...rects.map(rect => rect.x + rect.w));
+    const y2 = Math.max(...rects.map(rect => rect.y + rect.h));
+
+    return {
+        x:x1,
+        y:y1,
+        w:x2 - x1,
+        h:y2 - y1
     };
 }
 
 function activateHighlightTool(){
     const viewer =
         document.getElementById('pdfViewer');
+
+    if(viewer.contentWindow){
+        const selectionData =
+            getPdfTextSelection(viewer.contentWindow);
+
+        if(selectionData){
+            pendingTextSelection = selectionData;
+        }
+    }
 
     if(
         pendingTextSelection
@@ -4237,6 +5966,7 @@ function applyPendingTextHighlight(viewerWindow){
     return true;
 }
 
+// 텍스트 선택 좌표를 빈 본문의 댓글로 먼저 저장한 뒤 오른쪽 편집칸을 연다.
 function saveHighlightedTextComment(highlightData){
     if(
         !highlightData
@@ -4258,14 +5988,15 @@ function saveHighlightedTextComment(highlightData){
             pageNum:highlightData.pageNum,
             posX:highlightData.rectX,
             posY:highlightData.rectY,
-            commentText:highlightData.selectedText,
+            commentText:'',
             status:'OPEN',
             commentType:'TEXT',
             selectedText:highlightData.selectedText,
             rectX:highlightData.rectX,
             rectY:highlightData.rectY,
             rectW:highlightData.rectW,
-            rectH:highlightData.rectH
+            rectH:highlightData.rectH,
+            drawingPath:highlightData.drawingPath || null
         })
     })
     .then(handleJsonResponse)
@@ -4283,25 +6014,7 @@ function saveHighlightedTextComment(highlightData){
         ).value = '';
 
         return loadComments().then(() => {
-            const commentElement =
-                document.querySelector(
-                    '[data-comment-id="'
-                    + commentId
-                    + '"]'
-                );
-
-            if(commentElement){
-                commentElement.scrollIntoView({
-                    behavior:'smooth',
-                    block:'center'
-                });
-            }
-
-            if(document.getElementById(
-                    'commentTextView-' + commentId
-            )){
-                startEditComment(Number(commentId));
-            }
+            focusCreatedAnnotationComment(commentId);
         });
     })
     .catch(error => {
@@ -4314,9 +6027,8 @@ function saveHighlightedTextComment(highlightData){
     });
 }
 
-function saveVisualAnnotationComment(
-        annotationData,
-        defaultCommentText){
+// 사각형, 말풍선, 자유 그리기 좌표를 댓글 데이터로 저장한다.
+function saveVisualAnnotationComment(annotationData){
     if(
         !annotationData
         || !currentPdfId
@@ -4337,7 +6049,7 @@ function saveVisualAnnotationComment(
             pageNum:annotationData.pageNum,
             posX:annotationData.rectX,
             posY:annotationData.rectY,
-            commentText:defaultCommentText,
+            commentText:'',
             status:'OPEN',
             commentType:annotationData.commentType,
             selectedText:annotationData.selectedText,
@@ -4363,25 +6075,7 @@ function saveVisualAnnotationComment(
         ).value = '';
 
         return loadComments().then(() => {
-            const commentElement =
-                document.querySelector(
-                    '[data-comment-id="'
-                    + commentId
-                    + '"]'
-                );
-
-            if(commentElement){
-                commentElement.scrollIntoView({
-                    behavior:'smooth',
-                    block:'center'
-                });
-            }
-
-            if(document.getElementById(
-                    'commentTextView-' + commentId
-            )){
-                startEditComment(Number(commentId));
-            }
+            focusCreatedAnnotationComment(commentId);
         });
     })
     .catch(error => {
@@ -4469,6 +6163,10 @@ function setCommentMode(mode){
 
 }
 
+/*
+ * PDF.js iframe 툴바에 MAOOM 전용 선택/텍스트/사각형/말풍선/그리기 버튼을 추가한다.
+ * PDF.js 배포 파일 자체를 크게 수정하지 않고 부모 화면에서 필요한 UI와 이벤트를 주입한다.
+ */
 function initializePdfAnnotationToolbar(viewerWindow){
 
     const viewerDocument = viewerWindow.document;
@@ -4523,6 +6221,16 @@ function initializePdfAnnotationToolbar(viewerWindow){
             border-radius:2px;
             background:#1473e6;
         }
+        .maoom-annotation-button[data-mode="CALLOUT"] {
+            color:#e11d2e;
+        }
+        .maoom-annotation-button[data-mode="CALLOUT"].active {
+            color:#c91624;
+            background:rgba(225,29,46,.12);
+        }
+        .maoom-annotation-button[data-mode="CALLOUT"].active::after {
+            background:#e11d2e;
+        }
         .maoom-annotation-button svg {
             width:20px;
             height:20px;
@@ -4538,15 +6246,85 @@ function initializePdfAnnotationToolbar(viewerWindow){
         }
         html.maoom-mode-highlight #viewerContainer,
         html.maoom-mode-highlight #viewerContainer * {
-            cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M6 20l3 3 13-13-3-3L6 20z' fill='%23ffd54f' stroke='%23555' stroke-width='1.3'/%3E%3Cpath d='M5 23h8' stroke='%23555' stroke-width='1.5'/%3E%3C/svg%3E") 5 23, text !important;
+            cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M6 20l3 3 13-13-3-3L6 20z' fill='%23ff9845' stroke='%23555' stroke-width='1.3'/%3E%3Cpath d='M5 23h8' stroke='%23555' stroke-width='1.5'/%3E%3C/svg%3E") 5 23, text !important;
         }
         html.maoom-mode-callout #viewerContainer,
         html.maoom-mode-callout #viewerContainer * {
-            cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath d='M4 4h20v15H12l-6 6v-6H4z' fill='%23fff' stroke='%236b4fd3' stroke-width='2'/%3E%3Ccircle cx='10' cy='12' r='1.3' fill='%236b4fd3'/%3E%3Ccircle cx='15' cy='12' r='1.3' fill='%236b4fd3'/%3E%3Ccircle cx='20' cy='12' r='1.3' fill='%236b4fd3'/%3E%3C/svg%3E") 5 25, crosshair !important;
+            cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath d='M4 4h20v15H12l-6 6v-6H4z' fill='%23fff' stroke='%23e11d2e' stroke-width='2'/%3E%3Ccircle cx='10' cy='12' r='1.3' fill='%23e11d2e'/%3E%3Ccircle cx='15' cy='12' r='1.3' fill='%23e11d2e'/%3E%3Ccircle cx='20' cy='12' r='1.3' fill='%23e11d2e'/%3E%3C/svg%3E") 5 25, crosshair !important;
         }
         html.maoom-mode-draw #viewerContainer,
         html.maoom-mode-draw #viewerContainer * {
             cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M5 22l2.2-6.2L19.5 3.5l5 5L12.2 20.8 5 22z' fill='%23fff' stroke='%235f6368' stroke-width='1.5'/%3E%3Cpath d='M16.5 6.5l5 5' stroke='%235f6368' stroke-width='1.5'/%3E%3C/svg%3E") 5 23, crosshair !important;
+        }
+        .pdf-comment-hover-popup {
+            position:absolute;
+            left:0;
+            top:calc(100% + 4px);
+            z-index:100000;
+            display:none;
+            width:330px;
+            min-width:220px;
+            max-width:calc(100vw - 16px);
+            margin:0;
+            padding:13px 14px 12px;
+            border:1px solid #5f5f5f;
+            border-radius:0;
+            background:#fff3ec;
+            color:#171717;
+            box-shadow:2px 3px 4px rgba(0,0,0,.38);
+            transform:none;
+            box-sizing:border-box;
+            pointer-events:none;
+            opacity:1;
+            text-align:left;
+            font-family:Arial, Helvetica, sans-serif;
+            font-style:normal;
+            font-weight:400;
+        }
+        .pdf-comment-hover-popup.visible {
+            display:block;
+        }
+        .pdf-comment-hover-author {
+            margin:0 0 10px;
+            font-weight:700;
+            font-size:12px;
+            line-height:1.25;
+            text-align:left;
+        }
+        .pdf-comment-hover-text {
+            margin:0;
+            font-size:12px;
+            line-height:1.4;
+            text-align:left;
+            white-space:pre-wrap;
+            overflow-wrap:break-word;
+        }
+        .pdf-callout-icon {
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            width:30px;
+            height:30px;
+            color:#e11d2e;
+            filter:drop-shadow(0 1px 1px rgba(0,0,0,.25));
+        }
+        .pdf-callout-icon svg {
+            display:block;
+            width:30px;
+            height:30px;
+            overflow:visible;
+        }
+        .pdf-callout-icon-fill {
+            fill:#e11d2e;
+        }
+        .pdf-callout-icon-stroke {
+            fill:none;
+            stroke:#ffffff;
+            stroke-width:2.4;
+            stroke-linejoin:round;
+        }
+        .pdf-callout-icon circle {
+            fill:#ffffff;
         }
     `;
     viewerDocument.head.appendChild(style);

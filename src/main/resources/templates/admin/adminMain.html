@@ -1,12 +1,450 @@
 <!DOCTYPE html>
-<!-- 관리자 기능의 시작 화면. -->
-<html>
+<!-- 관리자 기능을 구현하기 위한 메인 화면. -->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Maoom</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maoom 관리자</title>
+    <link rel="stylesheet" href="/user/css/UserMain.css?v=nav-align-1">
+    <link rel="stylesheet" href="/user/css/AdminMain.css?v=admin-layout-2">
+    <script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
 </head>
-<body>
-<h1>adminmain</h1>
+<body class="admin-main-body">
+
+<div class="account-actions">
+    <button class="current-user-name"
+            type="button"
+            onclick="location.href='/main'">
+        <span class="account-menu-avatar">
+            <img th:src="@{/api/user/profile-image(userId=${currentUserId})}"
+                 alt=""
+                 onerror="this.hidden=true">
+            <i class="fa-solid fa-user"></i>
+        </span>
+        <strong th:text="${currentUserName}">사용자</strong>님
+    </button>
+    <a class="admin-page-btn" href="/main">
+        <i class="fa-solid fa-house"></i>
+        메인
+    </a>
+    <form class="logout-form" action="/logout" method="post">
+        <button class="logout-btn" type="submit">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            로그아웃
+        </button>
+    </form>
+</div>
+
+<main class="admin-shell">
+    <aside class="admin-sidebar" aria-label="관리자 DB 목록">
+        <div class="admin-brand">
+            <span class="admin-brand-mark">
+                <i class="fa-solid fa-database"></i>
+            </span>
+            <strong>관리자 DB</strong>
+        </div>
+        <nav class="admin-db-nav">
+            <button class="admin-db-nav-item active" type="button">
+                <i class="fa-solid fa-palette"></i>
+                컬러체크
+            </button>
+        </nav>
+    </aside>
+
+    <section class="admin-content" aria-label="컬러체크 DB 테이블">
+        <header class="admin-content-header">
+            <div>
+                <h1>컬러체크 DB</h1>
+                <p id="colorCheckSummary">데이터를 불러오는 중입니다.</p>
+            </div>
+            <a class="admin-export-btn" href="/admin/color-check/export">
+                <i class="fa-solid fa-file-excel"></i>
+                엑셀 내보내기
+            </a>
+        </header>
+
+        <div class="admin-table-tools">
+            <label class="admin-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="colorCheckSearch"
+                       type="search"
+                       placeholder="도안명 또는 V/X 검색">
+            </label>
+        </div>
+
+        <form id="colorCheckEditForm" class="admin-edit-form">
+            <input id="colorCheckDrawingName"
+                   type="text"
+                   placeholder="도안명"
+                   autocomplete="off">
+            <select id="colorCheckValue">
+                <option value="V">V</option>
+                <option value="X">X</option>
+            </select>
+            <button id="colorCheckSave"
+                    class="admin-tool-btn primary"
+                    type="submit">
+                <i class="fa-solid fa-floppy-disk"></i>
+                저장
+            </button>
+            <button id="colorCheckCancel"
+                    class="admin-tool-btn"
+                    type="button"
+                    hidden>
+                취소
+            </button>
+            <button id="colorCheckRefresh"
+                    class="admin-tool-btn"
+                    type="button">
+                <i class="fa-solid fa-rotate-right"></i>
+                새로고침
+            </button>
+        </form>
+
+        <div class="admin-table-wrap">
+            <table class="admin-data-table">
+                <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">
+                        <button class="sort-header" type="button" data-sort-key="drawingName">
+                            도안명
+                            <span data-sort-icon="drawingName"></span>
+                        </button>
+                    </th>
+                    <th scope="col">
+                        <button class="sort-header" type="button" data-sort-key="checkValue">
+                            컬러도안
+                            <span data-sort-icon="checkValue"></span>
+                        </button>
+                    </th>
+                    <th scope="col">
+                        <button class="sort-header" type="button" data-sort-key="regDt">
+                            등록일
+                            <span data-sort-icon="regDt"></span>
+                        </button>
+                    </th>
+                    <th scope="col">관리</th>
+                </tr>
+                </thead>
+                <tbody id="colorCheckTableBody">
+                <tr>
+                    <td colspan="5" class="admin-empty-cell">
+                        데이터를 불러오는 중입니다.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script>
+const colorCheckState = {
+    items: [],
+    filteredItems: [],
+    sortKey: 'regDt',
+    sortDirection: 'desc',
+    editingName: ''
+};
+
+const tableBody =
+    document.getElementById('colorCheckTableBody');
+const summary =
+    document.getElementById('colorCheckSummary');
+const searchInput =
+    document.getElementById('colorCheckSearch');
+const refreshButton =
+    document.getElementById('colorCheckRefresh');
+const editForm =
+    document.getElementById('colorCheckEditForm');
+const drawingNameInput =
+    document.getElementById('colorCheckDrawingName');
+const checkValueSelect =
+    document.getElementById('colorCheckValue');
+const cancelButton =
+    document.getElementById('colorCheckCancel');
+
+function safeText(value){
+    return value === null || value === undefined || value === ''
+        ? '-'
+        : String(value);
+}
+
+function formatDate(value){
+    if(!value){
+        return '-';
+    }
+
+    const date = new Date(value);
+
+    if(Number.isNaN(date.getTime())){
+        return String(value).replace('T', ' ');
+    }
+
+    const pad = number => String(number).padStart(2, '0');
+    return date.getFullYear()
+        + '-'
+        + pad(date.getMonth() + 1)
+        + '-'
+        + pad(date.getDate())
+        + ' '
+        + pad(date.getHours())
+        + ':'
+        + pad(date.getMinutes());
+}
+
+function renderTable(){
+    tableBody.innerHTML = '';
+
+    if(colorCheckState.filteredItems.length === 0){
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.colSpan = 5;
+        cell.className = 'admin-empty-cell';
+        cell.textContent = '표시할 컬러체크 데이터가 없습니다.';
+        row.appendChild(cell);
+        tableBody.appendChild(row);
+        return;
+    }
+
+    colorCheckState.filteredItems.forEach((item, index) => {
+        const row = document.createElement('tr');
+        const values = [
+            index + 1,
+            safeText(item.drawingName),
+            safeText(item.checkValue),
+            formatDate(item.regDt),
+            ''
+        ];
+
+        values.forEach((value, columnIndex) => {
+            const cell = document.createElement('td');
+
+            if(columnIndex === 2){
+                const badge = document.createElement('span');
+                badge.className = 'color-check-badge '
+                    + (value === 'V' ? 'is-checked' : 'is-unchecked');
+                badge.textContent = value;
+                cell.appendChild(badge);
+            }else if(columnIndex === 4){
+                const actions = document.createElement('div');
+                actions.className = 'admin-row-actions';
+                const editButton = document.createElement('button');
+                editButton.className = 'admin-icon-btn';
+                editButton.type = 'button';
+                editButton.title = '수정';
+                editButton.innerHTML = '<i class="fa-solid fa-pen"></i>';
+                editButton.addEventListener('click', () => startEdit(item));
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'admin-icon-btn danger';
+                deleteButton.type = 'button';
+                deleteButton.title = '삭제';
+                deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+                deleteButton.addEventListener('click', () => deleteItem(item));
+                actions.appendChild(editButton);
+                actions.appendChild(deleteButton);
+                cell.appendChild(actions);
+            }else{
+                cell.textContent = value;
+            }
+
+            row.appendChild(cell);
+        });
+
+        tableBody.appendChild(row);
+    });
+}
+
+function compareText(left, right){
+    return String(left || '').localeCompare(
+        String(right || ''),
+        'ko',
+        {numeric:true, sensitivity:'base'});
+}
+
+function sortItems(items){
+    const direction = colorCheckState.sortDirection === 'asc' ? 1 : -1;
+    const key = colorCheckState.sortKey;
+
+    return [...items].sort((left, right) => {
+        let result;
+
+        if(key === 'regDt'){
+            result = new Date(left.regDt || 0) - new Date(right.regDt || 0);
+        }else{
+            result = compareText(left[key], right[key]);
+        }
+
+        return result * direction;
+    });
+}
+
+function updateSortIcons(){
+    document.querySelectorAll('[data-sort-icon]').forEach(icon => {
+        const key = icon.dataset.sortIcon;
+        icon.textContent = key === colorCheckState.sortKey
+            ? (colorCheckState.sortDirection === 'asc' ? '▲' : '▼')
+            : '';
+    });
+}
+
+function updateSummary(){
+    const total = colorCheckState.items.length;
+    const showing = colorCheckState.filteredItems.length;
+    summary.textContent = total === showing
+        ? '총 ' + total.toLocaleString('ko-KR') + '건'
+        : '총 ' + total.toLocaleString('ko-KR') + '건 중 '
+            + showing.toLocaleString('ko-KR') + '건 표시';
+}
+
+function applyFilter(){
+    const keyword = searchInput.value.trim().toLowerCase();
+
+    const filtered = keyword
+        ? colorCheckState.items.filter(item => {
+            return safeText(item.drawingName).toLowerCase().includes(keyword)
+                || safeText(item.checkValue).toLowerCase().includes(keyword);
+        })
+        : [...colorCheckState.items];
+    colorCheckState.filteredItems = sortItems(filtered);
+
+    updateSummary();
+    updateSortIcons();
+    renderTable();
+}
+
+function resetForm(){
+    colorCheckState.editingName = '';
+    drawingNameInput.value = '';
+    drawingNameInput.disabled = false;
+    checkValueSelect.value = 'V';
+    cancelButton.hidden = true;
+}
+
+function startEdit(item){
+    colorCheckState.editingName = item.drawingName || '';
+    drawingNameInput.value = item.drawingName || '';
+    drawingNameInput.disabled = true;
+    checkValueSelect.value = item.checkValue === 'X' ? 'X' : 'V';
+    cancelButton.hidden = false;
+    checkValueSelect.focus();
+}
+
+async function saveItem(event){
+    event.preventDefault();
+    const drawingName = drawingNameInput.value.trim();
+    const checkValue = checkValueSelect.value;
+
+    if(!drawingName){
+        summary.textContent = '도안명을 입력해 주세요.';
+        drawingNameInput.focus();
+        return;
+    }
+
+    try{
+        const response = await fetch('/admin/color-check/items', {
+            method:'PUT',
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                drawingName:drawingName,
+                checkValue:checkValue
+            })
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        resetForm();
+        await loadColorCheckItems();
+    }catch(error){
+        summary.textContent = error.message || '저장하지 못했습니다.';
+    }
+}
+
+async function deleteItem(item){
+    const drawingName = item.drawingName || '';
+
+    if(!drawingName || !confirm(drawingName + ' 항목을 삭제할까요?')){
+        return;
+    }
+
+    try{
+        const response = await fetch(
+            '/admin/color-check/items/' + encodeURIComponent(drawingName),
+            {method:'DELETE'});
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        if(colorCheckState.editingName === drawingName){
+            resetForm();
+        }
+
+        await loadColorCheckItems();
+    }catch(error){
+        summary.textContent = error.message || '삭제하지 못했습니다.';
+    }
+}
+
+function changeSort(key){
+    if(colorCheckState.sortKey === key){
+        colorCheckState.sortDirection =
+            colorCheckState.sortDirection === 'asc' ? 'desc' : 'asc';
+    }else{
+        colorCheckState.sortKey = key;
+        colorCheckState.sortDirection = key === 'regDt' ? 'desc' : 'asc';
+    }
+
+    applyFilter();
+}
+
+async function loadColorCheckItems(){
+    refreshButton.disabled = true;
+    summary.textContent = '데이터를 불러오는 중입니다.';
+
+    try{
+        const response = await fetch('/admin/color-check/items', {
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        colorCheckState.items = await response.json();
+        applyFilter();
+    }catch(error){
+        tableBody.innerHTML = '';
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.colSpan = 5;
+        cell.className = 'admin-empty-cell';
+        cell.textContent = '컬러체크 DB를 불러오지 못했습니다.';
+        row.appendChild(cell);
+        tableBody.appendChild(row);
+        summary.textContent = error.message || '조회 중 오류가 발생했습니다.';
+    }finally{
+        refreshButton.disabled = false;
+    }
+}
+
+searchInput.addEventListener('input', applyFilter);
+refreshButton.addEventListener('click', loadColorCheckItems);
+editForm.addEventListener('submit', saveItem);
+cancelButton.addEventListener('click', resetForm);
+document.querySelectorAll('[data-sort-key]').forEach(button => {
+    button.addEventListener('click', () => changeSort(button.dataset.sortKey));
+});
+loadColorCheckItems();
+</script>
 
 </body>
 </html>

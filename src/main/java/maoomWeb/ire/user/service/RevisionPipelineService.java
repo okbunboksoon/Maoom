@@ -27,12 +27,23 @@ import maoomWeb.ire.user.dto.RevisionOptionDto;
 import maoomWeb.ire.user.dto.RevisionRunRequest;
 import maoomWeb.ire.user.dto.RevisionRunResult;
 
+/**
+ * DITA/DITAMAP 원본에 선택된 XSL 변환을 순서대로 적용하는 정제 파이프라인이다.
+ *
+ * <p>RevisionController에서 요청을 받아 원본을 임시 작업 폴더로 복사한 뒤,
+ * {@code revision-tool/xsl}의 스타일시트를 Saxon으로 실행한다. 각 단계의 결과가
+ * 다음 단계 입력이 되며, 최종 결과와 로그만 사용자가 지정한 Output 폴더로 복사한다.</p>
+ *
+ * <p>원본 보호를 위해 Input과 Output이 서로 포함된 경로는 허용하지 않으며,
+ * 작업 완료 여부와 관계없이 임시 폴더는 마지막에 정리한다.</p>
+ */
 @Service
 public class RevisionPipelineService {
 
     private static final DateTimeFormatter RUN_FORMAT =
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss-SSS");
 
+    // 이 목록의 순서가 화면 표시 순서이자 실제 XSL 실행 순서다.
     private static final List<RevisionStep> STEPS = List.of(
         doctypeStep("DOCTYPE_REMOVE", "DOCTYPE 제거 및 Map 병합",
                 "ditamap의 DOCTYPE을 제거하고 시작 Map을 생성합니다.",
@@ -92,6 +103,10 @@ public class RevisionPipelineService {
 
     private final Path toolDirectory;
 
+    /**
+     * 클래스패스의 revision-tool을 실행 가능한 로컬 경로로 준비한다.
+     * IDE 실행은 원본 폴더를 쓰고, JAR 실행은 임시 폴더에 리소스를 풀어 사용한다.
+     */
     public RevisionPipelineService() {
         try {
             this.toolDirectory = prepareToolDirectory();
@@ -101,6 +116,7 @@ public class RevisionPipelineService {
         }
     }
 
+    /** 내부 파이프라인 정의에서 화면에 필요한 ID, 이름과 설명만 반환한다. */
     public List<RevisionOptionDto> getOptions() {
         return STEPS.stream()
             .map(step -> new RevisionOptionDto(
@@ -108,6 +124,10 @@ public class RevisionPipelineService {
             .toList();
     }
 
+    /**
+     * 경로와 단계 의존성을 검증한 뒤 선택된 XSL을 순서대로 실행한다.
+     * 예외는 화면에서 바로 표시할 수 있도록 실패 결과와 로그로 변환한다.
+     */
     public RevisionRunResult run(RevisionRunRequest request) {
         List<String> logs = new ArrayList<>();
         Path workspace = null;
@@ -125,6 +145,7 @@ public class RevisionPipelineService {
                     : input;
             validateFileNames(topicsSource);
 
+            // 원본을 직접 수정하지 않도록 실행마다 독립된 임시 작업 폴더를 만든다.
             workspace = Files.createTempDirectory("maoom-revision-");
             Path topics = workspace.resolve("topics");
             Path temp = workspace.resolve("temp");
@@ -138,6 +159,7 @@ public class RevisionPipelineService {
             Path current = findStartingMap(topics);
             List<String> completed = new ArrayList<>();
 
+            // 사용자가 선택한 단계만 실행하지만 순서는 항상 STEPS 정의를 따른다.
             for (RevisionStep step : STEPS) {
                 if (!selected.contains(step.id())) {
                     continue;
@@ -185,6 +207,7 @@ public class RevisionPipelineService {
                 completed.add(step.id());
             }
 
+            // 같은 Output을 반복 사용해도 덮어쓰지 않도록 실행 시각별 폴더를 만든다.
             Path runOutput = output.resolve(
                     "revision-" + LocalDateTime.now().format(RUN_FORMAT));
             Files.createDirectories(runOutput);
@@ -228,6 +251,10 @@ public class RevisionPipelineService {
         }
     }
 
+    /**
+     * 별도 Java 프로세스로 Saxon Transform을 실행하고 표준 출력을 로그에 모은다.
+     * 종료 코드가 0이 아니면 해당 XSL 단계 실패로 처리한다.
+     */
     private void runSaxon(
             Path workspace,
             Path source,
@@ -291,6 +318,7 @@ public class RevisionPipelineService {
         }
     }
 
+    /** 요청 단계 ID가 실제 파이프라인에 존재하는지 확인하고 중복 없는 집합으로 바꾼다. */
     private Set<String> validateOptions(List<String> requestedOptions) {
         if (requestedOptions == null || requestedOptions.isEmpty()) {
             throw new IllegalArgumentException(
@@ -310,6 +338,7 @@ public class RevisionPipelineService {
         return Set.copyOf(requestedOptions);
     }
 
+    /** 후속 단계가 필요로 하는 보조 파일 생성 단계도 함께 선택됐는지 검사한다. */
     private void validateDependencies(Set<String> selected) {
         if (selected.contains("DITA_REBEAUTIFY")
                 && !selected.contains("BOOKMAP_CREATE")) {
@@ -318,6 +347,7 @@ public class RevisionPipelineService {
         }
     }
 
+    /** Input 경로가 실제 폴더인지 확인하고 비교 가능한 절대경로로 정규화한다. */
     private Path requireDirectory(String pathText, String label) {
         if (pathText == null || pathText.isBlank()) {
             throw new IllegalArgumentException(
@@ -332,6 +362,7 @@ public class RevisionPipelineService {
         return path;
     }
 
+    /** Output 경로를 절대경로로 정규화하고 없으면 생성한다. */
     private Path requireOutputDirectory(String pathText) throws IOException {
         if (pathText == null || pathText.isBlank()) {
             throw new IllegalArgumentException(
@@ -345,6 +376,7 @@ public class RevisionPipelineService {
         return output;
     }
 
+    /** 작업 결과가 원본 안에 생성되거나 원본이 출력 안에 들어가는 위험한 경로를 막는다. */
     private void validateSeparatePaths(Path input, Path output) {
         if (input.equals(output)
                 || input.startsWith(output)
@@ -354,6 +386,7 @@ public class RevisionPipelineService {
         }
     }
 
+    /** Saxon과 DITA 참조에서 문제가 되는 공백·비 ASCII 파일명을 실행 전에 찾는다. */
     private void validateFileNames(Path topics) throws IOException {
         List<String> invalid = new ArrayList<>();
 
@@ -379,6 +412,7 @@ public class RevisionPipelineService {
         }
     }
 
+    /** 정제 파이프라인의 최초 입력으로 사용할 첫 번째 ditamap을 찾는다. */
     private Path findStartingMap(Path topics) throws IOException {
         try (Stream<Path> files = Files.list(topics)) {
             return files
@@ -394,6 +428,7 @@ public class RevisionPipelineService {
         }
     }
 
+    /** JAR 내부 revision-tool 리소스를 일반 파일처럼 실행할 수 있는 경로로 준비한다. */
     private Path prepareToolDirectory() throws IOException {
         ClassPathResource root =
                 new ClassPathResource("revision-tool");
@@ -436,6 +471,7 @@ public class RevisionPipelineService {
         return extracted;
     }
 
+    /** 원본 topics와 XSL 디렉터리를 임시 작업 공간으로 재귀 복사한다. */
     private void copyDirectory(Path source, Path target)
             throws IOException {
         Files.createDirectories(target);
@@ -457,6 +493,7 @@ public class RevisionPipelineService {
         }
     }
 
+    /** 선택 단계에서 만들어질 수도 있는 보조 결과 파일만 최종 폴더로 복사한다. */
     private void copyIfExists(Path source, Path target)
             throws IOException {
         if (Files.isRegularFile(source)) {
@@ -467,6 +504,7 @@ public class RevisionPipelineService {
         }
     }
 
+    /** 실행 성공·실패와 관계없이 임시 작업 폴더를 뒤에서부터 조용히 제거한다. */
     private void deleteDirectoryQuietly(Path path) {
         if (path == null || !Files.exists(path)) {
             return;
@@ -555,6 +593,7 @@ public class RevisionPipelineService {
                 StepMode.CHAPTER);
     }
 
+    /** 단계별 입력·출력 방식 차이를 구분한다. */
     private enum StepMode {
         TRANSFORM,
         DOCTYPE,
@@ -562,6 +601,7 @@ public class RevisionPipelineService {
         CHAPTER
     }
 
+    /** 파이프라인 한 단계의 화면 정보와 XSL 실행 설정을 함께 보관한다. */
     private record RevisionStep(
             String id,
             String label,

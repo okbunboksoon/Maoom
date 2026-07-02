@@ -46,4 +46,14 @@ public class CurrentUserService {
 
         return user.getUserName();
     }
+
+    /** ROLE_ADMIN 권한 보유 여부를 반환한다. */
+    public boolean isAdministrator(Authentication authentication) {
+        return authentication != null
+                && authentication.getAuthorities()
+                .stream()
+                .anyMatch(authority ->
+                        "ROLE_ADMIN".equals(
+                                authority.getAuthority()));
+    }
 }

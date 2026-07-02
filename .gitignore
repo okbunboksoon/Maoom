@@ -34,6 +34,7 @@ build/
 
 ### Local secrets and user data ###
 src/main/resources/application-local.properties
+config/application-local.properties
 src/main/resources/sql/migrate_user_id_and_seed_users.sql
 *.env
 .env.*

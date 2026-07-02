@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<!--
+    DITA 정제 팝업의 연결 흐름
+
+    1. 화면이 열리면 GET /api/revision/options로 실행 가능한 XSL 단계를 조회한다.
+    2. 사용자가 Input/Output 경로와 실행 단계를 선택한다.
+    3. POST /api/revision/run으로 RevisionRunRequest를 전송한다.
+    4. RevisionController가 RevisionPipelineService에 실행을 위임한다.
+    5. 서비스는 임시 작업 폴더에서 Saxon과 XSL을 순서대로 실행한다.
+    6. 결과 파일과 revision.log를 지정한 Output 아래의 실행별 폴더에 저장한다.
+
+    이 화면은 경로 입력, 단계 선택과 결과 표시만 담당한다.
+    파일 검증과 실제 XSL 실행 규칙은 RevisionPipelineService에서 관리한다.
+-->
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -27,14 +40,14 @@
         <label class="path-field" for="inputPath">
             <span>Input</span>
             <input type="text" id="inputPath"
-                   placeholder="예: F:\__dh\KUS\topics" autocomplete="off">
+                   placeholder="예: C:\Users\adobe\Desktop\task" autocomplete="off">
             <small>DITA와 DITAMAP이 있는 topics 폴더 또는 topics의 상위 폴더</small>
         </label>
 
         <label class="path-field" for="outputPath">
             <span>Output</span>
             <input type="text" id="outputPath"
-                   placeholder="예: F:\__dh\KUS\result" autocomplete="off">
+                   placeholder="예: C:\Users\adobe\Desktop\task" autocomplete="off">
             <small>원본과 분리된 출력 폴더를 지정하세요. 실행별 하위 폴더가 생성됩니다.</small>
         </label>
     </section>
@@ -72,6 +85,7 @@
 </main>
 
 <script>
+// 화면에서 반복해서 사용하는 요소를 한 번만 찾아 변수로 보관한다.
 const optionList = document.getElementById('optionList');
 const toggleAllButton = document.getElementById('toggleAllOptions');
 const selectionSummary = document.getElementById('selectionSummary');
@@ -84,12 +98,14 @@ const statusIndicator = document.getElementById('statusIndicator');
 
 let options = [];
 
+// 현재 체크된 정제 단계 input만 배열로 반환한다.
 function selectedInputs() {
     return Array.from(
         optionList.querySelectorAll('input[name="revisionOption"]:checked')
     );
 }
 
+// 전체 단계 수와 선택 수를 안내하고 전체 선택/해제 버튼 문구를 맞춘다.
 function updateSelectionSummary() {
     const selectedCount = selectedInputs().length;
     selectionSummary.textContent =
@@ -98,6 +114,10 @@ function updateSelectionSummary() {
         selectedCount === options.length ? '전체 해제' : '전체 선택';
 }
 
+/*
+ * RevisionOptionDto 목록을 체크박스로 그린다.
+ * 배열 순서는 RevisionPipelineService의 실제 파이프라인 실행 순서와 같다.
+ */
 function renderOptions(items) {
     options = items;
     optionList.replaceChildren();
@@ -134,6 +154,7 @@ function renderOptions(items) {
     updateSelectionSummary();
 }
 
+// 실행 중, 성공, 실패 상태를 공통 결과 패널에 표시한다.
 function showResult(type, title, message, logs) {
     resultPanel.hidden = false;
     resultPanel.dataset.status = type;
@@ -155,6 +176,10 @@ toggleAllButton.addEventListener('click', function() {
     updateSelectionSummary();
 });
 
+/*
+ * 사용자가 입력한 경로와 단계 ID를 RevisionRunRequest 형식의 JSON으로 전송한다.
+ * 서버는 성공 여부, 결과 경로, 완료 단계와 Saxon 로그를 RevisionRunResult로 돌려준다.
+ */
 runButton.addEventListener('click', async function() {
     const inputPath = document.getElementById('inputPath').value.trim();
     const outputPath = document.getElementById('outputPath').value.trim();
@@ -202,6 +227,7 @@ runButton.addEventListener('click', async function() {
     }
 });
 
+// 최초 진입 시 서버의 파이프라인 정의를 읽어 화면 선택 항목을 구성한다.
 fetch('/api/revision/options')
     .then(function(response) {
         if (!response.ok) {

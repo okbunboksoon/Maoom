@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<!-- 로그인 후 PDF 리뷰, 정제, 배치 기능으로 이동하는 메인 메뉴 화면. -->
+<!--
+    로그인 후 PDF 리뷰, 컬러체크, 정제와 배치 기능으로 이동하는 메인 화면.
+    UserController가 currentUserId/currentUserName을 Thymeleaf 모델로 전달한다.
+    계정 대화상자는 /api/user/account와 /api/user/profile-image API를 사용한다.
+-->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/user/css/UserMain.css?v=account-profile-image-1">
+	<link rel="stylesheet" href="/user/css/UserMain.css?v=launcher-3">
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
@@ -12,6 +16,7 @@
 
 <body>
 
+<!-- 현재 사용자 정보와 Spring Security 기본 /logout 요청을 제공한다. -->
 <div class="account-actions">
     <button id="accountMenuButton"
             class="current-user-name"
@@ -30,6 +35,12 @@
                 th:text="${currentUserName}">사용자</strong>님
         <i class="fa-solid fa-chevron-down account-chevron"></i>
     </button>
+    <a class="admin-page-btn"
+       th:if="${administrator}"
+       href="/admin/main">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        관리자
+    </a>
     <form class="logout-form" action="/logout" method="post">
         <button class="logout-btn" type="submit">
             <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -38,6 +49,7 @@
     </form>
 </div>
 
+<!-- 이름·비밀번호·프로필 이미지를 변경하는 계정 설정 대화상자. -->
 <div id="accountDialogBackdrop"
      class="account-dialog-backdrop"
      hidden>
@@ -128,13 +140,42 @@
     </section>
 </div>
 
-<div class="menu-box">
-    <button class="menu-btn" onclick="openPdfPopup()">PDF 리뷰</button>
-    <button class="menu-btn" onclick="openRevisionPopup()">정제</button>
-    <button class="menu-btn" onclick="location.href='/page/calc'">배치</button>
-</div>
+<main class="main-launcher" aria-label="Maoom Tool 기능 메뉴">
+    <header class="launcher-header">
+        <div>
+            <h1>Maoom Tool</h1>
+            <p>작업을 선택하세요.</p>
+        </div>
+        <label class="launcher-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input id="menuSearch"
+                   type="search"
+                   placeholder="기능 검색">
+        </label>
+    </header>
+
+    <nav class="launcher-tabs" aria-label="기능 카테고리">
+        <button class="launcher-tab active"
+                type="button"
+                data-category="전체">전체</button>
+        <button class="launcher-tab"
+                type="button"
+                data-category="PDF">PDF</button>
+        <button class="launcher-tab"
+                type="button"
+                data-category="DITA">DITA</button>
+    </nav>
+
+    <section id="menuGrid"
+             class="launcher-grid"
+             aria-label="기능 목록"></section>
+    <p id="menuEmpty"
+       class="launcher-empty"
+       hidden>표시할 기능이 없습니다.</p>
+</main>
 
 <script>
+// 계정 대화상자와 프로필 API에서 공통으로 사용하는 현재 사용자 화면 상태.
 const accountBackdrop =
     document.getElementById('accountDialogBackdrop');
 const accountForm =
@@ -144,12 +185,63 @@ const accountUserId =
 const accountProfileFile =
     document.getElementById('accountProfileFile');
 
+const launcherMenus = [
+    {
+        title:'PDF 리뷰',
+        description:'PDF 검토 및 댓글 관리',
+        category:'PDF',
+        icon:'fa-file-pdf',
+        action:openPdfPopup
+    },
+    {
+        title:'견적',
+        description:'도안 컬러체크 엑셀 생성',
+        category:'PDF',
+        icon:'fa-table-list',
+        action:openColorCheckPopup
+    },
+	{
+	    title:'법규 Ditamap Builder',
+	    description:'DITAMAP 경로 선택 및 구조 생성',
+	    category:'DITA',
+	    icon:'fa-sitemap',
+	    action:openDitamapBuilderPopup
+	},
+    {
+        title:'BER 반영',
+        description:'BER 엑셀 생성 및 DB 반영',
+        category:'DITA',
+        icon:'fa-file-circle-check',
+        action:openBerPopup
+    },
+    {
+        title:'정제(X)',
+        description:'DITA 정제 옵션 실행',
+        category:'DITA',
+        icon:'fa-wand-magic-sparkles',
+        action:openRevisionPopup
+    },
+    {
+        title:'배치(X)',
+        description:'페이지 계산 및 배치',
+        category:'PDF',
+        icon:'fa-layer-group',
+        action:function(){
+            location.href = '/page/calc';
+        }
+    }
+];
+
+let activeMenuCategory = '전체';
+
+// 캐시 무효화용 버전을 붙여 같은 파일 URL이라도 변경 직후 새 이미지를 요청한다.
 function profileImageUrl(version){
     return '/api/user/profile-image?userId='
         + encodeURIComponent(accountUserId)
         + (version ? '&v=' + version : '');
 }
 
+// 메뉴 아바타와 대화상자 미리보기를 같은 최신 프로필 이미지로 갱신한다.
 function refreshProfileImages(){
     const url = profileImageUrl(Date.now());
 
@@ -162,6 +254,7 @@ function refreshProfileImages(){
     });
 }
 
+// 프로필이 삭제되거나 조회되지 않으면 img를 숨기고 기본 사용자 아이콘을 보인다.
 function hideProfileImages(){
     document.getElementById(
         'accountMenuAvatarImage'
@@ -171,6 +264,7 @@ function hideProfileImages(){
     ).hidden = true;
 }
 
+// JSON 또는 일반 문자열 형태의 서버 오류를 사용자에게 보여줄 한 문장으로 바꾼다.
 function readErrorMessage(response, fallback){
     return response.text().then(text => {
         if(response.ok){
@@ -210,6 +304,7 @@ accountBackdrop.addEventListener('click', function(event){
     }
 });
 
+// 선택한 이미지를 multipart/form-data로 UserController 업로드 API에 전송한다.
 accountProfileFile.addEventListener('change', function(){
     const file = accountProfileFile.files[0];
 
@@ -264,12 +359,98 @@ document.getElementById(
     });
 });
 
+function isAdministrator(){
+    return document.querySelector('.admin-page-btn') !== null;
+}
+
+function renderLauncherMenus(){
+    const grid =
+        document.getElementById('menuGrid');
+    const empty =
+        document.getElementById('menuEmpty');
+    const keyword =
+        document.getElementById('menuSearch')
+        .value
+        .trim()
+        .toLowerCase();
+    const administrator =
+        isAdministrator();
+
+    grid.innerHTML = '';
+
+    const visibleMenus = launcherMenus.filter(menu => {
+        if(menu.adminOnly && !administrator){
+            return false;
+        }
+
+        if(activeMenuCategory !== '전체'
+                && menu.category !== activeMenuCategory){
+            return false;
+        }
+
+        if(!keyword){
+            return true;
+        }
+
+        return menu.title.toLowerCase().includes(keyword)
+            || menu.description.toLowerCase().includes(keyword)
+            || menu.category.toLowerCase().includes(keyword);
+    });
+
+    visibleMenus.forEach(menu => {
+        const button = document.createElement('button');
+        button.className = 'launcher-card';
+        button.type = 'button';
+        button.addEventListener('click', menu.action);
+
+        const content = document.createElement('span');
+        content.className = 'launcher-card-content';
+
+        const title = document.createElement('strong');
+        title.textContent = menu.title;
+
+        const description = document.createElement('small');
+        description.textContent = menu.description;
+
+        const category = document.createElement('span');
+        category.className = 'launcher-card-category';
+        category.textContent = menu.category;
+
+        content.appendChild(title);
+        content.appendChild(description);
+        button.appendChild(content);
+        button.appendChild(category);
+        grid.appendChild(button);
+    });
+
+    empty.hidden = visibleMenus.length > 0;
+}
+
+document.querySelectorAll('.launcher-tab').forEach(tab => {
+    tab.addEventListener('click', function(){
+        activeMenuCategory = this.dataset.category;
+        document.querySelectorAll('.launcher-tab')
+            .forEach(item => item.classList.remove('active'));
+        this.classList.add('active');
+        renderLauncherMenus();
+    });
+});
+
+document.getElementById('menuSearch')
+    .addEventListener('input', renderLauncherMenus);
+
+renderLauncherMenus();
+
 document.addEventListener('keydown', function(event){
     if(event.key === 'Escape' && !accountBackdrop.hidden){
         closeAccountDialog();
     }
 });
 
+/*
+ * 이름과 선택적 새 비밀번호를 UserAccountUpdateDto JSON으로 전송한다.
+ * 비밀번호가 공백이면 UserService가 기존 비밀번호를 그대로 유지한다.
+ */
 accountForm.addEventListener('submit', function(event){
     event.preventDefault();
 
@@ -339,6 +520,33 @@ function openPdfPopup(){
         '/pdf/list',
         'pdfPopup',
         'width=600,height=800'
+    );
+}
+
+// PDF 도안 컬러체크 엑셀 생성 화면을 별도 팝업으로 연다.
+function openColorCheckPopup(){
+    window.open(
+        '/pdf/color-check',
+        'colorCheckPopup',
+        'width=680,height=620'
+    );
+}
+
+// BER 반영 전용 화면을 연다.
+function openBerPopup(){
+    window.open(
+        '/pdf/ber',
+        'berPopup',
+        'width=680,height=620'
+    );
+}
+
+// DITAMAP Builder 경로 입력 화면을 별도 팝업 창으로 연다.
+function openDitamapBuilderPopup(){
+    window.open(
+        '/ditamap-builder',
+        'ditamapBuilderPopup',
+        'width=680,height=300'
     );
 }
 

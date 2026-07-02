@@ -1,5 +1,15 @@
 <!DOCTYPE html>
-<!-- 일반 계정 로그인 화면과 아이디 저장, 비밀번호 표시 기능을 제공한다. -->
+<!--
+	현재 애플리케이션의 기본 로그인 화면.
+
+	1. 사용자가 ID와 비밀번호를 입력하면 POST /login으로 전송한다.
+	2. UserController가 UserService.checkLogin()으로 tb_user 정보를 검증한다.
+	3. 성공하면 Spring Security 세션을 만든 뒤 /main으로 이동한다.
+	4. 실패하면 RedirectAttributes의 msg를 받아 이 화면의 오류 대화상자로 표시한다.
+
+	화면의 아이디 저장은 서버가 아닌 브라우저 localStorage만 사용한다.
+	보이는 비밀번호 입력값은 제출 직전에 서버가 읽는 hidden password로 복사한다.
+-->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
@@ -102,6 +112,7 @@
 	<script>
 	$(function(){
 
+		// 아이디 저장을 선택했던 브라우저에서는 이전 ID만 복원한다. 비밀번호는 저장하지 않는다.
 		const savedId =
 			localStorage.getItem('savedLoginId');
 
@@ -116,6 +127,7 @@
 				|| checkValue.trim() === '';
 		}
 
+		// CSS 마스킹 클래스를 바꿔 비밀번호 표시/숨김 상태와 접근성 문구를 함께 갱신한다.
 		$('#passwordToggle').click(function(){
 
 			const password =
@@ -145,6 +157,10 @@
 
 		});
 
+		/*
+		 * 빈 값 검증 후 보이는 입력값을 hidden password에 복사한다.
+		 * 이후 일반 form submit이 UserController의 POST /login으로 전달된다.
+		 */
 		$('#loginUser').submit(function(e){
 
 			let isSubmit = true;
@@ -188,6 +204,7 @@
 		'pageshow',
 		function(event){
 
+			// 로그아웃 뒤 뒤로가기로 인증된 이전 화면이 보이는 브라우저 캐시 문제를 막는다.
 			if(event.persisted){
 				window.location.reload();
 			}
@@ -197,6 +214,7 @@
 	</script>
 
 	<script th:if="${msg}">
+		// 서버가 로그인 실패 메시지를 전달한 경우에만 오류 대화상자 동작을 등록한다.
 		const loginErrorBackdrop =
 			document.getElementById('loginErrorBackdrop');
 		const loginErrorConfirm =

@@ -16,6 +16,7 @@ import org.junit.jupiter.api.io.TempDir;
 
 import maoomWeb.ire.user.dto.CommentAttachmentDto;
 import maoomWeb.ire.user.dto.CommentDto;
+import maoomWeb.ire.user.dto.CommentReplyDto;
 import maoomWeb.ire.user.mapper.CommentMapper;
 
 class CommentExportServiceTest {
@@ -51,7 +52,9 @@ class CommentExportServiceTest {
         comment.setPdfId(1L);
         comment.setPageNum(3);
         comment.setUserId("admin");
+        comment.setUserName("관리자");
         comment.setCommentText("이미지 확인");
+        comment.setStatus("RESOLVED");
         comment.setCreateDt(LocalDateTime.of(
                 2026, 6, 15, 8, 30));
 
@@ -63,6 +66,14 @@ class CommentExportServiceTest {
         attachment.setStoredName("stored-image");
         attachment.setContentType("image/png");
 
+        CommentReplyDto reply = new CommentReplyDto();
+        reply.setReplyId(30L);
+        reply.setCommentId(10L);
+        reply.setUserId("reply-user");
+        reply.setUserName("답글 작성자");
+        reply.setReplyText("답글");
+        reply.setCreateDt("2026-06-15 08:31:00");
+
         Files.write(
                 uploadRoot.resolve("stored-image"),
                 PNG_1X1);
@@ -70,9 +81,11 @@ class CommentExportServiceTest {
         when(mapper.getCommentList(1L, "ALL"))
                 .thenReturn(List.of(comment));
         when(mapper.getReplyListByCommentIds(List.of(10L)))
-                .thenReturn(List.of());
+                .thenReturn(List.of(reply));
         when(mapper.getAttachmentListByCommentIds(List.of(10L)))
                 .thenReturn(List.of(attachment));
+        when(mapper.getAttachmentListByReplyIds(List.of(30L)))
+                .thenReturn(List.of());
 
         CommentExportService service =
                 new CommentExportService(
@@ -87,9 +100,33 @@ class CommentExportServiceTest {
             assertThat(
                     workbook.getSheet("댓글 목록")
                     .getRow(0)
-                    .getCell(5)
+                    .getCell(0)
+                    .getStringCellValue())
+                    .isEqualTo("상태");
+            assertThat(
+                    workbook.getSheet("댓글 목록")
+                    .getRow(1)
+                    .getCell(0)
+                    .getStringCellValue())
+                    .isEqualTo("해결");
+            assertThat(
+                    workbook.getSheet("댓글 목록")
+                    .getRow(0)
+                    .getCell(6)
                     .getStringCellValue())
                     .isEqualTo("첨부 이미지");
+            assertThat(
+                    workbook.getSheet("댓글 목록")
+                    .getRow(1)
+                    .getCell(3)
+                    .getStringCellValue())
+                    .isEqualTo("관리자");
+            assertThat(
+                    workbook.getSheet("댓글 목록")
+                    .getRow(2)
+                    .getCell(3)
+                    .getStringCellValue())
+                    .isEqualTo("답글 작성자");
             assertThat(
                     workbook.getSheet("댓글 목록")
                     .getRow(1)
