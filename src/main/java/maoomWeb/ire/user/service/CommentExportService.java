@@ -30,13 +30,19 @@ import maoomWeb.ire.user.dto.CommentDto;
 import maoomWeb.ire.user.dto.CommentReplyDto;
 import maoomWeb.ire.user.mapper.CommentMapper;
 
-/** PDF 댓글과 답글을 Excel 문서로 생성한다. */
+/**
+ * PDF 댓글, 답글, 첨부파일을 검토용 Excel 문서로 만든다.
+ *
+ * <p>CommentController의 {@code /api/comment/export}가 이 서비스를 호출한다.
+ * 댓글과 답글을 시간 순으로 행에 배치하고, 지원되는 이미지 첨부는 셀 안에 넣으며
+ * 일반 파일은 파일명 목록으로 표시한다.</p>
+ */
 @Service
 public class CommentExportService {
 
     private static final DateTimeFormatter DATE_FORMAT =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-    private static final int IMAGE_COLUMN = 5;
+    private static final int IMAGE_COLUMN = 6;
     private static final int IMAGE_CELL_WIDTH_PX = 420;
     private static final int IMAGE_HEIGHT_PX = 72;
     private static final int IMAGE_GAP_PX = 6;
@@ -54,7 +60,10 @@ public class CommentExportService {
                 .normalize();
     }
 
-    /** 원댓글과 답글을 시간 순서대로 배치한 XLSX 바이트 배열을 만든다. */
+    /**
+     * 원댓글과 답글을 시간 순서대로 배치한 XLSX 바이트 배열을 만든다.
+     * 반환된 바이트는 컨트롤러가 Content-Disposition 헤더와 함께 브라우저로 전송한다.
+     */
     public byte[] createWorkbook(Long pdfId) throws IOException {
 
         List<CommentDto> comments =
@@ -116,6 +125,7 @@ public class CommentExportService {
 
             Row header = sheet.createRow(0);
             String[] headers = {
+                    "상태",
                     "구분",
                     "페이지",
                     "작성자",
@@ -134,13 +144,18 @@ public class CommentExportService {
             for(CommentDto comment : comments){
 
                 Row row = sheet.createRow(rowIndex++);
-                row.createCell(0).setCellValue("원댓글");
-                row.createCell(1).setCellValue(
+                row.createCell(0).setCellValue(
+                        formatStatus(comment.getStatus()));
+                row.createCell(1).setCellValue("원댓글");
+                row.createCell(2).setCellValue(
                         formatPageNumber(comment.getPageNum()));
-                row.createCell(2).setCellValue(comment.getUserId());
                 row.createCell(3).setCellValue(
-                        comment.getCommentText());
+                        formatAuthor(
+                                comment.getUserName(),
+                                comment.getUserId()));
                 row.createCell(4).setCellValue(
+                        comment.getCommentText());
+                row.createCell(5).setCellValue(
                         comment.getCreateDt() == null
                         ? ""
                         : DATE_FORMAT.format(
@@ -162,14 +177,18 @@ public class CommentExportService {
 
                     Row replyRow = sheet.createRow(rowIndex++);
 
-                    replyRow.createCell(0).setCellValue("답글");
-                    replyRow.createCell(1).setCellValue(
-                            formatPageNumber(comment.getPageNum()));
+                    replyRow.createCell(0).setCellValue(
+                            formatStatus(comment.getStatus()));
+                    replyRow.createCell(1).setCellValue("답글");
                     replyRow.createCell(2).setCellValue(
-                            reply.getUserId());
+                            formatPageNumber(comment.getPageNum()));
                     replyRow.createCell(3).setCellValue(
-                            "↳ " + reply.getReplyText());
+                            formatAuthor(
+                                    reply.getUserName(),
+                                    reply.getUserId()));
                     replyRow.createCell(4).setCellValue(
+                            "↳ " + reply.getReplyText());
+                    replyRow.createCell(5).setCellValue(
                             reply.getCreateDt() == null
                             ? ""
                             : reply.getCreateDt());
@@ -184,10 +203,11 @@ public class CommentExportService {
             }
 
             sheet.setColumnWidth(0, 12 * 256);
-            sheet.setColumnWidth(1, 10 * 256);
-            sheet.setColumnWidth(2, 18 * 256);
-            sheet.setColumnWidth(3, 55 * 256);
-            sheet.setColumnWidth(4, 22 * 256);
+            sheet.setColumnWidth(1, 12 * 256);
+            sheet.setColumnWidth(2, 10 * 256);
+            sheet.setColumnWidth(3, 18 * 256);
+            sheet.setColumnWidth(4, 55 * 256);
+            sheet.setColumnWidth(5, 22 * 256);
             sheet.setColumnWidth(
                     IMAGE_COLUMN,
                     58 * 256);
@@ -200,6 +220,20 @@ public class CommentExportService {
 
     private String formatPageNumber(Integer pageNum) {
         return pageNum == null ? "" : pageNum + "페이지";
+    }
+
+    private String formatStatus(String status) {
+        return "RESOLVED".equals(status)
+                ? "해결"
+                : "미해결";
+    }
+
+    private String formatAuthor(
+            String userName,
+            String userId) {
+        return userName == null || userName.isBlank()
+                ? userId == null ? "" : userId
+                : userName;
     }
 
     private void addAttachments(

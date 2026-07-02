@@ -14,6 +14,8 @@ import java.util.stream.Collectors;
 
 import jakarta.annotation.PostConstruct;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +32,9 @@ import maoomWeb.ire.user.mapper.UserMapper;
  * Incoming Webhook 채널과 Bot API 개인 DM을 서로 독립적으로 호출한다.
  */
 public class SlackMentionService {
+
+    private static final Logger log =
+            LoggerFactory.getLogger(SlackMentionService.class);
 
     private static final Pattern MENTION_PATTERN =
             Pattern.compile(
@@ -61,11 +66,10 @@ public class SlackMentionService {
 
     @PostConstruct
     void logConfiguration() {
-        System.out.println(
-                "Slack notification configuration: channel="
-                + !isBlank(webhookUrl)
-                + ", dm="
-                + !isBlank(botToken));
+        log.info(
+                "Slack notification configuration: channel={}, dm={}",
+                !isBlank(webhookUrl),
+                !isBlank(botToken));
     }
 
     /** 댓글/답글의 멘션 대상에게 채널 알림과 개인 DM을 비동기로 전송한다. */
@@ -120,9 +124,9 @@ public class SlackMentionService {
                                     message));
 
         }catch(Exception e){
-            System.err.println(
-                    "Slack mention notification failed: "
-                    + e.getMessage());
+            log.warn(
+                    "Slack mention notification failed",
+                    e);
         }
     }
 
@@ -153,9 +157,9 @@ public class SlackMentionService {
                 .thenAccept(response -> {
                     if(response.statusCode() < 200
                             || response.statusCode() >= 300){
-                        System.err.println(
-                                "Slack channel notification failed: HTTP "
-                                + response.statusCode());
+                        log.warn(
+                                "Slack channel notification failed: HTTP {}",
+                                response.statusCode());
                     }
                 })
                 .exceptionally(error -> {
@@ -201,9 +205,9 @@ public class SlackMentionService {
                     })
                     .join();
 
-            System.out.println(
-                    "Slack direct notification sent to "
-                    + slackUserId);
+            log.debug(
+                    "Slack direct notification sent to {}",
+                    slackUserId);
         }catch(Exception e){
             logSlackFailure(
                     "direct notification to " + slackUserId,
@@ -343,10 +347,9 @@ public class SlackMentionService {
                 ? error
                 : error.getCause();
 
-        System.err.println(
-                "Slack "
-                + operation
-                + " failed: "
-                + cause.getMessage());
+        log.warn(
+                "Slack {} failed: {}",
+                operation,
+                cause.getMessage());
     }
 }

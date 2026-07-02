@@ -5,7 +5,13 @@
 
 <mapper namespace="maoomWeb.ire.user.mapper.CommentMapper">
 
-<!-- 댓글/답글 테이블 컬럼을 화면용 DTO 필드에 매핑한다. -->
+<!--
+    PDF 리뷰 댓글의 DB 입출력 모음.
+    CommentController -> CommentService -> CommentMapper.java -> 이 SQL 순서로 호출된다.
+    resultMap은 DB의 snake_case 컬럼을 Java DTO의 camelCase 필드에 연결한다.
+-->
+
+<!-- 원댓글 본문, 상태와 0~1 비율 주석 좌표를 CommentDto에 매핑한다. -->
 <resultMap id="CommentResultMap" type="CommentDto">
     <id property="commentId" column="comment_id"/>
     <result property="commentCode" column="comment_code"/>
@@ -15,6 +21,7 @@
     <result property="posY" column="pos_y"/>
     <result property="commentText" column="comment_text"/>
     <result property="userId" column="user_id"/>
+    <result property="userName" column="user_name"/>
     <result property="status" column="status"/>
     <result property="commentType" column="comment_type"/>
     <result property="selectedText" column="selected_text"/>
@@ -27,6 +34,7 @@
 	<result property="updateDt" column="update_dt"/>
 </resultMap>
 
+<!-- 댓글 또는 답글에 연결된 파일 메타데이터를 DTO에 매핑한다. -->
 <resultMap id="CommentAttachmentResultMap"
            type="maoomWeb.ire.user.dto.CommentAttachmentDto">
     <id property="attachmentId" column="attachment_id"/>
@@ -40,6 +48,7 @@
     <result property="createDt" column="create_dt"/>
 </resultMap>
 
+<!-- 답글 본문과 작성자 정보를 CommentReplyDto에 매핑한다. -->
 <resultMap id="CommentReplyResultMap"
            type="maoomWeb.ire.user.dto.CommentReplyDto">
 
@@ -47,20 +56,26 @@
     <result property="commentId" column="comment_id"/>
     <result property="replyText" column="reply_text"/>
     <result property="userId" column="user_id"/>
+    <result property="userName" column="user_name"/>
     <result property="createDt" column="create_dt"/>
 
 </resultMap>
 
+<!-- 화면과 내보내기 기능이 사용하는 PDF별 댓글 목록. ALL이면 상태 조건을 생략한다. -->
 <select id="getCommentList"
         resultMap="CommentResultMap">
 
-    SELECT *
-    FROM tb_comment
-    WHERE pdf_id = #{pdfId}
+    SELECT
+        c.*,
+        u.user_name
+    FROM tb_comment c
+    LEFT JOIN tb_user u
+      ON u.user_id = c.user_id
+    WHERE c.pdf_id = #{pdfId}
     <if test="status != null and status != '' and status != 'ALL'">
-        AND status = #{status}
+        AND c.status = #{status}
     </if>
-    ORDER BY create_dt DESC
+    ORDER BY c.create_dt DESC
 
 </select>
 
@@ -68,12 +83,17 @@
         resultMap="CommentResultMap"
         parameterType="Long">
 
-    SELECT *
-    FROM tb_comment
-    WHERE comment_id = #{commentId}
+    SELECT
+        c.*,
+        u.user_name
+    FROM tb_comment c
+    LEFT JOIN tb_user u
+      ON u.user_id = c.user_id
+    WHERE c.comment_id = #{commentId}
 
 </select>
 
+<!-- 같은 PDF에 댓글이 동시에 등록될 때 comment_code 순번이 겹치지 않도록 PDF 행을 잠근다. -->
 <select id="lockPdf"
         parameterType="Long"
         resultType="Long">
@@ -85,6 +105,7 @@
 
 </select>
 
+<!-- 현재 PDF의 comment_code에서 다음 id0001 형식 번호에 사용할 숫자를 계산한다. -->
 <select id="getNextCommentNumber"
         parameterType="Long"
         resultType="int">
@@ -103,6 +124,7 @@
 
 </select>
 
+<!-- 댓글 본문과 화면에서 계산한 정규화 좌표를 함께 저장하고 생성 ID를 DTO에 돌려준다. -->
 <insert id="addComment"
         useGeneratedKeys="true"
         keyProperty="commentId">
@@ -146,6 +168,7 @@ VALUES
 
 </insert>
 
+<!-- 실제 파일은 로컬 폴더에 저장되고, 이 SQL은 파일명과 댓글/답글 연결 정보만 저장한다. -->
 <insert id="addAttachment"
         useGeneratedKeys="true"
         keyProperty="attachmentId">
@@ -207,6 +230,7 @@ VALUES
 
 </select>
 
+<!-- 여러 댓글의 첨부를 한 번에 읽어 댓글마다 SQL이 반복되는 N+1 문제를 막는다. -->
 <select id="getAttachmentListByCommentIds"
         resultMap="CommentAttachmentResultMap">
 
@@ -225,6 +249,7 @@ VALUES
 
 </select>
 
+<!-- 여러 답글의 첨부를 한 번에 읽은 뒤 CommentService가 replyId별로 묶는다. -->
 <select id="getAttachmentListByReplyIds"
         resultMap="CommentAttachmentResultMap">
 
@@ -262,6 +287,7 @@ VALUES
 
 </update>
 
+<!-- 작성자 본인의 사각형/말풍선 위치와 크기만 변경할 수 있다. -->
 <update id="updateCommentGeometry">
 
     UPDATE tb_comment
@@ -329,10 +355,14 @@ VALUES
         parameterType="long"
         resultMap="CommentReplyResultMap">
 
-    SELECT *
-    FROM tb_comment_reply
-    WHERE comment_id = #{commentId}
-    ORDER BY create_dt
+    SELECT
+        r.*,
+        u.user_name
+    FROM tb_comment_reply r
+    LEFT JOIN tb_user u
+      ON u.user_id = r.user_id
+    WHERE r.comment_id = #{commentId}
+    ORDER BY r.create_dt
 
 </select>
 
@@ -340,18 +370,27 @@ VALUES
         parameterType="Long"
         resultMap="CommentReplyResultMap">
 
-    SELECT *
-    FROM tb_comment_reply
-    WHERE reply_id = #{replyId}
+    SELECT
+        r.*,
+        u.user_name
+    FROM tb_comment_reply r
+    LEFT JOIN tb_user u
+      ON u.user_id = r.user_id
+    WHERE r.reply_id = #{replyId}
 
 </select>
 
+<!-- 댓글 목록 응답에 포함할 답글을 한 번에 조회해 commentId별로 묶는다. -->
 <select id="getReplyListByCommentIds"
         resultMap="CommentReplyResultMap">
 
-    SELECT *
-    FROM tb_comment_reply
-    WHERE comment_id IN
+    SELECT
+        r.*,
+        u.user_name
+    FROM tb_comment_reply r
+    LEFT JOIN tb_user u
+      ON u.user_id = r.user_id
+    WHERE r.comment_id IN
     <foreach collection="commentIds"
              item="commentId"
              open="("
@@ -359,7 +398,7 @@ VALUES
              close=")">
         #{commentId}
     </foreach>
-    ORDER BY comment_id, create_dt, reply_id
+    ORDER BY r.comment_id, r.create_dt, r.reply_id
 
 </select>
 

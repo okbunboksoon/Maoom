@@ -1,118 +1,245 @@
 <!DOCTYPE html>
-<!-- 정제 옵션과 입출력 경로를 선택하는 팝업 화면. -->
+<!--
+    DITA 정제 팝업의 연결 흐름
+
+    1. 화면이 열리면 GET /api/revision/options로 실행 가능한 XSL 단계를 조회한다.
+    2. 사용자가 Input/Output 경로와 실행 단계를 선택한다.
+    3. POST /api/revision/run으로 RevisionRunRequest를 전송한다.
+    4. RevisionController가 RevisionPipelineService에 실행을 위임한다.
+    5. 서비스는 임시 작업 폴더에서 Saxon과 XSL을 순서대로 실행한다.
+    6. 결과 파일과 revision.log를 지정한 Output 아래의 실행별 폴더에 저장한다.
+
+    이 화면은 경로 입력, 단계 선택과 결과 표시만 담당한다.
+    파일 검증과 실제 XSL 실행 규칙은 RevisionPipelineService에서 관리한다.
+-->
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>정제</title>
+<title>DITA 정제</title>
 <link rel="stylesheet" href="/user/css/RevisionPopup.css">
 </head>
 <body>
-
 <main class="revision-page">
     <header class="revision-header">
         <div>
-            <h1>정제</h1>
-            <p>정제 항목과 입출력 경로를 선택하세요.</p>
+            <h1>DITA 정제</h1>
+            <p>선택한 변환만 위에서 아래 순서로 실행합니다.</p>
         </div>
-        <span class="revision-badge">Setting</span>
+        <span class="revision-badge">XSL Pipeline</span>
     </header>
 
-    <section class="option-section" aria-label="정제 항목 선택">
-        <div class="option-toolbar">
-            <button type="button" id="toggleAllOptions" class="toggle-all-button">전체 선택</button>
+    <section class="path-section" aria-labelledby="pathTitle">
+        <div class="section-title-row">
+            <div>
+                <h2 id="pathTitle">입출력 경로</h2>
+                <p>서버 PC에서 접근할 수 있는 절대경로를 입력하세요.</p>
+            </div>
         </div>
-        <div class="option-grid">
-            <label class="option-item"><input type="checkbox" name="revisionOption" value="1"><span>이미지속성</span></label>
-            <label class="option-item"><input type="checkbox" name="revisionOption" value="2"><span>테이블속성</span></label>
-            <label class="option-item"><input type="checkbox" name="revisionOption" value="3"><span>파일명변환</span></label>
-            <label class="option-item"><input type="checkbox" name="revisionOption" value="4"><span>1</span></label>
-            <label class="option-item"><input type="checkbox" name="revisionOption" value="5"><span>2</span></label>
-            <label class="option-item"><input type="checkbox" name="revisionOption" value="6"><span>3</span></label>
-            <label class="option-item"><input type="checkbox" name="revisionOption" value="7"><span>4</span></label>
-            <label class="option-item"><input type="checkbox" name="revisionOption" value="8"><span>5</span></label>
-            <label class="option-item"><input type="checkbox" name="revisionOption" value="9"><span>6</span></label>
-        </div>
+
+        <label class="path-field" for="inputPath">
+            <span>Input</span>
+            <input type="text" id="inputPath"
+                   placeholder="예: C:\Users\adobe\Desktop\task" autocomplete="off">
+            <small>DITA와 DITAMAP이 있는 topics 폴더 또는 topics의 상위 폴더</small>
+        </label>
+
+        <label class="path-field" for="outputPath">
+            <span>Output</span>
+            <input type="text" id="outputPath"
+                   placeholder="예: C:\Users\adobe\Desktop\task" autocomplete="off">
+            <small>원본과 분리된 출력 폴더를 지정하세요. 실행별 하위 폴더가 생성됩니다.</small>
+        </label>
     </section>
 
-    <section class="path-section">
-        <div class="path-field">
-            <label for="inputPath">Input</label>
-            <div class="path-row">
-                <input type="text" id="inputPath" placeholder="입력 경로를 붙여넣으세요.">
-                <button type="button" class="path-button" data-target="inputPath" data-picker="inputPicker">경로 선택</button>
-                <input type="file" id="inputPicker" class="directory-picker" webkitdirectory directory>
+    <section class="option-section" aria-labelledby="optionTitle">
+        <div class="section-title-row">
+            <div>
+                <h2 id="optionTitle">정제 항목</h2>
+                <p id="selectionSummary">항목을 불러오는 중입니다.</p>
             </div>
+            <button type="button" id="toggleAllOptions" class="secondary-button">
+                전체 해제
+            </button>
         </div>
+        <div id="optionList" class="option-list" aria-live="polite"></div>
+    </section>
 
-        <div class="path-field">
-            <label for="outputPath">Output</label>
-            <div class="path-row">
-                <input type="text" id="outputPath" placeholder="출력 경로를 붙여넣으세요.">
-                <button type="button" class="path-button" data-target="outputPath" data-picker="outputPicker">경로 선택</button>
-                <input type="file" id="outputPicker" class="directory-picker" webkitdirectory directory>
-            </div>
+    <section id="resultPanel" class="result-panel" hidden aria-live="polite">
+        <div class="result-heading">
+            <span id="statusIndicator" class="status-indicator"></span>
+            <strong id="resultTitle">실행 준비 중</strong>
         </div>
+        <p id="resultMessage"></p>
+        <pre id="resultLogs"></pre>
     </section>
 
     <div class="popup-actions">
-        <button type="button" class="action-button primary">실행</button>
-        <button type="button" class="action-button" onclick="window.close()">취소</button>
+        <button type="button" id="runButton" class="action-button primary">
+            정제 실행
+        </button>
+        <button type="button" class="action-button" onclick="window.close()">
+            닫기
+        </button>
     </div>
 </main>
 
 <script>
-const revisionOptions =
-    Array.from(document.querySelectorAll('input[name="revisionOption"]'));
-const toggleAllOptions = document.getElementById('toggleAllOptions');
+// 화면에서 반복해서 사용하는 요소를 한 번만 찾아 변수로 보관한다.
+const optionList = document.getElementById('optionList');
+const toggleAllButton = document.getElementById('toggleAllOptions');
+const selectionSummary = document.getElementById('selectionSummary');
+const runButton = document.getElementById('runButton');
+const resultPanel = document.getElementById('resultPanel');
+const resultTitle = document.getElementById('resultTitle');
+const resultMessage = document.getElementById('resultMessage');
+const resultLogs = document.getElementById('resultLogs');
+const statusIndicator = document.getElementById('statusIndicator');
 
-function updateToggleAllButton(){
-    const allChecked =
-        revisionOptions.every(function(option){
-            return option.checked;
-        });
+let options = [];
 
-    toggleAllOptions.textContent =
-        allChecked ? '전체 해제' : '전체 선택';
+// 현재 체크된 정제 단계 input만 배열로 반환한다.
+function selectedInputs() {
+    return Array.from(
+        optionList.querySelectorAll('input[name="revisionOption"]:checked')
+    );
 }
 
-toggleAllOptions.addEventListener('click', function(){
-    const shouldCheck =
-        !revisionOptions.every(function(option){
-            return option.checked;
+// 전체 단계 수와 선택 수를 안내하고 전체 선택/해제 버튼 문구를 맞춘다.
+function updateSelectionSummary() {
+    const selectedCount = selectedInputs().length;
+    selectionSummary.textContent =
+        `전체 ${options.length}개 중 ${selectedCount}개 선택`;
+    toggleAllButton.textContent =
+        selectedCount === options.length ? '전체 해제' : '전체 선택';
+}
+
+/*
+ * RevisionOptionDto 목록을 체크박스로 그린다.
+ * 배열 순서는 RevisionPipelineService의 실제 파이프라인 실행 순서와 같다.
+ */
+function renderOptions(items) {
+    options = items;
+    optionList.replaceChildren();
+
+    items.forEach(function(option, index) {
+        const label = document.createElement('label');
+        label.className = 'option-item';
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.name = 'revisionOption';
+        checkbox.value = option.id;
+        checkbox.checked = true;
+        checkbox.addEventListener('change', updateSelectionSummary);
+
+        const order = document.createElement('span');
+        order.className = 'option-order';
+        order.textContent = String(index + 1).padStart(2, '0');
+
+        const text = document.createElement('span');
+        text.className = 'option-text';
+
+        const name = document.createElement('strong');
+        name.textContent = option.label;
+
+        const description = document.createElement('small');
+        description.textContent = option.description;
+
+        text.append(name, description);
+        label.append(checkbox, order, text);
+        optionList.append(label);
+    });
+
+    updateSelectionSummary();
+}
+
+// 실행 중, 성공, 실패 상태를 공통 결과 패널에 표시한다.
+function showResult(type, title, message, logs) {
+    resultPanel.hidden = false;
+    resultPanel.dataset.status = type;
+    resultTitle.textContent = title;
+    resultMessage.textContent = message || '';
+    resultLogs.textContent = Array.isArray(logs) ? logs.join('\n') : '';
+    statusIndicator.classList.toggle('is-running', type === 'running');
+    resultPanel.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+}
+
+toggleAllButton.addEventListener('click', function() {
+    const inputs = Array.from(
+        optionList.querySelectorAll('input[name="revisionOption"]')
+    );
+    const shouldCheck = selectedInputs().length !== inputs.length;
+    inputs.forEach(function(input) {
+        input.checked = shouldCheck;
+    });
+    updateSelectionSummary();
+});
+
+/*
+ * 사용자가 입력한 경로와 단계 ID를 RevisionRunRequest 형식의 JSON으로 전송한다.
+ * 서버는 성공 여부, 결과 경로, 완료 단계와 Saxon 로그를 RevisionRunResult로 돌려준다.
+ */
+runButton.addEventListener('click', async function() {
+    const inputPath = document.getElementById('inputPath').value.trim();
+    const outputPath = document.getElementById('outputPath').value.trim();
+    const optionIds = selectedInputs().map(function(input) {
+        return input.value;
+    });
+
+    if (!inputPath || !outputPath) {
+        showResult('error', '경로 확인 필요',
+            'Input과 Output 절대경로를 모두 입력하세요.', []);
+        return;
+    }
+    if (!optionIds.length) {
+        showResult('error', '항목 선택 필요',
+            '실행할 정제 항목을 하나 이상 선택하세요.', []);
+        return;
+    }
+
+    runButton.disabled = true;
+    showResult('running', '정제 실행 중',
+        '파일 수와 선택 항목에 따라 시간이 걸릴 수 있습니다.', []);
+
+    try {
+        const response = await fetch('/api/revision/run', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({inputPath, outputPath, optionIds})
         });
+        const result = await response.json();
 
-    revisionOptions.forEach(function(option){
-        option.checked = shouldCheck;
-    });
-
-    updateToggleAllButton();
-});
-
-revisionOptions.forEach(function(option){
-    option.addEventListener('change', updateToggleAllButton);
-});
-
-document.querySelectorAll('.path-button').forEach(function(button){
-    const picker = document.getElementById(button.dataset.picker);
-    const pathInput = document.getElementById(button.dataset.target);
-
-    button.addEventListener('click', function(){
-        picker.click();
-    });
-
-    picker.addEventListener('change', function(){
-        if(!picker.files.length){
+        if (!response.ok || !result.success) {
+            showResult('error', '정제 실패',
+                result.logs?.at(-1) || '정제 중 오류가 발생했습니다.',
+                result.logs);
             return;
         }
 
-        const relativePath = picker.files[0].webkitRelativePath;
-        pathInput.value = relativePath
-            ? relativePath.split('/')[0]
-            : picker.files[0].name;
-    });
+        showResult('success', '정제 완료',
+            `결과 경로: ${result.outputPath}`, result.logs);
+    } catch (error) {
+        showResult('error', '통신 오류',
+            '서버 응답을 받지 못했습니다: ' + error.message, []);
+    } finally {
+        runButton.disabled = false;
+    }
 });
-</script>
 
+// 최초 진입 시 서버의 파이프라인 정의를 읽어 화면 선택 항목을 구성한다.
+fetch('/api/revision/options')
+    .then(function(response) {
+        if (!response.ok) {
+            throw new Error('정제 항목을 불러오지 못했습니다.');
+        }
+        return response.json();
+    })
+    .then(renderOptions)
+    .catch(function(error) {
+        showResult('error', '초기화 실패', error.message, []);
+        runButton.disabled = true;
+    });
+</script>
 </body>
 </html>

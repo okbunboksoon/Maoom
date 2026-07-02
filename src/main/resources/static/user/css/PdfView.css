@@ -315,6 +315,15 @@ border:1px solid #ddd;
     color:#1473e6;
 }
 
+.comment-header-icons button:disabled{
+    cursor:wait;
+    opacity:.72;
+}
+
+.comment-header-icons button.loading{
+    min-width:112px;
+}
+
 .export-file-icon{
     display:flex;
     align-items:center;
@@ -525,7 +534,8 @@ border:1px solid #ddd;
     color:#1473e6;
 }
 
-#commentAttachments{
+#commentAttachments,
+.attachment-file-input{
     display:none;
 }
 
@@ -566,6 +576,48 @@ border:1px solid #ddd;
     color:#73777c;
     font-size:15px;
     cursor:pointer;
+}
+
+.edit-attachment-zone{
+    position:relative;
+    margin:6px 0 8px;
+    padding:7px;
+    border:1px dashed #c8ccd1;
+    border-radius:5px;
+    background:#fafbfc;
+    transition:
+        border-color .15s ease,
+        background .15s ease;
+}
+
+.edit-attachment-zone.attachment-drag-over{
+    border-color:#1473e6;
+    background:#edf5ff;
+}
+
+.edit-attachment-zone.attachment-drag-over::after{
+    content:"여기에 놓아 수정 내용에 첨부";
+    position:absolute;
+    inset:2px;
+    z-index:5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:2px dashed #1473e6;
+    border-radius:4px;
+    background:rgba(237,245,255,.96);
+    color:#0b65c2;
+    font-size:11px;
+    font-weight:700;
+    pointer-events:none;
+}
+
+.edit-attachment-tools{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#85898e;
+    font-size:10px;
 }
 
 #commentBtn{
@@ -643,6 +695,7 @@ border:1px solid #ddd;
 }
 
 .comment-item{
+    position:relative;
     margin:8px 8px 10px;
     padding:12px;
     border:1px solid transparent;
@@ -842,7 +895,19 @@ border:1px solid #ddd;
 
 .comment-item.selected-comment{
     border-color:#1473e6;
-    box-shadow:0 0 0 1px #1473e6;
+    background:#fff2bf;
+    box-shadow:0 0 0 1px #1473e6, 0 8px 20px rgba(20,115,230,.16);
+}
+
+.comment-item.selected-comment::before{
+    content:"";
+    position:absolute;
+    top:8px;
+    bottom:8px;
+    left:0;
+    width:4px;
+    border-radius:0 3px 3px 0;
+    background:#1473e6;
 }
 
 #currentUserInfo{
@@ -861,6 +926,10 @@ border:1px solid #ddd;
 
 .resolved-comment{
     background:#f4f5f5;
+}
+
+.resolved-comment.selected-comment{
+    background:linear-gradient(90deg,#e0f7e9 0,#f1fff6 38%,#ffffff 100%);
 }
 
 .resolved-comment .comment-status{

@@ -4,7 +4,12 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="maoomWeb.ire.user.mapper.PdfMapper">
 
-    <!-- Google Drive 파일과 내부 PDF 관리 레코드를 매핑한다. -->
+    <!--
+        PdfMapper.java의 메서드와 이 파일의 id가 1:1로 연결된다.
+        tb_pdf는 Google Drive 파일과 댓글용 내부 pdf_id를 이어 주는 기준 테이블이다.
+    -->
+
+    <!-- DB 컬럼 이름을 PdfDto의 Java 필드 이름으로 변환한다. -->
     <resultMap id="PdfResultMap" type="maoomWeb.ire.user.dto.PdfDto">
         <id property="pdfId" column="pdf_id"/>
         <result property="fileName" column="file_name"/>
@@ -14,6 +19,7 @@
         <result property="createDt" column="create_dt"/>
     </resultMap>
 
+    <!-- 내부 pdfId로 PDF 한 건을 조회한다. -->
     <select id="getPdfById"
             parameterType="Long"
             resultMap="PdfResultMap">
@@ -30,6 +36,7 @@
 
     </select>
 
+    <!-- Drive 파일 ID로 이미 등록된 내부 PDF를 조회한다. -->
     <select id="getPdfByDriveFileId"
             parameterType="String"
             resultMap="PdfResultMap">
@@ -46,6 +53,7 @@
 
     </select>
     
+    <!-- PdfService의 최초 등록 여부 확인에 사용하는 조회다. -->
 <select id="findByDriveFileId"
         resultMap="PdfResultMap">
 
@@ -60,7 +68,82 @@
     WHERE drive_file_id = #{driveFileId}
 
 </select>
+
+    <!-- 아래 EXISTS 쿼리는 PdfAccessService가 각 리소스의 소속 관계를 검사할 때 사용한다. -->
+    <select id="hasPdfAccess" resultType="boolean">
+        SELECT EXISTS (
+            SELECT 1
+            FROM tb_pdf
+            WHERE pdf_id = #{pdfId}
+        )
+    </select>
+
+    <select id="isPdfOwner" resultType="boolean">
+        SELECT EXISTS (
+            SELECT 1
+            FROM tb_pdf
+            WHERE pdf_id = #{pdfId}
+              AND reg_user_id = #{userId}
+        )
+    </select>
+
+    <select id="hasDriveFileAccess" resultType="boolean">
+        SELECT EXISTS (
+            SELECT 1
+            FROM tb_pdf
+            WHERE drive_file_id = #{driveFileId}
+        )
+    </select>
+
+    <select id="hasPdfFileAccess" resultType="boolean">
+        SELECT EXISTS (
+            SELECT 1
+            FROM tb_pdf
+            WHERE pdf_id = #{pdfId}
+              AND drive_file_id = #{driveFileId}
+        )
+    </select>
+
+    <select id="hasCommentAccess" resultType="boolean">
+        SELECT EXISTS (
+            SELECT 1
+            FROM tb_comment c
+            JOIN tb_pdf p ON p.pdf_id = c.pdf_id
+            WHERE c.comment_id = #{commentId}
+        )
+    </select>
+
+    <select id="hasCommentAccessForPdf" resultType="boolean">
+        SELECT EXISTS (
+            SELECT 1
+            FROM tb_comment c
+            JOIN tb_pdf p ON p.pdf_id = c.pdf_id
+            WHERE c.comment_id = #{commentId}
+              AND c.pdf_id = #{pdfId}
+        )
+    </select>
+
+    <select id="hasReplyAccess" resultType="boolean">
+        SELECT EXISTS (
+            SELECT 1
+            FROM tb_comment_reply r
+            JOIN tb_comment c ON c.comment_id = r.comment_id
+            JOIN tb_pdf p ON p.pdf_id = c.pdf_id
+            WHERE r.reply_id = #{replyId}
+        )
+    </select>
+
+    <select id="hasAttachmentAccess" resultType="boolean">
+        SELECT EXISTS (
+            SELECT 1
+            FROM tb_comment_attachment a
+            JOIN tb_comment c ON c.comment_id = a.comment_id
+            JOIN tb_pdf p ON p.pdf_id = c.pdf_id
+            WHERE a.attachment_id = #{attachmentId}
+        )
+    </select>
 	
+    <!-- 처음 연 Drive PDF에 댓글용 내부 pdf_id를 발급한다. -->
 	<insert id="insertPdf"
 	        useGeneratedKeys="true"
 	        keyProperty="pdfId">

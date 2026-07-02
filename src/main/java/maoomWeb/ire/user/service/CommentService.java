@@ -4,8 +4,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronization;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 import org.springframework.web.server.ResponseStatusException;
 
 import static org.springframework.http.HttpStatus.FORBIDDEN;
@@ -17,12 +21,19 @@ import maoomWeb.ire.user.dto.CommentReplyDto;
 import maoomWeb.ire.user.mapper.CommentMapper;
 import maoomWeb.ire.user.websocket.PdfCollaborationHandler;
 
-@Service
 /**
- * 댓글과 답글의 비즈니스 규칙을 처리한다.
- * DB 변경 후 Slack 알림과 WebSocket 갱신 이벤트를 연계한다.
+ * PDF 댓글·답글의 저장 규칙과 후속 작업을 담당하는 중심 서비스다.
+ *
+ * <p>CommentController가 요청값과 접근 권한을 확인한 뒤 이 서비스를 호출하고,
+ * 이 서비스는 CommentMapper로 DB를 변경한다. 변경 트랜잭션이 성공한 뒤에만
+ * Slack 멘션과 WebSocket 갱신 신호를 보내므로, 저장 실패 데이터가 다른 사용자
+ * 화면에 먼저 보이는 일을 막는다.</p>
  */
+@Service
 public class CommentService {
+
+    private static final Logger log =
+            LoggerFactory.getLogger(CommentService.class);
 
     private final CommentMapper commentMapper;
     private final SlackMentionService slackMentionService;
@@ -40,7 +51,10 @@ public class CommentService {
         this.attachmentService = attachmentService;
     }
 
-    /** 상태 조건에 맞는 PDF 댓글 목록을 조회한다. */
+    /**
+     * 상태 조건에 맞는 댓글을 조회하고 답글·첨부파일을 묶어 화면용 구조로 만든다.
+     * 화면은 이 한 번의 응답만으로 댓글 카드 전체를 그릴 수 있다.
+     */
     public List<CommentDto> getCommentList(
             Long pdfId,
             String status){
@@ -86,7 +100,10 @@ public class CommentService {
 
     }
     
-    /** 댓글과 업무용 번호를 저장한 뒤 멘션 알림과 실시간 갱신 이벤트를 전송한다. */
+    /**
+     * PDF별 순번(id0001 형식)을 만든 뒤 댓글을 저장한다.
+     * 같은 PDF에서 동시에 등록해도 번호가 겹치지 않도록 먼저 PDF 행을 잠근다.
+     */
     @Transactional
     public Long addComment(CommentDto commentDto){
 
@@ -99,19 +116,21 @@ public class CommentService {
 
         commentMapper.addComment(commentDto);
 
-        slackMentionService.sendMentionNotification(
-                commentDto.getCommentText(),
-                commentDto.getPdfId(),
-                commentDto.getCommentCode());
-
-        collaborationHandler.broadcastCommentChanged(
-                commentDto.getPdfId());
+        afterCommit(() ->
+                slackMentionService.sendMentionNotification(
+                        commentDto.getCommentText(),
+                        commentDto.getPdfId(),
+                        commentDto.getCommentCode()));
+        afterCommit(() ->
+                collaborationHandler.broadcastCommentChanged(
+                        commentDto.getPdfId()));
 
         return commentDto.getCommentId();
 
     }
 
     /** 작성자 본인의 댓글만 수정하고 관련 사용자에게 변경을 알린다. */
+    @Transactional
     public int updateComment(
             CommentDto commentDto,
             String userId){
@@ -131,25 +150,30 @@ public class CommentService {
                     "작성자만 댓글을 수정할 수 있습니다.");
         }
 
-        slackMentionService.sendMentionNotification(
-                commentDto.getCommentText(),
+        Long pdfId =
                 savedComment == null
-                        ? null
-                        : savedComment.getPdfId(),
+                ? null
+                : savedComment.getPdfId();
+        String commentCode =
                 savedComment == null
-                        ? null
-                        : savedComment.getCommentCode());
+                ? null
+                : savedComment.getCommentCode();
 
-        collaborationHandler.broadcastCommentChanged(
-                savedComment == null
-                        ? null
-                        : savedComment.getPdfId());
+        afterCommit(() ->
+                slackMentionService.sendMentionNotification(
+                        commentDto.getCommentText(),
+                        pdfId,
+                        commentCode));
+        afterCommit(() ->
+                collaborationHandler.broadcastCommentChanged(
+                        pdfId));
 
         return result;
 
     }
 
     /** 작성자 본인의 사각형 또는 말풍선 좌표를 변경하고 협업 사용자에게 알린다. */
+    @Transactional
     public int updateCommentGeometry(
             CommentDto commentDto,
             String userId){
@@ -172,16 +196,20 @@ public class CommentService {
                 commentMapper.getComment(
                         commentDto.getCommentId());
 
-        collaborationHandler.broadcastCommentChanged(
+        Long pdfId =
                 savedComment == null
-                        ? null
-                        : savedComment.getPdfId());
+                ? null
+                : savedComment.getPdfId();
+
+        afterCommit(() ->
+                collaborationHandler.broadcastCommentChanged(
+                        pdfId));
 
         return result;
     }
 
-    @Transactional
     /** 댓글과 소속 답글을 하나의 트랜잭션으로 삭제한다. */
+    @Transactional
     public int deleteComment(
             Long commentId,
             String userId){
@@ -205,16 +233,21 @@ public class CommentService {
 
         attachmentService.deleteForComment(commentId);
 
-        collaborationHandler.broadcastCommentChanged(
+        Long pdfId =
                 savedComment == null
-                        ? null
-                        : savedComment.getPdfId());
+                ? null
+                : savedComment.getPdfId();
+
+        afterCommit(() ->
+                collaborationHandler.broadcastCommentChanged(
+                        pdfId));
 
         return result;
 
     }
 
     /** 허용된 상태값인지 확인한 후 작성자 본인의 댓글 상태를 변경한다. */
+    @Transactional
     public int updateCommentStatus(
             CommentDto commentDto,
             String userId){
@@ -243,15 +276,20 @@ public class CommentService {
                 commentMapper.getComment(
                         commentDto.getCommentId());
 
-        collaborationHandler.broadcastCommentChanged(
+        Long pdfId =
                 savedComment == null
-                        ? null
-                        : savedComment.getPdfId());
+                ? null
+                : savedComment.getPdfId();
+
+        afterCommit(() ->
+                collaborationHandler.broadcastCommentChanged(
+                        pdfId));
 
         return result;
 
     }
     
+    /** 답글 목록에 각 답글의 첨부파일을 결합해 반환한다. */
     public List<CommentReplyDto> getReplyList(Long commentId){
         List<CommentReplyDto> replies =
                 commentMapper.getReplyList(commentId);
@@ -260,6 +298,7 @@ public class CommentService {
     }
 
     /** 답글을 저장하고 원 댓글이 속한 PDF에 변경 이벤트를 전송한다. */
+    @Transactional
     public Long addReply(CommentReplyDto dto){
 
         commentMapper.addReply(dto);
@@ -268,24 +307,29 @@ public class CommentService {
                 commentMapper.getComment(
                         dto.getCommentId());
 
-        slackMentionService.sendMentionNotification(
-                dto.getReplyText(),
+        Long pdfId =
                 comment == null
-                        ? null
-                        : comment.getPdfId(),
+                ? null
+                : comment.getPdfId();
+        String commentCode =
                 comment == null
-                        ? null
-                        : comment.getCommentCode());
+                ? null
+                : comment.getCommentCode();
 
-        collaborationHandler.broadcastCommentChanged(
-                comment == null
-                        ? null
-                        : comment.getPdfId());
+        afterCommit(() ->
+                slackMentionService.sendMentionNotification(
+                        dto.getReplyText(),
+                        pdfId,
+                        commentCode));
+        afterCommit(() ->
+                collaborationHandler.broadcastCommentChanged(
+                        pdfId));
 
         return dto.getReplyId();
     }
 
     /** 작성자 본인의 답글만 수정한다. */
+    @Transactional
     public int updateReply(
             CommentReplyDto dto,
             String userId){
@@ -306,23 +350,29 @@ public class CommentService {
                         commentMapper.getCommentIdByReplyId(
                                 dto.getReplyId()));
 
-        slackMentionService.sendMentionNotification(
-                dto.getReplyText(),
+        Long pdfId =
                 comment == null
-                        ? null
-                        : comment.getPdfId(),
+                ? null
+                : comment.getPdfId();
+        String commentCode =
                 comment == null
-                        ? null
-                        : comment.getCommentCode());
+                ? null
+                : comment.getCommentCode();
 
-        collaborationHandler.broadcastCommentChanged(
-                commentMapper.getPdfIdByReplyId(
-                        dto.getReplyId()));
+        afterCommit(() ->
+                slackMentionService.sendMentionNotification(
+                        dto.getReplyText(),
+                        pdfId,
+                        commentCode));
+        afterCommit(() ->
+                collaborationHandler.broadcastCommentChanged(
+                        pdfId));
 
         return result;
     }
 
     /** 작성자 본인의 답글만 삭제한다. */
+    @Transactional
     public int deleteReply(
             Long replyId,
             String userId){
@@ -342,8 +392,9 @@ public class CommentService {
 
         attachmentService.deleteForReply(replyId);
 
-        collaborationHandler.broadcastCommentChanged(
-                pdfId);
+        afterCommit(() ->
+                collaborationHandler.broadcastCommentChanged(
+                        pdfId));
 
         return result;
     }
@@ -376,8 +427,39 @@ public class CommentService {
                                 List.of())));
     }
 
+    /** 답글 변경 후 어느 PDF 방에 WebSocket 신호를 보낼지 찾을 때 사용한다. */
     public Long getPdfIdByReplyId(Long replyId){
         return commentMapper.getPdfIdByReplyId(replyId);
+    }
+
+    private void afterCommit(Runnable action) {
+
+        // 트랜잭션 안에서 호출됐다면 DB 커밋 이후 실행한다.
+        // 테스트나 트랜잭션 밖 호출이면 즉시 실행해 동일한 후속 동작을 유지한다.
+        if(TransactionSynchronizationManager.isSynchronizationActive()){
+            TransactionSynchronizationManager.registerSynchronization(
+                    new TransactionSynchronization() {
+                        @Override
+                        public void afterCommit() {
+                            runSafely(action);
+                        }
+                    });
+            return;
+        }
+
+        runSafely(action);
+    }
+
+    private void runSafely(Runnable action) {
+
+        // Slack/WebSocket 장애가 이미 완료된 댓글 저장 결과를 되돌리지는 않게 한다.
+        try{
+            action.run();
+        }catch(RuntimeException error){
+            log.warn(
+                    "Post-commit comment notification failed",
+                    error);
+        }
     }
 
 }

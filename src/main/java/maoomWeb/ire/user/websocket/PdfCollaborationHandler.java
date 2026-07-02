@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
@@ -22,36 +24,53 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import maoomWeb.ire.user.service.CurrentUserService;
+import maoomWeb.ire.user.service.PdfAccessService;
 
-@Component
 /**
- * PDF별 WebSocket 방을 관리하며 접속자와 댓글 편집 상태를 실시간 공유한다.
+ * 같은 PDF를 보고 있는 브라우저끼리 댓글 변경과 편집 상태를 실시간으로 전달한다.
+ *
+ * <p>연결 주소의 {@code pdfId}를 방 번호로 사용한다. DB 내용을 WebSocket에 직접
+ * 저장하지는 않으며, 댓글이 바뀌면 {@code COMMENT_CHANGED} 신호만 보낸다.
+ * 신호를 받은 화면이 REST API로 최신 댓글 목록을 다시 조회하는 구조다.</p>
  */
+@Component
 public class PdfCollaborationHandler
         extends TextWebSocketHandler {
 
+    private static final Logger log =
+            LoggerFactory.getLogger(PdfCollaborationHandler.class);
+
     private final ObjectMapper objectMapper;
     private final CurrentUserService currentUserService;
+    private final PdfAccessService pdfAccessService;
 
+    // PDF ID -> 해당 PDF를 보고 있는 WebSocket 세션 목록
     private final Map<Long,Set<WebSocketSession>> rooms =
             new ConcurrentHashMap<>();
 
+    // 세션 ID -> PDF ID. 연결 종료 시 어느 방에서 제거할지 찾는 역방향 인덱스다.
     private final Map<String,Long> sessionPdfIds =
             new ConcurrentHashMap<>();
 
+    // 세션 ID -> 화면에 표시할 사용자 정보
     private final Map<String,Map<String,String>> sessionUsers =
             new ConcurrentHashMap<>();
 
     public PdfCollaborationHandler(
             ObjectMapper objectMapper,
-            CurrentUserService currentUserService) {
+            CurrentUserService currentUserService,
+            PdfAccessService pdfAccessService) {
 
         this.objectMapper = objectMapper;
         this.currentUserService = currentUserService;
+        this.pdfAccessService = pdfAccessService;
     }
 
     @Override
-    /** 쿼리의 pdfId를 기준으로 세션을 방에 등록하고 접속자 목록을 방송한다. */
+    /**
+     * 연결 주소의 pdfId와 로그인 사용자를 검사한 뒤 해당 PDF 방에 세션을 등록한다.
+     * 등록이 끝나면 방 전체에 최신 접속자 목록(PRESENCE)을 보낸다.
+     */
     public void afterConnectionEstablished(
             WebSocketSession session) throws Exception {
 
@@ -60,6 +79,15 @@ public class PdfCollaborationHandler
         if(pdfId == null){
             session.close(
                     CloseStatus.BAD_DATA);
+            return;
+        }
+
+        String userId = getUserId(session.getPrincipal());
+
+        if(userId == null
+                || !pdfAccessService.canAccessPdf(pdfId, userId)){
+            session.close(
+                    CloseStatus.POLICY_VIOLATION);
             return;
         }
 
@@ -82,7 +110,10 @@ public class PdfCollaborationHandler
     }
 
     @Override
-    /** 클라이언트의 댓글 편집 시작/종료 이벤트를 같은 PDF 사용자에게 전달한다. */
+    /**
+     * 화면에서 보낸 EDITING_START/EDITING_STOP을 검증한 뒤 같은 PDF 사용자에게 전달한다.
+     * 클라이언트가 임의의 commentId를 보내더라도 현재 PDF 소속 댓글이 아니면 무시한다.
+     */
     protected void handleTextMessage(
             WebSocketSession session,
             TextMessage message) throws Exception {
@@ -95,10 +126,28 @@ public class PdfCollaborationHandler
             return;
         }
 
-        Map<String,Object> payload =
-                objectMapper.readValue(
-                        message.getPayload(),
-                        new TypeReference<Map<String,Object>>(){});
+        String userId = getUserId(session.getPrincipal());
+
+        if(userId == null
+                || !pdfAccessService.canAccessPdf(pdfId, userId)){
+            session.close(
+                    CloseStatus.POLICY_VIOLATION);
+            return;
+        }
+
+        Map<String,Object> payload;
+
+        try{
+            payload =
+                    objectMapper.readValue(
+                            message.getPayload(),
+                            new TypeReference<Map<String,Object>>(){});
+        }catch(IOException error){
+            log.debug(
+                    "Ignoring invalid collaboration message",
+                    error);
+            return;
+        }
 
         String type =
                 String.valueOf(
@@ -106,6 +155,16 @@ public class PdfCollaborationHandler
 
         if(!"EDITING_START".equals(type)
                 && !"EDITING_STOP".equals(type)){
+            return;
+        }
+
+        Long commentId = toLong(payload.get("commentId"));
+
+        if(commentId == null
+                || !pdfAccessService.canAccessCommentInPdf(
+                        commentId,
+                        pdfId,
+                        userId)){
             return;
         }
 
@@ -118,7 +177,7 @@ public class PdfCollaborationHandler
                 "EDITING_START".equals(type));
         event.put(
                 "commentId",
-                payload.get("commentId"));
+                commentId);
         event.put(
                 "user",
                 sessionUsers.get(
@@ -131,7 +190,7 @@ public class PdfCollaborationHandler
     }
 
     @Override
-    /** 종료된 세션을 방에서 제거하고 최신 접속자 목록을 방송한다. */
+    /** 연결이 끝난 세션과 사용자 정보를 제거하고 최신 접속자 목록을 다시 보낸다. */
     public void afterConnectionClosed(
             WebSocketSession session,
             CloseStatus status) throws Exception {
@@ -155,14 +214,17 @@ public class PdfCollaborationHandler
             room.remove(session);
 
             if(room.isEmpty()){
-                rooms.remove(pdfId);
+                rooms.remove(pdfId, room);
             }
         }
 
         broadcastPresence(pdfId);
     }
 
-    /** 댓글 데이터가 바뀌었음을 PDF 방 전체에 알린다. */
+    /**
+     * CommentService가 DB 트랜잭션을 완료한 뒤 호출한다.
+     * 수신 화면은 이 신호를 받으면 /api/comment/list를 다시 호출한다.
+     */
     public void broadcastCommentChanged(Long pdfId) {
 
         if(pdfId == null){
@@ -225,9 +287,13 @@ public class PdfCollaborationHandler
                     new TextMessage(
                             objectMapper.writeValueAsString(event));
 
+            List<WebSocketSession> staleSessions =
+                    new ArrayList<>();
+
             room.removeIf(session -> {
 
                 if(!session.isOpen()){
+                    staleSessions.add(session);
                     return true;
                 }
 
@@ -245,15 +311,28 @@ public class PdfCollaborationHandler
                     return false;
 
                 }catch(IOException e){
+                    staleSessions.add(session);
                     return true;
                 }
             });
 
+            staleSessions.forEach(this::removeSessionMetadata);
+
+            if(room.isEmpty()){
+                rooms.remove(pdfId, room);
+            }
+
         }catch(Exception e){
-            System.err.println(
-                    "PDF collaboration broadcast failed: "
-                    + e.getMessage());
+            log.warn(
+                    "PDF collaboration broadcast failed",
+                    e);
         }
+    }
+
+    private void removeSessionMetadata(WebSocketSession session) {
+
+        sessionPdfIds.remove(session.getId());
+        sessionUsers.remove(session.getId());
     }
 
     /** WebSocket 접속 URI에서 숫자형 pdfId 쿼리 값을 읽는다. */
@@ -309,5 +388,26 @@ public class PdfCollaborationHandler
         }
 
         return user;
+    }
+
+    private String getUserId(Principal principal) {
+        if(principal instanceof Authentication authentication){
+            return currentUserService.getUserId(authentication);
+        }
+        return principal == null ? null : principal.getName();
+    }
+
+    private Long toLong(Object value) {
+        if(value instanceof Number number){
+            return number.longValue();
+        }
+        if(value == null){
+            return null;
+        }
+        try{
+            return Long.valueOf(String.valueOf(value));
+        }catch(NumberFormatException error){
+            return null;
+        }
     }
 }

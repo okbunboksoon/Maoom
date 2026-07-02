@@ -13,6 +13,8 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ResponseStatusException;
@@ -22,9 +24,18 @@ import maoomWeb.ire.user.dto.CommentDto;
 import maoomWeb.ire.user.dto.CommentReplyDto;
 import maoomWeb.ire.user.mapper.CommentMapper;
 
-/** 댓글 첨부파일을 로컬 저장소에 보관하고 메타데이터를 관리한다. */
+/**
+ * 댓글 첨부파일의 실제 파일과 DB 메타데이터를 함께 관리한다.
+ *
+ * <p>실제 파일은 {@code app.comment.upload-dir} 아래에 UUID 이름으로 저장하고,
+ * 사용자가 올린 원래 이름·크기·댓글/답글 연결 정보는 CommentMapper를 통해
+ * {@code tb_comment_attachment}에 저장한다.</p>
+ */
 @Service
 public class CommentAttachmentService {
+
+    private static final Logger log =
+            LoggerFactory.getLogger(CommentAttachmentService.class);
 
     private final CommentMapper commentMapper;
     private final Path uploadRoot;
@@ -109,6 +120,7 @@ public class CommentAttachmentService {
             List<MultipartFile> files,
             String userId) throws IOException {
 
+        // 여러 파일 중 비어 있는 항목은 건너뛰고, 각 파일을 고유 저장명으로 보관한다.
         for(MultipartFile file : files){
 
             if(file == null || file.isEmpty()){
@@ -136,7 +148,12 @@ public class CommentAttachmentService {
             attachment.setFileSize(file.getSize());
             attachment.setUploaderId(userId);
 
-            commentMapper.addAttachment(attachment);
+            try{
+                commentMapper.addAttachment(attachment);
+            }catch(RuntimeException error){
+                Files.deleteIfExists(target);
+                throw error;
+            }
         }
     }
 
@@ -214,9 +231,9 @@ public class CommentAttachmentService {
                         resolveStoredFile(
                                 attachment.getStoredName()));
             }catch(IOException e){
-                System.err.println(
-                        "Attachment file cleanup failed: "
-                        + e.getMessage());
+                log.warn(
+                        "Attachment file cleanup failed",
+                        e);
             }
         });
     }
