@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!-- 1안 테스트용: 법규 마스터와 실제 매뉴얼 DITAMAP을 비교한 뒤 V 체크 항목을 편집 화면으로 넘긴다. -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditamap Builder 1안</title>
+    <link rel="stylesheet" href="/user/css/DitamapBuilder.css?v=diff-test-1">
+</head>
+<body class="ditamap-view-body">
+<main class="ditamap-view-wrap">
+    <header class="ditamap-header">
+        <div>
+            <h1>Ditamap Builder 1안(diff 비교형)</h1>
+            <p id="diffPathText">DITA 경로를 입력하면 법규 마스터와 실제 매뉴얼을 비교합니다.</p>
+        </div>
+    </header>
+
+    <section id="diffPathPanel"
+             class="ditamap-panel ditamap-test-path-panel">
+        <div class="ditamap-path-row">
+            <label for="diffPathInput">DITA 경로</label>
+            <input id="diffPathInput"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="DITAMAP이 포함된 폴더 또는 .ditamap 경로">
+            <button id="diffLoadButton"
+                    class="ditamap-btn primary-btn"
+                    type="button">확인</button>
+        </div>
+    </section>
+
+    <div class="ditamap-test-summary">
+        <span class="diff-chip diff-chip-match">V 체크: 양쪽에 있음</span>
+        <span class="diff-chip diff-chip-master">빨강: 법규 마스터에만 있음</span>
+        <span class="diff-chip diff-chip-manual">회색: 실제 매뉴얼에만 있음</span>
+    </div>
+
+    <div class="ditamap-tree-area diff-tree-area">
+        <section class="ditamap-tree-panel"
+                 aria-label="법규 마스터 DITAMAP">
+            <header class="ditamap-tree-header">
+                <div>
+                    <h2>법규 마스터</h2>
+                    <p>revision-tool 법규 템플릿 기준</p>
+                </div>
+            </header>
+            <div class="ditamap-tree-columns law-ditamap-columns">
+                <span>Title</span>
+                <span>파일명</span>
+            </div>
+            <div id="masterTree"
+                 class="ditamap-tree law-ditamap-tree"></div>
+        </section>
+
+        <section class="ditamap-tree-panel"
+                 aria-label="실제 매뉴얼 DITAMAP">
+            <header class="ditamap-tree-header">
+                <div>
+                    <h2>실제 매뉴얼</h2>
+                    <p id="manualDitamapName">DITAMAP 대기 중</p>
+                </div>
+            </header>
+            <div class="ditamap-tree-columns base-ditamap-columns">
+                <span>V</span>
+                <span>Title</span>
+                <span>파일명</span>
+            </div>
+            <div id="manualTree"
+                 class="ditamap-tree base-ditamap-tree"></div>
+        </section>
+    </div>
+
+    <footer class="ditamap-view-actions">
+        <button class="ditamap-btn secondary-btn"
+                type="button"
+                onclick="window.close()">닫기</button>
+        <button id="diffNextButton"
+                class="ditamap-btn primary-btn"
+                type="button"
+                disabled>Next</button>
+    </footer>
+</main>
+
+<div id="diffProgressBackdrop"
+     class="legal-progress-backdrop"
+     hidden>
+    <div class="legal-progress-dialog"
+         role="status"
+         aria-live="polite">
+        <div id="diffProgressHourglass"
+             class="legal-progress-hourglass"
+             aria-hidden="true">⌛</div>
+        <strong id="diffProgressTitle">DITAMAP 비교 중</strong>
+        <p id="diffProgressText">잠시만 기다려 주세요.</p>
+        <button id="diffProgressCloseButton"
+                class="ditamap-btn primary-btn"
+                type="button"
+                hidden>확인</button>
+    </div>
+</div>
+
+<script>
+const diffParams = new URLSearchParams(location.search);
+const diffPathInput = document.getElementById('diffPathInput');
+const diffLoadButton = document.getElementById('diffLoadButton');
+const diffNextButton = document.getElementById('diffNextButton');
+const diffPathText = document.getElementById('diffPathText');
+const masterTree = document.getElementById('masterTree');
+const manualTree = document.getElementById('manualTree');
+const manualDitamapName = document.getElementById('manualDitamapName');
+const diffProgressBackdrop = document.getElementById('diffProgressBackdrop');
+const diffProgressHourglass = document.getElementById('diffProgressHourglass');
+const diffProgressTitle = document.getElementById('diffProgressTitle');
+const diffProgressText = document.getElementById('diffProgressText');
+const diffProgressCloseButton = document.getElementById('diffProgressCloseButton');
+const masterPanel = masterTree.closest('.ditamap-tree-panel');
+const manualPanel = manualTree.closest('.ditamap-tree-panel');
+let diffManualTree = null;
+let diffManualRows = [];
+let isSyncingDiffScroll = false;
+
+function showDiffProgress(title, text, state){
+    diffProgressTitle.textContent = title;
+    diffProgressText.textContent = text || '';
+    diffProgressBackdrop.hidden = false;
+    diffProgressBackdrop.classList.toggle('is-complete', state === 'complete');
+    diffProgressBackdrop.classList.toggle('is-error', state === 'error');
+    diffProgressHourglass.hidden = state !== 'progress';
+    diffProgressCloseButton.hidden = state === 'progress';
+}
+
+function hideDiffProgress(){
+    diffProgressBackdrop.hidden = true;
+    diffProgressBackdrop.classList.remove('is-complete', 'is-error');
+}
+
+function flattenNodes(nodes, rows){
+    const result = rows || [];
+
+    (nodes || []).forEach(node => {
+        result.push(Object.assign({}, node, {
+            children:null
+        }));
+
+        if(node.children && node.children.length > 0){
+            flattenNodes(node.children, result);
+        }
+    });
+
+    return result;
+}
+
+function normalizeKey(row){
+    const fileName = (row.fileName || '').trim().toLowerCase();
+
+    if(fileName){
+        return 'file:' + fileName;
+    }
+
+    return 'title:' + (row.title || '').trim().toLowerCase();
+}
+
+function pushMapValue(map, key, value){
+    if(!map.has(key)){
+        map.set(key, []);
+    }
+
+    map.get(key).push(value);
+}
+
+function popMapValue(map, key){
+    const values = map.get(key) || [];
+
+    if(values.length === 0){
+        return null;
+    }
+
+    return values.shift();
+}
+
+function renderDiffRow(rowData, target, options){
+    const row = document.createElement('div');
+    const isManual = options.side === 'manual';
+    const isBlank = !rowData;
+    const safeRow = rowData || {
+        title:'',
+        level:options.level || 1,
+        fileName:''
+    };
+    row.className = 'ditamap-tree-row';
+    row.dataset.level = String(Math.max(safeRow.level || 1, 1));
+
+    if(isBlank){
+        row.classList.add('is-diff-blank');
+    }
+
+    if(options.status){
+        row.classList.add('is-diff-' + options.status);
+    }
+
+    if(isManual){
+        const checkCell = document.createElement('div');
+        checkCell.className = 'ditamap-tree-check';
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.className = 'ditamap-topic-check';
+        checkbox.checked = !isBlank && options.status === 'match';
+
+        if(isBlank || options.index == null){
+            checkbox.disabled = true;
+        }else{
+            checkbox.dataset.index = String(options.index);
+            checkbox.addEventListener('change', updateDiffNextButton);
+        }
+
+        checkCell.appendChild(checkbox);
+        row.appendChild(checkCell);
+    }
+
+    const titleCell = document.createElement('div');
+    titleCell.className = 'ditamap-tree-title';
+    titleCell.style.paddingLeft = ((Math.max(safeRow.level || 1, 1) - 1) * 24) + 'px';
+    const marker = document.createElement('span');
+    marker.className = 'tree-marker';
+    marker.textContent = isBlank ? '' : '-';
+    const levelBadge = document.createElement('span');
+    levelBadge.className = 'level-badge';
+    levelBadge.textContent = isBlank
+        ? ''
+        : 'L' + Math.max(safeRow.level || 1, 1);
+    const title = document.createElement('span');
+    title.className = 'tree-title-text';
+    title.textContent = isBlank ? '' : (safeRow.title || '(제목 없음)');
+    const fileName = document.createElement('div');
+    fileName.className = 'ditamap-tree-file';
+    fileName.textContent = safeRow.fileName || '';
+
+    titleCell.appendChild(marker);
+    if(!isBlank){
+        titleCell.appendChild(levelBadge);
+    }
+    titleCell.appendChild(title);
+    row.appendChild(titleCell);
+    row.appendChild(fileName);
+    target.appendChild(row);
+}
+
+function updateDiffNextButton(){
+    diffNextButton.disabled =
+            manualTree.querySelectorAll('.ditamap-topic-check:checked').length === 0;
+}
+
+function syncDiffPanelScroll(sourcePanel, targetPanel){
+    if(isSyncingDiffScroll || !sourcePanel || !targetPanel){
+        return;
+    }
+
+    isSyncingDiffScroll = true;
+    targetPanel.scrollTop = sourcePanel.scrollTop;
+    targetPanel.scrollLeft = sourcePanel.scrollLeft;
+    requestAnimationFrame(() => {
+        isSyncingDiffScroll = false;
+    });
+}
+
+function scrollBothDiffPanels(deltaY){
+    if(!masterTree || !manualTree){
+        return;
+    }
+
+    isSyncingDiffScroll = true;
+    masterTree.scrollTop += deltaY;
+    manualTree.scrollTop += deltaY;
+    requestAnimationFrame(() => {
+        isSyncingDiffScroll = false;
+    });
+}
+
+function buildDiffMatches(masterRows, manualRows){
+    const masterKeys = masterRows.map(normalizeKey);
+    const manualKeys = manualRows.map(normalizeKey);
+    const rowCount = masterRows.length + 1;
+    const colCount = manualRows.length + 1;
+    const lengths = Array.from({length:rowCount}, () => Array(colCount).fill(0));
+
+    for(let masterIndex = masterRows.length - 1; masterIndex >= 0; masterIndex--){
+        for(let manualIndex = manualRows.length - 1; manualIndex >= 0; manualIndex--){
+            if(masterKeys[masterIndex] === manualKeys[manualIndex]){
+                lengths[masterIndex][manualIndex] = lengths[masterIndex + 1][manualIndex + 1] + 1;
+            }else{
+                lengths[masterIndex][manualIndex] = Math.max(
+                        lengths[masterIndex + 1][manualIndex],
+                        lengths[masterIndex][manualIndex + 1]);
+            }
+        }
+    }
+
+    const matches = [];
+    let masterIndex = 0;
+    let manualIndex = 0;
+
+    while(masterIndex < masterRows.length && manualIndex < manualRows.length){
+        if(masterKeys[masterIndex] === manualKeys[manualIndex]){
+            matches.push({
+                masterIndex:masterIndex,
+                manualIndex:manualIndex
+            });
+            masterIndex++;
+            manualIndex++;
+        }else if(lengths[masterIndex + 1][manualIndex] >= lengths[masterIndex][manualIndex + 1]){
+            masterIndex++;
+        }else{
+            manualIndex++;
+        }
+    }
+
+    return matches;
+}
+
+function renderDiff(master, manual){
+    const masterRows = flattenNodes(master.nodes || []);
+    const manualRows = flattenNodes(manual.nodes || []);
+    const matches = buildDiffMatches(masterRows, manualRows);
+    masterTree.innerHTML = '';
+    manualTree.innerHTML = '';
+    manualDitamapName.textContent = manual.rootTitle + ' · ' + manual.ditamapFile;
+    diffManualRows = manualRows;
+
+    /*
+     * Beyond Compare HTML처럼 LCS(diff) 기준으로 순서를 보존한다.
+     * 다음 공통 topicref 전까지 왼쪽-only 블록, 오른쪽-only 블록을 차례로 보여준다.
+     */
+    let masterCursor = 0;
+    let manualCursor = 0;
+
+    matches.forEach(match => {
+        while(masterCursor < match.masterIndex){
+            const masterRow = masterRows[masterCursor];
+            renderDiffRow(masterRow, masterTree, {
+                side:'master',
+                status:'master-only',
+                level:masterRow.level || 1
+            });
+            renderDiffRow(null, manualTree, {
+                side:'manual',
+                index:null,
+                status:'master-only',
+                level:masterRow.level || 1
+            });
+            masterCursor++;
+        }
+
+        while(manualCursor < match.manualIndex){
+            const manualRow = manualRows[manualCursor];
+            renderDiffRow(null, masterTree, {
+                side:'master',
+                status:'manual-only',
+                level:manualRow.level || 1
+            });
+            renderDiffRow(manualRow, manualTree, {
+                side:'manual',
+                index:manualCursor,
+                status:'manual-only',
+                level:manualRow.level || 1
+            });
+            manualCursor++;
+        }
+
+        const masterRow = masterRows[match.masterIndex];
+        const manualRow = manualRows[match.manualIndex];
+        const rowLevel = Math.max(masterRow.level || 1, manualRow.level || 1);
+        renderDiffRow(masterRow, masterTree, {
+            side:'master',
+            status:'match',
+            level:rowLevel
+        });
+        renderDiffRow(manualRow, manualTree, {
+            side:'manual',
+            index:match.manualIndex,
+            status:'match',
+            level:rowLevel
+        });
+
+        masterCursor = match.masterIndex + 1;
+        manualCursor = match.manualIndex + 1;
+    });
+
+    while(masterCursor < masterRows.length){
+        const masterRow = masterRows[masterCursor];
+        renderDiffRow(masterRow, masterTree, {
+            side:'master',
+            status:'master-only',
+            level:masterRow.level || 1
+        });
+        renderDiffRow(null, manualTree, {
+            side:'manual',
+            index:null,
+            status:'master-only',
+            level:masterRow.level || 1
+        });
+        masterCursor++;
+    }
+
+    while(manualCursor < manualRows.length){
+        const manualRow = manualRows[manualCursor];
+        renderDiffRow(null, masterTree, {
+            side:'master',
+            status:'manual-only',
+            level:manualRow.level || 1
+        });
+        renderDiffRow(manualRow, manualTree, {
+            side:'manual',
+            index:manualCursor,
+            status:'manual-only',
+            level:manualRow.level || 1
+        });
+        manualCursor++;
+    }
+
+    diffManualTree = manual;
+    updateDiffNextButton();
+}
+
+async function loadDiff(path){
+    if(!path){
+        return;
+    }
+
+    showDiffProgress('DITAMAP 비교 중', '법규 마스터와 실제 매뉴얼을 비교하고 있습니다.', 'progress');
+    diffPathText.textContent = path;
+
+    try{
+        const [masterResponse, manualResponse] = await Promise.all([
+            fetch('/api/ditamap-builder/legal-master', {
+                method:'POST',
+                headers:{'Accept':'application/json'}
+            }),
+            fetch('/api/ditamap-builder/tree-summary', {
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                    'Accept':'application/json'
+                },
+                body:JSON.stringify({path:path})
+            })
+        ]);
+
+        if(!masterResponse.ok){
+            throw new Error(await masterResponse.text());
+        }
+
+        if(!manualResponse.ok){
+            throw new Error(await manualResponse.text());
+        }
+
+        renderDiff(await masterResponse.json(), await manualResponse.json());
+        showDiffProgress('DITAMAP 비교 완료', '비교 결과를 불러왔습니다.', 'complete');
+    }catch(error){
+        showDiffProgress(
+                'DITAMAP 비교 실패',
+                error.message || '비교 결과를 불러오지 못했습니다.',
+                'error');
+    }
+}
+
+function openDiffEditor(){
+    if(!diffManualTree){
+        return;
+    }
+
+    const checkedTopics = Array.from(manualTree.querySelectorAll('.ditamap-topic-check:checked'))
+            .map(checkbox => diffManualRows[Number(checkbox.dataset.index)])
+            .filter(Boolean);
+
+    if(checkedTopics.length === 0){
+        showDiffProgress('선택 항목 없음', '편집 화면으로 넘길 V 체크 항목이 없습니다.', 'error');
+        return;
+    }
+
+    const draftId = 'legal-draft-diff-' + Date.now();
+    localStorage.setItem('ditamapLegalDraft:' + draftId, JSON.stringify({
+        ditamapFile:diffManualTree.ditamapFile,
+        topics:checkedTopics
+    }));
+    window.open(
+            '/ditamap-builder/legal-editor?draft=' + encodeURIComponent(draftId),
+            'ditamapLegalEditorDiff',
+            'width=1280,height=860,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=yes');
+}
+
+diffLoadButton.addEventListener('click', function(){
+    const path = diffPathInput.value.trim();
+
+    if(path){
+        location.href = '/ditamap-builder/diff?path=' + encodeURIComponent(path);
+    }
+});
+diffNextButton.addEventListener('click', openDiffEditor);
+diffProgressCloseButton.addEventListener('click', hideDiffProgress);
+
+[masterPanel, manualPanel].forEach(panel => {
+    if(!panel){
+        return;
+    }
+
+    panel.addEventListener('wheel', event => {
+        event.preventDefault();
+        scrollBothDiffPanels(event.deltaY);
+    }, {passive:false});
+});
+
+masterTree.addEventListener('scroll', () => {
+    syncDiffPanelScroll(masterTree, manualTree);
+});
+manualTree.addEventListener('scroll', () => {
+    syncDiffPanelScroll(manualTree, masterTree);
+});
+
+const initialDiffPath = diffParams.get('path') || '';
+diffPathInput.value = initialDiffPath;
+loadDiff(initialDiffPath);
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="legal_00_01">
+	<title>How to use this guide</title>
+	<shortdesc>We want you to enjoy your vehicle to the fullest.</shortdesc>
+	<conbody>
+		<p>We strongly recommend that you read this thoroughly. To minimize the chance of death or
+			injury, we urge you to read the DANGER, WARNING and CAUTION sections.</p>
+		<p>The table of contents provides an overview of how this information is organized. Use the index
+			to find specific topics or subjects. It provides an alphabetical listing of all
+			information. Safety precautions and operating procedures are identified as DANGER,
+			WARNING, CUATION, NOTICE, and TIP. These safety messages were prepared to enhance your
+			personal safety. </p>
+		<p>You should carefully read and follow All safety messages, procedures, and recommendations
+			provided.</p>
+		<note type="danger">
+			<p>A DANGER indicates a hazardous situation which, if not avoided, will result in death
+				or serious injury.</p>
+		</note>
+		<note type="warning">
+			<p>A WARNING indicates a hazardous situation which, if not avoided, may result in death
+				or serious injury.</p>
+		</note>
+		<note type="caution">
+			<p>A CAUTION indicates a hazardous situation which, if not avoided, could result in
+				minor or moderate injury.</p>
+		</note>
+		<note type="note">
+			<p>A NOTICE indicates a hazardous situation which, if not avoided, could result in
+				vehicle damage.</p>
+		</note>
+		<note type="tip">
+			<p>A TIP indicates a vehicle term or information display that requires additional
+				explanation.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="legal_00.dita#legal_00" role="parent" scope="local"
+				type="concept">
+				<linktext>Foreword</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

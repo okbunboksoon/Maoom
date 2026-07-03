@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<!-- DITAMAP Builder 트리 조회 결과 화면. -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>법규 Ditamap Builder View</title>
+    <link rel="stylesheet" href="/user/css/DitamapBuilder.css?v=legal-structure-1">
+</head>
+<body class="ditamap-view-body">
+<main class="ditamap-view-wrap">
+    <header class="ditamap-header">
+        <div>
+            <h1>법규 Ditamap Builder</h1>
+            <p id="viewPathText">DITAMAP 트리를 불러오는 중입니다.</p>
+        </div>
+    </header>
+
+    <div id="ditamapMessage"
+         class="status-message builder-view-status"
+         role="status"
+         aria-live="polite"
+         hidden>
+        <span id="ditamapLoadingHourglass"
+              class="status-hourglass"
+              aria-hidden="true"
+              hidden>⌛</span>
+        <span id="ditamapMessageText"></span>
+    </div>
+
+    <div class="ditamap-tree-area">
+        <section class="ditamap-tree-panel"
+                 aria-label="기준 DITAMAP 트리">
+            <header class="ditamap-tree-header">
+                <div>
+                    <h2>기준 DITAMAP</h2>
+                    <p id="baseDitamapName"></p>
+                </div>
+            </header>
+            <div class="ditamap-tree-columns base-ditamap-columns">
+                <span>체크</span>
+                <span>Title</span>
+                <span>파일명</span>
+            </div>
+            <div id="baseDitamapTree"
+                 class="ditamap-tree base-ditamap-tree"></div>
+        </section>
+
+        <div class="ditamap-transfer-slot"
+             aria-label="법규 DITAMAP 생성">
+            <button id="runBatchButton"
+                    class="ditamap-arrow-btn"
+                    type="button"
+                    title="legal hash 및 merge 배치 실행"
+                    disabled>
+                <span aria-hidden="true">→</span>
+            </button>
+        </div>
+
+        <div class="legal-ditamap-side">
+            <section class="ditamap-tree-panel empty-target"
+                     aria-label="법규 DITAMAP 트리">
+                <header class="ditamap-tree-header">
+                    <div>
+                        <h2>법규 DITAMAP</h2>
+                        <p>생성 후 새 DITAMAP 구조가 표시됩니다.</p>
+                    </div>
+                    <div class="ditamap-structure-toolbar legal-panel-toolbar"
+                         aria-label="법규 DITAMAP 구조 조정">
+                        <button id="lawMoveUpButton"
+                                class="ditamap-icon-btn"
+                                type="button"
+                                title="위로 이동"
+                                disabled>↑</button>
+                        <button id="lawMoveDownButton"
+                                class="ditamap-icon-btn"
+                                type="button"
+                                title="아래로 이동"
+                                disabled>↓</button>
+                        <button id="lawOutdentButton"
+                                class="ditamap-icon-btn"
+                                type="button"
+                                title="내어쓰기"
+                                disabled>←</button>
+                        <button id="lawIndentButton"
+                                class="ditamap-icon-btn"
+                                type="button"
+                                title="들여쓰기"
+                                disabled>→</button>
+                        <button id="lawDeleteButton"
+                                class="ditamap-icon-btn danger-icon-btn"
+                                type="button"
+                                title="선택 항목 삭제"
+                                disabled>×</button>
+                    </div>
+                </header>
+                <div class="ditamap-tree-columns law-ditamap-columns">
+                    <span>Title</span>
+                    <span>파일명</span>
+                </div>
+                <div id="lawDitamapTree"
+                     class="ditamap-tree law-ditamap-tree">
+                    <div class="ditamap-tree-placeholder">
+                        생성 작업 대기 중
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="ditamap-view-actions">
+        <!-- 오른쪽 법규 DITAMAP 작업 버튼은 저장과 폴더 확인을 분리한다.
+             저장 버튼은 파일 저장만 담당하고, 폴더열기는 사용자가 필요할 때 직접 실행한다. -->
+        <div class="legal-action-group">
+            <button id="undoLegalButton"
+                    class="ditamap-btn secondary-btn"
+                    type="button"
+                    disabled>되돌리기</button>
+            <button id="saveLegalButton"
+                    class="ditamap-btn primary-btn"
+                    type="button"
+                    disabled>저장</button>
+        </div>
+    </footer>
+</main>
+
+<!-- 법규 DITAMAP 생성 배치가 오래 걸릴 수 있어, 작업 중/완료/실패 상태를 별도 팝업으로 표시한다. -->
+<div id="legalProgressBackdrop"
+     class="legal-progress-backdrop"
+     hidden>
+    <div class="legal-progress-dialog"
+         role="status"
+         aria-live="polite">
+        <div id="legalProgressHourglass"
+             class="legal-progress-hourglass"
+             aria-hidden="true">⌛</div>
+        <strong id="legalProgressTitle">법규 DITAMAP 생성중</strong>
+        <p id="legalProgressText">잠시만 기다려 주세요.</p>
+        <button id="legalProgressCloseButton"
+                class="ditamap-btn primary-btn"
+                type="button"
+                hidden>확인</button>
+    </div>
+</div>
+
+<script>
+const changedAttributes = new Map();
+const message =
+    document.getElementById('ditamapMessage');
+const messageText =
+    document.getElementById('ditamapMessageText');
+const messageHourglass =
+    document.getElementById('ditamapLoadingHourglass');
+const baseTree =
+    document.getElementById('baseDitamapTree');
+const lawTree =
+    document.getElementById('lawDitamapTree');
+const baseDitamapName =
+    document.getElementById('baseDitamapName');
+const viewPathText =
+    document.getElementById('viewPathText');
+const runBatchButton =
+    document.getElementById('runBatchButton');
+const saveLegalButton =
+    document.getElementById('saveLegalButton');
+const undoLegalButton =
+    document.getElementById('undoLegalButton');
+const lawMoveUpButton =
+    document.getElementById('lawMoveUpButton');
+const lawMoveDownButton =
+    document.getElementById('lawMoveDownButton');
+const lawOutdentButton =
+    document.getElementById('lawOutdentButton');
+const lawIndentButton =
+    document.getElementById('lawIndentButton');
+const lawDeleteButton =
+    document.getElementById('lawDeleteButton');
+const legalProgressBackdrop =
+    document.getElementById('legalProgressBackdrop');
+const legalProgressHourglass =
+    document.getElementById('legalProgressHourglass');
+const legalProgressTitle =
+    document.getElementById('legalProgressTitle');
+const legalProgressText =
+    document.getElementById('legalProgressText');
+const legalProgressCloseButton =
+    document.getElementById('legalProgressCloseButton');
+let currentDitamapFile = '';
+let currentTreeData = null;
+let currentLegalDitamapFile = '';
+let currentLegalTreeData = null;
+let lawTreeRows = [];
+let draggingLawIndex = null;
+let selectedLawIndex = -1;
+
+function showMessage(text, type){
+    messageText.textContent = text;
+    message.className = 'status-message builder-view-status';
+
+    if(type){
+        message.classList.add(type);
+    }
+
+    messageHourglass.hidden = type !== 'progress';
+    message.hidden = false;
+}
+
+// 법규 DITAMAP 생성 배치 상태 팝업을 갱신한다.
+// state가 progress이면 모래시계를 보여 주고, complete/error이면 확인 버튼을 보여 사용자가 닫을 수 있게 한다.
+function showLegalProgress(title, text, state){
+    legalProgressTitle.textContent = title;
+    legalProgressText.textContent = text || '';
+    legalProgressBackdrop.hidden = false;
+    legalProgressBackdrop.classList.toggle('is-complete', state === 'complete');
+    legalProgressBackdrop.classList.toggle('is-error', state === 'error');
+    legalProgressHourglass.hidden = state !== 'progress';
+    legalProgressCloseButton.hidden = state === 'progress';
+}
+
+// 완료/실패 팝업의 확인 버튼에서 사용한다. 생성 중에는 버튼이 숨겨져 있어 닫을 수 없다.
+function hideLegalProgress(){
+    legalProgressBackdrop.classList.remove('is-complete', 'is-error');
+    legalProgressBackdrop.hidden = true;
+}
+
+// 화면에서 버튼 구성이 계속 바뀌는 영역이라, 존재하는 버튼에만 이벤트를 연결한다.
+// 버튼 하나가 빠져도 초기 스크립트가 멈추지 않아 DITAMAP 로딩은 계속 진행된다.
+function bindClick(element, handler){
+    if(element){
+        element.addEventListener('click', handler);
+    }
+}
+
+bindClick(legalProgressCloseButton, hideLegalProgress);
+bindClick(lawMoveUpButton, moveSelectedLawUp);
+bindClick(lawMoveDownButton, moveSelectedLawDown);
+bindClick(lawOutdentButton, () => changeSelectedLawLevel(-1));
+bindClick(lawIndentButton, () => changeSelectedLawLevel(1));
+bindClick(lawDeleteButton, deleteSelectedLawRow);
+
+async function loadDitamapTree(options = {}){
+    const showProgressPopup = options.showProgressPopup !== false;
+    const showCompletePopup = options.showCompletePopup !== false;
+    const showStatusMessage = options.showStatusMessage !== false;
+    const rethrowError = options.rethrowError === true;
+    const params = new URLSearchParams(location.search);
+    const path = params.get('path') || '';
+    viewPathText.textContent = path || 'DITA 경로가 없습니다.';
+    // 최초 DITAMAP 조회는 상단 알림 대신 중앙 팝업으로 보여 준다.
+    // 사용자가 요청한 대로 긴 로딩 상태가 화면 중앙에서 명확히 보이도록 분리했다.
+    if(showProgressPopup){
+        showLegalProgress(
+                'DITAMAP 트리 불러오는 중',
+                '잠시만 기다려 주세요.',
+                'progress');
+    }
+
+    if(!path){
+        if(showProgressPopup){
+            showLegalProgress(
+                    'DITAMAP 트리 불러오기 실패',
+                    'DITA 경로가 없습니다.',
+                    'error');
+        }
+        if(showStatusMessage){
+            showMessage('DITA 경로가 없습니다.', 'error');
+        }
+        if(rethrowError){
+            throw new Error('DITA 경로가 없습니다.');
+        }
+        return;
+    }
+
+    try{
+        const response = await fetch('/api/ditamap-builder/tree-summary', {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                path:path
+            })
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        const tree = await response.json();
+        currentTreeData = tree;
+        currentDitamapFile = tree.ditamapFile || '';
+        renderDitamapTree(tree);
+        if(showProgressPopup){
+            if(showCompletePopup){
+                showLegalProgress(
+                        'DITAMAP 트리 불러오기 완료',
+                        'DITAMAP 트리를 불러왔습니다.',
+                        'complete');
+            }else{
+                hideLegalProgress();
+            }
+        }
+        if(showStatusMessage){
+            showMessage('DITAMAP 트리를 불러왔습니다.', 'success');
+        }
+    }catch(error){
+        if(showProgressPopup){
+            showLegalProgress(
+                    'DITAMAP 트리 불러오기 실패',
+                    error.message || 'DITAMAP 트리를 불러오지 못했습니다.',
+                    'error');
+        }
+        if(showStatusMessage){
+            showMessage(
+                error.message || 'DITAMAP 트리를 불러오지 못했습니다.',
+                'error');
+        }
+        if(rethrowError){
+            throw error;
+        }
+    }
+}
+
+function renderDitamapTree(tree){
+    currentTreeData = tree;
+    renderBaseDitamapTree(tree);
+    renderLawDitamapPlaceholder();
+}
+
+function renderBaseDitamapTree(tree){
+    baseTree.innerHTML = '';
+    changedAttributes.clear();
+    updateRunBatchButton();
+    baseDitamapName.textContent = tree.rootTitle
+        + ' · '
+        + tree.ditamapFile;
+
+    if(!tree.nodes || tree.nodes.length === 0){
+        const empty = document.createElement('div');
+        empty.className = 'ditamap-tree-empty';
+        empty.textContent = '표시할 topicref가 없습니다.';
+        baseTree.appendChild(empty);
+        return;
+    }
+
+    tree.nodes.forEach(node => appendTreeNode(node, baseTree, true));
+}
+
+function renderLawDitamapPlaceholder(){
+    lawTree.innerHTML = '';
+    lawTreeRows = [];
+    selectedLawIndex = -1;
+    currentLegalDitamapFile = '';
+    currentLegalTreeData = null;
+    const placeholder = document.createElement('div');
+    placeholder.className = 'ditamap-tree-placeholder';
+    placeholder.textContent = '생성 작업 대기 중';
+    lawTree.appendChild(placeholder);
+    updateLegalActionButtons();
+}
+
+// 법규 DITAMAP을 새로 생성하거나 저장 후 다시 읽었을 때 호출된다.
+// currentLegalTreeData는 오른쪽 되돌리기의 기준 상태로 쓰이므로, 화면에 표시한 마지막 확정 트리를 보관한다.
+function renderLawDitamapTree(tree){
+    currentLegalTreeData = tree;
+    lawTreeRows = flattenLawTreeNodes(tree && tree.nodes ? tree.nodes : []);
+    selectedLawIndex = -1;
+    currentLegalDitamapFile = tree && tree.ditamapFile
+        ? tree.ditamapFile
+        : '';
+    renderLawDitamapRows();
+    updateLegalActionButtons();
+}
+
+// 오른쪽 버튼 상태를 한 곳에서 맞춘다.
+// 되돌리기/저장은 법규 DITAMAP이 실제로 생성된 뒤에만 활성화하고,
+// 폴더열기는 기준 DITAMAP 경로만 있으면 사용할 수 있게 분리한다.
+function updateLegalActionButtons(){
+    const hasLegalTree = lawTreeRows.length > 0;
+    undoLegalButton.disabled = !hasLegalTree;
+    saveLegalButton.disabled = !hasLegalTree || !currentDitamapFile;
+    lawMoveUpButton.disabled = selectedLawIndex < 0;
+    lawMoveDownButton.disabled = selectedLawIndex < 0;
+    lawOutdentButton.disabled = selectedLawIndex < 0;
+    lawIndentButton.disabled = selectedLawIndex < 0;
+    lawDeleteButton.disabled = selectedLawIndex < 0;
+}
+
+function flattenLawTreeNodes(nodes, rows){
+    const result = rows || [];
+
+    nodes.forEach(node => {
+        result.push(Object.assign({}, node, {
+            children:null
+        }));
+
+        if(node.children && node.children.length > 0){
+            flattenLawTreeNodes(node.children, result);
+        }
+    });
+
+    return result;
+}
+
+function renderLawDitamapRows(){
+    lawTree.innerHTML = '';
+
+    if(lawTreeRows.length === 0){
+        const empty = document.createElement('div');
+        empty.className = 'ditamap-tree-empty';
+        empty.textContent = '표시할 topicref가 없습니다.';
+        lawTree.appendChild(empty);
+        return;
+    }
+
+    lawTreeRows.forEach((node, index) => appendLawTreeRow(node, index));
+}
+
+function appendTreeNode(node, targetTree, editable){
+    const row = document.createElement('div');
+    row.className = 'ditamap-tree-row';
+    row.dataset.level = String(Math.max(node.level, 1));
+    row.dataset.title = node.title || '';
+    row.dataset.fileName = node.fileName || '';
+    row.dataset.href = node.href || '';
+    row.dataset.attributeValue = normalizeAttributeValue(
+            node.attributeValue || '');
+
+    const checkCell = document.createElement('div');
+    checkCell.className = 'ditamap-tree-check';
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.className = 'ditamap-topic-check';
+    checkbox.dataset.title = node.title || '';
+    checkbox.dataset.fileName = node.fileName || '';
+    checkbox.dataset.href = node.href || '';
+    checkbox.dataset.level = String(Math.max(node.level, 1));
+    checkbox.title = '법규 DITAMAP 생성 대상 선택';
+    checkbox.addEventListener('change', function(){
+        row.classList.toggle('is-checked', checkbox.checked);
+    });
+    checkCell.appendChild(checkbox);
+
+    const titleCell = document.createElement('div');
+    titleCell.className = 'ditamap-tree-title';
+    titleCell.style.paddingLeft =
+        ((Math.max(node.level, 1) - 1) * 24) + 'px';
+
+    const levelBadge = document.createElement('span');
+    levelBadge.className = 'level-badge';
+    levelBadge.textContent = 'L' + node.level;
+
+    const marker = document.createElement('span');
+    marker.className = 'tree-marker';
+    const hasChildren = node.children && node.children.length > 0;
+    marker.textContent = hasChildren ? '▾' : '-';
+
+    if(hasChildren){
+        marker.classList.add('is-toggle');
+        marker.title = '접기/펼치기';
+        marker.addEventListener('click', event => {
+            event.stopPropagation();
+            toggleFlatTreeRow(row);
+        });
+    }
+
+    const title = document.createElement('span');
+    title.className = 'tree-title-text';
+    title.textContent = node.title;
+
+    const fileName = document.createElement('div');
+    fileName.className = 'ditamap-tree-file';
+    fileName.textContent = node.fileName || '';
+
+    titleCell.appendChild(marker);
+    titleCell.appendChild(levelBadge);
+    titleCell.appendChild(title);
+    row.appendChild(checkCell);
+    row.appendChild(titleCell);
+    row.appendChild(fileName);
+    targetTree.appendChild(row);
+
+    if(node.children){
+        node.children.forEach(child => appendTreeNode(
+                child,
+                targetTree,
+                editable));
+    }
+}
+
+function appendLawTreeRow(node, index){
+    const row = document.createElement('div');
+    row.className = 'ditamap-tree-row law-draggable-row';
+    row.draggable = true;
+    row.dataset.lawIndex = index;
+    row.dataset.level = String(Math.max(node.level, 1));
+
+    if(isLegalResourceHeading(node)){
+        row.classList.add('is-legal-resource-title');
+    }
+
+    if(index === selectedLawIndex){
+        row.classList.add('is-selected');
+    }
+
+    const titleCell = document.createElement('div');
+    titleCell.className = 'ditamap-tree-title';
+    titleCell.style.paddingLeft =
+        ((Math.max(node.level, 1) - 1) * 24) + 'px';
+
+    const levelBadge = document.createElement('span');
+    levelBadge.className = 'level-badge';
+    levelBadge.textContent = 'L' + node.level;
+
+    const marker = document.createElement('span');
+    marker.className = 'tree-marker';
+    const hasChildren = lawTreeRows[index + 1]
+            && lawTreeRows[index + 1].level > node.level;
+    marker.textContent = hasChildren ? '▾' : '-';
+
+    if(hasChildren){
+        marker.classList.add('is-toggle');
+        marker.title = '접기/펼치기';
+        marker.addEventListener('click', event => {
+            event.stopPropagation();
+            toggleFlatTreeRow(row);
+        });
+    }
+
+    const title = document.createElement('span');
+    title.className = 'tree-title-text';
+    title.textContent = node.title;
+
+    const fileName = document.createElement('div');
+    fileName.className = 'ditamap-tree-file';
+    fileName.textContent = node.fileName || '';
+
+    titleCell.appendChild(marker);
+    titleCell.appendChild(levelBadge);
+    titleCell.appendChild(title);
+    row.appendChild(titleCell);
+    row.appendChild(fileName);
+    row.addEventListener('click', () => selectLawRow(index));
+    row.addEventListener('dragstart', handleLawDragStart);
+    row.addEventListener('dragover', handleLawDragOver);
+    row.addEventListener('dragleave', clearLawDropMarkers);
+    row.addEventListener('drop', handleLawDrop);
+    row.addEventListener('dragend', handleLawDragEnd);
+    lawTree.appendChild(row);
+}
+
+function isLegalResourceHeading(node){
+    const fileName = (node.fileName || '').toLowerCase();
+    const level = Number(node.level || 1);
+
+    // revision-tool/legal에서 복사되는 legal_*.dita 상위 항목만 구분한다.
+    // 일반 topic(t00000.dita)과 사용자가 추가한 하위 항목은 기존 색상을 유지한다.
+    return level <= 2
+        && /^legal_[\w-]+\.dita$/.test(fileName);
+}
+
+function toggleFlatTreeRow(row){
+    const collapsed = row.dataset.collapsed === 'true';
+    row.dataset.collapsed = collapsed ? 'false' : 'true';
+    const marker = row.querySelector('.tree-marker');
+
+    if(marker){
+        marker.textContent = collapsed ? '▾' : '▸';
+    }
+
+    updateFlatTreeVisibility(row.closest('.ditamap-tree'));
+}
+
+function updateFlatTreeVisibility(tree){
+    if(!tree){
+        return;
+    }
+
+    const collapsedLevels = [];
+
+    Array.from(tree.querySelectorAll('.ditamap-tree-row')).forEach(row => {
+        const level = Number(row.dataset.level || '1');
+
+        while(collapsedLevels.length
+                && collapsedLevels[collapsedLevels.length - 1] >= level){
+            collapsedLevels.pop();
+        }
+
+        row.hidden = collapsedLevels.length > 0;
+
+        if(row.dataset.collapsed === 'true'){
+            collapsedLevels.push(level);
+        }
+    });
+}
+
+function renderLawAttributeEditor(cell, node, index){
+    const input = document.createElement('input');
+    input.className = 'inline-attribute-input';
+    input.type = 'text';
+    input.value = node.attributeValue || '';
+    input.placeholder = '입력';
+    input.draggable = false;
+
+    input.addEventListener('mousedown', event => {
+        event.stopPropagation();
+    });
+
+    input.addEventListener('dragstart', event => {
+        event.preventDefault();
+        event.stopPropagation();
+    });
+
+    input.addEventListener('input', function(){
+        const nextValue = input.value.trim();
+        lawTreeRows[index].attributeValue = nextValue;
+        cell.classList.toggle('empty-value', nextValue === '');
+        cell.classList.add('changed');
+        saveLegalButton.disabled = false;
+        undoLegalButton.disabled = false;
+        focusBaseRowByAttribute(nextValue);
+    });
+
+    input.addEventListener('dblclick', function(){
+        input.select();
+        focusBaseRowByAttribute(input.value.trim());
+    });
+
+    input.addEventListener('focus', function(){
+        focusBaseRowByAttribute(input.value.trim());
+    });
+
+    cell.textContent = '';
+    cell.appendChild(input);
+    cell.classList.toggle('empty-value', input.value.trim() === '');
+}
+
+function handleLawDragStart(event){
+    draggingLawIndex = Number(event.currentTarget.dataset.lawIndex);
+    selectedLawIndex = draggingLawIndex;
+    event.currentTarget.classList.add('dragging');
+    event.dataTransfer.effectAllowed = 'move';
+    event.dataTransfer.setData('text/plain', String(draggingLawIndex));
+}
+
+function handleLawDragOver(event){
+    event.preventDefault();
+    clearLawDropMarkers();
+
+    const dropInfo = getLawDropInfo(event.currentTarget, event);
+    event.currentTarget.classList.add(dropInfo.after
+        ? 'law-drop-after'
+        : 'law-drop-before');
+    event.currentTarget.dataset.dropLevel = dropInfo.level;
+    event.dataTransfer.dropEffect = 'move';
+}
+
+function handleLawDrop(event){
+    event.preventDefault();
+
+    if(draggingLawIndex === null){
+        return;
+    }
+
+    const targetIndex = Number(event.currentTarget.dataset.lawIndex);
+    const dropInfo = getLawDropInfo(event.currentTarget, event);
+    const effectiveTargetIndex = dropInfo.after
+        ? findLawSubtreeEnd(targetIndex) - 1
+        : targetIndex;
+    moveLawTreeBlock(
+            draggingLawIndex,
+            effectiveTargetIndex,
+            dropInfo.after,
+            dropInfo.level);
+    draggingLawIndex = null;
+    clearLawDropMarkers();
+}
+
+function handleLawDragEnd(){
+    draggingLawIndex = null;
+    clearLawDropMarkers();
+}
+
+function clearLawDropMarkers(){
+    lawTree.querySelectorAll('.law-draggable-row').forEach(row => {
+        row.classList.remove(
+                'dragging',
+                'law-drop-before',
+                'law-drop-after');
+        delete row.dataset.dropLevel;
+    });
+}
+
+function getLawDropInfo(row, event){
+    const rect = row.getBoundingClientRect();
+    const titleCell = row.querySelector('.ditamap-tree-title');
+    const titleRect = titleCell.getBoundingClientRect();
+    const targetLevel = Number(row.dataset.level || '1');
+    const after = event.clientY > rect.top + rect.height / 2;
+    const targetIndentLeft = titleRect.left + ((targetLevel - 1) * 24);
+    const childDrop = after && event.clientX > targetIndentLeft + 120;
+
+    return {
+        after:after,
+        /*
+         * 위/아래 드롭은 기본적으로 대상과 같은 레벨의 앞/뒤 이동이다.
+         * 단, 아래쪽에 놓으면서 제목 시작점보다 충분히 오른쪽으로 들여 놓으면
+         * 대상의 첫 번째 하위 항목으로 간주해서 딱 한 단계만 내린다.
+         * 예: L3 아래쪽 일반 드롭 -> L3, L3 아래쪽 들여쓰기 드롭 -> L4.
+         */
+        level:Math.max(1, Math.min(6, childDrop
+            ? targetLevel + 1
+            : targetLevel))
+    };
+}
+
+function moveLawTreeBlock(sourceIndex, targetIndex, insertAfter, nextLevel){
+    if(sourceIndex < 0
+            || sourceIndex >= lawTreeRows.length
+            || targetIndex < 0
+            || targetIndex >= lawTreeRows.length){
+        return;
+    }
+
+    const blockEnd = findLawSubtreeEnd(sourceIndex);
+
+    if(targetIndex >= sourceIndex && targetIndex < blockEnd){
+        return;
+    }
+
+    const block = lawTreeRows.slice(sourceIndex, blockEnd);
+    lawTreeRows.splice(sourceIndex, block.length);
+
+    let insertIndex = targetIndex;
+
+    if(targetIndex > sourceIndex){
+        insertIndex -= block.length;
+    }
+
+    if(insertAfter){
+        insertIndex += 1;
+    }
+
+    const levelDelta = nextLevel - block[0].level;
+    block.forEach(row => {
+        row.level = Math.max(1, Math.min(6, row.level + levelDelta));
+    });
+
+    lawTreeRows.splice(insertIndex, 0, ...block);
+    selectedLawIndex = insertIndex;
+    saveLegalButton.disabled = false;
+    undoLegalButton.disabled = false;
+    renderLawDitamapRows();
+    updateLegalActionButtons();
+    showMessage('법규 DITAMAP 구조를 수정했습니다.', 'success');
+}
+
+function selectLawRow(index){
+    selectedLawIndex = index;
+    renderLawDitamapRows();
+    updateLegalActionButtons();
+}
+
+function previousLawSiblingStart(index){
+    if(index <= 0){
+        return -1;
+    }
+
+    const level = lawTreeRows[index].level || 1;
+    let cursor = index - 1;
+
+    while(cursor >= 0 && (lawTreeRows[cursor].level || 1) > level){
+        cursor--;
+    }
+
+    return cursor;
+}
+
+function moveSelectedLawUp(){
+    if(selectedLawIndex < 0){
+        return;
+    }
+
+    const targetIndex = previousLawSiblingStart(selectedLawIndex);
+
+    if(targetIndex < 0){
+        return;
+    }
+
+    moveLawTreeBlock(
+            selectedLawIndex,
+            targetIndex,
+            false,
+            lawTreeRows[selectedLawIndex].level || 1);
+}
+
+function moveSelectedLawDown(){
+    if(selectedLawIndex < 0){
+        return;
+    }
+
+    const blockEnd = findLawSubtreeEnd(selectedLawIndex);
+
+    if(blockEnd >= lawTreeRows.length){
+        return;
+    }
+
+    const nextBlockEnd = findLawSubtreeEnd(blockEnd);
+    const block = lawTreeRows.slice(selectedLawIndex, blockEnd);
+    lawTreeRows.splice(selectedLawIndex, block.length);
+    const insertIndex = nextBlockEnd - block.length;
+    lawTreeRows.splice(insertIndex, 0, ...block);
+    selectedLawIndex = insertIndex;
+    saveLegalButton.disabled = false;
+    undoLegalButton.disabled = false;
+    renderLawDitamapRows();
+    updateLegalActionButtons();
+    showMessage('법규 DITAMAP 구조를 수정했습니다.', 'success');
+}
+
+function changeSelectedLawLevel(delta){
+    if(selectedLawIndex < 0){
+        return;
+    }
+
+    const blockEnd = findLawSubtreeEnd(selectedLawIndex);
+    const nextLevel = Math.max(
+            1,
+            Math.min(6, (lawTreeRows[selectedLawIndex].level || 1) + delta));
+    const levelDelta = nextLevel - (lawTreeRows[selectedLawIndex].level || 1);
+
+    if(levelDelta === 0){
+        return;
+    }
+
+    for(let index = selectedLawIndex; index < blockEnd; index++){
+        lawTreeRows[index].level = Math.max(
+                1,
+                Math.min(6, (lawTreeRows[index].level || 1) + levelDelta));
+    }
+
+    saveLegalButton.disabled = false;
+    undoLegalButton.disabled = false;
+    renderLawDitamapRows();
+    updateLegalActionButtons();
+    showMessage('법규 DITAMAP 구조를 수정했습니다.', 'success');
+}
+
+function deleteSelectedLawRow(){
+    if(selectedLawIndex < 0){
+        return;
+    }
+
+    const blockEnd = findLawSubtreeEnd(selectedLawIndex);
+    const hasChildren = blockEnd > selectedLawIndex + 1;
+
+    if(hasChildren && !confirm('선택한 항목에 하위 항목이 있습니다.\n하위 항목까지 전체 삭제하시겠습니까?')){
+        return;
+    }
+
+    lawTreeRows.splice(selectedLawIndex, blockEnd - selectedLawIndex);
+    selectedLawIndex = Math.min(selectedLawIndex, lawTreeRows.length - 1);
+    saveLegalButton.disabled = false;
+    undoLegalButton.disabled = false;
+    renderLawDitamapRows();
+    updateLegalActionButtons();
+    showMessage('선택한 법규 DITAMAP 항목을 삭제했습니다.', 'success');
+}
+
+function findLawSubtreeEnd(index){
+    const sourceLevel = lawTreeRows[index].level;
+    let endIndex = index + 1;
+
+    while(endIndex < lawTreeRows.length
+            && lawTreeRows[endIndex].level > sourceLevel){
+        endIndex++;
+    }
+
+    return endIndex;
+}
+
+function isEditableTopicFile(fileName){
+    const normalized = (fileName || '').toLowerCase();
+    return normalized.endsWith('.dita')
+        || normalized.endsWith('.svg');
+}
+
+function startAttributeEdit(cell){
+    if(cell.classList.contains('editing')
+            || cell.classList.contains('not-editable')
+            || cell.dataset.editable !== 'true'){
+        return;
+    }
+
+    const input = document.createElement('input');
+    input.className = 'attribute-edit-input';
+    input.type = 'text';
+    input.value = cell.dataset.currentValue || '';
+    cell.classList.add('editing');
+    cell.textContent = '';
+    cell.appendChild(input);
+    input.focus();
+    input.select();
+
+    input.addEventListener('keydown', event => {
+        if(event.key === 'Enter'){
+            commitAttributeEdit(cell, input.value);
+        }
+
+        if(event.key === 'Escape'){
+            cancelAttributeEdit(cell);
+        }
+    });
+
+    input.addEventListener('blur', function(){
+        if(cell.classList.contains('editing')){
+            commitAttributeEdit(cell, input.value);
+        }
+    });
+}
+
+function commitAttributeEdit(cell, value){
+    const nextValue = value.trim();
+    cell.classList.remove('editing');
+    cell.dataset.currentValue = nextValue;
+    renderAttributeValue(cell);
+
+    const originalValue = cell.dataset.originalValue || '';
+    const key = createAttributeChangeKey(cell);
+
+    if(nextValue === originalValue){
+        changedAttributes.delete(key);
+        cell.classList.remove('changed');
+    }else{
+        changedAttributes.set(key, {
+            filePath:cell.dataset.filePath,
+            sourceFilePath:cell.dataset.sourceFilePath,
+            elementPath:cell.dataset.elementPath,
+            attributeName:cell.dataset.attributeName,
+            attributeValue:nextValue
+        });
+        cell.classList.add('changed');
+    }
+
+    updateRunBatchButton();
+}
+
+function cancelAttributeEdit(cell){
+    cell.classList.remove('editing');
+    renderAttributeValue(cell);
+}
+
+function renderAttributeValue(cell){
+    const value = cell.dataset.currentValue || '';
+    cell.textContent = '';
+    cell.classList.toggle('empty-value', value === '');
+
+    if(value){
+        cell.textContent = value;
+        return;
+    }
+
+    const placeholder = document.createElement('span');
+    placeholder.className = 'attribute-placeholder';
+    placeholder.textContent = '더블클릭해서 입력';
+    cell.appendChild(placeholder);
+}
+
+function renderAttributeEditor(cell){
+    const input = document.createElement('input');
+    input.className = 'inline-attribute-input';
+    input.type = 'text';
+    input.value = cell.dataset.currentValue || '';
+    input.placeholder = '입력';
+
+    input.addEventListener('input', function(){
+        cell.dataset.currentValue = input.value.trim();
+        updateAttributeChange(cell);
+    });
+
+    input.addEventListener('dblclick', function(){
+        input.select();
+    });
+
+    cell.textContent = '';
+    cell.appendChild(input);
+    cell.classList.toggle('empty-value', input.value.trim() === '');
+}
+
+function updateAttributeChange(cell){
+    const nextValue = cell.dataset.currentValue || '';
+    const originalValue = cell.dataset.originalValue || '';
+    const key = createAttributeChangeKey(cell);
+
+    cell.classList.toggle('empty-value', nextValue === '');
+
+    if(nextValue === originalValue){
+        changedAttributes.delete(key);
+        cell.classList.remove('changed');
+    }else{
+        changedAttributes.set(key, {
+            filePath:cell.dataset.filePath,
+            sourceFilePath:cell.dataset.sourceFilePath,
+            elementPath:cell.dataset.elementPath,
+            attributeName:cell.dataset.attributeName,
+            attributeValue:nextValue
+        });
+        cell.classList.add('changed');
+    }
+
+    updateRunBatchButton();
+}
+
+function createAttributeChangeKey(cell){
+    return [
+        cell.dataset.filePath || '',
+        cell.dataset.sourceFilePath || '',
+        cell.dataset.elementPath || '',
+        cell.dataset.attributeName || ''
+    ].join('::');
+}
+
+function normalizeAttributeValue(value){
+    return (value || '').trim().toLowerCase();
+}
+
+function focusBaseRowByAttribute(value){
+    const normalized = normalizeAttributeValue(value);
+
+    baseTree.querySelectorAll('.ditamap-tree-row.is-linked-focus')
+        .forEach(row => row.classList.remove('is-linked-focus'));
+
+    if(!normalized){
+        return;
+    }
+
+    const escapedValue = window.CSS && CSS.escape
+        ? CSS.escape(normalized)
+        : normalized.replace(/"/g, '\\"');
+    const matchedRow = baseTree.querySelector(
+        '.ditamap-tree-row[data-attribute-value="' + escapedValue + '"]'
+    );
+
+    if(!matchedRow){
+        return;
+    }
+
+    matchedRow.classList.add('is-linked-focus');
+    matchedRow.scrollIntoView({
+        block:'center',
+        inline:'nearest',
+        behavior:'smooth'
+    });
+}
+
+function updateRunBatchButton(){
+    runBatchButton.disabled = !currentDitamapFile;
+}
+
+function collectCheckedBaseTopics(){
+    return Array.from(baseTree.querySelectorAll('.ditamap-topic-check:checked'))
+        .map(checkbox => {
+            const row = checkbox.closest('.ditamap-tree-row');
+
+            return {
+                title:checkbox.dataset.title || '',
+                level:Number(checkbox.dataset.level || row.dataset.level || '1'),
+                attributeValue:'',
+                attributeName:'veh-legalid',
+                fileName:checkbox.dataset.fileName || '',
+                filePath:'',
+                sourceFilePath:'',
+                elementPath:'',
+                href:checkbox.dataset.href || '',
+                children:[]
+            };
+        });
+}
+
+function openLegalEditorPopup(){
+    const checkedTopics = collectCheckedBaseTopics();
+
+    if(checkedTopics.length === 0){
+        alert('법규 DITAMAP에 넣을 기준 topic을 체크해 주세요.');
+        return;
+    }
+
+    const draftId = 'legal-draft-' + Date.now();
+    localStorage.setItem(
+            'ditamapLegalDraft:' + draftId,
+            JSON.stringify({
+                ditamapFile:currentDitamapFile,
+                topics:checkedTopics
+            }));
+
+    window.open(
+            '/ditamap-builder/legal-editor?draft=' + encodeURIComponent(draftId),
+            'ditamapLegalEditor',
+            'width=1280,height=860,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=yes');
+}
+
+window.addEventListener('message', function(event){
+    if(!event.data || event.data.type !== 'DITAMAP_LEGAL_DRAFT_SAVED'){
+        return;
+    }
+
+    renderLawDitamapTree({
+        rootTitle:'법규 DITAMAP',
+        ditamapFile:event.data.ditamapFile || '편집 중',
+        nodes:event.data.nodes || []
+    });
+    showMessage('법규 DITAMAP 편집 구조를 오른쪽에 반영했습니다.', 'success');
+});
+
+runBatchButton.addEventListener('click', async function(){
+    if(!currentDitamapFile){
+        return;
+    }
+
+    openLegalEditorPopup();
+});
+
+undoLegalButton.addEventListener('click', function(){
+    if(!currentLegalTreeData || lawTreeRows.length === 0){
+        return;
+    }
+
+    // 저장 전 드래그/속성 편집을 버리고 마지막 생성/저장 직후의 법규 트리로 되돌린다.
+    // 서버 파일을 건드리지 않고 브라우저에 보관한 currentLegalTreeData만 다시 렌더링한다.
+    renderLawDitamapTree(currentLegalTreeData);
+    showMessage('저장 전 법규 DITAMAP 수정 내용을 되돌렸습니다.', 'success');
+});
+
+saveLegalButton.addEventListener('click', async function(){
+    if(!currentLegalDitamapFile || lawTreeRows.length === 0){
+        showMessage('저장할 법규 DITAMAP 결과가 없습니다.', 'error');
+        return;
+    }
+
+    saveLegalButton.disabled = true;
+    showMessage('법규 DITAMAP을 저장하는 중입니다.', 'progress');
+    // 오른쪽 법규 DITAMAP 저장도 중앙 팝업에 진행/완료/실패를 표시한다.
+    // 사용자가 저장 버튼을 눌렀을 때 배치 생성과 같은 방식으로 대기 상태를 확인할 수 있게 한다.
+    showLegalProgress(
+            '법규 DITAMAP 저장중',
+            '잠시만 기다려 주세요.',
+            'progress');
+
+    try{
+        const response = await fetch('/api/ditamap-builder/legal', {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                ditamapFile:currentLegalDitamapFile,
+                baseDitamapFile:currentDitamapFile,
+                rows:lawTreeRows
+            })
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        const result = await response.json();
+        currentLegalDitamapFile = result.savedDitamapFile || currentLegalDitamapFile;
+        // 저장된 파일 기준으로 오른쪽 트리를 다시 읽어 화면 상태와 실제 LM_*.ditamap을 맞춘다.
+        await reloadLegalDitamapTree();
+
+        showMessage(
+                '저장완료: '
+                + result.updatedCount
+                + '건의 법규 DITAMAP 항목을 저장했습니다.',
+                'success');
+        showLegalProgress(
+                '법규 DITAMAP 저장완료',
+                result.updatedCount + '건의 법규 DITAMAP 항목을 저장했습니다.',
+                'complete');
+    }catch(error){
+        showLegalProgress(
+                '법규 DITAMAP 저장실패',
+                error.message || '법규 DITAMAP 저장에 실패했습니다.',
+                'error');
+        showMessage(
+            error.message || '법규 DITAMAP 저장에 실패했습니다.',
+            'error');
+    }finally{
+        updateLegalActionButtons();
+    }
+});
+
+async function reloadLegalDitamapTree(){
+    const response = await fetch('/api/ditamap-builder/tree', {
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json',
+            'Accept':'application/json'
+        },
+        body:JSON.stringify({
+            path:currentLegalDitamapFile
+        })
+    });
+
+    if(!response.ok){
+        throw new Error(await response.text());
+    }
+
+    renderLawDitamapTree(await response.json());
+}
+
+loadDitamapTree().catch(error => {
+    const text = error && error.message
+        ? error.message
+        : 'DITAMAP 트리 초기화 중 오류가 발생했습니다.';
+    showLegalProgress('DITAMAP 트리 불러오기 실패', text, 'error');
+    showMessage(text, 'error');
+});
+</script>
+</body>
+</html>
