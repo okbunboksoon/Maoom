@@ -118,8 +118,20 @@
             </label>
 		</div>
 
+
+        <div class="comment-toolbar">
+            <label class="comment-status-field"
+                   for="commentUserFilter">
+                <span>표시할 사용자</span>
+                <select id="commentUserFilter">
+                    <option value="ALL">전체</option>
+                </select>
+            </label>
+        </div>
+
         <div id="commentList"></div>
 
+        <!-- 하이라이트/도형/말풍선 생성 시 코멘트 입력창이 바로 열리므로 하단 신규 코멘트 composer는 숨긴다.
         <div id="commentComposer"
              class="comment-composer">
             <textarea id="commentText"
@@ -146,6 +158,7 @@
                 이미지 또는 파일을 이 영역에 끌어 놓아도 첨부됩니다.
             </div>
         </div>
+        -->
 
     </div>
 
@@ -184,6 +197,7 @@
 	let mentionUsers = [];
 	let mentionState = null;
 	let currentCommentFilter = 'ALL';
+	let currentCommentUserFilter = 'ALL';
 	let commentSearchTimer = null;
 	let pendingAttachments = [];
 	const pendingReplyAttachments = new Map();
@@ -219,7 +233,7 @@ document.getElementById("fileId").value;
 
 /*
  * 화면 초기화 순서:
- * Drive fileId를 내부 pdfId로 연결하고 로그인 사용자를 확인한 뒤
+ * Drive fileId를 내부 pdfId로 연결하고 로그인 사용자와 사용자 필터 목록을 확인한 뒤
  * 댓글 목록과 같은 PDF 사용자의 WebSocket 연결을 시작한다.
  */
 Promise.all([
@@ -227,29 +241,27 @@ Promise.all([
         '/api/pdf/find-by-drive-file-id?fileId='
         + encodeURIComponent(fileId)
     ).then(handleJsonResponse),
-    fetch('/api/user/me').then(handleJsonResponse)
+    fetch('/api/user/me').then(handleJsonResponse),
+    fetch('/api/user/mention-list').then(handleJsonResponse)
 ])
-.then(([pdf, user]) => {
+.then(([pdf, user, users]) => {
     currentPdfId = pdf.pdfId;
     currentUser = user;
+    mentionUsers = users;
 
     document.getElementById(
         'currentUserInfo'
     ).textContent =
         user.userName + ' (' + user.userId + ')';
 
+    renderCommentUserFilter(
+        users,
+        user.userId
+    );
     loadComments();
     connectCollaboration();
 })
 .catch(showApiError);
-
-fetch('/api/user/mention-list')
-.then(response => response.json())
-.then(users => {
-
-    mentionUsers = users;
-
-});
 
 document.getElementById('pdfViewer').src =
 /*
@@ -981,6 +993,16 @@ function(){
 
 };
 
+document.getElementById('commentUserFilter').onchange =
+function(){
+
+    currentCommentUserFilter = this.value;
+    renderComments({
+        redrawHighlights:true
+    });
+
+};
+
 document.getElementById('commentSearch').oninput =
 function(){
 
@@ -998,6 +1020,9 @@ function(){
         setTimeout(renderComments, 120);
 };
 
+/*
+ * 하단 신규 코멘트 composer 비활성화.
+ * 하이라이트/도형/말풍선 작성 흐름은 각 코멘트 카드의 편집 영역에서 처리한다.
 document.getElementById('commentAttachments').onchange =
 function(){
 
@@ -1062,9 +1087,13 @@ function initializeAttachmentDrop(){
         );
     });
 }
+*/
 
 initializeCommentPanelResize();
 
+/*
+ * 하단 신규 코멘트 composer 비활성화.
+ * 하이라이트/도형/말풍선 작성 흐름은 각 코멘트 카드의 편집 영역에서 처리한다.
 document.getElementById('commentText').onfocus =
 function(){
     sendEditing(true, 'NEW');
@@ -1084,9 +1113,13 @@ setupClipboardImagePaste(
     document.getElementById('commentText'),
     addPendingAttachments
 );
+*/
 
 setCommentMode('SELECT');
 
+/*
+ * 하단 신규 코멘트 composer 비활성화.
+ * 하이라이트/도형/말풍선 작성 흐름은 각 코멘트 카드의 편집 영역에서 처리한다.
 document.getElementById('commentBtn').onclick = function(){
 
     const files = pendingAttachments;
@@ -1149,6 +1182,7 @@ document.getElementById('commentBtn').onclick = function(){
     .catch(showApiError);
 
 };
+*/
 
 // 현재 PDF의 댓글을 상태별로 조회하여 오른쪽 패널에 다시 그린다.
 function loadComments(){
@@ -1197,13 +1231,71 @@ function loadComments(){
     });
 }
 
+function renderCommentUserFilter(users, defaultUserId){
+
+    const select =
+        document.getElementById('commentUserFilter');
+
+    const selectedValue = select.value || 'ALL';
+    const defaultValue =
+        String(defaultUserId || '').trim();
+
+    select.replaceChildren(
+        new Option('전체', 'ALL')
+    );
+
+    users.forEach(user => {
+        const userId =
+            String(user.userId || '').trim();
+        const userName =
+            String(user.userName || userId).trim();
+
+        if(!userId || userId === 'admin'){
+            return;
+        }
+
+        select.add(
+            new Option(userName, userId)
+        );
+    });
+
+    const values =
+        [...select.options].map(option => option.value);
+
+    if(values.includes(defaultValue)){
+        select.value = defaultValue;
+    }else if(values.includes(selectedValue)){
+        select.value = selectedValue;
+    }else{
+        select.value = 'ALL';
+    }
+
+    currentCommentUserFilter = select.value;
+}
+
+// 사용자 필터는 코멘트 작성자뿐 아니라 답글 작성자까지 포함해 리뷰 참여 내역을 찾는다.
+function matchesCommentUserFilter(comment){
+
+    if(currentCommentUserFilter === 'ALL'){
+        return true;
+    }
+
+    const selectedUserId = currentCommentUserFilter;
+
+    return String(comment.userId || '') === selectedUserId
+        || (comment.replies || []).some(reply =>
+            String(reply.userId || '') === selectedUserId);
+}
+
 // 검색어 변경은 이미 받은 댓글 데이터만 다시 필터링해 불필요한 API 호출을 막는다.
 function renderComments(options = {}){
 
         const comments = loadedComments;
+        const userFilteredComments =
+            comments.filter(matchesCommentUserFilter);
 
         if(options.redrawHighlights){
-            drawHighlights(comments);
+            drawHighlights(userFilteredComments);
         }
 
         const searchQuery =
@@ -1217,7 +1309,7 @@ function renderComments(options = {}){
             .trim();
 
         const visibleComments =
-            comments.filter(comment => {
+            userFilteredComments.filter(comment => {
                 const matchesText =
                     !searchQuery
                     || String(comment.commentText || '')
@@ -1645,7 +1737,8 @@ function navigateUnresolved(direction){
     .then(comments => {
 
         const unresolved =
-            [...comments].sort((first, second) =>
+            comments.filter(matchesCommentUserFilter)
+            .sort((first, second) =>
                 first.pageNum - second.pageNum
                 || Number(first.rectY || first.posY || 0)
                     - Number(second.rectY || second.posY || 0)
@@ -6003,8 +6096,12 @@ function saveHighlightedTextComment(highlightData){
     .then(commentId => {
         selectedCommentData = null;
         currentCommentFilter = 'ALL';
+        currentCommentUserFilter = 'ALL';
         document.getElementById(
             'commentStatusFilter'
+        ).value = 'ALL';
+        document.getElementById(
+            'commentUserFilter'
         ).value = 'ALL';
         document.getElementById(
             'commentSearch'
@@ -6064,8 +6161,12 @@ function saveVisualAnnotationComment(annotationData){
     .then(commentId => {
         selectedCommentData = null;
         currentCommentFilter = 'ALL';
+        currentCommentUserFilter = 'ALL';
         document.getElementById(
             'commentStatusFilter'
+        ).value = 'ALL';
+        document.getElementById(
+            'commentUserFilter'
         ).value = 'ALL';
         document.getElementById(
             'commentSearch'
