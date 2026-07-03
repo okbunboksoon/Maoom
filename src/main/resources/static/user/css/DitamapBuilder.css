@@ -130,18 +130,6 @@ body{
     box-shadow:0 0 0 3px rgba(47,128,237,.12);
 }
 
-.ditamap-test-builder-row{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-    gap:10px;
-    margin-top:-4px;
-}
-
-.ditamap-test-builder-row .ditamap-btn{
-    min-width:140px;
-}
-
 .ditamap-btn{
     display:inline-flex;
     align-items:center;
@@ -648,6 +636,11 @@ body{
     grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
 }
 
+.diff-tree-area .ditamap-tree{
+    height:calc(100vh - 360px);
+    min-height:360px;
+}
+
 .diff-chip{
     display:inline-flex;
     align-items:center;
@@ -667,6 +660,18 @@ body{
     color:#176b38;
 }
 
+.diff-chip-moved{
+    border-color:#f4cf70;
+    background:#fff8db;
+    color:#8a5b00;
+}
+
+.diff-chip-master-unlinked{
+    border-color:#a78bfa;
+    background:#f3e8ff;
+    color:#6d28d9;
+}
+
 .diff-chip-master{
     border-color:#efb2b2;
     background:#fff1f1;
@@ -681,6 +686,32 @@ body{
 
 .ditamap-tree-row.is-diff-match{
     background:#f1fbf4;
+}
+
+.ditamap-tree-row.is-diff-blank{
+    background:transparent !important;
+}
+
+.ditamap-tree-row.is-diff-blank .ditamap-topic-check{
+    visibility:hidden;
+}
+
+.ditamap-tree-row.is-diff-moved{
+    background:#fff8db;
+}
+
+.ditamap-tree-row.is-diff-moved .tree-title-text{
+    color:#7a4f00;
+    font-weight:700;
+}
+
+.ditamap-tree-row.is-diff-master-unlinked{
+    background:#f3e8ff;
+}
+
+.ditamap-tree-row.is-diff-master-unlinked .tree-title-text{
+    color:#6d28d9;
+    font-weight:700;
 }
 
 .ditamap-tree-row.is-diff-master-only{

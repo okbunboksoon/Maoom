@@ -61,8 +61,6 @@ public class DitamapBuilderService {
     private static final String[] ATTRIBUTE_CANDIDATES = {
             "veh-legalid"
     };
-    private static final String EXCLUDED_LEGAL_TITLE =
-            "EMISSION CONTROL SYSTEM";
     private static final String MANUAL_CHECKED_GROUP_TITLE =
             "사용설명서(V체크한 타이틀)";
 
@@ -90,6 +88,33 @@ public class DitamapBuilderService {
 
     public DitamapTreeResponse readTreeSummary(String rawPath) {
         return readTree(rawPath, true);
+    }
+
+    public List<String> readDitaFiles(String rawPath) {
+        try{
+            Path ditamap = findDitamap(rawPath);
+            Path directory = ditamap.getParent();
+
+            if(directory == null || !Files.isDirectory(directory)){
+                return List.of();
+            }
+
+            try(var stream = Files.walk(directory)){
+                return stream
+                        .filter(Files::isRegularFile)
+                        .map(path -> path.getFileName().toString())
+                        .filter(fileName -> fileName.toLowerCase(Locale.ROOT)
+                                .endsWith(".dita"))
+                        .distinct()
+                        .sorted(String.CASE_INSENSITIVE_ORDER)
+                        .toList();
+            }
+        }catch(IOException exception){
+            throw new IllegalArgumentException(
+                    "DITA 파일 목록을 읽지 못했습니다. "
+                    + exception.getMessage(),
+                    exception);
+        }
     }
 
     public DitamapTreeResponse readLegalTemplate() {
@@ -283,6 +308,10 @@ public class DitamapBuilderService {
 
         if(title.isBlank()){
             title = firstDirectChildText(element, "title");
+        }
+
+        if(title.isBlank()){
+            title = readLegalResourceTitle(fileName);
         }
 
         if(title.isBlank()){
@@ -615,8 +644,7 @@ public class DitamapBuilderService {
                 "revision-tool/legal/" + fileName);
 
         if(!resource.exists()){
-            throw new IllegalArgumentException(
-                    "법규 DITA 리소스를 찾지 못했습니다: " + fileName);
+            return;
         }
 
         try(InputStream input = resource.getInputStream()){
@@ -1239,8 +1267,7 @@ public class DitamapBuilderService {
 
         String normalizedTitle = title.trim()
                 .replaceAll("\\s+", " ");
-        return normalizedTitle.equalsIgnoreCase(EXCLUDED_LEGAL_TITLE)
-                || normalizedTitle.equalsIgnoreCase(MANUAL_CHECKED_GROUP_TITLE);
+        return normalizedTitle.equalsIgnoreCase(MANUAL_CHECKED_GROUP_TITLE);
     }
 
     private DitamapTreeNode readTopicNode(

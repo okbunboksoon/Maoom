@@ -57,6 +57,12 @@ public class DitamapBuilderController {
         return ditamapBuilderService.readLegalTargetFiles();
     }
 
+    @PostMapping("/api/ditamap-builder/dita-files")
+    public List<String> readDitaFiles(
+            @RequestBody DitamapTreeRequest request) {
+        return ditamapBuilderService.readDitaFiles(request.path());
+    }
+
     @PostMapping("/api/ditamap-builder/legal-targets")
     public List<DitamapLegalTarget> readLegalTargets() {
         return ditamapBuilderService.readLegalTargets();
@@ -81,7 +87,7 @@ public class DitamapBuilderController {
     }
 
     /*
-     * 오른쪽 법규 DITAMAP 영역의 폴더열기 버튼에서 DITA 경로 폴더를 열 때 사용한다.
+     * 오른쪽 법규 DITAMAP 영역의 폴더열기 버튼에서 DITA 경로 폴더를 열 때 사용한다.`
      * 브라우저에서 V:/, H:/ 같은 로컬/네트워크 드라이브를 직접 열 수 없으므로
      * 서버가 허용 루트 검사를 통과한 경로만 Windows 탐색기로 열어 준다.
      */
