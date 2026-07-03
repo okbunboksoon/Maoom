@@ -4,34 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ditamap Builder 1안</title>
-    <link rel="stylesheet" href="/user/css/DitamapBuilder.css?v=diff-test-1">
+    <title>법규 Ditamap Builder</title>
+    <link rel="stylesheet" href="/user/css/DitamapBuilder.css?v=diff-test-5">
 </head>
 <body class="ditamap-view-body">
 <main class="ditamap-view-wrap">
     <header class="ditamap-header">
         <div>
-            <h1>Ditamap Builder 1안(diff 비교형)</h1>
-            <p id="diffPathText">DITA 경로를 입력하면 법규 마스터와 실제 매뉴얼을 비교합니다.</p>
+            <h1>법규 Ditamap Builder</h1>
+            <p id="diffPathText">DITA 경로 확인 중</p>
         </div>
     </header>
 
-    <section id="diffPathPanel"
-             class="ditamap-panel ditamap-test-path-panel">
-        <div class="ditamap-path-row">
-            <label for="diffPathInput">DITA 경로</label>
-            <input id="diffPathInput"
-                   type="text"
-                   autocomplete="off"
-                   placeholder="DITAMAP이 포함된 폴더 또는 .ditamap 경로">
-            <button id="diffLoadButton"
-                    class="ditamap-btn primary-btn"
-                    type="button">확인</button>
-        </div>
-    </section>
-
     <div class="ditamap-test-summary">
         <span class="diff-chip diff-chip-match">V 체크: 양쪽에 있음</span>
+        <span class="diff-chip diff-chip-moved">노랑: 다른 위치에 있음</span>
+        <span class="diff-chip diff-chip-master-unlinked">보라: 파일 있음 / DITAMAP 미연결</span>
         <span class="diff-chip diff-chip-master">빨강: 법규 마스터에만 있음</span>
         <span class="diff-chip diff-chip-manual">회색: 실제 매뉴얼에만 있음</span>
     </div>
@@ -72,9 +60,6 @@
     </div>
 
     <footer class="ditamap-view-actions">
-        <button class="ditamap-btn secondary-btn"
-                type="button"
-                onclick="window.close()">닫기</button>
         <button id="diffNextButton"
                 class="ditamap-btn primary-btn"
                 type="button"
@@ -102,8 +87,6 @@
 
 <script>
 const diffParams = new URLSearchParams(location.search);
-const diffPathInput = document.getElementById('diffPathInput');
-const diffLoadButton = document.getElementById('diffLoadButton');
 const diffNextButton = document.getElementById('diffNextButton');
 const diffPathText = document.getElementById('diffPathText');
 const masterTree = document.getElementById('masterTree');
@@ -161,6 +144,12 @@ function normalizeKey(row){
     return 'title:' + (row.title || '').trim().toLowerCase();
 }
 
+function normalizeFileKey(row){
+    const fileName = (row && row.fileName || '').trim().toLowerCase();
+
+    return fileName ? 'file:' + fileName : '';
+}
+
 function pushMapValue(map, key, value){
     if(!map.has(key)){
         map.set(key, []);
@@ -205,12 +194,14 @@ function renderDiffRow(rowData, target, options){
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.className = 'ditamap-topic-check';
-        checkbox.checked = !isBlank && options.status === 'match';
+        checkbox.checked = !isBlank
+                && (options.status === 'match' || options.status === 'moved');
 
         if(isBlank || options.index == null){
             checkbox.disabled = true;
         }else{
             checkbox.dataset.index = String(options.index);
+            checkbox.dataset.diffStatus = options.status || '';
             checkbox.addEventListener('change', updateDiffNextButton);
         }
 
@@ -318,10 +309,34 @@ function buildDiffMatches(masterRows, manualRows){
     return matches;
 }
 
-function renderDiff(master, manual){
+function getMasterOnlyStatus(masterRow, manualFileKeys, manualDiskFileKeys){
+    const key = normalizeFileKey(masterRow);
+
+    if(manualFileKeys.has(key)){
+        return 'moved';
+    }
+
+    if(manualDiskFileKeys.has(key)){
+        return 'master-unlinked';
+    }
+
+    return 'master-only';
+}
+
+function renderDiff(master, manual, manualDiskFiles){
     const masterRows = flattenNodes(master.nodes || []);
     const manualRows = flattenNodes(manual.nodes || []);
     const matches = buildDiffMatches(masterRows, manualRows);
+    const masterFileKeys = new Set(masterRows
+            .map(normalizeFileKey)
+            .filter(Boolean));
+    const manualFileKeys = new Set(manualRows
+            .map(normalizeFileKey)
+            .filter(Boolean));
+    const manualDiskFileKeys = new Set((manualDiskFiles || [])
+            .map(fileName => String(fileName || '').trim().toLowerCase())
+            .map(fileName => fileName ? 'file:' + fileName : '')
+            .filter(Boolean));
     masterTree.innerHTML = '';
     manualTree.innerHTML = '';
     manualDitamapName.textContent = manual.rootTitle + ' · ' + manual.ditamapFile;
@@ -337,15 +352,19 @@ function renderDiff(master, manual){
     matches.forEach(match => {
         while(masterCursor < match.masterIndex){
             const masterRow = masterRows[masterCursor];
+            const status = getMasterOnlyStatus(
+                    masterRow,
+                    manualFileKeys,
+                    manualDiskFileKeys);
             renderDiffRow(masterRow, masterTree, {
                 side:'master',
-                status:'master-only',
+                status:status,
                 level:masterRow.level || 1
             });
             renderDiffRow(null, manualTree, {
                 side:'manual',
                 index:null,
-                status:'master-only',
+                status:status,
                 level:masterRow.level || 1
             });
             masterCursor++;
@@ -353,15 +372,18 @@ function renderDiff(master, manual){
 
         while(manualCursor < match.manualIndex){
             const manualRow = manualRows[manualCursor];
+            const status = masterFileKeys.has(normalizeFileKey(manualRow))
+                    ? 'moved'
+                    : 'manual-only';
             renderDiffRow(null, masterTree, {
                 side:'master',
-                status:'manual-only',
+                status:status,
                 level:manualRow.level || 1
             });
             renderDiffRow(manualRow, manualTree, {
                 side:'manual',
                 index:manualCursor,
-                status:'manual-only',
+                status:status,
                 level:manualRow.level || 1
             });
             manualCursor++;
@@ -388,15 +410,19 @@ function renderDiff(master, manual){
 
     while(masterCursor < masterRows.length){
         const masterRow = masterRows[masterCursor];
+        const status = getMasterOnlyStatus(
+                masterRow,
+                manualFileKeys,
+                manualDiskFileKeys);
         renderDiffRow(masterRow, masterTree, {
             side:'master',
-            status:'master-only',
+            status:status,
             level:masterRow.level || 1
         });
         renderDiffRow(null, manualTree, {
             side:'manual',
             index:null,
-            status:'master-only',
+            status:status,
             level:masterRow.level || 1
         });
         masterCursor++;
@@ -404,15 +430,18 @@ function renderDiff(master, manual){
 
     while(manualCursor < manualRows.length){
         const manualRow = manualRows[manualCursor];
+        const status = masterFileKeys.has(normalizeFileKey(manualRow))
+                ? 'moved'
+                : 'manual-only';
         renderDiffRow(null, masterTree, {
             side:'master',
-            status:'manual-only',
+            status:status,
             level:manualRow.level || 1
         });
         renderDiffRow(manualRow, manualTree, {
             side:'manual',
             index:manualCursor,
-            status:'manual-only',
+            status:status,
             level:manualRow.level || 1
         });
         manualCursor++;
@@ -431,12 +460,20 @@ async function loadDiff(path){
     diffPathText.textContent = path;
 
     try{
-        const [masterResponse, manualResponse] = await Promise.all([
+        const [masterResponse, manualResponse, manualFilesResponse] = await Promise.all([
             fetch('/api/ditamap-builder/legal-master', {
                 method:'POST',
                 headers:{'Accept':'application/json'}
             }),
             fetch('/api/ditamap-builder/tree-summary', {
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                    'Accept':'application/json'
+                },
+                body:JSON.stringify({path:path})
+            }),
+            fetch('/api/ditamap-builder/dita-files', {
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json',
@@ -454,7 +491,14 @@ async function loadDiff(path){
             throw new Error(await manualResponse.text());
         }
 
-        renderDiff(await masterResponse.json(), await manualResponse.json());
+        if(!manualFilesResponse.ok){
+            throw new Error(await manualFilesResponse.text());
+        }
+
+        renderDiff(
+                await masterResponse.json(),
+                await manualResponse.json(),
+                await manualFilesResponse.json());
         showDiffProgress('DITAMAP 비교 완료', '비교 결과를 불러왔습니다.', 'complete');
     }catch(error){
         showDiffProgress(
@@ -470,7 +514,10 @@ function openDiffEditor(){
     }
 
     const checkedTopics = Array.from(manualTree.querySelectorAll('.ditamap-topic-check:checked'))
-            .map(checkbox => diffManualRows[Number(checkbox.dataset.index)])
+            .map(checkbox => Object.assign(
+                    {},
+                    diffManualRows[Number(checkbox.dataset.index)],
+                    {diffStatus:checkbox.dataset.diffStatus || ''}))
             .filter(Boolean);
 
     if(checkedTopics.length === 0){
@@ -481,6 +528,7 @@ function openDiffEditor(){
     const draftId = 'legal-draft-diff-' + Date.now();
     localStorage.setItem('ditamapLegalDraft:' + draftId, JSON.stringify({
         ditamapFile:diffManualTree.ditamapFile,
+        baseDitamapFile:diffManualTree.ditamapFile,
         topics:checkedTopics
     }));
     window.open(
@@ -489,13 +537,6 @@ function openDiffEditor(){
             'width=1280,height=860,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=yes');
 }
 
-diffLoadButton.addEventListener('click', function(){
-    const path = diffPathInput.value.trim();
-
-    if(path){
-        location.href = '/ditamap-builder/diff?path=' + encodeURIComponent(path);
-    }
-});
 diffNextButton.addEventListener('click', openDiffEditor);
 diffProgressCloseButton.addEventListener('click', hideDiffProgress);
 
@@ -518,7 +559,6 @@ manualTree.addEventListener('scroll', () => {
 });
 
 const initialDiffPath = diffParams.get('path') || '';
-diffPathInput.value = initialDiffPath;
 loadDiff(initialDiffPath);
 </script>
 </body>

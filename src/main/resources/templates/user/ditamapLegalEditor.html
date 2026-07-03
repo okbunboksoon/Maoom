@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>법규 DITAMAP 편집</title>
-    <link rel="stylesheet" href="/user/css/DitamapBuilder.css?v=legal-editor-3">
+    <title>법규용 DITAMAP 편집</title>
+    <link rel="stylesheet" href="/user/css/DitamapBuilder.css?v=legal-editor-5">
 </head>
 <body class="ditamap-view-body legal-editor-body">
 <main class="ditamap-view-wrap legal-editor-wrap">
@@ -46,7 +46,7 @@
              aria-label="법규 DITAMAP 편집 트리">
         <header class="ditamap-tree-header">
             <div>
-                <h2>법규 DITAMAP 제작</h2>
+                <h2>법규용 DITAMAP 제작</h2>
                 <p>사용설명서에서 V체크 표시한 내용과 법규 1 ~ 2레벨 타이틀과 조합하여 법규용 DITAMAP 제작합니다.</p>
             </div>
         </header>
@@ -110,6 +110,7 @@ let editorRows = [];
 let initialEditorRows = [];
 let selectedIndex = -1;
 let draggingEditorIndex = -1;
+let currentDraft = null;
 
 function cloneRows(rows){
     return JSON.parse(JSON.stringify(rows || []));
@@ -184,6 +185,7 @@ async function loadEditor(){
     }
 
     const draft = JSON.parse(stored);
+    currentDraft = draft;
     editorPathText.textContent = draft.ditamapFile || '';
     const response = await fetch('/api/ditamap-builder/legal-template', {
         method:'POST',
@@ -198,6 +200,19 @@ async function loadEditor(){
 
     const template = await response.json();
     editorRows = flattenNodes(template.nodes || []);
+    const checkedTopics = draft.topics || [];
+    const manualOnlyTopics = checkedTopics
+            .filter(topic => topic.diffStatus === 'manual-only');
+
+    if(manualOnlyTopics.length > 0){
+        appendEditorTopicGroup('미분류', manualOnlyTopics);
+    }
+
+    initialEditorRows = cloneRows(editorRows);
+    renderRows();
+}
+
+function appendEditorTopicGroup(title, checkedTopics){
     editorRows.push({
         title:'',
         level:1,
@@ -212,7 +227,7 @@ async function loadEditor(){
         children:null
     });
     editorRows.push({
-        title:'사용설명서(V체크한 타이틀)',
+        title:title,
         level:1,
         editorType:'unclassified',
         attributeValue:'',
@@ -225,7 +240,6 @@ async function loadEditor(){
         children:null
     });
 
-    const checkedTopics = draft.topics || [];
     const minimumCheckedLevel = checkedTopics.length === 0
         ? 2
         : Math.min(...checkedTopics.map(topic => Number(topic.level || 1)));
@@ -243,9 +257,6 @@ async function loadEditor(){
             children:null
         }));
     });
-
-    initialEditorRows = cloneRows(editorRows);
-    renderRows();
 }
 
 function renderEmpty(text){
@@ -329,7 +340,12 @@ function renderRows(){
 
 function isManualCheckedGroup(row){
     return row
-        && row.title === '사용설명서(V체크한 타이틀)';
+        && row.editorType === 'unclassified';
+}
+
+function isUnclassifiedGroup(row){
+    return isManualCheckedGroup(row)
+        && row.title === '미분류';
 }
 
 function isUnderManualCheckedGroup(index){
@@ -337,6 +353,22 @@ function isUnderManualCheckedGroup(index){
         const row = editorRows[cursor];
 
         if(isManualCheckedGroup(row)){
+            return true;
+        }
+
+        if((row.level || 1) <= 1){
+            return false;
+        }
+    }
+
+    return false;
+}
+
+function isUnderUnclassifiedGroup(index){
+    for(let cursor = index - 1; cursor >= 0; cursor--){
+        const row = editorRows[cursor];
+
+        if(isUnclassifiedGroup(row)){
             return true;
         }
 
@@ -610,8 +642,7 @@ function rowsToTree(rows){
     const roots = [];
     const parents = [];
 
-    rows.filter(row => row.editorType !== 'spacer'
-            && row.title !== '사용설명서(V체크한 타이틀)')
+    rows.filter(row => row.editorType !== 'spacer')
             .forEach(row => {
         const node = Object.assign({}, row, {
             children:[]
@@ -634,25 +665,20 @@ function rowsToTree(rows){
     return roots;
 }
 
-function hasRemainingManualCheckedRows(){
-    const groupIndex = editorRows.findIndex(row =>
-        row.title === '사용설명서(V체크한 타이틀)');
+function createSaveRows(rows){
+    return rows.filter((row, index) => row.editorType !== 'spacer'
+            && row.editorType !== 'unclassified'
+            && !isUnderManualCheckedGroup(index));
+}
 
-    if(groupIndex < 0){
-        return false;
-    }
-
-    const groupLevel = editorRows[groupIndex].level || 1;
-
-    for(let index = groupIndex + 1; index < editorRows.length; index++){
-        const row = editorRows[index];
-        const rowLevel = row.level || 1;
-
-        if(rowLevel <= groupLevel){
-            break;
+function hasRemainingUnclassifiedRows(){
+    for(let index = 0; index < editorRows.length; index++){
+        if(editorRows[index].editorType === 'spacer'
+                || editorRows[index].editorType === 'unclassified'){
+            continue;
         }
 
-        if(row.editorType !== 'spacer'){
+        if(isUnderUnclassifiedGroup(index)){
             return true;
         }
     }
@@ -668,26 +694,67 @@ deleteRowButton.addEventListener('click', deleteSelectedRow);
 undoEditButton.addEventListener('click', undoEditorChanges);
 cancelButton.addEventListener('click', () => window.close());
 saveDraftButton.addEventListener('click', async function(){
-    if(hasRemainingManualCheckedRows()
+    if(hasRemainingUnclassifiedRows()
             && !await showEditorConfirm(
-                    '남은 row 확인',
-                    '사용설명서(V체크한 타이틀) 아래에 아직 남아있는 row가 있습니다.\n남아있는 row는 최종 법규 DITAMAP 저장 대상에서 제외됩니다.\n그래도 저장하시겠습니까?')){
+                '남은 row 확인',
+                    '미분류 아래에 아직 남아있는 row가 있습니다.\n남아있는 row는 최종 법규 DITAMAP 저장 대상에서 제외됩니다.\n그래도 저장하시겠습니까?')){
         return;
     }
 
-    if(window.opener){
-        window.opener.postMessage({
-            type:'DITAMAP_LEGAL_DRAFT_SAVED',
-            ditamapFile:'편집 중',
-            nodes:rowsToTree(editorRows)
-        }, window.location.origin);
+    const baseDitamapFile = currentDraft
+            && (currentDraft.baseDitamapFile || currentDraft.ditamapFile);
+
+    if(!baseDitamapFile){
+        await showEditorConfirm(
+                '저장 실패',
+                '기준 DITAMAP 경로가 없어 저장 위치를 정할 수 없습니다.');
+        return;
     }
 
-    if(draftId){
-        localStorage.removeItem('ditamapLegalDraft:' + draftId);
-    }
+    saveDraftButton.disabled = true;
 
-    window.close();
+    try{
+        const response = await fetch('/api/ditamap-builder/legal', {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                ditamapFile:'편집 중',
+                baseDitamapFile:baseDitamapFile,
+                rows:createSaveRows(editorRows)
+            })
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        const result = await response.json();
+
+        if(window.opener){
+            window.opener.postMessage({
+                type:'DITAMAP_LEGAL_DRAFT_SAVED',
+                ditamapFile:result.savedDitamapFile || '편집 중',
+                nodes:rowsToTree(createSaveRows(editorRows))
+            }, window.location.origin);
+        }
+
+        if(draftId){
+            localStorage.removeItem('ditamapLegalDraft:' + draftId);
+        }
+
+        await showEditorConfirm(
+                '저장 완료',
+                result.savedDitamapFile || '법규 DITAMAP을 저장했습니다.');
+        window.close();
+    }catch(error){
+        saveDraftButton.disabled = false;
+        await showEditorConfirm(
+                '저장 실패',
+                error.message || '법규 DITAMAP 저장에 실패했습니다.');
+    }
 });
 
 loadEditor().catch(error => {
