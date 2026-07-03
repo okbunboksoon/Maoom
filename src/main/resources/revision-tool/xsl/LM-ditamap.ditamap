@@ -1,0 +1,1378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA 1.3 Map//EN" "technicalContent/dtd/map.dtd" []>
+<?path2rootmap-uri ./?>
+<map xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+     cascade="merge"
+     xml:lang="en-US">
+   <title>legal_KIA-SP3-ICE-HEV-en_GB-2027</title>
+   <topicref href="legal_00.dita" type="concept">
+      <topicmeta>
+         <navtitle>Foreword</navtitle>
+         <linktext>Foreword</linktext>
+      </topicmeta>
+      <topicref href="legal_00_01.dita" type="concept">
+         <topicmeta>
+            <navtitle>How to use this guide</navtitle>
+            <linktext>How to use this guide</linktext>
+         </topicmeta>
+      </topicref>
+   </topicref>
+   <topicref href="legal_01.dita" type="concept">
+      <topicmeta>
+         <navtitle>Safety Information and Warnings</navtitle>
+         <linktext>Safety Information and Warnings</linktext>
+      </topicmeta>
+      <topicref href="legal_01_01.dita" type="concept">
+         <topicmeta>
+            <navtitle>Seat belt warning operation and limitation</navtitle>
+            <linktext>Seat belt warning operation and limitation</linktext>
+         </topicmeta>
+         <topicref href="t00227.dita" type="concept">
+            <topicmeta>
+               <navtitle>Seat belt warning </navtitle>
+               <linktext>Seat belt warning </linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_02.dita" type="concept">
+         <topicmeta>
+            <navtitle>Seat belt precautions for folding seat</navtitle>
+            <linktext>Seat belt precautions for folding seat</linktext>
+         </topicmeta>
+         <topicref href="t00236.dita" type="concept">
+            <topicmeta>
+               <navtitle>Care of seat belts</navtitle>
+               <linktext>Care of seat belts</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_03.dita" type="concept">
+         <topicmeta>
+            <navtitle>Air bag warning label information and precautions</navtitle>
+            <linktext>Air bag warning label information and precautions</linktext>
+         </topicmeta>
+         <topicref href="t00265.dita" type="concept">
+            <topicmeta>
+               <navtitle>Air bag warning labels</navtitle>
+               <linktext>Air bag warning labels</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_04.dita" type="concept">
+         <topicmeta>
+            <navtitle>Multi-collision braking (MCB) system operation and limitati...</navtitle>
+            <linktext>Multi-collision braking (MCB) system operation and limitation</linktext>
+         </topicmeta>
+         <topicref href="t00421.dita" type="concept">
+            <topicmeta>
+               <navtitle>Multi-Collision Brake (MCB)</navtitle>
+               <linktext>Multi-Collision Brake (MCB)</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_05.dita" type="concept">
+         <topicmeta>
+            <navtitle>Child restraint system (CRS) information</navtitle>
+            <linktext>Child restraint system (CRS) information</linktext>
+         </topicmeta>
+         <topicref href="t00246.dita" type="concept">
+            <topicmeta>
+               <navtitle>ISOFIX low anchorage and ISOFIX top tether anchorage (ISOFI...</navtitle>
+               <linktext>ISOFIX low anchorage and ISOFIX top tether anchorage (ISOFIX anchorage system) for children </linktext>
+            </topicmeta>
+            <topicref href="t00247.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Securing a Child Restraint System with "ISOFIX Anchorage Sy...</navtitle>
+                  <linktext>Securing a Child Restraint System with "ISOFIX Anchorage System" </linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00248.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Securing a Child Restraint System seat with "ISOFIX top tet...</navtitle>
+                  <linktext>Securing a Child Restraint System seat with "ISOFIX top tether anchorage" system </linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00249.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Suitability of each seating position for belted &amp; ISOFIX Ch...</navtitle>
+                  <linktext>Suitability of each seating position for belted &amp; ISOFIX Child Restraint Systems (CRS)according to UN regulations (Information for use by vehicle users and CRS manufacturers)</linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_06.dita" type="concept">
+         <topicmeta>
+            <navtitle>Location of ADAS sensors</navtitle>
+            <linktext>Location of ADAS sensors</linktext>
+         </topicmeta>
+         <topicref href="t00444.dita" type="concept">
+            <topicmeta>
+               <navtitle>Detecting sensor(s)</navtitle>
+               <linktext>Detecting sensor(s)</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_07.dita" type="concept">
+         <topicmeta>
+            <navtitle>Overview of the Intelligent Speed Limit Assist</navtitle>
+            <linktext>Overview of the Intelligent Speed Limit Assist</linktext>
+         </topicmeta>
+         <topicref href="t00542.dita" type="concept">
+            <topicmeta>
+               <navtitle>Intelligent Speed Limit Assist (ISLA)</navtitle>
+               <linktext>Intelligent Speed Limit Assist (ISLA)</linktext>
+            </topicmeta>
+            <topicref href="t00543.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Intelligent Speed Limit Assist settings</navtitle>
+                  <linktext>Intelligent Speed Limit Assist settings</linktext>
+               </topicmeta>
+               <topicref href="t00544.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>When the navigation system is applied</navtitle>
+                     <linktext>When the navigation system is applied</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00545.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>When the navigation system is not applied</navtitle>
+                     <linktext>When the navigation system is not applied</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00546.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Warning Methods</navtitle>
+                     <linktext>Warning Methods</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+            <topicref href="t00547.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Intelligent Speed Limit Assist operation</navtitle>
+                  <linktext>Intelligent Speed Limit Assist operation</linktext>
+               </topicmeta>
+               <topicref href="t00548.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Warning and control</navtitle>
+                     <linktext>Warning and control</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00549.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Displaying the speed limit</navtitle>
+                     <linktext>Displaying the speed limit</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00550.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Speeding warning</navtitle>
+                     <linktext>Speeding warning</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00551.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Manual set speed change</navtitle>
+                     <linktext>Manual set speed change</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00552.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Auto set speed change (if equipped with navigation)</navtitle>
+                     <linktext>Auto set speed change (if equipped with navigation)</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+            <topicref href="t00553.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Intelligent Speed Limit Assist malfunction and limitations</navtitle>
+                  <linktext>Intelligent Speed Limit Assist malfunction and limitations</linktext>
+               </topicmeta>
+               <topicref href="t00554.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Intelligent Speed Limit Assist malfunction</navtitle>
+                     <linktext>Intelligent Speed Limit Assist malfunction</linktext>
+                  </topicmeta>
+                  <topicref href="t00555.dita" type="concept">
+                     <topicmeta>
+                        <navtitle>Intelligent Speed Limit Assist disabled</navtitle>
+                        <linktext>Intelligent Speed Limit Assist disabled</linktext>
+                     </topicmeta>
+                  </topicref>
+               </topicref>
+               <topicref href="t00556.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Limitations of Intelligent Speed Limit Assist</navtitle>
+                     <linktext>Limitations of Intelligent Speed Limit Assist</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_08.dita" type="concept">
+         <topicmeta>
+            <navtitle>Surround view assistance system information and precautions</navtitle>
+            <linktext>Surround view assistance system information and precautions</linktext>
+         </topicmeta>
+         <topicref href="t00653.dita" type="concept">
+            <topicmeta>
+               <navtitle>Rear View Monitor (RVM)</navtitle>
+               <linktext>Rear View Monitor (RVM)</linktext>
+            </topicmeta>
+            <topicref href="t00654.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Rear View Monitor settings</navtitle>
+                  <linktext>Rear View Monitor settings</linktext>
+               </topicmeta>
+               <topicref href="t00655.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Warning Methods</navtitle>
+                     <linktext>Warning Methods</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00656.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Camera Settings</navtitle>
+                     <linktext>Camera Settings</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+            <topicref href="t00657.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Rear View Monitor operation</navtitle>
+                  <linktext>Rear View Monitor operation</linktext>
+               </topicmeta>
+               <topicref href="t00658.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Parking/View button</navtitle>
+                     <linktext>Parking/View button</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00659.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Rear view</navtitle>
+                     <linktext>Rear view</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00660.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Extended Rear View Monitor</navtitle>
+                     <linktext>Extended Rear View Monitor</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00661.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Rear Top View</navtitle>
+                     <linktext>Rear Top View</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00662.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Rear view while driving function</navtitle>
+                     <linktext>Rear view while driving function</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+            <topicref href="t00663.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Rear View Monitor malfunction and limitations</navtitle>
+                  <linktext>Rear View Monitor malfunction and limitations</linktext>
+               </topicmeta>
+               <topicref href="t00664.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Rear View Monitor malfunction</navtitle>
+                     <linktext>Rear View Monitor malfunction</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00665.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Limitations of Rear View Monitor</navtitle>
+                     <linktext>Limitations of Rear View Monitor</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+         </topicref>
+         <topicref href="t00666.dita" type="concept">
+            <topicmeta>
+               <navtitle>Surround View Monitor (SVM)</navtitle>
+               <linktext>Surround View Monitor (SVM)</linktext>
+            </topicmeta>
+            <topicref href="t00667.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Surround View Monitor settings</navtitle>
+                  <linktext>Surround View Monitor settings</linktext>
+               </topicmeta>
+               <topicref href="t00668.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Warning Methods</navtitle>
+                     <linktext>Warning Methods</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00669.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Camera Settings</navtitle>
+                     <linktext>Camera Settings</linktext>
+                  </topicmeta>
+                  <topicref href="t00670.dita" type="concept">
+                     <topicmeta>
+                        <navtitle>Parking Distance Warning</navtitle>
+                        <linktext>Parking Distance Warning</linktext>
+                     </topicmeta>
+                  </topicref>
+                  <topicref href="t00671.dita" type="concept">
+                     <topicmeta>
+                        <navtitle>Rear View Parking Guidelines</navtitle>
+                        <linktext>Rear View Parking Guidelines</linktext>
+                     </topicmeta>
+                  </topicref>
+                  <topicref href="t00672.dita" type="concept">
+                     <topicmeta>
+                        <navtitle>Top View Parking Guidelines</navtitle>
+                        <linktext>Top View Parking Guidelines</linktext>
+                     </topicmeta>
+                  </topicref>
+                  <topicref href="t00673.dita" type="concept">
+                     <topicmeta>
+                        <navtitle>Display settings</navtitle>
+                        <linktext>Display settings</linktext>
+                     </topicmeta>
+                  </topicref>
+               </topicref>
+               <topicref href="t00674.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Surround View Monitor Auto On</navtitle>
+                     <linktext>Surround View Monitor Auto On</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+            <topicref href="t00675.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Surround View Monitor operation</navtitle>
+                  <linktext>Surround View Monitor operation</linktext>
+               </topicmeta>
+               <topicref href="t00676.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Parking/View button</navtitle>
+                     <linktext>Parking/View button</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00677.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Front-view</navtitle>
+                     <linktext>Front-view</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00678.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Rear-view</navtitle>
+                     <linktext>Rear-view</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00679.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Rear view while driving function</navtitle>
+                     <linktext>Rear view while driving function</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00680.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>3D View function</navtitle>
+                     <linktext>3D View function</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+            <topicref href="t00681.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Surround View Monitor malfunction and limitations</navtitle>
+                  <linktext>Surround View Monitor malfunction and limitations</linktext>
+               </topicmeta>
+               <topicref href="t00682.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Surround View Monitor malfunction</navtitle>
+                     <linktext>Surround View Monitor malfunction</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00683.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Limitations of Surround View Monitor</navtitle>
+                     <linktext>Limitations of Surround View Monitor</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_09.dita" type="concept">
+         <topicmeta>
+            <navtitle>Reversing obstacle detection and warning</navtitle>
+            <linktext>Reversing obstacle detection and warning</linktext>
+         </topicmeta>
+         <topicref href="t00696.dita" type="concept">
+            <topicmeta>
+               <navtitle>Parking Distance Warning (PDW)</navtitle>
+               <linktext>Parking Distance Warning (PDW)</linktext>
+            </topicmeta>
+            <topicref href="t00697.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Parking Distance Warning settings</navtitle>
+                  <linktext>Parking Distance Warning settings</linktext>
+               </topicmeta>
+               <topicref href="t00698.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Warning Methods</navtitle>
+                     <linktext>Warning Methods</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00699.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Parking Distance Warning Auto On</navtitle>
+                     <linktext>Parking Distance Warning Auto On</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+            <topicref href="t00700.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Parking Distance Warning operation</navtitle>
+                  <linktext>Parking Distance Warning operation</linktext>
+               </topicmeta>
+               <topicref href="t00701.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Parking Safety button</navtitle>
+                     <linktext>Parking Safety button</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00702.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Forward Parking Distance Warning</navtitle>
+                     <linktext>Forward Parking Distance Warning</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00703.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Side Parking Distance Warning</navtitle>
+                     <linktext>Side Parking Distance Warning</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00704.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Reverse Parking Distance Warning</navtitle>
+                     <linktext>Reverse Parking Distance Warning</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+            <topicref href="t00705.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Parking Distance Warning malfunction and precautions</navtitle>
+                  <linktext>Parking Distance Warning malfunction and precautions</linktext>
+               </topicmeta>
+               <topicref href="t00706.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Parking Distance Warning malfunction</navtitle>
+                     <linktext>Parking Distance Warning malfunction</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00707.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Parking Distance Warning disabled</navtitle>
+                     <linktext>Parking Distance Warning disabled</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+            <topicref href="t00708.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Limitations of Parking Distance Warning</navtitle>
+                  <linktext>Limitations of Parking Distance Warning</linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_10.dita" type="concept">
+         <topicmeta>
+            <navtitle>Precautions with theft-alarm and immobilizer systems</navtitle>
+            <linktext>Precautions with theft-alarm and immobilizer systems</linktext>
+         </topicmeta>
+         <topicref href="t00046.dita" type="concept">
+            <topicmeta>
+               <navtitle>Theft-alarm system precautions</navtitle>
+               <linktext>Theft-alarm system precautions</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00041.dita" type="concept">
+            <topicmeta>
+               <navtitle>Immobilizer system precautions</navtitle>
+               <linktext>Immobilizer system precautions</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_11.dita" type="concept">
+         <topicmeta>
+            <navtitle>Injury warning for power window operation</navtitle>
+            <linktext>Injury warning for power window operation</linktext>
+         </topicmeta>
+         <topicref href="t00097.dita" type="concept">
+            <topicmeta>
+               <navtitle>Power window lock button </navtitle>
+               <linktext>Power window lock button </linktext>
+            </topicmeta>
+            <topicref href="t00098.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Remote window closing/opening (power window lock button)</navtitle>
+                  <linktext>Remote window closing/opening (power window lock button)</linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_12.dita" type="concept">
+         <topicmeta>
+            <navtitle>Injury warning for panorama sunroof operation</navtitle>
+            <linktext>Injury warning for panorama sunroof operation</linktext>
+         </topicmeta>
+         <topicref href="t00107.dita" type="concept">
+            <topicmeta>
+               <navtitle>Panorama sunroof precautions</navtitle>
+               <linktext>Panorama sunroof precautions</linktext>
+            </topicmeta>
+            <topicref href="t00108.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Automatic reversal</navtitle>
+                  <linktext>Automatic reversal</linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_13.dita" type="concept">
+         <topicmeta>
+            <navtitle>Pan-European eCall system mandatory information</navtitle>
+            <linktext>Pan-European eCall system mandatory information</linktext>
+         </topicmeta>
+         <topicref href="t00771.dita" type="concept">
+            <topicmeta>
+               <navtitle>Pan-European eCall system</navtitle>
+               <linktext>Pan-European eCall system</linktext>
+            </topicmeta>
+            <topicref href="t00772.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Description of the eCall in-vehicle system</navtitle>
+                  <linktext>Description of the eCall in-vehicle system</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00773.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Information on data processing</navtitle>
+                  <linktext>Information on data processing</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00774.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Types of data and its recipients</navtitle>
+                  <linktext>Types of data and its recipients</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00775.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Arrangements for data processing</navtitle>
+                  <linktext>Arrangements for data processing</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00776.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Modalities for exercising data subject's rights</navtitle>
+                  <linktext>Modalities for exercising data subject's rights</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00777.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Pan-European eCall System operation</navtitle>
+                  <linktext>Pan-European eCall System operation</linktext>
+               </topicmeta>
+               <topicref href="t00778.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Automatic accident reporting</navtitle>
+                     <linktext>Automatic accident reporting</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="t00779.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>Manual accident reporting</navtitle>
+                     <linktext>Manual accident reporting</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_14.dita" type="concept">
+         <topicmeta>
+            <navtitle>Digital key registration and deletion (smartphone)</navtitle>
+            <linktext>Digital key registration and deletion (smartphone)</linktext>
+         </topicmeta>
+         <topicref href="t00064.dita" type="concept">
+            <topicmeta>
+               <navtitle>How to register Digital Key 2 (Smartphone) </navtitle>
+               <linktext>How to register Digital Key 2 (Smartphone) </linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00066.dita" type="concept">
+            <topicmeta>
+               <navtitle>How to delete the Digital Key 2 (Smartphone)</navtitle>
+               <linktext>How to delete the Digital Key 2 (Smartphone)</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_15.dita" type="concept">
+         <topicmeta>
+            <navtitle>Digital key registration and deletion (card key)</navtitle>
+            <linktext>Digital key registration and deletion (card key)</linktext>
+         </topicmeta>
+         <topicref href="t00068.dita" type="concept">
+            <topicmeta>
+               <navtitle>How to register Digital Key 2 (Card Key)</navtitle>
+               <linktext>How to register Digital Key 2 (Card Key)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00070.dita" type="concept">
+            <topicmeta>
+               <navtitle>How to delete the Digital Key 2 (Card Key)</navtitle>
+               <linktext>How to delete the Digital Key 2 (Card Key)</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_01_16.dita" type="concept">
+         <topicmeta>
+            <navtitle>Unlocking auto flush door handle</navtitle>
+            <linktext>Unlocking auto flush door handle</linktext>
+         </topicmeta>
+         <topicref href="t00050.dita" type="concept">
+            <topicmeta>
+               <navtitle>Unlocking (Manual flush handle)</navtitle>
+               <linktext>Unlocking (Manual flush handle)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00051.dita" type="concept">
+            <topicmeta>
+               <navtitle>Unlocking (Electronic flush handle)</navtitle>
+               <linktext>Unlocking (Electronic flush handle)</linktext>
+            </topicmeta>
+            <topicref href="t00052.dita" type="concept">
+               <topicmeta>
+                  <navtitle>When washing the vehicle</navtitle>
+                  <linktext>When washing the vehicle</linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+      </topicref>
+   </topicref>
+   <topicref href="legal_02.dita" type="concept">
+      <topicmeta>
+         <navtitle>Maintenance and Care</navtitle>
+         <linktext>Maintenance and Care</linktext>
+         <data name="wh-tile">
+            <data name="image" format="svg" href="./oxygen-webhelp/template/images/">
+               <data name="attr-width" value="64"/>
+               <data name="attr-height" value="64"/>
+            </data>
+         </data>
+      </topicmeta>
+      <topicref href="legal_02_01.dita" type="concept">
+         <topicmeta>
+            <navtitle>Light bulbs replacement procedures</navtitle>
+            <linktext>Light bulbs replacement procedures</linktext>
+         </topicmeta>
+         <topicref href="t00879.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing lights (LED type)</navtitle>
+               <linktext>Replacing lights (LED type)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00880.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing headlamp (high/low), day time running light, posi...</navtitle>
+               <linktext>Replacing headlamp (high/low), day time running light, position lamp, front turn signal lamp, front fog lamp (LED type)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00881.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing side repeater lamp (LED type)</navtitle>
+               <linktext>Replacing side repeater lamp (LED type)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00882.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing stop lamp, tail lamp, rear turn signal lamp, back...</navtitle>
+               <linktext>Replacing stop lamp, tail lamp, rear turn signal lamp, back up lamp, license plate lamp, high mounted stop lamp, rear fog lamp (LED type)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00883.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing interior lights (LED type)</navtitle>
+               <linktext>Replacing interior lights (LED type)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb13.dita" type="concept">
+            <topicmeta>
+               <navtitle>Headlamp (Low/High beam) bulb replacement (Headlamp Type A)</navtitle>
+               <linktext>Headlamp (Low/High beam) bulb replacement (Headlamp Type A)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb15.dita" type="concept">
+            <topicmeta>
+               <navtitle>Headlamp (Low beam) bulb (Bulb type B) replacement</navtitle>
+               <linktext>Headlamp (Low beam) bulb (Bulb type B) replacement</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb16.dita" type="concept">
+            <topicmeta>
+               <navtitle>Headlamp (Low beam) bulb (Bulb type B) replacement</navtitle>
+               <linktext>Headlamp (Low beam) bulb (Bulb type B) replacement</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb14.dita" type="concept">
+            <topicmeta>
+               <navtitle>Position lamp/Daytime running lamp (Bulb type) bulb replace...</navtitle>
+               <linktext>Position lamp/Daytime running lamp (Bulb type) bulb replacement (Headlamp Type A)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb17.dita" type="concept">
+            <topicmeta>
+               <navtitle>Position lamp (Bulb type) bulb replacement</navtitle>
+               <linktext>Position lamp (Bulb type) bulb replacement</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb18.dita" type="concept">
+            <topicmeta>
+               <navtitle>Front fog lamp (Bulb type) bulb replacement</navtitle>
+               <linktext>Front fog lamp (Bulb type) bulb replacement</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb12.dita" type="concept">
+            <topicmeta>
+               <navtitle>Side repeater lamp (bulb type) bulb replacement</navtitle>
+               <linktext>Side repeater lamp (bulb type) bulb replacement</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00885.dita" type="task">
+            <topicmeta>
+               <navtitle>Replacing the front turn signal lamp</navtitle>
+               <linktext>Replacing the front turn signal lamp</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb6.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing front turn signal lamp (Bulb type) (Type A)</navtitle>
+               <linktext>Replacing front turn signal lamp (Bulb type) (Type A)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00886.dita" type="task">
+            <topicmeta>
+               <navtitle>Replacing the rear turn signal lamp</navtitle>
+               <linktext>Replacing the rear turn signal lamp</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb2.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing rear turn signal lamp (Bulb type)</navtitle>
+               <linktext>Replacing rear turn signal lamp (Bulb type)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00887.dita" type="task">
+            <topicmeta>
+               <navtitle>Replacing the back up lamp</navtitle>
+               <linktext>Replacing the back up lamp</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00888.dita" type="task">
+            <topicmeta>
+               <navtitle>Replacing the rear fog lamp</navtitle>
+               <linktext>Replacing the rear fog lamp</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb1.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing stop and tail lamp (Bulb type) (Type A)</navtitle>
+               <linktext>Replacing stop and tail lamp (Bulb type) (Type A)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb1a.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing stop and tail lamp (Bulb type) (Type B)</navtitle>
+               <linktext>Replacing stop and tail lamp (Bulb type) (Type B)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb3.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing license plate lamp (Bulb type)</navtitle>
+               <linktext>Replacing license plate lamp (Bulb type)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb4.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing map lamp (Bulb type)</navtitle>
+               <linktext>Replacing map lamp (Bulb type)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb7.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing room lamp (Bulb type)</navtitle>
+               <linktext>Replacing room lamp (Bulb type)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb9.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing vanity mirror lamp (Bulb type)</navtitle>
+               <linktext>Replacing vanity mirror lamp (Bulb type)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb10.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing glove box lamp (Bulb type)</navtitle>
+               <linktext>Replacing glove box lamp (Bulb type)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="legal_bulb11.dita" type="concept">
+            <topicmeta>
+               <navtitle>Replacing luggage lamp (Bulb type)</navtitle>
+               <linktext>Replacing luggage lamp (Bulb type)</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_02_02.dita" type="concept">
+         <topicmeta>
+            <navtitle>Headlight aiming adjustment</navtitle>
+            <linktext>Headlight aiming adjustment</linktext>
+         </topicmeta>
+         <topicref href="t00183.dita" type="concept">
+            <topicmeta>
+               <navtitle>Traffic change (For Europe)</navtitle>
+               <linktext>Traffic change (For Europe)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00175.dita" type="concept">
+            <topicmeta>
+               <navtitle>High Beam Assist indicator light </navtitle>
+               <linktext>High Beam Assist indicator light </linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00889.dita" type="concept">
+            <topicmeta>
+               <navtitle>Headlamp aiming (for Europe)</navtitle>
+               <linktext>Headlamp aiming (for Europe)</linktext>
+            </topicmeta>
+            <topicref href="t00890.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Aiming point</navtitle>
+                  <linktext>Aiming point</linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+         <topicref href="t00189.dita" type="concept">
+            <topicmeta>
+               <navtitle>Headlight leveling adjustment switch</navtitle>
+               <linktext>Headlight leveling adjustment switch</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_02_03.dita" type="concept">
+         <topicmeta>
+            <navtitle>Brake pad and disc wear and inspection</navtitle>
+            <linktext>Brake pad and disc wear and inspection</linktext>
+         </topicmeta>
+         <topicref href="t00357_1.dita" type="concept">
+            <topicmeta>
+               <navtitle>Disc brakes wear indicator</navtitle>
+               <linktext>Disc brakes wear indicator</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00814.dita" type="concept">
+            <topicmeta>
+               <navtitle>Brake discs, pads and calipers</navtitle>
+               <linktext>Brake discs, pads and calipers</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_02_04.dita" type="concept">
+         <topicmeta>
+            <navtitle>Tire specification information</navtitle>
+            <linktext>Tire specification information</linktext>
+         </topicmeta>
+         <topicref href="t00023.dita" type="reference">
+            <topicmeta>
+               <navtitle>Tires and wheels </navtitle>
+               <linktext>Tires and wheels </linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_02_05.dita" type="concept">
+         <topicmeta>
+            <navtitle>Precautions for winter driving</navtitle>
+            <linktext>Precautions for winter driving</linktext>
+         </topicmeta>
+         <topicref href="t00440.dita" type="concept">
+            <topicmeta>
+               <navtitle>Winter driving</navtitle>
+               <linktext>Winter driving</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_02_06.dita" type="concept">
+         <topicmeta>
+            <navtitle>Tire pressure monitoring system (TPMS) usage and precaution...</navtitle>
+            <linktext>Tire pressure monitoring system (TPMS) usage and precautions</linktext>
+         </topicmeta>
+         <topicref href="t00747.dita" type="concept">
+            <topicmeta>
+               <navtitle>Tire Pressure Monitoring System (TPMS)</navtitle>
+               <linktext>Tire Pressure Monitoring System (TPMS)</linktext>
+            </topicmeta>
+            <topicref href="t00748.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Effective use of TPMS</navtitle>
+                  <linktext>Effective use of TPMS</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00749.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Low tire pressure indicator light </navtitle>
+                  <linktext>Low tire pressure indicator light </linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00750.dita" type="concept">
+               <topicmeta>
+                  <navtitle>TPMS malfunction indicator</navtitle>
+                  <linktext>TPMS malfunction indicator</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00751.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Tire replacement with TPMS</navtitle>
+                  <linktext>Tire replacement with TPMS</linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="legal_02_07.dita" type="concept">
+         <topicmeta>
+            <navtitle>Spare tire usage and precautions</navtitle>
+            <linktext>Spare tire usage and precautions</linktext>
+         </topicmeta>
+         <topicref href="t00752.dita" type="concept">
+            <topicmeta>
+               <navtitle>If you have a flat tire (with spare tire)</navtitle>
+               <linktext>If you have a flat tire (with spare tire)</linktext>
+            </topicmeta>
+            <topicref href="t00756.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Important - use of compact spare tire</navtitle>
+                  <linktext>Important - use of compact spare tire</linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="legal_02_08.dita" type="concept">
+         <topicmeta>
+            <navtitle>Tire mobility kit (TMK) usage and precautions</navtitle>
+            <linktext>Tire mobility kit (TMK) usage and precautions</linktext>
+         </topicmeta>
+         <topicref href="t00759.dita" type="concept">
+            <topicmeta>
+               <navtitle>If you have a flat tire (with Tire Mobility Kit)</navtitle>
+               <linktext>If you have a flat tire (with Tire Mobility Kit)</linktext>
+            </topicmeta>
+            <topicref href="t00760.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Components of the Tire Mobility Kit</navtitle>
+                  <linktext>Components of the Tire Mobility Kit</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00761.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Using the Tire Mobility Kit</navtitle>
+                  <linktext>Using the Tire Mobility Kit</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00762.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Distributing the sealant</navtitle>
+                  <linktext>Distributing the sealant</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00763.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Checking the tire inflation pressure</navtitle>
+                  <linktext>Checking the tire inflation pressure</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00764.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Technical data</navtitle>
+                  <linktext>Technical data</linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="legal_02_09.dita" type="concept">
+         <topicmeta>
+            <navtitle>Trailer towing information and precautions</navtitle>
+            <linktext>Trailer towing information and precautions</linktext>
+         </topicmeta>
+         <topicref href="t00019.dita" type="concept">
+            <topicmeta>
+               <navtitle>Reference weight and distance when towing a trailer </navtitle>
+               <linktext>Reference weight and distance when towing a trailer </linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00430.dita" type="concept">
+            <topicmeta>
+               <navtitle>Trailer towing installation location and maximum allowable ...</navtitle>
+               <linktext>Trailer towing installation location and maximum allowable load information</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00432.dita" type="concept">
+            <topicmeta>
+               <navtitle>Rear license plate and lighting device obstruction by hitch</navtitle>
+               <linktext>Rear license plate and lighting device obstruction by hitch</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00768.dita" type="concept">
+            <topicmeta>
+               <navtitle>High Beam Assist limitations</navtitle>
+               <linktext>High Beam Assist limitations</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_02_10.dita" type="concept">
+         <topicmeta>
+            <navtitle>Transmission shift indicator information</navtitle>
+            <linktext>Transmission shift indicator information</linktext>
+         </topicmeta>
+         <topicref href="t00152.dita" type="concept">
+            <topicmeta>
+               <navtitle>Manual transmission shift indicator</navtitle>
+               <linktext>Manual transmission shift indicator</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00153.dita" type="concept">
+            <topicmeta>
+               <navtitle>Dual clutch transmission shift indicator</navtitle>
+               <linktext>Dual clutch transmission shift indicator</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00154.dita" type="concept">
+            <topicmeta>
+               <navtitle>Intelligent variable transmission shift indicator</navtitle>
+               <linktext>Intelligent variable transmission shift indicator</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+   </topicref>
+   <topicref href="legal_03.dita" type="concept">
+      <topicmeta>
+         <navtitle>Emissions and Environment</navtitle>
+         <linktext>Emissions and Environment</linktext>
+         <data name="wh-tile">
+            <data name="image" format="svg" href="./oxygen-webhelp/template/images/">
+               <data name="attr-width" value="64"/>
+               <data name="attr-height" value="64"/>
+            </data>
+         </data>
+      </topicmeta>
+      <topicref href="t00894.dita" type="concept">
+         <topicmeta>
+            <navtitle>Emission control system</navtitle>
+            <linktext>Emission control system</linktext>
+         </topicmeta>
+         <topicref href="t00364.dita" type="concept">
+            <topicmeta>
+               <navtitle>Be sure the exhaust system does not leak</navtitle>
+               <linktext>Be sure the exhaust system does not leak</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00895.dita" type="concept">
+            <topicmeta>
+               <navtitle>Gasoline Particulate Filter</navtitle>
+               <linktext>Gasoline Particulate Filter</linktext>
+            </topicmeta>
+            <topicref href="t00896.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Exhaust system (GPF) warning light (Gasoline Engine) </navtitle>
+                  <linktext>Exhaust system (GPF) warning light (Gasoline Engine) </linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+         <topicref href="t00897.dita" type="concept">
+            <topicmeta>
+               <navtitle>Gasoline Particulate Filter (for EURO 7 engine)</navtitle>
+               <linktext>Gasoline Particulate Filter (for EURO 7 engine)</linktext>
+            </topicmeta>
+            <topicref href="t00898.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Exhaust system (GPF) warning light (Gasoline Engine) (for S...</navtitle>
+                  <linktext>Exhaust system (GPF) warning light (Gasoline Engine) (for Smartstream G1.6 T-GDi (EURO 7))</linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+         <topicref href="legal_dpf.dita" type="concept">
+            <topicmeta>
+               <navtitle>Diesel particulate filter</navtitle>
+               <linktext>Diesel particulate filter</linktext>
+            </topicmeta>
+            <topicref href="legal_dpf_warning.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Exhaust system (DPF) warning light (Diesel engine) </navtitle>
+                  <linktext>Exhaust system (DPF) warning light (Diesel engine) </linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+         <topicref href="legal_scr1.dita" type="concept">
+            <topicmeta>
+               <navtitle>Selective Catalytic Reduction</navtitle>
+               <linktext>Selective Catalytic Reduction</linktext>
+            </topicmeta>
+            <topicref href="legal_scr2.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Urea solution level gauge</navtitle>
+                  <linktext>Urea solution level gauge</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="legal_scr3.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Low urea solution warning message</navtitle>
+                  <linktext>Low urea solution warning message</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="legal_scr4.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Malfunction with the SCR system</navtitle>
+                  <linktext>Malfunction with the SCR system</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="legal_scr5.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Clearing the vehicle-restarting restriction</navtitle>
+                  <linktext>Clearing the vehicle-restarting restriction</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="legal_scr6.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Adding urea solution</navtitle>
+                  <linktext>Adding urea solution</linktext>
+               </topicmeta>
+               <topicref href="legal_scr7.dita" type="concept">
+                  <topicmeta>
+                     <navtitle>To refill urea solution with a refill hose</navtitle>
+                     <linktext>To refill urea solution with a refill hose</linktext>
+                  </topicmeta>
+               </topicref>
+               <topicref href="legal_scr8.dita" type="task">
+                  <topicmeta>
+                     <navtitle>To refill urea solution with a refill bottle</navtitle>
+                     <linktext>To refill urea solution with a refill bottle</linktext>
+                  </topicmeta>
+               </topicref>
+            </topicref>
+            <topicref href="legal_scr9.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Storing urea solution</navtitle>
+                  <linktext>Storing urea solution</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="legal_scr10.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Urea solution purity</navtitle>
+                  <linktext>Urea solution purity</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="legal_scr12.dita" type="concept">
+               <topicmeta>
+                  <navtitle>SCR warning light (Diesel engine) </navtitle>
+                  <linktext>SCR warning light (Diesel engine) </linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="legal_03_02.dita" type="concept">
+         <topicmeta>
+            <navtitle>Engine Oil and Filter Maintenance Information</navtitle>
+            <linktext>Engine Oil and Filter Maintenance Information</linktext>
+         </topicmeta>
+         <topicref href="t00824.dita" type="concept">
+            <topicmeta>
+               <navtitle>Oil Life Management System Information (for EURO 7 engine)</navtitle>
+               <linktext>Oil Life Management System Information (for EURO 7 engine)</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00795.dita" type="concept">
+            <topicmeta>
+               <navtitle>Maintenance When the Oil Life Management System Alert Appea...</navtitle>
+               <linktext>Maintenance When the Oil Life Management System Alert Appears (for EURO 7 engine)</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_03_03.dita" type="concept">
+         <topicmeta>
+            <navtitle>Label information</navtitle>
+            <linktext>Label information</linktext>
+         </topicmeta>
+         <topicref href="t00315.dita" type="concept">
+            <topicmeta>
+               <navtitle>Air conditioning refrigerant label</navtitle>
+               <linktext>Air conditioning refrigerant label</linktext>
+            </topicmeta>
+            <topicref href="t00021.dita" type="reference">
+               <topicmeta>
+                  <navtitle>Air conditioning system</navtitle>
+                  <linktext>Air conditioning system</linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+         <topicref href="t00032.dita" type="concept">
+            <topicmeta>
+               <navtitle>Fuel label</navtitle>
+               <linktext>Fuel label</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+   </topicref>
+   <topicref href="legal_04.dita" type="concept">
+      <topicref href="legal_04_01.dita" type="concept">
+         <topicmeta>
+            <navtitle>VESS information</navtitle>
+            <linktext>VESS information</linktext>
+         </topicmeta>
+         <topicref href="legal_group2_HEV00033.dita" type="concept">
+            <topicmeta>
+               <navtitle>Virtual Engine Sound System (VESS)</navtitle>
+               <linktext>Virtual Engine Sound System (VESS)</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+      <topicref href="legal_04_02.dita" type="concept">
+         <topicmeta>
+            <navtitle>EV charging label information</navtitle>
+            <linktext>EV charging label information</linktext>
+         </topicmeta>
+         <topicref href="legal_group2_EV00012.dita" type="concept">
+            <topicmeta>
+               <navtitle>How to check the symbol on the charging label (For Europe)</navtitle>
+               <linktext>How to check the symbol on the charging label (For Europe)</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+   </topicref>
+   <topicref href="legal_05.dita" type="concept">
+      <topicmeta>
+         <navtitle>Disclaimers</navtitle>
+         <linktext>Disclaimers</linktext>
+         <data name="wh-tile">
+            <data name="image" format="svg" href="./oxygen-webhelp/template/images/">
+               <data name="attr-width" value="64"/>
+               <data name="attr-height" value="64"/>
+            </data>
+         </data>
+      </topicmeta>
+      <topicref href="legal_05_01.dita" type="concept">
+         <topicmeta>
+            <navtitle>Overview of the Event Data Recorder (EDR)</navtitle>
+            <linktext>Overview of the Event Data Recorder (EDR)</linktext>
+         </topicmeta>
+         <topicref href="t00007.dita" type="concept">
+            <topicmeta>
+               <navtitle>Vehicle data collection and Event Data Recorders (EDR)</navtitle>
+               <linktext>Vehicle data collection and Event Data Recorders (EDR)</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+   </topicref>
+   <topicref href="legal_06.dita" type="concept">
+      <topicmeta>
+         <navtitle>Declarations of Conformity</navtitle>
+         <linktext>Declarations of Conformity</linktext>
+         <data name="wh-tile">
+            <data name="image" format="svg" href="./oxygen-webhelp/template/images/">
+               <data name="attr-width" value="64"/>
+               <data name="attr-height" value="64"/>
+            </data>
+         </data>
+      </topicmeta>
+      <topicref href="legal_06_01.dita" type="concept">
+         <topicmeta>
+            <navtitle>Certification information</navtitle>
+            <linktext>Certification information</linktext>
+         </topicmeta>
+         <topicref href="t00758.dita" type="concept">
+            <topicmeta>
+               <navtitle>Declaration of Conformity for Jack</navtitle>
+               <linktext>Declaration of Conformity for Jack</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00905.dita" type="concept">
+            <topicmeta>
+               <navtitle>Manufacturer Information for Antenna </navtitle>
+               <linktext>Manufacturer Information for Antenna </linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00902.dita" type="concept">
+            <topicmeta>
+               <navtitle>Information for EU Battery Regulation</navtitle>
+               <linktext>Information for EU Battery Regulation</linktext>
+            </topicmeta>
+            <topicref href="t00903.dita" type="concept">
+               <topicmeta>
+                  <navtitle>IMPORTER &amp; DISTRIBUTOR INFORMATION (EU 2023/1542)</navtitle>
+                  <linktext>IMPORTER &amp; DISTRIBUTOR INFORMATION (EU 2023/1542)</linktext>
+               </topicmeta>
+            </topicref>
+            <topicref href="t00904.dita" type="concept">
+               <topicmeta>
+                  <navtitle>Manufacturer Information</navtitle>
+                  <linktext>Manufacturer Information</linktext>
+               </topicmeta>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="legal_06_02.dita" type="concept">
+         <topicmeta>
+            <navtitle>Radio frequency component information</navtitle>
+            <linktext>Radio frequency component information</linktext>
+         </topicmeta>
+         <topicref href="t00735.dita" type="concept">
+            <topicmeta>
+               <navtitle>Declaration of conformity</navtitle>
+               <linktext>Declaration of conformity</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00900.dita" type="concept">
+            <topicmeta>
+               <navtitle>Declaration of CE conformity</navtitle>
+               <linktext>Declaration of CE conformity</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+   </topicref>
+   <topicref href="legal_07.dita" type="concept">
+      <topicmeta>
+         <navtitle>Reporting Safety Defects</navtitle>
+         <linktext>Reporting Safety Defects</linktext>
+         <data name="wh-tile">
+            <data name="image" format="svg" href="./oxygen-webhelp/template/images/">
+               <data name="attr-width" value="64"/>
+               <data name="attr-height" value="64"/>
+            </data>
+         </data>
+      </topicmeta>
+      <topicref href="legal_07_01.dita" type="concept">
+         <topicmeta>
+            <navtitle>Importer information</navtitle>
+            <linktext>Importer information</linktext>
+         </topicmeta>
+         <topicref href="t00008.dita" type="concept">
+            <topicmeta>
+               <navtitle>Importer information for United Kingdom</navtitle>
+               <linktext>Importer information for United Kingdom</linktext>
+            </topicmeta>
+         </topicref>
+         <topicref href="t00901.dita" type="concept">
+            <topicmeta>
+               <navtitle>Importer information for Europe</navtitle>
+               <linktext>Importer information for Europe</linktext>
+            </topicmeta>
+         </topicref>
+      </topicref>
+   </topicref>
+</map>

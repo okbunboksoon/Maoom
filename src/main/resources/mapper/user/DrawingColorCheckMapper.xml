@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="maoomWeb.ire.user.mapper.DrawingColorCheckMapper">
+
+    <!--
+        이 XML은 DrawingColorCheckMapper.java의 메서드와 실제 SQL을 연결한다.
+        namespace는 Java 인터페이스의 전체 패키지명과 반드시 같아야 한다.
+    -->
+
+    <!-- DB의 snake_case 열 이름을 Java DTO의 camelCase 필드에 연결한다. -->
+    <resultMap id="DrawingColorCheckResultMap"
+            type="maoomWeb.ire.user.dto.DrawingColorCheckDto">
+        <id property="drawingName" column="drawing_name"/>
+        <result property="checkValue" column="check_value"/>
+        <result property="regDt" column="reg_dt"/>
+    </resultMap>
+
+    <!--
+        PDF에서 찾은 도안명 목록에 해당하는 V/X 값만 한 번에 조회한다.
+        UPPER + TRIM을 사용해 대소문자와 앞뒤 공백 차이로 조회가 빠지는 것을 막는다.
+        foreach는 Java의 drawingNames 목록을 SQL의 IN (...) 형태로 변환한다.
+    -->
+    <select id="findByDrawingNames"
+            resultMap="DrawingColorCheckResultMap">
+        SELECT
+            drawing_name,
+            check_value,
+            reg_dt
+        FROM tb_drawing_color_check
+        WHERE UPPER(TRIM(drawing_name)) IN
+        <foreach collection="drawingNames"
+                item="drawingName"
+                open="("
+                separator=","
+                close=")">
+            UPPER(TRIM(#{drawingName}))
+        </foreach>
+    </select>
+
+    <!-- 관리용 전체 목록. 최근 등록 항목을 먼저 보여준다. -->
+    <select id="findAll"
+            resultMap="DrawingColorCheckResultMap">
+        SELECT
+            drawing_name,
+            check_value,
+            reg_dt
+        FROM tb_drawing_color_check
+        ORDER BY reg_dt DESC, drawing_name
+    </select>
+
+    <!--
+        MySQL의 UPSERT 구문.
+        같은 drawing_name이 없으면 INSERT하고, 기본키가 이미 있으면
+        check_value만 새 값으로 UPDATE한다.
+    -->
+    <insert id="upsert">
+        INSERT INTO tb_drawing_color_check (
+            drawing_name,
+            check_value
+        ) VALUES (
+            #{drawingName},
+            #{checkValue}
+        )
+        ON DUPLICATE KEY UPDATE
+            check_value = VALUES(check_value)
+    </insert>
+
+    <delete id="deleteByDrawingName">
+        DELETE FROM tb_drawing_color_check
+        WHERE drawing_name = #{drawingName}
+    </delete>
+
+</mapper>

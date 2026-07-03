@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="maoomWeb.ire.user.mapper.DitamapLegalTargetMapper">
+
+    <resultMap id="DitamapLegalTargetResultMap"
+            type="maoomWeb.ire.user.dto.DitamapLegalTarget">
+        <id property="fileName" column="file_name"/>
+        <result property="title" column="title"/>
+        <result property="parentL1File" column="parent_l1_file"/>
+        <result property="parentL2File" column="parent_l2_file"/>
+        <result property="level" column="level_no"/>
+    </resultMap>
+
+    <select id="findAll"
+            resultMap="DitamapLegalTargetResultMap">
+        SELECT
+            file_name,
+            title,
+            parent_l1_file,
+            parent_l2_file,
+            level_no
+        FROM tb_ditamap_legal_target
+        ORDER BY parent_l1_file, parent_l2_file, level_no, file_name
+    </select>
+
+    <select id="countAll"
+            resultType="int">
+        SELECT COUNT(*)
+        FROM tb_ditamap_legal_target
+    </select>
+
+    <insert id="insertIgnore">
+        INSERT IGNORE INTO tb_ditamap_legal_target (
+            file_name,
+            title,
+            parent_l1_file,
+            parent_l2_file,
+            level_no
+        ) VALUES (
+            #{fileName},
+            #{title},
+            #{parentL1File},
+            #{parentL2File},
+            #{level}
+        )
+    </insert>
+
+</mapper>

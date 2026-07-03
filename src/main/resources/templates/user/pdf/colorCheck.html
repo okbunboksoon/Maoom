@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!--
+    PDF 컬러체크 화면의 전체 연결 흐름
+
+    1. 사용자가 PDF를 선택하고 "엑셀 생성"을 누른다.
+    2. JavaScript가 POST /api/pdf/color-check/excel로 PDF를 전송한다.
+    3. ColorCheckController -> ColorCheckExportService가 엑셀을 만든다.
+    4. 브라우저가 도안분류용 엑셀을 다운로드한다.
+    5. 사용자가 생성된 엑셀의 컬러도안 열을 검토한다.
+    6. 검토 엑셀을 선택하고 "DB 반영"을 누른다.
+    7. POST /api/pdf/color-check/import -> DrawingColorCheckService가 V/X를 저장한다.
+    8. 최종 발주 엑셀을 다운로드하고 DB 반영 건수는 화면에 표시한다.
+
+    이 파일은 화면 구조와 브라우저 동작만 담당한다.
+    PDF 분석, 엑셀 생성, DB 저장 규칙은 Java 서비스에서 관리한다.
+-->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">견적</title>
+    <link rel="stylesheet" href="/user/css/ColorCheck.css?v=ui-5">
+    <script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<main class="color-check-wrap">
+    <header class="color-check-header">
+        <div>
+            <h1 id="pageHeading">견적</h1>
+            <p>PDF 도안을 엑셀로 만들고, 체크한 내용을 최종 엑셀로 만든다.</p>
+        </div>
+    </header>
+
+    <section class="color-check-panel" aria-label="PDF 컬러체크 엑셀 생성">
+        <!-- 1단계: PDF를 서버로 보내 컬러체크 엑셀을 생성한다. -->
+        <div class="step-title">
+            <span>1</span>
+            <div>
+                <strong>도안 확인용 엑셀 생성</strong>
+                <small>PDF를 선택하거나 첫 번째 행에 끌어다 놓으세요.</small>
+            </div>
+        </div>
+
+        <!-- 파일 선택 버튼과 드래그 앤 드롭이 같은 hidden file input을 사용한다. -->
+        <div id="pdfDropRow" class="path-row file-drop-row">
+            <label for="pdfPath">PDF 파일</label>
+            <input id="pdfPath" type="text"
+                   placeholder="PDF 선택 또는 여기에 끌어다 놓기" readonly>
+            <button class="select-btn secondary-btn" type="button" data-target="pdfFile">
+                선택
+            </button>
+            <input id="pdfFile" type="file" accept="application/pdf,.pdf" hidden>
+            <button id="runExtractBtn" class="run-btn primary-btn"
+                    type="button" disabled>엑셀 생성</button>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <!-- 2단계: 사용자가 검토한 엑셀의 V/X 값을 DB에 반영한다. -->
+        <div class="step-title">
+            <span>2</span>
+            <div>
+                <strong>최종 엑셀 생성 및 DB 업데이트</strong>
+                <small>최종 엑셀 리포트 생성 및 DB 업데이트 도안명에 대해 V, X 저장</small>
+            </div>
+        </div>
+
+        <div id="reviewExcelDropRow" class="path-row file-drop-row">
+            <label for="reviewExcelPath">최종 엑셀</label>
+            <input id="reviewExcelPath" type="text"
+                   placeholder="검토 엑셀 선택 또는 여기에 끌어다 놓기" readonly>
+            <button class="select-btn secondary-btn" type="button" data-target="reviewExcelFile">
+                선택
+            </button>
+            <input id="reviewExcelFile" type="file" accept=".xlsx,.xls" hidden>
+            <button id="runImportBtn" class="run-btn primary-btn"
+                    type="button" disabled>최종 생성</button>
+        </div>
+
+        <!-- API 처리 중/성공/실패 메시지를 alert 대신 화면 안에 보여준다. -->
+        <div id="statusMessage" class="status-message" role="status"
+             aria-live="polite" hidden></div>
+
+        <footer class="color-check-actions">
+            <button class="close-btn secondary-btn" type="button" onclick="window.close()">닫기</button>
+        </footer>
+    </section>
+</main>
+
+<div id="dbUpdateDialogBackdrop" class="db-update-dialog-backdrop" hidden>
+    <section class="db-update-dialog"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="dbUpdateDialogTitle">
+        <h2 id="dbUpdateDialogTitle">DB 업데이트</h2>
+        <p>최종 엑셀을 생성하면서 검토 엑셀의 V/X 값을 DB에 저장할까요?</p>
+        <div class="db-update-dialog-actions">
+            <button id="dbUpdateNoButton" class="secondary-btn" type="button">아니오</button>
+            <button id="dbUpdateYesButton" class="primary-btn" type="button">예</button>
+        </div>
+    </section>
+</div>
+
+<script>
+
+/*
+ * "선택" 버튼은 실제 파일 입력창을 보기 좋게 감싸는 버튼이다.
+ * data-target 값으로 어떤 hidden input을 열지 구분한다.
+ */
+document.querySelectorAll('.select-btn').forEach(button => {
+    button.addEventListener('click', function(){
+        document.getElementById(this.dataset.target).click();
+    });
+});
+
+// PDF 파일 선택창에서 파일을 고르면 화면 상태와 실행 버튼을 갱신한다.
+document.getElementById('pdfFile').addEventListener('change', function(){
+    setPdfFile(this.files[0]);
+});
+
+let droppedReviewExcelFile = null;
+
+// 검토 엑셀이 선택된 경우 현재 작업 파일로 설정한다.
+document.getElementById('reviewExcelFile').addEventListener('change', function(){
+    setReviewExcelFile(this.files[0]);
+});
+
+let droppedPdfFile = null;
+const pdfDropRow = document.getElementById('pdfDropRow');
+const reviewExcelDropRow = document.getElementById('reviewExcelDropRow');
+
+// 브라우저 기본 파일 열기 동작을 막고 드롭 가능 상태를 시각적으로 표시한다.
+['dragenter', 'dragover'].forEach(eventName => {
+    pdfDropRow.addEventListener(eventName, event => {
+        event.preventDefault();
+        event.stopPropagation();
+        pdfDropRow.classList.add('is-dragging');
+        event.dataTransfer.dropEffect = 'copy';
+    });
+});
+
+// 드래그가 끝나면 강조 표시를 제거한다.
+['dragleave', 'drop'].forEach(eventName => {
+    pdfDropRow.addEventListener(eventName, event => {
+        event.preventDefault();
+        event.stopPropagation();
+        pdfDropRow.classList.remove('is-dragging');
+    });
+});
+
+// 드롭된 여러 파일 중 첫 번째 PDF만 선택한다.
+pdfDropRow.addEventListener('drop', event => {
+    const file = Array.from(event.dataTransfer.files)
+        .find(item => item.name.toLowerCase().endsWith('.pdf'));
+
+    if(!file){
+        alert('PDF 파일만 끌어다 놓을 수 있습니다.');
+        return;
+    }
+
+    setPdfFile(file);
+});
+
+// 검토 엑셀 행도 PDF 행과 동일하게 파일 드래그 앤 드롭을 지원한다.
+['dragenter', 'dragover'].forEach(eventName => {
+    reviewExcelDropRow.addEventListener(eventName, event => {
+        event.preventDefault();
+        event.stopPropagation();
+        reviewExcelDropRow.classList.add('is-dragging');
+        event.dataTransfer.dropEffect = 'copy';
+    });
+});
+
+['dragleave', 'drop'].forEach(eventName => {
+    reviewExcelDropRow.addEventListener(eventName, event => {
+        event.preventDefault();
+        event.stopPropagation();
+        reviewExcelDropRow.classList.remove('is-dragging');
+    });
+});
+
+reviewExcelDropRow.addEventListener('drop', event => {
+    const file = Array.from(event.dataTransfer.files)
+        .find(item => /\.(xlsx|xls)$/i.test(item.name));
+
+    if(!file){
+        alert('XLSX 또는 XLS 파일만 끌어다 놓을 수 있습니다.');
+        return;
+    }
+
+    setReviewExcelFile(file);
+});
+
+// 읽기 전용 경로 입력칸을 눌러도 PDF 선택창이 열리게 한다.
+document.getElementById('pdfPath').addEventListener('click', () => {
+    document.getElementById('pdfFile').click();
+});
+
+// 검토 엑셀 경로 입력칸을 눌러도 파일 선택창이 열린다.
+document.getElementById('reviewExcelPath').addEventListener('click', () => {
+    document.getElementById('reviewExcelFile').click();
+});
+
+/**
+ * 선택 또는 드롭된 PDF를 현재 작업 파일로 설정한다.
+ * 파일이 없으면 엑셀 생성 버튼을 비활성화한다.
+ */
+function setPdfFile(file){
+    droppedPdfFile = file || null;
+    document.getElementById('pdfPath').value =
+        file ? file.name : '';
+    document.getElementById('runExtractBtn').disabled = !file;
+    setStatus('', '');
+}
+
+/**
+ * 선택 또는 드롭된 검토 엑셀을 현재 DB 반영 파일로 설정한다.
+ * 드롭 파일은 hidden input의 files에 강제로 넣지 않고 별도 변수로 안전하게 보관한다.
+ */
+function setReviewExcelFile(file){
+    droppedReviewExcelFile = file || null;
+    document.getElementById('reviewExcelPath').value =
+        file ? file.name : '';
+    document.getElementById('runImportBtn').disabled = !file;
+    setStatus('', '');
+}
+
+
+/**
+ * 1단계 실행:
+ * PDF를 multipart/form-data로 엑셀 생성 API에 전송한다.
+ * 생성된 엑셀은 접속한 사용자 PC에서 저장 위치를 골라 다운로드한다.
+ */
+document.getElementById('runExtractBtn').addEventListener('click', async function(){
+    const pdfFile = droppedPdfFile
+        || document.getElementById('pdfFile').files[0];
+
+    if(!pdfFile){
+        alert('PDF 파일을 선택해 주세요.');
+        return;
+    }
+
+    this.disabled = true;
+    const originalText = this.textContent;
+    this.textContent = '생성 중...';
+    setStatus(
+        'progress',
+        'PDF를 분석하고 있습니다. 페이지가 많으면 시간이 걸릴 수 있습니다.'
+    );
+
+    try{
+        const formData = new FormData();
+        formData.append('file', pdfFile);
+        const response = await fetch('/api/pdf/color-check/excel', {
+            method: 'POST',
+            body: formData
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text() || '엑셀 생성에 실패했습니다.');
+        }
+
+        // 응답받은 엑셀을 접속한 사용자 PC에서 직접 저장한다.
+        const blob = await response.blob();
+        const fileName = getDownloadFileName(
+            response,
+            pdfFile.name.replace(/\.pdf$/i, '') + '_도안분류용.xlsx'
+        );
+        const savedName = await saveWorkbookBlob(blob, fileName);
+        setStatus(
+            'success',
+            '엑셀 생성 완료: ' + savedName
+        );
+    }catch(error){
+        setStatus(
+            'error',
+            friendlyFetchError(
+                error,
+                '엑셀 생성 중 오류가 발생했습니다.'
+            )
+        );
+    }finally{
+        this.disabled = !droppedPdfFile
+            && !document.getElementById('pdfFile').files[0];
+        this.textContent = originalText;
+    }
+});
+
+/**
+ * 2단계 실행:
+ * 검토한 XLS/XLSX를 최종 엑셀 생성 및 DB 반영 API로 전송한다.
+ * 서버가 반환한 최종 발주 엑셀과 반영 건수를 사용자에게 보여준다.
+ */
+document.getElementById('runImportBtn').addEventListener('click', async function(){
+    const excelFile = droppedReviewExcelFile
+        || document.getElementById('reviewExcelFile').files[0];
+
+    if(!excelFile){
+        alert('최종 엑셀로 만들 파일을 선택해 주세요.');
+        return;
+    }
+
+    const updateDatabase = await askDbUpdate();
+
+    this.disabled = true;
+    const originalText = this.textContent;
+    this.textContent = '생성 중...';
+    setStatus(
+        'progress',
+        updateDatabase
+            ? '최종 발주 엑셀을 만들고 V/X 값을 DB에 반영하고 있습니다.'
+            : '최종 발주 엑셀만 만들고 있습니다.'
+    );
+
+    try{
+        const formData = new FormData();
+        formData.append('file', excelFile);
+        formData.append('updateDatabase', String(updateDatabase));
+        const response = await fetch('/api/pdf/color-check/import', {
+            method: 'POST',
+            body: formData
+        });
+
+        if(!response.ok){
+            throw new Error(
+                await response.text()
+                || '최종 엑셀 생성 및 DB 반영에 실패했습니다.'
+            );
+        }
+
+        const blob = await response.blob();
+        const fileName = getDownloadFileName(
+            response,
+            excelFile.name.replace(/\.(xlsx|xls)$/i, '') + '_최종발주.xlsx'
+        );
+        const savedName = await saveWorkbookBlob(blob, fileName);
+        const dbUpdated = response.headers.get('X-Color-Check-Db-Updated') === 'true';
+        const insertedCount = getHeaderNumber(
+            response,
+            'X-Color-Check-Inserted'
+        );
+        const updatedCount = getHeaderNumber(
+            response,
+            'X-Color-Check-Updated'
+        );
+        const unchangedCount = getHeaderNumber(
+            response,
+            'X-Color-Check-Unchanged'
+        );
+        const skippedCount = getHeaderNumber(
+            response,
+            'X-Color-Check-Skipped'
+        );
+
+        setStatus(
+            'success',
+            dbUpdated
+                ? '최종 엑셀 생성 및 DB 반영이 완료되었습니다.\n'
+                    + '신규: ' + insertedCount + '건\n'
+                    + '수정: ' + updatedCount + '건\n'
+                    + '변경 없음: ' + unchangedCount + '건\n'
+                    + '제외: ' + skippedCount + '건\n'
+                    + '다운로드: ' + savedName
+                : '최종 엑셀 생성이 완료되었습니다. DB 업데이트는 하지 않았습니다.\n'
+                    + '다운로드: ' + savedName
+        );
+    }catch(error){
+        setStatus(
+            'error',
+            friendlyFetchError(
+                error,
+                '최종 엑셀 생성 중 오류가 발생했습니다.'
+            )
+        );
+    }finally{
+        this.disabled = !droppedReviewExcelFile
+            && !document.getElementById('reviewExcelFile').files[0];
+        this.textContent = originalText;
+    }
+});
+
+function askDbUpdate(){
+    const backdrop = document.getElementById('dbUpdateDialogBackdrop');
+    const yesButton = document.getElementById('dbUpdateYesButton');
+    const noButton = document.getElementById('dbUpdateNoButton');
+
+    if(!backdrop || !yesButton || !noButton){
+        return Promise.resolve(
+            window.confirm('최종 엑셀을 생성하면서 V/X 값을 DB에 저장할까요?')
+        );
+    }
+
+    backdrop.hidden = false;
+    yesButton.focus();
+
+    return new Promise(resolve => {
+        const finish = value => {
+            backdrop.hidden = true;
+            yesButton.removeEventListener('click', onYes);
+            noButton.removeEventListener('click', onNo);
+            backdrop.removeEventListener('click', onBackdrop);
+            document.removeEventListener('keydown', onKeydown);
+            resolve(value);
+        };
+        const onYes = () => finish(true);
+        const onNo = () => finish(false);
+        const onBackdrop = event => {
+            if(event.target === backdrop){
+                finish(false);
+            }
+        };
+        const onKeydown = event => {
+            if(event.key === 'Escape'){
+                finish(false);
+            }
+        };
+
+        yesButton.addEventListener('click', onYes);
+        noButton.addEventListener('click', onNo);
+        backdrop.addEventListener('click', onBackdrop);
+        document.addEventListener('keydown', onKeydown);
+    });
+}
+/**
+ * fetch 자체가 실패하면 브라우저는 서버 응답문 대신 "Failed to fetch"만 준다.
+ * 사용자가 서버 중단이나 업로드 연결 끊김을 바로 이해할 수 있는 문구로 바꾼다.
+ */
+function friendlyFetchError(error, fallbackMessage){
+    if(error instanceof TypeError
+            || error.message === 'Failed to fetch'){
+        return '서버와 연결이 끊겼습니다. '
+            + '서버가 실행 중인지 확인한 뒤 다시 시도해 주세요.';
+    }
+
+    return error.message || fallbackMessage;
+}
+
+/**
+ * 처리 상태 영역의 색상과 문구를 한곳에서 관리한다.
+ * type은 progress, success, error 중 하나를 사용한다.
+ */
+function setStatus(type, message){
+    const status = document.getElementById('statusMessage');
+
+    if(!message){
+        status.hidden = true;
+        status.textContent = '';
+        status.className = 'status-message';
+        return;
+    }
+
+    status.hidden = false;
+    status.textContent = message;
+    status.className = 'status-message ' + type;
+}
+
+/**
+ * 브라우저 저장 대화상자가 지원되면 사용자가 직접 저장 위치를 고른다.
+ */
+async function saveWorkbookBlob(blob, fileName){
+    if(window.showSaveFilePicker){
+        const handle = await window.showSaveFilePicker({
+            suggestedName: fileName,
+            types: [{
+                description: 'Excel 통합 문서',
+                accept: {
+                    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': ['.xlsx']
+                }
+            }]
+        });
+        const writable = await handle.createWritable();
+        await writable.write(blob);
+        await writable.close();
+        return handle.name;
+    }
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+    return fileName;
+}
+
+function getDownloadFileName(response, fallbackName){
+    const disposition = response.headers.get('Content-Disposition') || '';
+    const utf8Match = disposition.match(/filename\*=UTF-8''([^;]+)/i);
+
+    if(utf8Match){
+        return decodeURIComponent(utf8Match[1]);
+    }
+
+    const plainMatch = disposition.match(/filename="?([^";]+)"?/i);
+
+    if(plainMatch){
+        return plainMatch[1];
+    }
+
+    return fallbackName;
+}
+
+function getHeaderNumber(response, headerName){
+    const value = response.headers.get(headerName);
+    return value == null || value === ''
+        ? 0
+        : Number(value);
+}
+
+</script>
+</body>
+</html>
+
+

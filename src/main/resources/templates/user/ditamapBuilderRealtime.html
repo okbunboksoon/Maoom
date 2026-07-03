@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<!-- 2안 테스트용: DB 대상 파일명 자동 체크와 오른쪽 법규 DITAMAP 실시간 반영 화면. -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditamap Builder 2안</title>
+    <link rel="stylesheet" href="/user/css/DitamapBuilder.css?v=realtime-footer-1">
+</head>
+<body class="ditamap-view-body">
+<main class="ditamap-view-wrap ditamap-realtime-wrap">
+    <header class="ditamap-header">
+        <div>
+            <h1>Ditamap Builder 2안(DB 자동체크형)</h1>
+            <p id="realtimePathText">DB 대상 파일명을 기준으로 자동 체크하고 오른쪽에 실시간 반영합니다.</p>
+        </div>
+    </header>
+
+    <section id="realtimePathPanel"
+             class="ditamap-panel ditamap-test-path-panel">
+        <div class="ditamap-path-row">
+            <label for="realtimePathInput">DITA 경로</label>
+            <input id="realtimePathInput"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="DITAMAP이 포함된 폴더 또는 .ditamap 경로">
+            <button id="realtimeLoadButton"
+                    class="ditamap-btn primary-btn"
+                    type="button">확인</button>
+        </div>
+    </section>
+
+    <div class="ditamap-tree-area">
+        <section class="ditamap-tree-panel"
+                 aria-label="기준 DITAMAP">
+            <header class="ditamap-tree-header">
+                <div>
+                    <h2>기준 DITAMAP</h2>
+                    <p id="realtimeBaseName">DITAMAP 대기 중</p>
+                </div>
+            </header>
+            <div class="ditamap-tree-columns base-ditamap-columns">
+                <span>체크</span>
+                <span>Title</span>
+                <span>파일명</span>
+            </div>
+            <div id="realtimeBaseTree"
+                 class="ditamap-tree base-ditamap-tree"></div>
+        </section>
+
+        <div class="ditamap-transfer-slot">
+            <button id="realtimeOpenEditorButton"
+                    class="ditamap-arrow-btn"
+                    type="button"
+                    title="현재 오른쪽 구조를 편집 팝업에서 확인"
+                    disabled>
+                <span aria-hidden="true">→</span>
+            </button>
+        </div>
+
+        <div class="legal-ditamap-side">
+            <section class="ditamap-tree-panel"
+                     aria-label="법규 DITAMAP 실시간 편집">
+                <header class="ditamap-tree-header">
+                    <div>
+                        <h2>법규 DITAMAP</h2>
+                        <p>체크/해제 시 오른쪽 구조에 바로 반영됩니다.</p>
+                    </div>
+                    <div class="ditamap-structure-toolbar legal-panel-toolbar">
+                        <button id="realtimeMoveUpButton"
+                                class="ditamap-icon-btn"
+                                type="button"
+                                title="위로 이동"
+                                disabled>↑</button>
+                        <button id="realtimeMoveDownButton"
+                                class="ditamap-icon-btn"
+                                type="button"
+                                title="아래로 이동"
+                                disabled>↓</button>
+                        <button id="realtimeOutdentButton"
+                                class="ditamap-icon-btn"
+                                type="button"
+                                title="내어쓰기"
+                                disabled>←</button>
+                        <button id="realtimeIndentButton"
+                                class="ditamap-icon-btn"
+                                type="button"
+                                title="들여쓰기"
+                                disabled>→</button>
+                        <button id="realtimeDeleteButton"
+                                class="ditamap-icon-btn danger-icon-btn"
+                                type="button"
+                                title="선택 항목 삭제"
+                                disabled>×</button>
+                    </div>
+                </header>
+                <div class="ditamap-tree-columns law-ditamap-columns">
+                    <span>Title</span>
+                    <span>파일명</span>
+                </div>
+                <div id="realtimeLegalTree"
+                     class="ditamap-tree law-ditamap-tree"></div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="ditamap-view-actions">
+        <button class="ditamap-btn secondary-btn"
+                type="button"
+                onclick="window.close()">닫기</button>
+        <button id="realtimeSaveButton"
+                class="ditamap-btn primary-btn"
+                type="button"
+                disabled>저장</button>
+    </footer>
+</main>
+
+<div id="realtimeProgressBackdrop"
+     class="legal-progress-backdrop"
+     hidden>
+    <div class="legal-progress-dialog"
+         role="status"
+         aria-live="polite">
+        <div id="realtimeProgressHourglass"
+             class="legal-progress-hourglass"
+             aria-hidden="true">⌛</div>
+        <strong id="realtimeProgressTitle">DITAMAP 불러오는 중</strong>
+        <p id="realtimeProgressText">잠시만 기다려 주세요.</p>
+        <button id="realtimeProgressCloseButton"
+                class="ditamap-btn primary-btn"
+                type="button"
+                hidden>확인</button>
+    </div>
+</div>
+
+<script>
+const realtimeParams = new URLSearchParams(location.search);
+const realtimePathInput = document.getElementById('realtimePathInput');
+const realtimeLoadButton = document.getElementById('realtimeLoadButton');
+const realtimePathText = document.getElementById('realtimePathText');
+const realtimeBaseName = document.getElementById('realtimeBaseName');
+const realtimeBaseTree = document.getElementById('realtimeBaseTree');
+const realtimeLegalTree = document.getElementById('realtimeLegalTree');
+const realtimeOpenEditorButton = document.getElementById('realtimeOpenEditorButton');
+const realtimeSaveButton = document.getElementById('realtimeSaveButton');
+const realtimeMoveUpButton = document.getElementById('realtimeMoveUpButton');
+const realtimeMoveDownButton = document.getElementById('realtimeMoveDownButton');
+const realtimeOutdentButton = document.getElementById('realtimeOutdentButton');
+const realtimeIndentButton = document.getElementById('realtimeIndentButton');
+const realtimeDeleteButton = document.getElementById('realtimeDeleteButton');
+const realtimeProgressBackdrop = document.getElementById('realtimeProgressBackdrop');
+const realtimeProgressHourglass = document.getElementById('realtimeProgressHourglass');
+const realtimeProgressTitle = document.getElementById('realtimeProgressTitle');
+const realtimeProgressText = document.getElementById('realtimeProgressText');
+const realtimeProgressCloseButton = document.getElementById('realtimeProgressCloseButton');
+let realtimeBaseTreeData = null;
+let realtimeBaseRows = [];
+let realtimeLegalRows = [];
+let realtimeSelectedLegalIndex = -1;
+let realtimeDraggingIndex = -1;
+let realtimeLegalTargetByFile = new Map();
+let expectedRealtimeLegalParentKeys = new Set();
+
+function showRealtimeProgress(title, text, state){
+    realtimeProgressTitle.textContent = title;
+    realtimeProgressText.textContent = text || '';
+    realtimeProgressBackdrop.hidden = false;
+    realtimeProgressBackdrop.classList.toggle('is-complete', state === 'complete');
+    realtimeProgressBackdrop.classList.toggle('is-error', state === 'error');
+    realtimeProgressHourglass.hidden = state !== 'progress';
+    realtimeProgressCloseButton.hidden = state === 'progress';
+}
+
+function hideRealtimeProgress(){
+    realtimeProgressBackdrop.hidden = true;
+    realtimeProgressBackdrop.classList.remove('is-complete', 'is-error');
+}
+
+function flattenNodes(nodes, rows, parentKey){
+    const result = rows || [];
+
+    (nodes || []).forEach(node => {
+        const key = getRealtimeRowKey(node);
+        result.push(Object.assign({}, node, {
+            parentKey:parentKey || '',
+            children:null
+        }));
+
+        if(node.children && node.children.length > 0){
+            flattenNodes(node.children, result, key);
+        }
+    });
+
+    return result;
+}
+
+function cloneRow(row){
+    return Object.assign({}, row, {
+        children:null
+    });
+}
+
+function normalizeFileName(fileName){
+    return (fileName || '').trim().toLowerCase();
+}
+
+function getRealtimeRowKey(row){
+    return normalizeFileName(row && row.fileName)
+        || ((row && row.title) || '').trim().toLowerCase();
+}
+
+function collectExpectedRealtimeLegalParentKeys(nodes, result){
+    const keys = result || new Set();
+
+    (nodes || []).forEach(node => {
+        const key = getRealtimeRowKey(node);
+
+        if(key && node.children && node.children.length > 0){
+            keys.add(key);
+        }
+
+        collectExpectedRealtimeLegalParentKeys(node.children || [], keys);
+    });
+
+    return keys;
+}
+
+function renderRealtimeBase(){
+    realtimeBaseTree.innerHTML = '';
+    realtimeBaseRows.forEach((node, index) => {
+        const row = document.createElement('div');
+        row.className = 'ditamap-tree-row';
+        row.dataset.level = String(Math.max(node.level || 1, 1));
+
+        const checkCell = document.createElement('div');
+        checkCell.className = 'ditamap-tree-check';
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.className = 'ditamap-topic-check';
+        checkbox.dataset.index = String(index);
+        checkbox.checked = Boolean(node.checked);
+        checkbox.addEventListener('change', function(){
+            node.checked = checkbox.checked;
+            row.classList.toggle('is-checked', checkbox.checked);
+            syncRealtimeTopic(node, checkbox.checked);
+        });
+        checkCell.appendChild(checkbox);
+
+        const titleCell = createRealtimeTitleCell(node);
+        const fileName = document.createElement('div');
+        fileName.className = 'ditamap-tree-file';
+        fileName.textContent = node.fileName || '';
+
+        row.classList.toggle('is-checked', checkbox.checked);
+        row.appendChild(checkCell);
+        row.appendChild(titleCell);
+        row.appendChild(fileName);
+        realtimeBaseTree.appendChild(row);
+    });
+}
+
+function createRealtimeTitleCell(node){
+    const titleCell = document.createElement('div');
+    titleCell.className = 'ditamap-tree-title';
+    titleCell.style.paddingLeft = ((Math.max(node.level || 1, 1) - 1) * 24) + 'px';
+    const marker = document.createElement('span');
+    marker.className = 'tree-marker';
+    marker.textContent = '-';
+    const levelBadge = document.createElement('span');
+    levelBadge.className = 'level-badge';
+    levelBadge.textContent = 'L' + Math.max(node.level || 1, 1);
+    const title = document.createElement('span');
+    title.className = 'tree-title-text';
+    title.textContent = node.title || '(제목 없음)';
+    titleCell.appendChild(marker);
+    titleCell.appendChild(levelBadge);
+    titleCell.appendChild(title);
+    return titleCell;
+}
+
+function renderRealtimeLegal(){
+    realtimeLegalTree.innerHTML = '';
+
+    if(realtimeLegalRows.length === 0){
+        const empty = document.createElement('div');
+        empty.className = 'ditamap-tree-empty';
+        empty.textContent = '표시할 법규 DITAMAP 항목이 없습니다.';
+        realtimeLegalTree.appendChild(empty);
+        updateRealtimeButtons();
+        return;
+    }
+
+    realtimeLegalRows.forEach((node, index) => {
+        const row = document.createElement('div');
+        row.className = 'ditamap-tree-row law-draggable-row';
+        row.draggable = true;
+        row.dataset.index = String(index);
+        row.dataset.level = String(Math.max(node.level || 1, 1));
+
+        if(index === realtimeSelectedLegalIndex){
+            row.classList.add('is-selected');
+        }
+
+        if(node.editorType === 'unclassified'){
+            row.classList.add('is-editor-unclassified');
+        }else if(Math.max(node.level || 1, 1) <= 2){
+            row.classList.add('is-legal-resource-title');
+
+            if(hasExpectedRealtimeLegalChild(node) && !hasRealtimeChild(index)){
+                row.classList.add('is-empty-legal-section');
+            }
+        }
+
+        const titleCell = createRealtimeTitleCell(node);
+        const fileName = document.createElement('div');
+        fileName.className = 'ditamap-tree-file';
+        fileName.textContent = node.fileName || '';
+
+        row.appendChild(titleCell);
+        row.appendChild(fileName);
+        row.addEventListener('click', () => {
+            realtimeSelectedLegalIndex = index;
+            renderRealtimeLegal();
+        });
+        row.addEventListener('dragstart', handleRealtimeDragStart);
+        row.addEventListener('dragover', handleRealtimeDragOver);
+        row.addEventListener('drop', handleRealtimeDrop);
+        row.addEventListener('dragend', handleRealtimeDragEnd);
+        realtimeLegalTree.appendChild(row);
+    });
+
+    updateRealtimeButtons();
+}
+
+function hasRealtimeChild(index){
+    return realtimeLegalRows[index + 1]
+        && (realtimeLegalRows[index + 1].level || 1) > (realtimeLegalRows[index].level || 1);
+}
+
+function hasExpectedRealtimeLegalChild(node){
+    return expectedRealtimeLegalParentKeys.has(getRealtimeRowKey(node));
+}
+
+function ensureUnclassifiedIndex(){
+    let index = realtimeLegalRows.findIndex(row => row.editorType === 'unclassified');
+
+    if(index < 0){
+        realtimeLegalRows.push({
+            title:'미분류',
+            level:1,
+            editorType:'unclassified',
+            attributeValue:'',
+            attributeName:'veh-legalid',
+            fileName:'',
+            filePath:'',
+            sourceFilePath:'',
+            elementPath:'',
+            href:'',
+            children:null
+        });
+        index = realtimeLegalRows.length - 1;
+    }
+
+    return index;
+}
+
+function syncRealtimeTopic(topic, checked){
+    const key = getRealtimeRowKey(topic);
+    const existingIndex = findRealtimeManualIndexByKey(key);
+    const existingAnyIndex = findRealtimeRowIndexByKey(key);
+
+    if(checked){
+        if(existingIndex >= 0){
+            return;
+        }
+
+        if(existingAnyIndex >= 0){
+            realtimeLegalRows[existingAnyIndex].sourceType = 'manual';
+            return;
+        }
+
+        const legalTarget = topic.legalTarget
+            || realtimeLegalTargetByFile.get(normalizeFileName(topic.fileName));
+        const parentIndex = findRealtimeLegalParentIndex(legalTarget);
+        const manualParentIndex = findRealtimeManualIndexByKey(topic.parentKey);
+        const row = cloneRow(topic);
+        row.sourceType = 'manual';
+
+        if(manualParentIndex >= 0){
+            row.level = Math.max(
+                    1,
+                    Math.min(6, (realtimeLegalRows[manualParentIndex].level || 1) + 1));
+            realtimeLegalRows.splice(findRealtimeSubtreeEnd(manualParentIndex), 0, row);
+        }else if(parentIndex >= 0){
+            row.level = Math.max(
+                    1,
+                    Math.min(6, (realtimeLegalRows[parentIndex].level || 1) + 1));
+            realtimeLegalRows.splice(findRealtimeSubtreeEnd(parentIndex), 0, row);
+        }else{
+            const groupIndex = ensureUnclassifiedIndex();
+            row.level = Math.max(2, Math.min(6, Number(topic.level || 2)));
+            realtimeLegalRows.splice(groupIndex + 1, 0, row);
+        }
+    }else if(existingIndex >= 0){
+        realtimeLegalRows.splice(existingIndex, findRealtimeSubtreeEnd(existingIndex) - existingIndex);
+    }
+
+    renderRealtimeLegal();
+}
+
+function findRealtimeManualIndexByKey(key){
+    if(!key){
+        return -1;
+    }
+
+    return realtimeLegalRows.findIndex(row =>
+        row.sourceType === 'manual' && getRealtimeRowKey(row) === key);
+}
+
+function findRealtimeRowIndexByKey(key){
+    if(!key){
+        return -1;
+    }
+
+    return realtimeLegalRows.findIndex(row => getRealtimeRowKey(row) === key);
+}
+
+function findRealtimeLegalParentIndex(legalTarget){
+    if(!legalTarget){
+        return -1;
+    }
+
+    const parentL2File = normalizeFileName(legalTarget.parentL2File);
+    const parentL1File = normalizeFileName(legalTarget.parentL1File);
+    let parentIndex = parentL2File
+        ? realtimeLegalRows.findIndex(row => normalizeFileName(row.fileName) === parentL2File)
+        : -1;
+
+    if(parentIndex < 0 && parentL1File){
+        parentIndex = realtimeLegalRows.findIndex(row =>
+                normalizeFileName(row.fileName) === parentL1File);
+    }
+
+    return parentIndex;
+}
+
+function findRealtimeSubtreeEnd(index){
+    const level = realtimeLegalRows[index].level || 1;
+    let end = index + 1;
+
+    while(end < realtimeLegalRows.length
+            && (realtimeLegalRows[end].level || 1) > level){
+        end++;
+    }
+
+    return end;
+}
+
+function moveRealtimeBlock(sourceIndex, targetIndex, insertAfter, nextLevel){
+    if(sourceIndex < 0
+            || targetIndex < 0
+            || sourceIndex >= realtimeLegalRows.length
+            || targetIndex >= realtimeLegalRows.length){
+        return;
+    }
+
+    const blockEnd = findRealtimeSubtreeEnd(sourceIndex);
+
+    if(targetIndex >= sourceIndex && targetIndex < blockEnd){
+        return;
+    }
+
+    const block = realtimeLegalRows.slice(sourceIndex, blockEnd);
+    const originalLevel = block[0].level || 1;
+    realtimeLegalRows.splice(sourceIndex, block.length);
+
+    let insertIndex = targetIndex;
+
+    if(targetIndex > sourceIndex){
+        insertIndex -= block.length;
+    }
+
+    if(insertAfter){
+        insertIndex++;
+    }
+
+    const levelDelta = Math.max(1, Math.min(6, Number(nextLevel || originalLevel))) - originalLevel;
+    block.forEach(row => {
+        row.level = Math.max(1, Math.min(6, (row.level || 1) + levelDelta));
+    });
+    realtimeLegalRows.splice(insertIndex, 0, ...block);
+    realtimeSelectedLegalIndex = insertIndex;
+    renderRealtimeLegal();
+}
+
+function getRealtimeDropInfo(row, event){
+    const rect = row.getBoundingClientRect();
+    const titleCell = row.querySelector('.ditamap-tree-title');
+    const titleRect = titleCell.getBoundingClientRect();
+    const targetLevel = Number(row.dataset.level || '1');
+    const after = event.clientY > rect.top + rect.height / 2;
+    const childDrop = after && event.clientX > titleRect.left + ((targetLevel - 1) * 24) + 120;
+
+    return {
+        after:after,
+        level:Math.max(1, Math.min(6, childDrop ? targetLevel + 1 : targetLevel))
+    };
+}
+
+function handleRealtimeDragStart(event){
+    realtimeDraggingIndex = Number(event.currentTarget.dataset.index);
+    realtimeSelectedLegalIndex = realtimeDraggingIndex;
+    event.dataTransfer.effectAllowed = 'move';
+}
+
+function handleRealtimeDragOver(event){
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'move';
+}
+
+function handleRealtimeDrop(event){
+    event.preventDefault();
+
+    if(realtimeDraggingIndex < 0){
+        return;
+    }
+
+    const targetIndex = Number(event.currentTarget.dataset.index);
+    const dropInfo = getRealtimeDropInfo(event.currentTarget, event);
+    const effectiveTargetIndex = dropInfo.after
+        ? findRealtimeSubtreeEnd(targetIndex) - 1
+        : targetIndex;
+    moveRealtimeBlock(
+            realtimeDraggingIndex,
+            effectiveTargetIndex,
+            dropInfo.after,
+            dropInfo.level);
+    realtimeDraggingIndex = -1;
+}
+
+function handleRealtimeDragEnd(){
+    realtimeDraggingIndex = -1;
+}
+
+function updateRealtimeButtons(){
+    const hasSelection = realtimeSelectedLegalIndex >= 0;
+    realtimeOpenEditorButton.disabled = realtimeLegalRows.length === 0;
+    realtimeSaveButton.disabled = !realtimeBaseTreeData || realtimeLegalRows.length === 0;
+    realtimeMoveUpButton.disabled = !hasSelection;
+    realtimeMoveDownButton.disabled = !hasSelection;
+    realtimeOutdentButton.disabled = !hasSelection;
+    realtimeIndentButton.disabled = !hasSelection;
+    realtimeDeleteButton.disabled = !hasSelection;
+}
+
+function previousRealtimeSibling(index){
+    if(index <= 0){
+        return -1;
+    }
+
+    const level = realtimeLegalRows[index].level || 1;
+    let cursor = index - 1;
+
+    while(cursor >= 0 && (realtimeLegalRows[cursor].level || 1) > level){
+        cursor--;
+    }
+
+    return cursor;
+}
+
+function moveRealtimeSelectedUp(){
+    const target = previousRealtimeSibling(realtimeSelectedLegalIndex);
+
+    if(target >= 0){
+        moveRealtimeBlock(
+                realtimeSelectedLegalIndex,
+                target,
+                false,
+                realtimeLegalRows[realtimeSelectedLegalIndex].level || 1);
+    }
+}
+
+function moveRealtimeSelectedDown(){
+    if(realtimeSelectedLegalIndex < 0){
+        return;
+    }
+
+    const blockEnd = findRealtimeSubtreeEnd(realtimeSelectedLegalIndex);
+
+    if(blockEnd >= realtimeLegalRows.length){
+        return;
+    }
+
+    const nextBlockEnd = findRealtimeSubtreeEnd(blockEnd);
+    const block = realtimeLegalRows.slice(realtimeSelectedLegalIndex, blockEnd);
+    realtimeLegalRows.splice(realtimeSelectedLegalIndex, block.length);
+    const insertIndex = nextBlockEnd - block.length;
+    realtimeLegalRows.splice(insertIndex, 0, ...block);
+    realtimeSelectedLegalIndex = insertIndex;
+    renderRealtimeLegal();
+}
+
+function changeRealtimeSelectedLevel(delta){
+    if(realtimeSelectedLegalIndex < 0){
+        return;
+    }
+
+    const blockEnd = findRealtimeSubtreeEnd(realtimeSelectedLegalIndex);
+    const levelDelta = Math.max(
+            1,
+            Math.min(6, (realtimeLegalRows[realtimeSelectedLegalIndex].level || 1) + delta))
+        - (realtimeLegalRows[realtimeSelectedLegalIndex].level || 1);
+
+    for(let index = realtimeSelectedLegalIndex; index < blockEnd; index++){
+        realtimeLegalRows[index].level = Math.max(
+                1,
+                Math.min(6, (realtimeLegalRows[index].level || 1) + levelDelta));
+    }
+
+    renderRealtimeLegal();
+}
+
+function deleteRealtimeSelected(){
+    if(realtimeSelectedLegalIndex < 0){
+        return;
+    }
+
+    const blockEnd = findRealtimeSubtreeEnd(realtimeSelectedLegalIndex);
+    realtimeLegalRows.splice(realtimeSelectedLegalIndex, blockEnd - realtimeSelectedLegalIndex);
+    realtimeSelectedLegalIndex = -1;
+    renderRealtimeLegal();
+}
+
+async function loadRealtime(path){
+    if(!path){
+        return;
+    }
+
+    showRealtimeProgress('DITAMAP 불러오는 중', '기준 DITAMAP과 법규 템플릿을 불러옵니다.', 'progress');
+    realtimePathText.textContent = path;
+
+    try{
+        const [baseResponse, templateResponse, targetResponse] = await Promise.all([
+            fetch('/api/ditamap-builder/tree-summary', {
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                    'Accept':'application/json'
+                },
+                body:JSON.stringify({path:path})
+            }),
+            fetch('/api/ditamap-builder/legal-template', {
+                method:'POST',
+                headers:{'Accept':'application/json'}
+            }),
+            fetch('/api/ditamap-builder/legal-targets', {
+                method:'POST',
+                headers:{'Accept':'application/json'}
+            })
+        ]);
+
+        if(!baseResponse.ok){
+            throw new Error(await baseResponse.text());
+        }
+
+        if(!templateResponse.ok){
+            throw new Error(await templateResponse.text());
+        }
+
+        if(!targetResponse.ok){
+            throw new Error(await targetResponse.text());
+        }
+
+        const legalTargets = await targetResponse.json();
+        const template = await templateResponse.json();
+        realtimeLegalTargetByFile = new Map(
+                legalTargets.map(target => [
+                    normalizeFileName(target.fileName),
+                    target
+                ]));
+        realtimeBaseTreeData = await baseResponse.json();
+        expectedRealtimeLegalParentKeys =
+                collectExpectedRealtimeLegalParentKeys(template.nodes || []);
+        realtimeBaseRows = flattenNodes(realtimeBaseTreeData.nodes || []);
+        realtimeBaseRows.forEach(row => {
+            const target = realtimeLegalTargetByFile.get(normalizeFileName(row.fileName));
+            row.checked = Boolean(target);
+            row.legalTarget = target || null;
+        });
+        realtimeLegalRows = flattenNodes(template.nodes || []);
+        ensureUnclassifiedIndex();
+        realtimeBaseRows.filter(row => row.checked)
+            .forEach(row => syncRealtimeTopic(row, true));
+        realtimeBaseName.textContent =
+                realtimeBaseTreeData.rootTitle + ' · ' + realtimeBaseTreeData.ditamapFile;
+        renderRealtimeBase();
+        renderRealtimeLegal();
+        showRealtimeProgress('DITAMAP 불러오기 완료', '2안 테스트 화면을 불러왔습니다.', 'complete');
+    }catch(error){
+        showRealtimeProgress(
+                'DITAMAP 불러오기 실패',
+                error.message || '2안 테스트 화면을 불러오지 못했습니다.',
+                'error');
+    }
+}
+
+function openRealtimeEditor(){
+    if(!realtimeBaseTreeData){
+        return;
+    }
+
+    const manualTopics = realtimeLegalRows.filter(row => row.sourceType === 'manual');
+    const draftId = 'legal-draft-realtime-' + Date.now();
+    localStorage.setItem('ditamapLegalDraft:' + draftId, JSON.stringify({
+        ditamapFile:realtimeBaseTreeData.ditamapFile,
+        topics:manualTopics
+    }));
+    window.open(
+            '/ditamap-builder/legal-editor?draft=' + encodeURIComponent(draftId),
+            'ditamapLegalEditorRealtime',
+            'width=1280,height=860,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=yes');
+}
+
+async function saveRealtimeLegal(){
+    if(!realtimeBaseTreeData){
+        return;
+    }
+
+    showRealtimeProgress('법규 DITAMAP 저장중', '현재 오른쪽 구조 그대로 저장합니다.', 'progress');
+
+    try{
+        const response = await fetch('/api/ditamap-builder/legal', {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                ditamapFile:'편집 중',
+                baseDitamapFile:realtimeBaseTreeData.ditamapFile,
+                rows:realtimeLegalRows
+            })
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        const result = await response.json();
+        showRealtimeProgress(
+                '법규 DITAMAP 저장완료',
+                result.savedDitamapFile || '저장되었습니다.',
+                'complete');
+    }catch(error){
+        showRealtimeProgress(
+                '법규 DITAMAP 저장실패',
+                error.message || '저장하지 못했습니다.',
+                'error');
+    }
+}
+
+realtimeLoadButton.addEventListener('click', function(){
+    const path = realtimePathInput.value.trim();
+
+    if(path){
+        location.href = '/ditamap-builder/realtime?path=' + encodeURIComponent(path);
+    }
+});
+realtimeProgressCloseButton.addEventListener('click', hideRealtimeProgress);
+realtimeOpenEditorButton.addEventListener('click', openRealtimeEditor);
+realtimeSaveButton.addEventListener('click', saveRealtimeLegal);
+realtimeMoveUpButton.addEventListener('click', moveRealtimeSelectedUp);
+realtimeMoveDownButton.addEventListener('click', moveRealtimeSelectedDown);
+realtimeOutdentButton.addEventListener('click', () => changeRealtimeSelectedLevel(-1));
+realtimeIndentButton.addEventListener('click', () => changeRealtimeSelectedLevel(1));
+realtimeDeleteButton.addEventListener('click', deleteRealtimeSelected);
+
+const initialRealtimePath = realtimeParams.get('path') || '';
+realtimePathInput.value = initialRealtimePath;
+loadRealtime(initialRealtimePath);
+</script>
+</body>
+</html>
