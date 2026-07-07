@@ -109,6 +109,9 @@ const draftId = params.get('draft') || '';
 let editorRows = [];
 let initialEditorRows = [];
 let selectedIndex = -1;
+// 이동/들여쓰기 기준은 selectedIndex 하나로 유지하고,
+// Ctrl 다중 선택 삭제는 selectedIndexes Set으로 별도 관리한다.
+let selectedIndexes = new Set();
 let draggingEditorIndex = -1;
 let currentDraft = null;
 
@@ -269,6 +272,7 @@ function renderEmpty(text){
 
 function renderRows(){
     editorTree.innerHTML = '';
+    const duplicateFileNameIndexes = getDuplicateEditorFileNameIndexes();
 
     if(editorRows.length === 0){
         renderEmpty('표시할 법규 DITAMAP 항목이 없습니다.');
@@ -288,7 +292,7 @@ function renderRows(){
             return;
         }
 
-        if(index === selectedIndex){
+        if(selectedIndexes.has(index)){
             row.classList.add('is-selected');
         }
 
@@ -316,19 +320,44 @@ function renderRows(){
         title.className = 'tree-title-text';
         title.textContent = rowData.title || '(제목 없음)';
 
+        const isDuplicateFileName = duplicateFileNameIndexes.has(index);
         const fileName = document.createElement('div');
         fileName.className = 'ditamap-tree-file';
-        fileName.textContent = rowData.fileName || '';
+        // 파일명 아래에 중복 안내 문구를 붙일 수 있도록 텍스트 span을 분리한다.
+        const fileNameText = document.createElement('span');
+        fileNameText.textContent = rowData.fileName || '';
+        fileName.appendChild(fileNameText);
+
+        if(isDuplicateFileName){
+            // 팝업으로 끊지 않고, 저장을 막는 이유를 해당 row에서 바로 보여준다.
+            row.classList.add('has-file-duplicate');
+            const duplicateMessage = document.createElement('span');
+            duplicateMessage.className = 'file-duplicate-message';
+            duplicateMessage.textContent = '파일명이 중복입니다.';
+            fileName.appendChild(duplicateMessage);
+        }
+
+        fileName.title = rowData.fileName
+            ? '더블클릭해서 파일명 수정'
+            : '';
+        fileName.addEventListener('mousedown', event => {
+            /*
+             * row 자체는 드래그 이동 대상이다. 파일명 cell에서 드래그가 시작되면
+             * 브라우저가 더블클릭 대신 dragstart 흐름으로 판단할 수 있으므로,
+             * 파일명 편집 cell에서는 row 드래그/선택으로 이벤트가 올라가지 않게 한다.
+             */
+            event.stopPropagation();
+        });
+        fileName.addEventListener('click', event => {
+            event.stopPropagation();
+        });
 
         titleCell.appendChild(marker);
         titleCell.appendChild(levelBadge);
         titleCell.appendChild(title);
         row.appendChild(titleCell);
         row.appendChild(fileName);
-        row.addEventListener('click', () => {
-            selectedIndex = index;
-            renderRows();
-        });
+        row.addEventListener('click', event => selectEditorRow(index, event));
         row.addEventListener('dragstart', handleEditorDragStart);
         row.addEventListener('dragover', handleEditorDragOver);
         row.addEventListener('dragleave', clearEditorDropMarkers);
@@ -336,6 +365,9 @@ function renderRows(){
         row.addEventListener('dragend', handleEditorDragEnd);
         editorTree.appendChild(row);
     });
+    // 렌더링이 끝날 때마다 저장 버튼 상태를 다시 맞춘다.
+    // 파일명을 고쳐 중복이 사라지는 순간 버튼이 자동으로 살아난다.
+    saveDraftButton.disabled = hasDuplicateEditorFileNames();
 }
 
 function isManualCheckedGroup(row){
@@ -404,6 +436,276 @@ function selectedBlockEnd(){
     return subtreeEnd(selectedIndex);
 }
 
+function selectEditorRow(index, event){
+    // Ctrl/Cmd 클릭은 여러 row를 선택하기 위한 토글 동작이다.
+    // 일반 클릭은 편집 대상 row 하나만 남기고 선택 상태를 초기화한다.
+    if(event && (event.ctrlKey || event.metaKey)){
+        if(selectedIndexes.has(index)){
+            selectedIndexes.delete(index);
+            selectedIndex = selectedIndexes.size > 0
+                ? Array.from(selectedIndexes).pop()
+                : -1;
+        }else{
+            selectedIndexes.add(index);
+            selectedIndex = index;
+        }
+    }else{
+        selectedIndexes = new Set([index]);
+        selectedIndex = index;
+    }
+
+    renderRows();
+}
+
+function getSelectedEditorDeleteRanges(){
+    const ranges = [];
+    const selectedRows = Array.from(selectedIndexes)
+        .filter(index => index >= 0 && index < editorRows.length)
+        .sort((left, right) => left - right);
+
+    selectedRows.forEach(start => {
+        // 부모 row를 선택하면 하위 row도 같이 삭제된다.
+        // 이미 부모 범위에 포함된 하위 row는 별도 삭제 범위로 만들지 않는다.
+        if(ranges.some(range => start >= range.start && start < range.end)){
+            return;
+        }
+
+        ranges.push({
+            start:start,
+            end:subtreeEnd(start)
+        });
+    });
+
+    return ranges;
+}
+
+function normalizeEditorFileNameForDuplicate(fileName){
+    // 중복 검사는 화면의 파일명 기준이다.
+    // 앞뒤 공백과 대소문자만 다른 값도 같은 파일명으로 본다.
+    return (fileName || '').trim().toLowerCase();
+}
+
+function getDuplicateEditorFileNameIndexes(){
+    const indexesByFileName = new Map();
+    const duplicateIndexes = new Set();
+
+    // 1차로 같은 파일명을 가진 row index들을 모아 둔다.
+    editorRows.forEach((row, index) => {
+        const normalized = normalizeEditorFileNameForDuplicate(row.fileName);
+
+        if(!normalized){
+            return;
+        }
+
+        const indexes = indexesByFileName.get(normalized) || [];
+        indexes.push(index);
+        indexesByFileName.set(normalized, indexes);
+    });
+
+    // 중복이 생긴 경우 첫 번째 항목도 같이 표시한다.
+    // 그래야 화면에서 같은 파일명끼리 모두 눈에 들어온다.
+    indexesByFileName.forEach(indexes => {
+        if(indexes.length > 1){
+            indexes.forEach(index => duplicateIndexes.add(index));
+        }
+    });
+
+    return duplicateIndexes;
+}
+
+function hasDuplicateEditorFileNames(){
+    return getDuplicateEditorFileNameIndexes().size > 0;
+}
+
+function isDuplicateEditorFileName(nextFileName, currentIndex){
+    // 현재 row는 자기 자신과 같은 파일명이므로 비교에서 제외한다.
+    // 다른 row에 같은 정규화 파일명이 있을 때 저장을 막는다.
+    const normalized = normalizeEditorFileNameForDuplicate(nextFileName);
+
+    if(!normalized){
+        return false;
+    }
+
+    return editorRows.some((row, index) =>
+        index !== currentIndex
+            && normalizeEditorFileNameForDuplicate(row.fileName) === normalized);
+}
+
+function replaceHrefFileName(currentHref, nextFileName){
+    // href가 "folder/topic.dita#id" 형태여도 폴더와 fragment는 유지하고
+    // 마지막 파일명만 교체한다.
+    const fileName = (nextFileName || '').trim().replace(/\\/g, '/');
+    const href = (currentHref || '').trim().replace(/\\/g, '/');
+
+    if(!href || href.endsWith('/')){
+        return fileName;
+    }
+
+    const parts = href.split('#');
+    const pathOnly = parts[0];
+    const fragment = parts.length > 1 ? '#' + parts.slice(1).join('#') : '';
+    const slashIndex = pathOnly.lastIndexOf('/');
+
+    if(slashIndex < 0){
+        return fileName + fragment;
+    }
+
+    return pathOnly.slice(0, slashIndex + 1) + fileName + fragment;
+}
+
+function getEditorBaseDitamapFile(){
+    // 팝업 편집기는 draft로 열릴 수 있으므로, draft가 들고 있는 기준 ditamap을
+    // 우선 사용하고 없으면 저장 대상 ditamap 경로를 사용한다.
+    return currentDraft
+        && (currentDraft.baseDitamapFile || currentDraft.ditamapFile)
+        || '';
+}
+
+function startEditorFileNameEdit(cell, index){
+    // 파일명 cell을 input으로 바꾸어 즉시 편집한다.
+    // row 드래그와 선택 이벤트가 input 조작을 방해하지 않도록 전파를 막는다.
+    if(index < 0
+            || index >= editorRows.length
+            || cell.classList.contains('editing')){
+        return;
+    }
+
+    const row = editorRows[index];
+    const input = document.createElement('input');
+    input.className = 'attribute-edit-input';
+    input.type = 'text';
+    input.value = row.fileName || '';
+    input.placeholder = '파일명 입력';
+    input.draggable = false;
+    cell.classList.add('editing');
+    cell.textContent = '';
+    cell.appendChild(input);
+    input.focus();
+    input.select();
+
+    input.addEventListener('click', event => event.stopPropagation());
+    input.addEventListener('mousedown', event => event.stopPropagation());
+    input.addEventListener('dragstart', event => {
+        event.preventDefault();
+        event.stopPropagation();
+    });
+    input.addEventListener('keydown', event => {
+        // Enter는 편집 확정, Escape는 편집 취소로 처리한다.
+        // blur 확정도 있으므로 키보드/마우스 사용 흐름이 모두 맞는다.
+        if(event.key === 'Enter'){
+            event.preventDefault();
+            commitEditorFileNameEdit(cell, index, input.value);
+        }
+
+        if(event.key === 'Escape'){
+            event.preventDefault();
+            cancelEditorFileNameEdit(cell, index);
+        }
+    });
+    input.addEventListener('blur', () => {
+        if(cell.classList.contains('editing')){
+            commitEditorFileNameEdit(cell, index, input.value);
+        }
+    });
+}
+
+function cancelEditorFileNameEdit(cell, index){
+    cell.classList.remove('editing');
+    cell.textContent = editorRows[index] && editorRows[index].fileName || '';
+}
+
+function handleEditorFileNameDoubleClick(event){
+    /*
+     * 더블클릭은 파일명 cell에 직접 걸 수도 있지만, row가 draggable이라
+     * 브라우저/마우스 움직임에 따라 drag 흐름과 섞일 수 있다.
+     * 편집 트리에서 캡처 단계로 먼저 잡아 파일명 cell이면 곧바로 편집을 연다.
+     */
+    const cell = event.target.closest('.ditamap-tree-file');
+
+    if(!cell || !editorTree.contains(cell) || cell.classList.contains('editing')){
+        return;
+    }
+
+    const row = cell.closest('.law-draggable-row');
+    const index = Number(row && row.dataset.index || -1);
+
+    if(index < 0 || index >= editorRows.length){
+        return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+    startEditorFileNameEdit(cell, index);
+}
+
+async function commitEditorFileNameEdit(cell, index, value){
+    const row = editorRows[index];
+    const nextFileName = (value || '').trim();
+
+    if(!row){
+        return;
+    }
+
+    if(nextFileName === (row.fileName || '')){
+        cancelEditorFileNameEdit(cell, index);
+        return;
+    }
+
+    if(isDuplicateEditorFileName(nextFileName, index)){
+        // 중복은 팝업으로 끊지 않고 row 안에 안내 문구를 표시한다.
+        // 사용자가 입력한 값을 유지해야 어떤 파일명이 문제인지 바로 알 수 있다.
+        row.fileName = nextFileName;
+        row.href = replaceHrefFileName(row.href || row.fileName || '', nextFileName);
+        renderRows();
+        return;
+    }
+
+    const baseDitamapFile = getEditorBaseDitamapFile();
+
+    if(!baseDitamapFile){
+        await showEditorConfirm(
+                '파일명 수정 실패',
+                '기준 DITAMAP 경로가 없어 title을 읽을 수 없습니다.');
+        cancelEditorFileNameEdit(cell, index);
+        return;
+    }
+
+    try{
+        // 파일명 변경 후 실제 DITA 파일에서 title만 읽어온다.
+        // ditamap 편집 기능이므로 DITA 파일 자체는 여기서 수정하지 않는다.
+        const nextHref = replaceHrefFileName(row.href || row.fileName || '', nextFileName);
+        // 기존 href를 함께 보내야 서버가 기존 폴더 위치와 #fragment를 보존해
+        // 새 파일명을 실제 파일 경로로 정확히 해석할 수 있다.
+        const response = await fetch('/api/ditamap-builder/topic-title', {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                baseDitamapFile:baseDitamapFile,
+                href:row.href || '',
+                fileName:nextFileName
+            })
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        const result = await response.json();
+        row.fileName = result.fileName || nextFileName;
+        row.href = result.href || nextHref;
+        row.title = result.title || row.title;
+        renderRows();
+    }catch(error){
+        await showEditorConfirm(
+                '파일명 수정 실패',
+                error.message || 'DITA title을 읽지 못했습니다.');
+        cancelEditorFileNameEdit(cell, index);
+    }
+}
+
 function moveEditorBlock(sourceIndex, targetIndex, insertAfter, nextLevel){
     if(sourceIndex < 0
             || sourceIndex >= editorRows.length
@@ -439,6 +741,7 @@ function moveEditorBlock(sourceIndex, targetIndex, insertAfter, nextLevel){
     });
     editorRows.splice(insertIndex, 0, ...block);
     selectedIndex = insertIndex;
+    selectedIndexes = new Set([insertIndex]);
     renderRows();
 }
 
@@ -492,6 +795,7 @@ function moveSelectedDown(){
     const insertIndex = nextBlockEnd - block.length;
     editorRows.splice(insertIndex, 0, ...block);
     selectedIndex = insertIndex;
+    selectedIndexes = new Set([insertIndex]);
     renderRows();
 }
 
@@ -506,6 +810,7 @@ function handleEditorDragStart(event){
     const row = event.currentTarget;
     draggingEditorIndex = Number(row.dataset.index || -1);
     selectedIndex = draggingEditorIndex;
+    selectedIndexes = new Set([draggingEditorIndex]);
     row.classList.add('dragging');
 
     if(event.dataTransfer){
@@ -603,21 +908,31 @@ function changeSelectedLevel(delta){
 }
 
 async function deleteSelectedRow(){
-    if(selectedIndex < 0){
+    const deleteRanges = getSelectedEditorDeleteRanges();
+
+    if(deleteRanges.length === 0){
         return;
     }
 
-    const blockEnd = selectedBlockEnd();
-    const hasChildren = blockEnd > selectedIndex + 1;
+    const hasChildren = deleteRanges.some(range => range.end > range.start + 1);
 
+    // 선택한 항목 중 하나라도 하위 항목을 포함하면 한 번만 확인한다.
+    // 확인 후에는 각 선택 범위의 하위 항목까지 함께 삭제된다.
     if(hasChildren && !await showEditorConfirm(
             '하위 항목 삭제',
             '선택한 항목에 하위 항목이 있습니다.\n하위 항목까지 전체 삭제하시겠습니까?')){
         return;
     }
 
-    editorRows.splice(selectedIndex, blockEnd - selectedIndex);
-    selectedIndex = Math.min(selectedIndex, editorRows.length - 1);
+    // 여러 범위를 삭제할 때는 뒤에서부터 지워야 앞쪽 삭제로 index가 밀리지 않는다.
+    deleteRanges
+        .slice()
+        .sort((left, right) => right.start - left.start)
+        .forEach(range => {
+            editorRows.splice(range.start, range.end - range.start);
+        });
+    selectedIndex = -1;
+    selectedIndexes.clear();
     renderRows();
 }
 
@@ -633,7 +948,9 @@ async function undoEditorChanges(){
     }
 
     editorRows = cloneRows(initialEditorRows);
+    // 되돌리기 후 이전 다중 선택 상태가 남아 있으면 삭제/이동 대상이 틀어지므로 초기화한다.
     selectedIndex = -1;
+    selectedIndexes.clear();
     draggingEditorIndex = -1;
     renderRows();
 }
@@ -693,7 +1010,15 @@ indentButton.addEventListener('click', () => changeSelectedLevel(1));
 deleteRowButton.addEventListener('click', deleteSelectedRow);
 undoEditButton.addEventListener('click', undoEditorChanges);
 cancelButton.addEventListener('click', () => window.close());
+editorTree.addEventListener('dblclick', handleEditorFileNameDoubleClick, true);
 saveDraftButton.addEventListener('click', async function(){
+    // 중복 파일명이 있으면 저장 요청 자체를 보내지 않는다.
+    // renderRows를 다시 호출해 사용자가 문제 row와 메시지를 바로 볼 수 있게 한다.
+    if(hasDuplicateEditorFileNames()){
+        renderRows();
+        return;
+    }
+
     if(hasRemainingUnclassifiedRows()
             && !await showEditorConfirm(
                 '남은 row 확인',
