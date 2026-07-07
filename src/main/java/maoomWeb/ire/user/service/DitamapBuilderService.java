@@ -234,7 +234,7 @@ public class DitamapBuilderService {
              * 사용자가 파일명에 ../ 같은 값을 넣어 허용 폴더 밖 파일을 읽지 못하게
              * 실제 경로 기준으로 다시 한 번 allowed root 내부인지 검증한다.
              */
-            if(!target.toRealPath().startsWith(realAllowedRoot)){
+            if(!isSameOrChildPath(target.toRealPath(), realAllowedRoot)){
                 throw new IllegalArgumentException(
                         "허용된 DITA 작업 경로 밖의 파일입니다: " + nextHref);
             }
@@ -829,7 +829,7 @@ public class DitamapBuilderService {
         Path realPath = path.toRealPath();
         Path realAllowedRoot = findAllowedRoot(realPath);
 
-        if(!realPath.startsWith(realAllowedRoot)){
+        if(!isSameOrChildPath(realPath, realAllowedRoot)){
             throw new IllegalArgumentException(
                     "허용된 DITA 작업 경로는 "
                     + realAllowedRoot
@@ -1000,8 +1000,18 @@ public class DitamapBuilderService {
             Path path,
             Path root)
             throws IOException {
-        String pathText = toComparablePathText(path);
-        String rootText = toComparablePathText(root);
+        return isSameOrChildPath(
+                path.toRealPath().toString(),
+                root.toRealPath().toString());
+    }
+
+    boolean isSameOrChildPath(
+            String path,
+            String root) {
+        String pathText = normalizeComparablePath(
+                convertMappedDrivePathToUnc(path));
+        String rootText = normalizeComparablePath(
+                convertMappedDrivePathToUnc(root));
 
         return pathText.equals(rootText)
                 || pathText.startsWith(rootText + "\\");
@@ -1638,7 +1648,7 @@ public class DitamapBuilderService {
         Path realAllowedRoot = findAllowedRoot(target.toRealPath());
 
         if(!Files.exists(target)
-                || !target.toRealPath().startsWith(realAllowedRoot)
+                || !isSameOrChildPath(target.toRealPath(), realAllowedRoot)
                 || !Files.isRegularFile(target)
                 || !isEditableTopicFile(target)){
             throw new IllegalArgumentException(
@@ -1671,7 +1681,7 @@ public class DitamapBuilderService {
         Path realAllowedRoot = findAllowedRoot(target.toRealPath());
 
         if(!Files.exists(target)
-                || !target.toRealPath().startsWith(realAllowedRoot)
+                || !isSameOrChildPath(target.toRealPath(), realAllowedRoot)
                 || !Files.isRegularFile(target)
                 || !isDitamap(target)){
             throw new IllegalArgumentException(
