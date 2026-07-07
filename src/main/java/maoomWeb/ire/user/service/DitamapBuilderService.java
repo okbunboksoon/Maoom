@@ -52,6 +52,8 @@ import maoomWeb.ire.user.dto.DitamapLegalRow;
 import maoomWeb.ire.user.dto.DitamapLegalSaveRequest;
 import maoomWeb.ire.user.dto.DitamapLegalSaveResponse;
 import maoomWeb.ire.user.dto.DitamapLegalTarget;
+import maoomWeb.ire.user.dto.DitamapTopicTitleRequest;
+import maoomWeb.ire.user.dto.DitamapTopicTitleResponse;
 import maoomWeb.ire.user.mapper.DitamapLegalTargetMapper;
 
 /** 설정으로 허용한 DITA 작업 폴더의 DITAMAP 파일을 화면용 트리 구조로 변환한다. */
@@ -187,6 +189,78 @@ public class DitamapBuilderService {
     public List<DitamapLegalTarget> readLegalTargets() {
         ensureLegalTargetsSeeded();
         return ditamapLegalTargetMapper.findAll();
+    }
+
+    public DitamapTopicTitleResponse readTopicTitle(
+            DitamapTopicTitleRequest request) {
+        /*
+         * 화면에서 파일명을 바꾸면 ditamap row의 title도 같이 맞춰야 한다.
+         * 이 메서드는 기준 ditamap 위치와 새 파일명으로 실제 DITA 파일을 찾아
+         * title만 읽어 오며, DITA 원본 파일은 절대 수정하지 않는다.
+         */
+        if(request == null
+                || request.baseDitamapFile() == null
+                || request.baseDitamapFile().isBlank()){
+            throw new IllegalArgumentException(
+                    "기준 DITAMAP 경로가 없어 title을 읽을 수 없습니다.");
+        }
+
+        String nextHref = normalizeEditedHref(request.href(), request.fileName());
+
+        if(nextHref.isBlank()){
+            throw new IllegalArgumentException("파일명을 입력해 주세요.");
+        }
+
+        try{
+            Path baseDitamap = findDitamap(request.baseDitamapFile());
+            Path target = resolveHref(baseDitamap.getParent(), nextHref);
+
+            /*
+             * ditamap 안의 topicref href는 기준 ditamap 폴더 기준 상대 경로다.
+             * 따라서 먼저 실제 파일 경로를 계산한 뒤, 존재하는 일반 DITA 파일인지
+             * 확인한다. ditamap 파일은 title 동기화 대상에서 제외한다.
+             */
+            if(target == null
+                    || !Files.exists(target)
+                    || !Files.isRegularFile(target)
+                    || isDitamap(target)){
+                throw new IllegalArgumentException(
+                        "DITA 파일을 찾지 못했습니다: " + nextHref);
+            }
+
+            Path realAllowedRoot = findAllowedRoot(target.toRealPath());
+
+            /*
+             * 사용자가 파일명에 ../ 같은 값을 넣어 허용 폴더 밖 파일을 읽지 못하게
+             * 실제 경로 기준으로 다시 한 번 allowed root 내부인지 검증한다.
+             */
+            if(!target.toRealPath().startsWith(realAllowedRoot)){
+                throw new IllegalArgumentException(
+                        "허용된 DITA 작업 경로 밖의 파일입니다: " + nextHref);
+            }
+
+            Document document = parseXml(target);
+            String title = firstDirectChildText(
+                    document.getDocumentElement(),
+                    "title");
+
+            // title이 비어 있는 DITA도 화면이 깨지지 않도록 파일명을 fallback으로 쓴다.
+            if(title.isBlank()){
+                title = target.getFileName()
+                        .toString()
+                        .replaceFirst("(?i)\\.(dita|ditamap)$", "");
+            }
+
+            return new DitamapTopicTitleResponse(
+                    title,
+                    target.getFileName().toString(),
+                    nextHref);
+        }catch(IOException | ParserConfigurationException | SAXException exception){
+            throw new IllegalArgumentException(
+                    "DITA title을 읽지 못했습니다. "
+                    + exception.getMessage(),
+                    exception);
+        }
     }
 
     private void ensureLegalTargetsSeeded() {
@@ -611,6 +685,42 @@ public class DitamapBuilderService {
         }
 
         return "";
+    }
+
+    private String normalizeEditedHref(String currentHref, String nextFileName) {
+        /*
+         * 화면에서는 파일명만 입력받지만 ditamap의 href에는 폴더 경로나 #fragment가
+         * 붙어 있을 수 있다. 기존 href의 경로 구조는 유지하고 마지막 파일명만
+         * 교체해야 저장 시 topicref 연결이 엉뚱한 위치로 바뀌지 않는다.
+         */
+        String fileName = nextFileName == null
+                ? ""
+                : nextFileName.trim().replace('\\', '/');
+
+        if(fileName.isBlank()){
+            return "";
+        }
+
+        String href = currentHref == null
+                ? ""
+                : currentHref.trim().replace('\\', '/');
+
+        if(href.isBlank() || href.endsWith("/")){
+            return fileName;
+        }
+
+        String[] hrefParts = href.split("#", 2);
+        String pathOnly = hrefParts[0];
+        String fragment = hrefParts.length > 1
+                ? "#" + hrefParts[1]
+                : "";
+        int slashIndex = pathOnly.lastIndexOf('/');
+
+        if(slashIndex < 0){
+            return fileName + fragment;
+        }
+
+        return pathOnly.substring(0, slashIndex + 1) + fileName + fragment;
     }
 
     private void appendTopicMeta(

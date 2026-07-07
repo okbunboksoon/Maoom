@@ -17,6 +17,8 @@ import maoomWeb.ire.user.dto.DitamapAttributeUpdateResponse;
 import maoomWeb.ire.user.dto.DitamapLegalSaveRequest;
 import maoomWeb.ire.user.dto.DitamapLegalSaveResponse;
 import maoomWeb.ire.user.dto.DitamapLegalTarget;
+import maoomWeb.ire.user.dto.DitamapTopicTitleRequest;
+import maoomWeb.ire.user.dto.DitamapTopicTitleResponse;
 import maoomWeb.ire.user.service.DitamapBuilderService;
 
 /** DITAMAP Builder 화면에서 사용하는 API를 담당한다. */
@@ -66,6 +68,21 @@ public class DitamapBuilderController {
     @PostMapping("/api/ditamap-builder/legal-targets")
     public List<DitamapLegalTarget> readLegalTargets() {
         return ditamapBuilderService.readLegalTargets();
+    }
+
+    /*
+     * 파일명 편집 흐름:
+     * 1. 화면에서 topicref 파일명을 더블클릭해 수정한다.
+     * 2. 화면은 기존 href와 새 파일명을 이 API로 보낸다.
+     * 3. 서비스가 실제 DITA 파일을 찾아 title을 읽어 응답한다.
+     * 4. 화면은 응답받은 title/fileName/href만 ditamap row에 반영한다.
+     *
+     * 여기서는 DITA 파일 자체를 저장하거나 수정하지 않는다.
+     */
+    @PostMapping("/api/ditamap-builder/topic-title")
+    public DitamapTopicTitleResponse readTopicTitle(
+            @RequestBody DitamapTopicTitleRequest request) {
+        return ditamapBuilderService.readTopicTitle(request);
     }
 
     @PostMapping("/api/ditamap-builder/attributes")

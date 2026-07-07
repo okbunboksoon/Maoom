@@ -1287,6 +1287,58 @@ function matchesCommentUserFilter(comment){
             String(reply.userId || '') === selectedUserId);
 }
 
+// Acrobat 주석 패널처럼 페이지 안에서 위->아래, 같은 높이면 왼쪽->오른쪽 순서로 정렬한다.
+// 하이라이트, 사각형, 말풍선, 자유 그리기 모두 같은 좌표 규칙을 사용한다.
+function compareCommentsByDocumentPosition(first, second){
+
+    return Number(first.pageNum || 0) - Number(second.pageNum || 0)
+        || getCommentCoordinate(first, 'Y')
+            - getCommentCoordinate(second, 'Y')
+        || getCommentCoordinate(first, 'X')
+            - getCommentCoordinate(second, 'X')
+        || getCommentCreatedAt(first)
+            - getCommentCreatedAt(second)
+        || Number(first.commentId || 0)
+            - Number(second.commentId || 0);
+}
+
+function getCommentCoordinate(comment, axis){
+
+    // 영역형 주석은 rect 좌표를, 점형/이전 데이터는 pos 좌표를 사용한다.
+    // 0도 정상 좌표라서 || 대신 null/undefined/빈 문자열만 fallback 처리한다.
+    const rectValue =
+        axis === 'Y'
+        ? comment.rectY
+        : comment.rectX;
+    const pointValue =
+        axis === 'Y'
+        ? comment.posY
+        : comment.posX;
+    const value =
+        rectValue !== null
+            && rectValue !== undefined
+            && rectValue !== ''
+        ? rectValue
+        : pointValue;
+    const numberValue = Number(value);
+
+    // 좌표가 없는 오래된 댓글은 페이지 그룹의 뒤쪽으로 보내고 생성순 보조 정렬을 따른다.
+    return Number.isFinite(numberValue)
+        ? numberValue
+        : Number.POSITIVE_INFINITY;
+}
+
+function getCommentCreatedAt(comment){
+
+    // 좌표가 같을 때만 사용하는 보조값이다. 주 정렬은 PDF 화면 좌표가 맡는다.
+    const createdAt =
+        new Date(comment.createDt).getTime();
+
+    return Number.isFinite(createdAt)
+        ? createdAt
+        : 0;
+}
+
 // 검색어 변경은 이미 받은 댓글 데이터만 다시 필터링해 불필요한 API 호출을 막는다.
 function renderComments(options = {}){
 
@@ -1339,10 +1391,8 @@ function renderComments(options = {}){
         let lastPageNum = null;
 
         const orderedComments =
-            [...visibleComments].sort((first, second) =>
-                first.pageNum - second.pageNum
-                || new Date(second.createDt)
-                    - new Date(first.createDt));
+            // 오른쪽 코멘트 패널도 PDF 화면에서 읽히는 위치 순서를 따른다.
+            [...visibleComments].sort(compareCommentsByDocumentPosition);
 
         const pageCommentCounts =
             orderedComments.reduce((counts, comment) => {
@@ -1738,11 +1788,8 @@ function navigateUnresolved(direction){
 
         const unresolved =
             comments.filter(matchesCommentUserFilter)
-            .sort((first, second) =>
-                first.pageNum - second.pageNum
-                || Number(first.rectY || first.posY || 0)
-                    - Number(second.rectY || second.posY || 0)
-                || first.commentId - second.commentId);
+            // 이전/다음 미해결 이동도 패널과 같은 Acrobat식 위치 순서를 사용한다.
+            .sort(compareCommentsByDocumentPosition);
 
         if(unresolved.length === 0){
             alert('미해결 댓글이 없습니다.');

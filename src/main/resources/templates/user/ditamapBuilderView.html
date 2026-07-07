@@ -192,6 +192,9 @@ let currentLegalTreeData = null;
 let lawTreeRows = [];
 let draggingLawIndex = null;
 let selectedLawIndex = -1;
+// 이동/들여쓰기처럼 기준 row가 하나 필요한 기능은 selectedLawIndex를 쓰고,
+// 삭제처럼 여러 row를 한 번에 처리해야 하는 기능은 selectedLawIndexes를 쓴다.
+let selectedLawIndexes = new Set();
 
 function showMessage(text, type){
     messageText.textContent = text;
@@ -351,6 +354,7 @@ function renderLawDitamapPlaceholder(){
     lawTree.innerHTML = '';
     lawTreeRows = [];
     selectedLawIndex = -1;
+    selectedLawIndexes.clear();
     currentLegalDitamapFile = '';
     currentLegalTreeData = null;
     const placeholder = document.createElement('div');
@@ -365,7 +369,10 @@ function renderLawDitamapPlaceholder(){
 function renderLawDitamapTree(tree){
     currentLegalTreeData = tree;
     lawTreeRows = flattenLawTreeNodes(tree && tree.nodes ? tree.nodes : []);
+    // 새 ditamap을 표시할 때 이전 선택 상태가 남아 있으면 엉뚱한 row가
+    // 삭제/이동될 수 있으므로 단일 선택과 다중 선택을 모두 초기화한다.
     selectedLawIndex = -1;
+    selectedLawIndexes.clear();
     currentLegalDitamapFile = tree && tree.ditamapFile
         ? tree.ditamapFile
         : '';
@@ -384,7 +391,7 @@ function updateLegalActionButtons(){
     lawMoveDownButton.disabled = selectedLawIndex < 0;
     lawOutdentButton.disabled = selectedLawIndex < 0;
     lawIndentButton.disabled = selectedLawIndex < 0;
-    lawDeleteButton.disabled = selectedLawIndex < 0;
+    lawDeleteButton.disabled = selectedLawIndexes.size === 0;
 }
 
 function flattenLawTreeNodes(nodes, rows){
@@ -414,6 +421,8 @@ function renderLawDitamapRows(){
         return;
     }
 
+    // 이 화면은 Next 전 생성 결과 확인/구조 조정 단계다.
+    // 파일명 수정과 중복 파일명 검사는 Next 이후 편집 화면에서만 처리한다.
     lawTreeRows.forEach((node, index) => appendLawTreeRow(node, index));
 }
 
@@ -501,7 +510,7 @@ function appendLawTreeRow(node, index){
         row.classList.add('is-legal-resource-title');
     }
 
-    if(index === selectedLawIndex){
+    if(selectedLawIndexes.has(index)){
         row.classList.add('is-selected');
     }
 
@@ -542,7 +551,7 @@ function appendLawTreeRow(node, index){
     titleCell.appendChild(title);
     row.appendChild(titleCell);
     row.appendChild(fileName);
-    row.addEventListener('click', () => selectLawRow(index));
+    row.addEventListener('click', event => selectLawRow(index, event));
     row.addEventListener('dragstart', handleLawDragStart);
     row.addEventListener('dragover', handleLawDragOver);
     row.addEventListener('dragleave', clearLawDropMarkers);
@@ -639,7 +648,10 @@ function renderLawAttributeEditor(cell, node, index){
 
 function handleLawDragStart(event){
     draggingLawIndex = Number(event.currentTarget.dataset.lawIndex);
+    // 드래그 이동은 한 번에 하나의 블록만 움직이는 기존 동작을 유지한다.
+    // 그래서 드래그를 시작한 row를 단일 선택 상태로 맞춘다.
     selectedLawIndex = draggingLawIndex;
+    selectedLawIndexes = new Set([draggingLawIndex]);
     event.currentTarget.classList.add('dragging');
     event.dataTransfer.effectAllowed = 'move';
     event.dataTransfer.setData('text/plain', String(draggingLawIndex));
@@ -749,7 +761,10 @@ function moveLawTreeBlock(sourceIndex, targetIndex, insertAfter, nextLevel){
     });
 
     lawTreeRows.splice(insertIndex, 0, ...block);
+    // 이동 후에는 옮겨진 블록의 시작 row를 다시 선택해 사용자가 이어서
+    // 위/아래 이동이나 들여쓰기 조작을 계속할 수 있게 한다.
     selectedLawIndex = insertIndex;
+    selectedLawIndexes = new Set([insertIndex]);
     saveLegalButton.disabled = false;
     undoLegalButton.disabled = false;
     renderLawDitamapRows();
@@ -757,10 +772,48 @@ function moveLawTreeBlock(sourceIndex, targetIndex, insertAfter, nextLevel){
     showMessage('법규 DITAMAP 구조를 수정했습니다.', 'success');
 }
 
-function selectLawRow(index){
-    selectedLawIndex = index;
+function selectLawRow(index, event){
+    // Ctrl/Cmd 클릭은 기존 선택을 유지하면서 현재 row만 토글한다.
+    // 일반 클릭은 기존 선택을 모두 지우고 현재 row 하나만 선택한다.
+    if(event && (event.ctrlKey || event.metaKey)){
+        if(selectedLawIndexes.has(index)){
+            selectedLawIndexes.delete(index);
+            selectedLawIndex = selectedLawIndexes.size > 0
+                ? Array.from(selectedLawIndexes).pop()
+                : -1;
+        }else{
+            selectedLawIndexes.add(index);
+            selectedLawIndex = index;
+        }
+    }else{
+        selectedLawIndexes = new Set([index]);
+        selectedLawIndex = index;
+    }
+
     renderLawDitamapRows();
     updateLegalActionButtons();
+}
+
+function getSelectedLawDeleteRanges(){
+    const ranges = [];
+    const selectedIndexes = Array.from(selectedLawIndexes)
+        .filter(index => index >= 0 && index < lawTreeRows.length)
+        .sort((left, right) => left - right);
+
+    selectedIndexes.forEach(start => {
+        // 부모 row가 이미 삭제 범위에 들어가 있으면 그 자식 row는 별도 범위로
+        // 추가하지 않는다. 그래야 같은 하위 항목을 두 번 삭제하지 않는다.
+        if(ranges.some(range => start >= range.start && start < range.end)){
+            return;
+        }
+
+        ranges.push({
+            start:start,
+            end:findLawSubtreeEnd(start)
+        });
+    });
+
+    return ranges;
 }
 
 function previousLawSiblingStart(index){
@@ -813,6 +866,7 @@ function moveSelectedLawDown(){
     const insertIndex = nextBlockEnd - block.length;
     lawTreeRows.splice(insertIndex, 0, ...block);
     selectedLawIndex = insertIndex;
+    selectedLawIndexes = new Set([insertIndex]);
     saveLegalButton.disabled = false;
     undoLegalButton.disabled = false;
     renderLawDitamapRows();
@@ -849,19 +903,29 @@ function changeSelectedLawLevel(delta){
 }
 
 function deleteSelectedLawRow(){
-    if(selectedLawIndex < 0){
+    const deleteRanges = getSelectedLawDeleteRanges();
+
+    if(deleteRanges.length === 0){
         return;
     }
 
-    const blockEnd = findLawSubtreeEnd(selectedLawIndex);
-    const hasChildren = blockEnd > selectedLawIndex + 1;
+    const hasChildren = deleteRanges.some(range => range.end > range.start + 1);
 
+    // 선택된 row 중 하나라도 하위 항목을 포함하면 기존 단일 삭제와 동일하게 확인한다.
     if(hasChildren && !confirm('선택한 항목에 하위 항목이 있습니다.\n하위 항목까지 전체 삭제하시겠습니까?')){
         return;
     }
 
-    lawTreeRows.splice(selectedLawIndex, blockEnd - selectedLawIndex);
-    selectedLawIndex = Math.min(selectedLawIndex, lawTreeRows.length - 1);
+    // 앞에서부터 삭제하면 뒤쪽 index가 밀려 계산한 범위가 틀어진다.
+    // 그래서 항상 시작 index가 큰 범위부터 삭제한다.
+    deleteRanges
+        .slice()
+        .sort((left, right) => right.start - left.start)
+        .forEach(range => {
+            lawTreeRows.splice(range.start, range.end - range.start);
+        });
+    selectedLawIndex = -1;
+    selectedLawIndexes.clear();
     saveLegalButton.disabled = false;
     undoLegalButton.disabled = false;
     renderLawDitamapRows();

@@ -935,8 +935,37 @@ body{
 
 .ditamap-tree-file{
     color:#66717d;
+    /* 중복 메시지를 파일명 아래에 붙이기 위해 파일명 cell만 세로 배치로 바꾼다. */
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
     overflow:visible;
     text-overflow:clip;
+}
+
+/* 파일명 중복은 저장을 막는 상태라서 row 전체와 파일명 영역을 같이 강조한다. */
+.ditamap-tree-row.has-file-duplicate{
+    background:#fff5f5;
+}
+
+.ditamap-tree-row.has-file-duplicate .ditamap-tree-file{
+    color:#b42318;
+    font-weight:700;
+}
+
+.legal-editor-tree .ditamap-tree-file{
+    cursor:text;
+    user-select:text;
+}
+
+/* 팝업 대신 row 안에 직접 보여주는 중복 파일명 안내 문구. */
+.file-duplicate-message{
+    margin-top:2px;
+    color:#d92d20;
+    font-size:11px;
+    font-weight:700;
+    line-height:1.2;
+    white-space:nowrap;
 }
 
 .ditamap-tree-empty,
