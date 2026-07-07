@@ -4561,6 +4561,8 @@ function renderMentionInputHighlight(textarea){
         return;
     }
 
+    syncMentionInputHighlightLayout(textarea, highlight);
+
     renderMentionText(
         highlight,
         textarea.value,
@@ -4575,6 +4577,24 @@ function renderMentionInputHighlight(textarea){
 
     highlight.scrollTop = textarea.scrollTop;
     highlight.scrollLeft = textarea.scrollLeft;
+}
+
+function syncMentionInputHighlightLayout(textarea, highlight){
+
+    const computed = window.getComputedStyle(textarea);
+    const horizontalBorderWidth =
+        parseFloat(computed.borderLeftWidth || '0')
+        + parseFloat(computed.borderRightWidth || '0');
+    const scrollbarWidth =
+        Math.max(
+            0,
+            textarea.offsetWidth
+            - textarea.clientWidth
+            - horizontalBorderWidth
+        );
+
+    highlight.style.right =
+        scrollbarWidth > 0 ? scrollbarWidth + 'px' : '0';
 }
 
 function setupAutoResizeCommentText(){

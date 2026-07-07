@@ -1031,6 +1031,11 @@ border:1px solid #ddd;
     font:inherit;
 }
 
+.comment-edit-text{
+    font-size:13px;
+    line-height:1.5;
+}
+
 .reply-list{
     margin-top:8px;
 }
