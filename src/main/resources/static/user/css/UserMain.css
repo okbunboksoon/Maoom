@@ -429,6 +429,31 @@ body.dialog-open{
     font-size:14px;
 }
 
+.launcher-guide-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    height:40px;
+    padding:0 15px;
+    border:1px solid #1473e6;
+    border-radius:8px;
+    background:#1473e6;
+    color:#fff;
+    box-sizing:border-box;
+    font-size:14px;
+    font-weight:700;
+    line-height:1;
+    white-space:nowrap;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.launcher-guide-btn:hover{
+    border-color:#0f63c9;
+    background:#0f63c9;
+}
+
 .launcher-tabs{
     display:flex;
     flex-wrap:wrap;
@@ -436,7 +461,8 @@ body.dialog-open{
     margin-bottom:18px;
 }
 
-.launcher-tab{
+.launcher-tab,
+.launcher-guide-link{
     display:flex;
     align-items:center;
     justify-content:center;
@@ -449,10 +475,13 @@ body.dialog-open{
     box-sizing:border-box;
     font-size:14px;
     font-weight:700;
+    line-height:1;
+    text-decoration:none;
     cursor:pointer;
 }
 
-.launcher-tab:hover{
+.launcher-tab:hover,
+.launcher-guide-link:hover{
     background:#f6f9fc;
 }
 
@@ -460,6 +489,15 @@ body.dialog-open{
     border-color:#1473e6;
     background:#1473e6;
     color:#fff;
+}
+
+.launcher-guide-link{
+    gap:7px;
+}
+
+.launcher-guide-link i{
+    color:#1473e6;
+    font-size:14px;
 }
 
 .launcher-grid{
@@ -485,6 +523,10 @@ body.dialog-open{
     text-align:left;
     cursor:pointer;
     transition:border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+
+a.launcher-card{
+    text-decoration:none;
 }
 
 .launcher-card:hover{
@@ -535,6 +577,56 @@ body.dialog-open{
     text-align:center;
 }
 
+.guide-launcher{
+    min-height:480px;
+}
+
+.guide-grid{
+    min-height:0;
+}
+
+.guide-card{
+    min-height:128px;
+}
+
+.guide-detail-header{
+    padding-bottom:22px;
+    border-bottom:1px solid #e1e6ec;
+}
+
+.guide-detail-category{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    height:24px;
+    margin-bottom:10px;
+    padding:0 9px;
+    border-radius:999px;
+    background:#f1f4f7;
+    color:#59636f;
+    box-sizing:border-box;
+    font-size:12px;
+    font-weight:700;
+}
+
+.guide-detail-panel{
+    max-width:760px;
+    padding-top:26px;
+}
+
+.guide-detail-panel h2{
+    margin:0 0 10px;
+    color:#1f2933;
+    font-size:21px;
+}
+
+.guide-detail-panel p{
+    margin:0;
+    color:#65717d;
+    font-size:14px;
+    line-height:1.7;
+}
+
 @media (max-width: 780px){
     body{
         align-items:flex-start;
@@ -552,6 +644,10 @@ body.dialog-open{
     }
 
     .launcher-search{
+        width:100%;
+    }
+
+    .launcher-guide-btn{
         width:100%;
     }
 }

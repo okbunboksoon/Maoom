@@ -164,6 +164,10 @@
         <button class="launcher-tab"
                 type="button"
                 data-category="DITA">DITA</button>
+        <a class="launcher-guide-link" href="/guide">
+            <i class="fa-solid fa-circle-question"></i>
+            가이드
+        </a>
     </nav>
 
     <section id="menuGrid"
@@ -215,7 +219,7 @@ const launcherMenus = [
         action:openBerPopup
     },
     {
-        title:'정제(X)',
+        title:'정제',
         description:'DITA 정제 옵션 실행',
         category:'DITA',
         icon:'fa-wand-magic-sparkles',
@@ -555,7 +559,7 @@ function openRevisionPopup(){
     window.open(
         '/revision/list',
         'revisionPopup',
-        'width=600,height=800'
+        'width=600,height=650'
     );
 }
 </script>

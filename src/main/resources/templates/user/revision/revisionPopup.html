@@ -20,69 +20,104 @@
 <link rel="stylesheet" href="/user/css/RevisionPopup.css">
 </head>
 <body>
-<main class="revision-page">
+<main class="revision-page revision-estimate-page">
     <header class="revision-header">
         <div>
-            <h1>DITA 정제</h1>
-            <p>선택한 변환만 위에서 아래 순서로 실행합니다.</p>
+            <h1>정제</h1>
+            <p>입력 경로를 작업 폴더로 복사한 뒤 선택한 형태로 변환한다.</p>
         </div>
-        <span class="revision-badge">XSL Pipeline</span>
     </header>
 
-    <section class="path-section" aria-labelledby="pathTitle">
-        <div class="section-title-row">
+    <section class="revision-panel" aria-label="정제 배치 실행">
+        <div class="step-title">
+            <span>1</span>
             <div>
-                <h2 id="pathTitle">입출력 경로</h2>
-                <p>서버 PC에서 접근할 수 있는 절대경로를 입력하세요.</p>
+                <strong>입력 경로 선택</strong>
+                <small>서버 PC에서 접근할 수 있는 경로를 입력하세요.(V서버, H서버)</small>
             </div>
         </div>
 
-        <label class="path-field" for="inputPath">
-            <span>Input</span>
+        <div class="path-row">
+            <label id="pathTitle" for="inputPath">입력경로</label>
             <input type="text" id="inputPath"
-                   placeholder="예: C:\Users\adobe\Desktop\task" autocomplete="off">
-            <small>DITA와 DITAMAP이 있는 topics 폴더 또는 topics의 상위 폴더</small>
-        </label>
+                   placeholder="경로를 입력하세요" autocomplete="off">
+            <span></span>
+            <span></span>
+        </div>
 
-        <label class="path-field" for="outputPath">
-            <span>Output</span>
-            <input type="text" id="outputPath"
-                   placeholder="예: C:\Users\adobe\Desktop\task" autocomplete="off">
-            <small>원본과 분리된 출력 폴더를 지정하세요. 실행별 하위 폴더가 생성됩니다.</small>
-        </label>
-    </section>
+        <input type="hidden" id="outputPath">
 
-    <section class="option-section" aria-labelledby="optionTitle">
-        <div class="section-title-row">
+        <div class="type-row" aria-label="output형태">
+            <strong>output형태</strong>
+            <label>
+                <input type="checkbox" name="outputType" value="xml">
+                xml
+            </label>
+            <label>
+                <input type="checkbox" name="outputType" value="dita">
+                dita
+            </label>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <div class="step-title">
+            <span>2</span>
             <div>
-                <h2 id="optionTitle">정제 항목</h2>
-                <p id="selectionSummary">항목을 불러오는 중입니다.</p>
+                <strong id="optionTitle">옵션</strong>
+                <small>필요한 정제 옵션을 선택하세요.</small>
             </div>
-            <button type="button" id="toggleAllOptions" class="secondary-button">
+            <p id="selectionSummary">항목을 불러오는 중입니다.</p>
+            <button type="button" id="toggleAllOptions" class="secondary-button compact-toggle">
                 전체 해제
             </button>
         </div>
         <div id="optionList" class="option-list" aria-live="polite"></div>
-    </section>
 
-    <section id="resultPanel" class="result-panel" hidden aria-live="polite">
-        <div class="result-heading">
-            <span id="statusIndicator" class="status-indicator"></span>
-            <strong id="resultTitle">실행 준비 중</strong>
-        </div>
-        <p id="resultMessage"></p>
-        <pre id="resultLogs"></pre>
-    </section>
+        <section id="resultPanel" class="result-panel" hidden aria-live="polite">
+            <div class="result-heading">
+                <span id="statusIndicator" class="status-indicator"></span>
+                <strong id="resultTitle">실행 준비 중</strong>
+            </div>
+            <p id="resultMessage"></p>
+        </section>
 
-    <div class="popup-actions">
-        <button type="button" id="runButton" class="action-button primary">
-            정제 실행
-        </button>
-        <button type="button" class="action-button" onclick="window.close()">
-            닫기
-        </button>
-    </div>
+        <footer class="popup-actions">
+            <button type="button" id="runButton" class="action-button primary">
+                실행
+            </button>
+            <button type="button" class="action-button" onclick="window.close()">
+                취소
+            </button>
+        </footer>
+    </section>
 </main>
+
+<div id="bookmapModal" class="modal-backdrop" hidden>
+    <section class="bookmap-modal" role="dialog" aria-modal="true"
+             aria-labelledby="bookmapModalTitle">
+        <div class="modal-title-row">
+            <span class="modal-mark"></span>
+            <div>
+                <h2 id="bookmapModalTitle">bookmap.xml 생성</h2>
+                <p>XML 입력에 사용할 mapname 파일명을 입력하세요.</p>
+            </div>
+        </div>
+        <label class="modal-field" for="bookmapMapNameInput">
+            <span>mapname</span>
+            <input type="text" id="bookmapMapNameInput"
+                   placeholder="예: KIA-SP3-ICE-HEV-en_GB-2027.ditamap"
+                   autocomplete="off">
+        </label>
+        <p id="bookmapModalMessage" class="modal-message" hidden></p>
+        <div class="modal-actions">
+            <button type="button" id="bookmapCancelButton"
+                    class="modal-button secondary">취소</button>
+            <button type="button" id="bookmapConfirmButton"
+                    class="modal-button primary">확인</button>
+        </div>
+    </section>
+</div>
 
 <script>
 // 화면에서 반복해서 사용하는 요소를 한 번만 찾아 변수로 보관한다.
@@ -93,10 +128,16 @@ const runButton = document.getElementById('runButton');
 const resultPanel = document.getElementById('resultPanel');
 const resultTitle = document.getElementById('resultTitle');
 const resultMessage = document.getElementById('resultMessage');
-const resultLogs = document.getElementById('resultLogs');
 const statusIndicator = document.getElementById('statusIndicator');
+const bookmapModal = document.getElementById('bookmapModal');
+const bookmapMapNameInput = document.getElementById('bookmapMapNameInput');
+const bookmapModalMessage = document.getElementById('bookmapModalMessage');
+const bookmapConfirmButton = document.getElementById('bookmapConfirmButton');
+const bookmapCancelButton = document.getElementById('bookmapCancelButton');
 
 let options = [];
+let pendingBookmapMapName = '';
+let bookmapModalResolver = null;
 
 // 현재 체크된 정제 단계 input만 배열로 반환한다.
 function selectedInputs() {
@@ -119,10 +160,34 @@ function updateSelectionSummary() {
  * 배열 순서는 RevisionPipelineService의 실제 파이프라인 실행 순서와 같다.
  */
 function renderOptions(items) {
-    options = items;
+    const preferredOrder = [
+        'FILE_NAME_KEEP',
+        'REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET',
+        'DELETE_DRAFT_COMMENT'
+    ];
+    const compactLabels = {
+        FILE_NAME_KEEP: '파일명 유지',
+        REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET: '속성 및 세션 지우기',
+        DELETE_DRAFT_COMMENT: 'Draft Comment 지우기'
+    };
+    const byId = new Map(items.map(function(item) {
+        return [item.id, item];
+    }));
+    options = preferredOrder
+        .filter(function(id) {
+            return byId.has(id);
+        })
+        .map(function(id) {
+            const item = byId.get(id);
+            return {
+                id: item.id,
+                label: compactLabels[id] || item.label,
+                description: item.description
+            };
+        });
     optionList.replaceChildren();
 
-    items.forEach(function(option, index) {
+    options.forEach(function(option) {
         const label = document.createElement('label');
         label.className = 'option-item';
 
@@ -130,12 +195,8 @@ function renderOptions(items) {
         checkbox.type = 'checkbox';
         checkbox.name = 'revisionOption';
         checkbox.value = option.id;
-        checkbox.checked = true;
+        checkbox.checked = false;
         checkbox.addEventListener('change', updateSelectionSummary);
-
-        const order = document.createElement('span');
-        order.className = 'option-order';
-        order.textContent = String(index + 1).padStart(2, '0');
 
         const text = document.createElement('span');
         text.className = 'option-text';
@@ -147,7 +208,7 @@ function renderOptions(items) {
         description.textContent = option.description;
 
         text.append(name, description);
-        label.append(checkbox, order, text);
+        label.append(checkbox, text);
         optionList.append(label);
     });
 
@@ -160,9 +221,71 @@ function showResult(type, title, message, logs) {
     resultPanel.dataset.status = type;
     resultTitle.textContent = title;
     resultMessage.textContent = message || '';
-    resultLogs.textContent = Array.isArray(logs) ? logs.join('\n') : '';
     statusIndicator.classList.toggle('is-running', type === 'running');
     resultPanel.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+}
+
+function buildOutputPath(inputPath) {
+    return inputPath.replace(/[\\\/]+$/, '') + '\\Result_Folder';
+}
+
+function isBookmapMapNameRequired(result) {
+    const messages = result.logs || [];
+    return messages.some(function(message) {
+        return message.includes('BOOKMAP_MAPNAME_REQUIRED:');
+    });
+}
+
+function openBookmapModal(defaultValue) {
+    bookmapModal.hidden = false;
+    bookmapModalMessage.hidden = true;
+    bookmapModalMessage.textContent = '';
+    bookmapMapNameInput.value = defaultValue || '';
+    bookmapMapNameInput.focus();
+    bookmapMapNameInput.select();
+
+    return new Promise(function(resolve) {
+        bookmapModalResolver = resolve;
+    });
+}
+
+function closeBookmapModal(value) {
+    bookmapModal.hidden = true;
+    if (bookmapModalResolver) {
+        bookmapModalResolver(value);
+        bookmapModalResolver = null;
+    }
+}
+
+function confirmBookmapModal() {
+    const mapName = bookmapMapNameInput.value.trim();
+    if (!mapName) {
+        bookmapModalMessage.hidden = false;
+        bookmapModalMessage.textContent = 'mapname 파일명을 입력하세요.';
+        bookmapMapNameInput.focus();
+        return;
+    }
+    closeBookmapModal(mapName);
+}
+
+function selectedValue(name) {
+    const checked = document.querySelector(`input[name="${name}"]:checked`);
+    return checked ? checked.value : '';
+}
+
+function enforceSingleSelection(name) {
+    document.querySelectorAll(`input[name="${name}"]`).forEach(function(input) {
+        input.addEventListener('change', function() {
+            if (!input.checked) {
+                return;
+            }
+            document.querySelectorAll(`input[name="${name}"]`).forEach(function(other) {
+                if (other !== input) {
+                    other.checked = false;
+                }
+            });
+        });
+    });
 }
 
 toggleAllButton.addEventListener('click', function() {
@@ -182,43 +305,64 @@ toggleAllButton.addEventListener('click', function() {
  */
 runButton.addEventListener('click', async function() {
     const inputPath = document.getElementById('inputPath').value.trim();
-    const outputPath = document.getElementById('outputPath').value.trim();
+    const outputPath = buildOutputPath(inputPath);
+    const outputType = selectedValue('outputType');
     const optionIds = selectedInputs().map(function(input) {
         return input.value;
     });
 
-    if (!inputPath || !outputPath) {
+    if (!inputPath) {
         showResult('error', '경로 확인 필요',
-            'Input과 Output 절대경로를 모두 입력하세요.', []);
+            '입력 경로를 입력하세요.', []);
         return;
     }
-    if (!optionIds.length) {
-        showResult('error', '항목 선택 필요',
-            '실행할 정제 항목을 하나 이상 선택하세요.', []);
+    if (!outputType) {
+        showResult('error', '형태 선택 필요',
+            'output형태를 선택하세요.', []);
         return;
     }
-
     runButton.disabled = true;
     showResult('running', '정제 실행 중',
         '파일 수와 선택 항목에 따라 시간이 걸릴 수 있습니다.', []);
 
     try {
+        const payload = {
+            inputPath,
+            outputPath,
+            outputType,
+            optionIds
+        };
+        if (pendingBookmapMapName) {
+            payload.bookmapMapName = pendingBookmapMapName;
+        }
+
         const response = await fetch('/api/revision/run', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({inputPath, outputPath, optionIds})
+            body: JSON.stringify(payload)
         });
         const result = await response.json();
 
         if (!response.ok || !result.success) {
+            if (isBookmapMapNameRequired(result)) {
+                const mapName = await openBookmapModal(pendingBookmapMapName);
+                if (mapName) {
+                    pendingBookmapMapName = mapName;
+                    setTimeout(function() {
+                        runButton.click();
+                    }, 0);
+                    return;
+                }
+            }
             showResult('error', '정제 실패',
                 result.logs?.at(-1) || '정제 중 오류가 발생했습니다.',
-                result.logs);
+                []);
             return;
         }
 
+        pendingBookmapMapName = '';
         showResult('success', '정제 완료',
-            `결과 경로: ${result.outputPath}`, result.logs);
+            `결과 경로: ${result.outputPath}`, []);
     } catch (error) {
         showResult('error', '통신 오류',
             '서버 응답을 받지 못했습니다: ' + error.message, []);
@@ -240,6 +384,23 @@ fetch('/api/revision/options')
         showResult('error', '초기화 실패', error.message, []);
         runButton.disabled = true;
     });
+
+enforceSingleSelection('outputType');
+
+bookmapConfirmButton.addEventListener('click', confirmBookmapModal);
+bookmapCancelButton.addEventListener('click', function() {
+    closeBookmapModal('');
+});
+bookmapMapNameInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        confirmBookmapModal();
+    }
+    if (event.key === 'Escape') {
+        event.preventDefault();
+        closeBookmapModal('');
+    }
+});
 </script>
 </body>
 </html>
