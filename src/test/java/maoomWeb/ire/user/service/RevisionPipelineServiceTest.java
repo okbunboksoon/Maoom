@@ -18,7 +18,7 @@ class RevisionPipelineServiceTest {
     Path tempDirectory;
 
     @Test
-    void runsSelectedStylesheetAndWritesResult() throws Exception {
+    void reportsMissingOutputWhenBatchCreatesNoChapterFiles() throws Exception {
         Path input = Files.createDirectory(tempDirectory.resolve("topics"));
         Path output = Files.createDirectory(tempDirectory.resolve("output"));
         Files.writeString(
@@ -29,13 +29,42 @@ class RevisionPipelineServiceTest {
         RevisionRunResult result = service.run(new RevisionRunRequest(
                 input.toString(),
                 output.toString(),
-                List.of("NAMESPACE_REMOVE_1")));
+                null,
+                "xml",
+                List.of(),
+                null));
 
-        assertThat(result.success()).isTrue();
+        assertThat(result.success())
+                .as(String.join(System.lineSeparator(), result.logs()))
+                .isFalse();
         assertThat(result.completedOptions())
-                .containsExactly("NAMESPACE_REMOVE_1");
-        assertThat(Path.of(result.outputPath())
-                .resolve("revision-result.xml"))
+                .isEmpty();
+        assertThat(result.logs())
+                .anyMatch(log -> log.contains("XML 출력 결과가 없습니다."));
+        assertThat(input.resolve("Result_Folder/revision.log"))
+                .exists();
+    }
+
+    @Test
+    void requiresBookmapMapNameWhenXmlInputHasNoBookmap() throws Exception {
+        Path input = Files.createDirectory(tempDirectory.resolve("xml-input"));
+        Files.writeString(
+                input.resolve("01_Intro.xml"),
+                "<?xml version=\"1.0\" encoding=\"UTF-8\"?><chapter/>");
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        RevisionRunResult result = service.run(new RevisionRunRequest(
+                input.toString(),
+                null,
+                null,
+                "dita",
+                List.of(),
+                null));
+
+        assertThat(result.success()).isFalse();
+        assertThat(result.logs())
+                .anyMatch(log -> log.contains("BOOKMAP_MAPNAME_REQUIRED:"));
+        assertThat(input.resolve("Result_Folder/revision.log"))
                 .exists();
     }
 }

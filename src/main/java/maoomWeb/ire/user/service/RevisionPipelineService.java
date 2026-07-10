@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URLDecoder;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -30,18 +31,27 @@ import maoomWeb.ire.user.dto.RevisionRunResult;
 /**
  * DITA/DITAMAP 원본에 선택된 XSL 변환을 순서대로 적용하는 정제 파이프라인이다.
  *
- * <p>RevisionController에서 요청을 받아 원본을 임시 작업 폴더로 복사한 뒤,
- * {@code revision-tool/xsl}의 스타일시트를 Saxon으로 실행한다. 각 단계의 결과가
+ * <p>RevisionController에서 요청을 받아 원본과 revision-tool 리소스를
+ * {@code .maoomtool} 작업 폴더로 복사한 뒤, {@code xsl}의 스타일시트를
+ * Saxon으로 실행한다. 각 단계의 결과가
  * 다음 단계 입력이 되며, 최종 결과와 로그만 사용자가 지정한 Output 폴더로 복사한다.</p>
  *
  * <p>원본 보호를 위해 Input과 Output이 서로 포함된 경로는 허용하지 않으며,
- * 작업 완료 여부와 관계없이 임시 폴더는 마지막에 정리한다.</p>
+ * 작업 완료 여부와 관계없이 작업 폴더는 마지막에 정리한다.</p>
  */
 @Service
 public class RevisionPipelineService {
 
     private static final DateTimeFormatter RUN_FORMAT =
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss-SSS");
+    private static final String BOOKMAP_MAPNAME_REQUIRED =
+            "BOOKMAP_MAPNAME_REQUIRED:";
+    private static final Charset BATCH_CHARSET = Charset.forName("MS949");
+    private static final String FILE_NAME_KEEP = "FILE_NAME_KEEP";
+    private static final String REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET =
+            "REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET";
+    private static final String DELETE_DRAFT_COMMENT =
+            "DELETE_DRAFT_COMMENT";
 
     // 이 목록의 순서가 화면 표시 순서이자 실제 XSL 실행 순서다.
     private static final List<RevisionStep> STEPS = List.of(
@@ -118,10 +128,19 @@ public class RevisionPipelineService {
 
     /** 내부 파이프라인 정의에서 화면에 필요한 ID, 이름과 설명만 반환한다. */
     public List<RevisionOptionDto> getOptions() {
-        return STEPS.stream()
-            .map(step -> new RevisionOptionDto(
-                    step.id(), step.label(), step.description()))
-            .toList();
+        return List.of(
+                new RevisionOptionDto(
+                        FILE_NAME_KEEP,
+                        "파일명 유지",
+                        "Chapter 변환 시 파일명 유지 배치를 실행합니다."),
+                new RevisionOptionDto(
+                        REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
+                        "속성 및 세션 지우기",
+                        "deliveryTarget 속성과 Simple operation 섹션을 제거합니다."),
+                new RevisionOptionDto(
+                        DELETE_DRAFT_COMMENT,
+                        "Draft Comment 지우기",
+                        "draft-comment 태그를 제거합니다."));
     }
 
     /**
@@ -131,107 +150,63 @@ public class RevisionPipelineService {
     public RevisionRunResult run(RevisionRunRequest request) {
         List<String> logs = new ArrayList<>();
         Path workspace = null;
+        Path input = null;
 
         try {
-            Path input = requireDirectory(request.inputPath(), "Input");
-            Path output = requireOutputDirectory(request.outputPath());
-            validateSeparatePaths(input, output);
+            input = requireDirectory(request.inputPath(), "Input");
+            RevisionFormat inputType = detectInputFormat(input);
+            RevisionFormat outputType = requireRevisionFormat(
+                    request.outputType(),
+                    "출력");
+            Set<String> selectedOptions = validateRevisionOptions(
+                    request.optionIds());
+            BatchPlan batchPlan = BatchPlan.of(
+                    inputType,
+                    outputType,
+                    selectedOptions);
 
-            Set<String> selected = validateOptions(request.optionIds());
-            validateDependencies(selected);
+            // 원본을 직접 수정하지 않도록 실행 PC의 .maoomtool 아래 작업 폴더에서 처리한다.
+            workspace = createWorkDirectory(input);
+            copyDirectory(toolDirectory, workspace);
+            Files.createDirectories(workspace.resolve("temp"));
+            Files.createDirectories(workspace.resolve("topics"));
+            Files.createDirectories(workspace.resolve("chapter"));
+            prepareBatchInput(input, inputType, workspace);
+            prepareBookmap(input, inputType, workspace, request.bookmapMapName());
 
-            Path topicsSource = Files.isDirectory(input.resolve("topics"))
-                    ? input.resolve("topics")
-                    : input;
-            validateFileNames(topicsSource);
+            logs.add("작업 폴더: " + workspace);
+            logs.add("Input 원본: " + input);
+            logs.add("입력 형태: " + inputType.value());
+            logs.add("출력 형태: " + outputType.value());
 
-            // 원본을 직접 수정하지 않도록 실행마다 독립된 임시 작업 폴더를 만든다.
-            workspace = Files.createTempDirectory("maoom-revision-");
-            Path topics = workspace.resolve("topics");
-            Path temp = workspace.resolve("temp");
-            Path chapter = workspace.resolve("chapter");
-            Path xsl = workspace.resolve("xsl");
-            Files.createDirectories(temp);
-            Files.createDirectories(chapter);
-            copyDirectory(topicsSource, topics);
-            copyDirectory(toolDirectory.resolve("xsl"), xsl);
-
-            Path current = findStartingMap(topics);
             List<String> completed = new ArrayList<>();
-
-            // 사용자가 선택한 단계만 실행하지만 순서는 항상 STEPS 정의를 따른다.
-            for (RevisionStep step : STEPS) {
-                if (!selected.contains(step.id())) {
-                    continue;
-                }
-
-                logs.add("실행: " + step.label());
-
-                if (step.mode() == StepMode.DOCTYPE) {
-                    runSaxon(
-                            workspace,
-                            xsl.resolve("dummy.xml"),
-                            xsl.resolve("dummy.xml"),
-                            xsl.resolve(step.stylesheet()),
-                            true,
-                            logs);
-                    current = temp.resolve(step.outputName());
-                } else if (step.mode() == StepMode.AUXILIARY) {
-                    runSaxon(
-                            workspace,
-                            current,
-                            xsl.resolve(step.outputName()),
-                            xsl.resolve(step.stylesheet()),
-                            step.catalog(),
-                            logs);
-                } else if (step.mode() == StepMode.CHAPTER) {
-                    runSaxon(
-                            workspace,
-                            current,
-                            xsl.resolve("dummy.xml"),
-                            xsl.resolve(step.stylesheet()),
-                            step.catalog(),
-                            logs);
-                } else {
-                    Path next = temp.resolve(step.outputName());
-                    runSaxon(
-                            workspace,
-                            current,
-                            next,
-                            xsl.resolve(step.stylesheet()),
-                            step.catalog(),
-                            logs);
-                    current = next;
-                }
-
-                completed.add(step.id());
+            for (String batchFile : batchPlan.batchFiles()) {
+                prepareBatchOptions(
+                        workspace,
+                        batchFile,
+                        selectedOptions,
+                        logs);
+                logs.add("배치 실행: " + batchFile);
+                runBatch(workspace, batchFile, logs);
+                completed.add(batchFile);
             }
+            validateBatchOutput(workspace, outputType, batchPlan);
 
-            // 같은 Output을 반복 사용해도 덮어쓰지 않도록 실행 시각별 폴더를 만든다.
-            Path runOutput = output.resolve(
-                    "revision-" + LocalDateTime.now().format(RUN_FORMAT));
+            Path runOutput = input.resolve("Result_Folder");
             Files.createDirectories(runOutput);
 
-            if (selected.contains("RECHAPTERIZE")) {
+            if (outputType == RevisionFormat.XML) {
                 Path chapterOutput = runOutput.resolve("chapter");
-                copyDirectory(chapter, chapterOutput);
+                replaceDirectory(workspace.resolve("chapter"), chapterOutput);
             } else {
-                Files.copy(
-                        current,
-                        runOutput.resolve("revision-result.xml"),
-                        StandardCopyOption.REPLACE_EXISTING);
+                Path topicsOutput = runOutput.resolve("topics");
+                replaceDirectory(workspace.resolve("topics"), topicsOutput);
             }
 
+            copyBookmap(workspace, runOutput, input);
             copyIfExists(
-                    xsl.resolve("bookmap.xml"),
-                    runOutput.resolve("bookmap.xml"));
-            copyIfExists(
-                    temp.resolve("table_report.xml"),
+                    workspace.resolve("temp/table_report.xml"),
                     runOutput.resolve("table_report.xml"));
-            Files.write(
-                    runOutput.resolve("revision.log"),
-                    logs,
-                    StandardCharsets.UTF_8);
 
             logs.add("완료: " + runOutput);
             return new RevisionRunResult(
@@ -241,6 +216,7 @@ public class RevisionPipelineService {
                     logs);
         } catch (Exception exception) {
             logs.add("오류: " + exception.getMessage());
+            writeFailureLog(input, logs);
             return new RevisionRunResult(
                     false,
                     null,
@@ -248,6 +224,458 @@ public class RevisionPipelineService {
                     logs);
         } finally {
             deleteDirectoryQuietly(workspace);
+        }
+    }
+
+    private void writeFailureLog(Path input, List<String> logs) {
+        if (input == null) {
+            return;
+        }
+
+        try {
+            Path resultFolder = input.resolve("Result_Folder");
+            Files.createDirectories(resultFolder);
+            Files.write(
+                    resultFolder.resolve("revision.log"),
+                    logs,
+                    StandardCharsets.UTF_8);
+        } catch (IOException logException) {
+            logs.add("오류 로그 저장 실패: " + logException.getMessage());
+        }
+    }
+
+    private RevisionFormat requireRevisionFormat(
+            String value,
+            String label) {
+        if (value == null || value.isBlank()) {
+            throw new IllegalArgumentException(
+                    label + " 형태를 선택해주세요.");
+        }
+
+        String normalized = value.trim().toLowerCase();
+        if ("xml".equals(normalized)) {
+            return RevisionFormat.XML;
+        }
+        if ("dita".equals(normalized)) {
+            return RevisionFormat.DITA;
+        }
+
+        throw new IllegalArgumentException(
+                label + " 형태는 xml 또는 dita만 선택할 수 있습니다.");
+    }
+
+    private RevisionFormat detectInputFormat(Path input)
+            throws IOException {
+        boolean hasXml = hasFileWithExtension(
+                resolveSourceDirectory(input, "chapter"),
+                ".xml");
+        boolean hasDita = hasFileWithExtension(
+                resolveSourceDirectory(input, "topics"),
+                ".dita",
+                ".ditamap");
+
+        if (hasXml && hasDita) {
+            throw new IllegalArgumentException(
+                    "입력 경로에 xml과 dita가 함께 있습니다. 한 가지 형태만 넣어주세요.");
+        }
+
+        if (hasXml) {
+            return RevisionFormat.XML;
+        }
+
+        if (hasDita) {
+            return RevisionFormat.DITA;
+        }
+
+        throw new IllegalArgumentException(
+                "입력 경로에서 xml 또는 dita 파일을 찾지 못했습니다.");
+    }
+
+    private boolean hasFileWithExtension(
+            Path directory,
+            String... extensions) throws IOException {
+        if (!Files.isDirectory(directory)) {
+            return false;
+        }
+
+        try (Stream<Path> files = Files.walk(directory)) {
+            return files
+                .filter(Files::isRegularFile)
+                .map(path -> path.getFileName()
+                        .toString()
+                        .toLowerCase())
+                .anyMatch(name -> {
+                    for (String extension : extensions) {
+                        if (name.endsWith(extension)) {
+                            return true;
+                        }
+                    }
+                    return false;
+                });
+        }
+    }
+
+    private void prepareBatchInput(
+            Path input,
+            RevisionFormat inputType,
+            Path workspace) throws IOException {
+
+        if (inputType == RevisionFormat.XML) {
+            Path chapterSource = resolveSourceDirectory(input, "chapter");
+            copyDirectory(chapterSource, workspace.resolve("chapter"));
+            return;
+        }
+
+        Path topicsSource = resolveSourceDirectory(input, "topics");
+        validateFileNames(topicsSource);
+        copyDirectory(topicsSource, workspace.resolve("topics"));
+    }
+
+    private Path resolveSourceDirectory(Path input, String childName) {
+        Path child = input.resolve(childName);
+        if (Files.isDirectory(child)) {
+            return child;
+        }
+        return input;
+    }
+
+    private void prepareBookmap(
+            Path input,
+            RevisionFormat inputType,
+            Path workspace,
+            String bookmapMapName) throws IOException {
+
+        Path source = input.resolve("bookmap.xml");
+        if (Files.isRegularFile(source)) {
+            copyInitialBookmap(source, workspace);
+            return;
+        }
+
+        if (inputType != RevisionFormat.XML) {
+            return;
+        }
+
+        if (bookmapMapName == null || bookmapMapName.isBlank()) {
+            throw new IllegalArgumentException(
+                    BOOKMAP_MAPNAME_REQUIRED
+                    + " XML 입력에는 bookmap.xml이 필요합니다. mapname 파일명을 입력해주세요.");
+        }
+
+        writeGeneratedBookmap(
+                workspace,
+                bookmapMapName.trim(),
+                collectChapterFileNames(workspace.resolve("chapter")));
+    }
+
+    private void copyInitialBookmap(Path source, Path workspace)
+            throws IOException {
+        Files.copy(
+                source,
+                workspace.resolve("bookmap.xml"),
+                StandardCopyOption.REPLACE_EXISTING);
+        Files.copy(
+                source,
+                workspace.resolve("xsl/bookmap.xml"),
+                StandardCopyOption.REPLACE_EXISTING);
+    }
+
+    private List<String> collectChapterFileNames(Path chapterDirectory)
+            throws IOException {
+        try (Stream<Path> files = Files.list(chapterDirectory)) {
+            return files
+                .filter(Files::isRegularFile)
+                .map(path -> path.getFileName().toString())
+                .filter(name -> name.toLowerCase().endsWith(".xml"))
+                .sorted(this::compareChapterFileName)
+                .toList();
+        }
+    }
+
+    private int compareChapterFileName(String left, String right) {
+        int leftGroup = chapterSortGroup(left);
+        int rightGroup = chapterSortGroup(right);
+        if (leftGroup != rightGroup) {
+            return Integer.compare(leftGroup, rightGroup);
+        }
+
+        if (leftGroup == 1) {
+            int leftNumber = leadingChapterNumber(left);
+            int rightNumber = leadingChapterNumber(right);
+            if (leftNumber != rightNumber) {
+                return Integer.compare(leftNumber, rightNumber);
+            }
+        }
+
+        return left.compareToIgnoreCase(right);
+    }
+
+    private int chapterSortGroup(String fileName) {
+        if ("Foreword.xml".equalsIgnoreCase(fileName)) {
+            return 0;
+        }
+        if (leadingChapterNumber(fileName) >= 0) {
+            return 1;
+        }
+        return 2;
+    }
+
+    private int leadingChapterNumber(String fileName) {
+        if (fileName.length() < 3 || fileName.charAt(2) != '_') {
+            return -1;
+        }
+
+        char first = fileName.charAt(0);
+        char second = fileName.charAt(1);
+        if (!Character.isDigit(first) || !Character.isDigit(second)) {
+            return -1;
+        }
+
+        return Integer.parseInt(fileName.substring(0, 2));
+    }
+
+    private void writeGeneratedBookmap(
+            Path workspace,
+            String mapName,
+            List<String> chapterFileNames) throws IOException {
+
+        StringBuilder xml = new StringBuilder();
+        xml.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
+        xml.append("<bookmap mapname=\"")
+                .append(escapeXmlAttribute(mapName))
+                .append("\" xml:lang=\"en-GB\">\r\n");
+
+        for (String fileName : chapterFileNames) {
+            xml.append("\t<chapter filename=\"")
+                    .append(escapeXmlAttribute(fileName))
+                    .append("\"/>\r\n");
+        }
+
+        xml.append("</bookmap>\r\n");
+
+        Files.writeString(
+                workspace.resolve("bookmap.xml"),
+                xml.toString(),
+                StandardCharsets.UTF_8);
+        Files.writeString(
+                workspace.resolve("xsl/bookmap.xml"),
+                xml.toString(),
+                StandardCharsets.UTF_8);
+    }
+
+    private String escapeXmlAttribute(String value) {
+        return value
+                .replace("&", "&amp;")
+                .replace("\"", "&quot;")
+                .replace("<", "&lt;")
+                .replace(">", "&gt;");
+    }
+
+    private Set<String> validateRevisionOptions(List<String> requestedOptions) {
+        if (requestedOptions == null || requestedOptions.isEmpty()) {
+            return Set.of();
+        }
+
+        Set<String> available = Set.of(
+                FILE_NAME_KEEP,
+                REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
+                DELETE_DRAFT_COMMENT);
+
+        for (String option : requestedOptions) {
+            if (!available.contains(option)) {
+                throw new IllegalArgumentException(
+                        "알 수 없는 정제 옵션입니다: " + option);
+            }
+        }
+
+        return Set.copyOf(requestedOptions);
+    }
+
+    private void prepareBatchOptions(
+            Path workspace,
+            String batchFileName,
+            Set<String> selectedOptions,
+            List<String> logs) throws IOException {
+
+        if (!batchFileName.startsWith("02_topics_Chapterize")) {
+            return;
+        }
+
+        boolean removeSimpleOperation = selectedOptions.contains(
+                REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET);
+        boolean deleteDraftComment = selectedOptions.contains(
+                DELETE_DRAFT_COMMENT);
+
+        if (!removeSimpleOperation && !deleteDraftComment) {
+            return;
+        }
+
+        Path batchFile = workspace.resolve(batchFileName);
+        String content = Files.readString(batchFile, BATCH_CHARSET);
+        String lineSeparator = content.contains("\r\n") ? "\r\n" : "\n";
+        String currentSource = "temp\\0180-translate_no_tagging.xml";
+        List<String> extraLines = new ArrayList<>();
+
+        if (removeSimpleOperation) {
+            String output = "temp\\0402-remove_simple_operation_deliverytarget.xml";
+            appendOptionTransform(
+                    workspace,
+                    extraLines,
+                    currentSource,
+                    output,
+                    "0402-Remove_Simple_Operation_And_DeliveryTarget.xsl.xsl");
+            currentSource = output;
+            logs.add("옵션 추가: 속성 및 세션 지우기");
+        }
+
+        if (deleteDraftComment) {
+            String output = "temp\\0401-remove_review_Delete_Draft_Comment.xml";
+            appendOptionTransform(
+                    workspace,
+                    extraLines,
+                    currentSource,
+                    output,
+                    "0401-remove_review_Delete_Draft_Comment.xsl");
+            currentSource = output;
+            logs.add("옵션 추가: Draft Comment 지우기");
+        }
+
+        List<String> patched = new ArrayList<>();
+        for (String line : content.split("\\R", -1)) {
+            String patchedLine = line;
+            if (line.contains("-s:temp\\0180-translate_no_tagging.xml")
+                    && line.contains("0400-remove_review.xsl")) {
+                patchedLine = line.replace(
+                        "-s:temp\\0180-translate_no_tagging.xml",
+                        "-s:" + currentSource);
+            }
+
+            patched.add(patchedLine);
+            if (line.contains("-o:temp\\0180-translate_no_tagging.xml")
+                    && line.contains("0180-translate_no_tagging.xsl")) {
+                patched.addAll(extraLines);
+            }
+        }
+
+        Files.writeString(
+                batchFile,
+                String.join(lineSeparator, patched),
+                BATCH_CHARSET);
+    }
+
+    private void appendOptionTransform(
+            Path workspace,
+            List<String> lines,
+            String source,
+            String output,
+            String stylesheetName) {
+
+        Path stylesheet = workspace.resolve("xsl").resolve(stylesheetName);
+        if (!Files.isRegularFile(stylesheet)) {
+            throw new IllegalArgumentException(
+                    "옵션 XSL 파일을 찾지 못했습니다: " + stylesheetName);
+        }
+
+        lines.add("java net.sf.saxon.Transform "
+                + "-s:" + source + " "
+                + "-o:" + output + " "
+                + "-xsl:xsl\\" + stylesheetName);
+    }
+
+    private void runBatch(
+            Path workspace,
+            String batchFileName,
+            List<String> logs) throws IOException, InterruptedException {
+
+        Path batchFile = workspace.resolve(batchFileName);
+        if (!Files.isRegularFile(batchFile)) {
+            throw new IllegalArgumentException(
+                    "정제 배치 파일을 찾지 못했습니다: " + batchFileName);
+        }
+
+        Process process = new ProcessBuilder(
+                "cmd.exe",
+                "/c",
+                batchFile.getFileName().toString())
+                .directory(workspace.toFile())
+                .redirectErrorStream(true)
+                .start();
+        process.getOutputStream().close();
+
+        try (BufferedReader reader = new BufferedReader(
+                new InputStreamReader(
+                        process.getInputStream(),
+                        BATCH_CHARSET))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (!line.isBlank()) {
+                    logs.add(line);
+                }
+            }
+        }
+
+        int exitCode = process.waitFor();
+        if (exitCode != 0) {
+            throw new IllegalStateException(
+                    "정제 배치 실행 실패(" + exitCode + "): "
+                    + batchFileName);
+        }
+    }
+
+    private void replaceDirectory(Path source, Path target)
+            throws IOException {
+        if (!Files.isDirectory(source)) {
+            throw new IllegalArgumentException(
+                    "결과 폴더가 생성되지 않았습니다: " + source);
+        }
+        deleteDirectoryQuietly(target);
+        copyDirectory(source, target);
+    }
+
+    private void validateBatchOutput(
+            Path workspace,
+            RevisionFormat outputType,
+            BatchPlan batchPlan) throws IOException {
+
+        if (outputType == RevisionFormat.XML) {
+            Path chapter = workspace.resolve("chapter");
+            if (!hasFileWithExtension(chapter, ".xml")) {
+                throw new IllegalStateException(
+                        "XML 출력 결과가 없습니다. 마지막 배치("
+                        + batchPlan.lastBatchFile()
+                        + ") 실행 후 chapter 폴더에 xml 파일이 생성되지 않았습니다: "
+                        + chapter);
+            }
+            return;
+        }
+
+        Path topics = workspace.resolve("topics");
+        if (!hasFileWithExtension(topics, ".dita", ".ditamap")) {
+            throw new IllegalStateException(
+                    "DITA 출력 결과가 없습니다. 마지막 배치("
+                    + batchPlan.lastBatchFile()
+                    + ") 실행 후 topics 폴더에 dita/ditamap 파일이 생성되지 않았습니다: "
+                    + topics);
+        }
+    }
+
+    private void copyBookmap(Path workspace, Path runOutput, Path input)
+            throws IOException {
+        Path rootBookmap = workspace.resolve("bookmap.xml");
+        Path xslBookmap = workspace.resolve("xsl/bookmap.xml");
+
+        if (Files.isRegularFile(rootBookmap)) {
+            Files.copy(
+                    rootBookmap,
+                    runOutput.resolve("bookmap.xml"),
+                    StandardCopyOption.REPLACE_EXISTING);
+            return;
+        }
+
+        if (Files.isRegularFile(xslBookmap)) {
+            Files.copy(
+                    xslBookmap,
+                    runOutput.resolve("bookmap.xml"),
+                    StandardCopyOption.REPLACE_EXISTING);
         }
     }
 
@@ -276,8 +704,8 @@ public class RevisionPipelineService {
                 isWindows() ? "java.exe" : "java");
         String classPath = String.join(
                 System.getProperty("path.separator"),
-                toolDirectory.resolve("lib/saxon-he-12.4.jar").toString(),
-                toolDirectory.resolve("lib/xmlresolver-5.2.2.jar").toString());
+                workspace.resolve("lib/saxon-he-12.4.jar").toString(),
+                workspace.resolve("lib/xmlresolver-5.2.2.jar").toString());
 
         List<String> command = new ArrayList<>(List.of(
                 javaExecutable.toString(),
@@ -345,6 +773,26 @@ public class RevisionPipelineService {
             throw new IllegalArgumentException(
                     "DITA 구조 정렬을 선택하려면 Bookmap 정보 생성도 선택해야 합니다.");
         }
+    }
+
+    /** .maoomtool 아래 실행별 작업 폴더를 만든다. */
+    private Path createWorkDirectory(Path inputDirectory) {
+        String folderName = inputDirectory.getFileName() == null
+                ? "revision"
+                : inputDirectory.getFileName().toString();
+        String safeName = folderName.replaceAll("[^A-Za-z0-9._-]", "_");
+
+        if (safeName.isBlank()) {
+            safeName = "revision";
+        }
+
+        return Path.of(
+                System.getProperty("user.home"),
+                ".maoomtool",
+                "revision-" + safeName + "-"
+                + LocalDateTime.now().format(RUN_FORMAT))
+                .toAbsolutePath()
+                .normalize();
     }
 
     /** Input 경로가 실제 폴더인지 확인하고 비교 가능한 절대경로로 정규화한다. */
@@ -474,6 +922,10 @@ public class RevisionPipelineService {
     /** 원본 topics와 XSL 디렉터리를 임시 작업 공간으로 재귀 복사한다. */
     private void copyDirectory(Path source, Path target)
             throws IOException {
+        if (!Files.isDirectory(source)) {
+            throw new IllegalArgumentException(
+                    "복사할 원본 폴더가 없습니다: " + source);
+        }
         Files.createDirectories(target);
 
         try (Stream<Path> paths = Files.walk(source)) {
@@ -599,6 +1051,62 @@ public class RevisionPipelineService {
         DOCTYPE,
         AUXILIARY,
         CHAPTER
+    }
+
+    private enum RevisionFormat {
+        XML("xml"),
+        DITA("dita");
+
+        private final String value;
+
+        RevisionFormat(String value) {
+            this.value = value;
+        }
+
+        private String value() {
+            return value;
+        }
+    }
+
+    private record BatchPlan(List<String> batchFiles) {
+
+        private String lastBatchFile() {
+            return batchFiles.isEmpty()
+                    ? "없음"
+                    : batchFiles.get(batchFiles.size() - 1);
+        }
+
+        private static BatchPlan of(
+                RevisionFormat inputType,
+                RevisionFormat outputType,
+                Set<String> selectedOptions) {
+
+            String chapterizeBatch = selectedOptions.contains(FILE_NAME_KEEP)
+                    ? "02_topics_Chapterize.bat"
+                    : "02_topics_Chapterize_NotFileNameChange.bat";
+
+            if (inputType == RevisionFormat.XML
+                    && outputType == RevisionFormat.DITA) {
+                return new BatchPlan(List.of(
+                        "03_chapter_Topicalize.bat"));
+            }
+
+            if (inputType == RevisionFormat.XML
+                    && outputType == RevisionFormat.XML) {
+                return new BatchPlan(List.of(
+                        "03_chapter_Topicalize.bat",
+                        chapterizeBatch));
+            }
+
+            if (inputType == RevisionFormat.DITA
+                    && outputType == RevisionFormat.XML) {
+                return new BatchPlan(List.of(chapterizeBatch));
+            }
+
+            return new BatchPlan(List.of(
+                    chapterizeBatch,
+                    "03_chapter_Topicalize.bat"));
+        }
     }
 
     /** 파이프라인 한 단계의 화면 정보와 XSL 실행 설정을 함께 보관한다. */

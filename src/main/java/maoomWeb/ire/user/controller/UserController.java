@@ -21,6 +21,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -148,6 +149,39 @@ public class UserController {
         return "user/userMain";
     }
 
+    @GetMapping("/guide")
+    /** 기능별 사용 가이드 목록을 표시한다. */
+    public String guideList(
+            Authentication authentication,
+            Model model) {
+
+        addCurrentUserModel(authentication, model);
+        model.addAttribute("guides", getGuides());
+        return "user/guide/guideList";
+    }
+
+    @GetMapping("/guide/{guideKey}")
+    /** 선택한 사용 가이드 상세 화면을 표시한다. */
+    public String guideDetail(
+            @PathVariable String guideKey,
+            Authentication authentication,
+            Model model) {
+
+        Map<String,String> guide = getGuides()
+                .stream()
+                .filter(item -> guideKey.equals(item.get("key")))
+                .findFirst()
+                .orElse(null);
+
+        if(guide == null){
+            return "redirect:/guide";
+        }
+
+        addCurrentUserModel(authentication, model);
+        model.addAttribute("guide", guide);
+        return "user/guide/guideDetail";
+    }
+
     @GetMapping("/admin/main")
     /** 관리자 메인 화면을 표시한다. */
     public String adminMain(
@@ -165,6 +199,65 @@ public class UserController {
                 "currentUserId",
                 currentUserService.getUserId(authentication));
         return "admin/adminMain";
+    }
+
+    private void addCurrentUserModel(
+            Authentication authentication,
+            Model model) {
+
+        model.addAttribute(
+                "currentUserName",
+                currentUserService.getUserName(authentication));
+        model.addAttribute(
+                "currentUserId",
+                currentUserService.getUserId(authentication));
+        model.addAttribute(
+                "administrator",
+                currentUserService.isAdministrator(authentication));
+    }
+
+    private List<Map<String,String>> getGuides() {
+
+        return List.of(
+                guide(
+                        "pdf-review",
+                        "PDF 리뷰 가이드",
+                        "PDF 선택, 댓글 작성, 첨부파일 확인 흐름",
+                        "PDF"),
+                guide(
+                        "color-check",
+                        "견적 컬러체크 가이드",
+                        "도안 컬러체크 엑셀 생성과 결과 확인",
+                        "PDF"),
+                guide(
+                        "ditamap-builder",
+                        "법규 Ditamap Builder 가이드",
+                        "DITAMAP 경로 선택과 구조 생성 절차",
+                        "DITA"),
+                guide(
+                        "ber",
+                        "BER 반영 가이드",
+                        "BER 엑셀 생성과 DB 반영 작업",
+                        "DITA"),
+                guide(
+                        "revision",
+                        "정제 가이드",
+                        "DITA 정제 옵션 선택과 실행 결과 확인",
+                        "DITA"));
+    }
+
+    private Map<String,String> guide(
+            String key,
+            String title,
+            String description,
+            String category) {
+
+        Map<String,String> guide = new LinkedHashMap<>();
+        guide.put("key", key);
+        guide.put("title", title);
+        guide.put("description", description);
+        guide.put("category", category);
+        return guide;
     }
     
     @GetMapping("/pdf/list")
