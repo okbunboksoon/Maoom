@@ -47,14 +47,14 @@
 
         <input type="hidden" id="outputPath">
 
-        <div class="type-row" aria-label="output형태">
-            <strong>output형태</strong>
+        <div class="type-row" aria-label="OutPutType">
+            <strong>OutPutType</strong>
             <label>
-                <input type="checkbox" name="outputType" value="xml">
+                <input type="checkbox" name="outputType" value="XML">
                 xml
             </label>
             <label>
-                <input type="checkbox" name="outputType" value="dita">
+                <input type="checkbox" name="outputType" value="DITA">
                 dita
             </label>
         </div>
@@ -166,8 +166,8 @@ function renderOptions(items) {
         'DELETE_DRAFT_COMMENT'
     ];
     const compactLabels = {
-        FILE_NAME_KEEP: '파일명 유지',
-        REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET: '속성 및 세션 지우기',
+        FILE_NAME_KEEP: '파일명 변경(ex t00000, t00001)',
+        REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET: 'deliveryTarget 및 Simple operation 지우기',
         DELETE_DRAFT_COMMENT: 'Draft Comment 지우기'
     };
     const byId = new Map(items.map(function(item) {
@@ -318,7 +318,7 @@ runButton.addEventListener('click', async function() {
     }
     if (!outputType) {
         showResult('error', '형태 선택 필요',
-            'output형태를 선택하세요.', []);
+            'OutPut형태를 선택하세요.', []);
         return;
     }
     runButton.disabled = true;

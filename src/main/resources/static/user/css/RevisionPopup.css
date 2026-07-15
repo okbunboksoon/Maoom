@@ -163,8 +163,8 @@ body{
 
 .option-list{
     display:grid;
-    grid-template-columns:repeat(3, max-content);
-    gap:12px 24px;
+    grid-template-columns:1fr;
+    gap:10px;
     align-items:center;
 }
 
@@ -261,6 +261,14 @@ button:disabled{
     gap:9px;
 }
 
+.result-panel[data-status="running"] .result-heading strong::after{
+    content:" ⏳";
+    display:inline-block;
+    margin-left:4px;
+    animation:hourglass-spin 1.2s linear infinite;
+    transform-origin:50% 55%;
+}
+
 .status-indicator{
     width:10px;
     height:10px;
@@ -289,6 +297,11 @@ button:disabled{
 @keyframes pulse{
     from{opacity:.35}
     to{opacity:1}
+}
+
+@keyframes hourglass-spin{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
 }
 
 .modal-backdrop{
@@ -438,7 +451,7 @@ button:disabled{
     }
 
     .option-list{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:1fr;
     }
 
     .bookmap-modal{

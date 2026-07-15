@@ -11,11 +11,7 @@ class DitamapBuilderServiceTest {
 
     @Test
     void treatsMappedDrivePathAsAllowedUncChild() throws Exception {
-        DitamapBuilderService service = new DitamapBuilderService(
-                "",
-                new DitamapLegalHashService(false, ""),
-                null,
-                null);
+        DitamapPathService service = new DitamapPathService("");
 
         cacheMappedDrive(service, "V:", "\\\\192.168.10.221\\QC_Docs");
 
@@ -27,11 +23,7 @@ class DitamapBuilderServiceTest {
 
     @Test
     void rejectsMappedDrivePathOutsideAllowedUncRoot() throws Exception {
-        DitamapBuilderService service = new DitamapBuilderService(
-                "",
-                new DitamapLegalHashService(false, ""),
-                null,
-                null);
+        DitamapPathService service = new DitamapPathService("");
 
         cacheMappedDrive(service, "V:", "\\\\192.168.10.221\\QC_Docs");
 
@@ -43,12 +35,12 @@ class DitamapBuilderServiceTest {
 
     @SuppressWarnings("unchecked")
     private void cacheMappedDrive(
-            DitamapBuilderService service,
+            DitamapPathService service,
             String drive,
             String remote)
             throws Exception {
         Field field =
-                DitamapBuilderService.class.getDeclaredField("mappedDriveCache");
+                DitamapPathService.class.getDeclaredField("mappedDriveCache");
         field.setAccessible(true);
         ((Map<String, String>)field.get(service)).put(drive, remote);
     }

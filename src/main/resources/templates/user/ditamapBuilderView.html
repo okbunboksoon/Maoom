@@ -51,7 +51,7 @@
             <button id="runBatchButton"
                     class="ditamap-arrow-btn"
                     type="button"
-                    title="legal hash 및 merge 배치 실행"
+                    title="법규 DITAMAP 편집 팝업 열기"
                     disabled>
                 <span aria-hidden="true">→</span>
             </button>
@@ -1183,6 +1183,11 @@ runBatchButton.addEventListener('click', async function(){
         return;
     }
 
+    /*
+     * 가운데 화살표는 더 이상 legal-hash 배치를 실행하지 않는다.
+     * 기준 DITAMAP을 선택한 뒤 법규 편집 팝업을 열고, 팝업에서 만든 rows를
+     * 오른쪽 트리에 반영한 다음 저장 API가 최종 LM_*.ditamap을 작성한다.
+     */
     openLegalEditorPopup();
 });
 

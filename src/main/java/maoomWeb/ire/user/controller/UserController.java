@@ -271,6 +271,12 @@ public class UserController {
     public String pdfList2() {
         return "user/revision/revisionPopup";
     }
+
+    @GetMapping("/multilingual/list")
+    /** 다국어 변환 입력 경로 선택 팝업 화면을 표시한다. */
+    public String multilingual() {
+        return "user/multilingual/multilingualPopup";
+    }
     
     @GetMapping("/page/calc")
     public String pdfList3() {

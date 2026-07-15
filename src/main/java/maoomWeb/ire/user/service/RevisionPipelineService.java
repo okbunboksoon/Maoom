@@ -27,6 +27,7 @@ import org.springframework.stereotype.Service;
 import maoomWeb.ire.user.dto.RevisionOptionDto;
 import maoomWeb.ire.user.dto.RevisionRunRequest;
 import maoomWeb.ire.user.dto.RevisionRunResult;
+import maoomWeb.ire.user.service.RevisionPipelineCatalog.BatchPlan;
 
 /**
  * DITA/DITAMAP 원본에 선택된 XSL 변환을 순서대로 적용하는 정제 파이프라인이다.
@@ -46,12 +47,9 @@ public class RevisionPipelineService {
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss-SSS");
     private static final String BOOKMAP_MAPNAME_REQUIRED =
             "BOOKMAP_MAPNAME_REQUIRED:";
-    private static final Charset BATCH_CHARSET = Charset.forName("MS949");
-    private static final String FILE_NAME_KEEP = "FILE_NAME_KEEP";
-    private static final String REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET =
-            "REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET";
-    private static final String DELETE_DRAFT_COMMENT =
-            "DELETE_DRAFT_COMMENT";
+    private static final Charset BATCH_FILE_CHARSET = StandardCharsets.UTF_8;
+    private static final Charset BATCH_OUTPUT_CHARSET = Charset.forName("MS949");
+    private static final String SHARED_XSL_ROOT = "shared-xsl";
 
     // 이 목록의 순서가 화면 표시 순서이자 실제 XSL 실행 순서다.
     private static final List<RevisionStep> STEPS = List.of(
@@ -128,19 +126,7 @@ public class RevisionPipelineService {
 
     /** 내부 파이프라인 정의에서 화면에 필요한 ID, 이름과 설명만 반환한다. */
     public List<RevisionOptionDto> getOptions() {
-        return List.of(
-                new RevisionOptionDto(
-                        FILE_NAME_KEEP,
-                        "파일명 유지",
-                        "Chapter 변환 시 파일명 유지 배치를 실행합니다."),
-                new RevisionOptionDto(
-                        REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
-                        "속성 및 세션 지우기",
-                        "deliveryTarget 속성과 Simple operation 섹션을 제거합니다."),
-                new RevisionOptionDto(
-                        DELETE_DRAFT_COMMENT,
-                        "Draft Comment 지우기",
-                        "draft-comment 태그를 제거합니다."));
+        return RevisionPipelineCatalog.options();
     }
 
     /**
@@ -158,9 +144,9 @@ public class RevisionPipelineService {
             RevisionFormat outputType = requireRevisionFormat(
                     request.outputType(),
                     "출력");
-            Set<String> selectedOptions = validateRevisionOptions(
+            Set<String> selectedOptions = RevisionPipelineCatalog.validateOptions(
                     request.optionIds());
-            BatchPlan batchPlan = BatchPlan.of(
+            BatchPlan batchPlan = RevisionPipelineCatalog.createBatchPlan(
                     inputType,
                     outputType,
                     selectedOptions);
@@ -168,6 +154,7 @@ public class RevisionPipelineService {
             // 원본을 직접 수정하지 않도록 실행 PC의 .maoomtool 아래 작업 폴더에서 처리한다.
             workspace = createWorkDirectory(input);
             copyDirectory(toolDirectory, workspace);
+            copySharedXslDirectory(workspace.resolve("xsl"));
             Files.createDirectories(workspace.resolve("temp"));
             Files.createDirectories(workspace.resolve("topics"));
             Files.createDirectories(workspace.resolve("chapter"));
@@ -385,10 +372,15 @@ public class RevisionPipelineService {
             return files
                 .filter(Files::isRegularFile)
                 .map(path -> path.getFileName().toString())
-                .filter(name -> name.toLowerCase().endsWith(".xml"))
+                .filter(this::isBookmapChapterFile)
                 .sorted(this::compareChapterFileName)
                 .toList();
         }
+    }
+
+    private boolean isBookmapChapterFile(String fileName) {
+        return fileName.toLowerCase().endsWith(".xml")
+                || leadingChapterNumber(fileName) >= 0;
     }
 
     private int compareChapterFileName(String left, String right) {
@@ -420,7 +412,7 @@ public class RevisionPipelineService {
     }
 
     private int leadingChapterNumber(String fileName) {
-        if (fileName.length() < 3 || fileName.charAt(2) != '_') {
+        if (fileName.length() < 2) {
             return -1;
         }
 
@@ -470,26 +462,6 @@ public class RevisionPipelineService {
                 .replace(">", "&gt;");
     }
 
-    private Set<String> validateRevisionOptions(List<String> requestedOptions) {
-        if (requestedOptions == null || requestedOptions.isEmpty()) {
-            return Set.of();
-        }
-
-        Set<String> available = Set.of(
-                FILE_NAME_KEEP,
-                REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
-                DELETE_DRAFT_COMMENT);
-
-        for (String option : requestedOptions) {
-            if (!available.contains(option)) {
-                throw new IllegalArgumentException(
-                        "알 수 없는 정제 옵션입니다: " + option);
-            }
-        }
-
-        return Set.copyOf(requestedOptions);
-    }
-
     private void prepareBatchOptions(
             Path workspace,
             String batchFileName,
@@ -501,16 +473,16 @@ public class RevisionPipelineService {
         }
 
         boolean removeSimpleOperation = selectedOptions.contains(
-                REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET);
+                RevisionPipelineCatalog.REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET);
         boolean deleteDraftComment = selectedOptions.contains(
-                DELETE_DRAFT_COMMENT);
+                RevisionPipelineCatalog.DELETE_DRAFT_COMMENT);
 
         if (!removeSimpleOperation && !deleteDraftComment) {
             return;
         }
 
         Path batchFile = workspace.resolve(batchFileName);
-        String content = Files.readString(batchFile, BATCH_CHARSET);
+        String content = Files.readString(batchFile, BATCH_FILE_CHARSET);
         String lineSeparator = content.contains("\r\n") ? "\r\n" : "\n";
         String currentSource = "temp\\0180-translate_no_tagging.xml";
         List<String> extraLines = new ArrayList<>();
@@ -522,7 +494,7 @@ public class RevisionPipelineService {
                     extraLines,
                     currentSource,
                     output,
-                    "0402-Remove_Simple_Operation_And_DeliveryTarget.xsl.xsl");
+                    "0402-Remove_Simple_Operation_And_DeliveryTarget.xsl");
             currentSource = output;
             logs.add("옵션 추가: 속성 및 세션 지우기");
         }
@@ -559,7 +531,7 @@ public class RevisionPipelineService {
         Files.writeString(
                 batchFile,
                 String.join(lineSeparator, patched),
-                BATCH_CHARSET);
+                BATCH_FILE_CHARSET);
     }
 
     private void appendOptionTransform(
@@ -604,7 +576,7 @@ public class RevisionPipelineService {
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(
                         process.getInputStream(),
-                        BATCH_CHARSET))) {
+                        BATCH_OUTPUT_CHARSET))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 if (!line.isBlank()) {
@@ -919,6 +891,54 @@ public class RevisionPipelineService {
         return extracted;
     }
 
+    private void copySharedXslDirectory(Path target) throws IOException {
+        deleteDirectoryQuietly(target);
+
+        ClassPathResource root = new ClassPathResource(SHARED_XSL_ROOT);
+        if (root.isFile()) {
+            copyDirectory(root.getFile().toPath(), target);
+            return;
+        }
+
+        PathMatchingResourcePatternResolver resolver =
+                new PathMatchingResourcePatternResolver();
+
+        for (Resource resource : resolver.getResources(
+                "classpath*:" + SHARED_XSL_ROOT + "/**/*")) {
+            if (!resource.isReadable()) {
+                continue;
+            }
+
+            String url = URLDecoder.decode(
+                    resource.getURL().toString(),
+                    StandardCharsets.UTF_8);
+            int index = url.lastIndexOf(SHARED_XSL_ROOT + "/");
+            if (index < 0) {
+                continue;
+            }
+
+            String relative = url.substring(
+                    index + (SHARED_XSL_ROOT + "/").length());
+            if (relative.isBlank() || relative.endsWith("/")) {
+                continue;
+            }
+
+            Path destination = target.resolve(relative).normalize();
+            if (!destination.startsWith(target.normalize())) {
+                throw new IllegalArgumentException(
+                        "공용 XSL 리소스 경로가 올바르지 않습니다: " + relative);
+            }
+
+            Files.createDirectories(destination.getParent());
+            try (var input = resource.getInputStream()) {
+                Files.copy(
+                        input,
+                        destination,
+                        StandardCopyOption.REPLACE_EXISTING);
+            }
+        }
+    }
+
     /** 원본 topics와 XSL 디렉터리를 임시 작업 공간으로 재귀 복사한다. */
     private void copyDirectory(Path source, Path target)
             throws IOException {
@@ -1051,62 +1071,6 @@ public class RevisionPipelineService {
         DOCTYPE,
         AUXILIARY,
         CHAPTER
-    }
-
-    private enum RevisionFormat {
-        XML("xml"),
-        DITA("dita");
-
-        private final String value;
-
-        RevisionFormat(String value) {
-            this.value = value;
-        }
-
-        private String value() {
-            return value;
-        }
-    }
-
-    private record BatchPlan(List<String> batchFiles) {
-
-        private String lastBatchFile() {
-            return batchFiles.isEmpty()
-                    ? "없음"
-                    : batchFiles.get(batchFiles.size() - 1);
-        }
-
-        private static BatchPlan of(
-                RevisionFormat inputType,
-                RevisionFormat outputType,
-                Set<String> selectedOptions) {
-
-            String chapterizeBatch = selectedOptions.contains(FILE_NAME_KEEP)
-                    ? "02_topics_Chapterize.bat"
-                    : "02_topics_Chapterize_NotFileNameChange.bat";
-
-            if (inputType == RevisionFormat.XML
-                    && outputType == RevisionFormat.DITA) {
-                return new BatchPlan(List.of(
-                        "03_chapter_Topicalize.bat"));
-            }
-
-            if (inputType == RevisionFormat.XML
-                    && outputType == RevisionFormat.XML) {
-                return new BatchPlan(List.of(
-                        "03_chapter_Topicalize.bat",
-                        chapterizeBatch));
-            }
-
-            if (inputType == RevisionFormat.DITA
-                    && outputType == RevisionFormat.XML) {
-                return new BatchPlan(List.of(chapterizeBatch));
-            }
-
-            return new BatchPlan(List.of(
-                    chapterizeBatch,
-                    "03_chapter_Topicalize.bat"));
-        }
     }
 
     /** 파이프라인 한 단계의 화면 정보와 XSL 실행 설정을 함께 보관한다. */

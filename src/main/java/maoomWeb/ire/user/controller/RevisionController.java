@@ -7,11 +7,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.Authentication;
 
 import maoomWeb.ire.user.dto.RevisionOptionDto;
 import maoomWeb.ire.user.dto.RevisionRunRequest;
 import maoomWeb.ire.user.dto.RevisionRunResult;
 import maoomWeb.ire.user.service.RevisionPipelineService;
+import maoomWeb.ire.user.service.CurrentUserService;
+import maoomWeb.ire.user.service.ProjectExecutionLogService;
 
 /**
  * DITA 정제 팝업과 실제 XSL 파이프라인 서비스를 연결하는 REST 컨트롤러.
@@ -25,10 +28,16 @@ import maoomWeb.ire.user.service.RevisionPipelineService;
 public class RevisionController {
 
     private final RevisionPipelineService revisionPipelineService;
+    private final CurrentUserService currentUserService;
+    private final ProjectExecutionLogService projectExecutionLogService;
 
     public RevisionController(
-            RevisionPipelineService revisionPipelineService) {
+            RevisionPipelineService revisionPipelineService,
+            CurrentUserService currentUserService,
+            ProjectExecutionLogService projectExecutionLogService) {
         this.revisionPipelineService = revisionPipelineService;
+        this.currentUserService = currentUserService;
+        this.projectExecutionLogService = projectExecutionLogService;
     }
 
     /** 화면에 표시할 정제 단계 ID, 이름과 설명을 실행 순서대로 반환한다. */
@@ -40,7 +49,33 @@ public class RevisionController {
     /** 선택한 단계만 순서대로 실행하고 결과 경로와 로그를 반환한다. */
     @PostMapping("/run")
     public RevisionRunResult run(
-            @RequestBody RevisionRunRequest request) {
-        return revisionPipelineService.run(request);
+            @RequestBody RevisionRunRequest request,
+            Authentication authentication) {
+
+        Long logId = projectExecutionLogService.start(
+                "REVISION",
+                "DITA 정제 실행",
+                currentUserService.getUserId(authentication),
+                request == null ? null : request.inputPath(),
+                "선택한 정제 파이프라인을 실행합니다.");
+        RevisionRunResult result = revisionPipelineService.run(request);
+
+        if(result.success()){
+            projectExecutionLogService.success(
+                    logId,
+                    result.outputPath(),
+                    "완료 단계 "
+                    + result.completedOptions().size()
+                    + "건");
+        }else{
+            projectExecutionLogService.fail(
+                    logId,
+                    new IllegalStateException(
+                            result.logs().isEmpty()
+                            ? "정제 실행 실패"
+                            : result.logs().get(result.logs().size() - 1)));
+        }
+
+        return result;
     }
 }
