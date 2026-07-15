@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,16 +21,30 @@ import maoomWeb.ire.user.dto.DitamapLegalTarget;
 import maoomWeb.ire.user.dto.DitamapTopicTitleRequest;
 import maoomWeb.ire.user.dto.DitamapTopicTitleResponse;
 import maoomWeb.ire.user.service.DitamapBuilderService;
+import maoomWeb.ire.user.service.CurrentUserService;
+import maoomWeb.ire.user.service.ProjectExecutionLogService;
 
-/** DITAMAP Builder 화면에서 사용하는 API를 담당한다. */
+/**
+ * DITAMAP Builder 화면에서 사용하는 API를 담당한다.
+ *
+ * 현재 법규 DITAMAP 생성 흐름은 서버 배치를 돌려 자동 생성하지 않는다.
+ * 화면에서 기준 DITAMAP을 읽고, 사용자가 오른쪽 법규 편집 팝업에서 구조를 만든 뒤
+ * /api/ditamap-builder/legal 저장 API가 최종 LM_*.ditamap 파일을 작성한다.
+ */
 @RestController
 public class DitamapBuilderController {
 
     private final DitamapBuilderService ditamapBuilderService;
+    private final CurrentUserService currentUserService;
+    private final ProjectExecutionLogService projectExecutionLogService;
 
     public DitamapBuilderController(
-            DitamapBuilderService ditamapBuilderService) {
+            DitamapBuilderService ditamapBuilderService,
+            CurrentUserService currentUserService,
+            ProjectExecutionLogService projectExecutionLogService) {
         this.ditamapBuilderService = ditamapBuilderService;
+        this.currentUserService = currentUserService;
+        this.projectExecutionLogService = projectExecutionLogService;
     }
 
     @PostMapping("/api/ditamap-builder/tree")
@@ -91,16 +106,30 @@ public class DitamapBuilderController {
         return ditamapBuilderService.updateAttributes(request);
     }
 
-    @PostMapping("/api/ditamap-builder/legal-hash")
-    public DitamapTreeResponse createLegalHash(
-            @RequestBody DitamapAttributeUpdateRequest request) {
-        return ditamapBuilderService.createLegalHash(request);
-    }
-
     @PostMapping("/api/ditamap-builder/legal")
     public DitamapLegalSaveResponse saveLegalDitamap(
-            @RequestBody DitamapLegalSaveRequest request) {
-        return ditamapBuilderService.saveLegalDitamap(request);
+            @RequestBody DitamapLegalSaveRequest request,
+            Authentication authentication) {
+
+        Long logId = projectExecutionLogService.start(
+                "DITAMAP_BUILDER",
+                "법규 DITAMAP 저장",
+                currentUserService.getUserId(authentication),
+                request == null ? null : request.baseDitamapFile(),
+                "화면에서 편집한 법규 rows를 LM DITAMAP으로 저장합니다.");
+
+        try{
+            DitamapLegalSaveResponse response =
+                    ditamapBuilderService.saveLegalDitamap(request);
+            projectExecutionLogService.success(
+                    logId,
+                    response.savedDitamapFile(),
+                    response.updatedCount() + "건 저장");
+            return response;
+        }catch(RuntimeException exception){
+            projectExecutionLogService.fail(logId, exception);
+            throw exception;
+        }
     }
 
     /*

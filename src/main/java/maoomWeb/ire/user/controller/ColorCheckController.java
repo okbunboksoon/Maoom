@@ -3,8 +3,6 @@ package maoomWeb.ire.user.controller;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.List;
 
 import org.springframework.http.ContentDisposition;
@@ -12,6 +10,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,9 +21,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import maoomWeb.ire.user.dto.DrawingColorCheckDto;
-import maoomWeb.ire.user.dto.DrawingColorCheckImportResult;
-import maoomWeb.ire.user.service.ColorCheckExportService;
-import maoomWeb.ire.user.service.ColorCheckFinalWorkbookService;
+import maoomWeb.ire.user.dto.ColorCheckWorkbookResponse;
+import maoomWeb.ire.user.service.CurrentUserService;
+import maoomWeb.ire.user.service.ColorCheckWorkflowService;
 import maoomWeb.ire.user.service.DrawingColorCheckService;
 
 /**
@@ -40,7 +39,7 @@ import maoomWeb.ire.user.service.DrawingColorCheckService;
  * </ol>
  *
  * <p>컨트롤러는 파일 형식 확인과 HTTP 응답만 담당한다.
- * 실제 PDF 분석은 {@link ColorCheckExportService}, DB 반영은
+ * 실제 PDF 분석과 최종 엑셀 생성 흐름은 {@link ColorCheckWorkflowService}, DB 반영은
  * {@link DrawingColorCheckService}가 담당한다.</p>
  */
 @RestController
@@ -52,22 +51,20 @@ public class ColorCheckController {
                     "application/vnd.openxmlformats-officedocument"
                     + ".spreadsheetml.sheet");
 
-    /** PDF를 읽고 도안 이미지가 포함된 엑셀을 만드는 서비스. */
-    private final ColorCheckExportService colorCheckExportService;
-
     /** 도안별 V/X 값을 조회하고 DB에 저장하는 서비스. */
     private final DrawingColorCheckService drawingColorCheckService;
 
-    /** 검토 엑셀을 최종 도안 발주 내역서 양식으로 만드는 서비스. */
-    private final ColorCheckFinalWorkbookService finalWorkbookService;
+    /** 컬러체크의 PDF 분석, 최종 엑셀 생성, 실행 로그 저장을 묶는 서비스. */
+    private final ColorCheckWorkflowService colorCheckWorkflowService;
+    private final CurrentUserService currentUserService;
 
     public ColorCheckController(
-            ColorCheckExportService colorCheckExportService,
             DrawingColorCheckService drawingColorCheckService,
-            ColorCheckFinalWorkbookService finalWorkbookService) {
-        this.colorCheckExportService = colorCheckExportService;
+            ColorCheckWorkflowService colorCheckWorkflowService,
+            CurrentUserService currentUserService) {
         this.drawingColorCheckService = drawingColorCheckService;
-        this.finalWorkbookService = finalWorkbookService;
+        this.colorCheckWorkflowService = colorCheckWorkflowService;
+        this.currentUserService = currentUserService;
     }
 
     /**
@@ -104,70 +101,17 @@ public class ColorCheckController {
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<byte[]> importExcel(
             @RequestParam("file") MultipartFile file,
-            @RequestParam(value = "updateDatabase", defaultValue = "true") boolean updateDatabase)
+            @RequestParam(value = "updateDatabase", defaultValue = "true") boolean updateDatabase,
+            Authentication authentication)
             throws IOException {
 
         validateExcel(file);
-
-        /*
-         * 이미지가 많은 대용량 엑셀을 byte[]로 복사하지 않고 임시 파일에 한 번
-         * 저장한다. 최종 발주 엑셀은 임시 폴더에 만든 뒤 접속한 사용자 PC에
-         * 내려보낸다. DB 반영 상세 리포트는 파일로 만들지 않고 화면에 건수만 보여준다.
-         */
-        String extension = file.getOriginalFilename()
-                .toLowerCase()
-                .endsWith(".xls")
-                ? ".xls"
-                : ".xlsx";
-        Path uploadedFile = Files.createTempFile(
-                "color-check-import-",
-                extension);
-        Path outputDirectory = Files.createTempDirectory(
-                "color-check-output-");
-        Path finalWorkbook = null;
-
-        try{
-            file.transferTo(uploadedFile);
-            finalWorkbook =
-                    finalWorkbookService.createFinalWorkbook(
-                            uploadedFile,
-                            file.getOriginalFilename(),
-                            outputDirectory);
-
-            DrawingColorCheckImportResult result = updateDatabase
-                    ? importColorCheckValues(uploadedFile)
-                    : new DrawingColorCheckImportResult(
-                            0,
-                            0,
-                            0,
-                            0,
-                            0,
-                            List.of());
-            byte[] excel = Files.readAllBytes(finalWorkbook);
-            String fileName = finalWorkbook.getFileName()
-                    .toString();
-            HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(XLSX_MEDIA_TYPE);
-            headers.setContentDisposition(
-                    ContentDisposition.attachment()
-                    .filename(fileName, StandardCharsets.UTF_8)
-                    .build());
-            headers.setContentLength(excel.length);
-            headers.set("X-Color-Check-Db-Updated", String.valueOf(updateDatabase));
-            headers.set("X-Color-Check-Total", String.valueOf(result.totalRows()));
-            headers.set("X-Color-Check-Inserted", String.valueOf(result.insertedCount()));
-            headers.set("X-Color-Check-Updated", String.valueOf(result.updatedCount()));
-            headers.set("X-Color-Check-Unchanged", String.valueOf(result.unchangedCount()));
-            headers.set("X-Color-Check-Skipped", String.valueOf(result.skippedCount()));
-            return new ResponseEntity<>(
-                    excel,
-                    headers,
-                    HttpStatus.OK);
-        }finally{
-            deleteIfExists(uploadedFile);
-            deleteIfExists(finalWorkbook);
-            deleteIfExists(outputDirectory);
-        }
+        ColorCheckWorkbookResponse workbook =
+                colorCheckWorkflowService.createFinalWorkbook(
+                        file,
+                        updateDatabase,
+                        currentUserService.getUserId(authentication));
+        return createExcelResponse(workbook);
     }
     /**
      * 업로드된 PDF를 분석해 컬러체크용 XLSX를 생성한다.
@@ -179,25 +123,16 @@ public class ColorCheckController {
             value = "/api/pdf/color-check/excel",
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<byte[]> createExcel(
-            @RequestParam("file") MultipartFile file)
+            @RequestParam("file") MultipartFile file,
+            Authentication authentication)
             throws IOException {
 
         validatePdf(file);
-        byte[] excel = colorCheckExportService.createWorkbook(
-                file.getBytes());
-        String fileName = createOutputFileName(
-                file.getOriginalFilename());
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(XLSX_MEDIA_TYPE);
-        headers.setContentDisposition(
-                ContentDisposition.attachment()
-                .filename(fileName, StandardCharsets.UTF_8)
-                .build());
-        headers.setContentLength(excel.length);
-        return new ResponseEntity<>(
-                excel,
-                headers,
-                HttpStatus.OK);
+        ColorCheckWorkbookResponse workbook =
+                colorCheckWorkflowService.createReviewWorkbook(
+                        file,
+                        currentUserService.getUserId(authentication));
+        return createExcelResponse(workbook);
     }
 
     /**
@@ -264,13 +199,6 @@ public class ColorCheckController {
         }
     }
 
-    private DrawingColorCheckImportResult importColorCheckValues(
-            Path uploadedFile)
-            throws IOException {
-        try(InputStream input = Files.newInputStream(uploadedFile)){
-            return drawingColorCheckService.importExcel(input);
-        }
-    }
     /** DB 반영 API에는 XLS/XLSX 파일만 들어오도록 확인한다. */
     private void validateExcel(MultipartFile file) {
 
@@ -291,54 +219,29 @@ public class ColorCheckController {
         }
     }
 
-    /** 원본 PDF 이름 뒤에 "_컬러체크.xlsx"를 붙여 기본 파일명을 만든다. */
-    private String createOutputFileName(String originalName) {
-
-        String baseName = originalName == null
-                ? "color-check"
-                : originalName.replaceFirst("(?i)\\.pdf$", "");
-        return baseName + "_도안분류용.xlsx";
-    }
-
-    /** 임시 파일 경로가 만들어진 경우에만 삭제한다. */
-    private void deleteIfExists(Path path) throws IOException {
-
-        if(path != null){
-            Files.deleteIfExists(path);
-        }
-    }
-
     /**
-     * 기존 파일을 보존하면서 저장할 수 있는 첫 번째 파일명을 찾는다.
-     *
-     * <p>예: {@code sample_컬러체크.xlsx}가 있으면
-     * {@code sample_컬러체크 (1).xlsx}를 확인하고 계속 번호를 증가시킨다.</p>
+     * 컬러체크 워크플로 서비스가 만든 엑셀 바이트를 브라우저 다운로드 응답으로 감싼다.
+     * DB 반영 건수는 기존 화면이 읽는 응답 헤더로 유지한다.
      */
-    private Path findAvailableOutputFile(
-            Path outputDirectory,
-            String fileName) {
-
-        Path firstChoice = outputDirectory.resolve(fileName);
-
-        if(!Files.exists(firstChoice)){
-            return firstChoice;
-        }
-
-        String baseName = fileName.replaceFirst(
-                "(?i)\\.xlsx$",
-                "");
-
-        for(int sequence = 1; ; sequence++){
-            Path candidate = outputDirectory.resolve(
-                    baseName
-                    + " ("
-                    + sequence
-                    + ").xlsx");
-
-            if(!Files.exists(candidate)){
-                return candidate;
-            }
-        }
+    private ResponseEntity<byte[]> createExcelResponse(
+            ColorCheckWorkbookResponse workbook) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(XLSX_MEDIA_TYPE);
+        headers.setContentDisposition(
+                ContentDisposition.attachment()
+                .filename(workbook.fileName(), StandardCharsets.UTF_8)
+                .build());
+        headers.setContentLength(workbook.content().length);
+        headers.set("X-Color-Check-Db-Updated", String.valueOf(workbook.databaseUpdated()));
+        headers.set("X-Color-Check-Total", String.valueOf(workbook.importResult().totalRows()));
+        headers.set("X-Color-Check-Inserted", String.valueOf(workbook.importResult().insertedCount()));
+        headers.set("X-Color-Check-Updated", String.valueOf(workbook.importResult().updatedCount()));
+        headers.set("X-Color-Check-Unchanged", String.valueOf(workbook.importResult().unchangedCount()));
+        headers.set("X-Color-Check-Skipped", String.valueOf(workbook.importResult().skippedCount()));
+        return new ResponseEntity<>(
+                workbook.content(),
+                headers,
+                HttpStatus.OK);
     }
 }
 

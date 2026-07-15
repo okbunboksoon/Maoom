@@ -9,14 +9,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.TimeUnit;
 
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
@@ -29,7 +25,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -56,7 +51,17 @@ import maoomWeb.ire.user.dto.DitamapTopicTitleRequest;
 import maoomWeb.ire.user.dto.DitamapTopicTitleResponse;
 import maoomWeb.ire.user.mapper.DitamapLegalTargetMapper;
 
-/** 설정으로 허용한 DITA 작업 폴더의 DITAMAP 파일을 화면용 트리 구조로 변환한다. */
+/**
+ * 설정으로 허용한 DITA 작업 폴더의 DITAMAP 파일을 화면용 트리 구조로 변환한다.
+ *
+ * 큰 흐름:
+ * 1. 기준 DITAMAP을 읽어 왼쪽 트리로 보여 준다.
+ * 2. 화면/팝업에서 선택한 항목과 법규 마스터 정보를 조합해 오른쪽 법규 트리를 만든다.
+ * 3. 저장 시 기존 Saxon legal-hash 배치를 실행하지 않고, 화면에서 넘어온 rows를
+ *    기준 DITAMAP의 선언/메타데이터에 끼워 넣어 LM_*.ditamap을 직접 작성한다.
+ *
+ * 그래서 이 서비스에는 파일 읽기, 화면용 트리 구성, 속성 저장, 최종 LM DITAMAP 저장만 남긴다.
+ */
 @Service
 public class DitamapBuilderService {
 
@@ -66,20 +71,15 @@ public class DitamapBuilderService {
     private static final String MANUAL_CHECKED_GROUP_TITLE =
             "사용설명서(V체크한 타이틀)";
 
-    private final List<Path> allowedRoots;
-    private final Map<String, String> mappedDriveCache =
-            new ConcurrentHashMap<>();
-    private final DitamapLegalHashService ditamapLegalHashService;
+    private final DitamapPathService ditamapPathService;
     private final DitamapLegalTargetMapper ditamapLegalTargetMapper;
     private final JdbcTemplate jdbcTemplate;
 
     public DitamapBuilderService(
-            @Value("${ditamap.builder.allowed-roots:}") String configuredRoots,
-            DitamapLegalHashService ditamapLegalHashService,
+            DitamapPathService ditamapPathService,
             DitamapLegalTargetMapper ditamapLegalTargetMapper,
             JdbcTemplate jdbcTemplate) {
-        this.allowedRoots = createAllowedRoots(configuredRoots);
-        this.ditamapLegalHashService = ditamapLegalHashService;
+        this.ditamapPathService = ditamapPathService;
         this.ditamapLegalTargetMapper = ditamapLegalTargetMapper;
         this.jdbcTemplate = jdbcTemplate;
     }
@@ -121,10 +121,10 @@ public class DitamapBuilderService {
 
     public DitamapTreeResponse readLegalTemplate() {
         Resource template =
-                new ClassPathResource("revision-tool/xsl/LM-ditamap.ditamap");
+                new ClassPathResource("shared-xsl/LM-ditamap.ditamap");
 
         if(!template.exists()){
-            template = new ClassPathResource("revision-tool/xsl/LM-template.xml");
+            template = new ClassPathResource("shared-xsl/LM-template.xml");
         }
 
         if(!template.exists()){
@@ -151,7 +151,7 @@ public class DitamapBuilderService {
 
     public DitamapTreeResponse readLegalMaster() {
         Resource master =
-                new ClassPathResource("revision-tool/xsl/LM-ditamap.ditamap");
+                new ClassPathResource("shared-xsl/LM-ditamap.ditamap");
 
         if(!master.exists()){
             throw new IllegalArgumentException(
@@ -164,7 +164,7 @@ public class DitamapBuilderService {
 
             return new DitamapTreeResponse(
                     readMapTitle(root, Path.of("LM-ditamap.ditamap")),
-                    "revision-tool/xsl/LM-ditamap.ditamap",
+                    "shared-xsl/LM-ditamap.ditamap",
                     readLegalMasterChildren(root, 1));
         }catch(IOException | ParserConfigurationException
                 | SAXException exception){
@@ -293,10 +293,10 @@ public class DitamapBuilderService {
 
     private List<DitamapLegalTarget> readDefaultLegalTargets() {
         Resource template =
-                new ClassPathResource("revision-tool/xsl/LM-ditamap.ditamap");
+                new ClassPathResource("shared-xsl/LM-ditamap.ditamap");
 
         if(!template.exists()){
-            template = new ClassPathResource("revision-tool/xsl/LM-template.xml");
+            template = new ClassPathResource("shared-xsl/LM-template.xml");
         }
 
         if(!template.exists()){
@@ -478,31 +478,6 @@ public class DitamapBuilderService {
         }
     }
 
-    public DitamapTreeResponse createLegalHash(
-            DitamapAttributeUpdateRequest request) {
-        if(request == null || request.ditamapFile() == null
-                || request.ditamapFile().isBlank()){
-            throw new IllegalArgumentException(
-                    "legal hash를 생성할 DITAMAP 정보가 없습니다.");
-        }
-
-        try{
-            Path legalDitamap =
-                    ditamapLegalHashService.run(findDitamap(request.ditamapFile()));
-            return readTree(legalDitamap.toString());
-        }catch(IOException | InterruptedException
-                | IllegalArgumentException exception){
-            if(exception instanceof InterruptedException){
-                Thread.currentThread().interrupt();
-            }
-
-            throw new IllegalArgumentException(
-                    "legal hash 생성에 실패했습니다. "
-                    + exception.getMessage(),
-                    exception);
-        }
-    }
-
     public DitamapLegalSaveResponse saveLegalDitamap(
             DitamapLegalSaveRequest request) {
         if(request == null){
@@ -515,6 +490,15 @@ public class DitamapBuilderService {
                 : request.rows();
 
         try{
+            /*
+             * 법규 DITAMAP 저장 흐름:
+             * - request.rows(): 오른쪽 법규 편집 화면에서 사용자가 정리한 최종 행 목록이다.
+             * - baseDitamap: 새 파일의 DOCTYPE, PI, root 속성, metadata를 가져올 기준 파일이다.
+             * - outputDitamap: 기준 파일과 같은 폴더에 LM_ 접두사를 붙여 저장한다.
+             *
+             * 과거 legal-hash 배치가 만들던 중간 산출물은 더 이상 만들지 않는다.
+             * 화면 상태를 서버가 그대로 XML로 직렬화해 실제 저장 파일과 UI 상태를 맞춘다.
+             */
             Path baseDitamap = findDitamap(resolveBaseDitamapFile(request));
             Path outputDirectory = baseDitamap.getParent();
 
@@ -773,335 +757,40 @@ public class DitamapBuilderService {
      * 저장 버튼과 분리된 기능이므로, 이 메서드는 파일 저장 작업을 수행하지 않는다.
      */
     public void openFolder(String rawPath) {
-        if(rawPath == null || rawPath.isBlank()){
-            throw new IllegalArgumentException(
-                    "열 폴더 경로가 없습니다.");
-        }
-
-        try{
-            Path path = Path.of(rawPath.trim())
-                    .toAbsolutePath()
-                    .normalize();
-
-            if(!Files.exists(path)){
-                throw new IllegalArgumentException(
-                        "경로가 존재하지 않습니다: " + path);
-            }
-
-            Path realPath = path.toRealPath();
-            // 화면에서 전달된 경로라도 허용 루트 밖이면 탐색기를 열지 않는다.
-            findAllowedRoot(realPath);
-            Path folder = Files.isRegularFile(realPath)
-                    ? realPath.getParent()
-                    : realPath;
-
-            if(folder == null || !Files.isDirectory(folder)){
-                throw new IllegalArgumentException(
-                        "열 수 있는 폴더가 아닙니다: " + realPath);
-            }
-
-            /*
-             * cmd start는 기존 Explorer 창을 재사용하면서 작업표시줄만 깜빡일 때가 있다.
-             * /n,/e 옵션으로 새 탐색기 창을 직접 열어 사용자가 폴더를 바로 찾기 쉽게 한다.
-             * 단, Windows의 포커스 탈취 방지 정책 때문에 항상 최상위 포커스를 보장할 수는 없다.
-             */
-            new ProcessBuilder(
-                    "explorer.exe",
-                    "/n,/e," + folder)
-                    .start();
-        }catch(IOException exception){
-            throw new IllegalArgumentException(
-                    "폴더를 열지 못했습니다. " + exception.getMessage(),
-                    exception);
-        }
+        ditamapPathService.openFolder(rawPath);
     }
 
     private Path findDitamap(String rawPath) throws IOException {
-        Path path = Path.of(rawPath.trim())
-                .toAbsolutePath()
-                .normalize();
-
-        if(!Files.exists(path)){
-            throw new IllegalArgumentException(
-                    "경로가 존재하지 않습니다: " + path);
-        }
-
-        Path realPath = path.toRealPath();
-        Path realAllowedRoot = findAllowedRoot(realPath);
-
-        if(!isSameOrChildPath(realPath, realAllowedRoot)){
-            throw new IllegalArgumentException(
-                    "허용된 DITA 작업 경로는 "
-                    + realAllowedRoot
-                    + " 아래입니다.");
-        }
-
-        if(Files.isRegularFile(realPath)){
-            if(isDitamap(realPath)){
-                return realPath;
-            }
-
-            throw new IllegalArgumentException(
-                    "DITAMAP 파일이 아닙니다: "
-                    + realPath.getFileName());
-        }
-
-        try(var stream = Files.list(realPath)){
-            return stream
-                    .filter(Files::isRegularFile)
-                    .filter(this::isDitamap)
-                    .sorted(Comparator.comparing(
-                            candidate -> candidate.getFileName()
-                                    .toString()))
-                    .findFirst()
-                    .orElseThrow(() -> new IllegalArgumentException(
-                            "해당 폴더에서 .ditamap 파일을 찾지 못했습니다."));
-        }
-    }
-
-    private List<Path> createAllowedRoots(String configuredRoots) {
-        List<Path> roots = new ArrayList<>();
-
-        if(configuredRoots != null && !configuredRoots.isBlank()){
-            for(String rawRoot : configuredRoots.split(";")){
-                String root = rawRoot.trim();
-
-                if(root.isBlank()){
-                    continue;
-                }
-
-                roots.add(Path.of(expandPathTokens(root))
-                        .toAbsolutePath()
-                        .normalize());
-            }
-        }
-
-        return roots.stream()
-                .distinct()
-                .toList();
-    }
-
-    private String expandPathTokens(String path) {
-        return path.replace(
-                "${user.home}",
-                System.getProperty("user.home"));
+        return ditamapPathService.findDitamap(rawPath);
     }
 
     private Path findAllowedRoot(Path path) throws IOException {
-        Path realPath = path.toRealPath();
-
-        if(allowedRoots.isEmpty()){
-            throw new IllegalArgumentException(describeAllowedRoots());
-        }
-
-        for(Path allowedRoot : allowedRoots){
-            if(!Files.exists(allowedRoot)){
-                continue;
-            }
-
-            Path realAllowedRoot = allowedRoot.toRealPath();
-
-            if(isSameOrChildPath(realPath, realAllowedRoot)){
-                return realAllowedRoot;
-            }
-        }
-
-        throw new IllegalArgumentException(
-                "허용된 DITA 작업 경로는 "
-                + describeAllowedRoots()
-                + " 아래입니다.");
+        return ditamapPathService.findAllowedRoot(path);
     }
 
     private boolean isUnderAllowedRoot(Path path) throws IOException {
-        try{
-            findAllowedRoot(path);
-            return true;
-        }catch(IllegalArgumentException exception){
-            return false;
-        }
+        return ditamapPathService.isUnderAllowedRoot(path);
     }
 
     private Path resolveAllowedRelativePath(String relativePath)
             throws IOException {
-        if(relativePath == null || relativePath.isBlank()){
-            throw new IllegalArgumentException(
-                    "수정할 파일 정보가 없습니다.");
-        }
-
-        for(Path allowedRoot : allowedRoots){
-            if(!Files.exists(allowedRoot)){
-                continue;
-            }
-
-            Path target = allowedRoot.resolve(relativePath)
-                    .normalize();
-
-            if(Files.exists(target)
-                    && isSameOrChildPath(
-                            target.toRealPath(),
-                            allowedRoot.toRealPath())){
-                return target;
-            }
-        }
-
-        throw new IllegalArgumentException(
-                "허용된 작업 경로 안에서 수정할 파일을 찾지 못했습니다: "
-                + relativePath);
-    }
-
-    private String describeAllowedRoots() {
-        if(allowedRoots.isEmpty()){
-            return "설정된 작업 루트가 없습니다. ditamap.builder.allowed-roots를 설정해 주세요.";
-        }
-
-        return allowedRoots.stream()
-                .map(Path::toString)
-                .reduce((left, right) -> left + ", " + right)
-                .orElse("(없음)");
+        return ditamapPathService.resolveAllowedRelativePath(relativePath);
     }
 
     private String toAllowedRelativePath(Path target)
             throws IOException {
-        Path realTarget = target.toRealPath();
-
-        for(Path allowedRoot : allowedRoots){
-            if(!Files.exists(allowedRoot)){
-                continue;
-            }
-
-            Path realAllowedRoot = allowedRoot.toRealPath();
-
-            if(!isSameOrChildPath(realTarget, realAllowedRoot)){
-                continue;
-            }
-
-            if(realTarget.startsWith(realAllowedRoot)){
-                return realAllowedRoot.relativize(realTarget)
-                        .toString();
-            }
-
-            String targetText = toComparablePathText(realTarget);
-            String rootText = toComparablePathText(realAllowedRoot);
-
-            if(targetText.equals(rootText)){
-                return "";
-            }
-
-            return targetText.substring(rootText.length() + 1)
-                    .replace('/', '\\');
-        }
-
-        throw new IllegalArgumentException(
-                "허용된 작업 경로 안에서 상대 경로를 만들 수 없습니다: "
-                + target);
+        return ditamapPathService.toAllowedRelativePath(target);
     }
 
     private boolean isSameOrChildPath(
             Path path,
             Path root)
             throws IOException {
-        return isSameOrChildPath(
-                path.toRealPath().toString(),
-                root.toRealPath().toString());
-    }
-
-    boolean isSameOrChildPath(
-            String path,
-            String root) {
-        String pathText = normalizeComparablePath(
-                convertMappedDrivePathToUnc(path));
-        String rootText = normalizeComparablePath(
-                convertMappedDrivePathToUnc(root));
-
-        return pathText.equals(rootText)
-                || pathText.startsWith(rootText + "\\");
-    }
-
-    private String toComparablePathText(Path path)
-            throws IOException {
-        String text = path.toRealPath()
-                .toString();
-        return normalizeComparablePath(convertMappedDrivePathToUnc(text));
-    }
-
-    private String normalizeComparablePath(String path) {
-        String normalized = path.replace('/', '\\');
-
-        while(normalized.endsWith("\\") && normalized.length() > 3){
-            normalized = normalized.substring(0, normalized.length() - 1);
-        }
-
-        return normalized.toLowerCase(Locale.ROOT);
-    }
-
-    private String convertMappedDrivePathToUnc(String path) {
-        if(path.length() < 3
-                || path.charAt(1) != ':'
-                || path.charAt(2) != '\\'){
-            return path;
-        }
-
-        String drive = path.substring(0, 2)
-                .toUpperCase(Locale.ROOT);
-        String remote = mappedDriveCache.computeIfAbsent(
-                drive,
-                this::readMappedDriveRemote);
-
-        if(remote.isBlank()){
-            return path;
-        }
-
-        return remote + path.substring(2);
-    }
-
-    private String readMappedDriveRemote(String drive) {
-        try{
-            Process process = new ProcessBuilder(
-                    "cmd",
-                    "/c",
-                    "net",
-                    "use",
-                    drive)
-                    .redirectErrorStream(true)
-                    .start();
-
-            if(!process.waitFor(3, TimeUnit.SECONDS)){
-                process.destroyForcibly();
-                return "";
-            }
-
-            String output = new String(
-                    process.getInputStream().readAllBytes(),
-                    StandardCharsets.UTF_8);
-            int uncStart = output.indexOf("\\\\");
-
-            if(uncStart < 0){
-                return "";
-            }
-
-            int uncEnd = uncStart;
-
-            while(uncEnd < output.length()
-                    && !Character.isWhitespace(output.charAt(uncEnd))){
-                uncEnd++;
-            }
-
-            return output.substring(uncStart, uncEnd)
-                    .replace('/', '\\');
-        }catch(IOException | InterruptedException exception){
-            if(exception instanceof InterruptedException){
-                Thread.currentThread().interrupt();
-            }
-
-            return "";
-        }
+        return ditamapPathService.isSameOrChildPath(path, root);
     }
 
     private boolean isDitamap(Path path) {
-        return path.getFileName()
-                .toString()
-                .toLowerCase()
-                .endsWith(".ditamap");
+        return ditamapPathService.isDitamap(path);
     }
 
     private Document parseXml(Path path)
@@ -2020,3 +1709,4 @@ public class DitamapBuilderService {
             String value) {
     }
 }
+

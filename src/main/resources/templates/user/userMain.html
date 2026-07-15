@@ -226,6 +226,13 @@ const launcherMenus = [
         action:openRevisionPopup
     },
     {
+        title:'다국어 변환',
+        description:'입력 경로 기준 다국어 변환',
+        category:'DITA',
+        icon:'fa-language',
+        action:openMultilingualPopup
+    },
+    {
         title:'배치(X)',
         description:'페이지 계산 및 배치',
         category:'PDF',
@@ -559,7 +566,16 @@ function openRevisionPopup(){
     window.open(
         '/revision/list',
         'revisionPopup',
-        'width=600,height=650'
+        'width=600,height=760'
+    );
+}
+
+// 다국어 변환 연결 전용 입력 화면을 연다.
+function openMultilingualPopup(){
+    window.open(
+        '/multilingual/list',
+        'multilingualPopup',
+        'width=600,height=450'
     );
 }
 </script>

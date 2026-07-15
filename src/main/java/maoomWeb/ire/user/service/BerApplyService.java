@@ -19,6 +19,7 @@ import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.stereotype.Service;
@@ -43,6 +44,7 @@ import maoomWeb.ire.user.dto.BerApplyResult;
 public class BerApplyService {
 
     private static final String RESOURCE_ROOT = "revision-tool";
+    private static final String SHARED_XSL_ROOT = "shared-xsl";
     private static final String BER_BATCH =
             "04_KUS_asis-tobe-apply_NotFileNameChange.bat";
     /**
@@ -284,6 +286,8 @@ public class BerApplyService {
             }
         }
 
+        copySharedXslDirectory(workDirectory.resolve("xsl"));
+
         for(String requiredFile : REQUIRED_TOOL_FILES){
             Path requiredPath = workDirectory.resolve(requiredFile);
 
@@ -291,6 +295,54 @@ public class BerApplyService {
                 throw new IllegalArgumentException(
                         "BER 배치 필수 파일을 찾지 못했습니다: "
                         + requiredFile);
+            }
+        }
+    }
+
+    private void copySharedXslDirectory(Path target) throws IOException {
+        if(Files.exists(target)){
+            deleteDirectory(target);
+        }
+
+        ClassPathResource root = new ClassPathResource(SHARED_XSL_ROOT);
+        if(root.isFile()){
+            copyDirectory(root.getFile().toPath(), target);
+            return;
+        }
+
+        Resource[] resources = resourceResolver.getResources(
+                "classpath*:" + SHARED_XSL_ROOT + "/**/*");
+
+        for(Resource resource : resources){
+            if(!resource.exists() || !resource.isReadable()){
+                continue;
+            }
+
+            String url = resource.getURL().toString().replace('\\', '/');
+            int index = url.lastIndexOf(SHARED_XSL_ROOT + "/");
+            if(index < 0){
+                continue;
+            }
+
+            String relativePath = url.substring(
+                    index + (SHARED_XSL_ROOT + "/").length());
+            if(relativePath.isBlank() || relativePath.endsWith("/")){
+                continue;
+            }
+
+            Path destination = target.resolve(relativePath).normalize();
+            if(!destination.startsWith(target.normalize())){
+                throw new IllegalArgumentException(
+                        "공용 XSL 리소스 경로가 올바르지 않습니다: "
+                        + relativePath);
+            }
+
+            Files.createDirectories(destination.getParent());
+            try(var input = resource.getInputStream()){
+                Files.copy(
+                        input,
+                        destination,
+                        StandardCopyOption.REPLACE_EXISTING);
             }
         }
     }

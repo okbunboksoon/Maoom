@@ -2,8 +2,6 @@ package maoomWeb.ire.user.controller;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.core.io.Resource;
@@ -22,10 +20,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import maoomWeb.ire.user.dto.CommentAttachmentDto;
 import maoomWeb.ire.user.dto.CommentDto;
+import maoomWeb.ire.user.dto.CommentExportResponse;
 import maoomWeb.ire.user.dto.CommentReplyDto;
 import maoomWeb.ire.user.service.CommentAttachmentService;
-import maoomWeb.ire.user.service.CommentExportService;
-import maoomWeb.ire.user.service.CommentPdfExportService;
+import maoomWeb.ire.user.service.CommentExportWorkflowService;
 import maoomWeb.ire.user.service.CommentService;
 import maoomWeb.ire.user.service.CurrentUserService;
 import maoomWeb.ire.user.service.PdfAccessService;
@@ -47,22 +45,19 @@ public class CommentController {
     private final CommentService commentService;
     private final CurrentUserService currentUserService;
     private final CommentAttachmentService attachmentService;
-    private final CommentExportService exportService;
-    private final CommentPdfExportService pdfExportService;
+    private final CommentExportWorkflowService commentExportWorkflowService;
     private final PdfAccessService pdfAccessService;
 
     public CommentController(
             CommentService commentService,
             CurrentUserService currentUserService,
             CommentAttachmentService attachmentService,
-            CommentExportService exportService,
-            CommentPdfExportService pdfExportService,
+            CommentExportWorkflowService commentExportWorkflowService,
             PdfAccessService pdfAccessService) {
         this.commentService = commentService;
         this.currentUserService = currentUserService;
         this.attachmentService = attachmentService;
-        this.exportService = exportService;
-        this.pdfExportService = pdfExportService;
+        this.commentExportWorkflowService = commentExportWorkflowService;
         this.pdfAccessService = pdfAccessService;
     }
 
@@ -239,26 +234,12 @@ public class CommentController {
                 pdfId,
                 userId(authentication));
 
-        byte[] workbook =
-                exportService.createWorkbook(pdfId);
-        String exportFileName =
-                buildCommentExportFileName(
+        CommentExportResponse export =
+                commentExportWorkflowService.createExcel(
+                        pdfId,
                         fileName,
-                        "xlsx");
-
-        return ResponseEntity.ok()
-                .contentType(
-                        MediaType.parseMediaType(
-                                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"))
-                .header(
-                        HttpHeaders.CONTENT_DISPOSITION,
-                        ContentDisposition.attachment()
-                        .filename(
-                                exportFileName,
-                                StandardCharsets.UTF_8)
-                        .build()
-                        .toString())
-                .body(workbook);
+                        userId(authentication));
+        return createDownloadResponse(export);
     }
 
     /**
@@ -278,56 +259,31 @@ public class CommentController {
                 fileId,
                 userId(authentication));
 
-        byte[] pdf =
-                pdfExportService.createAnnotatedPdf(
+        CommentExportResponse export =
+                commentExportWorkflowService.createPdf(
                         pdfId,
-                        fileId);
-        String exportFileName =
-                buildCommentExportFileName(
+                        fileId,
                         fileName,
-                        "pdf");
+                        userId(authentication));
+        return createDownloadResponse(export);
+    }
+
+    /** 워크플로우 서비스가 생성한 파일을 브라우저 다운로드 응답으로 변환한다. */
+    private ResponseEntity<byte[]> createDownloadResponse(
+            CommentExportResponse export) {
 
         return ResponseEntity.ok()
-                .contentType(MediaType.APPLICATION_PDF)
-                .contentLength(pdf.length)
+                .contentType(export.mediaType())
+                .contentLength(export.content().length)
                 .header(
                         HttpHeaders.CONTENT_DISPOSITION,
                         ContentDisposition.attachment()
                         .filename(
-                                exportFileName,
+                                export.fileName(),
                                 StandardCharsets.UTF_8)
                         .build()
                         .toString())
-                .body(pdf);
-    }
-
-    /** Excel과 PDF에 동일한 댓글 내보내기 파일명 규칙을 적용한다. */
-    private String buildCommentExportFileName(
-            String fileName,
-            String extension) {
-
-        String baseName =
-                fileName == null || fileName.isBlank()
-                ? "PDF"
-                : fileName.trim();
-
-        baseName = baseName.replaceFirst(
-                "(?i)\\.pdf$",
-                "");
-        baseName = baseName.replaceAll(
-                "[\\\\/:*?\"<>|]",
-                "_");
-
-        String timestamp =
-                LocalDateTime.now().format(
-                        DateTimeFormatter.ofPattern(
-                                "yyyyMMdd_HHmmss"));
-
-        return timestamp
-                + "_"
-                + baseName
-                + "_Comment."
-                + extension;
+                .body(export.content());
     }
 
     /** 댓글 작성자가 본문 내용을 수정한다. */

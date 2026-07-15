@@ -44,14 +44,24 @@
             <strong>관리자 DB</strong>
         </div>
         <nav class="admin-db-nav">
-            <button class="admin-db-nav-item active" type="button">
+            <button class="admin-db-nav-item active"
+                    type="button"
+                    data-admin-view="color-check">
                 <i class="fa-solid fa-palette"></i>
                 컬러체크
+            </button>
+            <button class="admin-db-nav-item"
+                    type="button"
+                    data-admin-view="project-logs">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                실행 로그
             </button>
         </nav>
     </aside>
 
-    <section class="admin-content" aria-label="컬러체크 DB 테이블">
+    <section id="colorCheckSection"
+             class="admin-content"
+             aria-label="컬러체크 DB 테이블">
         <header class="admin-content-header">
             <div>
                 <h1>컬러체크 DB</h1>
@@ -137,6 +147,57 @@
             </table>
         </div>
     </section>
+
+    <section id="projectLogSection"
+             class="admin-content"
+             aria-label="프로젝트 실행 로그 테이블"
+             hidden>
+        <header class="admin-content-header">
+            <div>
+                <h1>프로젝트 실행 로그</h1>
+                <p id="projectLogSummary">최근 실행 이력을 불러오는 중입니다.</p>
+            </div>
+            <button id="projectLogRefresh"
+                    class="admin-export-btn"
+                    type="button">
+                <i class="fa-solid fa-rotate-right"></i>
+                새로고침
+            </button>
+        </header>
+
+        <div class="admin-table-tools">
+            <label class="admin-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="projectLogSearch"
+                       type="search"
+                       placeholder="작업명, 사용자, 상태 검색">
+            </label>
+        </div>
+
+        <div class="admin-table-wrap">
+            <table class="admin-data-table">
+                <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">작업</th>
+                    <th scope="col">사용자</th>
+                    <th scope="col">시작</th>
+                    <th scope="col">소요</th>
+                    <th scope="col">입력/출력</th>
+                    <th scope="col">메시지</th>
+                </tr>
+                </thead>
+                <tbody id="projectLogTableBody">
+                <tr>
+                    <td colspan="8" class="admin-empty-cell">
+                        실행 로그를 불러오는 중입니다.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 </main>
 
 <script>
@@ -146,6 +207,11 @@ const colorCheckState = {
     sortKey: 'regDt',
     sortDirection: 'desc',
     editingName: ''
+};
+
+const projectLogState = {
+    items: [],
+    filteredItems: []
 };
 
 const tableBody =
@@ -164,6 +230,18 @@ const checkValueSelect =
     document.getElementById('colorCheckValue');
 const cancelButton =
     document.getElementById('colorCheckCancel');
+const colorCheckSection =
+    document.getElementById('colorCheckSection');
+const projectLogSection =
+    document.getElementById('projectLogSection');
+const projectLogTableBody =
+    document.getElementById('projectLogTableBody');
+const projectLogSummary =
+    document.getElementById('projectLogSummary');
+const projectLogSearch =
+    document.getElementById('projectLogSearch');
+const projectLogRefresh =
+    document.getElementById('projectLogRefresh');
 
 function safeText(value){
     return value === null || value === undefined || value === ''
@@ -192,6 +270,32 @@ function formatDate(value){
         + pad(date.getHours())
         + ':'
         + pad(date.getMinutes());
+}
+
+function formatElapsed(value){
+    if(value === null || value === undefined){
+        return '-';
+    }
+
+    if(value < 1000){
+        return value + 'ms';
+    }
+
+    return (value / 1000).toFixed(1) + 's';
+}
+
+function switchAdminView(view){
+    const isLogView = view === 'project-logs';
+    colorCheckSection.hidden = isLogView;
+    projectLogSection.hidden = !isLogView;
+
+    document.querySelectorAll('[data-admin-view]').forEach(button => {
+        button.classList.toggle('active', button.dataset.adminView === view);
+    });
+
+    if(isLogView && projectLogState.items.length === 0){
+        loadProjectLogs();
+    }
 }
 
 function renderTable(){
@@ -436,10 +540,125 @@ async function loadColorCheckItems(){
     }
 }
 
+function renderProjectLogs(){
+    projectLogTableBody.innerHTML = '';
+
+    if(projectLogState.filteredItems.length === 0){
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.colSpan = 8;
+        cell.className = 'admin-empty-cell';
+        cell.textContent = '표시할 실행 로그가 없습니다.';
+        row.appendChild(cell);
+        projectLogTableBody.appendChild(row);
+        return;
+    }
+
+    projectLogState.filteredItems.forEach((item, index) => {
+        const row = document.createElement('tr');
+        const values = [
+            index + 1,
+            item.status,
+            item.jobName || item.jobType,
+            item.triggerUserId || '-',
+            formatDate(item.startedAt),
+            formatElapsed(item.elapsedMs),
+            [
+                item.inputPath || '',
+                item.outputPath || ''
+            ].filter(Boolean).join(' -> ') || '-',
+            item.status === 'FAILED'
+                ? (item.errorMessage || item.message || '-')
+                : (item.message || '-')
+        ];
+
+        values.forEach((value, columnIndex) => {
+            const cell = document.createElement('td');
+
+            if(columnIndex === 1){
+                const badge = document.createElement('span');
+                badge.className = 'color-check-badge '
+                    + (value === 'SUCCESS' ? 'is-checked' : 'is-unchecked');
+                badge.textContent = value;
+                cell.appendChild(badge);
+            }else{
+                cell.textContent = safeText(value);
+            }
+
+            row.appendChild(cell);
+        });
+
+        projectLogTableBody.appendChild(row);
+    });
+}
+
+function applyProjectLogFilter(){
+    const keyword = projectLogSearch.value.trim().toLowerCase();
+    const filtered = keyword
+        ? projectLogState.items.filter(item => {
+            return [
+                item.jobType,
+                item.jobName,
+                item.status,
+                item.triggerUserId,
+                item.inputPath,
+                item.outputPath,
+                item.message,
+                item.errorMessage
+            ].some(value => safeText(value).toLowerCase().includes(keyword));
+        })
+        : [...projectLogState.items];
+
+    projectLogState.filteredItems = filtered;
+    projectLogSummary.textContent = '최근 '
+        + projectLogState.items.length.toLocaleString('ko-KR')
+        + '건 중 '
+        + filtered.length.toLocaleString('ko-KR')
+        + '건 표시';
+    renderProjectLogs();
+}
+
+async function loadProjectLogs(){
+    projectLogRefresh.disabled = true;
+    projectLogSummary.textContent = '최근 실행 이력을 불러오는 중입니다.';
+
+    try{
+        const response = await fetch('/admin/project-logs?limit=100', {
+            headers:{
+                'Accept':'application/json'
+            }
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        projectLogState.items = await response.json();
+        applyProjectLogFilter();
+    }catch(error){
+        projectLogTableBody.innerHTML = '';
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.colSpan = 8;
+        cell.className = 'admin-empty-cell';
+        cell.textContent = '실행 로그를 불러오지 못했습니다.';
+        row.appendChild(cell);
+        projectLogTableBody.appendChild(row);
+        projectLogSummary.textContent = error.message || '조회 중 오류가 발생했습니다.';
+    }finally{
+        projectLogRefresh.disabled = false;
+    }
+}
+
 searchInput.addEventListener('input', applyFilter);
 refreshButton.addEventListener('click', loadColorCheckItems);
 editForm.addEventListener('submit', saveItem);
 cancelButton.addEventListener('click', resetForm);
+projectLogSearch.addEventListener('input', applyProjectLogFilter);
+projectLogRefresh.addEventListener('click', loadProjectLogs);
+document.querySelectorAll('[data-admin-view]').forEach(button => {
+    button.addEventListener('click', () => switchAdminView(button.dataset.adminView));
+});
 document.querySelectorAll('[data-sort-key]').forEach(button => {
     button.addEventListener('click', () => changeSort(button.dataset.sortKey));
 });
