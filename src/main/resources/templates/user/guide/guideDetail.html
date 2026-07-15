@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- 선택한 기능 가이드 상세 화면. -->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${guide.title} + ' - Maoom Tool'">Maoom Tool 가이드</title>
+    <link rel="stylesheet" href="/user/css/UserMain.css?v=guide-1">
+    <script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="account-actions">
+    <button class="current-user-name"
+            type="button"
+            onclick="location.href='/main'">
+        <span class="account-menu-avatar">
+            <img th:src="@{/api/user/profile-image(userId=${currentUserId})}"
+                 alt=""
+                 onerror="this.hidden=true">
+            <i class="fa-solid fa-user"></i>
+        </span>
+        <strong th:text="${currentUserName}">사용자</strong>님
+    </button>
+    <a class="admin-page-btn" href="/guide">
+        <i class="fa-solid fa-list"></i>
+        목록
+    </a>
+    <a class="admin-page-btn" href="/main">
+        <i class="fa-solid fa-house"></i>
+        메인
+    </a>
+    <form class="logout-form" action="/logout" method="post">
+        <button class="logout-btn" type="submit">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            로그아웃
+        </button>
+    </form>
+</div>
+
+<main class="main-launcher guide-launcher" aria-label="Maoom Tool 가이드 상세">
+    <header class="launcher-header guide-detail-header">
+        <div>
+            <span class="guide-detail-category"
+                  th:text="${guide.category}">PDF</span>
+            <h1 th:text="${guide.title}">PDF 리뷰 가이드</h1>
+            <p th:text="${guide.description}">PDF 검토 흐름</p>
+        </div>
+        <a class="launcher-guide-btn" href="/guide">
+            <i class="fa-solid fa-arrow-left"></i>
+            가이드 목록
+        </a>
+    </header>
+
+    <section class="guide-detail-panel">
+        <h2>준비 중입니다</h2>
+        <p>
+        </p>
+    </section>
+</main>
+
+</body>
+</html>

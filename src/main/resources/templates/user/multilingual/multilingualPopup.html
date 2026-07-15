@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+    다국어 변환 팝업의 최초 입력 화면.
+
+    입력 경로를 서버로 전달하고 다국어 변환 배치를 실행한다.
+-->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>다국어 변환</title>
+<link rel="stylesheet" href="/user/css/RevisionPopup.css">
+</head>
+<body>
+<main class="revision-page revision-estimate-page">
+    <header class="revision-header">
+        <div>
+            <h1>다국어 변환</h1>
+            <p>입력 경로를 선택한 뒤 다국어 변환을 실행한다.</p>
+        </div>
+    </header>
+
+    <section class="revision-panel" aria-label="다국어 변환 실행">
+        <div class="step-title">
+            <span>1</span>
+            <div>
+                <strong>입력 경로 선택</strong>
+                <small>서버 PC에서 접근할 수 있는 경로를 입력하세요.(V서버, H서버)</small>
+            </div>
+        </div>
+
+        <div class="path-row single-path-row">
+            <label for="inputPath">입력경로</label>
+            <input type="text" id="inputPath"
+                   placeholder="경로를 입력하세요" autocomplete="off">
+            <span></span>
+            <span></span>
+        </div>
+
+        <section id="resultPanel" class="result-panel" hidden aria-live="polite">
+            <div class="result-heading">
+                <span class="status-indicator"></span>
+                <strong id="resultTitle">실행 준비 중</strong>
+            </div>
+            <p id="resultMessage"></p>
+        </section>
+
+        <footer class="popup-actions">
+            <button type="button" id="runButton" class="action-button primary">
+                실행
+            </button>
+            <button type="button" class="action-button" onclick="window.close()">
+                취소
+            </button>
+        </footer>
+    </section>
+</main>
+
+<script>
+const inputPath = document.getElementById('inputPath');
+const runButton = document.getElementById('runButton');
+const resultPanel = document.getElementById('resultPanel');
+const resultTitle = document.getElementById('resultTitle');
+const resultMessage = document.getElementById('resultMessage');
+
+function showResult(type, title, message) {
+    resultPanel.hidden = false;
+    resultPanel.dataset.status = type;
+    resultTitle.textContent = title;
+    resultMessage.textContent = message;
+}
+
+runButton.addEventListener('click', async function() {
+    const path = inputPath.value.trim();
+
+    if (!path) {
+        showResult('error', '경로 확인 필요', '입력 경로를 입력하세요.');
+        inputPath.focus();
+        return;
+    }
+
+    runButton.disabled = true;
+    showResult(
+        'running',
+        '다국어 변환 실행 중',
+        '파일 수에 따라 시간이 걸릴 수 있습니다.'
+    );
+
+    try {
+        const response = await fetch('/api/multilingual/run', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({inputPath: path})
+        });
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+            const logs = result.logs || [];
+            showResult(
+                'error',
+                '다국어 변환 실패',
+                logs.at(-1) || '다국어 변환 중 오류가 발생했습니다.'
+            );
+            return;
+        }
+
+        showResult(
+            'success',
+            '다국어 변환 완료',
+            `결과 경로: ${result.outputPath}`
+        );
+    } catch (error) {
+        showResult(
+            'error',
+            '통신 오류',
+            '서버 응답을 받지 못했습니다: ' + error.message
+        );
+    } finally {
+        runButton.disabled = false;
+    }
+});
+</script>
+</body>
+</html>

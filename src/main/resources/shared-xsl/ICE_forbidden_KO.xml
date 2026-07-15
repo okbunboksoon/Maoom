@@ -1,0 +1,61 @@
+<list>
+	<forbidden>
+		<item except="HEV PHEV">DRIVE READY</item>
+		<item except="HEV PHEV">i-PEDAL</item>
+		<item except="HEV">LDC</item>
+		<item except="HEV">Low Voltage DC-DC Converter</item>
+		<item except="HEV PHEV">OBC</item>
+		<item except="HEV PHEV">On-Board Charger</item>
+		<item except="HEV PHEV">POWER ON</item>
+		<item>Power/Charge 게이지</item>
+		<item except="HEV PHEV">VCU</item>
+		<item except="HEV PHEV">Vehicle Control Unit</item>
+		<item>VESS</item>
+		<item>Virtual Engine Sound System</item>
+		<item except="HEV PHEV">가상 변속 기능</item>
+		<item except="HEV PHEV">감속기</item>
+		<item except="HEV PHEV">감속기 계통</item>
+		<item except="HEV PHEV">감속기 오일</item>
+		<item except="HEV PHEV">구동 모터 번호</item>
+		<item except="HEV">구동용(고전압) 배터리</item>
+		<item except="HEV">구동용(고전압) 배터리 충전량(SOC) 표시계</item>
+		<item>구동용(고전압) 배터리(리튬이온 배터리)</item>
+		<item except="HEV PHEV">모터룸</item>
+		<item except="HEV">배터리 충전</item>
+		<item except="HEV">배터리 충전 도어</item>
+		<item>배터리 충전량</item>
+		<item except="HEV PHEV">배터리 컨디셔닝</item>
+		<item except="HEV PHEV">배터리 컨디셔닝 모드</item>
+		<item except="HEV PHEV">순간전비</item>
+		<item>스마트 회생 시스템</item>
+		<item except="HEV PHEV">아이 페달</item>
+		<item except="HEV">인렛</item>
+		<item except="HEV">인렛 커버</item>
+		<item except="HEV PHEV">저전도 냉각수</item>
+		<item except="HEV PHEV">전기 자동차</item>
+		<item except="HEV PHEV">전비</item>
+		<item>주행 가능 표시등</item>
+		<item>충전</item>
+		<item>충전 도어</item>
+		<item except="HEV">충전 도어 열림/닫힘 버튼</item>
+		<item except="HEV">충전 인렛</item>
+		<item except="HEV">충전 커넥터</item>
+		<item except="HEV">충전 케이블</item>
+		<item except="HEV">충전 표시등</item>
+		<item except="HEV">충전기</item>
+		<item>충전량</item>
+		<item except="HEV">충전소</item>
+		<item except="HEV PHEV">파워다운 표시등</item>
+		<item except="HEV PHEV">평균전비</item>
+		<item except="HEV PHEV">프론트 트렁크</item>
+		<item>회생 시스템</item>
+		<item>회생 제동</item>
+		<item>회생 제동 경고등</item>
+		<item>회생 제동 단계 표시등</item>
+		<item>회생 제동 브레이크</item>
+		<item>회생 제동량</item>
+	</forbidden>
+	<exception>
+		<item>aaa</item>
+	</exception>
+</list>
