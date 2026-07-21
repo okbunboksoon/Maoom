@@ -121,10 +121,10 @@ public class DitamapBuilderService {
 
     public DitamapTreeResponse readLegalTemplate() {
         Resource template =
-                new ClassPathResource("shared-xsl/LM-ditamap.ditamap");
+                new ClassPathResource("xsl/LM-ditamap.ditamap");
 
         if(!template.exists()){
-            template = new ClassPathResource("shared-xsl/LM-template.xml");
+            template = new ClassPathResource("xsl/LM-template.xml");
         }
 
         if(!template.exists()){
@@ -151,7 +151,7 @@ public class DitamapBuilderService {
 
     public DitamapTreeResponse readLegalMaster() {
         Resource master =
-                new ClassPathResource("shared-xsl/LM-ditamap.ditamap");
+                new ClassPathResource("xsl/LM-ditamap.ditamap");
 
         if(!master.exists()){
             throw new IllegalArgumentException(
@@ -164,7 +164,7 @@ public class DitamapBuilderService {
 
             return new DitamapTreeResponse(
                     readMapTitle(root, Path.of("LM-ditamap.ditamap")),
-                    "shared-xsl/LM-ditamap.ditamap",
+                    "xsl/LM-ditamap.ditamap",
                     readLegalMasterChildren(root, 1));
         }catch(IOException | ParserConfigurationException
                 | SAXException exception){
@@ -293,10 +293,10 @@ public class DitamapBuilderService {
 
     private List<DitamapLegalTarget> readDefaultLegalTargets() {
         Resource template =
-                new ClassPathResource("shared-xsl/LM-ditamap.ditamap");
+                new ClassPathResource("xsl/LM-ditamap.ditamap");
 
         if(!template.exists()){
-            template = new ClassPathResource("shared-xsl/LM-template.xml");
+            template = new ClassPathResource("xsl/LM-template.xml");
         }
 
         if(!template.exists()){

@@ -1,86 +1,86 @@
 <!DOCTYPE html>
-<!-- BER 반영: 서버가 접근 가능한 DITA 경로와 Output 경로를 받아 배치를 실행하고 결과 temp/topics를 반환한다. -->
+<!-- BER 반영: 서버가 접근 가능한 DITA 경로를 받아 배치를 실행하고 입력 경로의 Result_Folder에 결과를 반환한다. -->
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BER 반영</title>
-    <link rel="stylesheet" href="/user/css/ColorCheck.css?v=ber-apply-1">
-    <script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/user/css/RevisionPopup.css">
 </head>
 <body>
-<main class="color-check-wrap">
-    <header class="color-check-header">
+<main class="revision-page revision-estimate-page">
+    <header class="revision-header">
         <div>
             <h1>BER 반영</h1>
-            <p>DITA 경로를 기준으로 BER 배치를 실행합니다.</p>
+            <p>입력 경로를 작업 폴더로 복사한 뒤 BER 반영을 합니다.</p>
         </div>
     </header>
 
-    <section class="color-check-panel" aria-label="BER 반영 배치 실행">
+    <section class="revision-panel" aria-label="BER 반영 배치 실행">
         <div class="step-title">
             <span>1</span>
             <div>
-                <strong>DITA 경로 입력</strong>
-                <small>topics 폴더가 들어 있는 상위 경로 또는 DITA 파일 폴더를 입력하세요.</small>
+                <strong>입력 경로 선택</strong>
+                <small>서버 PC에서 접근할 수 있는 경로를 입력하세요.(V서버, H서버)</small>
             </div>
         </div>
 
-        <div class="path-row ber-path-row">
-            <label for="ditaPath">DITA 경로</label>
+        <div class="path-row ber-path-row full-path-row">
+            <label for="ditaPath">입력경로</label>
             <input id="ditaPath" type="text"
-                   placeholder="예: C:\\work\\KUS\\manual">
+                   placeholder="경로를 입력하세요" autocomplete="off">
             <span></span>
             <span></span>
         </div>
 
-        <div class="path-row ber-path-row">
-            <label for="outputPath">Output 경로</label>
-            <input id="outputPath" type="text"
-                   placeholder="예: V:\\Tools\\test 입력 시 V:\\Tools\\test\\결과">
-            <span></span>
-            <button id="runBerBtn" class="run-btn primary-btn" type="button">반영</button>
-        </div>
+        <section id="resultPanel" class="result-panel" hidden aria-live="polite">
+            <div class="result-heading">
+                <span id="statusIndicator" class="status-indicator"></span>
+                <strong id="resultTitle">실행 준비 중</strong>
+            </div>
+            <p id="resultMessage"></p>
+        </section>
 
-        <div id="statusMessage" class="status-message" role="status"
-             aria-live="polite" hidden></div>
-
-        <footer class="color-check-actions">
-            <button class="close-btn secondary-btn" type="button" onclick="window.close()">닫기</button>
+        <footer class="popup-actions">
+            <button id="runBerBtn" class="action-button primary" type="button">실행</button>
+            <button class="action-button" type="button" onclick="window.close()">취소</button>
         </footer>
     </section>
 </main>
 
 <script>
 const ditaPathInput = document.getElementById('ditaPath');
-const outputPathInput = document.getElementById('outputPath');
 const runBerBtn = document.getElementById('runBerBtn');
-const statusMessage = document.getElementById('statusMessage');
+const resultPanel = document.getElementById('resultPanel');
+const statusIndicator = document.getElementById('statusIndicator');
+const resultTitle = document.getElementById('resultTitle');
+const resultMessage = document.getElementById('resultMessage');
 
 runBerBtn.addEventListener('click', runBerApply);
-[ditaPathInput, outputPathInput].forEach(input => {
-    input.addEventListener('keydown', event => {
-        if(event.key === 'Enter'){
-            runBerApply();
-        }
-    });
+ditaPathInput.addEventListener('keydown', event => {
+    if(event.key === 'Enter'){
+        runBerApply();
+    }
 });
 
 // 입력값을 JSON으로 서버에 보내고, 서버가 반환한 결과 폴더 경로를 화면에 표시한다.
 async function runBerApply(){
     const ditaPath = ditaPathInput.value.trim();
-    const outputPath = outputPathInput.value.trim();
 
     if(!ditaPath){
-        showStatus('DITA 경로를 입력해 주세요.', 'error');
+        showResult('error', '경로 확인 필요', '입력 경로를 입력해 주세요.');
         ditaPathInput.focus();
         return;
     }
 
     runBerBtn.disabled = true;
+    runBerBtn.textContent = '반영 중...';
     ditaPathInput.disabled = true;
-    outputPathInput.disabled = true;
-    showStatus('BER 반영 배치를 실행 중입니다. 완료될 때까지 창을 닫지 마세요.', 'progress');
+    showResult(
+        'running',
+        'BER 반영 실행 중',
+        '완료될 때까지 창을 닫지 마세요.'
+    );
 
     try{
         const response = await fetch('/api/ber/apply', {
@@ -88,7 +88,7 @@ async function runBerApply(){
             headers:{
                 'Content-Type':'application/json'
             },
-            body:JSON.stringify({ ditaPath, outputPath })
+            body:JSON.stringify({ ditaPath })
         });
 
         if(!response.ok){
@@ -96,24 +96,46 @@ async function runBerApply(){
         }
 
         const result = await response.json();
-        showStatus(
-            'BER 반영 완료\n'
-            + 'temp: ' + result.tempPath + '\n'
-            + 'topics: ' + result.topicsPath,
-            'success');
+        showResult(
+            'success',
+            'BER 반영 완료',
+            result.topicsPath);
     }catch(error){
-        showStatus(error.message || 'BER 반영에 실패했습니다.', 'error');
+        showResult(
+            'error',
+            'BER 반영 실패',
+            error.message || 'BER 반영에 실패했습니다.');
     }finally{
         runBerBtn.disabled = false;
+        runBerBtn.textContent = '실행';
         ditaPathInput.disabled = false;
-        outputPathInput.disabled = false;
     }
 }
 
-function showStatus(message, type){
-    statusMessage.hidden = false;
-    statusMessage.textContent = message;
-    statusMessage.className = 'status-message ' + type;
+function showResult(type, title, message){
+    resultPanel.hidden = false;
+    resultPanel.dataset.status = type;
+    statusIndicator.classList.toggle('is-running', type === 'running');
+    resultTitle.textContent = title;
+    resultMessage.textContent = message;
+    resizePopupToContent();
+}
+
+// 결과 패널이 표시되면 팝업 창 높이를 콘텐츠에 맞춰 늘린다.
+function resizePopupToContent(){
+    requestAnimationFrame(() => {
+        const browserFrameHeight = window.outerHeight - window.innerHeight;
+        const contentHeight = document.documentElement.scrollHeight;
+        const verticalMargin = 36;
+        const nextHeight = Math.min(
+            screen.availHeight,
+            contentHeight + browserFrameHeight + verticalMargin
+        );
+
+        if(nextHeight > window.outerHeight){
+            window.resizeTo(window.outerWidth, nextHeight);
+        }
+    });
 }
 </script>
 </body>

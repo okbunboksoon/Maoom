@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <div class="path-row single-path-row">
+        <div class="path-row single-path-row full-path-row">
             <label for="inputPath">입력경로</label>
             <input type="text" id="inputPath"
                    placeholder="경로를 입력하세요" autocomplete="off">
@@ -80,6 +80,7 @@ runButton.addEventListener('click', async function() {
     }
 
     runButton.disabled = true;
+    runButton.textContent = '실행 중...';
     showResult(
         'running',
         '다국어 변환 실행 중',
@@ -117,6 +118,7 @@ runButton.addEventListener('click', async function() {
         );
     } finally {
         runButton.disabled = false;
+        runButton.textContent = '실행';
     }
 });
 </script>

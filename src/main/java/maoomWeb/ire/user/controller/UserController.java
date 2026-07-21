@@ -277,6 +277,12 @@ public class UserController {
     public String multilingual() {
         return "user/multilingual/multilingualPopup";
     }
+
+    @GetMapping("/qsg/list")
+    /** QSG 언어와 입력 경로 선택 팝업 화면을 표시한다. */
+    public String qsg() {
+        return "user/multilingual/qsgPopup";
+    }
     
     @GetMapping("/page/calc")
     public String pdfList3() {

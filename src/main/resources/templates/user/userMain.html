@@ -233,13 +233,11 @@ const launcherMenus = [
         action:openMultilingualPopup
     },
     {
-        title:'배치(X)',
-        description:'페이지 계산 및 배치',
-        category:'PDF',
-        icon:'fa-layer-group',
-        action:function(){
-            location.href = '/page/calc';
-        }
+        title:'QSG',
+        description:'언어 선택 및 배치 실행',
+        category:'DITA',
+        icon:'fa-book-open',
+        action:openQsgPopup
     }
 ];
 
@@ -530,7 +528,7 @@ function openPdfPopup(){
     window.open(
         '/pdf/list',
         'pdfPopup',
-        'width=600,height=800'
+        'width=680,height=800'
     );
 }
 
@@ -539,7 +537,7 @@ function openColorCheckPopup(){
     window.open(
         '/pdf/color-check',
         'colorCheckPopup',
-        'width=680,height=620'
+        'width=680,height=550'
     );
 }
 
@@ -548,7 +546,7 @@ function openBerPopup(){
     window.open(
         '/pdf/ber',
         'berPopup',
-        'width=680,height=620'
+        'width=680,height=350'
     );
 }
 
@@ -557,7 +555,7 @@ function openDitamapBuilderPopup(){
     window.open(
         '/ditamap-builder',
         'ditamapBuilderPopup',
-        'width=680,height=300'
+        'width=680,height=350'
     );
 }
 
@@ -566,7 +564,7 @@ function openRevisionPopup(){
     window.open(
         '/revision/list',
         'revisionPopup',
-        'width=600,height=760'
+        'width=680,height=570'
     );
 }
 
@@ -575,7 +573,16 @@ function openMultilingualPopup(){
     window.open(
         '/multilingual/list',
         'multilingualPopup',
-        'width=600,height=450'
+        'width=680,height=350'
+    );
+}
+
+// QSG 언어 선택과 입력 경로 화면을 연다.
+function openQsgPopup(){
+    window.open(
+        '/qsg/list',
+        'qsgPopup',
+        'width=980,height=800'
     );
 }
 </script>

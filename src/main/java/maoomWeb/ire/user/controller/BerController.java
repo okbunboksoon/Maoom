@@ -4,6 +4,7 @@ import java.nio.charset.StandardCharsets;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,27 +13,56 @@ import org.springframework.web.bind.annotation.RestController;
 import maoomWeb.ire.user.dto.BerApplyRequest;
 import maoomWeb.ire.user.dto.BerApplyResult;
 import maoomWeb.ire.user.service.BerApplyService;
+import maoomWeb.ire.user.service.CurrentUserService;
+import maoomWeb.ire.user.service.ProjectExecutionLogService;
 
 /**
  * BER 화면의 AJAX 요청을 서비스 계층으로 넘기는 REST 컨트롤러.
  *
- * <p>화면은 {@code ditaPath}와 {@code outputPath} 문자열만 보낸다. 실제 경로 검증,
+ * <p>화면은 {@code ditaPath} 문자열만 보낸다. 실제 경로 검증,
  * revision-tool 복사, BAT 실행, 결과 폴더 이동은 {@link BerApplyService}에서 처리한다.</p>
  */
 @RestController
 public class BerController {
 
     private final BerApplyService berApplyService;
+    private final CurrentUserService currentUserService;
+    private final ProjectExecutionLogService projectExecutionLogService;
 
-    public BerController(BerApplyService berApplyService) {
+    public BerController(
+            BerApplyService berApplyService,
+            CurrentUserService currentUserService,
+            ProjectExecutionLogService projectExecutionLogService) {
         this.berApplyService = berApplyService;
+        this.currentUserService = currentUserService;
+        this.projectExecutionLogService = projectExecutionLogService;
     }
 
     /** BER 반영 버튼 클릭 시 호출되는 API. 성공하면 결과 temp/topics 경로를 JSON으로 반환한다. */
     @PostMapping("/api/ber/apply")
     public BerApplyResult apply(
-            @RequestBody BerApplyRequest request) {
-        return berApplyService.apply(request.ditaPath(), request.outputPath());
+            @RequestBody BerApplyRequest request,
+            Authentication authentication) {
+
+        String inputPath = request == null ? null : request.ditaPath();
+        Long logId = projectExecutionLogService.start(
+                "BER",
+                "BER 반영 실행",
+                currentUserService.getUserId(authentication),
+                inputPath,
+                "BER 반영 배치를 실행합니다.");
+
+        try{
+            BerApplyResult result = berApplyService.apply(inputPath);
+            projectExecutionLogService.success(
+                    logId,
+                    result.topicsPath(),
+                    "BER 반영 완료");
+            return result;
+        }catch(IllegalArgumentException exception){
+            projectExecutionLogService.fail(logId, exception);
+            throw exception;
+        }
     }
 
     @ExceptionHandler(IllegalArgumentException.class)

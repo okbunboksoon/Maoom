@@ -14,7 +14,7 @@ body{
     min-height:100vh;
     background:#fff;
     color:#111;
-    font-family:Arial, "Noto Sans KR", sans-serif;
+    font-family:"LINE Seed Sans KR", SUIT, Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
 }
 
 .login-page{
@@ -27,7 +27,7 @@ body{
 .login-logo{
     margin:0 0 28px;
     font-size:48px;
-    font-family:"Arial Rounded MT Bold", "Segoe UI", sans-serif;
+    font-family:"LINE Seed Sans KR", SUIT, Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
     font-weight:600;
     letter-spacing:3px;
 }

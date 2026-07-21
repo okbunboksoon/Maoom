@@ -78,7 +78,7 @@ class RevisionPipelineServiceTest {
         Path workspace = Files.createDirectory(tempDirectory.resolve("workspace"));
         Path xsl = Files.createDirectory(workspace.resolve("xsl"));
         Files.copy(
-                Path.of("src/main/resources/revision-tool/02_topics_Chapterize.bat"),
+                Path.of("src/main/resources/bat/02_topics_Chapterize.bat"),
                 workspace.resolve("02_topics_Chapterize.bat"),
                 StandardCopyOption.REPLACE_EXISTING);
         Files.writeString(

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!-- QSG 언어와 입력 경로를 선택하는 팝업 화면. -->
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QSG</title>
+<link rel="stylesheet" href="/user/css/RevisionPopup.css">
+<style>
+.qsg-language-selector{
+    margin-bottom:16px;
+}
+
+.qsg-language-toolbar{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:10px;
+}
+
+.qsg-language-grid{
+    display:grid;
+    grid-template-columns:repeat(7, minmax(0, 1fr));
+    gap:8px;
+}
+
+.qsg-language-button{
+    width:100%;
+    min-width:0;
+    height:34px;
+    padding:0 8px;
+    border:1px solid #c7ced7;
+    border-radius:6px;
+    background:#f8fafc;
+    color:#2f3a45;
+    font-size:12px;
+    line-height:1.15;
+    text-align:center;
+    white-space:normal;
+    overflow-wrap:anywhere;
+}
+
+.qsg-language-button:hover{
+    background:#eef3f8;
+}
+
+.qsg-language-button[aria-pressed="true"]{
+    border-color:#1f6fd1;
+    background:#2475d0;
+    color:#fff;
+}
+
+@media (max-width:640px){
+    .qsg-language-grid{
+        grid-template-columns:repeat(3, minmax(0, 1fr));
+    }
+}
+</style>
+</head>
+<body>
+<main class="revision-page revision-estimate-page">
+    <header class="revision-header">
+        <div>
+            <h1>QSG</h1>
+            <p>언어와 입력 경로를 선택한 뒤 배치를 실행한다.</p>
+        </div>
+    </header>
+
+    <section class="revision-panel" aria-label="QSG 실행">
+        <div class="step-title">
+            <span>1</span>
+            <div>
+                <strong>언어 선택</strong>
+                <small>변환할 언어를 선택하세요.</small>
+            </div>
+        </div>
+
+        <div class="qsg-language-selector">
+            <div class="qsg-language-toolbar">
+                <button type="button" id="selectAllLanguages" class="action-button">
+                    전체선택
+                </button>
+            </div>
+            <div id="languageGrid" class="qsg-language-grid" aria-label="언어 선택"></div>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <div class="step-title">
+            <span>2</span>
+            <div>
+                <strong>입력 경로 선택</strong>
+                <small>서버 PC에서 접근할 수 있는 경로를 입력하세요.(V서버, H서버)</small>
+            </div>
+        </div>
+
+        <div class="path-row single-path-row">
+            <label for="inputPath">입력경로</label>
+            <input type="text" id="inputPath"
+                   placeholder="경로를 입력하세요" autocomplete="off">
+            <span></span>
+            <span></span>
+        </div>
+
+        <section id="resultPanel" class="result-panel" hidden aria-live="polite">
+            <div class="result-heading">
+                <span class="status-indicator"></span>
+                <strong id="resultTitle">실행 준비 중</strong>
+            </div>
+            <p id="resultMessage"></p>
+        </section>
+
+        <footer class="popup-actions">
+            <button type="button" id="qsgButton" class="action-button primary">
+                실행
+            </button>
+            <button type="button" class="action-button" onclick="window.close()">
+                취소
+            </button>
+        </footer>
+    </section>
+</main>
+
+<script>
+const inputPath = document.getElementById('inputPath');
+const qsgButton = document.getElementById('qsgButton');
+const languageGrid = document.getElementById('languageGrid');
+const selectAllLanguages = document.getElementById('selectAllLanguages');
+const resultPanel = document.getElementById('resultPanel');
+const resultTitle = document.getElementById('resultTitle');
+const resultMessage = document.getElementById('resultMessage');
+const statusIndicator = resultPanel.querySelector('.status-indicator');
+const languages = [
+    {name:'Arabic', code:'ar-AA'},
+    {name:'Bulgarian', code:'bg-BG'},
+    {name:'Cambodian', code:'km-KH'},
+    {name:'Catalan', code:'ca-ES'},
+    {name:'Chinese', code:'zh-CN'},
+    {name:'Croatian', code:'hr-HR'},
+    {name:'Czech', code:'cs-CZ'},
+    {name:'Danish', code:'da-DK'},
+    {name:'Dutch', code:'nl-NL'},
+    {name:'Estonian', code:'et-EE'},
+    {name:'Finnish', code:'fi-FI'},
+    {name:'French', code:'fr-FR'},
+    {name:'French_Canada', code:'fr-CA'},
+    {name:'German', code:'de-DE'},
+    {name:'Greek', code:'el-GR'},
+    {name:'Hebrew', code:'he-IL'},
+    {name:'Hungarian', code:'hu-HU'},
+    {name:'Icelandic', code:'is-IS'},
+    {name:'Indonesian', code:'id-ID'},
+    {name:'Italian', code:'it-IT'},
+    {name:'Japanese', code:'ja-JP'},
+    {name:'Kazakh', code:'kk-KZ'},
+    {name:'Lao', code:'lo-LA'},
+    {name:'Latvian', code:'lv-LV'},
+    {name:'Lithuanian', code:'lt-LT'},
+    {name:'Malaysia', code:'ms-MY'},
+    {name:'Mexican_Spanish', code:'es-MX'},
+    {name:'Myanmar', code:'my-MM'},
+    {name:'Norwegian', code:'no-NB'},
+    {name:'Polish', code:'pl-PL'},
+    {name:'Portuguese', code:'pt-PT'},
+    {name:'Romanian', code:'ro-RO'},
+    {name:'Russian', code:'ru-RU'},
+    {name:'Serbian', code:'sr-RS'},
+    {name:'Slovak', code:'sk-SK'},
+    {name:'Slovenian', code:'sl-SL'},
+    {name:'Spanish', code:'es-ES'},
+    {name:'Swedish', code:'sv-SE'},
+    {name:'Taiwanese', code:'zh-TW'},
+    {name:'Thai', code:'th-TH'},
+    {name:'Turkish', code:'tr-TR'},
+    {name:'Ukrainian', code:'uk-UK'},
+    {name:'Uzbek', code:'uz-UZ'},
+    {name:'Korean', code:'ko-KR'},
+    {name:'Canada', code:'en-CA'},
+    {name:'USA', code:'en-US'},
+    {name:'Vietnam', code:'vi-VN'},
+    {name:'India', code:'en-IN'},
+    {name:'Armenia', code:'hy-AM'},
+    {name:'Azerbaijan', code:'az-AZ'},
+    {name:'Kyrgyzstan', code:'ky-KG'},
+    {name:'Mongolia', code:'mn-MN'}
+];
+
+function showResult(type, title, message) {
+    resultPanel.hidden = false;
+    resultPanel.dataset.status = type;
+    statusIndicator.classList.toggle('is-running', type === 'running');
+    resultTitle.textContent = title;
+    resultMessage.textContent = message;
+}
+
+function selectedLanguages() {
+    return Array.from(
+        languageGrid.querySelectorAll('.qsg-language-button[aria-pressed="true"]')
+    ).map(button => ({
+        name: button.dataset.language,
+        code: button.dataset.code
+    }));
+}
+
+function updateSelectAllButton() {
+    const selectedCount = selectedLanguages().length;
+    selectAllLanguages.textContent =
+        selectedCount === languages.length ? '전체해제' : '전체선택';
+}
+
+function renderLanguageButtons() {
+    languages.forEach(language => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'qsg-language-button';
+        button.dataset.language = language.name;
+        button.dataset.code = language.code;
+        button.setAttribute('aria-pressed', 'false');
+        button.textContent = language.name;
+        button.addEventListener('click', function() {
+            const selected = this.getAttribute('aria-pressed') === 'true';
+            this.setAttribute('aria-pressed', selected ? 'false' : 'true');
+            updateSelectAllButton();
+        });
+        languageGrid.appendChild(button);
+    });
+}
+
+qsgButton.addEventListener('click', async function() {
+    const path = inputPath.value.trim();
+    const selected = selectedLanguages();
+
+    if (selected.length === 0) {
+        showResult('error', '언어 확인 필요', 'QSG에 사용할 언어를 선택하세요.');
+        languageGrid.querySelector('.qsg-language-button').focus();
+        return;
+    }
+
+    if (!path) {
+        showResult('error', '경로 확인 필요', '입력 경로를 입력하세요.');
+        inputPath.focus();
+        return;
+    }
+
+    qsgButton.disabled = true;
+    qsgButton.textContent = '실행 중...';
+    showResult('running', 'QSG 실행 중', '선택한 언어 코드를 서버로 전달합니다.');
+
+    try {
+        const languageCodes = selected.map(language => language.code);
+        const languageNames = selected.map(language => language.name);
+        console.log('[QSG] selected languages:', selected);
+        console.log('[QSG] request payload:', {
+            inputPath: path,
+            languageCodes: languageCodes
+        });
+        const response = await fetch('/api/qsg/run', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                inputPath: path,
+                languageCodes: languageCodes
+            })
+        });
+        const result = await response.json();
+        console.log('[QSG] controller response:', result);
+
+        if (!response.ok || !result.success) {
+            const logs = Array.isArray(result.logs) ? result.logs : [];
+            const lastLog = logs.length > 0 ? logs[logs.length - 1] : '';
+            showResult(
+                'error',
+                'QSG 실행 실패',
+                lastLog || 'QSG 요청을 처리하지 못했습니다.'
+            );
+            return;
+        }
+
+        showResult(
+            'success',
+            'QSG 제작 언어',
+            languageNames.join(', ') + '\n결과 경로: ' + result.outputPath
+        );
+    } catch (error) {
+        showResult(
+            'error',
+            '통신 오류',
+            '서버 응답을 받지 못했습니다: ' + error.message
+        );
+    } finally {
+        qsgButton.disabled = false;
+        qsgButton.textContent = '실행';
+    }
+});
+
+selectAllLanguages.addEventListener('click', function() {
+    const selectAll = selectedLanguages().length !== languages.length;
+    languageGrid.querySelectorAll('.qsg-language-button').forEach(button => {
+        button.setAttribute('aria-pressed', selectAll ? 'true' : 'false');
+    });
+    updateSelectAllButton();
+});
+
+renderLanguageButtons();
+</script>
+</body>
+</html>
