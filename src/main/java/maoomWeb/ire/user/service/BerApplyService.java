@@ -4,18 +4,17 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.StandardOpenOption;
-import java.time.Instant;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
@@ -23,8 +22,6 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.stereotype.Service;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 
 import maoomWeb.ire.user.dto.BerApplyResult;
 
@@ -44,7 +41,9 @@ import maoomWeb.ire.user.dto.BerApplyResult;
 public class BerApplyService {
 
     private static final String RESOURCE_ROOT = "revision-tool";
-    private static final String SHARED_XSL_ROOT = "shared-xsl";
+    private static final String SHARED_BAT_ROOT = "bat";
+    private static final String SHARED_XSL_ROOT = "xsl";
+    private static final String SHARED_LIB_ROOT = "lib";
     private static final String BER_BATCH =
             "04_KUS_asis-tobe-apply_NotFileNameChange.bat";
     /**
@@ -57,31 +56,33 @@ public class BerApplyService {
             "lib/saxon-ee-10.0.jar",
             "lib/xml-resolver-1.2.jar",
             "lib/saxon-license.lic",
-            "xsl/09-doctype-remove.xsl",
-            "xsl/10-namespace-remove.xsl",
-            "xsl/11-toc-create.xsl",
-            "xsl/12-bookmap-create.xsl",
-            "xsl/13-topic-merge.xsl",
-            "xsl/29-kus-text-normalize.xsl",
+            "xsl/0000-doctype-remove.xsl",
+            "xsl/0001-namespace-remove.xsl",
+            "xsl/0002-toc-create.xsl",
+            "xsl/0003-bookmap-create.xsl",
+            "xsl/0004-topic-merge.xsl",
+            "xsl/0290-kus-text-normalize.xsl",
             "xsl/kus-normalize-text.xsl",
-            "xsl/30-kus-inline-normalize.xsl",
-            "xsl/34-kus-db-apply_ber_exclude.xsl",
-            "xsl/34-kus-db-apply_ber.xsl",
+            "xsl/0300-kus-inline-normalize.xsl",
+            "xsl/0340-kus-db-apply_ber_exclude.xsl",
+            "xsl/0340-kus-db-apply_ber.xsl",
             "xsl/asis-tobe_eu.xml",
             "xsl/asis-tobe_us.xml",
             "xsl/asis-tobe_exclude.xml",
-            "xsl/31-kus-beautify.xsl",
+            "xsl/0310-kus-beautify.xsl",
             "xsl/kus-beautify.xsl",
-            "xsl/14-namespace-remove.xsl",
-            "xsl/15-id-clean_NotFileNameChange.xsl",
-            "xsl/16-xref-clean_NotFileNameChange.xsl",
-            "xsl/17-related-links_NotFileNameChange.xsl",
-            "xsl/05-topicalize_2.xsl",
-            "xsl/08-dita-beautify.xsl",
-            "xsl/41-make-change-report_ber.xsl",
+            "xsl/0005-namespace-remove.xsl",
+            "xsl/0006-id-clean_NotFileNameChange.xsl",
+            "xsl/0007-xref-clean_NotFileNameChange.xsl",
+            "xsl/0008-related-links_NotFileNameChange.xsl",
+            "xsl/0210-topicalize_2.xsl",
+            "xsl/0009-dita-rebeautify.xsl",
+            "xsl/0410-make-change-report_ber.xsl",
             "xsl/Convert_Xml_To_Excel.vbs"
     };
     private static final Duration BATCH_TIMEOUT = Duration.ofMinutes(30);
+    private static final Charset BATCH_OUTPUT_CHARSET =
+            Charset.forName("MS949");
     private static final DateTimeFormatter RUN_ID_FORMAT =
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
 
@@ -95,25 +96,28 @@ public class BerApplyService {
      *   <li>입력 DITA 경로가 서버에서 접근 가능한 폴더인지 확인한다.</li>
      *   <li>입력 폴더 안의 {@code topics}가 있으면 그 폴더를 원본으로 쓰고,
      *       없으면 입력 폴더 자체를 topics 원본으로 본다.</li>
-     *   <li>Output 경로가 있으면 {@code Output\결과}, 없으면 {@code DITA\결과}를
-     *       최종 결과 위치로 잡는다.</li>
+     *   <li>DITA 입력 경로 아래의 {@code Result_Folder}를 최종 결과 위치로 잡는다.</li>
      *   <li>{@code .maoomtool\ber-*} 작업 폴더에 tool 리소스와 topics를 복사한다.</li>
-     *   <li>BAT를 실행하고, 실행 이후 새로 생성된 DITA와 bookmap만 결과 topics로 모은다.</li>
-     *   <li>결과 temp/topics를 최종 결과 위치로 이동한 뒤 작업 폴더를 삭제한다.</li>
+     *   <li>BAT를 실행하고, 작업 폴더의 topics 전체를 결과 topics로 이동한다.</li>
+     *   <li>결과 topics와 리포트 엑셀을 최종 결과 위치로 이동한 뒤 작업 폴더를 삭제한다.</li>
      * </ol>
      */
-    public BerApplyResult apply(String ditaPath, String outputPath) {
-        // 1. 사용자가 입력한 경로는 브라우저 PC가 아니라 서버 PC 기준으로 해석된다.
-        Path inputDirectory = validateInputDirectory(ditaPath);
-        // 2. 입력 폴더가 상위 폴더인지 topics 폴더 자체인지 자동 판별한다.
-        Path sourceTopicsDirectory = resolveSourceTopicsDirectory(inputDirectory);
-        // 3. 최종 산출물은 항상 선택된 기준 경로 아래의 "결과" 폴더에 둔다.
-        Path resultDirectory = resolveResultDirectory(inputDirectory, outputPath);
-        // 4. BAT 실행 중간 산출물이 원본과 섞이지 않도록 매 실행마다 별도 작업 폴더를 쓴다.
-        Path workDirectory = createWorkDirectory(inputDirectory);
+    public BerApplyResult apply(String ditaPath) {
         List<String> logs = new ArrayList<>();
+        List<String> batchLogs = new ArrayList<>();
+        Path inputDirectory = null;
+        Path resultDirectory = null;
+        Path workDirectory = null;
 
         try{
+            // 1. 사용자가 입력한 경로는 브라우저 PC가 아니라 서버 PC 기준으로 해석된다.
+            inputDirectory = validateInputDirectory(ditaPath);
+            // 2. 입력 폴더가 상위 폴더인지 topics 폴더 자체인지 자동 판별한다.
+            Path sourceTopicsDirectory = resolveSourceTopicsDirectory(inputDirectory);
+            // 3. 최종 산출물은 입력 경로 아래의 Result_Folder에 둔다.
+            resultDirectory = resolveResultDirectory(inputDirectory);
+            // 4. BAT 실행 중간 산출물이 원본과 섞이지 않도록 매 실행마다 별도 작업 폴더를 쓴다.
+            workDirectory = createWorkDirectory(inputDirectory);
             // JAR 안에 포함된 revision-tool 전체를 일반 파일로 풀어 BAT가 접근할 수 있게 한다.
             prepareToolDirectory(workDirectory);
             copyDirectory(
@@ -125,37 +129,51 @@ public class BerApplyService {
             logs.add("작업 폴더: " + workDirectory);
             logs.add("DITA 입력: " + inputDirectory);
             logs.add("topics 원본: " + sourceTopicsDirectory);
-            // 배치 실행 전 시간을 기록해, 원본에서 복사된 기존 DITA와 배치가 새로 만든 DITA를 구분한다.
-            Instant batchStartedAt = Instant.now();
             // 실제 04_KUS_asis-tobe-apply_NotFileNameChange.bat 실행 지점.
-            runBatch(workDirectory, logs);
-            // BAT 실행 후 새로 생성/수정된 DITA와 xsl/bookmap.xml만 결과 topics로 모은다.
-            Path generatedTopicsDirectory =
-                    createGeneratedTopicsDirectory(workDirectory, batchStartedAt);
+            runBatch(workDirectory, logs, batchLogs);
+            // BAT가 작업한 topics 폴더를 필터링하지 않고 그대로 결과로 내보낸다.
+            validateResultTopicsDirectory(workDirectory.resolve("topics"));
+            deleteDirectory(resultDirectory.resolve("temp"));
+            moveReportFile(
+                    workDirectory.resolve("temp")
+                            .resolve("excel-change-report.xlsx"),
+                    resultDirectory.resolve("excel-change-report.xlsx"));
             moveResultDirectory(
-                    workDirectory.resolve("temp"),
-                    resultDirectory.resolve("temp"));
-            moveResultDirectory(
-                    generatedTopicsDirectory,
+                    workDirectory.resolve("topics"),
                     resultDirectory.resolve("topics"));
-            logs.add("temp 이동 완료: " + resultDirectory.resolve("temp"));
+            logs.add("리포트 엑셀 이동 완료: "
+                    + resultDirectory.resolve("excel-change-report.xlsx"));
             logs.add("topics 이동 완료: " + resultDirectory.resolve("topics"));
+            logs.add("완료: " + resultDirectory);
+            writeBerLog(resultDirectory, batchLogs);
 
             return new BerApplyResult(
                     inputDirectory.toString(),
-                    resultDirectory.resolve("temp").toString(),
+                    resultDirectory.resolve("excel-change-report.xlsx")
+                            .toString(),
                     resultDirectory.resolve("topics").toString(),
                     List.copyOf(logs));
         }catch(IOException exception){
+            logs.add("오류: " + exception.getMessage());
+            writeFailureLog(inputDirectory, resultDirectory, batchLogs);
             throw new IllegalArgumentException(
                     "BER 반영 파일 처리 중 오류가 발생했습니다: "
                     + exception.getMessage(),
                     exception);
         }catch(InterruptedException exception){
             Thread.currentThread().interrupt();
+            logs.add("오류: BER 반영 배치가 중단되었습니다.");
+            writeFailureLog(inputDirectory, resultDirectory, batchLogs);
             throw new IllegalArgumentException(
                     "BER 반영 배치가 중단되었습니다.",
                     exception);
+        }catch(RuntimeException exception){
+            logs.add("오류: "
+                    + (exception.getMessage() == null
+                    ? exception.getClass().getName()
+                    : exception.getMessage()));
+            writeFailureLog(inputDirectory, resultDirectory, batchLogs);
+            throw exception;
         }finally{
             try{
                 deleteDirectory(workDirectory);
@@ -201,20 +219,15 @@ public class BerApplyService {
 
 
     /**
-     * Output 경로가 있으면 그 경로 아래에, 없으면 DITA 입력 경로 아래에 "결과" 폴더를 만든다.
-     * 예: Output이 {@code V:\Tools\test}면 {@code V:\Tools\test\결과\temp/topics}가 된다.
+     * DITA 입력 경로 아래에 Result_Folder를 만든다.
+     * 예: 입력이 {@code V:\Tools\test}면 {@code V:\Tools\test\Result_Folder}가 된다.
      */
-    private Path resolveResultDirectory(
-            Path inputDirectory,
-            String outputPath) {
-        Path resultBaseDirectory = outputPath == null || outputPath.isBlank()
-                ? inputDirectory
-                : Path.of(outputPath.trim()).toAbsolutePath().normalize();
-        Path resultDirectory = resultBaseDirectory.resolve("결과");
+    private Path resolveResultDirectory(Path inputDirectory) {
+        Path resultDirectory = inputDirectory.resolve("Result_Folder");
 
         if(Files.exists(resultDirectory) && !Files.isDirectory(resultDirectory)){
             throw new IllegalArgumentException(
-                    "Output 경로가 폴더가 아닙니다: " + resultDirectory);
+                    "Result_Folder 경로가 폴더가 아닙니다: " + resultDirectory);
         }
 
         return resultDirectory;
@@ -287,6 +300,8 @@ public class BerApplyService {
         }
 
         copySharedXslDirectory(workDirectory.resolve("xsl"));
+        copySharedResourceDirectory(SHARED_BAT_ROOT, workDirectory, false);
+        copySharedResourceDirectory(SHARED_LIB_ROOT, workDirectory.resolve("lib"));
 
         for(String requiredFile : REQUIRED_TOOL_FILES){
             Path requiredPath = workDirectory.resolve(requiredFile);
@@ -300,18 +315,35 @@ public class BerApplyService {
     }
 
     private void copySharedXslDirectory(Path target) throws IOException {
-        if(Files.exists(target)){
+        copySharedResourceDirectory(SHARED_XSL_ROOT, target);
+    }
+
+    private void copySharedResourceDirectory(String resourceRoot, Path target)
+            throws IOException {
+        copySharedResourceDirectory(resourceRoot, target, true);
+    }
+
+    private void copySharedResourceDirectory(
+            String resourceRoot,
+            Path target,
+            boolean cleanTarget)
+            throws IOException {
+        if(cleanTarget && Files.exists(target)){
             deleteDirectory(target);
         }
 
-        ClassPathResource root = new ClassPathResource(SHARED_XSL_ROOT);
+        ClassPathResource root = new ClassPathResource(resourceRoot);
         if(root.isFile()){
-            copyDirectory(root.getFile().toPath(), target);
+            if(cleanTarget){
+                copyDirectory(root.getFile().toPath(), target);
+            }else{
+                copyDirectoryContents(root.getFile().toPath(), target);
+            }
             return;
         }
 
         Resource[] resources = resourceResolver.getResources(
-                "classpath*:" + SHARED_XSL_ROOT + "/**/*");
+                "classpath*:" + resourceRoot + "/**/*");
 
         for(Resource resource : resources){
             if(!resource.exists() || !resource.isReadable()){
@@ -319,13 +351,13 @@ public class BerApplyService {
             }
 
             String url = resource.getURL().toString().replace('\\', '/');
-            int index = url.lastIndexOf(SHARED_XSL_ROOT + "/");
+            int index = url.lastIndexOf(resourceRoot + "/");
             if(index < 0){
                 continue;
             }
 
             String relativePath = url.substring(
-                    index + (SHARED_XSL_ROOT + "/").length());
+                    index + (resourceRoot + "/").length());
             if(relativePath.isBlank() || relativePath.endsWith("/")){
                 continue;
             }
@@ -350,6 +382,40 @@ public class BerApplyService {
     /** source 폴더를 target으로 복사한다. 결과 폴더 제외가 필요 없을 때 쓰는 단순 래퍼다. */
     private void copyDirectory(Path source, Path target) throws IOException {
         copyDirectory(source, target, null);
+    }
+
+    private void copyDirectoryContents(Path source, Path target) throws IOException {
+        if(!Files.isDirectory(source)){
+            throw new IllegalArgumentException(
+                    "복사할 리소스 폴더를 찾지 못했습니다: " + source);
+        }
+
+        Files.createDirectories(target);
+
+        try(Stream<Path> stream = Files.walk(source)){
+            for(Path sourcePath : stream.toList()){
+                Path relativePath = source.relativize(sourcePath);
+                if(relativePath.toString().isBlank()){
+                    continue;
+                }
+
+                Path targetPath = target.resolve(relativePath).normalize();
+                if(!targetPath.startsWith(target.normalize())){
+                    throw new IllegalArgumentException(
+                            "리소스 경로가 올바르지 않습니다: " + relativePath);
+                }
+
+                if(Files.isDirectory(sourcePath)){
+                    Files.createDirectories(targetPath);
+                }else if(Files.isRegularFile(sourcePath)){
+                    Files.createDirectories(targetPath.getParent());
+                    Files.copy(
+                            sourcePath,
+                            targetPath,
+                            StandardCopyOption.REPLACE_EXISTING);
+                }
+            }
+        }
     }
 
     private void copyDirectory(
@@ -408,9 +474,12 @@ public class BerApplyService {
      *
      * <p>BAT 마지막에 pause가 있어 서버 프로세스가 멈출 수 있으므로
      * {@code echo. | call ...bat} 형태로 빈 Enter를 흘려보내 pause를 자동 통과시킨다.
-     * BAT 로그는 화면 오류 메시지에 활용할 수 있도록 logs에 모은다.</p>
+     * BAT 출력은 화면 오류 메시지와 ber.log에 활용할 수 있도록 별도로 모은다.</p>
      */
-    private void runBatch(Path workDirectory, List<String> logs)
+    private void runBatch(
+            Path workDirectory,
+            List<String> logs,
+            List<String> batchLogs)
             throws IOException, InterruptedException {
         Path batchFile = workDirectory.resolve(BER_BATCH);
         ProcessBuilder builder = new ProcessBuilder(
@@ -428,12 +497,13 @@ public class BerApplyService {
         try(BufferedReader reader = new BufferedReader(
                 new InputStreamReader(
                         process.getInputStream(),
-                        Charset.defaultCharset()))){
+                        BATCH_OUTPUT_CHARSET))){
             String line;
 
             while((line = reader.readLine()) != null){
                 if(!line.isBlank()){
                     logs.add(line);
+                    batchLogs.add(line);
                 }
             }
         }
@@ -459,128 +529,35 @@ public class BerApplyService {
             throw new IllegalArgumentException(
                     "BER 반영 결과 폴더(temp/topics)가 생성되지 않았습니다.");
         }
-    }
 
-    /**
-     * 배치가 만든 최종 topics 결과만 별도 폴더로 모은다.
-     *
-     * <p>작업 폴더의 topics에는 원본에서 복사한 파일과 배치가 새로 쓴 파일이 같이 있다.
-     * 결과로 원본 전체를 내보내면 불필요하게 크고 혼란스러우므로, 배치 시작 이후 수정된
-     * .dita 파일과 xsl/bookmap.xml에서 만들어진 ditamap만 generated-topics에 모은다.</p>
-     */
-    private Path createGeneratedTopicsDirectory(
-            Path workDirectory,
-            Instant batchStartedAt)
-            throws IOException {
-        Path generatedTopicsDirectory = workDirectory.resolve("generated-topics");
-        Path sourceTopicsDirectory = workDirectory.resolve("topics");
-
-        deleteDirectory(generatedTopicsDirectory);
-        Files.createDirectories(generatedTopicsDirectory);
-        copyGeneratedDitamap(workDirectory, generatedTopicsDirectory);
-
-        try(Stream<Path> stream = Files.walk(sourceTopicsDirectory)){
-            for(Path sourcePath : stream.toList()){
-                if(!Files.isRegularFile(sourcePath)
-                        || !sourcePath.getFileName()
-                        .toString()
-                        .toLowerCase(Locale.ROOT)
-                        .endsWith(".dita")){
-                    continue;
-                }
-
-                if(Files.getLastModifiedTime(sourcePath)
-                        .toInstant()
-                        .isBefore(batchStartedAt.minusSeconds(1))){
-                    continue;
-                }
-
-                Path targetPath = generatedTopicsDirectory.resolve(
-                        sourceTopicsDirectory.relativize(sourcePath))
-                        .normalize();
-
-                if(!targetPath.startsWith(generatedTopicsDirectory)){
-                    throw new IllegalArgumentException(
-                            "BER 생성 topics 경로가 올바르지 않습니다: "
-                            + sourcePath);
-                }
-
-                Files.createDirectories(targetPath.getParent());
-                Files.copy(
-                        sourcePath,
-                        targetPath,
-                        StandardCopyOption.REPLACE_EXISTING,
-                        StandardCopyOption.COPY_ATTRIBUTES);
-            }
-        }
-
-        return generatedTopicsDirectory;
-    }
-
-    /** xsl/bookmap.xml을 읽어 실제 mapname 속성 이름으로 결과 ditamap 파일을 복사한다. */
-    private void copyGeneratedDitamap(
-            Path workDirectory,
-            Path generatedTopicsDirectory)
-            throws IOException {
-        Path generatedBookmap = workDirectory.resolve("xsl")
-                .resolve("bookmap.xml");
-
-        if(!Files.isRegularFile(generatedBookmap)){
+        if(!Files.isRegularFile(workDirectory.resolve("temp")
+                .resolve("excel-change-report.xlsx"))){
             throw new IllegalArgumentException(
-                    "BER 생성 ditamap을 찾지 못했습니다: " + generatedBookmap);
+                    "BER 변경 리포트 엑셀이 생성되지 않았습니다.");
         }
-
-        String mapName = readGeneratedMapName(generatedBookmap);
-        Path targetMap = generatedTopicsDirectory.resolve(mapName)
-                .normalize();
-
-        if(!targetMap.startsWith(generatedTopicsDirectory)){
-            throw new IllegalArgumentException(
-                    "BER 생성 ditamap 이름이 올바르지 않습니다: " + mapName);
-        }
-
-        Files.copy(
-                generatedBookmap,
-                targetMap,
-                StandardCopyOption.REPLACE_EXISTING,
-                StandardCopyOption.COPY_ATTRIBUTES);
     }
 
-    /** 생성된 bookmap.xml의 루트 mapname 속성을 읽어 결과 ditamap 파일명을 결정한다. */
-    private String readGeneratedMapName(Path generatedBookmap) {
-        try(var input = Files.newInputStream(generatedBookmap)){
-            var factory = javax.xml.parsers.DocumentBuilderFactory.newInstance();
-            factory.setFeature(
-                    "http://apache.org/xml/features/disallow-doctype-decl",
-                    true);
-            factory.setFeature(
-                    "http://xml.org/sax/features/external-general-entities",
-                    false);
-            factory.setFeature(
-                    "http://xml.org/sax/features/external-parameter-entities",
-                    false);
-            factory.setExpandEntityReferences(false);
+    /** BAT 실행 후 결과로 옮길 topics 폴더가 비어 있지 않은지 확인한다. */
+    private void validateResultTopicsDirectory(Path topicsDirectory)
+            throws IOException {
 
-            Document document = factory.newDocumentBuilder()
-                    .parse(input);
-            Element root = document.getDocumentElement();
-            String mapName = root == null
-                    ? ""
-                    : root.getAttribute("mapname");
+        if(!Files.isDirectory(topicsDirectory)){
+            throw new IllegalArgumentException(
+                    "BER 반영 결과 topics 폴더가 생성되지 않았습니다.");
+        }
 
-            if(mapName == null || mapName.isBlank()){
+        try(Stream<Path> stream = Files.walk(topicsDirectory)){
+            boolean hasDita = stream.anyMatch(path ->
+                    Files.isRegularFile(path)
+                            && path.getFileName()
+                            .toString()
+                            .toLowerCase()
+                            .endsWith(".dita"));
+
+            if(!hasDita){
                 throw new IllegalArgumentException(
-                        "BER 생성 ditamap 이름을 찾지 못했습니다: "
-                        + generatedBookmap);
+                        "BER 반영 결과 DITA 파일이 생성되지 않았습니다.");
             }
-
-            return mapName.trim();
-        }catch(IllegalArgumentException exception){
-            throw exception;
-        }catch(Exception exception){
-            throw new IllegalArgumentException(
-                    "BER 생성 ditamap을 읽지 못했습니다: " + generatedBookmap,
-                    exception);
         }
     }
 
@@ -588,6 +565,56 @@ public class BerApplyService {
     private List<String> tail(List<String> logs, int count) {
         int fromIndex = Math.max(0, logs.size() - count);
         return logs.subList(fromIndex, logs.size());
+    }
+
+    /** QSG 로그와 같은 방식으로 BER 배치 출력 로그를 Result_Folder에 저장한다. */
+    private void writeBerLog(Path resultDirectory, List<String> logs)
+            throws IOException {
+
+        Files.createDirectories(resultDirectory);
+        Files.write(
+                resultDirectory.resolve("ber.log"),
+                logs,
+                StandardCharsets.UTF_8);
+    }
+
+    /** 실패 시에도 가능한 범위에서 Result_Folder\ber.log를 남긴다. */
+    private void writeFailureLog(
+            Path inputDirectory,
+            Path resultDirectory,
+            List<String> logs) {
+
+        Path logDirectory = resultDirectory;
+
+        if(logDirectory == null && inputDirectory != null){
+            logDirectory = inputDirectory.resolve("Result_Folder");
+        }
+
+        if(logDirectory == null){
+            return;
+        }
+
+        try{
+            writeBerLog(logDirectory, logs);
+        }catch(IOException logException){
+            logs.add("오류 로그 저장 실패: " + logException.getMessage());
+        }
+    }
+
+    /** BER 변경 리포트 엑셀을 Result_Folder 바로 아래로 이동한다. */
+    private void moveReportFile(Path source, Path target)
+            throws IOException {
+
+        if(!Files.isRegularFile(source)){
+            throw new IllegalArgumentException(
+                    "BER 변경 리포트 엑셀을 찾지 못했습니다: " + source);
+        }
+
+        Files.createDirectories(target.getParent());
+        Files.move(
+                source,
+                target,
+                StandardCopyOption.REPLACE_EXISTING);
     }
 
     /**

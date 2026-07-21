@@ -8,7 +8,7 @@ body{
     min-height:0;
     background:#eef1f5;
     color:#20252b;
-    font-family:Arial, "Malgun Gothic", sans-serif;
+    font-family:"LINE Seed Sans KR", SUIT, Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
 }
 
 .revision-page{
@@ -92,6 +92,15 @@ body{
     align-items:center;
     gap:10px;
     margin-bottom:16px;
+}
+
+.full-path-row{
+    grid-template-columns:1fr;
+    gap:8px;
+}
+
+.full-path-row span{
+    display:none;
 }
 
 .path-row label,

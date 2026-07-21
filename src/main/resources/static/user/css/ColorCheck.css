@@ -4,7 +4,7 @@ body{
     min-height:100vh;
     background:#eef1f5;
     color:#20252b;
-    font-family:Arial, "Malgun Gothic", sans-serif;
+    font-family:"LINE Seed Sans KR", SUIT, Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
 }
 
 /* 팝업 안쪽 콘텐츠의 최대 폭과 여백 */
@@ -209,6 +209,9 @@ button:disabled{
 
 /* API 진행/성공/실패 내용을 표시하는 공통 메시지 상자 */
 .status-message{
+    display:flex;
+    align-items:center;
+    gap:8px;
     margin-top:18px;
     padding:12px 14px;
     border:1px solid #cfd6df;
@@ -218,6 +221,19 @@ button:disabled{
     font-size:13px;
     line-height:1.55;
     white-space:pre-line;
+}
+
+.status-message[hidden]{
+    display:none !important;
+}
+
+.status-hourglass{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 auto;
+    font-size:16px;
+    animation:status-hourglass-spin 1.1s linear infinite;
 }
 
 .status-message.success{
@@ -236,6 +252,16 @@ button:disabled{
     border-color:#a8c9ef;
     background:#eef6ff;
     color:#245d99;
+}
+
+@keyframes status-hourglass-spin{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
 }
 
 /* 닫기 버튼이 있는 카드 하단 영역 */

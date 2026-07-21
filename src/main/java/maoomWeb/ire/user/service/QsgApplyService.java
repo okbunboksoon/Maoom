@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Stream;
@@ -22,40 +23,40 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.stereotype.Service;
 
-import maoomWeb.ire.user.dto.MultilingualRunRequest;
-import maoomWeb.ire.user.dto.MultilingualRunResult;
+import maoomWeb.ire.user.dto.QsgRunRequest;
+import maoomWeb.ire.user.dto.QsgRunResult;
 
-/**
- * 다국어 변환 배치를 임시 작업 폴더에서 실행하고 결과만 입력 경로로 복사한다.
- */
+/** QSG 배치를 작업 폴더에서 언어별로 실행하고 결과만 입력 경로로 복사한다. */
 @Service
-public class MultilingualConversionService {
+public class QsgApplyService {
 
     private static final DateTimeFormatter RUN_FORMAT =
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss-SSS");
     private static final Charset BATCH_OUTPUT_CHARSET =
             Charset.forName("MS949");
-    private static final String BATCH_FILE =
-            "00_Split_Extracted_Folders_to_DITA_ver260710.bat";
-    private static final String SHARED_BAT_ROOT = "bat";
-    private static final String SHARED_XSL_ROOT = "xsl";
-    private static final String SHARED_LIB_ROOT = "lib";
+    private static final String BAT_ROOT = "bat";
+    private static final String XSL_ROOT = "xsl";
+    private static final String LIB_ROOT = "lib";
+    private static final String BATCH_FILE = "02_QSG_apply.bat";
 
-    public MultilingualRunResult run(MultilingualRunRequest request) {
+    public QsgRunResult run(QsgRunRequest request) {
         List<String> logs = new ArrayList<>();
         Path workspace = null;
         Path input = null;
+        List<String> languageCodes = normalizeLanguageCodes(request);
 
         try {
             if (request == null) {
-                throw new IllegalArgumentException(
-                        "다국어 변환 요청이 비어 있습니다.");
+                throw new IllegalArgumentException("QSG 요청이 비어 있습니다.");
+            }
+            if (languageCodes.isEmpty()) {
+                throw new IllegalArgumentException("QSG 언어를 선택해주세요.");
             }
 
             input = requireDirectory(request.inputPath(), "Input");
             workspace = createWorkDirectory(input);
-            copySharedResourceDirectory(SHARED_BAT_ROOT, workspace, false);
-            copySharedResourceDirectory(SHARED_LIB_ROOT, workspace.resolve("lib"));
+            copySharedResourceDirectory(BAT_ROOT, workspace, false);
+            copySharedResourceDirectory(LIB_ROOT, workspace.resolve("lib"));
             copySharedXslDirectory(workspace.resolve("xsl"));
             Files.createDirectories(workspace.resolve("topics"));
 
@@ -63,39 +64,58 @@ public class MultilingualConversionService {
             copyDirectory(
                     source,
                     workspace.resolve("topics"),
-                    Set.of("Result_Folder", "temp_out"));
+                    Set.of("Result_Folder", "result_Folder", "temp_out"));
 
             logs.add("작업 폴더: " + workspace);
             logs.add("Input 원본: " + input);
-            logs.add("배치 실행: " + BATCH_FILE);
-            runBatch(workspace, logs);
-            validateOutput(workspace.resolve("topics"));
+            logs.add("선택 언어: " + String.join(", ", languageCodes));
+
+            for (String languageCode : languageCodes) {
+                logs.add("배치 실행: " + BATCH_FILE + " " + languageCode);
+                runBatch(workspace, languageCode, logs);
+            }
+
+            Path workspaceResult = workspace.resolve("result_Folder");
+            validateOutput(workspaceResult);
 
             Path runOutput = input.resolve("Result_Folder");
-            Files.createDirectories(runOutput);
-            replaceDirectory(
-                    workspace.resolve("topics"),
-                    runOutput.resolve("topics"));
+            replaceDirectory(workspaceResult, runOutput);
             logs.add("완료: " + runOutput);
             Files.write(
-                    runOutput.resolve("multilingual.log"),
+                    runOutput.resolve("qsg.log"),
                     logs,
                     StandardCharsets.UTF_8);
 
-            return new MultilingualRunResult(
+            return new QsgRunResult(
                     true,
                     runOutput.toString(),
+                    languageCodes,
                     logs);
         } catch (Exception exception) {
-            logs.add("오류: " + exception.getMessage());
+            logs.add("오류: " + formatException(exception));
             writeFailureLog(input, logs);
-            return new MultilingualRunResult(
+            return new QsgRunResult(
                     false,
                     null,
+                    languageCodes,
                     logs);
         } finally {
             deleteDirectoryQuietly(workspace);
         }
+    }
+
+    private List<String> normalizeLanguageCodes(QsgRunRequest request) {
+        if (request == null || request.languageCodes() == null) {
+            return List.of();
+        }
+
+        Set<String> codes = new LinkedHashSet<>();
+        for (String code : request.languageCodes()) {
+            if (code != null && !code.isBlank()) {
+                codes.add(code.trim());
+            }
+        }
+        return List.copyOf(codes);
     }
 
     private Path resolveTopicsSource(Path input) {
@@ -106,19 +126,20 @@ public class MultilingualConversionService {
         return input;
     }
 
-    private void runBatch(Path workspace, List<String> logs)
+    private void runBatch(Path workspace, String languageCode, List<String> logs)
             throws IOException, InterruptedException {
 
         Path batchFile = workspace.resolve(BATCH_FILE);
         if (!Files.isRegularFile(batchFile)) {
             throw new IllegalArgumentException(
-                    "다국어 변환 배치 파일을 찾지 못했습니다: " + BATCH_FILE);
+                    "QSG 배치 파일을 찾지 못했습니다: " + BATCH_FILE);
         }
 
         Process process = new ProcessBuilder(
                 "cmd.exe",
                 "/c",
-                "call \"" + batchFile.getFileName() + "\" < nul")
+                "call \"" + batchFile.getFileName() + "\" \""
+                        + languageCode + "\" < nul")
                 .directory(workspace.toFile())
                 .redirectErrorStream(true)
                 .start();
@@ -138,15 +159,15 @@ public class MultilingualConversionService {
         int exitCode = process.waitFor();
         if (exitCode != 0) {
             throw new IllegalStateException(
-                    "다국어 변환 배치 실행 실패(" + exitCode + ")");
+                    "QSG 배치 실행 실패(" + languageCode + ", " + exitCode + ")");
         }
     }
 
-    private void validateOutput(Path topics) throws IOException {
-        if (!hasFileWithExtension(topics, ".dita", ".ditamap")) {
+    private void validateOutput(Path resultFolder) throws IOException {
+        if (!hasFileWithExtension(resultFolder, ".dita", ".ditamap")) {
             throw new IllegalStateException(
-                    "다국어 변환 결과가 없습니다. topics 폴더에 dita/ditamap 파일이 생성되지 않았습니다: "
-                    + topics);
+                    "QSG 결과가 없습니다. result_Folder에 dita/ditamap 파일이 생성되지 않았습니다: "
+                    + resultFolder);
         }
     }
 
@@ -184,7 +205,7 @@ public class MultilingualConversionService {
             Path resultFolder = input.resolve("Result_Folder");
             Files.createDirectories(resultFolder);
             Files.write(
-                    resultFolder.resolve("multilingual.log"),
+                    resultFolder.resolve("qsg.log"),
                     logs,
                     StandardCharsets.UTF_8);
         } catch (IOException logException) {
@@ -194,8 +215,7 @@ public class MultilingualConversionService {
 
     private Path requireDirectory(String pathText, String label) {
         if (pathText == null || pathText.isBlank()) {
-            throw new IllegalArgumentException(
-                    label + " 경로를 입력해주세요.");
+            throw new IllegalArgumentException(label + " 경로를 입력해주세요.");
         }
 
         Path path = Path.of(pathText.trim()).toAbsolutePath().normalize();
@@ -208,25 +228,37 @@ public class MultilingualConversionService {
 
     private Path createWorkDirectory(Path inputDirectory) {
         String folderName = inputDirectory.getFileName() == null
-                ? "multilingual"
+                ? "qsg"
                 : inputDirectory.getFileName().toString();
         String safeName = folderName.replaceAll("[^A-Za-z0-9._-]", "_");
 
         if (safeName.isBlank()) {
-            safeName = "multilingual";
+            safeName = "qsg";
         }
 
         return Path.of(
                 System.getProperty("user.home"),
                 ".maoomtool",
-                "multilingual-" + safeName + "-"
+                "qsg-" + safeName + "-"
                 + LocalDateTime.now().format(RUN_FORMAT))
                 .toAbsolutePath()
                 .normalize();
     }
 
+    private void replaceDirectory(Path source, Path target)
+            throws IOException {
+
+        if (!Files.isDirectory(source)) {
+            throw new IllegalArgumentException(
+                    "복사할 결과 폴더가 없습니다: " + source);
+        }
+
+        deleteDirectory(target);
+        copyDirectory(source, target, Set.of());
+    }
+
     private void copySharedXslDirectory(Path target) throws IOException {
-        copySharedResourceDirectory(SHARED_XSL_ROOT, target);
+        copySharedResourceDirectory(XSL_ROOT, target);
     }
 
     private void copySharedResourceDirectory(String resourceRoot, Path target)
@@ -240,7 +272,7 @@ public class MultilingualConversionService {
             boolean cleanTarget)
             throws IOException {
         if (cleanTarget) {
-            deleteDirectoryQuietly(target);
+            deleteDirectory(target);
         }
 
         ClassPathResource root = new ClassPathResource(resourceRoot);
@@ -251,7 +283,6 @@ public class MultilingualConversionService {
 
         PathMatchingResourcePatternResolver resolver =
                 new PathMatchingResourcePatternResolver();
-
         for (Resource resource : resolver.getResources(
                 "classpath*:" + resourceRoot + "/**/*")) {
             if (!resource.isReadable()) {
@@ -266,8 +297,7 @@ public class MultilingualConversionService {
                 continue;
             }
 
-            String relative = url.substring(
-                    index + (resourceRoot + "/").length());
+            String relative = url.substring(index + (resourceRoot + "/").length());
             if (relative.isBlank() || relative.endsWith("/")) {
                 continue;
             }
@@ -288,16 +318,12 @@ public class MultilingualConversionService {
         }
     }
 
-    private void replaceDirectory(Path source, Path target)
-            throws IOException {
-
-        if (!Files.isDirectory(source)) {
-            throw new IllegalArgumentException(
-                    "복사할 결과 폴더가 없습니다: " + source);
+    private String formatException(Exception exception) {
+        String message = exception.getMessage();
+        if (message == null || message.isBlank()) {
+            return exception.getClass().getSimpleName();
         }
-
-        deleteDirectoryQuietly(target);
-        copyDirectory(source, target, Set.of());
+        return exception.getClass().getSimpleName() + ": " + message;
     }
 
     private void copyDirectory(
@@ -348,6 +374,18 @@ public class MultilingualConversionService {
                     }
                 });
         } catch (IOException ignored) {
+        }
+    }
+
+    private void deleteDirectory(Path path) throws IOException {
+        if (path == null || !Files.exists(path)) {
+            return;
+        }
+
+        try (Stream<Path> paths = Files.walk(path)) {
+            for (Path item : paths.sorted(Comparator.reverseOrder()).toList()) {
+                Files.deleteIfExists(item);
+            }
         }
     }
 }

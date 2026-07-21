@@ -27,7 +27,7 @@
     <header class="color-check-header">
         <div>
             <h1 id="pageHeading">견적</h1>
-            <p>PDF 도안을 엑셀로 만들고, 체크한 내용을 최종 엑셀로 만든다.</p>
+            <p>PDF의 도안을 추출하여 엑셀로 만들고, 체크한 도안을 발주내역서를 작성합니다.</p>
         </div>
     </header>
 
@@ -444,14 +444,24 @@ function setStatus(type, message){
 
     if(!message){
         status.hidden = true;
-        status.textContent = '';
+        status.replaceChildren();
         status.className = 'status-message';
         return;
     }
 
     status.hidden = false;
-    status.textContent = message;
     status.className = 'status-message ' + type;
+
+    if(type === 'progress'){
+        const hourglass = document.createElement('span');
+        hourglass.className = 'status-hourglass';
+        hourglass.textContent = '⏳';
+        hourglass.setAttribute('aria-hidden', 'true');
+        status.replaceChildren(hourglass, document.createTextNode(message));
+        return;
+    }
+
+    status.textContent = message;
 }
 
 /**
@@ -512,5 +522,4 @@ function getHeaderNumber(response, headerName){
 </script>
 </body>
 </html>
-
 

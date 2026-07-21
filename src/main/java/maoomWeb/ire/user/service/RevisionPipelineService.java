@@ -49,7 +49,9 @@ public class RevisionPipelineService {
             "BOOKMAP_MAPNAME_REQUIRED:";
     private static final Charset BATCH_FILE_CHARSET = StandardCharsets.UTF_8;
     private static final Charset BATCH_OUTPUT_CHARSET = Charset.forName("MS949");
-    private static final String SHARED_XSL_ROOT = "shared-xsl";
+    private static final String SHARED_BAT_ROOT = "bat";
+    private static final String SHARED_XSL_ROOT = "xsl";
+    private static final String SHARED_LIB_ROOT = "lib";
 
     // 이 목록의 순서가 화면 표시 순서이자 실제 XSL 실행 순서다.
     private static final List<RevisionStep> STEPS = List.of(
@@ -61,10 +63,10 @@ public class RevisionPipelineService {
                 "10-namespace-remove.xsl", "10-namespace-removed.xml", false),
         step("METADATA_INSERT", "메타데이터 추가",
                 "Map에 필요한 topicmeta 정보를 추가합니다.",
-                "11_metadata_Insert.xsl", "11-metadata-inserted.xml", false),
+                "0100-metadata_Insert.xsl", "11-metadata-inserted.xml", false),
         step("SVG_UPDATE", "SVG 정보 추가",
                 "navtitle 기준 SVG 관련 메타데이터를 갱신합니다.",
-                "12_svg_update.xsl", "12-svg-updated.xml", false),
+                "0110-svg_update.xsl", "12-svg-updated.xml", false),
         step("TOC_CREATE", "TOC 생성",
                 "Topicref를 목차 구조로 정리합니다.",
                 "11-toc-create.xsl", "11-toc-created.xml", false),
@@ -76,19 +78,19 @@ public class RevisionPipelineService {
                 "13-topic-merge.xsl", "13-topic-merged.xml", true),
         step("TGROUP_MERGE", "복수 Tgroup 병합",
                 "하나의 table 안에 있는 여러 tgroup을 하나로 합칩니다.",
-                "13-1_merge_tgroup.xsl", "14-topic-merged.xml", false),
+                "0130-merge_tgroup.xsl", "14-topic-merged.xml", false),
         step("IMAGE_ATTRIBUTE", "이미지 속성 정리",
                 "이미지 href와 placement, outputclass 속성을 정리합니다.",
                 "01c_image_attr.xsl", "image-attribute.xml", false),
         step("REFINEMENT_TAG", "정제 태그 적용",
                 "용어와 인라인 요소의 정제 태그를 적용합니다.",
-                "00_refinement_tag.xsl", "refinement-tag.xml", false),
+                "0170-refinement_tag.xsl", "refinement-tag.xml", false),
         step("TRANSLATE_NO_TAGGING", "번역 제외 태그 적용",
                 "번역 제외 대상에 필요한 태그를 적용합니다.",
-                "00_translate_no_tagging.xsl", "translate-no-tagging.xml", false),
+                "0180-translate_no_tagging.xsl", "translate-no-tagging.xml", false),
         step("REMOVE_REVIEW", "Review 속성 제거",
                 "검토용 outputclass와 modified 속성을 제거합니다.",
-                "14_1-remove_review.xsl", "remove-review.xml", true),
+                "0400-remove_review.xsl", "remove-review.xml", true),
         step("NAMESPACE_REMOVE_2", "2차 Namespace 제거",
                 "병합 이후 생성된 Namespace를 다시 정리합니다.",
                 "14-namespace-remove.xsl", "14-namespace-removed.xml", false),
@@ -103,10 +105,10 @@ public class RevisionPipelineService {
                 "17-related-links_NotFileNameChange.xsl", "17-related-links.xml", false),
         step("DITA_REBEAUTIFY", "DITA 구조 정렬",
                 "bookmap 정보를 이용해 chapter 파일 정보를 정렬합니다.",
-                "18-dita-rebeautify.xsl", "18-dita-rebeautified.xml", false),
+                "0009-dita-rebeautify.xsl", "18-dita-rebeautified.xml", false),
         chapter("RECHAPTERIZE", "Chapter 파일 분리",
                 "최종 Map을 chapter XML 파일들로 분리합니다.",
-                "19-rechapterize.xsl")
+                "0010-rechapterize.xsl")
     );
 
     private final Path toolDirectory;
@@ -154,6 +156,8 @@ public class RevisionPipelineService {
             // 원본을 직접 수정하지 않도록 실행 PC의 .maoomtool 아래 작업 폴더에서 처리한다.
             workspace = createWorkDirectory(input);
             copyDirectory(toolDirectory, workspace);
+            copySharedResourceDirectory(SHARED_BAT_ROOT, workspace, false);
+            copySharedResourceDirectory(SHARED_LIB_ROOT, workspace.resolve("lib"));
             copySharedXslDirectory(workspace.resolve("xsl"));
             Files.createDirectories(workspace.resolve("temp"));
             Files.createDirectories(workspace.resolve("topics"));
@@ -892,9 +896,24 @@ public class RevisionPipelineService {
     }
 
     private void copySharedXslDirectory(Path target) throws IOException {
-        deleteDirectoryQuietly(target);
+        copySharedResourceDirectory(SHARED_XSL_ROOT, target);
+    }
 
-        ClassPathResource root = new ClassPathResource(SHARED_XSL_ROOT);
+    private void copySharedResourceDirectory(String resourceRoot, Path target)
+            throws IOException {
+        copySharedResourceDirectory(resourceRoot, target, true);
+    }
+
+    private void copySharedResourceDirectory(
+            String resourceRoot,
+            Path target,
+            boolean cleanTarget)
+            throws IOException {
+        if (cleanTarget) {
+            deleteDirectoryQuietly(target);
+        }
+
+        ClassPathResource root = new ClassPathResource(resourceRoot);
         if (root.isFile()) {
             copyDirectory(root.getFile().toPath(), target);
             return;
@@ -904,7 +923,7 @@ public class RevisionPipelineService {
                 new PathMatchingResourcePatternResolver();
 
         for (Resource resource : resolver.getResources(
-                "classpath*:" + SHARED_XSL_ROOT + "/**/*")) {
+                "classpath*:" + resourceRoot + "/**/*")) {
             if (!resource.isReadable()) {
                 continue;
             }
@@ -912,13 +931,13 @@ public class RevisionPipelineService {
             String url = URLDecoder.decode(
                     resource.getURL().toString(),
                     StandardCharsets.UTF_8);
-            int index = url.lastIndexOf(SHARED_XSL_ROOT + "/");
+            int index = url.lastIndexOf(resourceRoot + "/");
             if (index < 0) {
                 continue;
             }
 
             String relative = url.substring(
-                    index + (SHARED_XSL_ROOT + "/").length());
+                    index + (resourceRoot + "/").length());
             if (relative.isBlank() || relative.endsWith("/")) {
                 continue;
             }
@@ -1084,3 +1103,4 @@ public class RevisionPipelineService {
             StepMode mode) {
     }
 }
+
