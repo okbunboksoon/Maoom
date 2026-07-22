@@ -1,8 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--
-    다국어 변환 팝업의 최초 입력 화면.
+    다국어 변환 팝업.
 
-    입력 경로를 서버로 전달하고 다국어 변환 배치를 실행한다.
+    1. 입력 경로는 서버 PC에서 접근 가능한 V서버/H서버 경로를 받는다.
+    2. XML 입력이면 bookmap.xml 생성에 사용할 ditamap 이름을 추가로 받는다.
+    3. 서버는 작업 폴더에서 배치를 실행하고 입력 경로의 Result_Folder에 결과를 남긴다.
+    4. 이 화면은 입력값 검증, API 호출, 결과 메시지 표시만 담당한다.
 -->
 <html lang="ko">
 <head>
@@ -37,6 +40,15 @@
             <span></span>
         </div>
 
+        <div class="path-row single-path-row full-path-row">
+            <label for="bookmapMapName">ditamap 이름(dita형태이면 X)</label>
+            <input type="text" id="bookmapMapName"
+                   placeholder="예: KIA-SP3-ICE-HEV-en_GB-2027.ditamap"
+                   autocomplete="off">
+            <small>XML 형태일 때 bookmap name으로 사용합니다.</small>
+            <span></span>
+        </div>
+
         <section id="resultPanel" class="result-panel" hidden aria-live="polite">
             <div class="result-heading">
                 <span class="status-indicator"></span>
@@ -57,7 +69,9 @@
 </main>
 
 <script>
+// 파일 업로드는 하지 않는다. 서버가 접근 가능한 입력 경로를 그대로 API에 전달한다.
 const inputPath = document.getElementById('inputPath');
+const bookmapMapName = document.getElementById('bookmapMapName');
 const runButton = document.getElementById('runButton');
 const resultPanel = document.getElementById('resultPanel');
 const resultTitle = document.getElementById('resultTitle');
@@ -68,10 +82,28 @@ function showResult(type, title, message) {
     resultPanel.dataset.status = type;
     resultTitle.textContent = title;
     resultMessage.textContent = message;
+    resizePopupToContent();
+}
+
+function resizePopupToContent(){
+    requestAnimationFrame(() => {
+        const browserFrameHeight = window.outerHeight - window.innerHeight;
+        const contentHeight = document.documentElement.scrollHeight;
+        const verticalMargin = 36;
+        const nextHeight = Math.min(
+            screen.availHeight,
+            contentHeight + browserFrameHeight + verticalMargin
+        );
+        if(Math.abs(nextHeight - window.outerHeight) > 8){
+            window.resizeTo(window.outerWidth, nextHeight);
+        }
+    });
 }
 
 runButton.addEventListener('click', async function() {
+    // MultilingualRunRequest와 같은 구조로 서버에 전달한다.
     const path = inputPath.value.trim();
+    const mapName = bookmapMapName.value.trim();
 
     if (!path) {
         showResult('error', '경로 확인 필요', '입력 경로를 입력하세요.');
@@ -91,7 +123,10 @@ runButton.addEventListener('click', async function() {
         const response = await fetch('/api/multilingual/run', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({inputPath: path})
+            body: JSON.stringify({
+                inputPath: path,
+                bookmapMapName: mapName
+            })
         });
         const result = await response.json();
 

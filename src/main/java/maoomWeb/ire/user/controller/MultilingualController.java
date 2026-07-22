@@ -13,7 +13,11 @@ import maoomWeb.ire.user.service.MultilingualConversionService;
 import maoomWeb.ire.user.service.ProjectExecutionLogService;
 
 /**
- * 다국어 변환 팝업과 배치 실행 서비스를 연결한다.
+ * 다국어 변환 팝업의 실행 API.
+ *
+ * <p>화면은 입력 경로와 XML 입력용 ditamap 이름만 보낸다. 실제 경로 검증,
+ * 작업 폴더 생성, classpath 리소스 복사, 배치 실행, Result_Folder 복사는
+ * {@link MultilingualConversionService}가 담당한다.</p>
  */
 @RestController
 @RequestMapping("/api/multilingual")
@@ -33,6 +37,7 @@ public class MultilingualController {
     }
 
     @PostMapping("/run")
+    /** 다국어 변환 실행 버튼 클릭 시 호출된다. 성공하면 입력 경로의 Result_Folder를 반환한다. */
     public MultilingualRunResult run(
             @RequestBody MultilingualRunRequest request,
             Authentication authentication) {

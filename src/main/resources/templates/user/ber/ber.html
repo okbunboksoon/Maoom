@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- BER 반영: 서버가 접근 가능한 DITA 경로를 받아 배치를 실행하고 입력 경로의 Result_Folder에 결과를 반환한다. -->
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -131,8 +131,7 @@ function resizePopupToContent(){
             screen.availHeight,
             contentHeight + browserFrameHeight + verticalMargin
         );
-
-        if(nextHeight > window.outerHeight){
+        if(Math.abs(nextHeight - window.outerHeight) > 8){
             window.resizeTo(window.outerWidth, nextHeight);
         }
     });

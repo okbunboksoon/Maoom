@@ -1,5 +1,11 @@
-<!DOCTYPE html>
-<!-- DITAMAP Builder 작업을 시작하기 위한 DITA 경로 입력 화면. -->
+﻿<!DOCTYPE html>
+<!--
+    DITAMAP Builder 시작 팝업.
+
+    1. 서버 PC에서 접근 가능한 V서버/H서버 입력 경로를 받는다.
+    2. 서버에서 경로를 검증하고 DITAMAP Builder용 조회/생성 흐름을 시작한다.
+    3. 이 화면은 경로 입력, API 호출, 결과 메시지 표시만 담당한다.
+-->
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -55,6 +61,7 @@
 </main>
 
 <script>
+// 파일 업로드는 하지 않고, 서버가 접근 가능한 DITA 경로 문자열만 전달한다.
 const ditaPathInput =
     document.getElementById('ditaPath');
 const resultPanel =
@@ -69,6 +76,22 @@ function showResult(type, title, message){
     resultPanel.dataset.status = type;
     resultTitle.textContent = title;
     resultMessage.textContent = message;
+    resizePopupToContent();
+}
+
+function resizePopupToContent(){
+    requestAnimationFrame(() => {
+        const browserFrameHeight = window.outerHeight - window.innerHeight;
+        const contentHeight = document.documentElement.scrollHeight;
+        const verticalMargin = 36;
+        const nextHeight = Math.min(
+            screen.availHeight,
+            contentHeight + browserFrameHeight + verticalMargin
+        );
+        if(Math.abs(nextHeight - window.outerHeight) > 8){
+            window.resizeTo(window.outerWidth, nextHeight);
+        }
+    });
 }
 
 document.getElementById('confirmDitaPath')

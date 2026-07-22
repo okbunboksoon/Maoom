@@ -164,6 +164,9 @@
         <button class="launcher-tab"
                 type="button"
                 data-category="DITA">DITA</button>
+        <button class="launcher-tab"
+                type="button"
+                data-category="EXCEL">EXCEL</button>
         <a class="launcher-guide-link" href="/guide">
             <i class="fa-solid fa-circle-question"></i>
             가이드
@@ -238,6 +241,13 @@ const launcherMenus = [
         category:'DITA',
         icon:'fa-book-open',
         action:openQsgPopup
+    },
+    {
+        title:'제품사양서 비교',
+        description:'제품 사양서 차이 비교',
+        category:'EXCEL',
+        icon:'fa-code-compare',
+        action:openProductSpecComparePopup
     }
 ];
 
@@ -541,6 +551,15 @@ function openColorCheckPopup(){
     );
 }
 
+// 제품사양서 비교 전용 화면을 연다.
+function openProductSpecComparePopup(){
+    window.open(
+        '/pdf/product-spec-comparison',
+        'productSpecComparisonPopup',
+        'width=720,height=820'
+    );
+}
+
 // BER 반영 전용 화면을 연다.
 function openBerPopup(){
     window.open(
@@ -573,7 +592,7 @@ function openMultilingualPopup(){
     window.open(
         '/multilingual/list',
         'multilingualPopup',
-        'width=680,height=350'
+        'width=680,height=450'
     );
 }
 

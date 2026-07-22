@@ -24,14 +24,28 @@
 			<xsl:apply-templates select="@* | node()"/>
 		</xsl:copy>
 	</xsl:template>
-	
+
+	<!-- ===== 배치 프롬프트 지역/DB 표시 ===== -->
+	<xsl:template match="/">
+		<xsl:message>
+			<xsl:text>Region=</xsl:text>
+			<xsl:value-of select="if ($isNA) then 'NA' else 'EU'"/>
+			<xsl:text>, DB=</xsl:text>
+			<xsl:value-of select="$dbPath"/>
+			<xsl:text>, map/title="</xsl:text>
+			<xsl:value-of select="$mapTitle"/>
+			<xsl:text>"</xsl:text>
+		</xsl:message>
+		<xsl:apply-templates/>
+	</xsl:template>
+
 	<!-- ===== 본문 치환: 텍스트는 DB/new, 인라인은 원문 재사용 ===== -->
 	<!--<xsl:template match="p | cmd | title | shortdesc">-->
 	<xsl:template match="p[not(@outputclass='exclude')] 
                    | cmd[not(@outputclass='exclude')] 
                    | title[not(@outputclass='exclude')] 
                    | shortdesc[not(@outputclass='exclude')]">
-                   
+
 		<xsl:variable name="current" select="."/>
 		<!-- 항상 현재 노드로부터 해시 계산 (매칭 키로만 사용) -->
 		<xsl:variable name="hash">

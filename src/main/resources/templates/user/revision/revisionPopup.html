@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--
     DITA 정제 팝업의 연결 흐름
 
@@ -41,8 +41,6 @@
             <label id="pathTitle" for="inputPath">입력경로</label>
             <input type="text" id="inputPath"
                    placeholder="경로를 입력하세요" autocomplete="off">
-            <span></span>
-            <span></span>
         </div>
 
         <input type="hidden" id="outputPath">
@@ -223,6 +221,22 @@ function showResult(type, title, message, logs) {
     resultMessage.textContent = message || '';
     statusIndicator.classList.toggle('is-running', type === 'running');
     resultPanel.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+    resizePopupToContent();
+}
+
+function resizePopupToContent(){
+    requestAnimationFrame(() => {
+        const browserFrameHeight = window.outerHeight - window.innerHeight;
+        const contentHeight = document.documentElement.scrollHeight;
+        const verticalMargin = 36;
+        const nextHeight = Math.min(
+            screen.availHeight,
+            contentHeight + browserFrameHeight + verticalMargin
+        );
+        if(Math.abs(nextHeight - window.outerHeight) > 8){
+            window.resizeTo(window.outerWidth, nextHeight);
+        }
+    });
 }
 
 function buildOutputPath(inputPath) {

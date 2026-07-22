@@ -50,7 +50,10 @@
              aria-label="가이드 목록">
         <a class="launcher-card guide-card"
            th:each="guide : ${guides}"
-           th:href="@{/guide/{guideKey}(guideKey=${guide.key})}">
+           th:href="${guide.url}"
+           th:attr="data-external-url=${guide.externalUrl}"
+           target="_blank"
+           rel="noopener">
             <span class="launcher-card-content">
                 <strong th:text="${guide.title}">PDF 리뷰 가이드</strong>
                 <small th:text="${guide.description}">PDF 검토 흐름</small>
@@ -61,5 +64,22 @@
     </section>
 </main>
 
+<script>
+document.querySelectorAll('.guide-card').forEach(card => {
+    card.addEventListener('click', event => {
+        const externalUrl = card.dataset.externalUrl;
+        if (!externalUrl) {
+            return;
+        }
+
+        event.preventDefault();
+        window.open(
+            externalUrl,
+            'guideNotionPopup',
+            'width=1200,height=850,scrollbars=yes,resizable=yes'
+        );
+    });
+});
+</script>
 </body>
 </html>
