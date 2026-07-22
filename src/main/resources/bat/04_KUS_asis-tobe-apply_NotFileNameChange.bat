@@ -32,8 +32,14 @@ rem 260331 eu us 분기 설정 = 34-kus-db-apply.xsl
 java net.sf.saxon.Transform								-s:temp\30-kus-inline-normalized.xml		-o:temp\34-kus-db-applied_exclude.xml  	-xsl:xsl\0340-kus-db-apply_ber_exclude.xsl  flag=on
 java net.sf.saxon.Transform								-s:temp\34-kus-db-applied_exclude.xml		-o:temp\34-kus-db-applied.xml  			-xsl:xsl\0340-kus-db-apply_ber.xsl  flag=on
 
-java net.sf.saxon.Transform								-s:temp\34-kus-db-applied.xml				-o:temp\35-kus-beautified.xml  			-xsl:xsl\0310-kus-beautify.xsl
-java net.sf.saxon.Transform 								-s:temp\35-kus-beautified.xml		 		-o:temp\14-namespace-removed.xml 	 	-xsl:xsl\0005-namespace-remove.xsl
+rem 260331 eu us 분기 설정 = 41-make-change-report.xsl
+java net.sf.saxon.Transform 								-s:temp\34-kus-db-applied_exclude.xml		-o:temp\excel-change-report.xml  			-xsl:xsl\0410-make-change-report_ber.xsl
+
+rem 태그 삭제
+java net.sf.saxon.Transform 								-s:temp\34-kus-db-applied.xml				-o:temp\35-remove_tag.xml	  			-xsl:xsl\0400-remove_review.xsl
+
+java net.sf.saxon.Transform								-s:temp\35-remove_tag.xml					-o:temp\36-kus-beautified.xml  			-xsl:xsl\0310-kus-beautify.xsl
+java net.sf.saxon.Transform 								-s:temp\36-kus-beautified.xml		 		-o:temp\14-namespace-removed.xml 	 	-xsl:xsl\0005-namespace-remove.xsl
 java net.sf.saxon.Transform 								-s:temp\14-namespace-removed.xml  		-o:temp\15-id-cleaned.xml  				-xsl:xsl\0006-id-clean_NotFileNameChange.xsl
 java net.sf.saxon.Transform 								-s:temp\15-id-cleaned.xml  				-o:temp\16-xref-cleaned.xml  				-xsl:xsl\0007-xref-clean_NotFileNameChange.xsl
 java net.sf.saxon.Transform 								-s:temp\16-xref-cleaned.xml  				-o:temp\17-related-links.xml  				-xsl:xsl\0008-related-links_NotFileNameChange.xsl
@@ -46,7 +52,7 @@ java net.sf.saxon.Transform 								-s:temp\17-related-links.xml  				-o:temp\ex
 cscript //nologo "%ROOT%xsl\Convert_Xml_To_Excel.vbs"
 
 del temp\0000-doctype-removed.xml temp\10-namespace-removed.xml temp\11-toc-created.xml temp\13-topic-merged.xml temp\14-namespace-removed.xml temp\15-id-cleaned.xml temp\34-kus-db-applied_exclude.xml  > NUL
-del temp\16-xref-cleaned.xml temp\17-related-links.xml temp\29-kus-text-normalized.xml temp\30-kus-inline-normalized.xml temp\34-kus-db-applied.xml temp\35-kus-beautified.xml > NUL
+del temp\16-xref-cleaned.xml temp\17-related-links.xml temp\29-kus-text-normalized.xml temp\30-kus-inline-normalized.xml temp\34-kus-db-applied.xml temp\36-kus-beautified.xml temp\35-remove_tag.xml > NUL
 del temp\excel-change-report.xml > NUL
 rem rd /q/s temp
 echo Done.

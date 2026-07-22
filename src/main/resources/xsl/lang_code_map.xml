@@ -4,7 +4,7 @@
     <Table>
       <Row>
         <Cell><Data ss:Type="String">Arabic</Data></Cell>
-        <Cell><Data ss:Type="String">ar-AE</Data></Cell>
+        <Cell><Data ss:Type="String">ar-AA</Data></Cell>
       </Row>
       <Row>
         <Cell><Data ss:Type="String">Bulgarian</Data></Cell>
@@ -116,7 +116,7 @@
       </Row>
       <Row>
         <Cell><Data ss:Type="String">Norwegian</Data></Cell>
-        <Cell><Data ss:Type="String">nb-NO</Data></Cell>
+        <Cell><Data ss:Type="String">no-NB</Data></Cell>
       </Row>
       <Row>
         <Cell><Data ss:Type="String">Polish</Data></Cell>
@@ -136,7 +136,7 @@
       </Row>
       <Row>
         <Cell><Data ss:Type="String">Serbian</Data></Cell>
-        <Cell><Data ss:Type="String">sr-Latn-RS</Data></Cell>
+        <Cell><Data ss:Type="String">sr-RS</Data></Cell>
       </Row>
       <Row>
         <Cell><Data ss:Type="String">Slovak</Data></Cell>
@@ -144,7 +144,7 @@
       </Row>
       <Row>
         <Cell><Data ss:Type="String">Slovenian</Data></Cell>
-        <Cell><Data ss:Type="String">sl-SI</Data></Cell>
+        <Cell><Data ss:Type="String">sl-SL</Data></Cell>
       </Row>
       <Row>
         <Cell><Data ss:Type="String">Spanish</Data></Cell>
@@ -168,11 +168,11 @@
       </Row>
       <Row>
         <Cell><Data ss:Type="String">Ukrainian</Data></Cell>
-        <Cell><Data ss:Type="String">uk-UA</Data></Cell>
+        <Cell><Data ss:Type="String">uk-UK</Data></Cell>
       </Row>
       <Row>
         <Cell><Data ss:Type="String">Uzbek</Data></Cell>
-        <Cell><Data ss:Type="String">uz-Latn-UZ</Data></Cell>
+        <Cell><Data ss:Type="String">uz-UZ</Data></Cell>
       </Row>
     </Table>
   </Worksheet>

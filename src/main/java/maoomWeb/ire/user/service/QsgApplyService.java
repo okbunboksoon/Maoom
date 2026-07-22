@@ -26,7 +26,25 @@ import org.springframework.stereotype.Service;
 import maoomWeb.ire.user.dto.QsgRunRequest;
 import maoomWeb.ire.user.dto.QsgRunResult;
 
-/** QSG 배치를 작업 폴더에서 언어별로 실행하고 결과만 입력 경로로 복사한다. */
+/**
+ * QSG 화면의 입력 경로와 언어 선택을 실제 QSG 배치 실행으로 연결한다.
+ *
+ * <p>다른 배치 기능과 동일하게 입력 경로는 원본으로만 사용한다. 실행별
+ * {@code .maoomtool\qsg-*} 작업 폴더를 만들고 classpath의 {@code bat},
+ * {@code xsl}, {@code lib} 리소스와 입력 topics를 복사한 뒤 언어별 배치를
+ * 실행한다. 작업 폴더의 {@code result_Folder}만 입력 경로의
+ * {@code Result_Folder}로 옮기고 로그를 저장한 뒤 작업 폴더를 삭제한다.</p>
+ *
+ * <ol>
+ *   <li>입력 경로와 선택 언어 목록을 검증한다.</li>
+ *   <li>작업 폴더를 만들고 classpath 도구 리소스를 복사한다.</li>
+ *   <li>입력 경로의 {@code topics}가 있으면 topics를, 없으면 입력 폴더 자체를 복사한다.</li>
+ *   <li>선택한 언어 코드마다 {@code 02_QSG_apply.bat}를 실행한다.</li>
+ *   <li>작업 폴더의 {@code result_Folder} 결과를 검증한다.</li>
+ *   <li>결과를 {@code 입력경로\Result_Folder}로 복사하고 {@code qsg.log}를 저장한다.</li>
+ *   <li>성공/실패와 관계없이 작업 폴더를 삭제한다.</li>
+ * </ol>
+ */
 @Service
 public class QsgApplyService {
 
@@ -39,6 +57,7 @@ public class QsgApplyService {
     private static final String LIB_ROOT = "lib";
     private static final String BATCH_FILE = "02_QSG_apply.bat";
 
+    /** QSG 실행 버튼 한 번에 수행되는 전체 파이프라인. */
     public QsgRunResult run(QsgRunRequest request) {
         List<String> logs = new ArrayList<>();
         Path workspace = null;

@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 setlocal EnableExtensions EnableDelayedExpansion
 
 rem ============================================================
@@ -291,9 +291,7 @@ java -cp "%JAVA_CP%" %SAXON_MAIN% ^
     -catalog:"%XSLDIR%\catalog.xml" ^
     -s:"%XSLDIR%\dummy.xml" ^
     -o:"%XSLDIR%\dummy.xml" ^
-    -xsl:"%XSLDIR%\0000-doctype-remove.xsl" ^
-    folderName=%LANG_NAME% ^
-    outFile=09-doctype-removed.xml
+    -xsl:"%XSLDIR%\multilingual-0000-doctype-remove.xsl"
 if errorlevel 1 exit /b 1
 
 java -cp "%JAVA_CP%" %SAXON_MAIN% ^

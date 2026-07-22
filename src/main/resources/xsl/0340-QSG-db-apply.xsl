@@ -13,7 +13,7 @@
   <!-- QSG DB -->
   <xsl:param name="flag" select="'off'"/>
   <xsl:param name="TARGET_LANG" select="''"/>
-  <xsl:variable name="db" select="document('qsg-QSG_DB.xml')"/>
+  <xsl:variable name="db" select="document('QSG_DB.xml')"/>
 
   <!-- title | p 처리: TARGET_LANG가 있으면 해당 언어 term으로 치환 -->
   <xsl:template match="title | p" priority="2">

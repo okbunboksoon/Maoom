@@ -113,7 +113,7 @@ if errorlevel 1 goto :LANG_ERROR
 java net.sf.saxon.Transform	-catalog:xsl\catalog.xml 		-s:temp\35-kus-beautified.xml						-o:xsl\dummy.xml 								-xsl:xsl\qsg-0240-dita-beautify.xsl 				TOPICS_URI="%TOPICS_URI%" OUT_TOPICS_URI="%TOPICS_URI%"
 if errorlevel 1 goto :LANG_ERROR
 
-copy /y "xsl\bookmap.xml" "%LANG_WORK%\bookmap.xml" >nul
+rem copy /y "xsl\bookmap.xml" "%LANG_WORK%\bookmap.xml" >nul
 
 if exist "%LANG_RESULT%" rd /s /q "%LANG_RESULT%"
 mkdir "%LANG_RESULT%"

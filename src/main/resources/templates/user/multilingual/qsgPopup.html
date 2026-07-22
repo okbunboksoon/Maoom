@@ -1,5 +1,12 @@
-<!DOCTYPE html>
-<!-- QSG 언어와 입력 경로를 선택하는 팝업 화면. -->
+﻿<!DOCTYPE html>
+<!--
+    QSG 팝업.
+
+    1. 변환할 언어 코드를 선택한다.
+    2. 입력 경로는 서버 PC에서 접근 가능한 V서버/H서버 경로를 받는다.
+    3. 서버는 작업 폴더에서 언어별 배치를 실행하고 입력 경로의 Result_Folder에 결과를 남긴다.
+    4. 이 화면은 언어 선택, 입력값 검증, API 호출, 결과 메시지 표시만 담당한다.
+-->
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -121,6 +128,7 @@
 </main>
 
 <script>
+// QSG는 업로드 없이 입력 경로와 선택 언어 코드만 서버에 전달한다.
 const inputPath = document.getElementById('inputPath');
 const qsgButton = document.getElementById('qsgButton');
 const languageGrid = document.getElementById('languageGrid');
@@ -155,7 +163,6 @@ const languages = [
     {name:'Lao', code:'lo-LA'},
     {name:'Latvian', code:'lv-LV'},
     {name:'Lithuanian', code:'lt-LT'},
-    {name:'Malaysia', code:'ms-MY'},
     {name:'Mexican_Spanish', code:'es-MX'},
     {name:'Myanmar', code:'my-MM'},
     {name:'Norwegian', code:'no-NB'},
@@ -175,9 +182,7 @@ const languages = [
     {name:'Uzbek', code:'uz-UZ'},
     {name:'Korean', code:'ko-KR'},
     {name:'Canada', code:'en-CA'},
-    {name:'USA', code:'en-US'},
     {name:'Vietnam', code:'vi-VN'},
-    {name:'India', code:'en-IN'},
     {name:'Armenia', code:'hy-AM'},
     {name:'Azerbaijan', code:'az-AZ'},
     {name:'Kyrgyzstan', code:'ky-KG'},
@@ -190,6 +195,22 @@ function showResult(type, title, message) {
     statusIndicator.classList.toggle('is-running', type === 'running');
     resultTitle.textContent = title;
     resultMessage.textContent = message;
+    resizePopupToContent();
+}
+
+function resizePopupToContent(){
+    requestAnimationFrame(() => {
+        const browserFrameHeight = window.outerHeight - window.innerHeight;
+        const contentHeight = document.documentElement.scrollHeight;
+        const verticalMargin = 36;
+        const nextHeight = Math.min(
+            screen.availHeight,
+            contentHeight + browserFrameHeight + verticalMargin
+        );
+        if(Math.abs(nextHeight - window.outerHeight) > 8){
+            window.resizeTo(window.outerWidth, nextHeight);
+        }
+    });
 }
 
 function selectedLanguages() {
