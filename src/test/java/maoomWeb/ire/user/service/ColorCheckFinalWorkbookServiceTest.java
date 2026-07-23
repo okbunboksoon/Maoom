@@ -9,6 +9,7 @@ import java.util.zip.ZipFile;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -164,6 +165,10 @@ class ColorCheckFinalWorkbookServiceTest {
             assertThat(summary.getRow(30).getCell(5)
                     .getNumericCellValue())
                     .isEqualTo(1);
+            assertThat(hasMergedRegion(summary, 30, 31, 2, 2))
+                    .isTrue();
+            assertThat(hasMergedRegion(summary, 6, 31, 1, 1))
+                    .isTrue();
             assertThat(summary.getRow(32).getCell(5)
                     .getNumericCellValue())
                     .isEqualTo(1);
@@ -338,6 +343,40 @@ class ColorCheckFinalWorkbookServiceTest {
                 .contains("SP3_PHEV_27MY_US_HTML");
     }
 
+    @Test
+    void keepsSingleEvPowertrainName()
+            throws Exception {
+
+        Path source = tempDirectory.resolve(
+                "KIA-SV-EV-en_GB-2027-OM_Full-PDF-"
+                + "260610-1.0_web_low_도안분류용.xlsx");
+        createReviewWorkbook(source);
+        ColorCheckFinalWorkbookService service =
+                new ColorCheckFinalWorkbookService();
+
+        Path output = service.createFinalWorkbook(
+                source,
+                source.getFileName().toString(),
+                tempDirectory);
+
+        assertThat(output.getFileName().toString())
+                .matches(
+                        "\\d{6}_도안발주내역서_"
+                        + "SV_EV_27MY_EG_HTML\\.xlsx");
+
+        try(var input = Files.newInputStream(output);
+                var workbook = WorkbookFactory.create(input)){
+            assertThat(workbook.getSheet("도안 발주서")
+                    .getRow(2).getCell(2)
+                    .getStringCellValue())
+                    .isEqualTo("SV_EV_27MY_EG");
+            assertThat(workbook.getSheet("작업의뢰 내역")
+                    .getRow(4).getCell(8)
+                    .getStringCellValue())
+                    .isEqualTo("SV_EV_27MY_EG");
+        }
+    }
+
     private void createReviewWorkbook(Path target)
             throws Exception {
 
@@ -388,5 +427,29 @@ class ColorCheckFinalWorkbookServiceTest {
         row.createCell(2).setCellValue(colorCheck);
         row.createCell(3).setCellValue(chapter);
         row.createCell(4).setCellValue(chapterNumber);
+    }
+
+    private boolean hasMergedRegion(
+            org.apache.poi.ss.usermodel.Sheet sheet,
+            int firstRow,
+            int lastRow,
+            int firstColumn,
+            int lastColumn) {
+
+        CellRangeAddress expected =
+                new CellRangeAddress(
+                        firstRow,
+                        lastRow,
+                        firstColumn,
+                        lastColumn);
+
+        for(CellRangeAddress region : sheet.getMergedRegions()){
+            if(region.formatAsString()
+                    .equals(expected.formatAsString())){
+                return true;
+            }
+        }
+
+        return false;
     }
 }

@@ -23,6 +23,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.model.CalculationChain;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.core.io.ClassPathResource;
@@ -365,7 +366,7 @@ public class ColorCheckFinalWorkbookService {
         }
 
         sheet.setAutoFilter(
-                new org.apache.poi.ss.util.CellRangeAddress(
+                new CellRangeAddress(
                         3,
                         DETAIL_FIRST_ROW + entries.size() - 1,
                         1,
@@ -486,6 +487,13 @@ public class ColorCheckFinalWorkbookService {
             totalRowIndex += addedRows;
         }
 
+        ensureMergedRegion(
+                sheet,
+                6,
+                totalRowIndex - 1,
+                1,
+                1);
+
         int totalCount = 0;
         Row descriptionStyleSource = sheet.getRow(28);
         Row compositionStyleSource = sheet.getRow(29);
@@ -530,6 +538,12 @@ public class ColorCheckFinalWorkbookService {
                     descriptionRow,
                     2,
                     groups.get(index));
+            ensureMergedRegion(
+                    sheet,
+                    descriptionRowIndex,
+                    compositionRowIndex,
+                    2,
+                    2);
             setCellValue(
                     descriptionRow,
                     3,
@@ -567,6 +581,39 @@ public class ColorCheckFinalWorkbookService {
         Row totalRow = sheet.getRow(totalRowIndex);
         setCellValue(totalRow, 5, totalCount);
         setCellValue(totalRow, 6, totalCount * UNIT_PRICE);
+    }
+
+    private void ensureMergedRegion(
+            Sheet sheet,
+            int firstRow,
+            int lastRow,
+            int firstColumn,
+            int lastColumn) {
+
+        CellRangeAddress target =
+                new CellRangeAddress(
+                        firstRow,
+                        lastRow,
+                        firstColumn,
+                        lastColumn);
+
+        for(int index = sheet.getNumMergedRegions() - 1;
+                index >= 0;
+                index--){
+            CellRangeAddress existing =
+                    sheet.getMergedRegion(index);
+
+            if(existing.formatAsString()
+                    .equals(target.formatAsString())){
+                return;
+            }
+
+            if(existing.intersects(target)){
+                sheet.removeMergedRegion(index);
+            }
+        }
+
+        sheet.addMergedRegion(target);
     }
 
     private String normalizeChapterNumber(String value) {
@@ -755,7 +802,7 @@ public class ColorCheckFinalWorkbookService {
 
         /*
          * KA4_PE_ICE처럼 모델 토큰 안에 PE와 구동 타입이 함께 들어오면
-         * PE는 제외하고 ICE/HEV/PHEV만 구동 타입으로 사용한다.
+         * PE는 제외하고 EV/ICE/HEV/PHEV만 구동 타입으로 사용한다.
          */
         for(int index = 1;
                 index < modelParts.length;
@@ -813,6 +860,7 @@ public class ColorCheckFinalWorkbookService {
 
     private boolean isPowertrain(String value) {
         return value.equals("ICE")
+                || value.equals("EV")
                 || value.equals("HEV")
                 || value.equals("PHEV");
     }
