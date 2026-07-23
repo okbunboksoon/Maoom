@@ -13,6 +13,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.NavigableMap;
+import java.util.TreeMap;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.regex.Matcher;
@@ -26,6 +28,8 @@ import org.apache.pdfbox.cos.COSName;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.graphics.image.PDImage;
+import org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDDocumentOutline;
+import org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDOutlineItem;
 import org.apache.pdfbox.rendering.ImageType;
 import org.apache.pdfbox.rendering.PDFRenderer;
 import org.apache.pdfbox.text.PDFTextStripper;
@@ -98,6 +102,11 @@ public class ColorCheckExportService {
     private static final Pattern NUMBERED_CHAPTER_PATTERN =
             Pattern.compile(
                     "^([0-9]+(?:[.-][0-9]+)*)"
+                    + "\\s+(.+)$");
+    /** PDF 북마크의 "7 Controls and Features" 같은 최상위 챕터를 읽는다. */
+    private static final Pattern OUTLINE_CHAPTER_PATTERN =
+            Pattern.compile(
+                    "^([0-9]+|[A-Z])"
                     + "\\s+(.+)$");
     /*
      * PDF 렌더링/엑셀 이미지 설정.
@@ -239,6 +248,8 @@ public class ColorCheckExportService {
         LinkedHashSet<String> seenDrawingNames =
                 new LinkedHashSet<>();
         ChapterInfo currentChapter = ChapterInfo.EMPTY;
+        NavigableMap<Integer,ChapterInfo> outlineChapters =
+                extractOutlineChapters(document);
 
         for(int pageIndex = 0;
                 pageIndex < document.getNumberOfPages();
@@ -265,7 +276,14 @@ public class ColorCheckExportService {
             List<ImageRegion> imageRegions =
                     extractImageRegions(page);
 
-            ChapterInfo pageChapter = findChapterInfo(lines);
+            ChapterInfo pageChapter =
+                    findOutlineChapterInfo(
+                            outlineChapters,
+                            pageIndex);
+
+            if(pageChapter.isEmpty()){
+                pageChapter = findChapterInfo(lines);
+            }
 
             if(!pageChapter.isEmpty()){
                 currentChapter = pageChapter;
@@ -309,6 +327,68 @@ public class ColorCheckExportService {
         }
 
         return entries;
+    }
+
+    /**
+     * PDF 북마크의 최상위 항목을 실제 챕터 범위로 사용한다.
+     *
+     * <p>차종/사양별로 중간 챕터가 빠지면 고정 매핑 번호가 밀릴 수 있으므로,
+     * 북마크에 있는 번호와 제목을 우선한다.</p>
+     */
+    private NavigableMap<Integer,ChapterInfo> extractOutlineChapters(
+            PDDocument document) throws IOException {
+
+        NavigableMap<Integer,ChapterInfo> chapters =
+                new TreeMap<>();
+        PDDocumentOutline outline =
+                document.getDocumentCatalog()
+                .getDocumentOutline();
+
+        if(outline == null){
+            return chapters;
+        }
+
+        for(PDOutlineItem item : outline.children()){
+            ChapterInfo chapterInfo =
+                    recognizeOutlineChapterInfo(
+                            item.getTitle());
+
+            if(chapterInfo.isEmpty()){
+                continue;
+            }
+
+            PDPage destinationPage =
+                    item.findDestinationPage(document);
+
+            if(destinationPage == null){
+                continue;
+            }
+
+            int pageIndex =
+                    document.getPages()
+                    .indexOf(destinationPage);
+
+            if(pageIndex >= 0){
+                chapters.put(pageIndex, chapterInfo);
+            }
+        }
+
+        return chapters;
+    }
+
+    private ChapterInfo findOutlineChapterInfo(
+            NavigableMap<Integer,ChapterInfo> outlineChapters,
+            int pageIndex) {
+
+        if(outlineChapters.isEmpty()){
+            return ChapterInfo.EMPTY;
+        }
+
+        Map.Entry<Integer,ChapterInfo> entry =
+                outlineChapters.floorEntry(pageIndex);
+        return entry == null
+                ? ChapterInfo.EMPTY
+                : entry.getValue();
     }
 
     /**
@@ -443,6 +523,33 @@ public class ColorCheckExportService {
         }
 
         return ChapterInfo.EMPTY;
+    }
+
+    private ChapterInfo recognizeOutlineChapterInfo(String value) {
+        String text = value == null
+                ? ""
+                : value.trim()
+                .replaceAll("\\s+", " ");
+
+        if(text.isBlank()){
+            return ChapterInfo.EMPTY;
+        }
+
+        Matcher outline =
+                OUTLINE_CHAPTER_PATTERN.matcher(text);
+
+        if(outline.matches()){
+            String title = outline.group(2).trim();
+            return title.isBlank()
+                    ? ChapterInfo.EMPTY
+                    : new ChapterInfo(
+                            CHAPTER_TITLES.getOrDefault(
+                                    canonicalChapterTitle(title),
+                                    title),
+                            outline.group(1));
+        }
+
+        return recognizeChapterInfo(text);
     }
 
     private String canonicalChapterTitle(String title) {
@@ -1142,6 +1249,7 @@ public class ColorCheckExportService {
                 "Hybrid vehicle guide",
                 "Hybrid system overview",
                 "Hybrid/Plug-in Hybrid system overview");
+        addChapterTitle(titles, "Electric vehicle guide");
         addChapterTitle(
                 titles,
                 "Controls and Features",
@@ -1203,6 +1311,7 @@ public class ColorCheckExportService {
         addChapterNumber(numbers, "Driver Adjustments", "5");
         addChapterNumber(numbers, "Seating and safety restraints", "6");
         addChapterNumber(numbers, "Hybrid vehicle guide", "7");
+        addChapterNumber(numbers, "Electric vehicle guide", "7");
         addChapterNumber(numbers, "Hybrid system overview", "7");
         addChapterNumber(numbers, "Hybrid/Plug-in Hybrid system overview", "7");
         addChapterNumber(numbers, "Controls and Features", "8");

@@ -13,6 +13,8 @@ import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.Standard14Fonts;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDDocumentOutline;
+import org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDOutlineItem;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -361,6 +363,63 @@ class ColorCheckExportServiceTest {
     }
 
     @Test
+    void usesPdfBookmarkChapterNumbersWhenChapterOrderChanges()
+            throws Exception {
+
+        DrawingColorCheckMapper mapper =
+                Mockito.mock(DrawingColorCheckMapper.class);
+        Mockito.when(mapper.findByDrawingNames(
+                Mockito.anyList()))
+                .thenReturn(java.util.List.of());
+        ColorCheckExportService service =
+                new ColorCheckExportService(mapper);
+
+        byte[] excel = service.createWorkbook(
+                createPdfWithOutlineChapterPages(
+                        new ChapterDrawing(
+                                "6 Seating and safety restraints",
+                                "ONQ5060001L"),
+                        new ChapterDrawing(
+                                "7 Controls and Features",
+                                "ONQ5070001L"),
+                        new ChapterDrawing(
+                                "8 Driving your vehicle",
+                                "ONQ5080001L"),
+                        new ChapterDrawing(
+                                "10 Driver assistance guide",
+                                "ONQ5100001L")));
+
+        try(XSSFWorkbook workbook = new XSSFWorkbook(
+                new ByteArrayInputStream(excel))){
+            var sheet = workbook.getSheet("컬러체크");
+            assertThat(java.util.List.of(
+                    sheet.getRow(3).getCell(3)
+                            .getStringCellValue(),
+                    sheet.getRow(4).getCell(3)
+                            .getStringCellValue(),
+                    sheet.getRow(5).getCell(3)
+                            .getStringCellValue(),
+                    sheet.getRow(6).getCell(3)
+                            .getStringCellValue()))
+                    .containsExactly(
+                            "Seating and safety restraints",
+                            "Controls and Features",
+                            "Driving your vehicle",
+                            "Driver assistance guide");
+            assertThat(java.util.List.of(
+                    sheet.getRow(3).getCell(4)
+                            .getStringCellValue(),
+                    sheet.getRow(4).getCell(4)
+                            .getStringCellValue(),
+                    sheet.getRow(5).getCell(4)
+                            .getStringCellValue(),
+                    sheet.getRow(6).getCell(4)
+                            .getStringCellValue()))
+                    .containsExactly("6", "7", "8", "10");
+        }
+    }
+
+    @Test
     void recognizesKoreanChapterTitlesAndNumberedHeadings() {
 
         DrawingColorCheckMapper mapper =
@@ -381,8 +440,14 @@ class ColorCheckExportServiceTest {
                 "Hybrid vehicle guide"))
                 .isEqualTo("Hybrid vehicle guide");
         assertThat(service.recognizeChapterTitle(
+                "Electric vehicle guide"))
+                .isEqualTo("Electric vehicle guide");
+        assertThat(service.recognizeChapterTitle(
                 "7 Hybrid vehicle guide"))
                 .isEqualTo("Hybrid vehicle guide");
+        assertThat(service.recognizeChapterTitle(
+                "7 Electric vehicle guide"))
+                .isEqualTo("Electric vehicle guide");
     }
 
     @Test
@@ -541,6 +606,63 @@ class ColorCheckExportServiceTest {
                 }
             }
 
+            document.save(output);
+            return output.toByteArray();
+        }
+    }
+
+    private byte[] createPdfWithOutlineChapterPages(
+            ChapterDrawing... pages) throws Exception {
+
+        try(PDDocument document = new PDDocument();
+                ByteArrayOutputStream output =
+                        new ByteArrayOutputStream()){
+            PDType1Font font = new PDType1Font(
+                    Standard14Fonts.FontName.HELVETICA);
+            PDDocumentOutline outline =
+                    new PDDocumentOutline();
+            document.getDocumentCatalog()
+                    .setDocumentOutline(outline);
+
+            for(ChapterDrawing pageData : pages){
+                PDPage page = new PDPage(PDRectangle.A4);
+                document.addPage(page);
+                PDOutlineItem item =
+                        new PDOutlineItem();
+                item.setTitle(pageData.chapter());
+                item.setDestination(page);
+                outline.addLast(item);
+
+                try(PDPageContentStream content =
+                        new PDPageContentStream(
+                                document,
+                                page)){
+                    writeText(
+                            content,
+                            font,
+                            10,
+                            40,
+                            790,
+                            "Body text without chapter heading");
+                    content.setNonStrokingColor(
+                            Color.LIGHT_GRAY);
+                    content.addRect(
+                            40,
+                            180,
+                            515,
+                            560);
+                    content.fill();
+                    writeText(
+                            content,
+                            font,
+                            5,
+                            210,
+                            150,
+                            pageData.drawingName());
+                }
+            }
+
+            outline.openNode();
             document.save(output);
             return output.toByteArray();
         }
