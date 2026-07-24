@@ -5,26 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maoom Tool 가이드</title>
-    <link rel="stylesheet" href="/user/css/UserMain.css?v=guide-1">
+    <link rel="stylesheet" href="/user/css/UserMain.css?v=font-align-4">
     <script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <div class="account-actions">
-    <button class="current-user-name"
+    <button id="accountMenuButton"
+            class="current-user-name"
             type="button"
-            onclick="location.href='/main'">
+            aria-haspopup="dialog"
+            aria-controls="accountDialog">
         <span class="account-menu-avatar">
-            <img th:src="@{/api/user/profile-image(userId=${currentUserId})}"
+            <img id="accountMenuAvatarImage"
+                 th:src="@{/api/user/profile-image(userId=${currentUserId})}"
                  alt=""
                  onerror="this.hidden=true">
             <i class="fa-solid fa-user"></i>
         </span>
-        <strong th:text="${currentUserName}">사용자</strong>님
+        <strong id="currentUserName"
+                th:text="${currentUserName}">사용자</strong>님
+        <i class="fa-solid fa-chevron-down account-chevron"></i>
     </button>
-    <a class="admin-page-btn" href="/main">
-        <i class="fa-solid fa-house"></i>
-        메인
+    <a class="admin-page-btn"
+       th:if="${administrator}"
+       href="/admin/main">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        관리자
     </a>
     <form class="logout-form" action="/logout" method="post">
         <button class="logout-btn" type="submit">
@@ -37,34 +44,74 @@
 <main class="main-launcher guide-launcher" aria-label="Maoom Tool 가이드 목록">
     <header class="launcher-header">
         <div>
-            <h1>가이드</h1>
-            <p>확인할 작업 가이드를 선택하세요.</p>
+            <h1>작업 사용설명서</h1>
+            <p>확인할 작업 사용설명서를 선택하세요.</p>
         </div>
-        <a class="launcher-guide-btn" href="/main">
-            <i class="fa-solid fa-arrow-left"></i>
-            메인
-        </a>
+        <label class="launcher-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input id="guideSearch"
+                   type="search"
+                   placeholder="기능 검색">
+        </label>
     </header>
 
+    <nav class="launcher-tabs" aria-label="가이드 이동">
+        <a class="launcher-guide-link" href="/main">
+            메인
+        </a>
+    </nav>
+
     <section class="launcher-grid guide-grid"
+             id="guideGrid"
              aria-label="가이드 목록">
         <a class="launcher-card guide-card"
            th:each="guide : ${guides}"
            th:href="${guide.url}"
-           th:attr="data-external-url=${guide.externalUrl}"
-           target="_blank"
+           th:attr="data-external-url=${guide.containsKey('externalUrl') ? guide.externalUrl : ''}"
+           th:target="${guide.containsKey('externalUrl') ? '_blank' : null}"
            rel="noopener">
             <span class="launcher-card-content">
                 <strong th:text="${guide.title}">PDF 리뷰 가이드</strong>
                 <small th:text="${guide.description}">PDF 검토 흐름</small>
             </span>
-            <span class="launcher-card-category"
-                  th:text="${guide.category}">PDF</span>
+            <span class="launcher-card-categories">
+                <span class="launcher-card-category"
+                      th:each="category : ${#strings.arraySplit(guide.category, ',')}"
+                      th:text="${#strings.trim(category)}">PDF</span>
+            </span>
         </a>
     </section>
+    <p id="guideEmpty"
+       class="launcher-empty"
+       hidden>표시할 사용설명서가 없습니다.</p>
 </main>
 
 <script>
+function renderGuideCards(){
+    const keyword =
+        document.getElementById('guideSearch')
+        .value
+        .trim()
+        .toLowerCase();
+    const cards =
+        document.querySelectorAll('.guide-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const visible = !keyword || text.includes(keyword);
+
+        card.hidden = !visible;
+
+        if(visible){
+            visibleCount++;
+        }
+    });
+
+    document.getElementById('guideEmpty').hidden =
+        visibleCount > 0;
+}
+
 document.querySelectorAll('.guide-card').forEach(card => {
     card.addEventListener('click', event => {
         const externalUrl = card.dataset.externalUrl;
@@ -76,10 +123,13 @@ document.querySelectorAll('.guide-card').forEach(card => {
         window.open(
             externalUrl,
             'guideNotionPopup',
-            'width=1200,height=850,scrollbars=yes,resizable=yes'
+            'width=1400,height=1200,scrollbars=yes,resizable=yes'
         );
     });
 });
+
+document.getElementById('guideSearch')
+    .addEventListener('input', renderGuideCards);
 </script>
 </body>
 </html>

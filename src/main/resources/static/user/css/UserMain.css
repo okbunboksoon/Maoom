@@ -1,3 +1,9 @@
+@import url("/user/css/Font.css");
+
+:root{
+    --app-font:"LINESeedKR", "LINE Seed Sans KR", Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
+}
+
 /* 로그인 후 기능 선택 메인 화면 스타일 */
 body{
     margin:0;
@@ -9,7 +15,39 @@ body{
     background:#f1f3f5;
     color:#20252b;
     box-sizing:border-box;
-    font-family:"LINE Seed Sans KR", SUIT, Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
+    font-family:var(--app-font);
+}
+
+button,
+input,
+a,
+strong,
+small,
+span{
+    font-family:var(--app-font);
+}
+
+.current-user-name,
+.admin-page-btn,
+.logout-btn,
+.launcher-guide-btn,
+.launcher-guide-link,
+.account-image-select-btn,
+.account-image-delete-btn,
+.account-cancel-btn,
+.account-save-btn{
+    align-items:center;
+    justify-content:center;
+    line-height:20px;
+    padding-top:2px;
+    padding-bottom:0;
+}
+
+input,
+.launcher-search input{
+    line-height:20px;
+    padding-top:2px;
+    padding-bottom:0;
 }
 
 .account-actions{
@@ -34,7 +72,7 @@ body{
     color:#4d5359;
     box-sizing:border-box;
     font-size:14px;
-    line-height:1;
+    line-height:20px;
     white-space:nowrap;
     cursor:pointer;
 }
@@ -57,7 +95,7 @@ body{
     color:#444;
     box-sizing:border-box;
     font-size:14px;
-    line-height:1;
+    line-height:20px;
     white-space:nowrap;
     text-decoration:none;
     cursor:pointer;
@@ -349,7 +387,7 @@ body.dialog-open{
     background:#fff;
     color:#444;
     font-size:14px;
-    line-height:1;
+    line-height:20px;
     white-space:nowrap;
     cursor:pointer;
 }
@@ -426,7 +464,9 @@ body.dialog-open{
     outline:0;
     background:transparent;
     color:#30363d;
+    box-sizing:border-box;
     font-size:14px;
+    line-height:20px;
 }
 
 .launcher-guide-btn{
@@ -443,7 +483,7 @@ body.dialog-open{
     box-sizing:border-box;
     font-size:14px;
     font-weight:700;
-    line-height:1;
+    line-height:20px;
     white-space:nowrap;
     text-decoration:none;
     cursor:pointer;
@@ -466,23 +506,24 @@ body.dialog-open{
     display:flex;
     align-items:center;
     justify-content:center;
+    min-width:80px;
     height:34px;
     padding:0 16px;
-    border:1px solid #d8dee6;
+    border:1px solid #1473e6;
     border-radius:8px;
-    background:#fff;
-    color:#4c5661;
+    background:#1473e6;
+    color:#fff;
     box-sizing:border-box;
     font-size:14px;
     font-weight:700;
-    line-height:1;
+    line-height:20px;
     text-decoration:none;
     cursor:pointer;
 }
 
 .launcher-tab:hover,
 .launcher-guide-link:hover{
-    background:#f6f9fc;
+    background:#0f63c9;
 }
 
 .launcher-tab.active{
@@ -492,12 +533,35 @@ body.dialog-open{
 }
 
 .launcher-guide-link{
-    gap:7px;
+    text-align:center;
 }
 
 .launcher-guide-link i{
-    color:#1473e6;
+    color:#fff;
     font-size:14px;
+}
+
+/* LINE Seed Sans KR 기준으로 버튼/검색 텍스트를 시각 중앙에 맞춘다. */
+.current-user-name,
+.admin-page-btn,
+.logout-btn,
+.launcher-guide-btn,
+.launcher-guide-link,
+.account-image-select-btn,
+.account-image-delete-btn,
+.account-cancel-btn,
+.account-save-btn{
+    box-sizing:border-box;
+    line-height:20px;
+    padding-top:4px;
+    padding-bottom:0;
+}
+
+.launcher-search input{
+    box-sizing:border-box;
+    line-height:20px;
+    padding-top:4px;
+    padding-bottom:0;
 }
 
 .launcher-grid{
@@ -539,36 +603,51 @@ a.launcher-card{
     display:flex;
     flex-direction:column;
     min-width:0;
-    padding-right:54px;
+    padding-right:90px;
 }
 
 .launcher-card-content strong{
     color:#1f2933;
     font-size:17px;
     line-height:1.25;
+    white-space:pre-line;
 }
 
 .launcher-card-content small{
     margin-top:7px;
     color:#65717d;
-    font-size:13px;
+    font-size:12px;
     line-height:1.4;
 }
 
-.launcher-card-category{
+.launcher-card-categories{
     position:absolute;
     top:16px;
     right:16px;
     display:flex;
     align-items:center;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+    gap:5px;
+    width:90px;
+}
+
+.launcher-card-category{
+    display:flex;
+    align-items:center;
     justify-content:center;
     height:22px;
+    min-width:36px;
     padding:0 8px;
     border-radius:999px;
     background:#f1f4f7;
     color:#59636f;
+    box-sizing:border-box;
+    font-family:var(--app-font);
     font-size:12px;
     font-weight:700;
+    line-height:1;
+    white-space:nowrap;
 }
 
 .launcher-empty{
@@ -578,15 +657,15 @@ a.launcher-card{
 }
 
 .guide-launcher{
-    min-height:480px;
+    min-height:520px;
 }
 
 .guide-grid{
-    min-height:0;
+    min-height:330px;
 }
 
 .guide-card{
-    min-height:128px;
+    min-height:118px;
 }
 
 .guide-detail-header{

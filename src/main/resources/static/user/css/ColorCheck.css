@@ -1,3 +1,5 @@
+@import url("/user/css/Font.css");
+
 /* 컬러체크 팝업 전체의 기본 배경과 글꼴 */
 body{
     margin:0;
@@ -5,7 +7,7 @@ body{
     overflow-y:auto;
     background:#eef1f5;
     color:#20252b;
-    font-family:"LINE Seed Sans KR", SUIT, Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
+    font-family:var(--app-font);
 }
 
 /* 팝업 안쪽 콘텐츠의 최대 폭과 여백 */

@@ -750,8 +750,11 @@ public class ColorCheckFinalWorkbookService {
             return null;
         }
 
-        String[] tokens = baseName.substring(
-                kiaIndex).split("-");
+        String normalizedBaseName = baseName.substring(kiaIndex)
+                .replaceFirst(
+                        "(?i)([a-z]{2}_[a-z]{2})_(20\\d{2})",
+                        "$1-$2");
+        String[] tokens = normalizedBaseName.split("-");
         int yearIndex = -1;
 
         for(int index = 3;
@@ -796,13 +799,15 @@ public class ColorCheckFinalWorkbookService {
             country = localeToken;
         }
 
+        List<String> modelNameParts = new ArrayList<>();
         String[] modelParts = tokens[1].split("_");
         String model = sanitizeNamePart(modelParts[0]);
+        modelNameParts.add(model);
         List<String> driveTypes = new ArrayList<>();
 
         /*
          * KA4_PE_ICE처럼 모델 토큰 안에 PE와 구동 타입이 함께 들어오면
-         * PE는 제외하고 EV/ICE/HEV/PHEV만 구동 타입으로 사용한다.
+         * PE는 모델 파생 코드로 보존하고 EV/ICE/HEV/PHEV는 구동 타입으로 사용한다.
          */
         for(int index = 1;
                 index < modelParts.length;
@@ -812,6 +817,8 @@ public class ColorCheckFinalWorkbookService {
 
             if(isPowertrain(modelPart)){
                 driveTypes.add(modelPart);
+            }else if(!modelPart.isBlank()){
+                modelNameParts.add(modelPart);
             }
         }
 
@@ -823,12 +830,15 @@ public class ColorCheckFinalWorkbookService {
 
             if(isPowertrain(driveType)){
                 driveTypes.add(driveType);
+            }else if(!driveType.isBlank()){
+                modelNameParts.add(driveType);
             }
         }
 
+        String modelName = String.join("_", modelNameParts);
         String vehicle = driveTypes.isEmpty()
-                ? model
-                : model
+                ? modelName
+                : modelName
                 + "_"
                 + String.join("-", driveTypes);
         String normalizedLanguage =

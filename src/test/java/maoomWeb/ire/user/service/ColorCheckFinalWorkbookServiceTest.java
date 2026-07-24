@@ -218,19 +218,63 @@ class ColorCheckFinalWorkbookServiceTest {
         assertThat(output.getFileName().toString())
                 .matches(
                         "\\d{6}_도안발주내역서_"
-                        + "KA4_ICE_27MY_EG_HTML\\.xlsx");
+                        + "KA4_PE_ICE_27MY_EG_HTML\\.xlsx");
 
         try(var input = Files.newInputStream(output);
                 var workbook = WorkbookFactory.create(input)){
             assertThat(workbook.getSheet("도안 발주서")
                     .getRow(2).getCell(2)
                     .getStringCellValue())
-                    .isEqualTo("KA4_ICE_27MY_EG");
-            assertThat(workbook.getSheet("작업의뢰 내역")
+                    .isEqualTo("KA4_PE_ICE_27MY_EG");
+        assertThat(workbook.getSheet("작업의뢰 내역")
                     .getRow(4).getCell(8)
                     .getStringCellValue())
-                    .isEqualTo("KA4_ICE_27MY_EG");
+                    .isEqualTo("KA4_PE_ICE_27MY_EG");
         }
+    }
+
+    @Test
+    void parsesUnderscoreBetweenLocaleAndYear()
+            throws Exception {
+
+        Path source = tempDirectory.resolve(
+                "KIA-LQ2a-ICE-en_GB_2027-OM_Full-PDF-"
+                + "260422-1.0_print_도안분류용.xlsx");
+        createReviewWorkbook(source);
+        ColorCheckFinalWorkbookService service =
+                new ColorCheckFinalWorkbookService();
+
+        Path output = service.createFinalWorkbook(
+                source,
+                source.getFileName().toString(),
+                tempDirectory);
+
+        assertThat(output.getFileName().toString())
+                .matches(
+                        "\\d{6}_도안발주내역서_"
+                        + "LQ2A_ICE_27MY_EG_HTML\\.xlsx");
+    }
+
+    @Test
+    void keepsPeModelVariantBeforePowertrain()
+            throws Exception {
+
+        Path source = tempDirectory.resolve(
+                "KIA-LQ2a-PE-ICE-en_GB_2027-OM_Full-PDF-"
+                + "260422-1.0_print_도안분류용.xlsx");
+        createReviewWorkbook(source);
+        ColorCheckFinalWorkbookService service =
+                new ColorCheckFinalWorkbookService();
+
+        Path output = service.createFinalWorkbook(
+                source,
+                source.getFileName().toString(),
+                tempDirectory);
+
+        assertThat(output.getFileName().toString())
+                .matches(
+                        "\\d{6}_도안발주내역서_"
+                        + "LQ2A_PE_ICE_27MY_EG_HTML\\.xlsx");
     }
 
     @Test
@@ -252,14 +296,14 @@ class ColorCheckFinalWorkbookServiceTest {
         assertThat(output.getFileName().toString())
                 .matches(
                         "\\d{6}_도안발주내역서_"
-                        + "KA4_ICE_27MY_KO_HTML\\.xlsx");
+                        + "KA4_PE_ICE_27MY_KO_HTML\\.xlsx");
 
         try(var input = Files.newInputStream(output);
                 var workbook = WorkbookFactory.create(input)){
             assertThat(workbook.getSheet("도안 발주서")
                     .getRow(2).getCell(2)
                     .getStringCellValue())
-                    .isEqualTo("KA4_ICE_27MY_KO");
+                    .isEqualTo("KA4_PE_ICE_27MY_KO");
         }
     }
 
@@ -282,7 +326,7 @@ class ColorCheckFinalWorkbookServiceTest {
         assertThat(output.getFileName().toString())
                 .matches(
                         "\\d{6}_도안발주내역서_"
-                        + "KA4_ICE_27MY_US_HTML\\.xlsx");
+                        + "KA4_PE_ICE_27MY_US_HTML\\.xlsx");
     }
 
     @Test

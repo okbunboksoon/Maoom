@@ -5,30 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title th:text="${guide.title} + ' - Maoom Tool'">Maoom Tool 가이드</title>
-    <link rel="stylesheet" href="/user/css/UserMain.css?v=guide-1">
+    <link rel="stylesheet" href="/user/css/UserMain.css?v=font-align-4">
     <script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <div class="account-actions">
-    <button class="current-user-name"
+    <button id="accountMenuButton"
+            class="current-user-name"
             type="button"
-            onclick="location.href='/main'">
+            aria-haspopup="dialog"
+            aria-controls="accountDialog">
         <span class="account-menu-avatar">
-            <img th:src="@{/api/user/profile-image(userId=${currentUserId})}"
+            <img id="accountMenuAvatarImage"
+                 th:src="@{/api/user/profile-image(userId=${currentUserId})}"
                  alt=""
                  onerror="this.hidden=true">
             <i class="fa-solid fa-user"></i>
         </span>
-        <strong th:text="${currentUserName}">사용자</strong>님
+        <strong id="currentUserName"
+                th:text="${currentUserName}">사용자</strong>님
+        <i class="fa-solid fa-chevron-down account-chevron"></i>
     </button>
-    <a class="admin-page-btn" href="/guide">
-        <i class="fa-solid fa-list"></i>
-        목록
-    </a>
-    <a class="admin-page-btn" href="/main">
-        <i class="fa-solid fa-house"></i>
-        메인
+    <a class="admin-page-btn"
+       th:if="${administrator}"
+       href="/admin/main">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        관리자
     </a>
     <form class="logout-form" action="/logout" method="post">
         <button class="logout-btn" type="submit">
@@ -46,11 +49,16 @@
             <h1 th:text="${guide.title}">PDF 리뷰 가이드</h1>
             <p th:text="${guide.description}">PDF 검토 흐름</p>
         </div>
-        <a class="launcher-guide-btn" href="/guide">
-            <i class="fa-solid fa-arrow-left"></i>
+    </header>
+
+    <nav class="launcher-tabs" aria-label="가이드 이동">
+        <a class="launcher-guide-link" href="/main">
+            메인
+        </a>
+        <a class="launcher-guide-link" href="/guide">
             가이드 목록
         </a>
-    </header>
+    </nav>
 
     <section class="guide-detail-panel">
         <h2>준비 중입니다</h2>

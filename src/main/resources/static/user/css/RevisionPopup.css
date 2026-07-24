@@ -1,3 +1,5 @@
+@import url("/user/css/Font.css");
+
 *{
     box-sizing:border-box;
 }
@@ -8,7 +10,7 @@ body{
     min-height:0;
     background:#eef1f5;
     color:#20252b;
-    font-family:"LINE Seed Sans KR", SUIT, Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
+    font-family:var(--app-font);
 }
 
 .revision-page{
