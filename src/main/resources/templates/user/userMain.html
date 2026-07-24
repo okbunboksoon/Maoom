@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/user/css/UserMain.css?v=launcher-3">
+	<link rel="stylesheet" href="/user/css/UserMain.css?v=font-align-4">
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
@@ -143,7 +143,7 @@
 <main class="main-launcher" aria-label="Maoom Tool 기능 메뉴">
     <header class="launcher-header">
         <div>
-            <h1>Maoom Tool</h1>
+            <h1>작업 메뉴</h1>
             <p>작업을 선택하세요.</p>
         </div>
         <label class="launcher-search">
@@ -155,7 +155,7 @@
     </header>
 
     <nav class="launcher-tabs" aria-label="기능 카테고리">
-        <button class="launcher-tab active"
+        <!-- <button class="launcher-tab active"
                 type="button"
                 data-category="전체">전체</button>
         <button class="launcher-tab"
@@ -166,10 +166,9 @@
                 data-category="DITA">DITA</button>
         <button class="launcher-tab"
                 type="button"
-                data-category="EXCEL">EXCEL</button>
+                data-category="EXCEL">EXCEL</button> -->
         <a class="launcher-guide-link" href="/guide">
-            <i class="fa-solid fa-circle-question"></i>
-            가이드
+            사용설명서
         </a>
     </nav>
 
@@ -195,49 +194,49 @@ const accountProfileFile =
 const launcherMenus = [
     {
         title:'PDF 리뷰',
-        description:'PDF 검토 및 댓글 관리',
+        description:'PDF 검토 및 실시간 댓글 관리',
         category:'PDF',
         icon:'fa-file-pdf',
         action:openPdfPopup
     },
     {
         title:'견적',
-        description:'도안 컬러체크 엑셀 생성',
+        description:'도안 확인 및 발주내역서 생성',
         category:'PDF',
         icon:'fa-table-list',
         action:openColorCheckPopup
     },
 	{
 	    title:'법규 Ditamap Builder',
-	    description:'DITAMAP 경로 선택 및 구조 생성',
+	    description:'법규 DITAMAP 제작',
 	    category:'DITA',
 	    icon:'fa-sitemap',
 	    action:openDitamapBuilderPopup
 	},
     {
         title:'BER 반영',
-        description:'BER 엑셀 생성 및 DB 반영',
+        description:'매뉴얼 유럽 및 북미 BER반영',
         category:'DITA',
         icon:'fa-file-circle-check',
         action:openBerPopup
     },
     {
         title:'정제',
-        description:'DITA 정제 옵션 실행',
-        category:'DITA',
+        description:'DITA 및 XML 정제',
+        category:'DITA, XML',
         icon:'fa-wand-magic-sparkles',
         action:openRevisionPopup
     },
     {
         title:'다국어 변환',
-        description:'입력 경로 기준 다국어 변환',
-        category:'DITA',
+        description:'번역파일을 변환후 후처리',
+        category:'DITA, XML',
         icon:'fa-language',
         action:openMultilingualPopup
     },
     {
         title:'QSG',
-        description:'언어 선택 및 배치 실행',
+        description:'영문 QSG 다국어별 변환',
         category:'DITA',
         icon:'fa-book-open',
         action:openQsgPopup
@@ -402,8 +401,12 @@ function renderLauncherMenus(){
             return false;
         }
 
+        const categories = menu.category
+            .split(',')
+            .map(item => item.trim());
+
         if(activeMenuCategory !== '전체'
-                && menu.category !== activeMenuCategory){
+                && !categories.includes(activeMenuCategory)){
             return false;
         }
 
@@ -432,8 +435,18 @@ function renderLauncherMenus(){
         description.textContent = menu.description;
 
         const category = document.createElement('span');
-        category.className = 'launcher-card-category';
-        category.textContent = menu.category;
+        category.className = 'launcher-card-categories';
+
+        menu.category
+            .split(',')
+            .map(item => item.trim())
+            .filter(item => item)
+            .forEach(item => {
+                const badge = document.createElement('span');
+                badge.className = 'launcher-card-category';
+                badge.textContent = item;
+                category.appendChild(badge);
+            });
 
         content.appendChild(title);
         content.appendChild(description);

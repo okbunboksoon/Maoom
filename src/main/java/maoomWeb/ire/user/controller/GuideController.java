@@ -82,29 +82,47 @@ public class GuideController {
                 guide(
                         "pdf-review",
                         "PDF 리뷰 가이드",
-                        "PDF 선택, 댓글 작성, 첨부파일 확인 흐름",
+                        "PDF 검토 및 실시간 댓글 관리",
                         "PDF"),
                 guide(
                         "color-check",
-                        "견적 컬러체크 가이드",
-                        "도안 컬러체크 엑셀 생성과 결과 확인",
+                        "견적 가이드",
+                        "도안 확인 및 발주내역서 생성",
                         "PDF"),
                 guide(
                         "ditamap-builder",
                         "법규 Ditamap Builder 가이드",
-                        "DITAMAP 경로 선택과 구조 생성 절차",
+                        "법규 DITAMAP 제작",
                         "DITA"),
                 guide(
                         "ber",
                         "BER 반영 가이드",
-                        "BER 엑셀 생성과 DB 반영 작업",
+                        "매뉴얼 유럽 및 북미 BER반영",
                         "DITA"),
                 guide(
                         "revision",
                         "정제 가이드",
-                        "DITA 정제 옵션 선택과 실행 결과 확인",
+                        "DITA 및 XML 정제",
+                        "DITA, XML",
+                        "https://app.notion.com/p/maoom/LAB-871f38ecae198272b282814336b4d31d"),
+                guide(
+                        "3",
+                        "다국어 변환 가이드",
+                        "번역파일을 변환후 후처리",
+                        "DITA, XML",
+                        "https://app.notion.com/p/maoom/LAB-871f38ecae198272b282814336b4d31d"),
+                guide(
+                        "2",
+                        "QSG 가이드",
+                        "영문 QSG -> 다국어별 생성",
                         "DITA",
-                        "https://app.notion.com/p/maoom/LAB-871f38ecae198272b282814336b4d31d"));
+                        "https://app.notion.com/p/maoom/LAB-871f38ecae198272b282814336b4d31d"),
+                guide(
+                        "1",
+                        "제품사양서 비교\n가이드",
+                        "제품 사양서 차이 비교",
+                        "DITA",
+                        "https://app.notion.com/p/maoom/3a7f38ecae1980ad9726e8c9124a17ce"));
     }
 
     private Map<String,String> guide(

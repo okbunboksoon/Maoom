@@ -1,3 +1,5 @@
+@import url("/user/css/Font.css");
+
 *{
     box-sizing:border-box;
 }
@@ -14,7 +16,7 @@ body{
     padding:24px;
     background:#f3f5f8;
     color:#25282c;
-    font-family:"LINE Seed Sans KR", SUIT, Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
+    font-family:var(--app-font);
 }
 
 .pdf-list-page{
@@ -123,7 +125,7 @@ body{
     border:0;
     background:transparent;
     gap:8px;
-    font-family:inherit;
+    font-family:var(--app-font);
     font-weight:700;
     text-align:left;
     cursor:pointer;

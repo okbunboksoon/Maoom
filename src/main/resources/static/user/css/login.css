@@ -1,3 +1,5 @@
+@import url("/user/css/Font.css");
+
 /* 기본 로그인 화면의 레이아웃, 입력 필드와 버튼 스타일 */
 *{
     box-sizing:border-box;
@@ -14,7 +16,7 @@ body{
     min-height:100vh;
     background:#fff;
     color:#111;
-    font-family:"LINE Seed Sans KR", SUIT, Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
+    font-family:var(--app-font);
 }
 
 .login-page{
@@ -27,7 +29,7 @@ body{
 .login-logo{
     margin:0 0 28px;
     font-size:48px;
-    font-family:"LINE Seed Sans KR", SUIT, Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
+    font-family:var(--app-font);
     font-weight:600;
     letter-spacing:3px;
 }
