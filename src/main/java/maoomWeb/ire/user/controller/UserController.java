@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -317,18 +318,30 @@ public class UserController {
     @PostMapping("/api/user/account")
     @ResponseBody
     /** 로그인 사용자의 이름과 선택적으로 비밀번호를 변경한다. */
-    public Map<String,String> updateAccount(
+    public ResponseEntity<Map<String,String>> updateAccount(
             @RequestBody UserAccountUpdateDto dto,
             Authentication authentication) {
 
-        User updatedUser =
-                userService.updateAccount(
-                        currentUserService.getUserId(authentication),
-                        dto);
+        try{
+            User updatedUser =
+                    userService.updateAccount(
+                            currentUserService.getUserId(authentication),
+                            dto);
 
-        return Map.of(
-                "userId", updatedUser.getUserId(),
-                "userName", updatedUser.getUserName());
+            return ResponseEntity.ok(Map.of(
+                    "userId", updatedUser.getUserId(),
+                    "userName", updatedUser.getUserName()));
+        }catch(ResponseStatusException e){
+            String message = e.getReason();
+
+            if(message == null || message.isBlank()){
+                message = "계정 정보를 수정하지 못했습니다.";
+            }
+
+            return ResponseEntity
+                    .status(e.getStatusCode())
+                    .body(Map.of("message", message));
+        }
     }
 
     @PostMapping("/api/user/profile-image")

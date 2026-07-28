@@ -53,33 +53,29 @@ public class UserService {
         if(user != null){
             String checkPw = user.getUserPw();
 
-            if(isBcryptHash(checkPw)){
-
-                result =
-                        passwordEncoder.matches(
-                                password,
-                                checkPw);
-
-            }else if(password.equals(checkPw)){
+            if(passwordMatches(password, checkPw)){
 
                 result = true;
 
-                String encodedPassword =
-                        passwordEncoder.encode(password);
+                if(!isBcryptHash(checkPw)){
 
-                try{
+                    String encodedPassword =
+                            passwordEncoder.encode(password);
 
-                    userMapper.updatePassword(
-                            username,
-                            encodedPassword);
+                    try{
 
-                    user.setUserPw(encodedPassword);
+                        userMapper.updatePassword(
+                                username,
+                                encodedPassword);
 
-                }catch(RuntimeException e){
+                        user.setUserPw(encodedPassword);
 
-                    log.warn(
-                            "BCrypt password migration failed. Run migrate_user_password_to_bcrypt.sql",
-                            e);
+                    }catch(RuntimeException e){
+
+                        log.warn(
+                                "BCrypt password migration failed. Run migrate_user_password_to_bcrypt.sql",
+                                e);
+                    }
                 }
             }
         }
@@ -132,6 +128,30 @@ public class UserService {
         String newPassword = dto.getNewPassword();
 
         if(newPassword != null && !newPassword.isBlank()){
+            String currentPassword = dto.getCurrentPassword();
+            String confirmPassword = dto.getConfirmPassword();
+
+            if(currentPassword == null || currentPassword.isBlank()){
+                throw new ResponseStatusException(
+                        BAD_REQUEST,
+                        "현재 비밀번호를 입력해주세요.");
+            }
+
+            if(!passwordMatches(
+                    currentPassword,
+                    savedUser.getUserPw())){
+                throw new ResponseStatusException(
+                        BAD_REQUEST,
+                        "현재 비밀번호가 일치하지 않습니다.");
+            }
+
+            if(confirmPassword == null
+                    || !newPassword.equals(confirmPassword)){
+                throw new ResponseStatusException(
+                        BAD_REQUEST,
+                        "신규 비밀번호와 확인 비밀번호가 일치하지 않습니다.");
+            }
+
             if(newPassword.length() < 6){
                 throw new ResponseStatusException(
                         BAD_REQUEST,
@@ -152,6 +172,23 @@ public class UserService {
         savedUser.setUserName(userName);
         savedUser.setUserPw(null);
         return savedUser;
+    }
+
+    private boolean passwordMatches(
+            String rawPassword,
+            String savedPassword) {
+
+        if(rawPassword == null || savedPassword == null){
+            return false;
+        }
+
+        if(isBcryptHash(savedPassword)){
+            return passwordEncoder.matches(
+                    rawPassword,
+                    savedPassword);
+        }
+
+        return rawPassword.equals(savedPassword);
     }
 
     /** 저장된 문자열이 BCrypt 해시 형식인지 확인한다. */
