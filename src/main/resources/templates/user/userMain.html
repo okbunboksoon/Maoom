@@ -114,14 +114,36 @@
             </label>
 
             <label class="account-field">
-                <span>비밀번호</span>
-                <input id="accountPassword"
+                <span>현재 비밀번호</span>
+                <input id="accountCurrentPassword"
+                       type="password"
+                       maxlength="72"
+                       autocomplete="current-password"
+                       placeholder="변경할 때만 입력">
+            </label>
+
+            <label class="account-field">
+                <span>신규 비밀번호</span>
+                <input id="accountNewPassword"
                        type="password"
                        minlength="6"
                        maxlength="72"
                        autocomplete="new-password"
                        placeholder="변경할 때만 입력">
                 <small>입력하지 않으면 기존 비밀번호가 유지됩니다.</small>
+            </label>
+
+            <label class="account-field">
+                <span>신규 비밀번호 확인</span>
+                <input id="accountConfirmPassword"
+                       type="password"
+                       minlength="6"
+                       maxlength="72"
+                       autocomplete="new-password"
+                       placeholder="신규 비밀번호 재입력">
+                <small id="accountPasswordMatchMessage"
+                       class="account-password-match-message"
+                       aria-live="polite"></small>
             </label>
 
             <p id="accountFormError"
@@ -143,7 +165,7 @@
 <main class="main-launcher" aria-label="Maoom Tool 기능 메뉴">
     <header class="launcher-header">
         <div>
-            <h1>작업 메뉴</h1>
+            <h1>LAB Portal</h1>
             <p>작업을 선택하세요.</p>
         </div>
         <label class="launcher-search">
@@ -167,7 +189,14 @@
         <button class="launcher-tab"
                 type="button"
                 data-category="EXCEL">EXCEL</button> -->
+        <!--
         <a class="launcher-guide-link" href="/guide">
+            사용설명서
+        </a>
+        -->
+        <a id="launcherGuideLink"
+           class="launcher-guide-link"
+           href="https://app.notion.com/p/maoom/3a7f38ecae19802693a8c4c5a9ec3afc">
             사용설명서
         </a>
     </nav>
@@ -190,6 +219,26 @@ const accountUserId =
     document.getElementById('accountUserId').value;
 const accountProfileFile =
     document.getElementById('accountProfileFile');
+const launcherGuideLink =
+    document.getElementById('launcherGuideLink');
+
+launcherGuideLink.addEventListener('click', function(event){
+    event.preventDefault();
+
+    const popup =
+        window.open(
+            launcherGuideLink.href,
+            'maoomGuide',
+            'width=1200,height=850,menubar=no,toolbar=no,location=yes,status=no,scrollbars=yes,resizable=yes'
+        );
+
+    if(popup){
+        popup.focus();
+        return;
+    }
+
+    window.location.href = launcherGuideLink.href;
+});
 
 const launcherMenus = [
     {
@@ -312,9 +361,43 @@ function openAccountDialog(){
 function closeAccountDialog(){
     accountBackdrop.hidden = true;
     document.body.classList.remove('dialog-open');
-    document.getElementById('accountPassword').value = '';
+    document.getElementById('accountCurrentPassword').value = '';
+    document.getElementById('accountNewPassword').value = '';
+    document.getElementById('accountConfirmPassword').value = '';
     document.getElementById('accountFormError').textContent = '';
+    updatePasswordMatchMessage();
 }
+
+function updatePasswordMatchMessage(){
+    const newPasswordInput =
+        document.getElementById('accountNewPassword');
+    const confirmPasswordInput =
+        document.getElementById('accountConfirmPassword');
+    const messageElement =
+        document.getElementById('accountPasswordMatchMessage');
+    const saveButton =
+        document.getElementById('accountSaveButton');
+    const newPassword = newPasswordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+    const mismatched =
+        (newPassword || confirmPassword)
+        && newPassword !== confirmPassword;
+
+    messageElement.textContent = mismatched
+        ? '신규 비밀번호와 확인 비밀번호가 일치하지 않습니다.'
+        : '';
+    confirmPasswordInput.classList.toggle(
+        'is-invalid',
+        mismatched);
+    saveButton.disabled = mismatched;
+
+    return !mismatched;
+}
+
+document.getElementById('accountNewPassword')
+    .addEventListener('input', updatePasswordMatchMessage);
+document.getElementById('accountConfirmPassword')
+    .addEventListener('input', updatePasswordMatchMessage);
 
 accountBackdrop.addEventListener('click', function(event){
     if(event.target === accountBackdrop){
@@ -480,8 +563,8 @@ document.addEventListener('keydown', function(event){
 });
 
 /*
- * 이름과 선택적 새 비밀번호를 UserAccountUpdateDto JSON으로 전송한다.
- * 비밀번호가 공백이면 UserService가 기존 비밀번호를 그대로 유지한다.
+ * 이름과 선택적 비밀번호 변경값을 UserAccountUpdateDto JSON으로 전송한다.
+ * 신규 비밀번호가 공백이면 UserService가 기존 비밀번호를 그대로 유지한다.
  */
 accountForm.addEventListener('submit', function(event){
     event.preventDefault();
@@ -492,10 +575,27 @@ accountForm.addEventListener('submit', function(event){
         document.getElementById('accountFormError');
     const userName =
         document.getElementById('accountUserName').value.trim();
+    const currentPassword =
+        document.getElementById('accountCurrentPassword').value;
     const newPassword =
-        document.getElementById('accountPassword').value;
+        document.getElementById('accountNewPassword').value;
+    const confirmPassword =
+        document.getElementById('accountConfirmPassword').value;
 
     errorElement.textContent = '';
+
+    if(!updatePasswordMatchMessage()){
+        errorElement.textContent =
+            '신규 비밀번호와 확인 비밀번호가 일치하지 않습니다.';
+        return;
+    }
+
+    if(newPassword && !currentPassword){
+        errorElement.textContent =
+            '현재 비밀번호를 입력해주세요.';
+        return;
+    }
+
     saveButton.disabled = true;
     saveButton.textContent = '수정 중...';
 
@@ -506,7 +606,9 @@ accountForm.addEventListener('submit', function(event){
         },
         body:JSON.stringify({
             userName:userName,
-            newPassword:newPassword
+            currentPassword:currentPassword,
+            newPassword:newPassword,
+            confirmPassword:confirmPassword
         })
     })
     .then(async response => {
@@ -516,11 +618,16 @@ accountForm.addEventListener('submit', function(event){
             try{
                 const body = JSON.parse(text);
                 throw new Error(
-                    body.message || body.error || text
+                    body.message
+                    || body.error
+                    || text
+                    || '계정 정보를 수정하지 못했습니다.'
                 );
             }catch(error){
                 if(error instanceof SyntaxError){
-                    throw new Error(text || '수정에 실패했습니다.');
+                    throw new Error(
+                        text || '계정 정보를 수정하지 못했습니다.'
+                    );
                 }
                 throw error;
             }

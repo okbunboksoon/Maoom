@@ -319,6 +319,15 @@ body.dialog-open{
     box-shadow:0 0 0 3px rgba(20,115,230,.12);
 }
 
+.account-field input.is-invalid{
+    border-color:#c62828;
+}
+
+.account-field input.is-invalid:focus{
+    border-color:#c62828;
+    box-shadow:0 0 0 3px rgba(198,40,40,.12);
+}
+
 .account-field input[readonly]{
     background:#f2f4f6;
     color:#737a82;
@@ -330,6 +339,11 @@ body.dialog-open{
     margin-top:6px;
     color:#858c94;
     font-size:11px;
+}
+
+.account-field .account-password-match-message{
+    min-height:14px;
+    color:#c62828;
 }
 
 .account-form-error{

@@ -31,7 +31,7 @@
 				<xsl:variable name="txt" 
 					select="replace(normalize-space(string(.)), '\s+', ' ')"/>
 
-				<xsl:if test="contains($txt, 'an authorized Kia dealer')">
+				<xsl:if test="contains($txt, 'an authorized Kia dealer') or contains($txt, 'an authorised Kia dealer')">
 					<xsl:sequence select="."/>
 				</xsl:if>
 
@@ -85,7 +85,7 @@
 							<Data ss:Type="String">Total</Data>
 						</Cell>
 						<Cell>
-							<Data ss:Type="String">an authorized Kia dealer.가 포함된 전체 문장</Data>
+							<Data ss:Type="String">an authorized Kia dealer 또는 an authorised Kia dealer가 포함된 전체 문장</Data>
 						</Cell>
 					</Row>
 					<Row>
