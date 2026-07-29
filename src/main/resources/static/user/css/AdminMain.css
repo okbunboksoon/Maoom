@@ -196,6 +196,30 @@ body.sidebar-toggled .admin-shell{
     font-size:1.8rem;
 }
 
+#newUserId{
+    min-width:360px;
+}
+
+#newUserPassword{
+    min-width:200px;
+}
+
+#newUserName{
+    min-width:220px;
+}
+
+#newUserEmail{
+    min-width:260px;
+}
+
+#newSlackUserId{
+    min-width:180px;
+}
+
+#userCreateForm{
+    grid-template-columns:360px 200px 220px 260px 84px 180px max-content;
+}
+
 .admin-stat-card.border-left-success span{
     color:#1cc88a;
 }

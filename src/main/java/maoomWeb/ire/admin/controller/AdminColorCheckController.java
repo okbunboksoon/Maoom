@@ -1,4 +1,4 @@
-package maoomWeb.ire.admin.service;
+package maoomWeb.ire.admin.controller;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
