@@ -45,7 +45,7 @@ public class ColorCheckWorkflowService {
 
         Long logId = projectExecutionLogService.start(
                 "COLOR_CHECK",
-                "컬러체크 검토 엑셀 생성",
+                "견적작업용 검토 엑셀 생성",
                 userId,
                 file.getOriginalFilename(),
                 "PDF에서 도안명을 추출해 검토용 XLSX를 생성합니다.");
@@ -80,7 +80,7 @@ public class ColorCheckWorkflowService {
 
         Long logId = projectExecutionLogService.start(
                 "COLOR_CHECK",
-                "컬러체크 최종 발주 엑셀 생성",
+                "발주내역서 최종 발주 엑셀 생성",
                 userId,
                 file.getOriginalFilename(),
                 updateDatabase

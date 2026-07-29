@@ -1,139 +1,170 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- 관리자 기능을 구현하기 위한 메인 화면. -->
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maoom 관리자</title>
+    <link rel="stylesheet" href="/admin/sb-admin-2/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/admin/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/admin/sb-admin-2/css/sb-admin-2.min.css">
     <link rel="stylesheet" href="/user/css/UserMain.css?v=font-align-4">
-    <link rel="stylesheet" href="/user/css/AdminMain.css?v=admin-layout-2">
-    <script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/user/css/AdminMain.css?v=sb-admin-2-2">
 </head>
-<body class="admin-main-body">
+<body id="page-top" class="admin-main-body">
 
 <div class="account-actions">
     <button class="current-user-name"
             type="button"
             onclick="location.href='/main'">
         <span class="account-menu-avatar">
-            <img th:src="@{/api/user/profile-image(userId=${currentUserId})}"
+            <img th:src="'/api/user/profile-image?userId=' + ${currentUserId}"
                  alt=""
                  onerror="this.hidden=true">
-            <i class="fa-solid fa-user"></i>
+            <i class="fas fa-user"></i>
         </span>
-        <strong th:text="${currentUserName}">사용자</strong>님
+        <strong th:text="${currentUserName} ?: '사용자'">사용자</strong>님
     </button>
     <a class="admin-page-btn" href="/main">
-        <i class="fa-solid fa-house"></i>
+        <i class="fas fa-house"></i>
         메인
     </a>
     <form class="logout-form" action="/logout" method="post">
         <button class="logout-btn" type="submit">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <i class="fas fa-arrow-right-from-bracket"></i>
             로그아웃
         </button>
     </form>
 </div>
 
 <main class="admin-shell">
-    <aside class="admin-sidebar" aria-label="관리자 DB 목록">
+    <aside class="admin-sidebar sidebar" aria-label="관리자 DB 목록">
         <div class="admin-brand">
             <span class="admin-brand-mark">
-                <i class="fa-solid fa-database"></i>
+                <i class="fas fa-database"></i>
             </span>
-            <strong>관리자 DB</strong>
+            <strong>Maoom Portal DB</strong>
         </div>
         <nav class="admin-db-nav">
+            <button class="admin-db-nav-item"
+                    type="button"
+                    data-admin-view="users">
+                <i class="fas fa-users"></i>
+                Maoom 정보 관리
+            </button>
             <button class="admin-db-nav-item active"
                     type="button"
                     data-admin-view="color-check">
-                <i class="fa-solid fa-palette"></i>
-                컬러체크
+                <i class="fas fa-palette"></i>
+                견적
             </button>
             <button class="admin-db-nav-item"
                     type="button"
                     data-admin-view="project-logs">
-                <i class="fa-solid fa-clock-rotate-left"></i>
+                <i class="fas fa-clock-rotate-left"></i>
                 실행 로그
             </button>
         </nav>
+        <div class="admin-sidebar-toggle">
+            <button id="sidebarToggle" type="button" aria-label="사이드바 접기">
+                <i class="fas fa-angle-left"></i>
+            </button>
+        </div>
     </aside>
 
     <section id="colorCheckSection"
              class="admin-content"
-             aria-label="컬러체크 DB 테이블">
+             aria-label="견적 DB 테이블">
         <header class="admin-content-header">
             <div>
-                <h1>컬러체크 DB</h1>
+                <h1>견적 도안 DB</h1>
                 <p id="colorCheckSummary">데이터를 불러오는 중입니다.</p>
             </div>
             <a class="admin-export-btn" href="/admin/color-check/export">
-                <i class="fa-solid fa-file-excel"></i>
+                <i class="fas fa-file-excel"></i>
                 엑셀 내보내기
             </a>
         </header>
 
-        <div class="admin-table-tools">
-            <label class="admin-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input id="colorCheckSearch"
-                       type="search"
-                       placeholder="도안명 또는 V/X 검색">
-            </label>
+        <div class="admin-dashboard-cards">
+            <article class="admin-stat-card border-left-primary">
+                <div>
+                    <span>전체 도안</span>
+                    <strong id="colorTotalCount">0</strong>
+                </div>
+                <i class="fas fa-database"></i>
+            </article>
+            <article class="admin-stat-card border-left-success">
+                <div>
+                    <span>V 항목</span>
+                    <strong id="colorCheckedCount">0</strong>
+                </div>
+                <i class="fas fa-check-circle"></i>
+            </article>
+            <article class="admin-stat-card border-left-danger">
+                <div>
+                    <span>X 항목</span>
+                    <strong id="colorUncheckedCount">0</strong>
+                </div>
+                <i class="fas fa-times-circle"></i>
+            </article>
+            <article class="admin-stat-card border-left-info">
+                <div>
+                    <span>검색 결과</span>
+                    <strong id="colorFilteredCount">0</strong>
+                </div>
+                <i class="fas fa-filter"></i>
+            </article>
         </div>
 
-        <form id="colorCheckEditForm" class="admin-edit-form">
-            <input id="colorCheckDrawingName"
-                   type="text"
-                   placeholder="도안명"
-                   autocomplete="off">
-            <select id="colorCheckValue">
-                <option value="V">V</option>
-                <option value="X">X</option>
-            </select>
-            <button id="colorCheckSave"
-                    class="admin-tool-btn primary"
-                    type="submit">
-                <i class="fa-solid fa-floppy-disk"></i>
-                저장
-            </button>
-            <button id="colorCheckCancel"
-                    class="admin-tool-btn"
-                    type="button"
-                    hidden>
-                취소
-            </button>
-            <button id="colorCheckRefresh"
-                    class="admin-tool-btn"
-                    type="button">
-                <i class="fa-solid fa-rotate-right"></i>
-                새로고침
-            </button>
-        </form>
+        <div class="card shadow mb-4 admin-table-card">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">견적 목록</h6>
+            </div>
+            <div class="card-body">
+                <div class="admin-edit-panel">
+                    <div class="admin-edit-panel-title">
+                        <strong>견적 항목 추가/수정</strong>
+                        <span>도안명과 판정값을 입력한 뒤 저장하세요.</span>
+                    </div>
+                    <form id="colorCheckEditForm" class="admin-edit-form">
+                        <input id="colorCheckDrawingName"
+                               type="text"
+                               placeholder="도안명"
+                               autocomplete="off">
+                        <select id="colorCheckValue">
+                            <option value="V">V</option>
+                            <option value="X">X</option>
+                        </select>
+                        <button id="colorCheckSave"
+                                class="admin-tool-btn primary"
+                                type="submit">
+                            <i class="fas fa-save"></i>
+                            저장
+                        </button>
+                        <button id="colorCheckCancel"
+                                class="admin-tool-btn"
+                                type="button"
+                                hidden>
+                            취소
+                        </button>
+                        <button id="colorCheckRefresh"
+                                class="admin-tool-btn"
+                                type="button">
+                            <i class="fas fa-sync-alt"></i>
+                            새로고침
+                        </button>
+                    </form>
+                </div>
 
-        <div class="admin-table-wrap">
-            <table class="admin-data-table">
+                <div class="table-responsive">
+            <table id="colorCheckTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0">
                 <thead>
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">
-                        <button class="sort-header" type="button" data-sort-key="drawingName">
-                            도안명
-                            <span data-sort-icon="drawingName"></span>
-                        </button>
-                    </th>
-                    <th scope="col">
-                        <button class="sort-header" type="button" data-sort-key="checkValue">
-                            컬러도안
-                            <span data-sort-icon="checkValue"></span>
-                        </button>
-                    </th>
-                    <th scope="col">
-                        <button class="sort-header" type="button" data-sort-key="regDt">
-                            등록일
-                            <span data-sort-icon="regDt"></span>
-                        </button>
-                    </th>
+                    <th scope="col">도안명</th>
+                    <th scope="col">컬러도안</th>
+                    <th scope="col">등록일</th>
                     <th scope="col">관리</th>
                 </tr>
                 </thead>
@@ -145,6 +176,8 @@
                 </tr>
                 </tbody>
             </table>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -157,25 +190,55 @@
                 <h1>프로젝트 실행 로그</h1>
                 <p id="projectLogSummary">최근 실행 이력을 불러오는 중입니다.</p>
             </div>
-            <button id="projectLogRefresh"
-                    class="admin-export-btn"
-                    type="button">
-                <i class="fa-solid fa-rotate-right"></i>
-                새로고침
-            </button>
         </header>
 
-        <div class="admin-table-tools">
-            <label class="admin-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input id="projectLogSearch"
-                       type="search"
-                       placeholder="작업명, 사용자, 상태 검색">
-            </label>
+        <div class="admin-dashboard-cards">
+            <article class="admin-stat-card border-left-primary">
+                <div>
+                    <span>최근 로그</span>
+                    <strong id="logTotalCount">0</strong>
+                </div>
+                <i class="fas fa-history"></i>
+            </article>
+            <article class="admin-stat-card border-left-success">
+                <div>
+                    <span>성공</span>
+                    <strong id="logSuccessCount">0</strong>
+                </div>
+                <i class="fas fa-check-circle"></i>
+            </article>
+            <article class="admin-stat-card border-left-danger">
+                <div>
+                    <span>실패</span>
+                    <strong id="logFailedCount">0</strong>
+                </div>
+                <i class="fas fa-exclamation-circle"></i>
+            </article>
+            <article class="admin-stat-card border-left-info">
+                <div>
+                    <span>검색 결과</span>
+                    <strong id="logFilteredCount">0</strong>
+                </div>
+                <i class="fas fa-filter"></i>
+            </article>
         </div>
 
-        <div class="admin-table-wrap">
-            <table class="admin-data-table">
+        <div class="card shadow mb-4 admin-table-card">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">실행 이력</h6>
+            </div>
+            <div class="card-body">
+                <div class="admin-table-tools">
+                    <button id="projectLogRefresh"
+                            class="admin-tool-btn"
+                            type="button">
+                        <i class="fas fa-sync-alt"></i>
+                        새로고침
+                    </button>
+                </div>
+
+                <div class="table-responsive">
+            <table id="projectLogTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0">
                 <thead>
                 <tr>
                     <th scope="col">No</th>
@@ -196,10 +259,101 @@
                 </tr>
                 </tbody>
             </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="userSection"
+             class="admin-content"
+             aria-label="Maoom Portal DB 테이블"
+             hidden>
+        <header class="admin-content-header">
+            <div>
+                <h1>Maoom Portal DB</h1>
+                <p id="userSummary">사용자 정보를 불러오는 중입니다.</p>
+            </div>
+        </header>
+
+        <div class="admin-dashboard-cards">
+            <article class="admin-stat-card border-left-primary">
+                <div>
+                    <span>전체 사용자</span>
+                    <strong id="userTotalCount">0</strong>
+                </div>
+                <i class="fas fa-users"></i>
+            </article>
+            <article class="admin-stat-card border-left-success">
+                <div>
+                    <span>관리자</span>
+                    <strong id="userAdminCount">0</strong>
+                </div>
+                <i class="fas fa-user-shield"></i>
+            </article>
+            <article class="admin-stat-card border-left-info">
+                <div>
+                    <span>일반 사용자</span>
+                    <strong id="userNormalCount">0</strong>
+                </div>
+                <i class="fas fa-user"></i>
+            </article>
+            <article class="admin-stat-card border-left-warning">
+                <div>
+                    <span>검색 결과</span>
+                    <strong id="userFilteredCount">0</strong>
+                </div>
+                <i class="fas fa-filter"></i>
+            </article>
+        </div>
+
+        <div class="card shadow mb-4 admin-table-card">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">사용자 목록</h6>
+            </div>
+            <div class="card-body">
+                <div class="admin-table-tools">
+                    <button id="userRefresh"
+                            class="admin-tool-btn"
+                            type="button">
+                        <i class="fas fa-sync-alt"></i>
+                        새로고침
+                    </button>
+                </div>
+
+                <div class="table-responsive">
+            <table id="userTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th scope="col">아이디</th>
+                    <th scope="col">비밀번호</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">권한</th>
+                    <th scope="col">등록일</th>
+                </tr>
+                </thead>
+                <tbody id="userTableBody">
+                <tr>
+                    <td colspan="5" class="admin-empty-cell">
+                        사용자 정보를 불러오는 중입니다.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+                </div>
+            </div>
         </div>
     </section>
 </main>
 
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<script src="/admin/sb-admin-2/vendor/jquery/jquery.min.js"></script>
+<script src="/admin/sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/admin/sb-admin-2/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="/admin/sb-admin-2/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="/admin/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script>
 const colorCheckState = {
     items: [],
@@ -214,12 +368,16 @@ const projectLogState = {
     filteredItems: []
 };
 
+const userState = {
+    items: [],
+    filteredItems: [],
+    editingCell: null
+};
+
 const tableBody =
     document.getElementById('colorCheckTableBody');
 const summary =
     document.getElementById('colorCheckSummary');
-const searchInput =
-    document.getElementById('colorCheckSearch');
 const refreshButton =
     document.getElementById('colorCheckRefresh');
 const editForm =
@@ -234,14 +392,47 @@ const colorCheckSection =
     document.getElementById('colorCheckSection');
 const projectLogSection =
     document.getElementById('projectLogSection');
+const userSection =
+    document.getElementById('userSection');
 const projectLogTableBody =
     document.getElementById('projectLogTableBody');
 const projectLogSummary =
     document.getElementById('projectLogSummary');
-const projectLogSearch =
-    document.getElementById('projectLogSearch');
 const projectLogRefresh =
     document.getElementById('projectLogRefresh');
+const colorTotalCount =
+    document.getElementById('colorTotalCount');
+const colorCheckedCount =
+    document.getElementById('colorCheckedCount');
+const colorUncheckedCount =
+    document.getElementById('colorUncheckedCount');
+const colorFilteredCount =
+    document.getElementById('colorFilteredCount');
+const logTotalCount =
+    document.getElementById('logTotalCount');
+const logSuccessCount =
+    document.getElementById('logSuccessCount');
+const logFailedCount =
+    document.getElementById('logFailedCount');
+const logFilteredCount =
+    document.getElementById('logFilteredCount');
+const userTableBody =
+    document.getElementById('userTableBody');
+const userSummary =
+    document.getElementById('userSummary');
+const userRefresh =
+    document.getElementById('userRefresh');
+const userTotalCount =
+    document.getElementById('userTotalCount');
+const userAdminCount =
+    document.getElementById('userAdminCount');
+const userNormalCount =
+    document.getElementById('userNormalCount');
+const userFilteredCount =
+    document.getElementById('userFilteredCount');
+let colorCheckDataTable = null;
+let projectLogDataTable = null;
+let userDataTable = null;
 
 function safeText(value){
     return value === null || value === undefined || value === ''
@@ -284,10 +475,36 @@ function formatElapsed(value){
     return (value / 1000).toFixed(1) + 's';
 }
 
+function formatStatus(value){
+    if(value === 'SUCCESS'){
+        return '성공';
+    }
+    if(value === 'FAILED'){
+        return '실패';
+    }
+    return safeText(value);
+}
+
+function formatRole(value){
+    const role = safeText(value);
+    const normalized = role.toUpperCase();
+
+    if(normalized === 'ADMIN' || normalized === 'ROLE_ADMIN'){
+        return '관리자';
+    }
+    if(normalized === 'USER' || normalized === 'ROLE_USER'){
+        return '사용자';
+    }
+    return role;
+}
+
 function switchAdminView(view){
+    const isColorCheckView = view === 'color-check';
     const isLogView = view === 'project-logs';
-    colorCheckSection.hidden = isLogView;
+    const isUserView = view === 'users';
+    colorCheckSection.hidden = !isColorCheckView;
     projectLogSection.hidden = !isLogView;
+    userSection.hidden = !isUserView;
 
     document.querySelectorAll('[data-admin-view]').forEach(button => {
         button.classList.toggle('active', button.dataset.adminView === view);
@@ -296,21 +513,124 @@ function switchAdminView(view){
     if(isLogView && projectLogState.items.length === 0){
         loadProjectLogs();
     }
+    if(isUserView && userState.items.length === 0){
+        loadUsers();
+    }
+}
+
+function dataTableLanguage(){
+    return {
+        lengthMenu: 'Show _MENU_ entries',
+        search: 'Search:',
+        info: 'Showing _START_ to _END_ of _TOTAL_ entries',
+        infoEmpty: 'Showing 0 to 0 of 0 entries',
+        infoFiltered: '(filtered from _MAX_ total entries)',
+        zeroRecords: '표시할 데이터가 없습니다.',
+        emptyTable: '표시할 데이터가 없습니다.',
+        paginate: {
+            previous: 'Previous',
+            next: 'Next'
+        }
+    };
+}
+
+function destroyDataTable(instance){
+    if(instance && typeof instance.destroy === 'function'){
+        instance.destroy();
+    }
+}
+
+function updateColorCheckFilteredCount(){
+    if(!colorCheckDataTable){
+        return;
+    }
+    const info = colorCheckDataTable.page.info();
+    const total = colorCheckState.items.length;
+    const showing = info.recordsDisplay;
+    colorFilteredCount.textContent = showing.toLocaleString('ko-KR');
+    summary.textContent = total === showing
+        ? '총 ' + total.toLocaleString('ko-KR') + '건'
+        : '총 ' + total.toLocaleString('ko-KR') + '건 중 '
+            + showing.toLocaleString('ko-KR') + '건 표시';
+}
+
+function updateProjectLogFilteredCount(){
+    if(!projectLogDataTable){
+        return;
+    }
+    const info = projectLogDataTable.page.info();
+    updateProjectLogSummary(info.recordsDisplay);
+}
+
+function updateUserFilteredCount(){
+    if(!userDataTable){
+        return;
+    }
+    const info = userDataTable.page.info();
+    updateUserSummary(info.recordsDisplay);
+}
+
+function initColorCheckDataTable(){
+    if(!window.jQuery || !jQuery.fn || !jQuery.fn.DataTable){
+        updateColorCheckFilteredCount();
+        return;
+    }
+    colorCheckDataTable = $('#colorCheckTable').DataTable({
+        language: dataTableLanguage(),
+        pageLength: 50,
+        order: [ [3, 'desc'] ],
+        columnDefs: [
+            {targets: [0, 2, 4], className: 'text-center'},
+            {targets: [4], orderable: false, searchable: false}
+        ],
+        drawCallback: updateColorCheckFilteredCount
+    });
+    updateColorCheckFilteredCount();
+}
+
+function initProjectLogDataTable(){
+    if(!window.jQuery || !jQuery.fn || !jQuery.fn.DataTable){
+        updateProjectLogSummary(projectLogState.filteredItems.length);
+        return;
+    }
+    projectLogDataTable = $('#projectLogTable').DataTable({
+        language: dataTableLanguage(),
+        pageLength: 50,
+        order: [ [4, 'desc'] ],
+        columnDefs: [
+            {targets: [0, 1, 3, 5], className: 'text-center'}
+        ],
+        drawCallback: updateProjectLogFilteredCount
+    });
+    updateProjectLogFilteredCount();
+}
+
+function initUserDataTable(){
+    if(!window.jQuery || !jQuery.fn || !jQuery.fn.DataTable){
+        updateUserSummary(userState.filteredItems.length);
+        return;
+    }
+    userDataTable = $('#userTable').DataTable({
+        language: dataTableLanguage(),
+        pageLength: 50,
+        order: [ [0, 'asc'] ],
+        columnDefs: [
+            {targets: [1, 3], className: 'text-center'},
+            {targets: [0], width: '18%'},
+            {targets: [1], width: '14%'},
+            {targets: [2], width: '18%'},
+            {targets: [3], width: '14%'},
+            {targets: [4], width: '18%'}
+        ],
+        drawCallback: updateUserFilteredCount
+    });
+    updateUserFilteredCount();
 }
 
 function renderTable(){
+    destroyDataTable(colorCheckDataTable);
+    colorCheckDataTable = null;
     tableBody.innerHTML = '';
-
-    if(colorCheckState.filteredItems.length === 0){
-        const row = document.createElement('tr');
-        const cell = document.createElement('td');
-        cell.colSpan = 5;
-        cell.className = 'admin-empty-cell';
-        cell.textContent = '표시할 컬러체크 데이터가 없습니다.';
-        row.appendChild(cell);
-        tableBody.appendChild(row);
-        return;
-    }
 
     colorCheckState.filteredItems.forEach((item, index) => {
         const row = document.createElement('tr');
@@ -338,13 +658,13 @@ function renderTable(){
                 editButton.className = 'admin-icon-btn';
                 editButton.type = 'button';
                 editButton.title = '수정';
-                editButton.innerHTML = '<i class="fa-solid fa-pen"></i>';
+                editButton.innerHTML = '<i class="fas fa-pen"></i>';
                 editButton.addEventListener('click', () => startEdit(item));
                 const deleteButton = document.createElement('button');
                 deleteButton.className = 'admin-icon-btn danger';
                 deleteButton.type = 'button';
                 deleteButton.title = '삭제';
-                deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+                deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
                 deleteButton.addEventListener('click', () => deleteItem(item));
                 actions.appendChild(editButton);
                 actions.appendChild(deleteButton);
@@ -358,6 +678,7 @@ function renderTable(){
 
         tableBody.appendChild(row);
     });
+    initColorCheckDataTable();
 }
 
 function compareText(left, right){
@@ -396,25 +717,25 @@ function updateSortIcons(){
 function updateSummary(){
     const total = colorCheckState.items.length;
     const showing = colorCheckState.filteredItems.length;
+    const checked = colorCheckState.items
+        .filter(item => item.checkValue === 'V').length;
+    const unchecked = colorCheckState.items
+        .filter(item => item.checkValue === 'X').length;
+
     summary.textContent = total === showing
         ? '총 ' + total.toLocaleString('ko-KR') + '건'
         : '총 ' + total.toLocaleString('ko-KR') + '건 중 '
             + showing.toLocaleString('ko-KR') + '건 표시';
+    colorTotalCount.textContent = total.toLocaleString('ko-KR');
+    colorCheckedCount.textContent = checked.toLocaleString('ko-KR');
+    colorUncheckedCount.textContent = unchecked.toLocaleString('ko-KR');
+    colorFilteredCount.textContent = showing.toLocaleString('ko-KR');
 }
 
 function applyFilter(){
-    const keyword = searchInput.value.trim().toLowerCase();
-
-    const filtered = keyword
-        ? colorCheckState.items.filter(item => {
-            return safeText(item.drawingName).toLowerCase().includes(keyword)
-                || safeText(item.checkValue).toLowerCase().includes(keyword);
-        })
-        : [...colorCheckState.items];
-    colorCheckState.filteredItems = sortItems(filtered);
+    colorCheckState.filteredItems = sortItems(colorCheckState.items);
 
     updateSummary();
-    updateSortIcons();
     renderTable();
 }
 
@@ -531,7 +852,7 @@ async function loadColorCheckItems(){
         const cell = document.createElement('td');
         cell.colSpan = 5;
         cell.className = 'admin-empty-cell';
-        cell.textContent = '컬러체크 DB를 불러오지 못했습니다.';
+        cell.textContent = '견적 DB를 불러오지 못했습니다.';
         row.appendChild(cell);
         tableBody.appendChild(row);
         summary.textContent = error.message || '조회 중 오류가 발생했습니다.';
@@ -541,24 +862,15 @@ async function loadColorCheckItems(){
 }
 
 function renderProjectLogs(){
+    destroyDataTable(projectLogDataTable);
+    projectLogDataTable = null;
     projectLogTableBody.innerHTML = '';
-
-    if(projectLogState.filteredItems.length === 0){
-        const row = document.createElement('tr');
-        const cell = document.createElement('td');
-        cell.colSpan = 8;
-        cell.className = 'admin-empty-cell';
-        cell.textContent = '표시할 실행 로그가 없습니다.';
-        row.appendChild(cell);
-        projectLogTableBody.appendChild(row);
-        return;
-    }
 
     projectLogState.filteredItems.forEach((item, index) => {
         const row = document.createElement('tr');
         const values = [
             index + 1,
-            item.status,
+            formatStatus(item.status),
             item.jobName || item.jobType,
             item.triggerUserId || '-',
             formatDate(item.startedAt),
@@ -574,48 +886,38 @@ function renderProjectLogs(){
 
         values.forEach((value, columnIndex) => {
             const cell = document.createElement('td');
-
-            if(columnIndex === 1){
-                const badge = document.createElement('span');
-                badge.className = 'color-check-badge '
-                    + (value === 'SUCCESS' ? 'is-checked' : 'is-unchecked');
-                badge.textContent = value;
-                cell.appendChild(badge);
-            }else{
-                cell.textContent = safeText(value);
-            }
+            cell.textContent = safeText(value);
 
             row.appendChild(cell);
         });
 
         projectLogTableBody.appendChild(row);
     });
+    initProjectLogDataTable();
 }
 
 function applyProjectLogFilter(){
-    const keyword = projectLogSearch.value.trim().toLowerCase();
-    const filtered = keyword
-        ? projectLogState.items.filter(item => {
-            return [
-                item.jobType,
-                item.jobName,
-                item.status,
-                item.triggerUserId,
-                item.inputPath,
-                item.outputPath,
-                item.message,
-                item.errorMessage
-            ].some(value => safeText(value).toLowerCase().includes(keyword));
-        })
-        : [...projectLogState.items];
-
-    projectLogState.filteredItems = filtered;
-    projectLogSummary.textContent = '최근 '
-        + projectLogState.items.length.toLocaleString('ko-KR')
-        + '건 중 '
-        + filtered.length.toLocaleString('ko-KR')
-        + '건 표시';
+    projectLogState.filteredItems = [...projectLogState.items];
+    updateProjectLogSummary(projectLogState.filteredItems.length);
     renderProjectLogs();
+}
+
+function updateProjectLogSummary(showing){
+    const total = projectLogState.items.length;
+    const success = projectLogState.items
+        .filter(item => item.status === 'SUCCESS').length;
+    const failed = projectLogState.items
+        .filter(item => item.status === 'FAILED').length;
+
+    projectLogSummary.textContent = '최근 '
+        + total.toLocaleString('ko-KR')
+        + '건 중 '
+        + showing.toLocaleString('ko-KR')
+        + '건 표시';
+    logTotalCount.textContent = total.toLocaleString('ko-KR');
+    logSuccessCount.textContent = success.toLocaleString('ko-KR');
+    logFailedCount.textContent = failed.toLocaleString('ko-KR');
+    logFilteredCount.textContent = showing.toLocaleString('ko-KR');
 }
 
 async function loadProjectLogs(){
@@ -650,20 +952,210 @@ async function loadProjectLogs(){
     }
 }
 
-searchInput.addEventListener('input', applyFilter);
+function renderUsers(){
+    destroyDataTable(userDataTable);
+    userDataTable = null;
+    userTableBody.innerHTML = '';
+
+    userState.filteredItems.forEach((item, index) => {
+        const row = document.createElement('tr');
+        const values = [
+            {text: item.userId, field: ''},
+            {text: item.passwordStatus, field: 'password'},
+            {text: item.userName, field: 'userName'},
+            {text: formatRole(item.userRole), field: 'userRole'},
+            {text: formatDate(item.regDt), field: ''}
+        ];
+
+        values.forEach(value => {
+            const cell = document.createElement('td');
+            cell.textContent = safeText(value.text);
+            if(value.field){
+                cell.classList.add('admin-editable-cell');
+                cell.title = '더블클릭해서 수정';
+                cell.addEventListener('dblclick', () => {
+                    startUserCellEdit(cell, item, value.field);
+                });
+            }
+            row.appendChild(cell);
+        });
+
+        userTableBody.appendChild(row);
+    });
+    initUserDataTable();
+}
+
+function startUserCellEdit(cell, item, field){
+    if(userState.editingCell){
+        return;
+    }
+
+    const originalText = cell.textContent;
+    userState.editingCell = cell;
+    cell.innerHTML = '';
+
+    const editor = field === 'userRole'
+        ? document.createElement('select')
+        : document.createElement('input');
+    editor.className = 'admin-inline-editor';
+
+    if(field === 'userRole'){
+        ['USER', 'ADMIN'].forEach(role => {
+            const option = document.createElement('option');
+            option.value = role;
+            option.textContent = formatRole(role);
+            option.selected = String(item.userRole || '').toUpperCase().includes(role);
+            editor.appendChild(option);
+        });
+    }else{
+        editor.type = field === 'password' ? 'password' : 'text';
+        editor.value = field === 'password' ? '' : (item.userName || '');
+        editor.placeholder = field === 'password'
+            ? '새 비밀번호'
+            : '';
+    }
+
+    let closed = false;
+    const finish = async shouldSave => {
+        if(closed){
+            return;
+        }
+        closed = true;
+        const value = editor.value.trim();
+
+        if(!shouldSave || (field === 'password' && !value)){
+            cell.textContent = originalText;
+            userState.editingCell = null;
+            return;
+        }
+
+        try{
+            const updatedUser = await saveUserField(item.userId, field, value);
+            Object.assign(item, updatedUser);
+            cell.textContent = field === 'password'
+                ? safeText(updatedUser.passwordStatus)
+                : field === 'userRole'
+                    ? formatRole(updatedUser.userRole)
+                    : safeText(updatedUser.userName);
+            if(userDataTable){
+                userDataTable.cell(cell).data(cell.textContent).draw(false);
+            }
+            updateUserSummary(userDataTable
+                ? userDataTable.page.info().recordsDisplay
+                : userState.filteredItems.length);
+        }catch(error){
+            cell.textContent = originalText;
+            userSummary.textContent = error.message || '사용자 정보를 저장하지 못했습니다.';
+        }finally{
+            userState.editingCell = null;
+        }
+    };
+
+    editor.addEventListener('keydown', event => {
+        if(event.key === 'Enter'){
+            event.preventDefault();
+            editor.blur();
+        }
+        if(event.key === 'Escape'){
+            event.preventDefault();
+            finish(false);
+        }
+    });
+    editor.addEventListener('blur', () => finish(true));
+    cell.appendChild(editor);
+    editor.focus();
+    if(editor.select){
+        editor.select();
+    }
+}
+
+async function saveUserField(userId, field, value){
+    const response = await fetch('/admin/users/' + encodeURIComponent(userId), {
+        method:'PATCH',
+        headers:{
+            'Content-Type':'application/json',
+            'Accept':'application/json'
+        },
+        body:JSON.stringify({
+            field:field,
+            value:value
+        })
+    });
+
+    if(!response.ok){
+        throw new Error(await response.text());
+    }
+
+    return response.json();
+}
+
+function applyUserFilter(){
+    userState.filteredItems = [...userState.items];
+    updateUserSummary(userState.filteredItems.length);
+    renderUsers();
+}
+
+function updateUserSummary(showing){
+    const total = userState.items.length;
+    const adminCount = userState.items
+        .filter(item => String(item.userRole || '').toUpperCase().includes('ADMIN'))
+        .length;
+    const normalCount = total - adminCount;
+
+    userSummary.textContent = '총 '
+        + total.toLocaleString('ko-KR')
+        + '명 중 '
+        + showing.toLocaleString('ko-KR')
+        + '명 표시';
+    userTotalCount.textContent = total.toLocaleString('ko-KR');
+    userAdminCount.textContent = adminCount.toLocaleString('ko-KR');
+    userNormalCount.textContent = normalCount.toLocaleString('ko-KR');
+    userFilteredCount.textContent = showing.toLocaleString('ko-KR');
+}
+
+async function loadUsers(){
+    userRefresh.disabled = true;
+    userSummary.textContent = '사용자 정보를 불러오는 중입니다.';
+
+    try{
+        const response = await fetch('/admin/users', {
+            headers:{
+                'Accept':'application/json'
+            }
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        userState.items = await response.json();
+        applyUserFilter();
+    }catch(error){
+        userTableBody.innerHTML = '';
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.colSpan = 5;
+        cell.className = 'admin-empty-cell';
+        cell.textContent = '사용자 DB를 불러오지 못했습니다.';
+        row.appendChild(cell);
+        userTableBody.appendChild(row);
+        userSummary.textContent = error.message || '조회 중 오류가 발생했습니다.';
+    }finally{
+        userRefresh.disabled = false;
+    }
+}
+
 refreshButton.addEventListener('click', loadColorCheckItems);
 editForm.addEventListener('submit', saveItem);
 cancelButton.addEventListener('click', resetForm);
-projectLogSearch.addEventListener('input', applyProjectLogFilter);
 projectLogRefresh.addEventListener('click', loadProjectLogs);
+userRefresh.addEventListener('click', loadUsers);
 document.querySelectorAll('[data-admin-view]').forEach(button => {
     button.addEventListener('click', () => switchAdminView(button.dataset.adminView));
 });
-document.querySelectorAll('[data-sort-key]').forEach(button => {
-    button.addEventListener('click', () => changeSort(button.dataset.sortKey));
-});
 loadColorCheckItems();
 </script>
+<script src="/admin/sb-admin-2/js/sb-admin-2.min.js"></script>
 
 </body>
 </html>
