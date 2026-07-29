@@ -76,22 +76,6 @@ function showResult(type, title, message){
     resultPanel.dataset.status = type;
     resultTitle.textContent = title;
     resultMessage.textContent = message;
-    resizePopupToContent();
-}
-
-function resizePopupToContent(){
-    requestAnimationFrame(() => {
-        const browserFrameHeight = window.outerHeight - window.innerHeight;
-        const contentHeight = document.documentElement.scrollHeight;
-        const verticalMargin = 36;
-        const nextHeight = Math.min(
-            screen.availHeight,
-            contentHeight + browserFrameHeight + verticalMargin
-        );
-        if(Math.abs(nextHeight - window.outerHeight) > 8){
-            window.resizeTo(window.outerWidth, nextHeight);
-        }
-    });
 }
 
 document.getElementById('confirmDitaPath')

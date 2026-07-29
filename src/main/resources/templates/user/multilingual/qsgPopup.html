@@ -195,22 +195,6 @@ function showResult(type, title, message) {
     statusIndicator.classList.toggle('is-running', type === 'running');
     resultTitle.textContent = title;
     resultMessage.textContent = message;
-    resizePopupToContent();
-}
-
-function resizePopupToContent(){
-    requestAnimationFrame(() => {
-        const browserFrameHeight = window.outerHeight - window.innerHeight;
-        const contentHeight = document.documentElement.scrollHeight;
-        const verticalMargin = 36;
-        const nextHeight = Math.min(
-            screen.availHeight,
-            contentHeight + browserFrameHeight + verticalMargin
-        );
-        if(Math.abs(nextHeight - window.outerHeight) > 8){
-            window.resizeTo(window.outerWidth, nextHeight);
-        }
-    });
 }
 
 function selectedLanguages() {
@@ -264,7 +248,7 @@ qsgButton.addEventListener('click', async function() {
 
     qsgButton.disabled = true;
     qsgButton.textContent = '실행 중...';
-    showResult('running', 'QSG 실행 중', '선택한 언어 코드를 서버로 전달합니다.');
+    showResult('running', 'QSG 실행 중', '선택한 언어 QSG 제작중입니다.');
 
     try {
         const languageCodes = selected.map(language => language.code);
