@@ -149,8 +149,13 @@ public class UserController {
         return "user/userMain";
     }
 
-    @GetMapping("/admin/main")
     /** 관리자 메인 화면을 표시한다. */
+    @GetMapping("/admin")
+    public String adminRoot() {
+        return "redirect:/admin/main";
+    }
+
+    @GetMapping("/admin/main")
     public String adminMain(
             Authentication authentication,
             Model model) {
