@@ -1,7 +1,8 @@
-package maoomWeb.ire.admin.service;
+package maoomWeb.ire.admin.controller;
 
 import java.util.List;
 
+import maoomWeb.ire.admin.service.AdminProjectExecutionLogService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
