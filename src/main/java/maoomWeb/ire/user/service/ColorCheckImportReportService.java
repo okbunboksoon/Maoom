@@ -23,7 +23,7 @@ import maoomWeb.ire.user.dto.DrawingColorCheckImportResult;
 
 /**
  * DB 반영 요약과 도안별 처리 결과를 사용자가 확인할 Excel 리포트로 만든다.
- * 실제 운영 파일은 컬러체크 생성 파일과 같은 바탕화면의 temp 폴더에 저장한다.
+ * 실제 운영 파일은 견적 생성 파일과 같은 바탕화면의 temp 폴더에 저장한다.
  */
 @Service
 public class ColorCheckImportReportService {
@@ -65,7 +65,7 @@ public class ColorCheckImportReportService {
 
             Row title = sheet.createRow(0);
             title.createCell(0).setCellValue(
-                    "컬러체크 DB 반영 리포트");
+                    "견적 DB 반영 리포트");
             title.getCell(0).setCellStyle(titleStyle);
 
             addLabelValue(
@@ -204,7 +204,7 @@ public class ColorCheckImportReportService {
     private String createReportFileName(String sourceFileName) {
         String baseName = sourceFileName == null
                 || sourceFileName.isBlank()
-                ? "컬러체크"
+                ? "견적"
                 : sourceFileName.trim()
                         .replaceFirst("(?i)\\.xlsx?$", "");
         baseName = baseName.replaceAll(

@@ -53,7 +53,7 @@ import maoomWeb.ire.user.dto.DrawingColorCheckDto;
 import maoomWeb.ire.user.mapper.DrawingColorCheckMapper;
 
 /**
- * PDF를 읽어 도안 목록과 도안 이미지를 컬러체크용 엑셀로 만드는 핵심 서비스.
+ * PDF를 읽어 도안 목록과 도안 이미지를 견적용 엑셀로 만드는 핵심 서비스.
  *
  * <p>이 클래스의 전체 처리 순서는 다음과 같다.</p>
  * <ol>
@@ -1051,7 +1051,7 @@ public class ColorCheckExportService {
     }
 
     /**
-     * 최종 도안 목록을 기준 양식의 '컬러체크' 시트로 작성한다.
+     * 최종 도안 목록을 기준 양식의 '견적' 시트로 작성한다.
      *
      * <p>데이터 셀과 이미지는 같은 행에 배치되며, 필터와 상단 행 고정을
      * 설정해 도안 수가 많아도 검토하기 쉽게 만든다.</p>
@@ -1060,7 +1060,7 @@ public class ColorCheckExportService {
             Workbook workbook,
             List<DrawingEntry> entries) {
 
-        var sheet = workbook.createSheet("컬러체크");
+        var sheet = workbook.createSheet("견적");
         var drawing = sheet.createDrawingPatriarch();
         CellStyle titleStyle = createTitleStyle(workbook);
         CellStyle headerStyle = createHeaderStyle(workbook);

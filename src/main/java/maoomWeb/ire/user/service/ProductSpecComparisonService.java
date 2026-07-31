@@ -44,7 +44,7 @@ import maoomWeb.ire.user.dto.ProductSpecComparisonResult;
  *   <li>Before 파일을 temp에 복사하고 {@code 02_Spec_Filter_To_Xml.bat}로 {@code excel_before.xml}을 만든다.</li>
  *   <li>After 파일도 같은 Key 옵션으로 {@code excel_after.xml}을 만든다.</li>
  *   <li>{@code 03_make_excel_comparison.bat}로 비교 XML/XLSX를 생성한다.</li>
- *   <li>작업 폴더의 temp 산출물을 입력 경로의 {@code Result_Folder}로 복사하고 로그를 저장한다.</li>
+ *   <li>작업 폴더의 temp 산출물을 입력 경로의 날짜별 비교 결과 폴더로 복사하고 로그를 저장한다.</li>
  *   <li>성공/실패와 관계없이 작업 폴더를 삭제한다.</li>
  * </ol>
  */
@@ -96,8 +96,8 @@ public class ProductSpecComparisonService {
     /**
      * 제품사양서 비교 버튼 한 번에 수행되는 전체 파이프라인.
      *
-     * <p>성공 시 {@code 입력경로\Result_Folder\Product_Equipment_List_Comparison.xlsx}
-     * 경로를 반환한다. 실패해도 가능한 경우 {@code Result_Folder}에
+     * <p>성공 시 날짜별 비교 결과 폴더의 {@code Product_Equipment_List_Comparison.xlsx}
+     * 경로를 반환한다. 실패해도 가능한 경우 결과 폴더에
      * {@code product-spec-comparison.log}를 남긴다.</p>
      */
     public synchronized ProductSpecComparisonResult run(
@@ -119,7 +119,9 @@ public class ProductSpecComparisonService {
                     request == null ? null : request.afterFileName());
             String keys = normalizeKeys(request);
 
-            resultDirectory = inputDirectory.resolve("Result_Folder");
+            resultDirectory = ResultFolderNames.resolve(
+                    inputDirectory,
+                    "comparison");
             workspace = createWorkDirectory(inputDirectory);
             prepareToolDirectory(workspace);
             Files.createDirectories(workspace.resolve("temp"));
@@ -376,7 +378,7 @@ public class ProductSpecComparisonService {
         return "echo. | call \"" + batchFileName + "\"";
     }
 
-    /** 최종으로 사용자에게 남길 비교 산출물을 입력 경로의 Result_Folder로 복사한다. */
+    /** 최종으로 사용자에게 남길 비교 산출물을 입력 경로의 결과 폴더로 복사한다. */
     private void replaceResultDirectory(Path workspaceTemp, Path resultDirectory)
             throws IOException {
 
@@ -428,7 +430,7 @@ public class ProductSpecComparisonService {
         }
     }
 
-    /** 실행 로그를 Result_Folder에 UTF-8 텍스트로 저장한다. */
+    /** 실행 로그를 결과 폴더에 UTF-8 텍스트로 저장한다. */
     private void writeLog(Path resultDirectory, List<String> logs)
             throws IOException {
         Files.createDirectories(resultDirectory);
@@ -438,7 +440,7 @@ public class ProductSpecComparisonService {
                 StandardCharsets.UTF_8);
     }
 
-    /** 실패 시에도 입력 경로를 알 수 있으면 Result_Folder에 로그를 남긴다. */
+    /** 실패 시에도 입력 경로를 알 수 있으면 결과 폴더에 로그를 남긴다. */
     private void writeFailureLog(
             Path inputDirectory,
             Path resultDirectory,
@@ -446,7 +448,9 @@ public class ProductSpecComparisonService {
 
         Path logDirectory = resultDirectory;
         if (logDirectory == null && inputDirectory != null) {
-            logDirectory = inputDirectory.resolve("Result_Folder");
+            logDirectory = ResultFolderNames.resolve(
+                    inputDirectory,
+                    "comparison");
         }
         if (logDirectory == null) {
             return;

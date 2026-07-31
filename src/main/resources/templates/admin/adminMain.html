@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- 관리자 기능을 구현하기 위한 메인 화면. -->
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -14,16 +14,22 @@
 <body id="page-top" class="admin-main-body">
 
 <div class="account-actions">
-    <button class="current-user-name"
+    <button id="accountMenuButton"
+            class="current-user-name"
             type="button"
-            onclick="location.href='/main'">
+            aria-haspopup="dialog"
+            aria-controls="accountDialog"
+            onclick="openAccountDialog()">
         <span class="account-menu-avatar">
-            <img th:src="'/api/user/profile-image?userId=' + ${currentUserId}"
+            <img id="accountMenuAvatarImage"
+                 th:src="'/api/user/profile-image?userId=' + ${currentUserId}"
                  alt=""
                  onerror="this.hidden=true">
             <i class="fas fa-user"></i>
         </span>
-        <strong th:text="${currentUserName} ?: '사용자'">사용자</strong>님
+        <strong id="currentUserName"
+                th:text="${currentUserName} ?: '사용자'">사용자</strong>님
+        <i class="fas fa-chevron-down account-chevron"></i>
     </button>
     <a class="admin-page-btn" href="/main">
         <i class="fas fa-house"></i>
@@ -35,6 +41,118 @@
             로그아웃
         </button>
     </form>
+</div>
+
+<div id="accountDialogBackdrop"
+     class="account-dialog-backdrop"
+     hidden>
+    <section id="accountDialog"
+             class="account-dialog"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="accountDialogTitle">
+        <div class="account-dialog-header">
+            <div>
+                <h2 id="accountDialogTitle">사용자 정보</h2>
+                <p>이름과 비밀번호를 변경할 수 있습니다.</p>
+            </div>
+            <button class="account-close-btn"
+                    type="button"
+                    aria-label="닫기"
+                    onclick="closeAccountDialog()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <form id="accountForm">
+            <div class="account-profile-editor">
+                <span class="account-profile-preview">
+                    <img id="accountProfilePreview"
+                         th:src="'/api/user/profile-image?userId=' + ${currentUserId}"
+                         alt="프로필 이미지"
+                         onerror="this.hidden=true">
+                    <i class="fas fa-user"></i>
+                </span>
+                <div class="account-profile-controls">
+                    <strong>프로필 이미지</strong>
+                    <span>PNG, JPG, GIF, WebP · 최대 5MB</span>
+                    <div>
+                        <label class="account-image-select-btn"
+                               for="accountProfileFile">이미지 변경</label>
+                        <input id="accountProfileFile"
+                               type="file"
+                               accept="image/png,image/jpeg,image/gif,image/webp"
+                               hidden>
+                        <button id="accountImageDeleteButton"
+                                class="account-image-delete-btn"
+                                type="button">삭제</button>
+                    </div>
+                </div>
+            </div>
+            <label class="account-field">
+                <span>이름</span>
+                <input id="accountUserName"
+                       type="text"
+                       maxlength="20"
+                       th:value="${currentUserName}"
+                       required>
+            </label>
+
+            <label class="account-field">
+                <span>아이디</span>
+                <input id="accountUserId"
+                       type="text"
+                       th:value="${currentUserId}"
+                       readonly>
+            </label>
+
+            <label class="account-field">
+                <span>현재 비밀번호</span>
+                <input id="accountCurrentPassword"
+                       type="password"
+                       maxlength="72"
+                       autocomplete="current-password"
+                       placeholder="변경할 때만 입력">
+            </label>
+
+            <label class="account-field">
+                <span>신규 비밀번호</span>
+                <input id="accountNewPassword"
+                       type="password"
+                       minlength="6"
+                       maxlength="72"
+                       autocomplete="new-password"
+                       placeholder="변경할 때만 입력">
+                <small>입력하지 않으면 기존 비밀번호가 유지됩니다.</small>
+            </label>
+
+            <label class="account-field">
+                <span>신규 비밀번호 확인</span>
+                <input id="accountConfirmPassword"
+                       type="password"
+                       minlength="6"
+                       maxlength="72"
+                       autocomplete="new-password"
+                       placeholder="신규 비밀번호 재입력">
+                <small id="accountPasswordMatchMessage"
+                       class="account-password-match-message"
+                       aria-live="polite"></small>
+            </label>
+
+            <p id="accountFormError"
+               class="account-form-error"
+               role="alert"></p>
+
+            <div class="account-dialog-actions">
+                <button class="account-cancel-btn"
+                        type="button"
+                        onclick="closeAccountDialog()">취소</button>
+                <button id="accountSaveButton"
+                        class="account-save-btn"
+                        type="submit">수정</button>
+            </div>
+        </form>
+    </section>
 </div>
 
 <main class="admin-shell">
@@ -81,10 +199,24 @@
                 <h1>견적 도안 DB</h1>
                 <p id="colorCheckSummary">데이터를 불러오는 중입니다.</p>
             </div>
-            <a class="admin-export-btn" href="/admin/color-check/export">
-                <i class="fas fa-file-excel"></i>
-                엑셀 내보내기
-            </a>
+            <div class="admin-header-actions">
+                <form id="colorCheckImportForm" class="admin-header-import-form">
+                    <input id="colorCheckImportFile"
+                           type="file"
+                           accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+                           hidden>
+                    <button id="colorCheckImportButton"
+                            class="admin-tool-btn primary"
+                            type="button">
+                        <i class="fas fa-upload"></i>
+                        엑셀 업로드
+                    </button>
+                </form>
+                <a class="admin-export-btn" href="/admin/color-check/export">
+                    <i class="fas fa-file-excel"></i>
+                    엑셀 내보내기
+                </a>
+            </div>
         </header>
 
         <div class="admin-dashboard-cards">
@@ -158,6 +290,10 @@
                     </form>
                 </div>
 
+                <div id="colorCheckImportResult"
+                     class="admin-import-result"
+                     hidden></div>
+
                 <div class="table-responsive">
             <table id="colorCheckTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0">
                 <thead>
@@ -189,14 +325,14 @@
         <header class="admin-content-header">
             <div>
                 <h1>프로젝트 실행 로그</h1>
-                <p id="projectLogSummary">최근 실행 이력을 불러오는 중입니다.</p>
+                <p id="projectLogSummary">전체 실행 이력을 불러오는 중입니다.</p>
             </div>
         </header>
 
         <div class="admin-dashboard-cards">
             <article class="admin-stat-card border-left-primary">
                 <div>
-                    <span>최근 로그</span>
+                    <span>전체 로그</span>
                     <strong id="logTotalCount">0</strong>
                 </div>
                 <i class="fas fa-history"></i>
@@ -229,15 +365,6 @@
                 <h6 class="m-0 font-weight-bold text-primary">실행 이력</h6>
             </div>
             <div class="card-body">
-                <div class="admin-table-tools">
-                    <button id="projectLogRefresh"
-                            class="admin-tool-btn"
-                            type="button">
-                        <i class="fas fa-sync-alt"></i>
-                        새로고침
-                    </button>
-                </div>
-
                 <div class="table-responsive">
             <table id="projectLogTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0">
                 <thead>
@@ -408,6 +535,14 @@ const userState = {
     editingCell: null
 };
 
+const accountBackdrop =
+    document.getElementById('accountDialogBackdrop');
+const accountForm =
+    document.getElementById('accountForm');
+const accountUserId =
+    document.getElementById('accountUserId').value;
+const accountProfileFile =
+    document.getElementById('accountProfileFile');
 const tableBody =
     document.getElementById('colorCheckTableBody');
 const summary =
@@ -422,6 +557,14 @@ const checkValueSelect =
     document.getElementById('colorCheckValue');
 const cancelButton =
     document.getElementById('colorCheckCancel');
+const importForm =
+    document.getElementById('colorCheckImportForm');
+const importFileInput =
+    document.getElementById('colorCheckImportFile');
+const importButton =
+    document.getElementById('colorCheckImportButton');
+const importResult =
+    document.getElementById('colorCheckImportResult');
 const colorCheckSection =
     document.getElementById('colorCheckSection');
 const projectLogSection =
@@ -432,8 +575,6 @@ const projectLogTableBody =
     document.getElementById('projectLogTableBody');
 const projectLogSummary =
     document.getElementById('projectLogSummary');
-const projectLogRefresh =
-    document.getElementById('projectLogRefresh');
 const colorTotalCount =
     document.getElementById('colorTotalCount');
 const colorCheckedCount =
@@ -481,6 +622,95 @@ const userFilteredCount =
 let colorCheckDataTable = null;
 let projectLogDataTable = null;
 let userDataTable = null;
+
+function profileImageUrl(version){
+    return '/api/user/profile-image?userId='
+        + encodeURIComponent(accountUserId)
+        + (version ? '&v=' + version : '');
+}
+
+function refreshProfileImages(){
+    const url = profileImageUrl(Date.now());
+
+    [
+        document.getElementById('accountMenuAvatarImage'),
+        document.getElementById('accountProfilePreview')
+    ].forEach(image => {
+        image.hidden = false;
+        image.src = url;
+    });
+}
+
+function hideProfileImages(){
+    document.getElementById(
+        'accountMenuAvatarImage'
+    ).hidden = true;
+    document.getElementById(
+        'accountProfilePreview'
+    ).hidden = true;
+}
+
+function readErrorMessage(response, fallback){
+    return response.text().then(text => {
+        if(response.ok){
+            return text ? JSON.parse(text) : {};
+        }
+
+        try{
+            const body = JSON.parse(text);
+            throw new Error(
+                body.message || body.error || fallback
+            );
+        }catch(error){
+            if(error instanceof SyntaxError){
+                throw new Error(text || fallback);
+            }
+            throw error;
+        }
+    });
+}
+
+function openAccountDialog(){
+    accountBackdrop.hidden = false;
+    document.body.classList.add('dialog-open');
+    document.getElementById('accountUserName').focus();
+}
+
+function closeAccountDialog(){
+    accountBackdrop.hidden = true;
+    document.body.classList.remove('dialog-open');
+    document.getElementById('accountCurrentPassword').value = '';
+    document.getElementById('accountNewPassword').value = '';
+    document.getElementById('accountConfirmPassword').value = '';
+    document.getElementById('accountFormError').textContent = '';
+    updatePasswordMatchMessage();
+}
+
+function updatePasswordMatchMessage(){
+    const newPasswordInput =
+        document.getElementById('accountNewPassword');
+    const confirmPasswordInput =
+        document.getElementById('accountConfirmPassword');
+    const messageElement =
+        document.getElementById('accountPasswordMatchMessage');
+    const saveButton =
+        document.getElementById('accountSaveButton');
+    const newPassword = newPasswordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+    const mismatched =
+        (newPassword || confirmPassword)
+        && newPassword !== confirmPassword;
+
+    messageElement.textContent = mismatched
+        ? '신규 비밀번호와 확인 비밀번호가 일치하지 않습니다.'
+        : '';
+    confirmPasswordInput.classList.toggle(
+        'is-invalid',
+        mismatched);
+    saveButton.disabled = mismatched;
+
+    return !mismatched;
+}
 
 function safeText(value){
     return value === null || value === undefined || value === ''
@@ -544,6 +774,40 @@ function formatRole(value){
         return 'Y';
     }
     return role;
+}
+
+function setImportResult(message, details){
+    importResult.hidden = false;
+    importResult.innerHTML = '';
+
+    const summaryLine = document.createElement('div');
+    summaryLine.className = 'admin-import-result-summary';
+    summaryLine.textContent = message;
+    importResult.appendChild(summaryLine);
+
+    if(details && details.length > 0){
+        const list = document.createElement('ul');
+        details.slice(0, 5).forEach(detail => {
+            const item = document.createElement('li');
+            item.textContent = '행 '
+                + detail.excelRowNumber
+                + ' - '
+                + safeText(detail.drawingName)
+                + ': '
+                + safeText(detail.note);
+            list.appendChild(item);
+        });
+
+        if(details.length > 5){
+            const item = document.createElement('li');
+            item.textContent = '외 '
+                + (details.length - 5).toLocaleString('ko-KR')
+                + '건';
+            list.appendChild(item);
+        }
+
+        importResult.appendChild(list);
+    }
 }
 
 function switchAdminView(view){
@@ -962,7 +1226,7 @@ function updateProjectLogSummary(showing){
     const failed = projectLogState.items
         .filter(item => item.status === 'FAILED').length;
 
-    projectLogSummary.textContent = '최근 '
+    projectLogSummary.textContent = '전체 '
         + total.toLocaleString('ko-KR')
         + '건 중 '
         + showing.toLocaleString('ko-KR')
@@ -974,11 +1238,10 @@ function updateProjectLogSummary(showing){
 }
 
 async function loadProjectLogs(){
-    projectLogRefresh.disabled = true;
-    projectLogSummary.textContent = '최근 실행 이력을 불러오는 중입니다.';
+    projectLogSummary.textContent = '전체 실행 이력을 불러오는 중입니다.';
 
     try{
-        const response = await fetch('/admin/project-logs?limit=100', {
+        const response = await fetch('/admin/project-logs', {
             headers:{
                 'Accept':'application/json'
             }
@@ -1000,8 +1263,59 @@ async function loadProjectLogs(){
         row.appendChild(cell);
         projectLogTableBody.appendChild(row);
         projectLogSummary.textContent = error.message || '조회 중 오류가 발생했습니다.';
+    }
+}
+
+async function importColorCheckExcel(event){
+    if(event){
+        event.preventDefault();
+    }
+
+    const file = importFileInput.files && importFileInput.files[0];
+    if(!file){
+        setImportResult('업로드할 엑셀 파일을 선택해 주세요.');
+        importFileInput.focus();
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('file', file);
+    importButton.disabled = true;
+    setImportResult('엑셀을 업로드하는 중입니다.');
+
+    try{
+        const response = await fetch('/admin/color-check/import', {
+            method:'POST',
+            headers:{
+                'Accept':'application/json'
+            },
+            body:formData
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        const result = await response.json();
+        const skippedDetails = (result.details || [])
+            .filter(detail => detail.status === '제외');
+        setImportResult(
+            '업로드 완료: 신규 '
+                + result.insertedCount.toLocaleString('ko-KR')
+                + '건, 수정 '
+                + result.updatedCount.toLocaleString('ko-KR')
+                + '건, 변경 없음 '
+                + result.unchangedCount.toLocaleString('ko-KR')
+                + '건, 제외 '
+                + result.skippedCount.toLocaleString('ko-KR')
+                + '건',
+            skippedDetails);
+        importFileInput.value = '';
+        await loadColorCheckItems();
+    }catch(error){
+        setImportResult(error.message || '엑셀 업로드에 실패했습니다.');
     }finally{
-        projectLogRefresh.disabled = false;
+        importButton.disabled = false;
     }
 }
 
@@ -1284,10 +1598,170 @@ async function loadUsers(){
     }
 }
 
+document.getElementById('accountNewPassword')
+    .addEventListener('input', updatePasswordMatchMessage);
+document.getElementById('accountConfirmPassword')
+    .addEventListener('input', updatePasswordMatchMessage);
+
+accountBackdrop.addEventListener('click', function(event){
+    if(event.target === accountBackdrop){
+        closeAccountDialog();
+    }
+});
+
+accountProfileFile.addEventListener('change', function(){
+    const file = accountProfileFile.files[0];
+
+    if(!file){
+        return;
+    }
+
+    const errorElement =
+        document.getElementById('accountFormError');
+    const formData = new FormData();
+    formData.append('file', file);
+    errorElement.textContent = '';
+
+    fetch('/api/user/profile-image', {
+        method:'POST',
+        body:formData
+    })
+    .then(response => readErrorMessage(
+        response,
+        '프로필 이미지 변경에 실패했습니다.'
+    ))
+    .then(() => {
+        refreshProfileImages();
+    })
+    .catch(error => {
+        errorElement.textContent = error.message;
+    })
+    .finally(() => {
+        accountProfileFile.value = '';
+    });
+});
+
+document.getElementById(
+    'accountImageDeleteButton'
+).addEventListener('click', function(){
+    const errorElement =
+        document.getElementById('accountFormError');
+    errorElement.textContent = '';
+
+    fetch('/api/user/profile-image', {
+        method:'DELETE'
+    })
+    .then(response => readErrorMessage(
+        response,
+        '프로필 이미지 삭제에 실패했습니다.'
+    ))
+    .then(() => {
+        hideProfileImages();
+    })
+    .catch(error => {
+        errorElement.textContent = error.message;
+    });
+});
+
+document.addEventListener('keydown', function(event){
+    if(event.key === 'Escape' && !accountBackdrop.hidden){
+        closeAccountDialog();
+    }
+});
+
+accountForm.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    const saveButton =
+        document.getElementById('accountSaveButton');
+    const errorElement =
+        document.getElementById('accountFormError');
+    const userName =
+        document.getElementById('accountUserName').value.trim();
+    const currentPassword =
+        document.getElementById('accountCurrentPassword').value;
+    const newPassword =
+        document.getElementById('accountNewPassword').value;
+    const confirmPassword =
+        document.getElementById('accountConfirmPassword').value;
+
+    errorElement.textContent = '';
+
+    if(!updatePasswordMatchMessage()){
+        errorElement.textContent =
+            '신규 비밀번호와 확인 비밀번호가 일치하지 않습니다.';
+        return;
+    }
+
+    if(newPassword && !currentPassword){
+        errorElement.textContent =
+            '현재 비밀번호를 입력해주세요.';
+        return;
+    }
+
+    saveButton.disabled = true;
+    saveButton.textContent = '수정 중...';
+
+    fetch('/api/user/account', {
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({
+            userName:userName,
+            currentPassword:currentPassword,
+            newPassword:newPassword,
+            confirmPassword:confirmPassword
+        })
+    })
+    .then(async response => {
+        const text = await response.text();
+
+        if(!response.ok){
+            try{
+                const body = JSON.parse(text);
+                throw new Error(
+                    body.message
+                    || body.error
+                    || text
+                    || '계정 정보를 수정하지 못했습니다.'
+                );
+            }catch(error){
+                if(error instanceof SyntaxError){
+                    throw new Error(
+                        text || '계정 정보를 수정하지 못했습니다.'
+                    );
+                }
+                throw error;
+            }
+        }
+
+        return text ? JSON.parse(text) : {};
+    })
+    .then(user => {
+        document.getElementById(
+            'currentUserName'
+        ).textContent = user.userName;
+        document.getElementById(
+            'accountUserName'
+        ).value = user.userName;
+        closeAccountDialog();
+    })
+    .catch(error => {
+        errorElement.textContent = error.message;
+    })
+    .finally(() => {
+        saveButton.disabled = false;
+        saveButton.textContent = '수정';
+    });
+});
+
 refreshButton.addEventListener('click', loadColorCheckItems);
 editForm.addEventListener('submit', saveItem);
+importForm.addEventListener('submit', importColorCheckExcel);
+importButton.addEventListener('click', () => importFileInput.click());
+importFileInput.addEventListener('change', importColorCheckExcel);
 cancelButton.addEventListener('click', resetForm);
-projectLogRefresh.addEventListener('click', loadProjectLogs);
 userRefresh.addEventListener('click', loadUsers);
 userCreateForm.addEventListener('submit', createUser);
 document.querySelectorAll('[data-admin-view]').forEach(button => {

@@ -102,7 +102,9 @@ public class MultilingualConversionService {
             runBatch(workspace, logs);
             validateOutput(workspace.resolve("topics"));
 
-            Path runOutput = input.resolve("Result_Folder");
+            Path runOutput = ResultFolderNames.resolve(
+                    input,
+                    "Multilingual");
             Files.createDirectories(runOutput);
             replaceDirectory(
                     workspace.resolve("topics"),
@@ -379,7 +381,9 @@ public class MultilingualConversionService {
         }
 
         try {
-            Path resultFolder = input.resolve("Result_Folder");
+            Path resultFolder = ResultFolderNames.resolve(
+                    input,
+                    "Multilingual");
             Files.createDirectories(resultFolder);
             writeLog(resultFolder.resolve("multilingual.log"), logs);
         } catch (IOException logException) {
@@ -523,8 +527,10 @@ public class MultilingualConversionService {
             for (Path path : paths.toList()) {
                 Path relative = source.relativize(path);
                 if (relative.getNameCount() > 0
-                        && excludedRootNames.contains(
-                                relative.getName(0).toString())) {
+                        && (excludedRootNames.contains(
+                                relative.getName(0).toString())
+                        || ResultFolderNames.isGeneratedResultFolder(
+                                relative.getName(0).toString()))) {
                     continue;
                 }
 

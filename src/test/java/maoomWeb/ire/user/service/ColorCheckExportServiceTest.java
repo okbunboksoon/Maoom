@@ -45,7 +45,7 @@ class ColorCheckExportServiceTest {
 
         try(XSSFWorkbook workbook = new XSSFWorkbook(
                 new ByteArrayInputStream(excel))){
-            var row = workbook.getSheet("컬러체크").getRow(3);
+            var row = workbook.getSheet("견적").getRow(3);
             assertThat(row.getCell(0).getStringCellValue())
                     .isEqualTo("N_SP3i26_B04_038_IR");
             assertThat(row.getCell(2).getStringCellValue())
@@ -73,7 +73,7 @@ class ColorCheckExportServiceTest {
 
         try(XSSFWorkbook workbook = new XSSFWorkbook(
                 new ByteArrayInputStream(excel))){
-            var sheet = workbook.getSheet("컬러체크");
+            var sheet = workbook.getSheet("견적");
             assertThat(sheet.getRow(0).getCell(0)
                     .getStringCellValue()).isEqualTo("체크");
             assertThat(sheet.getNumMergedRegions()).isEqualTo(1);
@@ -128,7 +128,7 @@ class ColorCheckExportServiceTest {
 
         try(XSSFWorkbook workbook = new XSSFWorkbook(
                 new ByteArrayInputStream(excel))){
-            assertThat(workbook.getSheet("컬러체크")
+            assertThat(workbook.getSheet("견적")
                     .getRow(3).getCell(0)
                     .getStringCellValue())
                     .isEqualTo("OCL4M035125N");
@@ -152,7 +152,7 @@ class ColorCheckExportServiceTest {
 
         try(XSSFWorkbook workbook = new XSSFWorkbook(
                 new ByteArrayInputStream(excel))){
-            assertThat(workbook.getSheet("컬러체크")
+            assertThat(workbook.getSheet("견적")
                     .getRow(3).getCell(0)
                     .getStringCellValue())
                     .isEqualTo("ODEEV123456");
@@ -163,7 +163,7 @@ class ColorCheckExportServiceTest {
 
         try(XSSFWorkbook workbook = new XSSFWorkbook(
                 new ByteArrayInputStream(kiaExcel))){
-            assertThat(workbook.getSheet("컬러체크")
+            assertThat(workbook.getSheet("견적")
                     .getRow(3).getCell(0)
                     .getStringCellValue())
                     .isEqualTo("KIA_C00_048");
@@ -205,7 +205,7 @@ class ColorCheckExportServiceTest {
 
         try(XSSFWorkbook workbook = new XSSFWorkbook(
                 new ByteArrayInputStream(excel))){
-            var sheet = workbook.getSheet("컬러체크");
+            var sheet = workbook.getSheet("견적");
             assertThat(sheet.getLastRowNum()).isEqualTo(3);
             assertThat(sheet.getRow(3).getCell(0)
                     .getStringCellValue())
@@ -237,7 +237,7 @@ class ColorCheckExportServiceTest {
 
         try(XSSFWorkbook workbook = new XSSFWorkbook(
                 new ByteArrayInputStream(excel))){
-            var row = workbook.getSheet("컬러체크")
+            var row = workbook.getSheet("견적")
                     .getRow(3);
             assertThat(row.getCell(0).getStringCellValue())
                     .isEqualTo("ONQ5052179L");
@@ -277,7 +277,7 @@ class ColorCheckExportServiceTest {
 
         try(XSSFWorkbook workbook = new XSSFWorkbook(
                 new ByteArrayInputStream(excel))){
-            var sheet = workbook.getSheet("컬러체크");
+            var sheet = workbook.getSheet("견적");
             assertThat(java.util.List.of(
                     sheet.getRow(3).getCell(0)
                             .getStringCellValue(),
@@ -334,7 +334,7 @@ class ColorCheckExportServiceTest {
 
         try(XSSFWorkbook workbook = new XSSFWorkbook(
                 new ByteArrayInputStream(excel))){
-            var sheet = workbook.getSheet("컬러체크");
+            var sheet = workbook.getSheet("견적");
             assertThat(sheet.getRow(3).getCell(3)
                     .getStringCellValue())
                     .isEqualTo("Driver Adjustments");
@@ -391,7 +391,7 @@ class ColorCheckExportServiceTest {
 
         try(XSSFWorkbook workbook = new XSSFWorkbook(
                 new ByteArrayInputStream(excel))){
-            var sheet = workbook.getSheet("컬러체크");
+            var sheet = workbook.getSheet("견적");
             assertThat(java.util.List.of(
                     sheet.getRow(3).getCell(3)
                             .getStringCellValue(),

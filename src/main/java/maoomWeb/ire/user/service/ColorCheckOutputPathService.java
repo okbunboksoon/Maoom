@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 /**
- * 컬러체크 산출물이 저장될 서버 PC의 실제 폴더를 한곳에서 계산한다.
+ * 견적 산출물이 저장될 서버 PC의 실제 폴더를 한곳에서 계산한다.
  */
 @Service
 public class ColorCheckOutputPathService {

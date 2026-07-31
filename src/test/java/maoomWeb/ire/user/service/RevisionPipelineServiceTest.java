@@ -46,7 +46,8 @@ class RevisionPipelineServiceTest {
                 .isEmpty();
         assertThat(result.logs())
                 .anyMatch(log -> log.contains("XML 출력 결과가 없습니다."));
-        assertThat(input.resolve("Result_Folder/revision.log"))
+        assertThat(ResultFolderNames.resolve(input, "revision")
+                .resolve("revision.log"))
                 .exists();
     }
 
@@ -69,8 +70,36 @@ class RevisionPipelineServiceTest {
         assertThat(result.success()).isFalse();
         assertThat(result.logs())
                 .anyMatch(log -> log.contains("BOOKMAP_MAPNAME_REQUIRED:"));
-        assertThat(input.resolve("Result_Folder/revision.log"))
+        assertThat(ResultFolderNames.resolve(input, "revision")
+                .resolve("revision.log"))
                 .exists();
+    }
+
+    @Test
+    void writesRevisionLogWhenRunSucceeds() throws Exception {
+        Path input = Files.createDirectory(tempDirectory.resolve("success-input"));
+        Path workspace = Files.createDirectory(tempDirectory.resolve("success-workspace"));
+        Path chapter = Files.createDirectory(workspace.resolve("chapter"));
+        Files.writeString(chapter.resolve("01_Intro.xml"), "<chapter/>");
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        Method method = RevisionPipelineService.class.getDeclaredMethod(
+                "writeLog",
+                Path.class,
+                List.class);
+        method.setAccessible(true);
+
+        Path resultFolder = ResultFolderNames.resolve(input, "revision");
+        method.invoke(
+                service,
+                resultFolder,
+                List.of("배치 실행: sample.bat", "완료: " + resultFolder));
+
+        assertThat(resultFolder.resolve("revision.log"))
+                .exists()
+                .content(StandardCharsets.UTF_8)
+                .contains("배치 실행: sample.bat")
+                .contains("완료: " + resultFolder);
     }
 
     @Test
@@ -179,5 +208,18 @@ class RevisionPipelineServiceTest {
                         "filename=\"01.txt\"",
                         "filename=\"02_Intro.xml\"")
                 .doesNotContain("memo.txt");
+    }
+
+    @Test
+    void recognizesDatedResultFolders() {
+        assertThat(ResultFolderNames.isGeneratedResultFolder(
+                "260731_Result_Folder_revision"))
+                .isTrue();
+        assertThat(ResultFolderNames.isGeneratedResultFolder(
+                "Result_Folder"))
+                .isTrue();
+        assertThat(ResultFolderNames.isGeneratedResultFolder(
+                "topics"))
+                .isFalse();
     }
 }

@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Param;
 import maoomWeb.ire.user.dto.DrawingColorCheckDto;
 
 /**
- * 컬러체크 서비스와 MyBatis SQL 파일을 연결하는 인터페이스.
+ * 견적 서비스와 MyBatis SQL 파일을 연결하는 인터페이스.
  *
  * <p>각 메서드 이름은
  * {@code resources/mapper/user/DrawingColorCheckMapper.xml}의
@@ -31,6 +31,6 @@ public interface DrawingColorCheckMapper {
      */
     int upsert(DrawingColorCheckDto colorCheck);
 
-    /** 도안명 기준으로 컬러체크 데이터를 삭제한다. */
+    /** 도안명 기준으로 견적 데이터를 삭제한다. */
     int deleteByDrawingName(@Param("drawingName") String drawingName);
 }

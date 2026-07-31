@@ -236,7 +236,7 @@ public class UserController {
 
     @GetMapping("/pdf/color-check")
     /**
-     * 컬러체크 팝업 화면을 연다.
+     * 견적 팝업 화면을 연다.
      *
      * <p>화면에 실제 저장 위치를 표시할 수 있도록 서버 PC의
      * 바탕화면/temp 전체 경로를 Thymeleaf 모델에 함께 넣는다.

@@ -97,7 +97,9 @@ public class QsgApplyService {
             Path workspaceResult = workspace.resolve("result_Folder");
             validateOutput(workspaceResult);
 
-            Path runOutput = input.resolve("Result_Folder");
+            Path runOutput = ResultFolderNames.resolve(
+                    input,
+                    "QSG");
             replaceDirectory(workspaceResult, runOutput);
             logs.add("완료: " + runOutput);
             Files.write(
@@ -221,7 +223,9 @@ public class QsgApplyService {
         }
 
         try {
-            Path resultFolder = input.resolve("Result_Folder");
+            Path resultFolder = ResultFolderNames.resolve(
+                    input,
+                    "QSG");
             Files.createDirectories(resultFolder);
             Files.write(
                     resultFolder.resolve("qsg.log"),
@@ -360,8 +364,10 @@ public class QsgApplyService {
             for (Path path : paths.toList()) {
                 Path relative = source.relativize(path);
                 if (relative.getNameCount() > 0
-                        && excludedRootNames.contains(
-                                relative.getName(0).toString())) {
+                        && (excludedRootNames.contains(
+                                relative.getName(0).toString())
+                        || ResultFolderNames.isGeneratedResultFolder(
+                                relative.getName(0).toString()))) {
                     continue;
                 }
 

@@ -183,7 +183,9 @@ public class RevisionPipelineService {
             }
             validateBatchOutput(workspace, outputType, batchPlan);
 
-            Path runOutput = input.resolve("Result_Folder");
+            Path runOutput = ResultFolderNames.resolve(
+                    input,
+                    "revision");
             Files.createDirectories(runOutput);
 
             if (outputType == RevisionFormat.XML) {
@@ -200,6 +202,7 @@ public class RevisionPipelineService {
                     runOutput.resolve("table_report.xml"));
 
             logs.add("완료: " + runOutput);
+            writeLog(runOutput, logs);
             return new RevisionRunResult(
                     true,
                     runOutput.toString(),
@@ -218,18 +221,25 @@ public class RevisionPipelineService {
         }
     }
 
+    private void writeLog(Path resultFolder, List<String> logs)
+            throws IOException {
+        Files.createDirectories(resultFolder);
+        Files.write(
+                resultFolder.resolve("revision.log"),
+                logs,
+                StandardCharsets.UTF_8);
+    }
+
     private void writeFailureLog(Path input, List<String> logs) {
         if (input == null) {
             return;
         }
 
         try {
-            Path resultFolder = input.resolve("Result_Folder");
-            Files.createDirectories(resultFolder);
-            Files.write(
-                    resultFolder.resolve("revision.log"),
-                    logs,
-                    StandardCharsets.UTF_8);
+            Path resultFolder = ResultFolderNames.resolve(
+                    input,
+                    "revision");
+            writeLog(resultFolder, logs);
         } catch (IOException logException) {
             logs.add("오류 로그 저장 실패: " + logException.getMessage());
         }

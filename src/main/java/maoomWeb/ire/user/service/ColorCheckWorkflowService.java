@@ -13,7 +13,7 @@ import maoomWeb.ire.user.dto.ColorCheckWorkbookResponse;
 import maoomWeb.ire.user.dto.DrawingColorCheckImportResult;
 
 /**
- * 컬러체크 화면의 큰 실행 흐름을 조율한다.
+ * 견적 화면의 큰 실행 흐름을 조율한다.
  *
  * <p>컨트롤러는 HTTP 요청/응답만 담당하고, 이 서비스가 PDF 분석 엑셀 생성,
  * 검토 엑셀의 최종 발주 양식 변환, DB 반영, 실행 로그 기록을 한 흐름으로 묶는다.</p>
@@ -153,7 +153,7 @@ public class ColorCheckWorkflowService {
                 List.of());
     }
 
-    /** 원본 PDF 이름 뒤에 "_컬러체크.xlsx"를 붙여 기본 파일명을 만든다. */
+    /** 원본 PDF 이름 뒤에 "_견적.xlsx"를 붙여 기본 파일명을 만든다. */
     private String createOutputFileName(String originalName) {
         String baseName = originalName == null
                 ? "color-check"
