@@ -11,7 +11,7 @@ body{
     justify-content:center;
     align-items:flex-start;
     min-height:100vh;
-    padding:132px 48px 64px;
+    padding:46px 48px 64px;
     background:#f1f3f5;
     color:#20252b;
     box-sizing:border-box;
@@ -51,9 +51,6 @@ input,
 }
 
 .account-actions{
-    position:fixed;
-    top:24px;
-    right:max(24px, calc((100vw - 1180px) / 2));
     display:flex;
     align-items:center;
     gap:10px;
@@ -441,8 +438,25 @@ body.dialog-open{
     display:flex;
     align-items:flex-start;
     justify-content:space-between;
-    gap:20px;
+    gap:24px;
     margin-bottom:22px;
+}
+
+.launcher-header-actions{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-end;
+    gap:10px;
+    width:max-content;
+}
+
+.launcher-header-actions .account-actions{
+    justify-content:flex-end;
+}
+
+.launcher-header-actions .launcher-search{
+    width:100%;
 }
 
 .launcher-header h1{
@@ -512,7 +526,7 @@ body.dialog-open{
     display:flex;
     flex-wrap:wrap;
     gap:8px;
-    margin-bottom:18px;
+    margin-bottom:26px;
 }
 
 .launcher-tab,
@@ -580,8 +594,8 @@ body.dialog-open{
 
 .launcher-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));
-    gap:16px;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:28px;
     min-height:330px;
     align-content:start;
 }
@@ -590,9 +604,8 @@ body.dialog-open{
     position:relative;
     display:flex;
     align-items:flex-start;
-    gap:13px;
-    min-height:118px;
-    padding:18px;
+    min-height:184px;
+    padding:26px;
     border:1px solid #d8dee6;
     border-radius:8px;
     background:#fff;
@@ -617,21 +630,37 @@ a.launcher-card{
     display:flex;
     flex-direction:column;
     min-width:0;
-    padding-right:90px;
+    padding-right:68px;
+}
+
+.launcher-card-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:46px;
+    height:46px;
+    margin-bottom:20px;
+    color:#145dcc;
+    font-size:38px;
+    line-height:1;
+}
+
+.launcher-card-icon i{
+    display:block;
 }
 
 .launcher-card-content strong{
     color:#1f2933;
-    font-size:17px;
+    font-size:20px;
     line-height:1.25;
     white-space:pre-line;
 }
 
 .launcher-card-content small{
-    margin-top:7px;
+    margin-top:12px;
     color:#65717d;
-    font-size:12px;
-    line-height:1.4;
+    font-size:13px;
+    line-height:1.55;
 }
 
 .launcher-card-categories{
@@ -736,11 +765,31 @@ a.launcher-card{
         flex-direction:column;
     }
 
+    .launcher-header-actions{
+        width:100%;
+        justify-content:flex-start;
+    }
+
+    .account-actions{
+        width:100%;
+        flex-wrap:wrap;
+    }
+
     .launcher-search{
         width:100%;
     }
 
     .launcher-guide-btn{
         width:100%;
+    }
+
+    .launcher-grid{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .launcher-card{
+        min-height:150px;
+        padding:20px;
     }
 }

@@ -72,14 +72,6 @@
         </div>
         <div id="optionList" class="option-list" aria-live="polite"></div>
 
-        <section id="resultPanel" class="result-panel" hidden aria-live="polite">
-            <div class="result-heading">
-                <span id="statusIndicator" class="status-indicator"></span>
-                <strong id="resultTitle">실행 준비 중</strong>
-            </div>
-            <p id="resultMessage"></p>
-        </section>
-
         <footer class="popup-actions">
             <button type="button" id="runButton" class="action-button primary">
                 실행
@@ -88,6 +80,14 @@
                 취소
             </button>
         </footer>
+
+        <section id="resultPanel" class="result-panel" hidden aria-live="polite">
+            <div class="result-heading">
+                <span id="statusIndicator" class="status-indicator"></span>
+                <strong id="resultTitle">실행 준비 중</strong>
+            </div>
+            <p id="resultMessage"></p>
+        </section>
     </section>
 </main>
 
@@ -220,7 +220,15 @@ function showResult(type, title, message, logs) {
     resultTitle.textContent = title;
     resultMessage.textContent = message || '';
     statusIndicator.classList.toggle('is-running', type === 'running');
-    resultPanel.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+    resizeRevisionPopupForResult();
+}
+
+function resizeRevisionPopupForResult() {
+    try {
+        window.resizeTo(680, 720);
+    } catch (error) {
+        // 브라우저가 팝업 크기 변경을 막으면 현재 창 크기를 그대로 사용한다.
+    }
 }
 
 function buildOutputPath(inputPath) {

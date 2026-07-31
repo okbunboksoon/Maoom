@@ -14,7 +14,7 @@ body{
 .color-check-wrap{
     width:100%;
     min-height:100vh;
-    padding:24px 28px;
+    padding:18px 28px;
     box-sizing:border-box;
 }
 
@@ -23,7 +23,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    margin-bottom:18px;
+    margin-bottom:12px;
 }
 
 .color-check-header h1{
@@ -43,7 +43,7 @@ body{
 /* 흰색 카드 형태의 실제 작업 영역 */
 .color-check-panel{
     width:100%;
-    padding:24px;
+    padding:20px 24px;
     border:1px solid #d6dce3;
     border-radius:8px;
     background:#fff;
@@ -171,7 +171,7 @@ button:disabled{
     display:flex;
     align-items:flex-start;
     gap:10px;
-    margin-bottom:16px;
+    margin-bottom:12px;
 }
 
 .step-title > span{
@@ -207,7 +207,7 @@ button:disabled{
 /* 두 작업 단계를 시각적으로 나누는 구분선 */
 .step-divider{
     height:1px;
-    margin:22px 0 18px;
+    margin:18px 0 14px;
     background:#edf0f3;
 }
 
@@ -216,8 +216,8 @@ button:disabled{
     display:flex;
     align-items:center;
     gap:8px;
-    margin-top:18px;
-    padding:12px 14px;
+    margin-top:10px;
+    padding:10px 14px;
     border:1px solid #cfd6df;
     border-radius:7px;
     background:#f7f9fb;
@@ -273,8 +273,8 @@ button:disabled{
     display:flex;
     justify-content:flex-end;
     gap:10px;
-    margin-top:22px;
-    padding-top:18px;
+    margin-top:14px;
+    padding-top:12px;
     border-top:1px solid #edf0f3;
 }
 

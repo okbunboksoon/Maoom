@@ -8,46 +8,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/user/css/UserMain.css?v=font-align-4">
+	<link rel="stylesheet" href="/user/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="/user/css/UserMain.css?v=launcher-icons-2">
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-<!-- 현재 사용자 정보와 Spring Security 기본 /logout 요청을 제공한다. -->
-<div class="account-actions">
-    <button id="accountMenuButton"
-            class="current-user-name"
-            type="button"
-            aria-haspopup="dialog"
-            aria-controls="accountDialog"
-            onclick="openAccountDialog()">
-        <span class="account-menu-avatar">
-            <img id="accountMenuAvatarImage"
-                 th:src="@{/api/user/profile-image(userId=${currentUserId})}"
-                 alt=""
-                 onerror="this.hidden=true">
-            <i class="fa-solid fa-user"></i>
-        </span>
-        <strong id="currentUserName"
-                th:text="${currentUserName}">사용자</strong>님
-        <i class="fa-solid fa-chevron-down account-chevron"></i>
-    </button>
-    <a class="admin-page-btn"
-       th:if="${administrator}"
-       href="/admin/main">
-        <i class="fa-solid fa-screwdriver-wrench"></i>
-        관리자
-    </a>
-    <form class="logout-form" action="/logout" method="post">
-        <button class="logout-btn" type="submit">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            로그아웃
-        </button>
-    </form>
-</div>
 
 <!-- 이름·비밀번호·프로필 이미지를 변경하는 계정 설정 대화상자. -->
 <div id="accountDialogBackdrop"
@@ -67,7 +35,7 @@
                     type="button"
                     aria-label="닫기"
                     onclick="closeAccountDialog()">
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fas fa-times"></i>
             </button>
         </div>
 
@@ -78,7 +46,7 @@
                          th:src="@{/api/user/profile-image(userId=${currentUserId})}"
                          alt="프로필 이미지"
                          onerror="this.hidden=true">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fas fa-user"></i>
                 </span>
                 <div class="account-profile-controls">
                     <strong>프로필 이미지</strong>
@@ -151,12 +119,13 @@
                role="alert"></p>
 
             <div class="account-dialog-actions">
-                <button class="account-cancel-btn"
-                        type="button"
-                        onclick="closeAccountDialog()">취소</button>
                 <button id="accountSaveButton"
                         class="account-save-btn"
                         type="submit">수정</button>
+                <button class="account-cancel-btn"
+                        type="button"
+                        onclick="closeAccountDialog()">취소</button>
+
             </div>
         </form>
     </section>
@@ -168,12 +137,46 @@
             <h1>LAB Portal</h1>
             <p>작업을 선택하세요.</p>
         </div>
-        <label class="launcher-search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input id="menuSearch"
-                   type="search"
-                   placeholder="기능 검색">
-        </label>
+        <div class="launcher-header-actions">
+            <!-- 현재 사용자 정보와 Spring Security 기본 /logout 요청을 제공한다. -->
+            <div class="account-actions">
+                <button id="accountMenuButton"
+                        class="current-user-name"
+                        type="button"
+                        aria-haspopup="dialog"
+                        aria-controls="accountDialog"
+                        onclick="openAccountDialog()">
+                    <span class="account-menu-avatar">
+                        <img id="accountMenuAvatarImage"
+                             th:src="@{/api/user/profile-image(userId=${currentUserId})}"
+                             alt=""
+                             onerror="this.hidden=true">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <strong id="currentUserName"
+                            th:text="${currentUserName}">사용자</strong>님
+                    <i class="fas fa-chevron-down account-chevron"></i>
+                </button>
+                <a class="admin-page-btn"
+                   th:if="${administrator}"
+                   href="/admin/main">
+                    <i class="fas fa-tools"></i>
+                    관리자
+                </a>
+                <form class="logout-form" action="/logout" method="post">
+                    <button class="logout-btn" type="submit">
+                        <i class="fas fa-sign-out-alt"></i>
+                        로그아웃
+                    </button>
+                </form>
+            </div>
+            <label class="launcher-search">
+                <i class="fas fa-search"></i>
+                <input id="menuSearch"
+                       type="search"
+                       placeholder="기능 검색">
+            </label>
+        </div>
     </header>
 
     <nav class="launcher-tabs" aria-label="기능 카테고리">
@@ -252,7 +255,7 @@ const launcherMenus = [
         title:'견적',
         description:'도안 확인 및 발주내역서 생성',
         category:'PDF',
-        icon:'fa-table-list',
+        icon:'fa-regular fa-image',
         action:openColorCheckPopup
     },
 	{
@@ -266,14 +269,14 @@ const launcherMenus = [
         title:'BER 반영',
         description:'매뉴얼 유럽 및 북미 BER반영',
         category:'DITA',
-        icon:'fa-file-circle-check',
+        icon:'fa-solid fa-file',
         action:openBerPopup
     },
     {
         title:'정제',
         description:'DITA 및 XML 정제',
         category:'DITA, XML',
-        icon:'fa-wand-magic-sparkles',
+        icon:'fa-solid fa-file',
         action:openRevisionPopup
     },
     {
@@ -294,12 +297,23 @@ const launcherMenus = [
         title:'제품사양서 비교',
         description:'제품 사양서 차이 비교',
         category:'EXCEL',
-        icon:'fa-code-compare',
+        icon:'fa-solid fa-list',
         action:openProductSpecComparePopup
     }
 ];
 
 let activeMenuCategory = '전체';
+
+function normalizeIconClass(icon){
+    const normalized = icon
+        .replace(/\bfa-solid\b/g, 'fas')
+        .replace(/\bfa-regular\b/g, 'far')
+        .trim();
+
+    return /\bfa[rsb]\b/.test(normalized)
+        ? normalized
+        : 'fas ' + normalized;
+}
 
 // 캐시 무효화용 버전을 붙여 같은 파일 URL이라도 변경 직후 새 이미지를 요청한다.
 function profileImageUrl(version){
@@ -508,6 +522,12 @@ function renderLauncherMenus(){
         button.type = 'button';
         button.addEventListener('click', menu.action);
 
+        const icon = document.createElement('span');
+        icon.className = 'launcher-card-icon';
+        const iconElement = document.createElement('i');
+        iconElement.className = normalizeIconClass(menu.icon);
+        icon.appendChild(iconElement);
+
         const content = document.createElement('span');
         content.className = 'launcher-card-content';
 
@@ -531,12 +551,19 @@ function renderLauncherMenus(){
                 category.appendChild(badge);
             });
 
+        content.appendChild(icon);
         content.appendChild(title);
         content.appendChild(description);
         button.appendChild(content);
         button.appendChild(category);
         grid.appendChild(button);
     });
+
+    if(window.FontAwesome && window.FontAwesome.dom){
+        window.FontAwesome.dom.i2svg({
+            node: grid
+        });
+    }
 
     empty.hidden = visibleMenus.length > 0;
 }
@@ -667,7 +694,7 @@ function openColorCheckPopup(){
     window.open(
         '/pdf/color-check',
         'colorCheckPopup',
-        'width=680,height=510'
+        'width=680,height=460'
     );
 }
 
@@ -703,7 +730,7 @@ function openRevisionPopup(){
     window.open(
         '/revision/list',
         'revisionPopup',
-        'width=680,height=570'
+        'width=680,height=560'
     );
 }
 
@@ -712,7 +739,7 @@ function openMultilingualPopup(){
     window.open(
         '/multilingual/list',
         'multilingualPopup',
-        'width=680,height=450'
+        'width=680,height=460'
     );
 }
 
@@ -721,7 +748,7 @@ function openQsgPopup(){
     window.open(
         '/qsg/list',
         'qsgPopup',
-        'width=980,height=760'
+        'width=980,height=720'
     );
 }
 </script>

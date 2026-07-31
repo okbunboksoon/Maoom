@@ -28,7 +28,7 @@
   MyBatis XML mapper와 연결되는 DB 접근 인터페이스다.
 - `src/main/java/maoomWeb/ire/admin/controller`  
   관리자 화면에서 호출하는 REST API 진입점이다.
-- `src/main/java/maoomWeb/ire/admin/service`  
+- `src/main/java/maoomWeb/ire/admin/service`  [userMain.html](../src/main/resources/templates/user/userMain.html)
   관리자 화면에서 쓰는 DB 조회/수정 서비스와 DTO가 있다.
 - `src/main/resources/mapper`  
   MyBatis SQL XML이다. DB 테이블과 Java DTO 필드 연결이 여기에 있다.
