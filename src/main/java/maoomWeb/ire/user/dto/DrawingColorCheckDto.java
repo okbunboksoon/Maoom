@@ -3,7 +3,7 @@ package maoomWeb.ire.user.dto;
 import java.time.LocalDateTime;
 
 /**
- * Java 서비스와 DB 사이에서 도안별 컬러체크 데이터를 전달하는 DTO.
+ * Java 서비스와 DB 사이에서 도안별 견적 데이터를 전달하는 DTO.
  *
  * <p>MyBatis의 {@code DrawingColorCheckResultMap}이 DB 열을 아래 필드에
  * 연결한다. 별도의 업무 로직은 없고 데이터만 담는 객체다.</p>

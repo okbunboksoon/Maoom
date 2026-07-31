@@ -24,7 +24,7 @@ public class AdminProjectExecutionLogController {
     @GetMapping("/admin/project-logs")
     @ResponseBody
     public List<ProjectExecutionLogDto> getProjectLogs(
-            @RequestParam(defaultValue = "100") int limit) {
+            @RequestParam(required = false) Integer limit) {
         return logService.findRecent(limit);
     }
 }

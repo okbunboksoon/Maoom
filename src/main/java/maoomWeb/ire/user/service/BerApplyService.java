@@ -96,7 +96,7 @@ public class BerApplyService {
      *   <li>입력 DITA 경로가 서버에서 접근 가능한 폴더인지 확인한다.</li>
      *   <li>입력 폴더 안의 {@code topics}가 있으면 그 폴더를 원본으로 쓰고,
      *       없으면 입력 폴더 자체를 topics 원본으로 본다.</li>
-     *   <li>DITA 입력 경로 아래의 {@code Result_Folder}를 최종 결과 위치로 잡는다.</li>
+     *   <li>DITA 입력 경로 아래의 날짜별 BER 결과 폴더를 최종 결과 위치로 잡는다.</li>
      *   <li>{@code .maoomtool\ber-*} 작업 폴더에 tool 리소스와 topics를 복사한다.</li>
      *   <li>BAT를 실행하고, 작업 폴더의 topics 전체를 결과 topics로 이동한다.</li>
      *   <li>결과 topics와 리포트 엑셀을 최종 결과 위치로 이동한 뒤 작업 폴더를 삭제한다.</li>
@@ -114,7 +114,7 @@ public class BerApplyService {
             inputDirectory = validateInputDirectory(ditaPath);
             // 2. 입력 폴더가 상위 폴더인지 topics 폴더 자체인지 자동 판별한다.
             Path sourceTopicsDirectory = resolveSourceTopicsDirectory(inputDirectory);
-            // 3. 최종 산출물은 입력 경로 아래의 Result_Folder에 둔다.
+            // 3. 최종 산출물은 입력 경로 아래의 날짜별 BER 결과 폴더에 둔다.
             resultDirectory = resolveResultDirectory(inputDirectory);
             // 4. BAT 실행 중간 산출물이 원본과 섞이지 않도록 매 실행마다 별도 작업 폴더를 쓴다.
             workDirectory = createWorkDirectory(inputDirectory);
@@ -219,15 +219,18 @@ public class BerApplyService {
 
 
     /**
-     * DITA 입력 경로 아래에 Result_Folder를 만든다.
-     * 예: 입력이 {@code V:\Tools\test}면 {@code V:\Tools\test\Result_Folder}가 된다.
+     * DITA 입력 경로 아래에 날짜별 BER 결과 폴더를 만든다.
+     * 예: 입력이 {@code V:\Tools\test}면
+     * {@code V:\Tools\test\260731_Result_Folder_BER} 형태가 된다.
      */
     private Path resolveResultDirectory(Path inputDirectory) {
-        Path resultDirectory = inputDirectory.resolve("Result_Folder");
+        Path resultDirectory = ResultFolderNames.resolve(
+                inputDirectory,
+                "BER");
 
         if(Files.exists(resultDirectory) && !Files.isDirectory(resultDirectory)){
             throw new IllegalArgumentException(
-                    "Result_Folder 경로가 폴더가 아닙니다: " + resultDirectory);
+                    "결과 폴더 경로가 폴더가 아닙니다: " + resultDirectory);
         }
 
         return resultDirectory;
@@ -447,6 +450,12 @@ public class BerApplyService {
                 }
 
                 Path relativePath = source.relativize(sourcePath);
+                if(relativePath.getNameCount() > 0
+                        && ResultFolderNames.isGeneratedResultFolder(
+                                relativePath.getName(0).toString())){
+                    continue;
+                }
+
                 Path targetPath = target.resolve(relativePath).normalize();
 
                 if(!targetPath.startsWith(target)){
@@ -567,7 +576,7 @@ public class BerApplyService {
         return logs.subList(fromIndex, logs.size());
     }
 
-    /** QSG 로그와 같은 방식으로 BER 배치 출력 로그를 Result_Folder에 저장한다. */
+    /** QSG 로그와 같은 방식으로 BER 배치 출력 로그를 결과 폴더에 저장한다. */
     private void writeBerLog(Path resultDirectory, List<String> logs)
             throws IOException {
 
@@ -578,7 +587,7 @@ public class BerApplyService {
                 StandardCharsets.UTF_8);
     }
 
-    /** 실패 시에도 가능한 범위에서 Result_Folder\ber.log를 남긴다. */
+    /** 실패 시에도 가능한 범위에서 결과 폴더에 ber.log를 남긴다. */
     private void writeFailureLog(
             Path inputDirectory,
             Path resultDirectory,
@@ -587,7 +596,9 @@ public class BerApplyService {
         Path logDirectory = resultDirectory;
 
         if(logDirectory == null && inputDirectory != null){
-            logDirectory = inputDirectory.resolve("Result_Folder");
+            logDirectory = ResultFolderNames.resolve(
+                    inputDirectory,
+                    "BER");
         }
 
         if(logDirectory == null){
@@ -601,7 +612,7 @@ public class BerApplyService {
         }
     }
 
-    /** BER 변경 리포트 엑셀을 Result_Folder 바로 아래로 이동한다. */
+    /** BER 변경 리포트 엑셀을 결과 폴더 바로 아래로 이동한다. */
     private void moveReportFile(Path source, Path target)
             throws IOException {
 

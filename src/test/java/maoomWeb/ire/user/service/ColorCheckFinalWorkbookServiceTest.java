@@ -25,7 +25,7 @@ class ColorCheckFinalWorkbookServiceTest {
 
         Path source = tempDirectory.resolve(
                 "KIA-SP3-ICE-HEV-en-US-2027-OM_Full-PDF-"
-                + "260526-1.1_ALL_low_light_컬러체크.xlsx");
+                + "260526-1.1_ALL_low_light_견적.xlsx");
         createReviewWorkbook(source);
         ColorCheckFinalWorkbookService service =
                 new ColorCheckFinalWorkbookService();
@@ -133,7 +133,7 @@ class ColorCheckFinalWorkbookServiceTest {
         try(XSSFWorkbook workbook = new XSSFWorkbook();
                 OutputStream output =
                         Files.newOutputStream(source)){
-            var sheet = workbook.createSheet("컬러체크");
+            var sheet = workbook.createSheet("견적");
             Row header = sheet.createRow(2);
             header.createCell(0).setCellValue("도안명");
             header.createCell(2).setCellValue("컬러도안");
@@ -180,7 +180,7 @@ class ColorCheckFinalWorkbookServiceTest {
             throws Exception {
 
         Path source = tempDirectory.resolve(
-                "sample_컬러체크.xlsx");
+                "sample_견적.xlsx");
         createReviewWorkbook(source);
         ColorCheckFinalWorkbookService service =
                 new ColorCheckFinalWorkbookService();
@@ -427,7 +427,7 @@ class ColorCheckFinalWorkbookServiceTest {
         try(XSSFWorkbook workbook = new XSSFWorkbook();
                 OutputStream output =
                         Files.newOutputStream(target)){
-            var sheet = workbook.createSheet("컬러체크");
+            var sheet = workbook.createSheet("견적");
             Row header = sheet.createRow(2);
             header.createCell(0).setCellValue("도안명");
             header.createCell(1).setCellValue("레드도안");

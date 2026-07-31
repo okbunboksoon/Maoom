@@ -156,6 +156,16 @@ body.sidebar-toggled .admin-shell{
     font-size:.875rem;
 }
 
+.admin-header-actions{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.admin-header-import-form{
+    margin:0;
+}
+
 .admin-dashboard-cards{
     display:grid;
     grid-template-columns:repeat(4, minmax(0, 1fr));
@@ -329,6 +339,25 @@ body.sidebar-toggled .admin-shell{
 .admin-edit-form input:disabled{
     background:#eaecf4;
     color:#858796;
+}
+
+.admin-import-result{
+    margin-bottom:.85rem;
+    padding:.75rem;
+    border:1px solid #e3e6f0;
+    border-radius:.35rem;
+    background:#f8f9fc;
+    color:#5a5c69;
+    font-size:.8125rem;
+}
+
+.admin-import-result-summary{
+    font-weight:700;
+}
+
+.admin-import-result ul{
+    margin:.5rem 0 0;
+    padding-left:1.1rem;
 }
 
 .admin-search{
@@ -539,6 +568,11 @@ body.sidebar-toggled .admin-shell{
 
     .admin-content-header,
     .admin-table-tools{
+        align-items:stretch;
+        flex-direction:column;
+    }
+
+    .admin-header-actions{
         align-items:stretch;
         flex-direction:column;
     }

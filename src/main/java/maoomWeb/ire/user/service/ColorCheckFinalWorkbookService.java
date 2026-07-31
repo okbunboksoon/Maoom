@@ -30,7 +30,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
 /**
- * 검토용 컬러체크 엑셀을 도안 발주 내역서 양식으로 변환한다.
+ * 검토용 견적 엑셀을 도안 발주 내역서 양식으로 변환한다.
  *
  * <p>양식은 사용자가 제공한 실제 발주 내역서를 템플릿으로 사용하므로
  * 기존 인쇄 설정, 셀 병합, 서식은 그대로 유지하고 데이터만 교체한다.</p>
@@ -705,7 +705,7 @@ public class ColorCheckFinalWorkbookService {
                 : sourceFileName.trim()
                         .replaceFirst("(?i)\\.xlsx?$", "")
                         .replaceFirst(
-                                "(?i)_컬러체크$",
+                                "(?i)_견적$",
                                 "");
 
         String parsedPdfName =

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-    로그인 후 PDF 리뷰, 컬러체크, 정제와 배치 기능으로 이동하는 메인 화면.
+    로그인 후 PDF 리뷰, 견적, 정제와 배치 기능으로 이동하는 메인 화면.
     UserController가 currentUserId/currentUserName을 Thymeleaf 모델로 전달한다.
     계정 대화상자는 /api/user/account와 /api/user/profile-image API를 사용한다.
 -->
@@ -662,7 +662,7 @@ function openPdfPopup(){
     );
 }
 
-// PDF 도안 컬러체크 엑셀 생성 화면을 별도 팝업으로 연다.
+// PDF 도안 견적 엑셀 생성 화면을 별도 팝업으로 연다.
 function openColorCheckPopup(){
     window.open(
         '/pdf/color-check',

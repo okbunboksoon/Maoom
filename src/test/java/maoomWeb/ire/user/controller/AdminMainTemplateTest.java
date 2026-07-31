@@ -28,8 +28,11 @@ class AdminMainTemplateTest {
         assertThat(html)
                 .contains("Maoom 관리자")
                 .contains("/api/user/profile-image?userId=admin")
+                .contains("onclick=\"openAccountDialog()\"")
+                .contains("id=\"accountDialog\"")
                 .contains("data-admin-view=\"users\"")
                 .contains("id=\"userTable\"")
-                .contains("/admin/users");
+                .contains("/admin/users")
+                .doesNotContain("onclick=\"location.href='/main'\"");
     }
 }

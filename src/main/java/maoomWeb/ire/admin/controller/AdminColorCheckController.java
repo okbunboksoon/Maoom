@@ -25,14 +25,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
+import maoomWeb.ire.user.dto.DrawingColorCheckImportResult;
 import maoomWeb.ire.user.dto.DrawingColorCheckDto;
 import maoomWeb.ire.user.service.DrawingColorCheckService;
 
-/** 관리자 화면에서 컬러체크 DB를 내려받는 기능을 담당한다. */
+/** 관리자 화면에서 견적 DB를 내려받는 기능을 담당한다. */
 @Controller
 public class AdminColorCheckController {
 
@@ -54,14 +58,14 @@ public class AdminColorCheckController {
         this.drawingColorCheckService = drawingColorCheckService;
     }
 
-    /** 관리자 화면 테이블에 표시할 컬러체크 DB 전체 목록을 반환한다. */
+    /** 관리자 화면 테이블에 표시할 견적 DB 전체 목록을 반환한다. */
     @GetMapping("/admin/color-check/items")
     @ResponseBody
     public List<DrawingColorCheckDto> getColorCheckItems() {
         return drawingColorCheckService.findAll();
     }
 
-    /** 관리자 화면에서 컬러체크 항목을 추가하거나 수정한다. */
+    /** 관리자 화면에서 견적 항목을 추가하거나 수정한다. */
     @PutMapping("/admin/color-check/items")
     @ResponseBody
     public DrawingColorCheckDto saveColorCheckItem(
@@ -69,7 +73,22 @@ public class AdminColorCheckController {
         return drawingColorCheckService.save(item);
     }
 
-    /** 관리자 화면에서 컬러체크 항목을 삭제한다. */
+    /** 관리자 화면에서 업로드한 엑셀 내용을 견적 DB에 추가/수정 반영한다. */
+    @PostMapping("/admin/color-check/import")
+    @ResponseBody
+    public DrawingColorCheckImportResult importColorCheckDb(
+            @RequestParam("file") MultipartFile file)
+            throws IOException {
+        if(file == null || file.isEmpty()){
+            throw new IllegalArgumentException(
+                    "업로드할 엑셀 파일을 선택해 주세요.");
+        }
+
+        return drawingColorCheckService.importExcel(
+                file.getInputStream());
+    }
+
+    /** 관리자 화면에서 견적 항목을 삭제한다. */
     @DeleteMapping("/admin/color-check/items/{drawingName}")
     @ResponseBody
     public void deleteColorCheckItem(
@@ -77,13 +96,13 @@ public class AdminColorCheckController {
         drawingColorCheckService.delete(drawingName);
     }
 
-    /** 현재 컬러체크 DB 전체 내용을 XLSX 파일로 내려준다. */
+    /** 현재 견적 DB 전체 내용을 XLSX 파일로 내려준다. */
     @GetMapping("/admin/color-check/export")
     public ResponseEntity<byte[]> exportColorCheckDb()
             throws IOException {
         byte[] excel = createWorkbook(
                 drawingColorCheckService.findAll());
-        String fileName = "컬러체크_DB_"
+        String fileName = "견적_DB_"
                 + LocalDateTime.now().format(FILE_TIME_FORMAT)
                 + ".xlsx";
 
@@ -107,13 +126,13 @@ public class AdminColorCheckController {
         try(Workbook workbook = new XSSFWorkbook();
                 ByteArrayOutputStream output =
                         new ByteArrayOutputStream()){
-            Sheet sheet = workbook.createSheet("컬러체크 DB");
+            Sheet sheet = workbook.createSheet("견적 DB");
             CellStyle titleStyle = createTitleStyle(workbook);
             CellStyle headerStyle = createHeaderStyle(workbook);
 
             Row title = sheet.createRow(0);
             title.createCell(0)
-                    .setCellValue("컬러체크 DB");
+                    .setCellValue("견적 DB");
             title.getCell(0)
                     .setCellStyle(titleStyle);
 

@@ -27,7 +27,7 @@ import maoomWeb.ire.user.service.ColorCheckWorkflowService;
 import maoomWeb.ire.user.service.DrawingColorCheckService;
 
 /**
- * 컬러체크 화면에서 사용하는 HTTP API를 한곳에 모은 컨트롤러.
+ * 견적 화면에서 사용하는 HTTP API를 한곳에 모은 컨트롤러.
  *
  * <p>처음 보는 사람은 다음 흐름으로 이해하면 된다.</p>
  * <ol>
@@ -54,7 +54,7 @@ public class ColorCheckController {
     /** 도안별 V/X 값을 조회하고 DB에 저장하는 서비스. */
     private final DrawingColorCheckService drawingColorCheckService;
 
-    /** 컬러체크의 PDF 분석, 최종 엑셀 생성, 실행 로그 저장을 묶는 서비스. */
+    /** 견적의 PDF 분석, 최종 엑셀 생성, 실행 로그 저장을 묶는 서비스. */
     private final ColorCheckWorkflowService colorCheckWorkflowService;
     private final CurrentUserService currentUserService;
 
@@ -114,7 +114,7 @@ public class ColorCheckController {
         return createExcelResponse(workbook);
     }
     /**
-     * 업로드된 PDF를 분석해 컬러체크용 XLSX를 생성한다.
+     * 업로드된 PDF를 분석해 견적용 XLSX를 생성한다.
      *
      * <p>응답에도 같은 XLSX 바이트를 넣는 이유는 브라우저가 작업 완료와
      * 실제 저장 파일명을 확인할 수 있게 하기 위해서다.</p>
@@ -220,7 +220,7 @@ public class ColorCheckController {
     }
 
     /**
-     * 컬러체크 워크플로 서비스가 만든 엑셀 바이트를 브라우저 다운로드 응답으로 감싼다.
+     * 견적 워크플로 서비스가 만든 엑셀 바이트를 브라우저 다운로드 응답으로 감싼다.
      * DB 반영 건수는 기존 화면이 읽는 응답 헤더로 유지한다.
      */
     private ResponseEntity<byte[]> createExcelResponse(

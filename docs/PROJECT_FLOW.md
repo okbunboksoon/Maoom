@@ -73,7 +73,7 @@ productSpecComparison.html
 실행 시작/성공/실패 이력은 `ProjectExecutionLogService`가 `tb_project_execution_log`에
 남긴다. 관리자 화면의 실행 로그 탭은 이 테이블을 다시 읽는다.
 
-## 컬러체크 흐름
+## 견적 흐름
 
 ```text
 colorCheck.html

@@ -51,19 +51,19 @@ class ColorCheckImportReportServiceTest {
 
         Path first = service.createReport(
                 result,
-                "sample_컬러체크.xlsx",
+                "sample_견적.xlsx",
                 tempDirectory);
         Path second = service.createReport(
                 result,
-                "sample_컬러체크.xlsx",
+                "sample_견적.xlsx",
                 tempDirectory);
 
         assertThat(first.getFileName().toString())
                 .isEqualTo(
-                        "sample_컬러체크_DB반영리포트.xlsx");
+                        "sample_견적_DB반영리포트.xlsx");
         assertThat(second.getFileName().toString())
                 .isEqualTo(
-                        "sample_컬러체크_DB반영리포트 (1).xlsx");
+                        "sample_견적_DB반영리포트 (1).xlsx");
         assertThat(Files.size(first)).isPositive();
 
         try(var input = Files.newInputStream(first);

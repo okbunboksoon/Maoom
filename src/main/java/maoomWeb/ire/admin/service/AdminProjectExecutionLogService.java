@@ -25,8 +25,29 @@ public class AdminProjectExecutionLogService {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    /** 관리자 메인 화면에 표시할 최근 실행 로그를 최신순으로 가져온다. */
-    public List<ProjectExecutionLogDto> findRecent(int limit) {
+    /** 관리자 메인 화면에 표시할 실행 로그를 최신순으로 가져온다. */
+    public List<ProjectExecutionLogDto> findRecent(Integer limit) {
+        if(limit == null){
+            return jdbcTemplate.query("""
+                    SELECT
+                        id,
+                        job_type,
+                        job_name,
+                        status,
+                        trigger_user_id,
+                        input_path,
+                        output_path,
+                        message,
+                        error_message,
+                        started_at,
+                        finished_at,
+                        elapsed_ms
+                    FROM tb_project_execution_log
+                    ORDER BY started_at DESC, id DESC
+                    """,
+                    this::mapLog);
+        }
+
         int safeLimit = Math.max(1, Math.min(limit, 500));
 
         return jdbcTemplate.query("""
