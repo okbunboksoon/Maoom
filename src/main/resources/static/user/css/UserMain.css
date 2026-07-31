@@ -444,8 +444,8 @@ body.dialog-open{
 
 .launcher-header-actions{
     display:flex;
-    flex-direction:column;
-    align-items:stretch;
+    flex-wrap:wrap;
+    align-items:center;
     justify-content:flex-end;
     gap:10px;
     width:max-content;
@@ -456,7 +456,7 @@ body.dialog-open{
 }
 
 .launcher-header-actions .launcher-search{
-    width:100%;
+    width:280px;
 }
 
 .launcher-header h1{
@@ -525,6 +525,8 @@ body.dialog-open{
 .launcher-tabs{
     display:flex;
     flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
     gap:8px;
     margin-bottom:26px;
 }
@@ -768,6 +770,10 @@ a.launcher-card{
     .launcher-header-actions{
         width:100%;
         justify-content:flex-start;
+    }
+
+    .launcher-header-actions .launcher-search{
+        width:100%;
     }
 
     .account-actions{
