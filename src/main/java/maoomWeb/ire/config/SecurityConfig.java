@@ -34,6 +34,7 @@ public class SecurityConfig {
 	                "/css/**",
 	                "/user/css/**",
 	                "/user/font/**",
+	                "/admin/sb-admin-2/vendor/fontawesome-free/**",
 	                "/js/**",
 	                "/images/**",
 	                "/pdfjs/**"
