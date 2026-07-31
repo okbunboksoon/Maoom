@@ -77,13 +77,13 @@
                     type="button" disabled>최종 생성</button>
         </div>
 
-        <!-- API 처리 중/성공/실패 메시지를 alert 대신 화면 안에 보여준다. -->
-        <div id="statusMessage" class="status-message" role="status"
-             aria-live="polite" hidden></div>
-
         <footer class="color-check-actions">
             <button class="close-btn secondary-btn" type="button" onclick="window.close()">닫기</button>
         </footer>
+
+        <!-- API 처리 중/성공/실패 메시지를 alert 대신 화면 안에 보여준다. -->
+        <div id="statusMessage" class="status-message" role="status"
+             aria-live="polite" hidden></div>
     </section>
 </main>
 
@@ -522,4 +522,3 @@ function getHeaderNumber(response, headerName){
 </script>
 </body>
 </html>
-

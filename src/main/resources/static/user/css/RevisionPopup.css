@@ -352,6 +352,18 @@ button:disabled{
     word-break:break-all;
 }
 
+.ber-popup-body .revision-page{
+    padding-bottom:20px;
+}
+
+.ber-popup-body .result-panel{
+    margin-top:10px;
+}
+
+.ber-popup-body .popup-actions{
+    margin-top:14px;
+}
+
 @keyframes pulse{
     from{opacity:.35}
     to{opacity:1}
