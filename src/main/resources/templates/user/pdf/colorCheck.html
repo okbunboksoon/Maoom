@@ -2,6 +2,17 @@
 <!--
     PDF 견적 화면의 전체 연결 흐름
 
+    화면 위치: 유저 메인 > "견적" 카드 클릭 시 openColorCheckPopup()이
+    /pdf/color-check 팝업으로 이 파일을 연다.
+    호출 JS: 이 파일 하단 스크립트가 runExtractBtn, runImportBtn 클릭을 처리한다.
+    연결 Controller/API:
+      - UserController#colorCheck() -> 이 화면 반환
+      - ColorCheckController#createExcel() -> POST /api/pdf/color-check/excel
+      - ColorCheckController#importExcel() -> POST /api/pdf/color-check/import
+    연결 Service:
+      - ColorCheckWorkflowService: PDF 분석, 검토/최종 엑셀 생성, 실행 로그 저장
+      - DrawingColorCheckService: 도안명별 컬러도안 V/X DB 조회와 저장
+
     1. 사용자가 PDF를 선택하고 "엑셀 생성"을 누른다.
     2. JavaScript가 POST /api/pdf/color-check/excel로 PDF를 전송한다.
     3. ColorCheckController -> ColorCheckExportService가 엑셀을 만든다.
@@ -13,6 +24,8 @@
 
     이 파일은 화면 구조와 브라우저 동작만 담당한다.
     PDF 분석, 엑셀 생성, DB 저장 규칙은 Java 서비스에서 관리한다.
+    수정 시 주의점: 다운로드 파일명과 DB 반영 건수는 응답 헤더에서 읽는다.
+    컨트롤러 헤더명 또는 워크북 생성 규칙을 바꾸면 하단 JS 표시 로직도 같이 확인한다.
 -->
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>

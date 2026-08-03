@@ -184,6 +184,12 @@
             </button>
             <button class="admin-db-nav-item"
                     type="button"
+                    data-admin-view="qsg-db">
+                <i class="fas fa-table"></i>
+                QSG DB
+            </button>
+            <button class="admin-db-nav-item"
+                    type="button"
                     data-admin-view="project-logs">
                 <i class="fas fa-clock-rotate-left"></i>
                 실행 로그
@@ -198,6 +204,7 @@
 
     <th:block th:replace="~{admin/section/colorCheck :: colorCheckSection}"></th:block>
     <th:block th:replace="~{admin/section/berAsisTobe :: berAsisTobeSection}"></th:block>
+    <th:block th:replace="~{admin/section/qsgDb :: qsgDbSection}"></th:block>
     <th:block th:replace="~{admin/section/projectLog :: projectLogSection}"></th:block>
     <th:block th:replace="~{admin/section/users :: usersSection}"></th:block>
 </main>
@@ -211,7 +218,7 @@
 <script src="/admin/sb-admin-2/vendor/jquery-easing/jquery.easing.min.js"></script>
 <script src="/admin/sb-admin-2/vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="/admin/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-<script src="/admin/js/adminMain.js?v=ber-admin-7"></script>
+<script src="/admin/js/adminMain.js?v=qsg-db-1"></script>
 <script src="/admin/sb-admin-2/js/sb-admin-2.min.js"></script>
 
 </body>

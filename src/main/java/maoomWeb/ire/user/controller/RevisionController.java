@@ -17,11 +17,20 @@ import maoomWeb.ire.user.service.CurrentUserService;
 import maoomWeb.ire.user.service.ProjectExecutionLogService;
 
 /**
- * DITA 정제 팝업과 실제 XSL 파이프라인 서비스를 연결하는 REST 컨트롤러.
+ * 유저 메인 "정제" 카드에서 열리는 DITA 정제 팝업의 REST 입구다.
  *
- * <p>{@code revisionPopup.html}은 이 컨트롤러에서 단계 목록을 조회하고,
- * 사용자가 선택한 경로와 단계 ID를 실행 요청으로 보낸다. 컨트롤러는 HTTP 요청
- * 변환만 담당하고 파일 검증과 Saxon 실행은 {@link RevisionPipelineService}에 위임한다.</p>
+ * <p>화면 위치: {@code templates/user/revision/revisionPopup.html}<br>
+ * 호출 JS: 같은 HTML 하단 스크립트에서 {@code fetch('/api/revision/options')},
+ * {@code fetch('/api/revision/run')}를 호출한다.<br>
+ * 연결 라우트: {@code UserController#revisionList()}가 {@code /revision/list}
+ * 팝업 화면을 반환하고, {@code userMain.html}의 {@code openRevisionPopup()}이
+ * 그 팝업을 연다.<br>
+ * 연결 서비스: {@link RevisionPipelineService}가 입력 경로 검증, revision-tool
+ * 리소스 준비, Saxon/XSL 실행, 결과 폴더와 {@code revision.log} 생성을 담당한다.</p>
+ *
+ * <p>수정 시 주의점: 컨트롤러는 요청/응답과 실행 이력 저장만 담당한다.
+ * 단계 목록, 실행 순서, 파일 복사 규칙을 바꿀 때는 서비스와 화면의 옵션 표시가
+ * 함께 맞는지 확인해야 한다.</p>
  */
 @RestController
 @RequestMapping("/api/revision")

@@ -27,7 +27,17 @@ import maoomWeb.ire.user.service.ColorCheckWorkflowService;
 import maoomWeb.ire.user.service.DrawingColorCheckService;
 
 /**
- * 견적 화면에서 사용하는 HTTP API를 한곳에 모은 컨트롤러.
+ * 유저 메인 "견적" 카드에서 열리는 도면 색상 체크 화면의 REST 입구다.
+ *
+ * <p>화면 위치: {@code templates/user/pdf/colorCheck.html}<br>
+ * 호출 JS: 같은 HTML 하단 스크립트에서 {@code /api/pdf/color-check/excel}
+ * 로 PDF를 보내 검토 엑셀을 만들고, {@code /api/pdf/color-check/import}로
+ * 검토 엑셀의 V/X 값을 DB에 반영한다.<br>
+ * 연결 라우트: {@code UserController#colorCheck()}가 {@code /pdf/color-check}
+ * 화면을 반환하고, {@code userMain.html}의 {@code openColorCheckPopup()}이
+ * 그 팝업을 연다.<br>
+ * 연결 서비스: {@link ColorCheckWorkflowService}가 PDF 분석/엑셀 생성/실행 로그를,
+ * {@link DrawingColorCheckService}가 도안별 V/X 조회와 저장을 담당한다.</p>
  *
  * <p>처음 보는 사람은 다음 흐름으로 이해하면 된다.</p>
  * <ol>

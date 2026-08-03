@@ -12,6 +12,22 @@ const berAsisTobeState = {
     editingCell: null
 };
 
+/*
+ * 관리자 > QSG DB 화면 상태.
+ *
+ * API 응답은 /admin/qsg-db/items에서 오며, 원본 QSG_DB.xml의
+ * <entry hash="..."><term lang="...">...</term></entry> 구조를
+ * hash + lang + term 행 목록으로 펼친 값이다.
+ *
+ * 현재 화면은 읽기 전용이다. 수정/업로드를 붙일 때는 BER DB 상태값처럼
+ * editingCell, save/delete API를 추가하면 된다. 엑셀 업로드는
+ * hash + lang 기준으로 QSG_DB.xml의 term 값을 수정/추가한다.
+ */
+const qsgDbState = {
+    items: [],
+    filteredItems: []
+};
+
 const projectLogState = {
     items: [],
     filteredItems: []
@@ -57,6 +73,9 @@ const colorCheckSection =
     document.getElementById('colorCheckSection');
 const berAsisTobeSection =
     document.getElementById('berAsisTobeSection');
+// QSG DB 메뉴 클릭 시 보여줄 관리자 섹션. 실제 HTML은 admin/section/qsgDb.html에 있다.
+const qsgDbSection =
+    document.getElementById('qsgDbSection');
 const projectLogSection =
     document.getElementById('projectLogSection');
 const userSection =
@@ -97,6 +116,29 @@ const berUsCount =
     document.getElementById('berUsCount');
 const berFilteredCount =
     document.getElementById('berFilteredCount');
+// QSG DB 화면의 테이블 본문, 요약 문구, 상단 통계 카드.
+const qsgDbTableBody =
+    document.getElementById('qsgDbTableBody');
+const qsgDbSummary =
+    document.getElementById('qsgDbSummary');
+const qsgDbRefresh =
+    document.getElementById('qsgDbRefresh');
+const qsgDbImportForm =
+    document.getElementById('qsgDbImportForm');
+const qsgDbImportFile =
+    document.getElementById('qsgDbImportFile');
+const qsgDbImportButton =
+    document.getElementById('qsgDbImportButton');
+const qsgDbImportResult =
+    document.getElementById('qsgDbImportResult');
+const qsgTotalCount =
+    document.getElementById('qsgTotalCount');
+const qsgHashCount =
+    document.getElementById('qsgHashCount');
+const qsgLangCount =
+    document.getElementById('qsgLangCount');
+const qsgFilteredCount =
+    document.getElementById('qsgFilteredCount');
 const logTotalCount =
     document.getElementById('logTotalCount');
 const logSuccessCount =
@@ -135,6 +177,8 @@ const userFilteredCount =
     document.getElementById('userFilteredCount');
 let colorCheckDataTable = null;
 let berAsisTobeDataTable = null;
+// QSG DB 테이블의 DataTables 인스턴스. 다시 렌더링할 때 destroy 후 새로 만든다.
+let qsgDbDataTable = null;
 let projectLogDataTable = null;
 let userDataTable = null;
 
@@ -325,13 +369,21 @@ function setImportResult(message, details){
     }
 }
 
+function setQsgDbImportResult(message){
+    qsgDbImportResult.hidden = false;
+    qsgDbImportResult.textContent = message;
+}
+
 function switchAdminView(view){
     const isColorCheckView = view === 'color-check';
     const isBerAsisTobeView = view === 'ber-asis-tobe';
+    // 사이드바의 data-admin-view="qsg-db" 버튼과 연결되는 QSG DB 화면 분기.
+    const isQsgDbView = view === 'qsg-db';
     const isLogView = view === 'project-logs';
     const isUserView = view === 'users';
     colorCheckSection.hidden = !isColorCheckView;
     berAsisTobeSection.hidden = !isBerAsisTobeView;
+    qsgDbSection.hidden = !isQsgDbView;
     projectLogSection.hidden = !isLogView;
     userSection.hidden = !isUserView;
 
@@ -344,6 +396,13 @@ function switchAdminView(view){
     }
     if(isBerAsisTobeView && berAsisTobeState.items.length === 0){
         loadBerAsisTobeItems();
+    }
+    /*
+     * QSG DB는 최초 진입 시 한 번만 XML을 읽어 온다.
+     * 새로고침 버튼을 누르면 loadQsgDbItems()가 다시 호출되어 최신 리소스를 반영한다.
+     */
+    if(isQsgDbView && qsgDbState.items.length === 0){
+        loadQsgDbItems();
     }
     if(isLogView && projectLogState.items.length === 0){
         loadProjectLogs();
@@ -405,6 +464,15 @@ function updateBerAsisTobeFilteredCount(){
     updateBerAsisTobeSummary(info.recordsDisplay);
 }
 
+function updateQsgDbFilteredCount(){
+    if(!qsgDbDataTable){
+        return;
+    }
+    const info = qsgDbDataTable.page.info();
+    // DataTables 검색어가 적용된 후 화면에 남은 행 수를 상단 요약/카드에 반영한다.
+    updateQsgDbSummary(info.recordsDisplay);
+}
+
 function updateUserFilteredCount(){
     if(!userDataTable){
         return;
@@ -418,11 +486,24 @@ function initBerAsisTobeDataTable(){
         updateBerAsisTobeSummary(berAsisTobeState.filteredItems.length);
         return;
     }
+    /*
+     * 관리자 > BER DB 테이블 초기화.
+     *
+     * 컬럼 순서:
+     * 0 No, 1 Region, 2 Hash, 3 Old, 4 New, 5 수정일, 6 관리
+     *
+     * 최초 정렬:
+     * - order [0, asc]라서 화면 진입 시 No 오름차순으로 보인다.
+     *
+     * 수정 시 주의:
+     * - 컬럼을 추가/삭제하면 columnDefs targets, renderBerAsisTobeTable(),
+     *   templates/admin/section/berAsisTobe.html의 thead 순서를 함께 수정해야 한다.
+     */
     berAsisTobeDataTable = $('#berAsisTobeTable').DataTable({
         language: dataTableLanguage(),
         pageLength: 50,
         autoWidth: false,
-        order: [ [5, 'desc'] ],
+        order: [ [0, 'asc'] ],
         columnDefs: [
             {targets: [0, 1, 5, 6], className: 'text-center'},
             {targets: [6], orderable: false, searchable: false},
@@ -436,6 +517,43 @@ function initBerAsisTobeDataTable(){
         drawCallback: updateBerAsisTobeFilteredCount
     });
     updateBerAsisTobeFilteredCount();
+}
+
+function initQsgDbDataTable(){
+    if(!window.jQuery || !jQuery.fn || !jQuery.fn.DataTable){
+        updateQsgDbSummary(qsgDbState.filteredItems.length);
+        return;
+    }
+    /*
+     * 관리자 > QSG DB 테이블 초기화.
+     *
+     * 컬럼 순서:
+     * 0 No, 1 Hash, 2 Lang, 3 Term
+     *
+     * 최초 정렬:
+     * - order [0, asc], [1, asc], [2, asc]라서 화면 진입 시
+     *   No -> Hash -> Lang 오름차순으로 보인다.
+     *
+     * 수정 시 주의:
+     * - Hash와 Term은 긴 문자열이라 width를 고정해 표가 크게 흔들리지 않게 했다.
+     * - 컬럼을 추가/삭제하면 columnDefs targets, renderQsgDbTable(),
+     *   templates/admin/section/qsgDb.html의 thead 순서를 함께 수정해야 한다.
+     */
+    qsgDbDataTable = $('#qsgDbTable').DataTable({
+        language: dataTableLanguage(),
+        pageLength: 50,
+        autoWidth: false,
+        order: [ [0, 'asc'], [1, 'asc'], [2, 'asc'] ],
+        columnDefs: [
+            {targets: [0, 2], className: 'text-center'},
+            {targets: [0], width: '70px'},
+            {targets: [1], width: '520px'},
+            {targets: [2], width: '100px'},
+            {targets: [3], width: '620px'}
+        ],
+        drawCallback: updateQsgDbFilteredCount
+    });
+    updateQsgDbFilteredCount();
 }
 
 function initColorCheckDataTable(){
@@ -918,6 +1036,170 @@ function applyBerAsisTobeFilter(){
     berAsisTobeState.filteredItems = [...berAsisTobeState.items];
     updateBerAsisTobeSummary(berAsisTobeState.filteredItems.length);
     renderBerAsisTobeTable();
+}
+
+function renderQsgDbTable(){
+    destroyDataTable(qsgDbDataTable);
+    qsgDbDataTable = null;
+    qsgDbTableBody.innerHTML = '';
+
+    /*
+     * API 한 행은 QsgDbTerm DTO와 같은 구조다.
+     * hash + lang이 실제 유니크 기준이고, No는 현재 표시 순서만 보여준다.
+     */
+    qsgDbState.filteredItems.forEach((item, index) => {
+        const row = document.createElement('tr');
+        const values = [
+            index + 1,
+            safeText(item.hash),
+            safeText(item.lang),
+            safeText(item.term)
+        ];
+
+        values.forEach((value, columnIndex) => {
+            const cell = document.createElement('td');
+
+            if(columnIndex === 1){
+                cell.className = 'ber-hash-cell';
+                cell.textContent = value;
+                if(value !== '-'){
+                    cell.title = value;
+                }
+            }else if(columnIndex === 3){
+                cell.className = 'ber-long-text-cell';
+                const textBox = document.createElement('div');
+                textBox.className = 'ber-clamped-text';
+                textBox.textContent = value;
+                cell.appendChild(textBox);
+                if(value !== '-'){
+                    cell.title = value;
+                }
+            }else{
+                cell.textContent = value;
+            }
+
+            row.appendChild(cell);
+        });
+
+        qsgDbTableBody.appendChild(row);
+    });
+    initQsgDbDataTable();
+}
+
+function updateQsgDbSummary(showing){
+    const total = qsgDbState.items.length;
+    // hashCount는 원본 QSG_DB.xml의 entry 개수와 같은 의미다.
+    const hashCount = new Set(
+        qsgDbState.items.map(item => item.hash).filter(Boolean)
+    ).size;
+    // langCount는 현재 QSG_DB.xml에 들어 있는 전체 언어 코드 종류 수다.
+    const langCount = new Set(
+        qsgDbState.items.map(item => item.lang).filter(Boolean)
+    ).size;
+
+    qsgDbSummary.textContent = total === showing
+        ? '총 ' + total.toLocaleString('ko-KR') + '건'
+        : '총 ' + total.toLocaleString('ko-KR') + '건 중 '
+            + showing.toLocaleString('ko-KR') + '건 표시';
+    qsgTotalCount.textContent = total.toLocaleString('ko-KR');
+    qsgHashCount.textContent = hashCount.toLocaleString('ko-KR');
+    qsgLangCount.textContent = langCount.toLocaleString('ko-KR');
+    qsgFilteredCount.textContent = showing.toLocaleString('ko-KR');
+}
+
+function applyQsgDbFilter(){
+    // 별도 필터 UI는 아직 없고, 검색/정렬은 DataTables 기본 기능에 맡긴다.
+    qsgDbState.filteredItems = [...qsgDbState.items];
+    updateQsgDbSummary(qsgDbState.filteredItems.length);
+    renderQsgDbTable();
+}
+
+async function loadQsgDbItems(){
+    qsgDbRefresh.disabled = true;
+    qsgDbSummary.textContent = 'QSG DB를 불러오는 중입니다.';
+
+    try{
+        /*
+         * 백엔드는 src/main/resources/xsl/QSG_DB.xml을 읽어서 내려준다.
+         * 나중에 실제 DB 테이블로 바꿔도 이 URL을 유지하면 프론트 수정이 작다.
+         */
+        const response = await fetch('/admin/qsg-db/items', {
+            headers:{
+                'Accept':'application/json'
+            }
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        qsgDbState.items = await response.json();
+        applyQsgDbFilter();
+    }catch(error){
+        qsgDbTableBody.innerHTML = '';
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.colSpan = 4;
+        cell.className = 'admin-empty-cell';
+        cell.textContent = 'QSG DB를 불러오지 못했습니다.';
+        row.appendChild(cell);
+        qsgDbTableBody.appendChild(row);
+        qsgDbSummary.textContent =
+            error.message || '조회 중 오류가 발생했습니다.';
+    }finally{
+        qsgDbRefresh.disabled = false;
+    }
+}
+
+async function importQsgDbExcel(event){
+    if(event){
+        event.preventDefault();
+    }
+
+    const file = qsgDbImportFile.files && qsgDbImportFile.files[0];
+    if(!file){
+        setQsgDbImportResult('업로드할 엑셀 파일을 선택해 주세요.');
+        qsgDbImportFile.focus();
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('file', file);
+    qsgDbImportButton.disabled = true;
+    setQsgDbImportResult('QSG DB 엑셀을 업로드하는 중입니다.');
+
+    try{
+        const response = await fetch('/admin/qsg-db/import', {
+            method:'POST',
+            headers:{
+                'Accept':'application/json'
+            },
+            body:formData
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        const result = await response.json();
+        setQsgDbImportResult(
+            '업로드 완료: 신규 '
+                + result.insertedCount.toLocaleString('ko-KR')
+                + '건, 수정 '
+                + result.updatedCount.toLocaleString('ko-KR')
+                + '건, 변경 없음 '
+                + result.unchangedCount.toLocaleString('ko-KR')
+                + '건, 제외 '
+                + result.skippedCount.toLocaleString('ko-KR')
+                + '건');
+        qsgDbImportFile.value = '';
+        await loadQsgDbItems();
+    }catch(error){
+        setQsgDbImportResult(
+            error.message || 'QSG DB 엑셀 업로드에 실패했습니다.');
+    }finally{
+        qsgDbImportButton.disabled = false;
+    }
 }
 
 async function loadBerAsisTobeItems(){
@@ -1678,6 +1960,10 @@ berAsisTobeImportFile.addEventListener('change', importBerAsisTobeExcel);
 berSentenceImportToggle.addEventListener(
     'click',
     openBerSentenceImportPopup);
+qsgDbRefresh.addEventListener('click', loadQsgDbItems);
+qsgDbImportForm.addEventListener('submit', importQsgDbExcel);
+qsgDbImportButton.addEventListener('click', () => qsgDbImportFile.click());
+qsgDbImportFile.addEventListener('change', importQsgDbExcel);
 window.addEventListener('message', function(event){
     if(event.origin !== window.location.origin){
         return;

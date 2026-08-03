@@ -2,6 +2,17 @@
 <!--
     DITA 정제 팝업의 연결 흐름
 
+    화면 위치: 유저 메인 > "정제" 카드 클릭 시 openRevisionPopup()이
+    /revision/list 팝업으로 이 파일을 연다.
+    호출 JS: 이 파일 하단 스크립트가 단계 조회와 실행 요청을 처리한다.
+    연결 Controller/API:
+      - UserController#revisionList() -> 이 화면 반환
+      - RevisionController#getOptions() -> GET /api/revision/options
+      - RevisionController#run() -> POST /api/revision/run
+    연결 Service:
+      - RevisionPipelineService: 입력/출력 경로 검증, revision-tool 리소스 준비,
+        Saxon/XSL 단계 실행, 결과 폴더와 revision.log 저장
+
     1. 화면이 열리면 GET /api/revision/options로 실행 가능한 XSL 단계를 조회한다.
     2. 사용자가 Input/Output 경로와 실행 단계를 선택한다.
     3. POST /api/revision/run으로 RevisionRunRequest를 전송한다.
@@ -11,6 +22,8 @@
 
     이 화면은 경로 입력, 단계 선택과 결과 표시만 담당한다.
     파일 검증과 실제 XSL 실행 규칙은 RevisionPipelineService에서 관리한다.
+    수정 시 주의점: 단계 ID, OutPutType, 파일명 입력 규칙은 DTO와 서비스 검증에
+    직접 연결된다. 화면 옵션명을 바꾸면 서버의 단계 카탈로그도 같이 확인한다.
 -->
 <html lang="ko">
 <head>

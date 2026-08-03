@@ -2,6 +2,21 @@
 <!--
     PDF 리뷰 메인 화면의 연결 흐름
 
+    화면 위치: PDF 목록 화면에서 PDF 클릭 시 /pdf/view?fileId=...로 이 파일을 연다.
+    호출 JS: 이 파일 하단 스크립트가 PDF.js iframe, 댓글 패널, 첨부, 내보내기,
+    WebSocket 갱신을 모두 제어한다.
+    연결 Controller/API:
+      - UserController#pdfView() -> 이 화면 반환
+      - PdfController#findPdf() -> GET /api/pdf/find-by-drive-file-id
+      - DriveController#getPdf() -> GET /api/drive/pdf
+      - DriveController#downloadPdf() -> GET /api/drive/pdf/download
+      - CommentController -> /api/comment/* 댓글, 답글, 첨부, 내보내기 API
+      - PdfCollaborationHandler -> /ws/pdf 변경 알림 WebSocket
+    연결 Service:
+      - PdfService/PdfMapper: Drive fileId와 내부 pdfId 연결
+      - CommentService 계열: 댓글, 답글, 첨부, Excel/PDF 내보내기
+      - PdfAccessService: PDF, 댓글, 첨부 접근 권한 확인
+
     1. URL의 Drive fileId를 /api/pdf/find-by-drive-file-id로 보내 내부 pdfId를 얻는다.
     2. 가운데 iframe은 PDF.js를 열고 /api/drive/pdf에서 원본 PDF를 읽는다.
     3. 오른쪽 패널은 /api/comment/* REST API로 댓글·답글·첨부를 조회하고 저장한다.
@@ -10,6 +25,8 @@
     6. 내보내기 버튼은 CommentExportWorkflowService를 통해 파일 생성과 실행 로그를 처리한다.
 
     이 파일은 화면 상태와 사용자 조작을 담당한다. DB 규칙과 권한 검사는 Java 서비스가 담당한다.
+    수정 시 주의점: 댓글 좌표는 PDF 페이지 픽셀이 아니라 0~1 비율로 저장된다.
+    확대/축소, iframe PDF.js 버전, 댓글 사각형 DOM 구조를 바꾸면 저장 좌표와 재렌더링을 같이 확인한다.
 -->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>

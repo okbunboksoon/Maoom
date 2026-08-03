@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <!--
+        관리자 > QSG DB 화면.
+
+        화면 전환:
+        - admin/adminMain.html의 data-admin-view="qsg-db" 메뉴가 이 섹션을 연다.
+
+        데이터 흐름:
+        - 목록 조회: static/admin/js/adminMain.js의 loadQsgDbItems()
+          -> GET /admin/qsg-db/items
+          -> AdminQsgDbController
+          -> QsgDbAdminService
+          -> src/main/resources/xsl/QSG_DB.xml
+
+        현재는 실제 DB 테이블이 아니라 src/main/resources/xsl/QSG_DB.xml을
+        hash + lang + term 형태로 펼쳐 보여주는 읽기 전용 화면이다.
+        엑셀 업로드/내보내기는 BER DB 화면과 같은 위치와 흐름을 사용한다.
+        업로드 엑셀은 hash, lang, term 컬럼을 읽고, hash + lang이 같으면
+        기존 term을 수정하고 없으면 QSG_DB.xml에 새 term을 추가한다.
+
+        수정 시 주의:
+        - 테이블 컬럼 순서를 바꾸면 adminMain.js의 initQsgDbDataTable(),
+          renderQsgDbTable(), AdminQsgDbController의 엑셀 export 헤더도 같이 맞춰야 한다.
+    -->
+    <section th:fragment="qsgDbSection" id="qsgDbSection"
+             class="admin-content"
+             aria-label="QSG DB 테이블"
+             hidden>
+        <header class="admin-content-header">
+            <div>
+                <h1>QSG DB</h1>
+                <p id="qsgDbSummary">데이터를 불러오는 중입니다.</p>
+            </div>
+            <div class="admin-header-actions">
+                <form id="qsgDbImportForm" class="admin-header-import-form">
+                    <input id="qsgDbImportFile"
+                           type="file"
+                           accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+                           hidden>
+                    <button id="qsgDbImportButton"
+                            class="admin-tool-btn primary"
+                            type="button">
+                        <i class="fas fa-upload"></i>
+                        엑셀 업로드
+                    </button>
+                </form>
+
+                <a class="admin-export-btn" href="/admin/qsg-db/export">
+                    <i class="fas fa-file-excel"></i>
+                    엑셀 내보내기
+                </a>
+            </div>
+        </header>
+
+        <div class="admin-dashboard-cards">
+            <article class="admin-stat-card border-left-primary">
+                <div>
+                    <span>전체 항목</span>
+                    <strong id="qsgTotalCount">0</strong>
+                </div>
+                <i class="fas fa-database"></i>
+            </article>
+            <article class="admin-stat-card border-left-success">
+                <div>
+                    <span>Hash 묶음</span>
+                    <strong id="qsgHashCount">0</strong>
+                </div>
+                <i class="fas fa-key"></i>
+            </article>
+            <article class="admin-stat-card border-left-info">
+                <div>
+                    <span>언어 수</span>
+                    <strong id="qsgLangCount">0</strong>
+                </div>
+                <i class="fas fa-language"></i>
+            </article>
+            <article class="admin-stat-card border-left-warning">
+                <div>
+                    <span>검색 결과</span>
+                    <strong id="qsgFilteredCount">0</strong>
+                </div>
+                <i class="fas fa-filter"></i>
+            </article>
+        </div>
+
+        <div class="card shadow mb-4 admin-table-card">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">QSG DB 목록</h6>
+            </div>
+            <div class="card-body">
+                <div class="admin-table-tools">
+                    <button id="qsgDbRefresh"
+                            class="admin-tool-btn"
+                            type="button">
+                        <i class="fas fa-sync-alt"></i>
+                        새로고침
+                    </button>
+                </div>
+
+                <div id="qsgDbImportResult"
+                     class="admin-import-result"
+                     hidden></div>
+
+                <div class="table-responsive">
+                    <table id="qsgDbTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Hash</th>
+                            <th scope="col">Lang</th>
+                            <th scope="col">Term</th>
+                        </tr>
+                        </thead>
+                        <tbody id="qsgDbTableBody">
+                        <tr>
+                            <td colspan="4" class="admin-empty-cell">
+                                데이터를 불러오는 중입니다.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

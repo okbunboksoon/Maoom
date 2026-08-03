@@ -42,6 +42,11 @@ import maoomWeb.ire.user.service.UserProfileImageService;
  * <p>화면 이동 요청은 Thymeleaf 템플릿 이름을 반환하고, {@code /api/user/*}
  * 요청은 UserService 또는 UserProfileImageService에 업무 처리를 위임한다.
  * 로그인 성공 시에는 Spring Security의 Authentication과 세션 Context를 직접 만든다.</p>
+ *
+ * <p>유저 메인 기능 카드는 {@code templates/user/userMain.html}의
+ * {@code launcherMenus} 배열에서 관리한다. 새 기능을 추가하거나 URL을 바꿀 때는
+ * 이 컨트롤러의 화면 라우팅, userMain.html의 open...Popup() 함수, 실제 실행 API
+ * 컨트롤러를 함께 맞춰야 한다.</p>
  */
 @Controller
 public class UserController {
@@ -131,8 +136,14 @@ public class UserController {
 	    return "redirect:/";
 	}
 	
+    /**
+     * 로그인 후 기능 선택 화면을 표시한다.
+     *
+     * <p>화면 위치는 {@code templates/user/userMain.html}이다.
+     * 여기서 PDF 리뷰, 견적, BER, QSG, 정제, 다국어 변환, DITAMAP Builder,
+     * 제품사양서 비교 팝업을 연다.</p>
+     */
     @GetMapping("/main")
-    /** 로그인 후 기능 선택 화면을 표시한다. */
     public String main(
             Authentication authentication,
             Model model) {
@@ -188,26 +199,48 @@ public class UserController {
                 currentUserService.isAdministrator(authentication));
     }
 
+    /**
+     * PDF 리뷰 카드가 여는 Google Drive PDF 선택 화면.
+     *
+     * <p>화면 위치: {@code templates/user/pdf/pdfList.html}.
+     * PDF 선택 후 뷰어는 {@link #pdfView(String, String, Model)}로 이동하고,
+     * 댓글/첨부/내보내기 처리는 CommentController와 PdfController 쪽 API가 담당한다.</p>
+     */
     @GetMapping("/pdf/list")
-    /** Google Drive의 PDF 선택 화면을 표시한다. */
     public String pdfList() {
         return "user/pdf/pdfList";
     }
 
+    /**
+     * 정제 카드가 여는 DITA/XML 정제 팝업 화면.
+     *
+     * <p>화면 위치: {@code templates/user/revision/revisionPopup.html}.
+     * 실제 실행 API는 RevisionController, 업무 처리는 RevisionPipelineService가 담당한다.</p>
+     */
     @GetMapping("/revision/list")
-    /** DITA 정제 옵션과 실행 결과를 제공하는 팝업 화면을 표시한다. */
     public String pdfList2() {
         return "user/revision/revisionPopup";
     }
 
+    /**
+     * 다국어 변환 카드가 여는 입력 경로 선택 팝업 화면.
+     *
+     * <p>화면 위치: {@code templates/user/multilingual/multilingualPopup.html}.
+     * 실제 실행 API는 MultilingualController, 업무 처리는 MultilingualConversionService가 담당한다.</p>
+     */
     @GetMapping("/multilingual/list")
-    /** 다국어 변환 입력 경로 선택 팝업 화면을 표시한다. */
     public String multilingual() {
         return "user/multilingual/multilingualPopup";
     }
 
+    /**
+     * QSG 카드가 여는 언어와 입력 경로 선택 팝업 화면.
+     *
+     * <p>화면 위치: {@code templates/user/multilingual/qsgPopup.html}.
+     * 실제 실행 API는 QsgController, 업무 처리는 QsgApplyService가 담당한다.
+     * 관리자 QSG DB 화면은 같은 {@code QSG_DB.xml}을 조회/업로드/내보내기한다.</p>
+     */
     @GetMapping("/qsg/list")
-    /** QSG 언어와 입력 경로 선택 팝업 화면을 표시한다. */
     public String qsg() {
         return "user/multilingual/qsgPopup";
     }
@@ -217,8 +250,15 @@ public class UserController {
         return "user/pdf/pdfList";
     }
     
+    /**
+     * PDF 리뷰에서 선택한 파일을 PDF 뷰어 화면으로 연다.
+     *
+     * <p>화면 위치: {@code templates/user/pdf/pdfview.html}.
+     * fileId/folderId는 Google Drive 파일과 폴더를 찾는 핵심 키다.
+     * 댓글 좌표, 하이라이트, 웹소켓 협업 상태는 pdfview.html의 JS와
+     * CommentController/PdfCollaborationHandler 쪽을 함께 봐야 한다.</p>
+     */
     @GetMapping("/pdf/view")
-    /** PDF 뷰어에 필요한 Drive 파일 및 폴더 ID를 모델에 전달한다. */
     public String pdfView(@RequestParam String fileId,
                           @RequestParam String folderId,
                           Model model) {
@@ -234,15 +274,15 @@ public class UserController {
         return "user/pdf/pdfUpload";
     }
 
-    @GetMapping("/pdf/color-check")
     /**
-     * 견적 팝업 화면을 연다.
+     * 견적 카드가 여는 팝업 화면.
      *
-     * <p>화면에 실제 저장 위치를 표시할 수 있도록 서버 PC의
-     * 바탕화면/temp 전체 경로를 Thymeleaf 모델에 함께 넣는다.
-     * PDF 분석이나 DB 작업은 이 메서드가 아니라
-     * {@link ColorCheckController}의 API가 처리한다.</p>
+     * <p>화면 위치: {@code templates/user/pdf/colorCheck.html}.
+     * 화면에 실제 저장 위치를 표시할 수 있도록 서버 PC의 바탕화면/temp 전체 경로를
+     * Thymeleaf 모델에 함께 넣는다. PDF 분석, 최종 엑셀 생성, DB 반영은
+     * {@link ColorCheckController}의 API와 ColorCheckWorkflowService가 처리한다.</p>
      */
+    @GetMapping("/pdf/color-check")
     public String colorCheck(Model model) {
         model.addAttribute(
                 "colorCheckOutputPath",
@@ -250,8 +290,15 @@ public class UserController {
         return "user/pdf/colorCheck";
     }
 
+    /**
+     * BER 반영 카드가 여는 팝업 화면.
+     *
+     * <p>화면 위치: {@code templates/user/ber/ber.html}.
+     * 실행 API는 BerController, 업무 처리는 BerApplyService가 담당한다.
+     * 관리자 BER DB 화면과 XML 생성 흐름은 BerAsisTobeAdminService,
+     * BerAsisTobeXmlService를 함께 확인한다.</p>
+     */
     @GetMapping("/pdf/ber")
-    /** BER 반영 팝업 화면을 연다. */
     public String ber(Model model) {
         model.addAttribute(
                 "colorCheckOutputPath",
@@ -259,14 +306,26 @@ public class UserController {
         return "user/ber/ber";
     }
 
+    /**
+     * 제품사양서 비교 카드가 여는 팝업 화면.
+     *
+     * <p>화면 위치: {@code templates/user/productSpecComparison/productSpecComparison.html}.
+     * 실제 비교 API는 ProductSpecComparisonController, 업무 처리는
+     * ProductSpecComparisonService가 담당한다.</p>
+     */
     @GetMapping("/pdf/product-spec-comparison")
-    /** 제품사양서 비교 팝업 화면을 연다. */
     public String productSpecComparison() {
         return "user/productSpecComparison/productSpecComparison";
     }
 
+    /**
+     * 법규 Ditamap Builder 카드가 여는 작업 경로 입력 화면.
+     *
+     * <p>화면 위치: {@code templates/user/ditamapBuilder/ditamapBuilder.html}.
+     * 실제 트리 생성/비교/편집 API는 DitamapBuilderController와
+     * DitamapBuilderService가 담당한다.</p>
+     */
     @GetMapping("/ditamap-builder")
-    /** DITAMAP Builder 작업 경로 입력 화면을 표시한다. */
     public String ditamapBuilder() {
         return "user/ditamapBuilder/ditamapBuilder";
     }
