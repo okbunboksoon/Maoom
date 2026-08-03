@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <section th:fragment="projectLogSection" id="projectLogSection"
+             class="admin-content"
+             aria-label="프로젝트 실행 로그 테이블"
+             hidden>
+        <header class="admin-content-header">
+            <div>
+                <h1>프로젝트 실행 로그</h1>
+                <p id="projectLogSummary">전체 실행 이력을 불러오는 중입니다.</p>
+            </div>
+        </header>
+
+        <div class="admin-dashboard-cards">
+            <article class="admin-stat-card border-left-primary">
+                <div>
+                    <span>전체 로그</span>
+                    <strong id="logTotalCount">0</strong>
+                </div>
+                <i class="fas fa-history"></i>
+            </article>
+            <article class="admin-stat-card border-left-success">
+                <div>
+                    <span>성공</span>
+                    <strong id="logSuccessCount">0</strong>
+                </div>
+                <i class="fas fa-check-circle"></i>
+            </article>
+            <article class="admin-stat-card border-left-danger">
+                <div>
+                    <span>실패</span>
+                    <strong id="logFailedCount">0</strong>
+                </div>
+                <i class="fas fa-exclamation-circle"></i>
+            </article>
+            <article class="admin-stat-card border-left-info">
+                <div>
+                    <span>검색 결과</span>
+                    <strong id="logFilteredCount">0</strong>
+                </div>
+                <i class="fas fa-filter"></i>
+            </article>
+        </div>
+
+        <div class="card shadow mb-4 admin-table-card">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">실행 이력</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+            <table id="projectLogTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">작업</th>
+                    <th scope="col">사용자</th>
+                    <th scope="col">시작</th>
+                    <th scope="col">소요</th>
+                    <th scope="col">입력/출력</th>
+                    <th scope="col">메시지</th>
+                </tr>
+                </thead>
+                <tbody id="projectLogTableBody">
+                <tr>
+                    <td colspan="8" class="admin-empty-cell">
+                        실행 로그를 불러오는 중입니다.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

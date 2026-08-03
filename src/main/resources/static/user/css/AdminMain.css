@@ -448,6 +448,47 @@ body.sidebar-toggled .admin-shell{
     background:#f8f9fc;
 }
 
+#berAsisTobeTable{
+    min-width:1630px;
+    table-layout:fixed;
+}
+
+#berAsisTobeTable .ber-region-cell{
+    color:#5a5c69;
+    font-weight:700;
+}
+
+#berAsisTobeTable .ber-hash-cell{
+    color:#6e707e;
+    font-family:Consolas, "Courier New", monospace;
+    font-size:.78rem;
+    white-space:nowrap;
+}
+
+#berAsisTobeTable .ber-long-text-cell{
+    min-width:180px;
+    max-width:360px;
+    vertical-align:top;
+    white-space:normal;
+}
+
+#berAsisTobeTable .ber-clamped-text{
+    display:-webkit-box;
+    max-height:42px;
+    overflow:hidden;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    line-clamp:2;
+    line-height:1.5;
+    text-align:left;
+    word-break:break-word;
+}
+
+#colorCheckTable .color-check-value-cell{
+    color:#5a5c69;
+    font-weight:700;
+}
+
 .admin-empty-cell{
     height:120px;
     color:#858796;
@@ -520,6 +561,12 @@ body.sidebar-toggled .admin-shell{
     color:#5a5c69;
     font:inherit;
     padding:4px 8px;
+}
+
+.ber-inline-editor{
+    min-height:92px;
+    resize:vertical;
+    white-space:normal;
 }
 
 @media (max-width: 860px){

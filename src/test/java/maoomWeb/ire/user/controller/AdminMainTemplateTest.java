@@ -31,8 +31,15 @@ class AdminMainTemplateTest {
                 .contains("onclick=\"openAccountDialog()\"")
                 .contains("id=\"accountDialog\"")
                 .contains("data-admin-view=\"users\"")
+                .contains("data-admin-view=\"color-check\"")
+                .contains("data-admin-view=\"ber-asis-tobe\"")
+                .contains("data-admin-view=\"project-logs\"")
                 .contains("id=\"userTable\"")
-                .contains("/admin/users")
+                .contains("id=\"colorCheckTable\"")
+                .contains("id=\"berAsisTobeTable\"")
+                .contains("id=\"berSentenceImportToggle\"")
+                .contains("As-is/To-be 엑셀 반영")
+                .contains("id=\"projectLogTable\"")
                 .doesNotContain("onclick=\"location.href='/main'\"");
     }
 }

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="maoomWeb.ire.user.mapper.BerAsisTobePairMapper">
+
+    <resultMap id="BerAsisTobePairResultMap"
+            type="maoomWeb.ire.user.dto.BerAsisTobePair">
+        <id property="id" column="id"/>
+        <result property="region" column="region"/>
+        <result property="hash" column="hash"/>
+        <result property="oldText" column="old_text"/>
+        <result property="newText" column="new_text"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+    <select id="findByRegion"
+            resultMap="BerAsisTobePairResultMap">
+        SELECT
+            id,
+            region,
+            hash,
+            old_text,
+            new_text,
+            created_at,
+            updated_at
+        FROM tb_ber_asis_tobe_pair
+        WHERE region = #{region}
+        ORDER BY id
+    </select>
+
+    <select id="countByRegion"
+            resultType="int">
+        SELECT COUNT(*)
+        FROM tb_ber_asis_tobe_pair
+        WHERE region = #{region}
+    </select>
+
+    <select id="findAll"
+            resultMap="BerAsisTobePairResultMap">
+        SELECT
+            id,
+            region,
+            hash,
+            old_text,
+            new_text,
+            created_at,
+            updated_at
+        FROM tb_ber_asis_tobe_pair
+        ORDER BY region, updated_at DESC, id DESC
+    </select>
+
+    <select id="findByRegionAndHash"
+            resultMap="BerAsisTobePairResultMap">
+        SELECT
+            id,
+            region,
+            hash,
+            old_text,
+            new_text,
+            created_at,
+            updated_at
+        FROM tb_ber_asis_tobe_pair
+        WHERE region = #{region}
+          AND hash = #{hash}
+    </select>
+
+    <insert id="upsert">
+        INSERT INTO tb_ber_asis_tobe_pair (
+            region,
+            hash,
+            old_text,
+            new_text
+        ) VALUES (
+            #{region},
+            #{hash},
+            #{oldText},
+            #{newText}
+        )
+        ON DUPLICATE KEY UPDATE
+            old_text = VALUES(old_text),
+            new_text = VALUES(new_text)
+    </insert>
+
+    <delete id="deleteByRegionAndHash">
+        DELETE FROM tb_ber_asis_tobe_pair
+        WHERE region = #{region}
+          AND hash = #{hash}
+    </delete>
+
+</mapper>
