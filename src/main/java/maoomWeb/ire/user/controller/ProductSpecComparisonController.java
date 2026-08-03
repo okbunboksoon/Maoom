@@ -24,11 +24,21 @@ import maoomWeb.ire.user.service.ProductSpecComparisonService;
 import maoomWeb.ire.user.service.ProjectExecutionLogService;
 
 /**
- * 제품사양서 비교 팝업의 실행 API.
+ * 유저 메인 "제품사양서 비교" 카드에서 열리는 비교 팝업의 REST 입구다.
  *
- * <p>화면은 서버 PC 기준 입력 경로와 Before/After 파일명, 추출 Key 옵션만 보낸다.
- * 실제 경로 검증, 작업 폴더 생성, classpath 도구 복사, BAT 실행, Result_Folder
- * 복사는 {@link ProductSpecComparisonService}가 담당한다.</p>
+ * <p>화면 위치: {@code templates/user/productSpecComparison/productSpecComparison.html}<br>
+ * 호출 JS: 같은 HTML 하단 스크립트에서 {@code fetch('/api/product-spec-comparison/run')}
+ * 으로 실행하고, 필요하면 {@code /api/product-spec-comparison/download}로 최근
+ * 결과 파일을 받을 수 있다.<br>
+ * 연결 라우트: {@code UserController#productSpecComparison()}이
+ * {@code /pdf/product-spec-comparison} 팝업 화면을 반환하고,
+ * {@code userMain.html}의 {@code openProductSpecComparePopup()}이 그 팝업을 연다.<br>
+ * 연결 서비스: {@link ProductSpecComparisonService}가 입력 경로 검증, 작업 폴더
+ * 생성, classpath 도구 복사, BAT 실행, {@code Result_Folder} 복사를 담당한다.</p>
+ *
+ * <p>수정 시 주의점: 화면은 전체 파일 경로가 아니라 입력 폴더 안의 Before/After
+ * 파일명만 보낸다. 파일 선택 UI, DTO 필드, 서비스의 경로 결합 규칙을 따로 바꾸면
+ * 실제 배치 파일이 대상 엑셀을 찾지 못할 수 있다.</p>
  */
 @RestController
 @RequestMapping("/api/product-spec-comparison")
@@ -47,8 +57,8 @@ public class ProductSpecComparisonController {
         this.projectExecutionLogService = projectExecutionLogService;
     }
 
-    @PostMapping("/run")
     /** 비교 실행 버튼 클릭 시 호출된다. 성공하면 입력 경로의 Result_Folder 결과 경로를 반환한다. */
+    @PostMapping("/run")
     public ProductSpecComparisonResult run(
             @RequestBody ProductSpecComparisonRequest request,
             Authentication authentication) {
@@ -79,8 +89,8 @@ public class ProductSpecComparisonController {
         return result;
     }
 
-    @GetMapping("/download")
     /** 최근 실행 결과 엑셀을 내려준다. 현재 화면은 결과 경로 표시만 쓰지만, API는 유지한다. */
+    @GetMapping("/download")
     public ResponseEntity<Resource> download() {
         Path resultFile = productSpecComparisonService.getResultFile();
         if (resultFile == null || !Files.isRegularFile(resultFile)) {

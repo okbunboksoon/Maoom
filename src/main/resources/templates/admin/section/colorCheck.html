@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <section th:fragment="colorCheckSection" id="colorCheckSection"
+             class="admin-content"
+             aria-label="견적 DB 테이블"
+             hidden>
+        <header class="admin-content-header">
+            <div>
+                <h1>견적 도안 DB</h1>
+                <p id="colorCheckSummary">데이터를 불러오는 중입니다.</p>
+            </div>
+            <div class="admin-header-actions">
+                <form id="colorCheckImportForm" class="admin-header-import-form">
+                    <input id="colorCheckImportFile"
+                           type="file"
+                           accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+                           hidden>
+                    <button id="colorCheckImportButton"
+                            class="admin-tool-btn primary"
+                            type="button">
+                        <i class="fas fa-upload"></i>
+                        엑셀 업로드
+                    </button>
+                </form>
+                <a class="admin-export-btn" href="/admin/color-check/export">
+                    <i class="fas fa-file-excel"></i>
+                    엑셀 내보내기
+                </a>
+            </div>
+        </header>
+
+        <div class="admin-dashboard-cards">
+            <article class="admin-stat-card border-left-primary">
+                <div>
+                    <span>전체 도안</span>
+                    <strong id="colorTotalCount">0</strong>
+                </div>
+                <i class="fas fa-database"></i>
+            </article>
+            <article class="admin-stat-card border-left-success">
+                <div>
+                    <span>V 항목</span>
+                    <strong id="colorCheckedCount">0</strong>
+                </div>
+                <i class="fas fa-check-circle"></i>
+            </article>
+            <article class="admin-stat-card border-left-danger">
+                <div>
+                    <span>X 항목</span>
+                    <strong id="colorUncheckedCount">0</strong>
+                </div>
+                <i class="fas fa-times-circle"></i>
+            </article>
+            <article class="admin-stat-card border-left-info">
+                <div>
+                    <span>검색 결과</span>
+                    <strong id="colorFilteredCount">0</strong>
+                </div>
+                <i class="fas fa-filter"></i>
+            </article>
+        </div>
+
+        <div class="card shadow mb-4 admin-table-card">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">견적 목록</h6>
+            </div>
+            <div class="card-body">
+                <div class="admin-edit-panel">
+                    <div class="admin-edit-panel-title">
+                        <strong>견적 항목 추가/수정</strong>
+                        <span>도안명과 판정값을 입력한 뒤 저장하세요.</span>
+                    </div>
+                    <form id="colorCheckEditForm" class="admin-edit-form">
+                        <input id="colorCheckDrawingName"
+                               type="text"
+                               placeholder="도안명"
+                               autocomplete="off">
+                        <select id="colorCheckValue">
+                            <option value="V">V</option>
+                            <option value="X">X</option>
+                        </select>
+                        <button id="colorCheckSave"
+                                class="admin-tool-btn primary"
+                                type="submit">
+                            <i class="fas fa-save"></i>
+                            저장
+                        </button>
+                        <button id="colorCheckCancel"
+                                class="admin-tool-btn"
+                                type="button"
+                                hidden>
+                            취소
+                        </button>
+                        <button id="colorCheckRefresh"
+                                class="admin-tool-btn"
+                                type="button">
+                            <i class="fas fa-sync-alt"></i>
+                            새로고침
+                        </button>
+                    </form>
+                </div>
+
+                <div id="colorCheckImportResult"
+                     class="admin-import-result"
+                     hidden></div>
+
+                <div class="table-responsive">
+            <table id="colorCheckTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">도안명</th>
+                    <th scope="col">컬러도안</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">관리</th>
+                </tr>
+                </thead>
+                <tbody id="colorCheckTableBody">
+                <tr>
+                    <td colspan="5" class="admin-empty-cell">
+                        데이터를 불러오는 중입니다.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

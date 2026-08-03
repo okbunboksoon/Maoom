@@ -1,8 +1,26 @@
 <!DOCTYPE html>
 <!--
-    로그인 후 PDF 리뷰, 견적, 정제와 배치 기능으로 이동하는 메인 화면.
-    UserController가 currentUserId/currentUserName을 Thymeleaf 모델로 전달한다.
-    계정 대화상자는 /api/user/account와 /api/user/profile-image API를 사용한다.
+    유저 메인 런처 화면.
+
+    화면 위치:
+    - GET /main
+    - UserController.main()
+    - templates/user/userMain.html
+
+    화면 역할:
+    - 로그인 후 사용자가 작업 기능을 선택하는 첫 화면이다.
+    - launcherMenus 배열이 실제 기능 카드 목록이다.
+    - 각 카드의 action 함수가 팝업 URL을 열고, 해당 URL은 UserController 또는
+      기능별 Controller가 템플릿/API로 이어받는다.
+
+    계정 기능:
+    - 사용자 이름/비밀번호 수정: POST /api/user/account -> UserController.updateAccount() -> UserService
+    - 프로필 이미지 조회/업로드/삭제: /api/user/profile-image -> UserProfileImageService
+
+    수정 시 주의:
+    - 새 기능 카드를 추가할 때는 launcherMenus에 항목을 추가하고, 아래 open...Popup()
+      함수와 UserController의 화면 라우팅, 실제 실행 API Controller를 함께 확인한다.
+    - 팝업 URL을 바꾸면 브라우저에서 열리는 화면뿐 아니라 테스트와 사용자 안내 문구도 같이 맞춘다.
 -->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -245,6 +263,33 @@ launcherGuideLink.addEventListener('click', function(event){
     window.location.href = launcherGuideLink.href;
 });
 
+/*
+ * 메인 런처 기능 목록.
+ *
+ * 기능 카드 한 개의 연결 흐름:
+ * - title/description/category/icon: userMain.html 화면에 표시되는 카드 정보
+ * - action: 아래 open...Popup() 함수
+ * - open...Popup(): UserController의 화면 URL을 새 창으로 연다
+ * - 화면 안의 실행 버튼: 각 기능별 REST Controller와 Service를 호출한다
+ *
+ * 기능별 실제 연결:
+ * - PDF 리뷰: /pdf/list -> UserController.pdfList() -> pdfList.html
+ *   이후 PDF 선택/댓글 API는 PdfController, CommentController, PdfService, CommentService 쪽을 본다.
+ * - 견적: /pdf/color-check -> UserController.colorCheck() -> colorCheck.html
+ *   실행 API는 ColorCheckController, 업무 처리는 ColorCheckWorkflowService/ColorCheckExportService 쪽을 본다.
+ * - 법규 Ditamap Builder: /ditamap-builder -> UserController.ditamapBuilder()
+ *   실행 API는 DitamapBuilderController, 업무 처리는 DitamapBuilderService 쪽을 본다.
+ * - BER 반영: /pdf/ber -> UserController.ber() -> ber.html
+ *   실행 API는 BerController, 업무 처리는 BerApplyService 쪽을 본다.
+ * - 정제: /revision/list -> UserController.pdfList2() -> revisionPopup.html
+ *   실행 API는 RevisionController, 업무 처리는 RevisionPipelineService 쪽을 본다.
+ * - 다국어 변환: /multilingual/list -> UserController.multilingual() -> multilingualPopup.html
+ *   실행 API는 MultilingualController, 업무 처리는 MultilingualConversionService 쪽을 본다.
+ * - QSG: /qsg/list -> UserController.qsg() -> qsgPopup.html
+ *   실행 API는 QsgController, 업무 처리는 QsgApplyService 쪽을 본다.
+ * - 제품사양서 비교: /pdf/product-spec-comparison -> UserController.productSpecComparison()
+ *   실행 API는 ProductSpecComparisonController, 업무 처리는 ProductSpecComparisonService 쪽을 본다.
+ */
 const launcherMenus = [
     {
         title:'PDF 리뷰',
@@ -495,6 +540,13 @@ function renderLauncherMenus(){
 
     grid.innerHTML = '';
 
+    /*
+     * 카드 표시 조건.
+     * - adminOnly가 true인 기능은 관리자에게만 보인다.
+     * - activeMenuCategory는 현재 탭 필터다. 지금 탭 버튼은 주석 처리되어 있지만,
+     *   다시 살리면 이 조건이 그대로 사용된다.
+     * - 검색어는 제목, 설명, 카테고리 문자열 전체에서 찾는다.
+     */
     const visibleMenus = launcherMenus.filter(menu => {
         if(menu.adminOnly && !administrator){
             return false;
@@ -682,7 +734,18 @@ accountForm.addEventListener('submit', function(event){
     });
 });
 
-// PDF 목록은 별도 팝업 창으로 열어 메인 메뉴를 유지한다.
+/*
+ * PDF 리뷰.
+ *
+ * 화면 위치: templates/user/pdf/pdfList.html
+ * 호출 URL: GET /pdf/list -> UserController.pdfList()
+ * 연결 API/Service:
+ * - Drive/PDF 목록: DriveController, PdfController, PdfService
+ * - 댓글/첨부/내보내기: CommentController, CommentService, CommentPdfExportService
+ * 수정 시 주의:
+ * - PDF 뷰어 화면은 pdfview.html 안에 JS가 많다. 댓글 좌표/하이라이트/웹소켓은
+ *   pdfview.html과 PdfCollaborationHandler를 같이 확인한다.
+ */
 function openPdfPopup(){
     window.open(
         '/pdf/list',
@@ -691,7 +754,19 @@ function openPdfPopup(){
     );
 }
 
-// PDF 도안 견적 엑셀 생성 화면을 별도 팝업으로 연다.
+/*
+ * 견적.
+ *
+ * 화면 위치: templates/user/pdf/colorCheck.html
+ * 호출 URL: GET /pdf/color-check -> UserController.colorCheck()
+ * 연결 API/Service:
+ * - ColorCheckController
+ * - ColorCheckWorkflowService, ColorCheckExportService, DrawingColorCheckService
+ * 입출력:
+ * - 사용자가 올린 검토 엑셀을 읽고 최종 발주 엑셀/DB 반영 리포트를 만든다.
+ * 수정 시 주의:
+ * - 출력 경로는 UserController.colorCheck()가 colorCheckOutputPath 모델로 넘긴다.
+ */
 function openColorCheckPopup(){
     window.open(
         '/pdf/color-check',
@@ -700,7 +775,17 @@ function openColorCheckPopup(){
     );
 }
 
-// 제품사양서 비교 전용 화면을 연다.
+/*
+ * 제품사양서 비교.
+ *
+ * 화면 위치: templates/user/productSpecComparison/productSpecComparison.html
+ * 호출 URL: GET /pdf/product-spec-comparison -> UserController.productSpecComparison()
+ * 연결 API/Service:
+ * - ProductSpecComparisonController
+ * - ProductSpecComparisonService
+ * 수정 시 주의:
+ * - 엑셀 비교 규칙을 바꿀 때는 화면보다 Service의 파싱/비교 기준을 먼저 확인한다.
+ */
 function openProductSpecComparePopup(){
     window.open(
         '/pdf/product-spec-comparison',
@@ -709,7 +794,19 @@ function openProductSpecComparePopup(){
     );
 }
 
-// BER 반영 전용 화면을 연다.
+/*
+ * BER 반영.
+ *
+ * 화면 위치: templates/user/ber/ber.html
+ * 호출 URL: GET /pdf/ber -> UserController.ber()
+ * 실행 API/Service:
+ * - POST /api/ber/apply -> BerController.apply() -> BerApplyService
+ * 입출력:
+ * - 입력 DITA 경로를 받아 revision-tool 리소스와 BER DB XML을 작업 폴더로 복사한 뒤 배치를 실행한다.
+ * 수정 시 주의:
+ * - BAT/CMD 파일은 PowerShell로 편집하지 않는다.
+ * - BER DB 관리 화면은 관리자 > BER DB 쪽이며, XML 생성은 BerAsisTobeXmlService를 확인한다.
+ */
 function openBerPopup(){
     window.open(
         '/pdf/ber',
@@ -718,7 +815,18 @@ function openBerPopup(){
     );
 }
 
-// DITAMAP Builder 경로 입력 화면을 별도 팝업 창으로 연다.
+/*
+ * 법규 Ditamap Builder.
+ *
+ * 화면 위치: templates/user/ditamapBuilder/ditamapBuilder.html
+ * 호출 URL: GET /ditamap-builder -> UserController.ditamapBuilder()
+ * 연결 API/Service:
+ * - DitamapBuilderController
+ * - DitamapBuilderService
+ * 수정 시 주의:
+ * - view/diff/realtime/legal-editor 화면이 같은 Service를 공유한다.
+ * - 트리 컬럼이나 체크 규칙을 바꾸면 DitamapBuilder.css와 관련 템플릿도 같이 확인한다.
+ */
 function openDitamapBuilderPopup(){
     window.open(
         '/ditamap-builder',
@@ -727,7 +835,19 @@ function openDitamapBuilderPopup(){
     );
 }
 
-// 정제 설정도 PDF 목록과 같은 크기의 별도 팝업 창으로 연다.
+/*
+ * 정제.
+ *
+ * 화면 위치: templates/user/revision/revisionPopup.html
+ * 호출 URL: GET /revision/list -> UserController.pdfList2()
+ * 연결 API/Service:
+ * - RevisionController
+ * - RevisionPipelineService
+ * 입출력:
+ * - 사용자가 선택한 DITA/XML 경로를 기준으로 정제 배치를 실행하고 결과 경로를 반환한다.
+ * 수정 시 주의:
+ * - 정제 배치 리소스와 XSL 변경은 SharedBatchResourceCopyTest, RevisionPipelineServiceTest로 확인한다.
+ */
 function openRevisionPopup(){
     window.open(
         '/revision/list',
@@ -736,7 +856,17 @@ function openRevisionPopup(){
     );
 }
 
-// 다국어 변환 연결 전용 입력 화면을 연다.
+/*
+ * 다국어 변환.
+ *
+ * 화면 위치: templates/user/multilingual/multilingualPopup.html
+ * 호출 URL: GET /multilingual/list -> UserController.multilingual()
+ * 연결 API/Service:
+ * - MultilingualController
+ * - MultilingualConversionService
+ * 수정 시 주의:
+ * - 언어 코드/경로 규칙을 바꾸면 qsgPopup과 겹치는 부분이 있는지 같이 확인한다.
+ */
 function openMultilingualPopup(){
     window.open(
         '/multilingual/list',
@@ -745,7 +875,19 @@ function openMultilingualPopup(){
     );
 }
 
-// QSG 언어 선택과 입력 경로 화면을 연다.
+/*
+ * QSG.
+ *
+ * 화면 위치: templates/user/multilingual/qsgPopup.html
+ * 호출 URL: GET /qsg/list -> UserController.qsg()
+ * 실행 API/Service:
+ * - POST /api/qsg/run -> QsgController.run() -> QsgApplyService
+ * 입력/DB 리소스:
+ * - src/main/resources/xsl/QSG_DB.xml
+ * - 관리자 > QSG DB 화면에서 hash + lang + term 구조로 조회/업로드/내보내기한다.
+ * 수정 시 주의:
+ * - QSG_DB.xml 구조를 바꾸면 QsgDbAdminService와 QSG 적용 XSL도 같이 맞춰야 한다.
+ */
 function openQsgPopup(){
     window.open(
         '/qsg/list',

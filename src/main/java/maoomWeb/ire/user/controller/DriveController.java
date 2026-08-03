@@ -38,9 +38,22 @@ import maoomWeb.ire.user.service.PdfAccessService;
 /**
  * PDF 리뷰 화면이 사용하는 Google Drive 탐색과 PDF 원본 전송 API다.
  *
- * <p>왼쪽 문서 트리는 items/path API를 호출하고, 가운데 PDF.js 뷰어는
- * pdf API를 호출한다. Drive API를 매번 호출하면 느리므로 폴더 목록은 메모리에
- * 5분간, PDF 원본은 로컬 캐시 폴더에 저장해 재사용한다.</p>
+ * <p>화면 위치: {@code templates/user/pdf/pdfList.html}의 폴더 트리와
+ * {@code templates/user/pdf/pdfview.html}의 왼쪽 트리/가운데 PDF.js 뷰어가
+ * 이 컨트롤러를 호출한다.<br>
+ * 호출 JS: {@code pdfList.html}, {@code pdfview.html} 하단 스크립트의
+ * {@code fetch('/api/drive/items')}, {@code fetch('/api/drive/path')},
+ * PDF.js iframe의 {@code /api/drive/pdf} 요청이 여기로 들어온다.<br>
+ * 연결 서비스: Google Drive SDK가 실제 Drive API를 호출하고,
+ * {@link PdfAccessService}가 로그인 사용자 권한을 확인한다.</p>
+ *
+ * <p>Drive API를 매번 호출하면 느리므로 폴더 목록은 서버 메모리에 5분간,
+ * PDF 원본은 로컬 캐시 폴더에 저장해 재사용한다. 새로고침 버튼은
+ * {@code refresh=true}를 보내 해당 폴더 캐시를 지운 뒤 다시 조회한다.</p>
+ *
+ * <p>수정 시 주의점: 이 컨트롤러는 실제 Google Drive 파일 바이트를 다루므로
+ * 접근 권한 검사와 Range 응답 처리를 유지해야 한다. 캐시 경로나 ROOT_FOLDER_ID를
+ * 바꾸면 PDF 목록 화면의 루트 폴더 상수도 함께 확인한다.</p>
  */
 @RestController
 public class DriveController {

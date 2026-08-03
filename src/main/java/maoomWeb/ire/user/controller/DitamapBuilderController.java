@@ -25,11 +25,28 @@ import maoomWeb.ire.user.service.CurrentUserService;
 import maoomWeb.ire.user.service.ProjectExecutionLogService;
 
 /**
- * DITAMAP Builder 화면에서 사용하는 API를 담당한다.
+ * 유저 메인 "Ditamap Builder" 카드에서 이어지는 법규 DITAMAP 편집 API다.
  *
- * 현재 법규 DITAMAP 생성 흐름은 서버 배치를 돌려 자동 생성하지 않는다.
+ * <p>화면 위치: 시작 팝업은 {@code templates/user/ditamapBuilder/ditamapBuilder.html},
+ * 실시간 편집/비교/법규 편집 화면은 같은 폴더의 {@code ditamapBuilderRealtime.html},
+ * {@code ditamapBuilderDiff.html}, {@code ditamapLegalEditor.html}을 사용한다.<br>
+ * 호출 JS: 각 HTML 하단 스크립트에서 {@code /api/ditamap-builder/*} API를 직접
+ * 호출한다.<br>
+ * 연결 라우트: {@code UserController#ditamapBuilder()}가
+ * {@code /ditamap-builder} 시작 팝업을 반환하고, {@code userMain.html}의
+ * {@code openDitamapBuilderPopup()}이 그 팝업을 연다.<br>
+ * 연결 서비스: {@link DitamapBuilderService}가 DITAMAP 읽기, 법규 템플릿 조회,
+ * title 동기화, 속성 변경, 최종 {@code LM_*.ditamap} 저장을 담당한다.</p>
+ *
+ * <p>현재 법규 DITAMAP 생성 흐름은 서버 배치를 돌려 자동 생성하지 않는다.
  * 화면에서 기준 DITAMAP을 읽고, 사용자가 오른쪽 법규 편집 팝업에서 구조를 만든 뒤
- * /api/ditamap-builder/legal 저장 API가 최종 LM_*.ditamap 파일을 작성한다.
+ * {@code /api/ditamap-builder/legal} 저장 API가 최종 {@code LM_*.ditamap}
+ * 파일을 작성한다.</p>
+ *
+ * <p>수정 시 주의점: 브라우저가 보낸 로컬/네트워크 경로를 그대로 믿으면 안 된다.
+ * 경로 검증과 허용 루트 처리는 서비스 계층의 {@code DitamapPathService} 규칙을
+ * 거쳐야 하며, 화면에서 행 구조를 바꾸면 저장 DTO와 서비스의 XML 작성 규칙도 같이
+ * 확인해야 한다.</p>
  */
 @RestController
 public class DitamapBuilderController {

@@ -419,6 +419,16 @@ body.sidebar-toggled .admin-shell{
     width:170px;
 }
 
+/* BER DB 테이블의 Old 헤더만 가운데 맞춘다. 본문 Old 문장은 가독성을 위해 기존 정렬을 유지한다. */
+#berAsisTobeTable thead th:nth-child(4){
+    text-align:center;
+}
+
+/* QSG DB 테이블의 Hash 헤더만 가운데 맞춘다. hash 본문은 긴 값이라 기존 정렬을 유지한다. */
+#qsgDbTable thead th:nth-child(2){
+    text-align:center;
+}
+
 .admin-data-table th:nth-child(5),
 .admin-data-table td:nth-child(5){
     width:110px;
@@ -446,6 +456,42 @@ body.sidebar-toggled .admin-shell{
 
 .admin-data-table tbody tr:hover{
     background:#f8f9fc;
+}
+
+#berAsisTobeTable{
+    min-width:1630px;
+    table-layout:fixed;
+}
+
+#berAsisTobeTable .ber-region-cell{
+    color:#5a5c69;
+    font-weight:700;
+}
+
+#berAsisTobeTable .ber-hash-cell{
+    color:#6e707e;
+    font-family:Consolas, "Courier New", monospace;
+    font-size:.78rem;
+    white-space:nowrap;
+}
+
+#berAsisTobeTable .ber-long-text-cell{
+    min-width:180px;
+    max-width:360px;
+    vertical-align:top;
+    white-space:normal;
+}
+
+#berAsisTobeTable .ber-clamped-text{
+    line-height:1.5;
+    text-align:left;
+    word-break:break-word;
+    white-space:normal;
+}
+
+#colorCheckTable .color-check-value-cell{
+    color:#5a5c69;
+    font-weight:700;
 }
 
 .admin-empty-cell{
@@ -520,6 +566,12 @@ body.sidebar-toggled .admin-shell{
     color:#5a5c69;
     font:inherit;
     padding:4px 8px;
+}
+
+.ber-inline-editor{
+    min-height:92px;
+    resize:vertical;
+    white-space:normal;
 }
 
 @media (max-width: 860px){

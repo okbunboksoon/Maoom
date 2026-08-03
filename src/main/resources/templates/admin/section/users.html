@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <section th:fragment="usersSection" id="userSection"
+             class="admin-content"
+             aria-label="Maoom Portal DB 테이블">
+        <header class="admin-content-header">
+            <div>
+                <h1>Maoom Portal DB</h1>
+                <p id="userSummary">사용자 정보를 불러오는 중입니다.</p>
+            </div>
+        </header>
+
+        <div class="admin-dashboard-cards">
+            <article class="admin-stat-card border-left-primary">
+                <div>
+                    <span>전체 사용자</span>
+                    <strong id="userTotalCount">0</strong>
+                </div>
+                <i class="fas fa-users"></i>
+            </article>
+            <article class="admin-stat-card border-left-success">
+                <div>
+                    <span>관리자</span>
+                    <strong id="userAdminCount">0</strong>
+                </div>
+                <i class="fas fa-user-shield"></i>
+            </article>
+            <article class="admin-stat-card border-left-info">
+                <div>
+                    <span>일반 사용자</span>
+                    <strong id="userNormalCount">0</strong>
+                </div>
+                <i class="fas fa-user"></i>
+            </article>
+            <article class="admin-stat-card border-left-warning">
+                <div>
+                    <span>검색 결과</span>
+                    <strong id="userFilteredCount">0</strong>
+                </div>
+                <i class="fas fa-filter"></i>
+            </article>
+        </div>
+
+        <div class="card shadow mb-4 admin-table-card">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">사용자 목록</h6>
+            </div>
+            <div class="card-body">
+                <div class="admin-table-tools">
+                    <form id="userCreateForm" class="admin-edit-form">
+                        <input id="newUserId"
+                               type="text"
+                               placeholder="아이디"
+                               autocomplete="off">
+                        <input id="newUserPassword"
+                               type="password"
+                               placeholder="비밀번호"
+                               autocomplete="new-password">
+                        <input id="newUserName"
+                               type="text"
+                               placeholder="이름"
+                               autocomplete="off">
+                        <input id="newUserEmail"
+                               type="email"
+                               placeholder="이메일"
+                               autocomplete="off">
+                        <select id="newUserRole">
+                            <option value="Y">Y</option>
+                            <option value="ADMIN">관리자</option>
+                        </select>
+                        <input id="newSlackUserId"
+                               type="text"
+                               placeholder="슬랙아이디"
+                               autocomplete="off">
+                        <button id="userCreateButton"
+                                class="admin-tool-btn primary"
+                                type="submit">
+                            <i class="fas fa-user-plus"></i>
+                            등록
+                        </button>
+                    </form>
+                    <button id="userRefresh"
+                            class="admin-tool-btn"
+                            type="button">
+                        <i class="fas fa-sync-alt"></i>
+                        새로고침
+                    </button>
+                </div>
+
+                <div class="table-responsive">
+            <table id="userTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th scope="col">아이디</th>
+                    <th scope="col">비밀번호</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">이메일</th>
+                    <th scope="col">권한</th>
+                    <th scope="col">슬랙아이디</th>
+                    <th scope="col">관리</th>
+                </tr>
+                </thead>
+                <tbody id="userTableBody">
+                <tr>
+                    <td colspan="7" class="admin-empty-cell">
+                        사용자 정보를 불러오는 중입니다.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <!--
+        관리자 > BER DB 화면.
+
+        화면 전환:
+        - admin/adminMain.html의 data-admin-view="ber-asis-tobe" 메뉴가 이 섹션을 연다.
+
+        데이터 흐름:
+        - 목록 조회: static/admin/js/adminMain.js의 loadBerAsisTobeItems()
+          -> GET /admin/ber-asis-tobe/items
+          -> AdminBerAsisTobeController
+          -> BerAsisTobeAdminService
+          -> BerAsisTobePairMapper
+          -> tb_ber_asis_tobe_pair
+
+        화면 동작:
+        - Old/New 셀은 더블클릭하면 바로 수정된다.
+        - 엑셀 업로드는 region, hash, old_text, new_text 컬럼을 읽는다.
+        - 엑셀 내보내기는 현재 DB 내용을 BER_asis-tobe_DB_yyyyMMdd_HHmmss.xlsx로 내려준다.
+
+        수정 시 주의:
+        - 테이블 컬럼 순서를 바꾸면 adminMain.js의 initBerAsisTobeDataTable(),
+          renderBerAsisTobeTable(), AdminBerAsisTobeController의 엑셀 export 헤더도 같이 맞춰야 한다.
+    -->
+    <section th:fragment="berAsisTobeSection" id="berAsisTobeSection"
+             class="admin-content"
+             aria-label="BER asis-tobe DB 테이블"
+             hidden>
+        <header class="admin-content-header">
+            <div>
+                <h1>BER DB</h1>
+                <p id="berAsisTobeSummary">데이터를 불러오는 중입니다.</p>
+            </div>
+            <div class="admin-header-actions">
+                <form id="berAsisTobeImportForm" class="admin-header-import-form">
+                    <input id="berAsisTobeImportFile"
+                           type="file"
+                           accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+                           hidden>
+                    <button id="berSentenceImportToggle"
+                            class="admin-tool-btn"
+                            type="button">
+                        <i class="fas fa-file-import"></i>
+                        As-is/To-be 신규 반영
+                    </button>
+                    <button id="berAsisTobeImportButton"
+                            class="admin-tool-btn primary"
+                            type="button">
+                        <i class="fas fa-upload"></i>
+                        엑셀 업로드
+                    </button>
+                </form>
+
+                <a class="admin-export-btn" href="/admin/ber-asis-tobe/export">
+                    <i class="fas fa-file-excel"></i>
+                    엑셀 내보내기
+                </a>
+            </div>
+        </header>
+
+        <div class="admin-dashboard-cards">
+            <article class="admin-stat-card border-left-primary">
+                <div>
+                    <span>전체 항목</span>
+                    <strong id="berTotalCount">0</strong>
+                </div>
+                <i class="fas fa-database"></i>
+            </article>
+            <article class="admin-stat-card border-left-success">
+                <div>
+                    <span>EU 항목</span>
+                    <strong id="berEuCount">0</strong>
+                </div>
+                <i class="fas fa-globe-europe"></i>
+            </article>
+            <article class="admin-stat-card border-left-danger">
+                <div>
+                    <span>US 항목</span>
+                    <strong id="berUsCount">0</strong>
+                </div>
+                <i class="fas fa-flag-usa"></i>
+            </article>
+            <article class="admin-stat-card border-left-info">
+                <div>
+                    <span>검색 결과</span>
+                    <strong id="berFilteredCount">0</strong>
+                </div>
+                <i class="fas fa-filter"></i>
+            </article>
+        </div>
+
+        <div class="card shadow mb-4 admin-table-card">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">BER asis-tobe 목록</h6>
+            </div>
+            <div class="card-body">
+                <div class="admin-table-tools">
+                    <button id="berAsisTobeRefresh"
+                            class="admin-tool-btn"
+                            type="button">
+                        <i class="fas fa-sync-alt"></i>
+                        새로고침
+                    </button>
+                </div>
+
+                <div id="berAsisTobeImportResult"
+                     class="admin-import-result"
+                     hidden></div>
+
+                <div class="table-responsive">
+            <table id="berAsisTobeTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Region</th>
+                    <th scope="col">Hash</th>
+                    <th scope="col">Old</th>
+                    <th scope="col">New</th>
+                    <th scope="col">수정일</th>
+                    <th scope="col">관리</th>
+                </tr>
+                </thead>
+                <tbody id="berAsisTobeTableBody">
+                <tr>
+                    <td colspan="7" class="admin-empty-cell">
+                        데이터를 불러오는 중입니다.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -88,6 +89,16 @@ public class BerApplyService {
 
     private final PathMatchingResourcePatternResolver resourceResolver =
             new PathMatchingResourcePatternResolver();
+    private final BerAsisTobeXmlService berAsisTobeXmlService;
+
+    public BerApplyService() {
+        this(null);
+    }
+
+    @Autowired
+    public BerApplyService(BerAsisTobeXmlService berAsisTobeXmlService) {
+        this.berAsisTobeXmlService = berAsisTobeXmlService;
+    }
 
     /**
      * BER 반영 버튼 클릭 한 번에 수행되는 전체 파이프라인.
@@ -120,6 +131,7 @@ public class BerApplyService {
             workDirectory = createWorkDirectory(inputDirectory);
             // JAR 안에 포함된 revision-tool 전체를 일반 파일로 풀어 BAT가 접근할 수 있게 한다.
             prepareToolDirectory(workDirectory);
+            writeBerAsisTobeXmlFromDatabase(workDirectory);
             copyDirectory(
                     sourceTopicsDirectory,
                     workDirectory.resolve("topics"),
@@ -315,6 +327,17 @@ public class BerApplyService {
                         + requiredFile);
             }
         }
+    }
+
+    private void writeBerAsisTobeXmlFromDatabase(Path workDirectory)
+            throws IOException {
+
+        if(berAsisTobeXmlService == null){
+            return;
+        }
+
+        berAsisTobeXmlService.writeRegionXmlFiles(
+                workDirectory.resolve("xsl"));
     }
 
     private void copySharedXslDirectory(Path target) throws IOException {

@@ -19,8 +19,18 @@ import maoomWeb.ire.user.service.ProjectExecutionLogService;
 /**
  * BER 화면의 AJAX 요청을 서비스 계층으로 넘기는 REST 컨트롤러.
  *
+ * <p>화면 위치는 {@code templates/user/ber/ber.html}이고,
+ * 유저 메인 {@code userMain.html}의 {@code openBerPopup()}이
+ * {@code /pdf/ber} 팝업을 열어 이 기능으로 진입한다.</p>
+ *
  * <p>화면은 {@code ditaPath} 문자열만 보낸다. 실제 경로 검증,
- * revision-tool 복사, BAT 실행, 결과 폴더 이동은 {@link BerApplyService}에서 처리한다.</p>
+ * revision-tool 복사, BAT 실행, 결과 폴더 이동은 {@link BerApplyService}에서 처리한다.
+ * 관리자 BER DB 화면에서 수정한 as-is/to-be 데이터는 실행 직전에 XML로 생성되어
+ * 배치 리소스와 함께 사용된다.</p>
+ *
+ * <p>수정 시 주의: BAT/CMD 파일은 PowerShell로 직접 편집하지 않는다.
+ * BER DB 구조를 바꾸면 관리자 BER DB 화면, BerAsisTobeXmlService,
+ * 배치 XSL을 함께 확인해야 한다.</p>
  */
 @RestController
 public class BerController {
@@ -38,7 +48,12 @@ public class BerController {
         this.projectExecutionLogService = projectExecutionLogService;
     }
 
-    /** BER 반영 버튼 클릭 시 호출되는 API. 성공하면 결과 temp/topics 경로를 JSON으로 반환한다. */
+    /**
+     * BER 반영 버튼 클릭 시 호출되는 API.
+     *
+     * <p>성공하면 결과 temp/topics 경로를 JSON으로 반환한다.
+     * 실행 이력은 ProjectExecutionLogService에 BER 작업으로 남겨 관리자 실행 로그에서 확인한다.</p>
+     */
     @PostMapping("/api/ber/apply")
     public BerApplyResult apply(
             @RequestBody BerApplyRequest request,
