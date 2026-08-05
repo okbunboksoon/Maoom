@@ -28,6 +28,16 @@ const qsgDbState = {
     filteredItems: []
 };
 
+/*
+ * 관리자 > Replace Symbol DB 화면 상태.
+ *
+ * API 응답은 /admin/replace-dark-symbol/items에서 오며,
+ * replace_dark_symbol.xml의 <replace from="..." to="..."/> 구조를
+ * fromSymbol + toSymbol 행으로 펼친 값이다.
+ *
+ * From/To 셀은 BER DB처럼 더블클릭으로 바로 수정하고,
+ * 저장된 DB 값은 배치 실행 직전 xsl/replace_dark_symbol.xml로 다시 생성된다.
+ */
 const replaceDarkSymbolState = {
     items: [],
     filteredItems: [],
@@ -153,12 +163,6 @@ const replaceDarkSymbolSummary =
     document.getElementById('replaceDarkSymbolSummary');
 const replaceDarkSymbolRefresh =
     document.getElementById('replaceDarkSymbolRefresh');
-const replaceDarkSymbolCreateForm =
-    document.getElementById('replaceDarkSymbolCreateForm');
-const replaceDarkSymbolFrom =
-    document.getElementById('replaceDarkSymbolFrom');
-const replaceDarkSymbolTo =
-    document.getElementById('replaceDarkSymbolTo');
 const replaceSymbolTotalCount =
     document.getElementById('replaceSymbolTotalCount');
 const replaceSymbolFromCount =
@@ -606,16 +610,25 @@ function initReplaceDarkSymbolDataTable(){
         return;
     }
 
+    /*
+     * Replace Symbol DB 테이블 초기화.
+     *
+     * 컬럼 순서:
+     * 0 No, 1 From, 2 To, 3 수정일, 4 관리
+     *
+     * From/To는 긴 문장이 아니라 이미지 코드라서 BER Old/New보다 좁고 가운데 정렬한다.
+     */
     replaceDarkSymbolDataTable = $('#replaceDarkSymbolTable').DataTable({
         language: dataTableLanguage(),
         pageLength: 50,
         autoWidth: false,
         order: [ [0, 'asc'] ],
         columnDefs: [
-            {targets: [0, 3, 4], className: 'text-center'},
+            {targets: [0, 1, 2, 3, 4], className: 'text-center'},
             {targets: [4], orderable: false, searchable: false},
             {targets: [0], width: '70px'},
-            {targets: [1, 2], width: '320px'},
+            {targets: [1], width: '260px'},
+            {targets: [2], width: '180px'},
             {targets: [3], width: '140px'},
             {targets: [4], width: '90px'}
         ],
@@ -1187,13 +1200,17 @@ function renderReplaceDarkSymbolTable(){
     replaceDarkSymbolDataTable = null;
     replaceDarkSymbolTableBody.innerHTML = '';
 
+    /*
+     * item.fromSymbol은 XML의 replace/@from, item.toSymbol은 replace/@to다.
+     * 표시는 코드 전용 셀 클래스를 써서 BER의 긴 문장 셀 스타일과 분리한다.
+     */
     replaceDarkSymbolState.filteredItems.forEach((item, index) => {
         const row = document.createElement('tr');
         const values = [
             index + 1,
             safeText(item.fromSymbol),
             safeText(item.toSymbol),
-            formatDateTime(item.updatedAt),
+            formatDate(item.updatedAt),
             ''
         ];
 
@@ -1201,10 +1218,10 @@ function renderReplaceDarkSymbolTable(){
             const cell = document.createElement('td');
 
             if(columnIndex === 1 || columnIndex === 2){
-                cell.className = 'ber-long-text-cell';
+                cell.className = 'replace-symbol-code-cell';
                 const field = columnIndex === 1 ? 'fromSymbol' : 'toSymbol';
                 const textBox = document.createElement('div');
-                textBox.className = 'ber-clamped-text';
+                textBox.className = 'replace-symbol-code-text';
                 textBox.textContent = value;
                 cell.appendChild(textBox);
                 cell.title = value === '-'
@@ -1302,7 +1319,7 @@ function startReplaceDarkSymbolCellEdit(cell, item, field){
 function restoreReplaceDarkSymbolCell(cell, value){
     cell.innerHTML = '';
     const textBox = document.createElement('div');
-    textBox.className = 'ber-clamped-text';
+    textBox.className = 'replace-symbol-code-text';
     const displayValue = value || '-';
     textBox.textContent = displayValue;
     cell.appendChild(textBox);
@@ -1312,6 +1329,10 @@ function restoreReplaceDarkSymbolCell(cell, value){
 }
 
 async function saveReplaceDarkSymbolField(item, field, value){
+    /*
+     * From 자체를 수정할 수도 있으므로 현재 행의 두 값을 모두 보내고,
+     * 서버는 새 fromSymbol 기준으로 upsert한다.
+     */
     const payload = {
         fromSymbol:item.fromSymbol || '',
         toSymbol:item.toSymbol || ''
@@ -1336,11 +1357,13 @@ async function saveReplaceDarkSymbolField(item, field, value){
 
 function updateReplaceDarkSymbolSummary(showing){
     const total = replaceDarkSymbolState.items.length;
+    // 치환 대상은 중복 제거한 From 개수다.
     const fromCount = new Set(
         replaceDarkSymbolState.items
             .map(item => item.fromSymbol)
             .filter(Boolean)
     ).size;
+    // 치환 결과는 중복 제거한 To 개수다. 여러 From이 같은 To로 모일 수 있다.
     const toCount = new Set(
         replaceDarkSymbolState.items
             .map(item => item.toSymbol)
@@ -1369,6 +1392,7 @@ async function loadReplaceDarkSymbolItems(){
     replaceDarkSymbolSummary.textContent = '데이터를 불러오는 중입니다.';
 
     try{
+        // 관리자 화면은 DB 원본을 조회한다. XML 파일은 실행 직전에만 다시 만든다.
         const response = await fetch('/admin/replace-dark-symbol/items', {
             headers:{
                 'Accept':'application/json'
@@ -1394,36 +1418,6 @@ async function loadReplaceDarkSymbolItems(){
             error.message || '조회 중 오류가 발생했습니다.';
     }finally{
         replaceDarkSymbolRefresh.disabled = false;
-    }
-}
-
-async function createReplaceDarkSymbolItem(event){
-    event.preventDefault();
-    const fromSymbol = replaceDarkSymbolFrom.value.trim();
-    const toSymbol = replaceDarkSymbolTo.value.trim();
-
-    try{
-        const response = await fetch('/admin/replace-dark-symbol/items', {
-            method:'PUT',
-            headers:{
-                'Content-Type':'application/json',
-                'Accept':'application/json'
-            },
-            body:JSON.stringify({
-                fromSymbol:fromSymbol,
-                toSymbol:toSymbol
-            })
-        });
-
-        if(!response.ok){
-            throw new Error(await response.text());
-        }
-
-        replaceDarkSymbolCreateForm.reset();
-        await loadReplaceDarkSymbolItems();
-    }catch(error){
-        replaceDarkSymbolSummary.textContent =
-            error.message || 'Replace Symbol 항목을 추가하지 못했습니다.';
     }
 }
 
@@ -2302,9 +2296,6 @@ qsgDbImportForm.addEventListener('submit', importQsgDbExcel);
 qsgDbImportButton.addEventListener('click', () => qsgDbImportFile.click());
 qsgDbImportFile.addEventListener('change', importQsgDbExcel);
 replaceDarkSymbolRefresh.addEventListener('click', loadReplaceDarkSymbolItems);
-replaceDarkSymbolCreateForm.addEventListener(
-    'submit',
-    createReplaceDarkSymbolItem);
 window.addEventListener('message', function(event){
     if(event.origin !== window.location.origin){
         return;

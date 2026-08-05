@@ -2,7 +2,13 @@ package maoomWeb.ire.user.dto;
 
 import java.time.LocalDateTime;
 
-/** replace_dark_symbol.xml의 replace 항목을 DB에서 관리하기 위한 행. */
+/**
+ * replace_dark_symbol.xml의 {@code <replace from="..." to="..."/>} 한 줄.
+ *
+ * <p>관리자 화면에서는 From/To 컬럼으로 보여주고, 배치 실행 직전에는
+ * {@link maoomWeb.ire.user.service.ReplaceDarkSymbolService}가 이 값을 다시
+ * {@code xsl/replace_dark_symbol.xml}로 만든다.</p>
+ */
 public class ReplaceDarkSymbolItem {
 
     private Long id;

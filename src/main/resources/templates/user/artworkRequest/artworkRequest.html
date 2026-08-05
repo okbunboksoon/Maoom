@@ -74,6 +74,14 @@
 </main>
 
 <script>
+/*
+ * 도안의뢰서 작성 팝업 동작 흐름.
+ *
+ * 1. 사용자가 결과 폴더를 만들 서버 기준 경로를 입력한다.
+ * 2. PDF 파일 한 건을 입력 행에 드래그한다.
+ * 3. POST /api/artwork-request/run 으로 경로와 PDF를 multipart/form-data로 보낸다.
+ * 4. ArtworkRequestService가 PDFImageExtractor를 호출하고 생성된 엑셀 경로를 돌려준다.
+ */
 const pdfDropRow = document.getElementById('pdfDropRow');
 const inputPath = document.getElementById('inputPath');
 const pdfPathInput = document.getElementById('pdfPath');
@@ -102,6 +110,7 @@ let selectedPdfFile = null;
 });
 
 pdfDropRow.addEventListener('drop', event => {
+    // 여러 파일을 떨어뜨려도 이 기능은 첫 번째 PDF 한 건만 처리한다.
     const file = Array.from(event.dataTransfer.files)
         .find(item => /\.pdf$/i.test(item.name));
 
@@ -149,6 +158,7 @@ async function runArtworkRequest(){
     showResult('running', '도안의뢰서 작성 중', 'PDF 파일을 전송하고 있습니다.');
 
     try{
+        // 파일 업로드가 필요하므로 JSON이 아니라 FormData로 전송한다.
         const formData = new FormData();
         formData.append('inputPath', inputPathValue);
         formData.append('file', file);
@@ -181,6 +191,7 @@ async function runArtworkRequest(){
 }
 
 function showResult(type, title, message){
+    // 상태값은 RevisionPopup.css의 result-panel 스타일과 연결된다.
     resultPanel.hidden = false;
     resultPanel.dataset.status = type;
     statusIndicator.classList.toggle('is-running', type === 'running');

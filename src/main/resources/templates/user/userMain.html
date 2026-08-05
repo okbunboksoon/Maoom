@@ -289,8 +289,12 @@ launcherGuideLink.addEventListener('click', function(event){
  *   실행 API는 QsgController, 업무 처리는 QsgApplyService 쪽을 본다.
  * - 제품사양서 비교: /pdf/product-spec-comparison -> UserController.productSpecComparison()
  *   실행 API는 ProductSpecComparisonController, 업무 처리는 ProductSpecComparisonService 쪽을 본다.
+ * - Index 추출: /index-extract -> UserController.indexExtract() -> index.html
+ *   실행 API는 IndexExtractController, 업무 처리는 IndexExtractService 쪽을 본다.
  * - PDF 검수 스캔 뷰어: POST /api/pdf-check-scan-viewer/launch -> PdfCheckScanViewerController
  *   업무 처리는 PdfCheckScanViewerService 쪽을 본다.
+ * - 도안의뢰서 작성: /pdf/artwork-request -> UserController.artworkRequest() -> artworkRequest.html
+ *   실행 API는 ArtworkRequestController, 업무 처리는 ArtworkRequestService 쪽을 본다.
  */
 const launcherMenus = [
     {
@@ -349,7 +353,6 @@ const launcherMenus = [
         icon:'fa-solid fa-list',
         action:openProductSpecComparePopup
     },
-    /**
     {
         title:'Index 추출',
         description:'DITA 인덱스 검토 엑셀 생성',
@@ -364,6 +367,7 @@ const launcherMenus = [
         icon:'fa-search',
         action:launchPdfCheckScanViewer
     },
+    /**
     {
         title:'도안의뢰서 작성',
         description:'도안의뢰 정보 입력 및 작성',
@@ -868,6 +872,11 @@ function openProductSpecComparePopup(){
  * 화면 위치: templates/user/artworkRequest/artworkRequest.html
  * 호출 URL: GET /pdf/artwork-request -> UserController.artworkRequest()
  * 이후 실행 API와 문서 생성 Service를 연결한다.
+ * 실행 API/Service:
+ * - POST /api/artwork-request/run -> ArtworkRequestController.run() -> ArtworkRequestService
+ * 입출력:
+ * - 사용자가 입력한 서버 경로 아래 날짜별 ImageExtractor 결과 폴더를 만들고,
+ *   업로드 PDF명 뒤에 _도안의뢰서.xlsx를 붙인 엑셀을 생성한다.
  */
 function openArtworkRequestPopup(){
     window.open(
@@ -883,8 +892,8 @@ function openArtworkRequestPopup(){
  * 호출 API: POST /api/pdf-check-scan-viewer/launch
  * 연결 Service: PdfCheckScanViewerService
  * 입출력:
- * - 프로젝트에 포함된 EXE를 서버 PC의 도구 폴더로 복사한 뒤 실행한다.
- * - pdf-check-scan-viewer.exe-path 설정값이 있으면 그 외부 EXE를 우선 사용한다.
+ * - pdf-check-scan-viewer.exe-path 설정값에 지정된 서버 PC의 EXE를 실행한다.
+ * - 브라우저가 아니라 서버 프로세스가 실행하므로 운영 서버의 실제 EXE 위치를 확인해야 한다.
  */
 function launchPdfCheckScanViewer(){
     fetch('/api/pdf-check-scan-viewer/launch', {
@@ -953,6 +962,9 @@ function openDitamapBuilderPopup(){
  * 호출 URL: GET /index-extract -> UserController.indexExtract()
  * 실행 API/Service:
  * - POST /api/index-extract/run -> IndexExtractController.run() -> IndexExtractService
+ * 입출력:
+ * - 입력 경로 또는 하위 topics를 작업 폴더로 복사하고, Index BAT를 실행해 index-review.xlsx를 만든다.
+ * - 산출물과 index-extract.log는 입력 경로 아래 날짜별 Index 결과 폴더에 저장된다.
  */
 function openIndexExtractPopup(){
     window.open(

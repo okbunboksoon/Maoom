@@ -26,7 +26,13 @@ import org.w3c.dom.NodeList;
 import maoomWeb.ire.user.dto.ReplaceDarkSymbolItem;
 import maoomWeb.ire.user.mapper.ReplaceDarkSymbolMapper;
 
-/** DB에 저장된 이미지 심볼 치환 목록을 replace_dark_symbol.xml로 만든다. */
+/**
+ * DB에 저장된 이미지 심볼 치환 목록을 기존 XSL이 읽는 XML 파일로 만든다.
+ *
+ * <p>기존 XSL은 {@code document('replace_dark_symbol.xml')}만 알고 있으므로,
+ * 관리자 DB를 직접 읽게 바꾸지 않고 실행 직전 작업 폴더의
+ * {@code xsl/replace_dark_symbol.xml}을 덮어쓴다. BER/QSG DB와 같은 방식이다.</p>
+ */
 @Service
 public class ReplaceDarkSymbolService {
 
@@ -45,6 +51,10 @@ public class ReplaceDarkSymbolService {
     @EventListener(ApplicationReadyEvent.class)
     @Transactional
     public void seedIfEmpty() {
+        /*
+         * 운영 DB가 비어 있는 최초 실행에서는 기존 리소스 XML을 원본으로 삼는다.
+         * 이후부터는 관리자 화면에서 관리하는 DB 값이 원본이므로 재시드하지 않는다.
+         */
         ensureTable();
 
         if(mapper.countAll() > 0){
@@ -100,6 +110,10 @@ public class ReplaceDarkSymbolService {
             Element root = document.createElement("replacements");
             document.appendChild(root);
 
+            /*
+             * XML 구조는 기존 XSL 호환을 위해 그대로 유지한다.
+             * <replacements><replace from="..." to="..."/></replacements>
+             */
             for(ReplaceDarkSymbolItem item : mapper.findAll()){
                 Element replace = document.createElement("replace");
                 replace.setAttribute("from", item.getFromSymbol());
@@ -163,6 +177,10 @@ public class ReplaceDarkSymbolService {
     }
 
     private void ensureTable() {
+        /*
+         * spring.sql.init.schema-locations에도 SQL 파일을 등록했지만,
+         * 로컬 설정에서 schema-locations가 덮이는 경우를 대비해 서비스 진입 시에도 보장한다.
+         */
         jdbcTemplate.execute("""
                 CREATE TABLE IF NOT EXISTS tb_replace_dark_symbol (
                     id BIGINT NOT NULL AUTO_INCREMENT,

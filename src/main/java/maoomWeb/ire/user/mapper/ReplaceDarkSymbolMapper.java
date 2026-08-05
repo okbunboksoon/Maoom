@@ -7,7 +7,12 @@ import org.apache.ibatis.annotations.Param;
 
 import maoomWeb.ire.user.dto.ReplaceDarkSymbolItem;
 
-/** replace_dark_symbol.xml 생성과 관리자 화면에서 사용할 치환 목록을 조회한다. */
+/**
+ * Replace Symbol DB 접근 매퍼.
+ *
+ * <p>from_symbol은 기존 이미지 심볼명이고 유니크 키다. to_symbol은 XSL이
+ * 실제 href 파일명으로 바꿀 대상 심볼명이다.</p>
+ */
 @Mapper
 public interface ReplaceDarkSymbolMapper {
 

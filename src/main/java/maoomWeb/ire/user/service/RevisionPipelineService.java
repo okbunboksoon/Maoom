@@ -168,6 +168,10 @@ public class RevisionPipelineService {
             copySharedResourceDirectory(SHARED_BAT_ROOT, workspace, false);
             copySharedResourceDirectory(SHARED_LIB_ROOT, workspace.resolve("lib"));
             copySharedXslDirectory(workspace.resolve("xsl"));
+            /*
+             * 01c_image_attr.xsl은 replace_dark_symbol.xml을 document()로 읽는다.
+             * 공유 xsl 복사본보다 관리자 DB 최신 값이 우선해야 하므로 실행 직전에 덮어쓴다.
+             */
             writeReplaceDarkSymbolXmlFromDatabase(workspace.resolve("xsl"));
             Files.createDirectories(workspace.resolve("temp"));
             Files.createDirectories(workspace.resolve("topics"));
@@ -936,6 +940,7 @@ public class RevisionPipelineService {
     private void writeReplaceDarkSymbolXmlFromDatabase(Path xslDirectory)
             throws IOException {
 
+        // 단위 테스트에서 기본 생성자를 쓰는 경우에는 기존 리소스 XML만 사용한다.
         if(replaceDarkSymbolService == null){
             return;
         }

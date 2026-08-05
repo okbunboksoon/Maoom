@@ -97,6 +97,10 @@ public class MultilingualConversionService {
             copySharedResourceDirectory(SHARED_BAT_ROOT, workspace, false);
             copySharedResourceDirectory(SHARED_LIB_ROOT, workspace.resolve("lib"));
             copySharedXslDirectory(workspace.resolve("xsl"));
+            /*
+             * 02_topics_Chapterize*.bat에서 호출되는 0160-image_attr.xsl도
+             * replace_dark_symbol.xml을 읽으므로, 실행 직전 DB 최신본으로 덮어쓴다.
+             */
             writeReplaceDarkSymbolXmlFromDatabase(workspace.resolve("xsl"));
             Files.createDirectories(workspace.resolve("topics"));
 
@@ -458,6 +462,7 @@ public class MultilingualConversionService {
     private void writeReplaceDarkSymbolXmlFromDatabase(Path xslDirectory)
             throws IOException {
 
+        // 테스트용 기본 생성자에서는 주입 서비스가 없으므로 classpath 복사본을 그대로 사용한다.
         if(replaceDarkSymbolService == null){
             return;
         }

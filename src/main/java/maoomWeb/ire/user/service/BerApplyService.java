@@ -136,6 +136,10 @@ public class BerApplyService {
             // JAR 안에 포함된 revision-tool 전체를 일반 파일로 풀어 BAT가 접근할 수 있게 한다.
             prepareToolDirectory(workDirectory);
             writeBerAsisTobeXmlFromDatabase(workDirectory);
+            /*
+             * BER 배치 안에서도 image_attr 계열 XSL을 탈 수 있으므로,
+             * asis-tobe XML과 마찬가지로 Replace Symbol DB를 작업 폴더 xsl에 반영한다.
+             */
             writeReplaceDarkSymbolXmlFromDatabase(workDirectory);
             copyDirectory(
                     sourceTopicsDirectory,
@@ -348,6 +352,7 @@ public class BerApplyService {
     private void writeReplaceDarkSymbolXmlFromDatabase(Path workDirectory)
             throws IOException {
 
+        // 단위 테스트나 수동 생성자 호출에서는 서비스가 없을 수 있어 기존 파일 복사본을 그대로 둔다.
         if(replaceDarkSymbolService == null){
             return;
         }
