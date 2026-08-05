@@ -8,7 +8,6 @@ import java.nio.file.Path;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
-import org.springframework.core.io.ByteArrayResource;
 
 class PdfCheckScanViewerServiceTest {
 
@@ -16,26 +15,20 @@ class PdfCheckScanViewerServiceTest {
     Path tempDirectory;
 
     @Test
-    void launchRejectsMissingBundledExeWhenNoPathConfigured() {
+    void launchRejectsBlankConfiguredPath() {
         PdfCheckScanViewerService service =
-                new PdfCheckScanViewerService("", new ByteArrayResource(new byte[0]) {
-                    @Override
-                    public boolean exists() {
-                        return false;
-                    }
-                });
+                new PdfCheckScanViewerService("");
 
         assertThatThrownBy(service::launch)
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining("프로젝트에 포함된");
+                .hasMessageContaining("경로가 설정되지 않았습니다");
     }
 
     @Test
     void launchRejectsMissingFile() {
         PdfCheckScanViewerService service =
                 new PdfCheckScanViewerService(
-                        tempDirectory.resolve("missing.exe").toString(),
-                        new ByteArrayResource(new byte[0]));
+                        tempDirectory.resolve("missing.exe").toString());
 
         assertThatThrownBy(service::launch)
                 .isInstanceOf(IllegalArgumentException.class)
@@ -48,8 +41,7 @@ class PdfCheckScanViewerServiceTest {
         Files.writeString(textFile, "not an exe");
         PdfCheckScanViewerService service =
                 new PdfCheckScanViewerService(
-                        textFile.toString(),
-                        new ByteArrayResource(new byte[0]));
+                        textFile.toString());
 
         assertThatThrownBy(service::launch)
                 .isInstanceOf(IllegalArgumentException.class)

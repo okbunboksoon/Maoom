@@ -44,3 +44,4 @@ src/main/resources/sql/migrate_user_id_and_seed_users.sql
 *.jks
 *credentials*.json
 *service-account*.json
+src/main/resources/tools/*.exe

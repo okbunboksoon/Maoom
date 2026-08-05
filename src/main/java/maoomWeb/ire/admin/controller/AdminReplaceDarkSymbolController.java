@@ -32,6 +32,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import maoomWeb.ire.user.dto.ReplaceDarkSymbolItem;
 import maoomWeb.ire.user.service.ReplaceDarkSymbolService;
 
+/**
+ * 관리자 > Replace Symbol DB 화면의 조회/수정/삭제/내보내기 API.
+ *
+ * <p>화면 위치는 {@code templates/admin/section/replaceDarkSymbol.html}이고,
+ * 프론트 동작은 {@code static/admin/js/adminMain.js}의
+ * replaceDarkSymbol 관련 함수들이 담당한다.</p>
+ */
 @Controller
 public class AdminReplaceDarkSymbolController {
 
@@ -56,6 +63,7 @@ public class AdminReplaceDarkSymbolController {
     @GetMapping("/admin/replace-dark-symbol/items")
     @ResponseBody
     public List<ReplaceDarkSymbolItem> getItems() {
+        // DataTables가 그대로 표시할 From/To 행 목록을 내려준다.
         return service.findAll();
     }
 
@@ -63,18 +71,21 @@ public class AdminReplaceDarkSymbolController {
     @ResponseBody
     public ReplaceDarkSymbolItem saveItem(
             @RequestBody ReplaceDarkSymbolItem item) {
+        // From 값을 키로 저장한다. 같은 From이면 To 값만 최신 값으로 갱신된다.
         return service.save(item);
     }
 
     @DeleteMapping("/admin/replace-dark-symbol/items/{fromSymbol}")
     @ResponseBody
     public void deleteItem(@PathVariable String fromSymbol) {
+        // 삭제 기준도 XSL의 @from 값과 동일한 from_symbol이다.
         service.delete(fromSymbol);
     }
 
     @GetMapping("/admin/replace-dark-symbol/export")
     public ResponseEntity<byte[]> exportExcel()
             throws IOException {
+        // 관리자 검토용 다운로드이며, 업로드 기능은 아직 연결하지 않는다.
         byte[] excel = createWorkbook(service.findAll());
         String fileName = "replace_dark_symbol_DB_"
                 + LocalDateTime.now().format(FILE_TIME_FORMAT)

@@ -27,7 +27,7 @@
 		<xsl:variable name="rawExt"
 			select="substring-after(tokenize(. , '/')[last()], '.')"/>
 
-		<!-- 치환 테이블 -->
+		<!-- 치환 테이블: 1010-replace_dark_symbol.xml 대신 최신 DB 원본에서 생성되는 파일명으로 통일 -->
 		<xsl:variable name="replacements"
 			select="document('replace_dark_symbol.xml')/replacements"/>
 

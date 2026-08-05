@@ -497,6 +497,45 @@ body.sidebar-toggled .admin-shell{
     white-space:normal;
 }
 
+/*
+ * Replace Symbol DB는 BER의 긴 문장 테이블과 다르게 짧은 코드값만 다룬다.
+ * 공통 admin-data-table nth-child 폭 규칙이 섞이지 않도록 테이블 ID 기준으로
+ * From/To 폭과 가운데 정렬을 명시한다.
+ */
+#replaceDarkSymbolTable{
+    min-width:760px;
+    table-layout:fixed;
+}
+
+#replaceDarkSymbolTable th:nth-child(2),
+#replaceDarkSymbolTable td:nth-child(2){
+    width:260px;
+    text-align:center;
+}
+
+#replaceDarkSymbolTable th:nth-child(3),
+#replaceDarkSymbolTable td:nth-child(3){
+    width:180px;
+    text-align:center;
+}
+
+#replaceDarkSymbolTable .replace-symbol-code-cell{
+    color:#6e707e;
+    font-family:Consolas, "Courier New", monospace;
+    font-size:.82rem;
+    text-align:center;
+}
+
+#replaceDarkSymbolTable .replace-symbol-code-text{
+    display:inline-block;
+    max-width:100%;
+    overflow:hidden;
+    text-align:center;
+    text-overflow:ellipsis;
+    vertical-align:middle;
+    white-space:nowrap;
+}
+
 #colorCheckTable .color-check-value-cell{
     color:#5a5c69;
     font-weight:700;

@@ -57,6 +57,14 @@
 </main>
 
 <script>
+/*
+ * Index 추출 팝업 동작 흐름.
+ *
+ * 1. 사용자가 서버 기준 DITA/topics 경로와 Index 레벨을 입력한다.
+ * 2. POST /api/index-extract/run 으로 JSON을 보낸다.
+ * 3. IndexExtractService가 작업 폴더를 만들고 07_make-excel-index.bat을 실행한다.
+ * 4. 화면에는 생성된 index-review.xlsx 경로 또는 실패 사유만 보여준다.
+ */
 const ditaPathInput = document.getElementById('ditaPath');
 const indexLevelInput = document.getElementById('indexLevel');
 const runIndexBtn = document.getElementById('runIndexBtn');
@@ -94,6 +102,7 @@ async function runIndexExtract(){
     showResult('running', 'Index 추출 실행 중', '완료될 때까지 창을 닫지 마세요.');
 
     try{
+        // 입력 경로는 브라우저 파일 경로가 아니라 서버가 접근 가능한 네트워크/로컬 경로여야 한다.
         const response = await fetch('/api/index-extract/run', {
             method:'POST',
             headers:{
@@ -119,6 +128,7 @@ async function runIndexExtract(){
 }
 
 function setRunning(running){
+    // 중복 실행을 막기 위해 배치가 끝날 때까지 입력 컨트롤을 잠근다.
     runIndexBtn.disabled = running;
     runIndexBtn.textContent = running ? '추출 중...' : '실행';
     ditaPathInput.disabled = running;
@@ -126,6 +136,7 @@ function setRunning(running){
 }
 
 function showResult(type, title, message){
+    // 결과 패널은 성공/실패/실행중 상태를 data-status로 CSS에 전달한다.
     resultPanel.hidden = false;
     resultPanel.dataset.status = type;
     statusIndicator.classList.toggle('is-running', type === 'running');

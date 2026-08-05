@@ -4,6 +4,10 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="maoomWeb.ire.user.mapper.ReplaceDarkSymbolMapper">
 
+    <!--
+        tb_replace_dark_symbol 한 행은 replace_dark_symbol.xml의 replace 한 개와 1:1로 대응한다.
+        from_symbol은 기존 이미지 심볼명, to_symbol은 치환 후 심볼명이다.
+    -->
     <resultMap id="ReplaceDarkSymbolResultMap"
             type="maoomWeb.ire.user.dto.ReplaceDarkSymbolItem">
         <id property="id" column="id"/>
@@ -44,6 +48,7 @@
     </select>
 
     <insert id="upsert">
+        <!-- 관리자 화면 저장/초기 XML 시드 모두 같은 upsert를 사용한다. -->
         INSERT INTO tb_replace_dark_symbol (
             from_symbol,
             to_symbol
