@@ -211,6 +211,75 @@ class RevisionPipelineServiceTest {
     }
 
     @Test
+    void copiesBookmapFromXmlSourceParentDirectory() throws Exception {
+        Path inputRoot = Files.createDirectory(tempDirectory.resolve("xml_dita"));
+        Path topics = Files.createDirectory(inputRoot.resolve("topics"));
+        Files.writeString(topics.resolve("01_Intro.xml"), "<chapter/>");
+        Files.writeString(
+                inputRoot.resolve("bookmap.xml"),
+                "<?xml version=\"1.0\" encoding=\"UTF-8\"?><bookmap mapname=\"parent.ditamap\"/>",
+                StandardCharsets.UTF_8);
+
+        Path workspace = Files.createDirectory(tempDirectory.resolve("workspace-parent-bookmap"));
+        Path chapter = Files.createDirectory(workspace.resolve("chapter"));
+        Files.createDirectory(workspace.resolve("xsl"));
+        Files.writeString(chapter.resolve("01_Intro.xml"), "<chapter/>");
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        Method method = RevisionPipelineService.class.getDeclaredMethod(
+                "prepareBookmap",
+                Path.class,
+                RevisionFormat.class,
+                Path.class,
+                String.class);
+        method.setAccessible(true);
+
+        method.invoke(service, topics, RevisionFormat.XML, workspace, null);
+
+        assertThat(Files.readString(
+                workspace.resolve("bookmap.xml"),
+                StandardCharsets.UTF_8))
+                .contains("mapname=\"parent.ditamap\"");
+    }
+
+    @Test
+    void ignoresBookmapInsideXmlSourceDirectory() throws Exception {
+        Path topics = Files.createDirectory(tempDirectory.resolve("topics"));
+        Files.writeString(topics.resolve("01_Intro.xml"), "<chapter/>");
+        Files.writeString(
+                topics.resolve("bookmap.xml"),
+                "<?xml version=\"1.0\" encoding=\"UTF-8\"?><bookmap mapname=\"ignored.ditamap\"/>",
+                StandardCharsets.UTF_8);
+
+        Path workspace = Files.createDirectory(tempDirectory.resolve("workspace-ignore-bookmap"));
+        Path chapter = Files.createDirectory(workspace.resolve("chapter"));
+        Files.createDirectory(workspace.resolve("xsl"));
+        Files.writeString(chapter.resolve("01_Intro.xml"), "<chapter/>");
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        Method method = RevisionPipelineService.class.getDeclaredMethod(
+                "prepareBookmap",
+                Path.class,
+                RevisionFormat.class,
+                Path.class,
+                String.class);
+        method.setAccessible(true);
+
+        method.invoke(
+                service,
+                topics,
+                RevisionFormat.XML,
+                workspace,
+                "generated.ditamap");
+
+        assertThat(Files.readString(
+                workspace.resolve("bookmap.xml"),
+                StandardCharsets.UTF_8))
+                .contains("mapname=\"generated.ditamap\"")
+                .doesNotContain("ignored.ditamap");
+    }
+
+    @Test
     void recognizesDatedResultFolders() {
         assertThat(ResultFolderNames.isGeneratedResultFolder(
                 "260731_Result_Folder_revision"))

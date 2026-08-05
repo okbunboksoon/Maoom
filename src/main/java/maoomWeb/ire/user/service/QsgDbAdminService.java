@@ -88,6 +88,48 @@ public class QsgDbAdminService {
     }
 
     /**
+     * QSG 배치가 실행될 임시 작업 폴더의 xsl 폴더에 현재 QSG_DB.xml을 쓴다.
+     *
+     * <p>BER 배치가 관리자 BER DB를 실행 직전에 {@code asis-tobe_*.xml}로
+     * 다시 만들어 넣는 것과 같은 목적이다. 관리자 화면에서 엑셀 업로드로
+     * 수정한 QSG_DB.xml이 classpath 복사본보다 우선해야 하므로,
+     * {@link QsgApplyService}는 공용 xsl 폴더를 복사한 뒤 이 메서드로
+     * {@code QSG_DB.xml}을 한 번 더 덮어쓴다.</p>
+     *
+     * <p>현재 QSG DB는 아직 별도 DB 테이블이 아니라 XML 파일이 원본이다.
+     * 개발 실행에서는 {@code src/main/resources/xsl/QSG_DB.xml}을 우선 사용하고,
+     * 패키징 실행처럼 원본 파일이 없으면 classpath의 {@code xsl/QSG_DB.xml}을
+     * 사용한다. 나중에 DB 테이블로 이관할 때는 이 메서드 내부만 DB 조회 후
+     * XML 생성 방식으로 바꾸면 배치 서비스는 그대로 둘 수 있다.</p>
+     */
+    public void writeQsgDbXml(Path xslDirectory) throws IOException {
+        if(xslDirectory == null){
+            throw new IllegalArgumentException(
+                    "QSG_DB.xml을 쓸 xsl 폴더가 비어 있습니다.");
+        }
+
+        Files.createDirectories(xslDirectory);
+        Path outputFile = xslDirectory.resolve("QSG_DB.xml");
+        Path editablePath = editableQsgDbPath();
+
+        if(editablePath != null){
+            Files.copy(
+                    editablePath,
+                    outputFile,
+                    java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+            return;
+        }
+
+        try(InputStream input = new ClassPathResource(QSG_DB_PATH)
+                .getInputStream()){
+            Files.copy(
+                    input,
+                    outputFile,
+                    java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+        }
+    }
+
+    /**
      * 관리자가 업로드한 엑셀을 QSG_DB.xml에 반영한다.
      *
      * <p>업로드 엑셀은 {@code hash, lang, term} 헤더가 있으면 된다.

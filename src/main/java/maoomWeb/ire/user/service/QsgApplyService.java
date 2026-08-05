@@ -21,6 +21,7 @@ import java.util.stream.Stream;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import maoomWeb.ire.user.dto.QsgRunRequest;
@@ -56,6 +57,16 @@ public class QsgApplyService {
     private static final String XSL_ROOT = "xsl";
     private static final String LIB_ROOT = "lib";
     private static final String BATCH_FILE = "02_QSG_apply.bat";
+    private final QsgDbAdminService qsgDbAdminService;
+
+    public QsgApplyService() {
+        this(null);
+    }
+
+    @Autowired
+    public QsgApplyService(QsgDbAdminService qsgDbAdminService) {
+        this.qsgDbAdminService = qsgDbAdminService;
+    }
 
     /** QSG 실행 버튼 한 번에 수행되는 전체 파이프라인. */
     public QsgRunResult run(QsgRunRequest request) {
@@ -76,7 +87,7 @@ public class QsgApplyService {
             workspace = createWorkDirectory(input);
             copySharedResourceDirectory(BAT_ROOT, workspace, false);
             copySharedResourceDirectory(LIB_ROOT, workspace.resolve("lib"));
-            copySharedXslDirectory(workspace.resolve("xsl"));
+            prepareXslDirectory(workspace.resolve("xsl"));
             Files.createDirectories(workspace.resolve("topics"));
 
             Path source = resolveTopicsSource(input);
@@ -123,6 +134,28 @@ public class QsgApplyService {
         } finally {
             deleteDirectoryQuietly(workspace);
         }
+    }
+
+    /**
+     * QSG 배치용 xsl 폴더를 준비한다.
+     *
+     * <p>먼저 classpath의 공용 xsl 리소스를 통째로 복사해 XSL/BAT 의존 파일을
+     * 모두 맞춘다. 그 다음 관리자 QSG DB가 들고 있는 최신 {@code QSG_DB.xml}을
+     * 같은 폴더에 덮어쓴다. 이 순서가 중요하다. 반대로 하면 공용 xsl 복사본이
+     * 관리자 수정본을 다시 덮어써서, 화면에서 수정한 QSG 용어가 배치에 반영되지
+     * 않을 수 있다.</p>
+     */
+    void prepareXslDirectory(Path xslDirectory) throws IOException {
+        copySharedXslDirectory(xslDirectory);
+        writeQsgDbXmlFromAdmin(xslDirectory);
+    }
+
+    private void writeQsgDbXmlFromAdmin(Path xslDirectory) throws IOException {
+        if(qsgDbAdminService == null){
+            return;
+        }
+
+        qsgDbAdminService.writeQsgDbXml(xslDirectory);
     }
 
     private List<String> normalizeLanguageCodes(QsgRunRequest request) {

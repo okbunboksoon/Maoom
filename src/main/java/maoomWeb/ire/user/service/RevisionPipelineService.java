@@ -346,13 +346,13 @@ public class RevisionPipelineService {
             Path workspace,
             String bookmapMapName) throws IOException {
 
-        Path source = input.resolve("bookmap.xml");
-        if (Files.isRegularFile(source)) {
-            copyInitialBookmap(source, workspace);
+        if (inputType != RevisionFormat.XML) {
             return;
         }
 
-        if (inputType != RevisionFormat.XML) {
+        Path source = resolveParentBookmap(input);
+        if (source != null) {
+            copyInitialBookmap(source, workspace);
             return;
         }
 
@@ -366,6 +366,20 @@ public class RevisionPipelineService {
                 workspace,
                 bookmapMapName.trim(),
                 collectChapterFileNames(workspace.resolve("chapter")));
+    }
+
+    private Path resolveParentBookmap(Path input) {
+        Path xmlSource = resolveSourceDirectory(input, "chapter");
+        Path parent = xmlSource.getParent();
+        if (parent == null) {
+            return null;
+        }
+
+        Path source = parent.resolve("bookmap.xml");
+        if (Files.isRegularFile(source)) {
+            return source;
+        }
+        return null;
     }
 
     private void copyInitialBookmap(Path source, Path workspace)
