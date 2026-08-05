@@ -243,6 +243,38 @@ class RevisionPipelineServiceTest {
     }
 
     @Test
+    void copiesBookmapFromChapterInputParentDirectory() throws Exception {
+        Path inputRoot = Files.createDirectory(tempDirectory.resolve("xml_chapter"));
+        Path chapterInput = Files.createDirectory(inputRoot.resolve("chapter"));
+        Files.writeString(chapterInput.resolve("01_Intro.xml"), "<chapter/>");
+        Files.writeString(
+                inputRoot.resolve("bookmap.xml"),
+                "<?xml version=\"1.0\" encoding=\"UTF-8\"?><bookmap mapname=\"chapter-parent.ditamap\"/>",
+                StandardCharsets.UTF_8);
+
+        Path workspace = Files.createDirectory(tempDirectory.resolve("workspace-chapter-parent"));
+        Path chapter = Files.createDirectory(workspace.resolve("chapter"));
+        Files.createDirectory(workspace.resolve("xsl"));
+        Files.writeString(chapter.resolve("01_Intro.xml"), "<chapter/>");
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        Method method = RevisionPipelineService.class.getDeclaredMethod(
+                "prepareBookmap",
+                Path.class,
+                RevisionFormat.class,
+                Path.class,
+                String.class);
+        method.setAccessible(true);
+
+        method.invoke(service, chapterInput, RevisionFormat.XML, workspace, null);
+
+        assertThat(Files.readString(
+                workspace.resolve("bookmap.xml"),
+                StandardCharsets.UTF_8))
+                .contains("mapname=\"chapter-parent.ditamap\"");
+    }
+
+    @Test
     void ignoresBookmapInsideXmlSourceDirectory() throws Exception {
         Path topics = Files.createDirectory(tempDirectory.resolve("topics"));
         Files.writeString(topics.resolve("01_Intro.xml"), "<chapter/>");

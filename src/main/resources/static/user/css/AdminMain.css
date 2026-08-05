@@ -1,3 +1,9 @@
+/*
+ * 관리자 메인 화면 공통 스타일.
+ *
+ * 적용 화면: templates/admin/adminMain.html 및 관리자 섹션 조각 화면.
+ * 구성: 좌측 사이드바, 상단 계정 메뉴, DB 관리 섹션, 테이블/폼/모달 상태를 담당한다.
+ */
 body.admin-main-body{
     display:block;
     min-height:100vh;
@@ -14,6 +20,7 @@ body.admin-main-body{
     z-index:1030;
 }
 
+/* 관리자 화면의 기본 2열 구조: 사이드바 + 본문 */
 .admin-shell{
     display:grid;
     grid-template-columns:224px minmax(0, 1fr);
@@ -21,6 +28,7 @@ body.admin-main-body{
     min-height:100vh;
 }
 
+/* 좌측 관리자 메뉴와 접힘 상태 */
 .admin-sidebar{
     position:sticky;
     top:0;

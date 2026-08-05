@@ -29,7 +29,7 @@
 
 		<!-- 치환 테이블 -->
 		<xsl:variable name="replacements"
-			select="document('1010-replace_dark_symbol.xml')/replacements"/>
+			select="document('replace_dark_symbol.xml')/replacements"/>
 
 		<!-- 치환된 이름 -->
 		<xsl:variable name="newName" select="

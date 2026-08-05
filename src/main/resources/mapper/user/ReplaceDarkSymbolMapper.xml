@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="maoomWeb.ire.user.mapper.ReplaceDarkSymbolMapper">
+
+    <resultMap id="ReplaceDarkSymbolResultMap"
+            type="maoomWeb.ire.user.dto.ReplaceDarkSymbolItem">
+        <id property="id" column="id"/>
+        <result property="fromSymbol" column="from_symbol"/>
+        <result property="toSymbol" column="to_symbol"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+    <select id="findAll"
+            resultMap="ReplaceDarkSymbolResultMap">
+        SELECT
+            id,
+            from_symbol,
+            to_symbol,
+            created_at,
+            updated_at
+        FROM tb_replace_dark_symbol
+        ORDER BY id
+    </select>
+
+    <select id="countAll"
+            resultType="int">
+        SELECT COUNT(*)
+        FROM tb_replace_dark_symbol
+    </select>
+
+    <select id="findByFromSymbol"
+            resultMap="ReplaceDarkSymbolResultMap">
+        SELECT
+            id,
+            from_symbol,
+            to_symbol,
+            created_at,
+            updated_at
+        FROM tb_replace_dark_symbol
+        WHERE from_symbol = #{fromSymbol}
+    </select>
+
+    <insert id="upsert">
+        INSERT INTO tb_replace_dark_symbol (
+            from_symbol,
+            to_symbol
+        ) VALUES (
+            #{fromSymbol},
+            #{toSymbol}
+        )
+        ON DUPLICATE KEY UPDATE
+            to_symbol = VALUES(to_symbol)
+    </insert>
+
+    <delete id="deleteByFromSymbol">
+        DELETE FROM tb_replace_dark_symbol
+        WHERE from_symbol = #{fromSymbol}
+    </delete>
+
+</mapper>

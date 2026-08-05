@@ -24,7 +24,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PDF 목록</title>
-<link rel="stylesheet" href="/user/css/PdfList.css?v=drive-refresh-1">
+<link rel="stylesheet" href="/user/css/PdfList.css?v=favorites-1">
 </head>
 <body>
 
@@ -45,9 +45,26 @@
         </div>
     </header>
 
-    <ul id="folderTree">
-        <li class="tree-loading">PDF 목록을 불러오는 중입니다.</li>
-    </ul>
+    <section class="pdf-list-section pdf-folder-section">
+        <ul id="folderTree">
+            <li class="tree-loading">PDF 목록을 불러오는 중입니다.</li>
+        </ul>
+    </section>
+
+    <div id="pdfListResizeHandle"
+         class="pdf-list-resize-handle"
+         role="separator"
+         aria-label="Google Drive 목록과 즐겨찾기 영역 높이 조절"
+         aria-orientation="horizontal"
+         tabindex="0"></div>
+
+    <section class="pdf-list-section pdf-favorite-section">
+        <div class="section-title-row">
+            <h2>즐겨찾기</h2>
+            <span id="favoriteCount" class="favorite-count">0개</span>
+        </div>
+        <ul id="favoriteTree" class="favorite-tree"></ul>
+    </section>
 </main>
 
 <script>
@@ -55,22 +72,166 @@
 // const ROOT_FOLDER_ID = '0ANjwWGzgwzlhUk9PVA';
 const ROOT_FOLDER_ID = '18WFt3vOuVQarQQDiZVP2Y2WeyoXgk1Qb';
 const DRIVE_CACHE_DURATION = 5 * 60 * 1000;
+const PDF_LIST_SPLIT_STORAGE_KEY = 'maoom.pdf.review.folderHeight';
+const MIN_SPLIT_SECTION_HEIGHT = 120;
 const driveItemCache = new Map();
 const driveItemRequests = new Map();
 let forceDriveRefresh = true;
+let pdfFavorites = [];
 
 // 최초 진입 시 서비스에서 사용하는 Drive 루트 폴더를 불러온다.
 window.addEventListener('load', function(){
-    loadTree(
-        ROOT_FOLDER_ID,
-        document.getElementById('folderTree'),
-        true
-    );
+    restorePdfListSplit();
+    setupPdfListResize();
+    initializePdfList();
 });
 
 document.getElementById(
     'driveRefreshButton'
 ).addEventListener('click', refreshDriveTree);
+
+function initializePdfList(){
+
+    loadPdfFavoritesFromServer()
+    .then(favorites => {
+        pdfFavorites = favorites;
+    })
+    .catch(error => {
+        console.warn('PDF 즐겨찾기를 불러오지 못했습니다.', error);
+    })
+    .finally(() => {
+        renderFavorites();
+        loadTree(
+            ROOT_FOLDER_ID,
+            document.getElementById('folderTree'),
+            true
+        );
+    });
+}
+
+function restorePdfListSplit(){
+
+    const savedHeight =
+        Number(localStorage.getItem(PDF_LIST_SPLIT_STORAGE_KEY));
+
+    if(Number.isFinite(savedHeight) && savedHeight > 0){
+        setFolderSectionHeight(savedHeight);
+    }
+}
+
+function setupPdfListResize(){
+
+    const resizeHandle =
+        document.getElementById('pdfListResizeHandle');
+    const folderSection =
+        document.querySelector('.pdf-folder-section');
+
+    let startY = 0;
+    let startHeight = 0;
+    let dragging = false;
+
+    resizeHandle.addEventListener('pointerdown', function(event){
+        dragging = true;
+        startY = event.clientY;
+        startHeight = folderSection.getBoundingClientRect().height;
+        resizeHandle.classList.add('dragging');
+        resizeHandle.setPointerCapture(event.pointerId);
+        event.preventDefault();
+    });
+
+    resizeHandle.addEventListener('pointermove', function(event){
+        if(!dragging){
+            return;
+        }
+
+        setFolderSectionHeight(startHeight + event.clientY - startY);
+    });
+
+    resizeHandle.addEventListener('pointerup', function(event){
+        if(!dragging){
+            return;
+        }
+
+        dragging = false;
+        resizeHandle.classList.remove('dragging');
+        resizeHandle.releasePointerCapture(event.pointerId);
+        saveFolderSectionHeight();
+    });
+
+    resizeHandle.addEventListener('pointercancel', function(){
+        dragging = false;
+        resizeHandle.classList.remove('dragging');
+        saveFolderSectionHeight();
+    });
+
+    resizeHandle.addEventListener('keydown', function(event){
+        const keySteps = {
+            ArrowUp : -24,
+            ArrowDown : 24
+        };
+
+        if(!Object.prototype.hasOwnProperty.call(keySteps, event.key)){
+            return;
+        }
+
+        event.preventDefault();
+        setFolderSectionHeight(
+            folderSection.getBoundingClientRect().height
+            + keySteps[event.key]
+        );
+        saveFolderSectionHeight();
+    });
+}
+
+function setFolderSectionHeight(height){
+
+    const page = document.querySelector('.pdf-list-page');
+    const header = document.querySelector('.pdf-list-header');
+    const folderSection =
+        document.querySelector('.pdf-folder-section');
+    const favoriteSection =
+        document.querySelector('.pdf-favorite-section');
+    const resizeHandle =
+        document.getElementById('pdfListResizeHandle');
+    const pageStyle = window.getComputedStyle(page);
+    const headerStyle = window.getComputedStyle(header);
+    const handleStyle = window.getComputedStyle(resizeHandle);
+    const pageHeight = page.clientHeight
+        - parseFloat(pageStyle.paddingTop)
+        - parseFloat(pageStyle.paddingBottom);
+    const headerHeight = header.getBoundingClientRect().height;
+    const handleHeight = resizeHandle.getBoundingClientRect().height;
+    const verticalGap =
+        parseFloat(headerStyle.marginBottom)
+        + parseFloat(handleStyle.marginTop)
+        + parseFloat(handleStyle.marginBottom);
+    const availableHeight =
+        pageHeight
+        - headerHeight
+        - handleHeight
+        - verticalGap;
+    const maxHeight =
+        Math.max(
+            MIN_SPLIT_SECTION_HEIGHT,
+            availableHeight - MIN_SPLIT_SECTION_HEIGHT
+        );
+    const nextHeight =
+        Math.min(Math.max(height, MIN_SPLIT_SECTION_HEIGHT), maxHeight);
+
+    folderSection.style.flex = '0 0 ' + nextHeight + 'px';
+    favoriteSection.style.flex = '1 1 auto';
+}
+
+function saveFolderSectionHeight(){
+
+    const folderSection =
+        document.querySelector('.pdf-folder-section');
+
+    localStorage.setItem(
+        PDF_LIST_SPLIT_STORAGE_KEY,
+        Math.round(folderSection.getBoundingClientRect().height)
+    );
+}
 
 // 폴더별 응답은 현재 PDFLIST 화면의 메모리에만 잠시 저장한다.
 function getDriveItems(folderId){
@@ -127,7 +288,12 @@ function refreshDriveTree(){
     folderTree.innerHTML =
         '<li class="tree-loading">최신 목록을 불러오는 중입니다.</li>';
 
-    getDriveItems(ROOT_FOLDER_ID)
+    loadPdfFavoritesFromServer()
+    .then(favorites => {
+        pdfFavorites = favorites;
+        renderFavorites();
+    })
+    .then(() => getDriveItems(ROOT_FOLDER_ID))
     .then(items => renderDriveItems(
         ROOT_FOLDER_ID,
         folderTree,
@@ -164,11 +330,15 @@ function renderDriveItems(folderId, parentElement, items){
     const fragment = document.createDocumentFragment();
     const folders = items.filter(item => item.type === 'folder');
     const pdfs = items.filter(item => item.type === 'pdf');
+    const rootFolder = folderId === ROOT_FOLDER_ID;
 
     folders.forEach(folder => {
         const li = document.createElement('li');
+        const row = document.createElement('div');
         const toggle = document.createElement('button');
 
+        li.className = 'folder-item';
+        row.className = 'tree-item-row folder-item-row';
         toggle.type = 'button';
         toggle.className = 'folder-toggle';
         toggle.textContent = folder.name;
@@ -191,7 +361,31 @@ function renderDriveItems(folderId, parentElement, items){
             loadTree(folder.id, childUl);
         });
 
-        li.appendChild(toggle);
+        row.appendChild(toggle);
+
+        if(!rootFolder){
+            const favoriteButton = document.createElement('button');
+
+            favoriteButton.type = 'button';
+            favoriteButton.className = 'favorite-toggle';
+            favoriteButton.dataset.favoriteId = folder.id;
+            favoriteButton.title = '즐겨찾기';
+            favoriteButton.setAttribute('aria-label', '즐겨찾기');
+            favoriteButton.addEventListener('click', function(event){
+                event.stopPropagation();
+                toggleFavorite({
+                    id : folder.id,
+                    folderId : folder.id,
+                    name : folder.name,
+                    type : 'folder'
+                });
+            });
+
+            updateFavoriteButton(favoriteButton, folder.id);
+            row.appendChild(favoriteButton);
+        }
+
+        li.appendChild(row);
         fragment.appendChild(li);
     });
 
@@ -231,18 +425,227 @@ function drawPdfList(folderId, target, pdfs){
 
     pdfs.forEach(pdf => {
         const pdfLi = document.createElement('li');
+        const row = document.createElement('div');
         const link = document.createElement('a');
+        const favoriteButton = document.createElement('button');
 
+        pdfLi.className = 'pdf-item';
+        row.className = 'pdf-item-row';
         link.href =
-            '/pdf/view?fileId='
-            + encodeURIComponent(pdf.id)
-            + '&folderId='
-            + encodeURIComponent(folderId);
+            buildPdfViewerUrl(pdf.id, folderId);
+        link.className = 'pdf-link';
         link.textContent = pdf.name;
         link.addEventListener('click', openPdfViewerMaximized);
 
-        pdfLi.appendChild(link);
+        favoriteButton.type = 'button';
+        favoriteButton.className = 'favorite-toggle';
+        favoriteButton.dataset.favoriteId = pdf.id;
+        favoriteButton.title = '즐겨찾기';
+        favoriteButton.setAttribute('aria-label', '즐겨찾기');
+        favoriteButton.textContent = '☆';
+        favoriteButton.addEventListener('click', function(event){
+            event.stopPropagation();
+            toggleFavorite({
+                id : pdf.id,
+                folderId : folderId,
+                name : pdf.name,
+                type : 'pdf'
+            });
+        });
+
+        updateFavoriteButton(favoriteButton, pdf.id);
+
+        row.appendChild(link);
+        row.appendChild(favoriteButton);
+        pdfLi.appendChild(row);
         target.appendChild(pdfLi);
+    });
+}
+
+function buildPdfViewerUrl(fileId, folderId){
+
+    return '/pdf/view?fileId='
+        + encodeURIComponent(fileId)
+        + '&folderId='
+        + encodeURIComponent(folderId);
+}
+
+function loadPdfFavoritesFromServer(){
+
+    return fetch('/api/pdf/favorites')
+        .then(handleDriveResponse)
+        .then(normalizePdfFavorites);
+}
+
+function isFavorite(fileId){
+
+    return pdfFavorites.some(item => item.id === fileId);
+}
+
+function toggleFavorite(pdf){
+
+    fetch(
+        '/api/pdf/favorites/toggle',
+        {
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            body : JSON.stringify({
+                id : pdf.id,
+                folderId : pdf.folderId,
+                name : pdf.name,
+                type : pdf.type || 'pdf'
+            })
+        }
+    )
+    .then(handleDriveResponse)
+    .then(normalizePdfFavorites)
+    .then(favorites => {
+        pdfFavorites = favorites;
+        renderFavorites();
+        refreshVisibleFavoriteButtons(pdf.id);
+    })
+    .catch(error => alert(error.message));
+}
+
+function normalizePdfFavorites(favorites){
+
+    if(!Array.isArray(favorites)){
+        return [];
+    }
+
+    return favorites
+        .filter(item => item && item.id && item.folderId && item.name)
+        .map(item => ({
+            id : item.id,
+            folderId : item.folderId,
+            name : item.name,
+            type : item.type === 'folder' ? 'folder' : 'pdf',
+            addedAt : Number(item.addedAt) || 0
+        }));
+}
+
+function renderFavorites(){
+
+    const favoriteTree = document.getElementById('favoriteTree');
+    const favoriteCount = document.getElementById('favoriteCount');
+    const fragment = document.createDocumentFragment();
+
+    favoriteCount.textContent = pdfFavorites.length + '개';
+
+    if(pdfFavorites.length === 0){
+        const emptyItem = document.createElement('li');
+        emptyItem.className = 'tree-empty favorite-empty';
+        emptyItem.textContent = '즐겨찾기한 PDF가 없습니다.';
+        fragment.appendChild(emptyItem);
+        favoriteTree.replaceChildren(fragment);
+        return;
+    }
+
+    sortedPdfFavorites().forEach(item => {
+        const pdfLi = document.createElement('li');
+        const row = document.createElement('div');
+        const mainElement =
+            item.type === 'folder'
+            ? document.createElement('button')
+            : document.createElement('a');
+        const removeButton = document.createElement('button');
+
+        pdfLi.className =
+            item.type === 'folder' ? 'folder-item' : 'pdf-item';
+        row.className = 'tree-item-row favorite-item-row';
+
+        if(item.type === 'folder'){
+            mainElement.type = 'button';
+            mainElement.className = 'folder-toggle favorite-folder-toggle';
+            mainElement.textContent = item.name;
+            mainElement.addEventListener('click', function(){
+                const childTree = pdfLi.querySelector(':scope > ul');
+
+                if(childTree){
+                    childTree.remove();
+                    mainElement.classList.remove('expanded');
+                    return;
+                }
+
+                mainElement.classList.add('expanded');
+
+                const childUl = document.createElement('ul');
+                childUl.innerHTML =
+                    '<li class="tree-loading">불러오는 중...</li>';
+                pdfLi.appendChild(childUl);
+                loadTree(item.id, childUl);
+            });
+        }else{
+            mainElement.href = buildPdfViewerUrl(item.id, item.folderId);
+            mainElement.className = 'pdf-link';
+            mainElement.textContent = item.name;
+            mainElement.addEventListener('click', openPdfViewerMaximized);
+        }
+
+        removeButton.type = 'button';
+        removeButton.className = 'favorite-toggle active';
+        removeButton.dataset.favoriteId = item.id;
+        removeButton.title = '즐겨찾기 해제';
+        removeButton.setAttribute('aria-label', '즐겨찾기 해제');
+        removeButton.addEventListener('click', function(event){
+            event.stopPropagation();
+            toggleFavorite(item);
+        });
+        updateFavoriteButton(removeButton, item.id);
+
+        row.appendChild(mainElement);
+        row.appendChild(removeButton);
+        pdfLi.appendChild(row);
+        fragment.appendChild(pdfLi);
+    });
+
+    favoriteTree.replaceChildren(fragment);
+}
+
+function sortedPdfFavorites(){
+
+    return [...pdfFavorites].sort((left, right) => {
+        const leftTypeOrder = left.type === 'folder' ? 0 : 1;
+        const rightTypeOrder = right.type === 'folder' ? 0 : 1;
+
+        if(leftTypeOrder !== rightTypeOrder){
+            return leftTypeOrder - rightTypeOrder;
+        }
+
+        return left.name.localeCompare(
+            right.name,
+            'ko',
+            {
+                numeric : true,
+                sensitivity : 'base'
+            }
+        );
+    });
+}
+
+function updateFavoriteButton(button, fileId){
+
+    const active = isFavorite(fileId);
+
+    button.classList.toggle('active', active);
+    button.textContent = active ? '♥' : '♡';
+    button.title = active ? '즐겨찾기 해제' : '즐겨찾기';
+    button.setAttribute(
+        'aria-label',
+        active ? '즐겨찾기 해제' : '즐겨찾기'
+    );
+}
+
+function refreshVisibleFavoriteButtons(fileId){
+
+    document
+    .querySelectorAll('.favorite-toggle[data-favorite-id]')
+    .forEach(button => {
+        if(button.dataset.favoriteId === fileId){
+            updateFavoriteButton(button, fileId);
+        }
     });
 }
 

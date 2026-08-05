@@ -32,7 +32,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/user/css/PdfView.css?v=annotation-highlight-fix-4">
+	<link rel="stylesheet" href="/user/css/PdfView.css?v=viewer-favorites-1">
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
@@ -49,6 +49,13 @@
 	        </div>
 	        <span class="pdf-tree-badge">Drive</span>
 	    </div>
+        <section class="viewer-favorite-section">
+            <div class="viewer-favorite-header">
+                <strong>즐겨찾기</strong>
+                <span id="viewerFavoriteCount">0개</span>
+            </div>
+            <ul id="favoriteTree" class="viewer-favorite-tree"></ul>
+        </section>
 	    <ul id="folderTree">
 	        <li class="viewer-tree-loading">PDF 목록을 불러오는 중입니다.</li>
 	    </ul>
@@ -78,6 +85,15 @@
                 <div id="currentUserInfo"></div>
             </div>
             <div class="comment-header-icons">
+                <button type="button"
+                        id="currentPdfFavoriteBtn"
+                        class="export-btn pdf-favorite-btn"
+                        title="현재 PDF 즐겨찾기 추가"
+                        aria-label="현재 PDF 즐겨찾기 추가"
+                        onclick="toggleCurrentPdfFavorite()">
+                    <span class="favorite-heart-icon" aria-hidden="true">♡</span>
+                    <span>즐겨찾기</span>
+                </button>
                 <button type="button"
                         id="pdfExportBtn"
                         class="export-btn pdf-export-btn"
@@ -236,6 +252,8 @@
 	const OPENED_FOLDERS_KEY = 'openedFolders:' + ROOT_FOLDER_ID;
 	const driveItemCache = new Map();
 	const driveItemRequests = new Map();
+    let currentPdfFavorite = null;
+    let viewerFavorites = [];
 	let openedFolders =
 	    JSON.parse(sessionStorage.getItem(OPENED_FOLDERS_KEY) || '[]');
 	let collapsedCommentIds =
@@ -275,6 +293,7 @@ Promise.all([
         users,
         user.userId
     );
+    reloadViewerFavorites();
     loadComments();
     connectCollaboration();
 })
@@ -769,6 +788,8 @@ setTimeout(loadViewerDriveTree, 900);
 
 // 현재 PDF 표시를 먼저 시작한 뒤 왼쪽 Drive 트리를 늦게 불러온다.
 function loadViewerDriveTree(){
+    reloadViewerFavorites();
+
     fetch(
         '/api/drive/path?fileId='
         + encodeURIComponent(fileId)
@@ -776,6 +797,8 @@ function loadViewerDriveTree(){
     .then(handleDriveResponse)
     .then(pathList => {
 	    currentPathIds = pathList.map(item => item.id);
+        rememberCurrentPdfForFavorite(pathList);
+        updateCurrentPdfFavoriteButton();
         loadTree(
             ROOT_FOLDER_ID,
             document.getElementById('folderTree')
@@ -932,6 +955,237 @@ function renderViewerTree(folderId, parentElement, items){
     }
 
     parentElement.replaceChildren(fragment);
+}
+
+function loadPdfFavorites(){
+
+    return fetch('/api/pdf/favorites')
+        .then(handleJsonResponse)
+        .then(normalizeViewerFavorites);
+}
+
+function getCurrentFolderIdFromUrl(){
+
+    return new URLSearchParams(window.location.search).get('folderId');
+}
+
+function rememberCurrentPdfForFavorite(pathList){
+
+    if(!Array.isArray(pathList) || pathList.length === 0){
+        return;
+    }
+
+    const currentPdf =
+        pathList.find(item => String(item.id) === String(fileId))
+        || pathList[pathList.length - 1];
+    const folder =
+        pathList
+            .slice(0, -1)
+            .reverse()
+            .find(item => item && item.id);
+    const folderId =
+        getCurrentFolderIdFromUrl()
+        || (folder ? folder.id : ROOT_FOLDER_ID);
+
+    currentPdfFavorite = {
+        id : fileId,
+        folderId : folderId,
+        name : currentPdf.name || currentPdf.fileName || 'PDF',
+        type : 'pdf'
+    };
+}
+
+function isCurrentPdfFavorite(){
+
+    if(!currentPdfFavorite){
+        return false;
+    }
+
+    return viewerFavorites.some(
+        item => String(item.id) === String(currentPdfFavorite.id)
+    );
+}
+
+function updateCurrentPdfFavoriteButton(){
+
+    const button =
+        document.getElementById('currentPdfFavoriteBtn');
+
+    if(!button){
+        return;
+    }
+
+    const active = isCurrentPdfFavorite();
+    const icon =
+        button.querySelector('.favorite-heart-icon');
+
+    button.disabled = !currentPdfFavorite;
+    button.classList.toggle('active', active);
+    button.title =
+        active ? '현재 PDF 즐겨찾기 해제' : '현재 PDF 즐겨찾기 추가';
+    button.setAttribute('aria-label', button.title);
+
+    if(icon){
+        icon.textContent = active ? '♥' : '♡';
+    }
+}
+
+function toggleCurrentPdfFavorite(){
+
+    if(!currentPdfFavorite){
+        alert('PDF 정보를 불러온 뒤 다시 시도해주세요.');
+        return;
+    }
+
+    fetch(
+        '/api/pdf/favorites/toggle',
+        {
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            body : JSON.stringify(currentPdfFavorite)
+        }
+    )
+    .then(handleJsonResponse)
+    .then(normalizeViewerFavorites)
+    .then(favorites => {
+        viewerFavorites = favorites;
+        renderViewerFavorites();
+        updateCurrentPdfFavoriteButton();
+    })
+    .catch(error => alert(error.message));
+}
+
+function sortedPdfFavorites(){
+
+    return [...viewerFavorites].sort((left, right) => {
+        const leftTypeOrder = left.type === 'folder' ? 0 : 1;
+        const rightTypeOrder = right.type === 'folder' ? 0 : 1;
+
+        if(leftTypeOrder !== rightTypeOrder){
+            return leftTypeOrder - rightTypeOrder;
+        }
+
+        return left.name.localeCompare(
+            right.name,
+            'ko',
+            {
+                numeric : true,
+                sensitivity : 'base'
+            }
+        );
+    });
+}
+
+function reloadViewerFavorites(){
+
+    loadPdfFavorites()
+    .then(favorites => {
+        viewerFavorites = favorites;
+        renderViewerFavorites();
+        updateCurrentPdfFavoriteButton();
+    })
+    .catch(error => {
+        console.warn('PDF 즐겨찾기를 불러오지 못했습니다.', error);
+    });
+}
+
+function normalizeViewerFavorites(favorites){
+
+    if(!Array.isArray(favorites)){
+        return [];
+    }
+
+    return favorites
+        .filter(item => item && item.id && item.folderId && item.name)
+        .map(item => ({
+            id : item.id,
+            folderId : item.folderId,
+            name : item.name,
+            type : item.type === 'folder' ? 'folder' : 'pdf'
+        }));
+}
+
+function renderViewerFavorites(){
+
+    const favoriteTree = document.getElementById('favoriteTree');
+    const favoriteCount =
+        document.getElementById('viewerFavoriteCount');
+    const favorites = sortedPdfFavorites();
+    const fragment = document.createDocumentFragment();
+
+    favoriteCount.textContent = favorites.length + '개';
+
+    if(favorites.length === 0){
+        const emptyItem = document.createElement('li');
+        emptyItem.className = 'viewer-tree-empty viewer-favorite-empty';
+        emptyItem.textContent = '즐겨찾기한 PDF가 없습니다.';
+        fragment.appendChild(emptyItem);
+        favoriteTree.replaceChildren(fragment);
+        return;
+    }
+
+    favorites.forEach(item => {
+        if(item.type === 'folder'){
+            drawViewerFavoriteFolder(fragment, item);
+        }else{
+            drawViewerFavoritePdf(fragment, item);
+        }
+    });
+
+    favoriteTree.replaceChildren(fragment);
+    updateCurrentPdfFavoriteButton();
+}
+
+function drawViewerFavoriteFolder(target, folder){
+
+    const li = document.createElement('li');
+    const toggle = document.createElement('button');
+
+    toggle.type = 'button';
+    toggle.className = 'viewer-folder-toggle viewer-favorite-item';
+    toggle.textContent = folder.name;
+    toggle.addEventListener('click', function(){
+        const childTree = li.querySelector(':scope > ul');
+
+        if(childTree){
+            childTree.remove();
+            toggle.classList.remove('expanded');
+            return;
+        }
+
+        toggle.classList.add('expanded');
+
+        const childUl = createViewerLoadingTree();
+        li.appendChild(childUl);
+        loadTree(folder.id, childUl);
+    });
+
+    li.appendChild(toggle);
+    target.appendChild(li);
+}
+
+function drawViewerFavoritePdf(target, pdf){
+
+    const li = document.createElement('li');
+    const link = document.createElement('a');
+
+    link.className = 'viewer-pdf-link viewer-favorite-item';
+    link.href =
+        '/pdf/view?fileId='
+        + encodeURIComponent(pdf.id)
+        + '&folderId='
+        + encodeURIComponent(pdf.folderId);
+    link.textContent = pdf.name;
+
+    if(String(pdf.id) === String(fileId)){
+        link.classList.add('active-pdf');
+        link.setAttribute('aria-current', 'page');
+    }
+
+    li.appendChild(link);
+    target.appendChild(li);
 }
 
 // 하위 목록을 기다리는 동안 패널 높이가 튀지 않도록 로딩 행을 표시한다.

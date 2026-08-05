@@ -1,16 +1,22 @@
 package maoomWeb.ire.user.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import maoomWeb.ire.user.dto.PdfFavoriteDto;
 import maoomWeb.ire.user.dto.PdfDto;
-import maoomWeb.ire.user.service.PdfService;
 import maoomWeb.ire.user.service.CurrentUserService;
+import maoomWeb.ire.user.service.PdfFavoriteService;
+import maoomWeb.ire.user.service.PdfService;
 
 /**
  * PDF 리뷰 뷰어가 처음 열릴 때 Google Drive 파일과 내부 PDF 레코드를 연결한다.
@@ -33,12 +39,15 @@ public class PdfController {
             LoggerFactory.getLogger(PdfController.class);
 
     private final PdfService pdfService;
+    private final PdfFavoriteService pdfFavoriteService;
     private final CurrentUserService currentUserService;
 
     public PdfController(
             PdfService pdfService,
+            PdfFavoriteService pdfFavoriteService,
             CurrentUserService currentUserService) {
         this.pdfService = pdfService;
+        this.pdfFavoriteService = pdfFavoriteService;
         this.currentUserService = currentUserService;
     }
 
@@ -62,8 +71,23 @@ public class PdfController {
 
     }
 
-    
-    
-    
-    
+    @GetMapping("/api/pdf/favorites")
+    @ResponseBody
+    public List<PdfFavoriteDto> findFavorites(
+            Authentication authentication) {
+
+        return pdfFavoriteService.findFavorites(
+                currentUserService.getUserId(authentication));
+    }
+
+    @PostMapping("/api/pdf/favorites/toggle")
+    @ResponseBody
+    public List<PdfFavoriteDto> toggleFavorite(
+            @RequestBody PdfFavoriteDto favorite,
+            Authentication authentication) {
+
+        return pdfFavoriteService.toggleFavorite(
+                currentUserService.getUserId(authentication),
+                favorite);
+    }
 }

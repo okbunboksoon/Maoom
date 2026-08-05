@@ -1,5 +1,13 @@
 @import url("/user/css/Font.css");
 
+/*
+ * DITAMAP Builder 계열 화면 스타일.
+ *
+ * 적용 화면: templates/user/ditamapBuilder/*.html
+ * 작업 경로 입력, 트리 테이블, 법규 DITAMAP 편집, 비교/실시간 반영 화면,
+ * 배치 실행 상태 팝업과 저장/중복 검증 표시를 함께 관리한다.
+ */
+
 body{
     margin:0;
     min-height:100vh;
@@ -8,12 +16,14 @@ body{
     font-family:var(--app-font);
 }
 
+/* DITAMAP Builder 기본 팝업/페이지 여백 */
 .ditamap-wrap{
     width:100%;
     padding:24px 28px;
     box-sizing:border-box;
 }
 
+/* 넓은 트리/비교 테이블 화면은 최소 폭을 확보한다. */
 .ditamap-view-body{
     min-width:1480px;
 }

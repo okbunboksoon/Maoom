@@ -1,5 +1,12 @@
 @import url("/user/css/Font.css");
 
+/*
+ * 로그인 화면 스타일.
+ *
+ * 적용 화면: templates/index.html, templates/user/user/userLogin.html 계열.
+ * 중앙 로그인 카드, 로고/타이틀, 입력 필드, 오류 메시지와 로그인 버튼을 담당한다.
+ */
+
 /* 기본 로그인 화면의 레이아웃, 입력 필드와 버튼 스타일 */
 *{
     box-sizing:border-box;
