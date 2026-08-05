@@ -1,0 +1,27 @@
+/*
+ * 도안의뢰서 작성 팝업 보조 스타일.
+ *
+ * 적용 화면: templates/user/artworkRequest/artworkRequest.html
+ * 기본 레이아웃은 BER 반영과 같은 RevisionPopup.css를 사용하고,
+ * 이 파일에서는 PDF 파일 입력 행의 드래그 강조만 보정한다.
+ */
+
+/* BER의 경로 입력 행과 같은 높이로 입력경로/PDF 행을 맞춘다. */
+.artwork-path-row,
+.artwork-file-row{
+    grid-template-columns:1fr;
+    gap:8px;
+}
+
+.artwork-file-row input[type="text"]{
+    cursor:default;
+}
+
+/* PDF 파일을 끌어오는 동안 입력 행을 강조한다. */
+.artwork-file-row.is-dragging{
+    padding:8px;
+    margin:-8px -8px 8px;
+    border:2px dashed #2475d0;
+    border-radius:8px;
+    background:#eef6ff;
+}

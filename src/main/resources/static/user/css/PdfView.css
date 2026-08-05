@@ -1,5 +1,13 @@
 @import url("/user/css/Font.css");
 
+/*
+ * PDF 리뷰 뷰어 스타일.
+ *
+ * 적용 화면: templates/user/pdf/pdfview.html
+ * PDF.js 렌더링 영역, 좌측 탐색기, 댓글/첨부 패널, 하이라이트/도형 오버레이,
+ * 실시간 협업 상태와 모바일 반응형 레이아웃을 담당한다.
+ */
+
 /* PDF 탐색기, PDF.js 뷰어, 댓글 패널과 공동 작업 상태 UI 스타일 */
 html,body{
     margin:0;
@@ -159,20 +167,59 @@ border:1px solid #ddd;
 }
 
 #folderTree,
-#folderTree ul{
+#folderTree ul,
+#favoriteTree,
+#favoriteTree ul{
     margin:0;
     padding:0;
     list-style:none;
 }
 
-#folderTree ul{
+#folderTree ul,
+#favoriteTree ul{
     margin:3px 0 4px 13px;
     padding-left:11px;
     border-left:1px solid #d9e0e8;
 }
 
-#folderTree li{
+#folderTree li,
+#favoriteTree li{
     margin:2px 0;
+}
+
+.viewer-favorite-section{
+    margin:0 0 14px;
+    padding:0 0 12px;
+    border-bottom:1px solid #dfe4ea;
+}
+
+.viewer-favorite-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    margin-bottom:6px;
+}
+
+.viewer-favorite-header strong{
+    color:#22272e;
+    font-size:12px;
+}
+
+.viewer-favorite-header span{
+    flex:0 0 auto;
+    padding:3px 7px;
+    border-radius:999px;
+    background:#edf3fb;
+    color:#526170;
+    font-size:10px;
+    font-weight:700;
+}
+
+.viewer-favorite-empty{
+    border:1px dashed #dfe4ea;
+    background:#fff;
+    text-align:center;
 }
 
 .viewer-folder-toggle,
@@ -249,6 +296,10 @@ border:1px solid #ddd;
 .viewer-pdf-link.active-pdf::before{
     border-color:#fff;
     color:#fff;
+}
+
+.viewer-favorite-item{
+    background:#fffaf0;
 }
 
 .viewer-tree-loading,
@@ -341,6 +392,28 @@ border:1px solid #ddd;
 
 .pdf-export-btn{
     color:#c62828 !important;
+}
+
+.pdf-favorite-btn{
+    color:#6b5a00 !important;
+}
+
+.pdf-favorite-btn.active{
+    border-color:#d8a800;
+    background:#fff8d7;
+    color:#4f4200 !important;
+}
+
+.favorite-heart-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:20px;
+    height:23px;
+    color:currentColor;
+    font-size:18px;
+    font-weight:800;
+    line-height:1;
 }
 
 .excel-export-btn{
@@ -853,11 +926,12 @@ border:1px solid #ddd;
 
 .comment-attachment img{
     display:block;
-    width:86px;
-    height:64px;
+    width:112px;
+    height:86px;
     border:1px solid #d5d8dc;
     border-radius:4px;
-    object-fit:cover;
+    background:#fff;
+    object-fit:contain;
     cursor:zoom-in;
 }
 

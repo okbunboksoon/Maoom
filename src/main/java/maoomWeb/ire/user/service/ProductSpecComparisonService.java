@@ -32,7 +32,7 @@ import maoomWeb.ire.user.dto.ProductSpecComparisonResult;
  * 제품사양서 비교 화면의 요청을 실제 배치 실행으로 연결한다.
  *
  * <p>이 서비스는 정제/BER/QSG와 같은 실행 모델을 따른다. 사용자가 입력한
- * V서버/H서버 경로는 원본 위치로만 사용하고, 실제 배치는 매 실행마다 생성하는
+ * V서버/H서버/G서버 경로는 원본 위치로만 사용하고, 실제 배치는 매 실행마다 생성하는
  * {@code %USERPROFILE%\.maoomtool\product-spec-comparison-*} 작업 폴더에서
  * 수행한다. 이렇게 해야 원본 폴더와 배치 중간 산출물이 섞이지 않고, 실행 후
  * 작업 폴더를 안전하게 삭제할 수 있다.</p>
@@ -65,12 +65,14 @@ public class ProductSpecComparisonService {
     private static final Duration BATCH_TIMEOUT = Duration.ofMinutes(30);
     private static final Charset BATCH_OUTPUT_CHARSET =
             Charset.forName("MS949");
+    private static final String G_SERVER_ROOT =
+            "\\\\192.168.10.221\\kia_om25";
     private static final DateTimeFormatter RUN_FORMAT =
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss-SSS");
     private static final Pattern SAFE_FILE_NAME =
             Pattern.compile("[^\\\\/:*?\"<>|]+\\.(?i:xlsx|xls)");
     private static final Pattern SAFE_KEYS =
-            Pattern.compile("(?i:k\\d+)(\\s+(?i:k\\d+))*");
+            Pattern.compile("(?i:[a-z]\\d+)(\\s+(?i:[a-z]\\d+))*");
     private static final String[] REQUIRED_FILES = {
             SPEC_FILTER_BATCH,
             COMPARISON_BATCH,
@@ -131,6 +133,7 @@ public class ProductSpecComparisonService {
             logs.add("입력 경로: " + inputDirectory);
             logs.add("Before 파일: " + beforeFile.getFileName());
             logs.add("After 파일: " + afterFile.getFileName());
+            logs.add("Extract keys: " + formatExtractKeys(keys));
 
             copyAndCreateXml(
                     workspace,
@@ -185,7 +188,7 @@ public class ProductSpecComparisonService {
             throw new IllegalArgumentException("입력 경로를 입력해 주세요.");
         }
 
-        Path inputDirectory = Path.of(inputPath.trim())
+        Path inputDirectory = Path.of(toServerInputPath(inputPath))
                 .toAbsolutePath()
                 .normalize();
         if (!Files.isDirectory(inputDirectory)) {
@@ -193,6 +196,25 @@ public class ProductSpecComparisonService {
                     "입력 경로를 찾지 못했습니다: " + inputDirectory);
         }
         return inputDirectory;
+    }
+
+    String toServerInputPath(String inputPath) {
+        String trimmed = inputPath.trim();
+        if (trimmed.length() >= 2
+                && trimmed.substring(0, 2).equalsIgnoreCase("G:")) {
+            if (trimmed.length() == 2) {
+                return G_SERVER_ROOT;
+            }
+            char separator = trimmed.charAt(2);
+            if (separator == '\\' || separator == '/') {
+                return G_SERVER_ROOT + trimmed.substring(2);
+            }
+        }
+        return trimmed;
+    }
+
+    String formatExtractKeys(String keys) {
+        return keys == null || keys.isBlank() ? "ALL" : keys;
     }
 
     /**
@@ -228,7 +250,7 @@ public class ProductSpecComparisonService {
         return inputFile;
     }
 
-    /** 전체 추출이면 빈 문자열, 특정 Key 추출이면 {@code K1 K2 K3} 형식으로 정규화한다. */
+    /** 전체 추출이면 빈 문자열, 특정 Key 추출이면 {@code A4 I3 C1 C2} 형식으로 정규화한다. */
     private String normalizeKeys(ProductSpecComparisonRequest request) {
         if (request == null
                 || request.keyMode() == null
@@ -245,7 +267,7 @@ public class ProductSpecComparisonService {
         }
         if (!SAFE_KEYS.matcher(keys).matches()) {
             throw new IllegalArgumentException(
-                    "Key는 K1 K2 K3 형식으로 입력해 주세요.");
+                    "Key는 A4 I3 C1 C2 형식으로 입력해 주세요.");
         }
 
         return keys.toUpperCase(Locale.ROOT);
@@ -293,7 +315,7 @@ public class ProductSpecComparisonService {
      * 제품사양서 하나를 temp에 복사하고 {@code 02_Spec_Filter_To_Xml.bat}를 실행해 XML 하나를 만든다.
      *
      * <p>Before와 After 모두 같은 {@code keys} 값을 사용한다. 전체 추출이면 빈 Enter를,
-     * 특정 Key 추출이면 {@code K1 K2} 같은 값을 배치의 {@code set /p KEYS} 입력으로 흘려보낸다.</p>
+     * 특정 Key 추출이면 {@code A4 I3 C1 C2} 같은 값을 배치의 {@code set /p KEYS} 입력으로 흘려보낸다.</p>
      */
     private void copyAndCreateXml(
             Path workspace,

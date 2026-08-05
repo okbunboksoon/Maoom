@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="maoomWeb.ire.user.mapper.PdfFavoriteMapper">
+
+    <resultMap id="PdfFavoriteResultMap"
+               type="maoomWeb.ire.user.dto.PdfFavoriteDto">
+        <id property="favoriteId" column="favorite_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="id" column="item_id"/>
+        <result property="folderId" column="folder_id"/>
+        <result property="name" column="item_name"/>
+        <result property="type" column="item_type"/>
+        <result property="createDt" column="create_dt"/>
+    </resultMap>
+
+    <select id="findByUserId" resultMap="PdfFavoriteResultMap">
+        SELECT
+            favorite_id,
+            user_id,
+            item_id,
+            folder_id,
+            item_name,
+            item_type,
+            create_dt
+        FROM tb_pdf_favorite
+        WHERE user_id = #{userId}
+        ORDER BY
+            CASE WHEN item_type = 'folder' THEN 0 ELSE 1 END,
+            item_name ASC
+    </select>
+
+    <select id="existsFavorite" resultType="int">
+        SELECT COUNT(*)
+        FROM tb_pdf_favorite
+        WHERE user_id = #{userId}
+          AND item_id = #{itemId}
+    </select>
+
+    <insert id="insertFavorite">
+        INSERT INTO tb_pdf_favorite
+        (
+            user_id,
+            item_id,
+            folder_id,
+            item_name,
+            item_type
+        )
+        VALUES
+        (
+            #{userId},
+            #{id},
+            #{folderId},
+            #{name},
+            #{type}
+        )
+        ON DUPLICATE KEY UPDATE
+            folder_id = VALUES(folder_id),
+            item_name = VALUES(item_name),
+            item_type = VALUES(item_type)
+    </insert>
+
+    <delete id="deleteFavorite">
+        DELETE FROM tb_pdf_favorite
+        WHERE user_id = #{userId}
+          AND item_id = #{itemId}
+    </delete>
+</mapper>

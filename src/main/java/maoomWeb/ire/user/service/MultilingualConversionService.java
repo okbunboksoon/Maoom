@@ -25,6 +25,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -67,6 +68,18 @@ public class MultilingualConversionService {
     private static final String SHARED_XSL_ROOT = "xsl";
     private static final String SHARED_LIB_ROOT = "lib";
 
+    private final ReplaceDarkSymbolService replaceDarkSymbolService;
+
+    public MultilingualConversionService() {
+        this(null);
+    }
+
+    @Autowired
+    public MultilingualConversionService(
+            ReplaceDarkSymbolService replaceDarkSymbolService) {
+        this.replaceDarkSymbolService = replaceDarkSymbolService;
+    }
+
     /** 다국어 변환 버튼 한 번에 수행되는 전체 파이프라인. */
     public MultilingualRunResult run(MultilingualRunRequest request) {
         List<String> logs = new ArrayList<>();
@@ -84,6 +97,7 @@ public class MultilingualConversionService {
             copySharedResourceDirectory(SHARED_BAT_ROOT, workspace, false);
             copySharedResourceDirectory(SHARED_LIB_ROOT, workspace.resolve("lib"));
             copySharedXslDirectory(workspace.resolve("xsl"));
+            writeReplaceDarkSymbolXmlFromDatabase(workspace.resolve("xsl"));
             Files.createDirectories(workspace.resolve("topics"));
 
             Path source = resolveTopicsSource(input);
@@ -439,6 +453,16 @@ public class MultilingualConversionService {
 
     private void copySharedXslDirectory(Path target) throws IOException {
         copySharedResourceDirectory(SHARED_XSL_ROOT, target);
+    }
+
+    private void writeReplaceDarkSymbolXmlFromDatabase(Path xslDirectory)
+            throws IOException {
+
+        if(replaceDarkSymbolService == null){
+            return;
+        }
+
+        replaceDarkSymbolService.writeXml(xslDirectory);
     }
 
     private void copySharedResourceDirectory(String resourceRoot, Path target)

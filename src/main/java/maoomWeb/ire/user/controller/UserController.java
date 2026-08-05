@@ -318,6 +318,12 @@ public class UserController {
         return "user/productSpecComparison/productSpecComparison";
     }
 
+    /** 도안의뢰서 작성 카드가 여는 입력 팝업 화면을 표시한다. */
+    @GetMapping("/pdf/artwork-request")
+    public String artworkRequest() {
+        return "user/artworkRequest/artworkRequest";
+    }
+
     /**
      * 법규 Ditamap Builder 카드가 여는 작업 경로 입력 화면.
      *

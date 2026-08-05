@@ -22,6 +22,7 @@ import java.util.stream.Stream;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import maoomWeb.ire.user.dto.RevisionOptionDto;
@@ -112,14 +113,22 @@ public class RevisionPipelineService {
     );
 
     private final Path toolDirectory;
+    private final ReplaceDarkSymbolService replaceDarkSymbolService;
 
     /**
      * 클래스패스의 revision-tool을 실행 가능한 로컬 경로로 준비한다.
      * IDE 실행은 원본 폴더를 쓰고, JAR 실행은 임시 폴더에 리소스를 풀어 사용한다.
      */
     public RevisionPipelineService() {
+        this(null);
+    }
+
+    @Autowired
+    public RevisionPipelineService(
+            ReplaceDarkSymbolService replaceDarkSymbolService) {
         try {
             this.toolDirectory = prepareToolDirectory();
+            this.replaceDarkSymbolService = replaceDarkSymbolService;
         } catch (IOException exception) {
             throw new IllegalStateException(
                     "정제 도구 리소스를 준비하지 못했습니다.", exception);
@@ -159,6 +168,7 @@ public class RevisionPipelineService {
             copySharedResourceDirectory(SHARED_BAT_ROOT, workspace, false);
             copySharedResourceDirectory(SHARED_LIB_ROOT, workspace.resolve("lib"));
             copySharedXslDirectory(workspace.resolve("xsl"));
+            writeReplaceDarkSymbolXmlFromDatabase(workspace.resolve("xsl"));
             Files.createDirectories(workspace.resolve("temp"));
             Files.createDirectories(workspace.resolve("topics"));
             Files.createDirectories(workspace.resolve("chapter"));
@@ -921,6 +931,16 @@ public class RevisionPipelineService {
 
     private void copySharedXslDirectory(Path target) throws IOException {
         copySharedResourceDirectory(SHARED_XSL_ROOT, target);
+    }
+
+    private void writeReplaceDarkSymbolXmlFromDatabase(Path xslDirectory)
+            throws IOException {
+
+        if(replaceDarkSymbolService == null){
+            return;
+        }
+
+        replaceDarkSymbolService.writeXml(xslDirectory);
     }
 
     private void copySharedResourceDirectory(String resourceRoot, Path target)

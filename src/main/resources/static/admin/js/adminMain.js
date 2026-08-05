@@ -28,6 +28,12 @@ const qsgDbState = {
     filteredItems: []
 };
 
+const replaceDarkSymbolState = {
+    items: [],
+    filteredItems: [],
+    editingCell: null
+};
+
 const projectLogState = {
     items: [],
     filteredItems: []
@@ -76,6 +82,8 @@ const berAsisTobeSection =
 // QSG DB 메뉴 클릭 시 보여줄 관리자 섹션. 실제 HTML은 admin/section/qsgDb.html에 있다.
 const qsgDbSection =
     document.getElementById('qsgDbSection');
+const replaceDarkSymbolSection =
+    document.getElementById('replaceDarkSymbolSection');
 const projectLogSection =
     document.getElementById('projectLogSection');
 const userSection =
@@ -139,6 +147,26 @@ const qsgLangCount =
     document.getElementById('qsgLangCount');
 const qsgFilteredCount =
     document.getElementById('qsgFilteredCount');
+const replaceDarkSymbolTableBody =
+    document.getElementById('replaceDarkSymbolTableBody');
+const replaceDarkSymbolSummary =
+    document.getElementById('replaceDarkSymbolSummary');
+const replaceDarkSymbolRefresh =
+    document.getElementById('replaceDarkSymbolRefresh');
+const replaceDarkSymbolCreateForm =
+    document.getElementById('replaceDarkSymbolCreateForm');
+const replaceDarkSymbolFrom =
+    document.getElementById('replaceDarkSymbolFrom');
+const replaceDarkSymbolTo =
+    document.getElementById('replaceDarkSymbolTo');
+const replaceSymbolTotalCount =
+    document.getElementById('replaceSymbolTotalCount');
+const replaceSymbolFromCount =
+    document.getElementById('replaceSymbolFromCount');
+const replaceSymbolToCount =
+    document.getElementById('replaceSymbolToCount');
+const replaceSymbolFilteredCount =
+    document.getElementById('replaceSymbolFilteredCount');
 const logTotalCount =
     document.getElementById('logTotalCount');
 const logSuccessCount =
@@ -179,6 +207,7 @@ let colorCheckDataTable = null;
 let berAsisTobeDataTable = null;
 // QSG DB 테이블의 DataTables 인스턴스. 다시 렌더링할 때 destroy 후 새로 만든다.
 let qsgDbDataTable = null;
+let replaceDarkSymbolDataTable = null;
 let projectLogDataTable = null;
 let userDataTable = null;
 
@@ -379,11 +408,13 @@ function switchAdminView(view){
     const isBerAsisTobeView = view === 'ber-asis-tobe';
     // 사이드바의 data-admin-view="qsg-db" 버튼과 연결되는 QSG DB 화면 분기.
     const isQsgDbView = view === 'qsg-db';
+    const isReplaceDarkSymbolView = view === 'replace-dark-symbol';
     const isLogView = view === 'project-logs';
     const isUserView = view === 'users';
     colorCheckSection.hidden = !isColorCheckView;
     berAsisTobeSection.hidden = !isBerAsisTobeView;
     qsgDbSection.hidden = !isQsgDbView;
+    replaceDarkSymbolSection.hidden = !isReplaceDarkSymbolView;
     projectLogSection.hidden = !isLogView;
     userSection.hidden = !isUserView;
 
@@ -403,6 +434,10 @@ function switchAdminView(view){
      */
     if(isQsgDbView && qsgDbState.items.length === 0){
         loadQsgDbItems();
+    }
+    if(isReplaceDarkSymbolView
+            && replaceDarkSymbolState.items.length === 0){
+        loadReplaceDarkSymbolItems();
     }
     if(isLogView && projectLogState.items.length === 0){
         loadProjectLogs();
@@ -471,6 +506,14 @@ function updateQsgDbFilteredCount(){
     const info = qsgDbDataTable.page.info();
     // DataTables 검색어가 적용된 후 화면에 남은 행 수를 상단 요약/카드에 반영한다.
     updateQsgDbSummary(info.recordsDisplay);
+}
+
+function updateReplaceDarkSymbolFilteredCount(){
+    if(!replaceDarkSymbolDataTable){
+        return;
+    }
+    const info = replaceDarkSymbolDataTable.page.info();
+    updateReplaceDarkSymbolSummary(info.recordsDisplay);
 }
 
 function updateUserFilteredCount(){
@@ -554,6 +597,31 @@ function initQsgDbDataTable(){
         drawCallback: updateQsgDbFilteredCount
     });
     updateQsgDbFilteredCount();
+}
+
+function initReplaceDarkSymbolDataTable(){
+    if(!window.jQuery || !jQuery.fn || !jQuery.fn.DataTable){
+        updateReplaceDarkSymbolSummary(
+                replaceDarkSymbolState.filteredItems.length);
+        return;
+    }
+
+    replaceDarkSymbolDataTable = $('#replaceDarkSymbolTable').DataTable({
+        language: dataTableLanguage(),
+        pageLength: 50,
+        autoWidth: false,
+        order: [ [0, 'asc'] ],
+        columnDefs: [
+            {targets: [0, 3, 4], className: 'text-center'},
+            {targets: [4], orderable: false, searchable: false},
+            {targets: [0], width: '70px'},
+            {targets: [1, 2], width: '320px'},
+            {targets: [3], width: '140px'},
+            {targets: [4], width: '90px'}
+        ],
+        drawCallback: updateReplaceDarkSymbolFilteredCount
+    });
+    updateReplaceDarkSymbolFilteredCount();
 }
 
 function initColorCheckDataTable(){
@@ -1112,6 +1180,275 @@ function applyQsgDbFilter(){
     qsgDbState.filteredItems = [...qsgDbState.items];
     updateQsgDbSummary(qsgDbState.filteredItems.length);
     renderQsgDbTable();
+}
+
+function renderReplaceDarkSymbolTable(){
+    destroyDataTable(replaceDarkSymbolDataTable);
+    replaceDarkSymbolDataTable = null;
+    replaceDarkSymbolTableBody.innerHTML = '';
+
+    replaceDarkSymbolState.filteredItems.forEach((item, index) => {
+        const row = document.createElement('tr');
+        const values = [
+            index + 1,
+            safeText(item.fromSymbol),
+            safeText(item.toSymbol),
+            formatDateTime(item.updatedAt),
+            ''
+        ];
+
+        values.forEach((value, columnIndex) => {
+            const cell = document.createElement('td');
+
+            if(columnIndex === 1 || columnIndex === 2){
+                cell.className = 'ber-long-text-cell';
+                const field = columnIndex === 1 ? 'fromSymbol' : 'toSymbol';
+                const textBox = document.createElement('div');
+                textBox.className = 'ber-clamped-text';
+                textBox.textContent = value;
+                cell.appendChild(textBox);
+                cell.title = value === '-'
+                    ? '더블클릭해서 수정'
+                    : value + '\n\n더블클릭해서 수정';
+                cell.addEventListener('dblclick', () => {
+                    startReplaceDarkSymbolCellEdit(cell, item, field);
+                });
+            }else if(columnIndex === 4){
+                const actions = document.createElement('div');
+                actions.className = 'admin-row-actions';
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'admin-icon-btn danger';
+                deleteButton.type = 'button';
+                deleteButton.title = '삭제';
+                deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+                deleteButton.addEventListener(
+                    'click',
+                    () => deleteReplaceDarkSymbolItem(item));
+                actions.appendChild(deleteButton);
+                cell.appendChild(actions);
+            }else{
+                cell.textContent = value;
+            }
+
+            row.appendChild(cell);
+        });
+
+        replaceDarkSymbolTableBody.appendChild(row);
+    });
+    initReplaceDarkSymbolDataTable();
+}
+
+function startReplaceDarkSymbolCellEdit(cell, item, field){
+    if(replaceDarkSymbolState.editingCell){
+        return;
+    }
+
+    const originalValue = item[field] || '';
+    replaceDarkSymbolState.editingCell = cell;
+    cell.innerHTML = '';
+    cell.title = '';
+
+    const editor = document.createElement('input');
+    editor.className = 'admin-inline-editor';
+    editor.type = 'text';
+    editor.value = originalValue;
+
+    let closed = false;
+    const finish = async shouldSave => {
+        if(closed){
+            return;
+        }
+        closed = true;
+        const value = editor.value;
+
+        if(!shouldSave || value === originalValue){
+            restoreReplaceDarkSymbolCell(cell, originalValue);
+            replaceDarkSymbolState.editingCell = null;
+            return;
+        }
+
+        try{
+            const updatedItem =
+                await saveReplaceDarkSymbolField(item, field, value);
+            Object.assign(item, updatedItem);
+            restoreReplaceDarkSymbolCell(
+                    cell,
+                    updatedItem[field] || '');
+        }catch(error){
+            restoreReplaceDarkSymbolCell(cell, originalValue);
+            replaceDarkSymbolSummary.textContent =
+                    error.message || 'Replace Symbol 항목을 저장하지 못했습니다.';
+        }finally{
+            replaceDarkSymbolState.editingCell = null;
+        }
+    };
+
+    editor.addEventListener('keydown', event => {
+        if(event.key === 'Escape'){
+            event.preventDefault();
+            finish(false);
+        }
+        if((event.ctrlKey || event.metaKey) && event.key === 'Enter'){
+            event.preventDefault();
+            editor.blur();
+        }
+    });
+    editor.addEventListener('blur', () => finish(true));
+    cell.appendChild(editor);
+    editor.focus();
+    editor.select();
+}
+
+function restoreReplaceDarkSymbolCell(cell, value){
+    cell.innerHTML = '';
+    const textBox = document.createElement('div');
+    textBox.className = 'ber-clamped-text';
+    const displayValue = value || '-';
+    textBox.textContent = displayValue;
+    cell.appendChild(textBox);
+    cell.title = displayValue === '-'
+        ? '더블클릭해서 수정'
+        : displayValue + '\n\n더블클릭해서 수정';
+}
+
+async function saveReplaceDarkSymbolField(item, field, value){
+    const payload = {
+        fromSymbol:item.fromSymbol || '',
+        toSymbol:item.toSymbol || ''
+    };
+    payload[field] = value;
+
+    const response = await fetch('/admin/replace-dark-symbol/items', {
+        method:'PUT',
+        headers:{
+            'Content-Type':'application/json',
+            'Accept':'application/json'
+        },
+        body:JSON.stringify(payload)
+    });
+
+    if(!response.ok){
+        throw new Error(await response.text());
+    }
+
+    return response.json();
+}
+
+function updateReplaceDarkSymbolSummary(showing){
+    const total = replaceDarkSymbolState.items.length;
+    const fromCount = new Set(
+        replaceDarkSymbolState.items
+            .map(item => item.fromSymbol)
+            .filter(Boolean)
+    ).size;
+    const toCount = new Set(
+        replaceDarkSymbolState.items
+            .map(item => item.toSymbol)
+            .filter(Boolean)
+    ).size;
+
+    replaceDarkSymbolSummary.textContent = total === showing
+        ? '총 ' + total.toLocaleString('ko-KR') + '건'
+        : '총 ' + total.toLocaleString('ko-KR') + '건 중 '
+            + showing.toLocaleString('ko-KR') + '건 표시';
+    replaceSymbolTotalCount.textContent = total.toLocaleString('ko-KR');
+    replaceSymbolFromCount.textContent = fromCount.toLocaleString('ko-KR');
+    replaceSymbolToCount.textContent = toCount.toLocaleString('ko-KR');
+    replaceSymbolFilteredCount.textContent = showing.toLocaleString('ko-KR');
+}
+
+function applyReplaceDarkSymbolFilter(){
+    replaceDarkSymbolState.filteredItems = [...replaceDarkSymbolState.items];
+    updateReplaceDarkSymbolSummary(
+            replaceDarkSymbolState.filteredItems.length);
+    renderReplaceDarkSymbolTable();
+}
+
+async function loadReplaceDarkSymbolItems(){
+    replaceDarkSymbolRefresh.disabled = true;
+    replaceDarkSymbolSummary.textContent = '데이터를 불러오는 중입니다.';
+
+    try{
+        const response = await fetch('/admin/replace-dark-symbol/items', {
+            headers:{
+                'Accept':'application/json'
+            }
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        replaceDarkSymbolState.items = await response.json();
+        applyReplaceDarkSymbolFilter();
+    }catch(error){
+        replaceDarkSymbolTableBody.innerHTML = '';
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.colSpan = 5;
+        cell.className = 'admin-empty-cell';
+        cell.textContent = 'Replace Symbol DB를 불러오지 못했습니다.';
+        row.appendChild(cell);
+        replaceDarkSymbolTableBody.appendChild(row);
+        replaceDarkSymbolSummary.textContent =
+            error.message || '조회 중 오류가 발생했습니다.';
+    }finally{
+        replaceDarkSymbolRefresh.disabled = false;
+    }
+}
+
+async function createReplaceDarkSymbolItem(event){
+    event.preventDefault();
+    const fromSymbol = replaceDarkSymbolFrom.value.trim();
+    const toSymbol = replaceDarkSymbolTo.value.trim();
+
+    try{
+        const response = await fetch('/admin/replace-dark-symbol/items', {
+            method:'PUT',
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                fromSymbol:fromSymbol,
+                toSymbol:toSymbol
+            })
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        replaceDarkSymbolCreateForm.reset();
+        await loadReplaceDarkSymbolItems();
+    }catch(error){
+        replaceDarkSymbolSummary.textContent =
+            error.message || 'Replace Symbol 항목을 추가하지 못했습니다.';
+    }
+}
+
+async function deleteReplaceDarkSymbolItem(item){
+    const fromSymbol = item.fromSymbol || '';
+
+    if(!fromSymbol || !confirm(fromSymbol + ' 항목을 삭제할까요?')){
+        return;
+    }
+
+    try{
+        const response = await fetch(
+            '/admin/replace-dark-symbol/items/'
+                + encodeURIComponent(fromSymbol),
+            {method:'DELETE'});
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        await loadReplaceDarkSymbolItems();
+    }catch(error){
+        replaceDarkSymbolSummary.textContent =
+            error.message || '삭제하지 못했습니다.';
+    }
 }
 
 async function loadQsgDbItems(){
@@ -1964,6 +2301,10 @@ qsgDbRefresh.addEventListener('click', loadQsgDbItems);
 qsgDbImportForm.addEventListener('submit', importQsgDbExcel);
 qsgDbImportButton.addEventListener('click', () => qsgDbImportFile.click());
 qsgDbImportFile.addEventListener('change', importQsgDbExcel);
+replaceDarkSymbolRefresh.addEventListener('click', loadReplaceDarkSymbolItems);
+replaceDarkSymbolCreateForm.addEventListener(
+    'submit',
+    createReplaceDarkSymbolItem);
 window.addEventListener('message', function(event){
     if(event.origin !== window.location.origin){
         return;

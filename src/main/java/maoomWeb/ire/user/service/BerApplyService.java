@@ -90,14 +90,18 @@ public class BerApplyService {
     private final PathMatchingResourcePatternResolver resourceResolver =
             new PathMatchingResourcePatternResolver();
     private final BerAsisTobeXmlService berAsisTobeXmlService;
+    private final ReplaceDarkSymbolService replaceDarkSymbolService;
 
     public BerApplyService() {
-        this(null);
+        this(null, null);
     }
 
     @Autowired
-    public BerApplyService(BerAsisTobeXmlService berAsisTobeXmlService) {
+    public BerApplyService(
+            BerAsisTobeXmlService berAsisTobeXmlService,
+            ReplaceDarkSymbolService replaceDarkSymbolService) {
         this.berAsisTobeXmlService = berAsisTobeXmlService;
+        this.replaceDarkSymbolService = replaceDarkSymbolService;
     }
 
     /**
@@ -132,6 +136,7 @@ public class BerApplyService {
             // JAR 안에 포함된 revision-tool 전체를 일반 파일로 풀어 BAT가 접근할 수 있게 한다.
             prepareToolDirectory(workDirectory);
             writeBerAsisTobeXmlFromDatabase(workDirectory);
+            writeReplaceDarkSymbolXmlFromDatabase(workDirectory);
             copyDirectory(
                     sourceTopicsDirectory,
                     workDirectory.resolve("topics"),
@@ -338,6 +343,16 @@ public class BerApplyService {
 
         berAsisTobeXmlService.writeRegionXmlFiles(
                 workDirectory.resolve("xsl"));
+    }
+
+    private void writeReplaceDarkSymbolXmlFromDatabase(Path workDirectory)
+            throws IOException {
+
+        if(replaceDarkSymbolService == null){
+            return;
+        }
+
+        replaceDarkSymbolService.writeXml(workDirectory.resolve("xsl"));
     }
 
     private void copySharedXslDirectory(Path target) throws IOException {

@@ -1,5 +1,12 @@
 @import url("/user/css/Font.css");
 
+/*
+ * 사용자 메인 런처 화면 스타일.
+ *
+ * 적용 화면: templates/user/userMain.html
+ * 기능 카드 그리드, 검색/탭, 계정 메뉴, 프로필 이미지 변경 모달과 관리자 진입 버튼을 담당한다.
+ */
+
 :root{
     --app-font:"LINESeedKR", "LINE Seed Sans KR", Pretendard, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
 }
