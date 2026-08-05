@@ -330,6 +330,12 @@ public class UserController {
         return "user/ditamapBuilder/ditamapBuilder";
     }
 
+    /** Index 추출 카드가 여는 DITA Index 검토 엑셀 생성 팝업 화면을 표시한다. */
+    @GetMapping("/index-extract")
+    public String indexExtract() {
+        return "user/indexExtract/index";
+    }
+
     @GetMapping("/ditamap-builder/view")
     /** DITAMAP Builder 트리 조회 결과 화면을 표시한다. */
     public String ditamapBuilderView() {

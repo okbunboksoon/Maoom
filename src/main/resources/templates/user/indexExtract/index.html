@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- Index 추출: 서버가 접근 가능한 DITA 경로와 출력 레벨을 받아 검토용 엑셀을 생성한다. -->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 추출</title>
+    <link rel="stylesheet" href="/user/css/RevisionPopup.css">
+</head>
+<body class="ber-popup-body">
+<main class="revision-page revision-estimate-page">
+    <header class="revision-header">
+        <div>
+            <h1>Index 추출</h1>
+            <p>DITA 경로를 작업 폴더로 복사한 뒤 인덱스 검토 엑셀을 생성합니다.</p>
+        </div>
+    </header>
+
+    <section class="revision-panel" aria-label="Index 추출 배치 실행">
+        <div class="step-title">
+            <span>1</span>
+            <div>
+                <strong>입력 경로 및 레벨 선택</strong>
+                <small>서버 PC에서 접근할 수 있는 경로와 출력할 목차 레벨을 입력하세요.</small>
+            </div>
+        </div>
+
+        <div class="path-row ber-path-row full-path-row">
+            <label for="ditaPath">입력경로</label>
+            <input id="ditaPath" type="text"
+                   placeholder="경로를 입력하세요" autocomplete="off">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="path-row ber-path-row full-path-row">
+            <label for="indexLevel">인덱스 레벨</label>
+            <input id="indexLevel" type="text" placeholder="추출할 인덱스의 레벨을 입력하세요"
+                   inputmode="numeric" autocomplete="off">
+            <span></span>
+            <span></span>
+        </div>
+
+        <footer class="popup-actions">
+            <button id="runIndexBtn" class="action-button primary" type="button">실행</button>
+            <button class="action-button" type="button" onclick="window.close()">취소</button>
+        </footer>
+
+        <section id="resultPanel" class="result-panel" hidden aria-live="polite">
+            <div class="result-heading">
+                <span id="statusIndicator" class="status-indicator"></span>
+                <strong id="resultTitle">실행 준비 중</strong>
+            </div>
+            <p id="resultMessage"></p>
+        </section>
+    </section>
+</main>
+
+<script>
+const ditaPathInput = document.getElementById('ditaPath');
+const indexLevelInput = document.getElementById('indexLevel');
+const runIndexBtn = document.getElementById('runIndexBtn');
+const resultPanel = document.getElementById('resultPanel');
+const statusIndicator = document.getElementById('statusIndicator');
+const resultTitle = document.getElementById('resultTitle');
+const resultMessage = document.getElementById('resultMessage');
+
+runIndexBtn.addEventListener('click', runIndexExtract);
+[ditaPathInput, indexLevelInput].forEach(input => {
+    input.addEventListener('keydown', event => {
+        if(event.key === 'Enter'){
+            runIndexExtract();
+        }
+    });
+});
+
+async function runIndexExtract(){
+    const ditaPath = ditaPathInput.value.trim();
+    const indexLevel = Number(indexLevelInput.value || 10);
+
+    if(!ditaPath){
+        showResult('error', '경로 확인 필요', '입력 경로를 입력해 주세요.');
+        ditaPathInput.focus();
+        return;
+    }
+
+    if(!Number.isInteger(indexLevel) || indexLevel < 1 || indexLevel > 99){
+        showResult('error', '레벨 확인 필요', '레벨은 1~99 사이 숫자로 입력해 주세요.');
+        indexLevelInput.focus();
+        return;
+    }
+
+    setRunning(true);
+    showResult('running', 'Index 추출 실행 중', '완료될 때까지 창을 닫지 마세요.');
+
+    try{
+        const response = await fetch('/api/index-extract/run', {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({ ditaPath, indexLevel })
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text() || 'Index 추출에 실패했습니다.');
+        }
+
+        const result = await response.json();
+        showResult('success', 'Index 추출 완료', result.reportPath);
+    }catch(error){
+        showResult(
+            'error',
+            'Index 추출 실패',
+            error.message || 'Index 추출에 실패했습니다.');
+    }finally{
+        setRunning(false);
+    }
+}
+
+function setRunning(running){
+    runIndexBtn.disabled = running;
+    runIndexBtn.textContent = running ? '추출 중...' : '실행';
+    ditaPathInput.disabled = running;
+    indexLevelInput.disabled = running;
+}
+
+function showResult(type, title, message){
+    resultPanel.hidden = false;
+    resultPanel.dataset.status = type;
+    statusIndicator.classList.toggle('is-running', type === 'running');
+    resultTitle.textContent = title;
+    resultMessage.textContent = message;
+    resizeIndexPopupForResult();
+}
+
+function resizeIndexPopupForResult(){
+    try{
+        window.resizeTo(680, 600);
+    }catch(error){
+        // 브라우저가 팝업 크기 변경을 막으면 현재 창 크기를 그대로 사용한다.
+    }
+}
+</script>
+</body>
+</html>

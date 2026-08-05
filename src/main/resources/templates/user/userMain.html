@@ -346,7 +346,72 @@ const launcherMenus = [
         category:'EXCEL',
         icon:'fa-solid fa-list',
         action:openProductSpecComparePopup
+    },
+    {
+        title:'Index 추출',
+        description:'DITA 인덱스 검토 엑셀 생성',
+        category:'DITA',
+        icon:'fas fa-list-ol',
+        action:openIndexExtractPopup
+    },
+    /**
+    {
+        title:'법규ID 반영',
+        description:'코드작성 중',
+        category:'DITA',
+        icon:'fas fa-times-circle',
+        action:openProductSpecComparePopup
+    },
+    {
+        title:'인쇄배열표 생성',
+        description:'코드작성 중 \n 초판 개정 페이지 계산',
+        category:'PDF',
+        icon:'fas fa-times-circle',
+        action:openProductSpecComparePopup
+    },
+    {
+        title:'금칙어 검사',
+        description:'코드작성 중',
+        category:'DITA',
+        icon:'fas fa-times-circle',
+        action:openProductSpecComparePopup
+    },
+    {
+        title:'도안의뢰서 작성',
+        description:'코드작성 중',
+        category:'PDF',
+        icon:'fas fa-times-circle',
+        action:openProductSpecComparePopup
+    },
+    {
+        title:'부서명 검수',
+        description:'코드작성 중',
+        category:'PDF',
+        icon:'fas fa-times-circle',
+        action:openProductSpecComparePopup
+    },
+    {
+        title:'문장 및 노트 치환',
+        description:'코드작성 중',
+        category:'DITA',
+        icon:'fas fa-times-circle',
+        action:openProductSpecComparePopup
+    },
+    {
+        title:'마이그레이션..?',
+        description:'코드작성 중',
+        category:'XML',
+        icon:'fas fa-times-circle',
+        action:openProductSpecComparePopup
+    },
+    {
+        title:'협조문 자동 완성',
+        description:'코드작성 중',
+        category:'PDF',
+        icon:'fas fa-times-circle',
+        action:openProductSpecComparePopup
     }
+        **/
 ];
 
 let activeMenuCategory = '전체';
@@ -832,6 +897,22 @@ function openDitamapBuilderPopup(){
         '/ditamap-builder',
         'ditamapBuilderPopup',
         'width=680,height=350'
+    );
+}
+
+/*
+ * Index 추출.
+ *
+ * 화면 위치: templates/user/indexExtract/index.html
+ * 호출 URL: GET /index-extract -> UserController.indexExtract()
+ * 실행 API/Service:
+ * - POST /api/index-extract/run -> IndexExtractController.run() -> IndexExtractService
+ */
+function openIndexExtractPopup(){
+    window.open(
+        '/index-extract',
+        'indexExtractPopup',
+        'width=680,height=430'
     );
 }
 
