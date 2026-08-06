@@ -1,7 +1,6 @@
 package maoom.PDFImageExtractor;
 
 import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.ss.util.SheetUtil;
 import org.apache.poi.util.IOUtils;
 import org.apache.poi.util.Units;
 import org.apache.poi.xssf.usermodel.XSSFClientAnchor;
@@ -11,7 +10,6 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.List;
-import java.util.regex.Pattern;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 
 public class ExcelExporter {

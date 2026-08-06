@@ -6,6 +6,9 @@ import java.util.Set;
 
 public class CodeImageMatcher {
 
+    private static final boolean DEBUG =
+            Boolean.getBoolean("artwork.request.debug");
+
     // 모드 구분 (로그에서 바로 보이게)
     public enum Mode { NORMAL, NOFLIP, FLIP }
 
@@ -58,16 +61,15 @@ public class CodeImageMatcher {
         float codeY_flip   = pageHeight - clYCenter;
         float codeY_noflip = clYCenter;
 
-        System.out.println(
-            "[DBG-BASE] page=" + page +
-            " code=" + cl.code +
-            " pageHeight=" + pageHeight +
-            " yMin=" + cl.yMin +
-            " yMax=" + cl.yMax +
-            " clYCenter=" + clYCenter +
-            " codeY_flip=" + codeY_flip +
-            " codeY_noflip=" + codeY_noflip
-        );
+        debug(
+                "[DBG-BASE] page=" + page +
+                " code=" + cl.code +
+                " pageHeight=" + pageHeight +
+                " yMin=" + cl.yMin +
+                " yMax=" + cl.yMax +
+                " clYCenter=" + clYCenter +
+                " codeY_flip=" + codeY_flip +
+                " codeY_noflip=" + codeY_noflip);
 
         // 실패 시 디버깅용: 후보를 가장 많이 만든 시도 기록
         MatchResult bestFail = null;
@@ -131,15 +133,14 @@ public class CodeImageMatcher {
             float imgBottomY = img.bbox.getLowerLeftY();
 
             // 후보 탈락 원인 확인용 로그(기존 유지)
-            System.out.println(
-                "[DBG-IMG] page=" + page +
-                " mode=" + mode +
-                " code=" + cl.code +
-                " imgIdx=" + i +
-                " imgBottomY=" + imgBottomY +
-                " codeY=" + codeY +
-                " diff=" + (imgBottomY - codeY)
-            );
+            debug(
+                    "[DBG-IMG] page=" + page +
+                    " mode=" + mode +
+                    " code=" + cl.code +
+                    " imgIdx=" + i +
+                    " imgBottomY=" + imgBottomY +
+                    " codeY=" + codeY +
+                    " diff=" + (imgBottomY - codeY));
 
             // 기존 후보 조건 유지 (코드보다 위쪽 이미지만)
             if (imgBottomY <= codeY - EPS) continue;
@@ -166,16 +167,15 @@ public class CodeImageMatcher {
             float score = dy + (dx * X_WEIGHT) - (isOverlapped ? (OVERLAP_BONUS * overlapRatio) : 0f);
 
             // 점수 로그(추적하기 쉽게 추가)
-            System.out.println(
-                "[DBG-SCORE] page=" + page +
-                " mode=" + mode +
-                " code=" + cl.code +
-                " imgIdx=" + i +
-                " dy=" + dy +
-                " dx=" + dx +
-                " overlapRatio=" + overlapRatio +
-                " score=" + score
-            );
+            debug(
+                    "[DBG-SCORE] page=" + page +
+                    " mode=" + mode +
+                    " code=" + cl.code +
+                    " imgIdx=" + i +
+                    " dy=" + dy +
+                    " dx=" + dx +
+                    " overlapRatio=" + overlapRatio +
+                    " score=" + score);
 
             if (score < bestScore) {
                 bestScore = score;
@@ -219,14 +219,13 @@ public class CodeImageMatcher {
             // 뒤집힌 것처럼 계산한 bottomY
             float imgBottomY = pageHeight - img.bbox.getUpperRightY();
 
-            System.out.println(
-                "[DBG-FLIP] page=" + page +
-                " code=" + cl.code +
-                " imgIdx=" + i +
-                " imgBottomY(flip)=" + imgBottomY +
-                " codeY=" + codeY +
-                " diff=" + (imgBottomY - codeY)
-            );
+            debug(
+                    "[DBG-FLIP] page=" + page +
+                    " code=" + cl.code +
+                    " imgIdx=" + i +
+                    " imgBottomY(flip)=" + imgBottomY +
+                    " codeY=" + codeY +
+                    " diff=" + (imgBottomY - codeY));
 
             // EPS 동일 적용
             if (imgBottomY <= codeY - EPS) continue;
@@ -247,16 +246,15 @@ public class CodeImageMatcher {
             // 기존은 dx*0.15 - 50 고정이었는데, NORMAL과 동일한 개념으로 ratio 반영
             float score = dy + (dx * 0.15f) - (isOverlapped ? (50f * overlapRatio) : 0f);
 
-            System.out.println(
-                "[DBG-SCORE] page=" + page +
-                " mode=" + Mode.FLIP +
-                " code=" + cl.code +
-                " imgIdx=" + i +
-                " dy=" + dy +
-                " dx=" + dx +
-                " overlapRatio=" + overlapRatio +
-                " score=" + score
-            );
+            debug(
+                    "[DBG-SCORE] page=" + page +
+                    " mode=" + Mode.FLIP +
+                    " code=" + cl.code +
+                    " imgIdx=" + i +
+                    " dy=" + dy +
+                    " dx=" + dx +
+                    " overlapRatio=" + overlapRatio +
+                    " score=" + score);
 
             candidates++;
             if (score < bestScore) {
@@ -270,5 +268,11 @@ public class CodeImageMatcher {
             return new MatchResult(cl, best, bestIndex, Mode.FLIP, candidates);
         }
         return new MatchResult(cl, null, -1, Mode.FLIP, candidates);
+    }
+
+    private static void debug(String message) {
+        if (DEBUG) {
+            System.out.println(message);
+        }
     }
 }
