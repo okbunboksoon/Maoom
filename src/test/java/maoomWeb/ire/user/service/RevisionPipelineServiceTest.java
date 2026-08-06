@@ -147,7 +147,7 @@ class RevisionPipelineServiceTest {
                 .contains("-s:temp\\0401-remove_review_Delete_Draft_Comment.xml");
         assertThat(logs)
                 .contains("옵션 추가: 속성 및 세션 지우기")
-                .contains("옵션 추가: Draft Comment 지우기");
+                .contains("옵션 추가: Draft Comment, review, hash, modified 지우기");
     }
 
     @Test

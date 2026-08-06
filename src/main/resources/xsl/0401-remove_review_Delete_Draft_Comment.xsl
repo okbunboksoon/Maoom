@@ -26,5 +26,8 @@
 	
 	<!-- draft-comment 태그 통째 삭제 -->
 	<xsl:template match="draft-comment"/>
+
+	<!-- hash 처리 명령 삭제 -->
+	<xsl:template match="processing-instruction('hash')"/>
 	
 </xsl:stylesheet>
