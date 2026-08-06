@@ -131,6 +131,107 @@ adminMain.html
 - 실행 로그 탭: `AdminProjectExecutionLogController`
 - 사용자 탭: `AdminUserController`
 
+## 서버 경로 설정 방법
+
+배포 후 서버 경로, DB, 업로드 폴더 같은 운영 설정은 소스의
+`src/main/resources/application.properties`를 직접 고치지 않고, 실행 JAR 옆에
+`config/application-local.properties` 파일을 만들어 관리한다.
+
+```text
+MaoomTool.jar
+config/
+  application-local.properties
+```
+
+애플리케이션은 시작할 때 다음 설정 때문에 이 파일을 자동으로 읽는다.
+
+```properties
+spring.config.import=optional:file:./config/application-local.properties
+```
+
+### G서버/V서버/H서버 경로 개념
+
+사용자가 화면에 입력하는 `V서버`, `H서버`, `G서버` 경로는 사용자 PC 기준이 아니라
+서버 PC 기준 경로다. 즉 브라우저를 다른 컴퓨터에서 열어도 실제 파일 접근은 배포용
+PC에서 일어난다.
+
+따라서 서버를 추가할 때는 먼저 배포용 PC에서 해당 경로가 열리는지 확인한다.
+
+```powershell
+Test-Path "\\fileserver\share"
+```
+
+`False`가 나오면 프로그램 설정 문제가 아니라 배포용 PC의 네트워크 연결, 공유 권한,
+실행 계정 권한 문제다. Windows 서비스로 실행 중이면 로그인 사용자 권한과 서비스 실행
+계정 권한이 다를 수 있으므로 서비스 계정에서도 같은 공유 폴더를 읽고 쓸 수 있어야 한다.
+
+### G서버 같은 작업 루트 추가/삭제
+
+DITAMAP Builder처럼 허용된 루트 아래 파일만 읽고 쓰는 기능은
+`ditamap.builder.allowed-roots`에 서버 루트를 세미콜론(`;`)으로 구분해 등록한다.
+
+예시:
+
+```properties
+ditamap.builder.allowed-roots=\\192.168.10.221\QC_Docs;\\192.168.10.221\kia_om26;\\g-server\project
+```
+
+G서버를 추가하려면 마지막에 `;\\g-server\project`를 붙인다.
+
+```properties
+ditamap.builder.allowed-roots=\\192.168.10.221\QC_Docs;\\192.168.10.221\kia_om26;\\g-server\project
+```
+
+G서버를 빼려면 해당 항목만 지운다.
+
+```properties
+ditamap.builder.allowed-roots=\\192.168.10.221\QC_Docs;\\192.168.10.221\kia_om26
+```
+
+수정 후에는 서버를 재시작해야 반영된다.
+
+### 자주 쓰는 운영 설정
+
+```properties
+# 접속 포트. 생략하면 Spring Boot 기본값 8080을 사용한다.
+server.port=8080
+
+# DB 접속 정보.
+spring.datasource.url=jdbc:mysql://localhost:3306/maoomtool?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+spring.datasource.username=root
+spring.datasource.password=비밀번호
+
+# 댓글 첨부파일 저장 위치.
+app.comment.upload-dir=D:/maoomtool-uploads/comments
+
+# 사용자 프로필 이미지 저장 위치.
+app.user.profile-upload-dir=D:/maoomtool-uploads/profiles
+
+# 견적 결과 저장 폴더. 비워두면 Java 실행 계정의 Desktop/temp를 사용한다.
+color-check.output-dir=D:/maoomtool-results/color-check
+
+# PDF 인쇄데이터 검증 로컬 실행 파일 위치.
+pdf-check-scan-viewer.exe-path=C:/maoomtool/tools/PdfCheckScanViewer-0.1.0.exe
+```
+
+환경변수로도 같은 설정을 줄 수 있다. 예를 들어 서버 루트는
+`DITAMAP_BUILDER_ALLOWED_ROOTS`, DB는 `DB_URL`, `DB_USERNAME`, `DB_PASSWORD`를
+사용할 수 있다. 다만 운영에서는 한눈에 보기 쉬운
+`config/application-local.properties` 파일 방식을 우선 권장한다.
+
+### 서버 추가 후 확인 순서
+
+1. 배포용 PC에서 공유 폴더가 열리는지 확인한다.
+2. 배포용 PC에서 실행 계정이 읽기/쓰기 권한을 갖는지 확인한다.
+3. `config/application-local.properties`에 필요한 경로를 추가하거나 삭제한다.
+4. 애플리케이션을 재시작한다.
+5. 화면에서 해당 경로를 입력해 실제 작업이 되는지 확인한다.
+
+경로 입력형 기능인 제품사양서 비교, BER, QSG, 다국어, Revision, 도안의뢰서 작성은
+기본적으로 사용자가 입력한 경로를 서버 PC에서 그대로 검사한다. 별도 허용 루트 설정이
+없는 기능은 설정 파일에 G서버를 추가하지 않아도 되지만, 배포용 PC에서 그 경로에
+접근할 수 있어야 한다.
+
 ## 테스트 확인 방법
 
 전체 회귀 확인은 프로젝트 루트에서 다음 명령으로 한다.

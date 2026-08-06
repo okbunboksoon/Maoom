@@ -179,7 +179,7 @@ function renderOptions(items) {
     const compactLabels = {
         FILE_NAME_KEEP: '파일명 변경(ex t00000, t00001)',
         REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET: 'deliveryTarget 및 Simple operation 지우기',
-        DELETE_DRAFT_COMMENT: 'Draft Comment 지우기'
+        DELETE_DRAFT_COMMENT: 'Draft Comment, review, hash, modified 지우기'
     };
     const byId = new Map(items.map(function(item) {
         return [item.id, item];
@@ -206,7 +206,7 @@ function renderOptions(items) {
         checkbox.type = 'checkbox';
         checkbox.name = 'revisionOption';
         checkbox.value = option.id;
-        checkbox.checked = false;
+        checkbox.checked = option.id === 'DELETE_DRAFT_COMMENT';
         checkbox.addEventListener('change', updateSelectionSummary);
 
         const text = document.createElement('span');

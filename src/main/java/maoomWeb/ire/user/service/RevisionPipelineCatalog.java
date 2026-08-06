@@ -35,8 +35,8 @@ final class RevisionPipelineCatalog {
                         "deliveryTarget 속성과 Simple operation 섹션을 제거합니다."),
                 new RevisionOptionDto(
                         DELETE_DRAFT_COMMENT,
-                        "Draft Comment 지우기",
-                        "draft-comment 태그를 제거합니다."));
+                        "Draft Comment, review, hash, modified 지우기",
+                        "draft-comment 태그, review/legal outputclass, hash 처리 명령, modified 속성을 제거합니다."));
     }
 
     static Set<String> validateOptions(List<String> requestedOptions) {

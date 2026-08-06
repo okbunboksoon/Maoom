@@ -550,7 +550,7 @@ public class RevisionPipelineService {
                     output,
                     "0401-remove_review_Delete_Draft_Comment.xsl");
             currentSource = output;
-            logs.add("옵션 추가: Draft Comment 지우기");
+            logs.add("옵션 추가: Draft Comment, review, hash, modified 지우기");
         }
 
         List<String> patched = new ArrayList<>();
