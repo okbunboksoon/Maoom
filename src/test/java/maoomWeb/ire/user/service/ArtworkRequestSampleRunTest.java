@@ -14,6 +14,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 import org.springframework.mock.web.MockMultipartFile;
 
 import maoomWeb.ire.user.dto.ArtworkRequestResult;
@@ -25,14 +26,38 @@ class ArtworkRequestSampleRunTest {
     private static final Path SAMPLE_PDF =
             SAMPLE_DIRECTORY.resolve(
                     "KIA-QVe-EV-en_GB-2027-OM_Full-PDF-260109-1.4_ALL_LOW_Sammy_RHD도안.pdf");
-    private static final Path EXPECTED_WORKBOOK =
-            SAMPLE_DIRECTORY.resolve(
-                    "KIA-QVe-EV-en_GB-2027-OM_Full-PDF-260109-1.4_ALL_LOW_Sammy_00_도안의뢰서.xlsx");
+    private static final List<String> EXPECTED_CODES = List.of(
+            "N_QVe27_D02_003_3_E",
+            "N_QVe27_D04_009_1_E",
+            "N_QVe27_D04_010_E",
+            "N_QVe27_D04_011_E",
+            "N_QVe27_D04_001_1_E",
+            "N_QVe27_D04_002_1_E",
+            "N_QVe27_D04_003_1_E",
+            "N_SP3i26_B04_003_E",
+            "N_QVe27_D04_005_1_E",
+            "N_QVe27_D04_006_1_E",
+            "N_QVe27_D04_016_1_E",
+            "N_QVe27_D04_017_E",
+            "N_QVe27_D04_018_1_E",
+            "N_QVe27_D04_019_E",
+            "N_QVe27_B05_019_E",
+            "N_QVe27_B05_020_E",
+            "N_QVe27_B05_018_E",
+            "N_QVe27_C05_002_1_E",
+            "N_QVe27_B05_023_1_E",
+            "N_QVe27_B05_025_1_E",
+            "N_QVe27_B05_024_E",
+            "N_QVe27_B05_026_1_E",
+            "N_QVe27_B05_027_E",
+            "N_QVe27_B05_028_1_E");
+
+    @TempDir
+    Path outputDirectory;
 
     @Test
     void createMatchesSampleWorkbookContent() throws Exception {
         Assumptions.assumeTrue(Files.isRegularFile(SAMPLE_PDF));
-        Assumptions.assumeTrue(Files.isRegularFile(EXPECTED_WORKBOOK));
 
         ArtworkRequestService service =
                 new ArtworkRequestService();
@@ -46,28 +71,26 @@ class ArtworkRequestSampleRunTest {
         }
 
         ArtworkRequestResult result =
-                service.create(SAMPLE_DIRECTORY.toString(), file);
+                service.create(outputDirectory.toString(), file);
 
         Path actualWorkbook =
                 Path.of(result.resultPath());
         assertThat(actualWorkbook).isRegularFile();
         assertThat(actualWorkbook.getParent()).isEqualTo(
-                SAMPLE_DIRECTORY.resolve(
+                outputDirectory.resolve(
                         LocalDate.now().format(DateTimeFormatter.BASIC_ISO_DATE)
                         + "_Result_Folder_ImageExtractor"));
         assertThat(actualWorkbook.getFileName().toString())
                 .isEqualTo(
                         "KIA-QVe-EV-en_GB-2027-OM_Full-PDF-260109-1.4_ALL_LOW_Sammy_RHD도안_도안의뢰서.xlsx");
 
-        try(Workbook expected = new XSSFWorkbook(
-                Files.newInputStream(EXPECTED_WORKBOOK));
-                Workbook actual = new XSSFWorkbook(
-                        Files.newInputStream(actualWorkbook))){
+        try(Workbook actual = new XSSFWorkbook(
+                Files.newInputStream(actualWorkbook))){
 
             assertThat(readDrawingCodes(actual))
-                    .containsExactlyElementsOf(readDrawingCodes(expected));
+                    .containsExactlyElementsOf(EXPECTED_CODES);
             assertThat(actual.getAllPictures())
-                    .hasSameSizeAs(expected.getAllPictures());
+                    .hasSize(EXPECTED_CODES.size());
         }
     }
 

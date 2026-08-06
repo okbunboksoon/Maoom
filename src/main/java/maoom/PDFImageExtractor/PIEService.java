@@ -4,6 +4,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 
 import java.io.File;
+import java.nio.file.Files;
 import java.util.*;
 
 public class PIEService {
@@ -11,8 +12,10 @@ public class PIEService {
     private final PdfLoader pdfLoader = new PdfLoader();
 
     // === 디버그 토글 ===
-    private static final boolean DBG = true;
-    private static final int DBG_PAGE = 37;
+    private static final boolean DBG =
+            Boolean.getBoolean("artwork.request.debug");
+    private static final int DBG_PAGE =
+            Integer.getInteger("artwork.request.debug.page", 37);
 
     public String exportExcel(String pdfPath, String outPath) throws Exception {
         System.out.println("[PIEService] exportExcel() start");
@@ -26,8 +29,7 @@ public class PIEService {
 
         List<ExcelExporter.RowData> excelRows = new ArrayList<>();
 
-        File pdfFile = new File(pdfPath);
-        File outDir = new File(pdfFile.getParentFile(), "png_by_code");
+        File outDir = Files.createTempDirectory("artwork-request-png-").toFile();
 
         boolean excelSaved = false;
 
@@ -53,7 +55,7 @@ public class PIEService {
 
             // 출력 폴더 생성
             if (!outDir.exists()) outDir.mkdirs();
-            System.out.println("[PIEService] png outDir=" + outDir.getAbsolutePath());
+            debug("[PIEService] png outDir=" + outDir.getAbsolutePath());
 
             //시작 디버그(원하면)
             if (DBG) {
@@ -72,7 +74,7 @@ public class PIEService {
                 List<ImageExtractorWithBbox.ImageHit> pageImgs = imagesByPage.getOrDefault(page, Collections.emptyList());
                 List<CodeLineExtractor.CodeLine> codeLines = codeLinesByPage.getOrDefault(page, Collections.emptyList());
 
-                System.out.println("[PIEService] page=" + page + " codeLines=" + codeLines.size() + " images=" + pageImgs.size());
+                debug("[PIEService] page=" + page + " codeLines=" + codeLines.size() + " images=" + pageImgs.size());
 
                 if (pageImgs.isEmpty()) continue; // 이미지 없으면 매칭 불가
 
@@ -81,7 +83,7 @@ public class PIEService {
                 if (DBG && page == DBG_PAGE) dumper.dumpHiRects(page, hiRectsPdf);
 
                 if (hiRectsPdf == null || hiRectsPdf.isEmpty()) {
-                    System.out.println("[HI] page=" + page + " no highlight -> skip page");
+                    debug("[HI] page=" + page + " no highlight -> skip page");
                     continue;
                 }
 
@@ -104,7 +106,7 @@ public class PIEService {
                 if (DBG && page == DBG_PAGE) dumper.dumpFallbackLines(page, fallbackLines);
 
                 if (fallbackLines.isEmpty()) {
-                    System.out.println("[HI] page=" + page + " highlight exists but no text codes in highlight area -> skip");
+                    debug("[HI] page=" + page + " highlight exists but no text codes in highlight area -> skip");
                     continue;
                 }
 
@@ -136,6 +138,12 @@ public class PIEService {
             }
         }
         dir.delete();
+    }
+
+    private static void debug(String message) {
+        if (DBG) {
+            System.out.println(message);
+        }
     }
 
     // 연결 확인용 (유지)

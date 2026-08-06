@@ -55,7 +55,8 @@ public class MatchAndExport {
 	                    + " pickClosestCode=" + best.code
 	                    + " dy=" + bestScore);
 
-	            exportOne(ctx, best, usedIdx, exportedCodes, outDir, excelRows);
+	            exportOne(ctx, best, usedIdx, exportedCodes, outDir, excelRows,
+                        "[MATCH]");
 	        }
 
 	        return;
@@ -63,7 +64,8 @@ public class MatchAndExport {
 
 	    // ✅ 기존 방식: 코드 글자 위에 하이라이트 쳐진 것만 처리
 	    for (CodeLineExtractor.CodeLine cl : highlighted) {
-	        exportOne(ctx, cl, usedIdx, exportedCodes, outDir, excelRows);
+	        exportOne(ctx, cl, usedIdx, exportedCodes, outDir, excelRows,
+                    "[MATCH]");
 	    }
 	}
 
@@ -73,7 +75,8 @@ public class MatchAndExport {
 	        Set<Integer> usedIdx,
 	        Set<String> exportedCodes,
 	        File outDir,
-	        List<ExcelExporter.RowData> excelRows
+	        List<ExcelExporter.RowData> excelRows,
+            String matchLogPrefix
 	) throws IOException {
 
 	    if (exportedCodes.contains(cl.code)) {
@@ -84,7 +87,7 @@ public class MatchAndExport {
 	    CodeImageMatcher.MatchResult mr =
 	            CodeImageMatcher.matchOne(ctx.page(), ctx.pageHeight(), cl, ctx.pageImgs(), usedIdx);
 
-	    System.out.println("[MATCH] page " + ctx.page() + " code=" + cl.code
+	    System.out.println(matchLogPrefix + " page " + ctx.page() + " code=" + cl.code
 	            + " used=" + mr.mode
 	            + " (candidates=" + mr.candidates + ", pickIndex=" + mr.imageIndex + ")");
 
@@ -117,34 +120,8 @@ public class MatchAndExport {
             List<ExcelExporter.RowData> excelRows
     ) throws IOException {
         for (CodeLineExtractor.CodeLine cl : fallbackLines) {
-
-            if (exportedCodes.contains(cl.code)) {
-                System.out.println("[DUP] skip code=" + cl.code + " (already exported)");
-                continue;
-            }
-
-            CodeImageMatcher.MatchResult mr =
-                    CodeImageMatcher.matchOne(ctx.page(), ctx.pageHeight(), cl, ctx.pageImgs(), usedIdx);
-
-            System.out.println("[MATCH-HI] page " + ctx.page() + " code=" + cl.code
-                    + " used=" + mr.mode
-                    + " (candidates=" + mr.candidates + ", pickIndex=" + mr.imageIndex + ")");
-
-            if (mr.image == null || mr.imageIndex < 0) {
-                System.out.println("[PNG] page " + ctx.page() + " code=" + cl.code + " -> no image");
-                continue;
-            }
-
-            usedIdx.add(mr.imageIndex);
-
-            File png = PngByCodeWriter.buildPngFile(outDir, ctx.page(), cl.code, 0);
-            PngByCodeWriter.write(mr.image, png);
-
-            excelRows.add(new ExcelExporter.RowData(ctx.page(), png));
-            exportedCodes.add(cl.code);
-
-            System.out.println("[PNG] saved: " + png.getAbsolutePath()
-                    + "  bbox=" + mr.image.bbox);
+            exportOne(ctx, cl, usedIdx, exportedCodes, outDir, excelRows,
+                    "[MATCH-HI]");
         }
     }
 

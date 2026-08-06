@@ -291,8 +291,8 @@ launcherGuideLink.addEventListener('click', function(event){
  *   실행 API는 ProductSpecComparisonController, 업무 처리는 ProductSpecComparisonService 쪽을 본다.
  * - Index 추출: /index-extract -> UserController.indexExtract() -> index.html
  *   실행 API는 IndexExtractController, 업무 처리는 IndexExtractService 쪽을 본다.
- * - PDF 검수 스캔 뷰어: POST /api/pdf-check-scan-viewer/launch -> PdfCheckScanViewerController
- *   업무 처리는 PdfCheckScanViewerService 쪽을 본다.
+ * - PDF 검수 스캔 뷰어: pdfcheckscanviewer://launch
+ *   클릭한 사용자 PC에 등록된 로컬 프로토콜로 실행한다.
  * - 도안의뢰서 작성: /pdf/artwork-request -> UserController.artworkRequest() -> artworkRequest.html
  *   실행 API는 ArtworkRequestController, 업무 처리는 ArtworkRequestService 쪽을 본다.
  */
@@ -361,20 +361,20 @@ const launcherMenus = [
         action:openIndexExtractPopup
     },
     {
-        title:'인쇄데이터 검증',
-        description:'공박사님께서 만드신 프로그램 실행',
-        category:'PDF',
-        icon:'fa-search',
-        action:launchPdfCheckScanViewer
-    },
-    /**
-    {
         title:'도안의뢰서 작성',
         description:'도안의뢰 정보 입력 및 작성',
         category:'PDF',
         icon:'fa-file-signature',
         action:openArtworkRequestPopup
     },
+    /**
+     {
+     title:'인쇄데이터 검증',
+     description:'공박사님께서 만드신 프로그램 실행',
+     category:'PDF',
+     icon:'fa-search',
+     action:launchPdfCheckScanViewer
+     },
     {
         title:'법규ID 반영',
         description:'코드작성 중',
@@ -889,29 +889,13 @@ function openArtworkRequestPopup(){
 /*
  * PDF 검수 스캔 뷰어.
  *
- * 호출 API: POST /api/pdf-check-scan-viewer/launch
- * 연결 Service: PdfCheckScanViewerService
+ * 호출 방식: pdfcheckscanviewer://launch
  * 입출력:
- * - pdf-check-scan-viewer.exe-path 설정값에 지정된 서버 PC의 EXE를 실행한다.
- * - 브라우저가 아니라 서버 프로세스가 실행하므로 운영 서버의 실제 EXE 위치를 확인해야 한다.
+ * - 서버 API를 호출하지 않고 클릭한 사용자 PC의 로컬 프로토콜 핸들러를 실행한다.
+ * - 각 사용자 PC에 PDF 검수 스캔 뷰어 프로토콜 등록이 필요하다.
  */
 function launchPdfCheckScanViewer(){
-    fetch('/api/pdf-check-scan-viewer/launch', {
-        method:'POST'
-    })
-    .then(async response => {
-        if(!response.ok){
-            const message = await response.text();
-            throw new Error(message || 'PDF 검수 스캔 뷰어 실행에 실패했습니다.');
-        }
-        return response.json();
-    })
-    .then(result => {
-        alert(result.message || 'PDF 검수 스캔 뷰어를 실행했습니다.');
-    })
-    .catch(error => {
-        alert(error.message);
-    });
+    window.location.href = 'pdfcheckscanviewer://launch';
 }
 
 /*
