@@ -367,14 +367,14 @@ const launcherMenus = [
         icon:'fa-file-signature',
         action:openArtworkRequestPopup
     },
+    {
+        title:'인쇄데이터 검증',
+        description:'공박사님께서 만드신 프로그램 실행',
+        category:'PDF',
+        icon:'fa-search',
+        action:launchPdfCheckScanViewer
+    }
     /**
-     {
-     title:'인쇄데이터 검증',
-     description:'공박사님께서 만드신 프로그램 실행',
-     category:'PDF',
-     icon:'fa-search',
-     action:launchPdfCheckScanViewer
-     },
     {
         title:'법규ID 반영',
         description:'코드작성 중',
@@ -418,7 +418,7 @@ const launcherMenus = [
         icon:'fas fa-times-circle',
         action:openProductSpecComparePopup
     }
-        **/
+    **/
 ];
 
 let activeMenuCategory = '전체';
