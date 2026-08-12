@@ -195,6 +195,7 @@ let selectedLawIndex = -1;
 // 이동/들여쓰기처럼 기준 row가 하나 필요한 기능은 selectedLawIndex를 쓰고,
 // 삭제처럼 여러 row를 한 번에 처리해야 하는 기능은 selectedLawIndexes를 쓴다.
 let selectedLawIndexes = new Set();
+let lawSelectionAnchorIndex = -1;
 
 function showMessage(text, type){
     messageText.textContent = text;
@@ -355,6 +356,7 @@ function renderLawDitamapPlaceholder(){
     lawTreeRows = [];
     selectedLawIndex = -1;
     selectedLawIndexes.clear();
+    lawSelectionAnchorIndex = -1;
     currentLegalDitamapFile = '';
     currentLegalTreeData = null;
     const placeholder = document.createElement('div');
@@ -373,6 +375,7 @@ function renderLawDitamapTree(tree){
     // 삭제/이동될 수 있으므로 단일 선택과 다중 선택을 모두 초기화한다.
     selectedLawIndex = -1;
     selectedLawIndexes.clear();
+    lawSelectionAnchorIndex = -1;
     currentLegalDitamapFile = tree && tree.ditamapFile
         ? tree.ditamapFile
         : '';
@@ -648,10 +651,13 @@ function renderLawAttributeEditor(cell, node, index){
 
 function handleLawDragStart(event){
     draggingLawIndex = Number(event.currentTarget.dataset.lawIndex);
-    // 드래그 이동은 한 번에 하나의 블록만 움직이는 기존 동작을 유지한다.
-    // 그래서 드래그를 시작한 row를 단일 선택 상태로 맞춘다.
-    selectedLawIndex = draggingLawIndex;
-    selectedLawIndexes = new Set([draggingLawIndex]);
+
+    if(!selectedLawIndexes.has(draggingLawIndex)){
+        selectedLawIndex = draggingLawIndex;
+        selectedLawIndexes = new Set([draggingLawIndex]);
+        lawSelectionAnchorIndex = draggingLawIndex;
+    }
+
     event.currentTarget.classList.add('dragging');
     event.dataTransfer.effectAllowed = 'move';
     event.dataTransfer.setData('text/plain', String(draggingLawIndex));
@@ -681,11 +687,19 @@ function handleLawDrop(event){
     const effectiveTargetIndex = dropInfo.after
         ? findLawSubtreeEnd(targetIndex) - 1
         : targetIndex;
-    moveLawTreeBlock(
-            draggingLawIndex,
+
+    if(moveLawRangesToTarget(
+            getSelectedLawDeleteRanges(),
             effectiveTargetIndex,
             dropInfo.after,
-            dropInfo.level);
+            dropInfo.level)){
+        saveLegalButton.disabled = false;
+        undoLegalButton.disabled = false;
+        renderLawDitamapRows();
+        updateLegalActionButtons();
+        showMessage('법규 DITAMAP 구조를 수정했습니다.', 'success');
+    }
+
     draggingLawIndex = null;
     clearLawDropMarkers();
 }
@@ -765,6 +779,7 @@ function moveLawTreeBlock(sourceIndex, targetIndex, insertAfter, nextLevel){
     // 위/아래 이동이나 들여쓰기 조작을 계속할 수 있게 한다.
     selectedLawIndex = insertIndex;
     selectedLawIndexes = new Set([insertIndex]);
+    lawSelectionAnchorIndex = insertIndex;
     saveLegalButton.disabled = false;
     undoLegalButton.disabled = false;
     renderLawDitamapRows();
@@ -773,9 +788,20 @@ function moveLawTreeBlock(sourceIndex, targetIndex, insertAfter, nextLevel){
 }
 
 function selectLawRow(index, event){
+    // Shift 클릭은 마지막 기준 row와 현재 row 사이를 범위 선택한다.
     // Ctrl/Cmd 클릭은 기존 선택을 유지하면서 현재 row만 토글한다.
     // 일반 클릭은 기존 선택을 모두 지우고 현재 row 하나만 선택한다.
-    if(event && (event.ctrlKey || event.metaKey)){
+    if(event && event.shiftKey && lawSelectionAnchorIndex >= 0){
+        const start = Math.min(lawSelectionAnchorIndex, index);
+        const end = Math.max(lawSelectionAnchorIndex, index);
+        selectedLawIndexes = new Set();
+
+        for(let cursor = start; cursor <= end; cursor++){
+            selectedLawIndexes.add(cursor);
+        }
+
+        selectedLawIndex = index;
+    }else if(event && (event.ctrlKey || event.metaKey)){
         if(selectedLawIndexes.has(index)){
             selectedLawIndexes.delete(index);
             selectedLawIndex = selectedLawIndexes.size > 0
@@ -785,9 +811,11 @@ function selectLawRow(index, event){
             selectedLawIndexes.add(index);
             selectedLawIndex = index;
         }
+        lawSelectionAnchorIndex = index;
     }else{
         selectedLawIndexes = new Set([index]);
         selectedLawIndex = index;
+        lawSelectionAnchorIndex = index;
     }
 
     renderLawDitamapRows();
@@ -831,42 +859,176 @@ function previousLawSiblingStart(index){
     return cursor;
 }
 
+function addLawSelectionRange(target, start, end){
+    for(let index = start; index < end; index++){
+        target.add(index);
+    }
+}
+
+function lawRangeContains(ranges, index){
+    return ranges.some(range => index >= range.start && index < range.end);
+}
+
+function mergeLawAdjacentRanges(ranges){
+    const merged = [];
+
+    ranges.forEach(range => {
+        const previous = merged[merged.length - 1];
+
+        if(previous && range.start <= previous.end){
+            previous.end = Math.max(previous.end, range.end);
+        }else{
+            merged.push({
+                start:range.start,
+                end:range.end
+            });
+        }
+    });
+
+    return merged;
+}
+
+function moveLawRangesToTarget(ranges, targetIndex, insertAfter, nextLevel){
+    const moveRanges = mergeLawAdjacentRanges(ranges);
+
+    if(moveRanges.length === 0
+            || targetIndex < 0
+            || targetIndex >= lawTreeRows.length
+            || lawRangeContains(moveRanges, targetIndex)){
+        return false;
+    }
+
+    const movingRows = [];
+    const originalLevel = lawTreeRows[moveRanges[0].start].level || 1;
+    let adjustedTargetIndex = targetIndex;
+
+    moveRanges
+        .slice()
+        .sort((left, right) => right.start - left.start)
+        .forEach(range => {
+            movingRows.unshift(...lawTreeRows.slice(range.start, range.end));
+            lawTreeRows.splice(range.start, range.end - range.start);
+
+            if(range.start < targetIndex){
+                adjustedTargetIndex -= range.end - range.start;
+            }
+        });
+
+    const targetLevel = Math.max(1, Math.min(6, Number(nextLevel || originalLevel)));
+    const levelDelta = targetLevel - originalLevel;
+
+    movingRows.forEach(row => {
+        row.level = Math.max(1, Math.min(6, (row.level || 1) + levelDelta));
+    });
+
+    const insertIndex = Math.max(
+            0,
+            Math.min(
+                    lawTreeRows.length,
+                    adjustedTargetIndex + (insertAfter ? 1 : 0)));
+    lawTreeRows.splice(insertIndex, 0, ...movingRows);
+    selectedLawIndexes = new Set();
+    addLawSelectionRange(selectedLawIndexes, insertIndex, insertIndex + movingRows.length);
+    selectedLawIndex = insertIndex;
+    lawSelectionAnchorIndex = insertIndex;
+    return true;
+}
+
 function moveSelectedLawUp(){
-    if(selectedLawIndex < 0){
+    const moveRanges = mergeLawAdjacentRanges(getSelectedLawDeleteRanges());
+
+    if(moveRanges.length === 0){
         return;
     }
 
-    const targetIndex = previousLawSiblingStart(selectedLawIndex);
+    const nextSelectedIndexes = new Set();
+    let nextSelectedIndex = selectedLawIndex;
+    let moved = false;
 
-    if(targetIndex < 0){
+    moveRanges.forEach(range => {
+        const targetIndex = previousLawSiblingStart(range.start);
+
+        if(targetIndex < 0 || lawRangeContains(moveRanges, targetIndex)){
+            addLawSelectionRange(nextSelectedIndexes, range.start, range.end);
+            return;
+        }
+
+        const movingBlock = lawTreeRows.slice(range.start, range.end);
+        const previousBlock = lawTreeRows.slice(targetIndex, range.start);
+        lawTreeRows.splice(
+                targetIndex,
+                range.end - targetIndex,
+                ...movingBlock,
+                ...previousBlock);
+
+        addLawSelectionRange(
+                nextSelectedIndexes,
+                targetIndex,
+                targetIndex + movingBlock.length);
+        nextSelectedIndex = targetIndex;
+        moved = true;
+    });
+
+    if(!moved){
         return;
     }
 
-    moveLawTreeBlock(
-            selectedLawIndex,
-            targetIndex,
-            false,
-            lawTreeRows[selectedLawIndex].level || 1);
+    selectedLawIndexes = nextSelectedIndexes;
+    selectedLawIndex = nextSelectedIndex;
+    lawSelectionAnchorIndex = nextSelectedIndex;
+    saveLegalButton.disabled = false;
+    undoLegalButton.disabled = false;
+    renderLawDitamapRows();
+    updateLegalActionButtons();
+    showMessage('법규 DITAMAP 구조를 수정했습니다.', 'success');
 }
 
 function moveSelectedLawDown(){
-    if(selectedLawIndex < 0){
+    const moveRanges = mergeLawAdjacentRanges(getSelectedLawDeleteRanges());
+
+    if(moveRanges.length === 0){
         return;
     }
 
-    const blockEnd = findLawSubtreeEnd(selectedLawIndex);
+    const nextSelectedIndexes = new Set();
+    let nextSelectedIndex = selectedLawIndex;
+    let moved = false;
 
-    if(blockEnd >= lawTreeRows.length){
+    moveRanges
+        .slice()
+        .sort((left, right) => right.start - left.start)
+        .forEach(range => {
+            if(range.end >= lawTreeRows.length
+                    || lawRangeContains(moveRanges, range.end)){
+                addLawSelectionRange(nextSelectedIndexes, range.start, range.end);
+                return;
+            }
+
+            const nextBlockEnd = findLawSubtreeEnd(range.end);
+            const movingBlock = lawTreeRows.slice(range.start, range.end);
+            const nextBlock = lawTreeRows.slice(range.end, nextBlockEnd);
+            lawTreeRows.splice(
+                    range.start,
+                    nextBlockEnd - range.start,
+                    ...nextBlock,
+                    ...movingBlock);
+
+            const movedStart = nextBlockEnd - movingBlock.length;
+            addLawSelectionRange(
+                    nextSelectedIndexes,
+                    movedStart,
+                    movedStart + movingBlock.length);
+            nextSelectedIndex = movedStart;
+            moved = true;
+        });
+
+    if(!moved){
         return;
     }
 
-    const nextBlockEnd = findLawSubtreeEnd(blockEnd);
-    const block = lawTreeRows.slice(selectedLawIndex, blockEnd);
-    lawTreeRows.splice(selectedLawIndex, block.length);
-    const insertIndex = nextBlockEnd - block.length;
-    lawTreeRows.splice(insertIndex, 0, ...block);
-    selectedLawIndex = insertIndex;
-    selectedLawIndexes = new Set([insertIndex]);
+    selectedLawIndexes = nextSelectedIndexes;
+    selectedLawIndex = nextSelectedIndex;
+    lawSelectionAnchorIndex = nextSelectedIndex;
     saveLegalButton.disabled = false;
     undoLegalButton.disabled = false;
     renderLawDitamapRows();
@@ -875,24 +1037,34 @@ function moveSelectedLawDown(){
 }
 
 function changeSelectedLawLevel(delta){
-    if(selectedLawIndex < 0){
+    const changeRanges = getSelectedLawDeleteRanges();
+
+    if(changeRanges.length === 0){
         return;
     }
 
-    const blockEnd = findLawSubtreeEnd(selectedLawIndex);
-    const nextLevel = Math.max(
-            1,
-            Math.min(6, (lawTreeRows[selectedLawIndex].level || 1) + delta));
-    const levelDelta = nextLevel - (lawTreeRows[selectedLawIndex].level || 1);
+    let changed = false;
 
-    if(levelDelta === 0){
+    changeRanges.forEach(range => {
+        const currentLevel = lawTreeRows[range.start].level || 1;
+        const nextLevel = Math.max(1, Math.min(6, currentLevel + delta));
+        const levelDelta = nextLevel - currentLevel;
+
+        if(levelDelta === 0){
+            return;
+        }
+
+        for(let index = range.start; index < range.end; index++){
+            lawTreeRows[index].level = Math.max(
+                    1,
+                    Math.min(6, (lawTreeRows[index].level || 1) + levelDelta));
+        }
+
+        changed = true;
+    });
+
+    if(!changed){
         return;
-    }
-
-    for(let index = selectedLawIndex; index < blockEnd; index++){
-        lawTreeRows[index].level = Math.max(
-                1,
-                Math.min(6, (lawTreeRows[index].level || 1) + levelDelta));
     }
 
     saveLegalButton.disabled = false;
@@ -926,6 +1098,7 @@ function deleteSelectedLawRow(){
         });
     selectedLawIndex = -1;
     selectedLawIndexes.clear();
+    lawSelectionAnchorIndex = -1;
     saveLegalButton.disabled = false;
     undoLegalButton.disabled = false;
     renderLawDitamapRows();
