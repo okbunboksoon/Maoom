@@ -14,14 +14,14 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="topicref[concept/title[normalize-space(.) = $consumerInfoTitle]]/topicref[1]/concept/conbody/section[1]/p[contains(., '819-420-4300')]">
+    <xsl:template match="p[contains(., '819-420-4300') and ancestor::topicref[concept/title[normalize-space(.) = $consumerInfoTitle]]]">
         <xsl:copy>
             <xsl:apply-templates select="@*"/>
             <xsl:text>T&#xE9;l&#xE9;phone&#xA0;: T&#xE9;l&#xE9;phone&#xA0;: 819-420-4300 (r&#xE9;gion d&#x2019;Ottawa-Gatineau ou international)</xsl:text>
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="topicref[concept/title[normalize-space(.) = $consumerInfoTitle]]/topicref[1]/concept/conbody/section[2]/p[1][normalize-space(.) = 'http://www.tc.gc.ca/recalls']">
+    <xsl:template match="p[normalize-space(.) = 'http://www.tc.gc.ca/recalls' and ancestor::topicref[concept/title[normalize-space(.) = $consumerInfoTitle]]]">
         <xsl:copy>
             <xsl:apply-templates select="@*"/>
             <xsl:text>http://www.tc.gc.ca/rappels</xsl:text>
