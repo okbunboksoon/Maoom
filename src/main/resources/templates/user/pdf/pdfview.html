@@ -6950,6 +6950,22 @@ function initializePdfAnnotationToolbar(viewerWindow){
         #layersView {
             overscroll-behavior:contain;
         }
+        #printButton,
+        #downloadButton,
+        #secondaryPrint,
+        #secondaryDownload {
+            display:none !important;
+        }
+        #secondaryPrint,
+        #secondaryDownload,
+        #secondaryPrint + #secondaryDownload,
+        #secondaryToolbarButtonContainer .visibleMediumView {
+            display:none !important;
+        }
+        #secondaryToolbarButtonContainer .visibleMediumView
+                + .horizontalToolbarSeparator {
+            display:none !important;
+        }
         .pdf-comment-hover-popup {
             position:absolute;
             left:0;
@@ -7024,6 +7040,7 @@ function initializePdfAnnotationToolbar(viewerWindow){
         }
     `;
     viewerDocument.head.appendChild(style);
+    hidePdfViewerPrintDownloadButtons(viewerDocument);
 
     const tools = viewerDocument.createElement('div');
     tools.id = 'maoomAnnotationTools';
@@ -7078,6 +7095,80 @@ function initializePdfAnnotationToolbar(viewerWindow){
 
     toolbarRight.prepend(tools);
     updatePdfAnnotationToolbar();
+}
+
+function hidePdfViewerPrintDownloadButtons(viewerDocument){
+    [
+        'printButton',
+        'downloadButton',
+        'secondaryPrint',
+        'secondaryDownload'
+    ].forEach(id => {
+        const button =
+            viewerDocument.getElementById(id);
+
+        if(button){
+            button.classList.add('hidden');
+            button.hidden = true;
+            button.style.display = 'none';
+        }
+    });
+
+    const secondaryPrint =
+        viewerDocument.getElementById('secondaryPrint');
+    const secondaryDownload =
+        viewerDocument.getElementById('secondaryDownload');
+    const secondaryPrintDownloadGroup =
+        secondaryPrint
+        ? secondaryPrint.closest('.visibleMediumView')
+        : secondaryDownload
+            ? secondaryDownload.closest('.visibleMediumView')
+            : null;
+
+    if(secondaryPrintDownloadGroup){
+        secondaryPrintDownloadGroup.classList.add('hidden');
+        secondaryPrintDownloadGroup.hidden = true;
+        secondaryPrintDownloadGroup.style.display = 'none';
+
+        const separator =
+            secondaryPrintDownloadGroup.nextElementSibling;
+
+        if(separator
+                && separator.classList
+                && separator.classList.contains(
+                    'horizontalToolbarSeparator'
+                )){
+            separator.classList.add('hidden');
+            separator.hidden = true;
+            separator.style.display = 'none';
+        }
+    }
+
+    const downloadButton =
+        viewerDocument.getElementById('downloadButton');
+    const printDownloadGroup =
+        downloadButton
+        ? downloadButton.closest('.toolbarHorizontalGroup')
+        : null;
+
+    if(printDownloadGroup){
+        printDownloadGroup.classList.add('hidden');
+        printDownloadGroup.hidden = true;
+        printDownloadGroup.style.display = 'none';
+
+        const separator =
+            printDownloadGroup.nextElementSibling;
+
+        if(separator
+                && separator.classList
+                && separator.classList.contains(
+                    'verticalToolbarSeparator'
+                )){
+            separator.classList.add('hidden');
+            separator.hidden = true;
+            separator.style.display = 'none';
+        }
+    }
 }
 
 function updatePdfAnnotationToolbar(){
