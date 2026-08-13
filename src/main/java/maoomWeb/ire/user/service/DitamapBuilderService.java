@@ -10,8 +10,10 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Set;
 
 import javax.xml.XMLConstants;
@@ -170,6 +172,72 @@ public class DitamapBuilderService {
                 | SAXException exception){
             throw new IllegalArgumentException(
                     "법규 마스터 DITAMAP을 읽지 못했습니다. "
+                    + exception.getMessage(),
+                    exception);
+        }
+    }
+
+    public Map<String, Object> readTestCrossCheck(String rawPath) {
+        try{
+            Resource master =
+                    new ClassPathResource("xsl/LM-ditamap.ditamap");
+
+            if(!master.exists()){
+                throw new IllegalArgumentException(
+                        "법규 마스터 DITAMAP을 찾지 못했습니다.");
+            }
+
+            Path manualDitamap = findDitamap(rawPath);
+            List<TestCrossCheckRow> masterRows;
+
+            try(InputStream input = master.getInputStream()){
+                masterRows = readTestCrossCheckRows(
+                        parseXml(input).getDocumentElement(),
+                        1,
+                        manualDitamap.getParent(),
+                        false);
+            }
+
+            List<TestCrossCheckRow> manualRows = readTestCrossCheckRows(
+                    parseXml(manualDitamap).getDocumentElement(),
+                    1,
+                    manualDitamap.getParent(),
+                    true);
+            List<Map<String, Object>> branchMatches =
+                    buildTestBranchMatches(masterRows, manualRows);
+            Set<Integer> branchMasterIndexes = new HashSet<>();
+            Set<Integer> branchManualIndexes = new HashSet<>();
+
+            for(Map<String, Object> match : branchMatches){
+                branchMasterIndexes.add((Integer)match.get("masterIndex"));
+
+                @SuppressWarnings("unchecked")
+                List<Integer> manualIndexes =
+                        (List<Integer>)match.get("manualIndexes");
+                branchManualIndexes.addAll(manualIndexes);
+            }
+
+            List<Map<String, Object>> topicMatches = buildTestTopicMatches(
+                    masterRows,
+                    manualRows,
+                    branchMasterIndexes,
+                    branchManualIndexes);
+            Map<String, Object> result = new LinkedHashMap<>();
+
+            result.put("masterRows", masterRows.stream()
+                    .map(this::toTestRowMap)
+                    .toList());
+            result.put("manualRows", manualRows.stream()
+                    .map(this::toTestRowMap)
+                    .toList());
+            result.put("branchMatches", branchMatches);
+            result.put("topicMatches", topicMatches);
+
+            return result;
+        }catch(IOException | ParserConfigurationException
+                | SAXException exception){
+            throw new IllegalArgumentException(
+                    "테스트용 법규 매칭 정보를 읽지 못했습니다. "
                     + exception.getMessage(),
                     exception);
         }
@@ -1694,6 +1762,261 @@ public class DitamapBuilderService {
         return "";
     }
 
+    private List<TestCrossCheckRow> readTestCrossCheckRows(
+            Element parent,
+            int level,
+            Path ditaDirectory,
+            boolean readDitaOtherprops) {
+        List<TestCrossCheckRow> rows = new ArrayList<>();
+        readTestCrossCheckRows(
+                parent,
+                level,
+                ditaDirectory,
+                readDitaOtherprops,
+                rows);
+
+        return rows;
+    }
+
+    private void readTestCrossCheckRows(
+            Element parent,
+            int level,
+            Path ditaDirectory,
+            boolean readDitaOtherprops,
+            List<TestCrossCheckRow> rows) {
+        NodeList children = parent.getChildNodes();
+
+        for(int index = 0; index < children.getLength(); index++){
+            Node child = children.item(index);
+
+            if(!(child instanceof Element element)
+                    || !"topicref".equals(element.getTagName())){
+                continue;
+            }
+
+            String href = element.getAttribute("href");
+            String fileName = extractHrefFileName(href);
+            String otherprops = element.getAttribute("otherprops");
+
+            if(readDitaOtherprops && ditaDirectory != null && !fileName.isBlank()){
+                otherprops = mergeAttributeTokens(
+                        otherprops,
+                        readDitaOtherprops(ditaDirectory.resolve(fileName)));
+            }
+
+            rows.add(new TestCrossCheckRow(
+                    rows.size(),
+                    readLegalTemplateTitle(element, fileName),
+                    level,
+                    fileName,
+                    href,
+                    otherprops,
+                    element.getAttribute("legal-select-branch")));
+            readTestCrossCheckRows(
+                    element,
+                    level + 1,
+                    ditaDirectory,
+                    readDitaOtherprops,
+                    rows);
+        }
+    }
+
+    private List<Map<String, Object>> buildTestBranchMatches(
+            List<TestCrossCheckRow> masterRows,
+            List<TestCrossCheckRow> manualRows) {
+        Map<String, List<TestCrossCheckRow>> manualByBranch =
+                new LinkedHashMap<>();
+        List<Map<String, Object>> matches = new ArrayList<>();
+
+        for(TestCrossCheckRow row : manualRows){
+            if(row.legalSelectBranch().isBlank()){
+                continue;
+            }
+
+            manualByBranch
+                    .computeIfAbsent(
+                            row.legalSelectBranch(),
+                            key -> new ArrayList<>())
+                    .add(row);
+        }
+
+        for(TestCrossCheckRow masterRow : masterRows){
+            if(masterRow.legalSelectBranch().isBlank()){
+                continue;
+            }
+
+            List<TestCrossCheckRow> candidates = manualByBranch.getOrDefault(
+                    masterRow.legalSelectBranch(),
+                    List.of());
+
+            if(candidates.size() != 1){
+                continue;
+            }
+
+            TestCrossCheckRow manualRoot = candidates.get(0);
+            List<TestCrossCheckRow> subtree =
+                    subtreeRows(manualRows, manualRoot.index());
+            Map<String, Object> match = new LinkedHashMap<>();
+
+            match.put("branchKey", masterRow.legalSelectBranch());
+            match.put("masterIndex", masterRow.index());
+            match.put("manualIndex", manualRoot.index());
+            match.put("manualIndexes", subtree.stream()
+                    .map(TestCrossCheckRow::index)
+                    .toList());
+            matches.add(match);
+        }
+
+        return matches;
+    }
+
+    private List<Map<String, Object>> buildTestTopicMatches(
+            List<TestCrossCheckRow> masterRows,
+            List<TestCrossCheckRow> manualRows,
+            Set<Integer> branchMasterIndexes,
+            Set<Integer> branchManualIndexes) {
+        Map<String, List<TestCrossCheckRow>> manualByOtherprops =
+                new LinkedHashMap<>();
+        List<Map<String, Object>> matches = new ArrayList<>();
+
+        for(TestCrossCheckRow manualRow : manualRows){
+            if(branchManualIndexes.contains(manualRow.index())){
+                continue;
+            }
+
+            for(String token : attributeTokens(manualRow.otherprops())){
+                manualByOtherprops
+                        .computeIfAbsent(token, key -> new ArrayList<>())
+                        .add(manualRow);
+            }
+        }
+
+        for(TestCrossCheckRow masterRow : masterRows){
+            if(branchMasterIndexes.contains(masterRow.index())
+                    || masterRow.otherprops().isBlank()){
+                continue;
+            }
+
+            List<TestCrossCheckRow> candidates = new ArrayList<>();
+
+            for(String token : attributeTokens(masterRow.otherprops())){
+                for(TestCrossCheckRow candidate : manualByOtherprops
+                        .getOrDefault(token, List.of())){
+                    if(!candidates.contains(candidate)){
+                        candidates.add(candidate);
+                    }
+                }
+            }
+
+            if(candidates.size() != 1){
+                continue;
+            }
+
+            TestCrossCheckRow manualRow = candidates.get(0);
+            Map<String, Object> match = new LinkedHashMap<>();
+
+            match.put("otherpropsKey", masterRow.otherprops());
+            match.put("masterIndex", masterRow.index());
+            match.put("manualIndex", manualRow.index());
+            matches.add(match);
+        }
+
+        return matches;
+    }
+
+    private List<TestCrossCheckRow> subtreeRows(
+            List<TestCrossCheckRow> rows,
+            int rootIndex) {
+        List<TestCrossCheckRow> subtree = new ArrayList<>();
+        int rootLevel = rows.get(rootIndex).level();
+
+        for(int index = rootIndex; index < rows.size(); index++){
+            TestCrossCheckRow row = rows.get(index);
+
+            if(index > rootIndex && row.level() <= rootLevel){
+                break;
+            }
+
+            subtree.add(row);
+        }
+
+        return subtree;
+    }
+
+    private String readDitaOtherprops(Path path) {
+        if(!Files.exists(path)){
+            return "";
+        }
+
+        try{
+            Document document = parseXml(path);
+            Set<String> tokens = new HashSet<>();
+            NodeList elements = document.getElementsByTagName("*");
+
+            for(int index = 0; index < elements.getLength(); index++){
+                Node node = elements.item(index);
+
+                if(node instanceof Element element){
+                    tokens.addAll(attributeTokens(
+                            element.getAttribute("otherprops")));
+                }
+            }
+
+            return String.join(" ", tokens.stream()
+                    .sorted()
+                    .toList());
+        }catch(IOException | ParserConfigurationException
+                | SAXException exception){
+            return "";
+        }
+    }
+
+    private Set<String> attributeTokens(String value) {
+        Set<String> tokens = new HashSet<>();
+
+        if(value == null || value.isBlank()){
+            return tokens;
+        }
+
+        for(String token : value.trim().split("\\s+")){
+            if(!token.isBlank()){
+                tokens.add(token);
+            }
+        }
+
+        return tokens;
+    }
+
+    private String mergeAttributeTokens(String left, String right) {
+        Set<String> tokens = attributeTokens(left);
+
+        tokens.addAll(attributeTokens(right));
+
+        return String.join(" ", tokens.stream()
+                .sorted()
+                .toList());
+    }
+
+    private Map<String, Object> toTestRowMap(TestCrossCheckRow row) {
+        Map<String, Object> map = new LinkedHashMap<>();
+
+        map.put("index", row.index());
+        map.put("title", row.title());
+        map.put("level", row.level());
+        map.put("fileName", row.fileName());
+        map.put("href", row.href());
+        map.put("otherprops", row.otherprops());
+        map.put("legalSelectBranch", row.legalSelectBranch());
+        map.put("attributeValue", "");
+        map.put("attributeName", "veh-legalid");
+        map.put("filePath", "");
+        map.put("sourceFilePath", "");
+        map.put("elementPath", "");
+        map.put("children", null);
+
+        return map;
+    }
+
     private record TopicInfo(
             String title,
             String attributeValue,
@@ -1707,6 +2030,16 @@ public class DitamapBuilderService {
     private record AttributeInfo(
             String name,
             String value) {
+    }
+
+    private record TestCrossCheckRow(
+            int index,
+            String title,
+            int level,
+            String fileName,
+            String href,
+            String otherprops,
+            String legalSelectBranch) {
     }
 }
 

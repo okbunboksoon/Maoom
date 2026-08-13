@@ -366,6 +366,24 @@ public class UserController {
         return "user/ditamapBuilder/ditamapLegalEditor";
     }
 
+    @GetMapping("/ditamap-builder-test")
+    /** 법규 DITAMAP Builder 변경 검증용 시작 화면을 표시한다. */
+    public String ditamapBuilderTest() {
+        return "user/ditamapBuilderTest/ditamapBuilderTest";
+    }
+
+    @GetMapping("/ditamap-builder-test/diff")
+    /** 법규 DITAMAP Builder 변경 검증용 비교 화면을 표시한다. */
+    public String ditamapBuilderTestDiff() {
+        return "user/ditamapBuilderTest/ditamapBuilderTestDiff";
+    }
+
+    @GetMapping("/ditamap-builder-test/legal-editor")
+    /** 법규 DITAMAP Builder 변경 검증용 편집 화면을 표시한다. */
+    public String ditamapLegalTestEditor() {
+        return "user/ditamapBuilderTest/ditamapLegalTestEditor";
+    }
+
     @GetMapping("/api/user/me")
     @ResponseBody
     /** 현재 로그인 사용자의 ID와 표시 이름을 반환한다. */
