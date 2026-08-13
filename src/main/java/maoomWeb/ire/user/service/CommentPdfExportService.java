@@ -29,7 +29,6 @@ import org.apache.pdfbox.pdmodel.graphics.color.PDColor;
 import org.apache.pdfbox.pdmodel.graphics.color.PDDeviceRGB;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationFileAttachment;
-import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationFreeText;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationHighlight;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationInk;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationMarkup;
@@ -69,8 +68,6 @@ public class CommentPdfExportService {
     private static final float ANNOTATION_SIZE = 22f;
     private static final float RECT_LINE_WIDTH = 2.2f;
     private static final float DRAW_LINE_WIDTH = 2.2f;
-    private static final float CALLOUT_WIDTH = 150f;
-    private static final float CALLOUT_HEIGHT = 64f;
     private static final ObjectMapper JSON_MAPPER =
             new ObjectMapper();
     private static final PDColor HIGHLIGHT_COLOR =
@@ -79,6 +76,8 @@ public class CommentPdfExportService {
             rgb(1f, 0.12f, 0.12f);
     private static final PDColor DRAW_COLOR =
             rgb(0.08f, 0.36f, 1f);
+    private static final PDColor CALLOUT_COLOR =
+            rgb(0.56f, 0.21f, 1f);
 
     private final CommentMapper commentMapper;
     private final Drive drive;
@@ -519,61 +518,16 @@ public class CommentPdfExportService {
                         page,
                         getAnnotationPoint(comment).x(),
                         getAnnotationPoint(comment).y());
-        PDRectangle crop = page.getCropBox();
-        float gap = 24f;
-        float left =
-                anchor.x() + gap + CALLOUT_WIDTH
-                        <= crop.getUpperRightX()
-                ? anchor.x() + gap
-                : anchor.x() - gap - CALLOUT_WIDTH;
-        float bottom =
-                Math.max(
-                        crop.getLowerLeftY() + 4f,
-                        Math.min(
-                                anchor.y() - CALLOUT_HEIGHT / 2f,
-                                crop.getUpperRightY()
-                                - CALLOUT_HEIGHT - 4f));
-        PDRectangle box =
-                new PDRectangle(
-                        left,
-                        bottom,
-                        CALLOUT_WIDTH,
-                        CALLOUT_HEIGHT);
-        float boxEdgeX =
-                left > anchor.x()
-                ? left
-                : left + CALLOUT_WIDTH;
-        float boxEdgeY =
-                Math.max(
-                        bottom + 8f,
-                        Math.min(
-                                anchor.y(),
-                                bottom + CALLOUT_HEIGHT - 8f));
-        float kneeX =
-                anchor.x()
-                + (boxEdgeX - anchor.x()) * 0.55f;
-
-        PDAnnotationFreeText annotation =
-                new PDAnnotationFreeText();
-        annotation.setRectangle(box);
-        annotation.setIntent(
-                PDAnnotationFreeText.IT_FREE_TEXT_CALLOUT);
-        annotation.setCallout(
-                new float[]{
-                    anchor.x(),
-                    anchor.y(),
-                    kneeX,
-                    anchor.y(),
-                    boxEdgeX,
-                    boxEdgeY
-                });
-        annotation.setLineEndingStyle("OpenArrow");
-        annotation.setColor(RECT_COLOR);
-        annotation.setBorderStyle(solidBorder(1.5f));
-        annotation.setDefaultAppearance(
-                "/Helv 10 Tf 0.12 0.12 0.12 rg");
-        annotation.setDefaultStyleString(
-                "font:10pt sans-serif;color:#202020");
+        PDAnnotationText annotation =
+                new PDAnnotationText();
+        annotation.setRectangle(
+                createAnnotationRectangle(
+                        page,
+                        anchor));
+        annotation.setOpen(false);
+        annotation.setName(
+                PDAnnotationText.NAME_COMMENT);
+        annotation.setColor(CALLOUT_COLOR);
         return annotation;
     }
 
@@ -1037,21 +991,12 @@ public class CommentPdfExportService {
 
     private String buildContents(CommentDto comment) {
 
-        StringBuilder contents =
-                new StringBuilder();
-
-        contents.append("[")
-                .append(formatStatus(comment.getStatus()))
-                .append("] ")
-                .append(getAuthor(comment));
-
         if(comment.getCommentText() != null
                 && !comment.getCommentText().isBlank()){
-            contents.append("\n")
-                    .append(comment.getCommentText().trim());
+            return comment.getCommentText().trim();
         }
 
-        return contents.toString();
+        return "";
     }
 
     private Calendar toCalendar(LocalDateTime dateTime) {

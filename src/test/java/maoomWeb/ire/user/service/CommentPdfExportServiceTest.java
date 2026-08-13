@@ -26,7 +26,6 @@ import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.common.filespecification.PDComplexFileSpecification;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationFileAttachment;
-import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationFreeText;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationHighlight;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationInk;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationMarkup;
@@ -214,7 +213,7 @@ class CommentPdfExportServiceTest {
                                             PDAnnotationHighlight.class),
                             annotation -> assertThat(annotation)
                                     .isExactlyInstanceOf(
-                                            PDAnnotationFreeText.class),
+                                            PDAnnotationText.class),
                             annotation -> assertThat(annotation)
                                     .isExactlyInstanceOf(
                                             PDAnnotationInk.class));
@@ -234,18 +233,17 @@ class CommentPdfExportServiceTest {
                     annotations.get(4);
             PDAnnotationHighlight exportedHighlight =
                     (PDAnnotationHighlight) annotations.get(5);
-            PDAnnotationFreeText exportedCallout =
-                    (PDAnnotationFreeText) annotations.get(6);
+            PDAnnotationText exportedCallout =
+                    (PDAnnotationText) annotations.get(6);
             PDAnnotationInk exportedInk =
                     (PDAnnotationInk) annotations.get(7);
 
             assertThat(exportedRectangle.getSubject())
                     .isEqualTo("C-0010 · 해결");
             assertThat(exportedRectangle.getContents())
-                    .contains(
-                            "[해결] 작성자",
-                            "본문 코멘트")
+                    .isEqualTo("본문 코멘트")
                     .doesNotContain(
+                            "[해결] 작성자",
                             "답글 작성자",
                             "답글 내용");
             assertThat(exportedRectangle.getAnnotationName())
@@ -327,12 +325,10 @@ class CommentPdfExportServiceTest {
             assertThat(exportedHighlight.getAppearance())
                     .isNotNull();
 
-            assertThat(exportedCallout.getIntent())
-                    .isEqualTo(
-                            PDAnnotationFreeText
-                            .IT_FREE_TEXT_CALLOUT);
-            assertThat(exportedCallout.getCallout())
-                    .hasSize(6);
+            assertThat(exportedCallout.getName())
+                    .isEqualTo(PDAnnotationText.NAME_COMMENT);
+            assertThat(exportedCallout.getOpen())
+                    .isFalse();
             assertThat(exportedCallout.getContents())
                     .contains("말풍선 코멘트");
 
