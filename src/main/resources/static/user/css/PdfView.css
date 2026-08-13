@@ -27,6 +27,7 @@ html,body{
     padding:0 14px 18px;
     border-right:1px solid #d8dee6;
     overflow:auto;
+    overscroll-behavior:contain;
     background:#f7f9fc;
     box-sizing:border-box;
 }

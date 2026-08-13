@@ -110,8 +110,9 @@ let editorRows = [];
 let initialEditorRows = [];
 let selectedIndex = -1;
 // 이동/들여쓰기 기준은 selectedIndex 하나로 유지하고,
-// Ctrl 다중 선택 삭제는 selectedIndexes Set으로 별도 관리한다.
+// Ctrl/Shift 다중 선택 삭제는 selectedIndexes Set으로 별도 관리한다.
 let selectedIndexes = new Set();
+let selectionAnchorIndex = -1;
 let draggingEditorIndex = -1;
 let currentDraft = null;
 
@@ -437,9 +438,20 @@ function selectedBlockEnd(){
 }
 
 function selectEditorRow(index, event){
+    // Shift 클릭은 마지막 기준 row와 현재 row 사이를 범위 선택한다.
     // Ctrl/Cmd 클릭은 여러 row를 선택하기 위한 토글 동작이다.
     // 일반 클릭은 편집 대상 row 하나만 남기고 선택 상태를 초기화한다.
-    if(event && (event.ctrlKey || event.metaKey)){
+    if(event && event.shiftKey && selectionAnchorIndex >= 0){
+        const start = Math.min(selectionAnchorIndex, index);
+        const end = Math.max(selectionAnchorIndex, index);
+        selectedIndexes = new Set();
+
+        for(let cursor = start; cursor <= end; cursor++){
+            selectedIndexes.add(cursor);
+        }
+
+        selectedIndex = index;
+    }else if(event && (event.ctrlKey || event.metaKey)){
         if(selectedIndexes.has(index)){
             selectedIndexes.delete(index);
             selectedIndex = selectedIndexes.size > 0
@@ -449,9 +461,11 @@ function selectEditorRow(index, event){
             selectedIndexes.add(index);
             selectedIndex = index;
         }
+        selectionAnchorIndex = index;
     }else{
         selectedIndexes = new Set([index]);
         selectedIndex = index;
+        selectionAnchorIndex = index;
     }
 
     renderRows();
@@ -742,6 +756,7 @@ function moveEditorBlock(sourceIndex, targetIndex, insertAfter, nextLevel){
     editorRows.splice(insertIndex, 0, ...block);
     selectedIndex = insertIndex;
     selectedIndexes = new Set([insertIndex]);
+    selectionAnchorIndex = insertIndex;
     renderRows();
 }
 
@@ -760,42 +775,172 @@ function previousSiblingStart(index){
     return cursor;
 }
 
+function addEditorSelectionRange(target, start, end){
+    for(let index = start; index < end; index++){
+        target.add(index);
+    }
+}
+
+function editorRangeContains(ranges, index){
+    return ranges.some(range => index >= range.start && index < range.end);
+}
+
+function mergeEditorAdjacentRanges(ranges){
+    const merged = [];
+
+    ranges.forEach(range => {
+        const previous = merged[merged.length - 1];
+
+        if(previous && range.start <= previous.end){
+            previous.end = Math.max(previous.end, range.end);
+        }else{
+            merged.push({
+                start:range.start,
+                end:range.end
+            });
+        }
+    });
+
+    return merged;
+}
+
+function moveEditorRangesToTarget(ranges, targetIndex, insertAfter, nextLevel){
+    const moveRanges = mergeEditorAdjacentRanges(ranges);
+
+    if(moveRanges.length === 0
+            || targetIndex < 0
+            || targetIndex >= editorRows.length
+            || editorRangeContains(moveRanges, targetIndex)){
+        return false;
+    }
+
+    const movingRows = [];
+    const originalLevel = editorRows[moveRanges[0].start].level || 1;
+    let adjustedTargetIndex = targetIndex;
+
+    moveRanges
+        .slice()
+        .sort((left, right) => right.start - left.start)
+        .forEach(range => {
+            movingRows.unshift(...editorRows.slice(range.start, range.end));
+            editorRows.splice(range.start, range.end - range.start);
+
+            if(range.start < targetIndex){
+                adjustedTargetIndex -= range.end - range.start;
+            }
+        });
+
+    const targetLevel = Math.max(1, Math.min(6, Number(nextLevel || originalLevel)));
+    const levelDelta = targetLevel - originalLevel;
+
+    movingRows.forEach(row => {
+        row.level = Math.max(1, Math.min(6, (row.level || 1) + levelDelta));
+    });
+
+    const insertIndex = Math.max(
+            0,
+            Math.min(
+                    editorRows.length,
+                    adjustedTargetIndex + (insertAfter ? 1 : 0)));
+    editorRows.splice(insertIndex, 0, ...movingRows);
+    selectedIndexes = new Set();
+    addEditorSelectionRange(selectedIndexes, insertIndex, insertIndex + movingRows.length);
+    selectedIndex = insertIndex;
+    selectionAnchorIndex = insertIndex;
+    return true;
+}
+
 function moveSelectedUp(){
-    if(selectedIndex < 0){
+    const moveRanges = mergeEditorAdjacentRanges(getSelectedEditorDeleteRanges());
+
+    if(moveRanges.length === 0){
         return;
     }
 
-    const targetIndex = previousSiblingStart(selectedIndex);
+    const nextSelectedIndexes = new Set();
+    let nextSelectedIndex = selectedIndex;
+    let moved = false;
 
-    if(targetIndex < 0){
+    moveRanges.forEach(range => {
+        const targetIndex = previousSiblingStart(range.start);
+
+        if(targetIndex < 0 || editorRangeContains(moveRanges, targetIndex)){
+            addEditorSelectionRange(nextSelectedIndexes, range.start, range.end);
+            return;
+        }
+
+        const movingBlock = editorRows.slice(range.start, range.end);
+        const previousBlock = editorRows.slice(targetIndex, range.start);
+        editorRows.splice(
+                targetIndex,
+                range.end - targetIndex,
+                ...movingBlock,
+                ...previousBlock);
+
+        addEditorSelectionRange(
+                nextSelectedIndexes,
+                targetIndex,
+                targetIndex + movingBlock.length);
+        nextSelectedIndex = targetIndex;
+        moved = true;
+    });
+
+    if(!moved){
         return;
     }
 
-    moveEditorBlock(
-            selectedIndex,
-            targetIndex,
-            false,
-            editorRows[selectedIndex].level || 1);
+    selectedIndexes = nextSelectedIndexes;
+    selectedIndex = nextSelectedIndex;
+    selectionAnchorIndex = nextSelectedIndex;
+    renderRows();
 }
 
 function moveSelectedDown(){
-    if(selectedIndex < 0){
+    const moveRanges = mergeEditorAdjacentRanges(getSelectedEditorDeleteRanges());
+
+    if(moveRanges.length === 0){
         return;
     }
 
-    const blockEnd = selectedBlockEnd();
+    const nextSelectedIndexes = new Set();
+    let nextSelectedIndex = selectedIndex;
+    let moved = false;
 
-    if(blockEnd >= editorRows.length){
+    moveRanges
+        .slice()
+        .sort((left, right) => right.start - left.start)
+        .forEach(range => {
+            if(range.end >= editorRows.length
+                    || editorRangeContains(moveRanges, range.end)){
+                addEditorSelectionRange(nextSelectedIndexes, range.start, range.end);
+                return;
+            }
+
+            const nextBlockEnd = subtreeEnd(range.end);
+            const movingBlock = editorRows.slice(range.start, range.end);
+            const nextBlock = editorRows.slice(range.end, nextBlockEnd);
+            editorRows.splice(
+                    range.start,
+                    nextBlockEnd - range.start,
+                    ...nextBlock,
+                    ...movingBlock);
+
+            const movedStart = nextBlockEnd - movingBlock.length;
+            addEditorSelectionRange(
+                    nextSelectedIndexes,
+                    movedStart,
+                    movedStart + movingBlock.length);
+            nextSelectedIndex = movedStart;
+            moved = true;
+        });
+
+    if(!moved){
         return;
     }
 
-    const nextBlockEnd = subtreeEnd(blockEnd);
-    const block = editorRows.slice(selectedIndex, blockEnd);
-    editorRows.splice(selectedIndex, block.length);
-    const insertIndex = nextBlockEnd - block.length;
-    editorRows.splice(insertIndex, 0, ...block);
-    selectedIndex = insertIndex;
-    selectedIndexes = new Set([insertIndex]);
+    selectedIndexes = nextSelectedIndexes;
+    selectedIndex = nextSelectedIndex;
+    selectionAnchorIndex = nextSelectedIndex;
     renderRows();
 }
 
@@ -809,8 +954,13 @@ function clearEditorDropMarkers(){
 function handleEditorDragStart(event){
     const row = event.currentTarget;
     draggingEditorIndex = Number(row.dataset.index || -1);
-    selectedIndex = draggingEditorIndex;
-    selectedIndexes = new Set([draggingEditorIndex]);
+
+    if(!selectedIndexes.has(draggingEditorIndex)){
+        selectedIndex = draggingEditorIndex;
+        selectedIndexes = new Set([draggingEditorIndex]);
+        selectionAnchorIndex = draggingEditorIndex;
+    }
+
     row.classList.add('dragging');
 
     if(event.dataTransfer){
@@ -852,11 +1002,13 @@ function handleEditorDrop(event){
     const effectiveTargetIndex = dropInfo.after ? subtreeEnd(targetIndex) - 1 : targetIndex;
 
     clearEditorDropMarkers();
-    moveEditorBlock(
-            draggingEditorIndex,
+    if(moveEditorRangesToTarget(
+            getSelectedEditorDeleteRanges(),
             effectiveTargetIndex,
             dropInfo.after,
-            dropInfo.level);
+            dropInfo.level)){
+        renderRows();
+    }
     draggingEditorIndex = -1;
 }
 
@@ -884,24 +1036,34 @@ function handleEditorDragEnd(){
 }
 
 function changeSelectedLevel(delta){
-    if(selectedIndex < 0){
+    const changeRanges = getSelectedEditorDeleteRanges();
+
+    if(changeRanges.length === 0){
         return;
     }
 
-    const blockEnd = selectedBlockEnd();
-    const nextLevel = Math.max(
-            1,
-            Math.min(6, (editorRows[selectedIndex].level || 1) + delta));
-    const levelDelta = nextLevel - (editorRows[selectedIndex].level || 1);
+    let changed = false;
 
-    if(levelDelta === 0){
+    changeRanges.forEach(range => {
+        const currentLevel = editorRows[range.start].level || 1;
+        const nextLevel = Math.max(1, Math.min(6, currentLevel + delta));
+        const levelDelta = nextLevel - currentLevel;
+
+        if(levelDelta === 0){
+            return;
+        }
+
+        for(let index = range.start; index < range.end; index++){
+            editorRows[index].level = Math.max(
+                    1,
+                    Math.min(6, (editorRows[index].level || 1) + levelDelta));
+        }
+
+        changed = true;
+    });
+
+    if(!changed){
         return;
-    }
-
-    for(let index = selectedIndex; index < blockEnd; index++){
-        editorRows[index].level = Math.max(
-                1,
-                Math.min(6, (editorRows[index].level || 1) + levelDelta));
     }
 
     renderRows();
@@ -933,6 +1095,7 @@ async function deleteSelectedRow(){
         });
     selectedIndex = -1;
     selectedIndexes.clear();
+    selectionAnchorIndex = -1;
     renderRows();
 }
 
@@ -951,6 +1114,7 @@ async function undoEditorChanges(){
     // 되돌리기 후 이전 다중 선택 상태가 남아 있으면 삭제/이동 대상이 틀어지므로 초기화한다.
     selectedIndex = -1;
     selectedIndexes.clear();
+    selectionAnchorIndex = -1;
     draggingEditorIndex = -1;
     renderRows();
 }

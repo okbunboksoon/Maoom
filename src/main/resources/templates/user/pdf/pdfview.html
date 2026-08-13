@@ -263,6 +263,28 @@
 	        ) || '[]'
 	    ).map(String);
 
+    preventPdfScrollFromDocumentTree();
+
+    function preventPdfScrollFromDocumentTree(){
+
+        const leftPanel =
+            document.querySelector('.left-panel');
+
+        if(!leftPanel){
+            return;
+        }
+
+        leftPanel.addEventListener(
+            'wheel',
+            function(event){
+                event.preventDefault();
+                event.stopPropagation();
+                leftPanel.scrollTop += event.deltaY;
+            },
+            { passive:false }
+        );
+    }
+
 const fileId =
 document.getElementById("fileId").value;
 
@@ -361,12 +383,21 @@ document.getElementById('pdfViewer').onload = function(){
             const pdfViewer =
                 app.pdfViewer;
             const pageScrollMode = 3;
+            const pdfJsUiTarget =
+                e.target.closest(
+                    '#viewsManager, '
+                    + '#toolbarContainer, '
+                    + '#secondaryToolbar, '
+                    + '.doorHanger, '
+                    + '.popupMenu'
+                );
 
             // PDF.js의 페이지 단위 모드에서만 휠로 페이지를 전환한다.
             // 세로/가로/연속 모드에서는 기본 스크롤을 막지 않는다.
             if(
                 !pdfViewer
                 || pdfViewer.scrollMode !== pageScrollMode
+                || pdfJsUiTarget
                 || e.ctrlKey
                 || e.metaKey
                 || app.page === undefined
@@ -377,16 +408,10 @@ document.getElementById('pdfViewer').onload = function(){
             e.preventDefault();
 
             if(e.deltaY > 0){
-
-                if(app.page < app.pagesCount){
-                    app.page++;
-                }
+                pdfViewer.nextPage();
 
             }else{
-
-                if(app.page > 1){
-                    app.page--;
-                }
+                pdfViewer.previousPage();
 
             }
 
@@ -432,6 +457,24 @@ document.getElementById('pdfViewer').onload = function(){
 	        }
 	    }
 	);
+
+    viewerWindow.document.addEventListener(
+        'mousedown',
+        function(e){
+            if(
+                !e.target.closest('.page')
+                || e.target.closest(
+                    '.pdf-comment-highlight, '
+                    + '.pdf-rect-resize-handle, '
+                    + '.pdf-text-highlight-selection-outline'
+                )
+            ){
+                return;
+            }
+
+            clearSelectedPdfHighlight(viewerWindow);
+        }
+    );
 	
 	viewerWindow.document.addEventListener(
 	    'mousedown',
@@ -2769,7 +2812,7 @@ function drawHighlights(comments, pageNumbers){
             highlight.style.mixBlendMode =
                 'darken';
 
-		    highlight.style.opacity =
+            highlight.style.opacity =
 		        '1';
 
             const textBounds =
@@ -2984,9 +3027,14 @@ function drawTextHighlightFragments(
         textRects){
 
     textRects.forEach(rect => {
+        const displayRect =
+            getSpanAlignedTextHighlightRect(
+                rect,
+                page
+            );
         const textBounds =
             getExpandedTextHighlightRect(
-                rect,
+                displayRect,
                 page
             );
         const highlight =
@@ -3021,11 +3069,12 @@ function drawTextHighlightFragments(
         highlight.style.pointerEvents =
             'auto';
 
-        highlight.onclick = function(){
-            moveToComment(
-                comment.commentId,
-                comment.pageNum,
-                comment.posY
+        highlight.onclick = function(event){
+            event.preventDefault();
+            event.stopPropagation();
+
+            selectPdfHighlightInPlace(
+                comment.commentId
             );
         };
 
@@ -3037,6 +3086,118 @@ function drawTextHighlightFragments(
 
         page.appendChild(highlight);
     });
+}
+
+function getSpanAlignedTextHighlightRect(rect, page){
+    if(!rect || !page || !page.getBoundingClientRect){
+        return rect;
+    }
+
+    const pageRect =
+        page.getBoundingClientRect();
+
+    if(pageRect.width <= 0 || pageRect.height <= 0){
+        return rect;
+    }
+
+    const highlightRect = {
+        left:pageRect.left + (Number(rect.x) * pageRect.width),
+        top:pageRect.top + (Number(rect.y) * pageRect.height),
+        right:pageRect.left
+            + ((Number(rect.x) + Number(rect.w)) * pageRect.width),
+        bottom:pageRect.top
+            + ((Number(rect.y) + Number(rect.h)) * pageRect.height)
+    };
+    highlightRect.width =
+        highlightRect.right - highlightRect.left;
+    highlightRect.height =
+        highlightRect.bottom - highlightRect.top;
+
+    const spanBounds =
+        getOverlappingTextSpanBounds(
+            highlightRect,
+            page
+        );
+
+    if(
+        !spanBounds
+        || spanBounds.bottom <= spanBounds.top
+    ){
+        return rect;
+    }
+
+    const y1 =
+        clampRatio((spanBounds.top - pageRect.top) / pageRect.height);
+    const y2 =
+        clampRatio((spanBounds.bottom - pageRect.top) / pageRect.height);
+
+    return {
+        x:rect.x,
+        y:y1,
+        w:rect.w,
+        h:Math.max(0.001, y2 - y1)
+    };
+}
+
+function getOverlappingTextSpanBounds(highlightRect, page){
+    const spans =
+        Array.from(
+            page.querySelectorAll('.textLayer span')
+        );
+    let top =
+        Number.POSITIVE_INFINITY;
+    let bottom =
+        Number.NEGATIVE_INFINITY;
+
+    spans.forEach(span => {
+        const spanRect =
+            span.getBoundingClientRect();
+
+        if(
+            spanRect.width <= 0
+            || spanRect.height <= 0
+            || !hasMeaningfulRectOverlap(spanRect, highlightRect)
+        ){
+            return;
+        }
+
+        top =
+            Math.min(top, spanRect.top);
+        bottom =
+            Math.max(bottom, spanRect.bottom);
+    });
+
+    if(
+        !Number.isFinite(top)
+        || !Number.isFinite(bottom)
+        || bottom <= top
+    ){
+        return null;
+    }
+
+    return {
+        top:top,
+        bottom:bottom
+    };
+}
+
+function hasMeaningfulRectOverlap(textRect, highlightRect){
+    const horizontalOverlap =
+        Math.min(textRect.right, highlightRect.right)
+        - Math.max(textRect.left, highlightRect.left);
+    const verticalOverlap =
+        Math.min(textRect.bottom, highlightRect.bottom)
+        - Math.max(textRect.top, highlightRect.top);
+
+    if(horizontalOverlap <= 0 || verticalOverlap <= 0){
+        return false;
+    }
+
+    const verticalRatio =
+        verticalOverlap
+        / Math.min(textRect.height, highlightRect.height);
+
+    return verticalRatio >= 0.5;
 }
 
 function storeTextHighlightBounds(target, bounds){
@@ -3082,15 +3243,13 @@ function getExpandedTextHighlightRect(rect, page){
         : null;
     const horizontalPadding =
         pageRect && pageRect.width > 0
-        ? 12 / pageRect.width
+        ? 1 / pageRect.width
         : 0;
+    const verticalPaddingPx =
+        0;
     const verticalPadding =
         pageRect && pageRect.height > 0
-        ? 1.5 / pageRect.height
-        : 0;
-    const verticalOffset =
-        pageRect && pageRect.height > 0
-        ? 3 / pageRect.height
+        ? verticalPaddingPx / pageRect.height
         : 0;
     const x1 =
         clampRatio(Number(rect.x) - horizontalPadding);
@@ -3098,7 +3257,6 @@ function getExpandedTextHighlightRect(rect, page){
         clampRatio(
             Number(rect.y)
             - verticalPadding
-            - verticalOffset
         );
     const x2 =
         clampRatio(
@@ -3111,7 +3269,6 @@ function getExpandedTextHighlightRect(rect, page){
             Number(rect.y)
             + Number(rect.h)
             + verticalPadding
-            - verticalOffset
         );
 
     return {
@@ -4045,38 +4202,34 @@ function moveToComment(commentId,pageNum,posY){
 
 }
 
+function selectPdfHighlightInPlace(commentId){
+
+    selectedCommentId = commentId;
+
+    document.querySelectorAll('.comment-item')
+        .forEach(item => item.classList.remove('selected-comment'));
+
+    const commentItem =
+        document.querySelector(
+            '.comment-item[data-comment-id="'
+            + commentId
+            + '"]'
+        );
+
+    if(commentItem){
+        commentItem.classList.add('selected-comment');
+    }
+
+    selectHighlight(commentId);
+
+}
+
 function selectHighlight(commentId){
 
     const viewerWindow =
         document.getElementById('pdfViewer').contentWindow;
 
-    viewerWindow.document
-        .querySelectorAll('.pdf-text-highlight-selection-outline')
-        .forEach(item => item.remove());
-
-    viewerWindow.document
-        .querySelectorAll('.pdf-comment-highlight')
-        .forEach(item => {
-
-            item.classList.remove('selected-pdf-comment-highlight');
-            item.style.outline = '';
-            item.style.outlineOffset = '';
-            item.style.filter = '';
-            item.style.boxShadow = '';
-            clearTextHighlightSelectionBorder(item);
-            if(item.dataset.commentType === 'TEXT'){
-                item.style.background =
-                    '#ffcca2';
-                item.style.mixBlendMode =
-                    'darken';
-            }
-            item.querySelectorAll(
-                '.pdf-rect-resize-handle'
-            ).forEach(handle => {
-                handle.style.display = 'none';
-            });
-
-        });
+    clearSelectedPdfHighlight(viewerWindow);
 
     const targets =
         viewerWindow.document.querySelectorAll(
@@ -4118,6 +4271,40 @@ function selectHighlight(commentId){
 
     applyTextHighlightSelectionBorder(textTargets);
 
+}
+
+function clearSelectedPdfHighlight(viewerWindow){
+    if(!viewerWindow || !viewerWindow.document){
+        return;
+    }
+
+    viewerWindow.document
+        .querySelectorAll('.pdf-text-highlight-selection-outline')
+        .forEach(item => item.remove());
+
+    viewerWindow.document
+        .querySelectorAll('.pdf-comment-highlight')
+        .forEach(item => {
+
+            item.classList.remove('selected-pdf-comment-highlight');
+            item.style.outline = '';
+            item.style.outlineOffset = '';
+            item.style.filter = '';
+            item.style.boxShadow = '';
+            clearTextHighlightSelectionBorder(item);
+            if(item.dataset.commentType === 'TEXT'){
+                item.style.background =
+                    '#ffcca2';
+                item.style.mixBlendMode =
+                    'darken';
+            }
+            item.querySelectorAll(
+                '.pdf-rect-resize-handle'
+            ).forEach(handle => {
+                handle.style.display = 'none';
+            });
+
+        });
 }
 
 function clearTextHighlightSelectionBorder(target){
@@ -4225,9 +4412,9 @@ function buildTextHighlightOutlinePath(
         return '';
     }
 
-    const horizontalPadding = 0;
-    const topPadding = 0;
-    const bottomPadding = 0;
+    const = 5;
+    const topPadding = 5;
+    const bottomPadding = 5;
     const minimumX = 1;
     const minimumY = 1;
     const maximumX =
@@ -6177,6 +6364,11 @@ function getPdfTextSelection(viewerWindow){
     const pageRect = pageElement.getBoundingClientRect();
     let rects = [];
 
+    debugPdfTextSelectionGeometry(
+        range,
+        pageElement
+    );
+
     try{
         rects =
             getSelectionLineRects(range, pageElement, pageRect);
@@ -6218,6 +6410,60 @@ function getPdfTextSelection(viewerWindow){
     };
 }
 
+function debugPdfTextSelectionGeometry(range, pageElement){
+    const debugEnabled =
+        window.localStorage
+        && window.localStorage.getItem('pdfHighlightDebug') === '1';
+
+    if(!debugEnabled || !range || !pageElement){
+        return;
+    }
+
+    const selectedSpans =
+        Array.from(
+            pageElement.querySelectorAll('.textLayer span')
+        )
+        .filter(span => {
+            try{
+                return range.intersectsNode(span);
+            }catch(error){
+                return false;
+            }
+        })
+        .map(span => {
+            const rect =
+                span.getBoundingClientRect();
+            const style =
+                span.ownerDocument.defaultView
+                .getComputedStyle(span);
+
+            return {
+                text:span.textContent,
+                spanTop:rect.top,
+                spanBottom:rect.bottom,
+                spanHeight:rect.height,
+                fontSize:style.fontSize,
+                fontHeight:style.getPropertyValue('--font-height'),
+                scaleX:style.getPropertyValue('--scale-x')
+            };
+        });
+    const rangeRects =
+        Array.from(range.getClientRects())
+        .map(rect => ({
+            rangeTop:rect.top,
+            rangeBottom:rect.bottom,
+            rangeHeight:rect.height,
+            rangeLeft:rect.left,
+            rangeRight:rect.right,
+            rangeWidth:rect.width
+        }));
+
+    console.group('[PDF highlight debug]');
+    console.table(rangeRects);
+    console.table(selectedSpans);
+    console.groupEnd();
+}
+
 function getSelectionLineRects(range, pageElement, pageRect){
     const rawRects =
         Array.from(range.getClientRects())
@@ -6229,10 +6475,12 @@ function getSelectionLineRects(range, pageElement, pageRect){
             && rect.right >= pageRect.left
             && rect.left <= pageRect.right
         )
-        .map(rect => toNormalizedSelectionRect(rect, pageRect))
+        .map(rect =>
+            toNormalizedSelectionRect(rect, pageRect)
+        )
         .filter(Boolean);
 
-    return mergeLineRects(rawRects);
+    return rawRects;
 }
 
 function toNormalizedSelectionRect(rect, pageRect){
@@ -6308,7 +6556,6 @@ function mergeLineRects(rects){
                             (item.y + (item.h / 2))
                             - rectCenterY
                         );
-
                     return (
                         minimumHeight > 0
                         && overlap / minimumHeight >= 0.55
@@ -6694,6 +6941,13 @@ function initializePdfAnnotationToolbar(viewerWindow){
         html.maoom-mode-draw #viewerContainer,
         html.maoom-mode-draw #viewerContainer * {
             cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M5 22l2.2-6.2L19.5 3.5l5 5L12.2 20.8 5 22z' fill='%23fff' stroke='%235f6368' stroke-width='1.5'/%3E%3Cpath d='M16.5 6.5l5 5' stroke='%235f6368' stroke-width='1.5'/%3E%3C/svg%3E") 5 23, crosshair !important;
+        }
+        #viewsManagerContent,
+        #outlinesView,
+        #thumbnailsView,
+        #attachmentsView,
+        #layersView {
+            overscroll-behavior:contain;
         }
         .pdf-comment-hover-popup {
             position:absolute;
