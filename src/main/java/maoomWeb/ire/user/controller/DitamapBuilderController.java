@@ -2,6 +2,7 @@ package maoomWeb.ire.user.controller;
 
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -95,6 +96,12 @@ public class DitamapBuilderController {
     public List<String> readDitaFiles(
             @RequestBody DitamapTreeRequest request) {
         return ditamapBuilderService.readDitaFiles(request.path());
+    }
+
+    @PostMapping("/api/ditamap-builder-test/cross-check")
+    public Map<String, Object> readTestCrossCheck(
+            @RequestBody DitamapTreeRequest request) {
+        return ditamapBuilderService.readTestCrossCheck(request.path());
     }
 
     @PostMapping("/api/ditamap-builder/legal-targets")

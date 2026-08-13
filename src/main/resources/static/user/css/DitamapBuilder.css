@@ -678,6 +678,18 @@ body{
     color:#8a5b00;
 }
 
+.diff-chip-branch{
+    border-color:#2dd4bf;
+    background:#ccfbf1;
+    color:#0f766e;
+}
+
+.diff-chip-otherprops{
+    border-color:#fb923c;
+    background:#ffedd5;
+    color:#c2410c;
+}
+
 .diff-chip-master-unlinked{
     border-color:#a78bfa;
     background:#f3e8ff;
@@ -714,6 +726,29 @@ body{
 
 .ditamap-tree-row.is-diff-moved .tree-title-text{
     color:#7a4f00;
+    font-weight:700;
+}
+
+.ditamap-tree-row.is-diff-branch-candidate{
+    background:#ccfbf1;
+}
+
+.ditamap-tree-row.is-diff-branch-child{
+    background:#f0fdfa;
+}
+
+.ditamap-tree-row.is-diff-branch-candidate .tree-title-text,
+.ditamap-tree-row.is-diff-branch-child .tree-title-text{
+    color:#0f766e;
+    font-weight:700;
+}
+
+.ditamap-tree-row.is-diff-otherprops-candidate{
+    background:#ffedd5;
+}
+
+.ditamap-tree-row.is-diff-otherprops-candidate .tree-title-text{
+    color:#c2410c;
     font-weight:700;
 }
 
