@@ -189,24 +189,44 @@ async function loadEditor(){
     }
 
     const draft = JSON.parse(stored);
+    const isOtherpropsMode = draft.compareMode === 'otherprops';
     currentDraft = draft;
     editorPathText.textContent = draft.ditamapFile || '';
-    const response = await fetch('/api/ditamap-builder/legal-template', {
-        method:'POST',
-        headers:{
-            'Accept':'application/json'
+    if(isOtherpropsMode
+            && draft.crossCheck
+            && Array.isArray(draft.crossCheck.masterRows)){
+        editorRows = draft.crossCheck.masterRows.map(row =>
+                normalizeCrossCheckEditorRow(row));
+    }else{
+        const response = await fetch('/api/ditamap-builder/legal-template', {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                masterPath:draft.masterPath || '',
+                masterFileName:draft.masterFileName || ''
+            })
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
         }
-    });
 
-    if(!response.ok){
-        throw new Error(await response.text());
+        const template = await response.json();
+        editorRows = flattenNodes(template.nodes || []);
     }
-
-    const template = await response.json();
-    editorRows = flattenNodes(template.nodes || []);
     const checkedTopics = draft.topics || [];
+    if(isOtherpropsMode){
+        applyOtherpropsBranchReplacements(draft, checkedTopics);
+        applyOtherpropsTopicReplacements(draft, checkedTopics);
+        removeStaleOtherpropsMasterRows();
+    }
     const manualOnlyTopics = checkedTopics
-            .filter(topic => topic.diffStatus === 'manual-only');
+            .filter(topic => isOtherpropsMode
+                    ? topic.diffStatus === 'manual-only' && !topic.matchType
+                    : topic.diffStatus === 'manual-only');
 
     if(manualOnlyTopics.length > 0){
         appendEditorTopicGroup('미분류', manualOnlyTopics);
@@ -214,6 +234,157 @@ async function loadEditor(){
 
     initialEditorRows = cloneRows(editorRows);
     renderRows();
+}
+
+function normalizeCrossCheckEditorRow(row){
+    return Object.assign({}, row, {
+        originalMasterIndex:Number(row.index),
+        attributeValue:row.attributeValue || '',
+        attributeName:row.attributeName || 'veh-legalid',
+        children:null
+    });
+}
+
+function rowSubtreeEndIndex(rows, rootIndex){
+    const rootLevel = Number(rows[rootIndex] && rows[rootIndex].level || 1);
+    let endIndex = rootIndex + 1;
+
+    while(endIndex < rows.length
+            && Number(rows[endIndex].level || 1) > rootLevel){
+        endIndex++;
+    }
+
+    return endIndex;
+}
+
+function cloneManualRowForOtherpropsEditor(row, levelDelta, replacementSource){
+    return Object.assign({}, row, {
+        level:Math.max(1, Math.min(6, Number(row.level || 1) + levelDelta)),
+        originalMasterIndex:null,
+        attributeValue:row.attributeValue || '',
+        attributeName:row.attributeName || 'veh-legalid',
+        replacementSource:replacementSource || '',
+        children:null
+    });
+}
+
+function findCurrentMasterRowIndex(originalMasterIndex){
+    return editorRows.findIndex(row =>
+            Number(row.originalMasterIndex) === Number(originalMasterIndex));
+}
+
+function applyOtherpropsBranchReplacements(draft, checkedTopics){
+    const crossCheck = draft.crossCheck || {};
+    const checkedBranchRoots = new Set(checkedTopics
+            .filter(topic => topic.matchType === 'branch')
+            .map(topic => String(topic.matchedMasterIndex || '')));
+    const branchMatches = (crossCheck.branchMatches || [])
+            .filter(match => checkedBranchRoots.has(String(match.masterIndex)))
+            .sort((left, right) => Number(right.masterIndex) - Number(left.masterIndex));
+
+    branchMatches.forEach(match => {
+        const masterIndex = Number(match.masterIndex);
+        const currentMasterIndex = findCurrentMasterRowIndex(masterIndex);
+
+        if(!Number.isInteger(masterIndex) || currentMasterIndex < 0){
+            return;
+        }
+
+        const manualRows = (match.manualIndexes || [])
+                .map(index => (crossCheck.manualRows || [])[Number(index)])
+                .filter(Boolean);
+
+        if(manualRows.length === 0){
+            return;
+        }
+
+        const endIndex = rowSubtreeEndIndex(editorRows, currentMasterIndex);
+        const levelDelta = Number(editorRows[currentMasterIndex].level || 1)
+                - Number(manualRows[0].level || 1);
+        const replacementRows = manualRows
+                .map(row => cloneManualRowForOtherpropsEditor(
+                        row,
+                        levelDelta,
+                        'cross-check'));
+
+        editorRows.splice(
+                currentMasterIndex,
+                endIndex - currentMasterIndex,
+                ...replacementRows);
+    });
+}
+
+function isInsideOtherpropsReplacedBranch(draft, masterIndex){
+    const crossCheck = draft.crossCheck || {};
+
+    return (crossCheck.branchMatches || []).some(match => {
+        const rootIndex = Number(match.masterIndex);
+
+        if(!Number.isInteger(rootIndex)){
+            return false;
+        }
+
+        const endIndex = rowSubtreeEndIndex(
+                crossCheck.masterRows || [],
+                rootIndex);
+
+        return masterIndex >= rootIndex && masterIndex < endIndex;
+    });
+}
+
+function applyOtherpropsTopicReplacements(draft, checkedTopics){
+    checkedTopics
+        .filter(topic => topic.matchType === 'topic')
+        .sort((left, right) =>
+                Number(right.matchedMasterIndex) - Number(left.matchedMasterIndex))
+        .forEach(topic => {
+            const masterIndex = Number(topic.matchedMasterIndex);
+            const currentMasterIndex = findCurrentMasterRowIndex(masterIndex);
+
+            if(!Number.isInteger(masterIndex)
+                    || currentMasterIndex < 0
+                    || isInsideOtherpropsReplacedBranch(draft, masterIndex)){
+                return;
+            }
+
+            editorRows.splice(
+                    currentMasterIndex,
+                    1,
+                    cloneManualRowForOtherpropsEditor(
+                            topic,
+                            Number(editorRows[currentMasterIndex].level || 1)
+                                    - Number(topic.level || 1),
+                            'cross-check'));
+        });
+}
+
+function normalizeEditorFileNameForReplacement(fileName){
+    return (fileName || '').trim().toLowerCase();
+}
+
+function removeStaleOtherpropsMasterRows(){
+    const replacementFileNames = new Set(editorRows
+            .filter(row => row.replacementSource === 'cross-check')
+            .map(row => normalizeEditorFileNameForReplacement(row.fileName))
+            .filter(Boolean));
+
+    if(replacementFileNames.size === 0){
+        return;
+    }
+
+    for(let index = editorRows.length - 1; index >= 0; index--){
+        const row = editorRows[index];
+        const fileName = normalizeEditorFileNameForReplacement(row.fileName);
+
+        if(row.replacementSource === 'cross-check'
+                || !replacementFileNames.has(fileName)){
+            continue;
+        }
+
+        editorRows.splice(
+                index,
+                rowSubtreeEndIndex(editorRows, index) - index);
+    }
 }
 
 function appendEditorTopicGroup(title, checkedTopics){

@@ -17,7 +17,10 @@
     </header>
 
     <div class="ditamap-test-summary">
-        <span class="diff-chip diff-chip-match">V 체크: 양쪽에 있음</span>
+        <span id="diffModeChip" class="diff-chip diff-chip-match">비교 방식 확인 중</span>
+        <span class="diff-chip diff-chip-branch">청록: legal-select-branch 전체 교체</span>
+        <span class="diff-chip diff-chip-otherprops">주황: otherprops 개별 교체</span>
+        <span class="diff-chip diff-chip-match">초록: 파일명 일치</span>
         <span class="diff-chip diff-chip-moved">노랑: 다른 위치에 있음</span>
         <span class="diff-chip diff-chip-master-unlinked">보라: 파일 있음 / DITAMAP 미연결</span>
         <span class="diff-chip diff-chip-master">빨강: 법규 마스터에만 있음</span>
@@ -78,17 +81,32 @@
              aria-hidden="true">⌛</div>
         <strong id="diffProgressTitle">DITAMAP 비교 중</strong>
         <p id="diffProgressText">잠시만 기다려 주세요.</p>
-        <button id="diffProgressCloseButton"
-                class="ditamap-btn primary-btn"
-                type="button"
-                hidden>확인</button>
+        <div id="diffProgressDetails"
+             class="legal-progress-details"
+             hidden></div>
+        <div class="legal-progress-actions">
+            <button id="diffProgressReportButton"
+                    class="ditamap-btn"
+                    type="button"
+                    hidden>상세 보기</button>
+            <button id="diffProgressCloseButton"
+                    class="ditamap-btn primary-btn"
+                    type="button"
+                    hidden>확인</button>
+        </div>
     </div>
 </div>
 
 <script>
 const diffParams = new URLSearchParams(location.search);
+const compareMode = diffParams.get('mode') === 'otherprops'
+        ? 'otherprops'
+        : 'file';
+const masterPath = diffParams.get('masterPath') || '';
+const masterFileName = diffParams.get('masterFileName') || '';
 const diffNextButton = document.getElementById('diffNextButton');
 const diffPathText = document.getElementById('diffPathText');
+const diffModeChip = document.getElementById('diffModeChip');
 const masterTree = document.getElementById('masterTree');
 const manualTree = document.getElementById('manualTree');
 const manualDitamapName = document.getElementById('manualDitamapName');
@@ -96,26 +114,45 @@ const diffProgressBackdrop = document.getElementById('diffProgressBackdrop');
 const diffProgressHourglass = document.getElementById('diffProgressHourglass');
 const diffProgressTitle = document.getElementById('diffProgressTitle');
 const diffProgressText = document.getElementById('diffProgressText');
+const diffProgressDetails = document.getElementById('diffProgressDetails');
+const diffProgressReportButton = document.getElementById('diffProgressReportButton');
 const diffProgressCloseButton = document.getElementById('diffProgressCloseButton');
 const masterPanel = masterTree.closest('.ditamap-tree-panel');
 const manualPanel = manualTree.closest('.ditamap-tree-panel');
 let diffManualTree = null;
 let diffManualRows = [];
+let diffCrossCheck = null;
+let diffOtherpropsReportId = '';
 let isSyncingDiffScroll = false;
 
-function showDiffProgress(title, text, state){
+function showDiffProgress(title, text, state, details){
     diffProgressTitle.textContent = title;
     diffProgressText.textContent = text || '';
+    diffProgressDetails.innerHTML = '';
+    diffProgressDetails.hidden = !details;
+    diffProgressReportButton.hidden =
+            state !== 'complete'
+            || !details
+            || details.dataset.showReport !== 'true';
+
+    if(details){
+        diffProgressDetails.appendChild(details);
+    }
+
     diffProgressBackdrop.hidden = false;
     diffProgressBackdrop.classList.toggle('is-complete', state === 'complete');
     diffProgressBackdrop.classList.toggle('is-error', state === 'error');
+    diffProgressBackdrop.classList.toggle('has-details', Boolean(details));
     diffProgressHourglass.hidden = state !== 'progress';
     diffProgressCloseButton.hidden = state === 'progress';
 }
 
 function hideDiffProgress(){
     diffProgressBackdrop.hidden = true;
-    diffProgressBackdrop.classList.remove('is-complete', 'is-error');
+    diffProgressBackdrop.classList.remove('is-complete', 'is-error', 'has-details');
+    diffProgressDetails.innerHTML = '';
+    diffProgressDetails.hidden = true;
+    diffProgressReportButton.hidden = true;
 }
 
 function flattenNodes(nodes, rows){
@@ -195,13 +232,27 @@ function renderDiffRow(rowData, target, options){
         checkbox.type = 'checkbox';
         checkbox.className = 'ditamap-topic-check';
         checkbox.checked = !isBlank
-                && (options.status === 'match' || options.status === 'moved');
+                && (compareMode === 'otherprops'
+                    ? options.status === 'branch-candidate'
+                        || options.status === 'branch-child'
+                        || options.status === 'otherprops-candidate'
+                    : options.status === 'match'
+                        || options.status === 'moved');
 
         if(isBlank || options.index == null){
             checkbox.disabled = true;
         }else{
             checkbox.dataset.index = String(options.index);
             checkbox.dataset.diffStatus = options.status || '';
+            checkbox.dataset.matchType = options.matchType || '';
+            checkbox.dataset.branchKey = options.branchKey || '';
+            checkbox.dataset.otherpropsKey = options.otherpropsKey || '';
+            checkbox.dataset.matchedMasterIndex = options.matchedMasterIndex == null
+                    ? ''
+                    : String(options.matchedMasterIndex);
+            checkbox.dataset.manualRootIndex = options.manualRootIndex == null
+                    ? ''
+                    : String(options.manualRootIndex);
             checkbox.addEventListener('change', updateDiffNextButton);
         }
 
@@ -323,10 +374,346 @@ function getMasterOnlyStatus(masterRow, manualFileKeys, manualDiskFileKeys){
     return 'master-only';
 }
 
-function renderDiff(master, manual, manualDiskFiles){
-    const masterRows = flattenNodes(master.nodes || []);
-    const manualRows = flattenNodes(manual.nodes || []);
-    const matches = buildDiffMatches(masterRows, manualRows);
+function createOtherpropsMatchState(crossCheck){
+    const manualStatusByIndex = new Map();
+    const masterStatusByIndex = new Map();
+    const replacedMasterIndexes = new Set();
+    const masterRows = Array.isArray(crossCheck.masterRows)
+            ? crossCheck.masterRows
+            : [];
+    const masterRowsByIndex = new Map(masterRows.map(row => [Number(row.index), row]));
+
+    function collectSubtreeIndexes(rows, rootIndex){
+        const rootRow = masterRowsByIndex.get(Number(rootIndex));
+
+        if(!rootRow){
+            return [Number(rootIndex)];
+        }
+
+        const rootPosition = rows.findIndex(row => Number(row.index) === Number(rootIndex));
+
+        if(rootPosition < 0){
+            return [Number(rootIndex)];
+        }
+
+        const rootLevel = Number(rootRow.level || 0);
+        const indexes = [];
+
+        for(let offset = rootPosition; offset < rows.length; offset++){
+            const row = rows[offset];
+
+            if(offset > rootPosition && Number(row.level || 0) <= rootLevel){
+                break;
+            }
+
+            indexes.push(Number(row.index));
+        }
+
+        return indexes;
+    }
+
+    (crossCheck.branchMatches || []).forEach(match => {
+        const masterIndex = Number(match.masterIndex);
+        collectSubtreeIndexes(masterRows, masterIndex).forEach((index, offset) => {
+            replacedMasterIndexes.add(index);
+            masterStatusByIndex.set(index, {
+                status:offset === 0 ? 'branch-candidate' : 'branch-child'
+            });
+        });
+        (match.manualIndexes || []).forEach((manualIndex, offset) => {
+            manualStatusByIndex.set(Number(manualIndex), {
+                status:offset === 0 ? 'branch-candidate' : 'branch-child',
+                matchType:offset === 0 ? 'branch' : 'branch-child',
+                branchKey:match.branchKey || '',
+                matchedMasterIndex:match.masterIndex,
+                manualRootIndex:match.manualIndex
+            });
+        });
+    });
+
+    (crossCheck.topicMatches || []).forEach(match => {
+        const masterIndex = Number(match.masterIndex);
+        const manualIndex = Number(match.manualIndex);
+        replacedMasterIndexes.add(masterIndex);
+
+        if(manualStatusByIndex.has(manualIndex)){
+            return;
+        }
+
+        masterStatusByIndex.set(masterIndex, {
+            status:'otherprops-candidate'
+        });
+        manualStatusByIndex.set(manualIndex, {
+            status:'otherprops-candidate',
+            matchType:'topic',
+            otherpropsKey:match.otherpropsKey || '',
+            matchedMasterIndex:match.masterIndex
+        });
+    });
+
+    return {
+        manualStatusByIndex:manualStatusByIndex,
+        masterStatusByIndex:masterStatusByIndex,
+        replacedMasterIndexes:replacedMasterIndexes
+    };
+}
+
+function emptyOtherpropsMatchState(){
+    return {
+        manualStatusByIndex:new Map(),
+        masterStatusByIndex:new Map(),
+        replacedMasterIndexes:new Set()
+    };
+}
+
+function splitOtherpropsTokens(value){
+    return String(value || '')
+            .trim()
+            .split(/\s+/)
+            .filter(Boolean);
+}
+
+function findOtherpropsCandidates(masterRow, manualRows){
+    const tokens = splitOtherpropsTokens(masterRow && masterRow.otherprops);
+    const candidates = [];
+
+    if(tokens.length === 0){
+        return candidates;
+    }
+
+    manualRows.forEach(row => {
+        const manualTokens = new Set(splitOtherpropsTokens(row.otherprops));
+
+        if(tokens.some(token => manualTokens.has(token))){
+            candidates.push(row);
+        }
+    });
+
+    return candidates;
+}
+
+function appendIssueList(parent, title, rows, renderDetail){
+    const section = document.createElement('section');
+    const heading = document.createElement('strong');
+    const list = document.createElement('ul');
+
+    section.className = 'legal-progress-issue-section';
+    heading.textContent = title;
+    list.className = 'legal-progress-issue-list';
+
+    rows.forEach(row => {
+        const item = document.createElement('li');
+        item.textContent = renderDetail(row);
+        list.appendChild(item);
+    });
+
+    section.appendChild(heading);
+    section.appendChild(list);
+    parent.appendChild(section);
+}
+
+function toReportRow(row){
+    return {
+        level:Number(row.level || 0),
+        fileName:row.fileName || '',
+        title:row.title || '',
+        otherprops:row.otherprops || ''
+    };
+}
+
+function buildOtherpropsReportData(crossCheck){
+    if(compareMode !== 'otherprops'
+            || !crossCheck
+            || !Array.isArray(crossCheck.masterRows)
+            || !Array.isArray(crossCheck.manualRows)){
+        return null;
+    }
+
+    const masterRows = crossCheck.masterRows;
+    const manualRows = crossCheck.manualRows;
+    const levelThreeRows = masterRows.filter(row => Number(row.level || 0) >= 3);
+    const targetRows = levelThreeRows.filter(row =>
+            splitOtherpropsTokens(row.otherprops).length > 0);
+    const branchRows = targetRows.filter(row => row.legalSelectBranch);
+    const topicRows = targetRows.filter(row => !row.legalSelectBranch);
+    const branchMatches = new Set((crossCheck.branchMatches || [])
+            .map(match => Number(match.masterIndex)));
+    const topicMatches = new Set((crossCheck.topicMatches || [])
+            .map(match => Number(match.masterIndex)));
+    const branchFailed = branchRows
+            .filter(row => !branchMatches.has(Number(row.index)))
+            .map(row => Object.assign({}, row, {
+                candidates:findOtherpropsCandidates(row, manualRows)
+            }));
+    const topicUnmatched = topicRows
+            .filter(row => !topicMatches.has(Number(row.index)))
+            .map(row => Object.assign({}, row, {
+                candidates:findOtherpropsCandidates(row, manualRows)
+            }));
+    const topicMissing = topicUnmatched
+            .filter(row => row.candidates.length === 0);
+    const topicMultiple = topicUnmatched
+            .filter(row => row.candidates.length > 1);
+    const branchSuccessCount = (crossCheck.branchMatches || [])
+            .filter(match => {
+                const row = masterRows[Number(match.masterIndex)];
+                return row && Number(row.level || 0) >= 3;
+            }).length;
+    const topicSuccessCount = (crossCheck.topicMatches || [])
+            .filter(match => {
+                const row = masterRows[Number(match.masterIndex)];
+                return row && Number(row.level || 0) >= 3;
+            }).length;
+
+    return {
+        path:diffParams.get('path') || '',
+        masterPath:masterPath,
+        masterFileName:masterFileName,
+        summary:{
+            targetCount:targetRows.length,
+            successCount:branchSuccessCount + topicSuccessCount,
+            failureCount:branchFailed.length + topicMissing.length,
+            pendingCount:topicMultiple.length,
+            branchSuccessCount:branchSuccessCount,
+            topicSuccessCount:topicSuccessCount,
+            branchFailureCount:branchFailed.length,
+            topicFailureCount:topicMissing.length
+        },
+        guide:[
+            'branch는 해당 topic 하나만 교체하는 게 아니라 지정된 범위 전체를 교체 대상으로 보는 항목이고,',
+            'topic은 매칭된 topic 하나만 개별 교체 대상으로 보는 항목입니다.'
+        ],
+        branchFailed:branchFailed.map(toReportRow),
+        topicMissing:topicMissing.map(toReportRow),
+        topicMultiple:topicMultiple.map(row => Object.assign(toReportRow(row), {
+            candidates:row.candidates.map(toReportRow)
+        }))
+    };
+}
+
+function buildOtherpropsResultDetails(report){
+    if(!report){
+        return null;
+    }
+
+    const details = document.createElement('div');
+    const summary = document.createElement('div');
+    const guide = document.createElement('div');
+
+    details.className = 'legal-progress-result-details';
+    summary.className = 'legal-progress-result-summary';
+    summary.textContent =
+            'L3 이상 otherprops 대상 '
+            + report.summary.targetCount
+            + '개 · 성공 '
+            + report.summary.successCount
+            + '개 · 실패 '
+            + report.summary.failureCount
+            + '개 · 보류 '
+            + report.summary.pendingCount
+            + '개';
+    details.appendChild(summary);
+    guide.className = 'legal-progress-result-guide';
+    report.guide.forEach(text => {
+        const line = document.createElement('div');
+        line.textContent = text;
+        guide.appendChild(line);
+    });
+    details.appendChild(guide);
+
+    const note = document.createElement('p');
+    note.className = 'legal-progress-report-note';
+    note.textContent = '실패/보류 전체 목록은 상세 보기 창에서 비교 화면을 보면서 확인할 수 있습니다.';
+    details.appendChild(note);
+
+    details.dataset.showReport =
+            report.summary.failureCount > 0 || report.summary.pendingCount > 0
+                    ? 'true'
+                    : 'false';
+
+    return details;
+}
+
+function saveOtherpropsReport(report){
+    if(!report){
+        diffOtherpropsReportId = '';
+        return;
+    }
+
+    diffOtherpropsReportId =
+            'otherprops-report-' + Date.now() + '-' + Math.random().toString(16).slice(2);
+    localStorage.setItem(
+            'ditamapOtherpropsReport:' + diffOtherpropsReportId,
+            JSON.stringify(report));
+}
+
+function openOtherpropsReport(){
+    if(!diffOtherpropsReportId){
+        return;
+    }
+
+    window.open(
+            '/ditamap-builder/otherprops-report?report='
+                + encodeURIComponent(diffOtherpropsReportId),
+            'ditamapOtherpropsReport',
+            'width=980,height=820,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=yes');
+}
+
+diffProgressReportButton.addEventListener('click', openOtherpropsReport);
+
+function buildLegacyOtherpropsResultDetails(report){
+    const details = document.createElement('div');
+
+    if(report.branchFailed.length > 0){
+        appendIssueList(
+                details,
+                'branch 실패: 범위 전체 교체 대상 - 실제 otherprops 후보 없음',
+                report.branchFailed,
+                row => (row.otherprops || '-')
+                        + ' | L'
+                        + row.level
+                        + ' '
+                        + (row.fileName || '')
+                        + ' | '
+                        + (row.title || ''));
+    }
+
+    if(report.topicMissing.length > 0){
+        appendIssueList(
+                details,
+                'topic 실패: 개별 topic 교체 대상 - 실제 otherprops 후보 없음',
+                report.topicMissing,
+                row => (row.otherprops || '-')
+                        + ' | L'
+                        + row.level
+                        + ' '
+                        + (row.fileName || '')
+                        + ' | '
+                        + (row.title || ''));
+    }
+
+    return details;
+}
+
+function mergeStatus(baseStatus, override){
+    return Object.assign({}, override || {}, {
+        status:override && override.status || baseStatus
+    });
+}
+
+function renderDiff(master, manual, manualDiskFiles, crossCheck){
+    const masterRows = crossCheck && crossCheck.masterRows
+            ? crossCheck.masterRows
+            : flattenNodes(master.nodes || []);
+    const manualRows = crossCheck && crossCheck.manualRows
+            ? crossCheck.manualRows
+            : flattenNodes(manual.nodes || []);
+    const matches = compareMode === 'file'
+            ? buildDiffMatches(masterRows, manualRows)
+            : [];
+    const otherpropsState = compareMode === 'otherprops'
+            ? createOtherpropsMatchState(crossCheck || {})
+            : emptyOtherpropsMatchState();
     const masterFileKeys = new Set(masterRows
             .map(normalizeFileKey)
             .filter(Boolean));
@@ -339,7 +726,12 @@ function renderDiff(master, manual, manualDiskFiles){
             .filter(Boolean));
     masterTree.innerHTML = '';
     manualTree.innerHTML = '';
+    document.querySelectorAll('.diff-chip-moved')
+            .forEach(chip => chip.hidden = compareMode === 'otherprops');
     manualDitamapName.textContent = manual.rootTitle + ' · ' + manual.ditamapFile;
+    diffModeChip.textContent = compareMode === 'otherprops'
+            ? '비교 방식: otherprops 기준'
+            : '비교 방식: 파일명 기준';
     diffManualRows = manualRows;
 
     /*
@@ -352,13 +744,17 @@ function renderDiff(master, manual, manualDiskFiles){
     matches.forEach(match => {
         while(masterCursor < match.masterIndex){
             const masterRow = masterRows[masterCursor];
-            const status = getMasterOnlyStatus(
-                    masterRow,
-                    manualFileKeys,
-                    manualDiskFileKeys);
+            const status = compareMode === 'otherprops'
+                    ? 'master-only'
+                    : getMasterOnlyStatus(
+                            masterRow,
+                            manualFileKeys,
+                            manualDiskFileKeys);
             renderDiffRow(masterRow, masterTree, {
                 side:'master',
-                status:status,
+                status:mergeStatus(
+                        status,
+                        otherpropsState.masterStatusByIndex.get(masterCursor)).status,
                 level:masterRow.level || 1
             });
             renderDiffRow(null, manualTree, {
@@ -372,9 +768,11 @@ function renderDiff(master, manual, manualDiskFiles){
 
         while(manualCursor < match.manualIndex){
             const manualRow = manualRows[manualCursor];
-            const status = masterFileKeys.has(normalizeFileKey(manualRow))
-                    ? 'moved'
-                    : 'manual-only';
+            const status = compareMode === 'otherprops'
+                    ? 'manual-only'
+                    : masterFileKeys.has(normalizeFileKey(manualRow))
+                            ? 'moved'
+                            : 'manual-only';
             renderDiffRow(null, masterTree, {
                 side:'master',
                 status:status,
@@ -383,7 +781,9 @@ function renderDiff(master, manual, manualDiskFiles){
             renderDiffRow(manualRow, manualTree, {
                 side:'manual',
                 index:manualCursor,
-                status:status,
+                ...mergeStatus(
+                        status,
+                        otherpropsState.manualStatusByIndex.get(manualCursor)),
                 level:manualRow.level || 1
             });
             manualCursor++;
@@ -392,15 +792,26 @@ function renderDiff(master, manual, manualDiskFiles){
         const masterRow = masterRows[match.masterIndex];
         const manualRow = manualRows[match.manualIndex];
         const rowLevel = Math.max(masterRow.level || 1, manualRow.level || 1);
+        const manualOverride =
+                otherpropsState.manualStatusByIndex.get(match.manualIndex);
+        const masterIsReplaced =
+                otherpropsState.replacedMasterIndexes.has(match.masterIndex);
+        const baseManualStatus = masterIsReplaced && !manualOverride
+                ? 'manual-only'
+                : 'match';
         renderDiffRow(masterRow, masterTree, {
             side:'master',
-            status:'match',
+            status:mergeStatus(
+                    'match',
+                    otherpropsState.masterStatusByIndex.get(match.masterIndex)).status,
             level:rowLevel
         });
         renderDiffRow(manualRow, manualTree, {
             side:'manual',
             index:match.manualIndex,
-            status:'match',
+            ...mergeStatus(
+                    baseManualStatus,
+                    manualOverride),
             level:rowLevel
         });
 
@@ -410,13 +821,17 @@ function renderDiff(master, manual, manualDiskFiles){
 
     while(masterCursor < masterRows.length){
         const masterRow = masterRows[masterCursor];
-        const status = getMasterOnlyStatus(
-                masterRow,
-                manualFileKeys,
-                manualDiskFileKeys);
+        const status = compareMode === 'otherprops'
+                ? 'master-only'
+                : getMasterOnlyStatus(
+                        masterRow,
+                        manualFileKeys,
+                        manualDiskFileKeys);
         renderDiffRow(masterRow, masterTree, {
             side:'master',
-            status:status,
+            status:mergeStatus(
+                    status,
+                    otherpropsState.masterStatusByIndex.get(masterCursor)).status,
             level:masterRow.level || 1
         });
         renderDiffRow(null, manualTree, {
@@ -430,9 +845,11 @@ function renderDiff(master, manual, manualDiskFiles){
 
     while(manualCursor < manualRows.length){
         const manualRow = manualRows[manualCursor];
-        const status = masterFileKeys.has(normalizeFileKey(manualRow))
-                ? 'moved'
-                : 'manual-only';
+        const status = compareMode === 'otherprops'
+                ? 'manual-only'
+                : masterFileKeys.has(normalizeFileKey(manualRow))
+                        ? 'moved'
+                        : 'manual-only';
         renderDiffRow(null, masterTree, {
             side:'master',
             status:status,
@@ -441,7 +858,9 @@ function renderDiff(master, manual, manualDiskFiles){
         renderDiffRow(manualRow, manualTree, {
             side:'manual',
             index:manualCursor,
-            status:status,
+            ...mergeStatus(
+                    status,
+                    otherpropsState.manualStatusByIndex.get(manualCursor)),
             level:manualRow.level || 1
         });
         manualCursor++;
@@ -457,13 +876,25 @@ async function loadDiff(path){
     }
 
     showDiffProgress('DITAMAP 비교 중', '법규 마스터와 실제 매뉴얼을 비교하고 있습니다.', 'progress');
-    diffPathText.textContent = path;
+    diffPathText.textContent = path + ' · '
+            + (compareMode === 'otherprops'
+                    ? 'otherprops 기준'
+                    : '파일명 기준');
+    const masterRequest = {
+        masterPath:masterPath,
+        masterFileName:masterFileName
+    };
+    const pathRequest = Object.assign({path:path}, masterRequest);
 
     try{
-        const [masterResponse, manualResponse, manualFilesResponse] = await Promise.all([
+        const [masterResponse, manualResponse, manualFilesResponse, crossCheckResponse] = await Promise.all([
             fetch('/api/ditamap-builder/legal-master', {
                 method:'POST',
-                headers:{'Accept':'application/json'}
+                headers:{
+                    'Content-Type':'application/json',
+                    'Accept':'application/json'
+                },
+                body:JSON.stringify(masterRequest)
             }),
             fetch('/api/ditamap-builder/tree-summary', {
                 method:'POST',
@@ -480,6 +911,14 @@ async function loadDiff(path){
                     'Accept':'application/json'
                 },
                 body:JSON.stringify({path:path})
+            }),
+            fetch('/api/ditamap-builder/cross-check', {
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                    'Accept':'application/json'
+                },
+                body:JSON.stringify(pathRequest)
             })
         ]);
 
@@ -495,11 +934,23 @@ async function loadDiff(path){
             throw new Error(await manualFilesResponse.text());
         }
 
+        if(!crossCheckResponse.ok){
+            throw new Error(await crossCheckResponse.text());
+        }
+
+        diffCrossCheck = await crossCheckResponse.json();
         renderDiff(
                 await masterResponse.json(),
                 await manualResponse.json(),
-                await manualFilesResponse.json());
-        showDiffProgress('DITAMAP 비교 완료', '비교 결과를 불러왔습니다.', 'complete');
+                await manualFilesResponse.json(),
+                diffCrossCheck);
+        const report = buildOtherpropsReportData(diffCrossCheck);
+        saveOtherpropsReport(report);
+        showDiffProgress(
+                'DITAMAP 비교 완료',
+                '비교 결과를 불러왔습니다.',
+                'complete',
+                buildOtherpropsResultDetails(report));
     }catch(error){
         showDiffProgress(
                 'DITAMAP 비교 실패',
@@ -517,7 +968,14 @@ function openDiffEditor(){
             .map(checkbox => Object.assign(
                     {},
                     diffManualRows[Number(checkbox.dataset.index)],
-                    {diffStatus:checkbox.dataset.diffStatus || ''}))
+                    {
+                        diffStatus:checkbox.dataset.diffStatus || '',
+                        matchType:checkbox.dataset.matchType || '',
+                        branchKey:checkbox.dataset.branchKey || '',
+                        otherpropsKey:checkbox.dataset.otherpropsKey || '',
+                        matchedMasterIndex:checkbox.dataset.matchedMasterIndex || '',
+                        manualRootIndex:checkbox.dataset.manualRootIndex || ''
+                    }))
             .filter(Boolean);
 
     if(checkedTopics.length === 0){
@@ -529,6 +987,10 @@ function openDiffEditor(){
     localStorage.setItem('ditamapLegalDraft:' + draftId, JSON.stringify({
         ditamapFile:diffManualTree.ditamapFile,
         baseDitamapFile:diffManualTree.ditamapFile,
+        compareMode:compareMode,
+        masterPath:masterPath,
+        masterFileName:masterFileName,
+        crossCheck:diffCrossCheck,
         topics:checkedTopics
     }));
     window.open(

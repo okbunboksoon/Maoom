@@ -54,6 +54,52 @@
             <span></span>
         </div>
 
+        <div class="step-title">
+            <span>2</span>
+            <div>
+                <strong>기준 DITAMAP 선택</strong>
+                <small>비워두면 프로젝트 XSL 안의 기본 LM-DITAMAP을 사용합니다.</small>
+            </div>
+        </div>
+
+        <div class="path-row full-path-row">
+            <label for="masterPath">기준 DITAMAP 경로</label>
+            <input id="masterPath"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="기준 DITAMAP이 있는 폴더 경로">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="path-row full-path-row">
+            <label for="masterFileName">파일명</label>
+            <input id="masterFileName"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="예: LM-ditamap.ditamap">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="comparison-options" aria-label="비교 방식 선택">
+            <label class="save-id">
+                <input name="compareMode"
+                       type="radio"
+                       value="file"
+                       checked>
+                <span class="check-icon">✓</span>
+                <span>파일명 기준 비교</span>
+            </label>
+            <label class="save-id">
+                <input name="compareMode"
+                       type="radio"
+                       value="otherprops">
+                <span class="check-icon">✓</span>
+                <span>otherprops 기준으로 비교</span>
+            </label>
+        </div>
+
         <section id="resultPanel" class="result-panel" hidden aria-live="polite">
             <div class="result-heading">
                 <span class="status-indicator"></span>
@@ -77,6 +123,10 @@
 // 파일 업로드는 하지 않고, 서버가 접근 가능한 DITA 경로 문자열만 전달한다.
 const ditaPathInput =
     document.getElementById('ditaPath');
+const masterPathInput =
+    document.getElementById('masterPath');
+const masterFileNameInput =
+    document.getElementById('masterFileName');
 const resultPanel =
     document.getElementById('resultPanel');
 const resultTitle =
@@ -89,15 +139,35 @@ function showResult(type, title, message){
     resultPanel.dataset.status = type;
     resultTitle.textContent = title;
     resultMessage.textContent = message;
+    resizeDitamapBuilderPopupForResult();
+}
+
+function resizeDitamapBuilderPopupForResult(){
+    try{
+        window.resizeTo(680, 800);
+    }catch(error){
+        // 브라우저가 팝업 크기 변경을 막으면 현재 창 크기를 그대로 사용한다.
+    }
 }
 
 document.getElementById('confirmDitaPath')
     .addEventListener('click', function(){
         const path = ditaPathInput.value.trim();
+        const masterPath = masterPathInput.value.trim();
+        const masterFileName = masterFileNameInput.value.trim();
 
         if(!path){
             showResult('error', '경로 확인 필요', '입력 경로를 입력해 주세요.');
             ditaPathInput.focus();
+            return;
+        }
+
+        if((masterPath && !masterFileName) || (!masterPath && masterFileName)){
+            showResult(
+                'error',
+                '기준 DITAMAP 확인 필요',
+                '기준 DITAMAP 경로와 파일명을 모두 입력하거나 둘 다 비워 주세요.');
+            (masterPath ? masterFileNameInput : masterPathInput).focus();
             return;
         }
 
@@ -109,8 +179,17 @@ document.getElementById('confirmDitaPath')
             screen.availHeight);
         const popupLeft = Math.max(0, Math.floor((screen.availWidth - popupWidth) / 2));
         const popupTop = Math.max(0, Math.floor((screen.availHeight - popupHeight) / 2));
+        const compareMode =
+            document.querySelector('input[name="compareMode"]:checked').value;
         const resultWindow = window.open(
-            '/ditamap-builder/diff?path=' + encodeURIComponent(path),
+            '/ditamap-builder/diff?path='
+                + encodeURIComponent(path)
+                + '&mode='
+                + encodeURIComponent(compareMode)
+                + '&masterPath='
+                + encodeURIComponent(masterPath)
+                + '&masterFileName='
+                + encodeURIComponent(masterFileName),
             'ditamapBuilderDiff',
             'width=' + popupWidth
                 + ',height=' + popupHeight

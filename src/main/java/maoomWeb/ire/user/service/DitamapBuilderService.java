@@ -14,6 +14,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
 import javax.xml.XMLConstants;
@@ -122,25 +123,24 @@ public class DitamapBuilderService {
     }
 
     public DitamapTreeResponse readLegalTemplate() {
-        Resource template =
-                new ClassPathResource("xsl/LM-ditamap.ditamap");
+        return readLegalTemplate(null, null);
+    }
 
-        if(!template.exists()){
-            template = new ClassPathResource("xsl/LM-template.xml");
-        }
+    public DitamapTreeResponse readLegalTemplate(
+            String masterPath,
+            String masterFileName) {
+        MasterDitamapSource template = resolveMasterDitamap(
+                masterPath,
+                masterFileName,
+                true);
 
-        if(!template.exists()){
-            throw new IllegalArgumentException(
-                    "법규 DITAMAP 템플릿을 찾지 못했습니다.");
-        }
-
-        try(InputStream input = template.getInputStream()){
+        try(InputStream input = template.openStream()){
             Document document = parseXml(input);
             Element root = document.getDocumentElement();
 
             return new DitamapTreeResponse(
                     "법규 DITAMAP",
-                    template.getFilename(),
+                    template.displayName(),
                     readLegalTemplateChildren(root, 1));
         }catch(IOException | ParserConfigurationException
                 | SAXException exception){
@@ -152,21 +152,24 @@ public class DitamapBuilderService {
     }
 
     public DitamapTreeResponse readLegalMaster() {
-        Resource master =
-                new ClassPathResource("xsl/LM-ditamap.ditamap");
+        return readLegalMaster(null, null);
+    }
 
-        if(!master.exists()){
-            throw new IllegalArgumentException(
-                    "법규 마스터 DITAMAP을 찾지 못했습니다.");
-        }
+    public DitamapTreeResponse readLegalMaster(
+            String masterPath,
+            String masterFileName) {
+        MasterDitamapSource master = resolveMasterDitamap(
+                masterPath,
+                masterFileName,
+                false);
 
-        try(InputStream input = master.getInputStream()){
+        try(InputStream input = master.openStream()){
             Document document = parseXml(input);
             Element root = document.getDocumentElement();
 
             return new DitamapTreeResponse(
-                    readMapTitle(root, Path.of("LM-ditamap.ditamap")),
-                    "xsl/LM-ditamap.ditamap",
+                    readMapTitle(root, Path.of(master.displayName())),
+                    master.displayName(),
                     readLegalMasterChildren(root, 1));
         }catch(IOException | ParserConfigurationException
                 | SAXException exception){
@@ -177,63 +180,148 @@ public class DitamapBuilderService {
         }
     }
 
-    public Map<String, Object> readTestCrossCheck(String rawPath) {
+    public Map<String, Object> readCrossCheck(String rawPath) {
+        return readCrossCheck(rawPath, null, null);
+    }
+
+    public Map<String, Object> readCrossCheck(
+            String rawPath,
+            String masterPath,
+            String masterFileName) {
         try{
+            MasterDitamapSource master = resolveMasterDitamap(
+                    masterPath,
+                    masterFileName,
+                    false);
+
+            try(InputStream input = master.openStream()){
+                return readCrossCheck(rawPath, input);
+            }
+        }catch(IOException | ParserConfigurationException
+                | SAXException exception){
+            throw new IllegalArgumentException(
+                    "법규 매칭 정보를 읽지 못했습니다. "
+                    + exception.getMessage(),
+                    exception);
+        }
+    }
+
+    private MasterDitamapSource resolveMasterDitamap(
+            String masterPath,
+            String masterFileName,
+            boolean allowTemplateFallback) {
+        String normalizedPath = masterPath == null ? "" : masterPath.trim();
+        String normalizedFileName = masterFileName == null
+                ? ""
+                : masterFileName.trim();
+
+        if(normalizedPath.isBlank() && normalizedFileName.isBlank()){
             Resource master =
                     new ClassPathResource("xsl/LM-ditamap.ditamap");
+
+            if(master.exists()){
+                return new MasterDitamapSource(
+                        "xsl/LM-ditamap.ditamap",
+                        master,
+                        null);
+            }
+
+            if(allowTemplateFallback){
+                Resource template =
+                        new ClassPathResource("xsl/LM-template.xml");
+
+                if(template.exists()){
+                    return new MasterDitamapSource(
+                            "xsl/LM-template.xml",
+                            template,
+                            null);
+                }
+            }
+
+            throw new IllegalArgumentException(
+                    "법규 마스터 DITAMAP을 찾지 못했습니다.");
+        }
+
+        if(normalizedPath.isBlank() || normalizedFileName.isBlank()){
+            throw new IllegalArgumentException(
+                    "기준 DITAMAP 경로와 파일명을 모두 입력해 주세요.");
+        }
+
+        Path directory = Path.of(normalizedPath)
+                .toAbsolutePath()
+                .normalize();
+        Path masterDitamap = directory.resolve(normalizedFileName)
+                .toAbsolutePath()
+                .normalize();
+
+        try{
+            if(!Files.exists(masterDitamap)){
+                throw new IllegalArgumentException(
+                        "기준 DITAMAP 파일이 없습니다: " + masterDitamap);
+            }
+
+            Path realMasterDitamap = masterDitamap.toRealPath();
+            Path realAllowedRoot = findAllowedRoot(realMasterDitamap);
+
+            if(!isSameOrChildPath(realMasterDitamap, realAllowedRoot)){
+                throw new IllegalArgumentException(
+                        "기준 DITAMAP은 허용된 작업 경로 아래에 있어야 합니다.");
+            }
+
+            if(!Files.isRegularFile(realMasterDitamap)
+                    || !isDitamap(realMasterDitamap)){
+                throw new IllegalArgumentException(
+                        "기준 DITAMAP 파일이 아닙니다: "
+                        + realMasterDitamap.getFileName());
+            }
+
+            return new MasterDitamapSource(
+                    realMasterDitamap.toString(),
+                    null,
+                    realMasterDitamap);
+        }catch(IOException exception){
+            throw new IllegalArgumentException(
+                    "기준 DITAMAP 파일을 확인하지 못했습니다. "
+                    + exception.getMessage(),
+                    exception);
+        }
+    }
+
+    private record MasterDitamapSource(
+            String displayName,
+            Resource resource,
+            Path path) {
+
+        InputStream openStream() throws IOException {
+            if(path != null){
+                return Files.newInputStream(path);
+            }
+
+            return resource.getInputStream();
+        }
+    }
+
+    public Map<String, Object> readTestCrossCheck(String rawPath) {
+        try{
+            Path testMaster = Path.of(
+                    "local-samples",
+                    "ditamap-builder",
+                    "LM-ditamap.ditamap");
+            Resource master =
+                    new ClassPathResource("xsl/LM-ditamap.ditamap");
+
+            if(Files.exists(testMaster)){
+                return readCrossCheck(rawPath, testMaster);
+            }
 
             if(!master.exists()){
                 throw new IllegalArgumentException(
                         "법규 마스터 DITAMAP을 찾지 못했습니다.");
             }
 
-            Path manualDitamap = findDitamap(rawPath);
-            List<TestCrossCheckRow> masterRows;
-
             try(InputStream input = master.getInputStream()){
-                masterRows = readTestCrossCheckRows(
-                        parseXml(input).getDocumentElement(),
-                        1,
-                        manualDitamap.getParent(),
-                        false);
+                return readCrossCheck(rawPath, input);
             }
-
-            List<TestCrossCheckRow> manualRows = readTestCrossCheckRows(
-                    parseXml(manualDitamap).getDocumentElement(),
-                    1,
-                    manualDitamap.getParent(),
-                    true);
-            List<Map<String, Object>> branchMatches =
-                    buildTestBranchMatches(masterRows, manualRows);
-            Set<Integer> branchMasterIndexes = new HashSet<>();
-            Set<Integer> branchManualIndexes = new HashSet<>();
-
-            for(Map<String, Object> match : branchMatches){
-                branchMasterIndexes.add((Integer)match.get("masterIndex"));
-
-                @SuppressWarnings("unchecked")
-                List<Integer> manualIndexes =
-                        (List<Integer>)match.get("manualIndexes");
-                branchManualIndexes.addAll(manualIndexes);
-            }
-
-            List<Map<String, Object>> topicMatches = buildTestTopicMatches(
-                    masterRows,
-                    manualRows,
-                    branchMasterIndexes,
-                    branchManualIndexes);
-            Map<String, Object> result = new LinkedHashMap<>();
-
-            result.put("masterRows", masterRows.stream()
-                    .map(this::toTestRowMap)
-                    .toList());
-            result.put("manualRows", manualRows.stream()
-                    .map(this::toTestRowMap)
-                    .toList());
-            result.put("branchMatches", branchMatches);
-            result.put("topicMatches", topicMatches);
-
-            return result;
         }catch(IOException | ParserConfigurationException
                 | SAXException exception){
             throw new IllegalArgumentException(
@@ -241,6 +329,82 @@ public class DitamapBuilderService {
                     + exception.getMessage(),
                     exception);
         }
+    }
+
+    private Map<String, Object> readCrossCheck(
+            String rawPath,
+            Path masterDitamap) throws IOException,
+            ParserConfigurationException,
+            SAXException {
+        Path manualDitamap = findDitamap(rawPath);
+        List<TestCrossCheckRow> masterRows = readTestCrossCheckRows(
+                parseXml(masterDitamap).getDocumentElement(),
+                1,
+                manualDitamap.getParent(),
+                false);
+
+        return buildCrossCheckResult(manualDitamap, masterRows);
+    }
+
+    private Map<String, Object> readCrossCheck(
+            String rawPath,
+            InputStream masterInput) throws IOException,
+            ParserConfigurationException,
+            SAXException {
+        Path manualDitamap = findDitamap(rawPath);
+        List<TestCrossCheckRow> masterRows = readTestCrossCheckRows(
+                parseXml(masterInput).getDocumentElement(),
+                1,
+                manualDitamap.getParent(),
+                false);
+
+        return buildCrossCheckResult(manualDitamap, masterRows);
+    }
+
+    private Map<String, Object> buildCrossCheckResult(
+            Path manualDitamap,
+            List<TestCrossCheckRow> masterRows) throws IOException,
+            ParserConfigurationException,
+            SAXException {
+        List<TestCrossCheckRow> manualRows = readTestCrossCheckRows(
+                parseXml(manualDitamap).getDocumentElement(),
+                1,
+                manualDitamap.getParent(),
+                true);
+        List<Map<String, Object>> branchMatches =
+                buildTestBranchMatches(masterRows, manualRows);
+        Set<Integer> branchMasterIndexes = new HashSet<>();
+        Set<Integer> branchManualIndexes = new HashSet<>();
+
+        for(Map<String, Object> match : branchMatches){
+            int masterIndex = (Integer)match.get("masterIndex");
+            subtreeRows(masterRows, masterIndex).stream()
+                    .map(TestCrossCheckRow::index)
+                    .forEach(branchMasterIndexes::add);
+
+            @SuppressWarnings("unchecked")
+            List<Integer> manualIndexes =
+                    (List<Integer>)match.get("manualIndexes");
+            branchManualIndexes.addAll(manualIndexes);
+        }
+
+        List<Map<String, Object>> topicMatches = buildTestTopicMatches(
+                masterRows,
+                manualRows,
+                branchMasterIndexes,
+                branchManualIndexes);
+        Map<String, Object> result = new LinkedHashMap<>();
+
+        result.put("masterRows", masterRows.stream()
+                .map(this::toTestRowMap)
+                .toList());
+        result.put("manualRows", manualRows.stream()
+                .map(this::toTestRowMap)
+                .toList());
+        result.put("branchMatches", branchMatches);
+        result.put("topicMatches", topicMatches);
+
+        return result;
     }
 
     public List<String> readLegalTargetFiles() {
@@ -1824,20 +1988,16 @@ public class DitamapBuilderService {
     private List<Map<String, Object>> buildTestBranchMatches(
             List<TestCrossCheckRow> masterRows,
             List<TestCrossCheckRow> manualRows) {
-        Map<String, List<TestCrossCheckRow>> manualByBranch =
+        Map<String, List<TestCrossCheckRow>> manualByOtherprops =
                 new LinkedHashMap<>();
         List<Map<String, Object>> matches = new ArrayList<>();
 
         for(TestCrossCheckRow row : manualRows){
-            if(row.legalSelectBranch().isBlank()){
-                continue;
+            for(String token : attributeTokens(row.otherprops())){
+                manualByOtherprops
+                        .computeIfAbsent(token, key -> new ArrayList<>())
+                        .add(row);
             }
-
-            manualByBranch
-                    .computeIfAbsent(
-                            row.legalSelectBranch(),
-                            key -> new ArrayList<>())
-                    .add(row);
         }
 
         for(TestCrossCheckRow masterRow : masterRows){
@@ -1845,15 +2005,20 @@ public class DitamapBuilderService {
                 continue;
             }
 
-            List<TestCrossCheckRow> candidates = manualByBranch.getOrDefault(
-                    masterRow.legalSelectBranch(),
-                    List.of());
+            List<TestCrossCheckRow> candidates = findOtherpropsCandidates(
+                    manualByOtherprops,
+                    masterRow.otherprops());
 
             if(candidates.size() != 1){
                 continue;
             }
 
-            TestCrossCheckRow manualRoot = candidates.get(0);
+            TestCrossCheckRow matchedManualRow = candidates.get(0);
+            TestCrossCheckRow manualRoot = resolveTestBranchRoot(
+                    manualRows,
+                    matchedManualRow,
+                    masterRow,
+                    masterRow.legalSelectBranch());
             List<TestCrossCheckRow> subtree =
                     subtreeRows(manualRows, manualRoot.index());
             Map<String, Object> match = new LinkedHashMap<>();
@@ -1861,6 +2026,8 @@ public class DitamapBuilderService {
             match.put("branchKey", masterRow.legalSelectBranch());
             match.put("masterIndex", masterRow.index());
             match.put("manualIndex", manualRoot.index());
+            match.put("matchedManualIndex", matchedManualRow.index());
+            match.put("source", "otherprops");
             match.put("manualIndexes", subtree.stream()
                     .map(TestCrossCheckRow::index)
                     .toList());
@@ -1868,6 +2035,104 @@ public class DitamapBuilderService {
         }
 
         return matches;
+    }
+
+    private TestCrossCheckRow resolveTestBranchRoot(
+            List<TestCrossCheckRow> manualRows,
+            TestCrossCheckRow matchedManualRow,
+            TestCrossCheckRow masterRow,
+            String branchMode) {
+        if("top".equalsIgnoreCase(branchMode)){
+            int parentLevel = matchedManualRow.level() - 1;
+
+            if(parentLevel < 1){
+                return matchedManualRow;
+            }
+
+            for(int index = matchedManualRow.index() - 1; index >= 0; index--){
+                TestCrossCheckRow row = manualRows.get(index);
+
+                if(row.level() == parentLevel){
+                    return row;
+                }
+            }
+
+            return matchedManualRow;
+        }
+
+        if(!"bottom".equalsIgnoreCase(branchMode)){
+            return matchedManualRow;
+        }
+
+        if(subtreeRows(manualRows, matchedManualRow.index()).size() > 1){
+            return matchedManualRow;
+        }
+
+        return findEquivalentBranchRoot(manualRows, masterRow)
+                .orElse(matchedManualRow);
+    }
+
+    private Optional<TestCrossCheckRow> findEquivalentBranchRoot(
+            List<TestCrossCheckRow> manualRows,
+            TestCrossCheckRow masterRow) {
+        String masterTitle = normalizeCrossCheckText(masterRow.title());
+        String masterFileName = normalizeCrossCheckText(masterRow.fileName());
+        List<TestCrossCheckRow> titleMatches = new ArrayList<>();
+        List<TestCrossCheckRow> fileAndTitleMatches = new ArrayList<>();
+
+        for(TestCrossCheckRow manualRow : manualRows){
+            boolean sameTitle = !masterTitle.isBlank()
+                    && masterTitle.equals(normalizeCrossCheckText(
+                            manualRow.title()));
+            boolean sameFileName = !masterFileName.isBlank()
+                    && masterFileName.equals(normalizeCrossCheckText(
+                            manualRow.fileName()));
+
+            if(sameTitle){
+                titleMatches.add(manualRow);
+
+                if(sameFileName){
+                    fileAndTitleMatches.add(manualRow);
+                }
+            }
+        }
+
+        if(fileAndTitleMatches.size() == 1){
+            return Optional.of(fileAndTitleMatches.get(0));
+        }
+
+        if(titleMatches.size() == 1){
+            return Optional.of(titleMatches.get(0));
+        }
+
+        return Optional.empty();
+    }
+
+    private String normalizeCrossCheckText(String value) {
+        if(value == null){
+            return "";
+        }
+
+        return value.trim()
+                .replaceAll("\\s+", " ")
+                .toLowerCase(Locale.ROOT);
+    }
+
+    private List<TestCrossCheckRow> findOtherpropsCandidates(
+            Map<String, List<TestCrossCheckRow>> manualByOtherprops,
+            String otherprops) {
+        List<TestCrossCheckRow> candidates = new ArrayList<>();
+
+        for(String token : attributeTokens(otherprops)){
+            for(TestCrossCheckRow candidate : manualByOtherprops
+                    .getOrDefault(token, List.of())){
+                if(!candidates.contains(candidate)){
+                    candidates.add(candidate);
+                }
+            }
+        }
+
+        return candidates;
     }
 
     private List<Map<String, Object>> buildTestTopicMatches(
@@ -1897,16 +2162,9 @@ public class DitamapBuilderService {
                 continue;
             }
 
-            List<TestCrossCheckRow> candidates = new ArrayList<>();
-
-            for(String token : attributeTokens(masterRow.otherprops())){
-                for(TestCrossCheckRow candidate : manualByOtherprops
-                        .getOrDefault(token, List.of())){
-                    if(!candidates.contains(candidate)){
-                        candidates.add(candidate);
-                    }
-                }
-            }
+            List<TestCrossCheckRow> candidates = findOtherpropsCandidates(
+                    manualByOtherprops,
+                    masterRow.otherprops());
 
             if(candidates.size() != 1){
                 continue;
