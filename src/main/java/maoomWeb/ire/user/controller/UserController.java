@@ -366,6 +366,12 @@ public class UserController {
         return "user/ditamapBuilder/ditamapLegalEditor";
     }
 
+    @GetMapping("/ditamap-builder/otherprops-report")
+    /** otherprops 비교 실패/보류 상세 목록을 별도 팝업으로 표시한다. */
+    public String ditamapOtherpropsReport() {
+        return "user/ditamapBuilder/ditamapOtherpropsReport";
+    }
+
     @GetMapping("/ditamap-builder-test")
     /** 법규 DITAMAP Builder 변경 검증용 시작 화면을 표시한다. */
     public String ditamapBuilderTest() {

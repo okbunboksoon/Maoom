@@ -258,6 +258,18 @@ body{
     box-sizing:border-box;
 }
 
+.legal-progress-backdrop.has-details .legal-progress-dialog{
+    width:min(860px, calc(100vw - 72px));
+    max-height:min(78vh, 760px);
+    text-align:left;
+    overflow:auto;
+}
+
+.legal-progress-backdrop.has-details .legal-progress-dialog > strong,
+.legal-progress-backdrop.has-details .legal-progress-dialog > p{
+    text-align:center;
+}
+
 /* 배치 대기 중임을 명확히 보여 주기 위한 모래시계 아이콘 애니메이션. */
 .legal-progress-hourglass{
     width:54px;
@@ -292,9 +304,133 @@ body{
     line-height:1.55;
 }
 
-.legal-progress-dialog .ditamap-btn{
-    min-width:96px;
+.legal-progress-details{
+    margin-top:18px;
+    padding-top:16px;
+    border-top:1px solid #e2e8f0;
+}
+
+.legal-progress-result-summary{
+    padding:10px 12px;
+    border-radius:6px;
+    background:#f8fafc;
+    color:#1f2937;
+    font-size:13px;
+    font-weight:700;
+    line-height:1.45;
+}
+
+.legal-progress-result-guide{
+    margin-top:8px;
+    padding:9px 12px;
+    border:1px solid #dbeafe;
+    border-radius:6px;
+    background:#eff6ff;
+    color:#1e3a8a;
+    font-size:12px;
+    line-height:1.55;
+}
+
+.legal-progress-issue-section{
+    margin-top:14px;
+}
+
+.legal-progress-issue-section > strong{
+    display:block;
+    color:#334155;
+    font-size:13px;
+    line-height:1.4;
+}
+
+.legal-progress-issue-list{
+    max-height:180px;
+    margin:8px 0 0;
+    padding:8px 10px 8px 24px;
+    border:1px solid #e2e8f0;
+    border-radius:6px;
+    background:#fff;
+    overflow:auto;
+}
+
+.legal-progress-issue-list li{
+    margin:4px 0;
+    color:#475569;
+    font-size:12px;
+    line-height:1.45;
+    word-break:break-word;
+}
+
+.legal-progress-pending-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    max-height:220px;
+    margin-top:8px;
+    padding:8px;
+    border:1px solid #e2e8f0;
+    border-radius:6px;
+    background:#fff;
+    overflow:auto;
+}
+
+.legal-progress-pending-item{
+    padding:10px 12px;
+    border:1px solid #fde68a;
+    border-radius:6px;
+    background:#fffbeb;
+}
+
+.legal-progress-pending-master{
+    color:#78350f;
+    font-size:12px;
+    font-weight:700;
+    line-height:1.45;
+    word-break:break-word;
+}
+
+.legal-progress-pending-candidate-title{
+    margin-top:8px;
+    color:#475569;
+    font-size:12px;
+    font-weight:700;
+}
+
+.legal-progress-pending-candidates{
+    margin:5px 0 0;
+    padding-left:18px;
+}
+
+.legal-progress-pending-candidates li{
+    margin:3px 0;
+    color:#475569;
+    font-size:12px;
+    line-height:1.45;
+    word-break:break-word;
+}
+
+.legal-progress-report-note{
+    margin:10px 0 0;
+    color:#64748b;
+    font-size:12px;
+    line-height:1.5;
+}
+
+.legal-progress-actions{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
     margin-top:20px;
+    text-align:center;
+}
+
+.legal-progress-actions .ditamap-btn{
+    min-width:96px;
+    margin-top:0;
+}
+
+.legal-progress-actions .ditamap-btn[hidden]{
+    display:none !important;
 }
 
 /* 완료 상태는 성공 색상으로만 강조하고, 팝업 구조는 그대로 유지한다. */
@@ -1080,6 +1216,142 @@ body{
     justify-self:end;
 }
 
+.otherprops-report-page{
+    gap:14px;
+}
+
+.otherprops-report-summary{
+    display:grid;
+    grid-template-columns:repeat(6, minmax(0, 1fr));
+    gap:10px;
+}
+
+.otherprops-summary-item{
+    padding:12px 14px;
+    border:1px solid #d8e0ea;
+    border-radius:8px;
+    background:#fff;
+}
+
+.otherprops-summary-item span{
+    display:block;
+    color:#64748b;
+    font-size:12px;
+    line-height:1.4;
+}
+
+.otherprops-summary-item strong{
+    display:block;
+    margin-top:4px;
+    color:#17202a;
+    font-size:22px;
+    line-height:1.1;
+}
+
+.otherprops-report-guide{
+    padding:12px 14px;
+    border:1px solid #dbeafe;
+    border-radius:8px;
+    background:#eff6ff;
+    color:#1e3a8a;
+    font-size:13px;
+    line-height:1.6;
+}
+
+.otherprops-report-content{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+}
+
+.otherprops-report-section{
+    padding:16px;
+    border:1px solid #d8e0ea;
+    border-radius:8px;
+    background:#fff;
+}
+
+.otherprops-report-section h2{
+    margin:0;
+    color:#17202a;
+    font-size:16px;
+    line-height:1.4;
+}
+
+.otherprops-report-section p{
+    margin:6px 0 0;
+    color:#64748b;
+    font-size:12px;
+    line-height:1.5;
+}
+
+.otherprops-report-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(360px, 1fr));
+    gap:10px;
+    margin-top:12px;
+}
+
+.otherprops-report-item{
+    padding:12px;
+    border:1px solid #fee2e2;
+    border-radius:8px;
+    background:#fff7f7;
+}
+
+.otherprops-report-item.is-pending{
+    border-color:#fde68a;
+    background:#fffbeb;
+}
+
+.otherprops-report-item strong{
+    display:block;
+    color:#991b1b;
+    font-size:12px;
+    line-height:1.4;
+}
+
+.otherprops-report-item.is-pending strong{
+    color:#78350f;
+}
+
+.otherprops-report-row-text{
+    margin-top:5px;
+    color:#334155;
+    font-size:13px;
+    line-height:1.45;
+    word-break:break-word;
+}
+
+.otherprops-report-candidate-title{
+    margin-top:10px;
+    color:#475569;
+    font-size:12px;
+    font-weight:700;
+}
+
+.otherprops-report-candidates{
+    margin:6px 0 0;
+    padding-left:18px;
+}
+
+.otherprops-report-candidates li{
+    margin:4px 0;
+    color:#475569;
+    font-size:12px;
+    line-height:1.45;
+    word-break:break-word;
+}
+
+.otherprops-report-empty{
+    padding:14px;
+    border:1px dashed #cbd5e1;
+    border-radius:8px;
+    color:#64748b;
+    font-size:13px;
+    background:#f8fafc;
+}
+
 @media (max-width: 620px){
     .ditamap-wrap{
         padding:20px;
@@ -1104,5 +1376,13 @@ body{
     .ditamap-tree-columns,
     .ditamap-tree-row{
         grid-template-columns:minmax(260px, 1fr) 110px 160px;
+    }
+
+    .otherprops-report-summary{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+
+    .otherprops-report-list{
+        grid-template-columns:1fr;
     }
 }

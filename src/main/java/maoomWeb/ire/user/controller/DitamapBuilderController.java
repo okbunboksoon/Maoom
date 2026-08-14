@@ -78,13 +78,19 @@ public class DitamapBuilderController {
     }
 
     @PostMapping("/api/ditamap-builder/legal-template")
-    public DitamapTreeResponse readLegalTemplate() {
-        return ditamapBuilderService.readLegalTemplate();
+    public DitamapTreeResponse readLegalTemplate(
+            @RequestBody(required = false) DitamapTreeRequest request) {
+        return ditamapBuilderService.readLegalTemplate(
+                request == null ? null : request.masterPath(),
+                request == null ? null : request.masterFileName());
     }
 
     @PostMapping("/api/ditamap-builder/legal-master")
-    public DitamapTreeResponse readLegalMaster() {
-        return ditamapBuilderService.readLegalMaster();
+    public DitamapTreeResponse readLegalMaster(
+            @RequestBody(required = false) DitamapTreeRequest request) {
+        return ditamapBuilderService.readLegalMaster(
+                request == null ? null : request.masterPath(),
+                request == null ? null : request.masterFileName());
     }
 
     @PostMapping("/api/ditamap-builder/legal-target-files")
@@ -96,6 +102,15 @@ public class DitamapBuilderController {
     public List<String> readDitaFiles(
             @RequestBody DitamapTreeRequest request) {
         return ditamapBuilderService.readDitaFiles(request.path());
+    }
+
+    @PostMapping("/api/ditamap-builder/cross-check")
+    public Map<String, Object> readCrossCheck(
+            @RequestBody DitamapTreeRequest request) {
+        return ditamapBuilderService.readCrossCheck(
+                request.path(),
+                request.masterPath(),
+                request.masterFileName());
     }
 
     @PostMapping("/api/ditamap-builder-test/cross-check")
