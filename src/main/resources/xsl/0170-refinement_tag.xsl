@@ -47,7 +47,7 @@
 	</xsl:template>
 
 	<!-- 6.  퓨즈테이블 속성 추가 -->
-	<xsl:template match="concept[title='Fuse/relay panel description']//sectiondiv//table//tbody//row/entry[1]/p[not(@translate)]">
+	<xsl:template match="concept[title='Fuse/relay panel description']//sectiondiv//table//tbody//row/entry[1]/p[not(@translate)and not(image)]">
 		<xsl:copy>
 			<xsl:attribute name="translate">no</xsl:attribute>
 			<xsl:apply-templates select="@* | node()"/>
