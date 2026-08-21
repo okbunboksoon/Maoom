@@ -48,7 +48,6 @@ public class RevisionPipelineService {
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss-SSS");
     private static final String BOOKMAP_MAPNAME_REQUIRED =
             "BOOKMAP_MAPNAME_REQUIRED:";
-    private static final Charset BATCH_FILE_CHARSET = StandardCharsets.UTF_8;
     private static final Charset BATCH_OUTPUT_CHARSET = Charset.forName("MS949");
     private static final String SHARED_BAT_ROOT = "bat";
     private static final String SHARED_XSL_ROOT = "xsl";
@@ -186,13 +185,8 @@ public class RevisionPipelineService {
 
             List<String> completed = new ArrayList<>();
             for (String batchFile : batchPlan.batchFiles()) {
-                prepareBatchOptions(
-                        workspace,
-                        batchFile,
-                        selectedOptions,
-                        logs);
                 logs.add("배치 실행: " + batchFile);
-                runBatch(workspace, batchFile, logs);
+                runBatch(workspace, batchFile, selectedOptions, logs);
                 completed.add(batchFile);
             }
             validateBatchOutput(workspace, outputType, batchPlan);
@@ -504,100 +498,10 @@ public class RevisionPipelineService {
                 .replace(">", "&gt;");
     }
 
-    private void prepareBatchOptions(
-            Path workspace,
-            String batchFileName,
-            Set<String> selectedOptions,
-            List<String> logs) throws IOException {
-
-        if (!batchFileName.startsWith("02_topics_Chapterize")) {
-            return;
-        }
-
-        boolean removeSimpleOperation = selectedOptions.contains(
-                RevisionPipelineCatalog.REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET);
-        boolean deleteDraftComment = selectedOptions.contains(
-                RevisionPipelineCatalog.DELETE_DRAFT_COMMENT);
-
-        if (!removeSimpleOperation && !deleteDraftComment) {
-            return;
-        }
-
-        Path batchFile = workspace.resolve(batchFileName);
-        String content = Files.readString(batchFile, BATCH_FILE_CHARSET);
-        String lineSeparator = content.contains("\r\n") ? "\r\n" : "\n";
-        String currentSource = "temp\\0180-translate_no_tagging.xml";
-        List<String> extraLines = new ArrayList<>();
-
-        if (removeSimpleOperation) {
-            String output = "temp\\0402-remove_simple_operation_deliverytarget.xml";
-            appendOptionTransform(
-                    workspace,
-                    extraLines,
-                    currentSource,
-                    output,
-                    "0402-Remove_Simple_Operation_And_DeliveryTarget.xsl");
-            currentSource = output;
-            logs.add("옵션 추가: 속성 및 세션 지우기");
-        }
-
-        if (deleteDraftComment) {
-            String output = "temp\\0401-remove_review_Delete_Draft_Comment.xml";
-            appendOptionTransform(
-                    workspace,
-                    extraLines,
-                    currentSource,
-                    output,
-                    "0401-remove_review_Delete_Draft_Comment.xsl");
-            currentSource = output;
-            logs.add("옵션 추가: Draft Comment, review, hash, modified 지우기");
-        }
-
-        List<String> patched = new ArrayList<>();
-        for (String line : content.split("\\R", -1)) {
-            String patchedLine = line;
-            if (line.contains("-s:temp\\0180-translate_no_tagging.xml")
-                    && line.contains("0400-remove_review.xsl")) {
-                patchedLine = line.replace(
-                        "-s:temp\\0180-translate_no_tagging.xml",
-                        "-s:" + currentSource);
-            }
-
-            patched.add(patchedLine);
-            if (line.contains("-o:temp\\0180-translate_no_tagging.xml")
-                    && line.contains("0180-translate_no_tagging.xsl")) {
-                patched.addAll(extraLines);
-            }
-        }
-
-        Files.writeString(
-                batchFile,
-                String.join(lineSeparator, patched),
-                BATCH_FILE_CHARSET);
-    }
-
-    private void appendOptionTransform(
-            Path workspace,
-            List<String> lines,
-            String source,
-            String output,
-            String stylesheetName) {
-
-        Path stylesheet = workspace.resolve("xsl").resolve(stylesheetName);
-        if (!Files.isRegularFile(stylesheet)) {
-            throw new IllegalArgumentException(
-                    "옵션 XSL 파일을 찾지 못했습니다: " + stylesheetName);
-        }
-
-        lines.add("java net.sf.saxon.Transform "
-                + "-s:" + source + " "
-                + "-o:" + output + " "
-                + "-xsl:xsl\\" + stylesheetName);
-    }
-
     private void runBatch(
             Path workspace,
             String batchFileName,
+            Set<String> selectedOptions,
             List<String> logs) throws IOException, InterruptedException {
 
         Path batchFile = workspace.resolve(batchFileName);
@@ -606,10 +510,13 @@ public class RevisionPipelineService {
                     "정제 배치 파일을 찾지 못했습니다: " + batchFileName);
         }
 
-        Process process = new ProcessBuilder(
-                "cmd.exe",
-                "/c",
-                batchFile.getFileName().toString())
+        List<String> command = new ArrayList<>();
+        command.add("cmd.exe");
+        command.add("/c");
+        command.add(batchFile.getFileName().toString());
+        appendBatchArguments(batchFileName, selectedOptions, command, logs);
+
+        Process process = new ProcessBuilder(command)
                 .directory(workspace.toFile())
                 .redirectErrorStream(true)
                 .start();
@@ -632,6 +539,32 @@ public class RevisionPipelineService {
             throw new IllegalStateException(
                     "정제 배치 실행 실패(" + exitCode + "): "
                     + batchFileName);
+        }
+    }
+
+    private void appendBatchArguments(
+            String batchFileName,
+            Set<String> selectedOptions,
+            List<String> command,
+            List<String> logs) {
+
+        if (!batchFileName.startsWith("02_topics_Chapterize")) {
+            return;
+        }
+
+        if (selectedOptions.contains(RevisionPipelineCatalog.FILE_NAME_KEEP)) {
+            command.add("FILE_NAME_CHANGE=Y");
+            logs.add("옵션 추가: 파일명 변경");
+        }
+        if (selectedOptions.contains(
+                RevisionPipelineCatalog.REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET)) {
+            command.add("REMOVE_SIMPLE=Y");
+            logs.add("옵션 추가: 속성 및 세션 지우기");
+        }
+        if (selectedOptions.contains(
+                RevisionPipelineCatalog.DELETE_DRAFT_COMMENT)) {
+            command.add("DELETE_DRAFT=Y");
+            logs.add("옵션 추가: Draft Comment, review, hash, modified 지우기");
         }
     }
 

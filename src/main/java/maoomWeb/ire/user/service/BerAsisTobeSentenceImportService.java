@@ -66,6 +66,7 @@ public class BerAsisTobeSentenceImportService {
             "xsl/0420-kus-db-clean_ber.xsl",
             "xsl/0430-kus-db-update_ber.xsl",
             "xsl/asis-tobe_eu.xml",
+            "xsl/asis-tobe_eu_rg.xml",
             "xsl/asis-tobe_us.xml",
             "xsl/asis-tobe_exclude.xml"
     };
@@ -177,9 +178,11 @@ public class BerAsisTobeSentenceImportService {
                 ? ""
                 : region.trim().toUpperCase(Locale.ROOT);
 
-        if(!normalized.equals("EU") && !normalized.equals("US")){
+        if(!normalized.equals("EU")
+                && !normalized.equals("EU_RG")
+                && !normalized.equals("US")){
             throw new IllegalArgumentException(
-                    "region은 EU 또는 US만 사용할 수 있습니다.");
+                    "region은 EU, EU_RG 또는 US만 사용할 수 있습니다.");
         }
 
         return normalized;

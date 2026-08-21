@@ -312,9 +312,11 @@ public class BerAsisTobeAdminService {
                 ? ""
                 : region.trim().toUpperCase(Locale.ROOT);
 
-        if(!normalized.equals("EU") && !normalized.equals("US")){
+        if(!normalized.equals("EU")
+                && !normalized.equals("EU_RG")
+                && !normalized.equals("US")){
             throw new IllegalArgumentException(
-                    "region은 EU 또는 US만 사용할 수 있습니다.");
+                    "region은 EU, EU_RG 또는 US만 사용할 수 있습니다.");
         }
 
         return normalized;

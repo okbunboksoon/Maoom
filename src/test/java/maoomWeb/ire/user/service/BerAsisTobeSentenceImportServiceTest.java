@@ -50,6 +50,6 @@ class BerAsisTobeSentenceImportServiceTest {
                 file,
                 "admin"))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining("EU 또는 US");
+                .hasMessageContaining("EU, EU_RG 또는 US");
     }
 }

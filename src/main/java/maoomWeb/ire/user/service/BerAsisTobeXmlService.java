@@ -22,6 +22,7 @@ import maoomWeb.ire.user.mapper.BerAsisTobePairMapper;
 public class BerAsisTobeXmlService {
 
     private static final String REGION_EU = "EU";
+    private static final String REGION_EU_RG = "EU_RG";
     private static final String REGION_US = "US";
 
     private final BerAsisTobePairMapper pairMapper;
@@ -33,6 +34,9 @@ public class BerAsisTobeXmlService {
     public void writeRegionXmlFiles(Path xslDirectory) throws IOException {
         Files.createDirectories(xslDirectory);
         writeRegionXml(REGION_EU, xslDirectory.resolve("asis-tobe_eu.xml"));
+        writeRegionXml(
+                REGION_EU_RG,
+                xslDirectory.resolve("asis-tobe_eu_rg.xml"));
         writeRegionXml(REGION_US, xslDirectory.resolve("asis-tobe_us.xml"));
     }
 

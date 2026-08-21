@@ -1100,6 +1100,8 @@ function updateBerAsisTobeSummary(showing){
     const total = berAsisTobeState.items.length;
     const euCount = berAsisTobeState.items
         .filter(item => item.region === 'EU').length;
+    const euRgCount = berAsisTobeState.items
+        .filter(item => item.region === 'EU_RG').length;
     const usCount = berAsisTobeState.items
         .filter(item => item.region === 'US').length;
 
@@ -1109,6 +1111,7 @@ function updateBerAsisTobeSummary(showing){
             + showing.toLocaleString('ko-KR') + '건 표시';
     berTotalCount.textContent = total.toLocaleString('ko-KR');
     berEuCount.textContent = euCount.toLocaleString('ko-KR');
+    berEuRgCount.textContent = euRgCount.toLocaleString('ko-KR');
     berUsCount.textContent = usCount.toLocaleString('ko-KR');
     berFilteredCount.textContent = showing.toLocaleString('ko-KR');
 }

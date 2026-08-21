@@ -6,7 +6,6 @@ import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -103,49 +102,38 @@ class RevisionPipelineServiceTest {
     }
 
     @Test
-    void patchesUtf8ChapterizeBatchWhenCleanupOptionsAreSelected() throws Exception {
-        Path workspace = Files.createDirectory(tempDirectory.resolve("workspace"));
-        Path xsl = Files.createDirectory(workspace.resolve("xsl"));
-        Files.copy(
-                Path.of("src/main/resources/bat/02_topics_Chapterize.bat"),
-                workspace.resolve("02_topics_Chapterize.bat"),
-                StandardCopyOption.REPLACE_EXISTING);
-        Files.writeString(
-                xsl.resolve("0402-Remove_Simple_Operation_And_DeliveryTarget.xsl"),
-                "<xsl:stylesheet version=\"3.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"/>",
-                StandardCharsets.UTF_8);
-        Files.writeString(
-                xsl.resolve("0401-remove_review_Delete_Draft_Comment.xsl"),
-                "<xsl:stylesheet version=\"3.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\"/>",
-                StandardCharsets.UTF_8);
-
+    void appendsChapterizeBatchArgumentsWhenOptionsAreSelected() throws Exception {
         RevisionPipelineService service = new RevisionPipelineService();
         List<String> logs = new ArrayList<>();
+        List<String> command = new ArrayList<>(List.of(
+                "cmd.exe",
+                "/c",
+                "02_topics_Chapterize_NotFileNameChange.bat"));
         Method method = RevisionPipelineService.class.getDeclaredMethod(
-                "prepareBatchOptions",
-                Path.class,
+                "appendBatchArguments",
                 String.class,
                 Set.class,
+                List.class,
                 List.class);
         method.setAccessible(true);
 
         method.invoke(
                 service,
-                workspace,
-                "02_topics_Chapterize.bat",
+                "02_topics_Chapterize_NotFileNameChange.bat",
                 Set.of(
+                        RevisionPipelineCatalog.FILE_NAME_KEEP,
                         RevisionPipelineCatalog.REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
                         RevisionPipelineCatalog.DELETE_DRAFT_COMMENT),
+                command,
                 logs);
 
-        String patched = Files.readString(
-                workspace.resolve("02_topics_Chapterize.bat"),
-                StandardCharsets.UTF_8);
-        assertThat(patched)
-                .contains("0402-Remove_Simple_Operation_And_DeliveryTarget.xsl")
-                .contains("0401-remove_review_Delete_Draft_Comment.xsl")
-                .contains("-s:temp\\0401-remove_review_Delete_Draft_Comment.xml");
+        assertThat(command)
+                .contains(
+                        "FILE_NAME_CHANGE=Y",
+                        "REMOVE_SIMPLE=Y",
+                        "DELETE_DRAFT=Y");
         assertThat(logs)
+                .contains("옵션 추가: 파일명 변경")
                 .contains("옵션 추가: 속성 및 세션 지우기")
                 .contains("옵션 추가: Draft Comment, review, hash, modified 지우기");
     }

@@ -245,6 +245,13 @@ public class UserController {
         return "user/multilingual/qsgPopup";
     }
     
+    /**
+     * 예전 페이지 계산 진입 URL을 PDF 목록 화면으로 연결한다.
+     *
+     * <p>현재 메인 런처에는 노출하지 않는 호환용 경로다. 실제 PDF 선택과 뷰어
+     * 이동 흐름은 {@link #pdfList()}와 동일하게 {@code templates/user/pdf/pdfList.html}
+     * 화면에서 시작한다.</p>
+     */
     @GetMapping("/page/calc")
     public String pdfList3() {
         return "user/pdf/pdfList";
@@ -269,6 +276,12 @@ public class UserController {
         return "user/pdf/pdfview";
     }
 
+    /**
+     * PDF 업로드 화면을 표시한다.
+     *
+     * <p>현재 PDF 리뷰의 기본 진입은 Google Drive 선택 화면이지만, 이 경로는
+     * 기존 업로드 화면 템플릿을 직접 열어야 할 때 사용한다.</p>
+     */
     @GetMapping("/pdf/upload")
     public String pdfUpload() {
         return "user/pdf/pdfUpload";
@@ -318,10 +331,28 @@ public class UserController {
         return "user/productSpecComparison/productSpecComparison";
     }
 
-    /** 도안의뢰서 작성 카드가 여는 입력 팝업 화면을 표시한다. */
+    /**
+     * 도안의뢰서 작성 카드가 여는 입력 팝업 화면.
+     *
+     * <p>화면 위치: {@code templates/user/artworkRequest/artworkRequest.html}.
+     * 실행 API는 ArtworkRequestController, PDF 검증과 엑셀 생성은
+     * ArtworkRequestService가 담당한다.</p>
+     */
     @GetMapping("/pdf/artwork-request")
     public String artworkRequest() {
         return "user/artworkRequest/artworkRequest";
+    }
+
+    /**
+     * 인쇄데이터 검증 카드가 여는 입력 팝업 화면.
+     *
+     * <p>화면 위치: {@code templates/user/printCheck/printCheck.html}.
+     * 실행 API는 PdfCheckScanViewerController, 로컬 검증 CLI 실행은
+     * PdfCheckScanViewerService가 담당한다.</p>
+     */
+    @GetMapping("/pdf/print-check")
+    public String printCheck() {
+        return "user/printCheck/printCheck";
     }
 
     /**
@@ -336,56 +367,100 @@ public class UserController {
         return "user/ditamapBuilder/ditamapBuilder";
     }
 
-    /** Index 추출 카드가 여는 DITA Index 검토 엑셀 생성 팝업 화면을 표시한다. */
+    /**
+     * Index 추출 카드가 여는 DITA Index 검토 엑셀 생성 팝업 화면.
+     *
+     * <p>화면 위치: {@code templates/user/indexExtract/index.html}.
+     * 실행 API는 IndexExtractController, 배치 실행과 결과 파일 정리는
+     * IndexExtractService가 담당한다.</p>
+     */
     @GetMapping("/index-extract")
     public String indexExtract() {
         return "user/indexExtract/index";
     }
 
+    /**
+     * DITAMAP Builder 트리 조회 결과 화면을 표시한다.
+     *
+     * <p>작업 경로 화면에서 생성한 트리 데이터를 보기 전용으로 확인하는 화면이다.
+     * 트리 생성 API는 DitamapBuilderController의 {@code /api/ditamap-builder/tree}
+     * 계열을 사용한다.</p>
+     */
     @GetMapping("/ditamap-builder/view")
-    /** DITAMAP Builder 트리 조회 결과 화면을 표시한다. */
     public String ditamapBuilderView() {
         return "user/ditamapBuilder/ditamapBuilderView";
     }
 
+    /**
+     * 법규 마스터와 실제 매뉴얼을 비교하는 DITAMAP Builder 화면을 표시한다.
+     *
+     * <p>초기 비교 방식 검증용 화면이며, 비교와 otherprops 리포트 생성은
+     * DitamapBuilderController와 DitamapBuilderService 쪽 API를 함께 확인해야 한다.</p>
+     */
     @GetMapping("/ditamap-builder/diff")
-    /** 1안 테스트용: 법규 마스터와 실제 매뉴얼을 비교하는 DITAMAP Builder 화면을 표시한다. */
     public String ditamapBuilderDiff() {
         return "user/ditamapBuilder/ditamapBuilderDiff";
     }
 
+    /**
+     * DB 대상 파일명을 기준으로 실시간 반영하는 DITAMAP Builder 화면을 표시한다.
+     *
+     * <p>법규 대상 파일 조회, topic 제목/속성 조회, 최종 legal DITAMAP 저장 API를
+     * 같은 화면 흐름에서 호출한다.</p>
+     */
     @GetMapping("/ditamap-builder/realtime")
-    /** 2안 테스트용: DB 대상 파일명을 기준으로 실시간 반영하는 DITAMAP Builder 화면을 표시한다. */
     public String ditamapBuilderRealtime() {
         return "user/ditamapBuilder/ditamapBuilderRealtime";
     }
 
+    /**
+     * 선택한 기준 topic을 법규용 DITAMAP 구조에 배치하는 팝업 화면을 표시한다.
+     *
+     * <p>사용자가 정리한 최종 법규 행 목록은 {@code /api/ditamap-builder/legal}
+     * 저장 API로 전달된다.</p>
+     */
     @GetMapping("/ditamap-builder/legal-editor")
-    /** 선택한 기준 topic을 법규용 DITAMAP 구조에 배치하는 팝업 화면을 표시한다. */
     public String ditamapLegalEditor() {
         return "user/ditamapBuilder/ditamapLegalEditor";
     }
 
+    /**
+     * otherprops 비교 실패/보류 상세 목록을 별도 팝업으로 표시한다.
+     *
+     * <p>DITAMAP Builder 비교 화면에서 만든 리포트를 사용자가 다시 확인하는
+     * 보조 화면이다.</p>
+     */
     @GetMapping("/ditamap-builder/otherprops-report")
-    /** otherprops 비교 실패/보류 상세 목록을 별도 팝업으로 표시한다. */
     public String ditamapOtherpropsReport() {
         return "user/ditamapBuilder/ditamapOtherpropsReport";
     }
 
+    /**
+     * 법규 DITAMAP Builder 변경 검증용 시작 화면을 표시한다.
+     *
+     * <p>운영 화면과 분리해 변경 사항을 비교 검증하기 위한 테스트 템플릿이다.</p>
+     */
     @GetMapping("/ditamap-builder-test")
-    /** 법규 DITAMAP Builder 변경 검증용 시작 화면을 표시한다. */
     public String ditamapBuilderTest() {
         return "user/ditamapBuilderTest/ditamapBuilderTest";
     }
 
+    /**
+     * 법규 DITAMAP Builder 변경 검증용 비교 화면을 표시한다.
+     *
+     * <p>운영 비교 화면과 같은 서비스 API를 사용하면서 화면 변경을 검증한다.</p>
+     */
     @GetMapping("/ditamap-builder-test/diff")
-    /** 법규 DITAMAP Builder 변경 검증용 비교 화면을 표시한다. */
     public String ditamapBuilderTestDiff() {
         return "user/ditamapBuilderTest/ditamapBuilderTestDiff";
     }
 
+    /**
+     * 법규 DITAMAP Builder 변경 검증용 편집 화면을 표시한다.
+     *
+     * <p>운영 legal editor와 같은 저장 API를 대상으로 테스트 화면 동작을 확인한다.</p>
+     */
     @GetMapping("/ditamap-builder-test/legal-editor")
-    /** 법규 DITAMAP Builder 변경 검증용 편집 화면을 표시한다. */
     public String ditamapLegalTestEditor() {
         return "user/ditamapBuilderTest/ditamapLegalTestEditor";
     }

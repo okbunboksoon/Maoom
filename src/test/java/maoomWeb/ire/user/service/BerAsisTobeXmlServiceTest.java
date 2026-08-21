@@ -19,7 +19,7 @@ class BerAsisTobeXmlServiceTest {
     Path tempDirectory;
 
     @Test
-    void writesEuAndUsXmlFilesFromDatabaseRows() throws Exception {
+    void writesEuEuRgAndUsXmlFilesFromDatabaseRows() throws Exception {
         BerAsisTobePairMapper mapper = new StubMapper(
                 List.of(pair(
                         1L,
@@ -27,6 +27,12 @@ class BerAsisTobeXmlServiceTest {
                         "EU_HASH",
                         "Use <old> & check.",
                         "Use <new> & check.")),
+                List.of(pair(
+                        3L,
+                        "EU_RG",
+                        "EU_RG_HASH",
+                        "RG old.",
+                        "RG new.")),
                 List.of(pair(
                         2L,
                         "US",
@@ -41,6 +47,9 @@ class BerAsisTobeXmlServiceTest {
         String euXml = Files.readString(
                 tempDirectory.resolve("asis-tobe_eu.xml"),
                 StandardCharsets.UTF_8);
+        String euRgXml = Files.readString(
+                tempDirectory.resolve("asis-tobe_eu_rg.xml"),
+                StandardCharsets.UTF_8);
         String usXml = Files.readString(
                 tempDirectory.resolve("asis-tobe_us.xml"),
                 StandardCharsets.UTF_8);
@@ -53,6 +62,9 @@ class BerAsisTobeXmlServiceTest {
         assertThat(usXml)
                 .contains("<pair hash=\"US_HASH\">")
                 .contains("<new>Contact an authorized Kia dealer or service partner.</new>");
+        assertThat(euRgXml)
+                .contains("<pair hash=\"EU_RG_HASH\">")
+                .contains("<new>RG new.</new>");
     }
 
     @Test
@@ -64,6 +76,7 @@ class BerAsisTobeXmlServiceTest {
                         "INLINE_HASH",
                         "See <xref/> before <term>ON</term>.",
                         "See <xref/> after <term>OFF</term>.")),
+                List.of(),
                 List.of());
 
         BerAsisTobeXmlService service = new BerAsisTobeXmlService(mapper);
@@ -87,7 +100,7 @@ class BerAsisTobeXmlServiceTest {
                 StandardCharsets.UTF_8);
 
         BerAsisTobeXmlService service = new BerAsisTobeXmlService(
-                new StubMapper(List.of(), List.of()));
+                new StubMapper(List.of(), List.of(), List.of()));
 
         service.writeRegionXmlFiles(tempDirectory);
 
@@ -115,12 +128,19 @@ class BerAsisTobeXmlServiceTest {
 
     private record StubMapper(
             List<BerAsisTobePair> euRows,
+            List<BerAsisTobePair> euRgRows,
             List<BerAsisTobePair> usRows)
             implements BerAsisTobePairMapper {
 
         @Override
         public List<BerAsisTobePair> findByRegion(String region) {
-            return "EU".equals(region) ? euRows : usRows;
+            if("EU".equals(region)){
+                return euRows;
+            }
+            if("EU_RG".equals(region)){
+                return euRgRows;
+            }
+            return usRows;
         }
 
         @Override

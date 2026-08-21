@@ -1,35 +1,88 @@
 package maoomWeb.ire.user.controller;
 
 import java.nio.charset.StandardCharsets;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import maoomWeb.ire.user.dto.PdfCheckScanViewerResult;
+import maoomWeb.ire.user.dto.PdfCheckScanViewerRunRequest;
+import maoomWeb.ire.user.service.CurrentUserService;
+import maoomWeb.ire.user.service.PdfCheckScanViewerService;
+import maoomWeb.ire.user.service.ProjectExecutionLogService;
 
 /**
  * 사용자 메인 화면의 '인쇄데이터 검증' 카드에서 호출하는 REST 컨트롤러.
  *
- * <p>운영 서버에서 EXE를 실행하면 원격 사용자가 눌러도 서버 PC에서 프로그램이
- * 열린다. 현재 화면은 사용자 PC의 로컬 프로토콜을 호출하므로 이 API는 남아 있는
- * 직접 호출이 서버 프로세스를 실행하지 못하게 차단한다.</p>
+ * <p>화면에서 받은 대상 폴더, 매치테이블 경로/파일명, 결과 저장 경로를
+ * CLI 실행 서비스로 넘긴다.</p>
  */
 @RestController
 public class PdfCheckScanViewerController {
 
-    /** 서버 PC에서 EXE가 실행되지 않도록 기존 런처 API를 비활성화한다. */
-    @PostMapping("/api/pdf-check-scan-viewer/launch")
-    public ResponseEntity<String> launch() {
-        return ResponseEntity.status(HttpStatus.GONE)
-                .contentType(new MediaType(
-                        "text",
-                        "plain",
-                        StandardCharsets.UTF_8))
-                .body("PDF 검수 스캔 뷰어는 사용자 PC에서 실행해야 합니다.");
+    private final PdfCheckScanViewerService pdfCheckScanViewerService;
+    private final CurrentUserService currentUserService;
+    private final ProjectExecutionLogService projectExecutionLogService;
+
+    public PdfCheckScanViewerController(
+            PdfCheckScanViewerService pdfCheckScanViewerService,
+            CurrentUserService currentUserService,
+            ProjectExecutionLogService projectExecutionLogService) {
+        this.pdfCheckScanViewerService = pdfCheckScanViewerService;
+        this.currentUserService = currentUserService;
+        this.projectExecutionLogService = projectExecutionLogService;
     }
 
-    /** EXE 경로 누락, 파일 없음, 실행 실패를 팝업 alert에서 읽을 수 있는 한글 문장으로 반환한다. */
+    /** 인쇄데이터 검증 CLI를 실행해 결과 xlsx를 생성한다. */
+    @PostMapping(
+            value = "/api/pdf-check-scan-viewer/run",
+            consumes = MediaType.APPLICATION_JSON_VALUE)
+    public PdfCheckScanViewerResult run(
+            @RequestBody PdfCheckScanViewerRunRequest request,
+            Authentication authentication) {
+        String targetDirectory = request == null ? null : request.targetDirectory();
+        String outputDirectory = request == null ? null : request.outputDirectory();
+        Long logId = projectExecutionLogService.start(
+                "PRINT_CHECK",
+                "인쇄데이터 검증",
+                currentUserService.getUserId(authentication),
+                targetDirectory,
+                "인쇄데이터 검증 CLI를 실행합니다.");
+
+        try{
+            PdfCheckScanViewerResult result = pdfCheckScanViewerService.run(
+                    targetDirectory,
+                    outputDirectory);
+            projectExecutionLogService.success(
+                    logId,
+                    result.resultPath(),
+                    buildSuccessLogMessage(result));
+            return result;
+        }catch(RuntimeException exception){
+            projectExecutionLogService.fail(logId, exception);
+            throw exception;
+        }
+    }
+
+    private String buildSuccessLogMessage(PdfCheckScanViewerResult result) {
+        if(result == null){
+            return "인쇄데이터 검증 완료";
+        }
+
+        StringBuilder message = new StringBuilder("인쇄데이터 검증 완료");
+        if(result.log() != null && !result.log().isBlank()){
+            message.append(System.lineSeparator())
+                    .append(result.log());
+        }
+        return message.toString();
+    }
+
+    /** EXE 경로 누락, 파일 없음, 실행 실패를 팝업에서 읽을 수 있는 한글 문장으로 반환한다. */
     @ExceptionHandler({
             IllegalArgumentException.class,
             IllegalStateException.class
