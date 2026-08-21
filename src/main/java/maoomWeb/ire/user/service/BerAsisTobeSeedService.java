@@ -32,6 +32,7 @@ public class BerAsisTobeSeedService {
     @Transactional
     public void seedIfEmpty() {
         seedRegionIfEmpty("EU", "xsl/asis-tobe_eu.xml");
+        seedRegionIfEmpty("EU_RG", "xsl/asis-tobe_eu_rg.xml");
         seedRegionIfEmpty("US", "xsl/asis-tobe_us.xml");
     }
 

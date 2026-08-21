@@ -13,7 +13,7 @@ import maoomWeb.ire.user.dto.BerAsisTobePair;
 class BerAsisTobeSeedServiceTest {
 
     @Test
-    void readsExistingEuAndUsXmlAsDatabaseRows() {
+    void readsExistingEuEuRgAndUsXmlAsDatabaseRows() {
         BerAsisTobeSeedService service =
                 new BerAsisTobeSeedService(null);
 
@@ -23,6 +23,8 @@ class BerAsisTobeSeedServiceTest {
         assertThat(service.readPairs("US", "xsl/asis-tobe_us.xml"))
                 .hasSizeGreaterThan(100)
                 .allSatisfy(this::hasRequiredFields);
+        assertThat(service.readPairs("EU_RG", "xsl/asis-tobe_eu_rg.xml"))
+                .isEmpty();
     }
 
     @Test
@@ -48,7 +50,7 @@ class BerAsisTobeSeedServiceTest {
     }
 
     private void hasRequiredFields(BerAsisTobePair pair) {
-        assertThat(pair.getRegion()).isIn("EU", "US");
+        assertThat(pair.getRegion()).isIn("EU", "EU_RG", "US");
         assertThat(pair.getHash()).isNotBlank();
         assertThat(pair.getNewText()).isNotBlank();
     }

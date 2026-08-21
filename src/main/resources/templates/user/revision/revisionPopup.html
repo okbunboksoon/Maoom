@@ -174,12 +174,16 @@ function renderOptions(items) {
     const preferredOrder = [
         'FILE_NAME_KEEP',
         'REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET',
-        'DELETE_DRAFT_COMMENT'
+        'DELETE_DRAFT_COMMENT',
+        'NOTE_타입_변경',
+        '문장 치환'
     ];
     const compactLabels = {
         FILE_NAME_KEEP: '파일명 변경(ex t00000, t00001)',
         REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET: 'deliveryTarget 및 Simple operation 지우기',
-        DELETE_DRAFT_COMMENT: 'Draft Comment, review, hash, modified 지우기'
+        DELETE_DRAFT_COMMENT: 'Draft Comment, review, hash, modified 지우기',
+        NOTE_DB_APPLY: 'NOTE_타입_변경',
+        TEXT_DB_APPLY: '문장 치환'
     };
     const byId = new Map(items.map(function(item) {
         return [item.id, item];

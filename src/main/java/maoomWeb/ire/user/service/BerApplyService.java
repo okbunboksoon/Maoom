@@ -54,6 +54,7 @@ public class BerApplyService {
      */
     private static final String[] REQUIRED_TOOL_FILES = {
             BER_BATCH,
+            "ditamap_not_file_delete.bat",
             "lib/saxon-ee-10.0.jar",
             "lib/xml-resolver-1.2.jar",
             "lib/saxon-license.lic",
@@ -68,6 +69,7 @@ public class BerApplyService {
             "xsl/0340-kus-db-apply_ber_exclude.xsl",
             "xsl/0340-kus-db-apply_ber.xsl",
             "xsl/asis-tobe_eu.xml",
+            "xsl/asis-tobe_eu_rg.xml",
             "xsl/asis-tobe_us.xml",
             "xsl/asis-tobe_exclude.xml",
             "xsl/0310-kus-beautify.xsl",

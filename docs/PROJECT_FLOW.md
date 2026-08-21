@@ -14,7 +14,7 @@
   -> Mapper / JdbcTemplate / 파일 처리 / XSL, Excel 처리
   -> DB 또는 결과 파일
 ```
-12312
+
 - `src/main/resources/templates`  
   사용자가 보는 HTML 화면이다. 버튼 클릭, 팝업, 테이블 화면의 뼈대가 있다.
 - `src/main/resources/static`  
@@ -73,6 +73,19 @@ productSpecComparison.html
 실행 시작/성공/실패 이력은 `ProjectExecutionLogService`가 `tb_project_execution_log`에
 남긴다. 관리자 화면의 실행 로그 탭은 이 테이블을 다시 읽는다.
 
+## Index 추출 흐름
+
+```text
+index.html
+  -> IndexExtractController.run()
+  -> IndexExtractService
+  -> resources/bat/07_make-excel-index.bat
+  -> 날짜별 Index 결과 폴더 / 결과 엑셀 / index-extract.log / 실행 로그
+```
+
+사용자는 DITA 작업 폴더를 입력하고, 서버 PC는 해당 경로 아래에서 Index 검토용 엑셀을
+생성한다. 입력 경로는 브라우저 PC가 아니라 서버 PC 기준으로 접근 가능해야 한다.
+
 ## 견적 흐름
 
 ```text
@@ -88,6 +101,34 @@ colorCheck.html
 관리자 화면의 견적 탭은 같은 DB를 관리용으로 조회/수정한다. 사용자용 API와 관리자용
 API는 URL만 다르고 핵심 DB 서비스는 공유한다.
 
+## 도안의뢰서 작성 흐름
+
+```text
+artworkRequest.html
+  -> ArtworkRequestController.run()
+  -> ArtworkRequestService
+  -> PDFImageExtractor 계열 서비스
+  -> 도안의뢰서 엑셀 / 실행 중 임시 PDF 정리
+```
+
+화면은 결과 저장 경로와 업로드 PDF를 `multipart/form-data`로 보낸다. 컨트롤러는
+HTTP 요청 형식만 처리하고, PDF 검증과 도안의뢰서 엑셀 생성은 서비스 계층에서
+처리한다.
+
+## 인쇄데이터 검증 흐름
+
+```text
+printCheck.html
+  -> PdfCheckScanViewerController.run()
+  -> PdfCheckScanViewerService
+  -> pdf-check-scan-viewer.exe-path에 설정된 로컬 CLI
+  -> 결과 xlsx / 실행 로그
+```
+
+이 기능은 서버 PC에서 외부 CLI 실행 파일을 호출한다. 운영 설정의
+`pdf-check-scan-viewer.exe-path`가 실제 EXE 위치를 가리켜야 하며, 대상 폴더와 결과
+폴더도 서버 PC 기준으로 접근 가능해야 한다.
+
 ## BER/QSG/다국어/Revision 흐름
 
 ```text
@@ -101,6 +142,29 @@ API는 URL만 다르고 핵심 DB 서비스는 공유한다.
 이 계열은 파일 경로를 입력받아 서버 PC에서 접근 가능한 경로를 처리한다. 배포 PC에서
 오류가 날 때는 Excel 프로세스, 파일 권한, 네트워크 드라이브 접근 권한, XSL/VBS 자원
 복사 여부를 같이 확인해야 한다.
+
+## DITAMAP Builder 흐름
+
+```text
+ditamapBuilder.html
+  -> DitamapBuilderController
+  -> DitamapBuilderService
+  -> 허용 루트 아래 DITAMAP/DITA 파일 읽기
+  -> 트리 조회 / 비교 / 법규 편집 / 저장
+```
+
+DITAMAP Builder는 `ditamap.builder.allowed-roots`에 등록된 작업 루트 아래 파일만
+읽고 쓴다. 메인 카드의 시작 화면은 작업 경로를 받고, 세부 화면은 아래처럼 나뉜다.
+
+- `/ditamap-builder/view`: 작업 경로에서 읽은 DITAMAP 트리 조회 결과 화면.
+- `/ditamap-builder/diff`: 법규 마스터와 실제 매뉴얼을 비교하는 화면.
+- `/ditamap-builder/realtime`: DB 대상 파일명을 기준으로 법규 반영 상태를 확인하고 저장하는 화면.
+- `/ditamap-builder/legal-editor`: 선택한 기준 topic을 최종 법규 DITAMAP 구조에 배치하는 팝업.
+- `/ditamap-builder/otherprops-report`: otherprops 비교 실패/보류 상세를 확인하는 보조 팝업.
+
+`/ditamap-builder-test` 계열 화면은 운영 화면과 분리해서 변경 사항을 검증하는 테스트
+템플릿이다. 실제 API는 운영 Builder와 같은 `DitamapBuilderController`와
+`DitamapBuilderService`를 기준으로 확인한다.
 
 ## PDF 댓글 흐름
 

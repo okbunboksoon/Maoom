@@ -34,7 +34,7 @@ class BerAsisTobeAdminServiceTest {
         BerAsisTobeImportResult result =
                 service.importExcel(new ByteArrayInputStream(workbookBytes()));
 
-        assertThat(result.insertedCount()).isEqualTo(1);
+        assertThat(result.insertedCount()).isEqualTo(2);
         assertThat(result.updatedCount()).isEqualTo(1);
         assertThat(result.unchangedCount()).isEqualTo(1);
         assertThat(result.skippedCount()).isEqualTo(1);
@@ -42,6 +42,8 @@ class BerAsisTobeAdminServiceTest {
                 .isEqualTo("after");
         assertThat(mapper.findByRegionAndHash("EU", "NEW").getNewText())
                 .isEqualTo("new");
+        assertThat(mapper.findByRegionAndHash("EU_RG", "RG_NEW").getNewText())
+                .isEqualTo("rg new");
     }
 
     private byte[] workbookBytes() throws Exception {
@@ -57,7 +59,8 @@ class BerAsisTobeAdminServiceTest {
             createRow(sheet, 1, "EU", "EXISTING", "old", "same");
             createRow(sheet, 2, "US", "UPDATE", "old", "after");
             createRow(sheet, 3, "EU", "NEW", "old", "new");
-            createRow(sheet, 4, "KR", "BAD", "old", "new");
+            createRow(sheet, 4, "EU_RG", "RG_NEW", "old", "rg new");
+            createRow(sheet, 5, "KR", "BAD", "old", "new");
 
             workbook.write(output);
             return output.toByteArray();

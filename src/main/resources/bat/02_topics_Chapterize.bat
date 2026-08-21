@@ -1,4 +1,7 @@
 @echo off
+call "%~dp0\02_topics_Chapterize_NotFileNameChange.bat" FILE_NAME_CHANGE=Y %*
+exit /b %ERRORLEVEL%
+
 setlocal enabledelayedexpansion
 
 set SAXON=%~dp0

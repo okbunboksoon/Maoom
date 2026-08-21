@@ -14,11 +14,13 @@ REM 원본 파일들
 set sourceFile1=xsl\asis-tobe_us.xml
 set sourceFile2=xsl\asis-tobe_eu.xml
 set sourceFile3=xsl\asis-tobe_exclude.xml
+set sourceFile4=xsl\asis-tobe_eu_rg.xml
 
 REM 백업 파일 경로
 set backupFile1=%backupDir%\%datetime%_asis-tobe_us.xml
 set backupFile2=%backupDir%\%datetime%_asis-tobe_eu.xml
 set backupFile3=%backupDir%\%datetime%_asis-tobe_exclude.xml
+set backupFile4=%backupDir%\%datetime%_asis-tobe_eu_rg.xml
 
 REM 백업 폴더 없으면 생성
 if not exist "%backupDir%" mkdir "%backupDir%"
@@ -27,13 +29,14 @@ REM 파일 백업
 copy "%sourceFile1%" "%backupFile1%" >NUL
 copy "%sourceFile2%" "%backupFile2%" >NUL
 copy "%sourceFile3%" "%backupFile3%" >NUL
+copy "%sourceFile4%" "%backupFile4%" >NUL
 
 echo Please wait a moment!
 echo Processing...
 
 rem 1. REGION 입력
 if "%~1"=="" (
-    set /p REGION=Enter region ^(EU / US / exclude^):
+    set /p REGION=Enter region ^(EU / EU_RG / US / exclude^):
 ) else (
     set REGION=%~1
 )
@@ -41,12 +44,14 @@ if "%~1"=="" (
 rem 2. 파일명 분기
 if /I "%REGION%"=="EU" (
     set MAPNAME=CV_EV_PE_en_GB_25MY.ditamap
+) else if /I "%REGION%"=="EU_RG" (
+    set MAPNAME=CV_EV_RG_en_GB_25MY.ditamap
 ) else if /I "%REGION%"=="US" (
     set MAPNAME=CVa_EV_PE_en_US_25MY.ditamap
 ) else if /I "%REGION%"=="exclude" (
     set MAPNAME=CVa_EV_PE_en_exclude_25MY.ditamap
 ) else (
-    echo Invalid region. EU or US or exclude
+    echo Invalid region. EU or EU_RG or US or exclude
     pause
     exit /b
 )
@@ -92,11 +97,12 @@ rem java net.sf.saxon.Transform 							-s:xsl\asis-tobe.xml						-o:xsl\asis-tob
 
 java net.sf.saxon.Transform								-s:xsl\asis-tobe_us.xml					-o:xsl\asis-tobe_us.xml					-xsl:xsl\0430-kus-db-update_ber.xsl	 region=us
 java net.sf.saxon.Transform								-s:xsl\asis-tobe_eu.xml					-o:xsl\asis-tobe_eu.xml					-xsl:xsl\0430-kus-db-update_ber.xsl	 region=eu
+java net.sf.saxon.Transform								-s:xsl\asis-tobe_eu_rg.xml				-o:xsl\asis-tobe_eu_rg.xml				-xsl:xsl\0430-kus-db-update_ber.xsl	 region=eu_rg
 java net.sf.saxon.Transform								-s:xsl\asis-tobe_exclude.xml				-o:xsl\asis-tobe_exclude.xml			-xsl:xsl\0430-kus-db-update_ber.xsl	 region=exclude
 
 REM temp 안에서 asis-tobe_eu/us/exclude.xml만 빼고 나머지 .xml 삭제
 for %%F in (temp\*.xml) do (
-    if /I not "%%~nxF"=="asis-tobe_eu.xml" if /I not "%%~nxF"=="asis-tobe_us.xml"  if /I not "%%~nxF"=="asis-tobe_exclude.xml" del "%%F"
+    if /I not "%%~nxF"=="asis-tobe_eu.xml" if /I not "%%~nxF"=="asis-tobe_eu_rg.xml" if /I not "%%~nxF"=="asis-tobe_us.xml"  if /I not "%%~nxF"=="asis-tobe_exclude.xml" del "%%F"
 )
 
 rem del temp\asis-tobe2.xml >NUL

@@ -27,8 +27,8 @@ final class RevisionPipelineCatalog {
         return List.of(
                 new RevisionOptionDto(
                         FILE_NAME_KEEP,
-                        "파일명 유지",
-                        "Chapter 변환 시 파일명 유지 배치를 실행합니다."),
+                        "파일명 변경",
+                        "Chapter 변환 시 파일명을 t00000, t00001 형식으로 변경합니다."),
                 new RevisionOptionDto(
                         REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
                         "속성 및 세션 지우기",
@@ -64,9 +64,7 @@ final class RevisionPipelineCatalog {
             RevisionFormat outputType,
             Set<String> selectedOptions) {
 
-        String chapterizeBatch = selectedOptions.contains(FILE_NAME_KEEP)
-                ? "02_topics_Chapterize.bat"
-                : "02_topics_Chapterize_NotFileNameChange.bat";
+        String chapterizeBatch = "02_topics_Chapterize_NotFileNameChange.bat";
 
         if(inputType == RevisionFormat.XML
                 && outputType == RevisionFormat.DITA){

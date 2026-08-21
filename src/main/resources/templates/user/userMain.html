@@ -369,10 +369,10 @@ const launcherMenus = [
     },
     {
         title:'인쇄데이터 검증',
-        description:'공박사님께서 만드신 프로그램 실행',
+        description:'인쇄데이터 폴더 검사 및 결과 엑셀 생성',
         category:'PDF',
         icon:'fa-search',
-        action:launchPdfCheckScanViewer
+        action:openPdfPrintCheckPopup
     }
     /**
     {
@@ -887,15 +887,23 @@ function openArtworkRequestPopup(){
 }
 
 /*
- * PDF 검수 스캔 뷰어.
+ * 인쇄데이터 검증.
  *
- * 호출 방식: pdfcheckscanviewer://launch
+ * 화면 위치: templates/user/printCheck/printCheck.html
+ * 호출 URL: GET /pdf/print-check -> UserController.printCheck()
+ * 실행 API/Service:
+ * - POST /api/pdf-check-scan-viewer/run -> PdfCheckScanViewerController.run() -> PdfCheckScanViewerService
  * 입출력:
- * - 서버 API를 호출하지 않고 클릭한 사용자 PC의 로컬 프로토콜 핸들러를 실행한다.
- * - 각 사용자 PC에 PDF 검수 스캔 뷰어 프로토콜 등록이 필요하다.
+ * - 대상 폴더와 결과 저장 경로를 받아 CLI EXE를 실행한다.
+ * - 매치테이블은 서버 설정값 pdf-check-scan-viewer.match-table-path를 사용한다.
+ * - 결과 저장 경로 아래에 날짜_인쇄데이터_검증.xlsx 파일을 생성한다.
  */
-function launchPdfCheckScanViewer(){
-    window.location.href = 'pdfcheckscanviewer://launch';
+function openPdfPrintCheckPopup(){
+    window.open(
+        '/pdf/print-check',
+        'pdfPrintCheckPopup',
+        'width=720,height=500'
+    );
 }
 
 /*

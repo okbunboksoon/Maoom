@@ -20,6 +20,9 @@ rem ===============================================
 echo Please wait a moment!
 echo Processing... 
 
+call "%~dp0ditamap_not_file_delete.bat"
+if errorlevel 1 exit /b %errorlevel%
+
 java net.sf.saxon.Transform -catalog:xsl\catalog.xml 		-s:xsl\dummy.xml  							-o:xsl\dummy.xml  							-xsl:xsl\0000-doctype-remove.xsl
 java net.sf.saxon.Transform 								-s:temp\0000-doctype-removed.xml  			-o:temp\10-namespace-removed.xml  		-xsl:xsl\0001-namespace-remove.xsl
 java net.sf.saxon.Transform 								-s:temp\10-namespace-removed.xml  		-o:temp\11-toc-created.xml  				-xsl:xsl\0002-toc-create.xsl
