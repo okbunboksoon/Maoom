@@ -398,6 +398,35 @@ class ColorCheckFinalWorkbookServiceTest {
     }
 
     @Test
+    void keepsUnderscoreInDomesticRegionToken()
+            throws Exception {
+
+        Path source = tempDirectory.resolve(
+                "KIA-TAM-ICE_KO-2027-OM_도안분류용.xlsx");
+        createReviewWorkbook(source);
+        ColorCheckFinalWorkbookService service =
+                new ColorCheckFinalWorkbookService();
+
+        Path output = service.createFinalWorkbook(
+                source,
+                source.getFileName().toString(),
+                tempDirectory);
+
+        assertThat(output.getFileName().toString())
+                .matches(
+                        "\\d{6}_도안발주내역서_"
+                        + "TAM_27MY_ICE_KO_HTML\\.xlsx");
+
+        try(var input = Files.newInputStream(output);
+                var workbook = WorkbookFactory.create(input)){
+            assertThat(workbook.getSheet("도안 발주서")
+                    .getRow(2).getCell(2)
+                    .getStringCellValue())
+                    .isEqualTo("TAM_27MY_ICE_KO");
+        }
+    }
+
+    @Test
     void usesUsCountryCodeForEnglishUsLocale()
             throws Exception {
 
