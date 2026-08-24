@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
+import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -123,6 +124,27 @@ public class ColorCheckController {
                         currentUserService.getUserId(authentication));
         return createExcelResponse(workbook);
     }
+
+    @PostMapping(
+            value = "/api/pdf/color-check/domestic-import",
+            consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<byte[]> importDomesticExcel(
+            @RequestParam("summaryFile") MultipartFile summaryFile,
+            @RequestParam("manualFile") MultipartFile manualFile,
+            @RequestParam(value = "updateDatabase", defaultValue = "true") boolean updateDatabase,
+            Authentication authentication)
+            throws IOException {
+
+        validateExcel(summaryFile);
+        validateExcel(manualFile);
+        ColorCheckWorkbookResponse workbook =
+                colorCheckWorkflowService.createDomesticFinalWorkbook(
+                        summaryFile,
+                        manualFile,
+                        updateDatabase,
+                        currentUserService.getUserId(authentication));
+        return createExcelResponse(workbook);
+    }
     /**
      * 업로드된 PDF를 분석해 견적용 XLSX를 생성한다.
      *
@@ -159,6 +181,18 @@ public class ColorCheckController {
                                 "plain",
                                 StandardCharsets.UTF_8))
                 .body(exception.getMessage());
+    }
+
+    @ExceptionHandler(MaxUploadSizeExceededException.class)
+    public ResponseEntity<String> handleMaxUploadSizeExceeded(
+            MaxUploadSizeExceededException exception) {
+        return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE)
+                .contentType(
+                        new MediaType(
+                                "text",
+                                "plain",
+                                StandardCharsets.UTF_8))
+                .body("업로드 파일 용량이 너무 큽니다. 500MB 이하 파일만 업로드할 수 있습니다.");
     }
 
     /**

@@ -21,7 +21,7 @@ body{
 .color-check-wrap{
     width:100%;
     min-height:100vh;
-    padding:18px 28px;
+    padding:18px 28px 28px;
     box-sizing:border-box;
 }
 
@@ -224,6 +224,7 @@ button:disabled{
     align-items:center;
     gap:8px;
     margin-top:10px;
+    margin-bottom:2px;
     padding:10px 14px;
     border:1px solid #cfd6df;
     border-radius:7px;

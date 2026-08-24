@@ -71,6 +71,34 @@ public class ColorCheckFinalWorkbookService {
             Path outputDirectory) throws IOException {
 
         List<OrderEntry> entries = readEntries(sourceExcel);
+        return createFinalWorkbookFromEntries(
+                entries,
+                sourceFileName,
+                outputDirectory);
+    }
+
+    public Path createDomesticFinalWorkbook(
+            Path summaryExcel,
+            String summaryFileName,
+            Path manualExcel,
+            String manualFileName,
+            Path outputDirectory) throws IOException {
+
+        List<OrderEntry> entries = new ArrayList<>();
+        entries.addAll(readEntriesAsSummaryGroup(summaryExcel));
+        entries.addAll(readEntries(manualExcel));
+        return createFinalWorkbookFromEntries(
+                entries,
+                manualFileName == null || manualFileName.isBlank()
+                        ? summaryFileName
+                        : manualFileName,
+                outputDirectory);
+    }
+
+    private Path createFinalWorkbookFromEntries(
+            List<OrderEntry> entries,
+            String sourceFileName,
+            Path outputDirectory) throws IOException {
 
         if(entries.isEmpty()){
             throw new IllegalArgumentException(
@@ -198,6 +226,22 @@ public class ColorCheckFinalWorkbookService {
 
             return entries;
         }
+    }
+
+    private List<OrderEntry> readEntriesAsSummaryGroup(
+            Path sourceExcel) throws IOException {
+
+        List<OrderEntry> entries = readEntries(sourceExcel);
+        List<OrderEntry> summaryEntries = new ArrayList<>();
+
+        for(OrderEntry entry : entries){
+            summaryEntries.add(new OrderEntry(
+                    entry.drawingName(),
+                    "요약본",
+                    "Q"));
+        }
+
+        return summaryEntries;
     }
 
     private ImportSheet findImportSheet(Workbook workbook) {

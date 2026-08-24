@@ -11,8 +11,8 @@
 	<xsl:param name="flag" select="'off'"/>
 	<xsl:variable name="mapTitle" select="normalize-space(string((/map/title)[1]))"/>
 	<xsl:variable name="isNA" select="contains(upper-case($mapTitle), 'US') or contains(upper-case($mapTitle), 'CA') or contains(upper-case($mapTitle), 'MX')"/>
-	<xsl:variable name="isRg" select="contains(upper-case($mapTitle), 'RG')"/>
-	<xsl:variable name="dbPath" select="if ($isNA) then 'asis-tobe_us.xml' else if ($isRg) then 'asis-tobe_eu_rg.xml' else 'asis-tobe_eu.xml'"/>
+	<xsl:variable name="isEuRg" select="contains(upper-case($mapTitle), 'RG') or contains(upper-case($mapTitle), 'IN')"/>
+	<xsl:variable name="dbPath" select="if ($isNA) then 'asis-tobe_us.xml' else if ($isEuRg) then 'asis-tobe_eu_rg.xml' else 'asis-tobe_eu.xml'"/>
 	<xsl:variable name="db" select="document($dbPath)"/>
 	
 	<!-- ===== 출력 옵션 ===== -->
@@ -30,7 +30,7 @@
 	<xsl:template match="/">
 		<xsl:message>
 			<xsl:text>Region=</xsl:text>
-			<xsl:value-of select="if ($isNA) then 'NA' else if ($isRg) then 'EU_RG' else 'EU'"/>
+			<xsl:value-of select="if ($isNA) then 'NA' else if ($isEuRg) then 'EU_RG' else 'EU'"/>
 			<xsl:text>, DB=</xsl:text>
 			<xsl:value-of select="$dbPath"/>
 			<xsl:text>, map/title="</xsl:text>
