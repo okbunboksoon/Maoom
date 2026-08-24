@@ -176,6 +176,96 @@ class ColorCheckFinalWorkbookServiceTest {
     }
 
     @Test
+    void createsDomesticOrderWorkbookWithSummaryEntriesInQGroup()
+            throws Exception {
+
+        Path summary = tempDirectory.resolve(
+                "KIA-SP3-ICE-ko_KR-2027-OM_Summary_도안분류용.xlsx");
+        Path manual = tempDirectory.resolve(
+                "KIA-SP3-ICE-ko_KR-2027-OM_Manual_도안분류용.xlsx");
+
+        try(XSSFWorkbook workbook = new XSSFWorkbook();
+                OutputStream output =
+                        Files.newOutputStream(summary)){
+            var sheet = workbook.createSheet("견적");
+            Row header = sheet.createRow(2);
+            header.createCell(0).setCellValue("도안명");
+            header.createCell(2).setCellValue("컬러도안");
+            header.createCell(3).setCellValue("챕터 구별");
+            header.createCell(4).setCellValue("챕터 넘버");
+            addRow(sheet, 3, "SUMMARY001", "V", "Safety", "1");
+            addRow(sheet, 4, "SUMMARY002", "V", "Maintenance", "8");
+            workbook.write(output);
+        }
+
+        try(XSSFWorkbook workbook = new XSSFWorkbook();
+                OutputStream output =
+                        Files.newOutputStream(manual)){
+            var sheet = workbook.createSheet("견적");
+            Row header = sheet.createRow(2);
+            header.createCell(0).setCellValue("도안명");
+            header.createCell(2).setCellValue("컬러도안");
+            header.createCell(3).setCellValue("챕터 구별");
+            header.createCell(4).setCellValue("챕터 넘버");
+            addRow(sheet, 3, "MANUAL001", "V", "Introduction", "1");
+            addRow(sheet, 4, "MANUAL002", "V", "Driving", "3");
+            workbook.write(output);
+        }
+
+        ColorCheckFinalWorkbookService service =
+                new ColorCheckFinalWorkbookService();
+        Path output = service.createDomesticFinalWorkbook(
+                summary,
+                summary.getFileName().toString(),
+                manual,
+                manual.getFileName().toString(),
+                tempDirectory);
+
+        try(var input = Files.newInputStream(output);
+                var workbook = WorkbookFactory.create(input)){
+            var details = workbook.getSheet("작업의뢰 내역");
+            assertThat(details.getRow(4).getCell(2)
+                    .getStringCellValue())
+                    .isEqualTo("SUMMARY001");
+            assertThat(details.getRow(4).getCell(3)
+                    .getStringCellValue())
+                    .isEqualTo("요약본");
+            assertThat(details.getRow(4).getCell(9)
+                    .getStringCellValue())
+                    .isEqualTo("Q");
+            assertThat(details.getRow(5).getCell(9)
+                    .getStringCellValue())
+                    .isEqualTo("Q");
+            assertThat(details.getRow(6).getCell(9)
+                    .getStringCellValue())
+                    .isEqualTo("1");
+            assertThat(details.getRow(7).getCell(9)
+                    .getStringCellValue())
+                    .isEqualTo("3");
+
+            var summarySheet = workbook.getSheet("도안 발주서");
+            assertThat(summarySheet.getRow(6).getCell(2)
+                    .getStringCellValue())
+                    .isEqualTo("Q");
+            assertThat(summarySheet.getRow(6).getCell(5)
+                    .getNumericCellValue())
+                    .isEqualTo(2);
+            assertThat(summarySheet.getRow(8).getCell(2)
+                    .getStringCellValue())
+                    .isEqualTo("1");
+            assertThat(summarySheet.getRow(8).getCell(5)
+                    .getNumericCellValue())
+                    .isEqualTo(1);
+            assertThat(summarySheet.getRow(12).getCell(2)
+                    .getStringCellValue())
+                    .isEqualTo("3");
+            assertThat(summarySheet.getRow(12).getCell(5)
+                    .getNumericCellValue())
+                    .isEqualTo(1);
+        }
+    }
+
+    @Test
     void doesNotOverwriteExistingFinalWorkbook()
             throws Exception {
 

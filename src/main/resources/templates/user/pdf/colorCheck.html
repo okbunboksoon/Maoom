@@ -32,7 +32,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageTitle">견적</title>
-    <link rel="stylesheet" href="/user/css/ColorCheck.css?v=ui-5">
+    <link rel="stylesheet" href="/user/css/ColorCheck.css?v=ui-6">
     <script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -90,6 +90,39 @@
                     type="button" disabled>최종 생성</button>
         </div>
 
+        <div class="step-divider"></div>
+
+        <div class="step-title">
+            <span>3</span>
+            <div>
+                <strong>내수 최종 엑셀 생성 및 DB 업데이트</strong>
+                <small>요약본은 Q 그룹으로 묶고, 설명서는 챕터 순서대로 최종 발주 엑셀을 만듭니다.</small>
+            </div>
+        </div>
+
+        <div id="summaryExcelDropRow" class="path-row file-drop-row">
+            <label for="summaryExcelPath">요약본</label>
+            <input id="summaryExcelPath" type="text"
+                   placeholder="요약본 선택 또는 여기에 끌어다 놓기" readonly>
+            <button class="select-btn secondary-btn" type="button" data-target="summaryExcelFile">
+                선택
+            </button>
+            <input id="summaryExcelFile" type="file" accept=".xlsx,.xls" hidden>
+            <span></span>
+        </div>
+
+        <div id="manualExcelDropRow" class="path-row file-drop-row">
+            <label for="manualExcelPath">사용설명서</label>
+            <input id="manualExcelPath" type="text"
+                   placeholder="설명서 선택 또는 여기에 끌어다 놓기" readonly>
+            <button class="select-btn secondary-btn" type="button" data-target="manualExcelFile">
+                선택
+            </button>
+            <input id="manualExcelFile" type="file" accept=".xlsx,.xls" hidden>
+            <button id="runDomesticImportBtn" class="run-btn primary-btn"
+                    type="button" disabled>최종 생성</button>
+        </div>
+
         <footer class="color-check-actions">
             <button class="close-btn secondary-btn" type="button" onclick="window.close()">닫기</button>
         </footer>
@@ -132,15 +165,25 @@ document.getElementById('pdfFile').addEventListener('change', function(){
 });
 
 let droppedReviewExcelFile = null;
+let droppedSummaryExcelFile = null;
+let droppedManualExcelFile = null;
 
 // 검토 엑셀이 선택된 경우 현재 작업 파일로 설정한다.
 document.getElementById('reviewExcelFile').addEventListener('change', function(){
     setReviewExcelFile(this.files[0]);
 });
+document.getElementById('summaryExcelFile').addEventListener('change', function(){
+    setSummaryExcelFile(this.files[0]);
+});
+document.getElementById('manualExcelFile').addEventListener('change', function(){
+    setManualExcelFile(this.files[0]);
+});
 
 let droppedPdfFile = null;
 const pdfDropRow = document.getElementById('pdfDropRow');
 const reviewExcelDropRow = document.getElementById('reviewExcelDropRow');
+const summaryExcelDropRow = document.getElementById('summaryExcelDropRow');
+const manualExcelDropRow = document.getElementById('manualExcelDropRow');
 
 // 브라우저 기본 파일 열기 동작을 막고 드롭 가능 상태를 시각적으로 표시한다.
 ['dragenter', 'dragover'].forEach(eventName => {
@@ -204,6 +247,9 @@ reviewExcelDropRow.addEventListener('drop', event => {
     setReviewExcelFile(file);
 });
 
+setupExcelDropRow(summaryExcelDropRow, setSummaryExcelFile);
+setupExcelDropRow(manualExcelDropRow, setManualExcelFile);
+
 // 읽기 전용 경로 입력칸을 눌러도 PDF 선택창이 열리게 한다.
 document.getElementById('pdfPath').addEventListener('click', () => {
     document.getElementById('pdfFile').click();
@@ -212,6 +258,12 @@ document.getElementById('pdfPath').addEventListener('click', () => {
 // 검토 엑셀 경로 입력칸을 눌러도 파일 선택창이 열린다.
 document.getElementById('reviewExcelPath').addEventListener('click', () => {
     document.getElementById('reviewExcelFile').click();
+});
+document.getElementById('summaryExcelPath').addEventListener('click', () => {
+    document.getElementById('summaryExcelFile').click();
+});
+document.getElementById('manualExcelPath').addEventListener('click', () => {
+    document.getElementById('manualExcelFile').click();
 });
 
 /**
@@ -236,6 +288,62 @@ function setReviewExcelFile(file){
         file ? file.name : '';
     document.getElementById('runImportBtn').disabled = !file;
     setStatus('', '');
+}
+
+function setSummaryExcelFile(file){
+    droppedSummaryExcelFile = file || null;
+    document.getElementById('summaryExcelPath').value =
+        file ? file.name : '';
+    updateDomesticImportButton();
+    setStatus('', '');
+}
+
+function setManualExcelFile(file){
+    droppedManualExcelFile = file || null;
+    document.getElementById('manualExcelPath').value =
+        file ? file.name : '';
+    updateDomesticImportButton();
+    setStatus('', '');
+}
+
+function updateDomesticImportButton(){
+    const summaryFile = droppedSummaryExcelFile
+        || document.getElementById('summaryExcelFile').files[0];
+    const manualFile = droppedManualExcelFile
+        || document.getElementById('manualExcelFile').files[0];
+    document.getElementById('runDomesticImportBtn').disabled =
+        !summaryFile || !manualFile;
+}
+
+function setupExcelDropRow(row, setter){
+    ['dragenter', 'dragover'].forEach(eventName => {
+        row.addEventListener(eventName, event => {
+            event.preventDefault();
+            event.stopPropagation();
+            row.classList.add('is-dragging');
+            event.dataTransfer.dropEffect = 'copy';
+        });
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+        row.addEventListener(eventName, event => {
+            event.preventDefault();
+            event.stopPropagation();
+            row.classList.remove('is-dragging');
+        });
+    });
+
+    row.addEventListener('drop', event => {
+        const file = Array.from(event.dataTransfer.files)
+            .find(item => /\.(xlsx|xls)$/i.test(item.name));
+
+        if(!file){
+            alert('XLSX 또는 XLS 파일만 끌어다 놓을 수 있습니다.');
+            return;
+        }
+
+        setter(file);
+    });
 }
 
 
@@ -392,6 +500,84 @@ document.getElementById('runImportBtn').addEventListener('click', async function
     }
 });
 
+document.getElementById('runDomesticImportBtn').addEventListener('click', async function(){
+    const summaryFile = droppedSummaryExcelFile
+        || document.getElementById('summaryExcelFile').files[0];
+    const manualFile = droppedManualExcelFile
+        || document.getElementById('manualExcelFile').files[0];
+
+    if(!summaryFile || !manualFile){
+        alert('요약본 검토 엑셀과 설명서 검토 엑셀을 모두 선택해 주세요.');
+        return;
+    }
+
+    const updateDatabase = await askDbUpdate();
+
+    this.disabled = true;
+    const originalText = this.textContent;
+    this.textContent = '생성 중...';
+    setStatus(
+        'progress',
+        updateDatabase
+            ? '내수 최종 발주 엑셀을 만들고 V/X 값을 DB에 반영하고 있습니다.'
+            : '내수 최종 발주 엑셀만 만들고 있습니다.'
+    );
+
+    try{
+        const formData = new FormData();
+        formData.append('summaryFile', summaryFile);
+        formData.append('manualFile', manualFile);
+        formData.append('updateDatabase', String(updateDatabase));
+        const response = await fetch('/api/pdf/color-check/domestic-import', {
+            method: 'POST',
+            body: formData
+        });
+
+        if(!response.ok){
+            throw new Error(
+                await response.text()
+                || '내수 최종 엑셀 생성 및 DB 반영에 실패했습니다.'
+            );
+        }
+
+        const blob = await response.blob();
+        const fileName = getDownloadFileName(
+            response,
+            manualFile.name.replace(/\.(xlsx|xls)$/i, '') + '_내수최종발주.xlsx'
+        );
+        const savedName = await saveWorkbookBlob(blob, fileName);
+        const dbUpdated = response.headers.get('X-Color-Check-Db-Updated') === 'true';
+        const insertedCount = getHeaderNumber(response, 'X-Color-Check-Inserted');
+        const updatedCount = getHeaderNumber(response, 'X-Color-Check-Updated');
+        const unchangedCount = getHeaderNumber(response, 'X-Color-Check-Unchanged');
+        const skippedCount = getHeaderNumber(response, 'X-Color-Check-Skipped');
+
+        setStatus(
+            'success',
+            dbUpdated
+                ? '내수 최종 엑셀 생성 및 DB 반영이 완료되었습니다.\n'
+                    + '신규: ' + insertedCount + '건\n'
+                    + '수정: ' + updatedCount + '건\n'
+                    + '변경 없음: ' + unchangedCount + '건\n'
+                    + '제외: ' + skippedCount + '건\n'
+                    + '다운로드: ' + savedName
+                : '내수 최종 엑셀 생성이 완료되었습니다. DB 업데이트는 하지 않았습니다.\n'
+                    + '다운로드: ' + savedName
+        );
+    }catch(error){
+        setStatus(
+            'error',
+            friendlyFetchError(
+                error,
+                '내수 최종 엑셀 생성 중 오류가 발생했습니다.'
+            )
+        );
+    }finally{
+        updateDomesticImportButton();
+        this.textContent = originalText;
+    }
+});
+
 function askDbUpdate(){
     const backdrop = document.getElementById('dbUpdateDialogBackdrop');
     const yesButton = document.getElementById('dbUpdateYesButton');
@@ -471,10 +657,23 @@ function setStatus(type, message){
         hourglass.textContent = '⏳';
         hourglass.setAttribute('aria-hidden', 'true');
         status.replaceChildren(hourglass, document.createTextNode(message));
+        requestAnimationFrame(adjustPopupHeightForStatus);
         return;
     }
 
     status.textContent = message;
+    requestAnimationFrame(adjustPopupHeightForStatus);
+}
+
+function adjustPopupHeightForStatus(){
+    const overflowHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+    if(overflowHeight <= 0){
+        return;
+    }
+
+    window.resizeBy(0, overflowHeight + 16);
 }
 
 /**

@@ -135,6 +135,100 @@ public class ColorCheckWorkflowService {
         }
     }
 
+    public ColorCheckWorkbookResponse createDomesticFinalWorkbook(
+            MultipartFile summaryFile,
+            MultipartFile manualFile,
+            boolean updateDatabase,
+            String userId)
+            throws IOException {
+
+        Long logId = projectExecutionLogService.start(
+                "COLOR_CHECK",
+                "내수 발주내역서 최종 발주 엑셀 생성",
+                userId,
+                manualFile.getOriginalFilename(),
+                updateDatabase
+                ? "요약본/설명서 검토 엑셀을 최종 양식으로 변환하고 V/X 값을 DB에 반영합니다."
+                : "요약본/설명서 검토 엑셀을 최종 양식으로만 변환합니다.");
+        Path uploadedSummaryFile = createTempExcelFile(
+                "color-check-summary-",
+                summaryFile);
+        Path uploadedManualFile = createTempExcelFile(
+                "color-check-manual-",
+                manualFile);
+        Path outputDirectory = Files.createTempDirectory(
+                "color-check-output-");
+        Path finalWorkbook = null;
+
+        try{
+            summaryFile.transferTo(uploadedSummaryFile);
+            manualFile.transferTo(uploadedManualFile);
+            finalWorkbook =
+                    finalWorkbookService.createDomesticFinalWorkbook(
+                            uploadedSummaryFile,
+                            summaryFile.getOriginalFilename(),
+                            uploadedManualFile,
+                            manualFile.getOriginalFilename(),
+                            outputDirectory);
+
+            DrawingColorCheckImportResult result = updateDatabase
+                    ? mergeImportResults(
+                            importColorCheckValues(uploadedSummaryFile),
+                            importColorCheckValues(uploadedManualFile))
+                    : emptyImportResult();
+            byte[] excel = Files.readAllBytes(finalWorkbook);
+            String fileName = finalWorkbook.getFileName()
+                    .toString();
+            projectExecutionLogService.success(
+                    logId,
+                    fileName,
+                    "내수 최종 엑셀 생성 완료, DB 반영 "
+                    + result.insertedCount()
+                    + "건 추가/"
+                    + result.updatedCount()
+                    + "건 수정");
+            return new ColorCheckWorkbookResponse(
+                    fileName,
+                    excel,
+                    updateDatabase,
+                    result);
+        }catch(IOException | RuntimeException exception){
+            projectExecutionLogService.fail(logId, exception);
+            throw exception;
+        }finally{
+            deleteIfExists(uploadedSummaryFile);
+            deleteIfExists(uploadedManualFile);
+            deleteIfExists(finalWorkbook);
+            deleteIfExists(outputDirectory);
+        }
+    }
+
+    private Path createTempExcelFile(
+            String prefix,
+            MultipartFile file) throws IOException {
+        String originalName = file.getOriginalFilename();
+        String extension = originalName != null
+                && originalName.toLowerCase()
+                .endsWith(".xls")
+                ? ".xls"
+                : ".xlsx";
+        return Files.createTempFile(
+                prefix,
+                extension);
+    }
+
+    private DrawingColorCheckImportResult mergeImportResults(
+            DrawingColorCheckImportResult first,
+            DrawingColorCheckImportResult second) {
+        return new DrawingColorCheckImportResult(
+                first.totalRows() + second.totalRows(),
+                first.insertedCount() + second.insertedCount(),
+                first.updatedCount() + second.updatedCount(),
+                first.unchangedCount() + second.unchangedCount(),
+                first.skippedCount() + second.skippedCount(),
+                List.of());
+    }
+
     private DrawingColorCheckImportResult importColorCheckValues(
             Path uploadedFile)
             throws IOException {
