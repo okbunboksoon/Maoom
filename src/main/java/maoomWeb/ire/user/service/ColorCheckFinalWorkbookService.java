@@ -886,9 +886,9 @@ public class ColorCheckFinalWorkbookService {
                 + "_"
                 + String.join("-", driveTypes);
         String normalizedLanguage =
-                sanitizeNamePart(language);
+                sanitizeRegionPart(language);
         String normalizedCountry =
-                sanitizeNamePart(country);
+                sanitizeRegionPart(country);
         String region = normalizedLanguage.equals("KO")
                 ? normalizedLanguage
                 : normalizedCountry;
@@ -925,6 +925,16 @@ public class ColorCheckFinalWorkbookService {
                 : value.trim()
                         .replaceAll(
                                 "[^A-Za-z0-9]",
+                                "")
+                        .toUpperCase(Locale.ROOT);
+    }
+
+    private String sanitizeRegionPart(String value) {
+        return value == null
+                ? ""
+                : value.trim()
+                        .replaceAll(
+                                "[^A-Za-z0-9_]",
                                 "")
                         .toUpperCase(Locale.ROOT);
     }
