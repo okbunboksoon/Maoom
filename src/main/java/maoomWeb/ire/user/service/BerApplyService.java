@@ -667,10 +667,28 @@ public class BerApplyService {
         }
 
         Files.createDirectories(target.getParent());
-        Files.move(
-                source,
-                target,
-                StandardCopyOption.REPLACE_EXISTING);
+        try{
+            Files.move(
+                    source,
+                    target,
+                    StandardCopyOption.REPLACE_EXISTING);
+        }catch(IOException moveError){
+            try{
+                Files.copy(
+                        source,
+                        target,
+                        StandardCopyOption.REPLACE_EXISTING);
+                Files.deleteIfExists(source);
+            }catch(IOException copyError){
+                copyError.addSuppressed(moveError);
+                throw new IOException(
+                        "BER 변경 리포트 엑셀을 결과 폴더로 옮기지 못했습니다. "
+                        + "대상 파일이 열려 있거나 드라이브 권한/연결 상태를 확인해 주세요: "
+                        + source + " -> " + target
+                        + " (" + copyError.getMessage() + ")",
+                        copyError);
+            }
+        }
     }
 
     /**
