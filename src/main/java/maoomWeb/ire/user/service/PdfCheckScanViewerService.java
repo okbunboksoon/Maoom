@@ -120,7 +120,8 @@ public class PdfCheckScanViewerService {
                 "--xlsx",
                 matchTablePath.toString(),
                 "--out",
-                outputFilePath.toString()));
+                outputFilePath.toString(),
+                "--quiet"));
 
         return new RunContext(exePath, outputFilePath, command);
     }

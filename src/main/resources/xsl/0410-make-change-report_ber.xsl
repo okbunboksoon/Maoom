@@ -10,6 +10,9 @@
 
 	<!-- 지역 판별 (US 여부) -->
 	<xsl:variable name="isNA" select="contains(upper-case($mapTitle), 'US') or contains(upper-case($mapTitle), 'CA') or contains(upper-case($mapTitle), 'MX')"/>
+	<xsl:variable name="isEuRg" select="contains(upper-case($mapTitle), 'RG') or contains(upper-case($mapTitle), 'IN')"/>
+	<xsl:variable name="dbPath" select="if ($isNA) then 'asis-tobe_us.xml' else if ($isEuRg) then 'asis-tobe_eu_rg.xml' else 'asis-tobe_eu.xml'"/>
+	<xsl:variable name="db" select="document($dbPath)"/>
 
 	<xsl:template match="/">
 
@@ -49,9 +52,20 @@
 		<xsl:variable name="changed-count"
 			select="count($targets[ancestor-or-self::*[starts-with(@status,'changed')]])"/>
 
+		<!-- 이미 BER 반영된 결과를 다시 돌린 경우: 현재 문장이 DB의 new 문장과 같으면 db 없음에서 제외 -->
+		<xsl:variable name="already-applied-targets" as="element()*">
+			<xsl:for-each select="$targets[not(ancestor-or-self::*[starts-with(@status,'changed')])]">
+				<xsl:variable name="targetText" select="replace(normalize-space(string(.)), '\s+', ' ')"/>
+				<xsl:if test="some $newText in $db/pairs/pair/new satisfies $targetText = replace(normalize-space(string($newText)), '\s+', ' ')">
+					<xsl:sequence select="."/>
+				</xsl:if>
+			</xsl:for-each>
+		</xsl:variable>
+		<xsl:variable name="already-applied-count" select="count($already-applied-targets)"/>
+
 		<!-- unchanged 개수 -->
 		<xsl:variable name="unchanged-count"
-			select="$dealer-count - $changed-count"/>
+			select="$dealer-count - $changed-count - $already-applied-count"/>
 
 		<!-- 변경 비율 계산 -->
 		<xsl:variable name="ratio"
@@ -113,6 +127,23 @@
 						</Cell>
 					</Row>
 
+					<!-- Already applied -->
+					<Row>
+						<Cell ss:StyleID="Center">
+							<Data ss:Type="String">Already applied</Data>
+						</Cell>
+						<Cell>
+							<Data ss:Type="String">이미 DB의 new 문장과 일치해서 db 없는 문장에서 제외한 수</Data>
+						</Cell>
+					</Row>
+					<Row>
+						<Cell ss:StyleID="Center">
+							<Data ss:Type="Number">
+								<xsl:value-of select="$already-applied-count"/>
+							</Data>
+						</Cell>
+					</Row>
+
 					<!-- Unchanged -->
 					<Row>
 						<Cell ss:StyleID="Center">
@@ -159,7 +190,7 @@
 						</Cell>
 					</Row>
 					<!-- <xsl:for-each select="$targets[not(ancestor-or-self::*[starts-with(@status,'changed')])]"> -->
-					<xsl:for-each select="$targets[not(ancestor-or-self::*[starts-with(@status,'changed')]) and not(ancestor-or-self::*[contains(@outputclass,'exclude')])]">
+					<xsl:for-each select="$targets[not(ancestor-or-self::*[starts-with(@status,'changed')]) and not(. intersect $already-applied-targets) and not(ancestor-or-self::*[contains(@outputclass,'exclude')])]">
 						<Row>
 							<Cell ss:StyleID="Center">
 								<Data ss:Type="Number">

@@ -3,9 +3,11 @@ package maoomWeb.ire.user.service;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -55,6 +57,46 @@ class PdfCheckScanViewerServiceTest {
                 "V:\\Tools\\test\\result"))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining(".exe");
+    }
+
+    @Test
+    void runCommandUsesQuietOption() throws Exception {
+        Path exeFile = tempDirectory.resolve("PdfPrintCheckCliNew-0.2.1.exe");
+        Path matchTableFile = tempDirectory.resolve("folder_lang_match.xlsx");
+        Path targetDirectory = tempDirectory.resolve("_Printing_KHQ");
+        Path outputDirectory = tempDirectory.resolve("result");
+        Files.writeString(exeFile, "fake exe");
+        Files.writeString(matchTableFile, "fake xlsx");
+        Files.createDirectory(targetDirectory);
+
+        PdfCheckScanViewerService service =
+                new PdfCheckScanViewerService(
+                        exeFile.toString(),
+                        matchTableFile.toString());
+
+        Method prepareRun = PdfCheckScanViewerService.class.getDeclaredMethod(
+                "prepareRun",
+                String.class,
+                String.class);
+        prepareRun.setAccessible(true);
+        Object context = prepareRun.invoke(
+                service,
+                targetDirectory.toString(),
+                outputDirectory.toString());
+        Method commandMethod = context.getClass().getDeclaredMethod("command");
+        commandMethod.setAccessible(true);
+        @SuppressWarnings("unchecked")
+        List<String> command = (List<String>) commandMethod.invoke(context);
+
+        org.assertj.core.api.Assertions.assertThat(command)
+                .containsExactly(
+                        exeFile.toAbsolutePath().normalize().toString(),
+                        targetDirectory.toAbsolutePath().normalize().toString(),
+                        "--xlsx",
+                        matchTableFile.toAbsolutePath().normalize().toString(),
+                        "--out",
+                        command.get(5),
+                        "--quiet");
     }
 
     @Test
