@@ -1,0 +1,20 @@
+/*
+ * 인쇄데이터 검증 팝업 보조 스타일.
+ *
+ * 적용 화면: templates/user/printCheck/printCheck.html
+ * 기본 레이아웃은 BER 반영과 같은 RevisionPopup.css를 사용한다.
+ */
+
+.print-check-path-row{
+    grid-template-columns:1fr;
+    gap:8px;
+}
+
+.print-check-path-row + .print-check-path-row{
+    margin-top:12px;
+}
+
+.print-check-popup-body .result-panel p{
+    word-break:break-all;
+    white-space:pre-wrap;
+}
