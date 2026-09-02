@@ -117,7 +117,7 @@ public class MultilingualConversionService {
             logs.add("작업 폴더: " + workspace);
             logs.add("Input 원본: " + input);
             logs.add("배치 실행: " + BATCH_FILE);
-            runBatch(workspace, logs);
+            runBatch(workspace, logs, request.bookmapMapName());
             validateOutput(workspace.resolve("topics"));
 
             Path runOutput = ResultFolderNames.resolve(
@@ -324,7 +324,7 @@ public class MultilingualConversionService {
                 .replace(">", "&gt;");
     }
 
-    private void runBatch(Path workspace, List<String> logs)
+    private void runBatch(Path workspace, List<String> logs, String bookmapMapName)
             throws IOException, InterruptedException {
 
         Path batchFile = workspace.resolve(BATCH_FILE);
@@ -333,13 +333,25 @@ public class MultilingualConversionService {
                     "다국어 변환 배치 파일을 찾지 못했습니다: " + BATCH_FILE);
         }
 
-        Process process = new ProcessBuilder(
+        String command = "call \"" + batchFile.getFileName()
+                + "\" TITLE_FILE_NAME_PREFIX=Y"
+                + buildMapNameArgument(bookmapMapName)
+                + " < nul";
+        logs.add("기본 적용: 파일명 변경(차종-연료타입-언어코드-연식-t00000 형식)");
+
+        ProcessBuilder processBuilder = new ProcessBuilder(
                 "cmd.exe",
                 "/c",
-                "call \"" + batchFile.getFileName() + "\" < nul")
+                command)
                 .directory(workspace.toFile())
-                .redirectErrorStream(true)
-                .start();
+                .redirectErrorStream(true);
+
+        String cleanMapName = cleanMapName(bookmapMapName);
+        if (!cleanMapName.isBlank()) {
+            processBuilder.environment().put("MAP_NAME", cleanMapName);
+        }
+
+        Process process = processBuilder.start();
 
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(
@@ -358,6 +370,21 @@ public class MultilingualConversionService {
             throw new IllegalStateException(
                     "다국어 변환 배치 실행 실패(" + exitCode + ")");
         }
+    }
+
+    private String buildMapNameArgument(String bookmapMapName) {
+        String cleanMapName = cleanMapName(bookmapMapName);
+        if (cleanMapName.isBlank()) {
+            return "";
+        }
+        return " MAP_NAME=" + cleanMapName;
+    }
+
+    private String cleanMapName(String bookmapMapName) {
+        if (bookmapMapName == null || bookmapMapName.isBlank()) {
+            return "";
+        }
+        return bookmapMapName.trim().replace("\"", "");
     }
 
     private void validateOutput(Path topics) throws IOException {

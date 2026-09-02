@@ -85,6 +85,32 @@
         </div>
         <div id="optionList" class="option-list" aria-live="polite"></div>
 
+        <details class="change-guide">
+            <summary>정제 시 변경되는 내용 보기</summary>
+            <div class="change-guide-body">
+                <strong>기본 적용</strong>
+                <ul>
+                    <li>tgroup이 2개 이상인 table을 하나의 tgroup으로 병합</li>
+                    <li>dark_symbol DB 기준으로 image 파일명을 치환</li>
+                    <li>placement=inline인 image에 scale=15를 설정</li>
+                    <li>placement=break인 image에 scale=95를 설정</li>
+                    <li>image의 width, height, xoffset, yoffset, id 및 inline image의 outputclass 삭제</li>
+                    <li>영문 유지 단어 term translate=no 추가</li>
+                </ul>
+                <strong>선택 시 적용</strong>
+                <ul>
+                    <li>파일명을 t00000, t00001 형식으로 변경하고 map/dita 내부 참조도 함께 수정</li>
+                    <li>map title에서 차종/언어코드를 읽어 기존 파일명 앞에 붙이고 내부 참조도 함께 수정</li>
+                    <li>deliveryTarget 삭제</li>
+                    <li>section title=Simple operation 삭제</li>
+                    <li>draft-comment, review/legal outputclass, hash, modified 삭제</li>
+                    <li>asis-tobe DB 기준으로 텍스트 변경</li>
+                    <li>note_db 기준으로 note type 변경</li>
+                    <li>금칙어 DB 기준으로 금칙어를 검출하고 결과 리포트 생성</li>
+                </ul>
+            </div>
+        </details>
+
         <footer class="popup-actions">
             <button type="button" id="runButton" class="action-button primary">
                 실행
@@ -173,18 +199,34 @@ function updateSelectionSummary() {
 function renderOptions(items) {
     const preferredOrder = [
         'FILE_NAME_KEEP',
-        'REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET',
+        'TITLE_FILE_NAME_PREFIX',
+        'REMOVE_SIMPLE_OPERATION',
+        'REMOVE_DELIVERY_TARGET',
         'DELETE_DRAFT_COMMENT',
-        'NOTE_타입_변경',
-        '문장 치환'
+        'NOTE_DB_APPLY',
+        'TEXT_DB_APPLY',
+        'FORBIDDEN_QC_REPORT'
     ];
     const compactLabels = {
         FILE_NAME_KEEP: '파일명 변경(ex t00000, t00001)',
-        REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET: 'deliveryTarget 및 Simple operation 지우기',
+        TITLE_FILE_NAME_PREFIX: '파일명 변경(차종-연료타입-언어코드-연식-t00000 형식)',
+        REMOVE_DELIVERY_TARGET: 'deliveryTarget 지우기',
+        REMOVE_SIMPLE_OPERATION: 'Simple operation 지우기',
         DELETE_DRAFT_COMMENT: 'Draft Comment, review, hash, modified 지우기',
-        NOTE_DB_APPLY: 'NOTE_타입_변경',
-        TEXT_DB_APPLY: '문장 치환'
+        NOTE_DB_APPLY: 'NOTE DB 반영',
+        TEXT_DB_APPLY: '문장 DB 반영',
+        FORBIDDEN_QC_REPORT: '금칙어 QC 리포트'
     };
+    const defaultCheckedIds = new Set([
+        'DELETE_DRAFT_COMMENT',
+        'NOTE_DB_APPLY',
+        'TEXT_DB_APPLY',
+        'FORBIDDEN_QC_REPORT'
+    ]);
+    const filenameOptionIds = new Set([
+        'FILE_NAME_KEEP',
+        'TITLE_FILE_NAME_PREFIX'
+    ]);
     const byId = new Map(items.map(function(item) {
         return [item.id, item];
     }));
@@ -210,8 +252,18 @@ function renderOptions(items) {
         checkbox.type = 'checkbox';
         checkbox.name = 'revisionOption';
         checkbox.value = option.id;
-        checkbox.checked = option.id === 'DELETE_DRAFT_COMMENT';
-        checkbox.addEventListener('change', updateSelectionSummary);
+        checkbox.checked = defaultCheckedIds.has(option.id);
+        checkbox.addEventListener('change', function() {
+            // 파일명 변경 방식은 동시에 적용할 수 없으므로 마지막 선택값만 유지한다.
+            if (checkbox.checked && filenameOptionIds.has(option.id)) {
+                document.querySelectorAll('input[name="revisionOption"]').forEach(function(input) {
+                    if (input !== checkbox && filenameOptionIds.has(input.value)) {
+                        input.checked = false;
+                    }
+                });
+            }
+            updateSelectionSummary();
+        });
 
         const text = document.createElement('span');
         text.className = 'option-text';
@@ -228,6 +280,7 @@ function renderOptions(items) {
     });
 
     updateSelectionSummary();
+    resizeRevisionPopup(false);
 }
 
 // 실행 중, 성공, 실패 상태를 공통 결과 패널에 표시한다.
@@ -236,13 +289,16 @@ function showResult(type, title, message, logs) {
     resultPanel.dataset.status = type;
     resultTitle.textContent = title;
     resultMessage.textContent = message || '';
+    resultMessage.style.whiteSpace = 'pre-line';
     statusIndicator.classList.toggle('is-running', type === 'running');
-    resizeRevisionPopupForResult();
+    resizeRevisionPopup(true);
 }
 
-function resizeRevisionPopupForResult() {
+function resizeRevisionPopup(hasResult) {
+    const targetHeight = hasResult ? 980 : 870;
+    const maxHeight = screen.availHeight || targetHeight;
     try {
-        window.resizeTo(680, 720);
+        window.resizeTo(680, Math.min(maxHeight, targetHeight));
     } catch (error) {
         // 브라우저가 팝업 크기 변경을 막으면 현재 창 크기를 그대로 사용한다.
     }
@@ -386,7 +442,9 @@ runButton.addEventListener('click', async function() {
 
         pendingBookmapMapName = '';
         showResult('success', '정제 완료',
-            `결과 경로: ${result.outputPath}`, []);
+            `결과 경로: ${result.outputPath}\n결과 리포트를 확인하세요.`, []);
+
+
     } catch (error) {
         showResult('error', '통신 오류',
             '서버 응답을 받지 못했습니다: ' + error.message, []);
