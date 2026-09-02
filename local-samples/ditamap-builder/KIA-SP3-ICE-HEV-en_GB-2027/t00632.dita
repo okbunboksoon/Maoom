@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00632">
+	<title>Navigation-based Smart Cruise Control limitations</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>navigation-based smart cruise control (NSCC)
+					<indexterm>limitations of navigation-based smart cruise control (NSCC)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Navigation-based Smart Cruise Control may operate abnormally or unexpectedly under the following circumstances:</p>
+		<ul id="e03904">
+			<li>
+				<p>The navigation system is not working properly.</p>
+			</li>
+			<li>
+				<p>Map information is not transmitted due to abnormal operation of the infotainment system screen.</p>
+			</li>
+			<li>
+				<p>Map information differs from the actual road because of real-time GPS data or map information errors.</p>
+			</li>
+			<li>
+				<p>The navigation is searching for a route while you are driving.</p>
+			</li>
+			<li>
+				<p>GPS signals are blocked, such as in a tunnel.</p>
+			</li>
+			<li>
+				<p>Traveling to a country where operation is not supported.</p>
+			</li>
+			<li>
+				<p><tm tmtype="tm">Android Auto</tm> or <tm tmtype="reg">Apple CarPlay</tm> is operating.</p>
+			</li>
+			<li>
+				<p>The controllable target (curved section) is close to the vehicle</p>
+			</li>
+			<li>
+				<p>The main lanes split into two or more and then merge</p>
+			</li>
+			<li>
+				<p>Not driving along the navigation-guided route</p>
+			</li>
+			<li>
+				<p>The destination is reset to recalculate the route (including real-time traffic-based recalculation) or the destination setting is canceled</p>
+			</li>
+			<li>
+				<p>Driving on the entrances or exits of rest areas or drowsy driver rest areas on a dedicated road</p>
+			</li>
+			<li>
+				<p>Short sections of splits or merges occur consecutively</p>
+			</li>
+			<li>
+				<p>Lanes are added or removed in sections other than splits or merges</p>
+			</li>
+			<li>
+				<p>Driving on roads without map information</p>
+			</li>
+			<li>
+				<p>The performance of sensors detecting objects around the vehicle is at its limit</p>
+			</li>
+			<li>
+				<p>Lane markings are unusual or of poor quality</p>
+			</li>
+			<li>
+				<p>The navigation system cannot detect the vehicle’s current position (for example, you are driving on elevated roads, including overpasses adjacent to general roads or nearby parallel roads).</p>
+			</li>
+			<li>
+				<p>The navigation system updates while you are driving.</p>
+			</li>
+			<li>
+				<p>The navigation system restarts while you are driving.</p>
+			</li>
+			<li>
+				<p>The speed limit of some sections of the road changes.</p>
+			</li>
+			<li>
+				<p>You are driving on a road under construction.</p>
+			</li>
+			<li>
+				<p>You are driving on a controlled road.</p>
+			</li>
+			<li>
+				<p>You are driving in bad weather, such as heavy rain or snow.</p>
+			</li>
+			<li>
+				<p>You are driving on a sharply curved road.</p>
+			</li>
+		</ul>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03905">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03906">
+								<image href="images/N_SP327_A10_006_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="ol_wxw_y41_4jc">
+								<li>
+									<p>Curved road section</p>
+								</li>
+								<li>
+									<p>Main road</p>
+								</li>
+								<li>
+									<p>Branch line</p>
+								</li>
+								<li>
+									<p>Driving route</p>
+								</li>
+								<li>
+									<p>Set route</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e03908">
+			<li>
+				<p>When there is a difference between the navigation set route (branch line) and the driving route (main road), the Highway Curve Zone Auto Slowdown may not operate until the system recognizes the driving route as the main road.</p>
+			</li>
+			<li>
+				<p>If the vehicle determines that the driving path is the main road of the dedicated roadway rather than the guided route, the Auto Highway Speed Change Adjustment function is activated. However, depending on the distance between the vehicle’s current position and the curved section, as well as the vehicle’s current speed, acceleration or deceleration may be insufficient or may occur abruptly.</p>
+			</li>
+		</ul>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03909">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03910">
+								<image href="images/N_SP327_A10_007_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="ol_d5v_z41_4jc">
+								<li>
+									<p>Curved road section</p>
+								</li>
+								<li>
+									<p>Main road</p>
+								</li>
+								<li>
+									<p>Branch line</p>
+								</li>
+								<li>
+									<p>Set route</p>
+								</li>
+								<li>
+									<p>Driving route</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e03912">
+			<li>
+				<p>When the navigation route (main road) and driving route (branch line) differ, the Highway Curve Zone Auto Slowdown function temporarily operates based on the main road curve information.</p>
+			</li>
+			<li>
+				<p>When the navigation system determines that you are driving off-route by entering the highway change or junction, Highway Curve Zone Auto Slowdown function does not operate.</p>
+			</li>
+		</ul>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03913">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03914">
+								<image href="images/N_SP327_A10_008_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="ol_tys_1p1_4jc">
+								<li>
+									<p>Curved road section</p>
+								</li>
+								<li>
+									<p>Main road</p>
+								</li>
+								<li>
+									<p>Branch line</p>
+								</li>
+								<li>
+									<p>Driving route</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e03916">
+			<li>
+				<p>If you do not set a navigation destination, Highway Curve Zone Auto Slowdown function operates based on the curve information on the main road.</p>
+			</li>
+			<li>
+				<p>Even if you depart from the main road, Highway Curve Zone Auto Slowdown function may temporarily operate based on navigation information about the curved section of the highway.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e03917">
+			<ul id="e03918">
+				<li>
+					<p>Navigation-based Smart Cruise Control is a convenience function, not a substitute for safe driving practices. Always keep your eyes on the road. It is your responsibility to avoid violating traffic laws.</p>
+				</li>
+				<li>
+					<p>Navigation-based Smart Cruise Control operates using road information provided by the navigation system. The navigation’s speed limit information may differ from the actual speed limit. It is your responsibility to check the speed limit where you are driving.</p>
+				</li>
+				<li>
+					<p>The Auto Highway Speed Change automatically turns off when the vehicle leaves the main lanes of a dedicated road and enters general roads classified as national roads or below, or enters facilities such as rest areas or entrances/exits (IC/JC) on the dedicated road. Always pay attention to the road and driving conditions.</p>
+				</li>
+				<li>
+					<p>Navigation-based Smart Cruise Control may not operate due to the presence of vehicles ahead of yours and their driving conditions. Always pay attention to the road and driving conditions.</p>
+				</li>
+				<li>
+					<p>When towing a trailer or something similar, your vehicle’s deceleration may be insufficient. Always drive with caution.</p>
+				</li>
+				<li>
+					<p>After you pass through a highway tollgate, Navigation-based Smart Cruise Control operates based on the first lane. If you enter another lane, Navigation-based Smart Cruise Control might not operate properly.</p>
+				</li>
+				<li>
+					<p>Your vehicle accelerates if you engage the accelerator pedal while Navigation-based Smart Cruise Control is operating. The function does not decelerate your vehicle. If you engage the accelerator pedal too lightly, the vehicle may decelerate.</p>
+				</li>
+				<li>
+					<p>If you engage and then release the accelerator pedal while Navigation-based Smart Cruise Control is operating, the vehicle may not decelerate sufficiently, or it may rapidly decelerate to a safe speed.</p>
+				</li>
+				<li>
+					<p>If the curve is too large or too small, Navigation-based Smart Cruise Control may not operate.</p>
+				</li>
+				<li>
+					<p>Towing a trailer or installing a carrier may reduce control stability. Disable the function if necessary and always drive with caution.</p>
+				</li>
+				<li>
+					<p>Do not use the system when towing another vehicle or when other equipment that may affect sensor operation or vehicle balance is installed, as the system may not operate properly.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" id="e03919">
+			<ul id="e03920">
+				<li>
+					<p>A time gap could occur between the navigation system’s guidance and when Navigation-based Smart Cruise Control operation starts and ends.</p>
+				</li>
+				<li>
+					<p>The speed information on the instrument cluster may differ from the navigation.</p>
+				</li>
+				<li>
+					<p>Even if you are driving at a speed lower than the Smart Cruise Control set speed, acceleration may be limited by curved road sections ahead.</p>
+				</li>
+				<li>
+					<p>If Navigation-based Smart Cruise Control is operating while you leave the main road to enter an interchange, junction, rest area, and so on, the function may operate for a certain period.</p>
+				</li>
+				<li>
+					<p>Deceleration by Navigation-based Smart Cruise Control may feel insufficient due to road conditions such as uneven road surfaces and narrow lanes. If you feel the deceleration is insufficient, engage the brake pedal to slow the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00622.dita#t00622" role="parent" scope="local" type="concept">
+				<linktext>Navigation-based Smart Cruise Control (NSCC)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

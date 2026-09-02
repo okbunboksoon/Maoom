@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="maoomWeb.ire.user.mapper.ProjectDbItemMapper">
+
+    <resultMap id="ProjectDbItemResultMap"
+            type="maoomWeb.ire.user.dto.ProjectDbItem">
+        <id property="id" column="id"/>
+        <result property="region" column="region"/>
+        <result property="hash" column="hash"/>
+        <result property="oldText" column="old_text"/>
+        <result property="newText" column="new_text"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+    <sql id="columns">
+        id,
+        region,
+        hash,
+        old_text,
+        new_text,
+        created_at,
+        updated_at
+    </sql>
+
+    <select id="findAll" resultMap="ProjectDbItemResultMap">
+        SELECT
+            <include refid="columns"/>
+        FROM ${tableName}
+        ORDER BY region, updated_at DESC, id DESC
+    </select>
+
+    <select id="findByRegionAndHash" resultMap="ProjectDbItemResultMap">
+        SELECT
+            <include refid="columns"/>
+        FROM ${tableName}
+        WHERE region = #{region}
+          AND hash = #{hash}
+    </select>
+
+    <insert id="upsert">
+        INSERT INTO ${tableName} (
+            region,
+            hash,
+            old_text,
+            new_text
+        ) VALUES (
+            #{item.region},
+            #{item.hash},
+            #{item.oldText},
+            #{item.newText}
+        )
+        ON DUPLICATE KEY UPDATE
+            old_text = VALUES(old_text),
+            new_text = VALUES(new_text)
+    </insert>
+
+    <delete id="deleteByRegionAndHash">
+        DELETE FROM ${tableName}
+        WHERE region = #{region}
+          AND hash = #{hash}
+    </delete>
+
+</mapper>

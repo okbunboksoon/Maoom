@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00150">
+	<title id="e01068">Driver’s and passenger’s front air bag</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>air bag 
+					<indexterm>driver’s and passenger’s front air bag</indexterm>
+				</indexterm>
+				<indexterm>driver’s and passenger’s front air bag</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01069">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0" valign="middle">
+							<fig id="e01070">
+								<figgroup>
+									<image href="../../images/OOV025053.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e01071"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" valign="middle">
+							<fig id="e01072">
+								<figgroup>
+									<image href="../../images/OOV025054.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e01073"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The indications of the system’s presence are the words <term>AIRBAG</term> engraved on the air bag pad cover on the steering wheel and the passenger’s side front panel pad above the glove box.</p>
+		<p>The air bag modules are located both in the center of the steering wheel and in the front passenger’s panel above the glove box. When the SRSCM detects a sufficiently severe impact to the front of the vehicle, it will automatically deploy the front air bags</p>
+		<p>Upon deployment, tear seams molded directly into the pad covers will separate under pressure from the expansion of the air bags. Further opening of the covers then allows full inflation of the air bags.</p>
+		<p>A fully inflated air bag, in combination with a properly worn seat belt, slows the driver’s or the passenger’s forward motion, reducing the risk of head and chest injury.</p>
+		<p>After complete inflation, the air bag immediately starts deflating, enabling the driver to maintain forward visibility and the ability to steer or operate other controls.</p>
+		<note type="note" id="e01074">
+			<p>Refer to the WARNING, CAUTION and NOTE of 'Air bag Precautions.'</p>
+		</note>
+	</conbody>
+</concept>

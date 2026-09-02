@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00306">
+	<title>Unlock charging connector in emergency</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>precautions for charging electric vehicle 
+					<indexterm>unlock charging connector in emergency</indexterm>
+				</indexterm>
+				<indexterm>unlock charging connector in emergency</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01365">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01366">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q043_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>If the charging cable does not detach due to battery discharge and failure of the electric wires, open the hood and slightly pull the emergency cable at the left side of the front trunk as shown image. The charging connector will then unlock.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Electromagnetic waves that are generated from the charger can seriously impact medical electric devices, such as an implantable cardiac pacemaker.</p>
+					<p>When using electronic medical devices, such as an implantable cardiac pacemaker, make sure to ask the medical team and manufacturer whether charging your electric vehicle will impact the operation of the medical electric devices, such as an implantable cardiac pacemaker.</p>
+				</li>
+				<li>
+					<p>Check to make sure there is no water or dust on the charging cable connector and plug before connecting to the charger and charging inlet. Connecting while there is water or dust on the charging cable connector and plug may cause a fire or electric shock.</p>
+				</li>
+				<li>
+					<p>Be careful not to touch the charging connector, charging plug, and the charging inlet when connecting the charger connector cable to the charging outlet and the charging inlet on the vehicle.</p>
+				</li>
+				<li>
+					<p>Comply with the following in order to prevent electrical shock when charging:</p>
+					<ul>
+						<li>
+							<p>Use a waterproof charger.</p>
+						</li>
+						<li>
+							<p>Do not touch the charging connector and charging plug with your hands wet, or do not stand in water or snow while connecting the charging cable.</p>
+						</li>
+						<li>
+							<p>Be careful when there is lightning.</p>
+						</li>
+						<li>
+							<p>Be careful when the charging connector and plug are wet.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Immediately stop charging when you discover abnormal symptoms (smell, smoke, etc.).</p>
+				</li>
+				<li>
+					<p>Replace the charging cable if the cable coating is damaged to prevent electrical shock.</p>
+				</li>
+				<li>
+					<p>When connecting or removing the charging cable, make sure to hold the charging connector handle.</p>
+				</li>
+				<li>
+					<p>Only use the charging cable (if equipped) certified by Kia. If you use a separate extension cable such as a reel or use an uncertified cable, it may cause abnormalities of electrical outlets, leading to fire or explosion.</p>
+				</li>
+				<li>
+					<p>If you pull the cable itself (without using the handle), the internal wires may be disconnected or get damaged. This may lead to electric shock or fire.</p>
+				</li>
+				<li>
+					<p>Do not leave the vehicle with the charging door open. An open charging door may indicate that the vehicle door has been unlocked and may be subject to vehicle theft.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Always keep the charging connector and charging plug in clean and dry condition. Be sure to keep the charging cable in a condition where there is no water or moisture.</p>
+				</li>
+				<li>
+					<p>Make sure to use the designated charger for charging the electric vehicle. Using any other charger may cause failure.</p>
+				</li>
+				<li>
+					<p>Before charging the battery, turn the vehicle <term translate="no">OFF</term>.</p>
+				</li>
+				<li>
+					<p>When the vehicle is switched <term translate="no">OFF</term> while charging, the cooling fan inside the motor compartment may automatically operate. Do not touch the cooling fan while charging.</p>
+				</li>
+				<li>
+					<p>Be careful not to drop the charging connector. The charging connector can be damaged.</p>
+				</li>
+				<li>
+					<p>Do NOT use an extension cord, when using the L1-Trickle charger, as this may overheat and/or cause damage.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>When charging or right after charging the high voltage battery, the cooling will be made using air conditioner system in order to control the high voltage battery temperature.</p>
+			<p>At this time, the noise might occur by the air conditioner compressor and cooling fan, but this is due to normal operation.</p>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00513">
+	<title>Collision-Avoidance Assist (while departing)</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03408">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03409">
+								<image href="images/N_SP3i25_C00_025_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03410">
+								<li>
+									<p><uicontrol>Emergency Braking</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The warning light on the outside rearview mirror, head-up display (if equipped), an audible warning and steering wheel vibration (if equipped) warn you of a collision. This function assists in braking control to prevent a collision with a vehicle approaching from your blind spot.</p>
+		<p>Collision-Avoidance Assist activates in the following conditions:</p>
+		<ul>
+			<li>
+				<p>Your speed is below 3 km/h (2 mph).</p>
+			</li>
+			<li>
+				<p>The speed of the vehicle in your blind spot is above 5 km/h (3 mph).</p>
+			</li>
+			<li>
+				<p>Gear position: any gear other than R (Reverse) or P (Park)</p>
+			</li>
+		</ul>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03411">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03412">
+								<image href="images/N_SP3i25_C00_091_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03413">
+								<li>
+									<p><uicontrol>Drive carefully</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the vehicle is stopped due to Emergency Braking, a warning message appears on the instrument cluster. For your safety, engage the brake pedal immediately and check the surroundings.</p>
+		<p>Brake control ends approximately 2 seconds after Emergency Braking stops your vehicle.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Collision-Avoidance Assist is deactivated in the following situations.</p>
+					<ul id="e03414">
+						<li>
+							<p>When the vehicle enters the adjacent lane beyond a certain distance.</p>
+						</li>
+						<li>
+							<p>When the vehicle moves away from the direction of potential collision.</p>
+						</li>
+						<li>
+							<p>When the steering wheel is turned sharply.</p>
+						</li>
+						<li>
+							<p>When the brake pedal is pressed.</p>
+						</li>
+						<li>
+							<p>When Forward Collision-Avoidance Assist (FCA) is activated.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>After Blind-Spot Collision-Avoidance Assist (BCA) has been activated or after changing lanes, make sure to return to the center of your lane. If you continue driving close to the lane markings without moving back to the center, Blind-Spot Collision-Avoidance Assist may not operate.</p>
+				</li>
+				<li>
+					<p>For your safety, change the settings only after parking the vehicle at a safe location.</p>
+				</li>
+				<li>
+					<p>Blind-Spot Collision Avoidance may not display a warning message or generate an audible warning if any other function’s warning message is displayed or audible warning is generated at the same time.</p>
+				</li>
+				<li>
+					<p>You may not hear the warning sound of Blind-Spot Collision-Avoidance Assist if your surroundings are noisy. Always pay attention and keep volume within the vehicle at a moderate level.</p>
+				</li>
+				<li>
+					<p>Blind-Spot Collision-Avoidance Assist may not operate if you engage the brake pedal to avoid a collision.</p>
+				</li>
+				<li>
+					<p>When Blind-Spot Collision-Avoidance Assist is operating, the function’s braking control cancels automatically when you excessively engage the accelerator pedal or sharply steer the vehicle.</p>
+				</li>
+				<li>
+					<p>During Blind-Spot Collision-Avoidance Assist operation, the vehicle may stop suddenly, injuring passengers and shifting loose objects. Always fasten the seat belts and keep loose objects secured.</p>
+				</li>
+				<li>
+					<p>Even if there is a problem with Blind-Spot Collision-Avoidance Assist, the vehicle’s basic braking performance will operate properly.</p>
+				</li>
+				<li>
+					<p>Blind-Spot Collision-Avoidance Assist may not operate in all situations, and even if it works, may not be able to avoid collisions.</p>
+				</li>
+				<li>
+					<p>Blind-Spot Collision-Avoidance Assist may warn you late or not at all, depending on the road and driving conditions.</p>
+				</li>
+				<li>
+					<p>You are responsible for safe operation of the vehicle. Do not rely solely on Blind-Spot Collision-Avoidance Assist for driving. Always check your surroundings and drive safely.</p>
+				</li>
+				<li>
+					<p>Never rely solely on Blind-Spot Collision-Avoidance to avoid a collision with people, animals, or objects. It may cause serious injury or death.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning">
+			<p>Brake control may not operate properly depending on the status of Electronic Stability Control (ESC).</p>
+			<p>There will only be a warning when:</p>
+			<ul>
+				<li>
+					<p>The ESC warning light is illuminated.</p>
+				</li>
+				<li>
+					<p>ESC is engaged in a different function.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00511.dita#t00511" role="parent" scope="local" type="concept">
+				<linktext>Blind-Spot Collision-Avoidance Assist operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

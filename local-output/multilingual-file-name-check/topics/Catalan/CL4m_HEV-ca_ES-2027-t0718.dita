@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0718">
+	<title>Kollisionsvermeidungsassistent beim rückwärts Einparken (PCA)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Kollisionsvermeidungsassistent beim rückwärts Einparken (PCA)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Der Kollisionsvermeidungsassistent beim rückwärts Einparken erkennt Fußgänger oder Hindernisse hinter dem Fahrzeug und kann Sie warnen oder beim Bremsen unterstützen, um eine Kollision beim Zurücksetzen Ihres Fahrzeugs zu vermeiden.</p>
+		<section>
+			<title>Erkennungssensor</title>
+			<p>Die zutreffenden Sensoren und ihre Standorte finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0439.dita#CL4m_HEV-ca_ES-2027-t0439"/>.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0437-CH10.dita#CL4m_HEV-ca_ES-2027-t0437-CH10" role="parent" scope="local" type="concept">
+				<linktext>Fahrerassistenzleitfaden</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

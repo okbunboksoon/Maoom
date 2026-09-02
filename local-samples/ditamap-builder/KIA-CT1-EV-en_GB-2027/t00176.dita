@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00176">
+	<title>High Beam Assist setting</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>high beam assist (HBA) 
+					<indexterm>setting</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="53*"/>
+				<colspec colnum="2" colname="2" colwidth="47*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig>
+								<figgroup>
+									<image href="../../images/N_TK25Z042_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol>Lights</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>HBA (High Beam Assist)</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the <term translate="no">EV</term> button in the <term translate="no">ON</term> position, select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>HBA (High Beam Assist)</uicontrol></menucascade> from the Vehicle Settings menu to turn on High Beam Assist and deselect to turn off the function.</p>
+		<note type="warning">
+			<p>For your safety, adjust your high beam settings only after parking the vehicle at a safe location.</p>
+		</note>
+	</conbody>
+</concept>

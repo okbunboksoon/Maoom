@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00464">
+	<title>Parking brake warning light</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>stopping the vehicle 
+					<indexterm>parking brake warning light</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25D003_1_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Check the parking brake warning light by pressing the <term translate="no">EV</term> button to the <term translate="no">POWER ON</term> position.</p>
+		<p>This light will be illuminated when the parking brake is applied with the <term translate="no">EV</term> button in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+		<p>Before driving, be sure the parking brake is released and the parking brake warning light (<image align="left" href="../../images/WKIA_127.eps" scale="15" placement="inline"/>) is <term translate="no">OFF</term>.</p>
+		<p>If the parking brake warning light (<image align="left" href="../../images/WKIA_127.eps" scale="15" placement="inline"/>) remains on after the parking brake is released while the <term translate="no">EV</term> button is in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position, there may be a malfunction in the brake system. Immediate attention is necessary.</p>
+		<p>If at all possible, cease driving the vehicle immediately. If that is not possible, use extreme caution while operating the vehicle and only continue to drive the vehicle until you can reach a safe location.</p>
+	</conbody>
+</concept>

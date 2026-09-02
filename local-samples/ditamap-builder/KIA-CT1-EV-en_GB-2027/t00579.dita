@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00579">
+	<title>Safe Exit Assist (SEA)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>safe exit assist (SEA)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25E117.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>While your vehicle is stopped, and if Safe Exit Assist detects a vehicle approaching the rear corner of your vehicle and a passenger opens a door, Safe Exit Assist may warn you with a warning message and a warning sound to help avoid a collision.</p>
+		<p>When the electronic child safety lock button is in the <term translate="no">LOCK</term> position and an approaching vehicle from the rear area is detected, the electronic child safety lock (<image align="left" href="../../images/OCV041518L.eps" scale="15" placement="inline"/>) button will not unlock even if the driver presses the button to prevent the rear doors from opening.</p>
+		<note type="caution">
+			<p>Warning timing may vary depending on the speed of the approaching vehicle.</p>
+		</note>
+		<section>
+			<title>Detecting sensor</title>
+			<note type="caution">
+				<p>For more details on the precautions of the rear corner radars, refer to <xref type="concept" href="t00558.dita#t00558">Blind-Spot Collision-Avoidance Assist (BCA)</xref>.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

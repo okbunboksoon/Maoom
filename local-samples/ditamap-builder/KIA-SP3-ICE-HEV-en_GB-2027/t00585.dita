@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00585">
+	<title>Temporarily pausing Cruise Control</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e03718">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e03719">
+								<figgroup>
+									<image href="images/N_SP3i26_B10_009_1_E.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Cruise Control will be paused when:</p>
+		<ul id="e03720">
+			<li>
+				<p>Depressing the brake pedal.</p>
+			</li>
+			<li>
+				<p>Pressing the (<image href="images/WKIA_079.jpg" scale="15" align="left" placement="inline"/>) switch.</p>
+			</li>
+			<li>
+				<p>Shifting the gear to N (Neutral).</p>
+			</li>
+			<li>
+				<p>Decreasing vehicle speed to less than approximately 30 km/h (20 mph).</p>
+			</li>
+			<li>
+				<p>ESC (Electronic Stability Control) is operating.</p>
+			</li>
+		</ul>
+		<p>The set speed will turn off but the Cruise (<image href="images/WKIA_357.jpg" scale="15" align="left" placement="inline"/>) indicator will stay on.</p>
+		<note type="note" id="e03721">
+			<p>If Cruise Control pauses during a situation that is not mentioned, have the vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00580.dita#t00580" role="parent" scope="local" type="concept">
+				<linktext>Cruise Control operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

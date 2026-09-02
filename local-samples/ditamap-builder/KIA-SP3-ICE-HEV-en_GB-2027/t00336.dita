@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00336">
+	<title>Windshield defrosting and defogging</title>
+	<shortdesc>Frost or moisture accumulated on the windshield can obscure visibility and should be removed.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>windshield defrosting and defogging</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<note type="warning" id="e02135">
+			<p>Windshield heating</p>
+			<p>Do not use the <image href="images/OSV034323.jpg" scale="15" align="center" placement="inline"/> or <image href="images/WKIA_181.jpg" scale="15" align="center" placement="inline"/> setting when running the air conditioner (<term translate="no">A/C</term>) in extremely humid weather. The temperature differential between outside air and the windshield can fog up the windshield’s outer surface and obscure visibility. Set the mode to <image href="images/WKIA_060.jpg" scale="15" align="left" placement="inline"/> and the fan speed control to its lowest speed.</p>
+		</note>
+		<ul id="e02136">
+			<li>
+				<p>For maximum defrosting, set the temperature control to its highest heat and the fan speed control to its highest speed.</p>
+			</li>
+			<li>
+				<p>Set the climate control mode to floor-defrost if you desire warm air in the footwell while defrosting or defogging.</p>
+			</li>
+			<li>
+				<p>Before driving, clear all snow and ice from the windshield, rear window, sideview mirrors, and all side windows.</p>
+			</li>
+			<li>
+				<p>To improve heater and defroster efficiency and reduce the likelihood of the inside of the windshield fogging up, clear all snow and ice from the hood and air inlet in the car’s grille.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00293.dita#t00293" role="parent" scope="local" type="concept">
+				<linktext>Control and Features</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

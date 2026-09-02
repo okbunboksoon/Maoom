@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0752">
+	<title>Ersatzrad ausbauen und verstauen</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Bei einer Reifenpanne (mit Ersatzrad)
+					<indexterm>Ersatzrad ausbauen und verstauen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M064018N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Um das Ersatzrad zu entnehmen, stecken Sie den Radmutternschlüssel in die Flügelschraube und entfernen Sie ihn durch Drehen gegen den Uhrzeigersinn.</p>
+		<p>Um das Ersatzrad zu befestigen, stecken Sie den Radmutternschlüssel in die Flügelschraube und drehen ihn im Uhrzeigersinn.</p>
+		<p>Verstauen Sie das Ersatzrad und das Werkzeug sorgfältig, um zu verhindern, dass während der Fahrt Klappergeräusche entstehen.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M064001N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn es schwierig ist, die Reifenflügelschraube mit der Hand zu lösen, können Sie sie leicht mit dem Radmutternschlüssel lösen.</p>
+		<ol>
+			<li>
+				<p>Stecken Sie den Radmutternschlüssel in die Flügelschraube des Reifenhalters.</p>
+			</li>
+			<li>
+				<p>Drehen Sie die Flügelschraube, die das Rad fixiert, mit dem Radmutternschlüssel gegen den Uhrzeigersinn.</p>
+			</li>
+		</ol>
+		<note type="warning">
+			<p>Stellen Sie sicher, dass das Ersatzrad mittig zur Halterung ausgerichtet ist, damit das Ersatzrad während der Fahrt keine Klappergeräusche verursachen kann.</p>
+			<p>Andernfalls kann das Ersatzrad vom Gepäckträger fallen und zu einem Unfall führen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0750.dita#CL4m_HEV-ca_ES-2027-t0750" role="parent" scope="local" type="concept">
+				<linktext>Bei einer Reifenpanne (mit Ersatzrad) </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

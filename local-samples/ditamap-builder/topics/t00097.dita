@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00097">
+	<title>Setting the Ergo-motion seat</title>
+	<conbody>
+		<p>Ergo-motion seat uses air pockets to provide adjustable cushioning and support to the driver, helping to reduce fatigue and improve comfort during long drives or in varying driving conditions.</p>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00686">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00687">
+								<figgroup>
+									<image href="../../images/OMV044127L.eps" align="center" placement="break" height="1.575in" id="e00688"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e00689">
+								<li>
+									<p> <uicontrol>Ergo-motion seat</uicontrol> </p>
+								</li>
+								<li id="e00690">
+									<p> <uicontrol>Comfortable stretch</uicontrol> </p>
+								</li>
+								<li id="e00691">
+									<p> <uicontrol>Posture Assist</uicontrol> </p>
+								</li>
+								<li id="e00692">
+									<p> <uicontrol>Lumbar Stabilisation System while driving</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_print" id="e00693">
+			<title>Operation</title>
+			<ul id="e00694">
+				<li>
+					<p>Select <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Seats</uicontrol><uicontrol>Ergo-motion seat</uicontrol></menucascade> from the infotainment system.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

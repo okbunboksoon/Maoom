@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0125">
+	<title id="e00289">Tankanzeige </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Tankanzeige</indexterm>
+				<indexterm>Instrumente
+					<indexterm>Tankanzeige</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Typ A</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034118N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<title>Typ B</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M036170L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Tankanzeige zeigt den ungefähren Tankinhalt an.</p>
+		<p>Es müssen mehr als 6 Liter (1,6 Gallonen) Kraftstoff nachgefüllt werden, damit das Fahrzeug die Tankanzeige ändert.</p>
+		<note type="note" id="e00290">
+			<ul id="e00291">
+				<li id="e00292">
+					<p>Das Fassungsvermögen des Kraftstofftanks finden Sie in <xref href="CL4m_HEV-ca_ES-2027-t0024.dita#CL4m_HEV-ca_ES-2027-t0024"/>.</p>
+				</li>
+				<li id="e00293">
+					<p>Die Tankanzeige wird durch eine Kraftstoffwarnleuchte ergänzt, die aufleuchtet, wenn der Tank fast leer ist.</p>
+				</li>
+				<li id="e00294">
+					<p>Auf Gefällstrecken oder in Kurven kann aufgrund der Bewegung des Kraftstoffs im Tank die Nadel der Tankanzeige schwanken oder die Tankwarnleuchte kann früher als üblich aufleuchten.</p>
+				</li>
+				<li>
+					<p>Wenn das Fahrzeug auf unebenem Untergrund steht oder wenn die Batteriespannung unterbrochen war, kann die Tankanzeigenfunktion beeinträchtigt sein.</p>
+				</li>
+				<li>
+					<p>Die Tankanzeige kann von der tatsächlichen Fahrstrecke abweichen, da sie nur eine Schätzung der verbleibenden Fahrstrecke ist.</p>
+				</li>
+				<li>
+					<p>Der Trip-Computer kann unter Umständen die nachgetankte Kraftstoffmenge nicht erkennen, wenn weniger als ca. 6 Liter (1,6 Gallonen) nachgetankt wurden.</p>
+				</li>
+				<li>
+					<p>Die Tankanzeige kann je nach Betriebszustand des Fahrzeugs, Fahrstil und Fahrbedingungen stark variieren.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" id="e00295">
+			<p>Tankanzeige</p>
+			<p>Die Fahrzeuginsassen können in gefährliche Situationen geraten, wenn der Tank leer gefahren wird.</p>
+			<p>Wenn die Warnleuchte aufleuchtet oder sich die Tankanzeige dem Stand „E (Leer) oder 0“ nähert, müssen Sie so schnell wie möglich anhalten und Kraftstoff nachfüllen.</p>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Vermeiden Sie es, mit sehr geringem Kraftstoffstand zu fahren. Wenn kein Kraftstoff mehr vorhanden ist, kann es zu Fehlzündungen kommen, die den Katalysator beschädigen können.</p>
+				</li>
+				<li>
+					<p>Wenn der Gang während des Tankens nicht auf P (Parken) oder N (Neutral) steht, wird der Tankvorgang möglicherweise nicht erkannt und die Kraftstoffmenge und die Restreichweite werden möglicherweise nicht ordnungsgemäß angezeigt.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Die Kraftstoffanzeige ist möglicherweise nicht genau, wenn sich das Fahrzeug an einer Steigung befindet.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0121.dita#CL4m_HEV-ca_ES-2027-t0121" role="parent" scope="local" type="concept">
+				<linktext>Instrumente </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

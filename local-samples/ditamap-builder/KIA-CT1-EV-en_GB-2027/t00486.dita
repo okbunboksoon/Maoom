@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00486">
+	<title>Emergency Stop Signal (ESS)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>driving safety features 
+					<indexterm>emergency stop signal (ESS)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Emergency Stop Signal (ESS) alerts the driver behind by flashing the brake lights when braking sharply and severely.</p>
+		<section deliveryTarget="except_print">
+			<title>Operating condition(s)</title>
+			<ul>
+				<li>
+					<p>The vehicle suddenly stops.</p>
+				</li>
+				<li>
+					<p>Anti-lock Brake System (ABS) is activated and the driving speed is over 55 km/h (34 mph).</p>
+				</li>
+				<li>
+					<p>The hazard warning flasher automatically turns on after blinking the brake lights when the driving speed is under 40 km/h (25 mph)</p>
+				</li>
+				<li>
+					<p>Anti-lock Brake System (ABS) is deactivated</p>
+				</li>
+				<li>
+					<p>The sudden braking is over</p>
+				</li>
+				<li>
+					<p>The hazard warning flasher turns off when the vehicle drives at a low speed for a certain period of time.</p>
+				</li>
+			</ul>
+			<note type="note">
+				<p>Emergency Stop Signal (ESS) will not activate when the hazard warning flashers are already on.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

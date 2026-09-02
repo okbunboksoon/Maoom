@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0295">
+	<title>Automatisch beschlagfrei halten (nur für automatisches Klimaanlage)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Beschlagfrei halten (Windschutzscheibe)
+					<indexterm>Automatische Scheibenheizung</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Die automatische Beschlagentfernung verringert die Wahrscheinlichkeit von Beschlagbildung auf der Innenseite der Windschutzscheibe, indem Feuchtigkeit an der Innenseite der Windschutzscheibe automatisch erkannt wird.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OSG2H041461.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p><image align="center" href="../../images/WKIA_068.eps" scale="15" placement="inline"/> Die automatische Scheibenentfeuchtung läuft bei eingeschalteter Klimaregelung.</p>
+		<p>Wenn die automatische Scheibenheizung in Betrieb ist, erscheint die entsprechende Kontrollleuchte.</p>
+		<p>Wenn im Fahrzeug eine hohe Luftfeuchtigkeit erkannt wird, wird die automatische Scheibenheizung aktiviert.</p>
+		<p>Die folgenden Schritte werden automatisch ausgeführt:</p>
+		<ol>
+			<li>
+				<p>Die Taste <term translate="no">A/C</term>dreht sich auf <term translate="no">ON</term>.</p>
+			</li>
+			<li>
+				<p>Bei niedrigen Außentemperaturen wird in den Frischluftmodus geschaltet.</p>
+			</li>
+			<li>
+				<p>Der Modus wird auf Enteisen geschaltet, um Luftstrom auf die Windschutzscheibe zu richten.</p>
+			</li>
+			<li>
+				<p>Die Lüfterdrehzahl wird erhöht.</p>
+			</li>
+		</ol>
+		<p>Die automatische Scheibenheizung deaktivieren oder zurücksetzen:</p>
+		<p>Drücken Sie die Taste für die Frontscheibenheizung 3 Sekunden lang, während sich das Fahrzeug in der Position <term translate="no">ON</term> befindet.</p>
+		<p>Wenn die automatische Scheibenheizung deaktiviert wird, blinkt die Kontrollleuchte der Scheibenheizung 3 Mal.</p>
+		<p>Wenn die automatische Scheibenheizung zurückgesetzt wird, blinkt die Kontrollleuchte der Scheibenheizungstaste dreimal.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn die Klimaanlage von der automatischen Scheibenheizung aktiviert wurde und Sie die Klimaanlage ausschalten wollen, blinkt die Kontrollleuchte 3 Mal und die Klimaanlage läuft weiter.</p>
+				</li>
+				<li>
+					<p>Um die Effektivität und Effizienz der automatischen Scheibenheizung zu bewahren, wählen Sie den Umluftmodus nicht, während die Heizung in Betrieb ist.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Bauen Sie nicht die Sensorabdeckung am oberen Windschutzscheibenrand auf der Fahrerseite ab.</p>
+			<p>Es könnten Schäden an Systemkomponenten auftreten, die eventuell nicht von der Fahrzeuggarantie abgedeckt sind.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0290.dita#CL4m_HEV-ca_ES-2027-t0290" role="parent" scope="local" type="concept">
+				<linktext>Windschutzscheibe beheizen und beschlagfrei halten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

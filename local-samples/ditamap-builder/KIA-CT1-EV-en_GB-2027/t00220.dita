@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00220">
+	<title>Rear seat headrest</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01018">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01019">
+								<title>Rear seat</title>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B008_1_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital" id="e01020">
+			<title>Simple operation</title>
+			<ul id="e01021">
+				<li>
+					<p>Pull up the headrest to raise it. Push and hold the release button (1) to lower the headrest.</p>
+				</li>
+				<li>
+					<p>Pull the headrest fully forward and release it. (if equipped)</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e01022">
+			<title>Operation</title>
+			<ul id="e01023">
+				<li>
+					<p>Pull up the headrest to raise it. Push and hold the release button (1) to lower the headrest.</p>
+				</li>
+				<li>
+					<p>Pull the headrest to the front to adjust the position. If you pull the headrest forward as far as it will go, the headrest will return to its original position. (if equipped)</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

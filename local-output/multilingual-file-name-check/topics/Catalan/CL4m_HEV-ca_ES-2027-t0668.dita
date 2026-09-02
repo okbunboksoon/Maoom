@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0668">
+	<title>Hecksicht während der Fahrt</title>
+	<conbody>
+		<p>Der Fahrer kann während der Fahrt die Rückansicht auf dem Bildschirm kontrollieren, sie soll beim Zurücksetzen unterstützen.</p>
+		<section>
+			<title>Betriebsbedingungen</title>
+			<p>Sie können die Hecksicht oder Weitwinkelhecksicht auswählen, indem Sie die Taste zum Umschalten der Ansicht (2) auf dem Fondmonitor drücken.</p>
+			<p>Die Hecksicht während der Fahrt schaltet sich ein, wenn folgende Bedingungen erfüllt sind:</p>
+			<ul>
+				<li>
+					<p>Drücken Sie die Taste Parken/Sicht (1), während der Gang in N (Neutral) oder D (Fahren) und die Fahrzeuggeschwindigkeit schneller als 10 km/h (6 mph) ist.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Ausschalt-Bedingungen</title>
+			<p>Die Funktion Hecksicht während der Fahrt schaltet sich unter folgenden Bedingungen aus:</p>
+			<ul>
+				<li>
+					<p>Der Wahlhebel wird in die Stellung P (Parkstufe) gebracht.</p>
+				</li>
+				<li>
+					<p>Drücken der Taste Parken/Sicht (1)</p>
+				</li>
+				<li>
+					<p>Drücken Sie die Zurück-Taste (3) auf dem Bildschirm des Heckmonitor</p>
+				</li>
+				<li>
+					<p>Drücken Sie die Betriebstaste des Infotainment-Systems (4)</p>
+				</li>
+			</ul>
+			<note type="note">
+				<ul>
+					<li>
+						<p>In allen Ansichten wird das Video nicht ausgeschaltet, wenn sich das Fahrzeug im R-Modus (Rückwärtsgang) befindet.</p>
+					</li>
+					<li>
+						<p>Wenn der Heckmonitor aktiviert ist, wird der zuletzt verwendete Anzeigemodus angezeigt.</p>
+					</li>
+					<li>
+						<p>Die Einparkleitlinien hinten werden in der Hecksicht und in der Rückansicht von oben angezeigt. Wählen Sie im Einstellungsmenü des Infotainment-Systems <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Fahrerassistenz</uicontrol><uicontrol>Parksicherheit</uicontrol><uicontrol>Kameraeinstellungen</uicontrol><uicontrol>Anzeige von Informationen</uicontrol><uicontrol>Einparkhilfe hinten</uicontrol></menucascade>, um die Einparkhilfe anzuzeigen. Allerdings werden beim Einparken die Parkleitlinien hinten nicht in der Hecksicht angezeigt.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0663.dita#CL4m_HEV-ca_ES-2027-t0663" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Heckmonitors</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

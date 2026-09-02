@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0482">
+	<title>Ein-/Ausschalten des Spurhalteassistenten</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054006N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Immer wenn das Fahrzeug eingeschaltet ist, wird auch der Spurhalteassistent eingeschaltet und eine graue Kontrollleuchte (<image align="left" href="../../images/WKIA_198.eps" scale="15" placement="inline"/>) am Kombiinstrument leuchtet auf.</p>
+		<p>Wenn Sie den Spurhalteassistenten ausschalten möchten, drücken Sie die Taste Spurhalteassistent (<image align="left" href="../../images/WKIA_274.eps" scale="15" placement="inline"/>).</p>
+		<p>Die Kontrollleuchte leuchtet gelb, wenn Sie den Spurhalteassistenten ausschalten.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn die Betriebsbedingungen des Spurhalteassistenten (LKA) erfüllt sind, leuchtet im Kombiinstrument eine grüne Anzeigeleuchte (<image align="left" href="../../images/WKIA_198.eps" scale="15" placement="inline"/>) auf.</p>
+				</li>
+				<li>
+					<p>Wenn die Betriebsbedingungen nicht erfüllt sind, leuchtet eine graue (<image align="left" href="../../images/WKIA_198.eps" scale="15" placement="inline"/>) Kontrollleuchte auf.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0481.dita#CL4m_HEV-ca_ES-2027-t0481" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Spurhalteassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

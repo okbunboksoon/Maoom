@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00609">
+	<title>Release</title>
+	<conbody>
+		<p> <uicontrol>Emergency Stop</uicontrol> will release when the following conditions are satisfied.</p>
+		<p>Warning message: <uicontrol>Drive carefully</uicontrol> </p>
+		<ul id="e04308">
+			<li>
+				<p>The driver focuses on the road ahead (if equipped) and controls the steering wheel</p>
+			</li>
+			<li>
+				<p>If the accelerator pedal is strongly input and maintained</p>
+			</li>
+			<li>
+				<p>If the brake pedal is strongly input</p>
+			</li>
+			<li>
+				<p>If the Lane Following Assist button (<image align="left" href="../../images/WKIA_011.eps" outputclass="nolabel" placement="inline" scale="15" id="e04309"/>) has pressed</p>
+			</li>
+			<li>
+				<p>If the Driver Assistance button has pressed</p>
+			</li>
+			<li>
+				<p>Hazard warning flasher button has pressed after stops.</p>
+			</li>
+			<li>
+				<p>The driver’s door of the vehicle has opened</p>
+			</li>
+		</ul>
+		<note type="caution" id="e04310">
+			<p>After the vehicle comes to a stop due to an <uicontrol>Emergency Stop</uicontrol>, to activate <uicontrol>Lane Following Assist</uicontrol> or <uicontrol>Highway Driving Assist</uicontrol>, vehicle needs to be restarted.</p>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00214">
+	<title>Opening the tailgate</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tailgate 
+					<indexterm>opening the tailgate</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01624">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01625">
+								<figgroup>
+									<image href="../../images/OOV035031.eps" align="center" placement="break" id="e01626"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>The tailgate is locked or unlocked when all doors are locked or unlocked with the transmitter (or smart key) or central door lock/unlock button.</p>
+			</li>
+			<li>
+				<p>Only the tailgate is unlocked if the tailgate unlock button on the transmitter or smart key is pressed for approximately 1 second.</p>
+			</li>
+			<li>
+				<p>If unlocked, the tailgate can be opened by pressing the handle and pulling it up.</p>
+			</li>
+			<li>
+				<p>Once the tailgate is opened and then closed, the tailgate locks automatically. (All doors must be locked.)</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>In cold and wet climates, door lock and door mechanisms may not work properly due to freezing conditions.</p>
+		</note>
+		<note type="warning">
+			<p>The tailgate swings upward. Make sure no objects or people are near the rear of the vehicle when opening the tailgate.</p>
+		</note>
+		<note type="caution">
+			<p>Make certain that you close the tailgate before driving your vehicle. Possible damage may occur to the tailgate gas lifters and attached hardware if the tailgate is not closed prior to driving.</p>
+		</note>
+	</conbody>
+</concept>

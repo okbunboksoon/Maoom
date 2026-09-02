@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00841">
+	<title>Blade inspection</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>wiper blades
+					<indexterm>blade inspection</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Contamination of either the windshield or the wiper blades with foreign substances can reduce the effectiveness of the windshield wipers. Common sources of contamination are insects, tree sap, and hot wax treatments used by some commercial car washes. If the blades are not wiping properly, clean both the windshield and the blades with a good cleaner or mild detergent, and rinse thoroughly with clean water.</p>
+		<note type="caution" id="e04949">
+			<p>To prevent damage to the wiper blades, do not use gasoline, kerosene, paint thinner, or other solvents on or near them.</p>
+		</note>
+		<note type="tip" id="e04950">
+			<p>Commercial hot waxes applied by automatic car washes have been known to make the windshield difficult to clean.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00840.dita#t00840" role="parent" scope="local" type="concept">
+				<linktext>Wiper blades</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

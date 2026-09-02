@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00211">
+	<title>Resetting relaxion comfort seat (Driver’s seat)</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01317">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01318">
+								<figgroup>
+									<image align="center" href="images/N_SP327_B06_016.jpg" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e01319">
+			<title>Driver’s side</title>
+			<sectiondiv deliveryTarget="except_print"><ph importance="high">Operation</ph>
+				<ol id="e01320">
+					<li>
+						<p>Open the driver’s side door when the vehicle is stopped and the vehicle in <term translate="no">ON</term> position.</p>
+					</li>
+					<li>
+						<p>Move the seat forward as far as possible, and raise the seatback angle as forward as possible by using the driver’s seat forward/backward adjustment switch and seatback angle adjustment switch.</p>
+					</li>
+					<li>
+						<p>Press the driver’s seatback angle adjustment switch and push the front portion of the driver’s seat forward/backward adjustment switch (the direction to move the seat position forward) at the same time for approximately 2 seconds.</p>
+					</li>
+				</ol>
+				<note type="note" id="e01321">
+					<p>Make sure there are no obstacles around the driver’s seat before initialization.</p>
+				</note>
+				<ul id="e01322">
+					<li>
+						<p>The initialization process are as follows.</p>
+						<ul id="e01323">
+							<li>
+								<p>With a beep sound, the initialization process begins.</p>
+							</li>
+							<li>
+								<p>The seat and backrest automatically move to the rear. A beep sounds continuously during operation.</p>
+							</li>
+							<li>
+								<p>The seat will move to the center again and the initialization process will end with the last beep sound.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv deliveryTarget="except_print" id="e01324"><ph importance="high">Non-operating condition(s)</ph>
+				<p>The initialization process will be interrupted in the following situations.</p>
+				<ul id="e01325">
+					<li>
+						<p>When the driver’s side seat adjustment switch is pressed</p>
+					</li>
+					<li>
+						<p>When the vehicle speed is above 5 km/h (3 mph)</p>
+					</li>
+					<li>
+						<p>When the driver’s side door is closed</p>
+					</li>
+				</ul>
+				<p>If the driver’s seat operation and a beep sound stop during initialization, start initialization again.</p>
+				<p>After initialization, adjust the seat to suit the driver and save it to the driving position memory system again.</p>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00208.dita#t00208" role="parent" scope="local" type="concept">
+				<linktext>Relaxion comfort seat</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

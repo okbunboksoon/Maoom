@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00372">
+	<title>Controlling the air intake</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C081.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Select the outside (fresh) air position or recirculated air position. In the outside (fresh) air position, the indicator light will turn off.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Select the outside (fresh) air position or recirculated air position.</p>
+				</li>
+				<li>
+					<p>In the outside (fresh) air position, air enters the vehicle from outside. The indicator light will turn off.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

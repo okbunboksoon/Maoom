@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA 1.3 Reference//EN" "reference.dtd">
+<reference id="t00282">
+	<title>Energy flow</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>driving the hybrid/plug-in hybrid vehicle
+					<indexterm>energy flow</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="e01810">
+			<p>The hybrid system informs you of its energy flow in various operating modes. While driving, the current energy flow is specified in 11 modes.</p>
+		</section>
+		<section id="e01811">
+			<title>Vehicle stop</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01812">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01813">
+									<image href="images/P_SP327_B00_007_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01814">
+									<li>
+										<p><uicontrol>Idle Mode</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The vehicle is stopped (no energy flow).</p>
+		</section>
+		<section id="e01815">
+			<title>EV propulsion</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01816">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01817">
+									<image href="images/P_SP327_B00_008_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01818">
+									<li>
+										<p><uicontrol>Electric Mode</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Only the motor is powering the vehicle (battery to wheel).</p>
+		</section>
+		<section id="e01819">
+			<title>Power assist</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01820">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01821">
+									<image href="images/P_SP327_B00_009_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01822">
+									<li>
+										<p><uicontrol>Hybrid Mode</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Both the motor and the engine power are powering the vehicle (battery &amp; engine to wheel).</p>
+		</section>
+		<section id="e01823">
+			<title>Engine only propulsion</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01824">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01825">
+									<image href="images/P_SP327_B00_010_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01826">
+									<li>
+										<p><uicontrol>Hybrid Mode</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Only the engine is powering the vehicle (engine to wheel).</p>
+		</section>
+		<section id="e01827">
+			<title>Engine generation</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01828">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01829">
+									<image href="images/N_SP327_B00_007_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01830">
+									<li>
+										<p><uicontrol>Charging</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When you stop the vehicle, the engine charges the high voltage battery (engine to battery).</p>
+		</section>
+		<section id="e01831">
+			<title>Regeneration</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01832">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01833">
+									<image href="images/N_SP327_B00_008_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01834">
+									<li>
+										<p><uicontrol>Charging</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The regenerative braking system charges the high voltage battery (wheel to battery).</p>
+		</section>
+		<section id="e01835">
+			<title>Engine brake</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01836">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01837">
+									<image href="images/P_SP327_B00_012_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01838">
+									<li>
+										<p><uicontrol>Engine Braking</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Engine braking slows down the vehicle (wheel to engine).</p>
+		</section>
+		<section id="e01839">
+			<title>Power reserve</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01840">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01841">
+									<image href="images/P_SP327_B00_013_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01842">
+									<li>
+										<p><uicontrol>Charging</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The engine simultaneously powers the vehicle and charges the high voltage battery (engine to wheel &amp; battery).</p>
+		</section>
+		<section id="e01843">
+			<title>Engine generation/motor drive</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01844">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01845">
+									<image href="images/P_SP327_B00_014_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01846">
+									<li>
+										<p><uicontrol>Charging</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The engine charges the high voltage battery. The motor powers the vehicle (engine to battery, battery to wheel).</p>
+		</section>
+		<section id="e01847">
+			<title>Engine generation/regeneration</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01848">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01849">
+									<image href="images/P_SP327_B00_013_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01850">
+									<li>
+										<p><uicontrol>Charging</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The engine and the regenerative braking system charge the high voltage battery (engine &amp; wheel to battery).</p>
+		</section>
+		<section id="e01851">
+			<title>Engine brake/regeneration</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01852">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01853">
+									<image href="images/P_SP327_B00_015_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01854">
+									<li>
+										<p><uicontrol>Charging</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Engine braking simultaneously slows down the vehicle and charges the high voltage battery (wheel to engine &amp; battery).</p>
+		</section>
+	</refbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00268.dita#t00268" role="parent" scope="local" type="concept">
+				<linktext>Driving the hybrid</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</reference>

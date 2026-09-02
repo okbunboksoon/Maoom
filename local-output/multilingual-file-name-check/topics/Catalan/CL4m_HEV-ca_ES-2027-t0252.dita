@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept outputclass="formatc" importance="optional" id="CL4m_HEV-ca_ES-2027-t0252">
+	<title id="e00641">Seitenairbag und mittlerer Seitenairbag der Vordersitze </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Airbag
+					<indexterm>Seitenairbag und Mittenairbag der Vordersitze</indexterm>
+				</indexterm>
+				<indexterm>Seitenairbag und Mittenairbag der Vordersitze</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Ihr Fahrzeug ist mit einem Seitenairbag in jedem Vordersitz und einem mittleren Seitenairbag auf dem Fahrersitz ausgestattet.</p>
+		<section>
+			<p>Zweck der Airbags ist es, dem Fahrer und/oder dem Beifahrer erweiterten Schutz, zusätzlich zu dem Schutz, den die Sicherheitsgurte bieten, zur Verfügung zu stellen.</p>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M024050N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M024009.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die tatsächlich vorhandenen Airbags im Fahrzeug können von der Abbildung abweichen.</p>
+		</section>
+		<section>
+			<p>Die Seitenairbags und der Mittenairbag der Vordersitze dürfen je nach Schwere der Kollision nur bei bestimmten Seitenaufprallunfällen auslösen. Die Seitenairbags und der Mittenairbag der Fahrerseite sollen nicht bei jedem Seitenaufprall entfaltet werden.</p>
+			<p>Wenn Unebenheiten oder Gegenstände auf unbefestigten Straßen auf das Fahrzeugchassis treffen, können die Airbags ausgelöst werden. Fahren Sie auf unbefestigten Wegen und auf für Fahrzeugverkehr nicht vorgesehenem Untergrund vorsichtig, um ungewolltes Auslösen von Airbags zu vermeiden.</p>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M024008.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M024065.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die tatsächlich vorhandenen Airbags im Fahrzeug können von der Abbildung abweichen.</p>
+			<note type="note" id="e00642">
+				<p>Siehe WARNUNG, ACHTUNG und HINWEIS von „Airbag-Vorsichtsmaßnahmen“.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0243.dita#CL4m_HEV-ca_ES-2027-t0243" role="parent" scope="local" type="concept">
+				<linktext>Airbag – ergänzendes Rückhaltesystem </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

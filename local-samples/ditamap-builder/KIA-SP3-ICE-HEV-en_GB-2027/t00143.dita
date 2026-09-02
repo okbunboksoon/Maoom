@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00143">
+	<title id="e00691">Gauges </title>
+	<shortdesc>The gauges display various information, such as the speed of the vehicle and other metrics.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>instrument cluster
+					<indexterm>gauges</indexterm>
+				</indexterm>
+				<indexterm>gauges</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00142.dita#t00142" role="parent" scope="local" type="concept">
+				<linktext>Instrument cluster </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

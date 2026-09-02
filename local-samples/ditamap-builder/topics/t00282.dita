@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00282">
+	<title id="e02118">Since last reset</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e02119">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e02120">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV035118L.eps" placement="break" width="2.244in" id="e02121"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<ol outputclass="callout" id="e02122">
+								<li>
+									<p> <uicontrol>Since last reset</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Trip</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Timer</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Avg.</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e02123">
+			<li id="e02124">
+				<p>Accumulated trip distance, total driving time, and average energy economy are displayed.</p>
+			</li>
+			<li id="e02125">
+				<p>The information is accumulated starting from the last reset.</p>
+			</li>
+			<li id="e02126">
+				<p>To reset manually, press the OK button on the steering wheel for more than 1 second when 'Since Last Reset' appears.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

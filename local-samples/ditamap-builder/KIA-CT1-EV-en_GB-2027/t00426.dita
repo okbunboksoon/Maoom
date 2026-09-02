@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00426">
+	<title>Shifting</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>gear shift 
+					<indexterm>shifting</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01725">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01726">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25D014_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Turn the shift lever.</p>
+				</li>
+				<li>
+					<p>Press P button to shift to P (Park).</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA 1.3 Reference//EN" "reference.dtd">
+<reference base="Anywhere" id="t00018">
+	<title>Gross vehicle weight</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications
+					<indexterm>gross vehicle weight</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="e00063">
+			<title>For Europe</title>
+			<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e00064">
+				<tgroup cols="8">
+					<colspec colnum="1" colwidth="1.75*" colname="col1"/>
+					<colspec colnum="2" colwidth="1.75*" colname="col2"/>
+					<colspec colnum="3" colwidth="1.75*" colname="col3"/>
+					<colspec colnum="4" colwidth="1.75*" colname="col5"/>
+					<colspec colnum="5" colname="col6" colwidth="1.75*"/>
+					<colspec colnum="6" colwidth="1.75*" colname="col7"/>
+					<colspec colnum="7" colwidth="1.75*" colname="col8"/>
+					<colspec colnum="8" colwidth="1.75*" colname="col9"/>
+					<thead>
+						<row>
+							<entry morerows="2" align="center" valign="middle">
+								<p>Item</p>
+							</entry>
+							<entry namest="col2" nameend="col9" align="center" valign="middle">
+								<p>Smartstream G1.6 T-GDI / Smartstream G1.6 T-GDI (EURO 7)</p>
+							</entry>
+						</row>
+						<row>
+							<entry namest="col2" nameend="col3" align="center" valign="middle">
+								<p>6MT</p>
+							</entry>
+							<entry namest="col5" nameend="col9" align="center" valign="middle">
+								<p>7DCT</p>
+							</entry>
+						</row>
+						<row>
+							<entry namest="col2" nameend="col3" align="center" valign="middle">
+								<p>2WD</p>
+							</entry>
+							<entry namest="col5" nameend="col7" align="center" valign="middle">
+								<p>2WD</p>
+							</entry>
+							<entry namest="col8" nameend="col9" align="center" valign="middle">
+								<p>AWD</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry align="center" valign="middle">
+								<p>Wheel size</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>16 inch</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>18 inch</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>16 inch</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>18 inch</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>19 inch</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>18 inch</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>19 inch</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" valign="middle">
+								<p>Gross vehicle weight [kg (lbs.)]</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>1,920 (4,233)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>2,000 (4,409)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>1,920 (4,233)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>2,035 (4,486)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>2,035 (4,486)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>2,115 (4,663)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>2,115 (4,663)</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e00065">
+				<tgroup cols="3">
+					<colspec colnum="1" colname="newCol1" colwidth="1*"/>
+					<colspec colnum="2" colwidth="1.75*" colname="col1"/>
+					<colspec colnum="3" colwidth="1.75*" colname="col2"/>
+					<thead>
+						<row>
+							<entry morerows="2" align="center" valign="middle">
+								<p>Item</p>
+							</entry>
+							<entry namest="col1" nameend="col2" align="center" valign="middle">
+								<p>Smartstream 1.6 GDi HEV/Smartstream 1.6 GDi HEV (EURO 7)</p>
+							</entry>
+						</row>
+						<row>
+							<entry namest="col1" nameend="col2" align="center" valign="middle">
+								<p>6DCT</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" valign="middle">
+								<p>2WD</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>AWD</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry align="center" valign="middle">
+								<p>Gross vehicle weight [kg (lbs.)]</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>2,085 (4,597)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>2,185 (4,817)</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section id="e00066">
+			<title>Except Europe</title>
+			<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e00067">
+				<tgroup cols="3">
+					<colspec colnum="1" colname="newCol1" colwidth="1*"/>
+					<colspec colnum="2" colwidth="1.75*" colname="col1"/>
+					<colspec colnum="3" colwidth="1.75*" colname="col2"/>
+					<thead>
+						<row>
+							<entry morerows="2" align="center" valign="middle">
+								<p>Item</p>
+							</entry>
+							<entry nameend="col2" align="center" valign="middle" namest="col1">
+								<p>Smartstream G2.0</p>
+							</entry>
+						</row>
+						<row>
+							<entry namest="col1" nameend="col2" align="center" valign="middle">
+								<p>IVT</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" valign="middle">
+								<p>2WD</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>AWD</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry align="center" valign="middle">
+								<p>Gross vehicle weight [kg (lbs.)]</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>1,980 (4,365)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>2,045 (4,508)</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e00068">
+				<tgroup cols="2">
+					<colspec colnum="1" colname="newCol1" colwidth="1*"/>
+					<colspec colnum="2" colwidth="1.75*" colname="col1"/>
+					<thead>
+						<row>
+							<entry morerows="2" align="center" valign="middle">
+								<p>Item</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Smartstream 1.6 GDi HEV/Smartstream 1.6 GDi HEV (EURO 7)</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" valign="middle">
+								<p>6DCT</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" valign="middle">
+								<p>2WD</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry align="center" valign="middle">
+								<p>Gross vehicle weight [kg (lbs.)]</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>2,085 (4,597)</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</refbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00015.dita#t00015" role="parent" scope="local" type="concept">
+				<linktext>Specifications </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</reference>

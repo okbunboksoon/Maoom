@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="CL4m_HEV-ca_ES-2027-t0332">
+	<title>Bügel an der Führungsschiene befestigen</title>
+	<taskbody>
+		<context>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MW035031L_2.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</context>
+		<steps-unordered>
+			<step>
+				<cmd>Bringen Sie den Bügel (A) in die Position, wer der Bügel in die Schiene eingeführt wird.</cmd>
+			</step>
+			<step>
+				<cmd>Zum Verschieben des Bügels drücken Sie die Taste (1) und schieben Sie den Bügel entlang der Schiene.</cmd>
+			</step>
+			<step>
+				<cmd>Stellen Sie sicher, dass der Bügel eingerastet ist.</cmd>
+			</step>
+			<step>
+				<cmd>Um das Gepäck zu sichern, ziehen Sie den Haken (2) zum mittleren Gepäckbereich nach oben.</cmd>
+			</step>
+			<step>
+				<cmd>Jetzt können Sie beispielsweise einen Riemen anbringen, um das Gepäck am Haken zu sichern.</cmd>
+			</step>
+			<step>
+				<cmd>Der Bügel kann nicht in der Position verwendet werden, wo er in die Schiene (3) eingeführt oder aus ihr entfernt wird.</cmd>
+			</step>
+		</steps-unordered>
+		<postreq>
+			<note type="caution">
+				<p>Zugkraft: max. 30 kgf für 1 Bügel</p>
+			</note>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0330.dita#CL4m_HEV-ca_ES-2027-t0330" role="parent" scope="local" type="concept">
+				<linktext>Gepäckschienensystem</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

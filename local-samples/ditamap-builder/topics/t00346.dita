@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00346">
+	<title>A/C automatic drying</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system 
+					<indexterm>A/C automatic drying</indexterm>
+					<indexterm>A/C automatic drying</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>A/C Automatic Drying feature dries the moisture in the air conditioner and reduces air conditioner odor. The blower motor automatically operates after 30 minutes the vehicle is turned off.</p>
+		<ul id="e02529">
+			<li>
+				<p>When the A/C Automatic Drying feature is activated, the air conditioner sets the fan speed to the third level, selects the outside (fresh) air position, and directs the airflow to the floor.</p>
+			</li>
+		</ul>
+		<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Climate</uicontrol><uicontrol>Climate Features</uicontrol><uicontrol>Air conditioner auto-drying</uicontrol></menucascade> from the infotainment system.</p>
+		<note type="tip" id="e02530">
+			<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+		</note>
+		<section id="e02531">
+			<title>Operating conditions</title>
+			<ul id="e02532">
+				<li>
+					<p>After operating the air conditioner for a certain period of time and turning OFF the vehicle</p>
+				</li>
+				<li>
+					<p>The 12 V battery level is sufficient</p>
+				</li>
+				<li>
+					<p>The outside temperature is above a certain level Non-operating conditions</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e02533">
+			<title>Non-operating conditions</title>
+			<ul id="e02534">
+				<li>
+					<p>The A/C Automatic Drying feature has operated for 3 minutes</p>
+				</li>
+				<li>
+					<p>The <term translate="no">EV</term> button is pressed, or the vehicle is in <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position</p>
+				</li>
+				<li>
+					<p>The climate control system is operated remotely</p>
+				</li>
+			</ul>
+			<note type="note" id="e02535">
+				<ul id="e02536">
+					<li>
+						<p>The A/C Automatic Drying feature reduces air conditioner odors but may not remove all odors.</p>
+					</li>
+					<li>
+						<p>The A/C Automatic Drying feature does not operate if the remaining battery level is insufficient to prevent battery discharge.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

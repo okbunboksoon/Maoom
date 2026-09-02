@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00803">
+	<title>Vacuum crankcase ventilation hoses</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>scheduled maintenance items
+					<indexterm>vacuum crankcase ventilation hoses</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Inspect the surface of hoses for evidence of heat or mechanical damage. Hard and brittle rubber, cracking, tears, cuts, abrasions, and excessive swelling indicate deterioration. Pay particular attention to the hose surfaces nearest to high heat sources, such as the exhaust manifold.</p>
+		<p>Inspect the hose routing to ensure that the hoses do not contact any heat source, sharp edges, or moving components that might cause heat damage or mechanical wear. Inspect all hose connections, such as clamps and couplings, to make sure they are secure and that no leaks are present. Replace hoses immediately if there is any evidence of deterioration or damage.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00796.dita#t00796" role="parent" scope="local" type="concept">
+				<linktext>Explanation of scheduled maintenance items</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

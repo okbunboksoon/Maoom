@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0864">
+	<title>Reifen tauschen</title>
+	<conbody>
+		<p>Um den Reifenverschleiß der Räder auszugleichen, ist es empfehlenswert, dass die Räder spätestens alle 10 000 km (6 500 Meilen) zwischen Vorder- und Hinterachse zu vertauschen.</p>
+		<p>Prüfen Sie beim Rädertausch, ob die Räder ordnungsgemäß ausgewuchtet sind.</p>
+		<p>Prüfen Sie die Reifen beim Tausch auf ungleichmäßigen Verschleiß und Beschädigungen. Ungleichmäßiger Verschleiß resultiert in der Regel aus falschem Reifendruck, falscher Radeinstellung und nicht ausgewuchteten Rädern. Weitere Ursachen sind extremes Bremsen und schnelle Kurvenfahrten. Prüfen Sie die Laufflächen und Flanken der Reifen auf Verformungen. Ersetzen Sie den Reifen in diesem Fall. Ersetzen Sie Reifen, bei denen das Gewebe oder der Stahlgürtel sichtbar sind. Korrigieren Sie nach dem Reifentausch den Reifendruck (vorn/ hinten) und vergewissern Sie sich, dass die Radmuttern fest angezogen sind.</p>
+		<p>Siehe <xref href="CL4m_HEV-ca_ES-2027-t0019.dita#CL4m_HEV-ca_ES-2027-t0019"/>.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Mit Ersatzreifen in voller Größe (ausstattungsabhängig)</title>
+								<figgroup>
+									<image align="center" href="../../images/OON072091L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01460">
+								<title>Ohne Ersatzreifen</title>
+								<figgroup>
+									<image align="center" href="../../images/OON072092L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01461">
+								<title>Laufrichtungsabhängige Reifen (ausstattungsabhängig)</title>
+								<figgroup>
+									<image align="center" href="../../images/OON072093L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Beim Rädertausch sollten die Bremsklötze der Scheibenbremsen auf Verschleiß geprüft werden.</p>
+		<note type="note">
+			<p>Tauschen Sie laufrichtungsgebundene Reifen nur zwischen Vorder- und Hinterachse einer Fahrzeugseite, aber nicht zwischen der rechten und linken Fahrzeugseite.</p>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Beziehen Sie ein Notrad (ausstattungsabhängig) nicht in den Reifentausch ein.</p>
+				</li>
+				<li>
+					<p>Verwenden Sie auf keinen Fall gleichzeitig Reifen unterschiedlicher Bauart (z. B. Radial- und Gürtelreifen). Andernfalls werden die Fahreigenschaften beeinträchtigt. Es besteht Verletzungs- und Lebensgefahr sowie die Gefahr von Sachschäden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0860.dita#CL4m_HEV-ca_ES-2027-t0860" role="parent" scope="local" type="concept">
+				<linktext>Reifen und Räder </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

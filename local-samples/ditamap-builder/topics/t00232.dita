@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00232">
+	<title>Detecting area</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>smart tailgate with auto open 
+					<indexterm>detecting area</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e01696">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01697">
+								<figgroup>
+									<image href="../../images/OOV035081.eps" align="center" placement="break" id="e01698"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>The smart tailgate with auto open function operates with a welcome alert if the smart key is detected within 50-100 cm from the tailgate.</p>
+			</li>
+			<li>
+				<p>The alert stops at once if the smart key is positioned outside the detecting area during the Detect and Alert stage.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>The smart tailgate with auto open function will not work if any of the following occurs:</p>
+					<ul>
+						<li>
+							<p>The smart key is close to a radio transmitter such as a radio station or an airport which can interfere with normal operation of the transmitter.</p>
+						</li>
+						<li>
+							<p>The smart key is near a mobile two-way radio system or a cellular phone.</p>
+						</li>
+						<li>
+							<p>Another vehicle’s smart key is being operated close to your vehicle.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>The detecting range may decrease or increase when:</p>
+					<ul>
+						<li>
+							<p>One side of the tire is raised to replace a tire or to inspect the vehicle.</p>
+						</li>
+						<li>
+							<p>The vehicle is slantingly parked on a slope or unpaved road, etc.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

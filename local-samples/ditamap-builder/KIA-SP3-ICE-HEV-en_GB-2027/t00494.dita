@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00494">
+	<title>Lane Keeping Assist disabled</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03345">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03346">
+								<image href="images/OCL4M055097N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03347">
+								<li>
+									<p><uicontrol>Driver Assistance system limited. Camera obscured.</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>If foreign material (such as snow or rain) obscure the sensors or the windshield where the front view camera is located, it may affect detection and render Lane Keeping Assist temporarily limited or disabled.</p>
+		<p>In this case, a warning message displays with the Master warning light (<image href="images/WKIA_040.jpg" scale="15" align="left" placement="inline"/>) and the Lane safety warning lights (<image href="images/WKIA_198.jpg" scale="15" align="left" placement="inline"/>) on the instrument cluster. This is normal operation.</p>
+		<p>Lane Keeping Assist should operate properly after cleaning snow, rain or foreign materials. Always keep it clean.</p>
+		<p>If Lane Keeping Assist still does not operate properly after you clean foreign materials (such as snow or rain) from the sensor or remove obstructions (such as a trailer or carrier) from the rear bumper, have the vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Even when a warning message or warning light does not appear on the instrument cluster, Lane Keeping Assist may not operate properly.</p>
+				</li>
+				<li>
+					<p>Even after your start the vehicle again, Lane Keeping Assist may not function properly if the obstruction or malfunction persists.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip">
+			<p>The warning information can be found in the service messages of the utility information view on the cluster display.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00493.dita#t00493" role="parent" scope="local" type="concept">
+				<linktext>Lane Keeping Assist malfunction</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

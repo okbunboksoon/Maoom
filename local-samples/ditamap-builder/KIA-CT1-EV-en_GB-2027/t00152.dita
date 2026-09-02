@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00152">
+	<title>Other view modes</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry align="center" colname="col1" valign="middle">
+							<p>LCD displays</p>
+						</entry>
+						<entry align="center" colname="col2" valign="middle">
+							<p>Displayed contents</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Z038_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p> <uicontrol>(A) Service Interval</uicontrol> </p>
+							<p>To reset the service interval, select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Cluster</uicontrol><uicontrol>Service Interval</uicontrol><uicontrol>Reset</uicontrol></menucascade>.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

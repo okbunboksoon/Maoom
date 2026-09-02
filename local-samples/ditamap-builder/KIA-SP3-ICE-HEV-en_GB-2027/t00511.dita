@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00511">
+	<title>Blind-Spot Collision-Avoidance Assist operation</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>blind-spot collision-avoidance assist (BCA)
+					<indexterm>operation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Blind-Spot Collision-Avoidance Assist operates as follows:</p>
+		<ul>
+			<li>
+				<p>Collision Warning (while driving)</p>
+			</li>
+			<li>
+				<p>Collision-Avoidance Assist (while departing)</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00507.dita#t00507" role="parent" scope="local" type="concept">
+				<linktext>Blind-spot Collision-avoidance Assist (BCA)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

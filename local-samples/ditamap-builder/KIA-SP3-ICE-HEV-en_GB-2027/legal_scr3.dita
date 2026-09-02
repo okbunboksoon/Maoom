@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00948">
+    <title>Low urea solution warning message</title>
+    <conbody>
+        <table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="table_awy_5y3_pjc">
+            <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+                <colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+                <tbody>
+                    <row rowsep="0">
+                        <entry colname="col1">
+                            <fig id="fig_bwy_5y3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073032L.jpg" scale="95"
+                                        align="center" placement="break" id="image_cwy_5y3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                        <entry colname="col2">
+                            <p><term translate="no">A</term>: Low urea</p>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="table_dwy_5y3_pjc">
+            <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+                <colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+                <tbody>
+                    <row rowsep="0">
+                        <entry colname="col1">
+                            <fig id="fig_ewy_5y3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073033L.jpg" scale="95"
+                                        align="center" placement="break" id="image_fwy_5y3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                        <entry colname="col2">
+                            <p><term translate="no">A</term>: Refill urea</p>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="table_gwy_5y3_pjc">
+            <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+                <colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+                <tbody>
+                    <row rowsep="0">
+                        <entry colname="col1">
+                            <fig id="fig_hwy_5y3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073034L.jpg" scale="95"
+                                        align="center" placement="break" id="image_iwy_5y3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                        <entry colname="col2">
+                            <p><term translate="no">A</term>: Refill urea in 000 km or vehicle will
+                                not start</p>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="table_jwy_5y3_pjc">
+            <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+                <colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+                <tbody>
+                    <row rowsep="0">
+                        <entry colname="col1">
+                            <fig id="fig_kwy_5y3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073035L.jpg" scale="95"
+                                        align="center" placement="break" id="image_lwy_5y3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                        <entry colname="col2">
+                            <p><term translate="no">A</term>: Refill urea tank or vehicle will not
+                                start</p>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>The lack warning messages of urea solution appear below urea solution level of
+            approximately 5.4 L. When the warning message "Low Urea" is displayed with SCR warning
+            lamp (<image href="images/WKIA_053.jpg" scale="15" align="left"
+                placement="inline" id="image_mwy_5y3_pjc"/>), the urea solution tank needs to be
+            refilled. If not refilled for a considerable mileage, visual warning system will
+            escalate the intensity by displaying the message "Refill Urea" with SCR warning lamp
+                (<image href="images/WKIA_053.jpg" scale="15" align="left"
+                placement="inline" id="image_nwy_5y3_pjc"/>).</p>
+        <p>In this case, the urea solution tank soon needs to be refilled. The remaining urea
+            solution in the urea solution tank approaches to too low level the warning message
+            "Refill Urea in 000 km or vehicle will not start" with SCR warning lamp (<image
+                href="images/WKIA_053.jpg" scale="15" align="left" placement="inline"
+                id="image_owy_5y3_pjc"/>). "000 km (mile)" represents the remaining travel distance
+            allowed, so do not continue driving to the limit of the remaining travel distance
+            without refilling.</p>
+        <p>Otherwise, the vehicle can't be restarted once the engine is turned off by the <term
+                translate="no">ENGINE START/STOP</term> button. Based on the driving pattern,
+            environmental condition and road profile, the deducted remaining mileage may differ from
+            the actual travel distance. When "Low Urea" or "Refill Urea" message is displayed, a
+            sufficient amount of urea solution must be added. When "Refill Urea in 000 km or vehicle
+            will not start" message is displayed, refill a sufficient amount of urea solution.</p>
+        <p>When "Refill Urea tank or vehicle will not start" message is displayed with SCR warning
+            lamp (<image href="images/WKIA_053.jpg" scale="15" align="left"
+                placement="inline" id="image_pwy_5y3_pjc"/>), the vehicle can't be restarted once
+            the engine is turned off. For the above cases, full replenishment is always
+            recommended.</p>
+    </conbody>
+</concept>

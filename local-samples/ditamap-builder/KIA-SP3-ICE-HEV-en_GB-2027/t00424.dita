@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00424">
+	<title>DRIVE MODE</title>
+	<shortdesc>You may select the drive mode according to preference or road condition.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>drive mode integrated control system
+					<indexterm>DRIVE MODE</indexterm>
+				</indexterm>
+				<indexterm>DRIVE MODE</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02888">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e02889">
+								<title>Type A</title>
+								<image align="center" placement="break" href="images/N_SP3i26_C09_025_1_I.jpg" scale="95"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e02890">
+								<title>Type B</title>
+								<image align="center" placement="break" scale="95" href="images/N_SP3i25_C09_024_1_IR.jpg"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e02891">
+			<li>
+				<p>Press the <term translate="no">DRIVE MODE</term> button. The drive mode changes whenever you press the button.</p>
+			</li>
+			<li>
+				<p><term translate="no">DRIVE MODE</term> will change to <term translate="no">NORMAL</term> mode when the vehicle is restarted.</p>
+			</li>
+			<li>
+				<p>For hybrid vehicle, <term translate="no">ECO</term> mode is maintained when restarting in any mode.</p>
+			</li>
+			<li>
+				<p>Depending on the region, if you turn off the vehicle while in <term translate="no">ECO</term> mode, the vehicle switches to <term translate="no">ECO</term> mode or <term translate="no">NORMAL</term> mode upon restart.</p>
+			</li>
+		</ul>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc" id="e02892">
+			<desc>
+				<p>: if equipped</p>
+			</desc>
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="23*"/>
+				<colspec colnum="2" colname="2" colwidth="77*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p><term translate="no">DRIVE MODE</term></p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>Characteristics</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p><term translate="no">ECO</term></p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>Helps improve efficiency for eco-friendly driving.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p><term translate="no">NORMAL</term><sup>*</sup></p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>Provides smooth driving and a comfortable ride.</p>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p><term translate="no">SPORT</term></p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>Provides sporty riding.</p>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p><term translate="no">SNOW</term><sup>*</sup></p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p><term translate="no">DRIVE MODE</term> selectable for each preferred component within the theme system.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e02893">
+			<title>ECO mode</title>
+			<p><term translate="no">ECO</term> mode manages the engine and transmission control logic to maximize fuel efficiency.</p>
+			<ul id="e02894">
+				<li>
+					<p>When <term translate="no">ECO</term> mode is activated, the <term translate="no">ECO</term> indicator appears on the instrument cluster.</p>
+				</li>
+				<li>
+					<p>When you restart the vehicle, the drive mode remains in <term translate="no">ECO</term> mode.</p>
+				</li>
+			</ul>
+			<note type="tip" id="e02895">
+				<p>Fuel efficiency depends on your driving habits and the road conditions.</p>
+			</note>
+			<sectiondiv><ph>When <term translate="no">ECO</term> mode is activated:</ph>
+				<ul id="e02896">
+					<li>
+						<p>The accelerator pedal is only moderately engaged and the acceleration response may be slightly reduced.</p>
+					</li>
+					<li>
+						<p>Air conditioning performance may be limited.</p>
+					</li>
+					<li>
+						<p>The automatic transmission’s shift pattern may change.</p>
+					</li>
+					<li>
+						<p>The engine noise may get louder.</p>
+					</li>
+				</ul>
+				<p>All of the above conditions are normal when <term translate="no">ECO</term> mode is activated.</p>
+			</sectiondiv>
+			<sectiondiv><ph>Limitations of <term translate="no">ECO</term> mode operation</ph>
+				<p>If the following conditions occur while <term translate="no">ECO</term> mode is operating, the system operation is limited, even though there is no change in the <term translate="no">ECO</term> indicator:</p>
+				<ul id="e02897">
+					<li>
+						<p>When the coolant temperature is low:</p>
+						<p>The system is limited until engine performance returns to normal.</p>
+					</li>
+					<li>
+						<p>When driving uphill:</p>
+						<p>The system is limited to gain power when driving uphill because the engine torque is restricted.</p>
+					</li>
+					<li>
+						<p>When you fully engage the accelerator pedal for a few seconds:</p>
+						<p>The system is limited as it determines that the driver wants to speed up.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+		</section>
+		<section id="e02898">
+			<title>NORMAL mode</title>
+			<p><term translate="no">NORMAL</term> mode provides smooth driving and comfortable riding.</p>
+		</section>
+		<section id="e02899">
+			<title>SPORT mode</title>
+			<p><term translate="no">SPORT</term> mode manages driving dynamics to enhance driver performance by automatically adjusting the steering effort, engine, and transmission control logic.</p>
+			<ul id="e02900">
+				<li>
+					<p>When <term translate="no">SPORT</term> mode is activated, the indicator appears on the instrument cluster.</p>
+				</li>
+				<li>
+					<p>The drive mode defaults to <term translate="no">NORMAL</term> when you restart the engine. If you want to use <term translate="no">SPORT</term> mode, press the <term translate="no">DRIVE MODE</term> button to select <term translate="no">SPORT</term> mode.</p>
+				</li>
+				<li>
+					<p>When <term translate="no">SPORT</term> mode is activated:</p>
+					<ul id="e02901">
+						<li>
+							<p>Engine speed (rpm) tends to remain raised over a certain amount of time, even after releasing the accelerator pedal.</p>
+						</li>
+						<li>
+							<p>Upshifts are delayed when you accelerate.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<note type="tip" id="e02902">
+				<p>Fuel efficiency may decrease when you drive in <term translate="no">SPORT</term> mode.</p>
+			</note>
+		</section>
+		<section id="e02903">
+			<title>SNOW mode</title>
+			<p><term translate="no">SNOW</term> mode controls the driven wheel’s driving force on slippery roads such as snow to enable a stable start and suppress tires from slipping. mode provides smooth driving and comfortable riding.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00423.dita#t00423" role="parent" scope="local" type="concept">
+				<linktext>Drive mode integrated control system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

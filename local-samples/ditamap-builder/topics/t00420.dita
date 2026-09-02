@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00420">
+	<title>Hill-start Assist Control (HAC)</title>
+	<shortdesc>Hill-start Assist Control (HAC) prevents the vehicle from rolling back by applying the brakes automatically for approximately 2 seconds (maximum of 5 seconds when the accelerator pedal is slightly depressed during Hill-start Assist Control (HAC) operation).</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle safety system 
+					<indexterm>hill-start assist control (HAC)</indexterm>
+				</indexterm>
+				<indexterm>hill-start assist control (HAC)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The brakes are released when the accelerator pedal is engaged or after approximately 2 seconds.</p>
+		<note type="warning" id="e03070">
+			<p>HAC does not replace the need to apply brakes while stopped on an incline. While stopped, make sure you maintain brake pressure sufficient to prevent your vehicle from rolling backward and causing an accident. Don't release the brake pedal until you are ready to accelerate forward.</p>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00854">
+	<title>Tire rotation</title>
+	<shortdesc>To equalize tread wear, it is recommended that you rotate the tires every 10,000 km (6,500 miles) or sooner if irregular wear develops.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tires and wheels
+					<indexterm>tire rotation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>During rotation, check the tires for correct balance.</p>
+		<p>When rotating the tires, check for uneven wear and damage. Abnormal wear is usually caused by incorrect tire pressure, improper wheel alignment, out-of-balance wheels, severe braking, or severe turning. Look for bumps or bulges in the tread or on the side of the tire. Replace the tire if you find either of these conditions. Replace the tire if fabric or cord is visible. After rotating the tires, be sure to bring the front and rear tire pressures to specification and check the tightness of the lug nuts (proper torque is 11–13 kgf·m [79–94 lb-ft]).</p>
+		<p>Refer to <xref href="t00023.dita#t00023"/>.</p>
+		<p>Inspect the disc brake pads for wear whenever you rotate the tires.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05042">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05043">
+								<title>With a spare tire</title>
+								<image href="images/N_SP3i26_B12_008_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e05044">
+								<title>Without a spare tire</title>
+								<image href="images/N_CT25_A12_022_A.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="col1">
+							<fig id="e05045">
+								<title>Directional tires (if equipped)</title>
+								<image href="images/N_CT25_A12_023_A.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Rotate radial tires with an asymmetric tread pattern only from front to rear and not from right to left.</p>
+		<note type="note" id="e05046">
+			<p>Mixing tires</p>
+			<p>Do not mix bias ply and radial ply tires under any circumstances. This may cause unusual handling.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00850.dita#t00850" role="parent" scope="local" type="concept">
+				<linktext>Tires and wheels</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

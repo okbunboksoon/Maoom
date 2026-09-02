@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0764">
+	<title>Fahrzeug abschleppen lassen</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Abschleppen
+					<indexterm>Fahrzeug abschleppen lassen</indexterm>
+				</indexterm>
+				<indexterm>Fahrzeug abschleppen lassen</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M064010N_3.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Nachläufer</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn Abschleppen erforderlich ist, wird empfohlen, einen autorisierten Kia-Händler oder einen gewerblichen Abschleppdienst damit beauftragen.</p>
+		<p>Ein ordnungsgemäßes Verfahren zum Anheben und Abschleppen ist notwendig, um Schäden am Fahrzeug zu vermeiden. Es wird empfohlen, Nachläufer (1) oder einen Pritschenwagen zu verwenden.</p>
+		<note type="warning">
+			<p>Seiten- und Kopfairbag (ausstattungsabhängig)</p>
+			<p>Wenn das Fahrzeug mit Seiten- und Kopfairbag ausgestattet ist (ausstattungsabhängig), stellen Sie das Fahrzeug in Position <term translate="no">ACC</term>, wenn das Fahrzeug abgeschleppt wird.</p>
+			<p>Seiten- und Kopfairbag (ausstattungsabhängig) können ausgelöst werden, wenn sich das Fahrzeug in der Stellung <term translate="no">ON</term> befindet und der Überschlagsensor die Situation als Überschlag interpretiert.</p>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Schalten Sie auf N (Neutral), um ein Fahrzeug mit Reifen auf der Straße abzuschleppen. Weitere Details finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0346.dita#CL4m_HEV-ca_ES-2027-t0346"/>, <xref href="CL4m_HEV-ca_ES-2027-t0349.dita#CL4m_HEV-ca_ES-2027-t0349"/>, <xref href="CL4m_HEV-ca_ES-2027-t0354.dita#CL4m_HEV-ca_ES-2027-t0354"/> oder <xref href="CL4m_HEV-ca_ES-2027-t0357.dita#CL4m_HEV-ca_ES-2027-t0357"/>.</p>
+				</li>
+				<li>
+					<p>Wenn sich die elektronische Feststellbremse (<term translate="no">EPB</term>) nicht normal lösen lässt, laden Sie das Fahrzeug zum Transport auf einen Pritschenwagen und lassen Sie es von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0763.dita#CL4m_HEV-ca_ES-2027-t0763" role="parent" scope="local" type="concept">
+				<linktext>Abschleppen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

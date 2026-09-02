@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0725">
+	<title>Betriebsbedingungen</title>
+	<conbody>
+		<p>Wählen Sie Kollisionsvermeidung hinten aus dem Menü Parksicherheit des Infotainment-Systems. Der Kollisionsvermeidungsassistent wird aktiviert, wenn die folgenden Bedingungen erfüllt sind:</p>
+		<ul>
+			<li>
+				<p>Der Kofferraum/die Heckklappe und die Türen sind geschlossen.</p>
+			</li>
+			<li>
+				<p>Die elektronische Feststellbremse (<term translate="no">EPB</term>) ist ausgelöst.</p>
+			</li>
+			<li>
+				<p>Es wurde in den Rückwärtsgang (R) geschaltet</p>
+			</li>
+			<li>
+				<p>Die Fahrzeuggeschwindigkeit liegt unter 10 km/h (6 mph) (Erkennung von Fußgängern).</p>
+			</li>
+			<li>
+				<p>Die Fahrgeschwindigkeit liegt unter 4 km/h (2 mph) (Erkennung von Objekten)</p>
+			</li>
+			<li>
+				<p>Komponenten des Kollisionsvermeidungsassistenten beim Einparken wie die Weitwinkel-Rückfahrkamera und die hinteren Ultraschallsensoren funktionieren normal.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0722.dita#CL4m_HEV-ca_ES-2027-t0722" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Kollisionsvermeidungs-Assistenten zum Rückwärtseinparken</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00394">
+	<title>Idle Stop and Go (ISG)</title>
+	<shortdesc>Idle Stop &amp; Go (ISG) system helps reduce fuel consumption by automatically stopping and restarting the engine. The engine restarts automatically when the required conditions are met.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>idle stop and go (ISG) system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02625">
+			<title>ISG indicator</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02626">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02627">
+									<image href="images/OMQ4A045032.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The <uicontrol>AUTO STOP</uicontrol> indicator (<image href="images/WKIA_075.jpg" scale="15" align="center" placement="inline"/>) appears on the instrument cluster.</p>
+		</section>
+		<section id="e02628">
+			<title>Activating ISG</title>
+			<p>The ISG system turns on whenever you turn the vehicle on.</p>
+			<note type="note" id="e02629">
+				<p>When the engine restarts automatically by the ISG system, some warning lights (ABS, ESC, <term translate="no">ESC OFF</term>, EPS, or parking brake) may appear for a few seconds. This occurs due to low battery voltage and does not indicate a system malfunction.</p>
+			</note>
+		</section>
+		<section id="e02630">
+			<title>Deactivating ISG</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02631">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02632">
+									<image href="images/N_SP327_C08_001_1_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul id="e02633">
+				<li>
+					<p>To deactivate ISG, press the ISG <term translate="no">OFF</term> button. The light on the button illuminates.</p>
+				</li>
+				<li>
+					<p>To activate ISG, press the ISG <term translate="no">OFF</term> button again. The light on the button disappears.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00362.dita#t00362" role="parent" scope="local" type="concept">
+				<linktext>Driving your vehicle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

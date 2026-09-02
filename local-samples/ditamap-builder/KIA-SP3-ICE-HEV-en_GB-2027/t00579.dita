@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00579">
+	<title>Cruise Control (CC)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>cruise control (CC)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e03698">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e03699">
+								<figgroup>
+									<image href="images/OGL3055295L.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03700">
+								<li>
+									<p>Cruise indicator</p>
+								</li>
+								<li>
+									<p>Set speed</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Cruise Control will allow you to drive at speeds above 30 km/h (20 mph) without depressing the accelerator pedal.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00442.dita#t00442" role="parent" scope="local" type="concept">
+				<linktext>Driver assistance guide</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

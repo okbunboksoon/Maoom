@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00335">
+	<title>Recirculate air</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system
+					<indexterm>recirculate air</indexterm>
+				</indexterm>
+				<indexterm>recirculate air</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>This function automatically switches the air conditioning system to internal air circulation mode based on the navigation map information and the speed of the vehicle to prevent polluted air from entering the cabin when passing through a tunnel or an area with a smell.</p>
+		<p>Also. it automatically activates to reduce any objection able scent of the washer fluid from entering the cabin when the windshield washer is used.</p>
+		<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Climate</uicontrol><uicontrol>Recirculate Air</uicontrol></menucascade> on the infotainment system screen.</p>
+		<ul id="e02128">
+			<li>
+				<p><uicontrol>Activate upon Washer Fluid Use</uicontrol>: Washer fluid odor is automatically prevented from entering the cabin.</p>
+			</li>
+			<li>
+				<p><uicontrol>Activate upon Entering Tunnels</uicontrol>: Automatic closing of windows and activation of internal air circulation upon entering a tunnel.</p>
+			</li>
+		</ul>
+		<p>About 7 seconds before the vehicle enters the tunnel, the air conditioning system automatically switches to indoor circulation mode.</p>
+		<section id="e02129">
+			<title>Operating condition(s)</title>
+			<ul id="e02130">
+				<li>
+					<p>When driving on a highway (or motorway)</p>
+				</li>
+				<li>
+					<p>When the air conditioning system is in fresh air intake mode</p>
+				</li>
+			</ul>
+			<note type="caution" id="e02131">
+				<p>Be careful not to get any part of your body caught when the windows are closing.</p>
+			</note>
+			<note type="note" id="e02132">
+				<p>However, when the temperature outside is low, moisture may accumulate on the windows. In this case, touch the front-windshield defroster icon to remove it.</p>
+			</note>
+			<note type="tip" id="e02133">
+				<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00324.dita#t00324" role="parent" scope="local" type="concept">
+				<linktext>Automatic climate control system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

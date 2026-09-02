@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0029">
+	<title>Motornummer</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Motornummer</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>(Benzinmotor) 1.6 MPI</title>
+								<figgroup>
+									<image align="center" href="../../images/OBL7M083006.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00068">
+								<title>(Benzinmotor) 2.0 MPI</title>
+								<figgroup>
+									<image align="center" href="../../images/OBL7M083008.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e00069">
+								<title>Smartstream G2.0</title>
+								<figgroup>
+									<image align="center" href="../../images/ODL3084001N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00070">
+								<title>Smartstream G1.6 T-GDi</title>
+								<figgroup>
+									<image align="center" href="../../images/ODL3084009N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e00071">
+								<title>Smartstream G1.6 T-GDi (EURO 7)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MGTL085001L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00072">
+								<title>Smartstream G1.0 T-GDi (EURO 7)/Smartstream G1.0 T-GDi MHEV (EURO 7)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M085010L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Motornummer ist an der in der Abbildung gezeigten Stelle in den Motor eingeschlagen.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0015-CH04.dita#CL4m_HEV-ca_ES-2027-t0015-CH04" role="parent" scope="local" type="concept">
+				<linktext>Spezifikationen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

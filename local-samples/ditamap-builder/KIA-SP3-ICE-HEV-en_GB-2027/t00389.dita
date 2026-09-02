@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00389">
+	<title>Shift lock system</title>
+	<shortdesc>For your safety, the transmission has a shift lock system that prevents you from shifting the transmission from P (Park) to R (Reverse) unless the brake pedal is engaged.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic transmission
+					<indexterm>shift lock system</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>To shift from P (Park) to R (Reverse):</p>
+		<ol id="e02595">
+			<li>
+				<p>Engage and hold the brake pedal.</p>
+			</li>
+			<li>
+				<p>Start the vehicle to <term translate="no">ON</term> position.</p>
+			</li>
+			<li>
+				<p>Shift the vehicle.</p>
+				<p>If you repeatedly engage and release the brake pedal with the vehicle in P (Park), you may hear a chattering noise and vibration. This is normal.</p>
+			</li>
+		</ol>
+		<note type="warning" id="e02596">
+			<p>Always engage the brake pedal fully before and while moving the shift lever from P (Park) into another position to avoid inadvertent vehicle motion, which could injure people in or around the vehicle.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00384.dita#t00384" role="parent" scope="local" type="concept">
+				<linktext>Dual clutch transmission (DCT)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

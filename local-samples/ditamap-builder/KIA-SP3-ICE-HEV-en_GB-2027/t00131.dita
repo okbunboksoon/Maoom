@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task importance="optional" id="t00131">
+	<title>Electric type</title>
+	<taskbody>
+		<context>
+			<p>You can fold or unfold the outside rearview mirror by pressing the button as shown in the following image:</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00657">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00658">
+									<image href="images/N_SP3i26_B05_013_1_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</context>
+		<steps-unordered>
+			<step>
+				<cmd>To fold the outside rearview mirror,press the button (1).</cmd>
+			</step>
+			<step>
+				<cmd>To unfold it, press the button (1) again.</cmd>
+				<info>
+					<note type="caution">
+						<p>You can adjust the electric outside rearview mirrors even when the vehicle is in the <term translate="no">OFF</term> positions. To prevent unnecessary battery discharge, do not adjust the mirrors for longer than necessary while the engine is not running.</p>
+					</note>
+					<note type="note">
+						<p>Do not fold an electric outside rearview mirror by hand. This action can cause motor failure.</p>
+					</note>
+				</info>
+			</step>
+		</steps-unordered>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00129.dita#t00129" role="parent" scope="local" type="concept">
+				<linktext>Folding the outside rearview mirror </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

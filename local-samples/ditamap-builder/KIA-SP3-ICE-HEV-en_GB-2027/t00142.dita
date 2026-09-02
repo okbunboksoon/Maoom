@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00142">
+	<title id="e00683">Instrument cluster </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>instrument cluster</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e00684">
+			<fig id="e00685">
+				<title>Type A</title>
+				<image href="images/OCL4M035141C.jpg" scale="95" align="center" placement="break"/>
+			</fig>
+			<fig id="e00686">
+				<title>Type B (For Hybrid)</title>
+				<image href="images/N_SP327_C00_213.jpg" scale="95" align="center" placement="break"/>
+			</fig>
+			<fig id="e00687">
+				<title>Type A</title>
+				<image href="images/N_TK25Z043.jpg" scale="95" align="center" placement="break"/>
+			</fig>
+			<fig id="e00688">
+				<title>Type B (For Hybrid)</title>
+				<image href="images/N_SP327_C00_003.jpg" scale="95" align="center" placement="break"/>
+			</fig>
+			<p>The actual instrument cluster in the vehicle may differ from the illustrations.</p>
+			<ol outputclass="callout" id="e00689">
+				<li>
+					<p>Warning and indicator lights</p>
+				</li>
+				<li>
+					<p>Speedometer</p>
+				</li>
+				<li>
+					<p>Tachometer/Power gauge</p>
+				</li>
+				<li>
+					<p>Distance to empty</p>
+				</li>
+				<li>
+					<p>Fuel gauge</p>
+				</li>
+				<li>
+					<p>Outside temperature gauge</p>
+				</li>
+				<li>
+					<p>Transmission shift indicator</p>
+				</li>
+				<li>
+					<p>Engine coolant temperature gauge/ Hybrid battery SOC (State of Charge) gauge</p>
+				</li>
+				<li>
+					<p>Odometer</p>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00114.dita#t00114" role="parent" scope="local" type="concept">
+				<linktext>Driver Adjustments </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

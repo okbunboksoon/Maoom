@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0236">
+	<title>Empfohlene Kinderrückhaltesysteme für Fahrzeuge gemäß UN-Vorschriften (für Europa) (Informationen für Fahrzeugnutzer und Hersteller von Kinderrückhaltesystemen)</title>
+	<conbody>
+		<table frame="all" rowsep="1" colsep="1" pgwide="1" outputclass="formatc" id="e00613">
+			<tgroup cols="4" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="0.716*"/>
+				<colspec colnum="2" colname="col2" colwidth="1.563*"/>
+				<colspec colnum="3" colname="col3" colwidth="1.183*"/>
+				<colspec colnum="4" colname="col4" colwidth="1.221*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1" align="center" valign="middle">
+							<p>Körpergröße des Kindes</p>
+						</entry>
+						<entry colname="col2">
+							<p>CRS-Modellbezeichnung</p>
+						</entry>
+						<entry colname="col3">
+							<p>CRS-Hersteller</p>
+						</entry>
+						<entry colname="col4">
+							<p>Art der Befestigung</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1" align="center" valign="middle">
+							<p>61–105 cm</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>MAXI COSI Pearl 360 mit FamilyFIx 360 Basis</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>Maxi-Cosi</p>
+						</entry>
+						<entry colname="col4">
+							<p>ISOFIX mit Stützfuß</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" align="center" valign="middle">
+							<p>76–105 cm</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>TRIFIX2 i-SIZE</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>Britax Römer</p>
+						</entry>
+						<entry colname="col4">
+							<p>ISOFIX- und oberes Befestigungsband</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" align="center" valign="middle">
+							<p>100–150 cm</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>Solution T i-Fix</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>Cybex</p>
+						</entry>
+						<entry colname="col4">
+							<p>ISOFIX und Fahrzeugsicherheitsgurt</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1" align="center" valign="middle">
+							<p>135–150 cm</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>Booster Basic R129</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>Graco</p>
+						</entry>
+						<entry colname="col4">
+							<p>Fahrzeuggurt</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p><b>CRS-Herstellerinformationen</b></p>
+		<p>Maxi-Cosi: https://www.maxi-cosi.com/</p>
+		<p>Britax Römer: https://www.britax-roemer.com</p>
+		<p>Cybex: https://www.cybex-online.com</p>
+		<p>Graco: https://gracobaby.eu/en</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0235.dita#CL4m_HEV-ca_ES-2027-t0235" role="parent" scope="local" type="concept">
+				<linktext>Eignung der einzelnen Sitzplätze für Gurt- und ISOFIX-Kinderrückhaltesysteme nach UN-Vorschriften (für 4-Türer, REAR CENTER 2 POINT SEAT BELT)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

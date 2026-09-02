@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_006_07" id="t00461">
+	<title>Stopping the vehicle</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>stopping the vehicle</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="63*"/>
+				<colspec colname="col2" colnum="2" colwidth="37*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1">
+							<p>Operation</p>
+						</entry>
+						<entry colname="col2">
+							<p>Operating condition(s)</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<p importance="high">In the event of brake failure</p>
+							<ul>
+								<li>
+									<p>Make an emergency stop with the parking brake.</p>
+								</li>
+							</ul>
+						</entry>
+						<entry colname="col2">
+							<ul>
+								<li>
+									<p>The brake has failed</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<p importance="high">Power-assisted brakes</p>
+							<ul>
+								<li>
+									<p>Apply greater force to the brake pedal.</p>
+								</li>
+							</ul>
+						</entry>
+						<entry colname="col2">
+							<ul>
+								<li>
+									<p>The vehicle is stalled</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<p importance="high">Brake over accelerator</p>
+							<ul>
+								<li>
+									<p>Apply the brakes steady and firmly. Stop the vehicle safely. Shift to P (Park). Turn off the vehicle and apply the parking brake. Inspect the accelerator pedal for any interference.</p>
+								</li>
+							</ul>
+						</entry>
+						<entry colname="col2">
+							<ul>
+								<li>
+									<p>The accelerator pedal is stuck</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Power-assist brakes</title>
+			<p>Your vehicle has power-assisted brakes that adjust automatically through normal usage.</p>
+			<p>If the vehicle is not running or is turned off while driving, the power assist for the brakes may not work. You can still stop your vehicle by applying greater force to the brake pedal than typical. The stopping distance, however, will be longer than with power brakes.</p>
+			<note type="warning">
+				<p importance="high">Take the following precautions:</p>
+				<ul>
+					<li>
+						<p>Do not drive with your foot resting on the brake pedal. This will create abnormal high brake temperatures, excessive brake lining and pad wear, and increased stopping distances. So increase the regeneration braking level with the left paddle shift lever to decrease the speed.</p>
+					</li>
+					<li>
+						<p>When descending a long or steep hill, use the paddle shifter to increase the regeneration braking level in order to decrease your speed without using the brake pedal excessively. Applying the brakes continuously will cause the brakes to overheat and could result in a temporary loss of braking performance.</p>
+					</li>
+					<li>
+						<p>Wet brakes may impair the vehicle’s ability to safely decelerate. Because wet brakes increase braking distance and cause noise troubles, select level 0 of the regenerative braking system and depress the brake pedal around 10 times, with keeping the safe distance from other vehicles, lightly in order to dry the braking system. Such procedure may decrease the driving distance by restraining the regenerative braking system, which is not a system malfunction. Inspect the braking system after car wash or driving over wet road conditions.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Do not continue depressing the brake pedal if the <image align="left" href="../../images/WKIA_326.eps" scale="15" placement="inline"/> indicator is <term translate="no">OFF</term>. The battery may be discharged.</p>
+					</li>
+					<li>
+						<p>Noise and vibration generated during braking is normal.</p>
+					</li>
+					<li>
+						<p>Under normal operation, electric brake pump noise and motor vibration may occur temporarily in below cases.</p>
+						<ul>
+							<li>
+								<p>When the pedal is depressed suddenly.</p>
+							</li>
+							<li>
+								<p>When the pedal is repeatedly depressed in short intervals.</p>
+							</li>
+							<li>
+								<p>When the ABS function is activated while braking.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>Disc brakes wear indicator</title>
+			<p>When your brake pads are worn and new pads are required, you will hear a high-pitched warning sound from your front or rear brakes. You may hear this sound come and go or it may occur whenever you depress the brake pedal.</p>
+			<p>Note that some driving conditions or climates may cause a brake squeal when you first apply (or lightly apply) the brakes. This is normal and does not indicate a problem with your brakes.</p>
+			<note type="warning" id="e01890">
+				<p>Frequent braking may deform components and worn the disc brake causing vibration when braking. Observe the speed limit to prevent brake damage from excessive braking.</p>
+				<p>Brake wear, noise, vibration from excessive braking or deformation of the brakes caused by repeatedly braking in high speed, racing on tracks, etc., can be excluded from warranty coverage.</p>
+			</note>
+			<note type="note">
+				<ul id="e01891">
+					<li>
+						<p>To avoid costly brake repairs, do not continue to drive with worn brake pads.</p>
+					</li>
+					<li>Brake dust may accumulate on the wheels, even under normal driving conditions. Some dust is inevitable as the brakes wear and contribute to brake noise.</li>
+				</ul>
+			</note>
+			<note type="tip">
+				<p>Always replace brake pads as complete front or rear axle sets.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

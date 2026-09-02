@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00296">
+	<title>Lighting control</title>
+	<shortdesc>The lighting control switch has a headlight and a position lamp position.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lighting 
+					<indexterm>lighting control</indexterm>
+				</indexterm>
+				<indexterm>lighting control</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02243">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02244">
+								<figgroup>
+									<image href="../../images/OSW035459L.eps" align="center" height="1.740in" placement="break" id="e02245"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To operate the lights, rotate the knob at the end of the control lever to one of the following positions:</p>
+		<ol outputclass="callout">
+			<li>
+				<p> <term translate="no">OFF</term> position</p>
+			</li>
+			<li>
+				<p>Auto light position</p>
+			</li>
+			<li>
+				<p>Position &amp; Tail lamp</p>
+			</li>
+			<li>
+				<p>Headlight position</p>
+			</li>
+		</ol>
+		<section>
+			<title>Position &amp; Tail lamp</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02246">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02247">
+									<figgroup>
+										<image href="../../images/OSW035460L.eps" align="center" height="1.740in" placement="break" id="e02248"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When the light switch is in the position lamp (<image href="../../images/WKIA_049.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02249"/>) position, the following lights turn on:</p>
+			<ul id="e02250">
+				<li>
+					<p>Front position lamps and auxiliary lamps (if equipped)</p>
+				</li>
+				<li>
+					<p>Tail lamps</p>
+				</li>
+				<li>
+					<p>License plate lamps</p>
+				</li>
+			</ul>
+			<note type="note">
+				<p>Auxiliary lamp will be <term translate="no">ON</term> only in position lamp (<image href="../../images/WKIA_049.eps" align="left" placement="inline" outputclass="nolabel" scale="15"/>) condition.</p>
+			</note>
+		</section>
+		<section id="e02251">
+			<title>Headlight (Low Beam)</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02252">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02253">
+									<figgroup>
+										<image href="../../images/OSW035461L.eps" align="center" height="1.740in" placement="break" id="e02254"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When the light switch is in the head light (<image href="../../images/WKIA_047.eps" align="center" scale="15" placement="inline" outputclass="nolabel" id="e02255"/>) position, the following lights turn on:</p>
+			<ul id="e02256">
+				<li>
+					<p>Headlights (low beam)</p>
+				</li>
+				<li>
+					<p>Tail lamps</p>
+				</li>
+				<li>
+					<p>License plate lamps</p>
+				</li>
+			</ul>
+			<note type="note">
+				<ul id="e02257">
+					<li>
+						<p>The vehicle must be in the <term translate="no">POWER ON</term> position or the <term translate="no">DRIVE READY</term> indicator must be on to turn on the headlights.</p>
+					</li>
+					<li>
+						<p>Even when the light switch is in the <term translate="no">OFF</term> position, the headlights (low beam) automatically turn on when driving at night or in low ambient light. These headlights cannot be turned off manually.</p>
+					</li>
+					<li>
+						<p>The position and tail lamps automatically turn on regardless of the light switch position. However, they can be turned off by engaging the parking brake and turning the light switch to the <term translate="no">OFF</term> position.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>Auto light</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02258">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02259">
+									<figgroup>
+										<image href="../../images/OSW035462L.eps" align="center" height="1.740in" placement="break" id="e02260"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When the light switch is in the <term translate="no">AUTO</term> position, the headlights and taillights automatically turn on or off depending on the surrounding light conditions.</p>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Never place any objects over the sensor (1) located on the instrument panel. Doing so may affect proper operation of the auto light system.</p>
+						<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02261">
+							<tgroup cols="2" colsep="0" rowsep="1">
+								<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+								<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+								<tbody>
+									<row rowsep="1">
+										<entry colname="col1">
+											<fig id="e02262">
+												<figgroup>
+													<image href="../../images/OOV035002.eps" align="center" height="1.740in" placement="break" id="e02263"/>
+												</figgroup>
+											</fig>
+										</entry>
+										<entry colname="col2"/>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+					</li>
+					<li>
+						<p>Do not clean the sensor with a window cleaner, as it may leave a light film that could interfere with sensor performance.</p>
+					</li>
+					<li>
+						<p>If the front windshield is equipped with window tint or a metallic coating, the auto light system may not operate properly.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

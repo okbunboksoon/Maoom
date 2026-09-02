@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00643">
+	<title>Highway Driving Assist standby</title>
+	<conbody>
+		<p>If Smart Cruise Control is temporarily canceled while Highway Driving Assist is operating, Highway Driving Assist switches to standby, but Lane Following Assist continues to operate.</p>
+		<note type="tip" id="e03970">
+			<ul id="e03971">
+				<li>
+					<p>After a stop caused by Emergency Stop, if Emergency Stop is canceled, Highway Driving Assist must be restarted to operate again.</p>
+				</li>
+				<li>
+					<p>If an interior camera is equipped, Highway Driving Assist operation may be restricted when the driver’s status cannot be detected.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00638.dita#t00638" role="parent" scope="local" type="concept">
+				<linktext>Highway Driving Assist</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

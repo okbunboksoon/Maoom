@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00761">
+	<title>Using the Tire Mobility Kit</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tire mobility kit
+					<indexterm>using the tire mobility kit</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<note type="caution" id="e04654">
+			<p>Detach the speed restriction label from the sealant bottle, and place it in a highly visible place inside the vehicle such as on the steering wheel to remind the driver not to drive too fast.</p>
+		</note>
+		<ol id="e04655">
+			<li>
+				<p>Shake the sealant bottle.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04656">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e04657">
+										<image href="images/N_SP327_C11_009.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Connect the compressor connector to the compressor hose connector, located on the sealant bottle (1). Make sure the sealant bottle is sitting upright.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04658">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e04659">
+										<image href="images/N_SP327_C11_010_1.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Make sure the compressor connector valve on the filling hose is locked.</p>
+			</li>
+			<li>
+				<p>Unscrew the tire valve cap and screw the sealant injection valve onto the tire valve.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04660">
+					<tgroup cols="2" colsep="0" rowsep="1">
+						<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+						<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e04661">
+										<figgroup>
+											<image align="center" href="images/N_SP327_C11_011.jpg" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Make sure the compressor is switched off.</p>
+				<note type="note" id="e04662">
+					<p>Make sure the tire inflation pressure adjustment valve is closed.</p>
+				</note>
+			</li>
+			<li>
+				<p>Connect between compressor and the vehicle power outlet using the cable and connectors.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04663">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e04664">
+										<image href="images/N_SP327_C08_032_1.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Start the vehicle.</p>
+			</li>
+			<li>
+				<p>Switch on the compressor and let it run for approximately 5–7 minutes to fill the sealant up to proper pressure. The inflation pressure of the tire after filling is unimportant and will be checked/corrected later.</p>
+				<p>Be careful not to overinflate the tire and stay away from the tire when filling it. When the tire and wheel are damaged, do not use Tire Mobility Kit for your safety.</p>
+			</li>
+			<li>
+				<p>Switch off the compressor.</p>
+			</li>
+			<li>
+				<p>Detach the sealant filling hoses from the sealant bottle connector and from the tire valve. After using, leave the sealant bottle and the compressor attached together.</p>
+			</li>
+			<li>
+				<p>Return the TMK to its storage location in the vehicle.</p>
+			</li>
+		</ol>
+		<note type="warning" id="e04665">
+			<ul id="e04666">
+				<li>
+					<p>If the tire pressure is below <?oxy_comment_start author="june" timestamp="20250825T155118+0900" comment="미국 단위 치환"?> 29 psi (200 kPa) <?oxy_comment_end?>, do not drive the vehicle. It may cause accident.</p>
+				</li>
+				<li>
+					<p>Do not leave your vehicle running in a poorly ventilated area for extended periods of time. Carbon monoxide poisoning and suffocation can occur.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution" id="e04667">
+			<p>Securely install the sealant filling hose on the valve. If not, sealant may flow backward, possibly clogging the filling hose.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00759.dita#t00759" role="parent" scope="local" type="concept">
+				<linktext>If you have a flat tire (with Tire Mobility Kit)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

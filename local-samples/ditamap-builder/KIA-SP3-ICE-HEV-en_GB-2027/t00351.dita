@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00351">
+	<title>Air ventilation seat</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features
+					<indexterm>air ventilation seat</indexterm>
+				</indexterm>
+				<indexterm>air ventilation seat</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02225">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02226">
+								<title>Front seat (Driver’s side)</title>
+								<image href="images/N_SP327_C08_027_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e02227">
+								<title>Front seat (Passenger’s side)</title>
+								<image href="images/N_SP327_C08_028_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The temperature setting of the seat changes according to the buttons' indicator.</p>
+		<p>To ventilate your seat cushion, push the buttons.</p>
+		<p>Each time you push the buttons, the airflow changes as follows:</p>
+		<p><menucascade><uicontrol>OFF</uicontrol><uicontrol>High</uicontrol><uicontrol>Medium</uicontrol><uicontrol>Low</uicontrol><uicontrol>OFF</uicontrol></menucascade></p>
+		<p>The seat warmer (with air ventilation) defaults to off whenever the vehicle is in <term translate="no">ON</term> position.</p>
+		<note type="note" id="e02228">
+			<p>Seat damage</p>
+			<ul id="e02229">
+				<li>
+					<p>When cleaning the seats, do not use an organic solvent such as paint thinner, benzene, alcohol, or gasoline. It may damage the air ventilation seat.</p>
+				</li>
+				<li>
+					<p>Do not place heavy or sharp objects on the seat. Those things may damage the air ventilation seat.</p>
+				</li>
+				<li>
+					<p>Be careful not to spill liquid, such as water or beverages, on the seat. If you spill some liquid, wipe the seat with a dry towel completely before using the air ventilation seat.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00347.dita#t00347" role="parent" scope="local" type="concept">
+				<linktext>Interior features</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

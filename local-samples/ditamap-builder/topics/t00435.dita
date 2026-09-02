@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00435">
+	<title>Active Air Flap (AAF)</title>
+	<shortdesc>Active Air Flap (AAF) controls the air flap below the front bumper to cool vehicle parts and improve energy economy.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>active air flap (AAF)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03241">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e03242">
+								<figgroup>
+									<image align="center" placement="break" height="1.575in" width="2.244in" href="../../images/OOV045016.eps" id="e03243"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e03244">
+			<title>Active Air Flap malfunction</title>
+			<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03245">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e03246">
+									<figgroup>
+										<image align="center" placement="break" height="1.575in" width="2.244in" href="../../images/OOV055206L.eps" id="e03247"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e03248">
+									<li>
+										<p> <uicontrol>Check Active Air Flap system</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The active air flap system may not operate normally if the air flap is temporarily opened due to foreign factors or if the controller is contaminated by snow or rain, etc.</p>
+			<p>When the message appears from the instrument cluster, stop the vehicle in a safe place and check the status of the air flap.</p>
+			<p>Start the vehicle after performing the necessary work like foreign matter removal and wait for approximately 10 minutes. If the message remains, have the vehicle inspected by a professional workshop. Kia recommends that you visit an authorized Kia dealer/service partner.</p>
+			<note type="caution" id="e03249">
+				<ul id="e03250">
+					<li>
+						<p>Even if the warning message is not displayed, if the air flaps are visually asymmetrical (vehicles with exposed flap applied), turn off the vehicle and restart after about 10 minutes to inspect the air flap.</p>
+					</li>
+					<li>
+						<p>The active air flap system is actuated by motors. Do not disturb actuation or apply force excessively. It may cause failure.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e03251">
+				<p>Active air flap system could be activated regardless of the vehicle condition.(Parking, driving, charging, etc.)</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

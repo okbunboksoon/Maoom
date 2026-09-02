@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0576">
+	<title>Vermindern der eingestellten Geschwindigkeit</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054014N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Drücken Sie die Schaltwippe (-) nach unten und lassen Sie sie sofort los. Die eingestellte Geschwindigkeit verringert sich in Schritten von 1 km/h. Um die eingestellte Geschwindigkeit schnell zu verringern, halten Sie den (-)-Schalter gedrückt. Die eingestellte Geschwindigkeit verringert sich in Schritten zu 10 km/h. Wenn die Geschwindigkeitseinheit im Kombiinstrument auf „mph“ eingestellt ist, verringert sie sich in Schritten zu 5.</p>
+			</li>
+			<li>
+				<p>Sie können eine Mindestgeschwindigkeit von 30 km/h (20 mph) einstellen.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0573.dita#CL4m_HEV-ca_ES-2027-t0573" role="parent" scope="local" type="concept">
+				<linktext>Bedienung der Tempomatsteuerung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

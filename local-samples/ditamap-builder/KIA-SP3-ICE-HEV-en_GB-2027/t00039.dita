@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00039">
+	<title id="e00192">Battery replacement </title>
+	<shortdesc>The smart key uses a 3V lithium battery, which normally lasts for several years.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>keys
+					<indexterm>battery replacement</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00193">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1"/>
+							<entry colname="col2"/>
+						</row>
+						<row>
+							<entry colname="col1">
+								<fig id="e00194">
+									<title>Smart key</title>
+									<image href="images/N_CT25C003.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e00195">
+									<title>Remote key</title>
+									<image href="images/N_SP3i26_B04_040_IR.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>If you are unsure how to use or replace the battery, Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			<p>To replace the smart key battery:</p>
+		</context>
+		<steps id="e00196">
+			<step id="e00197">
+				<cmd>Gently pry open the key battery cover using a thin tool.</cmd>
+			</step>
+			<step id="e00198">
+				<cmd>Replace the old battery with a new battery (remote key: CR2032, smart key: CR2450). When replacing the battery, make sure to align the battery poles properly.</cmd>
+				<info>
+					<p>If the battery is installed with incorrect polarity, it will discharge, rendering the key unusable.</p>
+				</info>
+			</step>
+			<step id="e00199">
+				<cmd>Install the battery in the reverse order of removal.</cmd>
+				<info>
+					<p>To replace your smart key, Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					<p>The smart key will give you years of trouble-free use. However, it can malfunction if exposed to moisture or static electricity. If you are unsure how to replace the battery, Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					<note type="caution" id="e00200">
+						<p>Using the wrong battery can cause the smart key to malfunction. Be sure to use the correct battery.</p>
+						<p>
+							<fig id="e00201">
+								<image href="images/WKIA_120.jpg" scale="15" align="left" placement="inline"/>
+							</fig>
+						</p>
+						<p>Inappropriate disposal of the battery can be harmful to the environment and human health. Dispose of the battery according to your local laws or regulations.</p>
+					</note>
+					<note type="warning">
+						<p>THIS PRODUCT CONTAINS A BUTTON BATTERY</p>
+						<p>If swallowed, a lithium button battery can cause severe or fatal injuries within 2 hours.</p>
+						<p>Keep batteries out of reach of children.</p>
+						<p>If you think a battery may have been swallowed or placed inside any part of the body, seek medical attention immediately.</p>
+					</note>
+					<note type="note">
+						<p>Smart key damage</p>
+						<p>The smart key can malfunction if dropped or exposed to moisture, static electricity, heat, or direct sunlight.</p>
+					</note>
+				</info>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00034.dita#t00034" role="parent" scope="local" type="concept">
+				<linktext>Keys </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

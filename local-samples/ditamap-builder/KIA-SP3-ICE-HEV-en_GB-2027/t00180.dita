@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00180">
+	<title>Battery saver function</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lighting
+					<indexterm>battery saver function</indexterm>
+				</indexterm>
+				<indexterm>battery saver function</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The purpose of this feature is to prevent the 12V battery from discharging if the lights are left on. The function automatically shuts off the position lamps once the engine is off and the driver’s door is opened.</p>
+		<p>The position lamps, however, will stay on if you operate the light switch after turning the vehicle off, even when the driver’s door is open.</p>
+		<p>To keep the lights on after turning off the vehicle, turn the position lamps off and on again using the headlamp switch on the steering column.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00179.dita#t00179" role="parent" scope="local" type="concept">
+				<linktext>Lighting</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

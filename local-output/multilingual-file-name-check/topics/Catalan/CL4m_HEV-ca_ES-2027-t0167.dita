@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0167">
+	<title id="e00482">Scheibenwischer und Waschanlage </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Scheibenwischer und Waschanlage</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Typ A</title>
+								<figgroup>
+									<image align="center" href="../../images/ONQ5035060L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00483">
+								<title>Typ B</title>
+								<figgroup>
+									<image align="center" href="../../images/ONQ5035059L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e00484">
+								<title>Typ C</title>
+								<figgroup>
+									<image align="center" href="../../images/ONQ5035059R.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Betrieb</title>
+			<ol outputclass="callout">
+				<li>
+					<p>Wischergeschwindigkeitssteuerung (vorn)</p>
+					<ul>
+						<li>
+							<p><term translate="no">MIST</term> /1x: Einzelner Wischvorgang</p>
+						</li>
+						<li>
+							<p><term translate="no">OFF</term> /O: Aus</p>
+						</li>
+						<li>
+							<p><term translate="no">AUTO</term>: Automatische Wischersteuerung</p>
+						</li>
+						<li>
+							<p><term translate="no">LO</term> /1: Langsame Wischergeschwindigkeit</p>
+						</li>
+						<li>
+							<p><term translate="no">HI</term> /2: Schnelle Wischergeschwindigkeit</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Waschen mit kurzen Wischvorgängen</p>
+				</li>
+				<li>
+					<p>Geschwindigkeitssteuerung hinterer Scheibenwischer</p>
+					<ul>
+						<li>
+							<p><term translate="no">HI</term> /2: Dauerbetrieb</p>
+						</li>
+						<li>
+							<p><term translate="no">LO</term> /1: Intervallbetrieb</p>
+						</li>
+						<li>
+							<p><term translate="no">OFF</term> /O: Aus</p>
+						</li>
+					</ul>
+				</li>
+			</ol>
+			<p importance="default">: ausstattungsabhängig</p>
+			<note type="note" id="e00485">
+				<p>Wenn die Windschutzscheibe stark vereist oder mit Schnee bedeckt ist, enteisen Sie die Windschutzscheibe erst ca. 10 Minuten lang oder solange, bis der Schnee und/oder das Eis abgetaut ist, bevor Sie die Scheibenwischer benutzen. Wenn Sie Schnee und/oder Eis nicht beseitigen, bevor Sie die Scheibenwischer/-waschanlage benutzen, drohen Schäden an der Anlage.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0104-CH06.dita#CL4m_HEV-ca_ES-2027-t0104-CH06" role="parent" scope="local" type="concept">
+				<linktext>Fahrereinstellungen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

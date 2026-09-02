@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0041">
+	<title>Wegfahrsperre</title>
+	<conbody>
+		<p>Zum Schutz vor Diebstahl ist Ihr Fahrzeug u. U. mit einer elektronischen Wegfahrsperre ausgerüstet.</p>
+		<p>Ihr Wegfahrsperrensystem besteht aus einem kleinen Transponder im Zündschlüssel und elektronischen Komponenten im Fahrzeug.</p>
+		<section>
+			<title>Fahrzeuge ohne Smart-Key-System</title>
+			<p>Die Wegfahrsperre prüft immer, wenn Sie den Zündschlüssel in den Zündschalter einführen und in Stellung <term translate="no">ON</term> drehen, ob der Zündschlüssel ein gültiger Zündschlüssel ist.</p>
+			<p>Wenn der Zündschlüssel in Ordnung ist, wird der Motor gestartet.</p>
+			<p>Wenn der Schlüssel nicht gültig ist, kann der Motor nicht angelassen werden.</p>
+			<sectiondiv><ph>Wegfahrsperre deaktivieren:</ph>
+				<p>Führen Sie den Zündschlüssel in das Zündschloss ein und drehen Sie ihn in die Position <term translate="no">ON</term>.</p>
+			</sectiondiv>
+			<sectiondiv><ph>Wegfahrsperre aktivieren:</ph>
+				<p>Drehen Sie den Zündschlüssel in die Stellung <term translate="no">OFF</term>. Die Wegfahrsperre aktiviert sich automatisch. Ohne gültigen Zündschlüssel kann der Motor nun nicht mehr angelassen werden.</p>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Fahrzeuge mit Smart-Key-System</title>
+			<p>Immer wenn die <term translate="no">ENGINE START/STOP</term>-Taste in die Position <term translate="no">ON</term> gebracht wird, prüft die Wegfahrsperre, ob der Zündschlüssel der korrekte Zündschlüssel ist.</p>
+			<p>Wenn der Zündschlüssel in Ordnung ist, wird der Motor gestartet.</p>
+			<p>Wenn der Schlüssel nicht gültig ist, kann der Motor nicht angelassen werden.</p>
+			<sectiondiv><ph>Wegfahrsperre deaktivieren</ph>
+				<p>Stellen Sie die Taste <term translate="no">ENGINE START/STOP</term> auf die Position <term translate="no">ON</term>.</p>
+			</sectiondiv>
+			<sectiondiv><ph>Wegfahrsperre aktivieren</ph>
+				<p>Stellen Sie die Taste <term translate="no">ENGINE START/STOP</term> auf die Position <term translate="no">OFF</term>. Die Wegfahrsperre aktiviert sich automatisch. Ohne gültigen Smart-Key kann der Motor nicht mehr angelassen werden.</p>
+			</sectiondiv>
+			<note type="warning">
+				<p>Um zu verhindern, dass Ihr Fahrzeug gestohlen wird, lassen Sie keine Ersatzschlüssel irgendwo in Ihrem Fahrzeug zurück. Ihr Wegfahrsperren-Passcode ist ein kundenbezogener individueller Passcode, der geheim gehalten werden sollte. Lassen Sie diesen Code nicht irgendwo in Ihrem Fahrzeug zurück.</p>
+			</note>
+			<note type="note">
+				<p>Beim Starten des Motors dürfen sich keine anderen Fahrzeugschlüssel mit Transponder im Bereich des Zündschlosses befinden. Andernfalls könnte es sein, dass der Motor nicht angelassen werden kann oder kurz nach dem Anspringen wieder stehen bleibt. Halten Sie die Schlüssel getrennt, um ein Startproblem zu vermeiden.</p>
+			</note>
+			<note type="caution">
+				<p>Bringen Sie keine Zubehörteile aus Metall in der Nähe des Zündschalters an. Zubehörteile aus Metall können die Sendersignale unterbrechen und verhindern, dass der Motor gestartet werden kann.</p>
+			</note>
+			<note type="note">
+				<p>Wenn Sie zusätzliche Schlüssel benötigen oder Ihre Schlüssel verloren haben, sollten Sie sich an einen Kia-Händler oder Servicepartner wenden.</p>
+			</note>
+			<note type="caution">
+				<p>Der Transponder in Ihrem Zündschlüssel ist eine wichtige Komponente des Wegfahrsperrensystems.</p>
+				<p>Er ist so konzipiert, dass er für Jahre wartungsfrei arbeitet. Vermeiden Sie es jedoch, dass er Feuchtigkeit, elektrostatischer Aufladung und grober Behandlung ausgesetzt wird. Dies könnte zu einer Störung der Wegfahrsperre führen.</p>
+			</note>
+			<note type="caution" otherprops="legal_eu_std_018_02">
+				<ul>
+					<li>
+						<p>Ändern oder passen Sie die Wegfahrsperre nicht an, da dies die Wegfahrsperre beschädigen könnte. Lassen Sie die Anlage in diesem Fall von einer Fachwerkstatt warten. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+					</li>
+					<li>
+						<p>Fehlfunktionen der Wegfahrsperre, die durch unsachgemäße Arbeiten, Änderungen und Einstellungen verursacht werden, unterliegen nicht der Garantie des Fahrzeugherstellers.</p>
+					</li>
+					<li>
+						<p>Versuchen Sie nicht, die Anlage zu modifizieren oder zu erweitern. Elektrische Probleme können zur Folge haben, dass Ihr Fahrzeug nicht mehr funktioniert.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0033-CH05.dita#CL4m_HEV-ca_ES-2027-t0033-CH05" role="parent" scope="local" type="concept">
+				<linktext>Öffnen und Schließen </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

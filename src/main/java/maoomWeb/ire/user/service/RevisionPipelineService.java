@@ -52,6 +52,8 @@ public class RevisionPipelineService {
     private static final String SHARED_BAT_ROOT = "bat";
     private static final String SHARED_XSL_ROOT = "xsl";
     private static final String SHARED_LIB_ROOT = "lib";
+    private static final String SHARED_DTD_ROOT = "dtd";
+    private static final String SHARED_SCH_ROOT = "sch";
 
     // 이 목록의 순서가 화면 표시 순서이자 실제 XSL 실행 순서다.
     private static final List<RevisionStep> STEPS = List.of(
@@ -113,21 +115,24 @@ public class RevisionPipelineService {
 
     private final Path toolDirectory;
     private final ReplaceDarkSymbolService replaceDarkSymbolService;
+    private final ProjectTextNoteDbXmlService projectTextNoteDbXmlService;
 
     /**
      * 클래스패스의 revision-tool을 실행 가능한 로컬 경로로 준비한다.
      * IDE 실행은 원본 폴더를 쓰고, JAR 실행은 임시 폴더에 리소스를 풀어 사용한다.
      */
     public RevisionPipelineService() {
-        this(null);
+        this(null, null);
     }
 
     @Autowired
     public RevisionPipelineService(
-            ReplaceDarkSymbolService replaceDarkSymbolService) {
+            ReplaceDarkSymbolService replaceDarkSymbolService,
+            ProjectTextNoteDbXmlService projectTextNoteDbXmlService) {
         try {
             this.toolDirectory = prepareToolDirectory();
             this.replaceDarkSymbolService = replaceDarkSymbolService;
+            this.projectTextNoteDbXmlService = projectTextNoteDbXmlService;
         } catch (IOException exception) {
             throw new IllegalStateException(
                     "정제 도구 리소스를 준비하지 못했습니다.", exception);
@@ -167,11 +172,17 @@ public class RevisionPipelineService {
             copySharedResourceDirectory(SHARED_BAT_ROOT, workspace, false);
             copySharedResourceDirectory(SHARED_LIB_ROOT, workspace.resolve("lib"));
             copySharedXslDirectory(workspace.resolve("xsl"));
+            copySharedResourceDirectory(SHARED_DTD_ROOT, workspace.resolve("dtd"));
+            copySharedResourceDirectory(SHARED_SCH_ROOT, workspace.resolve("sch"));
+            // 금칙어/문장 QC 배치가 참조하는 Ant 빌드 파일도 실행 폴더에 함께 둔다.
+            copySharedResourceFile("build_qc_lint.xml", workspace.resolve("build_qc_lint.xml"));
             /*
              * 01c_image_attr.xsl은 replace_dark_symbol.xml을 document()로 읽는다.
              * 공유 xsl 복사본보다 관리자 DB 최신 값이 우선해야 하므로 실행 직전에 덮어쓴다.
              */
             writeReplaceDarkSymbolXmlFromDatabase(workspace.resolve("xsl"));
+            // TEXT/NOTE DB는 관리자 화면에서 바뀔 수 있으므로 매 실행마다 최신 XML로 덮어쓴다.
+            writeProjectTextNoteDbXmlFromDatabase(workspace.resolve("xsl"));
             Files.createDirectories(workspace.resolve("temp"));
             Files.createDirectories(workspace.resolve("topics"));
             Files.createDirectories(workspace.resolve("chapter"));
@@ -186,7 +197,7 @@ public class RevisionPipelineService {
             List<String> completed = new ArrayList<>();
             for (String batchFile : batchPlan.batchFiles()) {
                 logs.add("배치 실행: " + batchFile);
-                runBatch(workspace, batchFile, selectedOptions, logs);
+                runBatch(workspace, batchFile, inputType, outputType, selectedOptions, logs);
                 completed.add(batchFile);
             }
             validateBatchOutput(workspace, outputType, batchPlan);
@@ -208,6 +219,17 @@ public class RevisionPipelineService {
             copyIfExists(
                     workspace.resolve("temp/table_report.xml"),
                     runOutput.resolve("table_report.xml"));
+            // 사용자가 바로 열어볼 수 있도록 임시 리포트명을 화면 표시용 한글 파일명으로 복사한다.
+            copyIfExists(
+                    workspace.resolve("temp/transform_report_excel.xlsx"),
+                    runOutput.resolve("결과_리포트.xlsx"),
+                    logs);
+            copyIfExists(
+                    workspace.resolve("temp/Forbidden_Report.html"),
+                    runOutput.resolve("금칙어_리포트.html"));
+            copyIfExists(
+                    workspace.resolve("temp/QC_LINT_Report.html"),
+                    runOutput.resolve("문장_검사_리포트.html"));
 
             logs.add("완료: " + runOutput);
             writeLog(runOutput, logs);
@@ -501,6 +523,8 @@ public class RevisionPipelineService {
     private void runBatch(
             Path workspace,
             String batchFileName,
+            RevisionFormat inputType,
+            RevisionFormat outputType,
             Set<String> selectedOptions,
             List<String> logs) throws IOException, InterruptedException {
 
@@ -514,7 +538,7 @@ public class RevisionPipelineService {
         command.add("cmd.exe");
         command.add("/c");
         command.add(batchFile.getFileName().toString());
-        appendBatchArguments(batchFileName, selectedOptions, command, logs);
+        appendBatchArguments(batchFileName, inputType, outputType, selectedOptions, command, logs);
 
         Process process = new ProcessBuilder(command)
                 .directory(workspace.toFile())
@@ -544,6 +568,8 @@ public class RevisionPipelineService {
 
     private void appendBatchArguments(
             String batchFileName,
+            RevisionFormat inputType,
+            RevisionFormat outputType,
             Set<String> selectedOptions,
             List<String> command,
             List<String> logs) {
@@ -552,20 +578,56 @@ public class RevisionPipelineService {
             return;
         }
 
-        if (selectedOptions.contains(RevisionPipelineCatalog.FILE_NAME_KEEP)) {
+        // 옵션을 BAT 인자로 넘겨 XML/DITA 방향과 선택 기능을 배치 내부 XSL 분기에 전달한다.
+        command.add("INPUT_TYPE=" + inputType.value());
+        command.add("OUTPUT_TYPE=" + outputType.value());
+        if (selectedOptions.contains(RevisionPipelineCatalog.TITLE_FILE_NAME_PREFIX)) {
+            command.add("TITLE_FILE_NAME_PREFIX=Y");
+            logs.add("옵션 추가: 파일명 변경(차종-연료타입-언어코드-연식-t00000 형식)");
+        } else if (selectedOptions.contains(RevisionPipelineCatalog.FILE_NAME_KEEP)) {
             command.add("FILE_NAME_CHANGE=Y");
             logs.add("옵션 추가: 파일명 변경");
         }
-        if (selectedOptions.contains(
-                RevisionPipelineCatalog.REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET)) {
-            command.add("REMOVE_SIMPLE=Y");
-            logs.add("옵션 추가: 속성 및 세션 지우기");
+        boolean legacySimpleDeliveryOption = selectedOptions.contains(
+                RevisionPipelineCatalog.REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET);
+        // 기존 통합 옵션 요청도 분리된 두 옵션과 같은 배치 인자로 처리해 하위 호환성을 유지한다.
+        if (legacySimpleDeliveryOption
+                || selectedOptions.contains(RevisionPipelineCatalog.REMOVE_DELIVERY_TARGET)) {
+            command.add("REMOVE_DELIVERY_TARGET=Y");
+            logs.add("옵션 추가: deliveryTarget 지우기");
+        }
+        if (legacySimpleDeliveryOption
+                || selectedOptions.contains(RevisionPipelineCatalog.REMOVE_SIMPLE_OPERATION)) {
+            command.add("REMOVE_SIMPLE_OPERATION=Y");
+            logs.add("옵션 추가: Simple operation 지우기");
         }
         if (selectedOptions.contains(
                 RevisionPipelineCatalog.DELETE_DRAFT_COMMENT)) {
             command.add("DELETE_DRAFT=Y");
             logs.add("옵션 추가: Draft Comment, review, hash, modified 지우기");
         }
+        if (selectedOptions.contains(RevisionPipelineCatalog.NOTE_DB_APPLY)) {
+            command.add("NOTE_DB_APPLY=Y");
+            logs.add("옵션 추가: NOTE TYPE 수정");
+        }
+        if (selectedOptions.contains(RevisionPipelineCatalog.TEXT_DB_APPLY)) {
+            command.add("TEXT_DB_APPLY=Y");
+            logs.add("옵션 추가: TEXT 수정");
+        }
+        if (selectedOptions.contains(RevisionPipelineCatalog.FORBIDDEN_QC_REPORT)) {
+            command.add("FORBIDDEN_QC_REPORT=Y");
+            logs.add("옵션 추가: 금칙어 QC 리포트");
+        }
+    }
+
+    private void writeProjectTextNoteDbXmlFromDatabase(Path xslDirectory)
+            throws IOException {
+
+        if(projectTextNoteDbXmlService == null){
+            return;
+        }
+
+        projectTextNoteDbXmlService.writeXmlFiles(xslDirectory);
     }
 
     private void replaceDirectory(Path source, Path target)
@@ -886,6 +948,22 @@ public class RevisionPipelineService {
         copySharedResourceDirectory(resourceRoot, target, true);
     }
 
+    private void copySharedResourceFile(String resourcePath, Path target)
+            throws IOException {
+        ClassPathResource resource = new ClassPathResource(resourcePath);
+        if (!resource.isReadable()) {
+            return;
+        }
+
+        Files.createDirectories(target.getParent());
+        try (var input = resource.getInputStream()) {
+            Files.copy(
+                    input,
+                    target,
+                    StandardCopyOption.REPLACE_EXISTING);
+        }
+    }
+
     private void copySharedResourceDirectory(
             String resourceRoot,
             Path target,
@@ -974,6 +1052,19 @@ public class RevisionPipelineService {
                     source,
                     target,
                     StandardCopyOption.REPLACE_EXISTING);
+        }
+    }
+
+    private void copyIfExists(Path source, Path target, List<String> logs)
+            throws IOException {
+        if (Files.isRegularFile(source)) {
+            Files.copy(
+                    source,
+                    target,
+                    StandardCopyOption.REPLACE_EXISTING);
+            logs.add("리포트 복사: " + source.getFileName() + " -> " + target.getFileName());
+        } else {
+            logs.add("리포트 파일 없음: " + source);
         }
     }
 

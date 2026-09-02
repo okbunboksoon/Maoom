@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00488">
+	<title>Warning and control</title>
+	<conbody>
+		<p>The Lane Keeping Assist function has the following warnings and controls:</p>
+		<ul>
+			<li>
+				<p>Lane Departure Warning</p>
+			</li>
+			<li>
+				<p>Lane Keeping Assist</p>
+			</li>
+		</ul>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03323">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03324">
+								<title>Lane Departure Warning (left)</title>
+								<image href="images/N_SP3i25_C00_019_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e03325">
+								<title>Lane Departure Warning (right)</title>
+								<image href="images/N_SP3i25_C00_020_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00486.dita#t00486" role="parent" scope="local" type="concept">
+				<linktext>Lane Keeping Assist operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

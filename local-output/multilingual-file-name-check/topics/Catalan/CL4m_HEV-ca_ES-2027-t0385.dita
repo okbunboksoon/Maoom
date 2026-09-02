@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0385">
+	<title>Auto Hold-Funktion abbrechen</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M045012L_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Um den automatischen Haltebetrieb zu stornieren, drücken Sie den Auto Hold-Schalter. Die Anzeige <term translate="no">AUTO HOLD</term> erlischt.</p>
+			</li>
+			<li>
+				<p>Um die Auto Hold-Funktion bei stehendem Fahrzeug zu deaktivieren, drücken Sie den Auto Hold-Schalter, während Sie das Bremspedal betätigen.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Das Folgende sind Bedingungen, in denen die Auto Hold-Funktion nicht eingreift (die Auto Hold-Leuchte wechselt nicht zu Grün und das Auto Hold-System bleibt betriebsbereit):</p>
+					<ul>
+						<li>
+							<p>Die Fahrertür wird geöffnet</p>
+						</li>
+						<li>
+							<p>Die Motorhaube wird geöffnet</p>
+						</li>
+						<li>
+							<p>Wenn sich der Wählhebel in der Parkstufe P oder der Rückwärtsgang R befindet.</p>
+						</li>
+						<li>
+							<p>Die <term translate="no">EPB</term> ist aktiviert</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Zu Ihrer Sicherheit schaltet Auto Hold in den folgenden Bedingungen automatisch auf <term translate="no">EPB</term> (Auto Hold-Leuchte bleibt Weiß und die <term translate="no">EPB</term> wird automatisch betätigt):</p>
+					<ul>
+						<li>
+							<p>Wenn die Fahrertür offen ist.</p>
+						</li>
+						<li>
+							<p>Die Motorhaube wird geöffnet.</p>
+						</li>
+						<li>
+							<p>Das Fahrzeug steht länger als 10 Minuten.</p>
+						</li>
+						<li>
+							<p>Das Fahrzeug steht auf einem steilen Hang.</p>
+						</li>
+						<li>
+							<p>Das Fahrzeug hat sich einige Sekunden lang bewegt.</p>
+							<p>In diesen Fällen leuchtet die Warnleuchte für die Bremse, die <term translate="no">AUTO HOLD</term>-Kontrollleuchte leuchtet statt grün weiß und es ertönt ein Warnsignal; außerdem erscheint eine Warnmeldung, dass die <term translate="no">EPB</term> automatisch aktiviert wurde. Betätigen Sie vor dem Weiterfahren das Bremspedal, überprüfen Sie, ob der Bereich um das Fahrzeug frei ist und lösen Sie die Feststellbremse manuell mit dem <term translate="no">EPB</term>-Schalter.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Wenn die <term translate="no">AUTO HOLD</term>-Kontrollleuchte gelb blinkt, funktioniert die Auto Hold-Funktion nicht einwandfrei. Lassen Sie die Anlage von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning">
+			<p>Um die Unfallgefahr zu vermindern, aktivieren Sie Auto Hold nicht bei der Bergabfahrt, beim Zurücksetzen und beim Einparken Ihres Fahrzeugs.</p>
+		</note>
+		<p>Bei einer Fehlfunktion der Fahrertür, der Motorhaube oder der Heckklappen-Öffnungserkennung funktioniert die Auto Hold-Funktion nicht einwandfrei.</p>
+		<p>Lassen Sie die Anlage von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<note type="note">
+			<p>Bei Aktivierung oder Deaktivierung der <term translate="no">EPB</term>, ist ein leichtes Klicken oder Motorgeräusch zu hören. Diese Bedingungen sind aber normal und zeigen nur an, dass die <term translate="no">EPB</term> einwandfrei funktioniert.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0383.dita#CL4m_HEV-ca_ES-2027-t0383" role="parent" scope="local" type="concept">
+				<linktext>AUTO HOLD</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_gen_std_008_01" base="Top" importance="optional" id="t00839">
+	<title id="e02691">UAE eCall system</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>UAE eCall system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02692">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e02693">
+								<figgroup>
+									<image href="../../images/N_CT25F001_4_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02694">
+								<li>
+									<p>Road accident</p>
+								</li>
+								<li>
+									<p>Wireless network</p>
+								</li>
+								<li>
+									<p>Public Safety Answering Point (PSAP)</p>
+								</li>
+								<li>
+									<p>Rescue</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The vehicle is equipped with a device <fn><p>UAE eCall device in the Owner’s Manual means equipment, installed in the vehicle, which provides connection with the UAE eCall system.</p></fn> connected with the UAE eCall system for making emergency call to response teams. The UAE eCall system is an automatic emergency call service made in event of a traffic accident or other <fn><p>“Other accidents” mean any accidents on the roads of the Middle East (only in countries with regulation on this system) resulted in injured people and/or necessity of provision of assistance. In case of registration of any accident, it is necessary to stop a vehicle, press button <term translate="no">SOS</term> (location of the button is specified on the picture in <xref type="concept" href="t00845.dita#t00845">UAE eCall system</xref>. When making a call, the system gathers information about the vehicle (from which a call was made), after which connects the vehicle with an officer of the Public Safety Answering Point (PSAP) to tell about the reason of the emergency call.</p></fn> accidents on the roads of Middle East. (only in countries with regulation on this system)</p>
+		<p>The system allows contacting with an officer of the single duty dispatch service in case of accidents on the roads of the Middle East. (only in countries with regulation on this system)</p>
+		<p>The UAE eCall system given conditions, stated in the Owner’s Manual as well as Warranty and Service book transmits data to the Public Safety Answering Point (PSAP) including such information as vehicle location, vehicle type, VIN (vehicle identification number of the vehicle).</p>
+		<p>Once the data which is stored in the UAE eCall system is delivered to the rescue center to assist the driver and passengers with proper rescue operations, the data will be deleted after rescue operation is completed.</p>
+	</conbody>
+</concept>

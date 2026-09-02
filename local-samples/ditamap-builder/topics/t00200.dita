@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00200">
+	<title>Limitations of the system</title>
+	<conbody>
+		<ul id="e01519">
+			<li>
+				<p>Fingerprint authentication system may not work when:</p>
+			</li>
+			<li>
+				<ul id="e01520">
+					<li>
+						<p>Trying to authorize with unregistered fingerprint.</p>
+					</li>
+					<li>
+						<p>Not touching the center of fingerprint authentication sensor.</p>
+					</li>
+					<li>
+						<p>Any water or substances is on your finger or the sensor.</p>
+					</li>
+					<li>
+						<p>The film on the sensor is not removed.</p>
+					</li>
+					<li>
+						<p>The registered fingerprint is damaged or swollen.</p>
+					</li>
+					<li>
+						<p>The hand is overly dry.</p>
+					</li>
+					<li>
+						<p>The sensor is touched shortly.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>If fingerprint authentication fails over 5 consecutive times, fingerprint enrollment and deletion may be temporarily restricted. You should try it later or try other methods such as inputting your password.</p>
+			</li>
+			<li>
+				<p>When you visit an authorized Kia dealer or service partner to repair parts due to fingerprint authorization system or related part failure, your registered fingerprint might be deleted. Have your smart key with you when you visit an authorized Kia dealer or service partner.</p>
+			</li>
+			<li>
+				<p>You cannot use the fingerprint sensor when the vehicle is discharged.</p>
+			</li>
+			<li>
+				<p>If you turn the vehicle on or off while proceeding the fingerprint authorization, the process will not be complete.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e01521">
+			<p>Do not enroll children’s fingerprints in the vehicle.If you enroll children’s fingerprints and leave them in the vehicle, unexpected accidents may occur.</p>
+		</note>
+	</conbody>
+</concept>

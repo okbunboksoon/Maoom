@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Top" id="CL4m_HEV-ca_ES-2027-t0807">
+	<title>Wartung unter schweren Einsatzbedingungen – für Europa (außer Russland)</title>
+	<conbody>
+		<table frame="all" rowsep="1" colsep="1" pgwide="1" outputclass="formatc">
+			<desc>
+				<p><term translate="no">I</term>: Prüfen und bei Bedarf einstellen, korrigieren, reinigen oder ersetzen.</p>
+				<p><term translate="no">R</term>: Ersetzen oder wechseln.</p>
+			</desc>
+			<tgroup cols="5" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="1.212*"/>
+				<colspec colnum="2" colname="col2" colwidth="1.232*"/>
+				<colspec colnum="3" colname="col3" colwidth="0.577*"/>
+				<colspec colnum="4" colname="col4" colwidth="0.912*"/>
+				<colspec colnum="5" colname="col5" colwidth="0.765*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p>Wartungselement</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>WARTUNGSART</p>
+						</entry>
+						<entry colname="col4" align="left" valign="middle">
+							<p>WARTUNGSINTERVALLE</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Fahrbedingung</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1" morerows="4" valign="middle">
+							<p>Motoröl und Motorölfilter</p>
+						</entry>
+						<entry colname="col2" valign="middle">
+							<p>Smartstream G1.6 T-GDi</p>
+						</entry>
+						<entry colname="col3" morerows="4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col4" morerows="2" valign="middle">
+							<p>Alle 7500 km (5000 Meilen) oder 6 Monate</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>A, B, C, D, E, F, G, H, I, J, K, L</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" align="left" valign="middle">
+							<p>Smartstream G1.6 T-GDi (EURO 7)</p>
+						</entry>
+						<entry colname="col5" morerows="1" align="center" valign="middle">
+							<p>D, H, I, L</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" valign="middle">
+							<p>Smartstream G1.0 T-GDi (EURO 7)/Smartstream G1.0 T-GDi MHEV (EURO 7)</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" align="left" valign="middle">
+							<p>(Benzinmotor) 1.6 MPI</p>
+						</entry>
+						<entry colname="col4" morerows="1" align="left" valign="middle">
+							<p>Alle 7500 km (5000 Meilen) oder 6 Monate</p>
+						</entry>
+						<entry colname="col5" morerows="1" align="center" valign="middle">
+							<p>A, B, C, D, E, F, G, H, I, J, K, L</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" valign="middle">
+							<p>(Benzinmotor) 2.0 MPI</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1" morerows="1">
+							<p>MHSG-Riemen (Mildhybridstarter &amp; Generator)</p>
+						</entry>
+						<entry colname="col2" morerows="1">
+							<p>Smartstream G1.0 T-GDI MHEV (EURO 7)</p>
+						</entry>
+						<entry colname="col3" align="center">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col4">
+							<p>Alle 45000 km (30000 Meilen) oder 24 Monate</p>
+						</entry>
+						<entry colname="col5" morerows="1" align="center">
+							<p>B, C, D, E, I, K</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col3" align="center">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col4">
+							<p>Alle 7500 km (5000 Meilen) oder 6 Monate</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p>Zündkerzen</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col4" align="left" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>A, B, F, G, H, I, K</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p>Flüssigkeit des Automatikgetriebes (AT)</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col4" align="left" valign="middle">
+							<p>Alle 90.000 km (60.000 Meilen)</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>A, C, F, G, H, I, J, K</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p>Doppelkupplungsgetriebeflüssigöl (DCT)</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col4" align="left" valign="middle">
+							<p>Alle 120.000 km (80.000 Meilen)</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>C, D, F, G, H, I, J</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p>Flüssigkeit des Schaltgetriebes (MT)</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col4" align="left" valign="middle">
+							<p>Alle 120.000 km (80.000 Meilen)</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>C, D, F, G, H, I, J</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p>Antriebswelle und Manschetten</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col4" align="left" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>C, D, E, F, G, H, I, J</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p>Luftfiltereinsatz</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col4" align="left" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>C, E</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p>Luftfilter der Klimaanlage</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col4" align="left" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>C, E, G</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p otherprops="legal_eu_std_006_02">Bremsscheiben, Bremsbeläge und Bremssättel</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col4" align="left" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>C, D, E, G, H, I, J, K</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p>Feststellbremse (Handbremse)</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col4" align="left" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>C, D, G, H</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p>Lenkgetriebe, Lenkgestänge und Manschetten</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col4" align="left" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>C, D, E, F, G</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p>Kugelgelenke der Radaufhängung</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col4" align="left" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>C, D, E, G, H, I</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Erschwerte Fahrbedingungen</title>
+			<p><term translate="no">A</term>: Wiederholte Fahrten über kurze Strecken unter 8 km (5 Meilen) bei Normaltemperatur oder unter 16 km (10 Meilen) bei Frost.</p>
+			<p><term translate="no">B</term>: Übermäßiger Motorleerlauf oder Fahren über längere Distanzen mit niedriger Geschwindigkeit.</p>
+			<p><term translate="no">C</term>: Fahren auf staubigen, schlammigen, unebenen und unbefestigten, mit Splitt oder Tausalz bedeckten Straßen.</p>
+			<p><term translate="no">D</term>: Fahren in Gebieten, wo Salz oder andere korrosive Materialien verwendet werden, oder bei sehr niedrigen Temperaturen</p>
+			<p><term translate="no">E</term>: Fahren mit starker Staubbelastung.</p>
+			<p><term translate="no">F</term>: Fahren bei hohem Verkehrsaufkommen</p>
+			<p><term translate="no">G</term>: Wiederholte Fahrten bergauf, bergab oder über Bergstraßen.</p>
+			<p><term translate="no">H</term>: Anhänger ziehen, Wohnwagen benutzen oder mit Dachlasten fahren.</p>
+			<p><term translate="no">I</term>: Einsatz als Streifenwagen, Taxi, Abschleppfahrzeug oder andere gewerbliche Nutzung.</p>
+			<p><term translate="no">J</term>: Häufiges Fahren mit hoher Geschwindigkeit oder schnelle Beschleunigung/Abbremsung.</p>
+			<p><term translate="no">K</term>: Häufiges Fahren im Stopp-and-Go-Verkehr.</p>
+			<p><term translate="no">L</term>: Verwendung von nicht empfohlenem Motoröl (Mineralöl, halbsynthetisches Öl, minderwertigere Spezifikation o.Ä.)</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0804.dita#CL4m_HEV-ca_ES-2027-t0804" role="parent" scope="local" type="concept">
+				<linktext>Wartungsplan </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

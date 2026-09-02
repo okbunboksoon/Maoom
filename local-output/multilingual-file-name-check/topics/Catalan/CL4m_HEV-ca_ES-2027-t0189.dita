@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0189">
+	<title>Tasche an der Rückenlehne</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Sitze
+					<indexterm>Tasche an der Rückenlehne</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024024N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>An der Rückenlehne des Beifahrersitzes befindet sich eine Tasche.</p>
+		<note type="warning">
+			<p>Taschen an der Rückenlehne</p>
+			<p>Verstauen Sie keine schweren oder scharfkantigen Gegenstände in den Taschen an den Rückenlehnen. Bei einem Unfall könnten diese Gegenstände aus den Taschen rutschen und Fahrzeuginsassen verletzen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0174.dita#CL4m_HEV-ca_ES-2027-t0174" role="parent" scope="local" type="concept">
+				<linktext>Sitze</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00409">
+	<title>EPB malfunction</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>electronic parking brake (EPB) 
+					<indexterm>malfunction</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02998">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e02999">
+								<figgroup>
+									<image href="../../images/N_CT25Z053.eps" align="center" height="1.573in" placement="break" id="e03000"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The warning light (<image align="left" href="../../images/WKIA_036.eps" outputclass="nolabel" placement="inline" scale="15" id="e03001"/>) appears if the vehicle is in <term translate="no">POWER ON</term> position and goes off in approximately 3 seconds if the system is operating normally.</p>
+		<p>If the EPB malfunction indicator remains on, comes on while driving, or does not come on when the vehicle is changed to the <term translate="no">POWER ON</term> position, this indicates that the EPB may have malfunctioned.</p>
+		<p>If this occurs, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<p>The EPB malfunction indicator may appear when the ESC indicator comes on to indicate that the ESC is not working properly, but it does not indicate a malfunction of the EPB.</p>
+		<note type="note" id="e03002">
+			<ul id="e03003">
+				<li>
+					<p>If the EPB warning light is still on, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>If the parking brake warning light does not appear or blinks even though the EPB switch was pulled up, the EPB is not applied.</p>
+				</li>
+				<li>
+					<p>If the parking brake warning light blinks when the EPB warning light is on, press the EPB switch, then pull it up. Once more press it back to its original position and pull it back up. If the EPB warning does not go off, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</note>
+		<section id="e03004">
+			<title>When the EPB does not release</title>
+			<p>If the EPB does not release normally, load your vehicle onto a flatbed tow truck and have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			<p>For more details, refer to <xref href="t00759.dita#t00759"/>.</p>
+		</section>
+	</conbody>
+</concept>

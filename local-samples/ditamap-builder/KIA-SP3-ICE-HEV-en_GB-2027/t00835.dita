@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00835">
+	<title>Checking the washer fluid level</title>
+	<shortdesc>The reservoir is translucent so that you can check the level with a quick visual inspection.</shortdesc>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04913">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04914">
+								<image href="images/N_SP327_D12_013_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Check the fluid level in the washer fluid reservoir and, if necessary, add fluid. You may use plain water if washer fluid is not available. However, you should use washer solvent with antifreeze characteristics in cold climates to prevent freezing.</p>
+		<note type="note">
+			<p>Washer fluid</p>
+			<ul>
+				<li>
+					<p>Do not use radiator coolant or antifreeze in the washer fluid reservoir.</p>
+				</li>
+				<li>
+					<p>Radiator coolant can severely obscure visibility when sprayed on the windshield. It may cause a loss of vehicle control or damage to the paint and body trim.</p>
+				</li>
+				<li>
+					<p>Windshield washer fluid agents contain some amounts of alcohol and can be flammable under certain circumstances. Do not allow sparks or flame to come into contact with the washer fluid or the washer fluid reservoir. This could damage your vehicle or injure the occupants.</p>
+				</li>
+				<li>
+					<p>Windshield washer fluid is poisonous to humans and animals. Do not drink and avoid coming into contact with windshield washer fluid. Serious injury or death could occur.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00834.dita#t00834" role="parent" scope="local" type="concept">
+				<linktext>Washer fluid</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

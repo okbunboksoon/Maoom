@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00228">
+	<title>Driver’s seat belt misuse warning</title>
+	<shortdesc/>
+	<conbody>
+		<p>If the driver’s seat belt is misused while driving and the vehicle’s speed is below approximately 20 km/h (12 mph), the warning light illuminates.</p>
+		<p>If the vehicle’s speed is above approximately 20 km/h (12 mph) and the seat belt is misused while driving, the warning light (flashing), warning sound, and a warning message will operate for approximately 100 seconds.</p>
+		<p>After that, the warning light will continue to stay illuminated until the seat belt is fastened correctly.</p>
+		<note type="note" id="e01432">
+			<p>Pressing the <term translate="no">OK</term> button on the message will stop the warning sound and message immediately, and the warning light will change from blinking to illuminated.</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01433">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01434">
+									<image href="images/N_QVe27_C00_145_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01435">
+									<li>
+										<p><uicontrol>Please fasten the driver’s seat belt correctly.</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</note>
+		<p>Driver’s seat belt misuse warning may operate under the following circumstances:</p>
+		<ul id="e01436">
+			<li>
+				<p>Seat belt buckle only: Using a fake buckle clip to activate only the buckle switch without actually wearing the seat belt.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01437">
+					<tgroup cols="2" colsep="0" rowsep="1">
+						<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e01438">
+										<image href="images/N_SP327_C06_012_A.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Seat belt completely behind back: Wearing both the lap belt and shoulder belt behind the body.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01439">
+					<tgroup cols="2" colsep="0" rowsep="1">
+						<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e01440">
+										<image href="images/N_SP327_C06_013_A.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Lap belt only: Wearing the lap belt properly while placing the shoulder belt behind the body.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01441">
+					<tgroup cols="2" colsep="0" rowsep="1">
+						<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e01442">
+										<image href="images/N_SP327_C06_014_A.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+		</ul>
+		<section id="e01443">
+			<title>Limitations of Driver’s seat belt misuse warning</title>
+			<p>The Driver’s seat belt misuse warning may not operate properly or may operate unexpectedly under the following circumstances:</p>
+			<ul id="e01444">
+				<li>
+					<p>The driver’s seat belt is covered by clothing or other objects, preventing the system from properly recognizing the seat belt routing.</p>
+				</li>
+				<li>
+					<p>When the driver performs certain movements while the seat belt is worn correctly, the system may interpret such movements as routing the shoulder belt behind the back.</p>
+				</li>
+			</ul>
+			<note type="caution" id="e01445">
+				<p>Driver’s seat belt misuse warning is a supplemental safety feature only. It may not detect all types of seat belt misuse. It is the driver’s responsibility to always wear the seat belt correctly regardless of the warning system.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00226.dita#t00226" role="parent" scope="local" type="concept">
+				<linktext>Seat belt restraint system </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

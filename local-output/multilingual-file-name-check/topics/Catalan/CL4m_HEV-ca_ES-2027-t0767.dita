@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0767">
+	<title>Abnehmbare Abschleppöse</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Vorn</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M064020_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01311">
+								<title>Hinten (5 Türen)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M065052L_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01312">
+								<title>Hinten (Kombi)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MW065003L_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol>
+			<li>
+				<p>Öffnen Sie den Kofferraum, und nehmen Sie die Anhängerkupplung aus dem Werkzeugkasten.</p>
+			</li>
+			<li>
+				<p>Entfernen Sie die Lochabdeckung, indem Sie den linken Teil der Abdeckung auf den Stoßfänger drücken.</p>
+			</li>
+			<li>
+				<p>Bauen Sie die Abschleppöse an, indem Sie sie im Uhrzeigersinn soweit in die Öffnung drehen, dass sie vollständig festgezogen ist.</p>
+			</li>
+			<li>
+				<p>Bauen Sie die Abschleppöse nach Gebrauch ab und verschließen Sie die Öffnung mit der Blende.</p>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0763.dita#CL4m_HEV-ca_ES-2027-t0763" role="parent" scope="local" type="concept">
+				<linktext>Abschleppen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

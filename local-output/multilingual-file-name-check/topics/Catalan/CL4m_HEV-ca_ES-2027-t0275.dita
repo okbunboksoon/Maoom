@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0275">
+	<title>Kofferraum/Heckklappe Innenraumleuchte</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Innenraumbeleuchtung
+					<indexterm>Kofferraumleuchte</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>4-Türer</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034084N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00682">
+								<title>5-Türer</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M035084L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e00683">
+								<title>Kombi</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MW035001L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Innenraumleuchte des Kofferraums/der Heckklappe leuchtet auf, wenn der Kofferraum/die Heckklappe geöffnet wird.</p>
+		<note type="caution">
+			<p>Die Innenraumleuchte des Kofferraums/der Heckklappe leuchtet, solange der Kofferraumdeckel/die Heckklappe geöffnet ist. Um eine unnötige Entleerung des Ladesystems zu vermeiden, schließen Sie den Kofferraum-/Heckklappendeckel sicher, nachdem Sie den Kofferraum-/Heckklappenraum benutzt haben.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0271.dita#CL4m_HEV-ca_ES-2027-t0271" role="parent" scope="local" type="concept">
+				<linktext>Innenraumbeleuchtung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

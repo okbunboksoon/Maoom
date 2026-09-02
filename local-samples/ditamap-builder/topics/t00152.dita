@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00152">
+	<title id="e01089">Curtain air bag</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>air bag 
+					<indexterm>curtain air bag</indexterm>
+				</indexterm>
+				<indexterm>curtain air bag</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01090">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0" valign="middle">
+							<fig id="e01091">
+								<figgroup>
+									<image href="../../images/OOV025061.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e01092"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" valign="middle">
+							<fig id="e01093">
+								<figgroup>
+									<image href="../../images/OOV025062L.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e01094"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p importance="default">The actual air bags in the vehicle may differ from the illustration.</p>
+		<p>Curtain air bags (1) are located along both sides of the roof rails above the front and rear doors.</p>
+		<p>They are designed to help protect the heads of the front seat occupants and the rear outboard seat occupants during certain side impact collisions.</p>
+		<p outputclass="formatc">The curtain air bags are designed to deploy during certain side impact collisions, depending on the crash severity. The curtain air bags are not designed to deploy in all side impact situations, or during collisions from the front or rear of the vehicle or in most rollover situations.</p>
+		<note type="note" id="e01095">
+			<p>Refer to the WARNING, CAUTION and NOTE of ‘Air bag Precautions.’</p>
+		</note>
+	</conbody>
+</concept>

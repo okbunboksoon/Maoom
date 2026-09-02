@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00422">
+	<title>Coasting</title>
+	<shortdesc>When a deceleration event is predicted by analyzing the navigation path and road information, the driver is notified when to release the accelerator pedal. A single notification sound and a cluster indicator inform the driver, helping to reduce unnecessary fuel consumption and minimize brake use.</shortdesc>
+	<conbody>
+		<section id="e02877">
+			<title>Coasting setting</title>
+			<ul id="e02878">
+				<li>
+					<p>Select <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>ECO Vehicle</uicontrol><uicontrol>Coasting Guide</uicontrol></menucascade> from the infotainment system.</p>
+				</li>
+				<li>
+					<p>When coasting is turned on and the operating conditions are met, the <uicontrol>Coasting</uicontrol> message appears on the instrument cluster. Coasting starts when the accelerator pedal is released after being engaged.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e02879">
+			<title>Coasting operating conditions</title>
+			<p>The Coasting function operates under the following conditions:</p>
+			<ul id="e02880">
+				<li>
+					<p>A destination is set in the navigation system.</p>
+				</li>
+				<li>
+					<p><term translate="no">ECO</term> mode is selected for <term translate="no">DRIVE MODE</term>.</p>
+				</li>
+				<li>
+					<p><term translate="no">ECO</term> or <term translate="no">SMART</term> is selected for <uicontrol>Powertrain</uicontrol> in the <uicontrol>MY DRIVE MODE</uicontrol> menu from the infotainment system.</p>
+					<p>If <term translate="no">SMART</term> mode is selected, driver acceleration must be mild.</p>
+				</li>
+				<li>
+					<p>The vehicle is in D (Drive).</p>
+				</li>
+				<li>
+					<p>Smart Cruise Control (SCC) is off.</p>
+				</li>
+				<li>
+					<p>Neither the accelerator pedal nor the brake pedal is engaged.</p>
+				</li>
+				<li>
+					<p>Vehicle speed is between 30–160 km/h (20–100 mph).</p>
+				</li>
+			</ul>
+			<note type="note" id="e02881">
+				<ul id="e02882">
+					<li>
+						<p>Coasting operation may be affected by tire size and tire pressure.</p>
+					</li>
+					<li>
+						<p>Coasting is not designed to operate perfectly in every condition.</p>
+					</li>
+					<li>
+						<p>Depending on driving conditions (road slope, distance, etc.), Coasting may not activate even if the above conditions are met.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e02883">
+				<p>Deceleration events include:</p>
+				<ul id="e02884">
+					<li>
+						<p>Change of direction (right/left/U-turn)</p>
+					</li>
+					<li>
+						<p>Roundabout</p>
+					</li>
+					<li>
+						<p>Highway entrance/exit</p>
+					</li>
+					<li>
+						<p>Tollgate</p>
+					</li>
+				</ul>
+			</note>
+			<note type="tip" id="e02885">
+				<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00362.dita#t00362" role="parent" scope="local" type="concept">
+				<linktext>Driving your vehicle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -190,6 +190,18 @@
             </button>
             <button class="admin-db-nav-item"
                     type="button"
+                    data-admin-view="project-text-db">
+                <i class="fas fa-font"></i>
+                TEXT DB
+            </button>
+            <button class="admin-db-nav-item"
+                    type="button"
+                    data-admin-view="project-note-db">
+                <i class="fas fa-sticky-note"></i>
+                NOTE DB
+            </button>
+            <button class="admin-db-nav-item"
+                    type="button"
                     data-admin-view="replace-dark-symbol">
                 <i class="fas fa-image"></i>
                 Replace Symbol DB
@@ -211,6 +223,8 @@
     <th:block th:replace="~{admin/section/colorCheck :: colorCheckSection}"></th:block>
     <th:block th:replace="~{admin/section/berAsisTobe :: berAsisTobeSection}"></th:block>
     <th:block th:replace="~{admin/section/qsgDb :: qsgDbSection}"></th:block>
+    <th:block th:replace="~{admin/section/projectTextDb :: projectTextDbSection}"></th:block>
+    <th:block th:replace="~{admin/section/projectNoteDb :: projectNoteDbSection}"></th:block>
     <th:block th:replace="~{admin/section/replaceDarkSymbol :: replaceDarkSymbolSection}"></th:block>
     <th:block th:replace="~{admin/section/projectLog :: projectLogSection}"></th:block>
     <th:block th:replace="~{admin/section/users :: usersSection}"></th:block>
@@ -225,7 +239,7 @@
 <script src="/admin/sb-admin-2/vendor/jquery-easing/jquery.easing.min.js"></script>
 <script src="/admin/sb-admin-2/vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="/admin/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-<script src="/admin/js/adminMain.js?v=replace-symbol-db-3"></script>
+<script src="/admin/js/adminMain.js?v=note-excel-import-1"></script>
 <script src="/admin/sb-admin-2/js/sb-admin-2.min.js"></script>
 
 </body>

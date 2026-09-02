@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" id="t00360">
+	<title>Interior button lights</title>
+	<conbody>
+		<section>
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Interior lights On</uicontrol></menucascade> on the infotainment system screen.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Operating condition(s)</title>
+			<p>The interior button lights turn on or off in the following conditions.</p>
+			<ul>
+				<li>
+					<p>The interior button lights turn on for a while when the door is unlocked and opened under condition that all doors were closed and locked.</p>
+				</li>
+				<li>
+					<p>The interior button lights always turn on when the vehicle is turned on.</p>
+				</li>
+				<li>
+					<p>The interior button lights turn on for a while when the vehicle is turned off. If the door is opened and closed or locked, the interior button lights turnoff immediately.</p>
+				</li>
+			</ul>
+			<note type="tip">
+				<p>The infotainment system may change after software updates. For more details, please refer to the web manual in the quick reference guide.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

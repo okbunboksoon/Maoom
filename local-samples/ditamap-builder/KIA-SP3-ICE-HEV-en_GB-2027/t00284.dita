@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00284">
+	<title>e-Handling_e-EHA</title>
+	<shortdesc>e-Handling controls the electric motor while turning around to improve the handling performance, driving safety, convenience and ride comfort.</shortdesc>
+	<conbody>
+		<p>e-EHA connects FCA (Forward Collision Avoidance Assist) and the electric motor to provide assists to avoid collision so that prompt collision avoidance is available while FCA warning appears.</p>
+		<note type="tip" id="e01857">
+			<ul id="e01858">
+				<li>
+					<p>e-Handling stands for Electrically Assisted Handling Performance.</p>
+				</li>
+				<li>
+					<p>e-EHA means Electrically Evasive Handling Assist.</p>
+				</li>
+			</ul>
+		</note>
+		<section id="e01859">
+			<title>Operating condition(s)</title>
+			<ul id="e01860">
+				<li>
+					<p>e-Handling starts to work by identifying enter or exit condition if the driver operates the steering wheel over a certain level when the vehicle speed is between 40 km/h (25 mph) and 120 km/h (74.5 mph).</p>
+				</li>
+				<li>
+					<p>e-EHA operates if there is urgent steering wheel operation while FCA (Forward Collision Avoidance Assist) warning appears.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01861">
+			<title>Non-operating condition(s)</title>
+			<ul id="e01862">
+				<li>
+					<p>When ESC operates</p>
+				</li>
+				<li>
+					<p>When ABS works</p>
+				</li>
+			</ul>
+			<note type="caution" id="e01863">
+				<p>The system does not work under the following conditions:</p>
+				<ul id="e01864">
+					<li>
+						<p>When the ESC operation stop light is on</p>
+					</li>
+					<li>
+						<p>When it does not work due to a malfunctionof electronic device</p>
+					</li>
+					<li>
+						<p>When the manual shift mode is set</p>
+					</li>
+					<li>
+						<p>The gear shift is not in D (Drive)</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00283.dita#t00283" role="parent" scope="local" type="concept">
+				<linktext>Hybrid Driving System</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

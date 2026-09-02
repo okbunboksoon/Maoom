@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00301">
+	<title>Welcome system</title>
+	<shortdesc>The welcome system displays the surroundings or the interior when the driver approaches or exits the vehicle.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>welcome system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<note type="tip" id="e01934">
+			<p>The infotainment system may change after software updates. For more information, refer to the user’s manual provided in the infotainment system and the quick reference guide.</p>
+		</note>
+		<section id="e01935">
+			<title>Door handle lamp</title>
+			<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Welcome Mirror/Light</uicontrol><uicontrol>On Door Unlock</uicontrol></menucascade> or <uicontrol>On Driver Approach</uicontrol> from the infotainment system screen.</p>
+			<p>When all the doors and the trunk are closed and locked, the door handle lamp will illuminate for about 15 seconds if you perform any of the following actions:</p>
+			<ul id="e01936">
+				<li>
+					<p>You press the smart key’s door unlock button.</p>
+				</li>
+				<li>
+					<p>You press the button on the outside door handle.</p>
+				</li>
+				<li>
+					<p>You approach the vehicle with the smart key in your possession.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01937">
+			<title>Headlight escort function</title>
+			<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Welcome Mirror/Light</uicontrol><uicontrol>On Door Unlock</uicontrol></menucascade> or <uicontrol>On Driver Approach</uicontrol> from the infotainment system screen.</p>
+			<p>The headlights and taillights remain on for approximately 5 minutes after you turn the vehicle to <term translate="no">OFF</term> or set the vehicle to <term translate="no">ON</term> position. If you open and close the driver’s door, the headlights will turn off after 15 seconds.</p>
+			<p>You can turn the headlights off by pressing the lock button on the smart key twice, or by turning the light switch to <term translate="no">OFF</term>.</p>
+		</section>
+		<section id="e01938">
+			<title>Interior light</title>
+			<p>When the <uicontrol>DOOR OFF</uicontrol> indicator light is off, and all doors and the trunk are locked and closed, the interior light illuminates for 30 seconds if you perform any of the following actions with the smart key:</p>
+			<ul id="e01939">
+				<li>
+					<p>You press the smart key’s door unlock button.</p>
+				</li>
+				<li>
+					<p>You touch the sensor on the outside door handle.</p>
+				</li>
+			</ul>
+			<p>If you press the smart key’s door lock button, the lamps will turn off immediately.</p>
+		</section>
+		<section id="e01940">
+			<title>Dynamic welcome light</title>
+			<p>This feature dynamically represents the vehicle’s lights for a certain period of time when the driver unlocks the vehicle, enhancing its aesthetic appeal.</p>
+			<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Headlight time-out</uicontrol></menucascade> from the infotainment system screen.</p>
+			<p>Dynamic welcome light will turn on when the Headlight escort function operational conditions are met.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00293.dita#t00293" role="parent" scope="local" type="concept">
+				<linktext>Control and Features</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

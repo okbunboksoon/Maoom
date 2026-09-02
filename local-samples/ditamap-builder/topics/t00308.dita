@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_009_01" id="t00308">
+	<title otherprops="legal_eu_std_009_01">Headlight leveling device</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lighting 
+					<indexterm>headlight leveling device</indexterm>
+				</indexterm>
+				<indexterm>headlight leveling device</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02322">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry>
+							<fig id="e02323">
+								<figgroup>
+									<image href="../../images/OOV035001.eps" align="center" height="1.740in" placement="break" id="e02324"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Adjust the headlight beam level according to the number of passengers and the load in the luggage area by turning the beam leveling switch.</p>
+		<p>The higher the number on the switch, the lower the headlight beam level. Always keep the headlights properly leveled to avoid dazzling other road users.</p>
+		<p>Below are examples of recommended switch settings. For loading conditions not listed, adjust the switch to achieve a beam level closest to the listed conditions.</p>
+		<table frame="all" rowsep="1" colsep="1" outputclass="formatc">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="1.606*"/>
+				<colspec colnum="2" colname="col2" colwidth="0.638*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1">
+							<p>Loading condition</p>
+						</entry>
+						<entry colname="col2">
+							<p>Switch position</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1" align="left" valign="middle">
+							<p>Driver only</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>0</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" align="left" valign="middle">
+							<p>Driver + Front passenger</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>0</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" align="left" valign="middle">
+							<p>Full passengers (including driver)</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>1</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" align="left" valign="middle">
+							<p>Full passengers (including driver) + Maximum permissible loading</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>2</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1" align="left" valign="middle">
+							<p>Driver + Maximum permissible loading</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>3</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

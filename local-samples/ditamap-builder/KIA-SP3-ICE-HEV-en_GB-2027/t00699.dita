@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00699">
+	<title>Parking Distance Warning Auto On</title>
+	<conbody>
+		<p>You can set the Parking Distance Warning to automatically turn <term translate="no">ON</term> when driving at low speeds. To use the Parking Distance Warning Auto On function, tap <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver Assistance</uicontrol><uicontrol>Parking Safety</uicontrol><uicontrol>Parking Distance Warning Auto On</uicontrol></menucascade> on the infotainment system screen.</p>
+		<note type="tip">
+			<ul id="e04154">
+				<li>
+					<p>When Parking Distance Warning Auto On is selected, the Parking Safety button indicator (<image href="images/WKIA_087.jpg" scale="15" align="left" placement="inline"/>) stays <term translate="no">ON</term>.</p>
+				</li>
+				<li>
+					<p>When towing a trailer or installing a carrier, vehicle stability may be reduced. Disable the function if necessary and always drive safely with caution.</p>
+				</li>
+				<li>
+					<p>Do not use the system when towing another vehicle or when installing equipment that may affect sensor performance or vehicle balance. The system may not operate properly.</p>
+				</li>
+				<li>
+					<p>When connecting a trailer or carrier, set the trailer or carrier menu (if equipped). If the driver manually sets the menu or the trailer or carrier connection is automatically recognized through genuine parts, the functions of the driver assistance system may be limited.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00697.dita#t00697" role="parent" scope="local" type="concept">
+				<linktext>Parking Distance Warning settings</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

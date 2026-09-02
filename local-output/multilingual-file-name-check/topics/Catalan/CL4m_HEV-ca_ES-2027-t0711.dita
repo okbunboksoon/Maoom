@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0711">
+	<title>Einparkhilfe vorn</title>
+	<conbody>
+		<p>Die Einparkhilfe vorn ist aktiv, wenn eine der folgenden Bedingungen erfüllt ist.</p>
+		<ul>
+			<li>
+				<p>Der Rückwärtsgang (R) oder die Fahrstufe (D) wird eingelegt, während die Einparkhilfe hinten eingeschaltet ist.</p>
+			</li>
+			<li>
+				<p>Die Fahrstufe (D) ist eingelegt und die Kontrollleuchte der Parksicherheitstaste (<image align="left" href="../../images/WKIA_087.eps" scale="15" placement="inline"/>) leuchtet.</p>
+			</li>
+			<li>
+				<p>Die Einparkhilfe vorn warnt den Fahrer, wenn der Schaltregler in Position D (Fahren) steht.</p>
+				<p>(Wenn <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Fahrerassistenz</uicontrol><uicontrol>Parksicherheit</uicontrol><uicontrol>Parkabstands-Warnung Auto Ein</uicontrol></menucascade> auf dem Infotainment-System ausgewählt ist)</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Die Einparkhilfe vorn ist nicht aktiv, wenn die Vorwärtsgeschwindigkeit über 10 km/h (6 mph) liegt, selbst wenn die Kontrollleuchte der Taste Parksicherheit (<image align="left" href="../../images/WKIA_087.eps" scale="15" placement="inline"/>) leuchtet. Die Einparkhilfe vorn ist wieder aktiv, wenn die Vorwärtsgeschwindigkeit unter 10 km/h (6 mph) fällt, während die Kontrollleuchte der Taste Parksicherheit (<image align="left" href="../../images/WKIA_087.eps" scale="15" placement="inline"/>) leuchtet.</p>
+				</li>
+				<li>
+					<p>Wenn Einparkhilfe Automatik Ein nicht aktiviert ist, wird die Einparkhilfe vorn deaktiviert, wenn die Fahrzeuggeschwindigkeit 30 km/h (18 mph) überschreitet (angezeigt durch Ausschalten der Taste). Die Funktion wird nicht automatisch aktiviert, auch wenn Sie wieder mit Geschwindigkeiten unter 10 km/h (6 mph) fahren.</p>
+				</li>
+				<li>
+					<p>Wenn sich der Gang in R (Rückwärtsgang) befinden, wird die vordere Innenwarnung aktiviert. Nur die vordere Außenwarnung wird aktiviert, wenn sich Objekte innerhalb von 60 cm (24 in.) befinden.</p>
+				</li>
+			</ul>
+		</note>
+		<section>
+			<title>Warnanzeige und Warnton</title>
+			<table outputclass="formatc" frame="all" rowsep="1" colsep="1">
+				<tgroup cols="4" colsep="1" rowsep="1">
+					<colspec colnum="1" colname="col1" colwidth="1.08*"/>
+					<colspec colnum="2" colname="col2" colwidth="1*"/>
+					<colspec colnum="3" colname="col3" colwidth="1.25*"/>
+					<colspec colnum="4" colname="col4" colwidth="1.06*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1" morerows="1">
+								<p>Abstand zum Objekt</p>
+							</entry>
+							<entry namest="col2" nameend="col3">
+								<p>Warnleuchte</p>
+							</entry>
+							<entry colname="col4" morerows="1">
+								<p>Warnton</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col2">
+								<p>Kombiinstrument</p>
+							</entry>
+							<entry colname="col3">
+								<p>Infotainment-System</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry colname="col1" align="center" valign="middle">
+								<p>60 – 120 cm (24 – 48 in.)</p>
+							</entry>
+							<entry colname="col2" align="center" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M054127N.eps" scale="30" placement="inline"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col3" align="center" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_089.eps" scale="30" placement="inline"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col4" align="center">
+								<p>Warnton ertönt in Intervallen</p>
+								<p>(Vorne Innenseite)</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry colname="col1" align="center">
+								<p>30 – 60 cm (12 – 24 in.)</p>
+							</entry>
+							<entry colname="col2" align="center" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M054128N.eps" scale="30" placement="inline"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col3" align="center" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_091.eps" scale="30" placement="inline"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col4" align="center">
+								<p>Piept häufiger</p>
+							</entry>
+						</row>
+						<row rowsep="0" valign="middle">
+							<entry colname="col1" align="center">
+								<p>innerhalb</p>
+								<p>30 cm</p>
+								<p>(12 Zoll)</p>
+							</entry>
+							<entry colname="col2" align="center" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M054129N.eps" scale="30" placement="inline"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col3" align="center" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_093.eps" scale="30" placement="inline"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col4" align="center" valign="middle">
+								<p>Piept kontinuierlich</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul>
+				<li>
+					<p>Die entsprechende Anzeige leuchtet auf, wenn ein Ultraschallsensor eine Person, ein Tier oder ein Objekt in seinem Erkennungsbereich erkennt. Es wird außerdem ein akustisches Warnsignal ausgegeben.</p>
+				</li>
+				<li>
+					<p>Wenn mehr als zwei Objekte gleichzeitig erkannt werden, wird auf das nächstgelegene Objekt mit einem Warnton hingewiesen.</p>
+				</li>
+				<li>
+					<p>Wenn der Abstand zum Objekt mehr als 60 cm (24 in.) beträgt, wird es bei der Warnung vorne und außen nicht auf dem Kombiinstrument angezeigt.</p>
+				</li>
+				<li>
+					<p>Die Form der Anzeige in der Abbildung kann vom tatsächlichen Fahrzeug abweichen.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0709.dita#CL4m_HEV-ca_ES-2027-t0709" role="parent" scope="local" type="concept">
+				<linktext>Betrieb der Einparkhilfe</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

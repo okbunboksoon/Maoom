@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00397">
+	<title>Operating conditions of ISG</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>idle stop and go (ISG)
+					<indexterm>deactivating</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The ISG system will operate under the following conditions:</p>
+		<ul id="e02651">
+			<li>
+				<p>The driver’s seat belt is fastened.</p>
+			</li>
+			<li>
+				<p>The driver’s door and hood are closed.</p>
+			</li>
+			<li>
+				<p>Brake vacuum pressure is adequate.</p>
+			</li>
+			<li>
+				<p>The battery sensor is activated and the battery is sufficiently charged.</p>
+			</li>
+			<li>
+				<p>The outside temperature is within the operating range (not too low or too high).</p>
+			</li>
+			<li>
+				<p>The climate control system conditions are satisfied.</p>
+			</li>
+			<li>
+				<p>The vehicle is sufficiently warmed up.</p>
+			</li>
+			<li>
+				<p>The vehicle is not on a steep road grade (Excluding Manual Transmission).</p>
+			</li>
+			<li>
+				<p>The steering wheel is not turned to a sharp angle.</p>
+			</li>
+			<li>
+				<p>The vehicle is not at a high elevation.</p>
+			</li>
+			<li>
+				<p>The front windshield defroster is off.</p>
+			</li>
+			<li>
+				<p>Manual shift mode is not selected (Excluding Manual Transmission).</p>
+			</li>
+			<li>
+				<p>A certain amount of time has passed after releasing the gear position from R (Reverse).</p>
+			</li>
+		</ul>
+		<p>The engine will also restart automatically, without any driver action, if one of the following occurs:</p>
+		<ul id="e02652">
+			<li>
+				<p>Brake vacuum pressure is low.</p>
+			</li>
+			<li>
+				<p>The maximum engine-off time has been exceeded.</p>
+			</li>
+			<li>
+				<p>The air conditioning is on with the fan speed set to the highest position.</p>
+			</li>
+			<li>
+				<p>Window fogging may occur while the air conditioning is on.</p>
+			</li>
+			<li>
+				<p>The battery is not within the optimal operating range.</p>
+			</li>
+			<li>
+				<p>Climate control system heating or cooling performance is unsatisfactory.</p>
+			</li>
+			<li>
+				<p>The ISG <term translate="no">OFF</term> button is pressed while the engine is automatically stopped (Excluding Manual Transmission).</p>
+			</li>
+			<li>
+				<p>The vehicle begins moving after standstill.</p>
+			</li>
+			<li>
+				<p>The accelerator and brake pedals are pressed at the same time (Excluding Manual Transmission).</p>
+			</li>
+			<li>
+				<p>The driver’s seat belt is unfastened or the driver’s door is ajar (Excluding Manual Transmission).</p>
+			</li>
+		</ul>
+		<p>The green <uicontrol>AUTO STOP</uicontrol> indicator (<image href="images/WKIA_075.jpg" scale="15" align="center" placement="inline"/>) on the instrument cluster will blink for 5 seconds.</p>
+		<note type="note" id="e02653">
+			<p>If the ISG system does not meet the operating conditions, the ISG system will be deactivated.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00394.dita#t00394" role="parent" scope="local" type="concept">
+				<linktext>Idle Stop and Go (ISG)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

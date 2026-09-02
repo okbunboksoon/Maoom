@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00704">
+	<title>Forward Parking Distance Warning</title>
+	<conbody>
+		<p>Forward Parking Distance Warning will operate when one of the condition is satisfied.</p>
+		<ul>
+			<li>
+				<p>The gear is shifted from R (Reverse) to D (Drive) with Reverse Parking Distance Warning on</p>
+			</li>
+			<li>
+				<p>The gear is in D (Drive) and the Parking safety (<image align="left" height="0.117in" href="../../images/WKIA_087.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) button indicator light is on</p>
+			</li>
+			<li>
+				<p>Forward Parking Distance Warning warns the driver when the vehicle is in D (Drive)</p>
+				<p>(If <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Parking Safety</uicontrol><uicontrol>Auto PDW (Parking Distance Warning)</uicontrol></menucascade> on the infotainment system selected)</p>
+			</li>
+			<li>
+				<p>Your driving speed is below 10 km/h (6 mph).</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Forward Parking Distance Warning does not operate when the vehicle’s forward speed is above 10 km/h (6 mph) even when the Parking Safety (<image align="left" height="0.117in" href="../../images/WKIA_087.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) button indicator is on. Forward Parking Distance Warning will operate again when the vehicle’s forward speed decreases below 10 km/h (6 mph) while the Parking Safety (<image align="left" height="0.117in" href="../../images/WKIA_087.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) button indicator is on.</p>
+				</li>
+				<li>
+					<p>When in R (Reverse), the front inside warning is not activated. Only the front outside warning is activated when objects are within 60 cm (24 in).</p>
+				</li>
+				<li>
+					<p>When the vehicle’s forward speed is above 30 km/h (18 mph), the Forward Parking Distance Warning will turn off (Parking Safety button indicator off). Although you drive below 10 km/h (6 mph) again, Forward Parking Distance Warning will not automatically turn on (If <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Parking safety</uicontrol><uicontrol>Auto PDW (Parking Distance Warning)</uicontrol></menucascade> on the infotainment system not selected).</p>
+				</li>
+			</ul>
+		</note>
+		<section>
+			<title>Warning indication and warning sound</title>
+			<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+				<tgroup cols="4" colsep="1" outputclass="FormatA" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="1.26*"/>
+					<colspec colname="col2" colnum="2" colwidth="1*"/>
+					<colspec colname="col3" colnum="3" colwidth="1.23*"/>
+					<colspec colname="col4" colnum="4" colwidth="1.34*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1" morerows="1">
+								<p>Distance from object</p>
+								<p/>
+							</entry>
+							<entry nameend="col3" namest="col2">
+								<p>Warning indicator</p>
+							</entry>
+							<entry colname="col4" morerows="1">
+								<p>Warning sound</p>
+								<p/>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col2">
+								<p>Cluster</p>
+							</entry>
+							<entry colname="col3">
+								<p>Infotainment</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1" valign="middle">
+								<p>60–120 cm (24–48 in)</p>
+							</entry>
+							<entry colname="col2">
+								<fig>
+									<figgroup>
+										<image align="center" height="0.395in" href="../../images/OOV055123.eps" outputclass="nolabel" placement="break" width="0.395in"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col3">
+								<fig id="fig_l2p_msd_s3c">
+									<figgroup>
+										<image href="../../images/OOV055132.eps" align="center" placement="break" height="0.395in" width="0.395in" outputclass="nolabel" id="image_m2p_msd_s3c"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry align="center" colname="col4">
+								<p>Buzzer beeps intermittently</p>
+								<p>(Front inner side)</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>30–60 cm (12–24 in)</p>
+							</entry>
+							<entry colname="col2">
+								<fig>
+									<figgroup>
+										<image align="center" height="0.395in" href="../../images/OOV055124.eps" outputclass="nolabel" placement="break" width="0.395in"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col3">
+								<fig id="fig_scv_msd_s3c">
+									<figgroup>
+										<image href="../../images/OOV055133.eps" align="center" placement="break" height="0.395in" width="0.395in" outputclass="nolabel" id="image_tcv_msd_s3c"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry align="center" colname="col4">
+								<p>Beeps more frequently</p>
+							</entry>
+						</row>
+						<row rowsep="0" valign="middle">
+							<entry align="center" colname="col1">
+								<p>within 30 cm (12 in)</p>
+							</entry>
+							<entry colname="col2">
+								<fig>
+									<figgroup>
+										<image align="center" height="0.395in" href="../../images/OOV055125.eps" outputclass="nolabel" placement="break" width="0.395in"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col3">
+								<fig id="fig_t3c_nsd_s3c">
+									<figgroup>
+										<image href="../../images/OOV055134.eps" align="center" placement="break" height="0.395in" width="0.395in" outputclass="nolabel" id="image_u3c_nsd_s3c"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry align="center" colname="col4" valign="middle">
+								<p>Beeps continuously</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul>
+				<li>
+					<p>The corresponding indicator will appear whenever each ultrasonic sensor detects a person, animal or object in its sensing range. Also, an audible warning will sound.</p>
+				</li>
+				<li>
+					<p>When more than two objects are detected at the same time, the closest one will be warned with an audible warning.</p>
+				</li>
+				<li>
+					<p>When the distance from the object is more than 60 cm (24 in), it is not displayed on the cluster in case of forward and outer warning.</p>
+				</li>
+				<li>
+					<p>The shape of the indicator in the illustration may differ from the actual vehicle.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

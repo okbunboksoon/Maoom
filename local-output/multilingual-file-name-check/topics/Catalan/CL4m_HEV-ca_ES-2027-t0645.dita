@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0645">
+	<title>Neustart nach Stopp</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054173N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Verwenden Sie den Schalter oder das Pedal, um zu beschleunigen</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn der Autobahn-Fahrassistent in Betrieb ist, hält Ihr Fahrzeug an, wenn das vor Ihnen fahrende Fahrzeug anhält. Wenn sich ein vor Ihnen fahrendes Fahrzeug innerhalb von 30 Sekunden nach dem Anhalten in Bewegung setzt, wird das Fahrzeug ebenfalls gestartet. Außerdem wird nach dem Anhalten des Fahrzeugs und nach Ablauf von 30 Sekunden eine Meldung im Kombiinstrument angezeigt. Betätigen Sie das Gaspedal oder bedienen Sie die Schaltwippe (+) oder (-) oder den Schalter (<image align="left" href="../../images/WKIA_079.eps" scale="15" placement="inline"/>), um die Fahrt zu beginnen.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0642.dita#CL4m_HEV-ca_ES-2027-t0642" role="parent" scope="local" type="concept">
+				<linktext>Autobahn-Fahrassistent</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

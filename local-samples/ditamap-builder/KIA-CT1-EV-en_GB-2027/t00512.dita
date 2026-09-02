@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00512">
+	<title>Forward Safety Warning Timing</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_TK25Z011_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol>Driver assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Driving safety</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Forward safety Warning Timing</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle is in <term translate="no">DRIVE READY</term>, select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Driving safety</uicontrol><uicontrol>Forward safety Warning Timing</uicontrol></menucascade> on the infotainment system to change the initial warning activation timing of Forward Collision-Avoidance Assist.</p>
+		<ul>
+			<li>
+				<p>Use <uicontrol>Standard</uicontrol> in normal driving conditions. If the Warning Timing seems sensitive, change it to <uicontrol>Late</uicontrol>.</p>
+			</li>
+			<li>
+				<p>If <uicontrol>Late</uicontrol> is selected, Forward Collision-Avoidance Assist, warns the driver more slowly.</p>
+			</li>
+		</ul>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Even though <uicontrol>Standard</uicontrol> is selected for Warning Timing, if the front vehicle suddenly stops, the warning may seem late.</p>
+				</li>
+				<li>
+					<p>Select <uicontrol>Late</uicontrol> for Warning Timing when traffic is light and when driving speed is slow.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>Forward/side safety does not provide the warning timing setting.</p>
+				</li>
+				<li>
+					<p>The warning timing you have set will be maintained even if the vehicle is restarted</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

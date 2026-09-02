@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00679">
+	<title>Parking/View button</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04479">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e04480">
+								<figgroup>
+									<image align="center" href="../../images/OOV055099.eps" placement="break" scale="95"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>(1) Parking/View button</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e04481">
+			<li>
+				<p>Press the Parking/View button (1) to turn on Surround View Monitor.</p>
+			</li>
+			<li>
+				<p>Press the button again to turn off Surround View Monitor.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0685">
+	<title>Während der Fahrt</title>
+	<conbody>
+		<p>Beim Fahren wird die Frontansicht des Umgebungsüberwachungs-Monitors unter den folgenden Bedingungen aktiviert:</p>
+		<ul>
+			<li>
+				<p>N (Neutral) oder D (Fahren) bei einer Fahrzeuggeschwindigkeit von mehr als 10 km/h (6 mph), Drücken der Taste Parken/Sicht (1).</p>
+				<p>Drücken der Taste zum Umschalten der Ansicht (2) auf dem Umgebungsüberwachungs-Monitor, um die Frontansicht oder die Weitsicht auszuwählen.</p>
+			</li>
+		</ul>
+		<p>Die Frontansicht des Umgebungsüberwachungs-Monitors wird während der Fahrt unter den folgenden Bedingungen ausgeschaltet:</p>
+		<ul>
+			<li>
+				<p>Schalten auf P (Parkstellung) oder R (Rückwärtsgang)</p>
+			</li>
+			<li>
+				<p>Drücken der Taste Parken/Sicht (1)</p>
+			</li>
+			<li>
+				<p>Drücken der Taste Zurück (3) auf dem Umgebungsüberwachungs-Monitor</p>
+			</li>
+			<li>
+				<p>Drücken der Einschalttaste des Infotainment-Systems (4)</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn die Frontansicht während der Fahrt aktiviert wird, wird die zuletzt verwendete Ansicht angezeigt.</p>
+				</li>
+				<li>
+					<p>Auch wenn die Fahrzeuggeschwindigkeit unter 10 km/h (6 mph) abfällt, bleibt die Hecksicht aktiv, wenn sie während der Fahrt eingeschaltet wird.</p>
+				</li>
+				<li>
+					<p>Wenn die Frontansicht während der Fahrt aktiviert wird, werden die vordere Draufsicht und die vordere Seitenansicht bei allen Geschwindigkeiten deaktiviert.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0683.dita#CL4m_HEV-ca_ES-2027-t0683" role="parent" scope="local" type="concept">
+				<linktext>Frontansicht</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

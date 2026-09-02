@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0611">
+	<title>Deaktivieren der Notbremsung</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCV054219N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Vorsichtig fahren</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn die Funktion feststellt, dass Sie reagiert haben, wird die Notbremsung deaktiviert, wenn eine der folgenden Bedingungen erfüllt ist:</p>
+		<ul>
+			<li>
+				<p>Der Fahrer blickt nach vorne (bei Ausstattung mit einer Innenraumkamera) und übernimmt die Kontrolle über das Lenkrad.</p>
+			</li>
+			<li>
+				<p>Der Fahrer tritt kräftig und kontinuierlich auf das Gaspedal.</p>
+			</li>
+			<li>
+				<p>Der Fahrer tritt kräftig auf das Bremspedal.</p>
+			</li>
+			<li>
+				<p>Der Fahrer drückt die Taste für den Spurhalteassistenten (<image align="left" href="../../images/WKIA_274.eps" scale="15" placement="inline"/>).</p>
+			</li>
+			<li>
+				<p>Der Fahrer drückt die Fahrassistent-Taste (<image align="left" href="../../images/WKIA_080.eps" scale="15" placement="inline"/>).</p>
+			</li>
+			<li>
+				<p>Der Fahrer drückt nach dem Anhalten des Fahrzeugs auf die Taste für die Warnblinkanlage.</p>
+			</li>
+			<li>
+				<p>Die Vordertür ist geöffnet.</p>
+			</li>
+			<li>
+				<p>Der Fahrer bricht den <term translate="no">SOS</term>-Notruf ab (ausstattungsabhängig).</p>
+			</li>
+			<li>
+				<p>Es wird von P in einen anderen Gang geschaltet.</p>
+			</li>
+		</ul>
+		<note type="caution">
+			<p>Das Fahrzeug muss neu gestartet werden, um den Spurhalteassistenten oder den Autobahn-Fahrassistenten zu reaktivieren, nachdem das Fahrzeug angehalten und die Notbremsung deaktiviert wurde.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0607.dita#CL4m_HEV-ca_ES-2027-t0607" role="parent" scope="local" type="concept">
+				<linktext>Betrieb der Notbremsung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

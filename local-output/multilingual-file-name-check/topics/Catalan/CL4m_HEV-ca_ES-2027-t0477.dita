@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0477">
+	<title>Spurhalteassistent (LKA)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Spurhalteassistent (LKA)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Ab einer bestimmten Fahrgeschwindigkeit erkennt der Spurhalteassistent Fahrbahnmarkierungen (oder Straßenränder) und kann Sie warnen, wenn Ihr Fahrzeug ohne Blinkerbetätigung die Fahrspur verlässt. Außerdem kann er die Lenkung unterstützen, um zu verhindern, dass Ihr Fahrzeug von der Fahrspur abkommt.</p>
+		<section>
+			<title>Erkennungssensor</title>
+			<p>Die zutreffenden Sensoren und ihre Standorte finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0439.dita#CL4m_HEV-ca_ES-2027-t0439"/>.</p>
+			<note type="caution">
+				<p>Weitere Vorsichtsmaßnahmen zur Frontkamera finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0440.dita#CL4m_HEV-ca_ES-2027-t0440"/>.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0437-CH10.dita#CL4m_HEV-ca_ES-2027-t0437-CH10" role="parent" scope="local" type="concept">
+				<linktext>Fahrerassistenzleitfaden</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

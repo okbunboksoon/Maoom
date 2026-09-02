@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00133">
+	<title id="e00643">Adjusting the outside rearview mirror</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00644">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00645">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C061_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00646">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C063_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e00647">
+			<li>
+				<p>Outside rearview mirror select switch</p>
+			</li>
+			<li>
+				<p>Mirror adjustment control</p>
+			</li>
+			<li>
+				<p>Mirror folding button</p>
+			</li>
+		</ol>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Press the outside rearview mirror select switch (1) to select the left or right side of the mirror. (Electric type)</p>
+				</li>
+				<li>
+					<p>Adjust the mirror adjustment control (2) to move the selected mirror.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Press the outside rearview mirror select switch (1) to select the left or right side of the mirror. (Electric type)</p>
+				</li>
+				<li>
+					<p>Adjust the mirror adjustment control (2) to move the selected mirror.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

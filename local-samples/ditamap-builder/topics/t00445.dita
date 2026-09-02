@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00445">
+	<title>Detecting sensors</title>
+	<conbody>
+		<fig expanse="page" id="e03362">
+			<title>Front</title>
+			<figgroup>
+				<image href="../../images/OOV055001.eps" align="center" placement="break" id="e03363"/>
+			</figgroup>
+		</fig>
+		<fig expanse="page" id="e03364">
+			<title>Front (GT-Line)</title>
+			<figgroup>
+				<image href="../../images/OOVGTL055001.eps" align="center" placement="break" id="e03365"/>
+			</figgroup>
+		</fig>
+		<fig expanse="page" id="e03366">
+			<title>Front (GT)</title>
+			<figgroup>
+				<image href="../../images/OOVGT055001.eps" align="center" placement="break" id="e03367"/>
+			</figgroup>
+		</fig>
+		<fig expanse="page" id="e03368">
+			<title>Rear</title>
+			<figgroup>
+				<image href="../../images/OOV055002.eps" align="center" placement="break" id="e03369"/>
+			</figgroup>
+		</fig>
+		<fig expanse="page" id="e03370">
+			<title>Rear (GT-Line)</title>
+			<figgroup>
+				<image href="../../images/OOVGTL055002.eps" align="center" placement="break" id="e03371"/>
+			</figgroup>
+		</fig>
+		<fig expanse="page" id="e03372">
+			<title>Rear (GT)</title>
+			<figgroup>
+				<image href="../../images/OOVGT055002.eps" align="center" placement="break" id="e03373"/>
+			</figgroup>
+		</fig>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc" id="e03374">
+			<desc>
+				<p>Refer to the picture above for the detailed location of the detecting sensors.</p>
+				<p importance="default">: if equipped</p>
+			</desc>
+			<tgroup cols="3" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="6*"/>
+				<colspec colnum="2" colname="2" colwidth="34*"/>
+				<colspec colnum="3" colname="3" colwidth="60*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1">
+							<p>No</p>
+						</entry>
+						<entry colname="2">
+							<p>Sensor</p>
+						</entry>
+						<entry colname="3">
+							<p>Function</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" align="center" valign="middle">
+							<p>1</p>
+						</entry>
+						<entry colname="2">
+							<p>Front view camera*</p>
+						</entry>
+						<entry colname="3">
+							<ul id="e03375">
+								<li>
+									<p>Forward Collision-Avoidance Assist (FCA)*</p>
+								</li>
+								<li>
+									<p>Lane Keeping Assist (LKA)*</p>
+								</li>
+								<li>
+									<p>Intelligent Speed Limit Assist (ISLA)*</p>
+								</li>
+								<li>
+									<p>Driver Attention Warning (DAW)*</p>
+								</li>
+								<li>
+									<p>Smart Cruise Control (SCC)*</p>
+								</li>
+								<li>
+									<p>Lane Following Assist (LFA)*</p>
+								</li>
+								<li>
+									<p>Highway Driving Assist (HDA)*</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" align="center" valign="middle">
+							<p>2</p>
+						</entry>
+						<entry colname="2">
+							<p>Wide-side view camera*</p>
+						</entry>
+						<entry colname="3">
+							<ul id="e03376">
+								<li>
+									<p>Blind-Spot View Monitor (BVM)*</p>
+								</li>
+								<li>
+									<p>Surround View Monitor (SVM)*</p>
+								</li>
+								<li>
+									<p>Remote Smart Parking Assist 2 (RSPA 2)*</p>
+								</li>
+								<li>
+									<p>Parking Collision-Avoidance Assist (PCA)*</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p>3</p>
+						</entry>
+						<entry colname="2">
+							<p>Wide-front view camera*</p>
+						</entry>
+						<entry colname="3">
+							<ul id="e03377">
+								<li>
+									<p>Surround View Monitor (SVM)*</p>
+								</li>
+								<li>
+									<p>Remote Smart Parking Assist 2 (RSPA 2)*</p>
+								</li>
+								<li>
+									<p>Parking Collision-Avoidance Assist (PCA)*</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p>4</p>
+						</entry>
+						<entry colname="2">
+							<p>Front radar*</p>
+						</entry>
+						<entry colname="3">
+							<ul id="e03378">
+								<li>
+									<p>Forward Collision-Avoidance Assist (FCA)*</p>
+								</li>
+								<li>
+									<p>Smart Cruise Control (SCC)*</p>
+								</li>
+								<li>
+									<p>Highway Driving Assist (HDA)*</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p>5</p>
+						</entry>
+						<entry colname="2">
+							<p>Front ultrasonic sensors*</p>
+						</entry>
+						<entry colname="3">
+							<ul id="e03379">
+								<li>
+									<p>Parking Distance Warning (PDW)*</p>
+								</li>
+								<li>
+									<p>Parking Collision-Avoidance Assist (PCA)*</p>
+								</li>
+								<li>
+									<p>Remote Smart Parking Assist 2 (RSPA 2)*</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p>6</p>
+						</entry>
+						<entry colname="2">
+							<p>Front corner radar*</p>
+						</entry>
+						<entry colname="3">
+							<ul id="e03380">
+								<li>
+									<p>Forward Collision-Avoidance Assist (FCA)*</p>
+								</li>
+								<li>
+									<p>Smart Cruise Control (SCC)*</p>
+								</li>
+								<li>
+									<p>Highway Driving Assist (HDA)*</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p>7</p>
+						</entry>
+						<entry colname="2">
+							<p>Front side ultrasonic sensors*</p>
+						</entry>
+						<entry colname="3">
+							<ul id="e03381">
+								<li>
+									<p>Parking Distance Warning (PDW)*</p>
+								</li>
+								<li>
+									<p>Parking Collision-Avoidance Assist (PCA)*</p>
+								</li>
+								<li>
+									<p>Remote Smart Parking Assist 2 (RSPA 2)*</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p>8</p>
+						</entry>
+						<entry colname="2">
+							<p>Wide-rearview camera</p>
+						</entry>
+						<entry colname="3">
+							<ul id="e03382">
+								<li>
+									<p>RearView Monitor (RVM)*</p>
+								</li>
+								<li>
+									<p>Surround View Monitor (SVM)*</p>
+								</li>
+								<li>
+									<p>Reverse Parking Collision-Avoidance Assist (PCA)*</p>
+								</li>
+								<li>
+									<p>Parking Collision-Avoidance Assist (PCA)*</p>
+								</li>
+								<li>
+									<p>Remote Smart Parking Assist 2 (RSPA 2)*</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p>9</p>
+						</entry>
+						<entry colname="2">
+							<p>Rear side ultrasonic sensors*</p>
+						</entry>
+						<entry colname="3">
+							<ul id="e03383">
+								<li>
+									<p>Remote Smart Parking Assist 2 (RSPA 2)*</p>
+								</li>
+								<li>
+									<p>Parking Distance Warning (PDW)*</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p>10</p>
+						</entry>
+						<entry colname="2">
+							<p>Rear corner radar*</p>
+						</entry>
+						<entry colname="3">
+							<ul id="e03384">
+								<li>
+									<p>Forward Collision-Avoidance Assist (FCA)*</p>
+								</li>
+								<li>
+									<p>Blind-Spot Collision-Avoidance Assist (BCA)*</p>
+								</li>
+								<li>
+									<p>Safe Exit Warning (SEW)*</p>
+								</li>
+								<li>
+									<p>Safe Exit Assist (SEA)*</p>
+								</li>
+								<li>
+									<p>Highway Driving Assist (HDA)*</p>
+								</li>
+								<li>
+									<p>Rear Cross-Traffic Collision-Avoidance Assist (RCCA)*</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p>11</p>
+						</entry>
+						<entry colname="2">
+							<p>Rear ultrasonic sensors</p>
+						</entry>
+						<entry colname="3">
+							<ul id="e03385">
+								<li>
+									<p>Parking Distance Warning (PDW)*</p>
+								</li>
+								<li>
+									<p>Parking Collision-Avoidance Assist (PCA)*</p>
+								</li>
+								<li>
+									<p>Remote Smart Parking Assist 2 (RSPA 2)*</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

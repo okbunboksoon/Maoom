@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00730">
+	<title>2. Remote Operation</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04627">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e04628">
+								<figgroup>
+									<image href="../../images/OOV056077L.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e04629"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e04630">
+			<title>Method (1): Using the Smart key</title>
+			<ol id="e04631">
+				<li>
+					<p>Press and hold one of the Forward (<image align="left" height="0.117in" href="../../images/WKIA_109.eps" outputclass="nolabel" placement="inline" width="0.117in" id="e04632"/>) or Backward (<image align="left" height="0.117in" href="../../images/WKIA_110.eps" outputclass="nolabel" placement="inline" width="0.117in" id="e04633"/>) button on the smart key.</p>
+					<ul id="e04634">
+						<li>
+							<p>Remote Smart Parking Assist will automatically control the steering wheel, vehicle speed and gear shift. The vehicle will move in the direction of the button pressed.</p>
+						</li>
+						<li>
+							<p>While Remote Operation function is operating, if you release the button, the vehicle will stop and function control will pause. The function will start operating again when the button is pressed and held again.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Hold down the Forward (<image align="left" height="0.117in" href="../../images/WKIA_109.eps" outputclass="nolabel" placement="inline" width="0.117in" id="e04635"/>) or Backward (<image align="left" height="0.117in" href="../../images/WKIA_110.eps" outputclass="nolabel" placement="inline" width="0.117in" id="e04636"/>) button until the vehicle reaches the target location.</p>
+				</li>
+				<li>
+					<p>When Remote Operation is done, get in the vehicle with the smart key or press the Remote Start (<image align="left" height="0.117in" href="../../images/WKIA_108.eps" outputclass="nolabel" placement="inline" width="0.117in" id="e04637"/>) button on the smart key from outside the vehicle.</p>
+					<ul id="e04638">
+						<li>
+							<p>The message will appear on the infotainment system screen. The vehicle will automatically shift to P (Park) and engage the parking brake.</p>
+						</li>
+						<li>
+							<p>When the Remote Start (<image align="left" height="0.117in" href="../../images/WKIA_108.eps" outputclass="nolabel" placement="inline" width="0.117in" id="e04639"/>) button is pressed, the vehicle will turn off. If the driver is in the vehicle, the vehicle will retain ON position.</p>
+						</li>
+					</ul>
+				</li>
+			</ol>
+		</section>
+		<section id="e04640">
+			<title>Method (2): Using the Digital key</title>
+			<ol id="e04641">
+				<li>
+					<p>Swipe the vehicle icon in the desired direction on the Remote Forward/Backward screen to operate the vehicle. 
+						<ul id="e04642">
+							<li>
+								<p>While the button is pressed, Remote Smart Parking Assist will automatically control the steering, gear shifting, and vehicle speed. The moving direction of the vehicle corresponds to the direction of the Forward or Backward button on the Digital Key.</p>
+							</li>
+							<li>
+								<p>If you release the button while controlling Remote Forward or Backward, the vehicle will stop and control will pause temporarily. Press the button again to resume operation.</p>
+							</li>
+						</ul> 
+					</p>
+				</li>
+				<li>
+					<p>Swipe the vehicle icon on the Digital Key and maintain the action until the vehicle reaches the desired position.</p>
+				</li>
+				<li>
+					<p>After Remote Forward or Backward is complete, either board the vehicle with the Digital Key or press the Exit button. 
+						<ul id="e04643">
+							<li>
+								<p>A Remote Forward/Backward complete message will be displayed on the infotainment system screen. Remote Smart Parking Assist will automatically shift to P (Park) and apply the Electronic Parking Brake (EPB).</p>
+							</li>
+							<li>
+								<p>If the Exit button is pressed, the vehicle will turn off. If you board the vehicle, the system will remain on.</p>
+							</li>
+						</ul> 
+					</p>
+				</li>
+			</ol>
+			<note type="note" id="e04644">
+				<ul id="e04645">
+					<li>
+						<p>Remote Operation can control the vehicle remotely using the smart key outside the vehicle.</p>
+					</li>
+					<li>
+						<p>Check that all smart keys or digital key are outside the vehicle when using Remote Operation function.</p>
+					</li>
+					<li>
+						<p>The detecting range of the smart key may vary depending on the surroundings that are affected by radio waves such as transmission tower, broadcast station, etc.</p>
+					</li>
+					<li>
+						<p>When remotely moving forward using method (1), it is recognized as an exit situation, and the vehicle moves 4 m (13 ft.) to check for pedestrians, animals or objects around the vehicle. After confirmation, the steering wheel is controlled according to the condition ahead.</p>
+					</li>
+					<li>
+						<p>When remotely moving forward using method (2), it is recognized as a parking situation, and will immediately control the steering wheel according to the condition ahead to assist with entering the parking space and aligning the vehicle. However, performance may reduce depending on the pedestrians, animals, shape of objects, location, etc. around the vehicle.</p>
+					</li>
+					<li>
+						<p>For moving remotely backward, both method (1) and (2) aligns the steering wheel first, and then will only move the vehicle straight.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning" id="e04646">
+				<ul id="e04647">
+					<li>
+						<p>When using Remote Operation function, make sure that all passengers have gotten out of the vehicle.</p>
+					</li>
+					<li>
+						<p>Before leaving the vehicle, close windows and sunroofs, and make sure the vehicle is off before locking the doors.</p>
+					</li>
+					<li>
+						<p>If the vehicle’s battery is discharged or Remote Smart Parking Assist malfunctions when parked in a narrow parking space, Remote Operation function will not operate. Always park your vehicle in a space wide enough for you to get in or out of your vehicle.</p>
+					</li>
+					<li>
+						<p>Please note that depending on the parking space, you may not be able to exit from the space you have entered by using Remote Operation function.</p>
+					</li>
+					<li>
+						<p>After parking, the surrounding may change due to the movement of surrounding vehicles. If this occurs, Remote Operation function may not operate.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

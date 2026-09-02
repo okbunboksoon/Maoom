@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task base="Anywhere" id="t00233">
+	<title>Stowing the rear seat belt</title>
+	<shortdesc>The rear seat belt buckles can be stowed in the pocket between the rear seatback and cushion when not in use.</shortdesc>
+	<taskbody>
+		<context>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01462">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01463">
+									<image href="images/N_SP327_B06_019.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</context>
+		<steps>
+			<step>
+				<cmd>Insert the seat belt metal tab into the two holes located on both sides. This will help keep the belts from being trapped behind or under the seats.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01464">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e01465">
+											<image href="images/N_SP327_C06_025_1_ER.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>After inserting the seat belt, tighten the belt webbing by pulling it up.</cmd>
+				<info>
+					<note type="tip">
+						<p>When pulling out the seat belt to wear it, slowly pull the tab out of the seat belt guide so that the guide does not come off the trim.</p>
+					</note>
+				</info>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00229.dita#t00229" role="parent" scope="local" type="concept">
+				<linktext>Seat belt - 3-point system with emergency locking retractor</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

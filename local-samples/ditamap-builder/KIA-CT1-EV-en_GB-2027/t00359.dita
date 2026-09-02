@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" id="t00359">
+	<title>Automatic turn-off function</title>
+	<prolog>
+		<metadata>
+			<keywords/>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>The interior lights will automatically turn off after approximately 20–25 minutes.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operating condition(s)</title>
+			<ul>
+				<li>
+					<p>The vehicle is in the <term translate="no">OFF</term> position and the lights are in the <term translate="no">ON</term> position.</p>
+				</li>
+			</ul>
+			<note type="tip">
+				<p>Vehicles equipped with a theft alarm system will enter the armed stage when the doors are locked with the vehicle key, and interior lights are automatically turned off.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

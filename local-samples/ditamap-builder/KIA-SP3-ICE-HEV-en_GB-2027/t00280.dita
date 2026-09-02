@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA 1.3 Reference//EN" "reference.dtd">
+<reference id="t00280">
+	<title>Instrument cluster messages</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>driving the hybrid/plug-in hybrid vehicle
+					<indexterm>LCD display messages</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="e01755">
+			<title>Ready to drive</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01756">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01757">
+									<image href="images/OLQ2AH005009.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01758">
+									<li>
+										<p><uicontrol>Ready to drive</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message displays when the vehicle is ready to drive.</p>
+		</section>
+		<section id="e01759">
+			<title>Check regenerative brakes</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01760">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01761">
+									<image href="images/OLQ2AH005010.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01762">
+									<li>
+										<p><uicontrol>Check regenerative brakes</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message displays when the brake performance is low or regenerative braking does not work properly due to a failure in the brake system. Operating the brake pedal might be slower than usual. The required braking distance might increase.</p>
+		</section>
+		<section id="e01763">
+			<title>Stop vehicle and check regenerative brakes</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01764">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01765">
+									<image href="images/OLQ2AH005011.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01766">
+									<li>
+										<p><uicontrol>Stop vehicle and check regenerative brakes</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message displays when the brake system has a failure. In this case, park the vehicle in a safe location and have it towed to the nearest authorized Kia dealership or service partner to be inspected.</p>
+		</section>
+		<section id="e01767">
+			<title>Check Hybrid system</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01768">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01769">
+									<image href="images/OLQ2AH005012.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01770">
+									<li>
+										<p><uicontrol>Check Hybrid system</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message displays when the hybrid control system has a problem. When this warning message displays, refrain from driving the vehicle. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+		<section id="e01771">
+			<title>Check Hybrid system. Stop safely.</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01772">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01773">
+									<image href="images/OLQ2AH005013.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01774">
+									<li>
+										<p><uicontrol>Check Hybrid system. Stop safely.</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message displays when the hybrid control system has a problem. The <term translate="no">READY</term> indicator blinks and a warning chime sounds until the problem resolves. When this warning message displays, refrain from driving the vehicle. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+		<section id="e01775">
+			<title>Check Hybrid system. Do not start engine.</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01776">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01777">
+									<image href="images/OLQ2AH005014.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01778">
+									<li>
+										<p><uicontrol>Check Hybrid system. Do not start engine.</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message displays when the hybrid battery’s charge level (SOC) is low. A warning chime sounds until the problem resolves. When this warning message displays, refrain from driving the vehicle. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+		<section id="e01779">
+			<title>Stop vehicle and check power supply</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01780">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01781">
+									<image href="images/OLQ2AH005015.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01782">
+									<li>
+										<p><uicontrol>Stop vehicle and check power supply</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message displays when the power supply system has a failure. In this case, park the vehicle in a safe location and have it towed to the nearest authorized Kia dealership or service partner to be inspected.</p>
+		</section>
+		<section id="e01783">
+			<title>Check Virtual Engine Sound System</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01784">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01785">
+									<image href="images/OLQ2AH005016.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01786">
+									<li>
+										<p><uicontrol>Check Virtual Engine Sound System</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message displays when the Virtual Engine Sound System (VESS) has a problem. When this warning message displays, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+		<section id="e01787">
+			<title>Refill coolant</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01788">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01789">
+									<image href="images/OLQ2AH005017.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01790">
+									<li>
+										<p><uicontrol>Refill coolant</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message displays when the inverter coolant is nearly empty. Refill the inverter coolant.</p>
+		</section>
+		<section id="e01791">
+			<title>Park with engine On to charge battery</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01792">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01793">
+									<image href="images/OLQ2AH005018.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01794">
+									<li>
+										<p><uicontrol>Park with engine On to charge battery</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message displays when the hybrid battery’s charge level (SOC) is low. Park the vehicle in a safe location and wait for the hybrid battery to charge before you resume driving.</p>
+		</section>
+		<section id="e01795">
+			<title>Start engine to avoid battery discharge</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01796">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01797">
+									<image href="images/OLQ2AH005019.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01798">
+									<li>
+										<p><uicontrol>Start engine to avoid battery discharge</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message displays when the 12V battery might discharge if the <term translate="no">ENGINE START/STOP</term> button is in the <term translate="no">ON</term> position and the <term translate="no">READY</term> indicator does not display. To prevent the 12V battery from discharging, set the vehicle to the <term translate="no">READY</term> mode.</p>
+		</section>
+	</refbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00268.dita#t00268" role="parent" scope="local" type="concept">
+				<linktext>Driving the hybrid</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</reference>

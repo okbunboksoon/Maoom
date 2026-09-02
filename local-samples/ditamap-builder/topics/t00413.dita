@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00413">
+	<title>Releasing AUTO HOLD</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>AUTO HOLD 
+					<indexterm>releasing</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03022">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e03023">
+								<figgroup>
+									<image href="../../images/OOV045009.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e03024"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol id="e03025">
+			<li>
+				<p>Press the <term>AUTO HOLD</term> button. The <term>AUTO HOLD</term> indicator will turn off.</p>
+			</li>
+			<li>
+				<p>To cancel <term>AUTO HOLD</term> while the vehicle is stationary, press the <term>AUTO HOLD</term> button while depressing the brake pedal.</p>
+			</li>
+		</ol>
+		<note type="warning" id="e03026">
+			<p>To reduce the risk of an accident, do not activate <term>AUTO HOLD</term> while driving downhill, backing up or parking your vehicle.</p>
+		</note>
+		<note type="note" id="e03027">
+			<ul id="e03028">
+				<li>
+					<p>The following are conditions when the <term>AUTO HOLD</term> will not engage (<term>AUTO HOLD</term> indicator will not turn green and the <term>AUTO HOLD</term> remains in standby):</p>
+					<ul id="e03029">
+						<li>
+							<p>The vehicle is in P (Park).</p>
+						</li>
+						<li>
+							<p>The EPB is applied.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>For your safety, the <term>AUTO HOLD</term> automatically switches to EPB under any of the following conditions (<term>AUTO HOLD</term> indicator remains white and the EPB automatically applies):</p>
+					<ul id="e03030">
+						<li>
+							<p>The driver’s door is opened.</p>
+						</li>
+						<li>
+							<p>The hood is opened.</p>
+						</li>
+						<li>
+							<p>The tailgate is opened.</p>
+						</li>
+						<li>
+							<p>The vehicle is in a standstill for more than 10 minutes.</p>
+						</li>
+						<li>
+							<p>The vehicle is standing on a steep slope.</p>
+						</li>
+						<li>
+							<p>The vehicle moved for a few seconds.</p>
+						</li>
+					</ul>
+					<p>In these cases, the brake warning light comes on, the <term>AUTO HOLD</term> indicator changes from green to white, and a warning sounds and a message will appear to inform you that EPB has been automatically engaged. Before driving off again, depress the brake pedal, check the surrounding area near your vehicle and release parking brake manually with the EPB switch.</p>
+				</li>
+				<li>
+					<p>If the <term>AUTO HOLD</term> indicator lights up yellow, the <term>AUTO HOLD</term> is not working properly. Take your vehicle to a professional workshop and have the system checked. Kia recommends that you visit an authorized Kia dealer/service partner.</p>
+				</li>
+				<li>
+					<p>A click or electric brake motor whine sound may be heard while operating or releasing the EPB, but these conditions are normal and indicate that the EPB is functioning properly.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0256">
+	<title>Bedingungen für das Nichtauslösen des Airbags</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Airbag
+					<indexterm>Bedingungen, unter denen Airbags nicht ausgelöst werden</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="all" rowsep="1" colsep="1" pgwide="0">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="1.111*"/>
+				<colspec colnum="2" colname="col2" colwidth="1.118*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="center" valign="middle">
+							<p>Bedingungen für das Nichtauslösen des Airbags</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1" align="center" valign="middle">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024055N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2" align="left" valign="middle">
+							<p>Bei bestimmten Kollisionen mit geringer Geschwindigkeit ist es möglich, dass Airbags nicht ausgelöst werden.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1" align="center" valign="middle">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024058N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2" align="left" valign="middle">
+							<p>Airbags sind nicht darauf ausgelegt, sich bei Heck-Kollisionen zu entfalten.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1" align="center" valign="middle">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024047N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2" align="left" valign="middle">
+							<p>Bei starkem Bremsen neigt sich die Fahrzeugfront nach unten, wodurch das Risiko besteht, unter ein vorausfahrendes Fahrzeug mit höherer Bodenfreiheit zu geraten.</p>
+							<p>Die Airbags lösen in dieser „Unterfahr“-Situation möglicherweise nicht aus, da die von den Sensoren erfassten Verzögerungskräfte bei solchen Unterfahrkollisionen erheblich reduziert sein können.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024060N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2" align="left" valign="middle">
+							<p>Bei einer schrägen Kollision oder einer Kollision in einem bestimmten Winkel kann die Aufprallkraft die Insassen in eine Richtung werfen, wo die Airbags keinen zusätzlichen Vorteil bieten könnten und deshalb lösen die Sensoren die Airbags evtl. nicht aus.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024057N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2" align="left" valign="middle">
+							<p>Front-Airbags öffnen sich bei Seitenkollisionen möglicherweise nicht.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024045N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2" align="left" valign="middle">
+							<p>Bei Unfällen mit Überschlägen werden die Airbags unter Umständen nicht ausgelöst, da das Fahrzeug Überschläge nicht erkennen kann.</p>
+						</entry>
+					</row>
+					<row rowsep="0" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024042N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2" align="left" valign="middle">
+							<p>Es ist möglich, dass Airbags bei einer Kollision mit einem Objekt wie einem Pfahl oder einem Baum, da sich der Aufprallpunkt auf einen schmalen Bereich konzentriert und nicht die volle Aufprallkraft an die Sensoren geliefert wird, nicht ausgelöst werden.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Das SRS-System ist so konzipiert, dass die Frontairbags nur ausgelöst werden, wenn ein Aufprall mit einer bestimmten Stärke stattfindet und wenn der Aufprallwinkel im Vergleich zur Fahrzeuglängsachse kleiner als 30° ist.</p>
+				</li>
+				<li>
+					<p>Frontairbags sind nicht dafür vorgesehen, dass sie bei seitlichen Kollisionen, Heckkollisionen oder Fahrzeugüberschlägen ausgelöst werden. Frontairbags werden auch bei frontalen Kollisionen nicht ausgelöst, wenn die Aufprallstärke unter einem Grenzwert liegt.</p>
+				</li>
+				<li>
+					<p>Die Seiten- und Kopfairbags entfalten sich nur bei bestimmten Seitenaufprall- oder Überschlagssituationen (nur Fahrzeuge mit Überschlagsensor), die schwer genug sind, um die Fahrzeuginsassen erheblich zu verletzen.</p>
+				</li>
+				<li>
+					<p>Deaktivieren Sie den Frontairbag auf der Beifahrerseite nur, wenn das Fahrzeug sich in der Position <term translate="no">OFF</term> befindet, sonst kommt es zu einer Fehlfunktion im SRS-Steuermodul. Außerdem besteht die Gefahr, dass der Fahrer- und/oder Beifahrer-Airbag und/oder der Seiten- und Vorhang-Airbag bei einem Aufprall nicht oder nicht richtig auslöst.</p>
+				</li>
+				<li>
+					<p>Wenn ein Airbag ausgelöst wird, kann erst ein lautes Explosionsgeräusch und danach ein feiner Staub im Fahrzeug entstehen. Diese Bedingungen sind nicht gefährlich.</p>
+				</li>
+				<li>
+					<p>Die Airbags sind in diesem feinen Puder verpackt. Der Staub, der bei der Auslösung eines Airbags freigesetzt wird, kann bei einigen Personen Haut- oder Augenreizungen sowie asthmatische Reaktionen verursachen. Waschen Sie nach einem Unfall, bei dem Airbags ausgelöst wurden, alle exponierten Hautpartien mit kaltem Wasser und milder Seife.</p>
+				</li>
+				<li>
+					<p>Verwenden Sie für die Reinigung der Airbagabdeckungen nur ein weiches trockenes Tuch, welches mit klarem Wasser angefeuchtet ist.</p>
+				</li>
+				<li>
+					<p>Lösungsmittel und Reiniger könnten sich nachteilig auf die Airbagabdeckungen und das ordnungsgemäße Entfalten der Airbags auswirken.</p>
+				</li>
+				<li>
+					<p>Halten Sie die SRS-Teile und Kabel von Wasser und anderen Flüssigkeiten fern. Wenn die SRS-Komponenten aufgrund des Kontakts mit Wasser oder Flüssigkeiten nicht mehr funktionieren, können sie Feuer fangen oder schwere Verletzungen verursachen.</p>
+				</li>
+				<li>
+					<p>Die folgenden Zustände weisen auf eine Fehlfunktion des SRS hin. Lassen Sie die Anlage in diesem Fall von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+					<ul>
+						<li>
+							<p>Das Licht leuchtet nicht kurz auf, wenn Sie das Fahrzeug drehen <term translate="no">ON</term>.</p>
+						</li>
+						<li>
+							<p>Die Warnleuchte leuchtet nach ca. 6 Sekunden dauerhaft weiter.</p>
+						</li>
+						<li>
+							<p>Die Warnleuchte leuchtet während der Fahrt auf.</p>
+						</li>
+						<li>
+							<p>Die Warnleuchte blinkt, wenn das Fahrzeug in Stellung <term translate="no">ON</term> steht.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Bevor Sie eine Sicherung austauschen oder einen Batteriepol abklemmen, ziehen Sie den Zündschlüssel ab oder schalten Sie die Taste <term translate="no">ENGINE START/STOP</term> aus. Entfernen oder ersetzen Sie niemals die Airbag-Sicherung(en), wenn sich der Zündschalter oder die Taste <term translate="no">ENGINE START/STOP</term> in der Position <term translate="no">ON</term> befindet. Wenn dieser Warnhinweis nicht beachtet wird, führt dies dazu, dass die SRS-Airbagwarnleuchte aufleuchtet.</p>
+				</li>
+				<li>
+					<p>Versuchen Sie nicht, Kabel oder Bauteile des SRS-Systems zu manipulieren oder zu trennen. Dies gilt auch für das Anbringen von Aufklebern auf den Abdeckungen und das Modifizieren der Fahrzeugkarosserie. Andernfalls kann die Leistung des SRS beeinträchtigt werden und das kann zu Verletzungen führen. Lassen Sie die Anlage bei Bedarf von einer Fachwerkstatt warten. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+				<li>
+					<p>Wenn das Fahrzeug im Wasser stand und der Teppich Wasser aufgesaugt hat oder sich Wasser auf dem Boden befindet, dürfen Sie das Fahrzeug nicht starten. Lassen Sie Ihr Fahrzeug in dieser Situation von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+				<li>
+					<p>Airbag können nur einmal verwendet werden. Nach einer Aktivierung der Airbags lassen Sie die Anlage von einer Fachwerkstatt austauschen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+				<li>
+					<p>Wenn Komponenten des Airbag-Systems entsorgt oder das Fahrzeug verschrottet werden muss, müssen bestimmte Sicherheitshinweise beachtet werden, z. B. müssen das SRS und die Gurtstraffer aufgrund der Explosionsgefahr vom Fahrzeug entfernt werden. Wenn die Vorsichtsmaßnahmen und die Vorgehensweisen nicht befolgt werden, könnte dies zu einem erhöhten Risiko von Personenschäden führen. Ein autorisierter Kia-Händler kennt diese Vorsichtsmaßnahmen und kann Ihnen die notwendigen Informationen geben.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Ohne Überschlagsensor</p>
+					<p>Jedoch können die Seiten- und/oder Kopfairbags auch ausgelöst werden, wenn der Fahrzeugüberschlag aus einem seitlichen Aufprall resultiert (wenn das Fahrzeug mit Seiten- und Kopfairbags ausgestattet ist).</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0243.dita#CL4m_HEV-ca_ES-2027-t0243" role="parent" scope="local" type="concept">
+				<linktext>Airbag – ergänzendes Rückhaltesystem </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

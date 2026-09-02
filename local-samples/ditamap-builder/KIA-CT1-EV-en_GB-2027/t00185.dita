@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00185">
+	<title>System malfunction</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00876">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00877">
+								<figgroup>
+									<image href="../../images/N_CT25Z095_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<p>(A) <uicontrol>Check Intelligent Front-Lighting System</uicontrol> </p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00878">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00879">
+								<figgroup>
+									<image href="../../images/N_CT25Z096_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<p>(A) <uicontrol>Intelligent Front-Lighting System disabled. Camera obscured</uicontrol> </p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When Intelligent Front-Lighting System is not working properly, the warning message will come on for a few second on the cluster. After the message disappears, the warning lights <image href="../../images/WKIA_421.eps" scale="15" align="left" placement="inline"/> will appear. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<p>When the front view camera is covered with dirt, snow, or debris, Intelligent Front-Lighting System may temporarily not work properly. If this occurs, a warning message will appear on the cluster.</p>
+		<p>The system will operate normally when such dirt, snow or debris is removed.</p>
+		<p>Intelligent Front-Lighting System may not properly operate in an area (e.g. open terrain) where any objects or vehicles are not detected after turning on the vehicle.</p>
+		<p>Also, even though a warning message does not appear on the cluster, the system may not properly operate.</p>
+	</conbody>
+</concept>

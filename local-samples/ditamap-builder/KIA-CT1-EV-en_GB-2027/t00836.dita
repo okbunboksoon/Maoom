@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00836">
+	<title>Automatic accident reporting</title>
+	<conbody>
+		<ol>
+			<li>
+				<p>System operation in the event of a traffic accident</p>
+			</li>
+			<li>
+				<p>Connection with the Public Safety Answering Point (PSAP)</p>
+			</li>
+			<li>
+				<p>Emergency services</p>
+			</li>
+		</ol>
+		<p>The Pan-European eCall device automatically makes an emergency call to the Public Safety Answering Point (PSAP) to request appropriate rescue operations in the event of a car accident.</p>
+		<p>For the purpose of providing appropriate emergency services response and support, the Pan-European eCall system automatically transmits the accident data to the Public Safety Answering Point (PSAP) when a traffic accident is detected.</p>
+		<p>In this situation, the emergency call cannot be hung up by pressing the <term translate="no">SOS</term> button; the Pan-European eCall system remains connected until the emergency service officer receiving the call disconnects the emergency call.</p>
+		<p>In minor traffic accidents, the Pan-European eCall system may not execute an emergency call. However, an emergency call may be made manually by pressing the <term translate="no">SOS</term> button.</p>
+		<note type="caution">
+			<p>Operation of the system is impossible in case of absence of cellular transmission and GPS and Galileo signals.</p>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="default" id="t00544">
+	<title>Auto set speed change (if equipped with the navigation)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>intelligent speed limit assist (ISLA) 
+					<indexterm>auto set speed change</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04091">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatC">
+				<colspec colnum="1" colname="1" colwidth="1.19*"/>
+				<colspec colnum="2" colname="2" colwidth="1*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e04092">
+								<figgroup>
+									<image href="../../images/OOV055114.eps" align="center" placement="break" height="1.740in" width="2.410in" id="e04093"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>When operating Manual Speed Limit Assist or Smart Cruise Control, if the speed set by the driver is the same as the speed limit on the road, the set speed is automatically adjusted accordingly the speed limit afterward. The auto set speed change function operates on roads with a speed limit of above 70 km/h (45 mph). When the function is activated, the set speed on the instrument cluster is displayed in green.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning" id="e04094">
+			<ul id="e04095">
+				<li>
+					<p>Even after changing the set speed according to the speed limit of the road, the vehicle can still be driven over the speed limit. If necessary, depress the brake pedal to reduce your driving speed.</p>
+				</li>
+				<li>
+					<p>Intelligent Speed Limit Assist operates based on the speed unit set by the driver on the cluster. If the speed unit set on the cluster differs from the speed unit used in the country, the system may not operate properly. Please take caution when changing the speed unit setting on the cluster.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e04096">
+			<ul id="e04097">
+				<li>
+					<p>For more details on Manual Speed Limit Assist operation, refer to <xref type="concept" href="t00529.dita#t00529"/>.</p>
+				</li>
+				<li>
+					<p>For more details on Smart Cruise Control operation, refer to <xref href="t00578.dita#t00578"/>.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

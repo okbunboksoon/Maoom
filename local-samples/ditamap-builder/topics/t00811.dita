@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00811">
+	<title>Tire sidewall labeling</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV075011.eps" placement="break" width="2.244in"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>This information identifies and describes the fundamental characteristics of the tire and also provides the tire identification number (TIN) for safety standard certification. The TIN can be used to identify the tire in case of a recall.</p>
+		<section>
+			<title>1. Manufacturer or brand name</title>
+			<p>Manufacturer or brand name is shown.</p>
+		</section>
+		<section>
+			<title>2. Tire size designation</title>
+			<p>A tire’s sidewall is marked with a tire size designation. You will need this information when selecting replacement tires for your vehicle.</p>
+			<p>Example tire size designation:</p>
+			<p>(These numbers are provided as an example only.)</p>
+			<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+				<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="23*"/>
+					<colspec colname="col2" colnum="2" colwidth="77*"/>
+					<thead>
+						<row rowsep="1">
+							<entry nameend="col2" namest="col1">
+								<p>255/45 R20 105V</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1" valign="middle">
+								<p> <term>255</term> </p>
+							</entry>
+							<entry colname="col2">
+								<p>Tire width in millimeters.</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1" valign="middle">
+								<p> <term>45</term> </p>
+							</entry>
+							<entry colname="col2">
+								<p>Aspect ratio. The tire’s section height as a percentage of its width.</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1" valign="middle">
+								<p> <term>R</term> </p>
+							</entry>
+							<entry colname="col2">
+								<p>Tire construction code (Radial).</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1" valign="middle">
+								<p> <term>20</term> </p>
+							</entry>
+							<entry colname="col2">
+								<p>Rim diameter in inches.</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1" valign="middle">
+								<p> <term>105</term> </p>
+							</entry>
+							<entry colname="col2">
+								<p>Load Index, a numerical code associated with the maximum load the tire can carry.</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1" valign="middle">
+								<p> <term>V</term> </p>
+							</entry>
+							<entry colname="col2">
+								<p>Speed Rating Symbol. See the speed rating chart in this section for additional information.</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<sectiondiv><ph>Wheel size designation</ph>
+				<p>Wheels are also marked with important information that you need if you ever have to replace one. The following explains what the letters and numbers in the wheel size designation mean.</p>
+				<p>Example wheel size designation:</p>
+				<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+					<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="23*"/>
+						<colspec colname="col2" colnum="2" colwidth="77*"/>
+						<thead>
+							<row rowsep="1">
+								<entry nameend="col2" namest="col1">
+									<p>8.0J X 20</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row rowsep="1" valign="middle">
+								<entry align="center" colname="col1" valign="middle">
+									<p> <term>8.0</term> </p>
+								</entry>
+								<entry colname="col2">
+									<p>Rim width in inches.</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry align="center" colname="col1" valign="middle">
+									<p> <term>J</term> </p>
+								</entry>
+								<entry colname="col2">
+									<p>Rim contour designation.</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry align="center" colname="col1" valign="middle">
+									<p> <term>20</term> </p>
+								</entry>
+								<entry colname="col2">
+									<p>Rim diameter in inches.</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+			<sectiondiv><ph>Tire speed ratings</ph>
+				<p>The chart below lists many of the different speed ratings currently being used for passenger car tires. The speed rating is part of the tire size designation on the sidewall of the tire. This symbol corresponds to that tire’s designed maximum safe operating speed.</p>
+				<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+					<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<thead>
+							<row rowsep="1">
+								<entry align="center" colname="col1" valign="middle">
+									<p>Speed Rating Symbol</p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>Maximum Speed</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row rowsep="1">
+								<entry align="center" colname="col1" valign="middle">
+									<p> <term>S</term> </p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>180 km/h (112 mph)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry align="center" colname="col1" valign="middle">
+									<p> <term>T</term> </p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>190 km/h (118 mph)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry align="center" colname="col1" valign="middle">
+									<p> <term>H</term> </p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>210 km/h (130 mph)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry align="center" colname="col1" valign="middle">
+									<p> <term>V</term> </p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>240 km/h (149 mph)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry align="center" colname="col1" valign="middle">
+									<p> <term>W</term> </p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>270 km/h (168 mph)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry align="center" colname="col1" valign="middle">
+									<p> <term>Y</term> </p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>300 km/h (186 mph)</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>3. Checking tire life (TIN: Tire Identification Number)</title>
+			<p>Any tires that are over 6 years old, based on the manufacturing date, should be replaced by new ones. You can find the manufacturing date on the tire sidewall, displaying the DOT Code. The manufacturing date is designated by the last four digits (characters) of the DOT code.</p>
+			<p importance="high">DOT: XXXX XXXX OOOO</p>
+			<p>The front part of the DOT means a plant code number, tire size and tread pattern and the last four numbers indicate week and year manufactured.</p>
+			<p>For example, DOT XXXX XXXX 1626 represents that the tire was produced in the 16th week of 2026.</p>
+			<note type="warning">
+				<p>Tires degrade over time, even when they are not being used. Regardless of the remaining tread, we recommend that tires be replaced after approximately 6 years of normal service. Heat caused by hot climates or frequent high loading conditions can accelerate the aging process. Failure to follow this warning can result in sudden tire failure, which could lead to a loss of control and an accident involving serious injury or death.</p>
+			</note>
+		</section>
+		<section>
+			<title>4. Tire ply composition and material</title>
+			<p>The number of layers or plies of rubber-coated fabric in the tire. Tire manufacturers also must indicate the materials in the tire, which include steel, nylon, polyester, and others. The letter “R” means radial ply construction; the letter “D” means diagonal or bias ply construction; and the letter “B” means belted-bias ply construction.</p>
+		</section>
+		<section>
+			<title>5. Maximum permissible inflation pressure</title>
+			<p>This number is the greatest amount of air pressure that should be put in the tire. Do not exceed the maximum permissible inflation pressure. Refer to <xref type="concept" href="t00850.dita#t00850">Vehicle certification label/tire specification and pressure label</xref> and <xref type="concept" href="t00851.dita#t00851">Vehicle certification label/tire specification and pressure label</xref>.</p>
+		</section>
+		<section>
+			<title>6. Maximum load rating</title>
+			<p>This number indicates the maximum load in kilograms and pounds that can be carried by the tire. When replacing the tires on the vehicle, always use a tire that has the same load rating as the factory installed tire.</p>
+		</section>
+		<section>
+			<title>7. Uniform tire quality grading</title>
+			<p>Quality grades can be found where applicable on the tire sidewall between tread shoulder and maximum section width.</p>
+			<p>For example:</p>
+			<p importance="high">TREADWEAR 200</p>
+			<p importance="high">TRACTION AA</p>
+			<p importance="high">TEMPERATURE A</p>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>The traction grade assigned to this tire is based on straight ahead braking traction tests, and does not include acceleration, cornering, hydroplaning, or peak traction characteristics.</p>
+					</li>
+					<li>
+						<p>The temperature grade for this tire is established for a tire that is properly inflated and not overloaded. Excessive speed, under inflation, or excessive loading, either separately or in combination, can cause heat build-up in tire and sudden tire failure. This can cause loss of vehicle control and serious injury or death.</p>
+					</li>
+				</ul>
+			</note>
+			<sectiondiv><ph>Tread wear</ph>
+				<p>The tread wear grade is a comparative rating based on the wear rate of the tire when tested under controlled conditions on a specified government test course. For example, a tire graded 150 would wear one-and-a-half times (1½) as well on the government course as a tire graded 100.</p>
+				<p>The relative performance of tires depends upon the actual conditions of their use, however, and may depart significantly from the norm due to variations in driving habits, service practices and differences in road characteristics and climate.</p>
+				<p>The tires available as standard or optional equipment on your vehicle may vary with respect to grade.</p>
+			</sectiondiv>
+			<sectiondiv><ph>Traction — AA, A, B and C</ph>
+				<p>The traction grades, from highest to lowest, are AA, A, B and C. Those grades represent the tire’s ability to stop on wet pavement as measured under controlled conditions on specified government test surfaces of asphalt and concrete. A tire marked C may have poor traction performance.</p>
+			</sectiondiv>
+			<sectiondiv><ph>Temperature — A, B and C</ph>
+				<p>The temperature grades are A (the highest), B, and C, representing the tire’s resistance to the generation of heat and its ability to dissipate heat when tested under controlled conditions on a specified indoor laboratory test wheel.</p>
+				<p>Sustained high temperature can cause the material of the tire to degenerate and reduce tire life, and excessive temperature can lead to sudden tire failure. Grades B and A represent higher levels of performance on the laboratory test wheel than the minimum required by law.</p>
+			</sectiondiv>
+		</section>
+	</conbody>
+</concept>

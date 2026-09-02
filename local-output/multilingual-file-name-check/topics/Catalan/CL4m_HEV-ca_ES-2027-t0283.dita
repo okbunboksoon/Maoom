@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0283">
+	<title>Heizung und Klimaanlage</title>
+	<conbody>
+		<fig expanse="page">
+			<figgroup>
+				<image align="center" href="../../images/OCL4M034313N.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<ol>
+			<li>
+				<p>Starten Sie den Motor.</p>
+			</li>
+			<li>
+				<p>Wählen Sie den gewünschten Modus aus.</p>
+				<p>Die Effektivität der Heizung und der Klimaanlage verbessern;</p>
+				<ul>
+					<li>
+						<p>Heizung: <image align="left" href="../../images/WKIA_062.eps" scale="15" placement="inline"/></p>
+					</li>
+					<li>
+						<p>Klimatisierung: <image align="left" href="../../images/WKIA_060.eps" scale="15" placement="inline"/></p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Stellen Sie die Temperaturregelung auf die gewünschte Position.</p>
+			</li>
+			<li>
+				<p>Stellen Sie die Frisch-/Umluftregelung auf Frischluft.</p>
+			</li>
+			<li>
+				<p>Stellen Sie die gewünschte Lüfterdrehzahl ein.</p>
+			</li>
+			<li>
+				<p>Wenn Sie Klimaanlage wünschen, schalten Sie die Klimaanlage (ausstattungsabhängig) ein.</p>
+			</li>
+		</ol>
+		<section>
+			<title>Modus wählen</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034314N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die Modustaste steuert die Richtung des Luftstroms im Belüftungssystem.</p>
+			<p>Die Luft kann in den Fußraum, zu den Düsen in der Instrumententafel und zur Windschutzscheibe geleitet werden. Es werden fünf Symbole für die Lüftungsmodi Entlüftungsmodus, Kopfbereich, Kopfbereich &amp; Fußraum, nur Fußraum, Fußraum &amp; Windschutzscheibe und Windschutzscheibe enteisen verwendet.</p>
+			<sectiondiv><ph><image align="left" href="../../images/WKIA_135.eps" scale="15" placement="inline"/> Entlüftungsmodus (2, 4, 6)</ph>
+				<p>Der Luftstrom wird zum Oberkörper und in den Kopfbereich geleitet. Zusätzlich können die Luftdüsen verstellt werden, um den Luftstrom aus den Düsen umzulenken.</p>
+				<p>Wenn ein Konsolenkanal vorhanden ist, funktioniert der Konsolenkanal im Entlüftungsmodus auch als Luftauslass.</p>
+			</sectiondiv>
+			<sectiondiv><ph><image align="left" href="../../images/WKIA_136.eps" scale="15" placement="inline"/> Kopfbereich &amp; Fußraum (2, 3, 4, 5, 6)</ph>
+				<p>Der Luftstrom wird in den Kopfbereich und in den Fußraum geleitet.</p>
+				<p>Wenn ein Konsolenkanal vorhanden ist, funktioniert der Konsolenkanal im Entlüftungsmodus auch als Luftauslass.</p>
+			</sectiondiv>
+			<sectiondiv><ph><image align="left" href="../../images/WKIA_137.eps" scale="15" placement="inline"/> Fußraum (1, 3, 4, 5)</ph>
+				<p>Der größte Teil des Luftstroms wird in den Fußraum geleitet und ein kleiner Teil wird zur Frontscheibe und zu den Lüftungsdüsen für die Seitenscheiben geleitet.</p>
+			</sectiondiv>
+			<sectiondiv><ph><image align="left" href="../../images/WKIA_138.eps" scale="15" placement="inline"/> Fußraum/Windschutzscheibe (1, 3, 4, 5)</ph>
+				<p>Der größte Teil des Luftstroms wird in den Fußraum und zur Frontscheibe geleitet, ein kleiner Teil zu den Lüftungsdüsen für die Seitenscheiben.</p>
+			</sectiondiv>
+			<sectiondiv><ph><image align="left" href="../../images/WKIA_139.eps" scale="15" placement="inline"/> Windschutzscheibe entfrosten (1, 4)</ph>
+				<p>Der größte Teil des Luftstroms wird zur Windschutzscheibe geleitet und ein kleiner Teil wird zu den Lüftungsdüsen für die Seitenscheiben geleitet.</p>
+			</sectiondiv>
+			<sectiondiv><ph>Steuerung des Öffnens/Schließens und der Richtungen der Lüftungsöffnungen</ph>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M034304N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<fig>
+										<title>Mitte (ausstattungsabhängig)</title>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M034323N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Zusätzlich können Sie an diesen Düsen die Richtung des Luftstroms durch Betätigung des Einstellhebels verändern (siehe Abbildung).</p>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Temperaturregler</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034315N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Mit der Temperaturregelungstaste können Sie die Temperatur der aus dem Lüftungssystem strömenden Luft steuern. Um die Lufttemperatur zu ändern, drücken Sie die Taste nach rechts für warme und heiße Luft oder nach links für kühlere Luft.</p>
+		</section>
+		<section>
+			<title>Frischluft/Umluft-Regelung</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034316N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die Frisch-/Umluft-Regelung wird verwendet, um die Frischluftposition bzw. Umluftposition auszuwählen.</p>
+			<p>Um die Stellung der Frisch-/Umluft-Regelung zu ändern, drücken Sie die Taste.</p>
+			<sectiondiv><ph>Umlufttaste</ph>
+				<p><image align="left" href="../../images/OCL4M034317N.eps" scale="15" placement="inline"/> Wenn die Umluftposition ausgewählt ist, wird Luft aus dem Fahrgastraum durch das Heizsystem gesaugt und gemäß der ausgewählten Funktion erwärmt oder gekühlt.</p>
+			</sectiondiv>
+			<sectiondiv><ph>Frischluftposition</ph>
+				<p><image align="left" href="../../images/OCL4M034318N.eps" scale="15" placement="inline"/> Wenn die Frischluftposition ausgewählt ist, tritt Luft von außen in das Fahrzeug ein und wird gemäß der ausgewählten Funktion erwärmt oder gekühlt.</p>
+			</sectiondiv>
+			<note type="note">
+				<p>Längerer Betrieb der Heizung in der Umluftposition (ohne eingeschaltete Klimaanlage) kann Beschlagen der Windschutzscheibe und der Seitenfenster verursachen und die Luft im Fahrgastraum kann stickig werden.</p>
+				<p>Zudem führt längere Verwendung der Klimaanlage in der Umluftposition zu übermäßig trockener Luft im Fahrgastraum.</p>
+			</note>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Durch kontinuierliches Verwenden der Klimaanlage in der Umluftposition kann die Feuchtigkeit im Fahrzeug steigen, so dass die Scheiben beschlagen und die Sicht behindert werden kann.</p>
+					</li>
+					<li>
+						<p>Schlafen Sie nicht in einem Fahrzeug mit eingeschalteter Klimaanlage oder Heizungsanlage. Dies kann aufgrund eines Abfalls des Sauerstoffgehalts bzw. der Körpertemperatur zu schweren Schäden oder zum Tod führen.</p>
+					</li>
+					<li>
+						<p>Kontinuierliches Verwenden der Klimaanlage in der Umluftposition kann zu Benommenheit oder Schläfrigkeit und dem Verlust der Kontrolle über das Fahrzeug führen. Fahren Sie so viel wie möglich im Frischluftmodus, damit Luft von außen zugeführt wird.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>Klimaanlage (A/C)</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034320N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Drücken Sie die Taste <term translate="no">A/C</term>, um die Klimaanlage einzuschalten. Die Kontrollleuchte im Schalter leuchtet bei eingeschalteter Klimaanlage auf.</p>
+			<p>Um die Klimaanlage abzuschalten, drücken Sie nochmals die Taste A/C.</p>
+		</section>
+		<section>
+			<title>Lüfterdrehzahlregler</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034319N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Der Lüfter kann nur bei Fahrzeug in Position <term translate="no">ON</term> bedient werden.</p>
+			<p>Mit dem Hebel zur Steuerung der Gebläsedrehzahl können Sie die Gebläsedrehzahl der aus dem Lüftungssystem strömenden Luft steuern. Drücken Sie den Knopf nach rechts, um die Geschwindigkeit zu erhöhen, oder nach links, um die Geschwindigkeit zu verringern.</p>
+			<p>Um die Gebläse auszuschalten, drücken Sie die linke Seite der Gebläsedrehzahlregelungstaste mehrmals nach unten oder halten Sie sie gedrückt.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0282.dita#CL4m_HEV-ca_ES-2027-t0282" role="parent" scope="local" type="concept">
+				<linktext>Manuelle Klimaregelung </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

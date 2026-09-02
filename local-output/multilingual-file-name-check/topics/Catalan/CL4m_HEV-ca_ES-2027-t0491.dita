@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0491">
+	<title id="e00994">Totwinkel-Kollisionsvermeidungsassistent (BCA) </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Totwinkel-Kollisionsvermeidungsassistent (BCA)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Der Totwinkel-Kollisionsvermeidungsassistent erkennt näherkommende Fahrzeuge im Totwinkelbereich des Fahrers und warnt Sie mit einer Warnleuchte und einem Warnton vor einer möglichen Kollision. Wenn beim Verlassen einer parallelen Lücke ein Kollisionsrisiko besteht, kann der Totwinkel-Kollisionsvermeidungsassistent beim Abbremsen des Fahrzeugs helfen, einen Zusammenstoß zu vermeiden.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054056N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Der Totwinkel-Kollisionsvermeidungsassistent erkennt, dass sich ein Fahrzeug im toten Winkel befindet, und informiert den Fahrer entsprechend.</p>
+		<note type="caution">
+			<p>Der Erkennungsbereich kann je nach der Geschwindigkeit Ihres Fahrzeugs variieren. Selbst wenn sich ein Fahrzeug im toten Winkel befindet, warnt das Totwinkel-Kollisionsvermeidungsassistent Sie möglicherweise nicht, wenn Sie mit hoher Geschwindigkeit überholen.</p>
+		</note>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054057N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Der Totwinkel-Kollisionsvermeidungsassistent hilft zu erkennen, dass sich ein Fahrzeug mit hoher Geschwindigkeit aus dem toten Winkel nähert, und informiert den Fahrer entsprechend.</p>
+		<note type="caution">
+			<p>Der Warnzeitpunkt kann je nach der Geschwindigkeit des sich mit hoher Geschwindigkeit nähernden Fahrzeugs variieren.</p>
+		</note>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054058N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn Sie vorwärts aus einer Parklücke herausfahren und der Totwinkel-Kollisionsvermeidungsassistent ein Kollisionsrisiko mit einem sich nähernden Fahrzeug im toten Winkel erkennt, kann er durch Bremsen des Fahrzeuges helfen, eine Kollision zu vermeiden.</p>
+		<section>
+			<title>Erkennungssensor</title>
+			<p>Die zutreffenden Sensoren und ihre Standorte finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0439.dita#CL4m_HEV-ca_ES-2027-t0439"/>.</p>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Demontieren Sie niemals den Erkennungssensorbaugruppe und vermeiden Sie Beschädigungen daran.</p>
+					</li>
+					<li>
+						<p>Wenn der Erkennungssensor oder der Bereich des Sensors beschädigt wurde oder einem Schlag ausgesetzt war, funktioniert der Totwinkel-Kollisionsvermeidungsassistent möglicherweise nicht einwandfrei, obwohl keine Warnmeldung auf dem Kombiinstrument erscheint. Lassen Sie Ihr Fahrzeug von einer Fachwerkstatt warten. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+					</li>
+					<li>
+						<p>Wenn die Erkennungssensoren ausgetauscht oder repariert wurden, lassen Sie Ihr Fahrzeug von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+					</li>
+					<li>
+						<p>Die originalen Heckstoßstangen von Kia, an denen die Radarsensoren für die hinteren Ecken angebracht sind, sind Teile, deren Qualität und Leistung gewährleistet sind. Wenn Sie unsachgemäß Farbe auftragen oder den Stoßdämpfer verändern, funktioniert der Totwinkel-Kollisionsvermeidungsassistent möglicherweise nicht mehr richtig. Verwenden Sie für Reparatur und Austausch der Stoßdämpfer nur Originalteile oder Teile mit gleichwertigem Standard und nachgewiesener Qualität und Leistung.</p>
+					</li>
+					<li>
+						<p>Bringen Sie in der Nähe des Eckradarsensors hinten keine Nummernschildhalter und keine Fremdkörper wie Aufkleber, Folie oder Stoßfängerschutz an.</p>
+					</li>
+					<li>
+						<p>Wenn ein Anhänger, Träger usw. installiert ist, kann dieser die Eigenschaften des Eckradars hinten oder die Funktionsfähigkeit des Totwinkel-Kollisionsvermeidungsassistenten verhindern.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0437-CH10.dita#CL4m_HEV-ca_ES-2027-t0437-CH10" role="parent" scope="local" type="concept">
+				<linktext>Fahrerassistenzleitfaden</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

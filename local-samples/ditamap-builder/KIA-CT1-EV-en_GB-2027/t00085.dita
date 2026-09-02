@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00085">
+	<title>Sunroof</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>wide sunroof</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>If your vehicle is equipped with a sunroof, you can slide or tilt your sunroof with the sunroof switch located on the overhead console.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00387">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00388">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C047_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The sunroof can only be operated when the <term translate="no">EV</term> button is in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+		<p>The sunroof can be operated for approximately 3 minutes after the <term translate="no">EV</term> button is in the <term translate="no">OFF</term> position. However, if the front door is open, the sunroof cannot be operated even within the 3 minutes period.</p>
+		<note otherprops="legal_eu_std_007_03" type="warning" id="e00389">
+			<ul id="e00390">
+				<li>
+					<p>Be sure to operate the sunroof while the car is stationary. If you operate the sunroof while driving, it may interfere with driving and cause an accident.</p>
+				</li>
+				<li>
+					<p>Even when leaving the vehicle for a short time, turn off the vehicle and carry the key to prevent children from operating the sunroof.</p>
+				</li>
+				<li>
+					<p>Do not sit on the roof. Sitting on a roof or lifting heavy objects can damage the sunroof.</p>
+				</li>
+			</ul>
+		</note>
+		<note deliveryTarget="except_print" type="note" id="e00391">
+			<p>Do not operate the sunroof when roof bars are installed on the vehicle or when there is luggage on the roof.</p>
+		</note>
+	</conbody>
+</concept>

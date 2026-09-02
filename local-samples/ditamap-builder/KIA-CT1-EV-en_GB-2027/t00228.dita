@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00228">
+	<title>Seat belt - 3-point system with emergency locking retractor</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01035">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01036">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B085.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Release button</p>
+								</li>
+								<li>
+									<p>Buckle</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Insert the metal tab into the buckle (2).</p>
+				</li>
+				<li>
+					<p>To release it, press the release button (1) in the locking buckle.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>When fastening the seat belt, insert the metal tab into the buckle (2).</p>
+				</li>
+				<li>
+					<p>To release it, press the release button (1) and pull the metal tab.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

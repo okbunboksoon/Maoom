@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00895">
+	<title>Light position (Rear/Side)</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e02809">
+			<desc>*: if equipped 
+			</desc>
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e02810">
+								<title>Rear combination lamp (Type A)</title>
+								<figgroup>
+									<image href="../../images/N_CT25G026.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<fig id="e02811">
+								<title>Rear combination lamp (Type B)</title>
+								<figgroup>
+									<image align="center" href="../../images/P_CT27_C12_002.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" colsep="0">
+							<fig id="e02812">
+								<title>High mounted stop lamp</title>
+								<figgroup>
+									<image href="../../images/N_CT25G028.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<fig id="e02813">
+								<title>Side repeater lamp</title>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25G030.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" colsep="0">
+							<fig id="e02814">
+								<title>License plate lamp</title>
+								<figgroup>
+									<image href="../../images/N_CT25G029.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<fig id="e02815">
+								<title>Back up lamp/Rear fog lamp* (Type A)</title>
+								<figgroup>
+									<image href="../../images/M_CT27_C12_001.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" colsep="0">
+							<fig id="e02816">
+								<title>Back up lamp/Rear fog lamp* (Type B-GT-line)</title>
+								<figgroup>
+									<image href="../../images/M_CT27_C12_002.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<fig id="e02817">
+								<title>Back up lamp/Rear fog lamp* (Type C-GT)</title>
+								<figgroup>
+									<image href="../../images/M_CT27_C12_003.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Tail lamp (LED type)</p>
+			</li>
+			<li>
+				<p>Stop lamp (LED type)</p>
+			</li>
+			<li>
+				<p>Rear turn signal lamp (LED type)</p>
+			</li>
+			<li>
+				<p>High mounted stop lamp (LED type)</p>
+			</li>
+			<li>
+				<p>Side repeater lamp (LED type)</p>
+			</li>
+			<li>
+				<p>License plate lamp (LED type)</p>
+			</li>
+			<li>
+				<p>Back up lamp/Rear fog lamp* (LED type)</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

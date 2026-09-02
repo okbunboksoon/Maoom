@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0370">
+	<title>Motor mit Start-Stopp-Automatik neu starten</title>
+	<conbody>
+		<section>
+			<title>Schaltgetriebe</title>
+			<ul>
+				<li>
+					<p>Vor dem Stillstand</p>
+					<ul>
+						<li>
+							<p>Betätigen Sie das Kupplungspedal, wenn dieses noch nicht betätigt wird.</p>
+						</li>
+						<li>
+							<p>Wenn das Kupplungspedal bereits betätigt wird, geben Sie das Bremspedal frei oder schalten Sie in eine andere Stellung als N (Neutralstellung).</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Nach dem Stillstand</p>
+					<ul>
+						<li>
+							<p>Wenn das Kupplungspedal bereits betätigt wird, geben Sie das Bremspedal frei oder schalten Sie in eine andere Stellung als N (Neutralstellung). Wenn das Kupplungspedal noch nicht betätigt wird, startet der Motor entsprechend dem Verfahren für verzögerten Neustart.</p>
+							<ol>
+								<li>
+									<p>Betätigen Sie das Kupplungspedal.</p>
+								</li>
+								<li>
+									<p>Legen Sie den Gang ein.</p>
+								</li>
+								<li>
+									<p>Geben Sie das Bremspedal frei.</p>
+								</li>
+							</ol>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Die verzögerte Neustartfunktion wird nur ausgeführt, wenn sich das Fahrzeug auf ebenem Untergrund befindet und stabil ist.</p>
+					</li>
+					<li>
+						<p>Um den Motor zu starten, während die Bremse nicht betätigt ist oder der Gang bereits eingelegt ist, betätigen Sie aus Sicherheitsgründen zunächst das Bremspedal und dann das Kupplungspedal.</p>
+					</li>
+					<li>
+						<p>Anlassen des Motors ohne Fahrzeugbewegung bei betätigtem Bremspedal (nur bei verzögertem Neustart):</p>
+						<ol>
+							<li>
+								<p>Betätigen Sie das Kupplungspedal und geben Sie es dann frei.</p>
+							</li>
+							<li>
+								<p>Betätigen Sie das Kupplungspedal sofort erneut.</p>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<p>Wenn das Fahrzeug abgewürgt wurde, startet der Motor, wenn Sie wie folgt vorgehen (nur bei verzögertem Neustart):</p>
+						<ol>
+							<li>
+								<p>Nachdem der Motor komplett ausgeschaltet ist, geben Sie das Kupplungspedal frei.</p>
+							</li>
+							<li>
+								<p>Betätigen Sie das Kupplungspedal.</p>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<p>Nach Betrieb von ISG STOP startet der Motor möglicherweise automatisch, wenn die Fahrgeschwindigkeit erhöht statt reduziert wird.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>Automatikgetriebe/Doppelkupplungsgetriebe/Intelligentes variables Getriebe</title>
+			<ul id="e00838">
+				<li>
+					<p>Geben Sie das Bremspedal frei. (für MHEV)</p>
+				</li>
+				<li>
+					<p>Geben Sie das Bremspedal unter 7 km/h frei.</p>
+				</li>
+				<li>
+					<p>Betätigen Sie das Gaspedal über 7 km/h.</p>
+				</li>
+			</ul>
+			<note type="note">
+				<p>Nach Betrieb von ISG STOP startet der Motor möglicherweise automatisch, wenn die Fahrgeschwindigkeit erhöht statt reduziert wird.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0368.dita#CL4m_HEV-ca_ES-2027-t0368" role="parent" scope="local" type="concept">
+				<linktext>Auto-Start</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

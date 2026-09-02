@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00661">
+	<title>Rear Top View</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04035">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04036">
+								<image href="images/N_SP327_C00_008_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e04037">
+								<image href="images/N_SP3i26_B10_012_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>(2) View switching button</p>
+		<p>(3) back button</p>
+		<p>(4) infotainment system operation button</p>
+		<p>The Rear Top View displays an image of the vehicle from above to help you determine the space between your vehicle and another vehicle or object when you are parking.</p>
+		<p>To turn the Rear Top View <term translate="no">ON</term>, press the Rear Top View button.</p>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>Rear View video will not turn <term translate="no">OFF</term> when the gear is in R (Reverse), regardless of which view you select.</p>
+				</li>
+				<li>
+					<p>The Rear View and Rear Top View can display Rear Parking Guidelines. To display Rear Parking Guidelines, tap <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver Assistance</uicontrol><uicontrol>Parking Safety</uicontrol><uicontrol>Camera Settings</uicontrol><uicontrol>Display Information</uicontrol><uicontrol>Rear Parking Guidelines</uicontrol></menucascade> on the infotainment system screen’s settings menu. Note that Rear Parking Guidelines are not displayed on the Rear View while parking.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00657.dita#t00657" role="parent" scope="local" type="concept">
+				<linktext>Rear View Monitor operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

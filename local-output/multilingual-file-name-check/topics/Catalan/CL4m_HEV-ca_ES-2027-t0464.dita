@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="CL4m_HEV-ca_ES-2027-t0464">
+	<title>Funktion Fahrspurwechsel bei Gegenverkehr</title>
+	<conbody>
+		<p>Die Funktion Fahrspurwechsel bei Gegenverkehr warnt und unterstützt auf folgende Weise.</p>
+		<ul>
+			<li>
+				<p>Kollisionswarnung</p>
+			</li>
+			<li>
+				<p>Notlenkung</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0447.dita#CL4m_HEV-ca_ES-2027-t0447" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Frontalkollisions-Vermeidungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

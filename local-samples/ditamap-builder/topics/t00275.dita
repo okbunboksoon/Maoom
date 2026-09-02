@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00275">
+	<title id="e02084">LCD display modes</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>LCD display 
+					<indexterm>LCD display modes</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody id="e02085">
+		<section>
+			<table frame="all" rowsep="1" colsep="1" pgwide="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colnum="1" colname="col1" colwidth="0.692*"/>
+					<colspec colnum="2" colname="col2" colwidth="1.566*"/>
+					<thead>
+						<row rowsep="1" valign="middle">
+							<entry colname="col1">
+								<p>View</p>
+							</entry>
+							<entry colname="col2">
+								<p>Description</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1" align="center" valign="middle">
+								<p>Driving Assist view</p>
+							</entry>
+							<entry colname="col2" align="center" valign="middle">
+								<p>Displays information related to Driver assistance system</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col1" align="center" valign="middle">
+								<p>Navigation view</p>
+							</entry>
+							<entry colname="col2" align="center" valign="middle">
+								<p>Displays information related to navigation system</p>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry colname="col1" align="center">
+								<p>Utility information view</p>
+							</entry>
+							<entry colname="col2" align="center">
+								<p>Displays information related to driving, warning, etc.</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0684">
+	<title>Parken</title>
+	<conbody>
+		<p>Beim Einparken wird die Frontansicht des Umgebungsüberwachungs-Monitors unter den folgenden Bedingungen aktiviert:</p>
+		<ul>
+			<li>
+				<p>P (Parken) oder N (Neutral) oder D (Fahren) mit einer Fahrzeuggeschwindigkeit von weniger als 10 km/h (6 mph), Drücken der Taste Parken/Sicht (1).</p>
+			</li>
+			<li>
+				<p>Umschalten von R (Rückwärtsgang) in N (Neutral) oder D (Fahren).</p>
+			</li>
+			<li>
+				<p>Wenn die automatische Aktivierungsfunktion der Umgebungsüberwachung aktiviert ist</p>
+			</li>
+		</ul>
+		<p>Drücken der Taste zum Umschalten der Ansicht (2) auf dem Umgebungsüberwachungs-Monitor, um die Ansicht von oben, von vorne, von der Seite oder die Weitsicht auszuwählen.</p>
+		<p>Beim Einparken wird die Frontansicht des Umgebungsüberwachungs-Monitors unter den folgenden Bedingungen ausgeschaltet:</p>
+		<ul>
+			<li>
+				<p>Schalten auf P (Parkstellung) oder R (Rückwärtsgang)</p>
+			</li>
+			<li>
+				<p>Drücken der Taste Parken/Sicht (1)</p>
+			</li>
+			<li>
+				<p>Drücken der Taste Zurück (3) auf dem Umgebungsüberwachungs-Monitor</p>
+			</li>
+			<li>
+				<p>Drücken der Einschalttaste des Infotainment-Systems (4)</p>
+			</li>
+			<li>
+				<p>Fahren mit einer Geschwindigkeit über 10 km/h (6 mph)</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>Wenn die Frontansicht aktiviert ist, wird die zuletzt verwendete Ansicht angezeigt.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0683.dita#CL4m_HEV-ca_ES-2027-t0683" role="parent" scope="local" type="concept">
+				<linktext>Frontansicht</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

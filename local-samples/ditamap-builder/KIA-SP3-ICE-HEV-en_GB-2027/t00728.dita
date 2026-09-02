@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00728">
+	<title>1. Getting ready to remotely move forward and backward</title>
+	<conbody>
+		<p>There are two ways to operate Remote Operation function.</p>
+		<section id="e04234">
+			<title>Method (1): Using the function with vehicle off</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04235">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e04236">
+									<figgroup>
+										<image href="images/N_SP327_B10_011_2.jpg" scale="95" align="center" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout" id="e04237">
+									<li>
+										<p>Within a certain range from the vehicle press the door lock (<image href="images/WKIA_019.jpg" scale="15" align="left" placement="inline"/>) button on the smart key or digital key and lock all doors.</p>
+									</li>
+									<li>
+										<p>Press and hold the Remote Start button (<image href="images/WKIA_108.jpg" scale="15" align="left" placement="inline"/>) within 4 seconds until the vehicle starts.</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>For more details on remotely starting the vehicle, refer to <xref href="t00034.dita#t00034"/>.</p>
+		</section>
+		<section id="e04238">
+			<title>Method (2): Using the function with vehicle on</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04239">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e04240">
+									<figgroup>
+										<image href="images/N_SP327_B10_012.jpg" scale="95" align="center" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<fig id="e04241">
+									<figgroup>
+										<image href="images/N_SP327_C00_022_E.jpg" scale="95" align="center" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol outputclass="callout" id="e04242">
+				<li>
+					<p><uicontrol>1. Leave the vehicle (keep the key) and close the doors.</uicontrol></p>
+				</li>
+				<li>
+					<p><uicontrol>2. Press and hold the parking button on the Smart Key.</uicontrol></p>
+				</li>
+			</ol>
+			<ol id="e04243">
+				<li>
+					<p>Park the vehicle in front of the space where you want to use Remote Operation function, and shift the gear to P (Park).</p>
+				</li>
+				<li>
+					<p>Press and hold the Parking/View (<image href="images/WKIA_106.jpg" scale="15" align="left" placement="inline"/>) button to turn on Smart Parking Assist. A message <uicontrol>Under REMOTE control</uicontrol> will appear on the infotainment system screen.</p>
+				</li>
+				<li>
+					<p>Get out of the vehicle with the smart key or digital key and close all doors.</p>
+				</li>
+			</ol>
+			<note type="note" id="e04244">
+				<ul id="e04245">
+					<li>
+						<p><uicontrol>Agree</uicontrol> must be selected on the infotainment system screen and the infotainment system has to operate properly to use Remote Operation function.</p>
+					</li>
+					<li>
+						<p>Before starting to move the vehicle using the Remote Forward/Reverse function from outside the vehicle, make sure that no Smart Key or digital key is left inside the vehicle. If a spare Smart Key or digital key remains inside the vehicle, the Remote Forward/Reverse function will not operate.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00727.dita#t00727" role="parent" scope="local" type="concept">
+				<linktext>Operating order</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

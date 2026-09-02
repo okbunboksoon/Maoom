@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0392">
+	<title>ESS (Notbremssignal)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Bremsanlage
+					<indexterm>Notstoppsignal (ESS)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Das Notstopp-Signalsystem warnt den Fahrer hinter dem Fahrzeug, wenn das Fahrzeug plötzlich stoppt oder das ABS-System bei einem Stopp aktiviert wird. (Das System wird aktiviert, wenn die Fahrzeuggeschwindigkeit über 55 km/h (34 mph) beträgt und die Fahrzeugverzögerung über 7m/s <sup>2</sup> liegt oder das ABS bei einer Notbremsung des Fahrzeugs aktiviert wird).</p>
+		<p>Wenn die Fahrzeuggeschwindigkeit unter 40 km/h (25 mph) liegt und der ABS-Eingriff beendet wird oder die Notbremssituation nicht länger besteht, blinken die Bremsleuchten nicht weiter.</p>
+		<note type="caution">
+			<p>Das Notstoppsignal (ESS) funktioniert nicht, wenn die Warnblinkanlage bereits eingeschaltet ist.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0375.dita#CL4m_HEV-ca_ES-2027-t0375" role="parent" scope="local" type="concept">
+				<linktext>Bremsanlage </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

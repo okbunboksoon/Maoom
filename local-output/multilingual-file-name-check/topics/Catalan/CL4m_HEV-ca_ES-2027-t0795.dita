@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0795">
+	<title>Manuelle Unfallmeldung</title>
+	<conbody>
+		<ol>
+			<li>
+				<p>Drücken Sie die Taste <term translate="no">SOS</term></p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M065050L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Verbindung mit dem Einheitsversanddienst</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCV061027L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Notdienste</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCV061028L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+		</ol>
+		<p>Fahrer oder Beifahrer können manuell einen Notruf in der Notrufzentrale absetzen, indem sie die <term translate="no">SOS</term>-Taste drücken, um die erforderlichen Notdienste zu rufen.</p>
+		<p>Ein Notruf über das ERA-GLONASS-System kann nur durch erneutes Drücken der Taste <term translate="no">SOS</term> vor der Rufverbindung abgebrochen werden.</p>
+		<p>Nach dem Auslösen des Notrufs im manuellen Modus (für eine ordnungsgemäße Notfallversorgung und -unterstützung) übermittelt das ERA-GLONASS-System durch Drücken der <term translate="no">SOS</term>-Taste automatisch die Daten des Verkehrsunfalls bzw. des anderen Unfalls an den Mitarbeiter der Notrufzentrale (während des Notrufs).</p>
+		<p>Bei einem Verkehrsunfall oder anderem Unfall sind zur manuellen Aktivierung eines Notrufs folgende Schritte erforderlich:</p>
+		<ol>
+			<li>
+				<p>Halten Sie das Auto an, um sich und die anderen Verkehrsteilnehmer zu schützen und die Verkehrsregeln einzuhalten;</p>
+			</li>
+			<li>
+				<p>Drücken Sie die <term translate="no">SOS</term>-Taste. Bei Betätigung der <term translate="no">SOS</term>-Taste wird das Gerät in den Mobilfunknetzen registriert und es werden die Mindestdaten über das Fahrzeug und seinen Standort entsprechend den technischen Anforderungen des Geräts erfasst. Danach wird eine Verbindung mit dem Mitarbeiter des ERA-GLONASS-Systems hergestellt, um die Gründe (Umstände) des Notrufs zu klären.</p>
+			</li>
+			<li>
+				<p>Nach Klärung der Gründe für den Notruf sendet der Beamte der Notrufzentrale einen Mindestdatensatz an die Notdienste und schließt den Notruf ab.</p>
+			</li>
+		</ol>
+		<p>Wenn der Notruf nicht wie vorgeschrieben beendet wird, gilt der Notruf als Fehlalarm.</p>
+		<note type="warning">
+			<p>Notstromversorgung des Systems ERA-GLONASS aus der Batterie</p>
+			<ul>
+				<li>
+					<p>Die Batterie des ERA-GLONASS-Systems liefert 1 Stunde lang Strom, falls die Hauptstromquelle des Fahrzeugs aufgrund einer Kollision in Notsituationen abgeschaltet wird.</p>
+				</li>
+				<li>
+					<p otherprops="legal_gen_std_017_03">Die Batterie des ERA-GLONASS-Systems sollte alle 4 Jahre ausgetauscht werden. Weitere Informationen finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0804.dita#CL4m_HEV-ca_ES-2027-t0804"/>.</p>
+				</li>
+			</ul>
+			<p>Aufleuchten der roten LED (Fehlfunktion des Systems)</p>
+			<p>Wenn die rote LED unter normalen Fahrbedingungen aufleuchtet, kann dies eine Fehlfunktion des ERA-GLONASS-Systems anzeigen. Bitte lassen Sie das ERA-GLONASS-System umgehend bei einem Kia-Vertragshändler oder Servicepartner überprüfen. Andernfalls ist der korrekte Betrieb des in Ihrem Fahrzeug installierten ERA-GLONASS-Systems nicht gewährleistet. Der Eigentümer des Fahrzeugs haftet für die Folgen, die durch Nichteinhaltung der oben erwähnten Bedingungen entstehen.</p>
+			<p>Eigenmächtiger Ausbau oder Modifikation</p>
+			<p>Das ERA-GLONASS-System ruft die Notdienste zur Hilfe. Daher kann jede willkürliche Entfernung oder Änderung der Einstellungen des ERA-GLONASS-Systems Ihre Fahrsicherheit beeinträchtigen. Es kann sogar einen irrtümlichen Notruf an die Notrufzentrale absetzen. Wir bitten Sie daher, weder selbst noch durch Dritte Änderungen an den Einstellungen der in Ihrem Fahrzeug installierten Geräte des ERA-GLONASS-Systems vorzunehmen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0793.dita#CL4m_HEV-ca_ES-2027-t0793" role="parent" scope="local" type="concept">
+				<linktext>ERA-GLONASS-System</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

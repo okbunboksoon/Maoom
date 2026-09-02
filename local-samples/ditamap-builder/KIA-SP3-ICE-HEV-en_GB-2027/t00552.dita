@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00552">
+	<title>Auto set speed change (if equipped with navigation)</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03557">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03558">
+								<image href="images/N_SP327_C00_039.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the Automatic Assist menu is selected and Manual Speed Limit Assist or Smart Cruise Control is operating, the automatic set speed adjustment function is activated, and the set speed is displayed in green on the cluster. When the speed limit changes, the set speed is automatically adjusted accordingly.</p>
+		<p>When Advanced Assist is set, if the upcoming speed limit is lower than the current road speed limit, the set speed is reduced in advance. If the set speed is reduced in advance, the upcoming speed limit is displayed in green.</p>
+		<p>Automatic set speed adjustment operates under the following conditions:</p>
+		<ul id="e03559">
+			<li>
+				<p>Europe</p>
+				<ul id="e03560">
+					<li>
+						<p>Highways / Motorways: Roads with a speed limit of 60 km/h (37 mph) or higher (in Switzerland 70 km/h (45 mph) or higher).</p>
+					</li>
+					<li>
+						<p>Non-highway roads: Roads with a speed limit of 30 km/h (20 mph) or higher.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Australia</p>
+				<ul id="e03561">
+					<li>
+						<p>Highways / Motorways: Roads with a speed limit of 70 km/h (45 mph) or higher.</p>
+					</li>
+					<li>
+						<p>Non-highway roads: Roads with a speed limit of 30 km/h (20 mph) or higher.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<note type="tip" id="e03562">
+			<ul id="e03563">
+				<li>
+					<p>When you drive at a speed lower than the speed limit, set the offset below “0”, or push the (<image align="left" href="images/WKIA_335.jpg" scale="15" placement="inline"/>) switch to decrease your set speed.</p>
+				</li>
+				<li>
+					<p>Even if the set speed of Manual Speed Limit Assist or Smart Cruise Control is matched to the road speed limit, the vehicle may exceed the speed limit depending on driving conditions. Always monitor traffic conditions and decelerate manually when necessary.</p>
+				</li>
+				<li>
+					<p>Intelligent Speed Limit Assist operates based on the speed unit set on the cluster. If the cluster’s speed unit differs from the speed unit used in the country, the system may not operate properly. Be cautious when changing the cluster’s speed unit.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip" id="e03564">
+			<p>When driving on sections of German highways without a speed limit, the set speed from the previous unrestricted section is remembered and used in the next section. (Applies to both automatic and manual set speed adjustments)</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00547.dita#t00547" role="parent" scope="local" type="concept">
+				<linktext>Intelligent Speed Limit Assist operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

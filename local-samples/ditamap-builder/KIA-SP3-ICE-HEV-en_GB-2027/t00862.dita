@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00862">
+	<title>Wheel and tire installation</title>
+	<shortdesc>When removing and installing wheels and tires, use the tool for removing the wheel cover inside the tool case to remove the wheel cover. The remover tool insertion hole is located at the top or edge of the wheel cover.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tires and wheels
+					<indexterm>wheel and tire installation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05079">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05080">
+								<image href="images/N_SP3i26_B12_009_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e05081">
+								<li>
+									<p>Wheel cover remover tool</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e05082">
+			<title>Removing the wheel cover using a dedicated removal tool</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05083">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e05084">
+									<image href="images/N_SP3i26_C11_024_1_I.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol id="e05085">
+				<li>
+					<p>Make sure to place the wheel cover into the designated position when replacing the wheel cover.</p>
+				</li>
+				<li>
+					<p>The designated position of the wheel cover depends on the shape of the wheel. It must be installed in the same position as before disassembly.</p>
+				</li>
+				<li>
+					<p>Be careful not to install in the wrong location or force it in, as this may damage the parts or cause the wheel cover to come off while driving.</p>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00850.dita#t00850" role="parent" scope="local" type="concept">
+				<linktext>Tires and wheels</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

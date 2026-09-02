@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00407">
+	<title>Applying EPB</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>electronic parking brake (EPB) 
+					<indexterm>applying</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02963">
+			<title>Applying EPB manually</title>
+			<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02964">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e02965">
+									<figgroup>
+										<image href="../../images/OOV045006.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02966"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol id="e02967">
+				<li>
+					<p>Depress the brake pedal.</p>
+				</li>
+				<li>
+					<p>Pull up the EPB switch.</p>
+				</li>
+			</ol>
+			<p>Make sure the brake warning light (<image align="left" href="../../images/WKIA_127.eps" outputclass="nolabel" placement="inline" scale="15" id="e02968"/>) illuminates. If <term>AUTO HOLD</term> is active when the vehicle is turned off, EPB is applied automatically. The EPB is also applied if the EPB switch is pulled up after the vehicle is turned off. Do not operate the EPB while driving, except in emergency situations.</p>
+			<note type="note" id="e02969">
+				<ul id="e02970">
+					<li>
+						<p>If the vehicle does not remain stationary on a steep incline or while pulling a trailer, follow the steps below:</p>
+						<ol id="e02971">
+							<li>
+								<p>Apply the Electronic Parking Brake (EPB).</p>
+							</li>
+							<li>
+								<p>Pull up the EPB switch and hold it for more than 3 seconds.</p>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<p>A clicking sound or electric brake motor whine may be heard when applying or releasing the EPB. This is normal and indicates proper system operation.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e02972">
+			<title>Applying EPB automatically</title>
+			<p>The Electronic Parking Brake (EPB) is applied automatically under the following conditions:</p>
+			<ul id="e02973">
+				<li>
+					<p>The EPB may automatically provide additional braking force after being applied for safety.</p>
+				</li>
+				<li>
+					<p>The driver turns off the vehicle while <term>AUTO HOLD</term> is active.</p>
+				</li>
+				<li>
+					<p>When the vehicle is shifted to P (Park).</p>
+				</li>
+				<li>
+					<p>The EPB is requested by other systems.</p>
+				</li>
+			</ul>
+			<note type="note" id="e02974">
+				<p>For vehicles equipped with EPB and <term>AUTO HOLD</term>:</p>
+				<ul id="e02975">
+					<li>
+						<p>If the vehicle is turned off while <term>AUTO HOLD</term> is active, the EPB will engage automatically.</p>
+					</li>
+					<li>
+						<p>To prevent this, turn off <term>AUTO HOLD</term> before turning off the vehicle.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e02976">
+			<title>Emergency braking</title>
+			<p>If there is a problem with the brake pedal while driving, emergency braking is possible by pulling up and holding the EPB switch. Braking is possible only while you are holding the EPB switch. However, braking distance will be longer than normal.</p>
+			<note type="warning" id="e02977">
+				<p>Do not operate EPB while the vehicle is moving except in an emergency situation. Applying the EPB while the vehicle is moving at normal speeds can cause a sudden loss of control of the vehicle. If you must use the EPB to stop the vehicle, use great caution in applying the brake.</p>
+			</note>
+			<note type="note" id="e02978">
+				<ul id="e02979">
+					<li>
+						<p>During emergency braking by the EPB, the parking brake warning light will appear to indicate that the system is operating.</p>
+					</li>
+					<li>
+						<p>If you notice a continuous noise or burning smell when the EPB is used for emergency braking, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

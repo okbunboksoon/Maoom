@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0289">
+	<title>Automatische Klimaanlagen-Trocknung</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatische Klimaanlagen-Trocknung</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Die automatische Trocknungsfunktion <term translate="no">A/C</term> trocknet die Feuchtigkeit in der Klimaanlage und verringert dadurch unangenehme Gerüche. Das Trocknergebläse läuft automatisch 30 Minuten nachdem das Fahrzeug ausgeschaltet wurde.</p>
+		<section>
+			<title>Ein- oder Ausschalten der automatischen Trocknung der Klimaanlage</title>
+			<p>Die automatische Trocknungsfunktion <term translate="no">A/C</term> kann über das Infotainment-System unter <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Klima</uicontrol><uicontrol>Klima-Funktionen</uicontrol><uicontrol>Klimaanlage Automatische Trocknung</uicontrol></menucascade> ein- und ausgeschaltet werden.</p>
+			<p>Wenn die automatische <term translate="no">A/C</term>-Trocknungsfunktion aktiviert ist, stellt die Klimaanlage die Gebläsedrehzahl auf die dritte Stufe ein und wählt den Fresh-Modus.</p>
+			<note type="tip">
+				<p>Das Infotainment-System kann sich nach Aktualisierungen ändern. Weitere Informationen finden Sie im Benutzerhandbuch des Infotainment-Systems und in der Kurzanleitung.</p>
+			</note>
+		</section>
+		<section>
+			<title>Betriebsbedingungen</title>
+			<p>Die automatische Trocknungsfunktion <term translate="no">A/C</term> funktioniert unter den folgenden Bedingungen:</p>
+			<ul>
+				<li>
+					<p>Das Fahrzeug wird nach dem Betrieb der Klimaanlage für einen bestimmten Zeitraum ausgeschaltet</p>
+				</li>
+				<li>
+					<p>Der Stand der 12-Volt-Batterie ist ausreichend</p>
+				</li>
+				<li>
+					<p>Die Außentemperatur liegt über einem bestimmten Wert</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Nicht-Betriebsbedingungen</title>
+			<p>Die automatische Trocknungsfunktion <term translate="no">A/C</term> wird unter den folgenden Bedingungen deaktiviert:</p>
+			<ul>
+				<li>
+					<p>Die automatische Trocknungsfunktion <term translate="no">A/C</term> ist seit 10 Minuten in Betrieb</p>
+				</li>
+				<li>
+					<p>Die Taste <term translate="no">ENGINE START/STOP</term> wird gedrückt oder das Fahrzeug steht auf <term translate="no">ON</term></p>
+				</li>
+				<li>
+					<p>Die Klimaanlage wird aus der Ferne bedient.</p>
+				</li>
+			</ul>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Die automatische Trocknungsfunktion <term translate="no">A/C</term> reduziert Gerüche aus der Klimaanlage, kann aber nicht alle Gerüche entfernen.</p>
+					</li>
+					<li>
+						<p>Die automatische Trocknungsfunktion <term translate="no">A/C</term> funktioniert nicht, wenn der verbleibende Batteriestand nicht ausreicht, um eine Entladung der Batterie zu verhindern.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0284.dita#CL4m_HEV-ca_ES-2027-t0284" role="parent" scope="local" type="concept">
+				<linktext>Automatische Klimaanlage </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

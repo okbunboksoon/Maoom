@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00354">
+	<title>Dynamic welcome light</title>
+	<conbody>
+		<p>This feature dynamically represents the vehicle’s lights for a certain period of time when the driver unlocks the vehicle, enhancing its aesthetic appeal.</p>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Headlight time-out</uicontrol></menucascade> on the infotainment system screen. Dynamic welcome light will turn on for approximately 2 seconds.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Headlight time-out</uicontrol></menucascade> on the infotainment system screen. Dynamic welcome light will turn on for approximately 2 seconds.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operating condition(s)</title>
+			<ul>
+				<li>
+					<p>The welcome light (exterior lights) operational conditions are met.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00878">
+	<title>Light bulb position (Rear)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>light bulbs
+					<indexterm>light bulb position (rear)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05172">
+			<desc>
+				<p>: if equipped</p>
+			</desc>
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row>
+						<entry colname="col1">
+							<fig id="e05173">
+								<title>Type A</title>
+								<image href="images/N_SP327_B12_003.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e05174">
+								<title>Type B</title>
+								<image href="images/N_SP327_B12_004.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05175">
+								<title>Type A</title>
+								<image href="images/N_SP327_D12_006_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e05176">
+								<title>Type B</title>
+								<image href="images/N_SP327_D12_007_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e05177">
+			<li>
+				<p>Tail lamp / Stop lamp (LED)</p>
+			</li>
+			<li>
+				<p>Turn signal lamp (Bulb)</p>
+			</li>
+			<li>
+				<p>Turn signal lamp (LED)</p>
+			</li>
+			<li>
+				<p>High mounted stop lamp (LED)</p>
+			</li>
+			<li>
+				<p>License plate lamps</p>
+			</li>
+			<li>
+				<p>Back up lamp (Bulb)</p>
+			</li>
+			<li>
+				<p>Back up lamp (LED)</p>
+			</li>
+			<li>
+				<p>Rear fog lamp (Bulb) <sup>*</sup></p>
+			</li>
+			<li>
+				<p>Rear fog lamp (LED) <sup>*</sup></p>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00874.dita#t00874" role="parent" scope="local" type="concept">
+				<linktext>Light bulbs</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

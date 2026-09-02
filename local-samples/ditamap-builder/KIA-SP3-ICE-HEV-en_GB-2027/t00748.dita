@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00748">
+	<title>Effective use of TPMS</title>
+	<conbody>
+		<p>Each tire, including the spare (if provided), should be checked monthly when cold and inflated to the inflation pressure recommended by the vehicle manufacturer on the vehicle placard or tire inflation pressure label.</p>
+		<p>(If your vehicle has tires of a different size than the size indicated on the vehicle placard or tire inflation pressure label, you should determine the proper tire inflation pressure for those tires.)</p>
+		<p>As an added safety feature, your vehicle has been equipped with a tire pressure monitoring system (TPMS) that illuminates a low tire pressure telltale when one or more of your tires is significantly under-inflated. Accordingly, when the low tire pressure telltale illuminates, you should stop and check your tires as soon as possible, and inflate them to the proper pressure. Driving on a significantly under-inflated tire causes the tire to overheat and can lead to tire failure. Under-inflation also reduces fuel efficiency and tire tread life, and may affect the vehicle’s handling and stopping ability.</p>
+		<p>Please note that the TPMS is not a substitute for proper tire maintenance, and it is the driver’s responsibility to maintain correct tire pressure, even if under-inflation has not reached the level to trigger illumination of the TPMS low tire pressure telltale.</p>
+		<p>Your vehicle has also been equipped with a TPMS malfunction indicator to indicate when the system is not operating properly. The TPMS malfunction indicator is combined with the low tire pressure telltale. When the system detects a malfunction, the telltale will flash for approximately one minute and then remain continuously illuminated. This sequence will continue upon subsequent vehicle start-ups as long as the malfunction exists. When the malfunction indicator is illuminated, the system may not be able to detect or signal low tire pressure as intended. TPMS malfunctions may occur for a variety of reasons, including the installation of replacement or alternate tires or wheels on the vehicle that prevent the TPMS from functioning properly.</p>
+		<p>Always check the TPMS malfunction telltale after replacing one or more tires or wheels on your vehicle to ensure that the replacement or alternate tires and wheels allow the TPMS to continue to function properly.</p>
+		<note type="warning" id="e04538">
+			<p>Overinflation or underinflation of tires can reduce tire life, adversely affect vehicle handling, and lead to sudden tire failure that may cause you to lose control of your vehicle, resulting in an accident.</p>
+		</note>
+		<note type="note" id="e04539">
+			<p>Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner under any of the following circumstances:</p>
+			<ul id="e04540">
+				<li>
+					<p>The low tire pressure or TPMS malfunction indicator light does not illuminate for 3 seconds when the vehicle is in <term translate="no">ON</term> position or the vehicle is running.</p>
+				</li>
+				<li>
+					<p>The TPMS malfunction indicator light remains illuminated after blinking for approximately 1 minute.</p>
+				</li>
+				<li>
+					<p>The low tire pressure position indicator light remains illuminated.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00747.dita#t00747" role="parent" scope="local" type="concept">
+				<linktext>Tire Pressure Monitoring System (TPMS)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

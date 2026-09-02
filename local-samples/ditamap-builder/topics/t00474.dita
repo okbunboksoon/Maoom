@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00474">
+	<title>Collision Warning</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03576">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03577">
+								<figgroup>
+									<image href="../../images/OOV055146L.eps" align="center" height="1.740in" placement="break" id="e03578"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e03579">
+								<figgroup>
+									<image href="../../images/OOV055108.eps" align="center" height="1.740in" placement="break" id="e03580"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e03581">
+			<li>
+				<p> <uicontrol>Collision Warning</uicontrol> </p>
+			</li>
+		</ol>
+		<p>Collision warning will alert the driver with the emergency steering warning light blinking (<image href="../../images/WKIA_077.eps" align="left" placement="inline" height="0.118in" width="0.170in" outputclass="nolabel" scale="15" id="e03582"/>), a warning message, steering wheel vibration and an audible warning. The warning light will appear on the outside rearview mirror (side view mirror) when the vehicle either on a right or left lane is detected from the rear.</p>
+		<p outputclass="across">Emergency steering will be activated in following conditions.</p>
+		<ul id="e03583">
+			<li>
+				<p>Your driving speed: Approximately 40–145 km/h (25–90 mph)</p>
+			</li>
+			<li>
+				<p>When your vehicle and the oncoming vehicle or powered two-wheeler are moving in opposite directions</p>
+			</li>
+			<li>
+				<p>When the target enters the operating area of the function.</p>
+			</li>
+			<li>
+				<p>When driving on a straight road</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0666">
+	<title>Erweiterte Rückfahrüberwachung</title>
+	<conbody>
+		<p>Die Erweiterte Rückfahrüberwachung behält die Hecksicht bei, wenn Sie den Gang von R (Rückwärtsgang) auf N (Neutral) oder D (Fahren) schalten, um Sie beim sicheren Einparken zu unterstützen.</p>
+		<section>
+			<title>Betriebsbedingungen</title>
+			<p>Der Heckmonitor bleibt aktiv, wenn folgende Bedingungen erfüllt sind:</p>
+			<ul>
+				<li>
+					<p>Umschalten des Gangs von R (Rückwärtsgang) in N (Neutral) oder D (Fahren).</p>
+				</li>
+				<li>
+					<p>Die Fahrgeschwindigkeit liegt unter etwa 10 km/h (6 mph).</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Ausschalt-Bedingungen</title>
+			<p>Die Funktion der erweiterten Rückfahrüberwachung schaltet sich ab, wenn folgende Bedingungen erfüllt sind:</p>
+			<ul>
+				<li>
+					<p>Umschalten des Gangs in P (Parkstellung)</p>
+				</li>
+				<li>
+					<p>Drücken der Taste Parken/Sicht (1)</p>
+				</li>
+				<li>
+					<p>Drücken Sie die Zurück-Taste (3) auf dem Bildschirm des Heckmonitor</p>
+				</li>
+				<li>
+					<p>Drücken der Bildschirmtaste Infotainment-System (4)</p>
+				</li>
+				<li>
+					<p>Die Fahrzeuggeschwindigkeit ist höher als 10 km/h (6 mph)</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0663.dita#CL4m_HEV-ca_ES-2027-t0663" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Heckmonitors</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

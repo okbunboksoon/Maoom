@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00848">
+	<title id="e05303">Recommended lubricants and capacities</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>lubricants and capacities</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc" id="e05304">
+			<desc>
+				<p>To help achieve proper vehicle performance and durability, use only lubricants of the proper quality.</p>
+				<p>These lubricants and fluids are recommended for use in your vehicle.</p>
+				<p>To maintain your vehicle’s best performance, use Kia genuine oil or those of an equivalent standard oil.</p>
+			</desc>
+			<tgroup cols="5" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="1.31*"/>
+				<colspec colnum="2" colname="2" colwidth="1.21*"/>
+				<colspec colnum="3" colname="3" colwidth="1*"/>
+				<colspec colnum="4" colname="4" colwidth="1.49*"/>
+				<colspec colnum="5" colname="5" colwidth="2.07*"/>
+				<thead valign="middle">
+					<row rowsep="1">
+						<entry align="center" valign="middle" namest="1" nameend="3">
+							<p>Lubricant</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>Volume (L)</p>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>Classification</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody valign="middle">
+					<row rowsep="1" valign="middle">
+						<entry align="left" valign="middle" morerows="2">
+							<p>Reducer fluid</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>2WD</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Front</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Approx. 0.65</p>
+						</entry>
+						<entry valign="middle">
+							<p>ExxonMobil-MOBIL EV COOL DRIVE013</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle" morerows="1">
+							<p>4WD</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Front</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Approx. 0.65</p>
+						</entry>
+						<entry valign="middle">
+							<p>ExxonMobil-MOBIL EV COOL DRIVE013</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>Rear</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Approx. 2.15</p>
+						</entry>
+						<entry valign="middle">
+							<p>SK ATF SP4M-1, MICHANG ATF SP4M-1, S-OIL ATF SP4M-1, Kia Genuine ATF SP4M-1</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry align="left" valign="middle" namest="1" nameend="3">
+							<p>Brake fluid</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>As required</p>
+						</entry>
+						<entry colname="5" valign="middle">
+							<p>SAE J1704 DOT-4 LV, FMVSS 116 DOT-4, ISO4925 CLASS-6</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry align="left" valign="middle" morerows="1">
+							<p>Coolant</p>
+						</entry>
+						<entry align="left" valign="middle" namest="2" nameend="3">
+							<p>2WD</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>11.6</p>
+						</entry>
+						<entry valign="middle" morerows="1">
+							<p>A Phosphate based ethylene glycol based coolant</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" namest="2" nameend="3">
+							<p>4WD</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>14.2</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

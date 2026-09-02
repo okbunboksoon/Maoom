@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00224">
+	<title id="e01392">Carrying long/narrow cargo </title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01393">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01394">
+								<image href="images/N_SP327_C06_011_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Additional cargo space is provided to accommodate long/narrow cargo (skis, poles, etc.) not able to fit properly in the tailgate when closed.</p>
+		<ol id="e01395">
+			<li>
+				<p>Pull the armrest down.</p>
+			</li>
+			<li>
+				<p>Pull the cover down while pushing the release lever down.</p>
+			</li>
+		</ol>
+		<note type="warning" id="e01396">
+			<p>Cargo should always be secured to prevent it from being thrown about the vehicle in a collision and causing injury to the vehicle occupants. Do not place objects in the rear seats, since they cannot be properly secured and may hit the front seat occupants in a collision.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00196.dita#t00196" role="parent" scope="local" type="concept">
+				<linktext>Seats </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

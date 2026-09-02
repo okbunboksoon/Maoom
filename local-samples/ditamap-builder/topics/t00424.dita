@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00424">
+	<title>Downhill Brake Control (DBC)</title>
+	<shortdesc>Downhill Brake Control (DBC) feature assists the driver to descend a steep hill without having to depress the brake pedal.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle safety system 
+					<indexterm>downhill brake control (DBC)</indexterm>
+				</indexterm>
+				<indexterm>downhill brake control (DBC)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03088">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e03089">
+								<figgroup>
+									<image align="center" placement="break" height="1.575in" width="2.244in" href="../../images/OOV045026.eps" id="e03090"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>DBC automatically applies the brakes to maintain the vehicle speed of 4–40 km/h (2.5–25 mph) and allows the driver to concentrate on steering the vehicle down hill.</p>
+		<p>Always turn off DBC on normal roads. DBC might activate inadvertently from the stand by mode when driving through speed bumps or making sharp curves.</p>
+		<note type="note" id="e03091">
+			<p>DBC defaults to the off position whenever the vehicle is in <term>POWER ON</term> position.</p>
+			<p>Noise or vibration may occur from the brakes when DBC is activated.</p>
+			<p>The rear stop light comes on when DBC is activated.</p>
+		</note>
+		<section id="e03092">
+			<title>Downhill Brake Control operation</title>
+			<table colsep="1" frame="none" outputclass="formatd" pgwide="true" rowsep="1" id="e03093">
+				<tgroup cols="3" colsep="1" outputclass="FormatD" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="17*"/>
+					<colspec colname="col2" colnum="2" colwidth="20*"/>
+					<colspec colname="col3" colnum="3" colwidth="63*"/>
+					<thead>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>Mode</p>
+							</entry>
+							<entry colname="col2">
+								<p>Indicator light</p>
+							</entry>
+							<entry align="center" colname="col3" valign="middle">
+								<p>Description</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>Standby</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<fig id="e03094">
+									<figgroup>
+										<image align="center" height="0.264in" href="../../images/WKIA_056.eps" outputclass="nolabel" placement="break" id="e03095"/>
+									</figgroup>
+								</fig>
+								<p>Appeared</p>
+							</entry>
+							<entry align="left" colname="col3" valign="middle">
+								<p>Press the DBC button when vehicle speed is under 60 km/h (38 mph). DBC will turn on and enter the standby mode.</p>
+								<p>The system does not turn on if vehicle speed is over 60 km/h (38 mph).</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>Activated</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<fig id="e03096">
+									<figgroup>
+										<image align="center" height="0.264in" href="../../images/WKIA_056.eps" outputclass="nolabel" placement="break" id="e03097"/>
+									</figgroup>
+								</fig>
+								<p>Blinks</p>
+							</entry>
+							<entry align="left" colname="col3" valign="middle">
+								<p>In the standby mode, It enters the operating mode when the following conditions are met.</p>
+								<ul id="e03098">
+									<li>
+										<p>The road surface should be more than a certain angle of inclination</p>
+									</li>
+									<li>
+										<p>The accelerator pedal must not be depressed.</p>
+									</li>
+									<li>
+										<p>The vehicle speed should be within 3–40 km/h (2–25 mph)</p>
+									</li>
+								</ul>
+								<p>Within operating vehicle speed 3–40 km/h (2–25 mph), the driver can lower or raise the vehicle speed by stepping on the brake pedal or accelerator pedal.</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>Temporarily deactivated</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<fig id="e03099">
+									<figgroup>
+										<image align="center" height="0.264in" href="../../images/WKIA_056.eps" outputclass="nolabel" placement="break" id="e03100"/>
+									</figgroup>
+								</fig>
+								<p>Appeared</p>
+							</entry>
+							<entry align="left" colname="col3" valign="middle">
+								<p>In the activated mode, DBC will temporarily deactivate under the following conditions:</p>
+								<ul id="e03101">
+									<li>
+										<p>The hill is not steep enough.</p>
+									</li>
+									<li>
+										<p>The accelerator pedal is depressed.</p>
+									</li>
+									<li>
+										<p>When the vehicle speed is in the range of 40–60 km/h (25–38 mph)</p>
+									</li>
+								</ul>
+								<p>If the above conditions are not met, DBC will automatically activate again.</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>OFF</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<fig id="e03102">
+									<figgroup>
+										<image align="center" height="0.264in" href="../../images/WKIA_056.eps" outputclass="nolabel" placement="break" id="e03103"/>
+									</figgroup>
+								</fig>
+								<p>Not appeared</p>
+							</entry>
+							<entry align="left" colname="col3" valign="middle">
+								<p>DBC will turn off under the following conditions:</p>
+								<ul id="e03104">
+									<li>
+										<p>DBC button is pressed again.</p>
+									</li>
+									<li>
+										<p>When the accelerator pedal is depressed and the vehicle speed exceeds 60 km/h (38 mph)</p>
+									</li>
+								</ul>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" colname="col1" valign="middle">
+								<p>Overheated or Malfunctioned</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<fig id="e03105">
+									<figgroup>
+										<image align="center" height="0.264in" href="../../images/WKIA_056.eps" outputclass="nolabel" placement="break" id="e03106"/>
+									</figgroup>
+								</fig>
+								<p>Appeared with yellow</p>
+							</entry>
+							<entry align="left" colname="col3" valign="middle">
+								<p>When the warning light appears even though the DBC has cooled off, have the vehicle checked by a professional workshop. Kia recommends that you visit an authorized Kia dealer/service partner.</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+</concept>

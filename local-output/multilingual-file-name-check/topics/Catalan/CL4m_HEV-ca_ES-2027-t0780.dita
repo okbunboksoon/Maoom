@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_017_02" id="CL4m_HEV-ca_ES-2027-t0780">
+	<title>Europaweites eCall-System</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M065023L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>LED</p>
+								</li>
+								<li>
+									<p>Taste <term translate="no">SOS</term></p>
+								</li>
+								<li>
+									<p>Mikrofon</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p><term translate="no">SOS</term> Taste: Der Fahrer/Beifahrer stellt durch Drücken der Taste eine Verbindung mit der Notrufzentrale her.</p>
+		<p>LED: Die rote und grüne LED leuchtet 3 Sekunden auf, wenn sich das Fahrzeug in Position <term translate="no">ON</term> befindet. Andernfalls werden sie im normalen Betrieb des Fahrzeugs ausgeschaltet.</p>
+		<p>Wenn Probleme mit dem System auftreten, leuchten die LED weiterhin rot.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0774.dita#CL4m_HEV-ca_ES-2027-t0774" role="parent" scope="local" type="concept">
+				<linktext>Europaweites eCall-System</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00368">
+	<title>Ignition switch</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>ignition switch</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02364">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e02365">
+								<figgroup>
+									<image href="images/N_SP3i26_C09_001_I.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02366">
+								<li>
+									<p><term translate="no">LOCK</term></p>
+								</li>
+								<li>
+									<p><term translate="no">ACC</term></p>
+								</li>
+								<li>
+									<p><term translate="no">ON</term></p>
+								</li>
+								<li>
+									<p><term translate="no">START</term></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e02367">
+			<title>LOCK</title>
+			<p>In this position, the steering wheel locks to prevent theft and the ignition key can be removed.</p>
+		</section>
+		<section id="e02368">
+			<title>ACC (Accessory)</title>
+			<p>In this position, the steering wheel is unlocked and electrical accessories are available.</p>
+			<note type="tip" id="e02369">
+				<p>If you have difficulty turning the ignition switch to <term translate="no">ACC</term> position, turn the steering wheel left and right while turning the key to release the tension.</p>
+			</note>
+		</section>
+		<section id="e02370">
+			<title>ON</title>
+			<ul id="e02371">
+				<li>
+					<p>Check the warning lights before starting the engine.</p>
+				</li>
+				<li>
+					<p>This is the normal position after the engine is started.</p>
+				</li>
+			</ul>
+			<note type="note" id="e02372">
+				<p>To prevent 12V battery discharge, do not leave the ignition switch in <term translate="no">ON</term> position when the engine is not running.</p>
+			</note>
+		</section>
+		<section id="e02373">
+			<title>START</title>
+			<ul id="e02374">
+				<li>
+					<p>Turn the ignition switch to the <term translate="no">START</term> position to start the engine.</p>
+				</li>
+				<li>
+					<p>The engine will crank while the ignition key is held in this position and will return to <term translate="no">ON</term> position when released.</p>
+				</li>
+				<li>
+					<p>The brake warning light can be checked in this position.</p>
+				</li>
+			</ul>
+			<note type="warning" id="e02375">
+				<ul id="e02376">
+					<li>
+						<p>Never turn the ignition switch to <term translate="no">LOCK</term> or <term translate="no">ACC</term> while the vehicle is in motion. This would result in loss of directional control and braking function, which could cause an accident.</p>
+					</li>
+					<li>
+						<p>Before leaving the driver’s seat, always make sure the vehicle is in P (Park), set the parking brake fully and turn the vehicle off. Unexpected and sudden vehicle movement may occur if these precautions are not taken.</p>
+					</li>
+					<li>
+						<p>Never reach for the ignition switch or any other controls through the steering wheel while the vehicle is in motion. The presence of your hand or arm in the area could cause loss of vehicle control, an accident and serious bodily injury or death.</p>
+					</li>
+					<li>
+						<p>Do not place any movable objects around the driver’s seat as they may move while driving, interfere with the driver and lead to an accident.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section importance="optional" id="e02377">
+			<title>Anti-theft steering column lock</title>
+			<ul id="e02378">
+				<li>
+					<p>The steering wheel locks in the <term translate="no">LOCK</term> position to help prevent theft.</p>
+				</li>
+				<li>
+					<p>The steering wheel locks when the driver’s door is opened.</p>
+				</li>
+				<li>
+					<p>If the steering wheel does not lock properly when the driver’s door is opened, a warning chime will sound. Attempt to lock the steering wheel again.</p>
+				</li>
+				<li>
+					<p>If the issue persists, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>If the vehicle is in the <term translate="no">LOCK</term> position and the driver’s door is already open, the steering wheel will not lock and a warning chime will sound. In this case, close the door to lock the steering wheel and stop the chime.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00362.dita#t00362" role="parent" scope="local" type="concept">
+				<linktext>Driving your vehicle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

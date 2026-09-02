@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00075">
+	<title>Opening the tailgate</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tailgate
+					<indexterm>opening the tailgate</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e00390">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e00391">
+								<image href="images/N_SP327_B04_009_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00392">
+								<image href="images/N_SP327_B04_010.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>The tailgate locks or unlocks when you lock or unlock all the doors with the smart key or the central door lock switch.</p>
+			</li>
+			<li>
+				<p>If you press the tailgate unlock button on the smart key for approximately 1 second, only the tailgate unlocks.</p>
+			</li>
+			<li>
+				<p>If the tailgate is unlocked, you can open it by pressing the handle and pulling it up.</p>
+			</li>
+			<li>
+				<p>Once you open and close the tailgate, it locks automatically. All doors must be locked.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>In cold and wet climates, the door lock and door mechanisms may not work properly due to freezing conditions.</p>
+		</note>
+		<note type="warning">
+			<p>The tailgate swings upward. Make sure no objects or people are near the rear of the vehicle when opening the tailgate.</p>
+		</note>
+		<note type="note">
+			<p>Make sure to close the tailgate before driving your vehicle. Possible damage to the tailgate gas lifters and attached hardware may occur if you do not close the tailgate prior to driving.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00074.dita#t00074" role="parent" scope="local" type="concept">
+				<linktext>Tailgate</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

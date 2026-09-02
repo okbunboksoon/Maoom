@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00564">
+	<title>Collision-Avoidance Assist (while departing)</title>
+	<conbody>
+		<p>The warning light on the outside rearview mirror, head-up display (if equipped), an audible warning and the steering wheel vibration will warn the driver of a collision. It assists in braking control to prevent a collision with a vehicle approaching from the blind spot area.</p>
+		<p>Warning message: <uicontrol>Emergency braking</uicontrol> </p>
+		<p>Collision-Avoidance Assist will be activated in the following conditions.</p>
+		<ul>
+			<li>
+				<p>Your driving speed: Below 3 km/h (2 mph)</p>
+			</li>
+			<li>
+				<p>Speed of the vehicle in your blind spot area: Above 5 km/h (3 mph)</p>
+			</li>
+		</ul>
+		<p>When the vehicle is stopped due to emergency braking, the warning message will appear on the cluster. For your safety, the driver should depress the brake pedal immediately and check the surroundings.</p>
+		<p>Warning message: <uicontrol>Drive carefully</uicontrol> </p>
+		<ul>
+			<li>
+				<p>Brake control will end after the vehicle is stopped by emergency braking for approximately 2 seconds.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>For your safety, change the Settings after parking the vehicle at a safe location.</p>
+				</li>
+				<li>
+					<p>If any other function’s warning message is displayed or audible warning is generated, Blind-Spot Collision-Avoidance Assist’s warning message may not be displayed and audible warning may not be generated.</p>
+				</li>
+				<li>
+					<p>You may not hear the warning sound of Blind-Spot Collision-Avoidance Assist if the surrounding is noisy. Always pay attention and keep the vehicle volume at a moderate level.</p>
+				</li>
+				<li>
+					<p>Blind-Spot Collision-Avoidance Assist may not operate if the driver applies the brake pedal to avoid collision.</p>
+				</li>
+				<li>
+					<p>When Blind-Spot Collision-Avoidance Assist is operating, braking control by the function will automatically cancel when the driver excessively depresses the accelerator pedal or sharply steers the vehicle.</p>
+				</li>
+				<li>
+					<p>During Blind-Spot Collision-Avoidance Assist operation, the vehicle may stop suddenly injuring passengers and shifting loose objects. Always have the seat belt on and keep loose objects secured.</p>
+				</li>
+				<li>
+					<p>Even if there is a problem with Blind-Spot Collision-Avoidance Assist, the vehicle’s basic braking performance will operate properly.</p>
+				</li>
+				<li>
+					<p>Blind-Spot Collision-Avoidance Assist may not operate in all situations, and even if it works, it may not be able to avoid collisions.</p>
+				</li>
+				<li>
+					<p>Blind-Spot Collision-Avoidance Assist may warn the driver late or may not warn the driver depending on the road and driving conditions.</p>
+				</li>
+				<li>
+					<p>The responsibility for vehicle operation lies with the driver. Do not rely solely on Blind-Spot Collision-Avoidance Assist for driving and always check the surrounding conditions directly and drive safely.</p>
+				</li>
+				<li>
+					<p>Never operate Blind-Spot Collision-Avoidance Assist on people, animal, objects, etc. It may cause serious injury or death.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning">
+			<p>The brake control may not operate properly depending on the status of ESC (Electronic Stability Control).</p>
+			<p>There will only be a warning when:</p>
+			<ul>
+				<li>
+					<p>The ESC (Electronic Stability Control) warning light is on</p>
+				</li>
+				<li>
+					<p>ESC (Electronic Stability Control) is engaged in a different function</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

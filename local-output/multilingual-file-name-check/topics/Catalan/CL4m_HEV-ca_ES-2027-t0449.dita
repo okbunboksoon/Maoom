@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0449">
+	<title>Kollisionswarnung</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034109N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Kollisionswarnung</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Bei Kollisionswarnung kann der Fahrer durch Blinken der Warnleuchte für Sicherheit vorne (<image align="left" href="../../images/WKIA_037.eps" scale="15" placement="inline"/>), eine Warnmeldung, ein akustisches Warnsignal und Lenkradvibrationen (ausstattungsabhängig) gewarnt werden.</p>
+		<p>Die Kollisionswarnung arbeitet unter den folgenden Bedingungen der Fahrzeuggeschwindigkeit, abhängig vom vorausfahrenden Fahrzeug.</p>
+		<ul>
+			<li>
+				<p>Fahrzeug oder motorisiertes Zweirad: Etwa 10-200km/h (6-124 mph)</p>
+			</li>
+			<li>
+				<p>Fußgänger oder Radfahrer: Etwa 10-85km/h (6-53 mph)</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0448.dita#CL4m_HEV-ca_ES-2027-t0448" role="parent" scope="local" type="concept">
+				<linktext>Grundlegende Funktion</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

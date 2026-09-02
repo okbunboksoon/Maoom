@@ -304,6 +304,18 @@ public class UserController {
     }
 
     /**
+     * 인쇄 배열표 카드가 여는 작업 선택 팝업 화면.
+     *
+     * <p>AutoCounting Swing 도구의 초판, 개정, 페이지 계산 기능을 현재 웹 UI로
+     * 옮기기 위한 진입점이다. 실제 PDF 분석과 엑셀 생성 API는 별도 서비스로
+     * 분리해서 연결한다.</p>
+     */
+    @GetMapping("/pdf/auto-counting")
+    public String autoCounting() {
+        return "user/autoCounting/autoCounting";
+    }
+
+    /**
      * BER 반영 카드가 여는 팝업 화면.
      *
      * <p>화면 위치: {@code templates/user/ber/ber.html}.

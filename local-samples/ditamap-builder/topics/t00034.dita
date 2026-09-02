@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00034">
+	<title>Checking charging status</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00204">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="1.09*"/>
+				<colspec colnum="2" colname="2" colwidth="1*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00205">
+								<figgroup>
+									<image href="../../images/OOVQ015029.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e00206"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>The charge indicator provides real-time information on the current state of charge:</p>
+							<ol id="e00207">
+								<li>
+									<p>When you plug in the charging connector, a green light illuminates.</p>
+								</li>
+								<li>
+									<p>If scheduled charging is set and the charger is connected for charging, the green light turns to amber light to indicate that scheduled charging is prepared.</p>
+								</li>
+								<li>
+									<p>As the charging started, a green light blinks, showing the charging is progressing.</p>
+								</li>
+								<li>
+									<p>When the battery is fully charged, the green light stops blinking to indicate that the battery is fully charged.</p>
+								</li>
+								<li>
+									<p>As the red light illuminates, stop the charging and check the cause of the unknown problem.</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="tip" id="e00208">
+			<p>The charge indicator lamp is located in the front of the vehicle inside the charging door.</p>
+		</note>
+	</conbody>
+</concept>

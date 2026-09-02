@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_007_02" base="Anywhere" id="t00084">
+	<title id="e00381">Power windows lock button</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00382">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00383">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C045.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Push the power windows lock button to make the rear passenger window inoperable.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul id="e00384">
+				<li id="e00385">
+					<p>Push the power windows lock button.</p>
+					<ul>
+						<li>
+							<p>Rear passenger window is inoperable.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>The front driver and passenger window can be operated.</p>
+				</li>
+				<li>
+					<p>The rear passengers' control cannot operate the rear passenger’s power window.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

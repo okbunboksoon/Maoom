@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legalnotice_europe-general_egall_2023_20230101_00025" id="t00421">
+	<title>Multi-Collision Brake (MCB)</title>
+	<shortdesc>Multi-Collision Brake (MCB) controls the brake automatically in the event of an accident where the air bag deploys to reduce the risk of additional accidents that may occur.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>multi-collision brake (MCB)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ul id="e02870">
+			<li>
+				<p>From the time the air bag deploys, MCB monitors the depression intensity of the brake pedal and accelerator pedal for a short period. The system operates when the following conditions are met:</p>
+				<ul id="e02871">
+					<li>
+						<p>Vehicle speed is under <?oxy_comment_start author="june" timestamp="20250827T153526+0900" comment="미국 단위 치환"?> 180 km/h (112 mph) <?oxy_comment_end?> at the time of collision.</p>
+					</li>
+					<li>
+						<p>The brake pedal and accelerator pedal are hardly depressed.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>When the driver steps on the brake pedal over a certain level while MCB is active, the braking power takes priority over automatic braking by MCB. However, if the driver takes the foot off the brake pedal, MCB will maintain automatic braking.</p>
+			</li>
+		</ul>
+		<section id="e02872">
+			<title>Non-operating condition(s)</title>
+			<p>MCB is canceled in the following situations:</p>
+			<ul id="e02873">
+				<li><?oxy_comment_start author="june" timestamp="20251224T093125+0900" comment="HEV/EV
+
+The accelerator pedal is depressed over a certain level when the vehicle is in ON position or READY indicator is displayed."?>
+					<p>The accelerator pedal is depressed over a certain level when the vehicle is in <term translate="no">ON</term> position.</p><?oxy_comment_end?>
+				</li>
+				<li><?oxy_comment_start author="june" timestamp="20251224T093047+0900" comment="HEV/EV
+
+The vehicle is stopped and in OFF position or READY indicator is off."?>
+					<p>The vehicle is stopped and in <term translate="no">OFF</term> position.</p><?oxy_comment_end?>
+				</li>
+				<li>
+					<p>If ESC or electronic devices has malfunctioned.</p>
+				</li>
+				<li>
+					<p>In a situation system cannot operate normally.</p>
+				</li>
+				<li>
+					<p>Approximately 10 seconds have passed since the brake has been controlled automatically by MCB.</p>
+				</li>
+			</ul>
+			<note type="warning" id="e02874">
+				<ul id="e02875">
+					<li>
+						<p>MCB decreases vehicle speed after a collision and reduces the risk of a second collision, but it does not prevent a second collision. You may drive away from the collision spot to avoid other dangerous situations by depressing the accelerator pedal.</p>
+					</li>
+					<li>
+						<p>After the vehicle is stopped by MCB, the system stops controlling the brakes.</p>
+						<p>Depending on the situation, the driver should depress the brake or the accelerator pedal to prevent further accidents.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00413.dita#t00413" role="parent" scope="local" type="concept">
+				<linktext>Vehicle safety system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

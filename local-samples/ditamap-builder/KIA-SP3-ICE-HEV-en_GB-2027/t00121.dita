@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00121">
+	<title>Steering wheel grip sensor</title>
+	<shortdesc/>
+	<conbody>
+		<p>While driving the vehicle with the Driver Assistance system on, it detects whether the driver is holding the steering wheel and displays the Hands-off warning when the driver is not holding the steering wheel.</p>
+		<note type="note" id="e00621">
+			<p>The steering wheel sensor may not work properly if the following precautions are not followed.</p>
+			<ul id="e00622">
+				<li>
+					<p>Do not modify the steering wheel cover.</p>
+				</li>
+				<li>
+					<p>Do not attach accessories on the rim of the steering wheel.</p>
+				</li>
+				<li>
+					<p>Do not let the steering wheel come in contact with electronic devices (for example, laptops, tablets, etc.).</p>
+				</li>
+				<li>
+					<p>Do not let the steering wheel come in contact with metallic or conductive objects (for example, tumblers, beverage cans, etc.).</p>
+				</li>
+				<li>
+					<p>Avoid excessive contact with moisture (for example, wet tissues, spilled water, vapor from steam wash, etc.).</p>
+				</li>
+			</ul>
+			<p>When the driver is wearing gloves or accessories such as a cover, steering wheel knobs, any other attachments are attached to the steering wheel, the sensor may fail to detect the driver’s hands even when the driver is holding the steering wheel.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00115.dita#t00115" role="parent" scope="local" type="concept">
+				<linktext>Steering wheel </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00300">
+	<title><uicontrol>AI Assistant</uicontrol></title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>infotainment system
+					<indexterm>AI assistant</indexterm>
+				</indexterm>
+				<indexterm>AI assistant</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01926">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01927">
+								<image align="center" placement="break" scale="95" href="images/N_SP3i26_C08_003_1_I.jpg"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p><uicontrol>AI Assistant</uicontrol> can be operated using voice recognition.</p>
+		<p>Press the <uicontrol>AI Assistant</uicontrol> button or say “Hey, Kia.”</p>
+		<section id="e01928">
+			<title>Example (Vehicle control)</title>
+			<ul id="e01929">
+				<li>
+					<p>“Turn on the air conditioner.”</p>
+				</li>
+				<li>
+					<p>“Turn off the air conditioner.”</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01930">
+			<title>Example (Question)</title>
+			<ul id="e01931">
+				<li>
+					<p>“Can you explain why the ocean is blue in a way that a 7-year-old can understand?”</p>
+				</li>
+			</ul>
+			<note type="note" id="e01932">
+				<p><uicontrol>AI Assistant</uicontrol> may provide inaccurate answers. Please check important details separately.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00294.dita#t00294" role="parent" scope="local" type="concept">
+				<linktext>Infotainment system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

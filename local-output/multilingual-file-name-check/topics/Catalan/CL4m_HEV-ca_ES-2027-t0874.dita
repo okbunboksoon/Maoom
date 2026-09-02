@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0874">
+	<title id="e01478">Motorraum-Sicherungen ersetzen </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Sicherungen
+					<indexterm>Motorraum-Sicherungen ersetzen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M074017N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol>
+			<li>
+				<p>Schalten Sie die Zündung und alle elektrischen Schalter aus.</p>
+			</li>
+			<li>
+				<p>Öffnen Sie den Deckel des Sicherungskastens, indem Sie die Verriegelungen drücken und den Deckel abheben. Wenn die Flachsicherung getrennt ist, entfernen Sie sie mithilfe der Klammer, die für den Austausch von Sicherungen im Motorraum-Sicherungskasten vorgesehen ist. Nach dem Ausbau setzen Sie eine Sicherung mit der gleichen Nennleistung sicher ein.</p>
+			</li>
+			<li>
+				<p>Prüfen Sie die ausgebaute Sicherung und ersetzen Sie, wenn sie durchgebrannt ist. Verwenden Sie zum Abziehen und Einsetzen von Sicherungen die Sicherungsklammer aus dem Sicherungskasten im Motorraum.</p>
+			</li>
+			<li>
+				<p>Setzen Sie eine neue Sicherung mit der gleichen Amperezahl ein und achten Sie darauf, dass sie stramm in ihrem Sockel sitzt. Wenn die neue Sicherung nicht fest sitzt, wenden Sie sich an eine Fachwerkstatt. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+			</li>
+		</ol>
+		<note type="caution">
+			<p>Verschließen Sie nach Arbeiten am Sicherungskasten im Motorraum den Deckel des Sicherungskastens sicher mit hörbarem Einrasten.</p>
+			<p>Andernfalls kann Feuchtigkeit eindringen und elektrische Fehlfunktionen verursachen.</p>
+		</note>
+		<section>
+			<title>Mehrfachsicherung</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M074018N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p><indexterm>Sicherungen<indexterm>Mehrfachsicherung</indexterm></indexterm>Ersetzen Sie eine durchgebrannte Mehrfachsicherung wie folgt:</p>
+			<ol>
+				<li>
+					<p>Klemmen Sie das Batterieminuskabel ab.</p>
+				</li>
+				<li>
+					<p>Lösen Sie die in der obigen Abbildung gezeigten Muttern.</p>
+				</li>
+				<li>
+					<p>Ersetzen Sie die durchgebrannte Sicherung durch eine Sicherung mit derselben Amperezahl.</p>
+				</li>
+				<li>
+					<p>Der Einbau erfolgt in der umgekehrten Reihenfolge des Ausbaus.</p>
+				</li>
+			</ol>
+			<note type="note">
+				<p>Wenn die Mehrfachsicherung durchgebrannt ist, wenden Sie sich an eine Fachwerkstatt. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0872.dita#CL4m_HEV-ca_ES-2027-t0872" role="parent" scope="local" type="concept">
+				<linktext>Sicherungen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

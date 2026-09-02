@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00628">
+	<title>Turning Lane Following Assist On/Off</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OOV055003.eps" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>With the vehicle on, shortly press the Lane Driving Assist button located on the steering wheel to turn on Lane Following Assist. The gray or green (<image align="left" href="../../images/WKIA_011.eps" outputclass="nolabel" placement="inline" scale="15"/>) indicator light will appear on the cluster.</p>
+							<p>Press the Lane Driving Assist button again to turn off Lane Following Assist.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

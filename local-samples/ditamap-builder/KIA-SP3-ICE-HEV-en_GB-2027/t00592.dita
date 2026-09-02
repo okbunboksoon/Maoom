@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00592">
+	<title>Overtaking Prevention</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03742">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03743">
+								<image href="images/N_TK25Z022E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03744">
+								<li>
+									<p><uicontrol>Driver Assistance</uicontrol></p>
+								</li>
+								<li>
+									<p><uicontrol>Driving Convenience</uicontrol></p>
+								</li>
+								<li>
+									<p><uicontrol>Overtaking Prevention</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The vehicle is <term translate="no">ON</term>, tap <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver Assistance</uicontrol><uicontrol>Driving Convenience</uicontrol><uicontrol>Overtaking Prevention</uicontrol></menucascade> on the infotainment system screen. Smart Cruise Control helps ensure that overtaking is performed only in the direction permitted according to the direction of travel.</p>
+		<note type="note" id="e03745">
+			<ul id="e03746">
+				<li>
+					<p>In right-hand traffic countries, the system helps prevent the vehicle from traveling faster than vehicles driving in the lane to the left of the vehicle. In left-hand traffic countries, it helps prevent the vehicle from traveling faster than vehicles driving in the lane to the right of the vehicle.</p>
+				</li>
+				<li>
+					<p>When traveling between countries with different traffic directions, the driving direction is updated only in vehicles equipped with navigation. If the vehicle is not equipped with navigation, turn off the USM menu before traveling between countries with different traffic directions.</p>
+				</li>
+				<li>
+					<p>Overtaking Prevention operates when the system determines that the vehicle is likely to overtake adjacent-lane vehicles in the permitted direction at or above a certain vehicle speed. The system does not operate in cases of sudden deceleration, so drive with caution.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" id="e03747">
+			<ul id="e03748">
+				<li>
+					<p>Towing a trailer or installing a carrier may reduce control stability. Disable the function if necessary and always drive carefully.</p>
+				</li>
+				<li>
+					<p>Do not use this function when towing another vehicle or when installing other equipment that may affect sensor operation or vehicle balance. It may not operate normally.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00589.dita#t00589" role="parent" scope="local" type="concept">
+				<linktext>Smart Cruise Control settings</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00396">
+	<title>LCD display messages</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>shift lever 
+					<indexterm>LCD display messages</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc" id="e02812">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1">
+							<p>Message</p>
+						</entry>
+						<entry colname="2">
+							<p>Description</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <term>Shifting conditions not met. Reduce speed, then shift</term> </p>
+						</entry>
+						<entry colname="2">
+							<ul id="e02813">
+								<li>
+									<p>When driving speed is too fast to shift the gear.</p>
+								</li>
+								<li>
+									<p>When the gear is shifted while the vehicle is in Utility mode.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <term>Press brake pedal to change gear</term> </p>
+						</entry>
+						<entry colname="2">
+							<ul id="e02814">
+								<li>
+									<p>When the brake pedal is not depressed while shifting the gear.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <term>Shift to P after stopping</term> </p>
+						</entry>
+						<entry colname="2">
+							<ul id="e02815">
+								<li>
+									<p>When the gear is shifted to P (Park) while the vehicle is moving.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <term>Gear already selected</term> </p>
+						</entry>
+						<entry colname="2">
+							<ul id="e02816">
+								<li>
+									<p>When the selected gear position is selected again.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <term>PARK malfunction. Engage parking brake when parking vehicle</term> </p>
+						</entry>
+						<entry colname="2">
+							<ul id="e02817">
+								<li>
+									<p>When there is a problem with function engaging P (Park) position.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <term>Check P button</term> </p>
+						</entry>
+						<entry colname="2">
+							<ul id="e02818">
+								<li>
+									<p>When there is problem with the P button.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <term>Check shifter lever</term> </p>
+						</entry>
+						<entry colname="2">
+							<ul id="e02819">
+								<li>
+									<p>When there is problem with the shift lever.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <term>Rotary shifter stuck</term> </p>
+						</entry>
+						<entry colname="2">
+							<ul id="e02820">
+								<li>
+									<p>When the shift lever is continuously stuck or there is problem with the shift lever.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="0" valign="middle">
+						<entry colname="1">
+							<p> <term>Shift button held down</term> </p>
+						</entry>
+						<entry colname="2">
+							<ul id="e02821">
+								<li>
+									<p>When the shift button is stuck.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

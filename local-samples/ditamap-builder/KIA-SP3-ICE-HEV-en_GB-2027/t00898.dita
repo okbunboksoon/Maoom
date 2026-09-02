@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00898">
+	<title>Exhaust system (GPF) warning light (Gasoline engine for EURO 7)</title>
+	<shortdesc/>
+	<conbody>
+		<p>This warning light appears:</p>
+		<ul id="e05325">
+			<li>
+				<p>when accumulated soot reaches a certain amount.</p>
+			</li>
+			<li>
+				<p>With the GPF warning light on, the warning light turns off under the following conditions:</p>
+				<ul id="e05326">
+					<li>
+						<p>You drive over 100 km/h (60 mph).</p>
+					</li>
+					<li>
+						<p>Your vehicle’s engine speed is between 2,500 and 4,000 rpm.</p>
+					</li>
+					<li>
+						<p>You drive in third gear or higher.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>For your safety, be sure to adjust to the above conditions on a road that is not congested.</p>
+			</li>
+			<li>
+				<p>Accelerate up to 2500-4000 rpm and 100 km/h (60 mph) in third gear or higher and release the accelerator pedal and wait for at least 10 seconds.</p>
+			</li>
+			<li>
+				<p>Repeat this process until the GPF warning light turns off.</p>
+			</li>
+		</ul>
+		<note type="note" id="e05327">
+			<p>Gasoline engine with GPF (if equipped)</p>
+			<p>If you continue to drive with the GPF warning light blinking for a long time, the GPF system can be damaged and fuel consumption can worsen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00897.dita#t00897" role="parent" scope="local" type="concept">
+				<linktext>Gasoline Particulate Filter (for EURO 7 engine)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0155">
+	<title>Fernlicht <image align="left" href="../../images/WKIA_046.eps" scale="15" placement="inline"/></title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Beleuchtung
+					<indexterm>Fernlicht</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Typ A</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MGTL034005.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00454">
+								<title>Typ B</title>
+								<figgroup>
+									<image align="center" href="../../images/OBL7M043061.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e00455">
+								<title>Typ C</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MGTL034005R.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00456">
+								<title>Typ D</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MGTL036005L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Fernlicht der Scheinwerfer einschalten:</p>
+		<ul>
+			<li>
+				<p>Drücken Sie den Hebel von sich weg.</p>
+				<p>Der Hebel stellt sich in seine Originalposition zurück.</p>
+				<p>Die Fernlicht-Kontrollleuchte leuchtet bei eingeschaltetem Fernlicht auf.</p>
+				<note type="warning">
+					<p>Verwenden Sie nicht das Fernlicht, wenn Ihnen Fahrzeuge entgegenkommen. Wenn Sie das Fernlicht verwenden, kann der andere Fahrer geblendet werden.</p>
+				</note>
+			</li>
+		</ul>
+		<p>Scheinwerfer-Fernlicht:</p>
+		<ul>
+			<li>
+				<p>Ziehen Sie den Hebel auf sich zu.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<title>Typ A</title>
+										<figgroup>
+											<image align="center" href="../../images/OCL4MGTL034006.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<fig id="e00457">
+										<title>Typ B</title>
+										<figgroup>
+											<image align="center" href="../../images/OBL7M043062.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+							</row>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig id="e00458">
+										<title>Typ C</title>
+										<figgroup>
+											<image align="center" href="../../images/OCL4MGTL034006R.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<fig id="e00459">
+										<title>Typ D</title>
+										<figgroup>
+											<image align="center" href="../../images/OCL4MGTL036006L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Wenn Sie ihn loslassen, kehrt er in seine ursprüngliche Stellung (Fahrlicht) zurück. Der Scheinwerferschalter muss nicht eingeschaltet sein, um diese Funktion zu nutzen.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0148.dita#CL4m_HEV-ca_ES-2027-t0148" role="parent" scope="local" type="concept">
+				<linktext>Beleuchtung </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

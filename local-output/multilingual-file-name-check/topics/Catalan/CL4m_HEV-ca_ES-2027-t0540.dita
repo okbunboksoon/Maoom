@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0540">
+	<title>Automatische Geschwindigkeitsänderung (ausstattungsabhängig mit Navigation)</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054097.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn beim Betrieb des manuellen Geschwindigkeitsbegrenzungsassistenten oder der intelligenten Tempomatsteuerung die vom Fahrer eingestellte Geschwindigkeit mit der Geschwindigkeitsbegrenzung auf der Straße übereinstimmt, wird die eingestellte Geschwindigkeit automatisch an die Geschwindigkeitsbegrenzung angepasst. Die Funktion zur automatischen Geschwindigkeitsänderung funktioniert auf Straßen mit einer Geschwindigkeitsbegrenzung von über 70 km/h (45 mph) Bei eingeschalteter Funktion wird die eingestellte Geschwindigkeit auf dem Kombiinstrument grün angezeigt.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Selbst nach Ändern der eingestellten Geschwindigkeit gemäß dem Tempolimit der Straße kann das Fahrzeug immer noch schneller als die Geschwindigkeitsbegrenzung gefahren werden. Betätigen Sie gegebenenfalls das Bremspedal, um die Fahrgeschwindigkeit zu verringern.</p>
+				</li>
+				<li>
+					<p>Wenn das Tempolimit der Straße unter 30 km/h (20 mph) liegt, funktioniert die Funktion zur Änderung der eingestellten Geschwindigkeit nicht.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Weitere Einzelheiten zum manuellen Geschwindigkeitsbegrenzungsassistenten finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0525.dita#CL4m_HEV-ca_ES-2027-t0525"/>.</p>
+				</li>
+				<li>
+					<p>Weitere Einzelheiten zur Bedienung der intelligenten Tempomatsteuerung finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0581.dita#CL4m_HEV-ca_ES-2027-t0581"/>.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0536.dita#CL4m_HEV-ca_ES-2027-t0536" role="parent" scope="local" type="concept">
+				<linktext>Warnung und Kontrolle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

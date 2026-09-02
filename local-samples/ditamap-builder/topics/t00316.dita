@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00316">
+	<title>Map lamp</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior lights 
+					<indexterm>map lamp</indexterm>
+				</indexterm>
+				<indexterm>map lamp</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02380">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02381">
+								<figgroup>
+									<image href="../../images/OOV035005.eps" align="center" height="1.740in" placement="break" id="e02382"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e02383">
+			<li>
+				<p> <image href="../../images/WKIA_070.eps" align="left" placement="inline" outputclass="nolabel" scale="15" id="e02384"/> <term translate="no">ON</term> </p>
+				<ul id="e02385">
+					<li>
+						<p>The front and rear lamps turn on. Press the button again to turn off all lamps.</p>
+					</li>
+					<li>
+						<p>With the indicator light on, press and hold the button for approximately 1.5 seconds to adjust the brightness of the lamps simultaneously. Release the button at the desired brightness to save the setting.</p>
+					</li>
+					<li>
+						<p>To reset the overall interior lamp brightness, press and hold the button for approximately 3 seconds with the indicator light off. The lamps will blink twice to indicate that the reset is complete.</p>
+					</li>
+				</ul>
+				<p>If you press and hold the corresponding button for about 1.5 seconds or more while the status indicator is on, the brightness of the front and rear seat lamps changes simultaneously. When you release the button at the desired brightness, the set brightness is saved.</p>
+				<p>To reset the overall brightness of the interior lights, press and hold for more than 3 seconds while the status indicator is off, the lights blink twice and are initialized.</p>
+			</li>
+			<li>
+				<p> <image href="../../images/WKIA_347.eps" align="left" placement="inline" outputclass="nolabel" scale="15" id="e02386"/> <term translate="no">DOOR OFF</term> </p>
+				<p importance="high">When the indicator light is off</p>
+				<ul id="e02387">
+					<li>
+						<p>Opening a door turns on the interior lamps (map lamps and room lamps). They turn off approximately 30 seconds after the doors are closed.</p>
+					</li>
+					<li>
+						<p>Unlocking the doors with the smart key turns on the interior lamps for approximately 30 seconds, after which they turn off.</p>
+					</li>
+					<li>
+						<p>If the interior lamps remain on for about 30 seconds, starting the vehicle or locking all doors will turn them off immediately.</p>
+					</li>
+					<li>
+						<p>When the vehicle is in <term translate="no">OFF</term> position and a door is opened, the interior lamps remain on for up to 10 minutes before turning off. In the vehicle is in <term translate="no">POWER ON</term> position or <term translate="no">DRIVE READY</term> indicator is on, the lamps remain on continuously.</p>
+					</li>
+				</ul>
+				<p importance="high">When the indicator light is on</p>
+				<ul id="e02388">
+					<li>
+						<p>The door-linked operation of the interior lamps is disabled.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p> <image href="../../images/WKIA_348.eps" scale="15" id="e02389"/> / <image href="../../images/WKIA_488.eps" scale="15" id="e02390"/> Map lamps</p>
+				<ul id="e02391">
+					<li>
+						<p>Touch the button (3) at each location to turn on the corresponding map lamp. Touch it again to turn it off.</p>
+					</li>
+					<li>
+						<p>When the map lamp is on, press and hold the button (3) for approximately 1.5 seconds to adjust the brightness. Release the button at the desired brightness to save the setting.</p>
+					</li>
+				</ul>
+			</li>
+		</ol>
+	</conbody>
+</concept>

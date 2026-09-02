@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00202">
+	<title id="e01269">Changing seat cushion height (for driver’s seat) </title>
+	<taskbody>
+		<context>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01270">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01271">
+									<image href="images/N_SP327_B06_005_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To change the height of the seat cushion:</p>
+		</context>
+		<steps>
+			<step>
+				<cmd>To lower the seat cushion, push the lever down several times.</cmd>
+			</step>
+			<step>
+				<cmd>To raise the seat cushion, pull the lever up several times.</cmd>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00199.dita#t00199" role="parent" scope="local" type="concept">
+				<linktext>Front seat adjustment for manual seat </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

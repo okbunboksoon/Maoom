@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00701">
+	<title>Parking Safety button</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04157">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04158">
+								<image href="images/N_SP327_D10_039_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Press the Parking Safety (<image href="images/WKIA_087.jpg" scale="15" align="left" placement="inline"/>) button to turn <term translate="no">ON</term> Parking Distance Warning. Press the button again to turn <term translate="no">OFF</term> the function.</p>
+		<p>When you shift the gear to R (Reverse), Parking Distance Warning automatically turns <term translate="no">ON</term> (the Parking Safety button indicator is <term translate="no">ON</term>).</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00700.dita#t00700" role="parent" scope="local" type="concept">
+				<linktext>Parking Distance Warning operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

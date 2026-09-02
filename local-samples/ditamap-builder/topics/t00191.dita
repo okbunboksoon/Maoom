@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00191">
+	<title id="e01441">With central door lock/unlock button</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01442">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01443">
+								<figgroup>
+									<image href="../../images/OOV035028.eps" align="center" placement="break" id="e01444"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Door indicator light</p>
+			</li>
+			<li>
+				<p>Central door unlock button</p>
+			</li>
+			<li>
+				<p>Central door lock button</p>
+			</li>
+		</ol>
+		<p>Operate by pressing the central door lock/unlock button.</p>
+		<ul id="e01445">
+			<li id="e01446">
+				<p>To lock all vehicle doors, press the central door lock button (1) of driver and passenger side.</p>
+			</li>
+			<li id="e01447">
+				<p>To unlock all vehicle doors, press central door unlock button (2) of driver and passenger side.</p>
+			</li>
+		</ul>
+		<p>When any door is unlocked, the indicating lights (3) on the driver’s door will turn on. If all vehicle doors are locked, it would go off.</p>
+		<p>Any door is opened, the doors will not lock even though the central door lock button is pressed.</p>
+		<note type="warning" id="e01448">
+			<p importance="high">Doors</p>
+			<ul id="e01449">
+				<li id="e01450">
+					<p>The doors should always be fully closed and locked while the vehicle is in motion to prevent accidental opening of the door. Locked doors will also discourage potential intruders when the vehicle stops or slows down.</p>
+				</li>
+				<li id="e01451">
+					<p>Be careful when opening doors and watch out for vehicles, motorcycles, bicycles or pedestrians approaching the vehicle in the path of the door. Opening a door when something is approaching can result in an accident to cause vehicle damage or serious injury.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" id="e01452">
+			<p importance="high">Unlocked vehicles</p>
+			<p>Leaving your vehicle unlocked can increase the risk of vehicle theft or any possible criminal harm caused by someone hiding in your vehicle while you are gone. Always turn the <term translate="no">EV</term> button off, engage the parking brake, close all windows and lock all doors when leaving your vehicle unattended.</p>
+		</note>
+		<note type="warning" id="e01453">
+			<p importance="high">Unattended children, the elderly or pets</p>
+			<p>An enclosed vehicle can become extremely hot, causing death or severe injury such as heatstroke to unattended children, the elderly or pets who cannot escape the vehicle. When left or trapped in a hot vehicle, make sure to stay hydrated and avoid sun exposure through the vehicle’s windshield. Furthermore, children might operate features of the vehicle that could injure them, or they could encounter other harm, possibly from someone gaining entry to the vehicle. Never leave children or animals unattended in your vehicle.</p>
+		</note>
+	</conbody>
+</concept>

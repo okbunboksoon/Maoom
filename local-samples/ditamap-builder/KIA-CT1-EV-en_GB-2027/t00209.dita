@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00209">
+	<title>Driver’s side</title>
+	<conbody>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul id="e00972">
+				<li>
+					<p>Stop the vehicle and open the Driver’s door with the <term translate="no">EV</term> button in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position and the vehicle shifted to P (Park).</p>
+				</li>
+				<li>
+					<p>Adjust the Driver’s seat and seatback to the foremost position.</p>
+				</li>
+				<li>
+					<p>Press the memory button 1 (or 2) and push forward the driver’s seat movement switch over 2 seconds simultaneously.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00973">
+			<title>While resetting relaxation comfort seat</title>
+			<ul id="e00974">
+				<li>
+					<p>Resetting starts with a notification sound.</p>
+				</li>
+				<li>
+					<p>The driver’s seat and seatback is adjusted to the rearward position with the notification sound.</p>
+				</li>
+				<li>
+					<p>The driver’s seat and seatback is re-adjusted to the default position (central position) with the notification sound.</p>
+				</li>
+			</ul>
+			<p>However, in the following cases, the resetting procedure and the notification sound may stop.</p>
+			<ul id="e00975">
+				<li>
+					<p>The memory button is pressed.</p>
+				</li>
+				<li>
+					<p>The seat control switch is operated.</p>
+				</li>
+				<li>
+					<p>The gear is shifted out of P (Park).</p>
+				</li>
+				<li>
+					<p>The driving speed exceeds 5 km/h (3 mph).</p>
+				</li>
+				<li>
+					<p>The driver’s door is closed.</p>
+				</li>
+			</ul>
+			<note type="note" id="e00976">
+				<ul id="e00977">
+					<li>
+						<p>While integrated memory system is being reset, if the resetting and notification sound stops incompletely, restart the resetting procedure again.</p>
+					</li>
+					<li>
+						<p>Make sure that there are no objects around the driver’s seat in advance of resetting the integrated memory system.</p>
+					</li>
+					<li>
+						<p>After resetting the integrated memory system, the adjustment for the driver seat must be stored again to recall the memory position.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

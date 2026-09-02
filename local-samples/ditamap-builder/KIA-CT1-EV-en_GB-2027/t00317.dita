@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00317">
+	<title>Renewing Plug n Charge (PnC)</title>
+	<conbody>
+		<p>If your Plug n Charge (PnC) auto-billing charge doesn't proceed or fails while charging is in progress, check your PnC contract certificate for expiration and renewal.</p>
+		<ul>
+			<li>
+				<p>When the certificate expires, automatic billing recharge will not proceed.</p>
+			</li>
+			<li>
+				<p>Turn off the Plug n Charge (PnC) function and use an external payment method until the certificate status is verified. If automatic billing recharge fails 2 or more times, the 3rd recharge attempt is forcibly switched to an external payment method.</p>
+			</li>
+		</ul>
+		<p>If your contract certificate for Plug n Charge (PnC) charging has expired or been revoked, proceed to the next step.</p>
+		<ol>
+			<li>
+				<p>Sign a new contract to issue or renew a certificate.</p>
+			</li>
+			<li>
+				<p>After connecting the charging connector, try Plug n Charge charging once. The validity period and revocation status of the certificate are displayed on the charger, and charging fails.</p>
+			</li>
+			<li>
+				<p>Disconnect and reconnect the charging connector and try Plug n Charge charging again. The certificate of the newly concluded contract is installed and Plug n Charge charging proceeds normally.</p>
+			</li>
+		</ol>
+		<note type="note">
+			<p>When the payment method is automatically changed to an external payment method, proceed with one of the following steps to reset the Plug n Charge (PnC) function and use the automatic charge billing function.</p>
+			<ul>
+				<li>
+					<p>Recharge your vehicle using an external payment method. From the next charge, you can use the Plug n Charge (PnC) automatic billing method again.</p>
+				</li>
+				<li>
+					<p>Disconnect the charging connector and close the charging door. Wait for at least approximately 1 minute with the vehicle in <term translate="no">ON</term> position Vehicle must be in <term translate="no">READY</term> mode. Afterwards, you can perform Plug n Charge (PnC) charging.</p>
+				</li>
+				<li>
+					<p>Plug n Charge (PnC) charging can be performed using other chargers that support the Plug n Charge (PnC) function.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

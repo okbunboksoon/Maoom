@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0604">
+	<title>Intelligente Tempomatsteuerung deaktiviert</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054165N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Fahrerassistenzsystem eingeschränkt. Radar blockiert.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn die Frontradarabdeckung oder der Sensor mit Schnee, Regen oder Fremdkörpern bedeckt ist, können sich die Erkennungseigenschaften verschlechtern, so dass die intelligente Tempomatsteuerung vorübergehend eingeschränkt oder deaktiviert ist.</p>
+		<p>Eine Warnmeldung und die Hauptwarnleuchte (<image align="left" href="../../images/WKIA_040.eps" scale="15" placement="inline"/>) werden im Kombiinstrument angezeigt (und schalten sich nach einer bestimmten Zeit aus). Dies ist kein Hinweis auf eine Fehlfunktion der Intelligenten Tempomatsteuerung.</p>
+		<p>Die intelligente Tempomatsteuerung funktioniert einwandfrei, nachdem Schnee, Regen oder Fremdkörper entfernt wurden. Halten Sie es immer sauber.</p>
+		<note type="warning">
+			<p>Auch wenn keine Warnmeldung im Kombiinstrument angezeigt wird, kann es sein, dass die Intelligente Tempomatsteuerung nicht richtig funktioniert.</p>
+		</note>
+		<note type="caution">
+			<p>Der intelligente Tempomat funktioniert möglicherweise nicht richtig in einem offenen Bereich, in dem es nichts zu erkennen gibt, oder der Erkennungssensor mit Fremdkörpern bedeckt ist, nachdem das Fahrzeug in Position <term translate="no">ON</term> gebracht wurde.</p>
+		</note>
+		<note type="note">
+			<p>Sie können dies in der Servicemeldung in der Ansicht nützlicher Informationen der Anzeige des Kombiinstruments überprüfen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0603.dita#CL4m_HEV-ca_ES-2027-t0603" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion der intelligenten Tempomatsteuerung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

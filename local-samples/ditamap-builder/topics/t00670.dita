@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00670">
+	<title>Surround View Monitor (SVM)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>surround view monitor (SVM)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Surround View Monitor can assist in parking or driving by allowing the driver to see around the vehicle.</p>
+		<section id="e04466">
+			<title>Detecting sensor</title>
+			<p>Surround View Monitor uses the Wide-front view camera (if equipped), Wide-side view camera (if equipped), Wide-rearview camera. Please refer to <xref type="concept" href="t00488.dita#t00488"/> for the sensor locations.</p>
+			<note type="note" id="e04467">
+				<p>After an additional infotainment system (genuine Kia parts) installation, Surround View Monitor may not operate as described in the owner’s manual. In this case, refer to the manual provided in the infotainment system for further information and operating Surround View Monitor.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0229">
+	<title>Befestigung eines Sitzes mit Kinderrückhaltesystem mit dem „ISOFIX-Verankerung für den oberen Haltegurt“</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Kinderrückhaltesystem (CRS)
+					<indexterm>Befestigung eines Sitzes mit Kinderrückhaltesystem mit dem „ISOFIX-Verankerung für den oberen Haltegurt“</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Typ A</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024003_3.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00600">
+								<figgroup>
+									<image align="center" href="../../images/OCL4M025072L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Typ B</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024003N_3.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00601">
+								<figgroup>
+									<image align="center" href="../../images/OCL4M025073L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Verankerungen des ISOFIX-Kinderrückhaltesystems für den oberen Haltegurt befinden sich auf der Ablage hinter den Rücksitzen.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024043N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol>
+			<li>
+				<p>Führen Sie den ISOFIX-Haltegurt über die Rückenlehne. Befolgen Sie bei der Verlegung des oberen Haltebandes die Anweisungen des Kindersitzherstellers.</p>
+			</li>
+			<li>
+				<p>Verbinden Sie den oberen ISOFIX-Haltegurt mit der oberen ISOFIX-Verankerung und ziehen Sie dann den oberen ISOFIX-Haltegurt gemäß den Anweisungen des Herstellers Ihres Kinderrückhaltesystems fest, um das Kinderrückhaltesystem fest mit dem Sitz zu verbinden.</p>
+			</li>
+		</ol>
+		<note type="warning">
+			<p>Beachten Sie bei der Befestigung des ISOFIX-Haltegurtes die folgenden Vorsichtsmaßnahmen:</p>
+			<ul>
+				<li>
+					<p>Studieren und beachten Sie alle mitgelieferten Einbauanleitungen Ihres Kinderrückhaltesystems.</p>
+				</li>
+				<li>
+					<p>Befestigen Sie NIE mehrere Kinderrückhaltesysteme an demselben oberen ISOFIX-Ankerpunkt. Dies könnte zum Lockern oder Reißen des Ankerpunktes oder des Befestigungselements führen.</p>
+				</li>
+				<li>
+					<p>Befestigen Sie den ISOFIX-Haltegurt ausschließlich an der passenden ISOFIX-Verankerung. Bei einer anderweitigen Befestigung ist die korrekte Funktion nicht gewährleistet.</p>
+				</li>
+				<li>
+					<p>Ankerpunkte für Kinderrückhaltesysteme sind so konzipiert, dass sie nur der Last eines korrekt befestigten Kinderrückhaltesystems standhalten. Sie dürfen unter keinen Umständen für die Befestigung von Sicherheitsgurten für Erwachsene oder für die Befestigung von Gegenständen oder Ausrüstungsteilen des Fahrzeugs verwendet werden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0227.dita#CL4m_HEV-ca_ES-2027-t0227" role="parent" scope="local" type="concept">
+				<linktext>Niedrige ISOFIX-Verankerung und ISOFIX-Verankerung für den oberen Haltegurt (ISOFIX-Verankerungssystem) für Kinder</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

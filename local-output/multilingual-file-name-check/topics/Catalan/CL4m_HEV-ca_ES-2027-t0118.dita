@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0118">
+	<title>Elektrochromatischer Spiegel (ECM)</title>
+	<shortdesc>Der elektrische Innenspiegel regelt nachts oder im Halbdunkel automatisch das Blendlicht hinter Ihnen fahrender Fahrzeuge.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Spiegel
+					<indexterm>Elektrochromatischer Spiegel (ECM)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OMQ4033058.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Der im Spiegel angebrachte Sensor erkennt die Lichtstärke im Umfeld des Fahrzeugs und regelt die Blendwirkung von den Scheinwerfern nachfahrender Fahrzeuge automatisch.</p>
+		<p>Wenn der Motor läuft, wird die Blendwirkung automatisch durch den im Rückspiegel eingebauten Sensor geregelt.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0116.dita#CL4m_HEV-ca_ES-2027-t0116" role="parent" scope="local" type="concept">
+				<linktext>Spiegel</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

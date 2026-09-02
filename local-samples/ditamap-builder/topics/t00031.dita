@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00031">
+	<title outputclass="across">Charging information</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>charge types for electric vehicle 
+					<indexterm>charging information</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ul id="e00172">
+			<li outputclass="across">
+				<p outputclass="across"> <uicontrol>AC Charge</uicontrol>: The electric vehicle is charged by plugging into an AC charger installed at your home or a public charging station.</p>
+			</li>
+			<li outputclass="across">
+				<p outputclass="across"> <uicontrol>DC Charge</uicontrol>: You can charge at high speeds at public charging stations. Refer to the respective company’s manual that is provided for each DC charger type. Battery performance and durability can deteriorate if the DC charger is used constantly.</p>
+				<p outputclass="across">Use of DC charge should be minimized in order to help prolong high voltage battery life.</p>
+			</li>
+			<li outputclass="across">
+				<p outputclass="across"> <uicontrol>Portable Charge</uicontrol>: The Electric vehicle can be charged by using household electricity. The electrical outlet at your home must comply with regulations and can safely accommodate the Voltage/Current (Amps)/Power (Watts) ratings specified on the portable charge.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

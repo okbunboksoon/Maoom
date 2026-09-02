@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00348">
+	<title>Updating software</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01496">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01497">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Z004_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01498">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Z005_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Details</p>
+			</li>
+			<li>
+				<p>Close</p>
+			</li>
+		</ol>
+		<p>You can see the progress of the update on the screen.</p>
+		<p>After the update is complete, you will receive a notification on your phone or the vehicle screen that the software update is complete.</p>
+		<note deliveryTarget="except_print" type="tip">
+			<ul>
+				<li>
+					<p>The screen turns off automatically after 3 minutes to save the battery. If the screen turns off automatically, you can check the update progress by pressing the <term translate="no">EV</term> button.</p>
+				</li>
+				<li>
+					<p>After the update starts, you can exit the vehicle.</p>
+				</li>
+				<li>
+					<p>The OTA software update feature is only available for Kia Connect service users.</p>
+				</li>
+				<li>
+					<p>The update details may vary depending on the installed software version.</p>
+				</li>
+				<li>
+					<p>Check the notice for the OTA software update on the Kia brand web.</p>
+				</li>
+				<li>
+					<p>If the update fails, the update recovery will automatically proceed. If you want to retry the software update, even after a successful recovery, contact an authorized Kia call center.</p>
+				</li>
+				<li>
+					<p>If the update or recovery fails, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>After the update is complete, it may provide new functions or improvements. For more information, refer to Kia website or scan the QR code on the infotainment screen.</p>
+				</li>
+			</ul>
+		</note>
+		<note deliveryTarget="except_print" type="note">
+			<ul>
+				<li>
+					<p>Observe the following restrictions during the update.</p>
+					<ul>
+						<li>
+							<p>You cannot use the vehicle during the update. Be sure to have enough time for the update, and safely park the vehicle before starting the update process.</p>
+						</li>
+						<li>
+							<p>You cannot use remote features, including remote start.</p>
+						</li>
+						<li>
+							<p>The vehicle cannot be charged. Charge your vehicle after completing the update.</p>
+						</li>
+						<li>
+							<p>The Rear Occupant Alert may not work. Check if there are any occupants in the rear seat after the update starts.</p>
+						</li>
+						<li>
+							<p>If the digital key function is included in the update history, the door lock/unlock function through digital key may not work. Check the notice and use the smart key button to lock or unlock the door if the digital key function is updated.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>The update will be automatically canceled if any vehicle conditions required for the update are changed before starting the update.</p>
+				</li>
+				<li>
+					<p>Once the update has started, you cannot cancel the update.</p>
+				</li>
+				<li>
+					<p>You cannot use the Over-The-Air software update feature if you modify or replace any vehicle software.</p>
+				</li>
+				<li>
+					<p>Do not open the hood or replace the battery in the vehicle during the update. The update may fail.</p>
+				</li>
+				<li>
+					<p>Note that the high-voltage-related module for charging the 12 V battery may be activated during the software update.</p>
+				</li>
+				<li>
+					<p>If a diagnostic tool of any kind is connected to the vehicle OBD (On-board Diagnostic) terminal, the vehicle cannot be updated. The vehicle can be updated by removing the diagnostic tool connected to the OBD terminal and then restarting the vehicle.</p>
+				</li>
+				<li>
+					<p>If the update is not complete successfully, contact Kia.</p>
+				</li>
+				<li>
+					<p>Vehicle reception must be identified to safely install any downloaded software.</p>
+				</li>
+				<li>
+					<p>Vehicle signal strength, must be strong (above -82 dBm) to safely install any downloaded software.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

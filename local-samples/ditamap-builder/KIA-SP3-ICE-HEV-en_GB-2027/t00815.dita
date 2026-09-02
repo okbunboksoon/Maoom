@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00815">
+	<title>Suspension mounting bolts</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>scheduled maintenance items
+					<indexterm>suspension mounting bolts</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Check the suspension connections for looseness or damage. Retighten to the specified torque.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00796.dita#t00796" role="parent" scope="local" type="concept">
+				<linktext>Explanation of scheduled maintenance items</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

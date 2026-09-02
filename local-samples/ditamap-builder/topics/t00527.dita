@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00527">
+	<title>Safe Exit Assist disabled</title>
+	<conbody>
+		<p>When the rear bumper around the rear corner radar or sensor is covered with foreign material, such as snow or rain, or installing a trailer or carrier, it can reduce the detecting performance and temporarily limit or disable Safe Exit Assist.</p>
+		<p>At this time, the warning message and the Master warning light (<image align="left" height="0.117in" href="../../images/WKIA_040.eps" outputclass="nolabel" placement="inline" width="0.117in" scale="15" id="e03988"/>) are displayed on the cluster display, but it does not indicate a malfunction of Safe Exit Assist.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03989">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e03990">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV055185L.eps" placement="break" width="2.244in" id="e03991"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03992">
+								<li>
+									<p> <uicontrol outputclass="c0586">Driver assistance system limited. Radar blocked.</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p outputclass="across">Safe Exit Assist will operate properly when such foreign material or trailer, etc., is removed, and then the vehicle is restarted.</p>
+		<p>If Safe Exit Assist does not operate properly after it is removed, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="warning" id="e03993">
+			<ul id="e03994">
+				<li>
+					<p>Even though the warning message does not appear on the cluster, Safe Exit Assist may not properly operate.</p>
+				</li>
+				<li>
+					<p>Safe Exit Assist may not properly operate in an area (for example, open terrain) where any objects are not detected right after the vehicle is turned on, or when the detecting sensor is blocked with foreign material right after the vehicle is turned on.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e03995">
+			<p>You can check it in the service message of the utility information view of the cluster display window.</p>
+		</note>
+		<note type="caution" id="e03996">
+			<p>Turn off Safe Exit Assist to install or remove a trailer, carrier, or another attachment. Turn on Safe Exit Assist when finished.</p>
+		</note>
+	</conbody>
+</concept>

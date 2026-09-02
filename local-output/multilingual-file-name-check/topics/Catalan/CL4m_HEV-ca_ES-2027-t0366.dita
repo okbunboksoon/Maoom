@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0366">
+	<title>Motor mit Start-Stopp-Automatik anhalten</title>
+	<conbody>
+		<section>
+			<title>Schaltgetriebe</title>
+			<ul>
+				<li>
+					<p>Verringern Sie die Geschwindigkeit auf unter 5 km/h (3 mph).</p>
+				</li>
+				<li>
+					<p>Stellen Sie den Wählhebel in die Neutralstellung (N).</p>
+				</li>
+				<li>
+					<p>Lassen Sie das Kupplungspedal los.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Automatikgetriebe/Doppelkupplungsgetriebe/Intelligentes variables Getriebe</title>
+			<ul>
+				<li>
+					<p>Verringern Sie die Geschwindigkeit auf 0 km/h (0 mph).</p>
+				</li>
+				<li>
+					<p>Treten Sie auf das Bremspedal.</p>
+				</li>
+			</ul>
+			<p>Der Motor wird abgeschaltet und die grüne Kontrollleuchte <term translate="no">AUTO</term> STOP (<image align="left" href="../../images/WKIA_075.eps" scale="15" placement="inline"/>) leuchtet am Kombiinstrument auf.</p>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Ein Fahrzeug mit Schaltgetriebe oder intelligentem Schaltgetriebe muss eine Geschwindigkeit von mindestens 8 km/h (5 mph) seit dem letzten Automatik-Stopp erreichen.</p>
+						<p>Ein Fahrzeug mit Automatikgetriebe oder Doppelkupplungsgetriebe muss eine Geschwindigkeit von mindestens 5 km/h (3 mph) seit dem letzten Automatik-Stopp erreichen.</p>
+					</li>
+					<li>
+						<p>Wenn Sie den Sicherheitsgurt lösen oder die Fahrertür (Motorhaube) öffnen, wird das ISG-System deaktiviert.</p>
+					</li>
+					<li>
+						<p>Das ISG-System ist aktiv, wenn das Fahrzeug mit intelligenter Tempomatsteuerung ausgestattet ist und die Betriebsbedingungen erfüllt sind.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0365.dita#CL4m_HEV-ca_ES-2027-t0365" role="parent" scope="local" type="concept">
+				<linktext>Auto-Stopp</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

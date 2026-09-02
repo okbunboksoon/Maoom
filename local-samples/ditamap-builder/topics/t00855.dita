@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_008_03" id="t00855">
+	<title otherprops="legal_eu_std_008_03">Declaration of conformity</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>declaration of conformity</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05339">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05340">
+								<figgroup>
+									<image href="../../images/CE0678.eps" align="center" height="0.251in" placement="break" outputclass="nolabel" id="e05341"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The radio frequency components of the vehicle comply with requirements and other relevant provisions of Directive 1995/5/EC.</p>
+		<p>Further information including the manufacturer’s declaration of conformity is available on Kia website as follows;</p>
+		<p>http://www.kia-hotline.com</p>
+	</conbody>
+</concept>

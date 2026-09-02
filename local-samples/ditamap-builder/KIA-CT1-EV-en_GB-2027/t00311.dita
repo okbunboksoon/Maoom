@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00311">
+	<title>How to disconnect AC charger</title>
+	<conbody>
+		<ol>
+			<li>
+				<p>When charging is complete, remove the charging plug from the electrical outlet of the AC charging station.</p>
+			</li>
+			<li>
+				<p>Hold the charging connector handle and pull it out while pushing the unlock button (1) on the charging connector.</p>
+				<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colnum="1" colname="1" colwidth="50*"/>
+						<colspec colnum="2" colname="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="1">
+									<fig>
+										<figgroup>
+											<image href="../../images/N_CT25Q077.eps" scale="95" align="center" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Make sure to completely close the charging door.</p>
+			</li>
+			<li>
+				<p>Close the protection caps of the charging connector and the charging plug to protect them from foreign substances.</p>
+			</li>
+			<li>
+				<p>If the personal charging connector is used, store the connector in the cable compartment.</p>
+			</li>
+		</ol>
+		<note type="caution" id="e01386">
+			<ul id="e01387">
+				<li>
+					<p>To disconnect the charging connector, you must unlock the vehicle door first. The release button (1) on the charging connector will not work if the vehicle door is locked.</p>
+				</li>
+				<li>
+					<p>Do not forcefully disconnect the charging connector without pressing the release button (1). This can damage both the charging connector and the vehicle’s charging inlet.</p>
+				</li>
+				<li>
+					<p>If the release button (1) on the charging connector does not work even after unlocking the vehicle door, pull the emergency release cable located in the motor room, then press the release button (1) to disconnect the charging connector. If the release button (1) continues to malfunction, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

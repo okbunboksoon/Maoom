@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0472">
+	<title>Notlenkung (Ausweichlenkunterstützung)</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054149.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Notlenkung</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Notlenkung warnt den Fahrer durch Blinken der Notlenkungswarnleuchte (<image align="left" href="../../images/WKIA_077.eps" scale="15" placement="inline"/>), eine Warnmeldung, ein akustisches Warnsignal und Vibrationen am Lenkrad (ausstattungsabhängig).</p>
+		<p>Wenn die Gefahr einer Kollision mit einem Fußgänger, einem Radfahrer oder einem angetriebenen Zweirad vor Ihnen besteht und Ihr Fahrzeug bereits die Notbremsgeschwindigkeit überschritten hat, wird die Lenkung unterstützt, um eine Kollision zu verhindern, wenn der Fahrer das Fahrzeug lenkt, um eine Kollision zu vermeiden.</p>
+		<p>Die Notlenkung wird unter folgenden Bedingungen aktiviert.</p>
+		<ul>
+			<li>
+				<p>Fahrgeschwindigkeit: Etwa 65-75km/h (40-47 mph)</p>
+			</li>
+		</ul>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Das Lenkrad kann sich automatisch drehen, wenn die Notlenkung aktiv ist.</p>
+				</li>
+				<li>
+					<p>Die Notlenkung wird automatisch aufgehoben, wenn die Risikofaktoren nicht mehr bestehen. Gegebenenfalls muss der Fahrer das Fahrzeug lenken.</p>
+				</li>
+				<li>
+					<p>Die Notlenkung darf während des Betriebs nicht funktionieren oder storniert werden, wenn das Lenkrad festgehalten oder in die entgegengesetzte Richtung gelenkt wird.</p>
+				</li>
+				<li>
+					<p>Bei Unterstützung der Lenkung, um eine Kollision mit einem Fahrzeug, einem Fußgänger und einem Radfahrer zu vermeiden, wird die Ausweichlenkunterstützung abgebrochen, falls Kollisionen mit anderen Objekten (Fahrzeug, motorisiertes Zweirad, Fußgänger oder Radfahrer) zu erwarten sind.</p>
+				</li>
+				<li>
+					<p>Die Ausweichlenkunterstützung funktioniert möglicherweise nicht, wenn auf der Fahrbahn kein Platz zur Vermeidung von Kollisionen vorhanden ist.</p>
+				</li>
+				<li>
+					<p>Bei Nachtfahrten ist die Leistung der Erkennung motorisierter Zweiräder vermindert, sodass der Frontalkollisions-Vermeidungsassistent möglicherweise vorübergehend eingeschränkt ist oder nicht funktioniert.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Weitere Details zu den Warnmeldungen finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0449.dita#CL4m_HEV-ca_ES-2027-t0449"/>.</p>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Ändern Sie zu Ihrer Sicherheit die Einstellungen, nachdem Sie das Fahrzeug an einem sicheren Ort geparkt haben.</p>
+				</li>
+				<li>
+					<p>Der Frontalkollisions-Vermeidungsassistent funktioniert nicht in allen Situationen und kann nicht alle Kollisionen vermeiden.</p>
+				</li>
+				<li>
+					<p>Der Fahrer trägt weiterhin die Verantwortung für die Führung des Fahrzeugs. Verlassen Sie sich nicht allein auf den Frontalkollisions-Vermeidungsassistenten. Halten Sie stattdessen einen Sicherheitsabstand ein und treten Sie gegebenenfalls das Bremspedal, um die Fahrgeschwindigkeit zu verringern oder das Fahrzeug zu stoppen.</p>
+				</li>
+				<li>
+					<p>Testen Sie niemals absichtlich den Frontalkollisions-Vermeidungsassistenten mit Personen, Gegenständen usw. Dies kann zu schweren oder tödlichen Verletzungen führen.</p>
+				</li>
+				<li>
+					<p>Der Frontalkollisions-Vermeidungsassistent funktioniert möglicherweise nicht, wenn der Fahrer zur Vermeidung einer Kollision das Bremspedal betätigt.</p>
+				</li>
+				<li>
+					<p>Je nach Straßen- und Fahrbedingungen warnt der Frontalkollisions-Vermeidungsassistent den Fahrer möglicherweise zu spät oder gar nicht.</p>
+				</li>
+				<li>
+					<p>Während der Nutzung des Frontalkollisions-Vermeidungsassistenten kann es vorkommen, dass das Fahrzeug plötzlich anhält und dabei Mitfahrer verletzt und lose Gegenstände verschiebt. Legen Sie immer den Sicherheitsgurt an und sichern Sie lose Gegenstände.</p>
+				</li>
+				<li>
+					<p>Wenn die Warnmeldung eines anderen Systems angezeigt oder ein Warnton ausgegeben wird, wird die Warnmeldung des Frontalkollisions-Vermeidungsassistenten möglicherweise nicht angezeigt und ggf. kein Warnton ausgegeben.</p>
+				</li>
+				<li>
+					<p>Möglicherweise hören Sie den Warnton des Frontalkollisions-Vermeidungsassistenten nicht, wenn die Umgebung laut ist.</p>
+				</li>
+				<li>
+					<p>Der Frontalkollisions-Vermeidungsassistent kann sich je nach Straßenzustand und Umgebung abschalten, nicht richtig funktionieren oder unbegründet aktiviert werden.</p>
+				</li>
+				<li>
+					<p>Bei einer Notbremsung wird die Bremssteuerung durch den Frontalkollisions-Vermeidungsassistent automatisch aufgehoben, wenn der Fahrer das Gaspedal kräftig tritt oder das Fahrzeug stark gegenlenkt.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Die Umgebung und Fußgänger, Radfahrer und motorisierte Zweiräder oder andere Fahrzeuge vor Ihnen können die Geschwindigkeit oder den Erfassungsbereich für den Frontalkollisions-Vermeidungsassistenten beeinträchtigen, sodass die Funktion des Frontalkollisions-Vermeidungsassistenten vorübergehend eingeschränkt oder deaktiviert wird.</p>
+				</li>
+				<li>
+					<p>Der Frontalkollisions-Vermeidungsassistent arbeitet unter bestimmten Bedingungen und berücksichtigt dabei den Status des entgegenkommenden Fahrzeugs und des motorisierten Zweirads, die Fahrtrichtung, die Geschwindigkeit und die Umgebung, um das Risikoniveau zu beurteilen.</p>
+				</li>
+				<li>
+					<p>Die Funktion kann begrenzt oder deaktiviert werden, wenn die Fahrgeschwindigkeit zu hoch ist oder ein erheblicher Geschwindigkeitsunterschied zwischen den entgegenkommenden motorisierten Zweirädern besteht.</p>
+				</li>
+				<li>
+					<p>Wenn eine Kollision mit einem Fahrzeug zu erwarten ist, warnen die Funktionen Fahrspurwechsel bei Gegenverkehr, Seitlicher Spurwechsel und Ausweichlenkunterstützung den Fahrer.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Bei einer drohenden Kollision kann der Frontalkollisions-Vermeidungsassistent den Fahrer mit Bremsen unterstützen, wenn dieser nicht ausreichend bremst.</p>
+				</li>
+				<li>
+					<p>Die Abbildungen oder Farben auf dem Kombiinstrument können sich von denen in diesem Handbuch unterscheiden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0470.dita#CL4m_HEV-ca_ES-2027-t0470" role="parent" scope="local" type="concept">
+				<linktext>Funktion der Ausweichlenkunterstützung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

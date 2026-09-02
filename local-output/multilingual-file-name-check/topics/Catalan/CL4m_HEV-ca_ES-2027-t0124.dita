@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0124">
+	<title id="e00285">Motorkühlmitteltemperaturanzeige </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Instrumente
+					<indexterm>Motorkühlmitteltemperaturanzeige</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Typ A</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034116N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<title>Typ B</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M036169L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Diese Anzeige zeigt die Temperatur des Motorkühlmittels an, wenn sich der <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) in Position <term translate="no">ON</term> befindet.</p>
+		<note type="caution" id="e00286">
+			<p>Bewegt sich der Zeiger der Anzeige über den normalen Bereich hinaus (zwischen C–H oder 50–130) in Richtung „H“ (Hot) oder 130, deutet dies auf eine Überhitzung hin, die den Motor beschädigen kann.</p>
+			<p>Fahren Sie nicht weiter, wenn der Motor überhitzt ist. Wenn Ihr Fahrzeug überhitzt, verfahren Sie entsprechend <xref href="CL4m_HEV-ca_ES-2027-t0745.dita#CL4m_HEV-ca_ES-2027-t0745"/>.</p>
+		</note>
+		<note type="warning" id="e00287">
+			<p>Entfernen Sie niemals bei heißem Motor den Deckel des Motorkühlmittelbehälters. Das Motorkühlmittel steht unter Druck und kann Sie stark verbrennen. Warten Sie bis der Motor abgekühlt ist, bevor Sie Kühlmittel in den Ausgleichsbehälter nachfüllen.</p>
+		</note>
+		<note type="warning">
+			<p>Deckel des Motorkühlmittelbehälters<image align="left" href="../../images/WKIA_112.eps" scale="30" placement="inline"/></p>
+			<p>Nehmen Sie den Deckel des Motorkühlmittelbehälters nicht ab, wenn der Motor heiß ist. Kühlmittel kann unter Druck austreten, und es besteht die Gefahr von schweren Verbrühungen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0121.dita#CL4m_HEV-ca_ES-2027-t0121" role="parent" scope="local" type="concept">
+				<linktext>Instrumente </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

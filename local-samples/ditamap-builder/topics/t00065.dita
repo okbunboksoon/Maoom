@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" deliveryTarget="except_print" id="t00065">
+	<title>Energy consumption</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>driving electric vehicle 
+					<indexterm>energy consumption</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>In order to check the current energy consumption for each system of the vehicle, select <menucascade><uicontrol>Electric Vehicle</uicontrol><uicontrol outputclass="a1702192">Energy consumption</uicontrol></menucascade> on the screen.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00397">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00398">
+								<figgroup>
+									<image align="center" height="1.624in" href="../../images/N_CT25Q023_E.eps" placement="break" width="2.244in" id="e00399"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e00400">
+			<li>
+				<p> <uicontrol outputclass="a1702197">Driving</uicontrol> shows the total power and energy consumption of the driving motor’s driving energy and regenerative energy.</p>
+			</li>
+			<li>
+				<p> <uicontrol outputclass="a1907130">Climate</uicontrol> shows the power and energy consumption which are used by the heater or air conditioner.</p>
+			</li>
+			<li>
+				<p> <uicontrol outputclass="a1702199">Electronics</uicontrol> shows the power and energy consumption which are used by the vehicle systems including the cluster, infotainment system (speaker and navigation), headlamp, vehicle control unit, etc.</p>
+			</li>
+			<li>
+				<p> <uicontrol outputclass="a1703661">Battery care</uicontrol> shows the momentary power and energy consumption which are used when:</p>
+				<ul id="e00401">
+					<li>
+						<p>Operating the battery conditioning mode to increase the battery temperature during winter to secure the charging performance as at room temperature.</p>
+					</li>
+					<li>
+						<p>Cooling down the battery temperature during summer to prevent over temperature of the battery.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</conbody>
+</concept>

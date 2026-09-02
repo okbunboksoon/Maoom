@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00422">
+	<title>Emergency Stop Signal (ESS)</title>
+	<shortdesc>Emergency Stop Signal (ESS) alerts the driver behind by flashing the brake lights when braking sharply and severely.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle safety system 
+					<indexterm>emergency stop signal (ESS)</indexterm>
+				</indexterm>
+				<indexterm>emergency stop signal (ESS)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section deliveryTarget="except_print" id="e03079">
+			<title>Operating conditions</title>
+			<ul id="e03080">
+				<li>
+					<p>The vehicle suddenly stops.</p>
+				</li>
+				<li>
+					<p>ABS is activated and the driving speed is over 55 km/h (34 mph).</p>
+				</li>
+				<li>
+					<p>The hazard warning flasher automatically turns on after blinking the brake lights when:</p>
+					<ul id="e03081">
+						<li>
+							<p>The driving speed is under approximately 40 km/h (25 mph)</p>
+						</li>
+						<li>
+							<p>The ABS is deactivated</p>
+						</li>
+						<li>
+							<p>The sudden braking is over</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>ABS is deactivated.</p>
+				</li>
+				<li>
+					<p>The sudden braking is over.</p>
+				</li>
+				<li>
+					<p>The hazard warning flasher turns off when the vehicle drives at a low speed for a certain period of time. The hazard warning flasher can be manually turned off by pressing the hazard switch while it is flashing.</p>
+				</li>
+			</ul>
+			<note type="note" id="e03082">
+				<p>ESS will not activate when the hazard warning flashers are already on.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

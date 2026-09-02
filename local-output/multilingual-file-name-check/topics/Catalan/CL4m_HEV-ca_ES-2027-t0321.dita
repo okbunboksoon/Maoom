@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0321">
+	<title id="e00749">Steckdose </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Innenausstattung
+					<indexterm>Steckdose</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Vorn</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034085.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<title>Hinten (ausstattungsabhängig)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MW035011L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Öffnen Sie bei eingeschaltetem Fahrzeug die Steckdosenabdeckung und schließen Sie Elektrogeräte an, die für den Gebrauch geeignet sind (12 V, 15 A oder weniger).</p>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Nutzen Sie die Bordsteckdose nur, wenn der Verbrennungsmotor läuft, und ziehen Sie den Zubehörstecker nach Verwendung ab. Durch längere Verwendung des Zubehörsteckers bei ausgeschaltetem Motor könnte die Batterie entladen werden.</p>
+				</li>
+				<li>
+					<p>Schließen Sie nur elektrische Geräte mit einer Betriebsspannung von 12 V und einem Stromverbrauch von unter 15 A an.</p>
+				</li>
+				<li>
+					<p>Stellen Sie die Klimaanlage oder die Heizung auf die niedrigste Stufe, wenn Sie ein Gerät an die Bordsteckdose anschließen möchten.</p>
+				</li>
+				<li>
+					<p>Schließen Sie die Abdeckung, wenn die Steckdose nicht verwendet wird.</p>
+				</li>
+				<li>
+					<p>Manche elektronischen Geräte können elektronische Störungen verursachen, wenn sie an der Stromsteckdose des Fahrzeugs angeschlossen sind. Diese Geräte können erhebliche Störungen des Audiosystems und Fehlfunktionen der im Fahrzeug verbauten elektronischen Systeme oder Geräte hervorrufen.</p>
+				</li>
+				<li>
+					<p>Die Verwendung elektrischer Geräte mit zu hoher Leistungsaufnahme kann eine Aufheizung der Steckdose und der Kabel bewirken. Dies kann zu Spannungsdurchschlägen führen.</p>
+				</li>
+				<li>
+					<p>Achten Sie immer darauf, elektrische Geräte fest an die Steckdose anzuschließen. Durch unvollständiges Anschließen kann es zu Spannungsdurchschlägen kommen.</p>
+				</li>
+				<li>
+					<p>Elektrische Geräte mit eingebauter Batterie können einen Stromfluss verursachen, der zu Funktionsstörungen der elektrischen/elektronischen Geräte in Ihrem Fahrzeug führen kann. Verwenden Sie nur elektrische Geräte, die mit Vorrichtungen zur Verhinderung von Rückwärtsstrom ausgestattet sind.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<p>Schließen Sie kein Reifen-Mobilitäts-Kit (TMK) eines anderen Fahrzeugs an die Steckdose oder die Batterieklemme an. Der unterschiedliche Strombedarf zwischen der Steckdose des Fahrzeugs und dem Reifen-Mobilitäts-Kit kann zu Bränden oder Schäden am Stromkreis des Fahrzeugs und des Reifen-Mobilitäts-Kits führen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0315.dita#CL4m_HEV-ca_ES-2027-t0315" role="parent" scope="local" type="concept">
+				<linktext>Innenausstattung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

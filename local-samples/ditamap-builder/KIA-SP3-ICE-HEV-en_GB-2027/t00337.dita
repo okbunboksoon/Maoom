@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00337">
+	<title>Defogging the inside of the windshield</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>windshield defrosting and defogging
+					<indexterm>defogging the inside of the windshield</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02138">
+			<title>For manual climate control system</title>
+			<p>To defog the inside of the windshield using the manual climate control system, follow these steps:</p>
+			<ol id="e02139">
+				<li>
+					<p>Select any fan speed other than 0.</p>
+				</li>
+				<li>
+					<p>Select the desired temperature.</p>
+				</li>
+				<li>
+					<p>Select the <image href="images/OSV034323.jpg" scale="15" align="center" placement="inline"/> or <image href="images/WKIA_181.jpg" scale="15" align="left" placement="inline"/> mode.</p>
+				</li>
+				<li>
+					<p>External airflow and air conditioning (<term translate="no">A/C</term>) will be selected automatically.</p>
+				</li>
+			</ol>
+			<p>If external airflow and <term translate="no">A/C</term> are not selected automatically, manually press the corresponding control buttons.</p>
+		</section>
+		<section id="e02140">
+			<title>For automatic climate control system</title>
+			<p>To defog the inside of the windshield using the automatic climate control system, follow these steps:</p>
+			<ol id="e02141">
+				<li>
+					<p>Set the desired fan speed.</p>
+				</li>
+				<li>
+					<p>Select the desired temperature.</p>
+				</li>
+				<li>
+					<p>Press the defroster icon <image href="images/WKIA_181.jpg" scale="15" align="left" placement="inline"/>.</p>
+				</li>
+				<li>
+					<p>External airflow is selected automatically, and the air conditioner (<term translate="no">A/C</term>) operates according to the detected ambient temperature.</p>
+				</li>
+			</ol>
+			<p>If external airflow and <term translate="no">A/C</term> are not selected automatically, manually press the corresponding control icons. If you select the <image href="images/WKIA_181.jpg" scale="15" align="left" placement="inline"/> mode, a slower fan speed is adjusted to a higher fan speed.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00336.dita#t00336" role="parent" scope="local" type="concept">
+				<linktext>Windshield defrosting and defogging</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

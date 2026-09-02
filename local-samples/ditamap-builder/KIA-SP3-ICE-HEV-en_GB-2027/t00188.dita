@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task importance="optional" id="t00188">
+	<title>Rear fog light operation</title>
+	<shortdesc>Rear fog lights are designed to improve visibility in fog, rain, or snow.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lighting control
+					<indexterm>rear fog light operation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context id="e01158">
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01159">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01160">
+									<image href="images/N_QVe27_B05_010_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</context>
+		<steps-unordered id="e01161">
+			<step>
+				<cmd>To turn on the fog lights, turn the fog light switch (1) to the <term translate="no">ON</term> position after turning the headlights on.</cmd>
+			</step>
+			<step>
+				<cmd>To turn off the fog lights, turn the fog light switch (1) to the <term translate="no">ON</term> position again.</cmd>
+			</step>
+		</steps-unordered>
+		<postreq id="e01162">
+			<note type="note" id="e01163">
+				<p>The fog lights consume large amounts of vehicle electrical power when in operation. Only use the fog lights when visibility is poor.</p>
+			</note>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00184.dita#t00184" role="parent" scope="local" type="concept">
+				<linktext>Lighting control</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

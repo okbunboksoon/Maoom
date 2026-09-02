@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00516">
+	<title>Limitations of Safe Exit Warning</title>
+	<conbody>
+		<p>Safe Exit Warning may not operate normally, or Safe Exit Warning may operate unexpectedly under the following warning.</p>
+		<ul id="e03920">
+			<li>
+				<p>Getting out of the vehicle where trees or grass are overgrown</p>
+			</li>
+			<li>
+				<p>Getting out of the vehicle where the road is wet</p>
+			</li>
+			<li>
+				<p>The approaching vehicle is very fast or very slow</p>
+			</li>
+		</ul>
+		<note type="note" id="e03921">
+			<p>For more details on the precautions of the rear corner radars, refer to <xref type="concept" href="t00497.dita#t00497">Blind-Spot Collision-Avoidance Assist (BCA)</xref>.</p>
+		</note>
+		<note type="warning" id="e03922">
+			<ul id="e03923">
+				<li>
+					<p>Safe Exit Warning may not operate normally if interfered by strong electromagnetic waves.</p>
+				</li>
+				<li>
+					<p>Safe Exit Warning may not operate for approximately 3 seconds after the vehicle is restarted, or the rear corner radars are initialized.</p>
+				</li>
+				<li>
+					<p>Even after starting the vehicle again, Safe Exit Warning not function properly when the obstruction or malfunction condition persists.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

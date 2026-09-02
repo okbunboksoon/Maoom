@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00877">
+	<title>Light bulb position (Side)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>light bulbs
+					<indexterm>light bulb position (side)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05168">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05169">
+								<image align="center" placement="break" scale="95" href="images/N_SP327_D12_047.jpg"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e05170">
+								<li>
+									<p>Side repeater lamp (LED type)</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00874.dita#t00874" role="parent" scope="local" type="concept">
+				<linktext>Light bulbs</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

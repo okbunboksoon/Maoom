@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0110">
+	<title id="e00260">Hupe </title>
+	<shortdesc>Um die Hupe zu betätigen, drücken Sie den mit dem Hupensymbol gekennzeichneten Bereich auf Ihrem Lenkrad (siehe Abbildung).</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Lenkrad
+					<indexterm>Hupe</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034048N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Hupe ertönt nur, wenn Sie den gekennzeichneten Lenkradbereich drücken. Prüfen Sie die Hupe regelmäßig, damit Sie sicher sein können, dass die Hupe in Ordnung ist.</p>
+		<note type="caution" id="e00261">
+			<ul id="e00262">
+				<li>
+					<p>Schlagen Sie nicht mit der Faust oder mit anderen Gegenständen auf den Hupenschalter. Stechen Sie auch nicht mit scharfkantigen Gegenständen in den Hupenschalter.</p>
+				</li>
+				<li>
+					<p>Verwenden Sie für die Reinigung des Lenkrads keine Lösungsmittel wie Verdünnung, Benzin oder Alkohol. Dadurch kann das Lenkrad beschädigt werden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0105.dita#CL4m_HEV-ca_ES-2027-t0105" role="parent" scope="local" type="concept">
+				<linktext>Lenkrad </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

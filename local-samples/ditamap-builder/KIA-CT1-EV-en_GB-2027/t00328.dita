@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00328">
+	<title>Impact on distance to empty</title>
+	<conbody>
+		<ul>
+			<li>
+				<p>Driving range depends on the driving style, electrical load usage, environment, and high voltage battery energy. Distance to empty displayed on the vehicle may be higher or lower than the certification range because these effects are considered.</p>
+			</li>
+			<li>
+				<p>Driving style refers to driving speed and acceleration/deceleration tendency. The higher the speed, or the more frequent the acceleration/deceleration, distance to empty will be reduced.</p>
+			</li>
+			<li>
+				<p>Electrical loads usage means air conditioning, heaters, lamps or additional auxiliary loads, and as the usage increases, distance to empty will be reduced.</p>
+			</li>
+			<li>
+				<p>Environment refers to weather, temperature, and terrain. Distance to empty is reduced in cases of snow/rain/high winds or low temperatures, uphill or slippery or rough road surfaces.</p>
+			</li>
+			<li>
+				<p>High voltage battery energy is proportional to SOC (charge amount), but may vary depending on the battery temperature, SOH (battery health), etc.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00614">
+	<title>Navigation-based Smart Cruise Control settings</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>navigation-based smart cruise control (NSCC) 
+					<indexterm>settings</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04318">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e04319">
+								<figgroup>
+									<image href="../../images/N_CT25Z022_E.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e04320"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e04321">
+								<li>
+									<p> <uicontrol outputclass="a1804438">Driver Assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1906778">Driving Convenience</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Auto Highway Speed Change</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

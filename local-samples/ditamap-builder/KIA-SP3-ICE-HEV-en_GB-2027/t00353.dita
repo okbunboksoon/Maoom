@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00353">
+	<title>USB charger</title>
+	<shortdesc>The USB charger recharges the batteries of small electronic devices using a USB cable.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features
+					<indexterm>USB charger</indexterm>
+				</indexterm>
+				<indexterm>USB charger</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02238">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02239">
+								<title>Instrument panel</title>
+								<image href="images/N_SP327_C08_030_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e02240">
+								<title>Front seat</title>
+								<image href="images/N_SP327_C08_031_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>You can recharge the electronic devices when the vehicle is in <term translate="no">ON</term> position.</p>
+		<p>You can monitor the battery charging state on the electronic device.</p>
+		<p>Disconnect the USB cable from the USB port after use.</p>
+		<p>Rated output: 9.0 V/Max 3.0 A</p>
+		<ul id="e02241">
+			<li>
+				<p>A smartphone or a tablet PC may get warmer during the recharging process. This does not indicate any malfunction with the charging system.</p>
+			</li>
+			<li>
+				<p>A smartphone or a tablet PC that has a different recharging method may not properly recharge. In this case, use an exclusive charger for your device.</p>
+			</li>
+			<li>
+				<p>The charging terminal is only for recharging a device. Do not use the charging terminal either to turn on an audio or to play media in the infotainment system.</p>
+			</li>
+		</ul>
+		<note type="note" id="e02242">
+			<ul id="e02243">
+				<li>
+					<p>Use the USB charger when the vehicle is running. Using the USB charger for prolonged periods of time with the vehicle off could cause the 12V battery to discharge.</p>
+				</li>
+				<li>
+					<p>To prevent damage to the USB charger:</p>
+					<ul id="e02244">
+						<li>
+							<p>Do not insert foreign objects or spill liquid into the outlet. This may damage the USB charging terminal.</p>
+						</li>
+						<li>
+							<p>Do not use devices with a working current exceeding 3,000 mA (3.0 A).</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+		<note type="tip" id="e02245">
+			<p>Charging may not be possible when using a USB Type-C to USB Type-A converter.</p>
+		</note>
+		<section importance="optional" id="e02246"><?oxy_comment_start author="june" timestamp="20250912T102103+0900" comment="100W USB 적용 시"?>
+			<title>100W USB charging port</title><?oxy_comment_end?>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02247">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02248">
+									<image href="images/N_SP327_C08_058_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When the vehicle is in <term translate="no">ON</term> position, you can charge various devices such as smartphones and tablets by connecting them to the USB charging port.</p>
+			<p>Depending on the connected device’s request or the specification of the charging cable, the USB charger can support up to 100W of total output.</p>
+			<ul id="e02249">
+				<li>
+					<p>When using one port in the center console: up to 100W supported</p>
+				</li>
+				<li>
+					<p>When using two ports in the center console: up to 50W supported for each port</p>
+				</li>
+			</ul>
+			<note type="caution" id="e02250">
+				<ul id="e02251">
+					<li>
+						<p>To prevent the vehicle’s 12V battery from discharging, use the charging function only when the vehicle is on.</p>
+					</li>
+					<li>
+						<p>Ensure that no foreign substances, beverages, or moisture enter the USB charging port, as it may cause damage.</p>
+					</li>
+					<li>
+						<p>If a failure of the USB port or infotainment system occurs due to the use of low-quality or non-certified components, warranty repair will not be provided even within the warranty period. Use only Kia Genuine Parts or those of an equivalent standard with proven quality and performance.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e02252">
+				<ul id="e02253">
+					<li>
+						<p>The 100W USB charging port is indicated by the symbols.</p>
+					</li>
+					<li>
+						<p>The 100W USB charging port supports full 100W charging only when using genuine Kia cables or USB-IF certified cables. When using non-standard cables, the charging power may be limited to 60W or 27W. Use only Kia Genuine Parts or those of an equivalent standard with proven quality and performance.</p>
+					</li>
+					<li>
+						<p>The 100W USB charging port indicates its operating status through indicator light for user convenience. If an issue persists, <?oxy_comment_start author="june" timestamp="20250814T161854+0900" comment="북미 BER 문구
+
+have your vehicle checked by an authorized Kia dealer."?> have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner. <?oxy_comment_end?></p>
+					</li>
+				</ul>
+			</note>
+			<sectiondiv><ph>100W USB charging port status</ph>
+				<table frame="all" rowsep="1" colsep="1" id="e02254">
+					<tgroup cols="3">
+						<colspec colname="c1" colnum="1" colwidth="1*"/>
+						<colspec colname="c2" colnum="2" colwidth="1*"/>
+						<colspec colname="c3" colnum="3" colwidth="1*"/>
+						<thead>
+							<row>
+								<entry valign="middle" align="center">
+									<p>Color</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>USB charging port state</p>
+								</entry>
+								<entry valign="middle" align="center">
+									<p>Measure</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry align="center" valign="middle">
+									<p>White</p>
+									<p>(Default)</p>
+								</entry>
+								<entry valign="middle" align="center">
+									<p>Normal</p>
+								</entry>
+								<entry valign="middle" align="center">
+									<p>-</p>
+								</entry>
+							</row>
+							<row>
+								<entry valign="middle" align="center">
+									<p>Amber</p>
+								</entry>
+								<entry valign="middle" align="center">
+									<p>Charging has stopped because the USB charging port is operating normally, but the connected device or cable is not.</p>
+								</entry>
+								<entry valign="middle">
+									<ul id="e02255">
+										<li>
+											<p>Check whether there is a problem with the connected device or cable, and then reconnect it.</p>
+										</li>
+										<li>
+											<p>If the same problem occurs repeatedly, replace it with another compatible cable or check whether the connected device is functioning properly.</p>
+										</li>
+									</ul>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p>Red</p>
+								</entry>
+								<entry valign="middle" align="center">
+									<p>Turns on when a malfunction is detected in the charging device.</p>
+								</entry>
+								<entry valign="middle">
+									<p>Stop charging immediately. <?oxy_comment_start author="june" timestamp="20250814T161854+0900" comment="북미 BER 문구
+
+Have your vehicle checked by an authorized Kia dealer."?> Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner. <?oxy_comment_end?></p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<note type="note" id="e02256">
+					<ul id="e02257">
+						<li>
+							<p>Check the charging status through the display on the connected device.</p>
+						</li>
+						<li>
+							<p>When connecting to the data port using a C to A type USB adapter, use a genuine adapter compatible with the vehicle. Using products that lack built-in overcurrent protection or stabilization features, or those that do not meet the required specifications, may damage the vehicle’s USB charging port or the connected device.</p>
+						</li>
+						<li>
+							<p>The USB charging port provides charging functionality only and does not support media connection or playback.</p>
+						</li>
+						<li>
+							<p>Always keep the USB port clean and free of dust or foreign substances. Using the port in a contaminated state may cause fire, damage, or other hazardous situations.</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+		</section>
+		<section importance="optional" id="e02258">
+			<title>100W charging cable</title>
+			<p>A 100W charging cable can support up to 100W, depending on the specifications of the connected device and charging terminal.</p>
+			<p>The LED indicator on the 100W charging cable shows the operating status.</p>
+			<note type="caution" id="e02259">
+				<ul id="e02260">
+					<li>
+						<p>To prevent the vehicle’s 12V battery from discharging, use the charging function only when the vehicle is turned on.</p>
+					</li>
+					<li>
+						<p>Be careful to ensure that no foreign substances, beverages, or moisture enter the 100W charging cable, as this may cause damage to the cable.</p>
+					</li>
+					<li>
+						<p>Do not use devices with a power consumption exceeding 5.0A.</p>
+					</li>
+					<li>
+						<p>When charging an electronic device using a C to A type USB adapter, always use a genuine adapter compatible with the vehicle. Using products that lack built-in overcurrent protection or stabilization features, or that do not meet the required specifications, may damage the vehicle’s 100W charging cable or the connected device.</p>
+					</li>
+					<li>
+						<p>If the 100W charging cable fails due to the use of low-quality or non-compliant devices, warranty repair will not be provided even within the warranty period.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e02261">
+				<ul id="e02262">
+					<li>
+						<p>Check the charging status through the display on the connected device.</p>
+					</li>
+					<li>
+						<p>During charging or large-capacity data transfer, the device temperature may rise slightly, which is a normal operating condition. Be careful not to disconnect the device during data transfer, as this may cause data loss or corruption.</p>
+					</li>
+					<li>
+						<p>This product is designed for use with devices that comply with USB-IF USB 2.0 and PD 3.0 standards. Using devices that do not meet these specifications may result in unexpected limitations or compatibility issues.</p>
+					</li>
+					<li>
+						<p>When connecting a device using a non-genuine C to A type USB adapter, the device may not operate properly.</p>
+					</li>
+					<li>
+						<p>Always keep the 100W charging cable plug clean and free from dust or foreign substances, as using it in a contaminated condition may cause hazardous situations or damage.</p>
+					</li>
+					<li>
+						<p>Depending on the shape or size of the connected device, cable connection may be difficult.</p>
+					</li>
+					<li>
+						<p>The 100W charging cable is a consumable part. If charging or data transfer becomes unstable after the warranty period, replace it with a new genuine cable.</p>
+					</li>
+				</ul>
+			</note>
+			<sectiondiv>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00347.dita#t00347" role="parent" scope="local" type="concept">
+				<linktext>Interior features</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

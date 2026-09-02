@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0662">
+	<title>Kameraeinstellungen</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054111N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Kameraeinstellungen</p>
+								</li>
+								<li>
+									<p>Anzeigeinhalt</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wählen Sie bei eingeschaltetem Fahrzeug das Setup-Symbol (<image align="left" href="../../images/WKIA_152.eps" scale="15" placement="inline"/>) auf dem Bildschirm oder <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Fahrerassistenz</uicontrol><uicontrol>Parksicherheit</uicontrol><uicontrol>Kameraeinstellungen</uicontrol></menucascade> auf dem Bildschirm des Infotainment-Systems, um die Einstellungen für den Heckmonitor zu ändern.</p>
+		<section id="e01168">
+			<title>Erweiterte Rückfahrüberwachung</title>
+			<p>Wenn Erweiterte Rückfahrüberwachung ausgewählt ist, wird die Rückfahrkamera auch dann angezeigt, wenn Sie von R (Rückwärtsgang) auf N (Neutral) oder D (Fahren) schalten.</p>
+		</section>
+		<section id="e01169">
+			<title>Hecksicht-Parkführung</title>
+			<p>Wenn Einparkleitlinien für die Hecksicht in der Anzeige ausgewählt ist, werden die Einparkleitlinien für die Hecksicht und die Leitlinien für die Rückansicht von oben auf dem Fondmonitor angezeigt.</p>
+		</section>
+		<section id="e01170">
+			<title>Anzeigeeinstellungen</title>
+			<p>Sie können die Helligkeit (Tag/Nacht) und den Kontrast des Kamerabildes in den Displayeinstellungen einstellen.</p>
+			<note type="note" id="e01171">
+				<p>Das Einstellungsmenü ist je nach Fahrzeugspezifikationen möglicherweise nicht für Ihr Fahrzeug verfügbar.</p>
+			</note>
+			<note type="note" id="e01172">
+				<ul id="e01173">
+					<li>
+						<p>Die horizontale Leitlinie der Parkleitlinien Rückansicht basiert auf dem leeren Frachtzustand. Dies erscheint im Abstand von etwa 0,5 m (20 in.), 1 m (40 in.) und 2,3 m (91 in.) vom Fahrzeug.</p>
+					</li>
+					<li>
+						<p>Die horizontale Leitlinie der Parkleitlinien Draufsicht basiert auf dem leeren Frachtzustand. Diese zeigt den Abstand von etwa 0,5 m (20 in.) und 1,5 m (60 in.) zum Fahrzeug an.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0660.dita#CL4m_HEV-ca_ES-2027-t0660" role="parent" scope="local" type="concept">
+				<linktext>Einstellungen des Heckmonitors</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

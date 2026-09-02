@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task base="Top" id="t00128">
+	<title id="e00644">Adjusting the outside rearview mirrors </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>outside rearview mirror
+					<indexterm>adjusting the outside rearview mirrors</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context>
+			<p>The electric remote control mirror switch allows you to adjust the position of the left and right outside rearview mirrors.</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00645">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00646">
+									<image href="images/N_SP3i26_B05_012_1_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To adjust the outside rearview mirrors, follow these steps:</p>
+		</context>
+		<steps>
+			<step>
+				<cmd>Move the R or L switch (2) to select the right side mirror or the left side mirror.</cmd>
+			</step>
+			<step>
+				<cmd>Engage the corresponding point ▲ on the mirror adjustment control (1) to position the selected mirror up, down, left, or right.</cmd>
+				<info>
+					<note type="note" id="e00647">
+						<ul id="e00648">
+							<li id="e00649">
+								<p>The mirrors will stop moving when they reach their maximum adjustment angles, but the motor will continue to operate while the switch is pressed. To avoid damage to the motor, do not press the switch longer than necessary.</p>
+							</li>
+							<li id="e00650">
+								<p>Do not adjust the outside rearview mirror s by hand. Doing so may damage their parts.</p>
+							</li>
+						</ul>
+					</note>
+				</info>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00127.dita#t00127" role="parent" scope="local" type="concept">
+				<linktext>Outside rearview mirror </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

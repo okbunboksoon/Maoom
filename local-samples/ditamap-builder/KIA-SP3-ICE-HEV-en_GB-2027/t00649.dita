@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00649">
+	<title>Canceling Highway Lane Change Assist</title>
+	<conbody>
+		<p>Highway Lane Change Assist is canceled when:</p>
+		<ul id="e03999">
+			<li>
+				<p>You set the turn signal lever to the opposite direction of the lane change.</p>
+			</li>
+			<li>
+				<p>You turn the steering wheel too sharply.</p>
+			</li>
+			<li>
+				<p>You turn the turn signal lever to the (1) position while Lane Change Assist is operating, then return the turn signal lever to the neutral position before you change lanes.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e04000">
+			<ul id="e04001">
+				<li>
+					<p>Highway Lane Change Assist is canceled under any of the following circumstances:</p>
+					<ul id="e04002">
+						<li>
+							<p>You turn Highway Driving Assist <term translate="no">OFF</term>.</p>
+						</li>
+						<li>
+							<p>You turn <term translate="no">OFF</term> or temporarily cancel Lane Following Assist or Smart Cruise Control.</p>
+						</li>
+						<li>
+							<p>You turn the turn signal lever to the (1) position.</p>
+						</li>
+						<li>
+							<p>You turn the hazard lights <term translate="no">ON</term>.</p>
+						</li>
+						<li>
+							<p>The instrument cluster displays a Forward Collision-Avoidance Assist or Blind-Spot Collision-Avoidance Assist warning message.</p>
+						</li>
+						<li>
+							<p>Your vehicle detects a possible collision in an adjacent lane, even without Forward Collision-Avoidance Assist and Blind Spot Collision-Avoidance Assist warnings.</p>
+						</li>
+						<li>
+							<p>Entering a construction zone.</p>
+						</li>
+						<li>
+							<p>The target lane ends.</p>
+						</li>
+						<li>
+							<p>Your vehicle does not detect the target lane.</p>
+						</li>
+						<li>
+							<p>There is a problem with the turn signal lights.</p>
+						</li>
+						<li>
+							<p>The function is <term translate="no">OFF</term> because you turned it <term translate="no">OFF</term> in the settings menu, the road changes to a one-way, there is an intersection or crosswalk ahead, there is a pedestrian or cyclist in the driving lane, or you enter a road with no structure, such as a median strip or guardrail.</p>
+						</li>
+						<li>
+							<p>If you drive below 25 km/h (15 mph) while the Highway Lane Change Assist status is ready, the function status changes to standby.</p>
+						</li>
+						<li>
+							<p>If you drive 30-80 km/h (20-50 mph) and your vehicle does not detect other vehicles in the right or left adjacent lanes, the Lane Change Assist status changes to standby.</p>
+						</li>
+						<li>
+							<p>Your vehicle detects a risk of collision.</p>
+						</li>
+						<li>
+							<p>The lane in the direction of the lane change is not a single dashed lane marking.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>If you cancel Highway Lane Change Assist while it is operating, the vehicle may steer toward the center of the driving lane or steering assist may stop, depending on driving conditions. Always pay attention to the road and driving conditions.</p>
+				</li>
+				<li>
+					<p>Highway Lane Change Assist may not operate normally on roads with pedestrians or cyclists, such as an intersection or crosswalk.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00644.dita#t00644" role="parent" scope="local" type="concept">
+				<linktext>Highway Lane Change Assist</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

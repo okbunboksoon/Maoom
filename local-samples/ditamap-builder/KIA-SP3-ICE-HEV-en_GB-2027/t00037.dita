@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00037">
+	<title id="e00172">Smart key </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>keys
+					<indexterm>smart key</indexterm>
+				</indexterm>
+				<indexterm>smart key</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>With a smart key, you can lock or unlock a door and even start the vehicle without inserting the key.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00173">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00174">
+								<image href="images/N_SP3i26_B04_048_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The smart key works when it is within approximately 10 m (33 feet) of the vehicle. Antenna within the vehicle sense when the smart key is within range.</p>
+		<p>Tinting the vehicle windows with film, especially metalized film, may interfere with the smart key’s signal and reduce its operating range.</p>
+		<section id="e00175">
+			<title>Lock <image href="images/WKIA_019.jpg" scale="15" align="left" placement="inline"/> (1)</title>
+			<p><indexterm>smart key<indexterm>operation</indexterm></indexterm>All doors will lock if you press the lock button while the key is within range of the vehicle. Once all doors are closed, the hazard warning lights will blink, and the chime will sound once to indicate that all doors are locked.</p>
+			<p>If you press the lock button again within 4 seconds, the hazard warning lights will blink, and the chime will sound once to confirm that the door is locked.</p>
+			<p>If any door remains open or if the key is out of range, the hazard warning lights (and/or the chime) will not signal. If all doors are closed after you press the lock button, the hazard warning lights will blink once.</p>
+		</section>
+		<section id="e00176">
+			<title>Unlock <image href="images/WKIA_021.jpg" scale="15" align="left" placement="inline"/> (2)</title>
+			<p>All doors will unlock if you press the unlock button once while the key is in range. The hazard warning lights will blink twice to indicate that all doors are unlocked.</p>
+			<p>Note that the doors will relock automatically if you do not open any door within 30 seconds of pressing the unlock button.</p>
+			<p>The door will not lock or unlock with the smart key’s lock/unlock button in the following situations:</p>
+			<ul id="e00177">
+				<li>
+					<p>When the vehicle is in <term translate="no">ACC</term> or <term translate="no">ON</term>.</p>
+				</li>
+				<li>
+					<p>When you try to lock a door when 1 or more doors are open.</p>
+				</li>
+			</ul>
+			<note type="note" id="e00178">
+				<ul id="e00179">
+					<li>
+						<p>Tinting the vehicle windows with film, especially metalized film, may interfere with the smart key’s receiving frequency and reduce its operating range.</p>
+					</li>
+					<li>
+						<p>If the smart key is inoperative due to exposure to water or other liquids, it will not be covered by your manufacturer’s vehicle warranty.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e00180">
+			<title>Tailgate unlock, Power tailgate open/close <image href="images/WKIA_020.jpg" scale="15" align="left" placement="inline"/> (3)</title>
+			<p>If you press the button for longer than a second, the lock will be released.</p>
+			<p>Once the tailgate is opened and then closed, the tailgate will lock automatically.</p>
+		</section>
+		<section importance="optional" id="e00181">
+			<title>Remote start <image href="images/WKIA_108.jpg" scale="15" align="left" placement="inline"/> (4)</title>
+			<p>You can start the vehicle using the smart key’s remote start button.</p>
+			<p>To start the vehicle remotely:</p>
+			<ol id="e00182">
+				<li>
+					<p>Lock the doors by pressing the door lock button (1) within 10 m (33 ft) of the vehicle.</p>
+				</li>
+				<li>
+					<p>Within 4 seconds after locking the doors, press and hold the remote start button for at least 2 seconds. The hazard lights will blink 3 times and the engine will start.</p>
+				</li>
+			</ol>
+			<p>Press the remote start button (4) once to turn off the vehicle.</p>
+			<p>If you take no further action to operate the vehicle, it will turn off 10 minutes after you started it remotely.</p>
+			<p>While remote starting, the hazard warning lights blink 3 times. If you want to stop the vehicle, press the remote start button again.</p>
+			<note type="caution" id="e00183">
+				<ul id="e00184">
+					<li>
+						<p>The remote start will not work if you exceed the operating distance limit.</p>
+					</li>
+					<li>
+						<p>Avoid idling the engine for prolonged periods to obey the emission regulations in your country.</p>
+					</li>
+					<li>
+						<p>Laws in your country may restrict the use of remote start. You should check country regulations before using this remote starting system.</p>
+					</li>
+					<li>
+						<p>If the hood, the tailgate is opened or the handbrake is pulled below 5 notches, you can't start the engine remotely.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e00185">
+			<title>Start-up</title>
+			<p>You can start the vehicle when the smart key is carried with you or placed inside the vehicle.</p>
+			<p>For more information, refer to <xref href="t00370.dita#t00370"/></p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00034.dita#t00034" role="parent" scope="local" type="concept">
+				<linktext>Keys </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

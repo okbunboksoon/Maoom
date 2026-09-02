@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00464">
+	<title>Stopping vehicle and ending brake control</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03180">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03181">
+								<image href="images/N_SP3i25_C00_012_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03182">
+								<li>
+									<p><uicontrol>Drive carefully</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When Emergency Braking stops your vehicle, a warning message appears on the instrument cluster.</p>
+		<p>For safety purposes, you should immediately engage the brake pedal and check the vehicle’s surroundings.</p>
+		<p>Brake control ends approximately 2 seconds after Emergency Braking stops your vehicle.</p>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>If your vehicle or the oncoming vehicle is not driving straight, the Front Oncoming function warning and control may be late or may not operate.</p>
+				</li>
+				<li>
+					<p>When driving at night, the ability to detect motorcycles is decreased. Thus, the Forward Collision- Avoidance Assist system may temporarily be limited or not work.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip">
+			<p>Press the hazard lights button to turn <term translate="no">OFF</term> the warning sound during collision warning and emergency braking.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00461.dita#t00461" role="parent" scope="local" type="concept">
+				<linktext>Direct Oncoming function</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

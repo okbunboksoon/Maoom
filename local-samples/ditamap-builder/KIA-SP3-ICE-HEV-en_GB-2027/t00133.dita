@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00133">
+	<title>Auto reverse user settings</title>
+	<taskbody>
+		<context>
+			<p>If you cannot secure enough visibility with the angles provided as factory default settings, you can readjust the angles of the outside rearview mirrors.</p>
+			<p>You can set the factory default angles of the right and left rearview mirrors differently to improve visibility:</p>
+		</context>
+		<steps>
+			<step>
+				<cmd>Set the shift lever to P (Park). Make sure that the vehicle is stopped and the mirrors are not working.</cmd>
+			</step>
+			<step>
+				<cmd>Position the lever to L (left) or R (right) according to the mirror you want to adjust.</cmd>
+			</step>
+			<step>
+				<cmd>Engage the brake pedal and set the shift lever to R (Reverse).</cmd>
+			</step>
+			<step>
+				<cmd>When the rearview mirror finishes moving downward, adjust it by pressing the directional switches: ▼, ▲, ◀, ▶.</cmd>
+			</step>
+			<step>
+				<cmd>To automatically save the adjusted angle, set the shift lever to a gear other than R (Reverse), change the rearview mirror selector lever to neutral, and wait for the mirror’s automatic return.</cmd>
+			</step>
+			<step>
+				<cmd>Follow the same procedure to adjust the rearview mirror on the other side of the vehicle.</cmd>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00132.dita#t00132" role="parent" scope="local" type="concept">
+				<linktext>Reverse parking aid function</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

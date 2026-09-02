@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00617">
+	<title>Operating conditions</title>
+	<conbody>
+		<p>Navigation-based Smart Cruise Control is ready to operate if all the following conditions are satisfied:</p>
+		<ul>
+			<li>
+				<p> <b>Auto Highway Speed Change</b> is enabled in the infotainment system settings</p>
+			</li>
+			<li>
+				<p>Smart Cruise Control is operating</p>
+			</li>
+			<li>
+				<p>Driving on main roads of highways (or motorways)</p>
+			</li>
+			<li>
+				<p>A control zone (e.g., curve section) is detected ahead</p>
+			</li>
+			<li>
+				<p>he set speed of Smart Cruise Control is higher than the recommended safe speed</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>For more details on how to operate Smart Cruise Control, refer to <xref type="concept" href="t00765.dita#t00765">SCC (Smart Cruise Control)</xref>.</p>
+		</note>
+	</conbody>
+</concept>

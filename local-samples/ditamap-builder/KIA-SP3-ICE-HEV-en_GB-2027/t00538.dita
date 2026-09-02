@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task base="Anywhere" id="t00538">
+	<title>Setting the speed limit</title>
+	<taskbody>
+		<steps>
+			<step>
+				<cmd>Press and hold the Driving Assist (<image align="left" href="images/WKIA_080.jpg" scale="15" placement="inline"/>) button while driving at the desired speed. The Speed Limit (<image align="left" href="images/WKIA_081.jpg" scale="15" placement="inline"/>) indicator appears on the instrument cluster.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03495">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e03496">
+											<image href="images/N_SP3i25_B10_033_1_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>Push the (<image align="left" href="images/WKIA_334.jpg" scale="15" placement="inline"/>) switch up or (<image align="left" href="images/WKIA_335.jpg" scale="15" placement="inline"/>) switch down and release it while driving at the desired speed.</cmd>
+				<info>
+					<p>Push the (<image align="left" href="images/WKIA_334.jpg" scale="15" placement="inline"/>) switch up or (<image align="left" href="images/WKIA_335.jpg" scale="15" placement="inline"/>) switch down and hold it. The speed increases or decreases to the nearest multiple of 10 km/h (5 mph) at first, then increases or decreases by 10 km/h (5 mph).</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03497">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e03498">
+											<image href="images/N_SP3i25_B10_047_1_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<fig id="e03499">
+											<image href="images/N_SP3i25_B10_048_1_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</info>
+			</step>
+			<step>
+				<cmd>The instrument cluster displays the set speed limit (1).</cmd>
+				<info>
+					<p>The set speed limit blinks and the chime sounds until you return the vehicle speed to the limit you set.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03500">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e03501">
+											<image href="images/OCL4M055113N.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<note type="tip">
+						<ul>
+							<li>
+								<p>When the accelerator pedal is not engaged beyond the pressure point, the vehicle maintains the set speed.</p>
+							</li>
+							<li>
+								<p>The set speed may differ depending on the vehicle specifications. You may not increase the set speed above the maximum set speed for your vehicle.</p>
+							</li>
+						</ul>
+					</note>
+				</info>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00537.dita#t00537" role="parent" scope="local" type="concept">
+				<linktext>Manual Speed Limit Assist operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

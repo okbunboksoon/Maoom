@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00680">
+	<title>Navigation-based Smart Cruise Control (NSCC)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>navigation-based smart cruise control (NSCC)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Navigation-based Smart Cruise Control helps maintain safe speed depending on the road conditions by using information from the navigation system when driving on highways while Smart Cruise Control is operating.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Navigation-based Smart Cruise Control is available only on controlled access road of certain highways.</p>
+					<p importance="default">Controlled access road indicates roads with limited entrances and exits that allow uninterrupted high speed traffic flow. Only passenger cars and motorcycles are allowed on controlled access roads.</p>
+				</li>
+				<li>
+					<p>Additional highways may be expanded by future navigation updates.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Navigation-based Smart Cruise Control operates on main roads of highways (or motorways), and does not operate on interchanges or junctions.</p>
+		</note>
+		<section>
+			<title>Highway Curve Zone Auto Slowdown</title>
+			<p>If vehicle speed is high, Highway Curve Zone Auto Slowdown function will temporarily decelerate your vehicle or limit acceleration to help you drive safely on a curve based on the curve information from the navigation.</p>
+		</section>
+	</conbody>
+</concept>

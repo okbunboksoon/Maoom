@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Top" id="t00006">
+	<title>High Voltage (HV) battery (lithium-ion)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>main components of electric vehicle 
+					<indexterm>high voltage (HV) battery</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The HV battery powers the vehicle and peripheral devices.</p>
+		<p>The charge amount of the HV battery may gradually decrease when the vehicle is not driven or charged.</p>
+		<p>The battery capacity of the HV battery may decrease over time when the vehicle is stored in high temperatures and temporarily in low temperatures.</p>
+		<p>Distance to empty may vary depending on the driving conditions (cargo, rain, snow, wind, road surfaces), even if the charge amount is the same. The HV battery may expend more energy when driving a fast pace or uphill. These actions may reduce the distance to empty.</p>
+		<p>The high voltage battery is used when using the air conditioner/heater and/or use the pre-conditioning prior to departures. This may reduce the distance to empty. Make sure to set moderate temperatures when using the air conditioner/heater.</p>
+		<p>Natural degradation may occur with the high voltage battery depending on the number of years the vehicle was used and/or the number of charging cycles. This will reduce the distance to empty over time.</p>
+		<p>When the charge capacity and distance to empty keep falling, contact a professional workshop for inspection and maintenance. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<p>If the vehicle will not be in use for an extended period of time, charge the high voltage battery once every three months to prevent it from discharging. Also, if the charge amount is not enough, immediately charge to full and store the vehicle.</p>
+		<p>AC (L2-Normal) charging is recommended to keep the high voltage battery in optimal condition.</p>
+		<p>If the HV battery is only charged to 80%, and you minimize the number of DC fast charging, you can keep the HV battery performance in optimal condition. (vs charging the HV battery to 100% an/or charging every drive cycle.)</p>
+		<p>When the battery charge is less than 20%, charging to 100% is recommended (once a month) to keep the high voltage battery in optimal condition</p>
+		<p>The value of the high voltage battery charge level may vary according to the charging conditions (state of charger, outside temperature, battery temperature, etc.). In order to fully charge the battery, the current of the high voltage battery will be gradually decreased, so that the longevity and safety of the battery can be secured.</p>
+	</conbody>
+</concept>

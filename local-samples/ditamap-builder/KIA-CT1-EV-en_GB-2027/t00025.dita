@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_032_01 legal_eu_std_032_02 legal_eu_std_032_03" base="Anywhere" importance="optional" id="t00025">
+	<title>How to check the symbol on the charging label (For Europe)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>how to check the symbol on the charging label (for Europe)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="FormatD" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1">
+							<p>Vehicle charging INLET</p>
+						</entry>
+						<entry colname="col2">
+							<p>Charging connector OUTLET</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry align="center" colname="col1" valign="middle">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q003_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry align="center" colname="col2" morerows="1" valign="middle">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q004_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/WKIA_323.eps" scale="95" outputclass="nolabel" placement="break"/>
+								</figgroup>
+							</fig>
+							<p>&lt;Symbol location and application example &gt;</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="center" colname="col1" valign="middle">
+							<fig>
+								<title>Type A</title>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q046_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+							<fig id="fig_cy5_y5b_kjc">
+								<title>Type B</title>
+								<figgroup>
+									<image align="center" href="../../images/N_QVe27_D03_003_E.eps" scale="95" placement="break" id="image_dy5_y5b_kjc"/>
+								</figgroup>
+							</fig>
+							<fig id="e00067">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q047_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Precautions for charging AC and Trickle charger* (Portable charging cable*) (AC charging)</title>
+			<ol>
+				<li>
+					<p>After opening the charging door, check the charging symbol at the bottom of the warning label.</p>
+				</li>
+				<li>
+					<p>Check the charging connector symbol of the AC and Trickle charger cable.</p>
+				</li>
+				<li>
+					<p>After checking the alphabet letter of the charging symbol, proceed the charging step.</p>
+					<p importance="default">Refer to <xref type="section" href="t00025.dita#t00025/e00069">Electric charging label symbol table (For Europe)</xref>.</p>
+				</li>
+				<li>
+					<p>Risks of failure, fire, injury, etc. are expected when using the charging connector with an unmatched symbol.</p>
+				</li>
+			</ol>
+			<p importance="default">: Depending on your region, this cable may not be provided in your vehicle.</p>
+		</section>
+		<section>
+			<title>Precautions for DC charging (DC charging)</title>
+			<ol>
+				<li>
+					<p>After opening the charging door, check the charging symbol at the bottom of the warning label.</p>
+				</li>
+				<li>
+					<p>Check the charging connector symbol at the high speed charging station.</p>
+				</li>
+				<li>
+					<p>After checking the alphabet letter of the charging symbol, proceed the charging step.</p>
+					<p importance="default">Refer to <xref type="section" href="t00025.dita#t00025/e00069">Electric charging label symbol table (For Europe)</xref>.</p>
+				</li>
+				<li>
+					<p>Risks of failure, fire, injury, etc. are expected when using the charging connector with an unmatched symbol.</p>
+				</li>
+			</ol>
+		</section>
+		<section>
+			<title>Electric charging label (For Europe)</title>
+			<table colsep="1" frame="none" outputclass="formatc" rowsep="1">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig>
+									<title>Type A</title>
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q005_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+								<fig id="fig_lrt_1vb_kjc">
+									<title>Type B</title>
+									<figgroup>
+										<image align="center" href="../../images/KIAPB194.eps" scale="95" placement="break" id="image_mrt_1vb_kjc"/>
+									</figgroup>
+								</fig>
+								<fig id="e00068">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q006_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol>
+									<li>
+										<p>Warning for high voltage</p>
+									</li>
+									<li>
+										<p>Symbol for charging door</p>
+									</li>
+									<li>
+										<p>Charging voltage and current</p>
+										<p>(<image align="left" href="../../images/OCV041514L.eps" scale="15" placement="inline"/>): AC Single phase</p>
+										<p>(<image align="left" href="../../images/OCV041516L.eps" scale="15" placement="inline"/>): AC 3 phase</p>
+									</li>
+									<li>
+										<p>For further details, refer to <xref type="concept" href="t00025.dita#t00025">How to check the symbol on the charging label (For Europe)</xref>.</p>
+									</li>
+								</ol>
+								<p>5–7: Symbols for charging type. For further details, refer to <xref type="section" href="t00025.dita#t00025/e00069">Electric charging label symbol table (For Europe)</xref>.</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section id="e00069">
+			<title>Electric charging label symbol table (For Europe)</title>
+			<sectiondiv><ph>AC and Trickle charger* charging</ph>
+				<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+					<desc>
+						<p importance="default">: Depending on your region, this cable may not be provided in your vehicle.</p>
+					</desc>
+					<tgroup cols="6" colsep="1" outputclass="formatc" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="12*"/>
+						<colspec colname="col2" colnum="2" colwidth="14*"/>
+						<colspec colname="col3" colnum="3" colwidth="14*"/>
+						<colspec colname="col4" colnum="4" colwidth="20*"/>
+						<colspec colname="col5" colnum="5" colwidth="20*"/>
+						<colspec colname="col6" colnum="6" colwidth="20*"/>
+						<thead>
+							<row rowsep="1">
+								<entry colname="col1">
+									<p>Supply type</p>
+								</entry>
+								<entry colname="col2">
+									<p>Standard</p>
+								</entry>
+								<entry colname="col3">
+									<p>Configuration</p>
+								</entry>
+								<entry colname="col4">
+									<p>Type of Accessory</p>
+								</entry>
+								<entry colname="col5">
+									<p>Voltage range</p>
+								</entry>
+								<entry colname="col6">
+									<p>Identifier</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row rowsep="1">
+								<entry align="center" colname="col1" valign="middle">
+									<p>AC</p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>EN 62196-2</p>
+								</entry>
+								<entry align="center" colname="col3" valign="middle">
+									<p>TYPE 2</p>
+								</entry>
+								<entry align="center" colname="col4" valign="middle">
+									<p>Vehicle connector and vehicle inlet</p>
+								</entry>
+								<entry align="center" colname="col5" valign="middle">
+									<p>≤480V RMS</p>
+								</entry>
+								<entry align="center" colname="col6" valign="middle">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/WKIA_323.eps" scale="95" outputclass="nolabel" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+			<sectiondiv><ph>DC charging</ph>
+				<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+					<tgroup cols="6" colsep="1" outputclass="formatc" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="13*"/>
+						<colspec colname="col2" colnum="2" colwidth="14*"/>
+						<colspec colname="col3" colnum="3" colwidth="14*"/>
+						<colspec colname="col4" colnum="4" colwidth="20*"/>
+						<colspec colname="col5" colnum="5" colwidth="20*"/>
+						<colspec colname="col6" colnum="6" colwidth="20*"/>
+						<thead>
+							<row rowsep="1">
+								<entry colname="col1">
+									<p>Supply type</p>
+								</entry>
+								<entry colname="col2">
+									<p>Standard</p>
+								</entry>
+								<entry colname="col3">
+									<p>Configuration</p>
+								</entry>
+								<entry colname="col4">
+									<p>Type of Accessory</p>
+								</entry>
+								<entry colname="col5">
+									<p>Voltage range</p>
+								</entry>
+								<entry colname="col6">
+									<p>Identifier</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row rowsep="1">
+								<entry align="center" colname="col1" morerows="1" valign="middle">
+									<p>DC</p>
+								</entry>
+								<entry align="center" colname="col2" morerows="1" valign="middle">
+									<p>EN 62196-3</p>
+								</entry>
+								<entry align="center" colname="col3" morerows="1" valign="middle">
+									<p>FF</p>
+								</entry>
+								<entry align="center" colname="col4" morerows="1" valign="middle">
+									<p>Vehicle connector and vehicle inlet</p>
+								</entry>
+								<entry align="center" colname="col5" valign="middle">
+									<p>50V to 500V</p>
+								</entry>
+								<entry align="center" colname="col6" valign="middle">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OMQ4PH083005L.eps" scale="95" outputclass="nolabel" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry align="center" colname="col5" valign="middle">
+									<p>200V to 920V</p>
+								</entry>
+								<entry align="center" colname="col6" valign="middle">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OMQ4PH083006L.eps" scale="95" outputclass="nolabel" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+		</section>
+	</conbody>
+</concept>

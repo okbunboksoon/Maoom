@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00392">
+	<title>Shift lever</title>
+	<shortdesc>Electric vehicles transmit the rotation of the motor to the wheel through the reducer.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>shift lever</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02779">
+			<title>Shift lever operation</title>
+			<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02780">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e02781">
+									<figgroup>
+										<image href="../../images/OOV045003.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02782"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e02783">
+									<figgroup>
+										<image href="../../images/OOV045004.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02784"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul id="e02785">
+				<li>
+					<p>Select the gear position by turning the shift lever.</p>
+					<p>For your safety, always depress the brake pedal while shifting to another gear.</p>
+				</li>
+				<li>
+					<p>Press P button to shift to P (Park).</p>
+				</li>
+			</ul>
+			<note type="warning" id="e02786">
+				<p>To reduce the risk of serious injury or death:</p>
+				<ul id="e02787">
+					<li>
+						<p>Always check the surrounding areas near your vehicle for people, especially children, before shifting to D (Drive) or R (Reverse).</p>
+					</li>
+					<li>
+						<p>Before leaving the driver’s seat, always make sure the vehicle is in P (Park), then set the parking brake, and place the vehicle in <term>OFF</term> position. Unexpected and sudden vehicle movement can occur if these precautions are not followed.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

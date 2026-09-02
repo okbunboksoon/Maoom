@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0730">
+	<title>Einschränkungen des Kollisionsvermeidungsassistent beim Rückwärtseinparken</title>
+	<conbody>
+		<p>Der Kollisionsvermeidungsassistent unterstützt unter folgenden Umständen nicht die Bremsung oder warnt den Fahrer nicht, selbst wenn Fußgänger oder Objekte vorhanden sind:</p>
+		<ul>
+			<li>
+				<p>Wenn es ein Problem mit dem Fahrzeug gibt.</p>
+				<ul>
+					<li>
+						<p>Wenn ein Muster auf der Straße zu sehen ist</p>
+					</li>
+					<li>
+						<p>Schatten auf dem Boden oder Lichtreflexe</p>
+					</li>
+					<li>
+						<p>Fußgänger oder Objekte nahe dem Weg des Fahrzeugs</p>
+					</li>
+					<li>
+						<p>Fahren durch enge Fahrspuren oder Parklücken</p>
+					</li>
+					<li>
+						<p>Fahren auf unebenem Untergrund wie unbefestigten Straßen, Schotter, Straßenklappen, Rampen usw.</p>
+					</li>
+					<li>
+						<p>Ein Anhänger oder Träger ist im Bereich des hinteren Eckradars installiert.</p>
+					</li>
+					<li>
+						<p>Nicht werkseitig installierte Geräte oder Zubehörteile vorhanden</p>
+					</li>
+					<li>
+						<p>Bremssystemkomponenten wie Bremsscheiben und Bremssättel werden modifiziert</p>
+					</li>
+					<li>
+						<p>Räder sind falsch ausgerichtet oder es wurden Aufhängungskomponenten verändert</p>
+					</li>
+					<li>
+						<p>Es sind Zubehörteile am Lenkrad angebracht oder Lenkungskomponenten wurden verändert</p>
+					</li>
+					<li>
+						<p>Instabilität des Fahrzeugs aufgrund eines Unfalls oder anderer Ursachen</p>
+					</li>
+					<li>
+						<p>Die Höhe des Stoßfängers oder die Installation des hinteren Ultraschallsensors wurde geändert</p>
+					</li>
+					<li>
+						<p>Bei starker Neigung der Gesamthöhe aufgrund von abnormem Reifendruck oder übermäßiger Belastung im Laderaum</p>
+					</li>
+					<li>
+						<p>Die Weitwinkel-Rückfahrkamera oder der/die Ultraschallsensor(en) sind beschädigt.</p>
+					</li>
+					<li>
+						<p>Die Weitwinkel-Rückfahrkamera oder der/die Ultraschallsensor(en) ist/sind mit Fremdkörpern wie Schnee, Schmutz usw. verschmutzt.</p>
+					</li>
+					<li>
+						<p>Eine Schneekette, ein Reserverad oder ein Rad einer anderen Größe wird installiert</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Wenn es ein Problem in der Umgebung gibt.</p>
+				<ul>
+					<li>
+						<p>Die Rückfahrkamera wird durch eine Lichtquelle oder durch ungünstige Witterungsbedingungen, wie starken Regen, Nebel, Schnee usw. gestört.</p>
+					</li>
+					<li>
+						<p>Die Umgebung ist sehr hell oder sehr dunkel.</p>
+					</li>
+					<li>
+						<p>Die Außentemperatur ist sehr hoch oder sehr niedrig.</p>
+					</li>
+					<li>
+						<p>Der Wind ist entweder stark (über 20 km/h (12 mph)) oder weht lotrecht zur hinteren Stoßstange.</p>
+					</li>
+					<li>
+						<p>Objekte, die übermäßigen Lärm verursachen (Fahrzeughupen, laute Motorräder, Lkw-Druckluftbremsen usw.), können die Sensoren stören.</p>
+					</li>
+					<li>
+						<p>In der Nähe befindet sich ein Objekt, das Ultraschallwellen erzeugt</p>
+					</li>
+					<li>
+						<p>Ein drahtloses Gerät mit Sendefunktion arbeitet in der Nähe der Ultraschallsensoren</p>
+					</li>
+					<li>
+						<p>Es wird von der Einparkhilfe eines anderen Fahrzeugs beeinflusst</p>
+					</li>
+					<li>
+						<p>Die Straße ist glatt oder abschüssig.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Es gibt ein Problem mit Fußgängern oder Objekten</p>
+				<ul>
+					<li>
+						<p>Fußgänger sind schwer zu erkennen</p>
+					</li>
+					<li>
+						<p>Es besteht ein Bodenhöhenunterschied zwischen Fahrzeug und Fußgänger.</p>
+					</li>
+					<li>
+						<p>Das Bild des Fußgängers in der Weitwinkel-Rückfahrkamera ist vom Hintergrund nicht zu unterscheiden.</p>
+					</li>
+					<li>
+						<p>Der Fußgänger befindet sich fast an der Hinterkante des Fahrzeugs.</p>
+					</li>
+					<li>
+						<p>Der Fußgänger steht nicht aufrecht.</p>
+					</li>
+					<li>
+						<p>Der Fußgänger ist entweder sehr klein oder sehr groß, so dass er nicht erkannt werden kann.</p>
+					</li>
+					<li>
+						<p>Der Fußgänger oder Radfahrer trägt Kleidung, die sich leicht in den Hintergrund einfügt, so dass er schwer zu erkennen ist.</p>
+					</li>
+					<li>
+						<p>Der Fußgänger trägt Kleidung, die Ultraschallwellen nicht gut reflektiert.</p>
+					</li>
+					<li>
+						<p>Aufgrund der Größe, Dicke, Höhe oder Form des Objekts reflektiert es Ultraschallwellen nicht gut (z. B. ein Mast, Busch, Bordsteine, Karren, Mauerrand usw.)</p>
+					</li>
+					<li>
+						<p>Der Fußgänger oder das Objekt bewegt sich.</p>
+					</li>
+					<li>
+						<p>Der Fußgänger oder das Objekt befindet sich sehr nahe am Heck des Fahrzeugs.</p>
+					</li>
+					<li>
+						<p>Hinter dem Fußgänger oder dem Objekt befindet sich ein großes Objekt, z.B. eine Wand</p>
+					</li>
+					<li>
+						<p>Das Objekt befindet sich nicht in der Mitte vor oder hinter Ihrem Fahrzeugs.</p>
+					</li>
+					<li>
+						<p>Das Objekt steht nicht parallel zur hinteren Stoßstange.</p>
+					</li>
+					<li>
+						<p>Die Fläche des Objekts ist nicht parallel zum Stoßdämpfer</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Es gibt ein Problem mit den Fahrbedingungen</p>
+				<ul>
+					<li>
+						<p>Der Fahrer fährt das Fahrzeug unmittelbar nach dem Schalten auf R (Rückwärtsgang) oder D (Fahrbetrieb) zurück.</p>
+					</li>
+					<li>
+						<p>Der Fahrer beschleunigt das Fahrzeug oder wendet.</p>
+					</li>
+					<li>
+						<p>Das Fahrzeug wird sofort nach dem Starten des Fahrzeugs gefahren.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Fahren immer äußerst vorsichtig. Der Fahrer ist für die Steuerung der Bremse und für sicheres Fahren verantwortlich.</p>
+				</li>
+				<li>
+					<p>Schauen Sie sich immer um, um Fußgänger oder Gegenstände zu erkennen, bevor Sie das Fahrzeug bewegen.</p>
+				</li>
+				<li>
+					<p>Die Erkennungsleistung des Kollisionsvermeidungsassistenten kann unter bestimmten Bedingungen variieren. Wenn die Fahrzeuggeschwindigkeit mehr als 4 km/h (2 mph) beträgt, greift der Kollisionsvermeidungsassistent nur ein, wenn Fußgänger erkannt werden. Schauen Sie sich immer um und bleiben Sie aufmerksam, wenn Sie mit Ihrem Fahrzeug fahren.</p>
+				</li>
+				<li>
+					<p>Einige Objekte können aufgrund ihrer Entfernung, Größe oder Materialbeschaffenheit nicht von den Sensoren erkannt werden. Alle diese Eigenschaften können die Effektivität der Sensoren beeinträchtigen.</p>
+				</li>
+				<li>
+					<p>Der Kollisionsvermeidungsassistent funktioniert möglicherweise nicht einwandfrei oder wird je nach Straßenzustand und Umgebung unnötig aktiviert.</p>
+				</li>
+				<li>
+					<p>Verlassen Sie sich nicht ausschließlich auf den Kollisionsvermeidungsassistenten. Dies kann zu Fahrzeugschäden oder Verletzungen führen.</p>
+				</li>
+				<li>
+					<p>Halten Sie die Weitwinkelkameras und die hinteren Ultraschallsensoren immer sauber.</p>
+				</li>
+				<li>
+					<p>Verwenden Sie keine anderen Reinigungsmittel mit Säuren oder Alkali zur Reinigung der Kameralinse. Verwenden Sie ausschließlich milde Reinigungsmittel und spülen Sie gründlich mit klarem Wasser nach.</p>
+				</li>
+				<li>
+					<p>Spritzen Sie die Weitwinkelkameras oder die Ultraschallsensoren hinten oder deren Umgebung nicht direkt mit einem Hochdruckreiniger ab. Es kann zu einer Fehlfunktion der Weitwinkelkameras oder der Ultraschallsensoren führen.</p>
+				</li>
+				<li>
+					<p>Bringen Sie keine Objekte, wie Stoßstangenaufkleber oder einen Stoßstangenschutz in der Nähe der Weitwinkelkameras oder der Ultraschallsensoren an und lackieren Sie die Stoßstange nicht. Andernfalls kann die Leistung des Kollisionsvermeidungsassistenten beeinträchtigt werden.</p>
+				</li>
+				<li>
+					<p>Die Weitwinkelkameras und die Komponenten der Ultraschallsensoren dürfen niemals zerlegt oder Schlagbeanspruchung ausgesetzt werden.</p>
+				</li>
+				<li>
+					<p>Legen Sie keine unnötige Kraft an den Weitwinkelkameras oder den Ultraschallsensoren an. Der Kollisionsvermeidungsassistent funktioniert möglicherweise nicht richtig, wenn die Weitwinkelkameras oder die Ultraschallsensoren gewaltsam dejustiert werden/wurden. Lassen Sie Ihr Fahrzeug von einer Fachwerkstatt warten. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+				<li>
+					<p>Bei plötzlichem Bremsen zur Vermeidung einer Kollision kann ein Geräusch hörbar sein.</p>
+				</li>
+				<li>
+					<p>Wenn bereits ein anderer Warnton ertönt, z.B. ein Warnton für den Sicherheitsgurt, ertönt die Warnung des Kollisionsvermeidungsassistenten möglicherweise nicht.</p>
+				</li>
+				<li>
+					<p>Der Kollisionsvermeidungsassistent funktioniert möglicherweise nicht richtig, wenn der Stoßfänger beschädigt, ersetzt oder repariert wurde.</p>
+				</li>
+				<li>
+					<p>Der Kollisionsvermeidungsassistent funktioniert möglicherweise nicht einwandfrei, wenn er durch starke elektromagnetische Wellen gestört wird.</p>
+				</li>
+				<li>
+					<p>Wenn das Audiosystem des Fahrzeugs mit hoher Lautstärke spielt, hören die Insassen möglicherweise keine Warntöne des Kollisionsvermeidungsassistenten.</p>
+				</li>
+				<li>
+					<p>Die Bremssteuerung funktioniert je nach Status der ESC (elektronischen Stabilitätskontrolle) nicht richtig.</p>
+					<p>Es wird nur in folgenden Fällen eine Warnung ausgegeben:</p>
+					<ul>
+						<li>
+							<p>Die ESC-Warnleuchte (Elektronische Stabilitätskontrolle) leuchtet.</p>
+						</li>
+						<li>
+							<p>Die ESC (Elektronische Stabilitätskontrolle) wird für eine andere Funktion benötigt.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Überprüfen Sie regelmäßig den Zustand der Bremsflüssigkeit und der Bremsbeläge. Die Bremsleistung kann je nach Bremsbedingungen abnehmen.</p>
+				</li>
+				<li>
+					<p>Schalten Sie den Kollisionsvermeidungsassistenten aus, wenn Sie einen Anhänger ziehen. Beim Ziehen und Zurücksetzen wird der Kollisionsvermeidungsassistent aktiviert, denn er erkennt den Anhänger.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Der Kollisionsvermeidungsassistent kann in den folgenden Situationen einen Fußgänger oder ein Objekt erkennen:</p>
+			<ul>
+				<li>
+					<p>Ein Fußgänger steht hinter dem Fahrzeug.</p>
+				</li>
+				<li>
+					<p>Ein großes Hindernis, z. B. ein Fahrzeug, wird in der Heckmitte Ihres Fahrzeugs geparkt</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0727.dita#CL4m_HEV-ca_ES-2027-t0727" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion und Einschränkungen des Kollisionsvermeidungs-Assistenten zum Rückwärtseinparken</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

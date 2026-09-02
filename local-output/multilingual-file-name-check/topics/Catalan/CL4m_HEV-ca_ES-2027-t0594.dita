@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0594">
+	<title>Anzeige und Steuerung der intelligenten Tempomatsteuerung</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Intelligente Tempomatsteuerung (SCC)
+					<indexterm>Anzeige und Bedienung</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Sie können den Status der Intelligenten Tempomatsteuerung in der Ansicht Fahrassistent im Kombiinstrument sehen. Siehe <xref href="CL4m_HEV-ca_ES-2027-t0135.dita#CL4m_HEV-ca_ES-2027-t0135"/>.</p>
+		<p>Je nach Status des Systems wird die intelligente Tempomatsteuerung wie folgt angezeigt.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054100N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Je nach Status des Systems wird die intelligente Tempomatsteuerung wie folgt angezeigt.</p>
+		<ul>
+			<li>
+				<p>Während des ESC-Betriebs</p>
+				<ol outputclass="callout">
+					<li>
+						<p>Ob ein vorausfahrendes Fahrzeug vorhanden ist sowie der gewählte Abstand</p>
+					</li>
+					<li>
+						<p>Die Soll-Geschwindigkeit</p>
+					</li>
+					<li>
+						<p>Ob sich vor dem eigenen Fahrzeug ein Fahrzeug befindet und der beabsichtigte Abstand zum vorausfahrenden Fahrzeug</p>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<p>Bei vorübergehender Deaktivierung</p>
+				<ol outputclass="callout">
+					<li>
+						<p>Ihr Fahrzeug (grau)</p>
+					</li>
+					<li>
+						<p>Die zuvor eingestellte Geschwindigkeit (grau)</p>
+					</li>
+					<li>
+						<p>Falls sich ein Fahrzeug vor Ihnen befindet (grau)</p>
+					</li>
+				</ol>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Der Abstand des vorderen Fahrzeugs auf dem Kombiinstrument wird entsprechend dem tatsächlichen Abstand zwischen Ihrem Fahrzeug und dem vorausfahrenden Fahrzeug angezeigt.</p>
+				</li>
+				<li>
+					<p>Der Sollabstand kann je nach Fahrzeuggeschwindigkeit und eingestelltem Fahrzeugabstand variieren. Bei niedriger Fahrzeuggeschwindigkeit kann die Änderung des Fahrzeugsollabstands gering sein, obwohl sich der Fahrzeugabstand geändert hat.</p>
+				</li>
+				<li>
+					<p>Die Bilder oder Farben, die auf dem Kombiinstrument angezeigt werden, können je nach den Spezifikationen oder Themen des Kombiinstruments variieren.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0585.dita#CL4m_HEV-ca_ES-2027-t0585" role="parent" scope="local" type="concept">
+				<linktext>Bedienung der intelligenten Tempomatsteuerung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00612">
+	<title>Limitations of Smart Cruise Control</title>
+	<conbody>
+		<p>Smart Cruise Control may operate abnormally or unexpectedly under the following circumstances:</p>
+		<ul>
+			<li>
+				<p>The detection sensor or its surrounding areas are contaminated or damaged.</p>
+			</li>
+			<li>
+				<p>Washer fluid is continuously sprayed, or the wiper is <term translate="no">ON</term>.</p>
+			</li>
+			<li>
+				<p>The camera lens is obscured by a windshield tint, film, or coating, damaged glass, or objects on the glass such as a sticker or insect.</p>
+			</li>
+			<li>
+				<p>There is moisture or ice on the windshield.</p>
+			</li>
+			<li>
+				<p>Glare from the sun obstructs the front view camera’s field of view.</p>
+			</li>
+			<li>
+				<p>Streetlights or light from an oncoming vehicle are reflected on a wet road.</p>
+			</li>
+			<li>
+				<p>The temperature near the front view camera is very high or low.</p>
+			</li>
+			<li>
+				<p>There is an object on the instrument panel.</p>
+			</li>
+			<li>
+				<p>Your vehicle’s surroundings are excessively bright or dark.</p>
+			</li>
+			<li>
+				<p>The brightness changes suddenly (for example, when you enter or exit a tunnel).</p>
+			</li>
+			<li>
+				<p>The brightness outside is low, and the headlights are not <term translate="no">ON</term> or are not bright.</p>
+			</li>
+			<li>
+				<p>You are driving in heavy rain, snow, or thick fog.</p>
+			</li>
+			<li>
+				<p>You are driving through steam, smoke, or shadows.</p>
+			</li>
+			<li>
+				<p>Only part of a vehicle ahead is detected.</p>
+			</li>
+			<li>
+				<p>A vehicle ahead has no tail lights or the tail lights are atypically located.</p>
+			</li>
+			<li>
+				<p>The brightness outside is low, and the tail lights of a vehicle ahead are not on or are not bright.</p>
+			</li>
+			<li>
+				<p>The rear of a vehicle ahead is small or does not look normal (for example, tilted or overturned).</p>
+			</li>
+			<li>
+				<p>A vehicle ahead has low or high ground clearance.</p>
+			</li>
+			<li>
+				<p>A vehicle suddenly cuts in ahead of you.</p>
+			</li>
+			<li>
+				<p>Your vehicle is being towed.</p>
+			</li>
+			<li>
+				<p>Light from an object (such as a guardrail or nearby vehicle) reflects off the front radar.</p>
+			</li>
+			<li>
+				<p>The bumper near the front radar is impacted or damaged, or the front radar is out of position.</p>
+			</li>
+			<li>
+				<p>The temperature near the front radar is high or low.</p>
+			</li>
+			<li>
+				<p>The vehicle ahead is made of material that does not reflect on the front radar.</p>
+			</li>
+			<li>
+				<p>You are driving near a highway, interchange, or tollgate.</p>
+			</li>
+			<li>
+				<p>You are driving on a slippery surface due to snow, rain, ice, and so on.</p>
+			</li>
+			<li>
+				<p>You are driving on a curved road.</p>
+			</li>
+			<li>
+				<p>A vehicle ahead is detected late.</p>
+			</li>
+			<li>
+				<p>A vehicle ahead is suddenly blocked by an obstacle.</p>
+			</li>
+			<li>
+				<p>A vehicle ahead suddenly changes lanes or reduces speed.</p>
+			</li>
+			<li>
+				<p>A vehicle ahead is bent out of shape.</p>
+			</li>
+			<li>
+				<p>A vehicle ahead is moving very fast or slow.</p>
+			</li>
+			<li>
+				<p>You change lanes suddenly when there is a vehicle ahead.</p>
+			</li>
+			<li>
+				<p>A vehicle ahead is covered with snow.</p>
+			</li>
+			<li>
+				<p>Your driving is unstable.</p>
+			</li>
+			<li>
+				<p>You are driving in a traffic circle and a vehicle ahead is not detected.</p>
+			</li>
+			<li>
+				<p>You are continuously driving in a circle.</p>
+			</li>
+			<li>
+				<p>Adverse road conditions cause excessive vehicle vibration.</p>
+			</li>
+			<li>
+				<p>Your vehicle height is low or high due to heavy loads, abnormal tire pressure, and so on.</p>
+			</li>
+			<li>
+				<p>You are driving:</p>
+				<ul>
+					<li>
+						<p>In a parking lot.</p>
+					</li>
+					<li>
+						<p>Through a construction area, unpaved road, partially paved road, uneven road, speed bumps, and so on.</p>
+					</li>
+					<li>
+						<p>On a steep or curving road.</p>
+					</li>
+					<li>
+						<p>By a roadside with trees or streetlights.</p>
+					</li>
+					<li>
+						<p>On a narrow road with overgrown foliage.</p>
+					</li>
+					<li>
+						<p>Through electromagnetic waves, such as an area with strong radio waves or electrical noise.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>You are driving through a tunnel or covered bridge.</p>
+			</li>
+			<li>
+				<p>You are driving near areas with a lot of metal, such as a construction zone, railroad, or road with metal plates.</p>
+			</li>
+			<li>
+				<p>You are driving in wide open areas where there are few vehicles or structures.</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<p>Driving on a curved road</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03823">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e03824">
+										<image href="images/N_SP3i25_B10_079_IR.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>On curves, Smart Cruise Control may not detect a vehicle in the same lane, and may accelerate to the set speed. Your vehicle speed may rapidly decrease when a vehicle ahead is detected suddenly.</p>
+				<p>Select the appropriate set speed on curves, and engage the brake pedal or accelerator pedal according to the road and driving conditions ahead.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03825">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e03826">
+										<image href="images/N_SP3i25_B10_080_IR.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Smart Cruise Control may reduce your vehicle speed due to the presence of a vehicle in an adjacent lane.</p>
+				<p>Check that the road conditions permit safe operation of Smart Cruise Control. If necessary, engage the brake pedal to reduce your speed and maintain a safe following distance.</p>
+			</li>
+			<li>
+				<p>Driving on an inclined road</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03827">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e03828">
+										<image href="images/N_SP3i25_B10_081_IR.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>When you drive uphill or downhill, Smart Cruise Control may not detect a moving vehicle in your lane, causing your vehicle to accelerate to the set speed. Your vehicle speed will rapidly decrease when a vehicle ahead is detected suddenly.</p>
+				<p>Select the appropriate set speed on inclines, and engage the brake pedal or accelerator pedal according to the road and driving conditions ahead.</p>
+			</li>
+			<li>
+				<p>Changing lanes</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03829">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e03830">
+										<image href="images/N_SP3i25_B10_018_IR.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<ol outputclass="callout" id="e03831">
+										<li>
+											<p>Your vehicle</p>
+										</li>
+										<li>
+											<p>Lane changing vehicle</p>
+										</li>
+									</ol>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>When a vehicle (2) moves into your lane from an adjacent lane, the sensor cannot detect it until it is in the detection range. Smart Cruise Control may not immediately detect the vehicle when it changes lanes abruptly. You must maintain a safe braking distance and, if necessary, engage the brake pedal to reduce your speed.</p>
+			</li>
+			<li>
+				<p>Detecting a vehicle</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03832">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e03833">
+										<image href="images/N_SP3i25_B10_053_IR.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>The sensor cannot detect the following types of vehicles or objects:</p>
+				<ul>
+					<li>
+						<p>Vehicles driving to one side.</p>
+					</li>
+					<li>
+						<p>Slow-moving or suddenly-decelerating vehicles.</p>
+					</li>
+					<li>
+						<p>Vehicles with higher ground clearance, or vehicles carrying loads that stick out of the back of the vehicle.</p>
+					</li>
+					<li>
+						<p>Vehicles with the front lifted due to heavy loads.</p>
+					</li>
+					<li>
+						<p>Vehicles within approximately 2 m (6 ft) of your vehicle.</p>
+					</li>
+					<li>
+						<p>Oncoming vehicles.</p>
+					</li>
+					<li>
+						<p>Stopped vehicles.</p>
+					</li>
+					<li>
+						<p>Vehicles with a small rear profile, such as trailers.</p>
+					</li>
+					<li>
+						<p>Narrow vehicles, such as motorcycles or bicycles.</p>
+					</li>
+					<li>
+						<p>Specialty vehicles.</p>
+					</li>
+					<li>
+						<p>Animals and pedestrians.</p>
+						<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03834">
+							<tgroup cols="2" colsep="1" rowsep="1">
+								<colspec colname="col1" colnum="1" colwidth="50*"/>
+								<colspec colname="col2" colnum="2" colwidth="50*"/>
+								<tbody>
+									<row rowsep="1">
+										<entry colname="col1">
+											<fig id="e03835">
+												<image href="images/N_SP3i25_B10_020_1_IR.jpg" scale="95" align="center" placement="break"/>
+											</fig>
+										</entry>
+										<entry colname="col2"/>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+					</li>
+				</ul>
+				<p>Always pay attention to the road and driving conditions and drive safely. If necessary, adjust your vehicle speed. The sensor cannot detect the vehicle ahead in the following cases:</p>
+				<ul>
+					<li>
+						<p>You are steering your vehicle.</p>
+					</li>
+					<li>
+						<p>You are driving on narrow or sharply curved roads.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>When a vehicle ahead disappears from view at an intersection</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03836">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e03837">
+										<image href="images/N_SP3i26_B10_010_E.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>When a vehicle ahead disappears from view at an intersection, your vehicle may accelerate.</p>
+				<p>Always pay attention to the road and driving conditions.</p>
+			</li>
+			<li>
+				<p>When a vehicle ahead of you changes lanes</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03838">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e03839">
+										<image href="images/N_SP3i25_B10_055_IR.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>When a vehicle ahead of you changes lanes, Smart Cruise Control may not immediately detect the new vehicle that is now ahead of you.</p>
+				<p>Always pay attention to the road and driving conditions.</p>
+			</li>
+			<li>
+				<p>Always look out for pedestrians</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03840">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e03841">
+										<image href="images/N_SP3i25_B10_042_IR.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Always look out for pedestrians when your vehicle is maintaining a set distance from the vehicle ahead.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00609.dita#t00609" role="parent" scope="local" type="concept">
+				<linktext>Smart Cruise Control malfunction and limitations</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

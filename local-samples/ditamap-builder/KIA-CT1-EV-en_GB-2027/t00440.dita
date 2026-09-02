@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00440">
+	<title>Limitations of smart regeneration system</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="52*"/>
+				<colspec colnum="2" colname="2" colwidth="48*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="1" nameend="2">
+							<p>Limitations of smart regeneration system</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" align="center" valign="middle">
+							<fig>
+								<title>Driving on a curved road</title>
+								<figgroup>
+									<image href="../../images/N_CT25D006_1_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+							<fig id="e01752">
+								<figgroup>
+									<image href="../../images/N_CT25D007_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>When driving on the curve, the system may not detect the vehicle in your lane and the regenerative braking level will reduce automatically, making you feel that the vehicle is accelerating.</p>
+							<p>Also, if the system suddenly recognizes the vehicle in front, the regenerative braking level will increase automatically, making you feel that the vehicle is decelerating.</p>
+							<p>The driver must maintain a safe braking distance, and if necessary, depress the brake pedal to reduce your driving speed in order to maintain a safe distance.</p>
+							<p>The smart regeneration system may recognize a vehicle in an adjacent lane when driving on a curved road. In this case, the system increase the braking level and slow the vehicle.</p>
+							<p>Always pay attention to road and driving conditions while driving. If necessary, depress the brake pedal to reduce your driving speed in order to maintain a safe distance. Also, when necessary, you may depress the accelerator pedal to prevent the system from unnecessarily decelerating your vehicle.</p>
+							<p>Always check the traffic conditions around the vehicle.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" align="center" valign="top">
+							<fig>
+								<title>Driving on a sloped road</title>
+								<figgroup>
+									<image href="../../images/N_CT25D008_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>When driving on an uphill or downhill, the system may not detect the vehicle in your lane and the regenerative braking level will reduce automatically, making you feel that the vehicle is accelerating.</p>
+							<p>Also, if the system suddenly recognizes the vehicle in front, the regenerative braking level will increase automatically, making you feel that the vehicle is decelerating.</p>
+							<p>The driver must maintain a safe braking distance, and if necessary, depress the brake pedal to reduce your driving speed in order to maintain a safe distance.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" align="center" valign="top">
+							<fig>
+								<title>Changing lanes</title>
+								<figgroup>
+									<image href="../../images/N_CT25D009_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>When a vehicle changes lanes in front of you, the smart regeneration system may not immediately detect the vehicle, especially if the vehicle changes lanes abruptly. In this case, you must maintain a safe braking distance, and if necessary, depress the brake pedal to reduce your driving speed in order to maintain a safe distance.</p>
+						</entry>
+					</row>
+					<row rowsep="0" valign="middle">
+						<entry colname="1" align="center" valign="middle">
+							<fig>
+								<title>Recognizing the vehicle</title>
+								<figgroup>
+									<image href="../../images/N_CT25D010_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>Some vehicles in your lane cannot be recognized by the sensor:</p>
+							<ul>
+								<li>
+									<p>Narrow vehicles such as motorcycles or bicycles</p>
+								</li>
+								<li>
+									<p>Vehicles offset to one side</p>
+								</li>
+								<li>
+									<p>Slow-moving vehicles or sudden-decelerating vehicles</p>
+								</li>
+								<li>
+									<p>Stopped vehicles (When the vehicle ahead drives away, the system may not detect a stopped vehicle.)</p>
+								</li>
+								<li>
+									<p>Vehicles with small rear profile such as trailers with no loads</p>
+								</li>
+							</ul>
+							<p>A vehicle ahead cannot be recognized correctly by the sensor if any of following occurs:</p>
+							<ul>
+								<li>
+									<p>When the vehicle is pointing upwards due to overloading in the luggage compartment</p>
+								</li>
+								<li>
+									<p>While the steering wheel is operating</p>
+								</li>
+								<li>
+									<p>When driving to one side of the lane</p>
+								</li>
+								<li>
+									<p>When driving on narrow lanes or on curves</p>
+								</li>
+							</ul>
+							<p>Apply the brake or accelerator pedal if necessary.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00473">
+	<title>Electronic Parking Brake (EPB) warning messages</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01920">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e01921">
+								<figgroup>
+									<image href="../../images/N_CT25Z042_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p> <uicontrol>(A) To release EPB, close the doors, the hood and the trunk/tailgate and fasten the seatbelt.</uicontrol> </p>
+							<p>If the driver’s seat belt is unfastened, or the hood, trunk, doors are open, and you try to drive with Electronic Parking Brake (<term translate="no">EPB</term>) applied, a warning sounds and a message appears.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry>
+							<fig id="e01922">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Z076_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<p> <uicontrol>(A) Press brake pedal to deactivate AUTO HOLD</uicontrol> </p>
+							<p>When the conversion from <term translate="no">AUTO HOLD</term> to Electronic Parking Brake (<term translate="no">EPB</term>) is not working properly a warning will sound and a message will appear.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry>
+							<fig id="e01923">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Z077_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<p> <uicontrol>(A) Parking brake automatically applied</uicontrol> </p>
+							<p>When Electronic Parking Brake (<term translate="no">EPB</term>) is applied while <term translate="no">AUTO HOLD</term> is activated, a warning will sound and a message will appear.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning" id="e01924">
+			<p>To prevent serious injury or death from unintended vehicle movement:</p>
+			<ul id="e01925">
+				<li>
+					<p>Always come to a complete stop and continue to depress the brake pedal before parking, shift the gear into P (Park), pull up the <term translate="no">EPB</term> switch, and press the <term translate="no">EV</term> button to the <term translate="no">OFF</term> position. Take the key with you when leaving the vehicle.</p>
+				</li>
+				<li>
+					<p>Never allow anyone who is unfamiliar with the vehicle to touch the <term translate="no">EPB</term> switch.</p>
+				</li>
+				<li>
+					<p>Only release Electronic Parking Brake (<term translate="no">EPB</term>) when you are seated inside the vehicle with your foot firmly on the brake pedal.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e01926">
+			<p>Driving with the parking brake on may overheat the braking system and cause premature wear or damage to brake parts.</p>
+		</note>
+		<note type="tip" id="e01927">
+			<ul id="e01928">
+				<li>
+					<p>In winter, the Electronic Parking Brake (<term translate="no">EPB</term>) related device may freeze and cannot be released. Do not use the Electronic Parking Brake (<term translate="no">EPB</term>) but park on a flat surface with the gear in P (Park). Use wheel chocks under the wheels if necessary.</p>
+					<p>If the Electronic Parking Brake (<term translate="no">EPB</term>) applies automatically when the gear is shifted to P (Park), turn off the <term translate="no">AUTO HOLD</term>, and press the <term translate="no">EPB</term> switch to release the parking brake.</p>
+				</li>
+				<li>
+					<p>A clicking sound may be heard while operating or releasing the Electronic Parking Brake (<term translate="no">EPB</term>). These conditions are normal and indicate that Electronic Parking Brake (<term translate="no">EPB</term>) is functioning properly.</p>
+				</li>
+				<li>
+					<p>When leaving your keys with a parking attendant or assistant, be sure to inform him/her how to operate the Electronic Parking Brake (<term translate="no">EPB</term>).</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

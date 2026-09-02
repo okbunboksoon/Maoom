@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00596">
+	<title>Turning off Manual Speed Limit Assist</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="FormatC" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25E046_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Press the Driving Assist button (<image align="left" href="../../images/WKIA_080.eps" scale="15" placement="inline"/>) to turn Manual Speed Limit Assist off. The Speed Limit indicator (<image align="left" href="../../images/WKIA_081.eps" scale="15" placement="inline"/>) will go off.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning">
+			<p>Take the following precautions when using Manual Speed Limit Assist:</p>
+			<ul>
+				<li>
+					<p>Always set the vehicle speed under the speed limit in your country.</p>
+				</li>
+				<li>
+					<p>Keep Manual Speed Limit Assist off when the function is not in use, to avoid inadvertently setting a speed. Check that the Speed Limit indicator (<image align="left" href="../../images/WKIA_081.eps" scale="15" placement="inline"/>) is off.</p>
+				</li>
+				<li>
+					<p>Manual Speed Limit Assist does not substitute for proper and safe driving. It is the responsibility of the driver to always drive safely and should always be aware of unexpected and sudden situations from occurring. Pay attention to the road conditions at all times.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

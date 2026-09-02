@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00149">
+	<title>Distance to empty</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>gauges
+					<indexterm>distance to empty</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00739">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00740">
+								<image href="images/P_SP327_B00_004_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e00741">
+			<li>
+				<p>The distance to empty is the estimated distance you can drive the vehicle with the current amount of fuel.</p>
+				<ul id="e00742">
+					<li>
+						<p>Distance range: 1–9,999 km or 1–9,999 mi.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>If the estimated distance is below 1.6 km (1 mile), the trip computer will display “---” as the distance to empty.</p>
+			</li>
+		</ul>
+		<note type="note" id="e00743">
+			<p>If the vehicle is not shifted to P (Park) or N (Neutral) when refueling, the amount of fuel and distance to empty may appear abnormally because fueling may not be recognized.</p>
+		</note>
+		<note type="tip" id="e00744">
+			<ul id="e00745">
+				<li>
+					<p>If the vehicle is not on level ground or the battery power has been interrupted, the distance to empty function may not operate correctly.</p>
+				</li>
+				<li>
+					<p>The distance to empty may differ from the actual driving distance, as it is only an estimate.</p>
+				</li>
+				<li>
+					<p>The trip computer may not register additional fuel if you add fewer than 6 liters (1.6 gallons) of fuel to the vehicle.</p>
+				</li>
+				<li>
+					<p>The fuel economy and distance to empty may vary significantly based on driving conditions, driving habits, and the condition of the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00143.dita#t00143" role="parent" scope="local" type="concept">
+				<linktext>Gauges </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

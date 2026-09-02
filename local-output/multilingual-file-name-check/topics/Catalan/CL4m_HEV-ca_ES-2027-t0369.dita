@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0369">
+	<title>Motor mit Start-Stopp-Automatik neu starten</title>
+	<conbody>
+		<section>
+			<title>Schaltgetriebe</title>
+			<p>Bei Fahrzeugen mit Schaltgetriebe stehen zwei Arten von Neustart zur Verfügung.</p>
+			<ul>
+				<li>
+					<p>Konventioneller Neustart</p>
+					<ul>
+						<li>
+							<p>Treten Sie das Kupplungspedal, wenn der Wählhebel in der Neutralstellung (N) steht.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Verzögerter Neustart (ausstattungsabhängig)</p>
+					<ul>
+						<li>
+							<p>Betätigen Sie das Kupplungspedal.</p>
+						</li>
+						<li>
+							<p>Legen Sie den Gang ein.</p>
+						</li>
+						<li>
+							<p>Geben Sie das Bremspedal frei.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Die verzögerte Neustartfunktion wird nur ausgeführt, wenn sich das Fahrzeug auf ebenem Untergrund befindet und stabil ist.</p>
+					</li>
+					<li>
+						<p>Um den Motor zu starten, während die Bremse nicht betätigt ist oder der Gang bereits eingelegt ist, betätigen Sie aus Sicherheitsgründen zunächst das Bremspedal und dann das Kupplungspedal.</p>
+					</li>
+					<li>
+						<p>Anlassen des Motors ohne Fahrzeugbewegung bei betätigtem Bremspedal (nur mit verzögertem Neustart),</p>
+						<ol>
+							<li>
+								<p>Betätigen Sie das Kupplungspedal und geben Sie es dann frei.</p>
+							</li>
+							<li>
+								<p>Betätigen Sie das Kupplungspedal sofort erneut.</p>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<p>Wenn das Fahrzeug abgewürgt wurde, startet der Motor, wenn Sie wie folgt vorgehen:</p>
+						<ol>
+							<li>
+								<p>Nachdem der Motor komplett ausgeschaltet ist, geben Sie das Kupplungspedal frei.</p>
+							</li>
+							<li>
+								<p>Betätigen Sie das Kupplungspedal.</p>
+							</li>
+						</ol>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>Automatikgetriebe/Doppelkupplungsgetriebe/Intelligentes variables Getriebe</title>
+			<ul>
+				<li>
+					<p>Geben Sie das Bremspedal frei. (für MHEV)</p>
+				</li>
+				<li>
+					<p>Geben Sie das Bremspedal unter 7 km/h frei.</p>
+				</li>
+				<li>
+					<p>Betätigen Sie das Gaspedal über 7 km/h.</p>
+				</li>
+			</ul>
+			<p>Der Motor springt an und die grüne Kontrollleuchte <term translate="no">AUTO</term> STOP (<image align="left" href="../../images/WKIA_075.eps" scale="15" placement="inline"/>) am Kombiinstrument erlischt.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0368.dita#CL4m_HEV-ca_ES-2027-t0368" role="parent" scope="local" type="concept">
+				<linktext>Auto-Start</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

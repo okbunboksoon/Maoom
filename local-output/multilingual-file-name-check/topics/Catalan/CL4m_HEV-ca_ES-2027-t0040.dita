@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0040">
+	<title id="e00097">Smart-Key </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Smart-Key</indexterm>
+				<indexterm>Schlüssel
+					<indexterm>Smart-Key</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Mit einem Smart-Key können Sie eine Tür (und Kofferraum/Heckklappe) ver- oder entriegeln und sogar den Motor starten, ohne den Schlüssel einstecken zu müssen.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OJAPE033089.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section importance="optional">
+			<title>Fernstart (1) <image align="left" href="../../images/WKIA_108.eps" scale="15" placement="inline"/></title>
+			<p>Sie können das Fahrzeug mit dem Fernbedienungsschlüssel auf dem Smart-Key starten.</p>
+			<p>Für den Fernstart des Fahrzeugs:</p>
+			<ol>
+				<li>
+					<p>Drücken Sie die Türverriegelungstaste auf dem Smart-Key in einem Abstand von 10 m (32 ft.) zum Fahrzeug.</p>
+				</li>
+				<li>
+					<p>Drücken Sie die Fernstarttaste innerhalb von 4 Sekunden nach dem Drücken der Türverriegelungstaste für mehr als 2 Sekunden. Der Motor wird gestartet.</p>
+				</li>
+				<li>
+					<p>Um die Fernstartfunktion auszuschalten, drücken Sie einmal auf die Fernstarttaste.</p>
+				</li>
+			</ol>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Das Fahrzeug muss sich in Stellung P (Parken) befinden, damit die Fernstart-Funktion verfügbar ist.</p>
+					</li>
+					<li>
+						<p>Der Motor schaltet sich aus, wenn Sie das Fahrzeug ohne registrierten Smart-Key betreten. Wenn Sie das Fahrzeug ohne Smart-Key betreten, während das Fahrzeug aus der Ferne gestartet wird, führen Sie Ihren Schlüssel bei sich, um die Zündung eingeschaltet zu halten angezeigt.</p>
+					</li>
+					<li>
+						<p>Der Motor schaltet sich aus, wenn Sie nicht innerhalb von 10 Minuten nach dem Fernstart des Fahrzeugs einsteigen.</p>
+					</li>
+					<li>
+						<p>Der Motor schaltet sich aus, wenn Sie nicht innerhalb von 10 Minuten nach dem Fernstart des Fahrzeugs einsteigen.</p>
+					</li>
+					<li>
+						<p>Die Fernstarttaste funktioniert möglicherweise nicht, wenn sich der Smart-Key nicht in einem Umkreis von 10 m (32 ft.) befindet.</p>
+					</li>
+					<li>
+						<p>Das Fahrzeug lässt sich nicht per Fernsteuerung starten, wenn die Motorhaube oder der Kofferraum/die Heckklappe geöffnet wird.</p>
+					</li>
+					<li>
+						<p>Lassen Sie den Motor nicht über einen längeren Zeitraum im Leerlauf laufen.</p>
+					</li>
+					<li>
+						<p>Betreiben Sie den Fernstart nicht in geschlossenen Räumen, in denen keine ausreichende Belüftung für die Motorabgase vorhanden ist.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e00098">
+			<title id="e00099">Verriegeln (2) <image align="left" href="../../images/WKIA_019.eps" scale="15" placement="inline"/></title>
+			<p>Wenn die Verriegelungstaste gedrückt wird, werden alle Türen verriegelt, wenn alle Türen geschlossen sind.</p>
+			<p>Die Warnblinker leuchten einmal kurz auf, um anzuzeigen, dass alle Türen verriegelt wurden.</p>
+			<p>Wenn jedoch eine Tür, die Motorhaube oder der Kofferraum/die Heckklappe offen bleibt, leuchten die Warnblinker nicht auf. Wenn alle Türen, die Motorhaube und der Kofferraum/die Heckklappe nach dem Drücken der Verriegelungstaste geschlossen werden, blinken die Warnblinker einmal auf.</p>
+		</section>
+		<section id="e00100">
+			<title>Entriegeln (3) <image align="left" href="../../images/WKIA_021.eps" scale="15" placement="inline"/></title>
+			<p>Wenn die Entriegelungstaste gedrückt wird, werden alle Türen entriegelt.</p>
+			<p>Die Warnblinker leuchten zweimal kurz auf, um anzuzeigen, dass alle Türen entriegelt sind.</p>
+			<p>Wenn innerhalb von 30 Sekunden nach dem Drücken dieser Taste keine Tür geöffnet wird, werden alle Türen automatisch wieder verriegelt.</p>
+		</section>
+		<section>
+			<title>Kofferraum/Heckklappe offen (4) <image align="left" href="../../images/WKIA_020.eps" scale="15" placement="inline"/></title>
+			<p>Wenn Sie diese Taste länger als eine Sekunde drücken, wird der Kofferraum-/Heckklappendeckel geöffnet.</p>
+			<p>Nach dem Öffnen und Schließen des Kofferraums/der Heckklappe verriegelt sich der Kofferraum/die Heckklappe automatisch.</p>
+		</section>
+		<section>
+			<title>Mechanischer Schlüssel</title>
+			<p>Wenn die Batterie des Smart-Key ausgelaufen ist oder der Smart-Key nicht normal funktioniert, kann die Tür mit dem mechanischen Schlüssel ver- oder entriegelt werden.</p>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034012N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Um den mechanischen Schlüssel zu entfernen, ziehen Sie die Schutzabdeckung des mechanischen Schlüssels (1) vom mechanischen Schlüssel ab.</p>
+			<note type="warning">
+				<p>Zündschlüssel (Smart-Key)</p>
+				<p>Es ist gefährlich, Kinder mit dem Zündschlüssel (Smart-Key) unbeaufsichtigt im Fahrzeug zu lassen, selbst wenn der Schlüssel nicht in der Zündung steckt und der Startschalter in der Position <term translate="no">ACC</term> oder <term translate="no">ON</term> steht.</p>
+				<p>Kinder ahmen Erwachsene nach und könnten den Schlüssel in das Zündschloss stecken oder den Startknopf drücken. Der Zündschlüssel (Smart-Key) würde es Kindern ermöglichen, die Fensterheber oder andere Steuerelemente zu bedienen oder sogar das Fahrzeug in Bewegung zu setzen, was zu schweren Verletzungen oder auch zum Tod führen könnte. Lassen Sie Ihre Schlüssel niemals zusammen mit unbeaufsichtigten Kindern in Ihrem Fahrzeug zurück, wenn der Motor läuft.</p>
+			</note>
+			<note type="warning">
+				<p>Kia empfiehlt, für den Austausch Teile von einem autorisierten Kia-Händler oder Servicepartner zu verwenden. Wenn ein Ersatzschlüssel verwendet wird, kehrt der Zündschalter möglicherweise nicht zurück in die Position <term translate="no">ON</term> nachdem <term translate="no">START</term>. Wenn dieser Fall eintritt, läuft der Anlasser weiter, was zu einer Beschädigung des Anlassermotors führt. Weiterhin besteht Brandgefahr durch Überlastung der Verkabelung.</p>
+			</note>
+		</section>
+		<section>
+			<title>Vorsichtsmaßnahmen in Bezug auf den Smart-Key</title>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Wenn Sie beide Smart-Keys verlieren, können Sie den Motor nicht mehr starten. Wenden Sie sich umgehend an einen autorisierten Kia-Händler oder Servicepartner, um Hilfe zu erhalten. Schleppen Sie Ihr Fahrzeug ab, wenn dies notwendig ist, um es vor möglichem Diebstahl zu schützen.</p>
+					</li>
+					<li>
+						<p>Pro Fahrzeug können maximal zwei Smart-Keys registriert werden. Wenn Sie Ihren Smart-Key verlieren, empfiehlt Kia, einen autorisierten Kia-Händler oder einen Servicepartner aufzusuchen.</p>
+					</li>
+					<li>
+						<p>Der Smart-Key funktioniert unter den folgenden Bedingungen nicht:</p>
+						<ul>
+							<li>
+								<p>Der Smart-Key befindet sich in der Nähe eines Funksenders, wie eines Radiosenders oder Flughafens, der den normalen Betrieb des Smart-Keys stören kann.</p>
+							</li>
+							<li>
+								<p>Der Smart-Key befindet sich in der Nähe eines mobilen Funksystems oder eines Handys.</p>
+							</li>
+							<li>
+								<p>In der Nähe Ihres Fahrzeugs wird der Smart-Key eines anderen Fahrzeugs betätigt.</p>
+							</li>
+							<li>
+								<p>Der Smart-Key ist nicht vollständig wasserfest. Wenn der Schlüssel mit Feuchtigkeit (Getränke, Wasser usw.) in Kontakt kommt oder erhitzt wird, kann es wiederum zu Fehlfunktionen kommen, die auf eine Beschädigung des internen Schaltkreises zurückzuführen sind. In diesem Fall ist eine Garantiereparatur nicht möglich.</p>
+							</li>
+						</ul>
+						<p>Wenn der Smart-Key nicht einwandfrei funktioniert, öffnen und schließen Sie die Tür mit dem mechanischen Schlüssel. Wenn Sie ein Problem mit dem Smart-Key haben, empfiehlt Kia, einen autorisierten Kia-Händler oder einen Servicepartner aufzusuchen.</p>
+					</li>
+					<li>
+						<p>Wenn der Smart-Key sich in unmittelbarer Nähe Ihres Mobiltelefons oder Smartphones befindet, kann das Signal vom Smart-Key durch den normalen Betrieb des Smartphones oder Mobiltelefons unterdrückt werden. Besonders gilt dies, wenn das Telefon aktiv ist, d. h. wenn Sie Gespräche führen, annehmen, SMS versenden bzw. E-Mails empfangen oder senden.</p>
+						<p>Bewahren Sie den Smart-Key nicht in derselben Hosen- oder Jackentasche wie Handy oder Smartphone auf und halten Sie einen ausreichenden Abstand zwischen den beiden Geräten ein.</p>
+					</li>
+					<li>
+						<p>Um die Tür durch Betätigen der Verriegelungs-/Entriegelungstaste am Außengriff des Fahrzeugs zu verriegeln oder zu entriegeln, stellen Sie sicher, dass alle Türen geschlossen bleiben.</p>
+					</li>
+					<li>
+						<p>Lassen Sie den Smart-Key nicht in der Nähe von metallischen Gegenständen wie Golftaschen, Metallgehäusen usw. liegen.</p>
+					</li>
+					<li>
+						<p>Tragen Sie immer Ihren Smart-Key bei sich, wenn Sie das Auto verlassen. Ein unbeaufsichtigter Smart-Key in der Nähe des Fahrzeugs kann dazu führen, dass sich die Fahrzeugbatterie selbst entlädt.</p>
+					</li>
+					<li>
+						<p>Bei Verlust des Smart-Keys kann das Fahrzeug nur mit dem registrierten Smart-Key gestartet werden. Der Smart-Key startet nur, wenn das Fahrzeug mit den im Smart-Key enthaltenen Daten übereinstimmt.</p>
+						<p>Wenn Sie Ihren Smart-Key verloren haben, schleppen Sie Ihr Fahrzeug daher zum nächstgelegenen autorisierten Kia-Händler ab und lassen Sie es überprüfen.</p>
+					</li>
+					<li>
+						<p>Wenn der Smart-Key mit einem Schlüsselbund zurückgelassen wird, kann die Ver-/Entriegelungstaste für Türen und Kofferraum/Heckklappe versehentlich gedrückt werden. Gehen Sie sorgfältig mit dem Schlüssel um.</p>
+					</li>
+					<li>
+						<p>Die Tönung der Fahrzeugscheiben mit Folie, insbesondere mit metallisierter Folie, kann den Empfang der vom Smart-Key gesendeten Frequenzen stören und so dessen Reichweite verringern.</p>
+					</li>
+					<li>
+						<p>Wenn der Smart-Key einige Zeit nicht bewegt wird, wird die Erkennungsfunktion für die Smart-Key-Bedienung angehalten. Heben Sie den Smart-Key an, um die Erkennung wieder zu aktivieren (ausstattungsabhängig).</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution">
+				<p>Lassen Sie weder Wasser noch andere Flüssigkeiten auf den Smart-Key gelangen. Wenn die Zentralverriegelung ausfällt, weil sie Wasser oder anderen Flüssigkeiten ausgesetzt wurde, unterliegt dies nicht der Garantie des Fahrzeugherstellers.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0034.dita#CL4m_HEV-ca_ES-2027-t0034" role="parent" scope="local" type="concept">
+				<linktext>Schlüssel</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

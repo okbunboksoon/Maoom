@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00262">
+	<title id="e01707">Air bag non-inflation conditions </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>air bag
+					<indexterm>non-inflation conditions</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e01708">
+			<tgroup cols="2" align="center">
+				<colspec colname="c1" colnum="1" colwidth="1*"/>
+				<colspec colname="c2" colnum="2" colwidth="1*"/>
+				<thead>
+					<row>
+						<entry namest="c1" nameend="c2">
+							<p>Air bag inflation conditions</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry>
+							<fig id="e01709">
+								<image href="images/N_SP3i26_D06_087_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>Air bags may not deploy in certain low-speed collisions where the air bag would not add any benefit beyond the protection already offered by the seat belts.</p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<fig id="e01710">
+								<image href="images/N_SP3i26_D06_090_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>Front air bags do not inflate in rear collisions because the impact moves occupants backward. In this case, inflated air bags cannot provide any additional benefit.</p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<fig id="e01711">
+								<image href="images/N_SP3i26_D06_093_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>Front air bags may not inflate in side impact collisions because passengers move toward the direction of the collision. Thus, frontal air bag deployment in side impacts does not provide additional occupant protection.</p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<fig id="e01712">
+								<image href="images/N_SP3i26_D06_092_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>In an angled collision, the force of impact may direct the occupants in a direction where the air bags would not be able to provide any additional benefit, and thus the sensors may not deploy any air bags.</p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<fig id="e01713">
+								<image href="images/N_SP3i26_D06_091_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>Just before impact, drivers often brake heavily. Such heavy braking lowers the front portion of the vehicle causing it to “ride” under a vehicle with a higher ground clearance. Air bags may not inflate in this 'under-ride' situation because sensors may detect deceleration forces that are significantly reduced by such 'under-ride' collisions.</p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<fig id="e01714">
+								<image href="images/N_SP3i26_D06_094_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>Front air bags may not inflate in all rollover accidents when the SRS Control Module (SRSCM) indicates that the front air bag deployment would not provide additional occupant protection.</p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<fig id="e01715">
+								<image href="images/N_SP3i26_D06_095_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>Air bags may not inflate if the vehicle collides with an object such as a utility pole or tree. This is because the point of impact concentrates in one area, and the sensors do not receive the full force of the impact.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00260.dita#t00260" role="parent" scope="local" type="concept">
+				<linktext>Air bag collision sensors </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task importance="optional" id="t00193">
+	<title id="e01221">Rear windshield wiper and washer operation </title>
+	<shortdesc>The rear windshield wiper and washer switch is located at the end of the lever.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>wipers and washers
+					<indexterm>rear windshield wiper and washer operation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<steps-unordered id="e01222">
+			<step>
+				<cmd>To operate the rear wiper and washer, turn the switch to the desired position.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01223">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e01224">
+											<image href="images/N_SP327_B05_016.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+				<choices id="e01225">
+					<choice>
+						<p><uicontrol>HI/2</uicontrol>: Normal wiper operation</p>
+					</choice>
+					<choice>
+						<p><uicontrol>LO/1</uicontrol>: Intermittent wiper operation</p>
+					</choice>
+					<choice>
+						<p><uicontrol>OFF/0</uicontrol>: Wiper is not in operation</p>
+					</choice>
+				</choices>
+			</step>
+			<step>
+				<cmd>Push the lever away from you to spray rear washer fluid and to run the rear wipers several times.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01226">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e01227">
+											<image align="center" placement="break" scale="95" href="images/N_SP327_B05_017.jpg"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+				<stepresult>
+					<p>The spray and wiper operation will continue until you release the lever.</p>
+					<p>When you activate the front wiper and shift to R (Reverse), the rear wiper will activate once to provide better visibility.</p>
+					<p>The rear wiper operates while the vehicle is in R (Reverse) with the front wiper on.</p>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Convenience</uicontrol><uicontrol>Auto Rear Wiper (in R)</uicontrol></menucascade> from the infotainment system.</p>
+				</stepresult>
+			</step>
+		</steps-unordered>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00190.dita#t00190" role="parent" scope="local" type="concept">
+				<linktext>Wipers and washers</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

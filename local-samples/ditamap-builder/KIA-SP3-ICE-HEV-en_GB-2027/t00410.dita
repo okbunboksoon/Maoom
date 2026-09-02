@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00410">
+	<title>Canceling AUTO HOLD function</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>AUTO HOLD
+					<indexterm>canceling</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02772">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e02773">
+								<title>Type A</title>
+								<image href="images/N_SP327_C09_001_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e02774">
+								<title>Type B</title>
+								<image href="images/N_SP327_C09_001_1_A.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<fig id="e02775">
+								<title>Type C</title>
+								<image href="images/N_SP327_C09_022_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol id="e02776">
+			<li>
+				<p>To cancel <term translate="no">AUTO HOLD</term> function, press the <term translate="no">AUTO HOLD</term> button. The <term translate="no">AUTO HOLD</term> indicator turns <term translate="no">OFF</term>.</p>
+			</li>
+			<li>
+				<p>To cancel <term translate="no">AUTO HOLD</term> function when your vehicle is at a standstill, press the <term translate="no">AUTO HOLD</term> while engaging the brake pedal.</p>
+			</li>
+		</ol>
+		<note type="warning" id="e02777">
+			<p>To reduce the risk of an accident, do not activate <term translate="no">AUTO HOLD</term> while driving downhill, backing up, or parking your vehicle.</p>
+		</note>
+		<note type="note" id="e02778">
+			<ul id="e02779">
+				<li>
+					<p>If the <term translate="no">AUTO HOLD</term> indicator light turns yellow, the <term translate="no">AUTO HOLD</term> function is not working properly. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>If there is a malfunction with the driver side door or hood open detection system, the <term translate="no">AUTO HOLD</term> function may not work properly. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>You may hear a click or electric brake motor whine sound while engaging or releasing the <term translate="no">EPB</term>. This is normal and indicates that the <term translate="no">EPB</term> is functioning properly.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip" id="e02780">
+			<ul id="e02781">
+				<li>
+					<p><term translate="no">AUTO HOLD</term> does not engage under the following are conditions (the <term translate="no">AUTO HOLD</term> indicator light does not turn green, and the <term translate="no">AUTO HOLD</term> function remains in standby):</p>
+					<ul id="e02782">
+						<li>
+							<p>You open the driver side door.</p>
+						</li>
+						<li>
+							<p>You open the hood.</p>
+						</li>
+						<li>
+							<p>You shift to P (Park).</p>
+						</li>
+						<li>
+							<p>You apply the <term translate="no">EPB</term>.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p><term translate="no">AUTO HOLD</term> automatically switches to <term translate="no">EPB</term> under any of the following conditions (the <term translate="no">AUTO HOLD</term> indicator light remains white and the <term translate="no">EPB</term> applies automatically):</p>
+					<ul id="e02783">
+						<li>
+							<p>You open the driver side door.</p>
+						</li>
+						<li>
+							<p>You open the hood.</p>
+						</li>
+						<li>
+							<p>Your vehicle is at a standstill for more than 10 minutes.</p>
+						</li>
+						<li>
+							<p>Your vehicle is at a standstill on a steep slope.</p>
+						</li>
+						<li>
+							<p>You moved your vehicle for a few seconds.</p>
+							<p>In these cases, the brake warning light appears, the <term translate="no">AUTO HOLD</term> indicator light changes from green to white, a warning sounds, and a message appears to inform you that the <term translate="no">EPB</term> has been applied automatically. Before driving again, engage the brake pedal, check your surroundings, and use the <term translate="no">EPB</term> switch to manually release the parking brake.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00408.dita#t00408" role="parent" scope="local" type="concept">
+				<linktext>AUTO HOLD</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

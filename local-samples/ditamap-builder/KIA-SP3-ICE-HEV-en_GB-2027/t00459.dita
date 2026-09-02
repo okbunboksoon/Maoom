@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00459">
+	<title>Emergency Braking</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03163">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03164">
+								<image href="images/N_SP3i25_C00_014_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03165">
+								<li>
+									<p><uicontrol>Emergency Braking</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Emergency Braking can alert you with the Forward Safety warning light blinking (<image href="images/WKIA_037.jpg" scale="15" align="left" placement="inline"/>), a warning message, an audible warning and steering wheel vibration (if equipped). Emergency Braking may activate to help avoid a collision with an oncoming vehicle.</p>
+		<p>Emergency Braking may be activated in the following conditions:</p>
+		<ul>
+			<li>
+				<p>Your driving speed is approximately 10-30 km/h (6-19 mph).</p>
+			</li>
+			<li>
+				<p>The oncoming vehicle speed is approximately 25-85 km/h (16-53 mph).</p>
+			</li>
+			<li>
+				<p>The motorcyclist or cyclist speed is approximately 15-85 km/h (9-53 mph).</p>
+			</li>
+			<li>
+				<p>A target enters the operating range of the Junction Turning function.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00457.dita#t00457" role="parent" scope="local" type="concept">
+				<linktext>Junction Turning function</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

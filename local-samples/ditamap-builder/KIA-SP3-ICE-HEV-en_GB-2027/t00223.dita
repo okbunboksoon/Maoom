@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" base="Top" id="t00223">
+	<title id="e01388">Seatback pocket </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>seat
+					<indexterm>seatback pocket</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>There is a pocket (2) in the front seatback for storing simple books or atlases, as well as a USB charger (1) for rear passengers.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01389">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01390">
+								<image href="images/N_SP3i26_D06_040_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning">
+			<p>Seatback pockets</p>
+			<p>Do not put heavy, stiff, or sharp objects in the seatback pockets. In an accident, they could contact and injure vehicle occupants.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00196.dita#t00196" role="parent" scope="local" type="concept">
+				<linktext>Seats </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

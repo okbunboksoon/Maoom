@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00456">
+	<title>Virtual Gear Shift (VGS) (For GT)</title>
+	<shortdesc>Virtual Gear Shift (VGS) is designed for electric vehicle that consists of motor and decelerator only. Virtual Gear Shift gives the shifting feel of an automatic transmission of an internal combustion engine by controlling the VCU motor.</shortdesc>
+	<conbody>
+		<section id="e01866">
+			<title>VGS settings</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01867">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01868">
+									<image href="../../../images/OCV044045L.eps" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01869">
+									<li>
+										<p> <uicontrol>VGS (Virtual Gear Shift)</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When the vehicle is in <term translate="no">DRIVE READY</term> state, tap <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Drive Mode</uicontrol><uicontrol>VGS (Virtual Gear Shift)</uicontrol></menucascade> from the infotainment system screen.</p>
+		</section>
+		<section id="e01870">
+			<title>VGS functions</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01871">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01872">
+									<image href="../../../images/OCV044048N.eps" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>VGS is possible to give the shifting feel of an automatic transmission of an internal combustion engine. 
+				<ul id="e01873">
+					<li>
+						<p>Shift pattern: Differentiate pattern by mode adjust shift, etc.</p>
+					</li>
+					<li>
+						<p>Shift feeling: Differentiate up/down shift by mode, down shift rev matching, etc.</p>
+					</li>
+					<li>
+						<p>Auto/Manual mode: When adjusting the left side (<image href="../../../images/WKIA_291.eps" scale="15" align="left" placement="inline"/>) and right side (<image href="../../../images/WKIA_292.eps" scale="15" align="left" placement="inline"/>) of the paddle shift lever, change it from automatic shift mode to manual shift mode (to cancel manual mode, hold the left side (<image href="../../../images/WKIA_291.eps" scale="15" align="left" placement="inline"/>) of the paddle shift for approximately 1 seconds, then it will change to automatic mode)</p>
+					</li>
+					<li>
+						<p>Sound effect: Virtual sounds that are matched to the simulating engine rpm/motor torque by gear</p>
+					</li>
+					<li>
+						<p>Interface realization: Auto/Manual mode (paddle shift), cluster (motor rpm, gear position)</p>
+					</li>
+				</ul> 
+			</p>
+			<note type="tip" id="e01874">
+				<ul id="e01875">
+					<li>
+						<p>This function is available in all driving modes except <term translate="no">ECO</term> and <term translate="no">SNOW</term> modes.</p>
+					</li>
+					<li>
+						<p>VGS may not be available when there is a malfunction with your electric vehicle system such as Smart Cruise Control (SCC), Launch Control, Remote Smart Parking Assist (RSPA) or low high voltage battery level.</p>
+					</li>
+					<li>
+						<p>When entering <term translate="no">ECO</term> mode or SCC while VGS is in operation, VGS is temporarily deactivated. After disabling <term translate="no">ECO</term> mode and SCC, VGS can be reactivated.</p>
+					</li>
+					<li>
+						<p>VGS may not operate properly due to temporary communication failures.</p>
+					</li>
+					<li>
+						<p>The sense of simulating gear shift can be affected by the condition of the vehicle (fully charged or discharged). Driver safety features (e.g. TCS/ESC) may also interrupt its operation.</p>
+					</li>
+					<li>
+						<p>The paddle shifter can be used as a manual gear in VGS. The left side of the paddle shifter (<image href="../../../images/WKIA_291.eps" scale="15" align="left" placement="inline"/>) is used to shift down, while the right paddle shifter (<image href="../../../images/WKIA_292.eps" scale="15" align="left" placement="inline"/>) is used to shift up.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

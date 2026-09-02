@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0146">
+	<title id="e00425">Head-Up-Display-Informationen </title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M035140L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Navigationsinformationen (Turn By Turn, TBT)</p>
+								</li>
+								<li>
+									<p>Verkehrsinformationen</p>
+								</li>
+								<li>
+									<p>Informationen zur Fahrzeugumgebung</p>
+								</li>
+								<li>
+									<p>Informationen zur Spursicherheit</p>
+								</li>
+								<li>
+									<p>Informationen Autobahn-Fahrassistent</p>
+								</li>
+								<li>
+									<p>Informationen zur automatischen Geschwindigkeitsänderung auf der Autobahn</p>
+								</li>
+								<li>
+									<p>Intelligente Tempomatsteuerung (SCC) Geschwindigkeitsinformationen einstellen</p>
+								</li>
+								<li>
+									<p>Intelligente Tempomatsteuerung (SCC) Fahrzeugabstandsinformationen</p>
+								</li>
+								<li>
+									<p>Informationen Spurfolgeassistent</p>
+								</li>
+								<li>
+									<p>Totwinkel-Sicherheitsinformationen</p>
+								</li>
+								<li>
+									<p>Tachometer-Informationen</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note">
+			<p>Je nach Region sind Informationen zu den Verkehrsschildern und zum Navigationsmodus verfügbar.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0145.dita#CL4m_HEV-ca_ES-2027-t0145" role="parent" scope="local" type="concept">
+				<linktext>Head-Up-Display (HUD) </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

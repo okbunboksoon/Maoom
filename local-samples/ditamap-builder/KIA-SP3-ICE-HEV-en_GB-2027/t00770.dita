@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00770">
+	<title>Emergency commodity</title>
+	<shortdesc>There are some emergency commodities in the vehicle to help you respond to the emergency situation.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>emergency commodity</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section otherprops="legalnotice_europe-general_gen-mid_2023_20230101_0000311" id="e04727">
+			<title>First-aid kit</title>
+			<p>Scissors, bandages, adhesive tape, etc. are provided in the kit.</p>
+		</section>
+		<section otherprops="legalnotice_europe-general_gen-mid_2023_20230101_0000312" id="e04728">
+			<title>Triangle reflector</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04729">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="1*"/>
+					<colspec colname="col2" colnum="2" colwidth="1.06*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e04730">
+									<image href="images/N_SP327_A11_001_1_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Place the triangle reflector on the road to warn oncoming vehicles.</p>
+		</section>
+		<section otherprops="legalnotice_europe-general_gen-mid_2023_20230101_0000313" id="e04731">
+			<title>Tire pressure gauge</title>
+			<p>To check the tire pressure, take the following steps:</p>
+			<ol id="e04732">
+				<li>
+					<p>Unscrew the inflation valve cap.</p>
+				</li>
+				<li>
+					<p>Press and hold the gauge against the tire valve.</p>
+				</li>
+				<li>
+					<p>A firm non-leaking push will activate the gauge.</p>
+					<p>Read the tire pressure on the gauge to know whether the tire pressure is low or high.</p>
+				</li>
+				<li>
+					<p>Adjust the tire pressures to the specified pressure.</p>
+				</li>
+				<li>
+					<p>Reinstall the inflation valve cap.</p>
+				</li>
+			</ol>
+			<note type="warning" id="e04733">
+				<ul id="e04734">
+					<li>
+						<p>When an accident occur, park the vehicle to a safe place. To avoid the leak of electricity in high voltage battery, turn the vehicle off and pull the yellow label in the high voltage battery switch to shut down the high voltage battery. Also, disconnect the auxiliary battery (12V) cable to shut down. Be sure to disconnect both (+)cable and (-) cable.</p>
+					</li>
+					<li>
+						<p>Do not touch the exposed electric wires. Do not touch high voltage wires (orange), connectors and other electric components.</p>
+					</li>
+					<li>
+						<p>When an accident occur, the lethal gas and fluid from damaged high voltage battery can be leaked. Be aware not to touch or exposed to the gas and fluid. When flammable or poison gas leak inside the vehicle, open windows and evacuate to a safe place. When leaked fluid comes in contact with your eyes, flush your eyes with clean water. When the fluid contacts with your skin, wash it with salt water. Get immediate medical attention afterward.</p>
+					</li>
+					<li>
+						<p>When the vehicle is flooded, immediately turn the vehicle off and evacuate to a safe place. For your safety, we recommend that you call the fire station and have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>When the fire spread to the high voltage battery, the additional fire may occur. In this situation, be sure to accompany a fire truck when the vehicle is being towed.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section otherprops="legalnotice_europe-general_gen-mid_2023_20230101_00003" id="e04735">
+			<title>Fire extinguisher</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04736">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="1*"/>
+					<colspec colname="col2" colnum="2" colwidth="1.02*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e04737">
+									<image href="images/N_SP327_A11_002_1_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>If there is small fire and you know how to use the fire extinguisher, follow these steps carefully.</p>
+			<ol id="e04738">
+				<li>
+					<p>Pull out the safety pin at the top of the extinguisher that keeps the handle from being accidentally pressed.</p>
+				</li>
+				<li>
+					<p>Aim the nozzle towards the base of the fire.</p>
+				</li>
+				<li>
+					<p>Stand approximately 2.5 m (8 ft) away from the fire and squeeze the handle to discharge the extinguisher. If you release the handle, the discharge will stop.</p>
+				</li>
+				<li>
+					<p>Sweep the nozzle back and for that the base of the fire. After the fire appears to be out, watch carefully since it may re-ignite.</p>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00736.dita#t00736" role="parent" scope="local" type="concept">
+				<linktext>What to do in an emergency</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

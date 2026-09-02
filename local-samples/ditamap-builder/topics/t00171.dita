@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00171">
+	<title id="e01246">Vehicles with smart key system</title>
+	<conbody>
+		<p>Whenever the <term translate="no">EV</term> button Is switched to the <term translate="no">DRIVE READY</term> position, the immobilizer system checks and verifies if the key is valid.</p>
+		<p>If the key is valid, you can drive the vehicle.</p>
+		<p>If the key is invalid, you can not drive the vehicle.</p>
+		<section id="e01247">
+			<title id="e01248">To deactivate the immobilizer system</title>
+			<p>Change the <term translate="no">EV</term> button to the <term translate="no">OFF</term> position.</p>
+		</section>
+		<section id="e01249">
+			<title id="e01250">To activate the immobilizer system</title>
+			<p>Change the <term translate="no">EV</term> button to the <term translate="no">DRIVE READY</term> position. The immobilizer system activates automatically. Without a valid smart key for your vehicle, you can not drive the vehicle.</p>
+			<note type="warning" id="e01251">
+				<p>In order to prevent theft of your vehicle, do not leave spare keys anywhere in your vehicle. Your immobilizer password is a customer unique password and should be kept confidential. Do not leave this number anywhere in your vehicle.</p>
+			</note>
+			<note type="note" id="e01252">
+				<p>When starting the vehicle, do not use the key with other immobilizer keys around. Otherwise, the vehicle may not start or may stop soon after it starts. Keep each key separately in order to avoid a starting malfunction.</p>
+			</note>
+			<note type="caution" id="e01253">
+				<p>Do not put metal accessories near the <term translate="no">EV</term> button. Metal accessories may interrupt the transponder signal and may prevent the vehicle from being started.</p>
+			</note>
+			<note type="note" id="e01254">
+				<p>If you need additional keys or lose your keys, Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</note>
+			<note type="caution" id="e01255">
+				<p>The transponder in your <term translate="no">EV</term> button is an important part of the immobilizer system. It is designed to give years of trouble-free service, however you should avoid exposure to moisture, static electricity and rough handling. Immobilizer system malfunction could occur.</p>
+			</note>
+			<note type="caution" id="e01256">
+				<ul id="e01257">
+					<li>
+						<p>Do not change, alter or adjust the immobilizer system because it could cause the immobilizer system to malfunction. In this case, have the system serviced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner..</p>
+					</li>
+					<li>
+						<p>Malfunctions caused by improper alterations, adjustments or modifications to the immobilizer system are not covered by your vehicle manufacturer warranty.</p>
+					</li>
+					<li>
+						<p>Do not attempt to alter this system or add other devices to it. Electrical problems could result that may make your vehicle inoperable.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

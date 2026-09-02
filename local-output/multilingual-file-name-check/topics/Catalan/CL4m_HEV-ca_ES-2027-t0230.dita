@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0230">
+	<title>Kinderrückhaltesystem mit Dreipunktgurt sichern</title>
+	<conbody>
+		<p>Wenn das ISOFIX-System nicht verwendet wird, sind alle Kinderrückhaltesysteme auf einem Rücksitz mit dem Beckenabschnitt eines Dreipunktgurtes zu befestigen.</p>
+		<section>
+			<sectiondiv><ph>Ein Kinderrückhaltesystem mit einem Dreipunktgurt befestigen</ph>
+				<p>Gehen Sie folgendermaßen vor, um ein Kinderrückhaltesystem auf einem Rücksitz zu befestigen:</p>
+				<ol outputclass="callout">
+					<li>
+						<p>Legen Sie das Rückhaltesystem auf den Rücksitz und führen Sie den Dreipunktgurt entsprechend der Herstelleranweisungen durch das Rückhaltesystem hindurch oder um das Rückhaltesystem herum.</p>
+						<p>Vergewissern Sie sich, dass das Gurtband nicht verdreht ist.</p>
+					</li>
+				</ol>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OJAPE023026.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<ol outputclass="callout_continue">
+					<li>
+						<p>Schieben Sie die Schließzunge des Dreipunktgurts in das Gurtschloss. Achten Sie darauf, dass das Klickgeräusch deutlich hörbar ist. Positionieren Sie die Gurtschlosstaste so, dass sie im Notfall leicht erreichbar ist.</p>
+					</li>
+				</ol>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OJAPE023023.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<ol outputclass="callout_continue">
+					<li>
+						<p>Sorgen Sie für eine möglichst hohe Gurtspannung, indem Sie das Kinderrückhaltesystem beim Aufrollen des Schultergurtes hinunterdrücken.</p>
+					</li>
+					<li>
+						<p>Drücken Sie gegen den Kindersitz und ziehen Sie daran, um sich zu vergewissern, dass der Sicherheitsgurt ihn ordnungsgemäß in Position hält.</p>
+					</li>
+				</ol>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OJAPE023024.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Wenn der Hersteller Ihres Kinderrückhaltesystems die Verwendung eines oberen ISOFIX-Haltegurtes zusätzlich zur Befestigung mit dem Dreipunktgurt empfiehlt, lesen Sie bitte den Abschnitt Ein Kinderrückhaltesystem mit dem System „ISOFIX-Verankerung für den oberen Haltegurt“ sichern.</p>
+				<p>Um das Kinderrückhaltesystem zu entfernen, drücken Sie die Entriegelungstaste an der Gurtschnalle, ziehen den Dreipunktgurt aus dem Kinderrückhaltesystem heraus und rollen den Sicherheitsgurt vollständig auf.</p>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0227.dita#CL4m_HEV-ca_ES-2027-t0227" role="parent" scope="local" type="concept">
+				<linktext>Niedrige ISOFIX-Verankerung und ISOFIX-Verankerung für den oberen Haltegurt (ISOFIX-Verankerungssystem) für Kinder</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

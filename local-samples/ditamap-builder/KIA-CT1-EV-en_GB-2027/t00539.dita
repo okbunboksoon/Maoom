@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00539">
+	<title>Emergency Steering (Evasive steering assist)</title>
+	<conbody>
+		<p>Emergency steering will alert the driver with the Emergency steering warning light (<image href="../../images/WKIA_077.eps" scale="15" align="left" placement="inline"/>) blinking, a warning message, an audible warning and steering wheel vibration.</p>
+		<p>Warning message: <uicontrol>Emergency steering</uicontrol> </p>
+		<p>If there is a risk of collision with a pedestrian, a cyclist, or a powered two-wheeler in front and your vehicle already exceeded the emergency braking speed limit, the steering will be assisted to help prevent collision when there is enough space to avoid in the current lane while driving.</p>
+		<p>Emergency Steering will be activated in following conditions.</p>
+		<ul>
+			<li>
+				<p>Your driving speed: Approximately 65–75 km/h (40–47 mph)</p>
+			</li>
+		</ul>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>The steering wheel may turn automatically when emergency steering is operating.</p>
+				</li>
+				<li>
+					<p>Emergency steering will automatically cancel when risk factors disappear. If necessary, the driver must steer the vehicle.</p>
+				</li>
+				<li>
+					<p>Emergency steering may not operate or may cancel during operation if the steering wheel is held tight or steered in the opposite direction.</p>
+				</li>
+				<li>
+					<p>When steering is assisted to avoid collision with a vehicle, pedestrian and cyclist, Evasive steering assist will be canceled if collisions with other objects (vehicle, powered two-wheeler, pedestrians, or cyclists) are expected.</p>
+				</li>
+				<li>
+					<p>Evasive steering assist may not operate if space to avoid collision in the driving lane is insufficient.</p>
+				</li>
+				<li>
+					<p>When driving at night, the performance of powered two-wheeler recognition is decreased, so the Forward Collision-Avoidance Assist system may be temporarily limited or may not work.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>For more details on warning messages, refer to <xref type="concept" href="t00516.dita#t00516"/>.</p>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>For your safety, change the Settings after parking the vehicle at a safe location.</p>
+				</li>
+				<li>
+					<p>Forward Collision-Avoidance Assist does not operate in all situations or cannot avoid all collisions.</p>
+				</li>
+				<li>
+					<p>The driver should hold the responsibility to control the vehicle. Do not solely depend on Forward Collision-Avoidance Assist. Rather, maintain a safe braking distance, and if necessary, depress the brake pedal to reduce driving speed or to stop the vehicle.</p>
+				</li>
+				<li>
+					<p>Never deliberately operate Forward Collision-Avoidance Assist on people, objects, etc. It may cause serious injury or death.</p>
+				</li>
+				<li>
+					<p>Forward Collision-Avoidance Assist may not operate if the driver depresses the brake pedal to avoid collision.</p>
+				</li>
+				<li>
+					<p>Depending on the road and driving conditions, Forward Collision-Avoidance Assist may warn the driver late or may not warn the driver.</p>
+				</li>
+				<li>
+					<p>During Forward Collision-Avoidance Assist operation, the vehicle may stop suddenly injuring passengers and shifting loose objects. Always have the seat belt on and keep loose objects secured.</p>
+				</li>
+				<li>
+					<p>If any other function’s warning message is displayed or audible warning is generated, Forward Collision-Avoidance Assist warning message may not be displayed and audible warning may not be generated.</p>
+				</li>
+				<li>
+					<p>You may not hear the warning sound of Forward Collision-Avoidance Assist if the surrounding is noisy.</p>
+				</li>
+				<li>
+					<p>Forward Collision-Avoidance Assist may turn off or may not operate properly or may operate unnecessarily depending on the road conditions and the surroundings.</p>
+				</li>
+				<li>
+					<p>Even if there is a problem with Forward Collision-Avoidance Assist, the vehicle’s basic braking performance will operate properly.</p>
+				</li>
+				<li>
+					<p>During emergency braking, braking control by Forward Collision-Avoidance Assist will automatically cancel when the driver excessively depresses the accelerator pedal or sharply steers the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>The surroundings and pedestrians, cyclists and powered two-wheeler or other vehicles in front of you may affect the speed or detection range to operate Forward Collision-Avoidance Assist, resulting in Forward Collision-Avoidance Assist temporarily limited or disabled.</p>
+				</li>
+				<li>
+					<p>Forward collision avoidance assistance operates under specific conditions, taking into account the status of the oncoming vehicle, powered two-wheeler and cyclist, driving direction, speed, and surrounding environment to judges the level of risk.</p>
+				</li>
+				<li>
+					<p>The function may be limited or deactivated in cases where the driving speed is excessively high or there is a significant speed difference between the vehicle and the oncoming powered two-wheelers or cyclists.</p>
+				</li>
+				<li>
+					<p>When a collision with a surrounding vehicle is expected, Lane-change oncoming, Lane-change side and Evasive steering assist functions will only warn the driver. (if equipped)</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>When a collision is imminent, the Forward Collision-Avoidance Assist may assist the driver with brakes if the driver fails to brake enough.</p>
+				</li>
+				<li>
+					<p>The images or colors may be displayed differently depending on the specifications of the instrument cluster or theme.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

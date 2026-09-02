@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00844">
+	<title>Rear wiper blade replacement</title>
+	<taskbody>
+		<context id="e04970">
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04971">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e04972">
+									<image align="center" placement="break" scale="95" href="images/N_SP3i26_B12_055_IR.jpg"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</context>
+		<steps id="e04973">
+			<step>
+				<cmd>Move the wiper switch to the single wiping (<term translate="no">MIST</term> /1X) position within 20 seconds after the vehicle is in <term translate="no">OFF</term> position. Hold the switch for more than 2 seconds until the wiper blade moves down to the bottom middle position.</cmd>
+			</step>
+			<step>
+				<cmd>Raise the wiper arm and pull out the wiper blade assembly.</cmd>
+			</step>
+			<step>
+				<cmd>For Type A, lift up the wiper blade and pull it to remove it.</cmd>
+				<info>
+					<p>For Type B, remove the wiper blade by pressing the locking pin.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04974">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04975">
+											<title>Type A</title>
+											<image href="images/N_SP3i26_B12_056_1_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<fig id="e04976">
+											<title>Type B</title>
+											<image href="images/N_SP3i26_B12_096_1_I.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</info>
+			</step>
+			<step>
+				<cmd>Install the new blade assembly by inserting the centre part into the slot in the wiper arm until it clicks into place.</cmd>
+			</step>
+			<step>
+				<cmd>Make sure that the blade assembly is installed firmly by trying to pull it slightly.</cmd>
+				<info>
+					<p>Place the wiper arm on the rear windscreen, and start the vehicle to the <term translate="no">ON</term> position, and operate the rear wiper to make sure the blade is installed correctly.</p>
+					<p>To prevent damage to the wiper arm or other components, have the wiper blade replaced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</info>
+			</step>
+		</steps>
+		<postreq id="e04977">
+			<note type="caution" id="e04978">
+				<ul id="e04979">
+					<li>
+						<p>The wiper may not operate for approximately 10 seconds if you try to operate it without washer fluid or if the blades are frozen. This is not a malfunction. It is a wiper protection system activated by the motor overload circuit within the wiper motor.</p>
+					</li>
+					<li>
+						<p>With the wiper blades raised up, clean the front windshield with a hose and wipe it with a clean towel. Whenever grease or wax has been applied to the wiper blades, wipe them clean.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e04980">
+				<p>If you apply too much force to the wiper arm while pulling the blade, you may damage the center part.</p>
+			</note>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00842.dita#t00842" role="parent" scope="local" type="concept">
+				<linktext>Blade replacement</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

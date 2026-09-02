@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0075">
+	<title>Automatische Umsteuerung</title>
+	<conbody>
+		<p>Wenn die elektrische Heckklappe während des Betriebs ein Hindernis erkennt, stoppt die Heckklappe oder öffnet sich vollständig. Die Rückfahrautomatik funktioniert unter Umständen nicht ordnungsgemäß oder kann unter den folgenden Umständen unerwartet ausgelöst werden:</p>
+		<ul>
+			<li>
+				<p>Die automatische Umsteuerung kann den Widerstand möglicherweise nicht erkennen, wenn der erkannte Widerstand unter einem bestimmten Wert liegt oder wenn die Heckklappe fast vollständig geschlossen ist und sich in der verriegelten Position befindet.</p>
+			</li>
+			<li>
+				<p>Die automatische Umsteuerung kann funktionieren, wenn ein starker Aufprall erfolgt und keine Hindernisse vorhanden sind.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<p>Halten Sie nie absichtlich einen Gegenstand oder ein Körperteil in den Weg der elektrischen Heckklappe, um herauszufinden, ob die automatische Rückfahrfunktion funktioniert. Schwere Verletzungen oder Schäden am Fahrzeug oder an Gegenständen können die Folge sein.</p>
+		</note>
+		<note type="tip">
+			<p>Die elektrische Heckklappe funktioniert möglicherweise nicht mehr, wenn die Funktion für den automatischen Rückwärtsgang mehr als zwei Mal betätigt wird, während Sie versuchen, die Heckklappe zu öffnen oder zu schließen. Wenn dies der Fall ist, öffnen oder schließen Sie die Heckklappe vorsichtig von Hand und versuchen Sie dann nach 30 Sekunden erneut, die elektrische Heckklappe automatisch zu bedienen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0074.dita#CL4m_HEV-ca_ES-2027-t0074" role="parent" scope="local" type="concept">
+				<linktext>Taste Öffnen/Schließen der Heckklappe in der Heckklappe</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

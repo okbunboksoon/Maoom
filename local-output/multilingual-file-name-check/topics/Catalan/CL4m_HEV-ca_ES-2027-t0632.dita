@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0632">
+	<title>Spurfolgeassistent</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054104N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn das vorausfahrende Fahrzeug und beide Fahrbahnmarkierungen erkannt werden und Ihre Fahrzeuggeschwindigkeit unter 180 km/h (110 mph) liegt, leuchtet die grüne (<image align="left" href="../../images/WKIA_011.eps" scale="15" placement="inline"/>) Anzeigeleuchte des Kombiinstruments auf, und der Spurfolgeassistent hält das Fahrzeug mittig in der Spur, indem es das Lenkrad steuert.</p>
+		<note type="caution">
+			<p>Wenn das Lenkrad nicht gesteuert wird, blinkt die weiße Kontrollleuchte (<image align="left" href="../../images/WKIA_011.eps" scale="15" placement="inline"/>) zunächst und wird dann grau.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0631.dita#CL4m_HEV-ca_ES-2027-t0631" role="parent" scope="local" type="concept">
+				<linktext>Warnung und Kontrolle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

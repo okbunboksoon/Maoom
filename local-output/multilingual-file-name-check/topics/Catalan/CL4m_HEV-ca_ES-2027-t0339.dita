@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0339">
+	<title id="e00773">Zündschlossstellungen </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Schlüsselstellungen
+					<indexterm>Zündschlossstellungen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>LOCK</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M045023L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Das Lenkradschloss wird in dieser Stellung verriegelt (Diebstahlschutz). Der Zündschlüssel kann nur in Stellung <term translate="no">LOCK</term> abgezogen werden.</p>
+		</section>
+		<section>
+			<title>ACC (Zubehör)</title>
+			<p>Das Lenkradschloss ist entriegelt und elektrisches Zubehör kann eingeschaltet werden.</p>
+			<note type="note">
+				<p>Wenn sich der Zündschalter nur schwer in die Position <term translate="no">ACC</term> drehen lässt, drehen Sie den Zündschlüssel, während Sie gleichzeitig das Lenkrad nach links und rechts bewegen, um die Verspannung im Lenkradschloss zu beseitigen.</p>
+			</note>
+		</section>
+		<section>
+			<title>EIN</title>
+			<p>Die Warnleuchten können geprüft werden, bevor der Motor angelassen wird. Dies ist die normale Betriebsposition nach Starten des Motors.</p>
+			<p>Um das Entladen der Batterie zu verhindern, lassen Sie den Zündschalter bei abgestelltem Motor nicht in der Stellung <term translate="no">ON</term> stehen.</p>
+		</section>
+		<section>
+			<title>START</title>
+			<p>Drehen Sie den Zündschalter in Stellung <term translate="no">START</term>, um den Motor zu starten. Der Motor dreht so lange, bis Sie den Schlüssel loslassen; dann kehrt er in die Position <term translate="no">ON</term> zurück. In dieser Stellung kann die Funktion der Bremsenwarnleuchte überprüft werden.</p>
+			<note type="warning">
+				<p>Zündschalter</p>
+				<ul>
+					<li>
+						<p>Drehen Sie den Zündschlüssel nie in die Position <term translate="no">LOCK</term> oder <term translate="no">ACC</term>, solange das Fahrzeug sich noch bewegt. Dies würde dazu führen, dass Sie nicht mehr lenken und ordnungsgemäß bremsen können, was zu einem Unfall führen könnte.</p>
+					</li>
+					<li>
+						<p>Das Lenkradschloss (ausstattungsabhängig) ist kein Ersatz für die Feststellbremse. Bevor Sie den Fahrersitz verlassen, stellen Sie jedes Mal sicher, dass bei einem Schaltgetriebe der erste Gang eingelegt und bei einem Automatikgetriebe der Wählhebel in die Parkstufe (P) gestellt ist, betätigen Sie die Feststellbremse und stellen Sie den Motor ab. Wenn diese Vorsichtsmaßnahmen nicht befolgt werden, kann sich das Fahrzeug plötzlich und unerwartet in Bewegung setzen.</p>
+					</li>
+					<li>
+						<p>Greifen Sie während der Fahrt niemals durch das Lenkrad hindurch zum Zündschloss oder zu anderen Bedienelementen. Ihr Arm oder Ihre Hand in diesem Bereich könnte verursachen, dass Sie die Kontrolle über das Fahrzeug verlieren, was zu einem Unfall und schweren oder tödlichen Verletzungen führen könnte.</p>
+					</li>
+					<li>
+						<p>Legen Sie keine losen Gegenstände in den Bereich des Fahrersitzes, da sich diese Gegenstände bewegen, den Fahrer stören und zu einem Unfall führen könnten.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0338.dita#CL4m_HEV-ca_ES-2027-t0338" role="parent" scope="local" type="concept">
+				<linktext>Schlüsselstellungen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

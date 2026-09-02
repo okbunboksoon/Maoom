@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0686">
+	<title>Hecksicht</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054112N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054018N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Rückfahrfunktion der Umgebungsüberwachung zeigt die Situation des Fahrzeugs hinten gemäß den Einstellungen des Fahrers auf dem Navigationssystem an und unterstützt das sichere Einparken.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0681.dita#CL4m_HEV-ca_ES-2027-t0681" role="parent" scope="local" type="concept">
+				<linktext>Bedienung der Umgebungsüberwachungs-Monitors</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

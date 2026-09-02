@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00355">
+	<title>Wireless smartphone charging system</title>
+	<shortdesc>A wireless smartphone charging system is located in front of the center console.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features
+					<indexterm>wireless smart phone charging system</indexterm>
+				</indexterm>
+				<indexterm>wireless smart phone charging system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02271">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02272">
+								<image href="images/N_SP3c27_C08_046_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02273">
+								<li>
+									<p>Indicator</p>
+								</li>
+								<li>
+									<p>Charging pad</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Firmly close all doors, and start the vehicle. To start wireless charging, place the smartphone equipped with wireless charging function on the wireless charging pad.</p>
+		<p>For best wireless charging results, place the smartphone on the center of the charging pad.</p>
+		<p>The wireless charging system is designed for <?oxy_comment_start author="june" timestamp="20250901T164104+0900" comment="2개 적용 시
+
+two smartphones"?> only 1 smartphone <?oxy_comment_end?> equipped with Qi <tm tmtype="reg"/>. Please refer to the smartphone accessory cover or the smartphone manufacturer’s website to check whether your smartphone supports the Qi <tm tmtype="reg"/> charging.</p>
+		<note type="note" id="e02274">
+			<p>If any metallic object, such as a coin, is located between the wireless charging system and the smartphone, it may disrupt charging. The metallic object may heat up.</p>
+		</note>
+		<section id="e02275">
+			<title>Wireless smartphone charging</title>
+			<ol id="e02276">
+				<li>
+					<p>Remove any object on the smartphone charging pad, including the smart key. If there is any foreign object on the pad other than a smartphone, the wireless charging function may not operate properly.</p>
+				</li>
+				<li>
+					<p>Place the smartphone on the center of the wireless charging pad.</p>
+				</li>
+				<li>
+					<p>The indicator light will change to amber when the wireless charging begins. After the charging is complete, the orange light will change to green.</p>
+				</li>
+				<li>
+					<p>You can choose to turn the wireless charging function to either on or off on the infotainment system.</p>
+					<p>If the wireless charging function does not work, gently move your smartphone around on the pad until the charging indicator light turns amber. Depending on the smartphone, the charging indicator light may not turn green, even after charging is complete.</p>
+					<p>If wireless charging is not functioning properly, the orange light will blink and flash for 10 seconds and then turn off. Remove the smartphone from the pad and place it on the pad again, or double check the charging status.</p>
+					<p>If you leave the smartphone on the charging pad when the vehicle is in <term translate="no">OFF</term> position and the front door is opened, the vehicle alerts you through warning messages and sound (applicable for vehicles with voice guidance function) on the instrument cluster.</p>
+					<p>For some manufacturers’ smartphones, the system may not warn you when the smartphone is left on the wireless charging pad. This is due to the characteristics of the smartphone and is not a wireless charging system malfunction.</p>
+				</li>
+			</ol>
+			<note type="warning" id="e02277">
+				<p>Distracted driving</p>
+				<p>Driving while distracted can result in a loss of vehicle control that may lead to an accident, severe bodily injury, or death. The driver’s primary responsibility is the safe and legal operation of a vehicle. Any use of handheld devices, other equipment, or vehicle systems that take the driver’s eyes, attention, and focus away from the safe operation of a vehicle are not permissible by law. These should never be used while operating the vehicle.</p>
+			</note>
+			<note type="caution" id="e02278">
+				<p>Liquid in wireless charging system</p>
+				<p>To prevent damage, be sure not to spill liquid over the wireless smartphone charging system.</p>
+			</note>
+			<note type="note" id="e02279">
+				<p>Metal in wireless charging system</p>
+				<p>If any metallic object, such as a coin, is located between the wireless charging system and the smartphone, charging may be disrupted. The metallic object may heat up and potentially damage the charging system. If there is any metallic object between the smartphone and the charging pad, immediately remove the smartphone. Remove the metallic object after it has cooled.</p>
+			</note>
+			<note type="note" id="e02280">
+				<ul id="e02281">
+					<li>
+						<p>When the interior temperature of the wireless charging system rises above a set temperature, the wireless charging will cease to function. After the interior temperature drops below the threshold, the wireless charging function will resume.</p>
+					</li>
+					<li>
+						<p>Wireless charging may not function properly when there is a heavy accessory cover on the smartphone.</p>
+					</li>
+					<li>
+						<p>To prevent radio wave disruption, wireless charging will stop when you use the wireless smart key search function.</p>
+					</li>
+					<li>
+						<p>Wireless charging will stop when you move the smart key out of the vehicle in <?oxy_comment_start author="june" timestamp="20250901T153649+0900" comment="EV 시동체계 변경 차종
+
+POWER ON or DRIVE READY"?><term translate="no">ON</term><?oxy_comment_end?> position.</p>
+					</li>
+					<li>
+						<p>Wireless charging will stop when you open any of the doors (if equipped with smart keys).</p>
+					</li>
+					<li>
+						<p>Wireless charging will stop when you turn the vehicle off.</p>
+					</li>
+					<li>
+						<p>Wireless charging will stop when the smartphone is not in complete contact with the wireless charging pad.</p>
+					</li>
+					<li>
+						<p>Items equipped with magnetic components, such as a credit card or transportation ticket, and so on may be damaged during wireless charging.</p>
+					</li>
+					<li>
+						<p>For best results, place the smartphone on the center of the charging pad. The smartphone may not charge when placed near the rim of the charging pad. When the smartphone is charging, it may heat up excessively.</p>
+					</li>
+					<li>
+						<p>For smartphones without a built-in wireless charging system, you must use an appropriate accessory.</p>
+					</li>
+					<li>
+						<p>Certain smartphones may display messages on weak current. This is due to the characteristics of that smartphone and is not a wireless charging system malfunction.</p>
+					</li>
+					<li>
+						<p>The indicator light of some manufacturers’ smartphones may still be orange after the smartphone is fully charged. This is due to the characteristics of the smartphone and not is a wireless charging system malfunction.</p>
+					</li>
+					<li>
+						<p>When you place any smartphone without a wireless charging function or a metallic object on the charging pad, you may hear a noise. This small noise comes from the vehicle discerning the compatibility of the object placed on the charging pad. It does not affect your vehicle or the smartphone in any way.</p>
+					</li>
+					<li>
+						<p>The wireless mobile phone charging system may not support certain mobile phones that are not verified for the QI <tm tmtype="reg"/> specification (<image href="images/WKIA_069.jpg" scale="15" align="center" placement="inline"/>).</p>
+					</li>
+					<li>
+						<p>When placing your smartphone on the charging pad, position the phone in the middle of the pad for maximum efficiency.</p>
+						<p>If your smartphone is off to the side, the charging speed may slow down, and your smartphone may heat up.</p>
+					</li>
+					<li>
+						<p>When charging some smartphones with a self-protection feature, the wireless charging may decrease in speed or stop.</p>
+					</li>
+					<li>
+						<p>You can only wirelessly charge a smartphone that supports wireless charging.</p>
+					</li>
+					<li>
+						<p>The wireless charging pad has an internal cooling system, which can create noise, to keep your phone cool while it charges.</p>
+					</li>
+					<li>
+						<p>It’s normal for your phone to warm up while charging, but using apps like Android Auto or Apple CarPlay can cause it to heat up faster, potentially delaying or stopping the charging process due to overheating. This is not an issue with the wireless charging system, so please remove the smartphone from the charging pad to help it cool down.</p>
+					</li>
+					<li>
+						<p>During wireless charging, an internal fan operates to prevent overheating. Fan noise may sound.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="tip" id="e02282">
+				<p>The wireless charging speed for certain smartphones with built-in protection may decrease or stop, depending on the wireless charging policy and product specifications set by each manufacturer, so you can check your smartphone’s maximum wireless charging speed in the manufacturer’s wireless charging manual.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00347.dita#t00347" role="parent" scope="local" type="concept">
+				<linktext>Interior features</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

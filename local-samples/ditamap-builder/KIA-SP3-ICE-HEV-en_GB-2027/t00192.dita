@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00192">
+	<title id="e01206">Windshield washer operation </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>wipers and washers
+					<indexterm>windshield washer operation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context id="e01207">
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01208">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01209">
+									<image align="center" placement="break" scale="95" href="images/N_SP327_B05_015.jpg"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</context>
+		<steps id="e01210">
+			<step>
+				<cmd>Turn the wiper speed control switch to <term translate="no">OFF</term>.</cmd>
+			</step>
+			<step>
+				<cmd>Gently pull the lever toward you to spray washer fluid on the windshield and run the wipers 1–3 cycles when the windshield is dirty. The spray and wiper operation will continue until you release the lever.</cmd>
+				<info>
+					<p>If the windshield washer does not work, check the washer fluid level. If the fluid level is not sufficient, you will need to add appropriate non-abrasive windshield washer fluid to the washer fluid reservoir.</p>
+					<p>The reservoir filler neck is in the front of the engine compartment on the passenger side.</p>
+				</info>
+			</step>
+		</steps>
+		<postreq id="e01211">
+			<note type="warning" id="e01212">
+				<p>Do not use the washer in freezing temperatures before warming the windshield with the defroster, as the washer solution could freeze on the windshield and obscure your view.</p>
+			</note>
+			<note type="note" id="e01213">
+				<p>To prevent possible damage to the washer pump, do not operate the washer when the fluid reservoir is empty.</p>
+			</note>
+			<note type="note" id="e01214">
+				<ul id="e01215">
+					<li id="e01216">
+						<p>To prevent possible damage to the wipers or windshield, do not operate the wipers when the windshield is dry.</p>
+					</li>
+					<li id="e01217">
+						<p>To prevent damage to the wiper blades, do not use gasoline, kerosene, paint thinner, or other solvents on or near the wiper blades.</p>
+					</li>
+					<li id="e01218">
+						<p>To prevent damage to the wiper arms and other components, do not attempt to move the wipers manually.</p>
+					</li>
+					<li id="e01219">
+						<p>To prevent damage to the wipers and washer system, use washer fluid containing anit-freeze in the winter season or cold weather.</p>
+					</li>
+				</ul>
+			</note>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00190.dita#t00190" role="parent" scope="local" type="concept">
+				<linktext>Wipers and washers</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

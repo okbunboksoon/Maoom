@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00390">
+	<title>EV button</title>
+	<shortdesc>Your vehicle is equipped with 2 different positions.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>EV button</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02742">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e02743">
+								<figgroup>
+									<image href="../../images/OOV045001.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02744"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e02745">
+			<title>OFF</title>
+			<p>Press the <term>EV</term> button with the vehicle in P (Park) to turn off the vehicle.</p>
+			<note type="caution" id="e02746">
+				<ul id="e02747">
+					<li>
+						<p>In an emergency situation while the vehicle is in motion, press the <term>EV</term> button for more than approximately 2 seconds or 3 times repeatedly within 3 seconds to turn the vehicle off.</p>
+					</li>
+					<li>
+						<p>If the vehicle is still moving, press <term>EV</term> button when the vehicle is over 5 km/h (3 mph) to restart the vehicle.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e02748">
+				<p>You are able to turn off the vehicle only when the vehicle is not in motion.</p>
+			</note>
+		</section>
+		<section id="e02749">
+			<title>POWER ON</title>
+			<p>Press the <term>EV</term> button once without depressing the brake pedal.</p>
+			<note type="note" id="e02750">
+				<ul id="e02751">
+					<li>
+						<p>When 14 minutes have passed since the vehicle is in <term>POWER ON</term> position, a pop-up appears on the infotainment screen. To continue using vehicle power, select <term>Start Utility Mode</term> on the infotainment screen.</p>
+						<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02752">
+							<tgroup cols="2" colsep="0" rowsep="0">
+								<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+								<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+								<tbody>
+									<row rowsep="0">
+										<entry colname="col1">
+											<fig id="e02753">
+												<figgroup>
+													<image href="../../images/N_CT25Z158_E.eps" align="center" height="1.573in" placement="break" id="e02754"/>
+												</figgroup>
+											</fig>
+										</entry>
+										<entry colname="col2">
+											<ol outputclass="callout" id="e02755">
+												<li>
+													<p> <term>Start Utility Mode</term> </p>
+												</li>
+											</ol>
+										</entry>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+					</li>
+					<li>
+						<p>If the <term translate="no">POWER ON</term> position is maintained for approximately 15 minutes without switching to utility mode, the vehicle will automatically turn off.</p>
+					</li>
+					<li>
+						<p>When charging the high-voltage battery or using the outdoor V2L feature while the vehicle is in <term translate="no">POWER ON</term> position, the vehicle will maintain <term translate="no">POWER ON</term> position continuously.</p>
+					</li>
+					<li>
+						<p>The infotainment system may be updated. For more details, refer to <xref href="t00378.dita#t00378"/>.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e02756">
+			<title>DRIVE READY</title>
+			<p>When the vehicle is in <term>OFF</term> or <term>POWER ON</term> position, press the <term>EV</term> button while depressing the brake pedal in P (Park).</p>
+			<note type="warning" id="e02757">
+				<ul id="e02758">
+					<li>
+						<p>Never press the <term>EV</term> button while the vehicle is in motion. This would result in loss of directional control and braking function, which could cause an accident.</p>
+					</li>
+					<li>
+						<p>Before leaving the driver’s seat, always make sure the vehicle is in P (Park), set the parking brake fully and turn the vehicle off. Unexpected and sudden vehicle movement may occur if these precautions are not taken.</p>
+					</li>
+					<li>
+						<p>Never reach for the <term>EV</term> button or any other controls through the steering wheel while the vehicle is in motion. The presence of your hand or arm in the area could cause loss of vehicle control, an accident and serious bodily injury or death.</p>
+					</li>
+					<li>
+						<p>Do not place any movable objects around the driver’s seat as they may move while driving, interfere with the driver and lead to an accident.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e02759">
+				<p>If you press the <term>EV</term> button without depressing the brake pedal, the vehicle will not start and the <term>EV</term> button changes as follows: 
+					<ul id="e02760">
+						<li>
+							<p> <menucascade><uicontrol>OFF</uicontrol><uicontrol>POWER ON</uicontrol><uicontrol>OFF</uicontrol></menucascade> </p>
+						</li>
+					</ul> 
+				</p>
+			</note>
+		</section>
+		<section importance="optional" id="e02761">
+			<title>Anti-theft steering column lock</title>
+			<ul id="e02762">
+				<li>
+					<p>The steering wheel locks in the <term>OFF</term> position to help prevent theft.</p>
+				</li>
+				<li>
+					<p>The steering wheel locks when the driver’s door is opened.</p>
+				</li>
+				<li>
+					<p>If the steering wheel does not lock properly when the driver’s door is opened, a warning chime will sound. Attempt to lock the steering wheel again.</p>
+				</li>
+				<li>
+					<p>If the issue persists, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>If the vehicle is in the <term>OFF</term> position and the driver’s door is already open, the steering wheel will not lock and a warning chime will sound. In this case, close the door to lock the steering wheel and stop the chime.</p>
+				</li>
+			</ul>
+			<note type="note" id="e02763">
+				<p>If the steering wheel doesn't unlock properly, the <term>EV</term> button will not work. Press the <term>EV</term> button while turning the steering wheel right and left to release the tension.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

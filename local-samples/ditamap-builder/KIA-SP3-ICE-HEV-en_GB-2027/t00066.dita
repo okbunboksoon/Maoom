@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legalnotice_europe-general_gen-ind_2023_20231004_12217" base="top" id="t00066">
+	<title id="e00357">How to delete Digital Key (Smartphone) </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>how to delete digital key 2 (smartphone)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Turn the vehicle on with the smart key and make sure to keep the smart key inside the vehicle during the digital key (smartphone) deleting process.</p>
+		<ol>
+			<li>
+				<p>Delete All digital Key (Smartphone)</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image href="images/OCL4M035126N.jpg" scale="95" align="center" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<ol outputclass="callout">
+										<li>
+											<p><uicontrol>Digital Keys</uicontrol></p>
+										</li>
+										<li>
+											<p><uicontrol>Smartphone key</uicontrol></p>
+										</li>
+										<li>
+											<p><uicontrol>Delete all</uicontrol></p>
+										</li>
+									</ol>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>With the vehicle on, touch <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Digital Keys</uicontrol><uicontrol>Smartphone key</uicontrol><uicontrol>Delete all</uicontrol></menucascade> on the infotainment system.</p>
+				<ul>
+					<li>
+						<p>The key of owner and the shared user will be deleted.</p>
+					</li>
+					<li>
+						<p>If there is no registered key, the menu cannot be selected.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Delete the owner’s Digital Key</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image href="images/OCL4M035127N.jpg" scale="95" align="center" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<ol outputclass="callout">
+										<li>
+											<p><uicontrol>Digital Keys</uicontrol></p>
+										</li>
+										<li>
+											<p><uicontrol>Smartphone key</uicontrol></p>
+										</li>
+										<li>
+											<p><uicontrol>My Smartphone key</uicontrol></p>
+										</li>
+										<li>
+											<p><uicontrol>Delete</uicontrol></p>
+										</li>
+									</ol>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>If you want to change only the owner’s smartphone key while keeping the shared key, delete “Owner’s smartphone key” not Delete All and then Save again.</p>
+				<p>With the vehicle on, touch <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Digital Keys</uicontrol><uicontrol>Smartphone Key</uicontrol><uicontrol>My Smartphone key</uicontrol><uicontrol>Delete</uicontrol></menucascade> on the infotainment system.</p>
+				<ul>
+					<li>
+						<p>After deleting My Smartphone key, the new smartphone can be registered.</p>
+					</li>
+				</ul>
+			</li>
+		</ol>
+		<section>
+			<title>Deleting the shared keys</title>
+			<p>Select <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Digital Keys</uicontrol><uicontrol>Smartphone key</uicontrol><uicontrol>Shared Keys</uicontrol><uicontrol>[Group]</uicontrol><uicontrol>Delete All</uicontrol></menucascade> on the infotainment system screen.</p>
+			<p>Those digital keys other than the My Smartphone Key (smartphone) are classified by [Group] and displayed as ‘Shared Key.’</p>
+			<p>If the account logged in the smartphone is the same, it is displayed as the same [Group]. You can delete the Shared Key by the unit of [Group].</p>
+			<note type="note">
+				<ul>
+					<li>
+						<p>If digital key (smartphone) is deleted, the digital key saved in the smartphone is also deleted.</p>
+					</li>
+					<li>
+						<p>If digital key (smartphone) is deleted on the smartphone, the digital key saved in the vehicle is also deleted.</p>
+					</li>
+					<li>
+						<p>Digital key (smartphone) is not deleted even if Kia App or Kia Connect app is deleted on the smartphone.</p>
+					</li>
+					<li>
+						<p>Digital key can be activated or deactivated within the Kia App or Kia Connect app provided from the smartphone manufacturer.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="tip">
+				<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00063.dita#t00063" role="parent" scope="local" type="concept">
+				<linktext>Digital Key 2 (Smartphone)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

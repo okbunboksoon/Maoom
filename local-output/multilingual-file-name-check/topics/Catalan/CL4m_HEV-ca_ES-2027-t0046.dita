@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0046">
+	<title>So verwenden Sie den Digital-Key 2 (Smartphone)</title>
+	<conbody>
+		<section>
+			<title>Smartphone-Touch-Steuerung</title>
+			<p>Der Fahrer kann die Tür ver- und entriegeln, indem er das Smartphone am Türgriff berührt, ohne die Kia App oder die KIA Connect-App zu aktivieren. Außerdem kann das Fahrzeug gestartet werden, indem das Smartphone auf das fahrzeuginterne Authentifizierungspad (drahtloses Ladepad) gelegt wird.</p>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M035021L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e00123">
+									<li>
+										<p>Authentifizierungspad am Türgriff</p>
+									</li>
+									<li>
+										<p>NFC-Antenne auf der Rückseite des Smartphones (Die Position der Antenne hängt vom Modell ab.)</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<note type="note">
+				<p>Sie können die Position der NFC-Antenne auf Ihrem Samsung Smartphone in der <menucascade><uicontrol>Einstellungen-App</uicontrol><uicontrol>Verbindungen</uicontrol><uicontrol>NFC und kontaktlose Zahlungen</uicontrol></menucascade> überprüfen. Die NFC-Antenne des Apple iPhone befindet sich oben auf der Rückseite des Geräts, die NFC-Antenne der Apple Watch befindet sich in der Mitte des Bildschirms. Vergewissern Sie sich, dass die NFC-Antenne des Smartphones das Authentifizierungspad im Fahrzeug (drahtloses Ladepad) berührt.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M035430L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Da die Position der NFC-Antenne des Smartphones jedoch von Smartphone-Modell zu Smartphone-Modell unterschiedlich sein kann, wenden Sie sich für weitere Informationen an den Smartphone-Hersteller.</p>
+			</note>
+		</section>
+		<section>
+			<title>Ver-/Entriegeln der Türen</title>
+			<ul>
+				<li>
+					<p>Berührt der Fahrer die NFC-Antenne seines Smartphones länger als 2 Sekunden mit dem Authentifizierungspad am Türgriff des Fahrers oder Beifahrers, wird die Tür ver- oder entriegelt.</p>
+				</li>
+				<li>
+					<p>Nach dem Entriegeln der Türen werden diese nach 30 Sekunden automatisch wieder verriegelt, es sei denn, eine Tür wird geöffnet.</p>
+				</li>
+				<li>
+					<p>Wenn der Digital-Key des Smartphones nicht funktioniert, entfernen Sie das Smartphone mehr als 10 cm (4 in.) vom Authentifizierungspad des Türgriffs und versuchen Sie es erneut.</p>
+				</li>
+			</ul>
+			<sectiondiv><ph>Für Smartphones ohne UWB-Unterstützung:</ph>
+				<p>Um die Türen mit einem registrierten Smartphone zu ver- oder entriegeln, berühren Sie die NFC-Antenne auf der Rückseite des Smartphones etwa 2 Sekunden lang mit dem Authentifizierungspad des Außentürgriffs von Fahrer oder Beifahrer.</p>
+			</sectiondiv>
+			<sectiondiv><ph>Für Smartphones mit UWB-Unterstützung:</ph>
+				<ul>
+					<li>
+						<p>Um die Türen zu ver- oder entriegeln, halten Sie Ihr Smartphone in der Hand und tippen Sie auf den Sensor zum Ver-/Entriegeln des Türgriffs (eingekerbter Bereich) am Außentürgriff.</p>
+					</li>
+					<li>
+						<p>Wählen Sie Beim Annähern des Fahrers im Infotainment-System. Die Türen werden automatisch entriegelt, wenn Sie sich der Fahrertür nähern, während Sie das Smartphone bei sich tragen. Wenn Sie sich der Beifahrertür nähern, berühren Sie den Türgriffknopf, um die Türen zu entriegeln.</p>
+					</li>
+				</ul>
+				<note type="warning">
+					<ul>
+						<li>
+							<p>Wenn Sie das Smartphone in einer Gesäßtasche oder einem Beutel verstauen, kann es durch ein Körperteil blockiert sein, was die Bluetooth-Verbindung einschränkt und zu einer Verzögerung der Bedienung beim Ver-/Entriegeln der Türen oder beim Starten des Fahrzeugs führt.</p>
+						</li>
+						<li>
+							<p>Wenn eine Tönungsfolie mit metallischen Bestandteilen angebracht wird, funktioniert der digitale Schlüssel möglicherweise nicht einwandfrei.</p>
+						</li>
+					</ul>
+				</note>
+				<note deliveryTarget="full_only" type="note">
+					<p>Beachten Sie, dass bei einem der folgenden Fälle die Tür entriegelt wird und ein Signalton ertönt, wenn Sie den digitalen Schlüssel 2 verwenden:</p>
+					<ul>
+						<li>
+							<p>Wenn sich der Smart-Key sich im Fahrzeug befindet</p>
+						</li>
+						<li>
+							<p>Der Zündschalter oder der <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) befindet sich in der Position <term translate="no">ACC</term> oder <term translate="no">ON</term>.</p>
+						</li>
+						<li>
+							<p>Versuch, die Tür zu verriegeln, wenn mehr als eine Tür oder Motorhaube, Kofferraum/Heckklappe geöffnet ist</p>
+						</li>
+						<li>
+							<p>Wenn eine Tönungsfolie, die metallische Substanzen enthält, auf den digitalen Schlüssel aufgebracht wird, funktioniert er möglicherweise nicht einwandfrei.</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Fahrzeug starten</title>
+			<p>Legen Sie Ihr registriertes Smartphone auf das Authentifizierungspad im Fahrzeug (kabelloses Ladepad), treten Sie das Bremspedal und starten Sie das Fahrzeug.</p>
+			<ul>
+				<li>
+					<p>Sobald das Fahrzeug gestartet ist, können Sie das Smartphone vom Pad entfernen.</p>
+				</li>
+			</ul>
+			<sectiondiv><ph>Für Smartphones ohne UWB-Unterstützung:</ph>
+				<ul>
+					<li>
+						<p>Legen Sie die NFC-Antenne des Smartphones auf die Mitte des Innenraum-Authentifizierungspads (kabelloses Ladepad), drücken Sie das Bremspedal und dann die Starttaste, um das Fahrzeug zu starten.</p>
+					</li>
+					<li>
+						<p>Nach dem Starten des Fahrzeugs können Sie das Smartphone vom Innenraum-Authentifizierungspad (kabelloses Ladepad) abnehmen.</p>
+					</li>
+					<li>
+						<p>Bei manchen Smartphones kann es vorkommen, dass die NFC-Kommunikation aufgrund der inneren Struktur nicht reibungslos funktioniert. Bewegen Sie in solchen Fällen das Smartphone nach rechts oder links vom Innenraum-Authentifizierungspad (kabelloses Ladepad), um es zu bedienen.</p>
+					</li>
+					<li>
+						<p>Die NFC-Antenne des Apple iPhone befindet sich oben auf der Rückseite des Geräts, die NFC-Antenne der Apple Watch befindet sich in der Mitte des Bildschirms. Vergewissern Sie sich, dass die NFC-Antenne des Smartphones das Authentifizierungspad im Fahrzeug (drahtloses Ladepad) berührt. Da die Position der NFC-Antenne des Smartphones jedoch von Smartphone-Modell zu Smartphone-Modell unterschiedlich sein kann, wenden Sie sich für weitere Informationen an den Smartphone-Hersteller.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>Für Smartphones mit UWB-Unterstützung:</ph>
+				<ul>
+					<li>
+						<p>Führen Sie das Smartphone im Fahrzeug mit sich, betätigen Sie das Bremspedal und drücken Sie dann die Starttaste, um das Fahrzeug zu starten.</p>
+					</li>
+					<li>
+						<p>Um das Fahrzeug aus der Ferne zu starten, verwenden Sie eine vom Smartphone-Hersteller bereitgestellte App, um das Fahrzeug mit der Türverriegelungstaste zu verriegeln, und drücken Sie dann innerhalb von 4 Sekunden die Fernstarttaste. Das Fahrzeug wird gestartet und die Warnblinkanlage blinkt.</p>
+					</li>
+					<li>
+						<p>Um das Fahrzeug auszuschalten, drücken Sie erneut die Fernstarttaste.</p>
+					</li>
+				</ul>
+				<note type="warning">
+					<p>Das Fahrzeug kann gestartet werden, wenn das registrierte Smartphone auf das fahrzeuginterne Authentifizierungspad (kabelloses Ladepad) gelegt wird. Lassen Sie daher keine Kinder oder Personen, die das System nicht kennen, unbeaufsichtigt, da dies zu schweren oder tödlichen Verletzungen führen könnte. Sie sollten das registrierte Smartphone stets bei sich haben, um einen Fahrzeugdiebstahl zu verhindern, wenn Sie das Fahrzeug verlassen.</p>
+				</note>
+				<note deliveryTarget="full_only" type="note">
+					<p>Die Betriebszeit des digitalen Schlüssels 2 für gemeinsame Nutzer kann sich bei der erstmaligen Verwendung verlängern.</p>
+					<p>Legen Sie Ihren digitalen Schlüssel 2 (Smartphone) auf das Authentifizierungspad im Türaußengriff, bis die Ver-/Entriegelungsfunktion der Fahrzeugtür funktioniert.</p>
+					<p>Wenn das innere Authentifizierungspad zum ersten Mal verwendet wird, funktioniert die Startfunktion des Fahrzeugs möglicherweise nicht.</p>
+				</note>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Bedienung Kofferraum/Heckklappe</title>
+			<sectiondiv><ph>Für Smartphones mit UWB-Unterstützung:</ph>
+				<ul>
+					<li>
+						<p>Wenn das Fahrzeug verriegelt ist, drücken Sie die Taste zum Öffnen des Kofferraums/der Heckklappe, während Sie ein registriertes Smartphone bei sich tragen, um die Heckklappe zu öffnen.</p>
+					</li>
+					<li>
+						<p>Wenn die Funktion Intelligente Heckklappe ausgewählt ist, öffnet sich der Kofferraum automatisch, wenn Sie sich länger als 3 Sekunden im Erfassungsbereich hinter dem Kofferraum aufhalten und dabei ein mit dem Digital Key 2 registriertes Smartphone bei sich tragen.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Überprüfen Sie beim Schließen der Heckklappe, dass sich das registrierte Smartphone im Fahrzeug befindet. Wenn Sie Ihr Smartphone im Fahrzeuginneren liegen lassen, werden die Türen möglicherweise nicht entriegelt, wenn Sie den Kofferraum/die Heckklappe bei verriegelten Türen schließen oder wenn Sie den Kofferraum/die Heckklappe mit der Taste zum Schließen des Kofferraums/der Heckklappe schließen.</p>
+					</li>
+					<li>
+						<p>Das Fahrzeug kann von jeder beliebigen Person gestartet werden, wenn sich das registrierte Smartphone im Fahrzeuginneren befindet. Lassen Sie daher Kinder oder Personen, die mit dem Fahrzeugsystem nicht vertraut sind, nicht allein im Fahrzeug zurück, da dies zu schweren Verletzungen oder zum Tod führen kann. Bewahren Sie außerdem das mit Digital Key 2 registrierte Smartphone immer bei sich auf, um Diebstahl zu verhindern, wenn Sie das Fahrzeug verlassen.</p>
+					</li>
+				</ul>
+			</note>
+			<p>Bei Smartphones mit UWB-Unterstützung ist Digital Key 2 nur verfügbar, wenn das Fahrzeug und das Smartphone über Bluetooth verbunden sind.</p>
+			<ul>
+				<li>
+					<p>Die Reichweite einer Bluetooth-Verbindung kann je nach Umgebung variieren.</p>
+				</li>
+				<li>
+					<p>Die Bluetooth-Verbindung kann abhängig von Tönungsfolien an den Fahrzeugfenstern beeinträchtigt sein.</p>
+				</li>
+				<li>
+					<p>Wenn Sie das Smartphone in einer Gesäßtasche oder einem Beutel mit sich führen, kann das Signal blockiert werden, was die Bluetooth-Verbindung beeinträchtigen und zu Verzögerungen beim Verriegeln/Entriegeln der Türen oder beim Starten des Fahrzeugs führen kann.</p>
+				</li>
+			</ul>
+			<p>Für Smartphones mit UWB-Unterstützung ist der Digital Key 2 nur für eine begrenzte Zeit verfügbar, um die Fahrzeug- und Smartphone-Batterien zu optimieren.</p>
+			<p>Sie können die Verbindung zwischen dem Fahrzeug und dem Smartphone in den Einstellungen des Smartphones oder in einer vom Smartphone-Hersteller bereitgestellten App überprüfen.</p>
+			<note type="warning">
+				<p>Das Fahrzeug kann gestartet werden, wenn das registrierte Smartphone auf das fahrzeuginterne Authentifizierungspad (kabelloses Ladepad) gelegt wird. Lassen Sie daher keine Kinder oder Personen, die das System nicht kennen, unbeaufsichtigt, da dies zu schweren oder tödlichen Verletzungen führen könnte. Sie sollten das registrierte Smartphone stets bei sich haben, um einen Fahrzeugdiebstahl zu verhindern, wenn Sie das Fahrzeug verlassen.</p>
+			</note>
+			<note deliveryTarget="full_only" type="note">
+				<p>Die Betriebszeit des digitalen Schlüssels 2 für gemeinsame Nutzer kann sich bei der erstmaligen Verwendung verlängern.</p>
+				<p>Legen Sie Ihren digitalen Schlüssel 2 (Smartphone) auf das Authentifizierungspad im Türaußengriff, bis die Ver-/Entriegelungsfunktion der Fahrzeugtür funktioniert.</p>
+				<p>Wenn das innere Authentifizierungspad zum ersten Mal verwendet wird, funktioniert die Startfunktion des Fahrzeugs möglicherweise nicht.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0044.dita#CL4m_HEV-ca_ES-2027-t0044" role="parent" scope="local" type="concept">
+				<linktext>Digital-Key 2 (Smartphone)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

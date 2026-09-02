@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Top" id="t00820">
+	<title>Driver’s side fuse panel</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05158">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05159">
+								<figgroup>
+									<image href="../../images/OOV075012.eps" align="center" height="1.740in" placement="break" id="e05160"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<fig>
+			<figgroup>
+				<image href="../../images/OOV075035.eps" align="center" placement="break"/>
+			</figgroup>
+		</fig>
+		<fig id="e05161">
+			<figgroup>
+				<image href="../../images/OOV075046L.eps" align="center" placement="break" id="e05162"/>
+			</figgroup>
+		</fig>
+		<section base="Top">
+			<title>PDC Junction Block</title>
+			<table frame="all" colsep="1" rowsep="1" outputclass="formatc">
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="1.18*"/>
+					<colspec colnum="2" colname="2" colwidth="1*"/>
+					<colspec colnum="3" colname="3" colwidth="1.12*"/>
+					<colspec colnum="4" colname="4" colwidth="3.12*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1" align="center" valign="middle">
+								<p>Name</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Layout</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>Rating</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>Circuit Protected</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>CHARGER</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS01</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>PE_BOX (Charger Door Lock/Unlock Relay)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>COOLING MODULE3</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS02</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>Refrigerant System Driver</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>A/C2</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS03</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>7.5A</p>
+							</entry>
+							<entry colname="4">
+								<p>DATC (Dual Automatic Temperature Control), Front Heater Control</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>BRAKE SWITCH</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS04</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>7.5A</p>
+							</entry>
+							<entry colname="4">
+								<p>BDC (Body Domain Controller: ECU), Stop Lamp Switch</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MEMORY1</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS05</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>CCNC Keyboard, USB Extension, ADAS Unit (Parking), ADP (Acoustic Design Processor), Rear Corner Radar LH/RH, Console Extension</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>E-SHIFTER2</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS06</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>7.5A</p>
+							</entry>
+							<entry colname="4">
+								<p>SBW (Shift-by-wire)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MDPS2</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS07</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>R-MDPS</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>IG3 8</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS08</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>Front Door Extension (DRIV/PASS), Rear Inverter, Rear EOP (Electric Oil Pump)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MODULE8</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS09</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>SAL (Smart Ambient Light)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>E-SHIFTER1</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS10</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>SBW (Shift-by-wire)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>SPARE</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS11</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>CCU</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS12</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>CCU (Central Communication Unit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MEMORY2</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS13</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>7.5A</p>
+							</entry>
+							<entry colname="4">
+								<p>ETCS (Electronic Toll Collection System), Cluster, DATC (Dual Automatic Temperature Control), Front Heater Control, Head-Up Display, BDC (Body Domain Controller: ECU), Built In Cam</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>BDC2</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS14</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>7.5A</p>
+							</entry>
+							<entry colname="4">
+								<p>BDC (Body Domain Controller: ECU)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MODULE2</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS15</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>CCU (Central Communication Unit), DCU (Data Connectivity Unit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>IG3 7</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS16</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>Console Extension, V2L_SIG (Vehicle to Load signal), Rear Door Extension (LH/RH), PTC (Positive Temperature Coefficient) Heater, DATC (Dual Automatic Temperature Control), Front Heater Control, PM_SNSR, INCAR SNSR, CCNC (Connected Car Navigation Cockpit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>USB CHARGER2</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS17</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>15A</p>
+							</entry>
+							<entry colname="4">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>Wireless DCU</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS18</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>7.5A</p>
+							</entry>
+							<entry colname="4">
+								<p>DCU (Data Connectivity Unit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>RESERVE</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS19</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>15A</p>
+							</entry>
+							<entry colname="4">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>CHILD LOCK</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS20</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>15A</p>
+							</entry>
+							<entry colname="4">
+								<p>Rear LH/RH Door Power Child Lock/Unlock Motor</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MULTIMEDIA</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS21</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>25A</p>
+							</entry>
+							<entry colname="4">
+								<p>CCNC (Connected Car Navigation Cockpit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MODULE5</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS22</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>CDU (Climate Display Unit), Crash Pad (Head Lamp Lever Device Power), ECM (Electronic Chromic Mirror), CCNC (Connected Car Navigation Cockpit), ICC_UNIT (In Cabin Cam_UNIT), Built In Cam, SAL (Smart Ambient Light), ICMU (IN CABIN MONITORING UNIT), Front Seat Extension (DRIV/PASS), AMP (Amplifier), Console Extension, ADP (Acoustic Design Processor), Head Lamp (LH/RH)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>CLUSTER</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS23</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>7.5A</p>
+							</entry>
+							<entry colname="4">
+								<p>Cluster, Head-Up Display</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>IG3 6</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS24</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>CCU (Central Communication Unit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>RESERVE</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS25</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>20A</p>
+							</entry>
+							<entry colname="4">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>ECS</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS26</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>15A</p>
+							</entry>
+							<entry colname="4">
+								<p>ECS (Electronic Control Suspension)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MODULE7</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS27</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>7.5A</p>
+							</entry>
+							<entry colname="4">
+								<p>Console Extension</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>TAILGATE OPEN</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS28</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>TAILGATE LATCH</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>S/HEATER RR</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS29</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>20A</p>
+							</entry>
+							<entry colname="4">
+								<p>Rear Seat LH</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MODULE3</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS30</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>M_F_SW (WASHER)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>A/BAG IND</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS31</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>7.5A</p>
+							</entry>
+							<entry colname="4">
+								<p>OHCL (Over Head Console Lamp)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MODULE10</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS32</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>BDC (Body Domain Controller), CCNC (Connected Car Navigation Cockpit), CCU (Central Communication Unit), CCNC Keyboard, DCU (Data Connectivity Unit), Built In Cam, AMP (Amplifier), ADP (Acoustic Design Processor), ADAS Unit (Parking), PE_BOX (Power Outlet Relay)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>P/SEAT PASS</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS33</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>30A</p>
+							</entry>
+							<entry colname="4">
+								<p>Front Seat Extenstion (PASS)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>S/HEATER FRT</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS34</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>25A</p>
+							</entry>
+							<entry colname="4">
+								<p>Front Seat Extenstion (DRIV)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>WASHER</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS35</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>15A</p>
+							</entry>
+							<entry colname="4">
+								<p>M_F_SW (WASHER)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>AIR BAG2</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS36</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>ISCM (INTEGRATED SAFETY CONTROL MODULE)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MODULE9</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS37</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>ICC_UNIT (In Cabin Cam_UNIT), OHCL (Over Head Console Lamp), Personal Lamp, Room Lamp, Sun Visor SW, Front Seat Extension (DRIV/PASS), PTGM (Power Tail Gate Module), ICMU (IN CABIN MONITORING UNIT), Console Extension, Front Door Extension, Front Door Outside Handle (DRIV/PASS)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>BDC1</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS38</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>BDC (Body Domain Controller)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>RESERVE</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS39</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>7.5A</p>
+							</entry>
+							<entry colname="4">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>AIR BAG1</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS40</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>ISCM (INTEGRATED SAFETY CONTROL MODULE), ODS (Occupant Detection System)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>USB CHARGER1</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS41</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>15A</p>
+							</entry>
+							<entry colname="4">
+								<p>Front Seat Extension (DRIV/PASS), USB Extension</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>RESERVE</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS42</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>SUNROOF2</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS43</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>20A</p>
+							</entry>
+							<entry colname="4">
+								<p>Sunroof Motor</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>P/WINDOW LH</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS44</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>25A</p>
+							</entry>
+							<entry colname="4">
+								<p>Power Window SW_Manual-REAR LH, Power Window Safety ECU-REAR LH, Rear Door Extention (LH), Power Window Safety ECU-DRIV (LHD), Front Door Extension-PASS (RHD), Power Window Safety ECU-PASS (RHD)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MODULE6</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS45</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>7.5A</p>
+							</entry>
+							<entry colname="4">
+								<p>BDC (Body Domain Controller)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>INVERTER2</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS46</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>Rear Inverter</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>SBCM PASS</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS47</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>20A</p>
+							</entry>
+							<entry colname="4">
+								<p>Passenger Side Body zone Control Module</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>AMP</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS48</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>25A</p>
+							</entry>
+							<entry colname="4">
+								<p>AMP (Amplifier)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>RESERVE</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS49</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>20A</p>
+							</entry>
+							<entry colname="4">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>MODULE4</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS50</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>ADAS Driving ECU, Front View Camera, ECS (Electronic Control Suspension), Rear Corner Radar (LH/RH), ADAS Unit (Parking), Rear Inverter, Front Corner Radar, Front Radar</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>P/SEAT DRV</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS51</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>30A</p>
+							</entry>
+							<entry colname="4">
+								<p>Front Seat Extension (DRIV)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>P/WINDOW RH</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS52</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>25A</p>
+							</entry>
+							<entry colname="4">
+								<p>Power Window SW_Manual-REAR RH, Power Window Safety ECU-REAR RH, Rear Door Extention (RH), Power Window Safety ECU-DRIV (RHD), Front Door Extension-PASS (LHD), Power Window Safety ECU-PASS (LHD)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>BMS</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS53</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>BMS (Battery Management System)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>DOOR LOCK</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS54</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>20A</p>
+							</entry>
+							<entry colname="4">
+								<p>Driver/Passenger Door Latch Motor, Rear Door Latch Motor</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>SBCM DRV</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS55</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>20A</p>
+							</entry>
+							<entry colname="4">
+								<p>Driver Side Body zone Control Module</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>SPARE</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS56</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>10A</p>
+							</entry>
+							<entry colname="4">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>START</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS57</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>7.5A</p>
+							</entry>
+							<entry colname="4">
+								<p>VPC (Vehicle Platform Controller), BDC (Body Domain Controller)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>POWER TAILGATE</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS58</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>30A</p>
+							</entry>
+							<entry colname="4">
+								<p>Power Tailgate Motor</p>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry colname="1" valign="middle">
+								<p>SUNROOF1</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>FS59</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>20A</p>
+							</entry>
+							<entry colname="4">
+								<p>Sunroof Motor</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+</concept>

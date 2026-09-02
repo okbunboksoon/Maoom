@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00005">
+	<title>Battery information</title>
+	<conbody>
+		<p>The vehicle is composed of a high voltage battery that drives the motor, air conditioner, and charges an auxiliary battery (12 V) that drives all other 12 V systems.</p>
+		<p>The auxiliary battery is automatically charged when the vehicle is in <term translate="no">POWER ON</term>, <term>DRIVE READY</term> mode or the high voltage battery is being charged.</p>
+		<note type="note" id="e00016">
+			<p importance="high">What does regenerative braking do?</p>
+			<p>When decelerating, the regenerative braking system uses the electric motor to recapture kinetic energy and convert it to electrical energy, charging the high voltage battery.</p>
+		</note>
+	</conbody>
+</concept>

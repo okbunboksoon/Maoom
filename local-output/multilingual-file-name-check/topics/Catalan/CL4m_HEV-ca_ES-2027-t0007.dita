@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" otherprops="legal_eu_std_042_01" id="CL4m_HEV-ca_ES-2027-t0007">
+	<title>Fahrzeugdatenerfassung und Ereignisdatenrekorder (EDR)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Fahrzeugdatenerfassung und Ereignisdatenrekorder</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Dieses Fahrzeug ist mit einem Ereignisdatenrekorder (EDR) ausgestattet. Der Hauptzweck eines EDR besteht darin, bei bestimmten Unfallsituationen oder bei Beinahe-Unfall-ähnlichen Situationen, z. B. beim Auslösen eines Airbags oder beim Aufprall auf ein Straßenhindernis, Daten aufzuzeichnen, die dabei helfen, die Leistung der Systeme eines Fahrzeugs zu verstehen. Der EDR ist dafür ausgelegt, Daten zur Fahrzeugdynamik und zu den Sicherheitssystemen für einen kurzen Zeitraum aufzuzeichnen, in der Regel 30 Sekunden oder weniger. Der EDR in diesem Fahrzeug ist dafür ausgelegt, Daten wie die folgenden aufzuzeichnen:</p>
+		<ul>
+			<li>
+				<p>Wie die verschiedenen Systeme in Ihrem Fahrzeug funktionierten;</p>
+			</li>
+			<li>
+				<p>Ob die Sicherheitsgurte von Fahrer und Beifahrer angelegt waren;</p>
+			</li>
+			<li>
+				<p>Wie weit (wenn überhaupt) der Fahrer das Gas- und/oder Bremspedal betätigt hat; und,</p>
+			</li>
+			<li>
+				<p>Wie schnell das Fahrzeug unterwegs war.</p>
+			</li>
+		</ul>
+		<p>Diese Daten können zu einem besseren Verständnis der Umstände beitragen, unter denen es zu Unfällen und Verletzungen kommt. HINWEIS: EDR-Daten werden von Ihrem Fahrzeug nur aufgezeichnet, wenn es zu einer nicht trivialen Unfallsituation kommt. Unter normalen Fahrbedingungen werden keine Daten vom EDR aufgezeichnet und es werden keine personenbezogenen Daten (z. B. Name, Geschlecht, Alter und Unfallort) gespeichert. Andere Parteien, wie z. B. die Strafverfolgungsbehörden, könnten jedoch die EDR-Daten mit der Art von personenbezogenen Daten kombinieren, die routinemäßig während einer Unfalluntersuchung erfasst werden.</p>
+		<p>Um die von einem EDR aufgezeichneten Daten auszulesen, ist eine spezielle Ausrüstung erforderlich, und es wird Zugang zum Fahrzeug oder zum EDR benötigt. Neben dem Fahrzeughersteller können auch andere Parteien, wie z. B. die Strafverfolgungsbehörden, die über die entsprechende Ausrüstung verfügen, die Informationen lesen, wenn sie Zugang zum Fahrzeug oder zum EDR haben.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0002-CH02.dita#CL4m_HEV-ca_ES-2027-t0002-CH02" role="parent" scope="local" type="concept">
+				<linktext>Einleitung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

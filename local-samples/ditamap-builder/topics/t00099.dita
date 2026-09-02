@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00099">
+	<title>Posture assist</title>
+	<shortdesc/>
+	<conbody>
+		<p>After about an hour of driving with the driver’s seat belt fastened, the posture assist function automatically turns on and assists the driver’s posture by adjusting the driver’s seat’s hips and waist parts.</p>
+		<section deliveryTarget="except_print" id="e00704">
+			<title>Operation</title>
+			<ul id="e00705">
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Seats</uicontrol><uicontrol>Ergo-motion seat</uicontrol><uicontrol>Posture Assist</uicontrol></menucascade> from the infotainment system.</p>
+				</li>
+				<li>
+					<p>If you press the seat adjustment switch (cushion support, lumbar support, bolster adjustment device) while the posture assist function is operating, the operation stops.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00706">
+			<title>Operating conditions</title>
+			<p>If both conditions below are satisfied, the posture assist function automatically operates to assist the driver’s posture.</p>
+			<ul id="e00707">
+				<li>
+					<p>The vehicle is in ON position</p>
+				</li>
+				<li>
+					<p>The driver’s side seatbelt is fastened</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

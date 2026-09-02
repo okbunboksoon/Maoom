@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00400">
+	<title>i-Pedal</title>
+	<shortdesc>i-Pedal is controlled using the accelerator pedal. It allows vehicle speed to be controlled without using the paddle shifters manually.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>regenerative braking system 
+					<indexterm>i-Pedal</indexterm>
+				</indexterm>
+				<indexterm>i-Pedal</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02844">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e02845">
+								<figgroup>
+									<image href="../../images/OOV045012.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02846"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e02847">
+								<figgroup>
+									<image href="../../images/OOVQ015035.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02848"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e02849">
+			<li>
+				<p>Pull the left side (<image href="../../images/WKIA_291.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02850"/>) of the paddle shifter for more than approximately 1 second at any regenerative braking level.</p>
+				<p>i-Pedal will be activated and (<image href="../../images/WKIA_328.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02851"/>) indicator will appear on the instrument cluster.</p>
+			</li>
+			<li>
+				<p>Pull the left side (<image href="../../images/WKIA_291.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02852"/>) of the paddle shifter again for more than approximately 1 second while i-Pedal is activated.</p>
+				<p>i-Pedal will be deactivated and (<image href="../../images/WKIA_328.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02853"/>) indicator will turn off on the instrument cluster.</p>
+			</li>
+		</ul>
+		<note type="note" id="e02854">
+			<ul id="e02855">
+				<li>
+					<p>When i-Pedal is deactivated, (<image href="../../images/WKIA_328.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02856"/>) indicator on the instrument cluster will turn gray.</p>
+				</li>
+				<li>
+					<p>When i-Pedal is activated, (<image href="../../images/WKIA_328.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02857"/>) indicator on the instrument cluster will turn green.</p>
+				</li>
+				<li>
+					<p>After restarting while i-Pedal is available, the regenerative braking level is maintained and turns back on. If the regenerative braking level is at 0, it will turn on at level 1.</p>
+				</li>
+			</ul>
+		</note>
+		<section id="e02858">
+			<title>i-Pedal settings</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02859">
+				<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1" colsep="0">
+								<fig id="e02860">
+									<figgroup>
+										<image align="center" height="1.573in" href="../../images/N_CT25Z089_E.eps" placement="break" width="2.243in" id="e02861"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e02862">
+									<li>
+										<p> <term>Electric Vehicle</term> </p>
+									</li>
+									<li>
+										<p> <term>i-PEDAL</term> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul id="e02863">
+				<li>
+					<p>Select <menucascade><uicontrol>Electric Vehicle</uicontrol><uicontrol><image href="../../images/WKIA_307.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02864"/></uicontrol><uicontrol>i-PEDAL</uicontrol></menucascade> from the infotainment system whether to use i-Pedal while reversing.</p>
+				</li>
+				<li>
+					<p>If <term>Disable i-PEDAL when Reversing</term> is selected, i-Pedal will turn off when shifting into R (Reverse), and it will automatically turn on once the vehicle is shifted to D (Drive) and driving above 20 km/h (12 mph).</p>
+				</li>
+				<li>
+					<p>If <term>Disable i-PEDAL when Reversing</term> is not selected, i-Pedal will automatically turn on when shifting into D (Drive) or R (Reverse).</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e02865">
+			<title>Non-operating conditions</title>
+			<ul id="e02866">
+				<li>
+					<p>Steep uphill or downhill roads</p>
+				</li>
+				<li>
+					<p>The point where the slope ends</p>
+				</li>
+				<li>
+					<p>When repeatedly starting and stopping on a sloped road</p>
+				</li>
+				<li>
+					<p>When Downhill Brake Control (DBC) is active</p>
+				</li>
+			</ul>
+			<note type="warning" id="e02867">
+				<ul id="e02868">
+					<li>
+						<p>The vehicle may not stop depending on the vehicle and road conditions. Always check the road conditions and driving status ahead, and if necessary, use the brake pedal to manually control the speed.</p>
+					</li>
+					<li>
+						<p>Always keep an eye on the road ahead while driving with i-Pedal.</p>
+					</li>
+					<li>
+						<p>In case of an emergency stop, use the brake pedal to stop the vehicle.</p>
+					</li>
+					<li>
+						<p>Do not use i-Pedal on slippery surfaces, as it may lead to an accident.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution" id="e02869">
+				<p>The regenerative braking level cannot be changed using the paddle shifter in the following cases:</p>
+				<ul id="e02870">
+					<li>
+						<p>Both the left (<image href="../../images/WKIA_291.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02871"/>) and right (<image href="../../images/WKIA_292.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02872"/>) side of the paddle shifters are pulled simultaneously.</p>
+					</li>
+					<li>
+						<p>Smart Cruise Control (SCC) is active.</p>
+					</li>
+					<li>
+						<p>The vehicle’s high-voltage battery is fully charged (100%) and regenerative braking is continued.</p>
+					</li>
+					<li>
+						<p>When a trailer is attached.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

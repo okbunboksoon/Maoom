@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00742">
+	<title>12V battery reset button</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04475">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04476">
+								<image href="images/N_SP327_D07_002_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol id="e04477">
+			<li>
+				<p>Open the driver’s door using the emergency key.</p>
+				<p>For more details, refer to “Locking/unlocking with the mechanical key” on page 0-00.</p>
+			</li>
+			<li>
+				<p>Press the <uicontrol>12V BATT RESET</uicontrol> button to reconnect the battery.</p>
+			</li>
+			<li>
+				<p>After pressing the <uicontrol>12V BATT RESET</uicontrol> button, start the vehicle within 15 seconds.</p>
+			</li>
+			<li>
+				<p>With the vehicle started (<term translate="no">READY</term> indicator <term translate="no">ON</term>), keep the vehicle stopped or drive for approximately 30 minutes to fully recharge the battery.</p>
+			</li>
+		</ol>
+		<note type="caution" id="e04478">
+			<ul id="e04479">
+				<li>
+					<p>If the vehicle is not started immediately after pressing the <uicontrol>12V BATT RESET</uicontrol> button, the battery power will be automatically disconnected after a few seconds to prevent further discharge. If the battery disconnects before starting the vehicle, press the button again and start the vehicle immediately.</p>
+				</li>
+				<li>
+					<p>Repeated use of the <uicontrol>12V BATT RESET</uicontrol> button without keeping the vehicle in the <term translate="no">READY</term> state for at least 30 minutes may cause over-discharge of the battery, which could prevent the vehicle from starting.</p>
+					<p>If the battery becomes too discharged for the reset function to operate, jump-start the vehicle. For more details, refer to <xref/>.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00739.dita#t00739" role="parent" scope="local" type="concept">
+				<linktext>If the engine does not start</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00415">
+	<title>Electronic Stability Control (ESC)</title>
+	<shortdesc>The ESC is designed to stabilizes your vehicle when turning to mitigate against loss of control that could lead to an accident.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle safety system
+					<indexterm>electronic stability control (ESC)</indexterm>
+				</indexterm>
+				<indexterm>electronic stability control (ESC)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02807">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02808">
+								<image href="images/N_SP3i26_C09_022_1_I.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>ESC engages the brakes on individual wheels and intervenes with your vehicle management system to stabilize your vehicle.</p>
+		<p>ESC does not prevent accidents. Excessive speed in turns, abrupt maneuvers, and hydroplaning on wet surfaces can still result in serious accidents.</p>
+		<p>Only a safe and attentive driver can prevent accidents by avoiding maneuvers that could cause the vehicle to lose traction. Even with ESC installed, always follow all the normal precautions for driving, including driving at safe speeds for the road conditions.</p>
+		<note type="warning" id="e02809">
+			<p>For maximum protection, always wear your seat belt. No system, no matter how advanced, can compensate for all driver errors or driving conditions. Always drive responsibly.</p>
+		</note>
+		<p>The ESC is an electronic system that helps you maintain control of your vehicle under adverse conditions. It is not a substitute for safe driving practices. Factors such as speed, road conditions, and driver steering input can all affect whether ESC is effective in preventing a loss of control. It is still your responsibility to drive and turn at reasonable speeds and to leave a sufficient margin of safety.</p>
+		<p>When you engage the brake pedal under conditions that may ordinarily lock the wheels, you may hear a “tik-tik” sound from the brakes or feel a corresponding sensation in the brake pedal. This is normal and means your ESC is active.</p>
+		<note type="tip" id="e02810">
+			<p>You may hear a click sound in your compartment when your vehicle begins to move after you start it. This is normal and indicates that the vehicle is functioning properly.</p>
+		</note>
+		<section id="e02811">
+			<title>ESC operation</title>
+			<sectiondiv>The ESC operates under the following conditions: 
+				<ul id="e02812">
+					<li>
+						<p>When the vehicle is in <term translate="no">ON</term> position, ESC and <term translate="no">ESC OFF</term> indicator lights appear for approximately 3 seconds, and then the ESC system turns on.</p>
+					</li>
+					<li>
+						<p>After you turn your vehicle on, press the <term translate="no">ESC OFF</term> button for at least half a second to turn the <term translate="no">ESC OFF</term> (the <term translate="no">ESC OFF</term> indicator appears). To turn the ESC on, press the <term translate="no">ESC OFF</term> button again (the <term translate="no">ESC OFF</term> indicator light disappears).</p>
+					</li>
+					<li>
+						<p>When starting your vehicle, you may hear a slight ticking sound. This is the ESC performing an automatic system self-check and does not indicate a problem.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>When operating</ph>
+				<p><image href="images/WKIA_041.jpg" scale="15"/> When the ESC is operating, the ESC indicator light blinks.</p>
+				<p>When the ESC is operating properly, you can feel a slight pulsation in your vehicle. This is normal.</p>
+				<p>When moving out of mud or driving on a slippery road, engaging the accelerator pedal may not increase your vehicle’s engine speed (rpm).</p>
+			</sectiondiv>
+		</section>
+		<section id="e02813">
+			<title>ESC operation OFF</title>
+			<p><image href="images/WKIA_042.jpg" scale="15"/> Your vehicle has two <term translate="no">OFF</term> states for the ESC. If you stop your vehicle when ESC is <term translate="no">OFF</term>, ESC remains off. When you restart your vehicle, ESC automatically turns on.</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02814">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02815">
+									<image href="images/OCL4M035110N.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e02816">
+									<li>
+										<p><uicontrol>Traction Control disabled</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<sectiondiv><ph><term translate="no">ESC OFF</term> state 1</ph>
+				<p>To turn off the traction control function and only operate the ESC’s brake control function, press the <term translate="no">ESC OFF</term> button (<term translate="no">ESC OFF</term><image href="images/WKIA_042.jpg" scale="15"/>) for less than 3 seconds. The <term translate="no">ESC OFF</term> indicator light (<term translate="no">ESC OFF</term><image href="images/WKIA_042.jpg" scale="15"/>) appears.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02817">
+					<tgroup cols="2" colsep="0" rowsep="1">
+						<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e02818">
+										<image href="images/OCL4M035111N.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<ol outputclass="callout" id="e02819">
+										<li>
+											<p><uicontrol>Traction and Stability Control disabled</uicontrol></p>
+										</li>
+									</ol>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+			<sectiondiv><ph><term translate="no">ESC OFF</term> state 2</ph>
+				<p>To turn the ESC’s traction control and brake control functions off, press the <term translate="no">ESC OFF</term> button (<term translate="no">ESC OFF</term><image href="images/WKIA_042.jpg" scale="15"/>) for more than 3 seconds. The <term translate="no">ESC OFF</term> indicator light (<term translate="no">ESC OFF</term><image href="images/WKIA_042.jpg" scale="15"/>) appears and the <term translate="no">ESC OFF</term> warning chime sounds. ESC does not operate.</p>
+			</sectiondiv>
+		</section>
+		<section id="e02820">
+			<title>Indicator light</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02821">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02822">
+									<title>ESC indicator light</title>
+									<image href="images/WKIA_041.jpg" scale="30" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e02823">
+									<title>ESC OFF indicator light</title>
+									<image href="images/WKIA_042.jpg" scale="30" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When the vehicle is in <term translate="no">ON</term> position, the <term translate="no">ESC OFF</term> indicator light appears and then disappears if the ESC is operating normally.</p>
+			<p>The ESC indicator light blinks when ESC is operating, or appears when ESC fails to operate.</p>
+			<p>The <term translate="no">ESC OFF</term> indicator light appears when you use the button to turn the ESC system off.</p>
+			<note type="warning" id="e02824">
+				<p>ESC</p>
+				<p>Drive carefully even though your vehicle has ESC. It can only assist you in maintaining control under certain circumstances.</p>
+			</note>
+		</section>
+		<section id="e02825">
+			<title>ESC OFF usage</title>
+			<sectiondiv><ph>When driving</ph>
+				<ul id="e02826">
+					<li>
+						<p>Keep the ESC system turned on whenever possible.</p>
+					</li>
+					<li>
+						<p>To turn the ESC system off, press the <term translate="no">ESC OFF</term> button while driving on a flat road surface.</p>
+					</li>
+				</ul>
+				<note type="warning" id="e02827">
+					<p>Operating ESC</p>
+					<p>Never press the <term translate="no">ESC OFF</term> button while the ESC system is active (the ESC indicator light blinks).</p>
+					<p>If you turn the ESC system off while it is active, your vehicle may lose control.</p>
+				</note>
+				<note type="note" id="e02828">
+					<ul id="e02829">
+						<li>
+							<p>When operating the vehicle on a dynamometer, ensure that the ESC system is turned off (the <term translate="no">ESC OFF</term> indicator light appears). If the ESC system is left on, it may prevent the vehicle speed from increasing, resulting in a false diagnosis.</p>
+						</li>
+						<li>
+							<p>Turning the ESC system off does not affect ABS or brake system operation.</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00413.dita#t00413" role="parent" scope="local" type="concept">
+				<linktext>Vehicle safety system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

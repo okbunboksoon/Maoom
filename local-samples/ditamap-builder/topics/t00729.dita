@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00729">
+	<title>1. Getting ready to remotely move forward and backward</title>
+	<conbody>
+		<p>There are two ways to operate Remote Operation function.</p>
+		<section>
+			<title>Method (1): Using the function with vehicle off</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig>
+									<figgroup>
+										<image href="../../images/OOV055075_2.eps" align="center" placement="break" height="1.575in" width="2.244in"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout">
+									<li>
+										<p>Within a certain range from the vehicle press the door lock (<image href="../../images/WKIA_019.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) button on the smart key and lock all doors.</p>
+									</li>
+									<li>
+										<p>Press and hold the Remote Start button (<image href="../../images/WKIA_108.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) within 4 seconds until the vehicle starts.</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p importance="default">For more details on remotely starting the vehicle, refer to <xref type="concept" href="t00160.dita#t00160"/>.</p>
+		</section>
+		<section>
+			<title>Method (2): Using the function with vehicle on</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04621">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e04622">
+									<figgroup>
+										<image href="../../images/OOV055076_2.eps" align="center" placement="break" width="2.244in" id="e04623"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<fig id="e04624">
+									<figgroup>
+										<image href="../../images/OOV055162L.eps" align="center" placement="break" width="2.244in" id="e04625"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol outputclass="callout">
+				<li>
+					<p> <uicontrol outputclass="a19063112">1. Leave the vehicle (keep the key) and close the doors.</uicontrol> </p>
+				</li>
+				<li>
+					<p> <uicontrol outputclass="a19063112">2. Press and hold the parking button on the Smart Key.</uicontrol> </p>
+				</li>
+			</ol>
+			<ol>
+				<li>
+					<p>Park the vehicle in front of the space where you want to use Remote Operation function, and shift the gear to P (Park).</p>
+				</li>
+				<li>
+					<p>Press and hold the Parking/View (<image href="../../images/WKIA_106.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) button to turn on Smart Parking Assist. A message <uicontrol outputclass="a1906310">Under REMOTE control</uicontrol> will appear on the infotainment system screen.</p>
+				</li>
+				<li>
+					<p>Get out of the vehicle with the smart key and close all doors.</p>
+				</li>
+			</ol>
+			<note type="note">
+				<ul>
+					<li>
+						<p> <uicontrol outputclass="a2008811">Agree</uicontrol> must be selected on the infotainment system screen and the infotainment system has to operate properly to use Remote Operation function.</p>
+					</li>
+					<li>
+						<p>Method (2) can be used after the vehicle has been driven above 5 km/h (3 mph).</p>
+					</li>
+					<li>
+						<p>If the function is turned on again after parallel parking is completed by Remote Smart Parking Assist, Remote Operation function can be used with Method (2).</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

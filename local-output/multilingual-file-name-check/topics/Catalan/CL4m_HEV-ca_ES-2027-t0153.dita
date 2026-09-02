@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0153">
+	<title>Innenraumtastenbeleuchtung</title>
+	<conbody>
+		<p>Die Innenraumtastenbeleuchtung schaltet sich unter den folgenden Bedingungen ein und aus.</p>
+		<ul>
+			<li>
+				<p>Die Innenraumtastenbeleuchtung schaltet sich für eine Weile ein, wenn die Tür entriegelt und geöffnet wird, vorausgesetzt, alle Türen waren geschlossen und verriegelt.</p>
+			</li>
+			<li>
+				<p>Die Innenraumtastenbeleuchtung schaltet sich immer ein, wenn das Fahrzeug eingeschaltet wird.</p>
+			</li>
+			<li>
+				<p>Die Innenraumtastenbeleuchtung schaltet sich für eine Weile ein, wenn das Fahrzeug ausgeschaltet wird. Wenn die Tür geöffnet und geschlossen oder verriegelt wird, schalten sich die Innenbeleuchtungstasten sofort aus.</p>
+			</li>
+		</ul>
+		<p>Sie können die Innentastenbeleuchtung aktivieren, indem Sie im Infotainment-System <menucascade><uicontrol>Benutzereinstellungen</uicontrol><uicontrol>Beleuchtung</uicontrol><uicontrol>Innentastenbeleuchtung immer einschalten</uicontrol></menucascade> wählen.</p>
+		<note type="tip">
+			<p>Die am Infotainment-System angezeigten Informationen verfügen möglicherweise nicht über alle Menüs dieser Betriebsanleitung oder können je nach Ausführung Ihres Fahrzeugs von dieser Betriebsanleitung abweichen. Das Infotainment-System kann sich nach Aktualisierungen ändern. Weitere Einzelheiten finden Sie in der Anleitung des Infotainment-Systems, die Sie über den QR-Code in der Kurzanleitung aufrufen können.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0148.dita#CL4m_HEV-ca_ES-2027-t0148" role="parent" scope="local" type="concept">
+				<linktext>Beleuchtung </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0560">
+	<title>Fahreraufmerksamkeitswarnung vorne</title>
+	<conbody>
+		<p>Das Fahreraufmerksamkeits-Warnsystem ermittelt anhand von Informationen wie dem Zeitpunkt, zu dem der Fahrer den Blick abwendet, dem Zeitpunkt, zu dem die Augen geschlossen sind, usw., ob der Fahrer auf die Straße konzentriert ist. Wenn das System feststellt, dass der Fahrer unkonzentriert ist, ertönt für ca. 1 Sekunde ein akustisches Warnsignal, und die Warnleuchte für die Fahreraufmerksamkeits-Warnung (<image align="left" href="../../images/WKIA_353.eps" scale="15" placement="inline"/>) leuchtet im Kombiinstrument auf, bis die Bedingungen zum Ausschalten erfüllt sind.</p>
+		<section>
+			<title>Betriebsbedingungen</title>
+			<ul>
+				<li>
+					<p>Wenn der Blick des Fahrers bei einer Geschwindigkeit von mehr als 20 km/h (12 mph) 3 Sekunden oder länger nicht ununterbrochen auf die Straße gerichtet ist</p>
+				</li>
+				<li>
+					<p>Wenn der Blick in einem Auto, das mit einer Geschwindigkeit von wenigstens 20 km/h (12 mph) fährt, innerhalb eines Zeitraums von 30 Sekunden 10 Sekunden oder mehr von der Straße abschweift</p>
+				</li>
+				<li>
+					<p>Wenn die Augen des Fahrers bei einer Geschwindigkeit von mehr als 10 km/h (6 mph) 2 Sekunden oder länger geschlossen sind</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Ausschalt-Bedingungen</title>
+			<ul>
+				<li>
+					<p>Wenn der Fahrer 2 Sekunden oder länger ununterbrochen nach vorne sieht</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0559.dita#CL4m_HEV-ca_ES-2027-t0559" role="parent" scope="local" type="concept">
+				<linktext>Betrieb der Fahreraufmerksamkeitswarnung vorne</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

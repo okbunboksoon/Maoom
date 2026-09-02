@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0227">
+	<title>Niedrige ISOFIX-Verankerung und ISOFIX-Verankerung für den oberen Haltegurt (ISOFIX-Verankerungssystem) für Kinder</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Kinderrückhaltesystem (CRS)
+					<indexterm>Niedrige ISOFIX-Verankerung und ISOFIX-Verankerung für den oberen Haltegurt (ISOFIX-Verankerungssystem) für Kinder</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Mit dem ISOFIX-System wird ein Kinderrückhaltesystem während der Fahrt und bei einem Unfall sicher befestigt. Das System soll die Befestigung des Kinderrückhaltesystems erleichtern und die Gefahr der falschen Befestigung minimieren. Das ISOFIX-System nutzt Ankerpunkte im Fahrzeug und Befestigungselemente am Kinderrückhaltesystem. Beim ISOFIX-System entfällt die Notwendigkeit, das Kinderrückhaltesystem mit den Sicherheitsgurten auf dem Rücksitz zu sichern.</p>
+		<p>Niedrige ISOFIX-Verankerungen sind im Fahrzeug eingebaute Metallstangen. Für jeden ISOFIX-Sitzplatz gibt es zwei niedrige ISOFIX-Verankerungen, an denen ein Kinderrückhaltesystem mit ISOFIX-Befestigung befestigt werden kann.</p>
+		<p>Um das ISOFIX-System in Ihrem Fahrzeug zu nutzen, benötigen Sie ein Kinderrückhaltesystem mit ISOFIX-Befestigungselementen.</p>
+		<p>Der Kindersitzhersteller stellt Anweisungen dazu bereit, wie das Kinderrückhaltesystem mit den jeweiligen Befestigungselementen an den niedrigen ISOFIX-Ankerpunkten zu befestigen ist.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024040N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Niedrige ISOFIX-Verankerungen sind auf den hinteren Außensitzen links und rechts vorhanden. Deren Einbaulage ist in der Abbildung dargestellt.</p>
+		<note type="warning">
+			<p>Versuchen Sie nicht, ein Kinderrückhaltesystem mit niedrigen ISOFIX-Verankerungen in der mittleren Rücksitzposition zu installieren. Für diesen Sitz sind keine niedrigen ISOFIX-Verankerungen vorgesehen. Wenn versucht wird, an den Ankerpunkten der äußeren Rücksitze ein in der mittleren Rücksitzposition montiertes Kinderrückhaltesystem zu befestigen, kann dies die Ankerpunkte beschädigen.</p>
+		</note>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024041_3.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Positionsanzeige für eine niedrige ISOFIX-Verankerung</p>
+								</li>
+								<li>
+									<p>Niedrige ISOFIX-Ankerpunkte</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Niedrige ISOFIX-Verankerungen befinden sich zwischen der Rückenlehne und dem Sitzpolster des linken und rechten Rücksitzes und sind durch ein Etikett gekennzeichnet.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0221.dita#CL4m_HEV-ca_ES-2027-t0221" role="parent" scope="local" type="concept">
+				<linktext>Kinderrückhaltesystem (CRS) </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00680">
+	<title>Front view</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04483">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e04484">
+								<figgroup>
+									<image href="../../images/OOV055262L.eps" align="center" placement="break" scale="95" id="e04485"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>(2) View switching button</p>
+							<p>(3) Back button</p>
+							<p>(4) Infotainment system operation button</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The front view function displays the vehicle’s front situation on the navigation system according to the driver’s settings, assisting in safe driving or parking.</p>
+		<section>
+			<title>Parking</title>
+			<p>While parking, the front view of the Surround View Monitor is activated in the following conditions:</p>
+			<ul>
+				<li>
+					<p>P (Park) or N (Neutral) or D (Drive) position with a vehicle speed slower than 10 km/h (6 mph), Pressing the Parking/View button (1).</p>
+				</li>
+				<li>
+					<p>Shifting from R (Reverse) to N (Neutral) or D (Drive).</p>
+				</li>
+				<li>
+					<p>When the automatic activation function of the Surround View Monitor is enabled (<menucascade><uicontrol outputclass="a1701754">Settings</uicontrol><uicontrol outputclass="a1701772">Vehicle</uicontrol><uicontrol outputclass="a1804409">Driver assistance</uicontrol><uicontrol outputclass="a1804506">Parking safety</uicontrol><uicontrol outputclass="a1805292">Automatic Activation of Surround View Monitor</uicontrol></menucascade> from the settings menu in the infotainment system is selected)</p>
+				</li>
+			</ul>
+			<p>Pressing the view switching button (2) on the Surround View Monitor to select the Top View, Front View, Side View, or Wide View.</p>
+			<p>While parking, the front view of the Surround View Monitor will be turned off in the following conditions:</p>
+			<ul>
+				<li>
+					<p>Shifting to P (Park) or R (Reverse)</p>
+				</li>
+				<li>
+					<p>Pressing the Parking/View button (1)</p>
+				</li>
+				<li>
+					<p>Pressing the back button (3) on the Surround View Monitor screen</p>
+				</li>
+				<li>
+					<p>Pressing the infotainment system power button (4)</p>
+				</li>
+				<li>
+					<p>Driving faster than 10 km/h (6 mph)</p>
+				</li>
+			</ul>
+			<note type="note">
+				<p>When the front view is activated, the last used view is displayed.</p>
+			</note>
+		</section>
+		<section>
+			<title>Driving</title>
+			<p>While driving, the front view of the Surround View Monitor is activated in the following conditions:</p>
+			<ul>
+				<li>
+					<p>N (Neutral) or D (Drive) position with a vehicle speed faster than 10 km/h (6 mph), Pressing the Parking/View button (1)</p>
+				</li>
+			</ul>
+			<p>Pressing the view switching button (2) on the Surround View Monitor to select the front view or wide view.</p>
+			<p>The front view of the Surround View Monitor is turned off during driving in the following conditions:</p>
+			<ul>
+				<li>
+					<p>Shifting to P (Park) or R (Reverse)</p>
+				</li>
+				<li>
+					<p>Pressing the Parking/View button (1)</p>
+				</li>
+				<li>
+					<p>Pressing the back button (3) on the Surround View Monitor screen</p>
+				</li>
+				<li>
+					<p>Pressing the infotainment system power button (4)</p>
+				</li>
+			</ul>
+			<note type="note">
+				<ul>
+					<li>
+						<p>When the front view is activated while driving, the last used view is displayed.</p>
+					</li>
+					<li>
+						<p>Even if the vehicle speed drops below 10 km/h (6 mph), the rearview remains active when the rearview is turned on while driving.</p>
+					</li>
+					<li>
+						<p>When the front view is activated while driving, the front top view and front side view will be deactivated at all speeds.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

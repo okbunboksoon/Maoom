@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00827">
+	<title>Light position (Side)</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e05195">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e05196">
+								<figgroup>
+									<image href="../../images/OOV075023.eps" align="center" placement="break" scale="95" id="e05197"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<ol outputclass="callout" id="e05198">
+								<li>
+									<p>Side repeater lamp (LED type)</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

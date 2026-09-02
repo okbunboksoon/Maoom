@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0083">
+	<title>Verwenden der intelligente Heckklappe mit automatischer Öffnungsfunktion</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Intelligente Heckklappe mit automatischer Öffnungsfunktion
+					<indexterm>Verwendung</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Die Heckklappe lässt sich berührungslos öffnen, wenn folgende Bedingungen erfüllt sind.</p>
+		<ul>
+			<li>
+				<p>Nach 15 Sekunden, wenn alle Türen geschlossen und verriegelt sind.</p>
+			</li>
+			<li>
+				<p>Länger als 3 Sekunden im Erkennungsbereich.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>Die intelligente Heckklappe mit automatischer Öffnungsfunktion funktioniert in den folgenden Fällen nicht:</p>
+			<ul>
+				<li>
+					<p>Der Smart-Key wird innerhalb von 15 Sekunden nach dem Schließen und Verriegeln der Türen erkannt und bleibt erkannt.</p>
+				</li>
+				<li>
+					<p>Der Smart-Key innerhalb von 15 Sekunden nach dem Schließen und Verriegeln der Türen erkannt wird und sich 1,5 m vom Vordertürgriff entfernt befindet. (für Fahrzeuge mit Begrüßungsleuchte)</p>
+				</li>
+				<li>
+					<p>Eine Tür ist nicht verriegelt oder geschlossen.</p>
+				</li>
+				<li>
+					<p>Der Smart-Key befindet sich im Fahrzeug.</p>
+				</li>
+			</ul>
+		</note>
+		<section>
+			<title>1. Einstellungen</title>
+			<p>Um die Intelligente Heckklappe mit automatischer Öffnungsfunktion zu aktivieren, wählen Sie Intelligente Heckklappe auf dem Infotainment-Bildschirm.</p>
+		</section>
+		<section>
+			<title>2. Erkennen und warnen</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MW035027L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Wenn Sie sich mit einem Smart-Key im Erkennungsbereich (50 bis 100 cm [20 bis 40 Zoll] hinter dem Fahrzeug) befinden, blinken die Warnleuchten und es wird ein Warnton ausgegeben, wenn der Smart-Key erkannt wurde und sich die Heckklappe öffnet.</p>
+			<note type="note">
+				<p>Nähern Sie sich nicht dem Erkennungsbereich, wenn Sie die Heckklappe nicht öffnen wollen. Wenn Sie versehentlich in den Erkennungsbereich getreten sind und die Warnleuchten und akustischen Signale bereits in Betrieb sind, verlassen Sie den Erkennungsbereich mit dem Smart-Key. Die Heckklappe bleibt geschlossen.</p>
+			</note>
+		</section>
+		<section>
+			<title>3. Automatisches Öffnen</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MW035027L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die Warnblinker leuchten, das akustische Signal ertönt sechsmal, dann öffnet sich langsam die Heckklappe.</p>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Stellen Sie sicher, dass Sie die Heckklappe vor Fahrtantritt schließen.</p>
+					</li>
+					<li>
+						<p>Achten Sie darauf, dass sich keine Menschen oder Objekte in der Nähe der Heckklappe befinden, bevor sich die Heckklappe öffnet oder schließt.</p>
+					</li>
+					<li>
+						<p>Achten Sie darauf, dass nichts aus der Heckklappe herausfällt, wenn Sie die Heckklappe an einer Neigung öffnen. Dies kann zu schweren Verletzungen führen.</p>
+					</li>
+					<li>
+						<p>Achten Sie darauf, die intelligente Heckklappe mit automatischer Öffnungsfunktion beim Waschen Ihres Fahrzeuges zu deaktivieren. Andernfalls kann sich die Heckklappe versehentlich öffnen.</p>
+					</li>
+					<li>
+						<p>Der Schlüssel muss außerhalb der Reichweite von Kindern aufbewahrt werden. Kinder können die intelligente Heckklappe mit automatischer Öffnungsfunktion versehentlich öffnen, wenn sie sich im hinteren Bereich des Fahrzeugs aufhalten.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0082.dita#CL4m_HEV-ca_ES-2027-t0082" role="parent" scope="local" type="concept">
+				<linktext>Intelligente Heckklappe mit automatischer Öffnungsfunktion</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

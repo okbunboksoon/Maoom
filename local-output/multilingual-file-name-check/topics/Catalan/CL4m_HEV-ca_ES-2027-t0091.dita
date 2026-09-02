@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0091">
+	<title id="e00229">Motorhaube öffnen </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Motorhaube
+					<indexterm>Motorhaube öffnen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ol outputclass="callout">
+			<li>
+				<p>Ziehen Sie den Entriegelungshebel, um die Motorhaube zu entriegeln. Die Haube sollt sich um ein kleines Stück anheben.</p>
+				<note type="warning">
+					<p>Öffnen Sie die Motorhaube, nachdem Sie den Motor auf einer ebenen Fläche abgestellt, den Schalthebel bei Automatikgetrieben in die Stellung P (Parkstufe) und bei Schaltgetrieben in den ersten Gang oder R (Rückwärtsgang) geschaltet und die Feststellbremse angezogen haben.</p>
+				</note>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M034034N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Stellen Sie sich vor das Fahrzeug, heben Sie die Motorhaube leicht an, drücken Sie den Entriegelungshebel der zweiten Motorhaubenentriegelungshebel (1) unter der Motorhaube nach oben und klappen Sie die Motorhaube (2) hoch.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M035037L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+		</ol>
+		<ol outputclass="callout_continue">
+			<li>
+				<p>Ziehen Sie die Stützstange aus den Klammern.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M034038N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Stützen Sie die Haube mit der Stützstange ab.</p>
+				<note type="warning">
+					<p>Heiße Teile</p>
+					<p>Fassen Sie die Haubenstütze an dem mit Gummi ummantelten Bereich an. Das Gummi verhindert, dass Sie sich bei heißem Motor an heißem Metall verbrennen.</p>
+				</note>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0090.dita#CL4m_HEV-ca_ES-2027-t0090" role="parent" scope="local" type="concept">
+				<linktext>Motorhaube </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

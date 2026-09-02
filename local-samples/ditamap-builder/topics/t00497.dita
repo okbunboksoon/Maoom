@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00497">
+	<title id="e03761">Blind-Spot Collision-Avoidance Assist (BCA)</title>
+	<conbody>
+		<p>Blind-Spot Collision-Avoidance Assist detects approaching vehicles in the driver’s blind spot areas and warn you of a possible collision with a warning light and a warning sound. If there is a collision risk when exiting a parallel space, Blind-Spot Collision-Avoidance Assist may assist with steering and braking your vehicle to help avoid a collision.</p>
+		<table colsep="1" frame="none" outputclass="formatc" rowsep="1" id="e03762">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1">
+							<p>Function</p>
+						</entry>
+						<entry colname="col2">
+							<p>Details</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig id="e03763">
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV055035.eps" placement="break" width="2.243in" id="e03764"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Blind-Spot Collision-Avoidance Assist helps detect and informs the driver that a vehicle is in the blind spot.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig id="e03765">
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV055036.eps" placement="break" width="2.243in" id="e03766"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Blind-Spot Collision-Avoidance Assist helps detect and informs the driver that a vehicle is approaching at high speed from the blind spot area.</p>
+						</entry>
+					</row>
+					<row rowsep="0" valign="middle">
+						<entry colname="col1">
+							<fig id="e03767">
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV055037.eps" placement="break" width="2.243in" id="e03768"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>When you are driving forward out of a parking space, if Blind-Spot Collision-Avoidance Assist judges that there is a collision risk with an approaching vehicle in the blind spot, it can help avoid collision by applying the brake.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="caution" id="e03769">
+			<ul id="e03770">
+				<li>
+					<p>The detecting range may vary depending on the speed of your vehicle. Even if there is a vehicle in the blind spot area, Blind-Spot Collision-Avoidance Assist may not warn you when you pass by at high speeds.</p>
+				</li>
+				<li>
+					<p>Warning timing may vary depending on the speed of the vehicle approaching at high speed.</p>
+				</li>
+			</ul>
+		</note>
+		<section id="e03771">
+			<title>Detecting sensor</title>
+			<p>Blind-Spot Collision-Avoidance Assist uses the rear corner radar. Please refer to <xref type="concept" href="t00445.dita#t00445"/> for the sensor locations.</p>
+			<note type="caution" id="e03772">
+				<ul id="e03773">
+					<li>
+						<p>Never disassemble the detecting sensor assembly, or cause any damage to it.</p>
+					</li>
+					<li>
+						<p>If the detecting sensor or near the sensor has been damaged or impacted in any way, even though the warning message does not appear on the cluster, Blind-Spot Collision-Avoidance Assist may not operate properly. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>If the detecting sensors have been replaced or repaired, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>The genuine Kia rear bumpers which the Rear corner radar sensors are mounted are parts with quality and performance ensured. If arbitrarily applying paint on or changing the bumper, the Blind-Spot Collision-Avoidance Assist may not function properly. Use only Kia Genuine Parts or those of an equivalent standard with proven quality and performance to repair or replace the bumper.</p>
+					</li>
+					<li>
+						<p>Do not apply license plate frame or objects, such as a bumper sticker, film or a bumper guard near the rear corner radar.</p>
+					</li>
+					<li>
+						<p>Blind-Spot Collision-Avoidance Assist may not work properly if the bumper has been replaced, or the surroundings of the rear corner radar has been damaged or paint has been applied.</p>
+					</li>
+					<li>
+						<p>If a trailer, carrier, etc., is installed, it may adversely affect the performance of the rear corner radar or Blind-Spot Collision-Avoidance Assist may not operate.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

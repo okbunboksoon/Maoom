@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00610">
+	<title>Limitations of Intelligent Speed Limit Assist</title>
+	<conbody>
+		<p>Intelligent Speed Limit Assist may not operate properly, or it may operate unexpectedly under the following circumstances:</p>
+		<ul>
+			<li>
+				<p>The road sign is contaminated or indistinguishable</p>
+				<ul>
+					<li>
+						<p>The road sign is difficult to see due to bad weather, such as rain, snow, fog</p>
+					</li>
+					<li>
+						<p>The road sign is partially obscured by surrounding objects or shadow</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>The road signs do not conform to the standard</p>
+				<ul>
+					<li>
+						<p>The road sign is bent or installed at an angle</p>
+					</li>
+					<li>
+						<p>The text or picture on the road sign is different from the standard</p>
+					</li>
+					<li>
+						<p>The road sign is installed between the main line and the exit road or between diverging roads</p>
+					</li>
+					<li>
+						<p>A sign is attached to another vehicle</p>
+					</li>
+					<li>
+						<p>Traffic signs are installed at a high position above the road</p>
+					</li>
+					<li>
+						<p>There is insufficient time to recognize traffic signs due to high vehicle speed</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>The distance between the vehicle and the road signs is far</p>
+			</li>
+			<li>
+				<p>The vehicle encounters illuminating road signs</p>
+			</li>
+			<li>
+				<p>Intelligent Speed Limit Assist incorrectly recognizes numbers or pictures in the street signs or other signs as the speed limit</p>
+			</li>
+			<li>
+				<p>A road sign near the road you are driving is detected</p>
+			</li>
+			<li>
+				<p>Multiple signs are installed close together</p>
+			</li>
+			<li>
+				<p>The turn signal is frequently activated in a lane adjacent to an exit ramp</p>
+			</li>
+			<li>
+				<p>Following the vehicle ahead too closely</p>
+			</li>
+			<li>
+				<p>The minimum speed limit sign is misrecognized</p>
+			</li>
+			<li>
+				<p>The minimum speed limit sign is on the road</p>
+			</li>
+			<li>
+				<p>The brightness changes suddenly, for example when entering or exiting a tunnel or passing under a bridge</p>
+			</li>
+			<li>
+				<p>Headlamps are not used or the brightness of the headlamps are weak at night or in the tunnel</p>
+			</li>
+			<li>
+				<p>The field of view of the front view camera is obstructed by sun glare</p>
+			</li>
+			<li>
+				<p>Road signs are difficult to recognize due to the reflection of sunlight, streetlights, or oncoming vehicles</p>
+			</li>
+			<li>
+				<p>The navigation information or GPS information contains errors</p>
+			</li>
+			<li>
+				<p>The driver does not follow the guide of the navigation</p>
+			</li>
+			<li>
+				<p>Driving on a road that is sharply curved or continuously curved</p>
+			</li>
+			<li>
+				<p>Driving through speed bumps, or driving up and down or left to right on steep inclines</p>
+			</li>
+			<li>
+				<p>When driving on a road under construction</p>
+			</li>
+			<li>
+				<p>The vehicle is shaking heavily</p>
+			</li>
+			<li>
+				<p>Driving on a new road</p>
+			</li>
+			<li>
+				<p>Communication with the map server is not available</p>
+			</li>
+			<li>
+				<p>The country is changed</p>
+			</li>
+			<li>
+				<p>The vehicle crosses a national border</p>
+			</li>
+			<li>
+				<p>The country setting is changed in the Country Selection menu</p>
+			</li>
+			<li>
+				<p>The navigation is being updated while driving</p>
+			</li>
+			<li>
+				<p>The navigation is being restarted while driving</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Intelligent Speed Limit Assist is a supplemental function that helps the driver to comply with the speed limit on the road, and may not display the correct speed limit or control the driving speed properly.</p>
+				</li>
+				<li>
+					<p>It is the responsibility of the driver to keep the speed limit.</p>
+				</li>
+				<li>
+					<p>It may not operate for 15 seconds after the vehicle is started, or the front view camera is initialized or restarted.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>For more details on the limitations of the front view camera, refer to <xref href="t00507.dita#t00507"/>.</p>
+		</note>
+	</conbody>
+</concept>

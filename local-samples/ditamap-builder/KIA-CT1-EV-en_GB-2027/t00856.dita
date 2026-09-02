@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00856">
+	<title>Maintenance under severe usage conditions</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>maintenance schedule 
+					<indexterm>maintenance under severe usage conditions</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table otherprops="legal_eu_std_006_08" frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+			<desc>
+				<p> <term translate="no">I</term>: Inspect and adjust, correct, clean, or replace if necessary.</p>
+				<p> <term translate="no">R</term>: Replace or change.</p>
+			</desc>
+			<tgroup cols="4" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="21*"/>
+				<colspec colnum="2" colname="2" colwidth="20*"/>
+				<colspec colnum="3" colname="3" colwidth="34*"/>
+				<colspec colnum="4" colname="4" colwidth="25*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p>Maintenance Item</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>Maintenance Operation</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>Maintenance Intervals</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>Driving Condition</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" valign="middle">
+							<p>Reducer fluid</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p> <term translate="no">R</term> </p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>Every 120,000 km (80,000 miles)</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>B, D, G, H</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" valign="middle">
+							<p>Drive shaft and boots</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p> <term translate="no">I</term> </p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>More frequently</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>B, C, D, E, F, G, H, I</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" valign="middle">
+							<p>Climate control air filter</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p> <term translate="no">R</term> </p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>More frequently</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>B, D, F</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" valign="middle">
+							<p>Brake discs, pads and calipers</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p> <term translate="no">I</term> </p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>More frequently</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>B, C, D, F, G, H, I, J</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" valign="middle">
+							<p>Steering-gear rack, linkage, and boots</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p> <term translate="no">I</term> </p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>More frequently</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>B, C, D, E, F</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" valign="middle">
+							<p>Suspension ball joints</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p> <term translate="no">I</term> </p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>More frequently</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>B, C, D, E, F</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e02729">
+			<title>Severe driving conditions</title>
+			<p>A. Repeatedly driving short distance of less than 8 km (5 miles) in normal temperature or less than 16 km (10 miles) in freezing temperature</p>
+			<p>B. Driving on rough, dusty, muddy, unpaved, graveled or salt spread roads</p>
+			<p>C. Driving in areas using salt or other corrosive materials or in very cold weather</p>
+			<p>D. Driving in heavy dust condition</p>
+			<p>E. Driving in heavy traffic area with the ambient temperature higher than 32 °C (90 °F) while consuming more than 50% of electric energy.</p>
+			<p>F. Driving on uphill, downhill, or mountain roads repeatedly</p>
+			<p>G. Towing a trailer, or using a camper or roof rack</p>
+			<p>H. Driving as a patrol car, taxi, other commercial use or vehicle towing</p>
+			<p>I. Frequently driving under high speed or rapid acceleration/deceleration</p>
+			<p>J. Frequently driving in stop-and-go conditions</p>
+		</section>
+	</conbody>
+</concept>

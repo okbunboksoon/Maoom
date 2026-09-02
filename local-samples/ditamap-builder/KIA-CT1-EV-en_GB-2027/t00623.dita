@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00623">
+	<title>Forward Attention Warning (FAW)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>forward attention warning (FAW)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Forward Attention Warning uses the in-cabin camera to help prevent the driver from being distracted while driving with an audible warning and warning light.</p>
+		<section>
+			<title>Detecting sensor</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig>
+									<figgroup>
+										<image href="../../images/N_CT25E123.eps" scale="95" align="center" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout">
+									<li>
+										<p> <uicontrol>In-cabin camera</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The picture above shows the detailed location of the detecting sensor.</p>
+			<note type="caution">
+				<p>Always keep the in-cabin camera in good condition to maintain optimal performance of Forward Attention Warning.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

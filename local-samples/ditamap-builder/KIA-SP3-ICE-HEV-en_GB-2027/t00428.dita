@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00428">
+	<title>Green Zone Drive Mode</title>
+	<shortdesc>To protect the atmospheric environment in urban areas, <term translate="no">EV</term> mode automatically expands when the vehicle enters a road inside the Green Zone based on navigation information, and also when departing from home based on the driving history.</shortdesc>
+	<conbody>
+		<section id="e02961">
+			<title>Green Zone Drive Mode settings</title>
+			<p>When the vehicle is in <term translate="no">ON</term> position, tap <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>ECO Vehicle</uicontrol><uicontrol>Green Zone EV Drive</uicontrol></menucascade> from the infotainment system screen.</p>
+		</section>
+		<section id="e02962">
+			<title>Green Zone Drive Mode display</title>
+			<p>Green Zone Drive Mode is enabled when the vehicle enters the green zone based on the navigation information in <term translate="no">ECO</term> mode.</p>
+		</section>
+		<section id="e02963">
+			<title>Green Zone registration point</title>
+			<p>Green Zone registration points are determined based on navigation information and driving history, and may include:</p>
+			<ol id="e02964">
+				<li>
+					<p>Schools</p>
+				</li>
+				<li>
+					<p>Large hospitals</p>
+				</li>
+				<li>
+					<p>Registered favorites (Home/Office)</p>
+				</li>
+			</ol>
+			<note type="caution" id="e02965">
+				<p>Even in the Green Zone, <term translate="no">EV</term> mode driving may be limited or the engine may start in the following situations:</p>
+				<ul id="e02966">
+					<li>
+						<p>When the high voltage battery charge is low.</p>
+					</li>
+					<li>
+						<p>When engine power is required (such as during acceleration, climbing, heating, or cooling) or when engine operation is necessary for the driving system.</p>
+					</li>
+					<li>
+						<p>When the Green Zone cannot be recognized due to navigation problems.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="tip" id="e02967">
+				<ul id="e02968">
+					<li>
+						<p>The available Green Zone may change through regular navigation updates.</p>
+					</li>
+					<li>
+						<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00362.dita#t00362" role="parent" scope="local" type="concept">
+				<linktext>Driving your vehicle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

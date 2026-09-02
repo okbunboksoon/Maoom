@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0643">
+	<title>Anzeige des Betriebszustands</title>
+	<conbody>
+		<p>Sie können den Status des Autobahn-Fahrassistenten in der Fahrassistenz-Ansicht im Kombiinstrument ablesen. Siehe <xref href="CL4m_HEV-ca_ES-2027-t0135.dita#CL4m_HEV-ca_ES-2027-t0135"/>.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Betriebszustand</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054151.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<title>Standby-Zustand</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054152.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Der Autobahn-Fahrassistent wird abhängig vom Status der Funktion wie nachfolgend dargestellt angezeigt.</p>
+		<ol outputclass="callout">
+			<li>
+				<p>Die Anzeige für den Autobahn-Fahrassistenten zeigt, ob sich ein anderes Fahrzeug vor dem Fahrzeug befindet; die gewählte Entfernung wird angezeigt.</p>
+				<ul>
+					<li>
+						<p>Anzeige für den Autobahn-Fahrassistenten</p>
+						<ul>
+							<li>
+								<p>Grüner Autobahn-Fahrassistent: Betriebszustand</p>
+							</li>
+							<li>
+								<p>HDA grau: Standby-Zustand</p>
+							</li>
+							<li>
+								<p>Weißes Blinken des Autobahn-Fahrassistenten: Gaspedal betätigt</p>
+							</li>
+							<li>
+								<p>Keine: Ausgeschalteter Zustand</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Eingestellte Geschwindigkeit</p>
+			</li>
+			<li>
+				<p>Der Spurfolgeassistent</p>
+			</li>
+			<li>
+				<p>Ob ein vorausfahrendes Fahrzeug vorhanden ist sowie der gewählte Strecke</p>
+			</li>
+			<li>
+				<p>Ob die Fahrspur erkannt wird</p>
+			</li>
+		</ol>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Weitere Einzelheiten zur Anzeige finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0626.dita#CL4m_HEV-ca_ES-2027-t0626"/>.</p>
+					<p>Weitere Einzelheiten zur Anzeige finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0581.dita#CL4m_HEV-ca_ES-2027-t0581"/>.</p>
+				</li>
+				<li>
+					<p>Die Bilder und Farben im Kombiinstrument können sich je nach Typ des Kombiinstruments oder des im Einstellungsmenü ausgewählten Themas unterscheiden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0642.dita#CL4m_HEV-ca_ES-2027-t0642" role="parent" scope="local" type="concept">
+				<linktext>Autobahn-Fahrassistent</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

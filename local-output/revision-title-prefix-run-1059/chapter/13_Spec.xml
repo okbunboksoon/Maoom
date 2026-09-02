@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter filename="13_Spec.xml" chapnum="13">
+	<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0727-CH14.dita">
+		<concept id="KA4i-ICE-HEV-en_IN-2026-t0727-CH14">
+			<title>Consumer information</title>
+			<shortdesc/>
+			<conbody>
+				<p/>
+			</conbody>
+			<related-links>
+				<linkpool>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0728-CH14.dita#KA4i-ICE-HEV-en_IN-2026-t0728-CH14" role="child" scope="local" type="concept">
+							<linktext>Declaration of conformity</linktext>
+						</link>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0729-CH14.dita#KA4i-ICE-HEV-en_IN-2026-t0729-CH14" role="child" scope="local" type="concept">
+							<linktext>Manufacturer Information for Antenna</linktext>
+						</link>
+					</linkpool>
+				</linkpool>
+			</related-links>
+		</concept>
+		<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0728-CH14.dita">
+			<concept importance="optional" id="KA4i-ICE-HEV-en_IN-2026-t0728-CH14">
+				<title>Declaration of conformity</title>
+				<conbody>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" placement="break" href="../../images/CE0678.eps" scale="95"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>The radio frequency components of the vehicle comply with requirements and other relevant provisions of Directive 1995/5/EC.</p>
+					<p>Further information including the manufacturer's declaration of conformity is available on Kia website as follows;</p>
+					<p>http://www.Kia-hotline.com</p>
+				</conbody>
+				<related-links>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0727-CH14.dita#KA4i-ICE-HEV-en_IN-2026-t0727-CH14" role="parent" scope="local" type="concept">
+							<linktext>Consumer information</linktext>
+						</link>
+					</linkpool>
+				</related-links>
+			</concept>
+		</topicref>
+		<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0729-CH14.dita">
+			<concept id="KA4i-ICE-HEV-en_IN-2026-t0729-CH14">
+				<title>Manufacturer Information for Antenna</title>
+				<conbody>
+					<ul>
+						<li>
+							<p>Winnercom Co.</p>
+							<ul>
+								<li>
+									<p>Address: 1000 Great West Road, Brentford, TW8 9DW, UK</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p>Ace Technologies</p>
+							<ul>
+								<li>
+									<p>Address: 47 Wynwards Road, Swindon, SN254ZP, UK</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p> INFAC Elecs</p>
+							<ul>
+								<li>
+									<p>Address: Unit 6, Benford Court, Warwick, CV34 5DA, UK</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p>Molex</p>
+							<ul>
+								<li>
+									<p>Address: Molex B.V., Ascent 1 Aerospace Boulevard, Farnborough, GU14 6XW, UK</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</conbody>
+				<related-links>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0727-CH14.dita#KA4i-ICE-HEV-en_IN-2026-t0727-CH14" role="parent" scope="local" type="concept">
+							<linktext>Consumer information</linktext>
+						</link>
+					</linkpool>
+				</related-links>
+			</concept>
+		</topicref>
+	</topicref>
+</chapter>

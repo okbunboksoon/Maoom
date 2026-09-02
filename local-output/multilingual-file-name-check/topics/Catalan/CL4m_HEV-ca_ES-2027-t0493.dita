@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0493">
+	<title>Totwinkelsicherheit</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054089N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Fahrerassistenz</p>
+								</li>
+								<li>
+									<p>Fahrsicherheit</p>
+								</li>
+								<li>
+									<p>Totwinkelsicherheit</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Bei eingeschaltetem Fahrzeug wählen Sie im Infotainment-System <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Fahrerassistenz</uicontrol><uicontrol>Blind Spot Safety</uicontrol></menucascade> aus.</p>
+		<ul>
+			<li>
+				<p><b>Totwinkelsicherheit</b>: Der Totwinkel-Kollisionsvermeidungsassistent warnt und der Bremsassistent wird je nach Kollisionsrisiko aktiviert.</p>
+			</li>
+		</ul>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M074124N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Totwinkel-Sicherheitssystem ist ausgeschaltet</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn Sie den Totwinkel-Kollisionsvermeidungsassistent aktivieren oder das Fahrzeug bei aktivierter Funktion neu starten, leuchtet die Warnleuchte an den Außenspiegeln etwa 3 Sekunden lang auf.</p>
+		<p>Wenn das Fahrzeug bei ausgeschaltetem Totwinkel-Kollisionsvermeidungsassistenten neu gestartet wird, wird die Warnmeldung im Kombiinstrument angezeigt.</p>
+		<note type="warning">
+			<p>Wenn die <b>Totwinkel-Sicherheit</b> deaktiviert ist, erhalten Sie keine Hilfe vom <b>Totwinkel-Kollisionsvermeidungsassistenten</b>. Der Fahrer hat stets die Umgebung im Auge zu behalten und Risiken zu vermeiden.</p>
+		</note>
+		<note type="caution">
+			<p>Wenn der Stecker des Anhängers angeschlossen wird, schaltet sich der Totwinkel-Kollisionsvermeidungsassistent automatisch aus. In diesem Fall können Sie keine Hilfe vom Totwinkel-Kollisionsvermeidungsassistenten erhalten. Fahren Sie besonders umsichtig, wenn die Funktion nicht aktiv ist. (Bei einem Original Anhänger-Kit von Kia erkennt das Fahrzeug, wenn ein Anhänger angeschlossen ist.)</p>
+		</note>
+		<note type="note">
+			<p>Wenn das Fahrzeug neu gestartet wird, merkt sich der Totwinkel-Kollisionsvermeidungsassistent die letzte Einstellung.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0492.dita#CL4m_HEV-ca_ES-2027-t0492" role="parent" scope="local" type="concept">
+				<linktext>Einstellungen des Totwinkel-Kollisionsvermeidungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

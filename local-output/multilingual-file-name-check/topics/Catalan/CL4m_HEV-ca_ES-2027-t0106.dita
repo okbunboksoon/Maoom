@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0106">
+	<title id="e00249">MDPS (Motor Driven Power Steering, Servolenkung) </title>
+	<shortdesc>Die vom Motor angetriebene Servolenkung erleichtert Ihnen das Lenken des Fahrzeugs.</shortdesc>
+	<conbody>
+		<p>Wenn der Motor abgestellt ist oder wenn die Servolenkung ausgefallen ist, kann das Fahrzeug weiterhin gelenkt werden, jedoch ist in diesem Fall ein größerer Kraftaufwand notwendig.</p>
+		<p>Die motorgetriebene Servolenkung wird von dem Servolenkmodul geregelt, das das Lenkraddrehmoment und die Fahrgeschwindigkeit erkennt und entsprechende Steuerbefehle an den Motor übermittelt.</p>
+		<p>Der für das Lenken erforderliche Kraftaufwand wird mit steigender Geschwindigkeit größer und bei geringerer Geschwindigkeit kleiner, um das Lenken zu erleichtern.</p>
+		<p>Sollten Sie während des normalen Fahrzeugbetriebs eine Veränderung der Leistung der Lenkung feststellen, lassen Sie das System von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<note type="note">
+			<p>Die folgenden Symptome könnten während des normalen Fahrzeugbetriebs auftreten:</p>
+			<ul>
+				<li>
+					<p>Die MDPS-Warnleuchte erscheint nicht.</p>
+				</li>
+				<li>
+					<p>Das Lenkrad lässt sich direkt nach dem Einschalten des Zündschalters oder des <term translate="no">ENGINE START/STOP</term>-Knopfs (MOTOR-START/STOPP) schwer lenken. weil das MDPS-System einen Diagnosetest durchführt. Wenn die Diagnose abgeschlossen ist, kann das Lenkrad wieder mit normaler Kraft gedreht werden.</p>
+				</li>
+				<li>
+					<p>Ein Klickgeräusch kann vom MDPS-Relais zu hören sein, nachdem der Zündschalter oder der <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) auf Positon <term translate="no">ON</term> oder <term translate="no">LOCK</term> gestellt wurde.</p>
+				</li>
+				<li>
+					<p>Wenn das Fahrzeug steht oder mit geringer Geschwindigkeit gefahren wird, können Motorgeräusche hörbar sein.</p>
+				</li>
+				<li>
+					<p>Wenn die Unregelmäßigkeit in der motorgetriebenen Servolenkung erkannt wird, werden zur Vermeidung schwerer Unfälle die Servolenkungsfunktionen deaktiviert. Zu diesem Zeitpunkt leuchtet die Warnleuchte auf dem Armaturenbrett auf oder blinkt und die Stromversorgung für die Lenkung wird ausgeschaltet. Prüfen Sie dies sofort, nachdem das Fahrzeug an eine sichere Zone navigiert wurde.</p>
+				</li>
+				<li>
+					<p>Der Lenkkraftaufwand erhöht sich, wenn das Lenkrad ständig bewegt wird, ohne dass das Fahrzeug fährt. Nach einigen Minuten kehrt es jedoch wieder in den Normalzustand zurück.</p>
+				</li>
+				<li>
+					<p>Wenn die motorgetriebene Servolenkung nicht normal funktioniert, erscheint die Warnleuchte oder blinkt das Kombiinstrument. Das Lenkrad erfordert mehr Kraftaufwand oder funktioniert nicht mehr wie normal. Lassen Sie die Anlage in diesem Fall von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+				<li>
+					<p>Wenn Sie das Lenkrad bei niedrigen Temperaturen bewegen, können Sie ungewöhnliche Geräusche hören. Wenn die Temperatur steigt, verschwinden diese Geräusche. Dies ist normal.</p>
+				</li>
+				<li>
+					<p>Wenn Sie nach einer Batterieentladung Starthilfe geben, funktioniert das Lenkrad möglicherweise nicht ordnungsgemäß. Es handelt sich um eine vorübergehende Situation aufgrund einer niedrigen Batteriespannung. Nach einer stabilen Batterieladung wird das Lenkrad wieder normal funktionieren. Bitte bewegen Sie das Lenkrad, um sicherzustellen, dass das Lenkrad richtig funktioniert, bevor Sie das Fahrzeug fahren.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0105.dita#CL4m_HEV-ca_ES-2027-t0105" role="parent" scope="local" type="concept">
+				<linktext>Lenkrad </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00604">
+	<title>Operating conditions</title>
+	<conbody>
+		<p>Emergency Stop operates when the following conditions are satisfied. 
+			<ul id="e04298">
+				<li>
+					<p>Smart Cruise Control is operating</p>
+				</li>
+				<li>
+					<p>LFA is operating</p>
+				</li>
+				<li>
+					<p>When determining if the driver is unresponsive</p>
+				</li>
+			</ul> 
+		</p>
+	</conbody>
+</concept>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00246">
+	<title id="e01559">ISOFIX low anchorage and ISOFIX top tether anchorage (ISOFIX anchorage system) for children </title>
+	<shortdesc/>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>ISOFIX low anchorage and ISOFIX top tether anchorage (ISOFIX anchorage system) for children</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The ISOFIX system holds a Child Restraint System during driving and in an accident. This system is designed to make installation of the Child Restraint System easier and reduce the possibility of improperly installing your Child Restraint System. The ISOFIX system uses anchors in the vehicle and attachments on the Child Restraint System. The ISOFIX system eliminates the need to use seat belts to secure the Child Restraint System to the rear seats.</p>
+		<p>ISOFIX low anchorages are metal bars built into the vehicle. There are two ISOFIX low anchorages for each ISOFIX seating position that will accommodate a Child Restraint System with ISOFIX attachments.</p>
+		<p>To use the ISOFIX system in your vehicle, you must have a Child Restraint System with ISOFIX attachments.</p>
+		<p>The Child Restraint System manufacturer will provide you with instructions on how to use the Child Restraint System with its attachments for the ISOFIX anchorages.</p>
+		<p>ISOFIX low anchorages have been provided in the left and right outboard rear seating positions. Their locations are shown in the illustration.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01560">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01561">
+								<figgroup>
+									<image href="images/N_SP3i26_D06_052_E.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning" id="e01562">
+			<p>Do not attempt to install a Child Restraint System using ISOFIX low anchorages in the rear center seating position. There are no ISOFIX low anchorages provided for this seat. Using the outboard seat anchorages, for the CRS installation on the rear center seating position, can damage the anchorages.</p>
+		</note>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01563">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01564">
+								<figgroup>
+									<image href="images/N_SP3i26_D06_048_1_E.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e01565">
+								<li id="e01566">
+									<p>ISOFIX low anchorage Position Indicator</p>
+								</li>
+								<li id="e01567">
+									<p>ISOFIX low anchorage</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>ISOFIX low anchorages are located between the seatback and the seat cushion of the rear seat left and right outboard seating positions, indicated by the symbols.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00194.dita#t00194" role="parent" scope="local" type="concept">
+				<linktext>Seating and safety restraints </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

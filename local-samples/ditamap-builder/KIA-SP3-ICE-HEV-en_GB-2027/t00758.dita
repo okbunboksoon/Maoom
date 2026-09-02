@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Top" id="t00758">
+	<title>Declaration of Conformity for Jack</title>
+	<shortdesc/>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>declaration of conformity for jack</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section otherprops="legalnotice_europe-general_egall_2023_20230101_0005614" id="e04622">
+			<title>CE</title>
+			<fig expanse="page" id="e04623">
+				<figgroup>
+					<image align="center" href="images/N_SP327_C11_001_E.jpg" scale="95" placement="break"/>
+				</figgroup>
+			</fig>
+		</section>
+		<section otherprops="legalnotice_europe-general_egall_2023_20230101_00058" base="Top" id="e04624">
+			<title>UKCA</title>
+			<fig expanse="page" id="e04625">
+				<figgroup>
+					<image align="center" href="images/OSG2H116030L.jpg" scale="95" placement="break"/>
+				</figgroup>
+			</fig>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00757.dita#t00757" role="parent" scope="local" type="concept">
+				<linktext>Jack label</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00455">
+	<title>Launch Control (For GT)</title>
+	<shortdesc>Launch control is a function that applies pre-torque in a stationary state to prepare for launch and delivers a punchy acceleration feel during takeoff.</shortdesc>
+	<conbody>
+		<section id="e01853">
+			<title>Launch Control settings</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01854">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01855">
+									<image href="../../../images/OCV044047L.eps" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01856">
+									<li>
+										<p> <uicontrol>Launch Control</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When the vehicle is in <term translate="no">DRIVE READY</term> state, tap <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Drive Mode</uicontrol><uicontrol>Launch Control</uicontrol></menucascade> from the infotainment system screen.</p>
+		</section>
+		<section id="e01857">
+			<title>Launch Control operation</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01858">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01859">
+									<image href="../../../images/OCV044050L.eps" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul id="e01860">
+				<li>
+					<p>Step on the brake pedal over a certain level and then depress the accelerator pedal lightly. <uicontrol>Launch Control Ready</uicontrol> warning message will appear on the instrument cluster once Launch Control is ready to activate.</p>
+				</li>
+				<li>
+					<p>Once Launch Control is ready, pre-torque will be automatically initiated.</p>
+				</li>
+				<li>
+					<p>Start driving after releasing the brake pedal within 8 seconds.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01861">
+			<title>Operating conditions</title>
+			<p>Launch Control will be activated when all of the following conditions are satisfied:</p>
+			<ul id="e01862">
+				<li>
+					<p>Drive mode is in <term translate="no">GT</term> (<term translate="no">MY DRIVE</term> mode: <uicontrol>SPORT+</uicontrol>)</p>
+				</li>
+				<li>
+					<p>ESC is in <term translate="no">SPORT</term> or <term translate="no">OFF</term> </p>
+				</li>
+				<li>
+					<p>Vehicle is in D (Drive)</p>
+				</li>
+				<li>
+					<p>Steering wheel is in straight position</p>
+				</li>
+				<li>
+					<p>No warning indicator lights</p>
+				</li>
+				<li>
+					<p>Normal wheel speed</p>
+				</li>
+				<li>
+					<p>Normal motor temperature</p>
+				</li>
+				<li>
+					<p>High voltage battery condition is normal (not overheated, not too cold, and not low state of charge)</p>
+				</li>
+			</ul>
+			<note type="tip" id="e01863">
+				<ul id="e01864">
+					<li>
+						<p>Launch Control will be canceled once you release the accelerator pedal.</p>
+					</li>
+					<li>
+						<p>If you want to use Launch Control again, you must cool down the vehicle for more than approximately 2 minutes. (If the ready state exceeds 8 seconds, it is considered as used.)</p>
+					</li>
+					<li>
+						<p>Launch control use is restricted when the vehicle’s Motor Control Unit (MCU) is overheated or when the battery is not in a normal condition (overheated, too cold, or low state of charge).</p>
+					</li>
+					<li>
+						<p>Launch control may also be restricted when driver assistance systems, including vehicle safety features, are operating.</p>
+					</li>
+					<li>
+						<p>Launch control is a launch assist feature and does not increase the vehicle’s actual acceleration performance.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

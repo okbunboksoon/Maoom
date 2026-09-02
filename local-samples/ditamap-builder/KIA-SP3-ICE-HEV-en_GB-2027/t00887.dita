@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task otherprops="legalnotice_europe-general_egall_2023_20230101_0000931" id="t00887">
+	<title>Replacing the back up lamp (Bulb type)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>replacing the back up lamp (bulb type)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context id="e05223">
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05224">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e05225">
+									<title>Type A</title>
+									<image href="images/N_SP3i26_B12_072_IR.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e05226">
+									<li>
+										<p>Back up lamp (Bulb type)</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To replace the reversing lamp (Bulb type), follow these steps:</p>
+		</context>
+		<steps id="e05227">
+			<step>
+				<cmd>Make sure the vehicle is in the <term translate="no">OFF</term> position and disconnect the negative 12V battery terminal.</cmd>
+			</step>
+			<step>
+				<cmd>Use a slotted (flat-tip) screwdriver to loosen the plastic tabs.</cmd>
+			</step>
+			<step>
+				<cmd>Loosen the plastic retaining screws and open the underpanel cover.</cmd>
+			</step>
+			<step>
+				<cmd>Disconnect the rear reversing lamp connector.</cmd>
+			</step>
+			<step>
+				<cmd>To remove the socket from the assembly, turn the socket counterclockwise until the tabs on the socket align with the slots on the assembly.</cmd>
+			</step>
+			<step>
+				<cmd>To install the socket back into the assembly, align the tabs on the socket with the slots in the assembly, push the socket into the assembly, and turn the socket clockwise.</cmd>
+			</step>
+			<step>
+				<cmd>Reconnect the rear reversing lamp connector.</cmd>
+			</step>
+			<step>
+				<cmd>Tighten the plastic retaining screws.</cmd>
+			</step>
+			<step>
+				<cmd>Close the underpanel cover and replace the plastic tabs.</cmd>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00884.dita#t00884" role="parent" scope="local" type="concept">
+				<linktext>Replacing lights (Bulb type)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

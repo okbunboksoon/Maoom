@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00098">
+	<title>Setting the power trunk</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>power trunk 
+					<indexterm>setting the power trunk</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e00469">
+			<title>Power trunk opening height</title>
+			<p>You can adjust the power trunk opening height. Select the desired opening height (<uicontrol>Full Open</uicontrol> / <uicontrol>Level 3</uicontrol> / <uicontrol>Level 2</uicontrol> / <uicontrol>Level 1</uicontrol> / <uicontrol>User Height Setting</uicontrol>).</p>
+			<sectiondiv deliveryTarget="except_digital"><ph>Simple operation</ph>
+				<ul id="e00470">
+					<li>
+						<p> <uicontrol>Infotainment system</uicontrol> </p>
+						<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Door</uicontrol><uicontrol>Power Trunk Opening Height</uicontrol><uicontrol>Full Open/Level 3/Level 2/ Level 1/User Height Setting</uicontrol></menucascade> on the infotainment system.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv deliveryTarget="except_print"><ph>Operation</ph>
+				<ul id="e00471">
+					<li>
+						<p> <uicontrol>Infotainment system</uicontrol> </p>
+						<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Door</uicontrol><uicontrol>Power Trunk Opening Height</uicontrol><uicontrol>Full Open/Level 3/Level 2/ Level 1/User Height Setting</uicontrol></menucascade> on the infotainment system.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+		</section>
+	</conbody>
+</concept>

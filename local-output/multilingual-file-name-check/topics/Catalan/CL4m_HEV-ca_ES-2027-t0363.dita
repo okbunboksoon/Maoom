@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0363">
+	<title>Bedingungen für den Neustart des Motors</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Leerlaufassistent (SSC) (MHEV-Motor)
+					<indexterm>Bedingungen für den Neustart des Motors</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ul>
+			<li>
+				<p>Der Motor wird in folgenden Fällen manuell neu gestartet:</p>
+				<ul>
+					<li>
+						<p>Das Gaspedal wird betätigt.</p>
+					</li>
+					<li>
+						<p>Das Bremspedal wird durchgetreten.</p>
+					</li>
+					<li>
+						<p>Wenn das Kupplungspedal durchgetreten ist.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Der Motor wird in folgenden Fällen automatisch neu gestartet:</p>
+				<ul>
+					<li>
+						<p>Das Lenkrad wird mehr als 30–45 Grad gedreht.</p>
+					</li>
+					<li>
+						<p>Die Straßenneigung liegt zwischen -4~+4 Prozent.</p>
+					</li>
+					<li>
+						<p>Die Restladung der Hochvoltbatterie oder 12-Volt-Batterie ist niedrig</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Der Leerlaufassistent funktioniert nur, wenn der Fahrmodus <term translate="no">ECO</term> ausgewählt ist.</p>
+				</li>
+				<li>
+					<p>Der Leerlaufassistent kann je nach Innen- oder Außentemperatur deaktiviert werden.</p>
+				</li>
+				<li>
+					<p>Der Leerlaufassistent kann je nach eingestellter Klimaoption (Scheibenheizung, Lüftergeschwindigkeit usw.) deaktiviert werden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0361.dita#CL4m_HEV-ca_ES-2027-t0361" role="parent" scope="local" type="concept">
+				<linktext>Leerlaufassistent (SSC) (MHEV-Motor)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

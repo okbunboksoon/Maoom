@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0440">
+	<title>Frontalkollisions-Vermeidungsassistent (FCA) (Sensor-Fusion)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Frontalkollisions-Vermeidungsassistent (FCA)</indexterm>
+				<indexterm>Frontalkollisions-Vermeidungsassistent (FCA)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Grundlegende Funktion</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M054044N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Der Frontalkollisions-Vermeidungsassistent erkennt ein Fahrzeug, ein motorisiertes Zweirad, einen Fußgänger oder einen Radfahrer vor Ihnen auf der Straße und kann Sie mit einer Warnmeldung im Kombiinstrument und einem Warnton vor einer möglichen Kollision warnen. Außerdem kann der Frontalkollisions-Vermeidungsassistent beim Abbremsen Ihres Fahrzeugs helfen, um die Kollisionsgeschwindigkeit zu verringern beziehungsweise einen Zusammenstoß zu vermeiden.</p>
+			<p importance="optional">Der Frontalkollisions-Vermeidungsassistent kann vorausfahrende Fahrzeuge und angrenzende Fahrspuren auch bei hohen Geschwindigkeiten erkennen. Wenn der Fahrer bei diesen Geschwindigkeiten die Fahrspur wechselt, kann das Fahrzeug eine Notbremsung durchführen, um einen Zusammenstoß abzumildern oder zu vermeiden.</p>
+		</section>
+		<section>
+			<title>Abbiegefunktion</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M056045L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die Abbiegefunktion kann dazu beitragen, eine Kollision mit einem entgegenkommenden Fahrzeug, einem motorisierten Zweirad und Fahrradfahrer auf einer benachbarten Spur zu vermeiden, wenn Sie mit eingeschaltetem Blinker an einer Kreuzung nach links (Linkslenker) oder rechts (Rechtslenker) abbiegen, indem eine Notbremsung eingeleitet wird.</p>
+		</section>
+		<section>
+			<title>Funktion Direkter Gegenverkehr</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M054048N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e00939">
+									<li>
+										<p>Fahrzeuge in Gegenrichtung</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die Funktion „Direkter Gegenverkehr“ kann dazu beitragen, die Geschwindigkeit bei einer Kollision zu reduzieren, wenn ein sich von der anderen Seite näherndes Fahrzeug oder motorisiertes Zweirad erkannt wird.</p>
+		</section>
+		<section importance="optional">
+			<title>Kreuzungs-Kollisionsvermeidung</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M054046N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die Kreuzungs-Kollisionsvermeidung kann dazu beitragen, eine Kollision mit entgegenkommenden Fahrzeugen auf der linken oder rechten Seite beim Überqueren einer Kreuzung durch eine Notbremsung abzuschwächen oder zu vermeiden.</p>
+		</section>
+		<section importance="optional">
+			<title>Funktion Fahrspurwechsel bei Gegenverkehr</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M056029L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e00940">
+									<li>
+										<p>Fahrzeuge in Gegenrichtung</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die Funktion Fahrspurwechsel bei Gegenverkehr kann dazu beitragen, eine Kollision mit entgegenkommenden Fahrzeugen oder motorisierten Zweirädern beim Spurwechsel durch Unterstützung der Lenkung des Fahrers abzuschwächen oder zu vermeiden.</p>
+		</section>
+		<section importance="optional">
+			<title>Seitliche Spurwechselassistenzfunktion</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M056031L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M056030L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol outputclass="callout">
+				<li>
+					<p>Sich von der Seite annäherndes Auto</p>
+				</li>
+			</ol>
+			<p>Die Spurwechselseitenfunktion kann dazu beitragen, eine Kollision mit Fahrzeugen oder motorisierten Zweirädern auf der nächsten Fahrspur beim Spurwechsel durch Unterstützung der Lenkung des Fahrers abzuschwächen oder zu vermeiden.</p>
+		</section>
+		<section importance="optional">
+			<title>Funktion der Ausweichlenkunterstützung</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M054047N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul>
+				<li>
+					<p>Fahrerlenkunterstützung</p>
+					<p>Wenn eine mögliche Kollision mit einem vorausfahrenden Fahrzeug, Fußgänger, Radfahrer usw. erkannt wird und Sie lenken, um die Kollision zu vermeiden, kann die Ausweichlenkunterstützung den Fahrer bei der Lenkung unterstützen.</p>
+				</li>
+				<li>
+					<p>Ausweichlenkunterstützung</p>
+					<p>Die Funktion Ausweichlenkunterstützung kann dazu beitragen, einen Zusammenstoß mit einem Fußgänger oder Radfahrer, der sich auf derselben Fahrspur vor Ihnen befindet, abzuschwächen oder zu vermeiden. Wenn eine Kollisionsgefahr erkannt wird, kann die Funktion Ausweichlenkunterstützung Sie warnen und Ihre Lenkung unterstützen, wenn Sie das Lenkrad bewegen.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Erkennungssensor</title>
+			<p>Die zutreffenden Sensoren und ihre Standorte finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0439.dita#CL4m_HEV-ca_ES-2027-t0439"/>.</p>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Demontieren Sie niemals den Erkennungssensor oder die Sensorbaugruppe und vermeiden Sie Beschädigungen daran.</p>
+					</li>
+					<li>
+						<p>Wenn die Erkennungssensoren ausgetauscht oder repariert wurden, lassen Sie Ihr Fahrzeug von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+					</li>
+					<li>
+						<p>Wenn das Radar oder der Bereich um das Radars beschädigt wurde, funktioniert der Frontalkollisions-Vermeidungsassistent möglicherweise nicht einwandfrei, auch wenn keine Warnmeldung im Kombiinstrument angezeigt wird. Lassen Sie Ihr Fahrzeug von einer Fachwerkstatt warten. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+					</li>
+					<li>
+						<p>Bringen Sie NIEMALS Zubehör oder Aufkleber an der Windschutzscheibe an und tönen Sie die Windschutzscheibe nicht.</p>
+					</li>
+					<li>
+						<p>Achten Sie sorgfältig darauf, die Frontkamera trocken zu halten.</p>
+					</li>
+					<li>
+						<p>Legen Sie niemals reflektierende Gegenstände (z.B. weißes Papier, Spiegel) auf das Armaturenbrett.</p>
+					</li>
+					<li>
+						<p>Stellen Sie keine Gegenstände in der Nähe der Windschutzscheibe ab und montieren Sie kein Zubehör an der Windschutzscheibe. Dies könnte die Leistung der Beschlag- und Entfrostungsfunktion der Klimaanlage beeinträchtigen und die Funktion der Fahrerassistenzsysteme verhindern.</p>
+					</li>
+					<li>
+						<p>Bringen Sie in der Nähe der Frontradarabdeckung keinen Nummernschildhalter und keine Fremdkörper wie Stoßstangenaufkleber, Folien oder Stoßstangenschutz an.</p>
+					</li>
+					<li>
+						<p>Halten Sie das Frontradar und die Abdeckung immer sauber und frei von Schmutz und Ablagerungen.</p>
+						<p>Verwenden Sie zum Waschen des Fahrzeugs nur weiche Tücher. Sprühen Sie kein Hochdruckwasser direkt auf den Sensor oder die Sensorabdeckung.</p>
+					</li>
+					<li>
+						<p>Die originalen Kia Radarsensorabdeckungen für den Frontbereich, den vorderen Eckradar und den hinteren Eckradar sind Teile, deren Qualität und Leistung gewährleistet sind. Wenn Sie unsachgemäß Farbe auftragen oder die Abdeckung verändern, funktioniert der Frontalkollisions-Vermeidungsassistent möglicherweise nicht mehr richtig.</p>
+						<p>Verwenden Sie für Reparatur und Austausch der Radarsensorabdeckungen nur Kia-Originalteile oder Teile mit gleichwertigem Standard und nachgewiesener Qualität und Leistung.</p>
+					</li>
+					<li>
+						<p>Bringen Sie keine Objekte, wie Stoßstangenaufkleber oder einen Stoßstangenschutz in der Nähe der Weitwinkelkameras oder der Ultraschallsensoren an und lackieren Sie die Stoßstange nicht.</p>
+					</li>
+					<li>
+						<p>Die Funktion arbeitet möglicherweise nicht richtig, wenn der Stoßfänger ersetzt wurde, oder der Bereich um den Eckradarsensor vorn oder hinten beschädigt oder lackiert wurde.</p>
+					</li>
+					<li>
+						<p>Wenn ein Anhänger, Träger usw. installiert ist, kann dieser die Funktionsfähigkeit des Frontalkollisions-Vermeidungsassistenten beeinträchtigen.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0437-CH10.dita#CL4m_HEV-ca_ES-2027-t0437-CH10" role="parent" scope="local" type="concept">
+				<linktext>Fahrerassistenzleitfaden</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

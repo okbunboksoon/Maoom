@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00749">
+	<title>Low tire pressure indicator light <image href="images/WKIA_035.jpg" scale="15" align="left" placement="inline"/></title>
+	<shortdesc>When the TPMS warning indicators are illuminated, one or more of your tires is significantly under-inflated.</shortdesc>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04542">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04543">
+								<image href="images/N_SP3i25_C00_008_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e04544">
+								<li>
+									<p><uicontrol>Low tire pressure</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the tire pressure monitoring system warning indicators are illuminated and warning message displayed on the instrument cluster, one or more of your tires is significantly under-inflated. The low tire pressure position telltale light will indicate which tire is significantly under-inflated by illuminating the corresponding position light.</p>
+		<p>If either telltale illuminates, immediately reduce your speed, avoid hard cornering and anticipate increased stopping distances. You should stop and check your tires as soon as possible. Inflate the tires to the proper pressure as indicated on the vehicle’s placard or tire inflation pressure label located on the driver’s (or front passenger’s) side center pillar outer panel. If you cannot reach a service station or if the tire cannot hold the newly added air, replace the low pressure tire with a spare tire.</p>
+		<p>If you drive the vehicle for about 10 minutes at speeds above 25 km/h (16 mph) after replacing the low pressure tire with the spare tire, one of the following will happen:</p>
+		<ul id="e04545">
+			<li>
+				<p>The TPMS malfunction indicator may blink for approximately 1 minute and then remain continuously illuminated because the TPMS sensor is not mounted on the spare wheel. (changed tire equipped with a sensor not in the vehicle)</p>
+			</li>
+			<li>
+				<p>The TPMS malfunction indicator will remain continuously illuminated while driving because the TPMS sensor is not mounted on the spare wheel. (changed tire equipped with a sensor in the vehicle)</p>
+			</li>
+		</ul>
+		<note type="warning" id="e04546">
+			<p>Low pressure damage</p>
+			<p>Do not drive on low pressure tires. Significantly low tire pressure can cause the tires to overheat and fail, making the vehicle unstable and resulting in increased braking distances and a loss of control.</p>
+		</note>
+		<note type="caution" id="e04547">
+			<ul id="e04548">
+				<li>
+					<p>In winter or cold weather, the low tire pressure telltale may illuminate if the tire pressure was adjusted to the recommended tire inflation pressure in warm weather. It does not mean your TPMS is malfunctioning because the decreased temperature leads to a lowering of tire pressure.</p>
+				</li>
+				<li>
+					<p>When you drive your vehicle from a warm area to a cold area or from a cold area to a warm area, or the outside temperature is higher or lower, you should check the tire inflation pressure and adjust the tires to the recommended tire inflation pressure.</p>
+				</li>
+				<li>
+					<p>When filling tires with more air, conditions to turn off the low tire pressure telltale may not be met. This is because a tire inflator has a margin of error in performance. The low tire pressure telltale will be turned off if the tire pressure is above the recommended tire inflation pressure.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00747.dita#t00747" role="parent" scope="local" type="concept">
+				<linktext>Tire Pressure Monitoring System (TPMS)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00523">
+	<title>Warning and control</title>
+	<conbody>
+		<p>Safe Exit Warning alerts you in the following situations:</p>
+		<ul id="e03453">
+			<li>
+				<p>Vehicle detection</p>
+			</li>
+			<li>
+				<p>Exit collision warning</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00522.dita#t00522" role="parent" scope="local" type="concept">
+				<linktext>Safe Exit Warning operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

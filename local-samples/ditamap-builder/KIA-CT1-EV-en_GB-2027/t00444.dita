@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00444">
+	<title>Canceling smart regeneration system</title>
+	<conbody>
+		<section id="e01768">
+			<title>Manually</title>
+			<ul id="e01769">
+				<li>
+					<p>Pull and hold the right side (<image href="../../images/WKIA_292.eps" scale="15" align="left" placement="inline"/>) of the paddle shifter for more than approximately 1 second.</p>
+					<ul id="e01770">
+						<li>
+							<p>The (<image href="../../images/WKIA_336.eps" scale="15" align="left" placement="inline"/>) symbol will disappear and the regenerative braking system level icon will appear.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Automatically</title>
+		</section>
+		<section>
+			<ul>
+				<li>
+					<p>The vehicle is shifted to N (Neutral), R (Reverse) or P (Park).</p>
+				</li>
+				<li>
+					<p>Cruise Control (CC) or Smart Cruise Control (SCC) is operating.</p>
+				</li>
+				<li>
+					<p>Electronic Stability Control (ESC) or Anti-lock Brake System (ABS) is operating.</p>
+				</li>
+				<li>
+					<p> <term translate="no">DRIVE MODE</term> is in <term translate="no">SNOW</term> mode.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

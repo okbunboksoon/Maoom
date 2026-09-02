@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00676">
+	<title>Deactivating Emergency Stop</title>
+	<conbody>
+		<p>If the function judges you have responded, Emergency Stop is deactivated when one of the following conditions is met:</p>
+		<ul id="e02340">
+			<li>
+				<p>When the driver holds and operates the steering wheel.</p>
+			</li>
+			<li>
+				<p>The driver strongly and continuously depresses the accelerator pedal.</p>
+			</li>
+			<li>
+				<p>The driver strongly depresses the brake pedal.</p>
+			</li>
+			<li>
+				<p>The driver presses the Lane Driving Assist button (<image href="../../images/WKIA_274.eps" scale="15" align="left" placement="inline"/>).</p>
+			</li>
+			<li>
+				<p>The driver presses the Driving Assist button (<image align="left" href="../../images/WKIA_080.eps" scale="15" placement="inline"/>)</p>
+			</li>
+			<li>
+				<p>The driver presses the hazard warning flasher button after the vehicle has stopped.</p>
+			</li>
+			<li>
+				<p>The front door is opened.</p>
+			</li>
+			<li>
+				<p>When shifting from P (Park) to another gear position.</p>
+			</li>
+		</ul>
+		<p>The vehicle needs to be restarted to reactivate Lane Following Assist or Highway Driving Assist after the vehicle is stopped and Emergency Stop is deactivated.</p>
+		<note type="caution" id="e02341">
+			<p>If the Emergency Stop has been released after the vehicle has come to a stop, Lane Keeping Assist or Highway Driving Assist cannot be activated. The system can be operated again after restarting the vehicle.</p>
+		</note>
+	</conbody>
+</concept>

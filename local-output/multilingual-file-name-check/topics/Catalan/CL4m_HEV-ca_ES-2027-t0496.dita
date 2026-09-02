@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0496">
+	<title>Kollisionswarnung (während der Fahrt)</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054059N_4.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Warnleuchte im Außenspiegel des Kombiinstruments leuchtet auf, wenn ein Fahrzeug auf beiden Fahrspuren von hinten erkannt wird.</p>
+		<p>Ein Fahrzeug wird unter den folgenden Bedingungen erkannt.</p>
+		<ul>
+			<li>
+				<p>Fahrgeschwindigkeit: über 20 km/h (12 mph)</p>
+			</li>
+			<li>
+				<p>Geschwindigkeit des Fahrzeugs im Totwinkel: über 10 km/h (7 mph)</p>
+			</li>
+		</ul>
+		<p>Im Zustand der Fahrzeugerkennung warnt die Kollisionswarnung den Fahrer, wenn der Blinker betätigt wird, um einen Spurwechsel mit einem benachbarten Fahrzeug im toten Winkel vorzunehmen.</p>
+		<ul>
+			<li>
+				<p>Die Kollisionswarnung warnt den Fahrer durch die Warnleuchte im Kombiinstrument, den Außenspiegel, ein akustisches Warnsignal und die Vibration des Lenkrads (ausstattungsabhängig).</p>
+			</li>
+			<li>
+				<p>Wenn der Blinker ausgeschaltet wird oder Sie sich von der Fahrspur entfernen, wird die Kollisionswarnung abgebrochen und das System kehrt in den Zustand der Fahrzeugerkennung zurück.</p>
+			</li>
+		</ul>
+		<p>Die Kollisionswarnung funktioniert unter folgenden Bedingungen.</p>
+		<ul>
+			<li>
+				<p>Fahrgeschwindigkeit: über 40 km/h (25 mph)</p>
+			</li>
+			<li>
+				<p>Geschwindigkeit des Fahrzeugs im Totwinkel: über 10 km/h (7 mph)</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Der Erfassungsbereich des Eckradars hinten wird durch die Standardfahrbahnbreite bestimmt, daher kann der Totwinkel-Kollisionsvermeidungsassistent auf einer schmalen Straße andere Fahrzeuge zwei Fahrspuren weiter erkennen und Sie warnen. Auf einer breiten Straße hingegen kann der Totwinkel-Kollisionsvermeidungsassistent ein Fahrzeug in der Nachbarspur möglicherweise nicht erkennen und Sie nicht warnen.</p>
+				</li>
+				<li>
+					<p>Wenn die Warnblinkanlage eingeschaltet ist, funktioniert die Kollisionswarnung durch den Blinker nicht.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn sich der Fahrersitz auf der linken Seite befindet, wird die Kollisionswarnung beim Linksabbiegen aktiviert. Wenn sich der Fahrersitz auf der rechten Seite befindet, wird die Kollisionswarnung beim Rechtsabbiegen aktiviert.</p>
+					<p>Halten Sie einen angemessenen Abstand zu den Fahrzeugen in der Spur ein.</p>
+				</li>
+				<li>
+					<p>Bilder oder Farben können je nach den Spezifikationen oder dem Design des Kombiinstruments unterschiedlich angezeigt werden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0495.dita#CL4m_HEV-ca_ES-2027-t0495" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Totwinkel-Kollisionsvermeidungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

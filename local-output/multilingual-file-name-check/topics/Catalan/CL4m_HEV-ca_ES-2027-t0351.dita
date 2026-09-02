@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0351">
+	<title>Getriebeganggruppen</title>
+	<conbody>
+		<p>Wenn sich der Zündschlüssel in der Stellung <term translate="no">ON</term> befindet, zeigen die Kontrollleuchten im Kombiinstrument die Stellung des Schalthebels an.</p>
+		<section>
+			<title>P (Parkstufe)</title>
+			<p>Warten Sie stets, bis das Fahrzeug vollständig zum Stillstand gekommen ist, bevor Sie nach „P“ (Parken) schalten. In dieser Schaltstufe ist das Getriebe gesperrt und die Vorderräder sind blockiert.</p>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Wenn der Schalthebel während der Fahrt in die Parkstufe (P) gestellt wird, blockieren die Antriebsräder. Dies führt dazu, dass Sie die Kontrolle über das Fahrzeug verlieren.</p>
+					</li>
+					<li>
+						<p>Verwenden Sie die Parkstufe (P) nicht anstelle der Feststellbremse. Stellen Sie sicher, dass der Schalthebel in der Parkstufe (P) eingerastet ist und betätigen Sie kräftig die Feststellbremse.</p>
+					</li>
+					<li>
+						<p>Lassen Sie Kinder niemals unbeaufsichtigt im Fahrzeug zurück.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution">
+				<p>Das Schalten in die Parkstufe (P) bei rollendem Fahrzeug kann zur Beschädigung des Getriebes führen.</p>
+			</note>
+			<note type="caution">
+				<p>Die U/Min. (Umdrehungen pro Minute) kann bei der Selbstdiagnose des intelligenten variablen Getriebes (IVT) steigen oder fallen.</p>
+			</note>
+		</section>
+		<section>
+			<title>R (Rückwärtsgang)</title>
+			<p>Wählen Sie diese Fahrstufe, um rückwärts zu fahren.</p>
+			<note type="caution">
+				<p>Schalten Sie immer erst dann in den Rückwärtsgang (R) hinein oder aus dem Rückwärtsgang (R) heraus, wenn das Fahrzeug vollständig zum Stillstand gekommen ist. Wenn der Rückwärtsgang (R) in anderen Situationen wie unter <xref href="CL4m_HEV-ca_ES-2027-t0409.dita#CL4m_HEV-ca_ES-2027-t0409"/> erläutert während der Fahrt eingelegt wird, kann das Getriebe beschädigt werden. .</p>
+			</note>
+		</section>
+		<section>
+			<title>N (Neutralstellung)</title>
+			<p>Die Verbindung zwischen den Räder und dem Getriebe ist getrennt. Das Fahrzeug wird bei dem geringsten Gefälle wegrollen, wenn die Fußbremse oder die Feststellbremse nicht betätigt wird.</p>
+			<note type="warning">
+				<p>Fahren Sie nicht mit dem Schalthebel in Neutralstellung (N).</p>
+				<p>Die Motorbremse funktioniert dann nicht und es kann zu einem Unfall kommen.</p>
+			</note>
+		</section>
+		<section>
+			<title>D (Fahren)</title>
+			<p>Dies ist die normale Stellung zum Vorwärtsfahren. Das Getriebe schaltet automatisch und sorgt so für optimalen Kraftstoffverbrauch und Leistung.</p>
+			<p>Wenn Sie beim Überholen eines anderen Fahrzeugs oder beim Bergauffahren zusätzlich beschleunigen wollen, treten Sie das Gaspedal voll durch; das Getriebe schaltet damit automatisch in den nächst niedrigeren Gang.</p>
+			<note type="note">
+				<p>Warten Sie immer, bis das Fahrzeug vollständig zum Stillstand gekommen ist, bevor Sie in die Stellung D (Fahrstellung) schalten.</p>
+			</note>
+		</section>
+		<section>
+			<title>Handschaltmodus</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M044004N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Den manuellen Modus können Sie sowohl im Stand als auch während der Fahrt wählen. Bewegen Sie dazu den Wählhebel aus der Fahrstufe (D) in die manuelle Schaltgasse. Um in die Fahrstufe D zurückzugelangen, bewegen Sie den Schalthebel zurück in die Automatik-Schaltgasse.</p>
+			<p>Im manuellen Modus werden die Lenkbewegungen sowie die Verbrennungsmotor- und Getriebesteuerlogik automatisch der Fahrdynamik angepasst, um das Fahrverhalten zu optimieren.</p>
+			<p>Im manuellen Modus können Sie schnell herauf- oder herunterschalten, indem Sie den Wählhebel nach vorn drücken oder nach hinten ziehen. Im Gegensatz zu einem Schaltgetriebe ist im manuellen Modus ein Gangwechsel bei durchgetretenem Gaspedal möglich.</p>
+			<ul>
+				<li>
+					<p>Nach oben (+): Drücken Sie den Wählhebel einmal nach vorn, um in den nächsten höheren Gang zu schalten.</p>
+				</li>
+				<li>
+					<p>Nach unten (-): Ziehen Sie den Wählhebel einmal nach hinten, um in den nächsten kleineren Gang zu schalten.</p>
+				</li>
+			</ul>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Der Fahrer muss das Hochschalten unter Berücksichtigung der Verkehrsbedingungen durchführen und darauf achten, dass die Motordrehzahl unter dem roten Bereich bleibt.</p>
+					</li>
+					<li>
+						<p>Es können nur die acht Vorwärtsgänge gewählt werden. Um in den Rückwärtsgang R oder die Parkstufe P zu schalten, schieben Sie den Schalthebel nach Bedarf in die Schaltstufe R oder D.</p>
+					</li>
+					<li>
+						<p>Das Herunterschalten erfolgt automatisch, wenn die Fahrgeschwindigkeit reduziert wird. Wenn das Fahrzeug zum Stillstand kommt, wird automatisch in den 1. Gang geschaltet.</p>
+					</li>
+					<li>
+						<p>Wenn sich die Motordrehzahl dem roten Bereich nähert, wird automatisch in den nächsthöheren Gang geschaltet.</p>
+					</li>
+					<li>
+						<p>Zum Schutz des Fahrzeugs und aus Sicherheitsgründen führt das Getriebe ggf. bestimmte manuelle Schaltvorgänge nicht aus, wenn der Schalthebel bedient wird.</p>
+					</li>
+					<li>
+						<p>Drücken Sie zum Anfahren auf glattem oder rutschigem Untergrund den Schalthebel nach vorn in die Position + (Hochschalten). Das Getriebe schaltet in den zweiten Gang, welcher für das Anfahren auf glattem oder rutschigem Untergrund besser geeignet ist. Ziehen Sie bei Bedarf den Schalthebel nach hinten in die Position (-), um in den ersten Gang zurückzuschalten.</p>
+					</li>
+					<li>
+						<p>Wenn der manuelle Modus aktiviert ist:</p>
+						<ul>
+							<li>
+								<p>Die Motordrehzahl bleibt auch nach Freigabe des Gaspedals noch längere Zeit erhöht.</p>
+							</li>
+							<li>
+								<p>Hochschaltvorgänge bei Beschleunigung werden verzögert.</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>Der Kraftstoffverbrauch kann sich erhöhen.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>Schalthebelsperre</title>
+			<p><indexterm>Automatikgetriebe<indexterm>Schalthebelsperre</indexterm></indexterm>Das Automatikgetriebe ist aus Sicherheitsgründen mit einer Schalthebelsperre ausgerüstet, die verhindert, dass der Schalthebel aus der Parkstufe (P) in den Rückwärtsgang (R) bewegt werden kann, wenn nicht gleichzeitig das Bremspedal betätigt wird.</p>
+			<p>So schalten Sie das Getriebe von der Parkstufe (P) in den Rückwärtsgang (R):</p>
+			<ol>
+				<li>
+					<p>Treten Sie auf das Bremspedal und halten Sie es gedrückt.</p>
+				</li>
+				<li>
+					<p>Bewegen Sie den Schalthebel.</p>
+				</li>
+			</ol>
+			<p>Wenn das Bremspedal wiederholt getreten und freigegeben wird, während sich der Schalthebel in Position P (Parken) befindet, ist möglicherweise ein Rattergeräusch in der Nähe des Schalthebels zu hören. Dies ist normal.</p>
+			<note type="warning">
+				<p>Treten Sie das Bremspedal immer vollständig durch, bevor und während Sie aus der Position P (Parkstufe) in eine andere Position schalten, um eine unbeabsichtigte Bewegung des Fahrzeugs zu vermeiden, die Personen im Fahrzeug oder in seiner Umgebung verletzen könnte.</p>
+			</note>
+		</section>
+		<section id="e00801">
+			<title id="e00802">Schalthebelsperre deaktivieren </title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M044003.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p><indexterm>Automatikgetriebe<indexterm>Schalthebelsperre deaktivieren</indexterm></indexterm>Wenn sich der Schalthebel von der Parkstufe (P) bei betätigtem Bremspedal nicht in den Rückwärtsgang (R) bewegen lässt, halten Sie das Bremspedal getreten und gehen Sie wie folgt vor:</p>
+			<ol>
+				<li>
+					<p>Bringen Sie den Zündschalter bzw. die Taste <term translate="no">ENGINE START/STOP</term> in die Stellung <term translate="no">LOCK/OFF</term>.</p>
+				</li>
+				<li>
+					<p>Betätigen Sie die Feststellbremse.</p>
+				</li>
+				<li>
+					<p>Entfernen Sie vorsichtig die Knaufmanschetten, die das Zugangsloch (1) zur Entriegelung der Schaltsperre abdecken.</p>
+				</li>
+				<li>
+					<p>Führen Sie ein Werkzeug (z. B. einen Schlitzschraubendreher) in die Zugangsöffnung ein und drücken Sie auf das Werkzeug.</p>
+				</li>
+				<li>
+					<p>Bewegen Sie den Schalthebel.</p>
+				</li>
+				<li>
+					<p>Entfernen Sie das Werkzeug aus dem Zugangsloch für die Schaltsperre und setzen Sie die Knaufmanschetten ein.</p>
+				</li>
+				<li>
+					<p>Wenn sich der Schalthebel auch nach Durchführen dieses Verfahrens nicht bewegt, lassen Sie das System von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+			</ol>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Achten Sie darauf, die Abdeckung nicht zu beschädigen, wenn Sie die Schalthebelmanschetten entfernen.</p>
+					</li>
+					<li>
+						<p>Stellen Sie sicher, dass das Fahrzeug auf einer ebenen Fläche steht, wenn Sie die Schaltsperre lösen.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0350.dita#CL4m_HEV-ca_ES-2027-t0350" role="parent" scope="local" type="concept">
+				<linktext>Intelligentes variables Getriebe (IVT)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

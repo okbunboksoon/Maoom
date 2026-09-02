@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00733">
+	<title>Limitations of Remote Smart Parking Assist</title>
+	<conbody>
+		<p>In the following circumstances, function performance to park or exit the vehicle may be limited, there may be a risk of collision, or Remote Smart Parking Assist may turn off. Park or exit the vehicle manually if necessary.</p>
+		<ul id="e04286">
+			<li>
+				<p>Accessories are attached to the steering wheel or steering components are modified</p>
+			</li>
+			<li>
+				<p>The vehicle is installed with a snow chain, spare tire or different size wheel</p>
+			</li>
+			<li>
+				<p>Tire pressure is lower or higher than the standard tire pressure</p>
+			</li>
+			<li>
+				<p>Your vehicle is loaded with cargo longer or wider than your vehicle or a trailer is connected to your vehicle</p>
+			</li>
+			<li>
+				<p>Wheels are misaligned or suspension components are modified</p>
+			</li>
+			<li>
+				<p>Your vehicle is leaning severely to one side</p>
+			</li>
+			<li>
+				<p>Your vehicle is equipped with a trailer hitch</p>
+			</li>
+			<li>
+				<p>The license plate is not installed in the original location</p>
+			</li>
+			<li>
+				<p>There is a person, animal or object above or below the ultrasonic sensor when Remote Smart Parking Assist is activated</p>
+			</li>
+			<li>
+				<p>The parking space is curved or diagonal</p>
+			</li>
+			<li>
+				<p>There is an obstacle such as a person, animal or object (trash can, bicycle, motorcycle, shopping cart, narrow pillar etc.) near the parking space</p>
+			</li>
+			<li>
+				<p>There is a circular pillar or narrow pillar, or a pillar surrounded by objects such as fire extinguisher, etc. near the parking space</p>
+			</li>
+			<li>
+				<p>The road surface is bumpy (curbstone, speed bump, etc.)</p>
+			</li>
+			<li>
+				<p>The road is slippery</p>
+			</li>
+			<li>
+				<p>The parking space is near a large vehicle, or one with higher ground clearance, such as a truck, etc.</p>
+			</li>
+			<li>
+				<p>The parking space is Inclined</p>
+			</li>
+			<li>
+				<p>There is heavy wind</p>
+			</li>
+			<li>
+				<p>Operating Remote Smart Parking Assist on uneven roads, gravel roads, bushes, etc.</p>
+			</li>
+			<li>
+				<p>The performance of the ultrasonic sensor is affected by extremely hot or cold weather</p>
+			</li>
+			<li>
+				<p>The ultrasonic sensor is covered with snow or water</p>
+			</li>
+			<li>
+				<p>An object that generates ultrasonic waves is nearby</p>
+			</li>
+			<li>
+				<p>A wireless device with a transmission function operates near the ultrasonic sensors</p>
+			</li>
+			<li>
+				<p>Your vehicle is affected by another vehicle’s Parking Distance Warning</p>
+			</li>
+			<li>
+				<p>The sensor is mounted or positioned incorrectly due to an impact to the bumper</p>
+			</li>
+			<li>
+				<p>When the ultrasonic sensor cannot detect the following objects: Sharp or slim objects, such as ropes, chains or small poles</p>
+			</li>
+			<li>
+				<p>Objects smaller than 100 cm (40 inches) in length and narrower than 14 cm (6 inches) in diameter</p>
+			</li>
+			<li>
+				<p>Objects which tend to absorb sensor frequency, such as clothes, spongy material or snow</p>
+			</li>
+		</ul>
+		<p>Remote Smart Parking Assist may not operate normally under the following circumstances:</p>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc" id="e04287">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1">
+							<p>Limitations</p>
+						</entry>
+						<entry colname="2">
+							<p>Details</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<fig id="e04288">
+								<title>Parking on inclines</title>
+								<figgroup>
+									<image href="images/N_SP327_B10_014.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>Park manually when parking on inclines.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<fig id="e04289">
+								<title>Parking on uneven road</title>
+								<figgroup>
+									<image href="images/N_SP327_B10_015.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>Remote Smart Parking Assist may cancel when the vehicle slips, or the vehicle cannot move due to road conditions such as pebbles or fragmented stones.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<fig id="e04290">
+								<title>Parking around high-level obstacles such as truck cargo beds</title>
+								<figgroup>
+									<image href="images/N_SP327_B10_016.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>Using Remote Smart Parking Assist near obstacles or structures located at heights that sensors may have difficulty detecting, such as truck cargo beds, may result in a collision. Park or exit the vehicle manually instead of using Remote Smart Parking Assist.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<fig id="e04291">
+								<title>Parking near a pillar</title>
+								<figgroup>
+									<image href="images/N_SP327_B10_017.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>Remote Smart Parking Assist performance may reduce or collision with an obstacle may occur when there is a narrow object, circular pillar, square pillar, or a pillar surrounded by objects such as a fire extinguisher, etc. near the parking space. The driver should park the vehicle manually.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<fig id="e04292">
+								<title>Parking in a parking space with a vehicle on one side only</title>
+								<figgroup>
+									<image href="images/N_SP327_B10_018.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>If Remote Smart Parking Assist is used, when parking in a parking space with a vehicle only on one side, your vehicle may cross the parking line to avoid the parked vehicle.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<fig id="e04293">
+								<title>Parking in snow</title>
+								<figgroup>
+									<image href="images/N_SP327_B10_019.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>Snow may interfere with sensor operation, or Remote Smart Parking Assist may cancel if the road is slippery while parking.</p>
+						</entry>
+					</row>
+					<row rowsep="0" valign="middle">
+						<entry colname="1">
+							<fig id="e04294">
+								<title>Parking diagonally</title>
+								<figgroup>
+									<image href="images/N_SP327_B10_020.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>Remote Smart Parking Assist does not provide diagonal parking. Even if your vehicle was able to enter the parking space, do not use the function because the function cannot operate normally.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning" id="e04295">
+			<ul id="e04296">
+				<li>
+					<p>It is the driver’s responsibility to park and exit safely. Use Remote Smart Parking Assist while checking your surroundings at all times when parking and exiting. Under various environmental conditions, braking control may not operate because people, animals, other vehicles or objects around the vehicle may not be properly detected. If there is a risk of collision with a nearby obstacle, release the control button to stop the function.</p>
+				</li>
+				<li>
+					<p>When using Remote Smart Parking Assist, stay out of the way in the direction the vehicle moves for your safety.</p>
+				</li>
+				<li>
+					<p>Always check surroundings when using Remote Smart Parking Assist. You may collide with pedestrians, animals, or objects if they are near the sensor or are in the sensor’s blind spot area.</p>
+				</li>
+				<li>
+					<p>A collision may occur if a pedestrian, animal, or object suddenly appears while Remote Smart Parking Assist is operating.</p>
+				</li>
+				<li>
+					<p>Do not use Remote Smart Parking Assist when under the influence of alcohol.</p>
+				</li>
+				<li>
+					<p>Do not let children or other people use the smart key.</p>
+				</li>
+				<li>
+					<p>If Remote Smart Parking Assist is used continuously for a long period, it may adversely affect Remote Smart Parking Assist performance.</p>
+				</li>
+				<li>
+					<p>Remote Smart Parking Assist may not operate normally if the vehicle needs wheel alignment adjustment such as when the vehicle tilts to one side. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>Noise may be heard when braking occurs by Remote Smart Parking Assist or when the brake pedal is depressed by the driver.</p>
+				</li>
+				<li>
+					<p>Remote Smart Parking Assist may suddenly apply the brake to avoid collision.</p>
+				</li>
+				<li>
+					<p>Use Remote Smart Parking Assist only in a parking space that is large enough for the vehicle to move safely.</p>
+				</li>
+				<li>
+					<p>Driving with the tailgate open is considered abnormal operation. Please exercise caution for your safety.</p>
+				</li>
+				<li>
+					<p>Always keep the detection sensors clean.</p>
+				</li>
+				<li>
+					<p>When cleaning the sensor surface, use only mild soap or a neutral detergent, and rinse thoroughly with water. Do not use acidic or alkaline cleaners.</p>
+				</li>
+				<li>
+					<p>Do not spray high pressure water directly onto the detection sensors or their surrounding areas during car washing. Impact from high-pressure water may cause the sensors to malfunction.</p>
+				</li>
+				<li>
+					<p>Do not cover the area around the detection sensors with external objects (such as stickers or bumper guards), and do not paint the bumper. The performance of the Remote Smart Parking Assist may be degraded.</p>
+				</li>
+				<li>
+					<p>Do not disassemble or apply impact to the detection sensor components.</p>
+				</li>
+				<li>
+					<p>Be careful not to subject the detection sensors to impact. If the sensors become misaligned due to impact, the Remote Smart Parking Assist may not operate properly. If a sensor is damaged by impact, have it inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>If the bumper is damaged, replaced, or repaired, the Parking Distance Warning may not function properly.</p>
+				</li>
+				<li>
+					<p>The Remote Smart Parking Assist may turn off due to strong electromagnetic interference.</p>
+				</li>
+				<li>
+					<p>Excessive sound from the audio system may prevent you from hearing the warning sound. Adjust the in-vehicle volume appropriately and always remain attentive.</p>
+				</li>
+				<li>
+					<p>To prevent a collision, sudden braking and resulting brake noises may occur.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e04297">
+			<ul id="e04298">
+				<li>
+					<p>If the 3rd stage warning (continuous beep) of the Forward/Reverse Parking Distance Warning sounds while Remote Smart Parking Assist is operating, it means the obstacle detected is close to your vehicle. At this time, Remote Smart Parking Assist will temporarily stop operating. Make sure there are no pedestrians, animals, or objects around your vehicle.</p>
+				</li>
+				<li>
+					<p>Depending on brake operation, the stop lights may come on while the vehicle is moving.</p>
+				</li>
+				<li>
+					<p>If the vehicle is remotely started that has been parked in cold weather for a long time, the operation of Remote Parking function may be delayed or canceled depending on vehicle condition.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00731.dita#t00731" role="parent" scope="local" type="concept">
+				<linktext>Remote Smart Parking Assist malfunction and limitations</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

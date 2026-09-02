@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00690">
+	<title>Emergency Braking</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04113">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04114">
+								<image href="images/N_SP3i26_B10_006_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e04115">
+								<image href="images/N_SP3i25_C00_041_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04116">
+								<image href="images/N_SP3i25_C00_043_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e04117">
+								<li>
+									<p><uicontrol>Emergency Braking</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Collision Warning can alert you with a warning light on the outside rearview mirror, a warning message, an audible warning and steering wheel vibration (if equipped).</p>
+		<p>Collision Warning also appears on the infotainment system screen.</p>
+		<p>Emergency Braking assists you to help prevent a collision with an approaching vehicle from the left or right.</p>
+		<p>Emergency Braking operates when all of the following conditions are satisfied:</p>
+		<ul>
+			<li>
+				<p>You shift the gear to R (Reverse) while your speed is below 8 km/h (5 mph).</p>
+			</li>
+			<li>
+				<p>The approaching vehicle is approximately 1.5 m (5 ft) from the left or right side of your vehicle.</p>
+			</li>
+			<li>
+				<p>The speed of the vehicle approaching from the left or right is above 5 km/h (3 mph).</p>
+			</li>
+		</ul>
+		<note type="tip">
+			<p>Brake control ends under the following conditions:</p>
+			<ul>
+				<li>
+					<p>The approaching vehicle is out of the detecting range.</p>
+				</li>
+				<li>
+					<p>The approaching vehicle passes behind your vehicle.</p>
+				</li>
+				<li>
+					<p>The approaching vehicle does not drive toward your vehicle.</p>
+				</li>
+				<li>
+					<p>The approaching vehicle slows down.</p>
+				</li>
+				<li>
+					<p>You engage the brake pedal with sufficient power.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00688.dita#t00688" role="parent" scope="local" type="concept">
+				<linktext>Rear Cross-Traffic Collision-Avoidance Assist operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

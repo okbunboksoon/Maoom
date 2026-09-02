@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0102">
+	<title>Zurücksetzen des Schiebedachs</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OMV033469N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>In einigen Fällen kann ein Zurücksetzen des Schiebedachs erforderlich sein. Ein Zurücksetzen des Schiebedachs kann in folgenden Fällen erforderlich sein:</p>
+		<ul>
+			<li>
+				<p>Wenn die 12V-Batterie abgeklemmt oder entladen ist</p>
+			</li>
+			<li>
+				<p>Wenn die Schiebedach-Sicherung ersetzt wird</p>
+			</li>
+			<li>
+				<p>Wenn die One-Touch-<term translate="no">AUTO</term>-AUF/ZU-Tasten des Schiebedachs nicht richtig funktionieren</p>
+			</li>
+		</ul>
+		<p>Zurücksetzen des Schiebedachs:</p>
+		<ol>
+			<li>
+				<p>Es wird empfohlen, das Schiebedach bei laufendem Motor zurückzusetzen. Starten Sie das Fahrzeug in Position P (Parkstufe).</p>
+			</li>
+			<li>
+				<p>Stellen Sie sicher, dass die elektrische Sonnenblende und das Schiebedach vollständig geschlossen sind. Wenn die elektrische Sonnenblende und das Schiebedachglas geöffnet sind, drücken Sie den Schalter nach vorn, bis die elektrische Sonnenblende und das Schiebedach vollständig geschlossen sind.</p>
+			</li>
+			<li>
+				<p>Lassen Sie den Schalter los, wenn die elektrische Sonnenblende und das Schiebedachglas vollständig geschlossen sind.</p>
+			</li>
+			<li>
+				<p>Drücken Sie den Schalter nach vorn, bis sich die elektrische Sonnenblende und das Schiebedachglas sich etwas bewegen. Lassen Sie den Schalter dann los.</p>
+			</li>
+			<li>
+				<p>Drücken und halten Sie den Schiebedachschalter erneut nach vorn, bis sich die elektrische Sonnenblende und das Schiebedach öffnen und schließen. Lassen Sie den Steuerschalter erst los, wenn der Vorgang abgeschlossen ist. Wenn Sie den Schalter während des Betriebs loslassen, beginnen Sie den Vorgang erneut ab Schritt 2.</p>
+			</li>
+		</ol>
+		<note type="note">
+			<p>Wird das Schiebedach nicht zurückgesetzt, wenn die Fahrzeugbatterie abgeklemmt oder entladen oder die betreffende Sicherung gewechselt wurde, funktioniert das Schiebedach möglicherweise nicht einwandfrei.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0097.dita#CL4m_HEV-ca_ES-2027-t0097" role="parent" scope="local" type="concept">
+				<linktext>Breites Schiebedach </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

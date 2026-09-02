@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="dpf" importance="optional"
+    otherprops="legalnotice_europe-general_egall_2023_20230101_00032">
+    <title>Diesel particulate filter</title>
+    <shortdesc/>
+    <conbody>
+        <p>The Diesel Particulate Filter (DPF) system removes the soot in the exhaust gas.</p>
+        <p>Unlike a disposable air filter, the DPF system automatically burns (oxidizes) and removes
+            the accumulated soot according to the driving condition. In other words, the active
+            burning by engine control system and high exhaust gas temperature caused by normal/high
+            driving condition burns and removes the accumulated soot. However, if the vehicle
+            continues to be driven at repeated short distance or driven at low speed for a long
+            time, the accumulated soot may not be automatically removed because of low exhaust gas
+            temperature. More than a certain amount of soot deposited, the malfunction indicator
+            light (<image href="images/WKIA_054.jpg" scale="15" id="e06021"/>) appears.</p>
+        <p>When the malfunction indicator light blinks, it may stop blinking by driving the vehicle
+            at more than 60 km/h (37 mph) or at more than second gear with 1500–2500 engine rpm for
+            a certain time (for about 25 minutes).</p>
+        <p>If the malfunction indicator light (<image href="images/WKIA_054.jpg" scale="15"
+                id="image_smf_4x3_pjc"/>) continues to be blinked or "Check exhaust system" warning
+            message appears in spite of the procedure, visit a professional workshop and check the
+            DPF system. Kia recommends visiting an authorized Kia dealer or service partner. If you
+            continue to drive with the malfunction indicator light blinking for a long time, the DPF
+            system can be damaged and fuel consumption can be worsen and engine durability can be
+            worsen by oil dilution.</p>
+        <note id="note_a23_qx3_pjc" type="caution">
+            <p>Diesel Fuel (if equipped with DPF)</p>
+            <p>It is recommended to use the regulated automotive diesel fuel for diesel vehicle
+                equipped with the DPF system.</p>
+            <p>If you use diesel fuel including high sulfur (more than 50 ppm sulfur) and
+                unspecified additives, it can cause the DPF system to be damaged and white smoke can
+                be emitted.</p>
+        </note>
+    </conbody>
+</concept>

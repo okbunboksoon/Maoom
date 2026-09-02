@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00408">
+	<title>Releasing EPB</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>electronic parking brake (EPB) 
+					<indexterm>releasing</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02981">
+			<title>Releasing EPB manually</title>
+			<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02982">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e02983">
+									<figgroup>
+										<image href="../../images/OOV045007.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02984"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol id="e02985">
+				<li>
+					<p>Turn on the vehicle.</p>
+				</li>
+				<li>
+					<p>Press the brake pedal.</p>
+				</li>
+				<li>
+					<p>Make sure the vehicle is in P (Park).</p>
+				</li>
+				<li>
+					<p>Press the EPB switch.</p>
+				</li>
+				<li>
+					<p>Make sure the brake warning light (<image align="left" href="../../images/WKIA_127.eps" outputclass="nolabel" placement="inline" scale="15" id="e02986"/>) goes off.</p>
+				</li>
+			</ol>
+			<note type="note" id="e02987">
+				<ul id="e02988">
+					<li>
+						<p>If the vehicle does not remain stationary on a steep incline or while pulling a trailer, follow the steps below:</p>
+						<ol id="e02989">
+							<li>
+								<p>Apply the Electronic Parking Brake (EPB).</p>
+							</li>
+							<li>
+								<p>Pull up the EPB switch and hold it for more than 3 seconds.</p>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<p>A clicking sound or electric brake motor whine may be heard when applying or releasing the EPB. This is normal and indicates proper system operation.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e02990">
+			<title>Releasing EPB automatically</title>
+			<p>The EPB is released automatically under following conditions:</p>
+			<ul id="e02991">
+				<li>
+					<p>While the <term translate="no">DRIVE READY</term> indicator is on and the brake pedal is depressed, the EPB will be released automatically if the vehicle is shifted from P (Park) or N (Neutral) to R (Reverse) or D (Drive). For your safety, check if the brake warning light (<image align="left" href="../../images/WKIA_127.eps" outputclass="nolabel" placement="inline" scale="15" id="e02992"/>) is turned off and release the brake pedal.</p>
+				</li>
+				<li>
+					<p>Under following conditions, the EPB is released automatically after slowly depressing the accelerator pedal. For your safety, check if the brake warning light is turned off.</p>
+					<ul id="e02993">
+						<li>
+							<p>The <term translate="no">DRIVE READY</term> indicator is on</p>
+						</li>
+						<li>
+							<p>The driver’s seat belt is fastened</p>
+						</li>
+						<li>
+							<p>The driver’s door, hood, tailgate is closed</p>
+						</li>
+						<li>
+							<p>The vehicle is in R (Reverse) or D (Drive)</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<note type="note" id="e02994">
+				<ul id="e02995">
+					<li>
+						<p>For your safety, you can engage the EPB even though the vehicle is turned off, but you cannot release it.</p>
+					</li>
+					<li>
+						<p>For your safety, depress the brake pedal and release the parking brake manually with the EPB switch when you drive downhill or when backing up the vehicle.</p>
+					</li>
+					<li>
+						<p>If the brake warning light (<image align="left" href="../../images/WKIA_127.eps" outputclass="nolabel" placement="inline" scale="15" id="e02996"/>) is still on even though the EPB has been released, have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>Do not drive your vehicle with the EPB applied. It may cause excessive brake pad and brake rotor wear.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

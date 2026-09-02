@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00715">
+	<title>Operating conditions</title>
+	<conbody>
+		<p>When Reverse Parking Collision-Avoidance Assist detects a risk of collision with pedestrians or objects behind the vehicle, an audible warning sounds and a warning message appears on the instrument cluster. If the Surround View Monitor is active, the infotainment system screen also displays a warning message.</p>
+		<p>If a collision risk is urgent, Reverse Parking Collision-Avoidance Assist controls the vehicle’s braking.</p>
+		<p>Tap Rear Safety on the Parking Safety menu on the infotainment system screen. Parking Collision-Avoidance Assist is enabled under the following conditions:</p>
+		<ul>
+			<li>
+				<p>The tailgate and doors are closed.</p>
+			</li>
+			<li>
+				<p>The Electronic Parking Brake (<term translate="no">EPB</term>) is released.</p>
+			</li>
+			<li>
+				<p>The gear is shifted to R (Reverse).</p>
+			</li>
+			<li>
+				<p>Your speed is below 10 km/h (6 mph) (detecting pedestrians).</p>
+			</li>
+			<li>
+				<p>Your speed is below 4 km/h (1 mph) (detecting objects).</p>
+			</li>
+			<li>
+				<p>Parking Collision-Avoidance Assist components (such as the wide-rear view camera and the rear ultrasonic sensors) are in normal condition.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04189">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e04190">
+										<image href="images/N_SP3i25_C00_063_IR.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>When Parking Collision-Avoidance Assist activates, a line appears at the bottom of the vehicle’s image in the instrument cluster.</p>
+			</li>
+		</ul>
+		<note type="tip">
+			<p>Parking Collision-Avoidance Assist operates only once after you shift the gear to R (Reverse). To reactivate Parking Collision-Avoidance Assist, shift from another gear to R (Reverse).</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00713.dita#t00713" role="parent" scope="local" type="concept">
+				<linktext>Reverse Parking Collision-Avoidance Assist operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

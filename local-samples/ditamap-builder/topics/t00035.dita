@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" deliveryTarget="except_print" id="t00035">
+	<title>Charging connector lock</title>
+	<conbody>
+		<p>You may select when the charging connector can be locked and unlocked in the charging inlet.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00210">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00211">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/N_CT25Q021_E.eps" placement="break" width="2.244in" id="e00212"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e00213">
+								<li>
+									<p> <uicontrol outputclass="a1805250">AC charger</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Lock charging cable</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1805674">Always</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1805673">While charging</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1805675">Do not lock</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital" id="e00214">
+			<title>Simple operation</title>
+			<ul id="e00215">
+				<li>
+					<p>Select <menucascade><uicontrol outputclass="a1701772">Electric Vehicle</uicontrol><uicontrol outputclass="a1701772">Reserved charging icon</uicontrol><uicontrol outputclass="a1804410">AC charger</uicontrol></menucascade> in the infotainment system.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00216">
+			<title>Operation</title>
+			<ul id="e00217">
+				<li>
+					<p>Select <menucascade><uicontrol outputclass="a1701772">Electric Vehicle</uicontrol><uicontrol outputclass="a1701772">Reserved charging icon</uicontrol><uicontrol outputclass="a1804410">AC charger</uicontrol></menucascade> in the infotainment system.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00849">
+	<title>Reset items</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>12V battery
+					<indexterm>reset items</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Reset the following items after the battery has been discharged or disconnected:</p>
+		<ul>
+			<li>
+				<p>Auto up and down window (Refer to <xref href="t00095.dita#t00095"/>)</p>
+			</li>
+			<li>
+				<p>Climate control system (Refer to <xref href="t00312.dita#t00312"/>)</p>
+			</li>
+			<li>
+				<p>Sunroof (Refer to <xref href="t00103.dita#t00103"/>)</p>
+			</li>
+			<li>
+				<p>Radio presets</p>
+			</li>
+			<li>
+				<p>Clock</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00845.dita#t00845" role="parent" scope="local" type="concept">
+				<linktext>12V Battery</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

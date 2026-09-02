@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00853">
+	<title>Checking tire inflation pressure</title>
+	<shortdesc>Check your tires once a month or more.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tires and wheels
+					<indexterm>checking tire inflation pressure</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context id="e05039">
+			<p>Use a high-quality gauge to check tire pressure. You cannot tell if your tires are properly inflated simply by looking at them. Radial tires may look properly inflated even when they are underinflated.</p>
+			<p>Check the tire inflation pressure when the tires are cold (after the vehicle has been sitting for at least 3 hours, or you haven’t driven it more than 1.6 km (1 mile) since you started it.)</p>
+		</context>
+		<steps id="e05040">
+			<step>
+				<cmd>Remove the valve cap from the tire valve stem.</cmd>
+			</step>
+			<step>
+				<cmd>Press the tire gauge firmly onto the valve to measure the pressure. If the cold tire inflation pressure matches the recommended pressure on the tire and loading information label, no further adjustment is necessary.</cmd>
+			</step>
+			<step>
+				<cmd>If the pressure is low, add air until you reach the recommended pressure.</cmd>
+			</step>
+			<step>
+				<cmd>If you overfill the tire, release air by pushing on the metal stem in the center of the tire valve.</cmd>
+			</step>
+			<step>
+				<cmd>Recheck the tire pressure with the tire gauge.</cmd>
+			</step>
+			<step>
+				<cmd>Be sure to put the valve caps back on the valve stems. They help prevent leaks by keeping out dirt and moisture.</cmd>
+				<info>
+					<p>Inspect your tires frequently for proper inflation as well as wear and damage. Always use a tire pressure gauge.</p>
+					<p>Tires with too much or too little pressure wear unevenly. This could result in poor handling, a loss of vehicle control, and sudden tire failure, leading to accidents, injuries, and even death. The recommended cold tire pressure for your vehicle can be found in this manual and on the tire label located on the vehicle’s side center pillar.</p>
+				</info>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00850.dita#t00850" role="parent" scope="local" type="concept">
+				<linktext>Tires and wheels</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

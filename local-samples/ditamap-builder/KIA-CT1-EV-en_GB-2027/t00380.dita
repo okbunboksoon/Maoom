@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00380">
+	<title>OFF mode</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01603">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01604">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C092.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01605">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C093.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e01606">
+			<li>
+				<p> <term translate="no">OFF</term> icon</p>
+			</li>
+			<li>
+				<p>Fan speed control lever</p>
+			</li>
+		</ol>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul id="e01607">
+				<li>
+					<p>Touch the icon (1) several times or keep touching it.</p>
+				</li>
+				<li>
+					<p>Press down the fan speed control lever (2) several times or keep pressing it down.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul id="e01608">
+				<li>
+					<p>Touch the icon (1) several times or keep touching it.</p>
+				</li>
+				<li>
+					<p>Press down the fan speed control lever (2) several times or keep pressing it down.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

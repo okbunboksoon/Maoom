@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00206">
+	<title id="e01284">Changing seat cushion tilt and height </title>
+	<taskbody>
+		<context>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01285">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01286">
+									<image href="images/N_SP327_B06_008_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e01287">
+									<image href="images/N_SP327_B06_009_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To change the height of the seat:</p>
+		</context>
+		<steps>
+			<step>
+				<cmd>Pull the front portion of the control switch up to raise or press down to lower the front part of the seat cushion.</cmd>
+			</step>
+			<step>
+				<cmd>Pull the rear portion of the control switch up to raise or press down to lower the rear part of the seat cushion.</cmd>
+			</step>
+			<step>
+				<cmd>Release the switch once the seat reaches the desired position.</cmd>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00203.dita#t00203" role="parent" scope="local" type="concept">
+				<linktext>Front seat adjustment for power seat </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

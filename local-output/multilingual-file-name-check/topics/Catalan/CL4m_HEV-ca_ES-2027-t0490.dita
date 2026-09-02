@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0490">
+	<title>Einschränkungen des Spurhalteassistenten</title>
+	<conbody>
+		<p>Der Spurhalteassistent funktioniert unter den folgenden Bedingungen eventuell nicht einwandfrei oder kann unerwartet reagieren:</p>
+		<ul>
+			<li>
+				<p>Die Fahrbahn ist verunreinigt oder schwer zu erkennen:</p>
+				<ul>
+					<li>
+						<p>Die Fahrbahnmarkierungen (oder der Straßenrand) sind durch Regen, Schnee, Schmutz, Öl usw. nicht erkennbar.</p>
+					</li>
+					<li>
+						<p>Sich die Farbe der Fahrspur- (oder Fahrbahnrand-) Markierung nicht deutlich genug von der Fahrbahn abhebt.</p>
+					</li>
+					<li>
+						<p>Es gibt Markierungen (oder Straßenränder) auf der Straße in der Nähe der Fahrspur oder die Markierungen (oder Straßenränder) der Straße sehen den Fahrbahnmarkierungen (oder Straßenrändern) ähnlich.</p>
+					</li>
+					<li>
+						<p>Die Spurmarkierung (oder der Straßenrand) ist undeutlich oder beschädigt.</p>
+					</li>
+					<li>
+						<p>Wenn der Schatten von Objekten am Straßenrand (Mittelstreifen, Leitplanke, Lärmschutzwand, umliegende Büsche usw.) oder der Schatten eines Fahrzeugs die Spur verdeckt.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Die Anzahl der Fahrspuren ändert sich, oder die Fahrspurmarkierungen (oder Straßenränder) überkreuzen sich.</p>
+			</li>
+			<li>
+				<p>Es gibt mehr als zwei Fahrbahnmarkierungen (oder Straßenränder) auf der Straße.</p>
+			</li>
+			<li>
+				<p>Die Fahrbahnmarkierungen (oder Straßenränder) sind kompliziert, oder die Linien werden durch eine Struktur ersetzt, z. B. in einer Baustelle.</p>
+			</li>
+			<li>
+				<p>Es sind Fahrbahnmarkierungen wie Zickzacklinien, Zebrastreifen und Verkehrszeichen vorhanden.</p>
+			</li>
+			<li>
+				<p>Die Fahrspurmarkierung verschwindet plötzlich, beispielsweise an einer Kreuzung</p>
+			</li>
+			<li>
+				<p>Die Fahrspur (oder Straße) ist sehr breit oder sehr schmal.</p>
+			</li>
+			<li>
+				<p>Der Straßenrand hat keine Fahrspurmarkierung.</p>
+			</li>
+			<li>
+				<p>Die Fahrbahn hat eine Begrenzung, z. B. eine Mautschranke, einen Gehweg, einen Bordstein usw.</p>
+			</li>
+			<li>
+				<p>Der Abstand zum vorausfahrenden Fahrzeug ist extrem kurz oder das vorausfahrende Fahrzeug verdeckt die Fahrbahnmarkierung (oder den Straßenrand).</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>Weitere Hinweise zu den Beschränkungen der Frontkamera finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0440.dita#CL4m_HEV-ca_ES-2027-t0440"/>.</p>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Es obliegt dem Fahrer, das Fahrzeug sicher zu steuern und zu kontrollieren. Verlassen Sie sich nicht allein auf den Spurhalteassistenten und gehen Sie kein Risiko ein.</p>
+				</li>
+				<li>
+					<p>Die Bedienung des Spurhalteassistenten kann je nach Straßenzustand und Umgebung abgebrochen werden oder nicht richtig funktionieren. Fahren Sie immer vorsichtig.</p>
+				</li>
+				<li>
+					<p>Siehe <xref href="CL4m_HEV-ca_ES-2027-t0487.dita#CL4m_HEV-ca_ES-2027-t0487"/>, wenn die Fahrspur nicht richtig erkannt wird.</p>
+				</li>
+				<li>
+					<p>Wenn Sie einen Anhänger oder ein anderes Fahrzeug ziehen, schalten Sie den Spurhalteassistenten aus Sicherheitsgründen aus.</p>
+				</li>
+				<li>
+					<p>Wenn das Fahrzeug mit hoher Geschwindigkeit gefahren wird, wird das Lenkrad nicht gesteuert. Der Fahrer muss bei der Verwendung des Spurhalteassistenten immer die Höchstgeschwindigkeit einhalten.</p>
+				</li>
+				<li>
+					<p>Wenn die Warnmeldung einer anderen Funktion angezeigt oder ein anderer Warnton ausgegeben wird, wird die Warnmeldung des Spurhalteassistenten möglicherweise nicht angezeigt und kein Warnton ausgegeben.</p>
+				</li>
+				<li>
+					<p>Möglicherweise hören Sie den Warnton des Spurhalteassistenten nicht, wenn die Umgebung laut ist. Stellen Sie die Fahrzeuglautstärke mäßig ein und achten Sie immer auf die Umgebung.</p>
+				</li>
+				<li>
+					<p>Wenn Sie Gegenstände am Lenkrad anbringen, wird die Lenkung möglicherweise nicht korrekt unterstützt.</p>
+				</li>
+				<li>
+					<p>Der Spurhalteassistent funktioniert möglicherweise nach dem Start des Fahrzeugs oder der Initialisierung der Kamera etwa 15 Sekunden lang nicht.</p>
+				</li>
+				<li>
+					<p>Der Spurhalteassistent funktioniert in folgenden Fällen nicht:</p>
+					<ul>
+						<li>
+							<p>Blinker oder Warnblinkanlage sind aktiviert.</p>
+						</li>
+						<li>
+							<p>Das Fahrzeug beim Einschalten des Spurhalteassistenten nicht in der Mitte der Spur fährt oder gerade erst einen Spurwechsel vollzogen hat.</p>
+						</li>
+						<li>
+							<p>ESC (elektronische Stabilitätskontrolle) oder VSM (Fahrzeugstabilitätsmanagement) ist aktiviert.</p>
+						</li>
+						<li>
+							<p>Das Fahrzeug fährt schnell durch eine kurvenreiche Straße.</p>
+						</li>
+						<li>
+							<p>Die Fahrzeuggeschwindigkeit unter 55 km/h (35 mph) oder über 210 km/h (130 mph) liegt.</p>
+						</li>
+						<li>
+							<p>Das Fahrzeug abrupte Fahrspurwechsel durchführt.</p>
+						</li>
+						<li>
+							<p>Das Fahrzeug bremst plötzlich.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Wenn die maximale Zuladung überschritten wird oder die Ladung an einer Stelle im Laderaum konzentriert wird, kann dies die Fahrstabilität des Fahrzeugs beeinträchtigen, was wiederum die Wirksamkeit des Spurhalteassistenten verringern kann.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0487.dita#CL4m_HEV-ca_ES-2027-t0487" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion und Einschränkungen des Spurhalteassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

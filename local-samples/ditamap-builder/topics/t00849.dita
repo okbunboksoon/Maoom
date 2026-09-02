@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_gen_std_005_01" id="t00849">
+	<title otherprops="legal_gen_std_005_01">Vehicle Identification Number (VIN)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle identification number (VIN)</indexterm>
+				<indexterm>specifications 
+					<indexterm>vehicle identification number (VIN)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05306">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05307">
+								<figgroup>
+									<image href="../../images/OOV085001.eps" align="center" height="1.740in" placement="break" id="e05308"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e05309">
+								<figgroup>
+									<image href="../../images/OOV085004.eps" align="center" height="1.740in" placement="break" id="e05310"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The Vehicle Identification Number (VIN) is the number used in registering your vehicle and in all legal matters pertaining to its ownership, etc.</p>
+		<p>The number is punched on the motor compartment frame as shown in the drawing. To check the number, open the cover.</p>
+		<p>The VIN is also on a plate attached to the top of the instrument panel. The number on the plate can easily be seen through the windshield from outside.</p>
+	</conbody>
+</concept>

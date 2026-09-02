@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0270">
+	<title>AI Assistant</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034416.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>AI Assistant kann mittels Spracherkennung verwendet werden.</p>
+		<section>
+			<title>Betrieb</title>
+			<p>Drücken Sie die Taste AI Assistant oder sagen Sie „Hey, Kia“.</p>
+			<ul>
+				<li>
+					<p>Beispiel (Fahrzeugsteuerung)</p>
+					<ul>
+						<li>
+							<p>„Schalte die Klimaanlage ein.“</p>
+						</li>
+						<li>
+							<p>„Schalte die Klimaanlage aus.“</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Beispiel (Frage)</p>
+					<ul>
+						<li>
+							<p>„Kannst Du erklären, warum das Meer blau ist, und zwar so, dass ein 7-Jähriger es versteht?“</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<note type="note">
+				<p>AI Assistanten geben möglicherweise ungenaue Antworten. Bitte prüfen Sie die wichtigen Details selbst.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0261.dita#CL4m_HEV-ca_ES-2027-t0261" role="parent" scope="local" type="concept">
+				<linktext>Infotainment-System </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

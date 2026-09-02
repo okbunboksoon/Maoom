@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00099">
+	<title id="e00515">Hood </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>hood</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The hood serves as a cover for the engine room.</p>
+		<p>Open the hood if maintenance work needs to be performed in the engine room or if you need to look at the compartment.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00033.dita#t00033" role="parent" scope="local" type="concept">
+				<linktext>Opening and Closing</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

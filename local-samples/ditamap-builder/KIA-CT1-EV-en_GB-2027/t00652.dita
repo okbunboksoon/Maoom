@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00652">
+	<title>Operating conditions</title>
+	<conbody>
+		<section>
+			<title>Basic function</title>
+			<p>Smart Cruise Control operates when the following conditions are satisfied.</p>
+			<ul>
+				<li>
+					<p>The gear is in D (Drive)</p>
+				</li>
+				<li>
+					<p>Your driving speed is within the operating speed range</p>
+					<ul>
+						<li>
+							<p>10–160 km/h (5–100 mph): when there is no vehicle in front</p>
+						</li>
+						<li>
+							<p>0–160 km/h (0–100 mph): when there is a vehicle in front</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>ESC (Electronic Stability Control) or ABS is on</p>
+				</li>
+			</ul>
+			<p>Smart Cruise Control does not operate in the following conditions.</p>
+			<ul>
+				<li>
+					<p>The driver’s door is open</p>
+				</li>
+				<li>
+					<p>The vehicle is in power limited mode (<image align="left" href="../../images/WKIA_313.eps" scale="15" placement="inline"/>)</p>
+				</li>
+				<li>
+					<p> <term translate="no">EPB</term> (Electronic Parking Brake) is applied</p>
+				</li>
+				<li>
+					<p>ESC (Electronic Stability Control) or ABS is controlling the vehicle</p>
+				</li>
+				<li>
+					<p>Forward Collision-Avoidance Assist brake control is operating</p>
+				</li>
+				<li>
+					<p>Remote Smart Parking Assist brake control is operating (if equipped)</p>
+				</li>
+			</ul>
+			<note type="note">
+				<p>When stopped behind another vehicle, the driver can turn on Smart Cruise Control while the brake pedal is depressed.</p>
+			</note>
+		</section>
+		<section>
+			<title>Overtake Acceleration Assist function</title>
+			<p>Overtaking Acceleration Assist will operate when the turn signal indicator is turned on to the left (left-hand drive) or turned on to the right (right-hand drive) while Smart Cruise Control is operating, and the following conditions are satisfied:</p>
+			<ul>
+				<li>
+					<p>Your driving speed is above 60 km/h (40 mph)</p>
+				</li>
+				<li>
+					<p>A vehicle is detected in front of your vehicle</p>
+				</li>
+			</ul>
+			<p>Overtaking Acceleration Assist does not operate in the following conditions.</p>
+			<ul>
+				<li>
+					<p>The hazard warning flasher is on</p>
+				</li>
+				<li>
+					<p>Vehicle speed is reduced to maintain distance with the vehicle in front</p>
+				</li>
+			</ul>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>When the turn signal indicator is turned on to the left (left-hand drive) or turned on to the right (right-hand drive) while there is a vehicle ahead, the vehicle may accelerate temporarily. Pay attention to the road conditions at all times.</p>
+					</li>
+					<li>
+						<p>Regardless of your country’s driving direction, Overtaking Acceleration Assist will operate when the conditions are satisfied. When using the function in countries with different driving direction, always check the road conditions at all times.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

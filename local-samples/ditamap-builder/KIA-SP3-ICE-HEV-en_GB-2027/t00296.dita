@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00296">
+	<title>Audio system</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>infotainment system
+					<indexterm>audio system</indexterm>
+				</indexterm>
+				<indexterm>audio system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<note type="note" id="e01905">
+			<ul id="e01906">
+				<li>
+					<p>If you install an aftermarket High Intensity Discharge (HID) headlight, your vehicle’s audio and electronic devices may malfunction.</p>
+				</li>
+				<li>
+					<p>When attaching metallic tinted paper to the glass, the communication function of the hi-pass system, radio reception function, connected car service, and automatic headlight turn-on function may not work normally. Also, be careful as the solution used in the construction of the tinted paper may permeate the inside of the vehicle, which may cause the electronic device to fail.</p>
+				</li>
+			</ul>
+		</note>
+		<p>If your vehicle is equipped with an infotainment system, refer to the separately supplied manual for detailed information.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00294.dita#t00294" role="parent" scope="local" type="concept">
+				<linktext>Infotainment system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

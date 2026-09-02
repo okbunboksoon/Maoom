@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00344">
+	<title>System cancellation</title>
+	<conbody>
+		<ol>
+			<li>
+				<p> <term translate="no">EV</term> button is in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+			</li>
+			<li>
+				<p>Select Floor-Level <image href="../../images/WKIA_062.eps" align="center" placement="inline" outputclass="nolabel" scale="15" id="e02526"/> air flow direction by touching Mode Selection icon.</p>
+			</li>
+			<li>
+				<p>With touching Air Conditioning icon, touch the Recirculated Air icon more than 4 times within 2 seconds.</p>
+			</li>
+			<li>
+				<p>If the system is canceled, the indicator on air intake control icon will blink 3 times.</p>
+			</li>
+		</ol>
+		<p>Activation on washer fluid is activated when you select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Climate</uicontrol><uicontrol>Recirculate Air</uicontrol><uicontrol>Activation upon Washer Fluid Use</uicontrol></menucascade> from the Settings in the infotainment system screen.</p>
+		<note type="tip">
+			<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+		</note>
+	</conbody>
+</concept>

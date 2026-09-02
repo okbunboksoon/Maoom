@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00547">
+	<title>Intelligent Speed Limit Assist disabled</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04107">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04108">
+								<figgroup>
+									<image href="../../images/OOV055184L.eps" align="center" height="1.740in" placement="break" id="e04109"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e04110">
+								<li>
+									<p> <uicontrol outputclass="c0586">Driver assistance system limited. Camera obscured.</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the front windshield where the front view camera is located is covered with foreign material, such as snow or rain, it can reduce the detecting performance and temporarily limit or disable Intelligent Speed Limit Assist. If this occurs, the warning message and speed limit indicator (<image href="../../images/WKIA_082.eps" align="left" placement="inline" outputclass="nolabel" scale="15" id="e04111"/>) will appear on the cluster.</p>
+		<p outputclass="across">Intelligent Speed Limit Assist will operate properly when snow, rain or foreign material is removed. Always keep it clean.</p>
+		<p>If Intelligent Speed Limit Assist does not operate properly after it is removed, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="warning" id="e04112">
+			<ul id="e04113">
+				<li>
+					<p outputclass="across">Even though the warning message or warning light does not appear on the cluster, Intelligent Speed Limit Assist may not operate properly.</p>
+				</li>
+				<li>
+					<p outputclass="across">Even if restarting the vehicle with the sensors blocked or malfunctioned, Intelligent Speed Limit Assist may not properly operate as the function maintains the broken/covered state.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e04114">
+			<p>You can check it in the service message of the utility information view of the cluster display window.</p>
+		</note>
+	</conbody>
+</concept>

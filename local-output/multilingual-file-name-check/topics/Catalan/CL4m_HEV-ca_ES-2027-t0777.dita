@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0777">
+	<title>Arten von Daten und deren Empfänger</title>
+	<conbody>
+		<p>Das eCall-Bordsystem kann nur die folgenden Daten erfassen und verarbeiten:</p>
+		<ul>
+			<li>
+				<p>Fahrzeug-Identifizierungs-Nummer</p>
+			</li>
+			<li>
+				<p>Fahrzeugtyp (PKW oder leichtes Nutzfahrzeug)</p>
+			</li>
+			<li>
+				<p>Art der Fahrzeugtreibstoffspeicherung (Benzin/Diesel, CNG/LPG/Elektro/Wasserstoff)</p>
+			</li>
+			<li>
+				<p otherprops="legal_eu_std_017_04">Letzte drei Positionen des Fahrzeugs und Fahrtrichtung</p>
+			</li>
+			<li>
+				<p>Protokolldatei der automatischen Aktivierung des Systems und seines Zeitstempels</p>
+			</li>
+			<li>
+				<p>Zusätzliche Daten (falls zutreffend): Entfällt</p>
+			</li>
+		</ul>
+		<p>Die Empfänger der durch das eCall-Bordsystem verarbeiteten Daten sind die relevanten öffentlichen Notrufzentralen, die von den jeweiligen Behörden des Landes, auf dessen Gebiet sich das Fahrzeug befindet, als die Instanz ausgewiesen sind, die eCalls an den einheitlichen europäischen Notruf als erstes empfängt und handhabt. Zusätzliche Informationen (falls verfügbar): Entfällt</p>
+		<ol>
+			<li>
+				<p>Richtlinie 95/46/EC des Europäischen Parlaments und des Europäischen Rates vom 24. Oktober 1995 zum Schutz natürlicher Personen bei Verarbeitung von personenbezogenen Daten und zum freien Datenverkehr (OJ L 281, 23.11.1995, S. 31).</p>
+			</li>
+			<li>
+				<p>Richtlinie 2002/58/EC des Europäischen Parlaments und des Europäischen Rates vom 12. Juli 2002 zur Verarbeitung von personenbezogenen Daten und des Datenschutzes im Sektor der elektronischen Kommunikation (Richtlinie zu Datenschutz und elektronischer Kommunikation) (OJ L 201, 31.7.2002, S. 37).</p>
+			</li>
+			<li>
+				<p>Richtlinie 95/46/EC ist durch Regelung (EU) 2016/679 des Europäischen Parlaments und des Europarats vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung von personenbezogenen Daten und der freien Übertragbarkeit derartiger Daten (Datenschutz-Grundverordnung) (OJ L 119, 4.5.2016, S. 1) außer Kraft gesetzt. Die Regelung gilt seit 25. Mai 2018.</p>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0776.dita#CL4m_HEV-ca_ES-2027-t0776" role="parent" scope="local" type="concept">
+				<linktext>Informationen zur Datenverarbeitung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

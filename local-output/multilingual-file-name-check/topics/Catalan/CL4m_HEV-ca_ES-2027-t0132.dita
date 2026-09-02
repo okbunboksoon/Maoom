@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" otherprops="legal_eu_std_028_01" id="CL4m_HEV-ca_ES-2027-t0132">
+	<title id="e00317">Schaltanzeige für Automatikgetriebe/intelligentes variables Getriebe im manuellen Schaltmodus </title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Typ A</title>
+								<figgroup>
+									<image align="center" href="../../images/OMQ4033189L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<title>Typ B</title>
+								<figgroup>
+									<image align="center" href="../../images/OMQ4033190L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Im manuellen Modus informiert diese Anzeige darüber, welcher Gang während der Fahrt einzulegen ist, um Kraftstoff zu sparen.</p>
+		<ul>
+			<li>
+				<p>8-Gang-Automatikgetriebe</p>
+				<ul>
+					<li>
+						<p>Hochschalten: ▲2, ▲3, ▲4, ▲5, ▲6, ▲7,* ▲8*</p>
+					</li>
+					<li>
+						<p>Herunterschalten: ▼1, ▼2, ▼3, ▼4, ▼5, ▼6*, ▼7*</p>
+					</li>
+				</ul>
+				<p>*: Ausstattungsabhängig</p>
+			</li>
+		</ul>
+		<p>Zum Beispiel</p>
+		<ol>
+			<li>
+				<p>▲3: Zeigt an, dass ein Hochschalten in den 3. Gang empfohlen wird (das Fahrzeug befindet sich derzeit im 2. oder 1. Gang).</p>
+			</li>
+			<li>
+				<p>▼3: Zeigt an, dass ein Herunterschalten in den 3. Gang empfohlen wird (das Fahrzeug befindet sich derzeit im 4., 5. oder 6. Gang). Wenn das System nicht einwandfrei funktioniert, wird die Kontrollleuchte nicht angezeigt.</p>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0129.dita#CL4m_HEV-ca_ES-2027-t0129" role="parent" scope="local" type="concept">
+				<linktext>Ganganzeige </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00281">
+	<title>Stay mode</title>
+	<shortdesc/>
+	<conbody>
+		<p>Stay mode allows users to use in-vehicle systems using the high-voltage battery instead of the 12 V battery.</p>
+		<section id="e01800">
+			<title>System setting</title>
+			<p>Stay mode will operate under the following conditions:</p>
+			<ul id="e01801">
+				<li>
+					<p>When the <term translate="no">READY</term> indicator light illuminates or the vehicle is in <term translate="no">ON</term> position.</p>
+				</li>
+				<li>
+					<p>The gear is in P (Park).</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01802">
+			<title>System activation</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01803">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01804">
+									<figgroup>
+										<image href="images/P_SP327_B00_006_E.jpg" scale="95" align="center" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To activate or deactivate stay mode, Select <menucascade><uicontrol>Hybrid</uicontrol><uicontrol><image href="images/WKIA_152.jpg" scale="15" align="left" placement="inline"/></uicontrol><uicontrol>Stay Mode</uicontrol></menucascade> on the infotainment system screen</p>
+			<p><uicontrol>Enable Stay Mode':</uicontrol> You can turn on the stay mode.</p>
+			<p><uicontrol>Activate Stay Mode Upon Arrival at a Set Destination:</uicontrol> Shift the gear to P (Park) upon arrival at the destination, and a confirmation message pops up asking if you want to start stay mode. Press 'Yes’ to turn on the mode.</p>
+		</section>
+		<section id="e01805">
+			<title>System deactivation</title>
+			<p>Stay mode will stop under the following conditions:</p>
+			<ul id="e01806">
+				<li>
+					<p>When the coolant temperature is low.</p>
+				</li>
+				<li>
+					<p>When te high voltage battery charge is low.</p>
+				</li>
+				<li>
+					<p>When the fuel gauge is low.</p>
+				</li>
+			</ul>
+			<note id="e01807">
+				<ul id="e01808">
+					<li>
+						<p>The <uicontrol>Activate Stay Mode Upon Arrival at a Set Destination</uicontrol> feature is available when a destination is set on the navigation system.</p>
+					</li>
+					<li>
+						<p>This feature pre-charges the battery before arriving at the destination to enable the use of stay mode, and may affect fuel economy and the battery’s state-of-charge (SoC) level.</p>
+					</li>
+					<li>
+						<p>When the stay mode is in use, the vehicle cannot be driven and cannot be shifted to positions other than P (Park).</p>
+					</li>
+					<li>
+						<p>Whilst in the stay mode, it is possible to use all in-vehicle electrical devices.</p>
+					</li>
+					<li>
+						<p>How long this mode can be used may differ, depending on the outside temperature and the vehicle’s power consumption (heating/cooling).</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00268.dita#t00268" role="parent" scope="local" type="concept">
+				<linktext>Driving the hybrid</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

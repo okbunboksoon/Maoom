@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00101">
+	<title id="e00525">Hood open warning </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>hood
+					<indexterm>hood open warning</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The hood warning message will appear on the LCD display when hood is open.</p>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00526">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00527">
+								<figgroup>
+									<image href="images/N_SP3i25_C00_003_IR.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The warning message will appear on the LCD display when hood is open.</p>
+		<p>The chime will sound if you drive with the hood opened.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00099.dita#t00099" role="parent" scope="local" type="concept">
+				<linktext>Hood </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

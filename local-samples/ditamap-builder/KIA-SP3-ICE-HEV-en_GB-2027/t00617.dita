@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00617">
+	<title>Stop</title>
+	<conbody>
+		<p>If the vehicle stops by <uicontrol>Emergency Stop</uicontrol>, a warning message, warning sounds, and hazard warning flashers will alert if <uicontrol>Emergency Stop</uicontrol> is operated.</p>
+		<p>After that, the vehicle will automatically operate the following procedures:</p>
+		<ul id="e03860">
+			<li>
+				<p>Door unlock</p>
+			</li>
+			<li>
+				<p><term translate="no">SOS</term> Call connect</p>
+			</li>
+			<li>
+				<p><term translate="no">EPB</term> applied</p>
+			</li>
+			<li>
+				<p>Shift to the P (Park) position.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00614.dita#t00614" role="parent" scope="local" type="concept">
+				<linktext>Emergency Stop operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

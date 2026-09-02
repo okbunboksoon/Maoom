@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00021">
+	<title>V2L connector</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00099">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00100">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOVQ015057.eps" placement="break" width="2.244in" id="e00101"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00102">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOVQ015058.eps" placement="break" width="2.244in" id="e00103"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol importance="high" outputclass="callout" id="e00104">
+			<li>
+				<p>Lights</p>
+			</li>
+			<li>
+				<p>Switch</p>
+			</li>
+		</ol>
+		<section deliveryTarget="except_digital" id="e00105">
+			<title>Simple operation</title>
+			<ul id="e00106">
+				<li>
+					<p>Plug the V2L connector to the vehicle charging inlet on the vehicle.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00107">
+			<title>Operation</title>
+			<ol id="e00108">
+				<li>
+					<p>Open the cover of the V2L connector.</p>
+				</li>
+				<li>
+					<p>Close the cover after connecting home appliances and electronic products to the power outlet.</p>
+				</li>
+				<li>
+					<p>Connect the V2L connector to the charging hole on the vehicle.</p>
+				</li>
+				<li>
+					<p>Press the switch (2) of the V2L connector and check whether the light (1) is on or off.</p>
+				</li>
+				<li>
+					<p>Press the switch (2) to turn off the light (1) the V2L will be off. You can disconnect the V2L connector when the light (1) turns off and the charging door lock is deactivated by pressing the door unlock button on the smart key.</p>
+				</li>
+			</ol>
+			<note type="note" id="e00109">
+				<ul id="e00110">
+					<li>
+						<p>Some types of plugs may not fit into the outlet cover of the V2L connector, causing incomplete closing of the cover.</p>
+					</li>
+					<li>
+						<p>For your safety, do not use the V2L connector on a rainy or snowy day if the outlet cover is not completely closed. There is a risk of fire and/or injury.</p>
+					</li>
+					<li>
+						<p>The light (1) may not turn on normally when:</p>
+						<ul id="e00111">
+							<li>
+								<p>The battery discharging limit for high voltage battery for driving in <uicontrol outputclass="a1702192">Energy consumption</uicontrol> menu on the screen is higher than the current amounts of high voltage battery.</p>
+							</li>
+							<li>
+								<p>Check whether the light of V2L connector or indoor power outlet turns on or not.</p>
+							</li>
+							<li>
+								<p>If the warning message for V2L appears on the cluster, refer to <xref href="t00022.dita#t00022"/>.</p>
+							</li>
+							<li>
+								<p>If V2L does not operate previously when you connect another home appliances, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

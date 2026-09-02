@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00812">
+	<title>Brake/clutch fluid</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>scheduled maintenance items
+					<indexterm>brake fluid</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Check the brake/clutch fluid level in the brake/clutch fluid reservoir. The level should be between the <term translate="no">MIN</term> and <term translate="no">MAX</term> marks on the side of the reservoir. Use only hydraulic brake/clutch fluid conforming to DOT 4 specifications.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00796.dita#t00796" role="parent" scope="local" type="concept">
+				<linktext>Explanation of scheduled maintenance items</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

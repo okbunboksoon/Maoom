@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00883">
+	<title>Replacing interior lights (LED type)</title>
+	<shortdesc/>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>replacing interior light (LED type)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e05198">
+			<title>Replacing interior lights (LED type)</title>
+			<p>If map lamp, room lamp, personal lamp, ambient light is not functioning, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e05199">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row>
+							<entry colname="col1">
+								<fig id="e05200">
+									<title>Map lamp</title>
+									<image href="images/N_SP3i26_B12_088_IR.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e05201">
+									<title>Room lamp (if equipped)</title>
+									<image href="images/N_SP3i26_C08_005_1_I.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e05202">
+									<title>Personal lamp (if equipped)</title>
+									<image href="images/N_SP3i26_C08_006_1_I.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e05203">
+									<title>Ambient light (if equipped)</title>
+									<image href="images/N_SP3i26_C08_043_I.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+						<row>
+							<entry colname="col1">
+								<fig id="e05204">
+									<title>Tailgate light</title>
+									<image href="images/N_SP327_C08_044_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e05205">
+									<title>Luaggage compartment lamp (if equipped)</title>
+									<image href="images/N_SP327_C08_043_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+						<row>
+							<entry colname="col1">
+								<fig id="e05206">
+									<title>Vanity mirror lamp (if equipped)</title>
+									<image href="images/N_SP327_C08_045_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00879.dita#t00879" role="parent" scope="local" type="concept">
+				<linktext>Replacing lights (LED type)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

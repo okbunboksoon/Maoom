@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0530">
+	<title>Manuellen Geschwindigkeitsbegrenzungsassistent ausschalten</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054007N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Drücken Sie die Fahrassistenz-Taste (<image align="left" href="../../images/WKIA_080.eps" scale="15" placement="inline"/>), um den manuellen Geschwindigkeitsbegrenzungsassistenten auszuschalten. Die Kontrollleuchte für die Geschwindigkeitsbegrenzung (<image align="left" href="../../images/WKIA_081.eps" scale="15" placement="inline"/>) erlischt.</p>
+		<note type="warning">
+			<p>Beachten Sie die folgenden Vorsichtsmaßnahmen, wenn Sie den manuellen Geschwindigkeitsbegrenzungsassistenten verwenden:</p>
+			<ul>
+				<li>
+					<p>Stellen Sie die Fahrzeuggeschwindigkeit nie höher ein als die zulässige Höchstgeschwindigkeit in Ihrem Land.</p>
+				</li>
+				<li>
+					<p>Schalten Sie den manuellen Geschwindigkeitsbegrenzungsassistenten ab, wenn er nicht benötigt wird, um eine unbeabsichtigte Änderung einer Geschwindigkeit zu vermeiden. Überprüfen Sie, ob die Kontrollleuchte für die Geschwindigkeitsbegrenzung (<image align="left" href="../../images/WKIA_081.eps" scale="15" placement="inline"/>) ausgeschaltet ist.</p>
+				</li>
+				<li>
+					<p>Der manuelle Geschwindigkeitsbegrenzungsassistent ersetzt nicht das einwandfreie und sichere Fahren. Es liegt in der Verantwortung des Fahrers, immer vorsichtig zu fahren und stets mit unerwarteten oder plötzlich auftretenden Situationen zu rechnen. Achten Sie immer auf die Fahrbahnbedingungen.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0526.dita#CL4m_HEV-ca_ES-2027-t0526" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des manuellen Geschwindigkeitsbegrenzungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

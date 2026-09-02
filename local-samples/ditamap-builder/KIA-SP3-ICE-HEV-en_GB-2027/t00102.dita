@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00102">
+	<title id="e00529">Closing the hood </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>hood
+					<indexterm>closing the hood</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e00530">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e00531">
+								<figgroup>
+									<image href="images/N_SP3i25_B04_025_AR.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol id="e00532">
+			<li>
+				<p>Before closing the hood, check the following:</p>
+				<ul id="e00533">
+					<li>
+						<p>All filler caps in the engine room must be correctly installed.</p>
+					</li>
+					<li>
+						<p>Gloves, rags or any other combustible material must be removed from the engine room.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Lower the hood halfway and push down to securely lock in place.</p>
+			</li>
+			<li>
+				<p>Check that the hood has engaged properly. If the hood can be raised slightly, it is not properly engaged. Open it again and close it with a little more force.</p>
+			</li>
+		</ol>
+		<note type="warning" id="e00534">
+			<ul id="e00535">
+				<li id="e00536">
+					<p>Before closing the hood, ensure that all obstructions are removed from the hood opening. Closing the hood with an obstruction present in the hood opening may result in property damage or severe personal injury.</p>
+				</li>
+				<li id="e00537">
+					<p>Do not leave gloves, rags or any other combustible material in the engine room. Doing so may cause a heat-induced fire.</p>
+				</li>
+				<li>
+					<p>Do not move the vehicle with the hood raised. The view will be blocked and the hood could fall or be damaged.</p>
+				</li>
+				<li id="e00538">
+					<p>Always double check to be sure that the hood is firmly latched before driving away. If it is not latched, the hood could open while the vehicle is being driven, causing total loss of visibility, which might result in an accident.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00099.dita#t00099" role="parent" scope="local" type="concept">
+				<linktext>Hood </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

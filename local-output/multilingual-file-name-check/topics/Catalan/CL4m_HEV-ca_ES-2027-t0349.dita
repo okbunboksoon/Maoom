@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0349">
+	<title>Intelligentes variables Getriebe (IVT)</title>
+	<shortdesc>Das Intelligent Variable Transmission (IVT) schaltet automatisch je nach Geschwindigkeit und Gaspedalstellung. Die jeweilige Gang wird automatisch in Abhängigkeit von der Wählhebelstellung gewählt.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Intelligentes variables Getriebe (IVT)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M044005N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p><image align="center" href="../../images/WKIA_142.eps" scale="15" placement="inline"/> Drücken Sie beim Schalten das Bremspedal und die Freigabetaste.</p>
+		<p><image align="center" href="../../images/WKIA_143.eps" scale="15" placement="inline"/> Drücken Sie beim Schalten die Freigabetaste.</p>
+		<p><image align="center" href="../../images/WKIA_144.eps" scale="15" placement="inline"/> Der Schalthebel kann frei bewegt werden.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0333-CH09.dita#CL4m_HEV-ca_ES-2027-t0333-CH09" role="parent" scope="local" type="concept">
+				<linktext>Fahrhinweise</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

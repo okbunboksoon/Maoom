@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00039">
+	<title>Electric charging door</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>charging electric vehicle 
+					<indexterm>electric charging door</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatd" id="e00235">
+			<tgroup cols="3" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="1" colwidth="25*"/>
+				<colspec colnum="2" colname="2" colwidth="37*"/>
+				<colspec colnum="3" colname="3" colwidth="38*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1">
+							<p>Location</p>
+						</entry>
+						<entry colname="2">
+							<p>Open</p>
+						</entry>
+						<entry colname="3">
+							<p>Close</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p>Charging door</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<fig id="e00236">
+								<figgroup>
+									<image href="../../images/OOV035090.eps" align="center" placement="break" height="1.220in" width="1.575in" id="e00237"/>
+								</figgroup>
+							</fig>
+							<p>Push the charging door.</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<fig id="e00238">
+								<figgroup>
+									<image href="../../images/OOV035091.eps" align="center" placement="break" height="1.222in" width="1.575in" id="e00239"/>
+								</figgroup>
+							</fig>
+							<p>Press the charging door close button, or close the charging door manually.</p>
+						</entry>
+					</row>
+					<row rowsep="0" valign="middle">
+						<entry colname="1">
+							<p>Instrument panel</p>
+						</entry>
+						<entry namest="2" nameend="3" align="center" valign="middle">
+							<fig id="e00240">
+								<figgroup>
+									<image href="../../images/OOV035089.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e00241"/>
+								</figgroup>
+							</fig>
+							<p>Press the charging door open/close button.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note" id="e00242">
+			<p>The charging door automatically closes when:</p>
+			<ul id="e00243">
+				<li>
+					<p>The charge connector is disconnected</p>
+				</li>
+				<li>
+					<p>The charging procedure has not done for approximately 2 minutes while the charging door is opened.</p>
+				</li>
+				<li>
+					<p>The gear is in D (drive), N (neutral), or R (Reverse).</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

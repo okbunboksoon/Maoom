@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00737">
+	<title>Operating order</title>
+	<conbody>
+		<p>Smart Exit function operates in the following order:</p>
+		<ol>
+			<li>
+				<p>Getting ready for exit</p>
+			</li>
+			<li>
+				<p>Checking space</p>
+			</li>
+			<li>
+				<p>Select exit direction</p>
+			</li>
+			<li>
+				<p>Smart Exit</p>
+			</li>
+		</ol>
+		<section>
+			<title>1. Getting ready for exit</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1" colsep="0">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OOV055099.eps" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(1) Parking/View button</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol id="e04663">
+				<li>
+					<p>With the vehicle turned on, depress the brake pedal and shift the gear to P (Park) or N (Neutral).</p>
+				</li>
+				<li>
+					<p>Press and hold the Parking/View (<image align="left" height="0.117in" href="../../images/WKIA_106.eps" outputclass="nolabel" placement="inline" width="0.117in" id="e04664"/>) button (1) to turn on Remote Smart Parking Assist.</p>
+				</li>
+			</ol>
+			<note type="note">
+				<ul>
+					<li>
+						<p> <uicontrol outputclass="a2008811">Agree</uicontrol> must be selected on the infotainment system screen and the infotainment system has to operate properly to use Smart Exit function.</p>
+					</li>
+					<li>
+						<p>Drive below 5 km/h (3 mph) with the vehicle on and shift the gear to N (Neutral), Smart Exit function can be used.</p>
+					</li>
+					<li>
+						<p>If the function is turned on again after parallel parking is completed by Remote Smart Parking Assist, Smart Exit function can be used.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>2. Checking space</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1" colsep="0">
+								<fig>
+									<figgroup>
+										<image align="center" height="1.740in" href="../../images/OOV055168L.eps" placement="break" width="2.410in"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout">
+									<li>
+										<p> <uicontrol outputclass="a1906329">Checking space...</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol outputclass="a1906330">Stop the vehicle.</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol>
+				<li>
+					<p>When the vehicle is stopped by depressing the brake pedal, the vehicle sensors will detect the distance from nearby objects and check for space to exit.</p>
+				</li>
+				<li>
+					<p>When checking for space is complete, a message will appear on the infotainment system screen with an audible sound to notify the search is complete.</p>
+				</li>
+			</ol>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>While checking for space, if there is a risk of collision with pedestrian, animal or object in the direction of vehicle exit, for your safety, Smart Exit function can be turned off.</p>
+					</li>
+					<li>
+						<p>Even if check for space is completed, objects in the blind spot area cannot be detected by the sensors. The driver must directly check the blind spot area and continue using the function.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note">
+				<p>Due to abnormal performance of the ultrasonic sensor or the influence of the surroundings, Parking function may not be able to search for a parking space even if there is a parking space, or may search for a space that is not suitable for parking.</p>
+			</note>
+		</section>
+		<section>
+			<title>3. Select exiting direction</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1" colsep="0">
+								<fig>
+									<figgroup>
+										<image align="center" height="1.740in" href="../../images/OOV055169L.eps" placement="break" width="2.410in"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout">
+									<li>
+										<p> <uicontrol outputclass="a1906332">Select exiting direction</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol outputclass="a1906331">Direction can only be selected at standstill.</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol>
+				<li>
+					<p>With the vehicle stopped by depressing the brake pedal, the infotainment system screen displays the possible directions for parallel exit.</p>
+				</li>
+				<li>
+					<p>Touch the infotainment system screen to select the desired exit direction.</p>
+				</li>
+			</ol>
+			<note type="warning">
+				<p>Before selecting the Exit Direction, the driver should check whether the space for exit is suitable. If the searched exit space by Remote Smart Parking Assist is narrow or unsuitable (surrounding vehicles are parked vertically, etc.), do not use the Smart Exit function.</p>
+			</note>
+		</section>
+		<section>
+			<title>4. Smart Exit</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1" colsep="0">
+								<fig>
+									<figgroup>
+										<image align="center" height="1.740in" href="../../images/OOV055170L.eps" placement="break" width="2.410in"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout">
+									<li>
+										<p> <uicontrol outputclass="a1906335">SMART Exiting</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol outputclass="a1906305">1. Take hands off steering wheel.</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol outputclass="a19063051">2. Press and hold Parking/View button.</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol>
+				<li>
+					<p>Press the Parking/View (<image align="left" height="0.117in" href="../../images/WKIA_106.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) button when the vehicle is stopped by depressing the brake pedal.</p>
+					<ul>
+						<li>
+							<p>When the brake pedal is released, Remote Smart Parking Assist will automatically control the steering wheel, vehicle speed and gearshift.</p>
+						</li>
+						<li>
+							<p>While Smart Exit function is operating, if you do not hold down the Parking/View button, the vehicle will stop and function control will pause. The function will start operating again when the Parking/View button is pressed and held again.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Hold the Parking/View (<image align="left" height="0.117in" href="../../images/WKIA_106.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) button until the vehicle reaches the target exit location. When the vehicle reaches the target exit location, a message will appear on the infotainment system screen to inform you that exit is complete.</p>
+					<ul>
+						<li>
+							<p>When the vehicle reaches the target exit location, a message will appear on the infotainment system screen to inform you that exit is complete.</p>
+						</li>
+					</ul>
+				</li>
+			</ol>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Smart Exit function will not operate if the door is open or the seat belt is not fastened.</p>
+					</li>
+					<li>
+						<p>Vehicle speed can be adjusted by depressing the brake pedal while Smart Exit function is operating. However, the vehicle does not accelerate even when the accelerator pedal is depressed.</p>
+					</li>
+					<li>
+						<p>If exit is completed while depressing the brake pedal, Smart Exit function will complete with the gear in D (Drive).</p>
+					</li>
+					<li>
+						<p>If exit is completed while depressing the accelerator pedal, you must take your foot off the accelerator pedal once for the accelerator pedal to operate.</p>
+					</li>
+					<li>
+						<p>If there is no vehicle operation such as depressing the brake pedal or accelerator pedal within 4 seconds after exit is complete, the vehicle will automatically shift to P (Park) and engage EPB (Electronic Parking Brake).</p>
+					</li>
+					<li>
+						<p>After Smart Exit function is complete, always check the surroundings before driving.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>How to turn off Smart Exit function while operating</title>
+			<ul id="e04665">
+				<li>
+					<p>Press the Parking/View (<image href="../../images/WKIA_106.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel" id="e04666"/>) button in the following stage:</p>
+					<ul id="e04667">
+						<li>
+							<p>Checking space</p>
+						</li>
+						<li>
+							<p>Select exit direction</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Shift the gear to R (Reverse) in the following stage:</p>
+					<ul id="e04668">
+						<li>
+							<p>Checking space</p>
+						</li>
+						<li>
+							<p>Select exit direction</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Press the Parking Safety (<image href="../../images/WKIA_087.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel" id="e04669"/>) button or select <uicontrol outputclass="a1700884">Cancel</uicontrol> on the infotainment system screen to turn off Smart Exit function.</p>
+				</li>
+				<li>
+					<p>While Smart Exit function is operating, if the vehicle is stopped by depressing the brake pedal, and the gear is shifted, Exiting function will turn off. At this time, EPB (Electronic Parking Brake) will not be engaged.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>The function will pause in the following conditions when:</title>
+			<p>When Smart Exit function is paused, the vehicle will stop. If the condition that made the function to pause disappears, the function may operate again.</p>
+			<ul id="e04670">
+				<li>
+					<p>There is a pedestrian, animal or object in the direction the vehicle is moving</p>
+				</li>
+				<li>
+					<p>The door or tailgate is open</p>
+				</li>
+				<li>
+					<p>The driver’s seat belt is not fastened</p>
+				</li>
+				<li>
+					<p>When Parking Collision-Avoidance Assist, Blind-Spot Collision-Avoidance Assist or Rear Cross-Traffic Collision-Avoidance Assist operates</p>
+				</li>
+				<li>
+					<p>The Parking/View (<image href="../../images/WKIA_106.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel" id="e04671"/>) button is not continuously pressed</p>
+				</li>
+				<li>
+					<p>The vehicle is stopped by depressing the brake pedal</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>The function will cancel in the following conditions when:</title>
+			<p>When Smart Exit function is canceled, the vehicle will automatically stop, shift the gear to P (Park) and engage EPB (Electronic Parking Brake).</p>
+			<ul id="e04672">
+				<li>
+					<p>Smart Exit</p>
+					<ul id="e04673">
+						<li>
+							<p>The steering wheel is steered</p>
+						</li>
+						<li>
+							<p>The gear is shifted while the vehicle is moving</p>
+						</li>
+						<li>
+							<p>Operating EPB while the vehicle is moving</p>
+						</li>
+						<li>
+							<p>The hood is open</p>
+						</li>
+						<li>
+							<p>The driver opens the door with the seatbelt unfastened</p>
+						</li>
+						<li>
+							<p>Rapid acceleration occurs</p>
+						</li>
+						<li>
+							<p>Vehicle skid occurs</p>
+						</li>
+						<li>
+							<p>The wheel is stuck by an obstacle and cannot move</p>
+						</li>
+						<li>
+							<p>There are pedestrians, animals or objects at the front and rear of the vehicle at the same time</p>
+						</li>
+						<li>
+							<p>Approximately 3 minutes and 50 seconds have past after Smart Exit function has started to operate</p>
+						</li>
+						<li>
+							<p>The slope of the road exceeds the operational range</p>
+						</li>
+						<li>
+							<p>The function was paused for more than 1 minute</p>
+						</li>
+						<li>
+							<p>The steering wheel, gearshift, braking, and drive controls are not working normally</p>
+						</li>
+						<li>
+							<p>ABS, TCS or ESC system operates due to slippery road conditions</p>
+						</li>
+						<li>
+							<p>The charging door opens</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

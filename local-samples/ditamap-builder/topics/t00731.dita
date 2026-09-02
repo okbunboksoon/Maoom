@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00731">
+	<title>Remote Smart Parking Assist operation status</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1">
+							<p>Operation Status</p>
+						</entry>
+						<entry colname="col2">
+							<p>Smart key LED</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry align="center" colname="col1" valign="middle">
+							<p>Under control</p>
+						</entry>
+						<entry align="center" colname="col2" valign="middle">
+							<p>Green LED Continuously blinks</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="center" colname="col1" valign="middle">
+							<p>Pause</p>
+						</entry>
+						<entry align="center" colname="col2" valign="middle">
+							<p>Red LED Continuously blinks</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="center" colname="col1" valign="middle">
+							<p>Off</p>
+						</entry>
+						<entry align="center" colname="col2" valign="middle">
+							<p>Red LED illuminates for 4 seconds and then turns off</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry align="center" colname="col1" valign="middle">
+							<p>Complete</p>
+						</entry>
+						<entry align="center" colname="col2" valign="middle">
+							<p>Green LED illuminates for 4 seconds and then turns off</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Operation status by the hazard warning light may not be applicable based on the regulation of your country.</p>
+				</li>
+				<li>
+					<p>If the smart key is not within the operating range from the vehicle (approximately 4 m (13 ft.)), the smart key LED will not appear or blink. Use the smart key within the operating range.</p>
+				</li>
+			</ul>
+		</note>
+		<section>
+			<title>How to turn off Remote Operation function while operating</title>
+			<ul>
+				<li>
+					<p>Press the Parking/View (<image align="left" height="0.117in" href="../../images/WKIA_106.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) button or shift the gear except to P (Park) while the infotainment system screen guides the driver using method 2.</p>
+				</li>
+				<li>
+					<p>Press the Parking Safety (<image align="left" height="0.117in" href="../../images/WKIA_087.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) button or select <uicontrol outputclass="a1700884">Cancel</uicontrol> on the infotainment system screen.</p>
+				</li>
+				<li>
+					<p>Press the Remote Start (<image align="left" height="0.117in" href="../../images/WKIA_108.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) button on the smart key while the vehicle is being controlled by Remote Operation function. Remote Operation function will turn off. At this time, the vehicle will turn off.</p>
+				</li>
+				<li>
+					<p>Get on the vehicle with the smart key. Remote Operation function will turn off. At this time, the vehicle will remain on.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>The function will pause in the following conditions when:</title>
+			<p>When Remote Operation function is paused, the vehicle will stop. If the condition that made the function to pause disappears, the function may operate again.</p>
+			<ul>
+				<li>
+					<p>There is a pedestrian, animal or object in the direction the vehicle is moving</p>
+				</li>
+				<li>
+					<p>The door or tailgate is open</p>
+				</li>
+				<li>
+					<p>The Forward (<image align="left" height="0.117in" href="../../images/WKIA_109.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) or Backward (<image align="left" height="0.117in" href="../../images/WKIA_110.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) button is not continuously pressed</p>
+				</li>
+				<li>
+					<p>Simultaneously pressing multiple buttons on a smart key</p>
+				</li>
+				<li>
+					<p>The smart key is not operated within 4 m (13 ft.) from the vehicle</p>
+				</li>
+				<li>
+					<p>Button of another smart key is pressed in addition to the operating smart key (Excluding start button)</p>
+				</li>
+				<li>
+					<p>When Parking Collision-Avoidance Assist, Blind-Spot Collision-Avoidance Assist or Rear Cross-Traffic Collision-Avoidance Assist operates</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>The function will cancel in the following conditions when:</title>
+			<p>When Remote Operation function is canceled, the vehicle will automatically stop, shift the gear to P (Park) and engage EPB (Electronic Parking Brake).</p>
+			<ul>
+				<li>
+					<p>The steering wheel is steered</p>
+				</li>
+				<li>
+					<p>The gear is shifted while the vehicle is moving</p>
+				</li>
+				<li>
+					<p>Operating EPB while the vehicle is moving</p>
+				</li>
+				<li>
+					<p>The vehicle hood is open</p>
+				</li>
+				<li>
+					<p>The brake pedal or accelerator pedal is depressed when all the doors are closed</p>
+				</li>
+				<li>
+					<p>The smart key is outside the vehicle when the brake pedal is depressed while the driver’s door is open</p>
+				</li>
+				<li>
+					<p>Rapid acceleration occurs</p>
+				</li>
+				<li>
+					<p>Vehicle skid occurs</p>
+				</li>
+				<li>
+					<p>The wheel is stuck by an obstacle and cannot move</p>
+				</li>
+				<li>
+					<p>Approximately 3 minutes and 50 seconds have past after Remote Operation function has started to operate</p>
+				</li>
+				<li>
+					<p>The slope of the road exceeds the operational range</p>
+				</li>
+				<li>
+					<p>The function is paused for more than 1 minute</p>
+				</li>
+				<li>
+					<p>The total travel distance of the vehicle has exceeded 20 m (66 ft.) after Remote Operation function operation</p>
+				</li>
+				<li>
+					<p>The steering wheel, gearshift, braking, and drive controls are not working normally</p>
+				</li>
+				<li>
+					<p>There is a problem with the smart key or the smart key battery is low</p>
+				</li>
+				<li>
+					<p>ABS, TCS or ESC system operates due to slippery road conditions</p>
+				</li>
+				<li>
+					<p>The alarm of the Theft Alarm System sounds</p>
+				</li>
+				<li>
+					<p>The charging door opens</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

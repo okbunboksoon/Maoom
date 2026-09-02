@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00182">
+	<title>Daytime Running Light (DRL)</title>
+	<shortdesc>The DRL can make it easier for others to see the front of your vehicle during the day.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lighting
+					<indexterm>daytime running light (DRL)</indexterm>
+				</indexterm>
+				<indexterm>daytime running light (DRL)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The DRL can be helpful in many different driving conditions, especially after dawn and before sunset.</p>
+		<p>The DRL will turn its DRL lamp off when:</p>
+		<ul id="e01108">
+			<li>
+				<p>The light switch is set to <term translate="no">AUTO</term> or <term translate="no">ON</term> and the headlamps and taillight are on.</p>
+			</li>
+			<li>
+				<p>The vehicle is in <term translate="no">OFF</term> position.</p>
+			</li>
+			<li>
+				<p>The parking brake is engaged. (When the light switch is set to <term translate="no">OFF</term>)</p>
+			</li>
+			<li>
+				<p>The hazard warning lights are on</p>
+			</li>
+			<li>
+				<p>The front fog lamps are on.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00179.dita#t00179" role="parent" scope="local" type="concept">
+				<linktext>Lighting</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

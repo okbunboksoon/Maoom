@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00375">
+	<title>Controlling heating and air conditioning automatically</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system 
+					<indexterm>controlling automatically</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01579">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01580">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C086.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ol>
+				<li>
+					<p>Set the desired temperature.</p>
+				</li>
+				<li>
+					<p>Touch the <term translate="no">AUTO</term> icon to control the mode, fan speed, air intake, air conditioning automatically.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ol>
+				<li>
+					<p>Set the desired temperature.</p>
+				</li>
+				<li>
+					<p>Touch the <term translate="no">AUTO</term> icon to control:</p>
+					<ul>
+						<li>
+							<p>Mode</p>
+						</li>
+						<li>
+							<p>Fan speed</p>
+						</li>
+						<li>
+							<p>Air intake</p>
+						</li>
+						<li>
+							<p>Air conditioning</p>
+						</li>
+					</ul>
+					<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+						<desc>
+							<ul>
+								<li>
+									<p>Set the temperature with the temperature control icon.</p>
+								</li>
+							</ul>
+						</desc>
+						<tgroup cols="4" colsep="1" outputclass="FormatD" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="25*"/>
+							<colspec colname="col2" colnum="2" colwidth="25*"/>
+							<colspec colname="col3" colnum="3" colwidth="25*"/>
+							<colspec colname="col4" colnum="4" colwidth="25*"/>
+							<thead>
+								<row rowsep="1">
+									<entry align="center" colname="col1" valign="middle">
+										<p>Level</p>
+									</entry>
+									<entry align="center" colname="col2" valign="middle">
+										<p>Indicator</p>
+									</entry>
+									<entry align="center" colname="col3" valign="middle">
+										<p>LCD Display</p>
+									</entry>
+									<entry align="center" colname="col4" valign="middle">
+										<p>Air flow</p>
+									</entry>
+								</row>
+							</thead>
+							<tbody>
+								<row rowsep="1">
+									<entry align="center" colname="col1" valign="middle">
+										<p>High</p>
+									</entry>
+									<entry colname="col2">
+										<fig id="e01581">
+											<figgroup>
+												<image href="../../images/N_TK25C159.eps" scale="95" align="center" placement="break" outputclass="nolabel"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col3">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/N_CT25C187.eps" scale="95" outputclass="nolabel" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry align="center" colname="col4" valign="middle">
+										<p>2–8</p>
+									</entry>
+								</row>
+								<row rowsep="1">
+									<entry align="center" colname="col1" valign="middle">
+										<p>Medium</p>
+									</entry>
+									<entry colname="col2">
+										<fig id="e01582">
+											<figgroup>
+												<image href="../../images/N_TK25C158.eps" scale="95" align="center" placement="break" outputclass="nolabel"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col3">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/N_CT25C186.eps" scale="95" outputclass="nolabel" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry align="center" colname="col4" valign="middle">
+										<p>1–6</p>
+									</entry>
+								</row>
+								<row rowsep="1">
+									<entry align="center" colname="col1" valign="middle">
+										<p>Low</p>
+									</entry>
+									<entry colname="col2">
+										<fig id="e01583">
+											<figgroup>
+												<image href="../../images/N_TK25C157.eps" scale="95" align="center" placement="break" outputclass="nolabel"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col3">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/N_CT25C185.eps" scale="95" outputclass="nolabel" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry align="center" colname="col4" valign="middle">
+										<p>1–4</p>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+</concept>

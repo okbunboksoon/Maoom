@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0608">
+	<title>Betriebsbedingungen</title>
+	<conbody>
+		<p>Die Notbremsung ist betriebsbereit, wenn sowohl die intelligente Tempomatsteuerung als auch der Spurfolgeassistent in Betrieb sind.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn der Fahrer seinen Sicherheitsgurt löst, schaltet sich der Spurfolgeassistent aus.</p>
+				</li>
+				<li>
+					<p>Wenn der Fahrer keinen Sicherheitsgurt angelegt hat, kann der Spurfolgeassistent nicht aktiviert werden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0607.dita#CL4m_HEV-ca_ES-2027-t0607" role="parent" scope="local" type="concept">
+				<linktext>Betrieb der Notbremsung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

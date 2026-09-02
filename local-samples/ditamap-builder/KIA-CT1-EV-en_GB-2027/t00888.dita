@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00888">
+	<title>Replacing main fuse (multi fuse)</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02791">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02792">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25G021_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Operation</title>
+			<ol>
+				<li>
+					<p>Turn off the vehicle.</p>
+				</li>
+				<li>
+					<p>Disconnect the negative battery cable.</p>
+				</li>
+				<li>
+					<p>Remove the nuts.</p>
+				</li>
+				<li>
+					<p>Replace the fuse with a new one of the same rating.</p>
+				</li>
+				<li>
+					<p>Reinstall in the reverse order of removal.</p>
+				</li>
+			</ol>
+			<note type="caution">
+				<p>Visually inspect the battery cap for secure closing. If the battery cap is not securely latched, the electrical system may be damaged due to influx of moisture into the system.</p>
+			</note>
+			<note type="note">
+				<ul>
+					<li>
+						<p>The electronic system may not function correctly even when the motor room and internal fuse box’s individual fuses are not disconnected. In such case the cause of the problem may be disconnection of the main fuse (BFT type), which is located inside the positive battery terminal (+) cap. Since the main fuse is designed more intricately than other parts, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>If the multi fuse is blown, consult a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

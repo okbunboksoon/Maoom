@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0381">
+	<title>Feststellbremse lösen</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Bremsanlage
+					<indexterm>feststellbremse lösen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M044010N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Zur manuellen Freigabe der EPB:</title>
+			<p>Drücken Sie den <term translate="no">EPB</term>-Schalter bei folgender Bedingung.</p>
+			<ul>
+				<li>
+					<p>Bringen Sie den Zündschalter bzw. den <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) in die Position <term translate="no">ON</term>.</p>
+				</li>
+				<li>
+					<p>Treten Sie das Bremspedal.</p>
+				</li>
+				<li>
+					<p>Achten Sie darauf, dass die Warnleuchte für die Bremse erlischt.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Zur automatischen Freigabe der EPB (Automatikgetriebe):</title>
+			<ol>
+				<li>
+					<p>Schließen Sie Fahrertür, Motorhaube und Kofferraum.</p>
+				</li>
+				<li>
+					<p>Legen Sie den Sicherheitsgurt an.</p>
+				</li>
+				<li>
+					<p>Starten Sie den Motor.</p>
+				</li>
+				<li>
+					<p>Wenn sich der Schalthebel in Position P (Parken) befindet, betätigen Sie das Bremspedal und schalten Sie aus Position P (Parken) auf Position R (Rückwärtsgang) oder D (Fahren) und die <term translate="no">EPB</term> wird automatisch freigegeben. Achten Sie darauf, dass die Warnleuchte für die Bremse erlischt.</p>
+				</li>
+				<li>
+					<p>Wenn sich der Wählhebel in Position N (Neutral) befindet, betätigen Sie das Bremspedal und schalten von Position N (Neutral) auf R (Rückwärtsgang) oder D (Fahren) um und die <term translate="no">EPB</term> wird automatisch freigegeben. Achten Sie darauf, dass die Warnleuchte für die Bremse erlischt.</p>
+					<ul>
+						<li>
+							<p>Wenn Sie versuchen, bei betätigter <term translate="no">EPB</term> das Gaspedal zu betätigen, aber nicht automatisch loslassen, ertönt einmal ein Warnton, und eine Warnmeldung wird angezeigt.</p>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" href="../../images/OCL4M034159N.eps" scale="95" placement="break"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<p><term translate="no">A</term>: Zum Entriegeln der <term translate="no">EPB</term> den Sicherheitsgurt anlegen und Tür, Motorhaube und Kofferraum/-klappe schließen</p>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+						</li>
+						<li>
+							<p>Wenn der Sicherheitsgurt des Fahrers nicht angelegt ist, die Fahrertür geöffnet wird, die Motorhaube in D geöffnet wird oder der Kofferraum/die Heckklappe in R geöffnet wird, ertönt einmal ein Warnton und eine Meldung wird angezeigt.</p>
+						</li>
+						<li>
+							<p>Wenn ein Problem mit dem Fahrzeug auftritt, ertönt ein Warnsignal und es erscheint eine Warnmeldung. Wenn die oben genannte Situation eintritt, betätigen Sie das Bremspedal und lösen Sie die <term translate="no">EPB</term> durch Drücken des <term translate="no">EPB</term>-Schalters.</p>
+						</li>
+					</ul>
+				</li>
+			</ol>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Personen, die mit der Bedienung des Fahrzeugs nicht vertraut sind, dürfen den Hebel der Feststellbremse nicht betätigen. Wenn die Feststellbremse unbeabsichtigt gelöst wird, kann dies zu schweren Verletzungen führen.</p>
+					</li>
+					<li>
+						<p>Platzieren Sie keine Gegenstände um den <term translate="no">EPB</term>-Schalter herum. Sie könnten den <term translate="no">EPB</term>-Schalter freigeben.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Um zu gewährleisten, dass sich ein stehendes oder abgestelltes Fahrzeug nicht unbeabsichtigt in Bewegung setzt, stellen Sie nicht den Wählhebel als Ersatz für die Feststellbremse in eine Schaltstufe. Ziehen Sie die Feststellbremse an und achten Sie darauf, dass der Schalthebel sicher in Stellung P (Parkstufe) steht. Verwenden Sie bei Bedarf Vorlegekeile.</p>
+					</li>
+					<li>
+						<p>Bei winterlichen oder kalten Bedingungen kann die <term translate="no">EPB</term> einfrieren. Parken Sie das Fahrzeug mit dem Schalthebel in Position P an einem ebenen und sicheren Ort, ohne die <term translate="no">EPB</term> zu betätigen. Verwenden Sie stattdessen Radvorleger.</p>
+					</li>
+					<li>
+						<p>Fahren Sie Ihr Fahrzeug nicht mit angezogener elektronischer <term translate="no">EPB</term>. Dies kann zu einem übermäßigen Verschleiß von Bremsbelag und Bremsrotor führen.</p>
+					</li>
+					<li>
+						<p>Bei Aktivierung oder Deaktivierung der <term translate="no">EPB</term> ist ein leichtes Klicken zu hören. Diese Bedingungen sind aber normal und zeigen nur an, dass die <term translate="no">EPB</term> einwandfrei funktioniert.</p>
+					</li>
+					<li>
+						<p>Wenn Sie Ihre Wagenschlüssel einem Parkplatzwächter oder Hotelboy überlassen, erklären Sie ihn, wie die <term translate="no">EPB</term> funktioniert.</p>
+					</li>
+					<li>
+						<p>Wenn die Batterie leer ist, lässt sich die <term translate="no">EPB</term> nicht betätigen oder freigeben. In diesem Fall starten Sie Ihr Fahrzeug mit einem Starthilfekabel.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0379.dita#CL4m_HEV-ca_ES-2027-t0379" role="parent" scope="local" type="concept">
+				<linktext>Elektronische Feststellbremse (EPB) </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

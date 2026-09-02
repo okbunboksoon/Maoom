@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0355">
+	<title>Automatikgetriebefunktion</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Automatikgetriebe
+					<indexterm>Automatikgetriebefunktion</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Das Automatikgetriebe verfügt über sechs bzw. acht Vorwärtsgänge und einen Rückwärtsgang. Die jeweilige Gang wird automatisch in Abhängigkeit von der Wählhebelstellung gewählt.</p>
+		<note type="note">
+			<p>Bei einem neuen Fahrzeug, wenn die Batterie abgeklemmt war, können anfangs einige wenige Schaltvorgänge relativ abrupt erfolgen. Dies ist eine normale Erscheinung und nachdem das Getriebe-Steuergerät (TCM) bzw. das Powertrain-Steuergerät (PCM) einige Schaltvorgänge durchgeführt hat, wird die Schaltsequenz justiert.</p>
+		</note>
+		<p>Um einen ruhigen Schaltvorgang zu gewährleisten, treten Sie beim Schalten von N (Neutral) in einen Vorwärts- oder in den Rückwärtsgang das Bremspedal.</p>
+		<note type="warning">
+			<p>Automatikgetriebe</p>
+			<ul>
+				<li>
+					<p>Bei Bergauf- bzw. Bergabfahrten für die Vorwärtsfahrt immer den Schaltregler in Stellung D (Fahren) schalten bzw. für die Rückwärtsfahrt den Schaltregler in Stellung R (Rückwärtsgang) schalten und vor dem Anfahren den eingelegten Gang auf dem Kombiinstrument prüfen.</p>
+					<p>Wird in die dem eingelegten Gang entgegengesetzte Richtung gefahren, kann dies zu einer Gefahrensituation führen, indem der Motor ausgeschaltet und die Bremsleistung beeinträchtigt wird.</p>
+				</li>
+				<li>
+					<p>Prüfen Sie IMMER den Bereich um Ihr Fahrzeug auf Personen, insbesondere Kinder, bevor Sie das Fahrzeug auf D (Fahrstufe) oder R (Rückwärtsgang) schalten.</p>
+				</li>
+				<li>
+					<p>Bevor Sie den Fahrersitz verlassen, stellen Sie sicher, dass Sie den Wählhebel in die Parkstufe (P) schalten und danach die Feststellbremse betätigen und den Motor abstellen. Wenn diese Vorsichtshinweise nicht oder nicht in der richtigen Reihenfolge befolgt werden, könnte sich das Fahrzeug plötzlich und unerwartet in Bewegung setzen.</p>
+				</li>
+				<li>
+					<p>Verwenden Sie auf einer glatten Straße nicht die Motorbremse (d. h. schalten Sie nicht schnell von einem hohen Gang in einen niedrigeren Gang). Das Fahrzeug kann ins Rutschen kommen und einen Unfall verursachen.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Um eine Beschädigung des Getriebes zu vermeiden, geben Sie bei betätigter Bremse weder im Rückwärtsgang (R) noch in einem Vorwärtsgang Gas.</p>
+				</li>
+				<li>
+					<p>Halten Sie Ihr Fahrzeug bei Stopps an Steigungen nicht durch Gasgeben auf der Stelle. Betätigen Sie stattdessen das Bremspedal oder die Feststellbremse.</p>
+				</li>
+				<li>
+					<p>Schalten Sie den Schalthebel nicht von N (Neutralstellung) oder P (Parken) nach D (Fahrstufe) oder R (Rückwärtsgang), wenn sich der Motor schneller als mit Leerlaufdrehzahl dreht.</p>
+				</li>
+			</ul>
+		</note>
+		<section>
+			<title>LCD-Anzeige für Warnmeldung</title>
+			<p><indexterm>Automatikgetriebe<indexterm>LCD-Anzeige für Warnmeldung</indexterm></indexterm>Eine Warnmeldung wird auf der LCD-Anzeige bei Vorliegen einer Warnbedingung angezeigt.</p>
+			<sectiondiv><ph>Überhitztes Getriebe</ph>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M034133N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<p><term translate="no">A</term>: Getriebe überhitzt! Parken mit eingeschaltetem Motor</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<ul>
+					<li>
+						<p>Beim Fahren unter schwierigen Bedingungen wie wiederholtem plötzlichem Anfahren und plötzlicher Beschleunigung kann es zu einer Überhitzung des Getriebes kommen und aufgrund des Selbstschutzmodus ein Warnton und eine Warnmeldung auf dem Kombiinstrument angezeigt werden.</p>
+					</li>
+					<li>
+						<p>Fahren Sie in diesem Fall an einen sicheren Ort, stoppen Sie das Fahrzeug bei laufendem Motor, betätigen Sie die Bremsen, schalten Sie den Gang auf (P) und warten Sie, bis das Getriebe abgekühlt ist.</p>
+					</li>
+					<li>
+						<p>Wenn die Warnmeldung weiterhin angezeigt wird, lassen Sie das System von einer Fachwerkstatt überprüfen. Kia empfiehlt, sich an einen autorisierten Kia-Händler zu wenden, um unvorhergesehene Unfälle zu vermeiden.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>Leistung begrenzt</ph>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M054181N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<p><term translate="no">A</term>: Fahrzeugleistung aufgrund hoher Getriebetemperatur eingeschränkt</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<ul>
+					<li>
+						<p>Wenn das Getriebe weiterhin überhitzt und seine Höchsttemperatur erreicht, erscheint die obige Warnmeldung. In diesem Fall begrenzt das Fahrzeug die Getriebeleistung durch seinen Selbstschutzmodus.</p>
+					</li>
+					<li>
+						<p>Wenn eine solche Situation auftritt, ist das normale Fahren eingeschränkt, bis sich die Getriebetemperatur normalisiert hat. Nachdem Sie das Fahrzeug an eine sichere Stelle gebracht haben, schalten Sie bei laufendem Motor den Gang auf P (Parken) und warten Sie einige Minuten, bis die Warnung auf dem Display deaktiviert wird.</p>
+					</li>
+					<li>
+						<p>Wenn die Warnmeldung weiterhin angezeigt wird, lassen Sie das System von einer Fachwerkstatt überprüfen. Kia empfiehlt, sich an einen autorisierten Kia-Händler zu wenden, um unvorhergesehene Unfälle zu vermeiden.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>Getriebe abgekühlt</ph>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M034134N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<p><term translate="no">A</term>: Trans gekühlt. Weiterfahren.</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<ul>
+					<li>
+						<p>Wenn die Meldung „Trans cooled. Weiterfahren.“ erscheint, können Sie die Fahrt mit dem Fahrzeug fortsetzen.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Getriebeganggruppen</title>
+			<p><indexterm>Automatikgetriebe<indexterm>Getriebeganggruppen</indexterm></indexterm>Die Anzeige im Kombiinstrument zeigt die Position des Schalthebels an, wenn sich der Zündschalter oder die Taste <term translate="no">ENGINE START/STOP</term> in der Position <term translate="no">ON</term> befindet.</p>
+			<sectiondiv><ph>P (Parkstufe)</ph>
+				<p>Bringen Sie das Fahrzeug immer zu einem kompletten Stillstand, bevor Sie in die Parkstufe P schalten. In dieser Schaltstufe ist das Getriebe gesperrt und die Antriebsräder sind blockiert.</p>
+				<note type="warning">
+					<ul>
+						<li>
+							<p>Wenn der Schalthebel während der Fahrt in die Parkstufe (P) gestellt wird, blockieren die Antriebsräder. Dies führt dazu, dass Sie die Kontrolle über das Fahrzeug verlieren.</p>
+						</li>
+						<li>
+							<p>Verwenden Sie die Parkstufe (P) nicht anstelle der Feststellbremse. Stellen Sie sicher, dass der Schalthebel in der Parkstufe (P) eingerastet ist und betätigen Sie kräftig die Feststellbremse.</p>
+						</li>
+						<li>
+							<p>Lassen Sie Kinder niemals unbeaufsichtigt im Fahrzeug zurück.</p>
+						</li>
+					</ul>
+				</note>
+				<note type="caution">
+					<p>Das Schalten in die Parkstufe (P) bei rollendem Fahrzeug kann zur Beschädigung des Getriebes führen.</p>
+				</note>
+			</sectiondiv>
+			<sectiondiv><ph>R (Rückwärtsgang)</ph>
+				<p>Wählen Sie diese Fahrstufe, um rückwärts zu fahren.</p>
+				<note type="caution">
+					<p>Schalten Sie immer erst dann in den Rückwärtsgang (R) hinein oder aus dem Rückwärtsgang (R) heraus, wenn das Fahrzeug vollständig zum Stillstand gekommen ist. Wenn der Rückwärtsgang (R) während der Fahrt eingelegt wird, kann das Getriebe beschädigt werden, außer wie unter <xref href="CL4m_HEV-ca_ES-2027-t0409.dita#CL4m_HEV-ca_ES-2027-t0409"/> erläutert.</p>
+				</note>
+			</sectiondiv>
+			<sectiondiv><ph>N (Neutralstellung)</ph>
+				<p>Die Verbindung zwischen den Räder und dem Getriebe ist getrennt. Das Fahrzeug wird bei dem geringsten Gefälle wegrollen, wenn die Fußbremse oder die Feststellbremse nicht betätigt wird.</p>
+				<note type="warning">
+					<p>Fahren Sie nicht mit dem Schalthebel in Neutralstellung (N).</p>
+					<p>Die Motorbremse funktioniert dann nicht und es kann zu einem Unfall kommen.</p>
+				</note>
+			</sectiondiv>
+			<sectiondiv><ph>D (Fahren)</ph>
+				<p>Dies ist die normale Stellung zum Vorwärtsfahren. Das Getriebe schaltet automatisch durch eine 6-Gang-Sequenz und erreicht so den günstigsten Kraftstoffverbrauch und die optimalen Fahrleistungen.</p>
+				<p>Wenn Sie zusätzlich beim Überholen eines anderen Fahrzeugs oder beim Bergauffahren beschleunigen wollen, treten Sie das Gaspedal voll durch, das Getriebe schaltet damit automatisch in den nächstniedrigeren Gang,</p>
+				<note type="note">
+					<p>Warten Sie immer, bis das Fahrzeug vollständig zum Stillstand gekommen ist, bevor Sie in die Stellung D (Fahrstellung) schalten.<indexterm>Automatikgetriebe<indexterm>Handschaltmodus</indexterm></indexterm></p>
+				</note>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Handschaltmodus</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M044004N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Den manuellen Modus können Sie sowohl im Stand als auch während der Fahrt wählen. Bewegen Sie dazu den Wählhebel aus der Fahrstufe (D) in die manuelle Schaltgasse. Um in die Fahrstufe D zurückzugelangen, bewegen Sie den Schalthebel zurück in die Automatik-Schaltgasse.</p>
+			<p>Im manuellen Modus können Sie schnell herauf- oder herunterschalten, indem Sie den Wählhebel nach vorn drücken oder nach hinten ziehen. Im Gegensatz zu einem Schaltgetriebe ist im manuellen Modus ein Gangwechsel bei durchgetretenem Gaspedal möglich.</p>
+			<sectiondiv><ph>Verwendung des Schalthebels</ph>
+				<p>Nach oben (+): Drücken Sie den Wählhebel einmal nach vorn, um in den nächsten höheren Gang zu schalten.</p>
+				<p>Nach unten (-): Ziehen Sie den Wählhebel einmal nach hinten, um in den nächsten kleineren Gang zu schalten.</p>
+				<note type="note">
+					<ul>
+						<li>
+							<p>Im manuellen Modus muss der Fahrer das Hochschalten unter Berücksichtigung der Verkehrsbedingungen manuell durchführen und darauf achten, dass die Motordrehzahl unter dem roten Bereich bleibt.</p>
+						</li>
+						<li>
+							<p>Im manuellen Modus können nur die 6 Vorwärtsgänge gewählt werden. Um in den Rückwärtsgang R oder die Parkstufe P zu schalten, schieben Sie den Schalthebel nach Bedarf in die Schaltstufe R oder D.</p>
+						</li>
+						<li>
+							<p>Das Herunterschalten erfolgt im manuellen Modus automatisch, wenn die Fahrgeschwindigkeit reduziert wird. Wenn das Fahrzeug zum Stillstand kommt, wird automatisch in den 1. Gang geschaltet.</p>
+						</li>
+						<li>
+							<p>Wenn sich im manuellen Modus die Motordrehzahl dem roten Bereich nähert, wird automatisch in den nächsten höheren Gang geschaltet.</p>
+						</li>
+						<li>
+							<p>Zum Schutz des Fahrzeugs und aus Sicherheitsgründen führt das Getriebe ggf. bestimmte manuelle Schaltvorgänge nicht aus, wenn der Schalthebel bedient wird.</p>
+						</li>
+						<li>
+							<p>Drücken Sie zum Anfahren auf glattem oder rutschigem Untergrund den Schalthebel nach vorn in die Position + (Hochschalten). Das Getriebe schaltet in den zweiten Gang, welcher für das Anfahren auf glattem oder rutschigem Untergrund besser geeignet ist. Ziehen Sie bei Bedarf den Schalthebel nach hinten in die Position (-), um in den ersten Gang zurückzuschalten.</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Schalthebelsperre</title>
+			<p><indexterm>Automatikgetriebe<indexterm>Schalthebelsperre</indexterm></indexterm>Das Automatikgetriebe ist aus Sicherheitsgründen mit einer Schalthebelsperre ausgerüstet, die verhindert, dass der Schalthebel aus der Parkstufe (P) in den Rückwärtsgang (R) bewegt werden kann, wenn nicht gleichzeitig das Bremspedal betätigt wird.</p>
+			<p>So schalten Sie das Getriebe von der Parkstufe (P) in den Rückwärtsgang (R):</p>
+			<ol>
+				<li>
+					<p>Treten Sie auf das Bremspedal und halten Sie es gedrückt.</p>
+				</li>
+				<li>
+					<p>Bewegen Sie den Schalthebel.</p>
+				</li>
+			</ol>
+			<p>Wenn das Bremspedal wiederholt getreten und freigegeben wird, während sich der Schalthebel in Position P (Parken) befindet, ist möglicherweise ein Rattergeräusch in der Nähe des Schalthebels zu hören. Dies ist normal.</p>
+			<note type="warning">
+				<p>Treten Sie das Bremspedal immer vollständig durch, bevor und während Sie aus der Position P (Parkstufe) in eine andere Position schalten, um eine unbeabsichtigte Bewegung des Fahrzeugs zu vermeiden, die Personen im Fahrzeug oder in seiner Umgebung verletzen könnte.</p>
+			</note>
+		</section>
+		<section id="e00808">
+			<title id="e00809">Schalthebelsperre deaktivieren </title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M044003.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p><indexterm>Automatikgetriebe<indexterm>Schalthebelsperre deaktivieren</indexterm></indexterm>Wenn sich der Schalthebel von der Parkstufe (P) bei betätigtem Bremspedal nicht in den Rückwärtsgang (R) bewegen lässt, halten Sie das Bremspedal getreten und gehen Sie wie folgt vor:</p>
+			<ol>
+				<li>
+					<p>Bringen Sie den Zündschalter bzw. die Taste <term translate="no">ENGINE START/STOP</term> in die Stellung <term translate="no">LOCK/OFF</term>.</p>
+				</li>
+				<li>
+					<p>Betätigen Sie die Feststellbremse.</p>
+				</li>
+				<li>
+					<p>Entfernen Sie vorsichtig die Knaufmanschetten, die das Zugangsloch (1) zur Entriegelung der Schaltsperre abdecken.</p>
+				</li>
+				<li>
+					<p>Führen Sie ein Werkzeug (z. B. einen Schlitzschraubendreher) in die Zugangsöffnung ein und drücken Sie auf das Werkzeug.</p>
+				</li>
+				<li>
+					<p>Bewegen Sie den Schalthebel.</p>
+				</li>
+				<li>
+					<p>Entfernen Sie das Werkzeug aus dem Zugangsloch für die Schaltsperre und setzen Sie die Knaufmanschetten ein.</p>
+				</li>
+				<li>
+					<p>Wenn sich der Schalthebel auch nach Durchführen dieses Verfahrens nicht bewegt, lassen Sie das System von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+			</ol>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Achten Sie darauf, die Abdeckung nicht zu beschädigen, wenn Sie die Schalthebelmanschetten entfernen.</p>
+					</li>
+					<li>
+						<p>Stellen Sie sicher, dass das Fahrzeug auf einer ebenen Fläche steht, wenn Sie die Schaltsperre lösen.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e00810">
+			<title id="e00811">Verriegelungssystem des Zündschlüssels </title>
+			<p>Der Zündschlüssel kann nur dann abgezogen werden, wenn sich der Wählhebel in der Parkstellung (P) befindet.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0354.dita#CL4m_HEV-ca_ES-2027-t0354" role="parent" scope="local" type="concept">
+				<linktext>Automatikgetriebe </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

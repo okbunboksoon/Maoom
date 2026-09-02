@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00288">
+	<title id="e02154">LCD display messages</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>LCD displays 
+					<indexterm>LCD display messages</indexterm>
+				</indexterm>
+				<indexterm>LCD display messages</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title id="e02155">Door, hood, tailgate, sunroof open</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02156">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02157">
+									<figgroup>
+										<image href="../../images/OOV035113.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02158"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul id="e02159">
+				<li id="e02160">
+					<p>This warning is displayed indicating which door, the hood, the tailgate or the sunroof is open.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e02161">Lights mode</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02162">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02163">
+									<figgroup>
+										<image href="../../images/OOV055182L.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02164"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e02165">
+									<li>
+										<p> <uicontrol>Lights</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This indicator displays which exterior light is selected using the lighting control.</p>
+		</section>
+		<section>
+			<title id="e02166">Wiper mode</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02167">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02168">
+									<figgroup>
+										<image href="../../images/OOV055183L.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02169"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e02170">
+									<li>
+										<p> <uicontrol>Front wipers</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This indicator displays which wiper speed is selected using the wiper control.</p>
+		</section>
+		<section>
+			<title>Low washer fluid</title>
+			<ul id="e02171">
+				<li id="e02172">
+					<p>The washer fluid level in the reservoir is nearly empty</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e02173">Icy road warning</title>
+			<ul id="e02174">
+				<li id="e02175">
+					<p>The temperature on the outside temperature gauge is below approximately 4 °C (40 °F).</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e02176">Low key battery</title>
+			<ul id="e02177">
+				<li id="e02178">
+					<p>The battery in the smart key is flat</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e02179">Press START button while turning wheel</title>
+			<ul id="e02180">
+				<li id="e02181">
+					<p>The steering wheel does not unlock normally when the <term translate="no">EV</term> button is pressed</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e02182">Steering wheel unlocked</title>
+			<ul>
+				<li id="e02183">
+					<p>The steering wheel does not lock when the <term translate="no">EV</term> button changes to the OFF position</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e02184">Check steering wheel lock system</title>
+			<ul id="e02185">
+				<li id="e02186">
+					<p>The steering wheel does not lock normally when the <term translate="no">EV</term> button changes to the OFF position</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e02187">Check haptic steering wheel system</title>
+			<ul id="e02188">
+				<li id="e02189">
+					<p>There is a problem with the haptic steering wheel system</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e02190">Key not in vehicle</title>
+			<ul id="e02191">
+				<li id="e02192">
+					<p>The smart key is not in the vehicle when you press the <term translate="no">EV</term> button</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e02193">Key not detected</title>
+			<p>The smart key is not detected when you press the <term translate="no">EV</term> button</p>
+		</section>
+		<section>
+			<title id="e02194">Press start button again</title>
+			<ul id="e02195">
+				<li id="e02196">
+					<p>The <term translate="no">EV</term> button cannot be operated due to a problem with the <term translate="no">EV</term> button system</p>
+				</li>
+				<li>
+					<p>You could start the vehicle by pressing the <term translate="no">EV</term> button once more.</p>
+				</li>
+				<li>
+					<p>If the warning message is displayed each time you press the <term translate="no">EV</term> button, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e02197">Place smart key on emergency start position and press EV button.</title>
+			<ul id="e02198">
+				<li id="e02199">
+					<p>The <term translate="no">EV</term> button is pressed while the “Key not detected” warning message is displayed</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Check driver assistance system.</title>
+			<p>Problem with Driver Assistance system</p>
+		</section>
+		<section id="e02200">
+			<title>Check BRAKE SWITCH fuse</title>
+			<ul>
+				<li>
+					<p>The brake switch fuse is disconnected</p>
+				</li>
+				<li>
+					<p>You need to replace the fuse with a new one before starting the vehicle.</p>
+				</li>
+				<li>
+					<p>If that is not possible, you can start the vehicle by pressing the <term translate="no">EV</term> button for 10 seconds in the <term>POWER ON</term> or <term>DRIVE READY</term> position.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e02201">
+			<title>Refill coolant</title>
+			<p>The coolant is low</p>
+		</section>
+		<section id="e02202">
+			<title>The steering wheel heater is off</title>
+			<p>When you turn off the steering wheel heater</p>
+		</section>
+		<section id="e02203">
+			<title>Charge immediately. Power limited</title>
+			<p>When the battery temperature is extremely low in winter, the battery temperature optimization is conducted for normal driving conditions.</p>
+			<p>The optimization time may vary depending on the battery temperature and charging conditions.</p>
+		</section>
+		<section id="e02204">
+			<title>Power limited due to low EV battery temperature. Charge battery</title>
+			<p>If the high voltage battery level and temperature is too low, the power may be limited. When the warning message is displayed, please charge the vehicle immediately.</p>
+			<note type="note" deliveryTarget="except_print" id="e02205">
+				<ul id="e02206">
+					<li>
+						<p>Some driving information stored in the trip computer resets if the battery is disconnected.</p>
+					</li>
+					<li>
+						<p>If any of the following conditions occurs, the mileage and days may be incorrect.</p>
+						<ul id="e02207">
+							<li id="e02208">
+								<p>The battery cable is disconnected.</p>
+							</li>
+							<li id="e02209">
+								<p>The battery is discharged.</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>If sunroof open warning is displayed in the cluster, the Driving Information message may not be displayed.</p>
+					</li>
+					<li>
+						<p>To set the charging time and/or climate time, refer to Navigation Quick Reference Guide.</p>
+					</li>
+					<li>
+						<p>If the icy road warning appears while driving, you should drive more attentively and safely refraining from over-speeding, rapid acceleration, sudden braking or sharp turning, etc.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

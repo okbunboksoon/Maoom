@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="bulb6" otherprops="legalnotice_europe-general_egall_2023_20230101_0000914">
+    <title>Replacing front turn signal lamp (Bulb type) (Type A)</title>
+    <shortdesc/>
+    <conbody>
+        <table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="table_ndn_k2j_pjc">
+            <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+                <colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+                <tbody>
+                    <row rowsep="0">
+                        <entry colname="col1">
+                            <fig id="fig_odn_k2j_pjc">
+                                <figgroup>
+                                    <image href="images/OKA4H073057.jpg" scale="95"
+                                        align="center" placement="break" id="image_pdn_k2j_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                        <entry colname="col2"/>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <ol id="ol_qdn_k2j_pjc">
+            <li>
+                <p>Disconnect the negative terminal from the battery.</p>
+            </li>
+            <li>
+                <p>Remove the socket from the assembly by turning the socket counterclockwise until
+                    the tabs on the socket align with the slots on the assembly.</p>
+            </li>
+            <li>
+                <p>Remove the bulb from the socket by pressing it in and rotating it
+                    counterclockwise until the tabs on the bulb align with the slots in the socket.
+                    Pull the bulb out of the socket</p>
+            </li>
+            <li>
+                <p>Insert a new bulb by inserting it into the socket and rotating it until it locks
+                    into place.</p>
+            </li>
+            <li>
+                <p>Install the socket in the assembly by aligning the tabs on the socket with the
+                    slots in the assembly. Push the socket into the assembly and turn the socket
+                    clockwise.</p>
+            </li>
+            <li>
+                <p>Connect the negative terminal from the battery.</p>
+            </li>
+        </ol>
+    </conbody>
+</concept>

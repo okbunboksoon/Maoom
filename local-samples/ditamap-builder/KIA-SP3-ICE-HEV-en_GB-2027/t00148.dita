@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00148">
+	<title id="e00733">Odometer </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>gauges
+					<indexterm>odometer</indexterm>
+				</indexterm>
+				<indexterm>odometer</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00734">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00735">
+								<image href="images/P_SP327_B00_003_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The odometer displays the total distance that the vehicle has been driven and should be used to determine when to perform periodic maintenance.</p>
+		<ul id="e00736">
+			<li id="e00737">
+				<p>Odometer range: 0–999,999 mi or 0–1,599,999 km.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00143.dita#t00143" role="parent" scope="local" type="concept">
+				<linktext>Gauges </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

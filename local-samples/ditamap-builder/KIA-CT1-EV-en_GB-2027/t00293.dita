@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00293">
+	<title>Battery conditioning mode</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q020_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol>Battery conditioning</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Battery conditioning</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Activate</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e01324">
+			<li>
+				<p>If DC charging performance is likely to be impaired due to the high-voltage battery temperature being too high or too low, manually activate the Battery Conditioning function or link it to the navigation system to achieve the expected DC charging performance at room temperature.</p>
+			</li>
+			<li>
+				<p>If you set a DC charging station as a destination or waypoint in the navigation system, the Battery Conditioning function controls the battery temperature to a level suitable for DC charging while considering the arrival time.</p>
+			</li>
+			<li>
+				<p>Manual control indicates the operating status and allows the mode to be switched on and off.</p>
+			</li>
+			<li>
+				<p>The Battery Conditioning function operates only in vehicles equipped with a battery heater. It does not operate when the battery charge level is low to ensure driving distance. It also does not operate if the battery temperature is already suitable for DC charging.</p>
+			</li>
+			<li>
+				<p>The energy used to adjust the battery temperature may shorten the driving distance. Reaching a suitable battery temperature requires time.</p>
+			</li>
+			<li>
+				<p>You can control the Battery Conditioning function remotely while the vehicle is parked. In this case, the function will end when the battery temperature reaches the appropriate range or after 30 minutes. For more information, refer to the separately supplied manual.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

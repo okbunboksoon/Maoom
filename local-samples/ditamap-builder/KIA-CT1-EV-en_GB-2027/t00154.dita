@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00154">
+	<title>LCD display messages</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p>LCD displays</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>Displayed contents</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<fig>
+								<figgroup>
+									<image href="../../images/N_CT25Z027.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>Door, hood, trunk, sunroof open</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<fig id="e00750">
+								<figgroup>
+									<image href="../../images/N_CT25Z039_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p> <uicontrol>(A) Lights</uicontrol> </p>
+							<ul>
+								<li>
+									<p> <image href="../../images/WKIA_047.eps" scale="15" align="left" placement="inline"/> </p>
+								</li>
+								<li>
+									<p> <image href="../../images/WKIA_049.eps" scale="15" align="left" placement="inline"/> </p>
+								</li>
+								<li>
+									<p> <term translate="no">AUTO</term> </p>
+								</li>
+								<li>
+									<p> <term translate="no">OFF</term> (O)</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<fig id="e00751">
+								<figgroup>
+									<image href="../../images/N_CT25Z040_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p> <uicontrol>(A) Front Wiper</uicontrol> </p>
+							<ul>
+								<li>
+									<p> <term translate="no">OFF</term> (O)</p>
+								</li>
+								<li>
+									<p> <term translate="no">AUTO</term> /INT</p>
+								</li>
+								<li>
+									<p> <term translate="no">LO</term> (1)</p>
+								</li>
+								<li>
+									<p> <term translate="no">HI</term> (2)</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p id="e00752"> <uicontrol>Low washer fluid</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p id="e00753">The washer fluid level in the reservoir is nearly empty</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <uicontrol>Icy road warning</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>The temperature on the outside temperature gauge is below approximately 4 °C (40 °F).</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <uicontrol>Low key battery</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>The battery in the smart key is flat</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p id="e00754"> <uicontrol>Press START button while turning wheel</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p id="e00755">The steering wheel does not unlock normally when the <term translate="no">EV</term> button is pressed</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p id="e00756"> <uicontrol>Steering wheel unlocked</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p id="e00757">The steering wheel does not lock when the <term translate="no">EV</term> button changes to the <term translate="no">OFF</term> position</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p id="e00758"> <uicontrol>Check steering wheel lock system</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p id="e00759">The steering wheel does not lock normally when the <term translate="no">EV</term> button changes to the <term translate="no">OFF</term> position</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p id="e00760"> <uicontrol>Check haptic steering wheel system</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p id="e00761">There is a problem with the haptic steering wheel system</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p id="e00762"> <uicontrol>Key not in vehicle</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p id="e00763">The smart key is not in the vehicle when you press the <term translate="no">EV</term> button</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p id="e00764"> <uicontrol>Key not detected</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p id="e00765">The smart key is not detected when you press the <term translate="no">EV</term> button</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p id="e00766"> <uicontrol>Press start button again</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p id="e00767">The <term translate="no">EV</term> button cannot be operated due to a problem with the <term translate="no">EV</term> button system</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p id="e00768"> <uicontrol>Place smart key on emergency start position and press EV button.</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p id="e00769">The <term translate="no">EV</term> button is pressed while the “Key not detected” warning message is displayed</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <uicontrol>Check driver assistance system.</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>Problem with Driver Assistance system</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <uicontrol>Check BRAKE SWITCH fuse</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>The brake switch fuse is disconnected</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <uicontrol>Refill coolant</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>The coolant is low</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="1" align="center" valign="middle">
+							<p> <uicontrol>The steering wheel heater is off</uicontrol> </p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>When you turn off the steering wheel heater</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>When the battery temperature is extremely low in winter, the battery temperature optimization is conducted for normal driving conditions.</p>
+					<p>The optimization time may vary depending on the battery temperature and charging conditions.</p>
+					<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+						<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+							<colspec colnum="1" colname="1" colwidth="50*"/>
+							<colspec colnum="2" colname="2" colwidth="50*"/>
+							<thead>
+								<row rowsep="1">
+									<entry colname="1" align="center" valign="middle">
+										<p>LCD displays</p>
+									</entry>
+									<entry colname="2" align="center" valign="middle">
+										<p>Displayed contents</p>
+									</entry>
+								</row>
+							</thead>
+							<tbody>
+								<row rowsep="0" valign="middle">
+									<entry colname="1">
+										<fig>
+											<figgroup>
+												<image href="../../images/N_CT25Q033_E.eps" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="2">
+										<p> <uicontrol>(A) Charge immediately. Power limited</uicontrol> </p>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>If the high voltage battery level and temperature is too low, the power may be limited. When the warning message is displayed, please charge the vehicle immediately.</p>
+					<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+						<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+							<colspec colnum="1" colname="1" colwidth="50*"/>
+							<colspec colnum="2" colname="2" colwidth="50*"/>
+							<thead>
+								<row rowsep="1">
+									<entry colname="1" align="center" valign="middle">
+										<p>LCD displays</p>
+									</entry>
+									<entry colname="2" align="center" valign="middle">
+										<p>Displayed contents</p>
+									</entry>
+								</row>
+							</thead>
+							<tbody>
+								<row rowsep="0" valign="middle">
+									<entry colname="1">
+										<fig>
+											<figgroup>
+												<image href="../../images/N_CT25Q036_E.eps" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="2">
+										<p> <uicontrol>(A) Power limited due to low EV battery temperature. Charge battery</uicontrol> </p>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+			</ul>
+		</note>
+		<note type="tip" deliveryTarget="except_print">
+			<ul>
+				<li>
+					<p>If there is no problem with the operation and the messages above are constantly displayed, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p importance="high">Press start button again</p>
+					<ul>
+						<li>
+							<p>You could start the vehicle by pressing the <term translate="no">EV</term> button once more.</p>
+						</li>
+						<li>
+							<p>If the warning message is displayed each time you press the <term translate="no">EV</term> button, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p importance="high">Check BRAKE SWITCH fuse</p>
+					<ul>
+						<li>
+							<p>You need to replace the fuse with a new one before starting the vehicle.</p>
+						</li>
+						<li>
+							<p>If that is not possible, you can start the vehicle by pressing the <term translate="no">EV</term> button for 10 seconds in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+		<note type="note" deliveryTarget="except_print" id="e00770">
+			<ul>
+				<li>
+					<p>Some driving information stored in the trip computer resets if the battery is disconnected.</p>
+				</li>
+				<li>
+					<p>If any of the following conditions occurs, the mileage and days may be incorrect.</p>
+					<ul id="e00771">
+						<li id="e00772">
+							<p>The battery cable is disconnected.</p>
+						</li>
+						<li id="e00773">
+							<p>The battery is discharged.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>If sunroof open warning is displayed in the cluster, the Driving Information message may not be displayed.</p>
+				</li>
+				<li>
+					<p>To set the charging time and/or climate time, refer to Navigation Quick Reference Guide.</p>
+				</li>
+				<li>
+					<p>If the icy road warning appears while driving, you should drive more attentively and safely refraining from over-speeding, rapid acceleration, sudden braking or sharp turning, etc.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

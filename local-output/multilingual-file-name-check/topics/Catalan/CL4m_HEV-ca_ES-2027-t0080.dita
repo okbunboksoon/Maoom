@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0080">
+	<title>Elektrische Heckklappe zurücksetzen</title>
+	<conbody>
+		<p>In einigen Fällen kann ein Zurücksetzen der Heckklappe erforderlich sein. Ein Zurücksetzen der Heckklappe kann in folgenden Fällen erforderlich sein:</p>
+		<ul>
+			<li>
+				<p>Wenn die 12V Batterie wieder aufgeladen wird</p>
+			</li>
+			<li>
+				<p>Wenn die 12V Batterie nach dem Ausbau oder Austausch wieder eingebaut wird</p>
+			</li>
+			<li>
+				<p>Wenn die zugehörige Sicherung nach dem Ausbau oder Austausch wieder eingebaut wird</p>
+			</li>
+		</ul>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MW035025L_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol>
+			<li>
+				<p>Schalten Sie bei Fahrzeug in Position <term translate="no">OFF</term> oder <term translate="no">ON</term> in die Stellung P (Parken).</p>
+			</li>
+			<li>
+				<p>Drücken Sie die innere Taste zum Öffnen/Schließen der Heckklappe (1) und die äußere Taste (2) gleichzeitig, bis ein Signalton ertönt.</p>
+			</li>
+			<li>
+				<p>Schließen Sie die Heckklappe langsam manuell.</p>
+			</li>
+			<li>
+				<p>Äußere Taste zum Öffnen/Schließen der Heckklappe drücken. Die elektrische Heckklappe öffnet sich mit einem Warnton.</p>
+				<p>Warten Sie, bis die Heckklappe vollständig geöffnet ist, um die Rückstellung abzuschließen. Wenn die Heckklappe angehalten wird, bevor sie vollständig geöffnet ist, kann die Rückstellung nicht durchgeführt werden.</p>
+			</li>
+		</ol>
+		<note type="tip">
+			<p>Wenn die elektrische Heckklappe nach dem oben beschriebenen Verfahren nicht ordnungsgemäß funktioniert, lassen Sie sie von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0070.dita#CL4m_HEV-ca_ES-2027-t0070" role="parent" scope="local" type="concept">
+				<linktext>Elektrische Heckklappe (für Kombi)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

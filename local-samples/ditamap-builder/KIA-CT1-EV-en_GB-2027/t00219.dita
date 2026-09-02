@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00219">
+	<title>Removing/reinstalling headrest</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01007">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01008">
+								<title>Type A</title>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B020_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01009">
+								<title>Type B (GT)</title>
+								<figgroup>
+									<image align="center" href="../../images/N_CT27_C06_001_1_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>*Before adjusting the headrest, check the lever position for your seat type.</p>
+		<section id="e01010">
+			<title>Operation</title>
+			<p>To remove the headrest:</p>
+			<ol id="e01011">
+				<li>
+					<p>Recline the seatback with the recline lever or switch.</p>
+				</li>
+				<li>
+					<p>Push and hold the release button (1). Raise headrest as far as it can go.</p>
+				</li>
+				<li>
+					<p>Insert a short, flat object (such as a small flat-head screwdriver) into the opening on the inside base of the left post and pull the headrest upward.</p>
+				</li>
+			</ol>
+			<p>To reinstall the headrest:</p>
+			<ol id="e01012">
+				<li>
+					<p>Put the headrest poles into the holes while pressing the release button (1).</p>
+				</li>
+				<li>
+					<p>Recline the seatback with the recline lever or switch.</p>
+				</li>
+				<li>
+					<p>Adjust the headrest to the appropriate height.</p>
+				</li>
+			</ol>
+			<note type="warning" id="e01013">
+				<ul id="e01014">
+					<li>
+						<p>NEVER allow anyone to ride in a seat with the headrest removed.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning" id="e01015">
+				<ul id="e01016">
+					<li>
+						<p>Always make sure the headrest locks into position after reinstalling and adjusting it properly.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

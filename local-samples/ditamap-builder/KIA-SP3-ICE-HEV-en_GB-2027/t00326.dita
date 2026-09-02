@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00326">
+	<title>Manual heating and air conditioning (A/C) operation</title>
+	<shortdesc>The heating and cooling system can be controlled manually by pressing buttons other than the <term translate="no">AUTO</term> button.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system
+					<indexterm>manual heating and air conditioning (A/C) operation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context id="e02075">
+			<fig id="e02076">
+				<image href="images/N_SP327_C08_053.jpg" scale="95" align="center" placement="break"/>
+			</fig>
+			<p>To manually operate the heating and <term translate="no">A/C</term>, follow these steps:</p>
+		</context>
+		<steps id="e02077">
+			<step>
+				<cmd>Start the vehicle.</cmd>
+			</step>
+			<step>
+				<cmd>Set the desired mode.</cmd>
+				<choices id="e02078">
+					<choice>
+						<p>Heating: <image href="images/WKIA_062.jpg" scale="15" align="left" placement="inline"/></p>
+					</choice>
+					<choice>
+						<p>Cooling: <image href="images/WKIA_060.jpg" scale="15" align="left" placement="inline"/></p>
+					</choice>
+				</choices>
+			</step>
+			<step>
+				<cmd>Set the temperature control as desired.</cmd>
+			</step>
+			<step>
+				<cmd>Set the air intake control to external air.</cmd>
+			</step>
+			<step>
+				<cmd>Set the desired fan speed. Turn the <term translate="no">A/C</term> system on if desired.</cmd>
+			</step>
+			<step>
+				<cmd>If desired, turn the air conditioning on with the temperature set high in order to dehumidify the air before it enters into the cabin.</cmd>
+				<info>
+					<p>If the windshield fogs up, select the front defrost <image href="images/WKIA_181.jpg" scale="15" align="center" placement="inline"/> mode.</p>
+				</info>
+			</step>
+		</steps>
+		<postreq id="e02079">
+			<p>Press the <term translate="no">AUTO</term> button to switch to the automatically controlled climate system.</p>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00324.dita#t00324" role="parent" scope="local" type="concept">
+				<linktext>Automatic climate control system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

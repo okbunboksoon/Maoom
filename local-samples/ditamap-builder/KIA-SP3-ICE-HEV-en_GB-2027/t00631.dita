@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00631">
+	<title>Highway Curve Zone Auto Slowdown</title>
+	<conbody>
+		<p>The vehicle decelerates depending on the curve ahead on the highway. After passing the curve, the vehicle accelerates to the Smart Cruise Control set speed.</p>
+		<note type="tip" id="e03902">
+			<p>The deceleration starting point depends on driving speed and road curvature. The higher the speed, the earlier the deceleration starting point.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00625.dita#t00625" role="parent" scope="local" type="concept">
+				<linktext>Navigation-based Smart Cruise Control operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

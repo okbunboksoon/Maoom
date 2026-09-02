@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00401">
+	<title>Smart regeneration system</title>
+	<shortdesc>The Smart Regeneration System automatically adjusts the regenerative braking based on road grade and the distance to the vehicle ahead. This system reduces unnecessary use of the brake and accelerator pedals, improves energy efficiency, and assists the driver during driving.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>smart regeneration system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02874">
+			<title>Detecting sensor</title>
+			<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02875">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e02876">
+									<title>Front radar</title>
+									<figgroup>
+										<image href="../../images/OOV045013.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02877"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Always make sure the radar sensor cover is clean and free of dirt, snow, and debris.</p>
+			<p>Dirt, snow, or foreign substances on the lens may adversely affect the sensing performance of the sensor. In this case, the system operation may stop temporarily and not operate normally.</p>
+			<note type="caution" id="e02878">
+				<ul id="e02879">
+					<li>
+						<p>Do not apply a license plate frame or foreign objects such as a bumper sticker or a bumper guard near the radar sensor. Doing so may adversely affect the sensing performance of the radar.</p>
+					</li>
+					<li>
+						<p>Always keep the radar sensor and lens cover clean and free of dirt and debris.</p>
+					</li>
+					<li>
+						<p>Use only a soft cloth to wash the vehicle. Do not spray pressurized water directly on the sensor or sensor cover.</p>
+					</li>
+					<li>
+						<p>Be careful not to apply unnecessary force on the radar sensor or sensor cover. If the sensor is forcibly moved out of proper alignment, the smart regeneration system may not operate correctly. A warning message may not be displayed. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>If the front bumper becomes damaged in the area around the radar sensor, the smart regeneration system may not operate properly. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>The genuine Kia front radar sensor covers are parts with quality and performance ensured. If arbitrarily applying paint on or changing the cover, smart regeneration system may not function properly. Use only Kia Genuine Parts or those of an equivalent standard with proven quality and performance to repair or replace the radar sensor covers.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

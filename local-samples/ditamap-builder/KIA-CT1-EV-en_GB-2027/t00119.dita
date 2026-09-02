@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00119">
+	<title>Steering wheel haptic warning</title>
+	<conbody>
+		<p>The driver assistance system’s feature with steering wheel haptic warning warns the driver by vibrating the steering wheel when it detects a dangerous situation.</p>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>When the vehicle is in <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position, select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver Assistance</uicontrol><uicontrol>Warning Methods</uicontrol><uicontrol>Haptic Warning</uicontrol></menucascade> on the infotainment system.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>When the vehicle is in <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position, select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver Assistance</uicontrol><uicontrol>Warning Methods</uicontrol><uicontrol>Haptic Warning</uicontrol></menucascade> on the infotainment system.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

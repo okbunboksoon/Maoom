@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00472">
+	<title>Lane-Change Side function</title>
+	<conbody>
+		<p>Lane-Change Side functions for Forward Collision-Avoidance Assist are:</p>
+		<ul>
+			<li>
+				<p>Collision Warning</p>
+			</li>
+			<li>
+				<p>Emergency Steering</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00452.dita#t00452" role="parent" scope="local" type="concept">
+				<linktext>Forward Collision-Avoidance Assist operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

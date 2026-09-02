@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00216">
+	<title>Front seat headrest</title>
+	<shortdesc>The driver’s and front passenger’s seats are equipped with a headrest for the occupant’s safety and comfort.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>headrest
+					<indexterm>front seat headrest</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01342">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01343">
+								<image href="images/N_SP327_B06_023.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The headrest not only provides comfort for the driver and front passenger, but also helps protect the head and neck in the event of a collision.</p>
+		<p>To maximize effectiveness in case of accidents, the headrest should be adjusted so the middle of the headrest is level with the center of gravity of an occupant’s head. Generally, the center of gravity of most people’s heads is at the same height as the top of their eyes.</p>
+		<p>Adjust the headrest as close to your head as possible. For this reason, we do not recommend using a cushion that holds your body away from the seatback.</p>
+		<note type="warning">
+			<p>Headrest removal/adjustment</p>
+			<ul>
+				<li>
+					<p>Do not operate the vehicle with the headrests removed. Headrests can provide critical neck and head support in a crash.</p>
+				</li>
+				<li>
+					<p>Do not adjust the headrest height while the vehicle is in motion. You may lose control of the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<p>Excessive pulling or pushing may damage the headrest.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00196.dita#t00196" role="parent" scope="local" type="concept">
+				<linktext>Seats </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00680">
+	<title>3D View function</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04085">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04086">
+								<image href="images/N_SP327_C00_010_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e04087">
+								<image href="images/N_SP3i26_B10_012_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>(2) View switching button</p>
+		<p>(3) back button</p>
+		<p>(4) infotainment system operation button</p>
+		<p>The Surround View Monitor’s 3D View function displays the vehicle from various angles. To select the angle, press the 3D View icon on the Surround View Monitor. To reset the angle, press the 3D View icon again.</p>
+		<p>The Surround View Monitor’s 3D View function activates under the following conditions:</p>
+		<ul>
+			<li>
+				<p>You shift the gear to P (Park), N (Neutral), or D (Drive) at a speed below 10 km/h (6 mph).</p>
+			</li>
+			<li>
+				<p>You press the view switching button (2) to select 3D view while the gear is in R (Reverse) and Surround View Monitor is operating.</p>
+			</li>
+		</ul>
+		<p>The Surround View Monitor’s 3D View functions turns <term translate="no">OFF</term> when you are parking under the following conditions:</p>
+		<ul>
+			<li>
+				<p>You shift the gear from N (Neutral) or D (Drive) to P (Park).</p>
+			</li>
+			<li>
+				<p>You press the Parking/View button (1).</p>
+			</li>
+			<li>
+				<p>You press the back button (3) on the Surround View Monitor screen.</p>
+			</li>
+			<li>
+				<p>You press the infotainment system power button (4).</p>
+			</li>
+			<li>
+				<p>You drive above 10 km/h (6 mph).</p>
+			</li>
+			<li>
+				<p>You shift the gear from R (Reverse) to P (Park).</p>
+			</li>
+		</ul>
+		<p>When the vehicle is in R (Reverse), the 3D view function of the Surround View Monitor will turn off under the following conditions:</p>
+		<ul id="e04088">
+			<li>
+				<p>Shifting to P (Park)</p>
+			</li>
+		</ul>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>The 3D View does not display parking guidelines.</p>
+				</li>
+				<li>
+					<p>The Top View screen, which displays the Front View, Rear View, or 3D View, converts the original footage captured by your vehicle’s 4 wide-view cameras to provide a 360-degree image of the vehicle from above.</p>
+				</li>
+				<li>
+					<p>Top View does not display when you select Front or Rear Wide View.</p>
+				</li>
+				<li>
+					<p>Pinch the Top View area to zoom in or out.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00675.dita#t00675" role="parent" scope="local" type="concept">
+				<linktext>Surround View Monitor operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

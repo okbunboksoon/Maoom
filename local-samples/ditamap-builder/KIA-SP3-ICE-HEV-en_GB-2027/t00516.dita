@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00516">
+	<title>Blind-Spot Collision-Avoidance Assist disabled</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03424">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03425">
+								<image href="images/OCL4M055098N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03426">
+								<li>
+									<p><uicontrol>Driver Assistance system limited. Radar blocked.</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When foreign material (such as snow or rain) covers the rear bumper near the rear corner radar or sensor, or when you install a trailer or carrier, it can reduce the detection performance and temporarily limit or disable Blind-Spot Collision-Avoidance Assist.</p>
+		<p>A warning message and the Master warning light (<image href="images/WKIA_040.jpg" scale="15" align="left" placement="inline"/>) display on the instrument cluster. This does not indicate a Blind-Spot Collision-Avoidance Assist malfunction.</p>
+		<p>Blind-Spot Collision-Avoidance Assist operates properly after you remove foreign material (such as snow or rain) from the sensor or obstructions (such as a trailer or carrier) from the rear bumper then restart the vehicle.</p>
+		<p>If Blind-Spot Collision-Avoidance Assist still does not operate properly after you remove foreign material (such as snow or rain) from the sensor or obstructions (such as a trailer or carrier) from the rear bumper, have the vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Even when a warning message does not appear on the instrument cluster, Blind-Spot Collision-Avoidance Assist may not operate properly.</p>
+				</li>
+				<li>
+					<p>Blind-Spot Collision-Avoidance Assist may not operate properly in an area (such as, open terrain) where any objects are not detected right after the you turn <term translate="no">ON</term> the vehicle, or when the detection sensor is blocked with foreign material right after you turn <term translate="no">ON</term> the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<p>Turn <term translate="no">OFF</term> Blind-Spot Collision-Avoidance Assist to install or remove a trailer, carrier, or other attachment. Turn <term translate="no">ON</term> Blind-Spot Collision-Avoidance Assist when you are finished.</p>
+		</note>
+		<note type="tip">
+			<p>You can check the Blind-Spot Collision-Avoidance Assist status in the service message of the utility information view of the instrument cluster display window.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00515.dita#t00515" role="parent" scope="local" type="concept">
+				<linktext>Blind-Spot Collision-Avoidance Assist malfunction</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

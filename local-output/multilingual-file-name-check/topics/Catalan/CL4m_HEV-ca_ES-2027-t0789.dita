@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" otherprops="legal_gen_std_008_03" id="CL4m_HEV-ca_ES-2027-t0789">
+	<title>Bedienung des Notruf-Systems (eCall)</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01345">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="1*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="1*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01346">
+								<image align="center" href="../../../images/OCL4M065023L.eps" scale="95" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e01347">
+								<li>
+									<p>Mikrofon</p>
+								</li>
+								<li>
+									<p>Taste <term translate="no">SOS</term></p>
+								</li>
+								<li>
+									<p><term translate="no">SOS</term> Warnleuchte</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p><term translate="no">SOS</term> Warnleuchte: Die Warnleuchte <term translate="no">SOS</term> erscheint für 3 Sekunden im Kombiinstrument, wenn sich das Fahrzeug in der Position <term translate="no">ON</term> befindet. Ansonsten erlischt sie bei normalem Betrieb des Fahrzeugs.</p>
+		<p><term translate="no">SOS</term> Taste: Der Fahrer/Beifahrer stellt durch Drücken der Taste eine Verbindung zur Notrufzentrale (PSAP) her.</p>
+		<p>Falls ein Problem am System auftritt, bleibt die Warnleuchte <term translate="no">SOS</term> im Kombiinstrument eingeschaltet.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0783.dita#CL4m_HEV-ca_ES-2027-t0783" role="parent" scope="local" type="concept">
+				<linktext>Notruf-System (eCall)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0265">
+	<title>Vorbereiten des Software-Updates</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034157N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Jetzt aktualisieren</p>
+								</li>
+								<li>
+									<p>Update abbrechen</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn Sie auf dem Bildschirm die Schaltfläche Jetzt aktualisieren drücken, beginnt das Fahrzeug automatisch mit der Installation des Updates. Die folgenden Bedingungen müssen erfüllt sein:</p>
+		<ul>
+			<li>
+				<p>Das Fahrzeug muss ausgeschaltet sein.</p>
+			</li>
+			<li>
+				<p>Der Gang muss auf P (Parkstellung) geschaltet sein.</p>
+			</li>
+			<li>
+				<p>Die Feststellbremse muss angezogen sein.</p>
+			</li>
+			<li>
+				<p>Die Außenbeleuchtung muss ausgeschaltet sein.</p>
+			</li>
+			<li>
+				<p>Die Motorhaube muss geschlossen sein.</p>
+			</li>
+			<li>
+				<p>Der Akku muss ausreichend sein.</p>
+			</li>
+			<li>
+				<p>Die zu aktualisierenden Systeme dürfen nicht in Betrieb sein.</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<p>Um sofort zu aktualisieren, drücken Sie Jetzt aktualisieren.</p>
+			</li>
+			<li>
+				<p>Um die Aktualisierung abzubrechen, drücken Sie Aktualisierung abbrechen.</p>
+			</li>
+		</ul>
+		<note type="tip">
+			<p>Der Batterie- und Systemstatus wird automatisch vom Fahrzeug überprüft.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0262.dita#CL4m_HEV-ca_ES-2027-t0262" role="parent" scope="local" type="concept">
+				<linktext>Over-The-Air Software-Update (ausstattungsabhängig)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

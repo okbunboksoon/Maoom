@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0841">
+	<title>Füllstand der Brems-/Kupplungsflüssigkeit prüfen</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Brems-/Kupplungsflüssigkeit
+					<indexterm>Füllstand der Brems-/Kupplungsflüssigkeit prüfen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M074006N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Prüfen Sie regelmäßig den Füllstand des Bremsflüssigkeitsbehälters. Der Füllstand muss sich zwischen den seitlichen Behältermarkierungen <term translate="no">MAX</term> und <term translate="no">MIN</term> befinden.</p>
+		<p>Bevor Sie den Behälterdeckel abnehmen, um Brems-/Kupplungsflüssigkeit nachzufüllen, reinigen Sie den Bereich um den Deckel sorgfältig, damit die Brems-/Kupplungsflüssigkeit nicht verunreinigt werden kann.</p>
+		<p>Prüfen Sie regelmäßig, dass der Füllstand im Bremsflüssigkeitsbehälter zwischen <term translate="no">MIN</term> und <term translate="no">MAX</term> liegt. Der Flüssigkeitsstand sinkt mit steigender Fahrleistung. Dies ist ein normaler Zustand, der auf den Verschleiß der Bremsklötze zurückzuführen ist.</p>
+		<p>Wenn der Füllstand ungewöhnlich niedrig ist, lassen Sie die Anlage von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<p>Verwenden Sie nur die vorgegebene Bremsflüssigkeit.</p>
+		<p>(Siehe <xref href="CL4m_HEV-ca_ES-2027-t0025.dita#CL4m_HEV-ca_ES-2027-t0025"/>.)</p>
+		<p>Vermischen Sie niemals verschiedene Hydraulikflüssigkeiten miteinander.</p>
+		<note type="warning">
+			<p importance="high">Verlust von Brems-/Kupplungsflüssigkeit</p>
+			<p>Falls die Brems-/Kupplungsanlage häufiges Nachfüllen von Flüssigkeiten erfordert, lassen Sie die Anlage von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		</note>
+		<note type="warning">
+			<p importance="high">Brems-/Kupplungsflüssigkeit</p>
+			<p>Seien Sie beim Wechseln und Nachfüllen von Brems-/Kupplungsflüssigkeit vorsichtig. Vermeiden Sie jeglichen Augenkontakt. Falls die Brems- und Kupplungsflüssigkeit in Kontakt mit Ihren Augen kommt, spülen Sie diese sofort mit viel frischem Leitungswasser. Lassen Sie Ihre Augen umgehend von einem Arzt untersuchen.</p>
+		</note>
+		<note type="caution">
+			<p>Lassen Sie keine Brems-/Kupplungsflüssigkeit auf den Fahrzeuglack gelangen, da dies zu Lackschäden führen würde. Brems-/Kupplungsflüssigkeit, die über längere Zeit der Luft ausgesetzt war (z. B. kein geschlossener Behälter), darf niemals mehr verwendet werden, da sie nicht mehr über die erforderlichen Eigenschaften verfügt. Sie muss ordnungsgemäß entsorgt werden. Füllen Sie keine falschen Flüssigkeiten ein. Bereits geringste Mengen Mineralöl (z. B. Motoröl) im Brems-/Kupplungssystem, können zu Beschädigungen der Systemkomponenten von Kupplung und Bremse führen.</p>
+		</note>
+		<note type="caution">
+			<p>Um die beste Brems- und ABS/ESC-Leistung des Fahrzeugs zu erhalten, verwenden Sie Kia-Original-Bremsflüssigkeit oder eine gleichwertige Standard-Bremsflüssigkeit gemäß Spezifikation. (Klassifikation: SAE J1704 DOT-4 LV, ISO4925 CLASS-6, FMVSS116 DOT-4)</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0840.dita#CL4m_HEV-ca_ES-2027-t0840" role="parent" scope="local" type="concept">
+				<linktext>Brems-/Kupplungsflüssigkeit </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

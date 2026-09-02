@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0255">
+	<title>Bedingungen für das Auslösen der Airbags</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Airbag
+					<indexterm>Bedingungen zum Auslösen der Airbags</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="all" rowsep="1" colsep="1" pgwide="0">
+			<desc>
+				<p>Die tatsächlich vorhandenen Airbags im Fahrzeug können von der Abbildung abweichen.</p>
+			</desc>
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="1.111*"/>
+				<colspec colnum="2" colname="col2" colwidth="1.118*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="center" valign="middle">
+							<p>Bedingungen für das Auslösen der Airbags</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1" align="center" valign="middle">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024055N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2" align="left" valign="middle">
+							<p>Frontairbags werden in der Regel bei einem Frontalaufprall ausgelöst. Die Auslösung hängt von der Intensität, der Geschwindigkeit und dem Aufprallwinkel ab.</p>
+						</entry>
+					</row>
+					<row rowsep="0" valign="middle">
+						<entry colname="col1" align="center" valign="middle">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024056N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2" align="left" valign="middle">
+							<p>Seiten- und/oder Kopfairbags sind so konzipiert, dass sie bei der Erkennung eines seitlichen Aufpralls durch die seitlichen Aufprallsensoren, abhängig von der Aufprallstärke, der Geschwindigkeit oder dem Winkel des Aufpralls, ausgelöst werden.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note" id="e00650">
+			<p>Seiten- und Kopfairbag</p>
+			<p>Die Seiten- und Kopfairbags können ausgelöst werden, wenn die Seitenaufprallsensoren einen Aufprall erkennen, in Abhängigkeit von mehreren Faktoren, darunter die Schwere des Aufpralls.</p>
+			<p>Wenn das Fahrzeugchassis Stößen durch Unebenheiten oder Objekten auf unbefestigten Wegen oder Fußwegen ausgesetzt wird, können Airbags ausgelöst werden. Fahren Sie auf unbefestigten Wegen oder auf für Fahrzeugverkehr nicht vorgesehenem Untergrund vorsichtig, um ungewolltes Auslösen von Airbags zu vermeiden.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0243.dita#CL4m_HEV-ca_ES-2027-t0243" role="parent" scope="local" type="concept">
+				<linktext>Airbag – ergänzendes Rückhaltesystem </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

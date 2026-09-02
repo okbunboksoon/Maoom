@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0476">
+	<title>Einschränkungen des Frontalkollisions-Vermeidungsassistenten</title>
+	<conbody>
+		<p>Unter folgenden Umständen funktioniert der Frontalkollisions-Vermeidungsassistent möglicherweise nicht normal, oder er wird unerwartet aktiviert:</p>
+		<ul>
+			<li>
+				<p>Ein Sensor oder seine Umgebung ist verschmutzt oder beschädigt</p>
+			</li>
+			<li>
+				<p>Die Temperatur um die Frontansicht-Kamera ist extrem hoch oder niedrig</p>
+			</li>
+			<li>
+				<p>Das Kameraobjektiv wird durch eine getönte, gefilmte oder beschichtete Windschutzscheibe, durch beschädigtes Glas oder durch Fremdkörper (Aufkleber, Käfer usw.) auf dem Glas verdeckt.</p>
+			</li>
+			<li>
+				<p>Feuchtigkeit oder Eis auf der Windschutzscheibe</p>
+			</li>
+			<li>
+				<p>Starker Regen, Schnee oder Nebel verdecken die Sicht der Kamera</p>
+			</li>
+			<li>
+				<p>Das Sichtfeld der Frontkamera wird durch Sonnenblendung reduziert</p>
+			</li>
+			<li>
+				<p>Licht wird von einer nassen Fahrbahnoberfläche reflektiert, z. B. von einer Pfütze auf der Straße</p>
+			</li>
+			<li>
+				<p>Ein Objekt wurde auf dem Armaturenbrett platziert</p>
+			</li>
+			<li>
+				<p>Die Umgebung ist sehr hell (z. B. durch Blendung) oder sehr dunkel (z. B. in einem Tunnel).</p>
+			</li>
+			<li>
+				<p>Das Licht ändert sich plötzlich (z. B. bei der Einfahrt in oder Ausfahrt aus einem Tunnel)</p>
+			</li>
+			<li>
+				<p>Bei Dunkelheit, wenn die Scheinwerfer nicht eingeschaltet oder verdeckt sind oder wenn das andere Fahrzeug keine Rücklichter hat</p>
+			</li>
+			<li>
+				<p>Es wird nur ein Teil des Fahrzeugs, motorisierten Zweirads, Fußgängers oder Radfahrers erkannt.</p>
+			</li>
+			<li>
+				<p>Das vorausfahrende Fahrzeug ist ein Bus, ein schwerer Lastwagen, ein Lastwagen mit ungewöhnlich geformter Ladung, ein Anhänger usw.</p>
+			</li>
+			<li>
+				<p>Das vorausfahrende Fahrzeug oder motorisierte Zweirad hat keine Rücklichter oder seine Rücklichter befinden sich in ungewöhnlichen Positionen</p>
+			</li>
+			<li>
+				<p>Das Heck des vorderen Fahrzeugs ist klein oder das Fahrzeug sieht nicht normal aus, z. B. wenn das Fahrzeug gekippt oder umgekippt ist Klärung</p>
+			</li>
+			<li>
+				<p>Die Bodenfreiheit des anderen Fahrzeugs ist extrem niedrig oder hoch</p>
+			</li>
+			<li>
+				<p>Ein Fahrzeug, motorisierte Zweirad, Fußgänger oder Radfahrer schert plötzlich vorne ein.</p>
+			</li>
+			<li>
+				<p>Das Frontradar oder seine Umgebung ist beeinträchtigt, beschädigt oder nicht in der richtigen Position</p>
+			</li>
+			<li>
+				<p>Die Temperatur um den Frontradar ist zu hoch oder zu niedrig.</p>
+			</li>
+			<li>
+				<p>Die Temperatur des Frontradars ist extrem hoch oder niedrig</p>
+			</li>
+			<li>
+				<p>Fahren in Gebieten, in denen es kaum Fahrzeuge oder Strukturen gibt (z. B. Wüste, Wiese usw.)</p>
+			</li>
+			<li>
+				<p>Fahren in der Nähe von Bereichen, die metallhaltige Substanzen enthalten, wie z. B. Baustellen, Bahngleise, Metallplatten auf der Straße.</p>
+			</li>
+			<li>
+				<p>In der Nähe befindet sich ein Material, das sehr gut auf dem vorderen Radar reflektiert, z. B. eine Leitplanke oder ein Fahrzeug in der Nähe.</p>
+			</li>
+			<li>
+				<p>Der vorausfahrende Radfahrer ist auf einem Fahrrad aus einem Material, das das Signal des vorderen Radars nicht reflektiert</p>
+			</li>
+			<li>
+				<p>Das Fahrzeug oder motorisierte Zweirad erscheint plötzlich</p>
+			</li>
+			<li>
+				<p>Die Sicht auf das Fahrzeug oder das motorisierte Zweirad ist plötzlich versperrt</p>
+			</li>
+			<li>
+				<p>Das vorausfahrende Fahrzeug oder motorisierte Zweirad wechselt plötzlich die Spur oder reduziert plötzlich die Geschwindigkeit.</p>
+			</li>
+			<li>
+				<p>Das vorausfahrende Fahrzeug ist mit Schnee bedeckt.</p>
+			</li>
+			<li>
+				<p>Sie verlassen die Fahrspur oder kehren auf die Fahrspur zurück.</p>
+			</li>
+			<li>
+				<p>Instabile Fahrt</p>
+			</li>
+			<li>
+				<p>Sie befinden sich in einem Kreisverkehr und das vorausfahrende Fahrzeug oder motorisierte Zweirad im Kreisverkehr wird nicht erkannt.</p>
+			</li>
+			<li>
+				<p>Sie fahren ständig im Kreis.</p>
+			</li>
+			<li>
+				<p>Das vorausfahrende Fahrzeug oder motorisierte Zweirad ist hat eine ungewöhnliche Form</p>
+			</li>
+			<li>
+				<p>Das vorausfahrende Fahrzeug oder motorisierte Zweirad befindet sich auf einer steilen Anhöhe, außerhalb der Reichweite von Kamera und Radar</p>
+			</li>
+			<li>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OMV053105.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Die obige Abbildung zeigt die Arten von Bildern, die die Frontansicht-Kamera und das Frontradar als Fahrzeug, motorisiertes Zweirad, Fußgänger und Radfahrer erkennen können. Das System kann einen Fußgänger oder Radfahrer nicht erkennen:</p>
+			</li>
+			<li>
+				<p>sich bückt oder nicht ganz aufrecht geht</p>
+			</li>
+			<li>
+				<p>Der Fußgänger oder Radfahrer trägt Kleidung oder Ausrüstung, die es schwierig macht, ihn zu erkennen.</p>
+			</li>
+			<li>
+				<p>Der vordere Fußgänger oder Radfahrer bewegt sich sehr schnell.</p>
+			</li>
+			<li>
+				<p>Der Fußgänger oder Radfahrer vor dem Fahrzeug ist klein oder hat eine niedrige Körperhaltung.</p>
+			</li>
+			<li>
+				<p>Der Fußgänger oder Radfahrer vor dem Fahrzeug ist in seiner Mobilität eingeschränkt oder bewegt sich quer zur Fahrtrichtung.</p>
+			</li>
+			<li>
+				<p>Vorn dem Fahrzeug befindet sich eine Gruppe von Fußgängern, Radfahrern oder eine große Menschenmenge.</p>
+			</li>
+			<li>
+				<p>Der Fußgänger oder Radfahrer trägt Kleidung, die sich leicht in den Hintergrund einfügt, so dass er schwer zu erkennen ist.</p>
+			</li>
+			<li>
+				<p>Der Fußgänger oder Radfahrer ist von der ähnlich geformten Struktur in der Umgebung nur schwer zu unterscheiden.</p>
+			</li>
+			<li>
+				<p>Sie fahren in der Nähe der Kreuzung an einem Fußgänger, Radfahrer, Verkehrsschildern, Gebäuden usw. vorbei.</p>
+			</li>
+			<li>
+				<p>Bei Fahrten in den folgenden Situationen</p>
+				<ul>
+					<li>
+						<p>Fahrten durch Dampf, Rauch oder Schatten</p>
+					</li>
+					<li>
+						<p>Bei Fahrten durch einen Tunnel oder eine Eisenbrücke</p>
+					</li>
+					<li>
+						<p>Bei Fahrten in offenem Gelände, in denen es nur wenige Fahrzeuge oder Objekte gibt (d. h. Wüste, Wiese, Vorort usw.)</p>
+					</li>
+					<li>
+						<p>Fahren in einem Parkhaus</p>
+					</li>
+					<li>
+						<p>Fahrten durch eine Mautstelle, Baustellen, auf teilweise gepflasterten Straße, unebenen Straße, über Fahrbahnschwellen usw.</p>
+					</li>
+					<li>
+						<p>Bei Fahrten in der Nähe von Metallkonstruktionen, beispielsweise in der Nähe von Baustellen, Eisenbahnschienen usw.</p>
+					</li>
+					<li>
+						<p>Fahren auf einer abschüssigen Straße, einer Kurve usw.</p>
+					</li>
+					<li>
+						<p>Fahrten an einem Straßenrand mit Bäumen oder Straßenlaternen.</p>
+					</li>
+					<li>
+						<p>Fahrten auf einer schmalen Straße, die durch Bäume oder Gras überwachsen ist.</p>
+					</li>
+					<li>
+						<p>Bei Störungen durch elektromagnetische Wellen, z. B. bei Fahrten in einem Gebiet mit starken Funkwellen oder elektrischen Störungen.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Eine Schneekette, ein Reserverad oder ein Rad einer anderen Größe wird installiert</p>
+			</li>
+		</ul>
+		<section importance="optional">
+			<title>Kreuzungs-Kollisionsvermeidung, Fahrspurwechsel bei Gegenverkehr, Seitlicher Spurwechsel und Ausweichlenkunterstützung.</title>
+			<ul>
+				<li>
+					<p>Die Temperatur im Bereich des vorderen Eckradars oder des hinteren Eckradars ist zu hoch oder zu niedrig.</p>
+				</li>
+				<li>
+					<p>Ein Anhänger oder Träger ist im Bereich des hinteren Eckradars installiert.</p>
+				</li>
+				<li>
+					<p>Der vordere Eckradarsensor ist durch Schnee, Regen, Schmutz usw. verdeckt.</p>
+				</li>
+				<li>
+					<p>Der Stoßfänger ist im Bereich um das Eckradar vorn oder das Eckradar hinten durch Fremdkörper wie Aufkleber, Stoßfängerschutz, Fahrradträger usw. verdeckt.</p>
+				</li>
+				<li>
+					<p>Der Stoßfänger im Bereich um das Eckradar vorn oder das Eckradar hinten wird einem Stoß ausgesetzt, beschädigt oder der Radarsensor wird aus seiner Position bewegt.</p>
+				</li>
+				<li>
+					<p>Der Eckradarsensor vorn oder der Eckradarsensor hinten ist durch andere Fahrzeuge, Mauern oder Säulen verdeckt.</p>
+				</li>
+				<li>
+					<p>Fahren auf einer Autobahnauffahrt</p>
+				</li>
+				<li>
+					<p>Fahrten auf einer Straße, an der die Leitplanke oder eine Wand doppelt vorhanden ist.</p>
+				</li>
+				<li>
+					<p>Das andere Fahrzeug oder motorisierte Zweirad fährt sehr dicht hinter Ihrem Fahrzeug oder fährt in unmittelbarer Nähe an Ihrem Fahrzeug vorbei.</p>
+				</li>
+				<li>
+					<p>Die Geschwindigkeit des anderen Fahrzeugs oder motorisierten Zweirads ist sehr hoch, so dass es schnell an Ihrem Fahrzeug vorbeifährt.</p>
+				</li>
+				<li>
+					<p>Ihr Fahrzeug überholt das andere Fahrzeug oder motorisierte Zweirad.</p>
+				</li>
+				<li>
+					<p>Ihr Fahrzeug ist gleichzeitig mit dem daneben befindlichen Fahrzeug oder motorisierte Zweirad losgefahren und hat beschleunigt.</p>
+				</li>
+				<li>
+					<p>Das Fahrzeug oder motorisierte Zweirad in der Nebenspur wechselt in die übernächste Spur oder das Fahrzeug in der übernächsten Spur in die Nebenspur.</p>
+				</li>
+				<li>
+					<p>Es wird ein Motorrad oder ein Fahrrad erkannt.</p>
+				</li>
+				<li>
+					<p>Es wird ein Fahrzeug, z.B. ein flacher Anhänger, erkannt.</p>
+				</li>
+				<li>
+					<p>Es wird ein großes Fahrzeug, z.B. ein Bus oder LKW, erkannt.</p>
+				</li>
+				<li>
+					<p>Bei Erkennung eines kleinen beweglichen Hindernisses wie ein Fußgänger, Tier, Einkaufswagen oder Kinderwagen.</p>
+				</li>
+				<li>
+					<p>Es wird ein Fahrzeug mit geringer Höhe, z.B. ein Sportwagen, erkannt.</p>
+				</li>
+				<li>
+					<p>Die Fahrspur ist aufgrund von Fremdkörpern, Regen, Schnee, Staub, Sand, Öl- und Wasserpfützen schwer zu erkennen.</p>
+				</li>
+				<li>
+					<p>Die Farbe der Fahrbahnmarkierung ist nicht von der Straße zu unterscheiden.</p>
+				</li>
+				<li>
+					<p>Es gibt Markierungen auf der Straße in der Nähe der Fahrspur, oder die Markierungen auf der Straße sehen den Fahrbahnmarkierungen ähnlich.</p>
+				</li>
+				<li>
+					<p>Durch einen Mittelstreifen, Bäume, Leitplanken, Lärmschutzwände usw. fällt ein Schatten auf die Fahrbahnmarkierung.</p>
+				</li>
+				<li>
+					<p>Die Anzahl der Fahrspuren ändert sich oder die Fahrspurmarkierungen überkreuzen sich.</p>
+				</li>
+				<li>
+					<p>Es gibt mehr als zwei Fahrbahnmarkierungen auf der Straße.</p>
+				</li>
+				<li>
+					<p>Die Fahrspurmarkierungen sind kompliziert oder werden durch andere Strukturen ersetzt, beispielsweise an einer Baustelle.</p>
+				</li>
+				<li>
+					<p>Es sind Fahrbahnmarkierungen wie Zickzacklinien, Zebrastreifen und Verkehrszeichen vorhanden.</p>
+				</li>
+				<li>
+					<p>Die Fahrspurmarkierung verschwindet plötzlich, beispielsweise an einer Kreuzung</p>
+				</li>
+				<li>
+					<p>Die Fahrspur ist sehr breit oder sehr schmal.</p>
+				</li>
+				<li>
+					<p>Bei Bordsteinen oder Straßenrändern ohne Fahrspur</p>
+				</li>
+				<li>
+					<p>Das vorausfahrende Fahrzeug fährt mit einer Seite auf der Fahrbahnmarkierung.</p>
+				</li>
+				<li>
+					<p>Der Abstand zum vorderen Fahrzeug ist extrem kurz.</p>
+				</li>
+			</ul>
+			<note type="note">
+				<p>Weitere Einzelheiten zu den Einschränkungen bei der Erkennung von Fahrzeugen im hinteren seitlichen Bereich und Vorsichtsmaßnahmen in Bezug auf den hinteren Ecksensor finden Sie in <xref href="CL4m_HEV-ca_ES-2027-t0491.dita#CL4m_HEV-ca_ES-2027-t0491"/>.</p>
+			</note>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Fahrten in einer Kurve</p>
+						<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+							<tgroup cols="2" colsep="0" rowsep="0">
+								<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+								<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+								<tbody>
+									<row rowsep="0">
+										<entry colname="col1">
+											<fig>
+												<figgroup>
+													<image align="center" href="../../images/OCL4M054052N_4.eps" scale="95" placement="break"/>
+												</figgroup>
+											</fig>
+										</entry>
+										<entry colname="col2">
+											<fig>
+												<figgroup>
+													<image align="center" href="../../images/OCL4M054053N_4.eps" scale="95" placement="break"/>
+												</figgroup>
+											</fig>
+										</entry>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+						<p>Der Frontalkollisions-Vermeidungsassistent erkennt möglicherweise keine anderen Fahrzeuge, motorisierte Zweiräder, Fußgänger oder Radfahrer vor Ihnen, wenn Sie auf kurvigen Straßen fahren. Dies kann dazu führen, dass keine Warnung, kein Bremsassistent bzw. kein Lenkassistent aktiviert wird, wenn diese erforderlich sind.</p>
+						<p>Wenn Sie in einer Kurve fahren, müssen Sie einen sicheren Bremsabstand einhalten und gegebenenfalls das Fahrzeug lenken und das Bremspedal betätigen, um Ihre Fahrgeschwindigkeit zu reduzieren, damit der Sicherheitsabstand eingehalten wird.</p>
+						<p>Der Frontalkollisions-Vermeidungsassistent (FCA) erkennt bei der Fahrt auf einer kurvenreichen Straße möglicherweise ein Fahrzeug, ein motorisiertes Zweirad, einen Fußgänger oder einen Radfahrer in der benachbarten Spur oder außerhalb der Spur.</p>
+						<p>In diesem Fall kann der Frontalkollisions-Vermeidungsassistent den Fahrer unnötigerweise warnen und die Bremse oder die Lenkung kontrollieren. Prüfen Sie immer die Verkehrsbedingungen um das Fahrzeug.</p>
+					</li>
+					<li>
+						<p>Fahren am Hang</p>
+						<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+							<tgroup cols="2" colsep="0" rowsep="0">
+								<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+								<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+								<tbody>
+									<row rowsep="0">
+										<entry colname="col1">
+											<fig>
+												<figgroup>
+													<image align="center" href="../../images/OCL4M054054N_4.eps" scale="95" placement="break"/>
+												</figgroup>
+											</fig>
+										</entry>
+										<entry colname="col2"/>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+						<p>Der Frontalkollisions-Vermeidungsassistent erkennt möglicherweise andere Fahrzeuge, motorisierte Zweiräder, Fußgänger oder Radfahrer vor Ihnen nicht, wenn Sie bergauf oder bergab fahren, da dies die Eigenschaften der Sensoren beeinträchtigt.</p>
+						<p>Dies hilft möglicherweise nicht bei der Warnung, beim Bremsen oder beim Lenken, wenn dies notwendig ist.</p>
+						<p>Außerdem kann die Fahrzeuggeschwindigkeit schnell reduziert werden, wenn plötzlich ein vorausfahrendes Fahrzeug, ein motorisiertes Zweirad, ein Fußgänger oder ein Radfahrer erkannt wird.</p>
+						<p>Behalten Sie bei Berg- und Talfahrten stets die Straße im Auge und lenken /bremsen Sie Ihr Fahrzeug gegebenenfalls, um die Fahrgeschwindigkeit zu reduzieren und einen sicheren Abstand zu halten.</p>
+					</li>
+					<li>
+						<p>Fahrspurwechsel</p>
+						<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+							<tgroup cols="2" colsep="0" rowsep="0">
+								<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+								<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+								<tbody>
+									<row rowsep="0">
+										<entry colname="col1">
+											<fig>
+												<figgroup>
+													<image align="center" href="../../images/OCL4M054032N.eps" scale="95" placement="break"/>
+												</figgroup>
+											</fig>
+										</entry>
+										<entry colname="col2">
+											<ol outputclass="callout">
+												<li>
+													<p>Ihr Fahrzeug</p>
+												</li>
+												<li>
+													<p>Die Spur wechselndes Fahrzeug oder motorisiertes Zweirad</p>
+												</li>
+											</ol>
+										</entry>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+						<p>Wenn ein Fahrzeug oder motorisiertes Zweirad (2) von einer benachbarten Spur in Ihre Spur wechselt, kann es vom Sensor erst erkannt werden, wenn es sich im Erkennungsbereich des Sensors befindet.</p>
+						<p>Der Frontalkollisions-Vermeidungsassistent erkennt ein Fahrzeug oder motorisiertes Zweirad (B) möglicherweise nicht sofort, wenn das Fahrzeug abrupt die Spur wechselt. In diesem Fall müssen Sie einen Sicherheitsabstand einhalten und ggf. das Bremspedal treten, um die Fahrgeschwindigkeit zu verringern und den Sicherheitsabstand zu halten.</p>
+						<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+							<tgroup cols="2" colsep="0" rowsep="0">
+								<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+								<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+								<tbody>
+									<row rowsep="0">
+										<entry colname="col1">
+											<fig>
+												<figgroup>
+													<image align="center" href="../../images/OCL4M054033N.eps" scale="95" placement="break"/>
+												</figgroup>
+											</fig>
+										</entry>
+										<entry colname="col2">
+											<ol outputclass="callout" id="e00977">
+												<li>
+													<p>Ihr Fahrzeug</p>
+												</li>
+												<li>
+													<p>Die Spur wechselndes Fahrzeug oder motorisiertes Zweirad</p>
+												</li>
+												<li>
+													<p>Fahrzeug in derselben Spur</p>
+												</li>
+											</ol>
+										</entry>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+						<p>Wenn ein vor Ihnen fahrendes Fahrzeug (2) die Spur verlässt, erkennt der Frontalkollisions-Vermeidungsassistent das nun vor Ihnen fahrende Fahrzeug oder motorisierte Zweirad (3) möglicherweise nicht sofort. In diesem Fall müssen Sie einen Sicherheitsabstand einhalten und ggf. das Bremspedal treten, um die Fahrgeschwindigkeit zu verringern und den Sicherheitsabstand zu halten.</p>
+					</li>
+					<li>
+						<p>Erkennen eines Fahrzeugs</p>
+						<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+							<tgroup cols="2" colsep="0" rowsep="0">
+								<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+								<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+								<tbody>
+									<row rowsep="0">
+										<entry colname="col1">
+											<fig>
+												<figgroup>
+													<image align="center" href="../../images/OCL4M054055N_2.eps" scale="95" placement="break"/>
+												</figgroup>
+											</fig>
+										</entry>
+										<entry colname="col2"/>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+						<p>Wenn das Fahrzeug vor Ihnen Ladung hat, die nach hinten aus dem Fahrerhaus herausragt oder das Fahrzeug vor Ihnen eine höhere Bodenfreiheit aufweist, ist besondere Aufmerksamkeit erforderlich. Der Frontalkollisions-Vermeidungsassistent kann möglicherweise die aus dem Fahrzeug herausragende Ladung nicht erkennen. In diesen Fällen müssen Sie einen sicheren Bremsabstand vom am weitesten herausragenden Objekt einhalten und gegebenenfalls das Fahrzeug lenken und das Bremspedal betätigen, um die Fahrgeschwindigkeit zu reduzieren und den Sicherheitsabstand herzustellen.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Wenn Sie einen Anhänger oder ein anderes Fahrzeug ziehen, sollten Sie den Frontalkollisions-Vermeidungsassistenten aus Sicherheitsgründen ausschalten.</p>
+					</li>
+					<li>
+						<p>Der Frontalkollisions-Vermeidungsassistent kann aktiv werden, wenn er Objekte erkennt, die aufgrund der Form oder der Eigenschaften Fahrzeugen, motorisierten Zweirädern, Fußgängern und Radfahrern ähnlich sind.</p>
+					</li>
+					<li>
+						<p>Der Frontalkollisions-Vermeidungsassistent funktioniert nicht bei Handwagen, Fahrrädern, Koffern, Kinderwagen usw., die von Fußgängern oder Radfahrern gezogen oder geschoben werden.</p>
+					</li>
+					<li>
+						<p>Der Frontalkollisions-Vermeidungsassistent funktioniert möglicherweise nicht normal, wenn er durch starke elektromagnetische Wellen gestört wird.</p>
+					</li>
+					<li>
+						<p>Der Frontalkollisions-Vermeidungsassistent funktioniert möglicherweise erst 15 Sekunden nach dem Start des Fahrzeugs oder der Initialisierung der Frontkamera.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning">
+				<p>Bei Ausstattung mit einem Schaltgetriebe</p>
+				<p>Das Fahrzeug kann sich ausschalten, wenn die Notbremsung des Frontalkollisions-Vermeidungsassistenten aktiviert ist.</p>
+			</note>
+			<note type="note">
+				<p>Weitere Einzelheiten zu den Einschränkungen bei der Erkennung von Fahrzeugen in hinteren Ecken und Vorsichtsmaßnahmen in Bezug auf den Sensor für hintere Ecken finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0491.dita#CL4m_HEV-ca_ES-2027-t0491"/>.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0473.dita#CL4m_HEV-ca_ES-2027-t0473" role="parent" scope="local" type="concept">
+				<linktext>Frontalkollisions-Vermeidungsassistent defekt und eingeschränkt</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

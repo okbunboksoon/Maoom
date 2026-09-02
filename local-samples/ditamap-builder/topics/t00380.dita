@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00380">
+	<title>USB port</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>infotainment system 
+					<indexterm>USB port</indexterm>
+				</indexterm>
+				<indexterm>USB port</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02687">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02688">
+								<figgroup>
+									<image href="../../images/OOV035025_2.eps" align="center" height="1.740in" placement="break" id="e02689"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02690">
+								<li>
+									<p>USB port/USB charger change button</p>
+								</li>
+								<li>
+									<p>USB port and charger indicator light</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Press the button (1) and when the USB port and charger indicator light turns on (2), you can use the USB port to plug in a USB.</p>
+	</conbody>
+</concept>

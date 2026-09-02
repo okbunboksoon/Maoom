@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00310">
+	<title>Tailgate light</title>
+	<shortdesc>When an emergency situation such as a vehicle breakdown occurs, open the tailgate and activate it together with the hazard warning lights to alert surrounding vehicles to the emergency situation and help prevent secondary accidents.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior lights
+					<indexterm>tailgate light</indexterm>
+				</indexterm>
+				<indexterm>tailgate light</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01973">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01974">
+								<image href="images/N_SP327_C08_044_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e01975">
+			<li>
+				<p>When you open the tailgate, the lamp turns on.</p>
+			</li>
+			<li>
+				<p>When you close the tailgate, the lamp turns off.</p>
+			</li>
+		</ul>
+		<note type="caution" id="e01976">
+			<p>Make sure that the tailgate is fully closed.</p>
+			<p>If the lamp remains on, it may cause 12 V battery discharge and tailgate damage.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00302.dita#t00302" role="parent" scope="local" type="concept">
+				<linktext>Interior lights</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

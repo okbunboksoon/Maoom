@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00080">
+	<title>Resetting the power windows</title>
+	<conbody>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Close the window, then pull the power window switch for 1 second.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ol id="e00359">
+				<li>
+					<p>Close the window.</p>
+				</li>
+				<li>
+					<p>Pull the power window switch.</p>
+					<ul>
+						<li>
+							<p>Approximately 1 second</p>
+						</li>
+					</ul>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operating condition(s)</title>
+			<ul>
+				<li>
+					<p>The vehicle is in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

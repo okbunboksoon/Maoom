@@ -15,10 +15,16 @@ import maoomWeb.ire.user.dto.RevisionOptionDto;
 final class RevisionPipelineCatalog {
 
     static final String FILE_NAME_KEEP = "FILE_NAME_KEEP";
+    static final String TITLE_FILE_NAME_PREFIX = "TITLE_FILE_NAME_PREFIX";
     static final String REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET =
             "REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET";
+    static final String REMOVE_DELIVERY_TARGET = "REMOVE_DELIVERY_TARGET";
+    static final String REMOVE_SIMPLE_OPERATION = "REMOVE_SIMPLE_OPERATION";
     static final String DELETE_DRAFT_COMMENT =
             "DELETE_DRAFT_COMMENT";
+    static final String NOTE_DB_APPLY = "NOTE_DB_APPLY";
+    static final String TEXT_DB_APPLY = "TEXT_DB_APPLY";
+    static final String FORBIDDEN_QC_REPORT = "FORBIDDEN_QC_REPORT";
 
     private RevisionPipelineCatalog() {
     }
@@ -30,13 +36,33 @@ final class RevisionPipelineCatalog {
                         "파일명 변경",
                         "Chapter 변환 시 파일명을 t00000, t00001 형식으로 변경합니다."),
                 new RevisionOptionDto(
-                        REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
-                        "속성 및 세션 지우기",
-                        "deliveryTarget 속성과 Simple operation 섹션을 제거합니다."),
+                        TITLE_FILE_NAME_PREFIX,
+                        "파일명 변경",
+                        "Chapter 변환 시 파일명을 차종-연료타입-언어코드-연식-t00000 형식으로 변경합니다."),
+                new RevisionOptionDto(
+                        REMOVE_SIMPLE_OPERATION,
+                        "Simple operation 지우기",
+                        "Simple operation 섹션을 제거합니다."),
+                new RevisionOptionDto(
+                        REMOVE_DELIVERY_TARGET,
+                        "deliveryTarget 지우기",
+                        "deliveryTarget 속성을 제거합니다."),
                 new RevisionOptionDto(
                         DELETE_DRAFT_COMMENT,
                         "Draft Comment, review, hash, modified 지우기",
-                        "draft-comment 태그, review/legal outputclass, hash 처리 명령, modified 속성을 제거합니다."));
+                        "draft-comment 태그, review/legal outputclass, hash 처리 명령, modified 속성을 제거합니다."),
+                new RevisionOptionDto(
+                        NOTE_DB_APPLY,
+                        "NOTE TYPE 수정",
+                        "관리자 NOTE DB 기준으로 note 타입을 수정합니다."),
+                new RevisionOptionDto(
+                        TEXT_DB_APPLY,
+                        "TEXT 수정",
+                        "관리자 TEXT DB 기준으로 문장을 수정합니다."),
+                new RevisionOptionDto(
+                        FORBIDDEN_QC_REPORT,
+                        "금칙어 QC 리포트",
+                        "금칙어 DB 기준으로 금칙어를 검출하고 결과 리포트를 생성합니다."));
     }
 
     static Set<String> validateOptions(List<String> requestedOptions) {
@@ -46,8 +72,14 @@ final class RevisionPipelineCatalog {
 
         Set<String> available = Set.of(
                 FILE_NAME_KEEP,
+                TITLE_FILE_NAME_PREFIX,
                 REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
-                DELETE_DRAFT_COMMENT);
+                REMOVE_SIMPLE_OPERATION,
+                REMOVE_DELIVERY_TARGET,
+                DELETE_DRAFT_COMMENT,
+                NOTE_DB_APPLY,
+                TEXT_DB_APPLY,
+                FORBIDDEN_QC_REPORT);
 
         for(String option : requestedOptions){
             if(!available.contains(option)){
@@ -64,6 +96,7 @@ final class RevisionPipelineCatalog {
             RevisionFormat outputType,
             Set<String> selectedOptions) {
 
+        // 옵션이 늘어나도 실제 정제 중심 배치는 이 파일 하나로 모아 BAT 호출 지점을 고정한다.
         String chapterizeBatch = "02_topics_Chapterize_NotFileNameChange.bat";
 
         if(inputType == RevisionFormat.XML
@@ -97,7 +130,10 @@ final class RevisionPipelineCatalog {
     }
 
     private static boolean hasCleanupOption(Set<String> selectedOptions) {
+        // XML 입력을 다시 DITA로 내보낼 때는 정제 후 topicalize를 한 번 더 태워 결과 구조를 맞춘다.
         return selectedOptions.contains(REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET)
+                || selectedOptions.contains(REMOVE_DELIVERY_TARGET)
+                || selectedOptions.contains(REMOVE_SIMPLE_OPERATION)
                 || selectedOptions.contains(DELETE_DRAFT_COMMENT);
     }
 

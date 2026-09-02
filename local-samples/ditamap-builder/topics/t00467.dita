@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00467">
+	<title>Collision Warning</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03536">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03537">
+								<figgroup>
+									<image href="../../images/OOV055148L.eps" align="center" height="1.740in" placement="break" id="e03538"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03539">
+								<li>
+									<p> <uicontrol>Collision Warning</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Collision Warning will alert the driver with the Forward Safety warning light blinking (<image align="left" height="0.117in" href="../../images/WKIA_037.eps" outputclass="nolabel" placement="inline" width="0.143in" scale="15" id="e03540"/>), warning message, steering wheel vibration and an audible warning.</p>
+		<p outputclass="across">Forward collision warning will be activated in the following conditions.</p>
+		<ul id="e03541">
+			<li>
+				<p outputclass="across">Your driving speed: Approximately 10–55 km/h (6–34 mph)</p>
+			</li>
+			<li>
+				<p>Crossing vehicle speed: Approximately 10–60 km/h (6–37 mph)</p>
+			</li>
+			<li>
+				<p>When the target enters the operating area of the function.</p>
+			</li>
+			<li>
+				<p>When the target is approaching at a speed slower than that of your vehicle.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

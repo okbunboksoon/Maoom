@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00298">
+	<title>Operating turn signals and lane change signals</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lighting 
+					<indexterm>operating turn signals and lane change signals</indexterm>
+				</indexterm>
+				<indexterm>operating turn signals and lane change signals</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02272">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02273">
+								<figgroup>
+									<image href="../../images/OSW035465L.eps" align="center" height="1.740in" placement="break" id="e02274"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The vehicle must be in the <term translate="no">POWER ON</term> position or the <term translate="no">DRIVE READY</term> indicator must be on for the turn signals to operate.</p>
+		<ul id="e02275">
+			<li>
+				<p>Move the lever up or down (1) to activate the turn signals.</p>
+				<p>The green turn signal indicators on the instrument panel (<image href="../../images/WKIA_045.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02276"/>) show which side of turn signal is operating.</p>
+				<p>The turn signals will cancel automatically after a turn. If the indicator continues to flash, manually return the lever to the <term translate="no">OFF</term> position.</p>
+			</li>
+			<li>
+				<p>Move the lever slightly to position (2) and hold it to signal a lane change.</p>
+				<p>The lever will return to the <term translate="no">OFF</term> position when released.</p>
+			</li>
+			<li>
+				<p>If the turn signal indicator stays on without flashing or flashes abnormally, one of the turn signal lamps may be malfunctioning and should be inspected and replaced as necessary.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

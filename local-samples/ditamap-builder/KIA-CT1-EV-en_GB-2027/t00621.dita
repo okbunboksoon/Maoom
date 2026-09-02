@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00621">
+	<title>Driver Attention Warning disabled</title>
+	<conbody>
+		<p>When the windshield where the front view camera is located, front radar cover, bumper or sensor is covered with foreign material, such as snow or rain, it can reduce the detecting performance and temporarily limit or disable Driver Attention Warning.</p>
+		<p>If this occurs the warning message, and the Master warning light (<image align="left" href="../../images/WKIA_040.eps" scale="15" placement="inline"/>) will appear on the cluster. This is normal operation.</p>
+		<p>Warning message: <uicontrol>Driver Assistance System limited. Camera obscured</uicontrol> </p>
+		<p>If you drive after removing the foreign material, Driver Attention Warning will operate properly again. Always keep it clean.</p>
+		<p>If Driver Attention Warning does not operate properly after obstruction (snow, rain, or foreign material) is removed (including trailer, carrier, etc. from the rear bumper), have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Even though the warning message or warning light does not appear on the cluster, Driver Attention Warning may not properly operate.</p>
+				</li>
+				<li>
+					<p>Driver Attention Warning may not operate properly when the sensor is covered in foreign material or broken conditions, even if the vehicle is turned on.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e02251">
+			<p>You can check it in the service message of the utility information view of the cluster display window.</p>
+		</note>
+	</conbody>
+</concept>

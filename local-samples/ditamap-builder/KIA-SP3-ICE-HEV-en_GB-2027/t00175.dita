@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00175">
+	<title>High Beam Assist indicator light</title>
+	<shortdesc/>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>high beam assist indicator light</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>This indicator light appears:</p>
+		<ul id="e01096">
+			<li>
+				<p>When the light switch is set to <term translate="no">AUTO</term> and the high beam lights are <term translate="no">ON</term>.</p>
+			</li>
+			<li>
+				<p>If your vehicle detects oncoming vehicles or vehicles ahead, High Beam Assist will automatically switch the headlight from high beam to low beam.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00174.dita#t00174" role="parent" scope="local" type="concept">
+				<linktext>High Beam Assist operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

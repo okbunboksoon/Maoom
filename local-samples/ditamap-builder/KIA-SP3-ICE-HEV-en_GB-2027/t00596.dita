@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00596">
+	<title>Setting vehicle distance</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03759">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03760">
+								<image href="images/N_SP3i25_B10_050_1_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To adjust the distance to the vehicle ahead, press the button. The distance will change as follows:</p>
+		<ul id="e03761">
+			<li>
+				<p>The closest vehicle distance is set to 1.</p>
+			</li>
+		</ul>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03762">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03763">
+								<image href="images/ODEEV078136NR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>For example, if you drive at 90 km/h (56 mph), the distance is maintained as follows:</p>
+		<ul>
+			<li>
+				<p>Distance 4: approximately 52.5 m (172 ft)</p>
+			</li>
+			<li>
+				<p>Distance 3: approximately 40 m (130 ft)</p>
+			</li>
+			<li>
+				<p>Distance 2: approximately 32.5 m (106 ft)</p>
+			</li>
+			<li>
+				<p>Distance 1: approximately 25 m (82 ft)</p>
+			</li>
+		</ul>
+		<note type="tip">
+			<ul id="e03764">
+				<li>
+					<p>The distance is set to the last distance you set before you restarted the vehicle or temporarily canceled Smart Cruise Control.</p>
+				</li>
+				<li>
+					<p>When an in-cabin camera is equipped and the driver is not looking forward, the following distance is automatically adjusted to a level longer than Level 4 for safety. When the driver looks forward again, the following distance automatically returns to the previously set level.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00595.dita#t00595" role="parent" scope="local" type="concept">
+				<linktext>Turning on Smart Cruise Control</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

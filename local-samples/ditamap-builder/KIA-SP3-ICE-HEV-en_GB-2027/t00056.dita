@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00056">
+	<title id="e00288">With the door handle </title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00289">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00290">
+								<image href="images/N_SP327_B03_001_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Front door</p>
+				<p>If the inner door handle is pulled when the door is locked, the door will unlock and open.</p>
+			</li>
+			<li importance="optional">
+				<p>Rear door</p>
+				<p>If the inner door handle is pulled once when the door is locked, the door will unlock.</p>
+				<p>If the inner door handle is pulled once more, the door will open.</p>
+			</li>
+		</ul>
+		<p>Door lock malfunction</p>
+		<p>If a power door lock does not work while you are in the vehicle, try 1 or more of the following techniques to exit:</p>
+		<ul id="e00291">
+			<li id="e00292">
+				<p>Operate the door unlock feature repeatedly (both electronic and manual) while simultaneously pulling on the door handle.</p>
+			</li>
+			<li id="e00293">
+				<p>Operate the other door locks and handles, front and rear.</p>
+			</li>
+			<li id="e00294">
+				<p>Lower a front window and use the key to unlock the door from outside.</p>
+			</li>
+			<li id="e00295">
+				<p>Move to the cargo area and open the tailgate.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e00296">
+			<p>Do not pull the inner door handle of any door while the vehicle is moving.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00055.dita#t00055" role="parent" scope="local" type="concept">
+				<linktext>Operating door locks from inside the vehicle </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

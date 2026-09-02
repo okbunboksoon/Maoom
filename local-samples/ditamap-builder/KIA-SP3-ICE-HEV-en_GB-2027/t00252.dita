@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00252">
+	<title><b>Overview</b></title>
+	<conbody>
+		<fig id="e01614">
+			<image href="images/N_SP327_C06_002_E.jpg" scale="95" align="center" placement="break"/>
+		</fig>
+		<ol outputclass="callout" id="e01615">
+			<li>
+				<p>Passenger’s front air bag</p>
+			</li>
+			<li>
+				<p>Driver’s front air bag</p>
+			</li>
+			<li>
+				<p>Side air bag</p>
+			</li>
+			<li>
+				<p>Curtain air bag</p>
+			</li>
+			<li>
+				<p>Front center side air bag*</p>
+			</li>
+		</ol>
+		<p>*: if equipped</p>
+		<p>Even in vehicles with air bags, you and your passengers must always wear the provided safety belts to minimize the risk and severity of injury in the event of a collision or rollover.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00250.dita#t00250" role="parent" scope="local" type="concept">
+				<linktext>Air bag - supplemental restraint system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

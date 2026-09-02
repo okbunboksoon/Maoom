@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0454">
+	<title>Notbremsung</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034113N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Notbremsung</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Bei einer Notbremsung kann der Fahrer durch Blinken der Warnleuchte für Sicherheit vorne (<image align="left" href="../../images/WKIA_037.eps" scale="15" placement="inline"/>), eine Warnmeldung, ein akustisches Warnsignal und eine Vibration des Lenkrads (ausstattungsabhängig) gewarnt werden. Der Bremsassistent kann aktiviert werden, um eine Kollision mit einem entgegenkommenden Fahrzeug und einem motorisierten Zweirad zu vermeiden.</p>
+		<p>Die Notbremsung wird unter folgenden Bedingungen aktiviert.</p>
+		<ul>
+			<li>
+				<p>Fahrgeschwindigkeit: 10–30 km/h (6–19 mph)</p>
+			</li>
+			<li>
+				<p>Geschwindigkeit von Fahrzeug in Gegenrichtung: Etwa 25-70 km/h (15-44 mph)</p>
+			</li>
+			<li>
+				<p>Geschwindigkeit von motorisierten Zweirädern und Radfahrern: Etwa 15-70 km/h (9-44 mph)</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0452.dita#CL4m_HEV-ca_ES-2027-t0452" role="parent" scope="local" type="concept">
+				<linktext>Abbiegefunktion</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

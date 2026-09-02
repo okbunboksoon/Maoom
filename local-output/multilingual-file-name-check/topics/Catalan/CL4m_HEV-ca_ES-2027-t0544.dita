@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0544">
+	<title>Einschränkungen des Intelligenten Geschwindigkeitsbegrenzungsassistenten</title>
+	<conbody>
+		<p>Unter folgenden Umständen funktioniert der Intelligente Geschwindigkeitsbegrenzungsassistent möglicherweise nicht einwandfrei, oder er wird unerwartet aktiviert:</p>
+		<ul>
+			<li>
+				<p>Das Verkehrsschild ist verschmutzt oder nicht erkennbar.</p>
+				<ul>
+					<li>
+						<p>Das Verkehrsschild ist aufgrund von schlechtem Wetter, wie Regen, Schnee, Nebel usw. schwer zu sehen.</p>
+					</li>
+					<li>
+						<p>Das Verkehrsschild ist teilweise durch umgebende Objekte oder Schatten verdeckt.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Die Verkehrsschilder entsprechen nicht dem Standard.</p>
+				<ul>
+					<li>
+						<p>Der Text oder das Bild auf dem Verkehrsschild weichen vom Standard ab.</p>
+					</li>
+					<li>
+						<p>Das Verkehrsschild ist zwischen der Hauptstrecke und der Abfahrt oder zwischen sich gabelnden Straßen aufgestellt.</p>
+					</li>
+					<li>
+						<p>Ein Schild ist an einem anderen Fahrzeug befestigt.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Der Abstand zwischen dem Fahrzeug und den Verkehrsschildern ist zu groß.</p>
+			</li>
+			<li>
+				<p>Das Fahrzeug trifft auf beleuchtete Verkehrszeichen.</p>
+			</li>
+			<li>
+				<p>Der Intelligente Geschwindigkeitsbegrenzungsassistent erkennt Zahlen oder Bilder in den Straßensignalen oder anderen Schildern fälschlicherweise als Geschwindigkeitsbegrenzung.</p>
+			</li>
+			<li>
+				<p>Ein Straßenschild in der Nähe der Straße, auf der Sie fahren, wird erkannt</p>
+			</li>
+			<li>
+				<p>Mehrere Schilder stehen nah beieinander</p>
+			</li>
+			<li>
+				<p>Das Zeichen für die Mindestgeschwindigkeit wird falsch erkannt</p>
+			</li>
+			<li>
+				<p>Das Zeichen für die Mindestgeschwindigkeit ist auf der Straße</p>
+			</li>
+			<li>
+				<p>Die Helligkeit ändert sich plötzlich, z.B. beim Einfahren oder Verlassen eines Tunnels oder beim Unterqueren einer Brücke.</p>
+			</li>
+			<li>
+				<p>Nachts oder im Tunnel werden die Scheinwerfer nicht verwendet oder die Helligkeit der Scheinwerfer ist gering.</p>
+			</li>
+			<li>
+				<p>Das Sichtfeld der Frontkamera wird durch Sonnenblendung reduziert</p>
+			</li>
+			<li>
+				<p>Verkehrsschilder sind aufgrund der Reflexion von Sonnenlicht, Straßenlaternen oder Gegenverkehr schlecht zu erkennen.</p>
+			</li>
+			<li>
+				<p>Die Navigations- oder GPS-Informationen enthalten Fehler.</p>
+			</li>
+			<li>
+				<p>Der Fahrer folgt nicht den Anweisungen des Navigationssystems.</p>
+			</li>
+			<li>
+				<p>Fahrten auf einer Straße mit scharfer oder kontinuierlicher Kurve</p>
+			</li>
+			<li>
+				<p>Fahrten über Fahrbahnschwellen oder Fahrten bergauf und bergab bzw. links oder rechts an steilen Gefällen</p>
+			</li>
+			<li>
+				<p>Das Fahrzeug wird stark erschüttert.</p>
+			</li>
+			<li>
+				<p>Fahren auf einer neuen Straße</p>
+			</li>
+			<li>
+				<p>Fahrten auf einer im Bau befindlichen Straße.</p>
+			</li>
+			<li>
+				<p>Wenn die Navigationssoftware während der Fahrt aktualisiert wird</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Der intelligente Geschwindigkeitsbegrenzungsassistent ist eine ergänzende Funktion, die dem Fahrer dabei hilft, das Tempolimit der Straße einzuhalten. Er zeigt möglicherweise nicht die richtige Geschwindigkeitsbegrenzung an bzw. regelt die Fahrgeschwindigkeit möglicherweise nicht ordnungsgemäß.</p>
+				</li>
+				<li>
+					<p>Es liegt in der Verantwortung des Fahrers, die Geschwindigkeitsbegrenzungen einzuhalten.</p>
+				</li>
+				<li>
+					<p>Es reagiert möglicherweise 15 Sekunden lang nicht, nachdem der Motor gestartet oder die Kamera initialisiert wurde oder neu gestartet.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Weitere Hinweise zu den Beschränkungen der Frontkamera finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0440.dita#CL4m_HEV-ca_ES-2027-t0440"/>.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0541.dita#CL4m_HEV-ca_ES-2027-t0541" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion und Einschränkungen des Intelligenten Geschwindigkeitsbegrenzungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

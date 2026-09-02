@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00271">
+	<title>Economical and safe operation of hybrid system</title>
+	<conbody>
+		<ul>
+			<li>
+				<p>Drive smoothly. Accelerate at a moderate rate and maintain a steady cruising speed. Do not make jackrabbit starts. Do not race between stoplights.</p>
+			</li>
+			<li>
+				<p>Avoid heavy traffic whenever possible. To avoid unnecessary braking and reduce brake wear, always maintain a safe following distance from other vehicles.</p>
+			</li>
+			<li>
+				<p>Regenerative braking generates energy when the vehicle slows down.</p>
+			</li>
+			<li>
+				<p>The hybrid system automatically recharges the hybrid battery when the battery charge level is low.</p>
+			</li>
+			<li>
+				<p>When the engine is running while the gear is in N (Neutral), the hybrid system cannot generate electricity or charge the hybrid battery.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>In the hybrid system, the engine automatically runs and stops. When the hybrid system operates, the <term translate="no">READY</term> indicator displays.</p>
+			<p>The engine might operate automatically in the following situations:</p>
+			<ul>
+				<li>
+					<p>The engine is ready to operate.</p>
+				</li>
+				<li>
+					<p>The hybrid battery is charging.</p>
+				</li>
+				<li>
+					<p>The hybrid battery is a certain temperature.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00270.dita#t00270" role="parent" scope="local" type="task">
+				<linktext>Vehicles with smart key system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

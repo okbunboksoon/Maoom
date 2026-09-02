@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00822">
+	<title>Checking the engine oil level</title>
+	<conbody>
+		<p>Engine oil lubricates, cools, and operates various hydraulic components in the engine. Engine oil consumption while driving is normal, so it is necessary to check and refill the engine oil regularly. Check and refill the oil according to the recommended maintenance schedule to prevent deterioration of the oil performance.</p>
+		<p>Check the engine oil according to the following procedure:</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04867">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04868">
+								<title>Smartstream G1.6 T-GDi</title>
+								<image href="images/N_SP327_D12_001_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e04869">
+								<title>Smartstream G1.6 T-GDI (EURO 7)</title>
+								<image href="images/N_SP327_A12_006_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="col1">
+							<fig id="e04870">
+								<title>Smartstream G2.0</title>
+								<image href="images/N_SP327_D12_030_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e04871">
+								<title>Smartstream G1.6 GDi HEV/Smartstream G1.6 GDi HEV (EURO 7)</title>
+								<image href="images/N_SP327_A12_007_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol>
+			<li>
+				<p>Be sure the vehicle is on level ground.</p>
+			</li>
+			<li>
+				<p>Start the engine and allow it to reach the normal operating temperature.</p>
+			</li>
+			<li>
+				<p>Turn <term translate="no">OFF</term> the engine, remove the oil filler cap, and pull out the dipstick. Wait for 15 minutes for the oil to return to the oil pan.</p>
+			</li>
+			<li>
+				<p>Wipe the dipstick clean and fully reinsert it.</p>
+			</li>
+			<li>
+				<p>Pull the dipstick out again and check to see whether the oil level is between the F-L line. If it is below the L line, add enough oil to bring it to the F line.</p>
+			</li>
+		</ol>
+		<note type="caution" id="e04872">
+			<p>Radiator hose</p>
+			<p>Be very careful not to touch the radiator hose when checking or adding engine oil, as it may be hot enough to burn you.</p>
+		</note>
+		<note type="note" id="e04873">
+			<p>When you wipe the oil level gauge, use a clean cloth. An oil level gauge with debris can damage the engine.</p>
+		</note>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04874">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04875">
+								<title>Smartstream G1.6 T-GDi</title>
+								<image href="images/N_SP327_A12_008_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e04876">
+								<title>Smartstream G1.6 T-GDI (EURO 7)</title>
+								<image href="images/N_SP327_A12_009_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="col1">
+							<fig id="e04877">
+								<title>Smartstream G2.0</title>
+								<image href="images/N_SP327_A12_010_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e04878">
+								<title>Smartstream G1.6 GDi HEV/Smartstream G1.6 GDi HEV (EURO 7)</title>
+								<image href="images/N_SP327_A12_011_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Use a funnel to help prevent you from spilling oil on the engine components.</p>
+		<p>Use only the specified engine oil. (Refer to <xref href="t00024.dita#t00024"/>.)</p>
+		<ul>
+			<li>
+				<p>Do not spill engine oil when adding or changing engine oil. Wipe off spilled oil immediately.</p>
+			</li>
+			<li>
+				<p>Engine oil consumption may increase while you break in your new vehicle. It will stabilize after you drive 6,000 km (4,000 miles)).</p>
+			</li>
+			<li>
+				<p>Engine oil consumption can be affected by driving habits, climate conditions, traffic conditions, oil quality, and so on. Therefore, it is recommended that you inspect the engine oil level regularly and refill the oil, if necessary.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00821.dita#t00821" role="parent" scope="local" type="concept">
+				<linktext>Engine oil</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

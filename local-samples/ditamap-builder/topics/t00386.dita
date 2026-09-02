@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00386">
+	<title><term translate="no">AI Assistant</term></title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>infotainment system 
+					<indexterm>AI assistant</indexterm>
+				</indexterm>
+				<indexterm>AI assistant</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02720">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02721">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV035015.eps" placement="break" width="2.244in" id="e02722"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p> <term translate="no">AI Assistant</term> can be operated using voice recognition.</p>
+		<section id="e02723">
+			<title>Operation</title>
+			<p>Press the <term translate="no">AI Assistant</term> button or say “Hey, Kia.”</p>
+			<ul id="e02724">
+				<li>
+					<p>Example (Vehicle control)</p>
+					<ul id="e02725">
+						<li>
+							<p>“Turn on the air conditioner.”</p>
+						</li>
+						<li>
+							<p>“Turn off the air conditioner.”</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Example (Question)</p>
+					<ul id="e02726">
+						<li>
+							<p>“Can you explain why the ocean is blue in a way that a 7-year-old can understand?”</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<note type="note" id="e02727">
+				<ul id="e02728">
+					<li>
+						<p>AI assistants may provide inaccurate answers. Please check important details separately.</p>
+					</li>
+					<li>
+						<p>AI assistant may not support certain languages or regions.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

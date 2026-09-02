@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0843">
+	<title>Kontrolle des Füllstands der Waschflüssigkeit</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Waschflüssigkeit
+					<indexterm>Kontrolle des Füllstands der Waschflüssigkeit</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M074007N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Der Behälter ist durchsichtig, so dass Sie den Füllstand mit einer schnellen Sichtprüfung prüfen können.</p>
+		<p>Prüfen Sie den Füllstand im Waschflüssigkeitsbehälters und füllen Sie bei Bedarf Flüssigkeit nach. Wenn keine Waschflüssigkeit verfügbar ist, kann klares Wasser verwendet werden. Für den Winterbetrieb empfiehlt sich jedoch die Verwendung einer Waschflüssigkeit mit Frostschutzeigenschaften, damit die Waschflüssigkeit nicht einfrieren kann.</p>
+		<note type="warning">
+			<p importance="high">Waschflüssigkeit</p>
+			<ul>
+				<li>
+					<p>Verwenden Sie kein Kühlerkühlmittel oder Kühlerfrostschutzmittel im Flüssigkeitstank der Windschutzscheiben-Waschanlage.</p>
+				</li>
+				<li>
+					<p>Motorkühlmittel auf der Windschutzscheibe kann die Sicht erheblich beeinträchtigen und zum Verlust der Kontrolle über das Fahrzeug führen. Weiterhin kann es die Lackierung und Anbauteile beschädigen.</p>
+				</li>
+				<li>
+					<p>Flüssigkeiten für die Windschutzscheiben-Waschanlage enthalten gewisse Mengen Alkohol und können unter bestimmten Umständen entflammbar sein. Verhindern Sie, dass Funken oder eine Flamme mit der Waschflüssigkeit oder dem Waschflüssigkeitsbehälter in Kontakt kommen. Schäden am Fahrzeug oder an den Insassen könnten die Folge sein.</p>
+				</li>
+				<li>
+					<p>Die Flüssigkeit der Waschanlage ist für Menschen und Tiere giftig. Trinken Sie nicht und vermeiden Sie Kontakt mit der Waschflüssigkeit. Es besteht die Gefahr schwerer oder tödlicher Verletzungen.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0842.dita#CL4m_HEV-ca_ES-2027-t0842" role="parent" scope="local" type="concept">
+				<linktext>Waschflüssigkeit </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

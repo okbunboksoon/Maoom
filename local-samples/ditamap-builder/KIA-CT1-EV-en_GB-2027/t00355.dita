@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00355">
+	<title>Dynamic escort light</title>
+	<conbody>
+		<p>This feature dynamically represents the vehicle’s lights for a certain period of time when the driver turns off the vehicle with the headlamps <term translate="no">ON</term>, enhancing its aesthetic appeal.</p>
+		<section deliveryTarget="except_digital" id="e01521">
+			<title>Simple operation</title>
+			<ul id="e01522">
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Headlight time-out</uicontrol></menucascade> on the infotainment system screen. Dynamic escort light will turn on.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e01523">
+			<title>Operation</title>
+			<ul id="e01524">
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Headlight time-out</uicontrol></menucascade> on the infotainment system screen. Dynamic escort light will turn on.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e01525">
+			<title>Operating condition(s)</title>
+			<ul id="e01526">
+				<li>
+					<p>The headlamp escort function operational conditions are met.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

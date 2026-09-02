@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00297">
+	<title>Operating high beam</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lighting 
+					<indexterm>operating high beam</indexterm>
+				</indexterm>
+				<indexterm>operating high beam</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02265">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02266">
+								<figgroup>
+									<image href="../../images/OSW035464L.eps" align="center" height="1.740in" placement="break" id="e02267"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e02268">
+			<li>
+				<p>To turn on the high beams, push the lever away from you.</p>
+				<p>The lever will return to its original position, and the high beam indicator (<image href="../../images/WKIA_046.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02269"/>) will illuminate on the instrument cluster.</p>
+			</li>
+			<li>
+				<p>To flash the headlights, pull the lever toward you and then release it.</p>
+				<p>The lever will return to the normal (low beam) position.</p>
+				<p>The headlight switch does not need to be <term translate="no">ON</term> to use the flash feature.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e02270">
+			<p>Do not use the high beams when other vehicles are nearby, as this may obstruct other drivers’ vision.</p>
+		</note>
+	</conbody>
+</concept>

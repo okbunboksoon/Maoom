@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00059">
+	<title id="e00324">Child-protector rear door lock </title>
+	<shortdesc>The child-protector rear door lock helps prevent children from accidentally opening the rear doors from inside the vehicle.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>door locks
+					<indexterm>child-protector rear door lock</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00325">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00326">
+								<image href="images/N_SP3i25_B04_008_1_AR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The rear door safety locks should be used whenever children are in the vehicle.</p>
+		<p>The child safety locks are located on the edge of each rear door. When the child safety lock is in the lock position (1), the rear door will not open if you pull the inner door handle.</p>
+		<p>To activate the child safety lock, insert a small flat blade tool (like a screwdriver or similar) into the hole and turn it clockwise to the lock position.</p>
+		<p>To allow a rear door to be opened from inside the vehicle, deactivate the child safety lock.</p>
+		<p>The outside door handle still operates when the child safety lock is activated.</p>
+		<note type="warning" id="e00327">
+			<p>Rear door locks</p>
+			<p>If children accidentally open the rear doors while the vehicle is in motion, they could fall out and be severely injured or killed. To prevent children from opening the rear doors from the inside, use the rear door safety locks whenever children are in the vehicle.</p>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>The various driver safety systems do not detect every obstacle approaching the vehicle exit.</p>
+				</li>
+				<li>
+					<p>The driver and passenger are responsible for any accident that occurs while exiting the vehicle. Always check your surroundings before you exit the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00047.dita#t00047" role="parent" scope="local" type="concept">
+				<linktext>Door locks </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

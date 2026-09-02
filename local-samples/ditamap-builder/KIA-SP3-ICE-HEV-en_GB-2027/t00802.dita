@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00802">
+	<title>Fuel tank and fuel cap</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>scheduled maintenance items
+					<indexterm>fuel tank and fuel cap</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Inspect the fuel tank and fuel cap at the intervals specified in the maintenance schedule. Make sure to correctly replace a fuel tank or fuel cap with a new one.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00796.dita#t00796" role="parent" scope="local" type="concept">
+				<linktext>Explanation of scheduled maintenance items</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

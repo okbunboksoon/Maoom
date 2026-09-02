@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00571">
+	<title>Safe exit</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_TK25Z016_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol>Driver assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Driving safety</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>SEA (Safe Exit Assist)</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle is in <term translate="no">DRIVE READY</term>, select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Driving safety</uicontrol><uicontrol>SEA (Safe Exit Assist)</uicontrol></menucascade> on the infotainment system.</p>
+		<note type="warning">
+			<p>If <uicontrol>SEA (Safe Exit Assist)</uicontrol> is deselected, the driver cannot get help from Safe Exit Warning. Always drive with care.</p>
+		</note>
+		<note type="caution">
+			<p>When the trailer’s connector is plugged into your vehicle, Safe Exit Warning automatically turns off. In this case, you cannot get help from Safe Exit Warning. Pay extra attention when you drive when the function is inactive. (If a Kia genuine Trailer Kit that can determine whether a trailer is connected is used)</p>
+		</note>
+		<note type="note">
+			<p>If the vehicle is turned off and restarted, Safe Exit Warning will maintain the last setting.</p>
+		</note>
+	</conbody>
+</concept>

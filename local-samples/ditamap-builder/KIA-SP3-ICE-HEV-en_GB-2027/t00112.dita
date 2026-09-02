@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00112">
+	<title id="e00569">Opening the fuel filler door </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>fuel filler door
+					<indexterm>opening the fuel filler door</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ol id="e00570">
+			<li>
+				<p>Turn the engine <term translate="no">OFF</term>.</p>
+			</li>
+			<li>
+				<ul id="e00571">
+					<li>
+						<p>Type A</p>
+						<p>Pull up the fuel filler door opener.</p>
+						<p>The fuel filler door must be opened from inside the vehicle by pulling up on the fuel filler door opener located on the front floor area on the driver’s seat.</p>
+					</li>
+					<li>
+						<p>Type B</p>
+						<p>Press the rear center edge of the fuel filler door.</p>
+					</li>
+				</ul>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e00572">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<title>Type A</title>
+										<figgroup>
+											<image align="center" placement="break" scale="95" href="images/N_SP3i26_B04_034_1_E.jpg"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<fig id="e00573">
+										<title>Type B</title>
+										<figgroup>
+											<image align="center" placement="break" scale="95" href="images/N_SP327_D04_003_E.jpg"/>
+										</figgroup>
+									</fig>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Pull the fuel filler door out to fully open it.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e00574">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig id="e00575">
+										<figgroup>
+											<image align="center" placement="break" scale="95" href="images/N_SP327_D03_010.jpg"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li id="e00576">
+				<p>To remove the fuel tank cap (1), turn it counterclockwise. You may hear a hissing noise as the pressure inside the tank equalizes.</p>
+			</li>
+			<li id="e00577">
+				<p>Place the cap on the fuel filler door.</p>
+			</li>
+		</ol>
+		<note type="warning" id="e00578">
+			<p>Before refueling, be sure to check what type of fuel is used for your vehicle.</p>
+			<p>If you put diesel fuel into a gasoline-powered vehicle or gasoline into a diesel-powered vehicle, it may affect the fuel system and cause serious damage to the vehicle.</p>
+		</note>
+		<note type="note" id="e00579">
+			<p>If the fuel filler door does not open because ice has formed around it, tap lightly or push on the door to break the ice and release the door. Do not pry on the door. If necessary, spray around the door with an approved de-icer fluid (do not use radiator anti-freeze) or move the vehicle to a warm place and allow the ice to melt.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00111.dita#t00111" role="parent" scope="local" type="concept">
+				<linktext>Fuel filler door </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

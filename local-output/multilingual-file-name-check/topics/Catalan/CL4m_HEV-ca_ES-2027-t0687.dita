@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0687">
+	<title>Parken</title>
+	<conbody>
+		<p>Beim Einparken wird die Hecksicht des Umgebungsüberwachungs-Monitors in folgenden Fällen aktiviert:</p>
+		<ul>
+			<li>
+				<p>P (Parkstellung) oder N (Neutral) oder D (Fahren) bei einer Fahrzeuggeschwindigkeit unter 10 km/h (6 mph), Drücken der Taste Parken/Sicht (1) und anschließendes Drücken der Taste zum Umschalten der Ansicht (2), um die Hecksicht auszuwählen</p>
+			</li>
+			<li>
+				<p>Umschalten auf R (Rückwärtsgang)</p>
+			</li>
+		</ul>
+		<p>Wenn Sie die Taste zum Umschalten der Ansicht (2) auf dem Umgebungsüberwachungs-Monitor drücken, um die Hecksicht, Rückansicht von oben, Rückansicht nach der Seite oder Weitsicht hinten auszuwählen.</p>
+		<p>Während des Parkens ist die Funktion des Umgebungsüberwachungs-Monitors unter den folgenden Bedingungen ausgeschaltet, wenn sich das Fahrzeug in P (Parken) oder N (Neutral) oder D (Fahren) befindet:</p>
+		<ul>
+			<li>
+				<p>Schalten von N (Neutral) oder D (Fahren) auf P (Parkstellung)</p>
+			</li>
+			<li>
+				<p>Drücken der Taste Parken/Sicht (1)</p>
+			</li>
+			<li>
+				<p>Drücken der Taste Zurück (3) auf dem Umgebungsüberwachungs-Monitor</p>
+			</li>
+			<li>
+				<p>Drücken der Einschalttaste des Infotainment-Systems (4)</p>
+			</li>
+			<li>
+				<p>Fahren mit einer Geschwindigkeit über 10 km/h (6 mph)</p>
+			</li>
+		</ul>
+		<p>Wenn sich das Fahrzeug in R (Rückwärtsgang) befindet, wird die Rückansichtfunktion der Umgebungsüberwachung unter den folgenden Bedingungen ausgeschaltet:</p>
+		<ul>
+			<li>
+				<p>Schalten auf P (Parkstellung)</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Die Rückansicht wird immer in R (Rückwarts) angezeigt.</p>
+				</li>
+				<li>
+					<p>In der Stellung R (Rückwärts) wird das Video nicht durch Drücken der Einschalttaste des Infotainment-Systems (4) ausgeschaltet.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0686.dita#CL4m_HEV-ca_ES-2027-t0686" role="parent" scope="local" type="concept">
+				<linktext>Hecksicht</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

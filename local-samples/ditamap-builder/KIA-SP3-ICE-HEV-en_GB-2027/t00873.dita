@@ -1,0 +1,1682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00873">
+	<title>Fuse/relay panel description</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>fuses
+					<indexterm>fuse/relay panel description</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Refer to the owner’s manual for fuse/relay names and capacities.</p>
+		<note type="tip" id="e05140">
+			<p>While the fuse panel descriptions in this manual are accurate at the time of printing, not all fuse panel descriptions may apply to your vehicle.</p>
+		</note>
+		<section id="e05141">
+			<title>Driver side fuse panel</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05142">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e05143">
+									<image href="images/N_SP327_D12_041_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<fig id="e05144">
+				<image href="images/N_SP327_D12_002_E.jpg" scale="95" align="center" placement="break"/>
+			</fig>
+			<sectiondiv><ph>PDC</ph>
+				<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e05145">
+					<tgroup cols="4">
+						<colspec colnum="1" colwidth="165*" colname="col1"/>
+						<colspec colnum="2" colwidth="82*" colname="col2"/>
+						<colspec colnum="3" colwidth="496*" colname="col3"/>
+						<colspec colnum="4" colwidth="117*" colname="col4"/>
+						<thead>
+							<row>
+								<entry align="center" valign="middle">
+									<p>Fuse Name</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>Fuse Rating</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>Circuit Protected</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE NUMBER</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>-</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Not Used</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE01</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">P/WINDOW DRV</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>POWER WINDOW MOTOR</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE02</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">A/C3</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>7.5A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>DATC MTC INCAR SENSOR DUST SENSOR PTC HEATER 1,2 Relay Coil E-Compressor (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE03</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">BRAKE SW</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>7.5A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>BDC (Body Domain Controller) Stop Lamp Switch</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE04</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MEMORY1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>CLUSTER BDC DATC MTC WPC (Wireless Power Charger) HUD ADAS Parking ECU (Advanced Driver Assistance System Parking ECU) ADP BUILT IN CAM CONER RADAR</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE05</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>-</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Not Used</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE06</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">E-SHIFTER3</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>SBW Lever (Shift By Wire Lever) VPC (HEV) SCU (ICE)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE07</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">IG3_3</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>BMS (HEV) E-AWD REAR INVERTER (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE08</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MODULE9</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>UWB AVN KEYBOARD ICC UNIT (In Cabin Camera Unit) OBD (On Board Diagnostic) Blower motor Relay Coil Rain Sensor</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE09</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">E-SHIFTER2</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>SBW Lever (Shift By Wire Lever) SCU</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE10</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">SPARE</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE11</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">CCU</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>CCU (Communication Central Unit)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE12</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MEMORY2</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>7.5A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>MOOD LAMP AVN KEYBOARD ETCS</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE13</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">BDC2</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>7.5A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>BDC (Body Domain Controller)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE14</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MODULE2</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>CCU (Communication Central Unit) Stop Lamp Switch</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE15</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">IG3_5</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>V2LC (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE16</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MODULE10</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>DCU (Data Connectivity Unit)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE17</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>-</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Not Used</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE18</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>-</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Not Used</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE19</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">SPARE</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE20</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MULTIMEDIA</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>25A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>ccNC (connected car Navigation Cockpit)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE21</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MODULE5</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>CONSOLE SWITCH Inside Mirror DATC MTC OHCL_PAB+ETCS CRASH PAD SWITCH HLLD ICC UNIT (In Cabin Camera Unit) OBD (On Board Diagnostic) ccNC (connected car Navigation Cockpit) CONSOLE SWITCH UPPER External Amplifier POWER SEAT ECU HEAT_VENT_SW_PASS BUILT IN CAM ADP POWER WINDOW SWITCH REAR IMS SWITCH</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE22</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">CLUSTER</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>7.5A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>CLUSTER HUD (Head Up Display)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE23</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">IG3_4</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>CCU (Communication Central Unit)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE24</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">SBCM DRV</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>SBCM DRV</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE25</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">SBCM PASS</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>SBCM PASS</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE26</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MODULE7</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>7.5A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>P_LBM (Parking Lithum Battery Module)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE27</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">TAILGATE OPEN</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Tailgate Latch Actuator</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE28</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">SUNROOF1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>20A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Sunroof motor (Front)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE29</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MODULE3</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Power window switch DRV</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE30</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MDPS2</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>7.5A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>R-MDPS (Rack-Motor Driven Power Steering)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE31</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MODULE1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>ccNC (connected car Navigation Cockpit) DCU (Data Connectivity Unit) AVN KEY BOARDBDC (Body Domain Controller) CCU (Communication Central Unit) BDC AMP BUILT IN CAM ADP ADAS PARK ECU BMS</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE32</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">P/SEAT PASS</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>30A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Passenger Power Seat</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE33</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">S/HEATER FRT</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>25A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Driver and Passenger Seat Warmer/Ventilation</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE34</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">WASHER</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Washer Motor</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE35</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">AIR BAG 2</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>ACU</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE36</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">BDC1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>UWB (Ultra Wide Band) BDC (Body Domain Controller) SMK</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE37</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">INBERTER REAR</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>EAWD REAR INVERTER</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE38</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">WIPER FRT2</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>7.5A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>FRONT WIPER</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE39</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">AIR BAG1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>ACU ODS (Occupant Detection SystemU</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE40</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">USB CHARGER1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>USB CHARGER</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE41</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">LDC</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>AVN KEYBOARD CLUSTER Rear Corner Radar &amp; Front Corner radar ADAS Parking ECU (Advanced Driver Assistance System Parking ECU) WPC (Wireless Power Charger) HUD (Head Up Display)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE42</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">SUNROOF2</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>20A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Sunroof motor (REAR)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE43</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">P/WINDOW RH</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>25A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Power Window Safety ECU Passenger &amp; Rear RH</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE44</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MODULE6</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>7.5A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>BDC (Body Domain Controller)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE45</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">BMS</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>BMS (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE46</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>-</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Not Used</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE47</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">AMP</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>25A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>External Amplifier (Merdian)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE48</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>-</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Not Used</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE49</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MODULE4</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>CONSOLE SWITCH C/PAD SWITCH MULTIFUNCTION SWITCH ADAS DRV CONER RADAR FRONT CAMERA</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE50</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">P/SEAT DRV</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>30A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Drv Power Seat</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE51</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">P/WINDOW LH</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>25A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Power Window Safety ECU Drv &amp; Rear LH</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE52</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">SPARE</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE53</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">DOOR LOCK</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Door Lock/Unlock Actuator</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE54</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">S/HEATER RR</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>25A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>REAR SEAT WARMER</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE55</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">MODULE8</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>PTGM VESS FRONT CAMERA POWER SEAT DRV/PASS AAF</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE56</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">START</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>7.5A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>BDC (Body Domain Controller) Start signal (ECU/BDC)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE57</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>-</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Not Used</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE58</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">CHARGER</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>V2LC (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUSE59</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+		</section>
+		<section base="Top" id="e05146">
+			<title>Engine compartment fuse panel</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05147">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e05148">
+									<image href="images/N_SP327_D12_056_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<fig id="e05149">
+				<image align="center" placement="break" scale="95" href="images/N_SP327_D12_003_E.jpg"/>
+			</fig>
+			<sectiondiv><ph>Engine Compartment Junction Block</ph>
+				<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e05150">
+					<tgroup cols="4">
+						<colspec colnum="1" colwidth="72*" colname="col1"/>
+						<colspec colnum="2" colwidth="198*" colname="col2"/>
+						<colspec colnum="3" colwidth="158*" colname="col3"/>
+						<colspec colnum="4" colwidth="479*" colname="col4"/>
+						<thead>
+							<row>
+								<entry align="center" valign="middle">
+									<p>NO</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>Relay Name</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>TYPE</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>Load</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G4_1_1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>START (ICE) IG3 (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Start Solenoid (ICE) HPCU (Hybrid Power Control Unit) (HEV) PDC IG3 Power (HEV)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G5_1_1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>COOLING FAN1</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MINI RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>COOLING FAN HI</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G5_2_1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>REAR HEATED</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MINI RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>REAR HEATED</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G7_1_1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>BLOWER</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Blower Motor</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G7_1_2</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>RESERVE (ICE) BATTERY COOLING FAN (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>HIGH VOLTAGE BATTERY COOLING FAN (HEV)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G7_1_3</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>RESERVE (ICE) FUEL LID (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Fuel Filler Door Opener</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G7_1_4</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>RESERVE PTC HEATER1 (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>PTC Heater1</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G7_1_5</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>P/WINDOW DRV1</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>POWER WINDOW DOWN MOTOR</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G7_1_6</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUEL PUMP</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>FUEL PUMP MOTOR</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G7_1_7</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>COOLING FAN2 (ICE) RESERVER (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 5P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>COOLING FAN LOW</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G15_1_1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>RESERVE PTC HEATER2 (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>PTC HEATER2</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G15_1_2</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>WIPER RR</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>REAR WIPER</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">G15_1_3</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>P/WINDOW DRV2</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MINI RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>POWER WINDOW UP MOTOR</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+			<sectiondiv><ph>Relay</ph>
+				<p>The following table shows the relay type:</p>
+				<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e05151">
+					<tgroup cols="3">
+						<colspec colnum="1" colwidth="198*" colname="col1"/>
+						<colspec colnum="2" colwidth="158*" colname="col2"/>
+						<colspec colnum="3" colwidth="479*" colname="col3"/>
+						<thead>
+							<row>
+								<entry align="center" valign="middle">
+									<p>Relay Name</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>TYPE</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>Load</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">START (ICE) IG3 (HEV)</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Start Solenoid (ICE) HPCU (Hybrid Power Control Unit) (HEV) PDC IG3 Power (HEV)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">COOLING FAN1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MINI RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>COOLING FAN HI</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">REAR HEATED</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MINI RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>REAR HEATED</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">BLOWER</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Blower Motor</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">RESERVE (ICE) BATTERY COOLING FAN (HEV)</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>HIGH VOLTAGE BATTERY COOLING FAN (HEV)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">RESERVE (ICE) FUEL LID (HEV)</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Fuel Filler Door Opener</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">RESERVE PTC HEATER1 (HEV)</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>PTC Heater1</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">P/WINDOW DRV1</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>POWER WINDOW DOWN MOTOR</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUEL PUMP</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>FUEL PUMP MOTOR</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">COOLING FAN2 (ICE) RESERVER (HEV)</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 5P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>COOLING FAN LOW</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">RESERVE PTC HEATER2 (HEV)</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>PTC HEATER2</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">WIPER RR</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>H/C MICRO RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>REAR WIPER</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">P/WINDOW DRV2</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MINI RELAY 4P</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>POWER WINDOW UP MOTOR</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+			<sectiondiv><ph>PCB Block</ph>
+				<p>The following table shows the PCB block</p>
+				<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e05152">
+					<tgroup cols="4">
+						<colspec colnum="1" colwidth="72*" colname="col1"/>
+						<colspec colnum="2" colwidth="198*" colname="col2"/>
+						<colspec colnum="3" colwidth="158*" colname="col3"/>
+						<colspec colnum="4" colwidth="479*" colname="col4"/>
+						<thead>
+							<row>
+								<entry align="center" valign="middle">
+									<p>FUSE NUMBER</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>Fuse Name</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>Fuse Rating</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>Circuit Protected</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE01</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>POWER OUTLET1</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 20A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Front Power Outlet</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE02</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>SPARE</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 20A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE03</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>WIPER FRT1</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 30A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>WIPER FRONT</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE04</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>SENSOR3</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>COOLING FAN</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE05</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>ECU2 (ICE) SPARE (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>ECU (Engine Control Unit)(ICE) SPARE (HEV)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE06</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>ECU1</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 20A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>ECU (Engine Control Unit)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE07</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>IGN COIL</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 20A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Ignition Coil 1–4</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE08</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>WIPER RR</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>WIPER REAR</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE09</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>SENSOR1</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>O2 Sensor</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE10</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>INJECTOR4, EWP (ICE) SPARE (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Injector 1–4, EWP (ICE) SPARE (HEV)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE11</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>TCU2</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>TCU (Transmission Control Unit)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE12</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>ECU4</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>ECU (Engine Control Unit)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE13</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>FUEL PUMP2</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Fuel Pump Relay Coil</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE14</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>SENSOR2</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>OCV (Oil Control Valve) VOPS (Variable oil pump) PCSV (Purge Control Solenoid Valve) ELCM (Evaporation Leak Check Module) FTIV (Fuel Tank Isolation Valve) RCV (Recirculation Control Valve)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE15</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>SPARE (ICE) EWP3 (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 7.5A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>SPARE (ICE) EWP (HEV)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE16</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>SPARE (ICE) HPCU (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>SPARE (ICE) HPCU (HEV)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE17</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>ABS3 (ICE) IEB3 (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>ESC (ELECTRIC STABILITY CONTROL) (ICE) IEB (Integrated Electric Brake) (HEV)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE18</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>A/C1 (ICE) SPARE (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Compressor (ICE) SPARE (HEV)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE19</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>ECU3</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>ECU (Engine Control Unit)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE20</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>TCU1 (ICE) SPARE (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>TCU (Transmission Control Unit) SPARE (HEV)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE21</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>ECU5 (ICE) SPARE (HEV)</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>ECU (Engine Control Unit) SPARE (HEV)</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE22</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>HORN</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Horn LH, Horn RH</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE23</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>B/ALARM HORN</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 15A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>Burglar Alarm Horn</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE24</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>SPARE</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+							</row>
+							<row>
+								<entry align="center" valign="middle">
+									<p><term translate="no">FUSE25</term></p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>SPARE</p>
+								</entry>
+								<entry align="center" valign="middle">
+									<p>MICRO 10A</p>
+								</entry>
+								<entry align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00869.dita#t00869" role="parent" scope="local" type="concept">
+				<linktext>Fuses</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

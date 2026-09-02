@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00249">
+	<title>Overview</title>
+	<conbody>
+		<p>ISOFIX anchorages are metal bars built into the vehicle. There are two lower anchors for each ISOFIX seating position that will accommodate a Child Restraint System with lower attachments.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01127">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01128">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B041.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01129">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B042_3.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e01130">
+			<li id="e01131">
+				<p>ISOFIX low anchorage Position position indicator</p>
+			</li>
+			<li id="e01132">
+				<p>ISOFIX low anchorage</p>
+			</li>
+		</ol>
+		<p>ISOFIX anchorages have been provided in the left and right outboard rear seating positions.</p>
+		<note type="warning">
+			<p>Do not attempt to install a Child Restraint System using ISOFIX anchorages in the rear center seating position. There are no ISOFIX anchorages provided for this seat. Using the outboard seat anchorages, for the CRS installation on the rear center seating position, can damage the anchorages.</p>
+		</note>
+	</conbody>
+</concept>

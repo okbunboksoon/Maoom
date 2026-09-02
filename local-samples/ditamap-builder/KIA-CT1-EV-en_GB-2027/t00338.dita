@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00338">
+	<title>Action to be taken when charging stops abruptly</title>
+	<conbody>
+		<p>When the high voltage battery does not charge, check the followings:</p>
+		<ul>
+			<li>
+				<p>Check the charging setting for the vehicle. (e.g. When scheduled charging is set, charging is not initiated immediately when the AC charger or portable charger (ICCB: In-Cable Control Box) is connected.)</p>
+			</li>
+			<li>
+				<p>Check the operation status of AC charger, portable charger and DC charger. (Refer to <xref type="concept" href="t00299.dita#t00299">Checking charging status</xref>)</p>
+				<p importance="default">Actual method for indicating the charging status may vary in accordance with the charger manufacturer.</p>
+			</li>
+			<li>
+				<p>When the vehicle does not charge and a warning message appears on the cluster, check the corresponding message.</p>
+			</li>
+			<li>
+				<p>If the vehicle is properly charged when charged with another normally working charger, contact the charger manufacturer.</p>
+			</li>
+			<li>
+				<p>If the vehicle does not charge when charged with another normally working charger, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</li>
+			<li>
+				<p>If charging fails and the service warning light (<image align="left" href="../../images/WKIA_267.eps" scale="15" placement="inline"/>) is lit in the cluster, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00532">
+	<title>Temporarily pausing Manual Speed Limit Assist</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>manual speed limit assist (MSLA) 
+					<indexterm>temporarily pausing manual speed limit assist</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04022">
+			<tgroup cols="2" colsep="1" outputclass="FormatC" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e04023">
+								<figgroup>
+									<image align="center" href="../../images/OOV055007.eps" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Press the (<image align="left" height="0.117in" href="../../images/WKIA_079.eps" outputclass="nolabel" placement="inline" width="0.117in" scale="15" id="e04024"/>) switch to temporarily pause the set speed limit. The set speed limit will turn off but the Speed Limit (<image align="left" href="../../images/WKIA_081.eps" outputclass="nolabel" placement="inline" scale="15" id="e04025"/>) indicator will stay on.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

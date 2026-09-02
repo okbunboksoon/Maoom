@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00333">
+	<title>Air conditioning (A/C) automatic drying</title>
+	<shortdesc>The <term translate="no">A/C</term> automatic drying feature dries the moisture in the <term translate="no">A/C</term> and reduces <term translate="no">A/C</term> odor. The blower motor automatically operates after the vehicle has been turned off for 30 minutes.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system
+					<indexterm>air conditioning (A/C) automatic drying</indexterm>
+				</indexterm>
+				<indexterm>air conditioning (A/C) automatic drying</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02116">
+			<title>Turning A/C automatic drying on or off</title>
+			<p>You can turn the <term translate="no">A/C</term> automatic drying feature on and off by selecting <menucascade><uicontrol>Setings</uicontrol><uicontrol>Climate</uicontrol><uicontrol>Climate Features</uicontrol><uicontrol>A/C Automatic Drying</uicontrol></menucascade> on the infotainment system screen.</p>
+			<p>When the <term translate="no">A/C</term> automatic drying feature is activated, the air conditioner sets the fan speed to the third level, selects the outside (fresh) air position, and directs the airflow to the floor.</p>
+			<note type="tip" id="e02117">
+				<p>The infotainment system may change after a software update. For more details, refer to the user’s manual in the infotainment system or the quick reference guide.</p>
+			</note>
+		</section>
+		<section id="e02118">
+			<title>Operating conditions</title>
+			<p>The <term translate="no">A/C</term> automatic drying feature operates under the following conditions:</p>
+			<ul id="e02119">
+				<li>
+					<p>The vehicle is turned off after operating the air conditioner for a certain period</p>
+				</li>
+				<li>
+					<p>The 12V battery level is sufficient</p>
+				</li>
+				<li>
+					<p>The outside temperature is above a certain level</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e02120">
+			<title>Non-operating conditions</title>
+			<p>The <term translate="no">A/C</term> automatic drying feature stops operating under the following conditions:</p>
+			<ul id="e02121">
+				<li>
+					<p>The <term translate="no">A/C</term> automatic drying feature has operated for 10 minutes</p>
+				</li>
+				<li>
+					<p>The the vehicle is in <term translate="no">ACC</term> position or <term translate="no">ON</term> position</p>
+				</li>
+				<li>
+					<p>The climate control system is operated remotely</p>
+				</li>
+			</ul>
+			<note type="note" id="e02122">
+				<ul id="e02123">
+					<li>
+						<p>The <term translate="no">A/C</term> automatic drying feature reduces <term translate="no">A/C</term> odors but may not remove all odors.</p>
+					</li>
+					<li>
+						<p>To prevent 12V battery discharge, the <term translate="no">A/C</term> automatic drying feature does not operate if the remaining 12V battery level is insufficient.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00324.dita#t00324" role="parent" scope="local" type="concept">
+				<linktext>Automatic climate control system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

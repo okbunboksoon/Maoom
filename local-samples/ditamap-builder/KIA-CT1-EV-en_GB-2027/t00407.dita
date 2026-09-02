@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" base="Anywhere" id="t00407">
+	<title id="e01667">USB charger</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features 
+					<indexterm>USB charger</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01668">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01669">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C044_1E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01670">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C112_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The USB charger allows drivers and passengers to charge their digital devices such as smartphones and tablets.</p>
+		<note deliveryTarget="except_print" type="note">
+			<ul id="e01671">
+				<li>
+					<p>The battery charging state may be monitored on the electronic device.</p>
+				</li>
+				<li>
+					<p>Disconnect the USB cable from the USB port after use.</p>
+				</li>
+				<li>
+					<p>Fast charging is available on the electronic device equipped with fast charging capabilities. The device without fast charging is charged at a regular speed.</p>
+				</li>
+				<li>
+					<p>Fast charging may not work when the electronic devices are off.</p>
+				</li>
+				<li>
+					<p>Charging some digital devices is not available or requires special dedicated adapters if their charging methods don't fit the way the USB car charger works.</p>
+				</li>
+				<li>
+					<p>Do not attempt to use the charging terminal either to turn on an audio or to play media with the infotainment system.</p>
+				</li>
+				<li>
+					<p>Charging speeds may vary depending on the state of charging status of electronic devices.</p>
+				</li>
+				<li>
+					<p>Battery chargers cannot be charged.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

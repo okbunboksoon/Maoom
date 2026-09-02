@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00229">
+	<title>Smart Tailgate with Auto Open</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>smart tailgate with auto open</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>On a vehicle equipped with a smart key, the tailgate can be opened using the smart tailgate with auto open function.</p>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e01680">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01681">
+								<figgroup>
+									<image href="../../images/OOV035081.eps" align="center" placement="break" id="e01682"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00711">
+	<title>Hands-off warning</title>
+	<conbody>
+		<p>If the driver takes their hands off the steering wheel for several seconds, the warning message will appear and an audible warning will sound in stages.</p>
+		<ul>
+			<li>
+				<p>First stage: Warning message</p>
+				<p>Warning message: <uicontrol>Keep hands on steering wheel</uicontrol> </p>
+			</li>
+			<li>
+				<p>Second stage: Warning message (red steering wheel) and audible warning</p>
+				<p>Warning message: <uicontrol>HDA (Highway Driving Assist) system. canceled</uicontrol> </p>
+			</li>
+		</ul>
+		<p>If the driver still does not have their hands on the steering wheel after the hands-off warning, the warning message will appear and Highway Driving Assist will be automatically canceled.</p>
+		<note type="caution" id="e02387">
+			<p>When 'Emergency Stop (ES)' is equipped, the emergency stop function will activate if you do not continue to hold the steering wheel.</p>
+			<p>For more information, refer to the “Emergency Stop (ES)” section in this chapter.</p>
+		</note>
+	</conbody>
+</concept>

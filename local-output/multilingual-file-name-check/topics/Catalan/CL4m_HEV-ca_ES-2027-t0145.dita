@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0145">
+	<title id="e00423">Head-Up-Display (HUD) </title>
+	<shortdesc>Das Head-Up-Display ist ein transparentes Display, das ein Bild bestimmter Informationen aus dem Kombiinstrument und dem Navigationssystem auf die Windschutzscheibenscheibe projiziert.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Head-Up-Display (HUD)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034412N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Das Bild auf dem Head-Up-Display ist in folgenden Fällen möglicherweise nicht sichtbar:</p>
+				<ul>
+					<li>
+						<p>Die Sitzposition ungünstig ist.</p>
+					</li>
+					<li>
+						<p>Eine Sonnenbrille mit Polarisationsfilter getragen wird.</p>
+					</li>
+					<li>
+						<p>Ein Gegenstand das Head-Up-Display verdeckt.</p>
+					</li>
+					<li>
+						<p>Wenn auf nasser Straße gefahren wird.</p>
+					</li>
+					<li>
+						<p>Wenn die Beleuchtung im Inneren des Fahrzeuges nicht ausreicht.</p>
+					</li>
+					<li>
+						<p>Licht von außen einfällt.</p>
+					</li>
+					<li>
+						<p>Sie keine passende Brille tragen.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Wenn das Head-Up-Display nur schlecht lesbar ist, stellen Sie Höhe, Ausrichtung bzw. Helligkeit des Head-Up-Displays in dem LCD-Display ein.</p>
+			</li>
+			<li>
+				<p>Wenn das Head-Up-Display überprüft oder repariert werden muss, lassen Sie Ihr Fahrzeug von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<p>Head-Up-Display</p>
+			<ul>
+				<li>
+					<p>Verzichten Sie bei der Windschutzscheibe auf eine Tönung des Glases oder andere metallische Beschichtungen. Andernfalls ist das Bild auf dem Head-Up-Display möglicherweise unsichtbar.</p>
+				</li>
+				<li>
+					<p>Legen Sie kein Zubehör auf das Armaturenbrett und befestigen Sie keine Gegenstände auf dem Glas der Windschutzscheibe.</p>
+				</li>
+				<li>
+					<p>Da das Totwinkel-Erkennungssystem (BCW) ein Zusatzsystem zur Erhöhung der Fahrsicherheit ist, dürfen Sie sich nicht ausschließlich auf die BCW-Informationen im Head-Up-Display verlassen, wenn Sie die Fahrspur wechseln. Fahren Sie immer aufmerksam, um die Sicherheit zu gewährleisten.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<p>Wenn Sie die Windschutzscheibe eines Fahrzeugs mit Head-Up-Display ersetzen lassen, lassen Sie diese durch eine Windschutzscheibe ersetzen, die für Head-Up-Displays geeignet ist. Anderenfalls können Doppelbilder auf der Windschutzscheibe angezeigt werden.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0104-CH06.dita#CL4m_HEV-ca_ES-2027-t0104-CH06" role="parent" scope="local" type="concept">
+				<linktext>Fahrereinstellungen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

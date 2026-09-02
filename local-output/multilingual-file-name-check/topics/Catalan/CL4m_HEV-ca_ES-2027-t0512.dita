@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0512">
+	<title>Einschränkungen der Ausstiegswarnung</title>
+	<conbody>
+		<p>Bei folgenden Warnungen funktioniert der Ausstiegswarnung möglicherweise nicht richtig oder er wird unerwartet aktiviert:</p>
+		<ul>
+			<li>
+				<p>Aussteigen aus dem Fahrzeug in der Nähe von Bäumen oder hohem Gras</p>
+			</li>
+			<li>
+				<p>Aussteigen aus dem Fahrzeug bei nasser Straße</p>
+			</li>
+			<li>
+				<p>Das herannahende Fahrzeug ist sehr schnell oder sehr langsam</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>Weitere Einzelheiten zu den Vorsichtsmaßnahmen für die Radargeräte in den hinteren Ecken finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0491.dita#CL4m_HEV-ca_ES-2027-t0491"/>.</p>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Die Ausstiegswarnung funktioniert möglicherweise nicht richtig, wenn er durch starke elektromagnetische Wellen gestört wird.</p>
+				</li>
+				<li>
+					<p>Die Ausstiegswarnung funktioniert möglicherweise nach dem Start des Fahrzeugs oder der Initialisierung der Radarsensoren hinten erst nach ca. 3 Sekunden.</p>
+				</li>
+				<li>
+					<p>Auch nach dem erneuten Starten des Fahrzeugs funktioniert die Ausstiegswarnung möglicherweise nicht einwandfrei, wenn das Hindernis oder die Störung weiterhin besteht.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0509.dita#CL4m_HEV-ca_ES-2027-t0509" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion und Einschränkungen der Ausstiegswarnung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

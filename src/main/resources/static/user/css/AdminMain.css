@@ -497,6 +497,111 @@ body.sidebar-toggled .admin-shell{
     white-space:normal;
 }
 
+#projectNoteDbTable th:nth-child(5),
+#projectNoteDbTable td:nth-child(5){
+    width:620px;
+    text-align:left;
+}
+
+#projectNoteDbTable{
+    min-width:1640px;
+    table-layout:fixed;
+}
+
+#projectNoteDbTable th:nth-child(2),
+#projectNoteDbTable td:nth-child(2){
+    width:70px !important;
+}
+
+#projectNoteDbTable th:nth-child(3),
+#projectNoteDbTable td:nth-child(3){
+    width:400px !important;
+    overflow:hidden;
+    text-align:left;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+#projectNoteDbTable th:nth-child(4),
+#projectNoteDbTable td:nth-child(4){
+    width:70px !important;
+}
+
+#projectNoteDbTable th:nth-child(6),
+#projectNoteDbTable td:nth-child(6){
+    width:150px;
+}
+
+#projectNoteDbTable th:nth-child(7),
+#projectNoteDbTable td:nth-child(7){
+    width:90px;
+    text-align:center;
+}
+
+#projectNoteDbTable .ber-long-text-cell{
+    vertical-align:top;
+    overflow:hidden;
+    white-space:nowrap;
+    text-align:left;
+}
+
+#projectNoteDbTable .ber-clamped-text{
+    display:block;
+    max-width:100%;
+    overflow:hidden;
+    line-height:1.5;
+    text-align:left;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+#projectTextDbTable{
+    min-width:1640px;
+    table-layout:fixed;
+}
+
+#projectTextDbTable th:nth-child(2),
+#projectTextDbTable td:nth-child(2){
+    width:90px;
+}
+
+#projectTextDbTable th:nth-child(3),
+#projectTextDbTable td:nth-child(3){
+    width:500px;
+}
+
+#projectTextDbTable th:nth-child(4),
+#projectTextDbTable td:nth-child(4),
+#projectTextDbTable th:nth-child(5),
+#projectTextDbTable td:nth-child(5){
+    width:370px;
+    text-align:left;
+}
+
+#projectTextDbTable th:nth-child(6),
+#projectTextDbTable td:nth-child(6){
+    width:150px;
+}
+
+#projectTextDbTable th:nth-child(7),
+#projectTextDbTable td:nth-child(7){
+    width:90px;
+    text-align:center;
+}
+
+#projectTextDbTable .ber-long-text-cell{
+    vertical-align:top;
+    white-space:normal;
+    text-align:left;
+}
+
+#projectTextDbTable .ber-clamped-text{
+    line-height:1.5;
+    text-align:left;
+    word-break:break-word;
+    white-space:normal;
+}
+
 /*
  * Replace Symbol DB는 BER의 긴 문장 테이블과 다르게 짧은 코드값만 다룬다.
  * 공통 admin-data-table nth-child 폭 규칙이 섞이지 않도록 테이블 ID 기준으로

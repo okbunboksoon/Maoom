@@ -112,6 +112,8 @@ class RevisionPipelineServiceTest {
         Method method = RevisionPipelineService.class.getDeclaredMethod(
                 "appendBatchArguments",
                 String.class,
+                RevisionFormat.class,
+                RevisionFormat.class,
                 Set.class,
                 List.class,
                 List.class);
@@ -120,6 +122,8 @@ class RevisionPipelineServiceTest {
         method.invoke(
                 service,
                 "02_topics_Chapterize_NotFileNameChange.bat",
+                RevisionFormat.DITA,
+                RevisionFormat.XML,
                 Set.of(
                         RevisionPipelineCatalog.FILE_NAME_KEEP,
                         RevisionPipelineCatalog.REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
@@ -129,12 +133,16 @@ class RevisionPipelineServiceTest {
 
         assertThat(command)
                 .contains(
+                        "INPUT_TYPE=dita",
+                        "OUTPUT_TYPE=xml",
                         "FILE_NAME_CHANGE=Y",
-                        "REMOVE_SIMPLE=Y",
+                        "REMOVE_DELIVERY_TARGET=Y",
+                        "REMOVE_SIMPLE_OPERATION=Y",
                         "DELETE_DRAFT=Y");
         assertThat(logs)
                 .contains("옵션 추가: 파일명 변경")
-                .contains("옵션 추가: 속성 및 세션 지우기")
+                .contains("옵션 추가: deliveryTarget 지우기")
+                .contains("옵션 추가: Simple operation 지우기")
                 .contains("옵션 추가: Draft Comment, review, hash, modified 지우기");
     }
 

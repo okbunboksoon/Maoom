@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0471">
+	<title>Notlenkung (Fahrerlenkunterstützung)</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054149.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Notlenkung</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Notlenkung warnt den Fahrer durch Blinken der Notlenkungswarnleuchte (<image align="left" href="../../images/WKIA_077.eps" scale="15" placement="inline"/>), eine Warnmeldung, ein akustisches Warnsignal und Vibrationen am Lenkrad (ausstattungsabhängig).</p>
+		<p>Wenn Kollisionsgefahr mit einem vorausfahrenden Fahrzeug, Fußgänger, Radfahrer oder motorisierten Zweirad besteht, wird die Lenkung unterstützt, um eine Kollision zu vermeiden.</p>
+		<p>Die Notlenkung kann unter folgenden Bedingungen aktiviert werden.</p>
+		<ul>
+			<li>
+				<p>Fahrgeschwindigkeit: Etwa 40-85km/h (25-53 mph)</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0470.dita#CL4m_HEV-ca_ES-2027-t0470" role="parent" scope="local" type="concept">
+				<linktext>Funktion der Ausweichlenkunterstützung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

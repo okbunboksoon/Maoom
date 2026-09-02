@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0605">
+	<title>Einschränkungen der intelligenten Tempomatsteuerung</title>
+	<conbody>
+		<p>Unter folgenden Umständen funktioniert die intelligente Tempomatsteuerung möglicherweise nicht richtig:</p>
+		<ul>
+			<li>
+				<p>Der Erkennungssensor oder die Umgebung sind verunreinigt oder beschädigt.</p>
+			</li>
+			<li>
+				<p>Es wird kontinuierlich Waschflüssigkeit gesprüht, oder der Scheibenwischer ist eingeschaltet.</p>
+			</li>
+			<li>
+				<p>Das Objektiv der Kamera ist durch eine getönte, mit Folie beklebte oder beschichtete Frontscheibe, Glasschäden oder durch Fremdkörper (Aufkleber, Insekten usw.) auf dem Glas verunreinigt.</p>
+			</li>
+			<li>
+				<p>Beschlag auf der Windschutzscheibe wird nicht entfernt oder abgetaut.</p>
+			</li>
+			<li>
+				<p>Das Sichtfeld der Frontkamera wird durch Sonnenblendung reduziert</p>
+			</li>
+			<li>
+				<p>Straßenlaternen oder das Licht eines entgegenkommenden Fahrzeugs wird auf einer nassen Straße reflektiert.</p>
+			</li>
+			<li>
+				<p>Die Temperatur in der Umgebung der Frontkamera ist zu hoch oder niedrig.</p>
+			</li>
+			<li>
+				<p>Ein Objekt wurde auf dem Armaturenbrett platziert</p>
+			</li>
+			<li>
+				<p>Die Umgebung ist sehr hell.</p>
+			</li>
+			<li>
+				<p>Die Umgebung ist sehr dunkel, z. B. in einem Tunnel usw.</p>
+			</li>
+			<li>
+				<p>Die Außenhelligkeit ändert sich plötzlich, z. B. beim Einfahren oder Verlassen eines Tunnels.</p>
+			</li>
+			<li>
+				<p>Die Helligkeit draußen ist niedrig, und die Scheinwerfer sind nicht eingeschaltet oder nicht hell</p>
+			</li>
+			<li>
+				<p>Fahrten bei starkem Regen oder Schnee oder dichtem Nebel</p>
+			</li>
+			<li>
+				<p>Fahren durch Dampf, Rauch oder Schatten</p>
+			</li>
+			<li>
+				<p>Es wird nur ein Teil des Fahrzeugs erkannt</p>
+			</li>
+			<li>
+				<p>Ein vorausfahrendes Fahrzeug hat keine Rücklichter, die Rücklichter sind atypisch angeordnet usw.</p>
+			</li>
+			<li>
+				<p>Die Außenhelligkeit ist gering und die Rückleuchten sind nicht eingeschaltet oder nicht hell genug.</p>
+			</li>
+			<li>
+				<p>Das Heck eines vorausfahrenden Fahrzeugs ist klein oder sieht nicht normal aus (z. B. gekippt, umgestürzt usw.).</p>
+			</li>
+			<li>
+				<p>Niedrige oder hohe Bodenfreiheit des Vorderwagens</p>
+			</li>
+			<li>
+				<p>Ein Fahrzeug schert plötzlich vorne ein.</p>
+			</li>
+			<li>
+				<p>Ihr Fahrzeug wird abgeschleppt.</p>
+			</li>
+			<li>
+				<p>Ein Objekt wird vom Frontradar reflektiert, z. B. eine Leitplanke, ein Fahrzeug in der Nähe usw.</p>
+			</li>
+			<li>
+				<p>Der Stoßfänger am Frontradar ist beschädigt oder das Frontradar wurde verschoben.</p>
+			</li>
+			<li>
+				<p>Die Temperatur um den Frontradar ist zu hoch oder zu niedrig.</p>
+			</li>
+			<li>
+				<p>Das vorausfahrende Fahrzeug besteht aus einem Material, das nicht auf das Frontradar reflektiert wird.</p>
+			</li>
+			<li>
+				<p>Fahren in der Nähe einer Autobahn, eines Autobahnkreuzes oder einer Mautstelle</p>
+			</li>
+			<li>
+				<p>Fahren auf rutschigem Untergrund aufgrund von Schnee, Regen, Eis usw.</p>
+			</li>
+			<li>
+				<p>Fahrten in einer Kurve</p>
+			</li>
+			<li>
+				<p>Ein vorausfahrendes Fahrzeug wird zu spät erkannt</p>
+			</li>
+			<li>
+				<p>Ein vorausfahrendes Fahrzeug wird plötzlich durch ein Hindernis blockiert</p>
+			</li>
+			<li>
+				<p>Ein vorausfahrendes Fahrzeug wechselt plötzlich die Fahrspur oder verringert plötzlich die Geschwindigkeit</p>
+			</li>
+			<li>
+				<p>Ein vorausfahrendes Fahrzeug wird verbogen</p>
+			</li>
+			<li>
+				<p>Die Geschwindigkeit des vorausfahrenden Fahrzeugs ist schnell oder langsam</p>
+			</li>
+			<li>
+				<p>Bei einem vorausfahrenden Fahrzeug wechseln Sie plötzlich die Fahrspur</p>
+			</li>
+			<li>
+				<p>Ein vorausfahrendes Fahrzeug ist mit Schnee bedeckt</p>
+			</li>
+			<li>
+				<p>Instabile Fahrt</p>
+			</li>
+			<li>
+				<p>Sie befinden sich in einem Kreisverkehr und ein vorausfahrendes Fahrzeug wird nicht erkannt</p>
+			</li>
+			<li>
+				<p>Sie fahren ständig im Kreis.</p>
+			</li>
+			<li>
+				<p>Ungünstige Straßenverhältnisse verursachen übermäßige Fahrzeugvibrationen</p>
+			</li>
+			<li>
+				<p>Ihre Fahrzeughöhe ist aufgrund schwerer Lasten, eines anormalen Reifendrucks usw. zu niedrig oder zu hoch.</p>
+			</li>
+			<li>
+				<p>Fahren an folgenden Orten</p>
+				<ul>
+					<li>
+						<p>Fahrten auf einem Parkplatz</p>
+					</li>
+					<li>
+						<p>Fahren durch eine Baustelle, unbefestigte Straße, teilweise befestigte Straße, unebene Straße, Fahrbahnschwellen usw.</p>
+					</li>
+					<li>
+						<p>Fahren auf einer abschüssigen Straße, einer Kurve usw.</p>
+					</li>
+					<li>
+						<p>Fahrten an einem Straßenrand mit Bäumen oder Straßenlaternen.</p>
+					</li>
+					<li>
+						<p>Fahrt durch eine schmale Straße mit überwucherndem Laub</p>
+					</li>
+					<li>
+						<p>Es gibt Störungen durch elektromagnetische Wellen, z. B. wenn Sie in einem Gebiet mit starken Radiowellen oder elektrischem Lärm fahren</p>
+					</li>
+					<li>
+						<p>Fahrten in einer Kurve</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Durch einen Tunnel oder über eine Eisenbrücke fahren</p>
+			</li>
+			<li>
+				<p>Bei Fahrten in der Nähe von Metallkonstruktionen, beispielsweise in der Nähe von Baustellen, Eisenbahnschienen usw.</p>
+			</li>
+			<li>
+				<p>Fahren in weiten offenen Gebieten, in denen es nur wenige Fahrzeuge oder Strukturen gibt</p>
+				<ul>
+					<li>
+						<p>Fahrten durch Dampf, Rauch oder Schatten</p>
+					</li>
+					<li>
+						<p>Fahren in der Nähe eines Autobahnkreuzes oder einer Mautstelle</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Fahrten in einer Kurve</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M054072N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>In Kurven erkennt die Intelligente Tempomatsteuerung möglicherweise kein Fahrzeug auf derselben Fahrspur und beschleunigt auf die eingestellte Geschwindigkeit. Die Fahrzeuggeschwindigkeit kann schnell abnehmen, wenn ein vorausfahrendes Fahrzeug plötzlich erkannt wird.</p>
+				<p>Wählen Sie in Kurven die geeignete Sollgeschwindigkeit und betätigen Sie das Brems- oder Gaspedal je nach Straße und Verkehrsbedingungen.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M054073N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Die Geschwindigkeit des Fahrzeugs kann sich aufgrund eines Fahrzeugs auf der Nachbarspur verringern.</p>
+				<p>Überprüfen Sie, ob die Straßenverhältnisse einen sicheren Betrieb der Intelligenten Tempomatsteuerung zulassen, und treten Sie gegebenenfalls auf das Bremspedal, um Ihre Fahrgeschwindigkeit zu verringern und einen sicheren Abstand einzuhalten.</p>
+			</li>
+			<li>
+				<p>Fahren am Hang</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M054074N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Beim Bergauf- oder Bergabfahren kann es vorkommen, dass die Intelligente Tempomatsteuerung ein fahrendes Fahrzeug in Ihrer Fahrspur nicht erkennt und das Fahrzeug auf die eingestellte Geschwindigkeit beschleunigt. Die Geschwindigkeit des Fahrzeugs nimmt schnell ab, wenn ein vorausfahrendes Fahrzeug plötzlich erkannt wird.</p>
+				<p>Wählen Sie an Steigungen die geeignete Sollgeschwindigkeit und betätigen Sie das Brems- oder Gaspedal je nach Fahrbahn und den Verkehrsbedingungen vor Ihnen.</p>
+			</li>
+			<li>
+				<p>Fahrspurwechsel</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M054032N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<ol outputclass="callout">
+										<li>
+											<p>Ihr Fahrzeug,</p>
+										</li>
+										<li>
+											<p>Die Spur wechselndes Fahrzeug</p>
+										</li>
+									</ol>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Ein Fahrzeug (2), das von einer benachbarten Spur in Ihre Spur wechselt, kann vom Sensor erst erkannt werden, wenn es sich im Erkennungsbereich des Sensors befindet. Die intelligente Tempomatsteuerung erkennt das Fahrzeug möglicherweise nicht sofort, wenn das Fahrzeug abrupt die Spur wechselt. Sie müssen einen sicheren Bremsweg einhalten und gegebenenfalls das Bremspedal betätigen, um Ihre Fahrgeschwindigkeit zu verringern, um einen sicheren Abstand zu halten.</p>
+			</li>
+			<li>
+				<p>Erkennen eines Fahrzeugs</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M056075L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>In den folgenden Fällen können Fahrzeuge in Ihrer Fahrspur nicht vom Sensor erfasst werden:</p>
+				<ul>
+					<li>
+						<p>Zu einer Seite versetzte Fahrzeuge</p>
+					</li>
+					<li>
+						<p>Langsame oder plötzlich bremsende Fahrzeuge</p>
+					</li>
+					<li>
+						<p>Fahrzeuge mit größerer Bodenfreiheit oder Fahrzeuge, die Lasten transportieren, die aus dem Heck des Fahrzeugs herausragen.</p>
+					</li>
+					<li>
+						<p>Fahrzeuge, bei denen die Vorderseite durch schwere Lasten angehoben ist</p>
+					</li>
+					<li>
+						<p>Fahrzeuge im Umkreis von ca. 2 m (6 Fuß) von Ihrem Fahrzeug</p>
+					</li>
+					<li>
+						<p>Fahrzeuge in Gegenrichtung</p>
+					</li>
+					<li>
+						<p>Angehaltene Fahrzeuge</p>
+					</li>
+					<li>
+						<p>Fahrzeuge mit kleinem Heckprofil, z. B. mit Anhänger</p>
+					</li>
+					<li>
+						<p>Schmale Fahrzeuge, wie Motorräder oder Fahrräder</p>
+					</li>
+					<li>
+						<p>Spezialfahrzeuge</p>
+					</li>
+					<li>
+						<p>Tiere und Fußgänger</p>
+						<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+							<tgroup cols="2" colsep="0" rowsep="0">
+								<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+								<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+								<tbody>
+									<row rowsep="0">
+										<entry colname="col1">
+											<fig>
+												<figgroup>
+													<image align="center" href="../../images/OCL4M054055N_2.eps" scale="95" placement="break"/>
+												</figgroup>
+											</fig>
+										</entry>
+										<entry colname="col2"/>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+					</li>
+				</ul>
+				<p>In den folgenden Fällen kann das vorausfahrende Fahrzeug nicht vom Sensor erfasst werden. Achten Sie während der Fahrt immer auf die Straßenbedingungen und fahren Sie sicher. Passen Sie ggf. die Fahrzeuggeschwindigkeit an.</p>
+				<ul>
+					<li>
+						<p>Sie lenken Ihr Fahrzeug.</p>
+					</li>
+					<li>
+						<p>Fahren auf engen oder kurvigen Straßen</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Wenn ein vorausfahrendes Fahrzeug an einer Kreuzung aus dem Sichtfeld gerät.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M054076N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Wenn ein vorausfahrendes Fahrzeug an einer Kreuzung aus dem Sichtfeld gerät, kann Ihr Fahrzeug beschleunigen.</p>
+				<p>Achten Sie während der Fahrt immer auf die Straßen- und Fahrbedingungen.</p>
+			</li>
+			<li>
+				<p>Wenn ein Fahrzeug vor Ihnen von der Spur abweicht</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M054077N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Wenn ein vor Ihnen fahrendes Fahrzeug aus der Spur gerät, erkennt die intelligente Tempomatsteuerung das vor Ihnen fahrende Fahrzeug möglicherweise nicht sofort.</p>
+				<p>Achten Sie während der Fahrt immer auf die Straßen- und Fahrbedingungen.</p>
+			</li>
+			<li>
+				<p>Halten Sie stets Ausschau nach Fußgängern</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M054078N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Achten Sie immer auf Fußgänger, wenn Ihr Fahrzeug den Abstand zum vorausfahrenden Fahrzeug hält.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0602.dita#CL4m_HEV-ca_ES-2027-t0602" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion und Einschränkungen der intelligenten Tempomatsteuerung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

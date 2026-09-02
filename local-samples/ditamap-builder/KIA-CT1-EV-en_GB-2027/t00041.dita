@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00041">
+	<title id="e00133">Armed stage</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>theft-alarm system 
+					<indexterm>armed stage</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ol id="e00134">
+				<li>
+					<p>Lock the doors by pressing the lock button on the key or door handle.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ol id="e00135">
+				<li>
+					<p>Lock the doors by pressing the lock button on the key or door handle.</p>
+				</li>
+				<li>
+					<p>The hazard warning lights will blink once to indicate that the system is armed.</p>
+				</li>
+				<li>
+					<p>The chime will sound for approximately 3 seconds if any doors remain open.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operating condition(s)</title>
+			<ul>
+				<li>
+					<p>30 seconds after all doors are closed and locked.</p>
+				</li>
+				<li>
+					<p>Vehicle in <term translate="no">OFF</term> position or key removed from the vehicle.</p>
+				</li>
+				<li>
+					<p> <term translate="no">EV</term> button is in the <term translate="no">OFF</term> position.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

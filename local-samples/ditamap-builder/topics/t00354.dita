@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00354">
+	<title>Auto defogging system</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>windshield defrosting and defogging 
+					<indexterm>auto defogging system</indexterm>
+				</indexterm>
+				<indexterm>auto defogging system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02560">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02561">
+								<figgroup>
+									<image href="../../images/OOV035010.eps" align="center" height="1.740in" placement="break" id="e02562"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Auto defogging reduces the possibility of fogging up the inside of the windshield by automatically sensing the moisture of inside the windshield.</p>
+		<p>Auto Defog System is activated when you select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Climate</uicontrol><uicontrol>Defog/Defrost Options</uicontrol><uicontrol>Auto Defog</uicontrol></menucascade> from the Settings in the infotainment system screen.</p>
+		<note type="tip">
+			<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+		</note>
+		<p>This indicator illuminates when the auto defogging system senses the moisture of inside the windshield and operates.</p>
+		<p>If more moisture is in the vehicle, higher steps operate as follows.</p>
+		<p>Step 1: Outside air position</p>
+		<p>Step 2: Blowing air flow toward the windshield</p>
+		<p>Step 3: Increasing air flow toward the windshield</p>
+		<p>Step 4: Operating the air conditioning.</p>
+		<section>
+			<title>To cancel or reset the Auto Defogging System</title>
+			<p>Touch the front windshield defroster icon for 3 seconds when the <term translate="no">EV</term> button is in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+			<p>When the ADS system is canceled, indicator on the icon will blink 3 times per 0.5 sec and the <term translate="no">ADS OFF</term> position will be displayed on the climate control information screen.</p>
+			<p>When the ADS system is reset, indicator on the icon will blink 6 times per 0.25 sec and the position <term translate="no">ADS OFF</term> position will be disappeared on the climate control information screen.</p>
+			<p>You can set or release the Auto Defogging System on the Climate Information selection screen.</p>
+			<p>Auto Defog System is activated when you select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Climate</uicontrol><uicontrol>Defog/Defrost Options</uicontrol><uicontrol>Auto Defog</uicontrol></menucascade> from the Settings in the infotainment system screen.</p>
+			<p>If the battery is discharged or detached, the auto defogging system will be reset. Adjust the feature accordingly.</p>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Touching one of air intake control icon, A/C icon, wind direction mode selection icons will deactivate the Auto Defogging System. To secure a driver’s vision, never touch air intake control icon, A/C icon, wind direction mode selection icons while the Auto Defogging System is running.</p>
+					</li>
+					<li>
+						<p>Do not remove the sensor cover located on the upper end of the windshield glass. Removing the cover can damage the sensor.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

@@ -14,7 +14,7 @@
 body{
     margin:0;
     min-width:360px;
-    min-height:0;
+    min-height:100vh;
     background:#eef1f5;
     color:#20252b;
     font-family:var(--app-font);
@@ -22,7 +22,7 @@ body{
 
 .revision-page{
     width:100%;
-    padding:20px 24px 14px;
+    padding:18px 24px 16px;
 }
 
 .revision-header{
@@ -245,6 +245,43 @@ body{
     display:none;
 }
 
+.change-guide{
+    margin-top:14px;
+    border-top:1px solid #e1e5ea;
+    border-bottom:1px solid #e1e5ea;
+    padding:10px 0;
+    color:#2f3945;
+}
+
+.change-guide summary{
+    cursor:pointer;
+    font-size:13px;
+    font-weight:700;
+    color:#356fca;
+}
+
+.change-guide-body{
+    margin-top:10px;
+    display:grid;
+    gap:8px;
+    font-size:12px;
+    line-height:1.55;
+}
+
+.change-guide-body strong{
+    font-size:12px;
+    color:#1f2933;
+}
+
+.change-guide-body ul{
+    margin:0;
+    padding-left:18px;
+}
+
+.change-guide-body li{
+    margin:2px 0;
+}
+
 button{
     display:inline-flex;
     align-items:center;
@@ -329,6 +366,8 @@ button:disabled{
 
 .result-panel{
     margin-top:18px;
+    max-height:150px;
+    overflow:auto;
     padding:12px 14px;
     border:1px solid #cfd6df;
     border-radius:7px;

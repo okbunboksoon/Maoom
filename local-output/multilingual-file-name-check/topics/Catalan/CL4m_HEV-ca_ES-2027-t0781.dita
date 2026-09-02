@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0781">
+	<title>Automatische Unfallmeldung</title>
+	<conbody>
+		<ol>
+			<li>
+				<p>Systembetrieb im Falle eines Verkehrsunfalls</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M064026.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Verbindung mit der Notrufzentrale (PSAP, Public Safety Answering Point)</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCV061027L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Notdienste</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCV061028L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+		</ol>
+		<p>Das Pan-European eCall-System löst automatisch einen Notruf zu einer öffentlichen Notrufnummer aus, um bei einem Pkw-Unfall Rettungsmaßnahmen zu veranlassen.</p>
+		<p>Zur schnellen Verständigung der Rettungsdienste und Hilfeleistung überträgt das europaweite eCall-System die Unfalldaten bei Erkennung eines Verkehrsunfalls automatisch an die Notrufzentrale.</p>
+		<p>In dieser Situation kann der Notruf nicht durch Drücken der <term translate="no">SOS</term>-Taste abgebrochen werden und das europaweite eCall-System hält die Verbindung, bis der Mitarbeiter des Notdienstes, der den Anruf entgegennimmt, die Verbindung trennt.</p>
+		<p>Bei kleineren Unfällen löst das Pan-European eCall-System möglicherweise keinen Notruf aus. Ein Notruf kann jedoch manuell durch Betätigen der Taste <term translate="no">SOS</term> vorgenommen werden.</p>
+		<note type="caution">
+			<p>Bei fehlender Mobilfunkübertragung und ohne GPS- und Galileo-Signalen ist der Betrieb des Systems nicht möglich.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0780.dita#CL4m_HEV-ca_ES-2027-t0780" role="parent" scope="local" type="concept">
+				<linktext>Europaweites eCall-System</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00527">
+	<title>Direct Oncoming function</title>
+	<conbody>
+		<p>The Direct Oncoming function is warned and controlled in the following way.</p>
+		<ul id="e02082">
+			<li>
+				<p>Collision Warning</p>
+			</li>
+			<li>
+				<p>Emergency Braking</p>
+			</li>
+			<li>
+				<p>Stopping vehicle and ending brake control</p>
+			</li>
+		</ul>
+		<note type="note" id="e02083">
+			<ul id="e02084">
+				<li>
+					<p>The following warning message will appear on the LCD display.</p>
+					<p>For more details, refer to the warning and control section of the function.</p>
+					<ul id="e02085">
+						<li>
+							<p importance="high">Collision warning</p>
+						</li>
+						<li>
+							<p importance="high">Emergency braking</p>
+						</li>
+						<li>
+							<p importance="high">Drive carefully</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

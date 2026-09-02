@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00524">
+	<title>Safe Exit Assist linked with Electronic child safety lock</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03961">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e03962">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV055205L.eps" placement="break" width="2.244in" id="e03963"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03964">
+								<li>
+									<p> <uicontrol>Check surroundings then try again.</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p outputclass="across">The warning light on the outside rearview mirror will blink and the warning message will appear on the cluster.</p>
+		<ul id="e03965">
+			<li>
+				<p outputclass="across">Safe Exit Assist linked with Electronic child safety lock will operate in the following conditions:</p>
+				<ul id="e03966">
+					<li>
+						<p>Your driving speed: below 3 km/h (2 mph)</p>
+					</li>
+					<li>
+						<p>The speed of the approaching vehicle from the rear: above 6 km/h (4 mph)</p>
+					</li>
+					<li>
+						<p>When the target enters the operating area of the function.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<note type="note" id="e03967">
+			<p>For more details on electric child safety lock button, refer to <xref type="concept" href="t00195.dita#t00195">Electronic child safety lock system</xref>.</p>
+		</note>
+		<note type="warning" id="e03968">
+			<p>If the driver presses the electronic child safety lock button again within 10 seconds after the warning message appears, Safe Exit Assist judges that the driver has unlocked the doors acknowledging the rear status. The electronic child safety lock will turn off (button indicator OFF) and the rear doors will unlock. Always check the surroundings before turning off the electronic child safety lock button.</p>
+		</note>
+		<note type="note" id="e03969">
+			<p>If a rear door is open from the outside, it will open regardless of Safe Exit Assist operation.</p>
+		</note>
+		<note type="warning" id="e03970">
+			<ul id="e03971">
+				<li>
+					<p>For your safety, change the Settings after parking the vehicle at a safe location.</p>
+				</li>
+				<li>
+					<p>If any other function’s warning message is displayed or audible warning is generated, Safe Exit Assist warning message may not be displayed and audible warning may not be generated.</p>
+				</li>
+				<li>
+					<p>You may not hear the warning sound of Safe Exit Assist if the surrounding is noisy.</p>
+				</li>
+				<li>
+					<p>Safe Exit Assist does not operate in all situations or cannot prevent all collisions.</p>
+				</li>
+				<li>
+					<p>Safe Exit Assist may warn the driver late or may not warn the driver depending on the road and driving conditions. Always check vehicle surroundings.</p>
+				</li>
+				<li>
+					<p>The driver and passengers are responsible for accidents that occur while exiting the vehicle. Always check the surroundings before you exit the vehicle.</p>
+				</li>
+				<li>
+					<p>Never deliberately operate Safe Exit Assist. Doing so may lead to serious injury or death.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e03972">
+			<ul id="e03973">
+				<li>
+					<p>After the vehicle is turned off, Safe Exit Assist operates approximately for 3 minutes, but turns off immediately if the doors are locked.</p>
+				</li>
+				<li>
+					<p>The images and colors in the instrument cluster may differ depending on the cluster type or theme selected from the settings menu.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

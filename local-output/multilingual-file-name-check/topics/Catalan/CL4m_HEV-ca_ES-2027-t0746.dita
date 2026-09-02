@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0746">
+	<title id="e01265">Reifendruck-Überwachungssystem (TPMS) </title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" otherprops="legal_eu_std_003_01">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M064016N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry morerows="2">
+							<ol outputclass="callout" id="e01266">
+								<li>
+									<p>Warnleuchte für Reifendefekt/TPMS-Störungsleuchte</p>
+								</li>
+								<li>
+									<p>TPMS zurücksetzen</p>
+								</li>
+								<li>
+									<p>Warnmeldung niedriger Reifendruck</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M064035N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M064033N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Das Reifendruck-Überwachungssystem TPMS (Tire Pressure Monitoring System) stellt mit Hilfe von Sensoren im Rad fest, ob der Reifendruck niedrig ist, und erkennt Veränderungen des Reifenradius und Vibrationen während der Fahrt. Damit dieses System richtig funktioniert, müssen Sie den aktuellen Reifendruck zurücksetzen und speichern. Wenn nach dem Zurücksetzen des TPMS einer oder mehrere Ihrer Reifen im Vergleich zum gespeicherten Reifendruck zu wenig Druck haben, erscheint eine Warnleuchte im Kombiinstrument. Eine Warnleuchte erscheint auch, wenn es ein Problem mit dem TPMS-System gibt.</p>
+		<p>Wenn die Bedingungen des Fahrzeugs erfüllt sind, kann TPMS eine Position mit niedrigem Reifendruck anzeigen. Auch wenn TPMS eine Position anzeigt, sollten Sie den Luftdruck aller Reifen überprüfen und die Reifen auf den empfohlenen Reifendruck einstellen.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0732-CH11.dita#CL4m_HEV-ca_ES-2027-t0732-CH11" role="parent" scope="local" type="concept">
+				<linktext>Maßnahmen bei einem Notfall</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

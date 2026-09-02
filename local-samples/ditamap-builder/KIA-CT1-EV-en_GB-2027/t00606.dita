@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00606">
+	<title>Auto set speed change (if the navigation equipped)</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatC">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig>
+								<figgroup>
+									<image href="../../images/N_CT25Z098.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>When operating Manual Speed Limit Assist or Smart Cruise Control, if the speed set by the driver is the same as the speed limit on the road, the set speed is automatically adjusted accordingly the speed limit afterwards. The auto set speed change function operates on roads with a speed limit of above 70 km/h (45 mph). When the function is activated, the set speed on the instrument cluster is displayed in green.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning" id="e02224">
+			<ul id="e02225">
+				<li>
+					<p>Even after changing the set speed according to the speed limit of the road, the vehicle can still be driven over the speed limit. If necessary, depress the brake pedal to reduce your driving speed.</p>
+				</li>
+				<li>
+					<p>Intelligent Speed Limit Assist operates using the speed unit in the instrument cluster set by the driver. If the speed unit is set to a unit other than the speed unit used in your country, Intelligent Speed Limit Assist may not operate properly. (Except Australia/Russia)</p>
+				</li>
+			</ul>
+		</note>
+		<note id="e02226">
+			<ul id="e02227">
+				<li>
+					<p>For more details on Manual Speed Limit Assist operation, refer to <xref type="concept" href="t00591.dita#t00591">Manual Speed Limit Assist (MSLA)</xref>.</p>
+				</li>
+				<li>
+					<p>For more details on Smart Cruise Control operation, refer to <xref type="concept" href="t00647.dita#t00647">Smart Cruise Control (SCC)</xref>.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

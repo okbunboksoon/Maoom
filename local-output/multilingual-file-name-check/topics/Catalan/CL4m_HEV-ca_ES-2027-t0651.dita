@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0651">
+	<title>Anzeige und Bedienung</title>
+	<conbody>
+		<p>Sie können den Betriebsstatus der Autobahn-Fahrspurwechselhilfe in der Fahrassistenz-Ansicht im Kombiinstrument sehen. Siehe <xref href="CL4m_HEV-ca_ES-2027-t0134.dita#CL4m_HEV-ca_ES-2027-t0134"/>.</p>
+		<p>Je nach Status der Funktion wird die Autobahn-Fahrspurwechselhilfe wie folgt angezeigt.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Bereit/Betrieb</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054153N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<title>Standby/Abbruch</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054154.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Anzeige für die Autobahn-Fahrspurwechselhilfe</p>
+				<ul>
+					<li>
+						<p>Grün (<image align="center" href="../../images/WKIA_086.eps" scale="15" placement="inline"/>) ein: Zustand Betriebsbereit</p>
+					</li>
+					<li>
+						<p>Grünes (<image align="center" href="../../images/WKIA_086.eps" scale="15" placement="inline"/>) Blinken: Betriebszustand</p>
+					</li>
+					<li>
+						<p>Grau (<image align="center" href="../../images/WKIA_086.eps" scale="15" placement="inline"/>) leuchtet: Standby-Zustand</p>
+					</li>
+					<li>
+						<p>Weißes (<image align="center" href="../../images/WKIA_086.eps" scale="15" placement="inline"/>) Blinken: Abgebrochener Zustand (Anzeige nur für eine bestimmte Zeit)</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Fahrspurmarkierung</p>
+				<p>Die Fahrspurmarkierung wird ebenso angezeigt wie die Anzeige für die Autobahn-Fahrspurwechselhilfe (1). Die Verfügbarkeit der Fahrspurerkennung wird jedoch im Standby-Zustand angezeigt.</p>
+			</li>
+			<li>
+				<p>Grüner Pfeil und Hintergrund</p>
+				<p>Der grüne Pfeil wird nach dem Start der Funktion nach gewisser Zeit angezeigt, bis der Spurwechsel abgeschlossen ist.</p>
+			</li>
+			<li>
+				<p>Meldung</p>
+				<ul>
+					<li>
+						<p>Die Meldung wird angezeigt, wenn die Funktion nicht verfügbar ist, obwohl der Blinkerhebel betätigt wird.</p>
+					</li>
+					<li>
+						<p>Die Meldung wird angezeigt, wenn die Funktion während des Betriebs abgebrochen wird.</p>
+					</li>
+				</ul>
+			</li>
+		</ol>
+		<p>Die Funktion Autobahn-Fahrspurwechselhilfe wird eingeschaltet, wenn die folgenden Bedingungen erfüllt sind.</p>
+		<ul>
+			<li>
+				<p>Der Autobahn-Fahrassistent wird mit der Fahrassistenz-Taste oder der Fahrspurassistent-Taste eingeschaltet.</p>
+			</li>
+			<li>
+				<p>Die Taste <term translate="no">OK</term> am Lenkrad wird gedrückt, während im Kombiinstrument eine Meldung angezeigt wird, die zur Verwendung der Autobahn-Fahrspurwechselhilfe auffordert.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0650.dita#CL4m_HEV-ca_ES-2027-t0650" role="parent" scope="local" type="concept">
+				<linktext>Autobahn-Fahrspurwechselhilfe</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

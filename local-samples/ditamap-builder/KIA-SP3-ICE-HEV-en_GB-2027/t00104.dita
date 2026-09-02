@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00104">
+	<title>Power sunshade</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>panorama sunroof
+					<indexterm>power sunshade</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00543">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00544">
+								<image href="images/N_SP3i26_B04_026_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00545">
+								<image href="images/N_SP3i26_B04_027_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Use the power sunshade to block direct sunlight coming through the sunroof glass.</p>
+		<ul>
+			<li>
+				<p>Push the sunroof switch backward to the first position. The power sunshade slides open.</p>
+			</li>
+			<li>
+				<p>Push the sunroof switch forward to the first position. The power sunshade closes. The glass closes first if the sunroof is already open.</p>
+			</li>
+		</ul>
+		<p>To stop the power sunshade at any point, push the sunroof switch in any direction.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Do not pull or push the power sunshade by hand, as this may damage the power sunshade or cause it to malfunction.</p>
+				</li>
+				<li>
+					<p>Wrinkles that form on the shade are normal for the material used.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00103.dita#t00103" role="parent" scope="local" type="concept">
+				<linktext>Panorama sunroof</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

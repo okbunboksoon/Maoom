@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00145">
+	<title>Instrument cluster</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>display 
+					<indexterm>instrument cluster</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<fig expanse="page">
+			<figgroup>
+				<image align="center" href="../../images/N_CT25Z011.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<section>
+			<title>1. Speedometer</title>
+			<ul>
+				<li>
+					<p>The speed of the vehicle in kilometers per hour (km/h) or miles per hour (mph).</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e00706">
+			<title>2. Warning and indicator lights</title>
+			<ul id="e00707">
+				<li>
+					<p>Refer to <xref type="concept" href="t00155.dita#t00155">Warning and indicator lights</xref>.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e00708">
+			<title>3. LCD display</title>
+			<ul id="e00709">
+				<li>
+					<p>Refer to <xref type="concept" href="t00146.dita#t00146">LCD display</xref>.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e00710">
+			<title>4. Power/Charge gauge</title>
+			<ul id="e00711">
+				<li>
+					<p>The energy consumption rate of the vehicle and the charge/discharge status of the regenerative brakes.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>5. Distance to empty</title>
+			<ul>
+				<li>
+					<p>Estimated distance the vehicle can be driven with the remaining electric energy.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e00712">
+			<title>6. Gear shift indicator</title>
+			<ul id="e00713">
+				<li>
+					<p>The indicator displays which gear is selected.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>7. Battery SOC (State of Charge) gauge</title>
+			<ul>
+				<li>
+					<p>Charging status of the high voltage battery.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e00714">
+			<title>8. Regenerative braking level indicator</title>
+			<ul id="e00715">
+				<li>
+					<p>Refer to <xref type="concept" href="t00431.dita#t00431">Regenerative braking system</xref>.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>9. Odometer</title>
+			<ul>
+				<li>
+					<p>The odometer indicates the total distance that the vehicle has been driven.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<note type="caution">
+				<ul>
+					<li>
+						<p>The information is displayed after getting information from a weather information provider via GPS. Depending on conditions of GPS reception, the information may be different from the current weather in your area.</p>
+					</li>
+					<li>
+						<p>Be careful while driving as dynamic-themed animation effects can distract the driver and lead to unexpected accidents.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e00716">
+				<ul id="e00717">
+					<li id="e00718">
+						<p>When the remaining battery is lower than 10% for the high voltage battery, the vehicle speed is limited and then eventually the vehicle will turn <term translate="no">OFF</term>. Charge the vehicle immediately.</p>
+					</li>
+					<li id="e00719">
+						<p>If the vehicle is not on level ground or the battery power has been interrupted, the distance to empty function may not operate correctly.</p>
+					</li>
+					<li id="e00720">
+						<p>The distance to empty may differ from the actual driving distance as it is an estimate of the available driving distance.</p>
+					</li>
+					<li id="e00721">
+						<p>The distance to empty may vary significantly based on driving conditions, driving habits, and condition of the vehicle.</p>
+					</li>
+					<li>
+						<p>Use a clean soft microfiber cloth to gently wipe any fingerprints off the touch screen.</p>
+					</li>
+					<li>
+						<p>The instrument cluster for the right-hand drive vehicle may be on the opposite side show differently.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

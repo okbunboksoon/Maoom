@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00529">
+	<title>Blind-spot View Monitor (BVM)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>blind-spot view monitor (BVM)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03475">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03476">
+								<title>Left</title>
+								<image href="images/N_SP327_C00_001_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e03477">
+								<title>Right</title>
+								<image href="images/N_SP327_C00_002_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To help you safely change lanes, Blind-Spot View Monitor displays rear blind spots in the instrument cluster when you use the turn signal.</p>
+		<section>
+			<title>Detection sensor</title>
+			<p>Please refer to <xref href="t00444.dita#t00444"/> for the applicable sensors and their locations.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00442.dita#t00442" role="parent" scope="local" type="concept">
+				<linktext>Driver assistance guide</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

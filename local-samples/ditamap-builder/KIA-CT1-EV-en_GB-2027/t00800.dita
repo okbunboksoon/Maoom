@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00800">
+	<title>Remote Smart Parking Assist malfunction</title>
+	<conbody>
+		<section>
+			<title>Remote Smart Parking Assist check</title>
+			<p>Warning message: <uicontrol>Check Parking Assist</uicontrol> <uicontrol>Visit A Nearby Service Center.</uicontrol> </p>
+			<p>When Remote Smart Parking Assist is not working properly, the <uicontrol>Check Parking Assist</uicontrol> warning message will appear on the infotainment system screen. If the message appears, stop using the function, and have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+		<section>
+			<title>Remote Smart Parking Assist canceled</title>
+			<p>Warning message: <uicontrol>Parking Assist Canceled.</uicontrol> <uicontrol>Please Refer To Owner’s Manual.</uicontrol> </p>
+			<p>When Remote Smart Parking Assist is operating, the function can be canceled, and the <uicontrol>Parking Assist Canceled.</uicontrol> Warning message may appear regardless of the parking order. Other messages may appear depending on the situations. Follow the instructions provided on the infotainment system screen while parking your vehicle with Remote Smart Parking Assist. Always look around and pay attention when using the function.</p>
+		</section>
+		<section>
+			<title>Remote Smart Parking Assist standby</title>
+			<p>Warning message: <uicontrol>Parking Assist Conditions Not Met</uicontrol> <uicontrol>Please Refer To Owner’s Manual.</uicontrol> </p>
+			<p>When <uicontrol>Parking Assist Conditions Not Met</uicontrol> message appears:</p>
+			<ul id="e02574">
+				<li>
+					<p>When Parking/View (<image align="left" href="../../images/WKIA_106.eps" scale="15" placement="inline"/>) button has been pressed and held, Remote Smart Parking Assist is in standby. After a while, press and hold the Parking/View (<image align="left" href="../../images/WKIA_106.eps" scale="15" placement="inline"/>) button again to see if the function works.</p>
+				</li>
+				<li>
+					<p>The message appears even when the smart key’s battery is low. Check the smart key battery level.</p>
+				</li>
+				<li>
+					<p>The guidance will be displayed even when the <term translate="no">EV</term> mode is in Utility mode. For more information, refer to <xref type="concept" href="t00292.dita#t00292"/>.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

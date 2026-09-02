@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00096">
+	<title id="e00475">Window opening and closing </title>
+	<shortdesc>You can open and close the windows using the power window switch.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>windows
+					<indexterm>window opening and closing</indexterm>
+				</indexterm>
+				<indexterm>window opening and closing</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e00476">
+			<title id="e00477">Type A </title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00478">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00479">
+									<image href="images/N_SP3i26_B04_019_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To open or close a window, press down or pull up the front portion of the corresponding switch to the first position (1).</p>
+		</section>
+		<section importance="optional" id="e00480">
+			<title id="e00481">Type B - Auto up/down window </title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00482">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00483">
+									<image href="images/N_SP3i26_B04_018_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Momentarily pressing down or pulling up the power window switch to the second position (2) completely lowers or raises the window, even when you release the switch. To stop the window at the desired position while it is moving, pull up or press down and release the switch.</p>
+		</section>
+		<section>
+			<title>To reset the power windows</title>
+			<p>If the power window does not operate normally, reset the automatic power window system as follows:</p>
+			<ol id="e00484">
+				<li>
+					<p>Move the <term translate="no">ENGINE START/STOP</term> button to the <term translate="no">ON</term> position.</p>
+				</li>
+				<li>
+					<p>Close the window and continue pulling up the power window switch for at least 1 second after the window is completely closed.</p>
+				</li>
+			</ol>
+		</section>
+		<section importance="optional" id="e00485">
+			<title id="e00486">Automatic reversal </title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00487">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00488">
+									<image href="images/N_SP3i26_B04_020_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>If an object or part of the body blocks the upward movement of the window, the window will detect the resistance and stop moving up. The window will then move down approximately 30 cm (11.8 inches) to allow you to clear the object.</p>
+			<p>If the window detects resistance while you pull up the power window switch continuously, the window will stop moving up, then move down approximately 2.5 cm (1 inch).</p>
+			<p>If you pull up the power window to position 1 or position 2 within 5 seconds after the automatic window reversal feature operates, The window will move manual up.</p>
+			<p>If you pull down the power window to position 1 or position 2 within 5 seconds after the automatic window reversal feature operates, The window will move manual down or auto down respectively.</p>
+			<p>If you pull up the power window to position 1 or position 2 after 5 seconds after the automatic window reversal feature operates, The window will move manual up or auto up respectively.</p>
+			<p>If you pull down the power window to position 1 or position 2 after 5 seconds after the automatic window reversal feature operates, The window will move manual down or auto down respectively.</p>
+			<note type="tip">
+				<p>The automatic reverse feature for the window is only active when you use the “auto up” feature by fully pulling up the switch. The automatic reverse feature will not operate if you raise the window using the halfway position on the power window switch.</p>
+			</note>
+			<note type="note">
+				<p>To avoid injuries or vehicle damage, always check for obstructions before raising any window. If an object less than 4 mm (0.16 inch) in diameter is caught between the window glass and the upper window channel, the automatic reverse window may not detect the resistance and will not stop and reverse direction.</p>
+			</note>
+			<note type="warning">
+				<p>The automatic reverse feature doesn’t activate while you reset the power window system. Make sure body parts or other objects are safely out of the way before closing the windows to avoid injuries.</p>
+			</note>
+			<note type="note">
+				<p>Do not install any accessories in the vehicle that extend into the open window area. Such objects could prevent the automatic reverse feature from functioning.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00095.dita#t00095" role="parent" scope="local" type="concept">
+				<linktext>Windows </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

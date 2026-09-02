@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0389">
+	<title>Berganfahrassistent (HAC)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Bremsanlage
+					<indexterm>Berganfahrassistent (HAC)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Der Berganfahrassistent ist eine Komfortfunktion. Er soll vor allem ein Rückwärtsrollen des Fahrzeuges beim Losfahren auf einer Steigerung zu verhindern. Der HAC hält den vom Fahrer während des Anhaltevorgangs aufgebauten Bremsdruck für 2 Sekunden nach dem Loslassen des Bremspedals.</p>
+		<p>Während dieses Zeitraumes kann der Fahrer das Gaspedal betätigen, um loszufahren. Der Bremsdruck wird reduziert, sobald das System erkennt, dass der Fahrer losfahren will.</p>
+		<note type="warning">
+			<p>Der Berganfahrassistent wird in der Regel nur 2 Sekunden lang aktiviert. Der Fahrer sollte immer bedenken, dass er zurückrollen und einen Unfall mit Gegenständen oder Personen verursachen kann, wenn er beim Losfahren auf einer Steigung aufgrund des von ihm unzureichend aufgebauten Bremshaltedrucks zurückrollt.</p>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Die HAC funktioniert nicht, wenn der Wählhebel in der Parkstufe (P) bzw. der Schalthebel in der Neutralstellung (N) steht.</p>
+				</li>
+				<li>
+					<p>Die HAC wird aktiv, selbst wenn das ESC ausgeschaltet ist, aber sie funktioniert nicht, wenn eine Fehlfunktion der Stabilitätskontrolle vorliegt.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0375.dita#CL4m_HEV-ca_ES-2027-t0375" role="parent" scope="local" type="concept">
+				<linktext>Bremsanlage </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

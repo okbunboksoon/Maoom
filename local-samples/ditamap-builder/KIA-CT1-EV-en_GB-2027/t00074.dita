@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00074">
+	<title>Rear Occupant Alert (ROA) (Type B)</title>
+	<conbody>
+		<p>The Rear Occupant Alert (ROA) is provided to help prevent exiting the vehicle with a child left in the vehicle.</p>
+		<section deliveryTarget="except_digital" id="e00325">
+			<title>Simple operation</title>
+			<ul id="e00326">
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Convenience</uicontrol><uicontrol>Rear Occupant Alert</uicontrol></menucascade> on the infotainment system screen.</p>
+				</li>
+			</ul>
+			<p importance="default">For detailed information, refer to Navigation Quick Reference Guide.</p>
+		</section>
+		<section deliveryTarget="except_print" id="e00327">
+			<title>Operation</title>
+			<ul id="e00328">
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Convenience</uicontrol><uicontrol>Rear Occupant Alert</uicontrol></menucascade> on the infotainment system screen.</p>
+				</li>
+			</ul>
+			<p importance="default">For detailed information, refer to Navigation Quick Reference Guide.</p>
+			<note type="note" id="e00329">
+				<ul id="e00330">
+					<li>The system turns on automatically when you start the vehicle. If you turn it off, the change only applies to your current trip. The system will turn back on the next time you start the vehicle.</li>
+					<li>
+						<p>When system is deactivated, indicator light appears on the instrument cluster.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e00331">
+			<title>Cluster alert operation</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00332">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e00333">
+									<figgroup>
+										<image href="../../images/N_CT25Z099_E.eps" scale="95" align="center" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry>
+								<p>(A) <uicontrol>Do not leave children or pets alone. Detection starts after locking vehicle.</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The cluster alert occurs when opening the driver’s door after journey.</p>
+			<p>Alert is not the result of sensor detection but reminder.</p>
+		</section>
+		<section id="e00334">
+			<title>Warning delayed</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00335">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e00336">
+									<figgroup>
+										<image href="../../images/N_CT25Z157_E.eps" scale="95" align="center" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry>
+								<p>(A) <uicontrol>Rear Occupant Alert check delayed.</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When driver press <term translate="no">OK</term> button on the steering wheel during the alert display, Initial warning will be delayed for 10 minutes.​</p>
+		</section>
+		<section id="e00337">
+			<title>Initial Warning</title>
+			<p>After the cluster alert, the initial warning operates for a short time when it detects child’s presence inside the vehicle after all doors are closed and locked.​</p>
+		</section>
+		<section id="e00338">
+			<title>Escalation warning​</title>
+			<p>After the initial warning, the escalation warning operates for a long time when it still detects child’s presence inside the vehicle.​</p>
+			<p>Also, a text message is sent to members of Kia Connect Services.</p>
+		</section>
+	</conbody>
+</concept>

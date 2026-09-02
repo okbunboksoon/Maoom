@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00062">
+	<title>Change of distance to empty when 100% charging</title>
+	<conbody>
+		<ul id="e00387">
+			<li>
+				<p>If the distance to empty is lowered due to learning by the driving style or the environment in which the vehicle is used, the driving distance may be increased again if the vehicle continues to drive according to the “driving tips for improving the driving distance”. The distance to empty can be reset at the workshop, but it does not actually increase the range. Therefore, the distance to empty may be inaccurate until the learning proceeds.</p>
+			</li>
+			<li>
+				<p>Distance to empty decreases when the high voltage battery temperature is low in winter. It is not a permanent change. If the temperature rises, the distance to empty is restored.</p>
+			</li>
+			<li>
+				<p>Reducing the use of electrical loads increases the range available.</p>
+			</li>
+			<li>
+				<p>Natural degradation of the high voltage battery occurs depending on the length of use of the vehicle, which reduces the distance to empty.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

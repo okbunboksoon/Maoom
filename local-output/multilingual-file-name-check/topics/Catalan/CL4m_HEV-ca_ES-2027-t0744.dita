@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0744">
+	<title>Fahrzeug anschieben</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Starthilfe
+					<indexterm>Fahrzeug anschieben</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Ein Fahrzeug mit Schaltgetriebe sollte nicht angeschoben werden, da die Abgasregelung beschädigt werden könnte.</p>
+		<p>Fahrzeuge mit Automatikgetriebe können nicht angeschoben werden.</p>
+		<p>Folgen Sie den Hinweisen in diesem Abschnitt, um den Motor mit Starthilfekabeln anzulassen.</p>
+		<note type="warning">
+			<p>Versuchen Sie niemals, ein Fahrzeug anzuschleppen. Wenn der Motor plötzlich anspringt, besteht die Gefahr, dass Sie auf das ziehende Fahrzeug auffahren.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0742.dita#CL4m_HEV-ca_ES-2027-t0742" role="parent" scope="local" type="concept">
+				<linktext>Starthilfe</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00096">
+	<title>Operating the power trunk</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>power trunk 
+					<indexterm>operating the power trunk</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00445">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00446">
+								<figgroup>
+									<image href="../../images/N_CT25C002_1_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<fig id="e00447">
+								<figgroup>
+									<image href="../../images/N_CT25C001_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" colsep="0">
+							<fig id="e00448">
+								<figgroup>
+									<image href="../../images/N_CT25C004_1_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<fig id="e00449">
+								<figgroup>
+									<image href="../../images/N_CT25C006_1_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e00450">
+			<li>
+				<p>Power trunk open/close button inside the vehicle</p>
+			</li>
+			<li>
+				<p>Power trunk open/close button on the smart key</p>
+			</li>
+			<li>
+				<p>Power trunk open/close button outside the vehicle</p>
+			</li>
+			<li>
+				<p>Power trunk close button inside the power trunk</p>
+			</li>
+		</ol>
+		<section deliveryTarget="except_digital" id="e00451">
+			<title>Simple operation</title>
+			<ul id="e00452">
+				<li>
+					<p>When the trunk is closed, press the power trunk open/close button inside the vehicle (1) for 1 second. The power trunk opens with a warning sound.</p>
+				</li>
+				<li>
+					<p>When the trunk is closed, press the power trunk open/close button on the smart key (2) for 1 second. The power trunk opens with a warning sound.</p>
+				</li>
+				<li>
+					<p>When the trunk is closed, press the power trunk open/close button outside the vehicle (3) to open the trunk.</p>
+				</li>
+				<li>
+					<p>Press the power trunk close button inside the power trunk (4). The trunk opens or closes automatically.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00453">
+			<title>Operation</title>
+			<ul id="e00454">
+				<li>
+					<p>When the trunk is closed, press the power trunk open/close button inside the vehicle (1) for 1 second. The power trunk will open with a warning sound.</p>
+					<ul id="e00455">
+						<li>
+							<p>While the trunk is opening, press the button to stop trunk operation.</p>
+						</li>
+						<li>
+							<p>When the power trunk is opened, press and hold the power trunk open/close button to close the trunk. If you release the button while the trunk is closing, power trunk operation will stop with a warning sound for 5 seconds.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>When the trunk is closed, press the power trunk open/close button on the smart key (2) for 1 second. The power trunk opens with a warning sound.</p>
+					<ul id="e00456">
+						<li>
+							<p>While the trunk is opening, press the button to stop trunk operation.</p>
+						</li>
+						<li>
+							<p>When the power trunk is opened, press and hold the power trunk open/close button to close the trunk. If you release the button while the trunk is closing, power trunk operation will stop with a warning sound for 5 seconds.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>If the smart key is not within operation range (approximately 10 m) from the vehicle, trunk operation will stop with a warning sound for 5 seconds.</p>
+				</li>
+				<li>
+					<p>When the trunk is closed, press the power trunk open/close button outside the vehicle (3) to open the trunk.</p>
+					<p>If the vehicle is locked, press the power trunk open/close button with the smart key in your possession.</p>
+					<p>While the trunk is opening, press the button to stop power trunk operation.</p>
+				</li>
+				<li>
+					<p>Press the power trunk close button inside the power trunk (4). The trunk closes automatically.</p>
+					<p>While the trunk is closing, press the button to stop power trunk operation</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00457">
+			<title>Operating condition(s)</title>
+			<ul id="e00458">
+				<li>
+					<p>When the gear is in P (Park) with the vehicle in <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position</p>
+				</li>
+				<li>
+					<p>When the vehicle is in <term translate="no">OFF</term> position</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00459">
+			<title>Non-operating condition(s)</title>
+			<ul id="e00460">
+				<li>
+					<p>The vehicle speed is above 3 km/h (1.8 mph)</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

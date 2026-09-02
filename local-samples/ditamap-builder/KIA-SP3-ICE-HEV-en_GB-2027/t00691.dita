@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00691">
+	<title>Stopping the vehicle and ending brake control</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04119">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04120">
+								<image href="images/N_SP3i25_C00_091_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e04121">
+								<li>
+									<p><uicontrol>Drive carefully</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When Emergency Braking stops your vehicle, a warning message appears on the instrument cluster.</p>
+		<p>You should manually brake immediately and check your surroundings.</p>
+		<ul>
+			<li>
+				<p>The vehicle will remain stationary for up to 5 minutes, including during sudden braking. If no brake input is detected, the <term translate="no">EPB</term> will be engaged afterward.</p>
+			</li>
+			<li>
+				<p>During braking and stop control, if the driver presses the brake pedal with sufficient force, the control will be released.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>For your safety, change the settings only after parking the vehicle at a safe location.</p>
+				</li>
+				<li>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist may not display a warning message or generate an audible warning if any other function’s warning message is displayed or audible warning is generated at the same time.</p>
+				</li>
+				<li>
+					<p>You may not hear the warning sound of Rear Cross-Traffic Collision-Avoidance Assist in noisy surroundings.</p>
+				</li>
+				<li>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist may not operate if you manually brake to avoid a collision.</p>
+				</li>
+				<li>
+					<p>During Rear Cross-Traffic Collision-Avoidance Assist operation, your vehicle may stop suddenly, injuring passengers and shifting loose objects. Always have seat belts on and keep loose objects secured.</p>
+				</li>
+				<li>
+					<p>In a potential collision situation, if the driver presses the brake pedal, the Rear Cross-Traffic Collision-Avoidance Assist may not operate.</p>
+				</li>
+				<li>
+					<p>Your vehicle’s basic braking performance operates properly even if there is a problem with Rear Cross-Traffic Collision-Avoidance Assist.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist automatically cancels braking control if you excessively engage the accelerator pedal.</p>
+				</li>
+				<li>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist does not operate in all situations and cannot avoid all collisions.</p>
+				</li>
+				<li>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist may warn you late or may not warn you depending on the road and driving conditions.</p>
+				</li>
+				<li>
+					<p>It is your responsibility to control your vehicle. Do not solely depend on Rear Cross-Traffic Collision-Avoidance Assist. Maintain a safe braking distance and, if necessary, engage the brake pedal to reduce speed or stop your vehicle.</p>
+				</li>
+				<li>
+					<p>Never rely on Rear Cross-Traffic Collision Avoidance to avoid a collision with people, animals, or objects. This may cause serious injury or death.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip">
+			<p>The brake control may not operate properly depending on the status of Electronic Stability Control (ESC).</p>
+			<p>There will only be a warning when:</p>
+			<ul>
+				<li>
+					<p>The ESC warning light is illuminated.</p>
+				</li>
+				<li>
+					<p>ESC is engaged in a different function.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>If Rear Cross-Traffic Collision-Avoidance Assist assists with braking, you must immediately engage the brake pedal and check your surroundings.</p>
+				</li>
+				<li>
+					<p>After you shift the gear to R (Reverse), braking control operates once each for vehicles approaching from the left or right.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00688.dita#t00688" role="parent" scope="local" type="concept">
+				<linktext>Rear Cross-Traffic Collision-Avoidance Assist operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

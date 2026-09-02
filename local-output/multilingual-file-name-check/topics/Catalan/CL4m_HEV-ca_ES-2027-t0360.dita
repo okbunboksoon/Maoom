@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0360">
+	<title>Schaltwippe</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Schaltwippe</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M045006L_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Betrieb</title>
+			<ul>
+				<li>
+					<p>Ziehen Sie die Schaltwippe [+] oder [-] einmal, um einen Gang nach oben oder unten zu schalten, und das System wechselt vom Automatikschaltmodus in den Handschaltmodus. (Die Schaltwippe funktioniert nicht bei niedriger Fahrzeuggeschwindigkeit.)</p>
+				</li>
+				<li>
+					<p>Um vom Handschaltmodus zurück zum Automatikschaltmodus zu wechseln, führen Sie eine der folgenden Optionen aus:</p>
+					<ul>
+						<li>
+							<p>Ziehen und halten Sie die [+] Schaltwippe länger als eine Sekunde.</p>
+						</li>
+						<li>
+							<p>Wechseln Sie den Schalthebel von D (Fahren) auf Handschaltmodus und schalten Sie ihn dann wieder zurück zu Schalthebelposition D. Beim Schaltregler SBW-Typ, den Schaltregler in die Fahrstufe D bringen.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Der Handschaltmodus wechselt auch in einer der folgenden Situationen wieder in den Automatikschaltmodus:</p>
+					<ul>
+						<li>
+							<p>Wenn das Gaspedal während der Fahrt für mehr als 6 Sekunden leicht betätigt wird. (Der Handschaltmodus wird im <term translate="no">SPORT</term>-Modus als Fahrmodus beibehalten)</p>
+						</li>
+						<li>
+							<p>Wenn das Fahrzeug anhält.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Wenn die Schaltwippe [-] eine bestimmte Zeit gezogen wird (0,5 Sekunden), nachdem der Fahrer den Fuß vom Gaspedal genommen hat, wird das Getriebe in den niedrigsten zulässigen Gang heruntergeschaltet. Wenn die Schaltwippe [ – ] eine bestimmte Zeit bedient wird, während das Bremspedal gedrückt ist, kann zusätzlich ein Gang heruntergeschaltet werden. (Für Doppelkupplungsgetriebe)</p>
+				</li>
+			</ul>
+			<note type="note">
+				<p>Wenn die linke und die rechte Seite der Schaltwippen gleichzeitig betätigt werden, wird nicht geschaltet.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0333-CH09.dita#CL4m_HEV-ca_ES-2027-t0333-CH09" role="parent" scope="local" type="concept">
+				<linktext>Fahrhinweise</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

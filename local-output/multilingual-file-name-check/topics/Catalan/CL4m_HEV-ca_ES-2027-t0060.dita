@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0060">
+	<title>Insassenwarnsystem hinten (ROA) (Typ B)</title>
+	<conbody>
+		<p>Der Rücksitzalarm (ROA) soll verhindern, das Fahrzeugs zu verlassen, wenn sich noch ein Kind im Fond des Fahrzeugs befindet.</p>
+		<ul>
+			<li>
+				<p>Der Alarm des Kombiinstruments tritt auf, wenn Sie die Fahrertür nach der Fahrt öffnen. Der Alarm ist nicht das Ergebnis der Sensorerkennung, sondern eine Erinnerung.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M035143L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<p><term translate="no">A</term>: Überprüfen Sie, ob sich auf dem Rücksitz Passagiere oder Gegenstände befinden.</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M035163L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<p><term translate="no">A</term>: Lassen Sie Kinder und Haustiere nicht allein. Die Erkennung beginnt nach dem Verriegeln des Fahrzeugs.</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Wenn der Fahrer während der Anzeige der Warnung die Taste <term translate="no">OK</term> am Lenkrad drückt, wird die erste Warnung um 10 Minuten verzögert.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M035164L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<p><term translate="no">A</term>: Die Prüfung des Insassenalarms hinten verzögert sich.</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+		</ul>
+		<p>Sie können die Rücksitz-Warnung aktivieren oder deaktivieren, indem Sie im Infotainment-System <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Komfort</uicontrol><uicontrol>Rücksitz-Warnung</uicontrol></menucascade> wählen.</p>
+		<p>Weitere Informationen finden Sie in der Kurzanleitung zur Navigation.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Das System wird automatisch aktiviert, wenn Sie das Fahrzeug starten. Wenn Sie es ausschalten, gilt die Änderung nur für die aktuelle Fahrt. Das System wird beim nächsten Start des Fahrzeugs wieder aktiviert.</p>
+				</li>
+				<li>
+					<p>Wenn das System deaktiviert ist, leuchtet die Kontrollleuchte im Kombiinstrument auf.</p>
+				</li>
+			</ul>
+		</note>
+		<section>
+			<title>Erste Warnung</title>
+			<p>Nach dem Cluster-Alarm wird die erste Warnung für eine kurze Zeit aktiviert, wenn das System die Anwesenheit eines Kindes im Fahrzeug erkennt, nachdem alle Türen geschlossen und verriegelt wurden.</p>
+		</section>
+		<section>
+			<title>Eskalationswarnung</title>
+			<p>Nach der ersten Warnung arbeitet die Eskalationswarnung noch lange, wenn sie die Anwesenheit von Kindern im Fahrzeug erkennt.</p>
+			<p>Außerdem wird eine Textmeldung an die Mitglieder der Kia Connect Services gesendet.</p>
+		</section>
+		<section>
+			<title>Vorsichtsmaßnahmen</title>
+			<p>Stellen Sie sicher, dass alle Fenster geschlossen sind. Wenn das Fenster geöffnet ist, kann die Warnung dadurch ausgelöst werden, dass der Sensor eine unbeabsichtigte Bewegung erkennt (z. B. Kleidung oder Insekten).</p>
+			<p>Das System dient dazu, die Anwesenheit eines auf dem Rücksitz sitzenden Kindes zu erkennen, aber die Warnung kann unter folgenden Bedingungen ausgelöst werden:</p>
+			<ul>
+				<li>
+					<p>Wenn das System Haustiere oder andere Tiere fälschlicherweise als Kinder identifiziert.</p>
+				</li>
+				<li>
+					<p>Wenn das System eine Bewegung auf dem Fahrer- oder Beifahrersitz erkennt (z. B. beim Zurücklehnen des Sitzes oder im Entspannungsmodus).</p>
+				</li>
+				<li>
+					<p>Wenn das Fahrzeug gestoßen, geschoben oder gerüttelt wird, nachdem es verriegelt wurde (z. B. bei einer Autowäsche oder aufgrund von externen Geräuschen oder Vibrationen).</p>
+				</li>
+				<li>
+					<p>Wenn sich metallische oder flüssige Gegenstände im Inneren des Fahrzeugs befinden.</p>
+				</li>
+				<li>
+					<p>Wenn gestapelte Kisten oder andere Gegenstände im Fahrzeug umfallen.</p>
+				</li>
+			</ul>
+			<note type="warning">
+				<p>Auch wenn das Fahrzeug mit diesem System ausgestattet ist, sollten Sie die Rücksitze immer überprüfen, bevor Sie das Fahrzeug verlassen. Das System darf unter den folgenden Bedingungen nicht funktionieren:</p>
+				<ul>
+					<li>
+						<p>Wenn die Bewegung nicht lange dauert oder sehr klein ist.</p>
+					</li>
+					<li>
+						<p>Wenn ein Kind nicht richtig in einem Kinderrückhaltesystem sitzt.</p>
+					</li>
+					<li>
+						<p>Wenn sie durch den Fahrzeugsitz oder das Kinderrückhaltesystem behindert werden.</p>
+					</li>
+					<li>
+						<p>Wenn der Fahrgast ein Kind über 6 Jahre oder ein Erwachsener ist.</p>
+					</li>
+					<li>
+						<p>Wenn der Fahrgast mit einem Stoff bedeckt ist, der eine metallische Substanz enthält, z. B. mit einer Decke.</p>
+					</li>
+					<li>
+						<p>Wenn ein Objekt im Fahrzeug den Sensor blockiert.</p>
+					</li>
+					<li>
+						<p>Wenn der Sensor durch Fremdkörper verschmutzt ist.</p>
+					</li>
+					<li>
+						<p>Wenn ein Tier auf dem Rücksitz nicht groß genug ist, um vom Sensor erkannt zu werden, oder wenn es sich kaum bewegt.</p>
+					</li>
+					<li>
+						<p>Wenn Gegenstände an der Innendecke angebracht werden oder die Decke verändert, verformt oder beschädigt wird.</p>
+					</li>
+					<li>
+						<p>Wenn es in der Umgebung des Fahrzeugs zu elektronischen Störungen kommt.</p>
+					</li>
+					<li>
+						<p>Wenn es andere Umweltfaktoren gibt, die das System beeinflussen können.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Zum Abbrechen oder Anhalten der Warnung:</p>
+						<ol>
+							<li>
+								<p>Schalten Sie das System über das Einstellungsmenü des Infotainment-Systems aus.</p>
+							</li>
+							<li>
+								<p>Durch das Ver- und Entriegeln oder Öffnen einer Tür wird die Warnung beendet oder aufgehoben.</p>
+								<p>Das System setzt die Erkennung fort, wenn alle Türen geschlossen und verriegelt sind (auch über die automatische Türverriegelung).</p>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<p>Die Erstwarnung und die Eskalationswarnung sind nur verfügbar, wenn der Sensor im Fahrzeug installiert ist.</p>
+					</li>
+					<li>
+						<p>Wenn eine Warnung ausfällt oder aufgehoben wird und derselbe Zustand erneut auftritt, gibt das System nur ein akustisches Signal aus, ohne eine Warnmeldung im Kombiinstrument anzuzeigen.</p>
+					</li>
+					<li>
+						<p>Wenn das Fahrzeug aus der Ferne gestartet wird, wird die Warnung beendet.</p>
+					</li>
+					<li>
+						<p>Wenn Sie keine mobilen Benachrichtigungen erhalten, überprüfen Sie die verbundenen Dienste.</p>
+					</li>
+					<li>
+						<p>Wenn Sie andere Modi aktivieren, z. B. den Komfortmodus, wird das System dadurch deaktiviert.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section otherprops="legal_eu_std_008_05">
+			<title>Konformitätserklärung</title>
+			<p>Die HF-Komponenten (Rücksitzalarm-Radarsensor) erfüllen folgende Forderungen:</p>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/N_CT25C048_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0052.dita#CL4m_HEV-ca_ES-2027-t0052" role="parent" scope="local" type="concept">
+				<linktext>Türschlösser </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

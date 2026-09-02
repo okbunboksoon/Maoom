@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0615">
+	<title>Navigationsgestützte intelligente Tempomatsteuerung (NSCC)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Navigationsgestützte intelligente Tempomatsteuerung (NSCC)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Die navigationsgestützte intelligente Tempomatsteuerung hilft beim Fahren auf der Autobahn mit aktivem Tempomat, eine den Straßenverhältnissen entsprechende sichere Geschwindigkeit zu halten und nutzt dazu Informationen des Navigationssystems.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Die navigationsgestützte intelligente Tempomatsteuerung ist nur auf zugangsbeschränkten Straßen bestimmter Autobahnen ( Fernverkehrsstraßen) verfügbar.</p>
+					<p>Kontrollierte Zufahrtsstraßen sind ausgewiesene Straßen mit begrenzten Ein- und Ausfahrten, die einen ununterbrochenen Verkehrsfluss mit hoher Geschwindigkeit ermöglichen. Nur Pkws und Motorräder sind auf Straßen mit kontrollierter Zufahrt erlaubt.</p>
+				</li>
+				<li>
+					<p>Die navigationsgestützte intelligente Tempomatsteuerung funktioniert auf den Hauptstrecken von Straßen mit kontrollierten Zufahrten, nicht aber an Autobahnkreuzen und Anschlussstellen.</p>
+				</li>
+				<li>
+					<p>Zusätzliche Autobahnen können durch zukünftige Aktualisierungen der Navigation ergänzt werden.</p>
+				</li>
+			</ul>
+		</note>
+		<section>
+			<title>Automatische Verzögerung in Autobahnkurven</title>
+			<p>Wenn die Fahrgeschwindigkeit hoch ist, bremst die automatische Abbremsfunktion in Kurven auf der Autobahn Ihr Fahrzeug ab bzw. beschränkt die Beschleunigung, um Sie bei der sicheren Kurvenfahrt basierend auf den Kurveninformationen aus dem Navigationssystem zu unterstützen.</p>
+			<note type="warning">
+				<p>Die navigationsgestützte intelligente Tempomatsteuerung (NSCC) ist ein Zusatzsystem, aber kein Ersatz für sicheres Fahren. Der Fahrer muss immer die Geschwindigkeit und den Abstand zum vorausfahrenden Fahrzeug beobachten. Fahren Sie immer sicher und seien Sie vorsichtig.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0437-CH10.dita#CL4m_HEV-ca_ES-2027-t0437-CH10" role="parent" scope="local" type="concept">
+				<linktext>Fahrerassistenzleitfaden</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

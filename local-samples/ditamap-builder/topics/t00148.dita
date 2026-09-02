@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00148">
+	<title>Out of position warning</title>
+	<shortdesc/>
+	<conbody>
+		<p>The Out of position warning determines whether the front passenger is seated in an abnormal position that may affect airbag deployment. If the front passenger is detected to be in an out-of–position state, the front passenger air bag ON/OFF indicator <image href="../../../2026/images/WKIA_121.eps" align="center" placement="inline" height="0.2in" id="e01028"/> <image href="../../../2026/images/WKIA_122.eps" align="center" placement="inline" scale="15" id="e01029"/> may change to OFF, indicating that the front passenger airbag is deactivated.</p>
+		<p>When this occurs, a warning message appears on the instrument cluster and an audible warning sounds until the passenger returns to a proper seating position.</p>
+		<section id="e01030">
+			<title>Operating condition(s)</title>
+			<ul id="e01031">
+				<li>
+					<p>When the front passenger is detected to be in an out-of-position state while driving above 10 km/h (6 mph).</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01032">
+			<title>Off conditions(s)</title>
+			<ul id="e01033">
+				<li>
+					<p>When the front passenger returns to a proper seating position.</p>
+				</li>
+				<li>
+					<p>When the warning has been maintained cumulatively for 100 seconds.</p>
+				</li>
+			</ul>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01034">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01035">
+									<image href="../../../2026/images/N_QVe27_C00_146_E.eps" align="center" placement="break" scale="95" id="e01036"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01037">
+									<li>
+										<p> <uicontrol>The front passenger’s seating posture is unsafe. Please sit up straight.</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<note type="note" id="e01038">
+				<ul id="e01039">
+					<li>
+						<p>Pressing the OK button on the message will stop the warning message immediately. However, if the front passenger remains in an out-of-position state, the audible warning continues for up to 100 seconds.</p>
+					</li>
+					<li>
+						<p>Even if the warning is turned off, if the front passenger continues to remain in an out-of-position state, the Out of position warning may activate again after approximately 15 minutes.</p>
+					</li>
+					<li>
+						<p>The passenger air bag ON/OFF indicator is displayed regardless of vehicle speed.</p>
+					</li>
+				</ul>
+			</note>
+			<p>The out of position warning may operate under the following conditions:</p>
+			<ul id="e01040">
+				<li>
+					<p>Close proximity to the airbag: when the front passenger leans too close toward the dashboard.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01041">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e01042">
+											<image href="../../../2026/images/OOVGT026003L.eps" align="center" placement="break" scale="95" id="e01043"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>Feet on dashboard: when the front passenger places one or both feet on the dashboard.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01044">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e01045">
+											<image href="../../../2026/images/OOV025048.eps" align="center" placement="break" scale="95" id="e01046"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+			</ul>
+		</section>
+		<section id="e01047">
+			<title>Limitations of Out of position warning</title>
+			<p>The Out of position warning may not operate properly or may operate unexpectedly under the following circumstances:</p>
+			<ul id="e01048">
+				<li>
+					<p>A human-like object is placed on the front passenger seat.</p>
+				</li>
+				<li>
+					<p>The front passenger’s face or body is obscured.</p>
+				</li>
+				<li>
+					<p>The front passenger is wearing bulky clothing or headwear.</p>
+				</li>
+				<li>
+					<p>The front passenger is holding a large or bulky object (such as a box or a large bag).</p>
+				</li>
+			</ul>
+			<note type="caution" id="e01049">
+				<ul id="e01050">
+					<li>
+						<p>Depending on the airbag system applied to your vehicle, the front passenger airbag may not deploy in certain out-of-position situations to prevent further injury.</p>
+					</li>
+					<li>
+						<p>Out of position warning is a supplemental safety feature only. It may not detect all types of improper seating postures. It is the occupants’ responsibility to maintain a proper seating position at all times regardless of the warning system.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

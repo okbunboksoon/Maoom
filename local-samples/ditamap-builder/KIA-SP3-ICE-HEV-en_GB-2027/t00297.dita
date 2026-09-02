@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00297">
+	<title>Shark-fin antenna</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>audio system
+					<indexterm>shark-fin antenna</indexterm>
+				</indexterm>
+				<indexterm>shark-fin antenna</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01908">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01909">
+								<image href="images/N_SP3i26_C08_001_I.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Shark-fin antenna transmit and receive signals such as AM/FM and GPS. Additional signals are sent and received according to vehicle options.</p>
+		<ul id="e01910">
+			<li>
+				<p>Be careful of antenna damage by checking the height of the vehicle before entering low-ceiling spaces such as automated parking lots or automated washing machines.</p>
+			</li>
+			<li>
+				<p>Be careful not to contact the antenna when loading cargo on the roof rack. Antenna transmission/reception performance may be degraded.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00296.dita#t00296" role="parent" scope="local" type="concept">
+				<linktext>Audio system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

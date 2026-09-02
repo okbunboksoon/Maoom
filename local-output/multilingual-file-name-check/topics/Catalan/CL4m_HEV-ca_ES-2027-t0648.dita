@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="CL4m_HEV-ca_ES-2027-t0648">
+	<title>Einseitiges Fahren innerhalb der Fahrspur</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054081N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn Ihre Fahrzeuggeschwindigkeit über 60 km/h (40 mph) liegt und ein Fahrzeug dicht neben Ihnen fährt, steuert Ihr Fahrzeug die Lenkung in die entgegengesetzte Richtung dieses Fahrzeugs, um ein sicheres Fahren zu unterstützen. Wenn sich auf beiden Seiten der Fahrspur Fahrzeuge befinden, die dicht neben Ihnen fahren, weicht die Funktion nicht auf die andere Seite der Fahrspur aus.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0642.dita#CL4m_HEV-ca_ES-2027-t0642" role="parent" scope="local" type="concept">
+				<linktext>Autobahn-Fahrassistent</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

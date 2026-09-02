@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0152">
+	<title id="e00434">Tagesfahrlicht </title>
+	<conbody>
+		<p>Durch das Tagesfahrlicht (DRL, Daytime Running Light) wird Ihr Fahrzeug tagsüber besser von anderen Verkehrsteilnehmern gesehen. DRL kann in vielen Fahrbedingungen nützlich sein, insbesondere nach Sonnenaufgang und vor Sonnenuntergang.</p>
+		<p>Das DRL-System schaltet in folgenden Fällen auf <term translate="no">OFF</term>:</p>
+		<ol>
+			<li>
+				<p>Der Scheinwerferschalter <term translate="no">ON</term> ist.</p>
+			</li>
+			<li>
+				<p>Der Motor <term translate="no">OFF</term> ist.</p>
+			</li>
+			<li>
+				<p>Der Nebelscheinwerfer <term translate="no">ON</term> ist.</p>
+			</li>
+			<li>
+				<p>Feststellbremse anziehen</p>
+			</li>
+		</ol>
+		<note type="note" otherprops="legal_eu_std_011_01">
+			<p>Andere Verkehrsregeln (nur Europa)</p>
+			<p>Die Lichtverteilung des Abblendlichts ist asymmetrisch. Wenn Sie in ein Land mit anderer Fahrtrichtung reisen, kann dieser asymmetrische Teil entgegenkommende Fahrzeuge blenden. Um dies zu verhindern, fordert die ECE-Regelung mehrere technische Lösungen (z.B. System zum automatischen Umschalten, Abkleben, Abblenden). Diese Scheinwerfer sind so konstruiert, dass sie den Gegenverkehr nicht blenden. Sie brauchen daher Ihre Scheinwerfer in einem Land mit Linksverkehr nicht zu wechseln.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0148.dita#CL4m_HEV-ca_ES-2027-t0148" role="parent" scope="local" type="concept">
+				<linktext>Beleuchtung </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

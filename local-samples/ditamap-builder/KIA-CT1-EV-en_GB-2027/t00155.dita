@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00155">
+	<title>Warning and indicator lights</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>display 
+					<indexterm>warning and indicator lights</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+			<desc>
+				<p>Once you set the vehicle to the <term translate="no">ON</term> position, the symbols shown below will light up. If these symbols remain on or malfunction, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				<p>The information provided may differ according to which functions are applicable to your vehicle.</p>
+			</desc>
+			<tgroup cols="3" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="9*"/>
+				<colspec colnum="2" colname="2" colwidth="14*"/>
+				<colspec colnum="3" colname="3" colwidth="77*"/>
+				<thead valign="middle">
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p>Symbol</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>Time</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>Notes</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody valign="middle">
+					<row rowsep="1" valign="middle">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_313.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Power down indicator light appears for approximately 3 seconds.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>The high voltage battery level is too low or voltage is decreasing</p>
+								</li>
+								<li>
+									<p>The temperature of the high voltage battery is too high or too low</p>
+								</li>
+								<li>
+									<p>The temperature of the motor is high</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image align="left" href="../../images/WKIA_281.eps" scale="15" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Charging indicator light appears when charging the high voltage battery.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_314.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>High voltage battery level warning light appears when the high voltage battery level is low.</p>
+							<p>When the warning light turns on, charge the battery immediately.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_033.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3">
+							<p>Charging system warning light appears for approximately 3 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>Whenever there is a malfunction with either the LDC (Low DC-DC converter) or electrical charging system.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_028.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>6 seconds</p>
+						</entry>
+						<entry colname="3">
+							<p>Seat belt warning light appears for approximately 6 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry>
+							<p>Seat belt warning light informs the driver that the seat belt is not fastened.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" morerows="1" align="center" valign="middle"><image href="../../images/WKIA_027.eps" scale="15" align="left" placement="inline"/>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>6 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>The air bag warning light appears for about 6 seconds and then turns off.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>There is a malfunction with the Safety Restraint System (SRS) air bag operation.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image align="left" href="../../images/WKIA_127.eps" scale="15" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Parking brake &amp; brake fluid warning light appears for approximately 3 seconds.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>Red: When the parking brake is applied.</p>
+								</li>
+								<li>
+									<p>Red: When the brake fluid level in the reservoir is low.</p>
+								</li>
+								<li>
+									<p>Red: When the regenerative brake does not operate.</p>
+								</li>
+								<li>
+									<p>Yellow: Regenerative brake warning light appears when the regenerative brake does not operate and the brake does not perform well.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_107.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>The ABS warning light appears for about 3 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>Whenever there is a malfunction with the ABS.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_107.eps" scale="15" align="left" placement="inline"/> </p>
+							<p> <image align="left" href="../../images/WKIA_127.eps" scale="15" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Electronic Brake Force Distribution (EBD) system warning light appears when there is a problem with the Electronic Brake Force Distribution system.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_031.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Motor Driven Power Steering (MDPS) warning light appears for about 3 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>Whenever there is a malfunction with the motor driven power steering.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_007.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Master warning light appears when there is a malfunction in various vehicle functions. To identify the details of the warning, refer to the LCD display warning message.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image align="left" href="../../images/WKIA_036.eps" scale="15" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Electronic Parking Brake <image align="left" href="../../images/WKIA_036.eps" scale="15" placement="inline"/> warning light appears for about 3 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>Whenever there is a malfunction with the Electronic Parking Brake <term translate="no">EPB</term> </p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="2" align="center" valign="middle">
+							<p> <image align="left" href="../../images/WKIA_035.eps" scale="15" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Low tire pressure warning light appears for approximately 3 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>When one or more of your tires are significantly underinflated.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>When there is a malfunction with the TPMS.</p>
+								</li>
+							</ul>
+							<p>Refer to <xref type="concept" href="t00824.dita#t00824"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="2" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_037.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Yellow: Warning light turns on when the vehicle is started, then turns off again if no abnormalities are detected in the Forward Collision-Avoidance Assist system’s Forward Safety/Forward Crossing Safety.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center" valign="middle">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Red: Flashes when the Forward Safety/Forward Crossing Safety function is in operation.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>Yellow: Yellow warning light remains lit when there is a problem, such as if Forward Safety is not set or has a functional abnormality.</p>
+							<p>Refer to <xref href="t00507.dita#t00507"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="2" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_077.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Yellow: Warning light turns on when the vehicle is started, then turns off again if no abnormalities are detected in the Forward Collision-Avoidance Assist system’s Forward/Side Safety.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center" valign="middle">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Red: Flashes when the Forward/Side Safety function is in operation.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>Yellow: Yellow warning light remains lit when there is a problem, such as if Forward/Side Safety is not set or has a functional abnormality.</p>
+							<p>Refer to <xref href="t00507.dita#t00507"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="2" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_198.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Yellow: Yellow indicator light turns on when the vehicle is started, then turns off again if no abnormalities are detected in the Lane Keeping Assist system.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center" valign="middle">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Green: Flashes when the Lane Keeping Assist system is in operation.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>Lane safety indicator light appears:</p>
+							<ul>
+								<li>
+									<p>Green: When Lane Keeping Assist operating conditions are satisfied.</p>
+								</li>
+								<li>
+									<p>Gray: When Lane Keeping Assist operating conditions are not satisfied.</p>
+								</li>
+								<li>
+									<p>Yellow: Whenever there is a malfunction with Lane Keeping Assist.</p>
+								</li>
+							</ul>
+							<p>Refer to <xref type="concept" href="t00544.dita#t00544"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="2" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_059.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Yellow: Yellow warning light turns on when the vehicle is started, then turns off again if no abnormalities are detected in the Driver Attention Warning system.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center" valign="middle">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Yellow: Flashes when it is recommended that the driver takes a rest.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>Yellow: Warning light turns on when forward cameras are obscured or when there is a functional abnormality/failure in the Driver Attention Warning system.</p>
+							<p>Refer to <xref type="concept" href="t00611.dita#t00611"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_082.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Yellow: Yellow indicator light turns on when the vehicle is started, then turns off again if no abnormalities are detected in the Intelligent Speed Limit Assist system.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>Yellow: Indicator light turns on when there is a problem, such as if the Intelligent Speed Limit Assist system is turned off or has a functional abnormality.</p>
+								</li>
+								<li>
+									<p>While the Intelligent Speed Limit Assist system is in operation, indicates the speed limit and shows the speed limit in red when the vehicle is exceeding the speed limit.</p>
+								</li>
+							</ul>
+							<p>Refer to <xref type="concept" href="t00597.dita#t00597"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_011.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>Lane Following Assist indicator light appears:</p>
+							<ul>
+								<li>
+									<p>Green: When Lane Following Assist is activated</p>
+								</li>
+								<li>
+									<p>Gray: When Lane Following Assist operating conditions are not satisfied</p>
+								</li>
+							</ul>
+							<p>Refer to <xref type="concept" href="t00691.dita#t00691"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_086.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>Highway Lane Change Assist indicator light appears:</p>
+							<ul>
+								<li>
+									<p>Green: When Highway Lane Change Assist is ready for operation.</p>
+								</li>
+								<li>
+									<p>Gray: When Highway Lane Change Assist is in standby.</p>
+								</li>
+							</ul>
+							<p>Refer to <xref type="concept" href="t00702.dita#t00702"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>Green: When Highway Lane Change Assist is operating.</p>
+								</li>
+								<li>
+									<p>White: When Highway Lane Change Assist is canceled.</p>
+								</li>
+							</ul>
+							<p>Refer to <xref type="concept" href="t00702.dita#t00702"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_056.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>When DBC is activated.</p>
+							<p>Refer to <xref type="concept" href="t00488.dita#t00488"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="2" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_050.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>LED headlight warning light appears for approximately 3 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>Whenever there is a malfunction with the LED headlight.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3">
+							<p>Whenever there is a malfunction with a LED headlight related part.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_057.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Icy road warning light and outside temperature gauge blinks and then appears. Also, the warning chime sounds 1 time.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_041.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Electronic Stability Control indicator light appears for about 3 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>Whenever there is a malfunction with ESC system.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_042.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>The <term translate="no">ESC OFF</term> indicator light appears for approximately 3 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>When you deactivate ESC system by pressing the <term translate="no">ESC OFF</term> button.</p>
+							<p>Refer to <xref type="concept" href="t00482.dita#t00482"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="2" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_044.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>When the vehicle detects the smart key in the vehicle in <term translate="no">POWER ON</term> position</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3">
+							<p>When the key is not in the vehicle</p>
+							<p>Whenever there is a malfunction with the immobilizer system.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center" valign="middle">
+							<p>2 seconds</p>
+						</entry>
+						<entry colname="3">
+							<p>When the vehicle cannot detect the smart key.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_045.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Blinks</p>
+						</entry>
+						<entry colname="3">
+							<p>When the turn signal light is on</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_046.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>When high-beam headlamps are on.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_047.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>When low-beam headlamps are on.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_049.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>When the light switch is in the <term translate="no">ON</term> position</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image align="left" href="../../images/WKIA_352.eps" scale="15" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>When the rear fog lights are on.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_048.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>White: White indicator light turns on when the High Beam Assist function is entering the “Ready” state.</p>
+								</li>
+								<li>
+									<p>Green: Green indicator light turns on when the High Beam Assist function or Intelligent Front-Lighting System is in operation.</p>
+								</li>
+							</ul>
+							<p>Refer to <xref type="concept" href="t00175.dita#t00175"/> and <xref type="concept" href="t00181.dita#t00181"/>.</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle" morerows="1">
+							<p> <image href="../../images/WKIA_421.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3">
+							<p>The Intelligent Front-Lighting System warning light appears for approximately 3 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row>
+						<entry colname="2" align="center">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3">
+							<p>Whenever there is a malfunction with Intelligent Front-Lighting System.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image align="left" href="../../images/WKIA_327.eps" scale="15" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>When <term translate="no">AUTO HOLD</term> is activated.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" morerows="2" align="center" valign="middle">
+							<p> <image align="left" href="../../images/WKIA_326.eps" scale="15" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p> <image align="left" href="../../images/WKIA_326.eps" scale="15" placement="inline"/> indicator appears when the vehicle is ready to be driven.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Off</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>Normal driving is not possible, or a problem has occurred.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>Emergency driving, there is a problem with the system.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_267.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>Service warning light appears for approximately 3 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>When there is a problem with related parts of the electric vehicle control system, such as sensors, etc.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_128.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3">
+							<p>Overspeed warning light blinks when you drive the vehicle more than 120 km/h.</p>
+							<p>The overspeed warning chime also sound for approximately 5 seconds.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" morerows="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_422.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3">
+							<p> <term translate="no">SOS</term> warning light appears for approximately 3 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<ul>
+								<li>
+									<p>Whenever there is a malfunction with the eCall system.</p>
+								</li>
+							</ul>
+							<p>Refer to <xref type="concept" href="t00835.dita#t00835"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_330.eps" scale="15" align="left" placement="inline"/> </p>
+							<p> <image href="../../images/WKIA_331.eps" scale="15" align="left" placement="inline"/> </p>
+							<p> <image href="../../images/WKIA_332.eps" scale="15" align="left" placement="inline"/> </p>
+							<p> <image href="../../images/WKIA_746.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>When you select each mode as drive mode.</p>
+							<p>Refer to <xref type="concept" href="t00445.dita#t00445"/>.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_072.eps" scale="15" align="center" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>When the trunk is not closed securely</p>
+						</entry>
+					</row>
+					<row valign="middle">
+						<entry align="center" valign="middle">
+							<p> <image href="../../images/WKIA_179.eps" scale="15" align="center" placement="inline"/> </p>
+						</entry>
+						<entry align="center" colname="2">
+							<p>Continuously</p>
+						</entry>
+						<entry>
+							<p>When the washer fluid level in the reservoir is nearly empty.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_058.eps" scale="15" align="center" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>When a door is not closed securely</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_273.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" morerows="1" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3" morerows="1">
+							<p>When Battery Conditioning Mode is activated.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <image href="../../images/WKIA_272.eps" scale="15" align="left" placement="inline"/> </p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry morerows="1" align="center" valign="middle" colname="1">
+							<p> <image align="left" href="../../images/WKIA_353.eps" scale="15" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>3 seconds</p>
+						</entry>
+						<entry colname="3" valign="middle">
+							<p>The forward attention warning light appears for approximately 3 seconds and then goes off.</p>
+						</entry>
+					</row>
+					<row rowsep="0" valign="middle">
+						<entry colname="2" align="center">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3">
+							<p>Forward Attention Warning is operating.</p>
+							<p>Refer to <xref type="concept" href="t00623.dita#t00623"/>.</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle" morerows="1">
+							<p importance="high"> <image href="../../images/WKIA_796.eps" scale="15" align="center" placement="inline"/> </p>
+						</entry>
+						<entry colname="2" align="center">
+							<p>Continuously</p>
+						</entry>
+						<entry colname="3">
+							<p>Gray: Launch Control is ready to activate.</p>
+						</entry>
+					</row>
+					<row>
+						<entry colname="2" align="center">
+							<p>Blinking</p>
+						</entry>
+						<entry colname="3">
+							<p>Green: Launch Control is activating.</p>
+							<p>Refer to <xref href="t00455.dita#t00455"/>.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="tip" deliveryTarget="except_print">
+			<ul>
+				<li>
+					<p importance="high">Dual-diagonal braking system</p>
+					<p>Your vehicle is equipped with dual diagonal braking systems. This means you still have braking on two wheels even if one of the dual systems should fail.</p>
+					<p>With only one of the dual systems working, more than normal pedal travel and greater pedal pressure are required to stop the vehicle. Also, the vehicle will not stop in as short a distance with only a portion of the brake system working.</p>
+				</li>
+				<li>
+					<p> <image align="left" href="../../images/WKIA_326.eps" scale="15" placement="inline"/> </p>
+					<p>When the <image align="left" href="../../images/WKIA_326.eps" scale="15" placement="inline"/> indicator goes <term translate="no">OFF</term> or blinks, there is a problem with the system. In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" deliveryTarget="except_print" id="e00775">
+			<ul>
+				<li>
+					<p importance="high">Parking brake &amp; brake fluid warning light <image align="left" href="../../images/WKIA_127.eps" scale="15" placement="inline"/> </p>
+					<ul>
+						<li>
+							<p>Driving the vehicle with a warning light <term translate="no">ON</term> is dangerous. If the parking brake &amp; brake fluid warning light appears with the parking brake released, it indicates that the brake fluid level is low.</p>
+						</li>
+						<li>
+							<p>In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p importance="high">Electronic Brake force Distribution (EBD) system warning light <image href="../../images/WKIA_107.eps" scale="15" align="left" placement="inline"/> <image align="left" href="../../images/WKIA_127.eps" scale="15" placement="inline"/> </p>
+					<ul>
+						<li>
+							<p>When both ABS and parking brake &amp; brake fluid warning lights are on, the brake system will not work normally and you may experience an unexpected and dangerous situation during sudden braking.</p>
+						</li>
+						<li>
+							<p>In this case, avoid high speed driving and abrupt braking. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p importance="high">Safe stopping</p>
+					<ul>
+						<li>
+							<p>The TPMS cannot alert you to severe and sudden tire damage caused by external factors.</p>
+						</li>
+						<li>
+							<p>If you notice any vehicle instability, immediately take your foot off the accelerator pedal, apply the brakes gradually with light force, and slowly move to a safe position off the road.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+		<note type="note" deliveryTarget="except_print" id="e00776">
+			<ul>
+				<li>
+					<p>Make sure that all warning lights are <term translate="no">OFF</term> after starting the vehicle. If any light is still <term translate="no">ON</term>, this indicates a situation that needs attention.</p>
+				</li>
+				<li>
+					<p importance="high">Power down indicator light <image href="../../images/WKIA_313.eps" scale="15" align="left" placement="inline"/> </p>
+					<ul>
+						<li>
+							<p>Do not accelerate or start the vehicle suddenly when the power down indicator light is <term translate="no">ON</term>.</p>
+							<p>When the power is limited for the safety of the high-powered parts of an electric vehicle, the power down indicator light appears. Your vehicle may not be driven, or may roll back on a slope with the indicator light <term translate="no">ON</term>.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p importance="high">Electronic Brake force Distribution (EBD) system warning light <image href="../../images/WKIA_107.eps" scale="15" align="left" placement="inline"/> <image align="left" href="../../images/WKIA_127.eps" scale="15" placement="inline"/> </p>
+					<ul>
+						<li>
+							<p>When the ABS warning light is on or both ABS and Parking Brake &amp; Brake Fluid warning lights are on, the speedometer, odometer, or tripmeter may not work. Also, the MDPS warning light may appear and the steering effort may increase or decrease.</p>
+						</li>
+						<li>
+							<p>In this case, avoid high speed driving and abrupt braking. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>The Electronic Parking Brake <image align="left" href="../../images/WKIA_036.eps" scale="15" placement="inline"/> warning light may appear when the Electronic Stability Control (ESC) indicator light comes on to indicate that the ESC is not working properly (This does not indicate malfunction of the <term translate="no">EPB</term>).</p>
+				</li>
+				<li>
+					<p>Continuous driving with the LED Headlight warning light on or blinking can reduce LED headlight life.</p>
+				</li>
+				<li>
+					<p>If the icy road warning light appears while driving, you should drive more attentively and safely refraining from over-speeding, rapid acceleration, sudden braking or sharp turning, etc.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

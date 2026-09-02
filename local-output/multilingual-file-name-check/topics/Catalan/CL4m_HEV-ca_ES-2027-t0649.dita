@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0649">
+	<title>Standby des Autobahn-Fahrassistenten</title>
+	<conbody>
+		<p>Wenn die intelligente Tempomatsteuerung während der Nutzung des Autobahn-Fahrassistenten vorübergehend deaktiviert ist, befindet sich der Autobahn-Fahrassistent im Bereitschaftszustand. Zu diesem Zeitpunkt funktioniert der Spurfolgeassistent einwandfrei.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Die Fahrgeschwindigkeitsbegrenzung hilft Ihnen, langsamer als 60 km/h (40 mph) zu fahren. Das Fahrzeug wird aufgrund des vorausfahrenden Fahrzeugs abgebremst. Nachdem das Fahrzeug abgebremst hat, kann es nicht automatisch wieder beschleunigen.</p>
+				</li>
+				<li>
+					<p>Die Geschwindigkeitsbegrenzung wird unter den folgenden Umständen aufgehoben:</p>
+					<ul>
+						<li>
+							<p>Wenn Sie das Lenkrad wieder in die Hand nehmen</p>
+						</li>
+						<li>
+							<p>Wenn Sie den Spurfolgeassistenten durch Drücken der Fahrassistent-Taste einschalten</p>
+						</li>
+						<li>
+							<p>Wenn der Schalter (+), (-), (<image align="left" href="../../images/WKIA_079.eps" scale="15" placement="inline"/>) oder (<image align="left" href="../../images/WKIA_084.eps" scale="15" placement="inline"/>) betätigt wird, oder das Gaspedal oder das Bremspedal gedrückt wird.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0642.dita#CL4m_HEV-ca_ES-2027-t0642" role="parent" scope="local" type="concept">
+				<linktext>Autobahn-Fahrassistent</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00391">
+	<title>Starting the vehicle</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>EV button 
+					<indexterm>starting the vehicle</indexterm>
+				</indexterm>
+				<indexterm>starting the vehicle</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02765">
+			<title>Starting the vehicle with smart key</title>
+			<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02766">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e02767">
+									<figgroup>
+										<image href="../../images/OOV045027.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02768"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e02769">
+									<figgroup>
+										<image href="../../images/OOV045002.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02770"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul id="e02771">
+				<li>
+					<p>At the time that the vehicle doors are opened or when the <term>EV</term> button is pressed, the vehicle will check for the smart key.</p>
+				</li>
+				<li>
+					<p>If the smart key is not in the vehicle, the immobilizer indicator (<image align="left" href="../../images/WKIA_044.eps" outputclass="nolabel" placement="inline" scale="15" id="e02772"/>) and a message will appear on the instrument cluster.</p>
+				</li>
+				<li>
+					<p>If all doors are closed, the chime will sound for approximately 5 seconds. The indicator or message will turn off while the vehicle is moving. Always have the smart key with you.</p>
+				</li>
+				<li>
+					<p>If the battery is weak or the smart key does not work correctly, you can start the vehicle by placing the smart key on the key recognition area located on the center console and then pressing the <term>EV</term> button for about 10 seconds in <term>OFF</term> position.</p>
+				</li>
+			</ul>
+			<note type="warning" id="e02773">
+				<ul id="e02774">
+					<li>
+						<p>Always wear appropriate shoes when operating your vehicle. Unsuitable shoes (high heels, ski boots, etc.) may interfere with your ability to use the brake, accelerator.</p>
+					</li>
+					<li>
+						<p>Do not start the vehicle with the accelerator pedal engaged. The vehicle can move and lead to an accident.</p>
+					</li>
+					<li>
+						<p>The vehicle will start only when the smart key is in the vehicle. Never allow children or any person who is unfamiliar with the vehicle touch the <term>EV</term> button or related parts. Pushing the <term>EV</term> button while the smart key is in the vehicle may result in unintended vehicle operation and/or unintended vehicle movement.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution" id="e02775">
+				<ul id="e02776">
+					<li>
+						<p>If the vehicle stalls while the vehicle is in motion, do not attempt to shift to P (Park). If the traffic and road conditions permit, you may shift to N (Neutral) while the vehicle is still moving and press the <term>EV</term> button in an attempt to restart the vehicle.</p>
+					</li>
+					<li>
+						<p>Do not press the <term>EV</term> button for more than 10 seconds except when the stop lamp fuse is blown.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e02777">
+				<p>If the stop lamp fuse is blown, the vehicle cannot be started normally. Replace the fuse with a new one. If replacement is not possible, press the <term>EV</term> button for 10 seconds in the <term>OFF</term> position to start the vehicle. The vehicle can be started without depressing the brake pedal. However, for your safety, always depress the brake pedal when starting the vehicle.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

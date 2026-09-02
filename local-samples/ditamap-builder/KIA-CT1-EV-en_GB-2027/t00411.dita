@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" base="Anywhere" id="t00411">
+	<title>Coat hook</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features 
+					<indexterm>coat hook</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>A coat hook is next to the left rear grab handle.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01690">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01691">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C189.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note deliveryTarget="except_print" type="caution">
+			<p>Do not hang heavy clothes, since they may damage the hook.</p>
+		</note>
+	</conbody>
+</concept>

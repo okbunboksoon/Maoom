@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00379">
+	<title>Controlling fan speed</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system 
+					<indexterm>controlling fan speed</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01591">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01592">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C090.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01593">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C091.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Climate control display: Touch the left or right icon to adjust the speed.</p>
+				</li>
+				<li>
+					<p>Center fascia: Put the lever up or down.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Climate control display: Touch the left or right icon to adjust the speed.</p>
+				</li>
+				<li>
+					<p>Center fascia: Put the lever up or down.</p>
+				</li>
+			</ul>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Continuously using the climate control system in the recirculated air position may allow humidity to increase inside the vehicle which may fog the glass and obscure visibility.</p>
+					</li>
+					<li>
+						<p>Do not sleep in a vehicle with the air conditioning or heating system on. It may cause serious harm or death due to a drop in the oxygen level and/or body temperature.</p>
+					</li>
+					<li>
+						<p>Continuously using the climate control system in the recirculated air position can cause drowsiness or sleepiness, and loss of vehicle control. Set the air intake control to the outside (fresh) air position as much as possible while driving.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution">
+				<p>Operating the blower when the <term translate="no">EV</term> button is in <term translate="no">POWER ON</term> position and the gear is in the N (Neutral) could cause the battery to discharge.</p>
+			</note>
+			<note type="note" id="e01594">
+				<ul id="e01595">
+					<li>
+						<p>Prolonged operation of the heater in the recirculated air position (without air conditioning selected) may cause fogging of the windshield and side windows and make the air in the passenger compartment stale. In addition, prolonged use of the air conditioning with the re circulated air position selected will result in excessively dry air in the passenger compartment.</p>
+					</li>
+					<li id="e01596">
+						<p>To turn the automatic operation off, select any icon or lever of the following:</p>
+						<ul id="e01597">
+							<li id="e01598">
+								<p>Mode selection icon/lever</p>
+							</li>
+							<li>
+								<p>Air conditioning icon</p>
+							</li>
+							<li id="e01599">
+								<p>Front-windshield defroster icon (Touch the icon one more time to deselect the front windshield defroster function. The <term translate="no">AUTO</term> sign will illuminate on the information display once again.)</p>
+							</li>
+							<li id="e01600">
+								<p>Fan speed control icon/lever</p>
+							</li>
+						</ul>
+						<p>The selected function will be controlled manually while other functions operate automatically.</p>
+					</li>
+					<li id="e01601">
+						<p>For your convenience and to improve the effectiveness of the climate control, use the <term translate="no">AUTO</term> icon and set the temperature to 22 °C (72 °F).</p>
+					</li>
+					<li>
+						<p>Never place anything over the sensor located on the instrument panel to ensure better control of the heating and cooling system.</p>
+					</li>
+					<li>
+						<p>To help improve microphone voice input sound, fan speed may automatically slow down for a couple of minutes when you activate voice recognition or hands free.</p>
+					</li>
+					<li>
+						<p>When charging or right after charging the high voltage battery, the cooling will be made using air conditioner system in order to control the high voltage battery temperature.</p>
+						<p>At this time, the noise might occur by the air conditioner compressor and cooling fan, but this is due to normal operation.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

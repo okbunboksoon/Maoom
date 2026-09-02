@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00398">
+	<title>Instrument cluster display for warning message</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>idle stop and go (ISG)
+					<indexterm>malfunction indicator</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="all" rowsep="1" colsep="1" pgwide="1" outputclass="formatc" id="e02655">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="2.343*"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1">
+							<p>Message</p>
+						</entry>
+						<entry colname="col2">
+							<p>Description</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<p><uicontrol>Auto Stop is Off. Shift to P or N and start engine manually.</uicontrol></p>
+						</entry>
+						<entry colname="col2">
+							<p>The system may require the engine to manually restart when the light on the ISG <term translate="no">OFF</term> button will appear and If your vehicle is equipped with <uicontrol>AUTO STOP</uicontrol> display, warning message comes on continuously.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<p><uicontrol>Press brake pedal to deactivate AUTO HOLD</uicontrol></p>
+						</entry>
+						<entry colname="col2">
+							<p>The engine will not restart if the gear is moved from N (Neutral) to D (Drive), Manual mode, or R (Reverse) without depressing the brake pedal while the engine is automatically stopped. In this case, the engine will restart when the brake pedal is pressed.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="caution" id="e02656">
+			<p>If any warning message on the instrument cluster continues to blink, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00394.dita#t00394" role="parent" scope="local" type="concept">
+				<linktext>Idle Stop and Go (ISG)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00703">
+	<title>Parking Safety button</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV055018.eps" placement="break" width="2.243in"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ul id="e04553">
+								<li>
+									<p>Press the Parking Safety button (<image align="left" height="0.117in" href="../../images/WKIA_087.eps" outputclass="nolabel" placement="inline" width="0.117in" id="e04554"/>) to turn on Forward/Side/Reverse Parking Distance Warning.</p>
+								</li>
+								<li>
+									<p>Press the button again to turn off the function.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the gear is shift to R (Reverse), Parking Distance Warning will automatically turn on (Parking Safety button indicator on).</p>
+	</conbody>
+</concept>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00515">
+	<title>Blind-Spot Collision-Avoidance Assist malfunction</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03417">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03418">
+								<image href="images/OCL4M055096N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03419">
+								<li>
+									<p><uicontrol>Check Driver Assistance system.</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When Blind-Spot Collision-Avoidance Assist is not working properly, the Master warning light (<image href="images/WKIA_040.jpg" scale="15" align="left" placement="inline"/>) appears on the instrument cluster, along with a warning message, which lasts for several seconds. If this occurs, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03420">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03421">
+								<image href="images/OCL4M055102N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03422">
+								<li>
+									<p><uicontrol>Check side view mirror warning light</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the outside rearview mirror warning light is not working properly, the Master warning light (<image href="images/WKIA_040.jpg" scale="15" align="left" placement="inline"/>) appears on the instrument cluster, along with a warning message, which lasts for several seconds. If this occurs, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00514.dita#t00514" role="parent" scope="local" type="concept">
+				<linktext>Blind-Spot Collision-Avoidance Assist malfunction and limitations</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

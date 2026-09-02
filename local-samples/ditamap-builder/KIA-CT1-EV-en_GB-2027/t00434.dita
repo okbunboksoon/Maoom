@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00434">
+	<title>Adjusting regenerative braking with paddle shifter</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>regenerative braking system 
+					<indexterm>adjusting regenerative braking with paddle shifter</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01737">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01738">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25D018_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01739">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Z054.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Pull the left side (<image href="../../images/WKIA_291.eps" scale="15" align="left" placement="inline"/>) of the paddle shifter to increase regenerative braking and deceleration.</p>
+				</li>
+				<li>
+					<p>Pull the right side (<image href="../../images/WKIA_292.eps" scale="15" align="left" placement="inline"/>) of the paddle shifter to decrease regenerative braking and deceleration.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Non-operating condition(s)</title>
+			<ul>
+				<li>
+					<p>The left side (<image href="../../images/WKIA_291.eps" scale="15" align="left" placement="inline"/>) and right side (<image href="../../images/WKIA_292.eps" scale="15" align="left" placement="inline"/>) of paddle shifters are pulled simultaneously.</p>
+				</li>
+				<li>
+					<p>The trailer is installed.</p>
+				</li>
+				<li>
+					<p>Cruise Control or Smart Cruise Control is operating.</p>
+				</li>
+				<li>
+					<p>The regenerative braking system is activated in 100% charge.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Regenerative braking system according to DRIVE MODE</title>
+			<ul>
+				<li>
+					<p>Initial setting of the regenerative braking level and adjustable range vary according to the selected drive mode.</p>
+				</li>
+				<li>
+					<p>The setting will return to 1 when the vehicle is restarted from 0.</p>
+				</li>
+				<li>
+					<p>For more details, refer to <xref type="concept" href="t00445.dita#t00445">Drive mode integrated control system</xref>.</p>
+				</li>
+			</ul>
+			<table colsep="1" frame="none" outputclass="formatc" rowsep="1">
+				<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="51*"/>
+					<colspec colname="col2" colnum="2" colwidth="49*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1">
+								<p>Drive mode</p>
+							</entry>
+							<entry colname="col2">
+								<p>Adjustable range</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p> <term translate="no">ECO</term> </p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>0–3</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p> <term translate="no">NORMAL</term> </p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>0–3</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p> <term translate="no">SPORT</term> </p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>0–3</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p> <term translate="no">MY DRIVE</term> </p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>0–3</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" colname="col1" valign="middle">
+								<p> <term translate="no">SNOW</term> </p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>0–1</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+</concept>

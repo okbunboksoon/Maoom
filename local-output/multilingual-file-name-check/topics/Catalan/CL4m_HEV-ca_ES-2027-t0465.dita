@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0465">
+	<title>Kollisionswarnung</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034112N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Kollisionswarnung</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Bei der Kollisionswarnung kann der Fahrer durch das Blinken der Notlenkungswarnleuchte (<image align="left" href="../../images/WKIA_077.eps" scale="15" placement="inline"/>), eine Warnmeldung, ein akustisches Warnsignal und Lenkradvibrationen (ausstattungsabhängig) gewarnt werden.</p>
+		<p>Die Kollisionswarnung wird unter folgenden Bedingungen aktiviert.</p>
+		<ul>
+			<li>
+				<p>Fahrgeschwindigkeit: Etwa 40-145km/h (25-90 mph)</p>
+			</li>
+			<li>
+				<p>Entgegenkommendes Fahrzeug oder motorisiertes Zweirad: Über etwa 10 km/h (6 mph)</p>
+			</li>
+			<li>
+				<p>Relative Geschwindigkeit: Unter etwa 200 km/h (124 mph)</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0464.dita#CL4m_HEV-ca_ES-2027-t0464" role="parent" scope="local" type="concept">
+				<linktext>Funktion Fahrspurwechsel bei Gegenverkehr</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

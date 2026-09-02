@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0170">
+	<title id="e00489">Waschanlagensteuerung </title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Typ A</title>
+								<figgroup>
+									<image align="center" href="../../images/ONQ5035063L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00490">
+								<title>Typ B</title>
+								<figgroup>
+									<image align="center" href="../../images/ONQ5035062L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e00491">
+								<title>Typ C</title>
+								<figgroup>
+									<image align="center" href="../../images/ONQ5035062R.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<ol>
+				<li>
+					<p>Bringen Sie den Regler für die Wischergeschwindigkeit in Position <term translate="no">OFF</term> (O).</p>
+				</li>
+				<li>
+					<p>So sprühen Sie die Waschflüssigkeit auf die Windschutzscheibe:</p>
+					<ul>
+						<li>
+							<p>Frontscheibe (1): Ziehen Sie den Schalthebel auf sich zu.</p>
+						</li>
+						<li>
+							<p>Heckscheibe (2): Drücken Sie den Schalthebel von sich weg.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Wiederholen Sie Schritt 2 mehrmals.</p>
+				</li>
+			</ol>
+			<p>Wenn die Waschanlage nicht funktioniert, überprüfen Sie den Flüssigkeitsfüllstand der Waschanlage. Wenn der Füllstand nicht ausreicht, müssen Sie geeignete, nicht scheuernde Windschutzscheiben-Waschflüssigkeit in den Flüssigkeitstank nachfüllen.</p>
+			<p>Der Füllstützen des Tanks befindet sich vorn im Motorraum auf der Beifahrerseite.</p>
+			<note type="warning" id="e00492">
+				<p>Betätigen Sie die Scheibenwaschanlage bei Frost erst, nachdem Sie die Windschutzscheibe mit den Lüftungsdüsen erwärmt haben. Die Waschflüssigkeit könnte sonst auf der Scheibe gefrieren und Ihre Sicht behindern.</p>
+			</note>
+			<note type="caution" id="e00493">
+				<ul id="e00494">
+					<li>
+						<p>Um mögliche Schäden an der Pumpe der Waschanlage zu vermeiden, betätigen Sie die Waschanlage nicht bei leerem Flüssigkeitstank.</p>
+					</li>
+					<li id="e00495">
+						<p>Um zu vermeiden, dass Scheibenwischer und/oder Windschutzscheibe beschädigt werden, betätigen Sie die Scheibenwischer nicht, wenn die Windschutzscheibe trocken ist.</p>
+					</li>
+					<li id="e00496">
+						<p>Reinigen Sie Wischerblätter nicht mit Benzin oder aggressiven Lösemitteln wie Nitroverdünnung usw., damit sie nicht beschädigt werden.</p>
+					</li>
+					<li id="e00497">
+						<p>Um Schäden an den Scheibenwischerarmen und anderen Komponenten zu vermeiden, versuchen Sie nicht, die Scheibenwischer von Hand zu bewegen.</p>
+					</li>
+					<li id="e00498">
+						<p>Um eine Beschädigung der Scheibenwisch- und Waschanlage zu vermeiden, verwenden Sie im Winter und bei kalter Witterung Waschflüssigkeit mit Frostschutzmittel.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0169.dita#CL4m_HEV-ca_ES-2027-t0169" role="parent" scope="local" type="concept">
+				<linktext>Waschanlage</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

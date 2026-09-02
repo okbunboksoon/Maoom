@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00387">
+	<title>Manual mode</title>
+	<shortdesc>In manual mode, moving the shift lever forward or backward allows quick gear changes. Unlike manual transmission, gearshifts can be made even while the accelerator pedal is depressed.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>dual clutch transmission (DCT)
+					<indexterm>manual mode</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02580">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02581">
+								<image href="images/N_SP327_C09_007.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Select manual mode by pushing the gear shift lever from D (Drive) into the manual gate. To return to D (Drive) range operation, push the gear shift lever back into the main gate.</p>
+		<p>In manual mode, moving the shift lever back and forth allows you to shift gears rapidly. Unlike a manual transmission, manual mode allows you to shift gears while engaging the accelerator pedal.</p>
+		<ul id="e02582">
+			<li>
+				<p>Up (+): Push the lever forward once to shift up 1 gear.</p>
+			</li>
+			<li>
+				<p>Down (-): Pull the lever backward once to shift down 1 gear.</p>
+			</li>
+		</ul>
+		<note type="tip" id="e02583">
+			<ul id="e02584">
+				<li id="e02585">
+					<p>Shift the gear upward according to the driving conditions, taking care to keep the engine speed (rpm) appropriately.</p>
+				</li>
+				<li>
+					<p>You can only select the <?oxy_comment_start author="june" timestamp="20250814T165127+0900" comment="No. of gears"?> 8 <?oxy_comment_end?> forward gears. To reverse or park your vehicle, move the gear shift lever to R (Reverse) or P (Park) as required.</p>
+				</li>
+				<li>
+					<p>The gear shifts down automatically when you slow down your vehicle. When you stop your vehicle, the 1st gear is selected automatically.</p>
+				</li>
+				<li>
+					<p>When the engine speed (rpm) is too high, the gear shift points are varied to shift up automatically.</p>
+				</li>
+				<li>
+					<p>To maintain the required levels of vehicle performance and safety, the system may not execute certain shifts between gears when you operate the gear shift lever.</p>
+				</li>
+				<li>
+					<p>When driving on a slippery road, push the gear shift lever forward into the Up (+) position so that the transmission shifts up 1 gear, which helps with smooth driving on slippery roads. To shift back, push the gear shift lever into Down (-) position.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00384.dita#t00384" role="parent" scope="local" type="concept">
+				<linktext>Dual clutch transmission (DCT)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

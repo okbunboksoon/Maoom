@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="CL4m_HEV-ca_ES-2027-t0314">
+	<title>Wenn das Schutznetz nicht verwendet wird:</title>
+	<taskbody>
+		<steps>
+			<step>
+				<cmd>Entfernen Sie den Haken, indem Sie ihn durch die großen Öffnungen ziehen.</cmd>
+			</step>
+			<step>
+				<cmd>Lösen Sie die unteren Riemen auf beiden Seiten des Netzes von den Haken am Boden.</cmd>
+			</step>
+		</steps>
+		<postreq>
+			<note type="note">
+				<p>Vor Entfernen des Schutznetzes muss zunächst die Kofferraumabdeckung entfernt werden.</p>
+			</note>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0313.dita#CL4m_HEV-ca_ES-2027-t0313" role="parent" scope="local" type="task">
+				<linktext>Schutznetz verwenden</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

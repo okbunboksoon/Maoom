@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00697">
+	<title>Lane Following Assist</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Z119.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>If the vehicle ahead and/or both lane markings are detected and Your driving speed is below 160 km/h (110 mph), the green (<image align="left" href="../../images/WKIA_011.eps" scale="15" placement="inline"/>) indicator light appears on the cluster, and Lane Following Assist helps center the vehicle in the lane by assisting the steering wheel.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="caution">
+			<p>When the steering wheel is not assisted, the white (<image align="left" href="../../images/WKIA_011.eps" scale="15" placement="inline"/>) indicator light blinks and change to gray.</p>
+		</note>
+	</conbody>
+</concept>

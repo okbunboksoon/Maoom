@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00132">
+	<title>Auto reverse function</title>
+	<conbody>
+		<p> 
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00634">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00635">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25C065_1.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e00636">
+									<li>
+										<p>Outside rearview mirror select switch</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table> The outside rear view mirror will move downwards when the vehicle is in R (Reverse) position to assist reverse parking.</p>
+		<section deliveryTarget="except_digital" id="e00637">
+			<title>Simple operation</title>
+			<ul id="e00638">
+				<li>
+					<p>Press the outside rear view mirror switch to L or R.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00639">
+			<title>Operation</title>
+			<ul id="e00640">
+				<li>
+					<p>The outside rearview mirror select switch (1) position determines the mirror movement:</p>
+					<ul id="e00641">
+						<li>
+							<p>L/R: Outside rear view mirrors will move.</p>
+						</li>
+						<li>
+							<p>Center: Outside rear view mirrors will not move.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

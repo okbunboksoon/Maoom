@@ -12,6 +12,11 @@ const berAsisTobeState = {
     editingCell: null
 };
 
+const projectDbStates = {
+    text: {items: [], filteredItems: [], editingCell: null, dataTable: null},
+    note: {items: [], filteredItems: [], editingCell: null, dataTable: null}
+};
+
 /*
  * 관리자 > QSG DB 화면 상태.
  *
@@ -92,6 +97,10 @@ const berAsisTobeSection =
 // QSG DB 메뉴 클릭 시 보여줄 관리자 섹션. 실제 HTML은 admin/section/qsgDb.html에 있다.
 const qsgDbSection =
     document.getElementById('qsgDbSection');
+const projectTextDbSection =
+    document.getElementById('projectTextDbSection');
+const projectNoteDbSection =
+    document.getElementById('projectNoteDbSection');
 const replaceDarkSymbolSection =
     document.getElementById('replaceDarkSymbolSection');
 const projectLogSection =
@@ -134,6 +143,47 @@ const berUsCount =
     document.getElementById('berUsCount');
 const berFilteredCount =
     document.getElementById('berFilteredCount');
+const projectDbConfigs = {
+    text: {
+        displayName: 'TEXT DB',
+        urlBase: '/admin/project-text-db',
+        section: projectTextDbSection,
+        tableSelector: '#projectTextDbTable',
+        tableBody: document.getElementById('projectTextDbTableBody'),
+        summary: document.getElementById('projectTextDbSummary'),
+        refresh: document.getElementById('projectTextDbRefresh'),
+        importForm: document.getElementById('projectTextDbImportForm'),
+        importFile: document.getElementById('projectTextDbImportFile'),
+        importButton: document.getElementById('projectTextDbImportButton'),
+        importResult: document.getElementById('projectTextDbImportResult'),
+        totalCount: document.getElementById('projectTextTotalCount'),
+        egCount: document.getElementById('projectTextEgCount'),
+        koCount: document.getElementById('projectTextKoCount'),
+        otherCount: document.getElementById('projectTextOtherCount'),
+        filteredCount: document.getElementById('projectTextFilteredCount')
+    },
+    note: {
+        displayName: 'NOTE DB',
+        urlBase: '/admin/project-note-db',
+        section: projectNoteDbSection,
+        tableSelector: '#projectNoteDbTable',
+        tableBody: document.getElementById('projectNoteDbTableBody'),
+        summary: document.getElementById('projectNoteDbSummary'),
+        refresh: document.getElementById('projectNoteDbRefresh'),
+        importForm: document.getElementById('projectNoteDbImportForm'),
+        importFile: document.getElementById('projectNoteDbImportFile'),
+        importButton: document.getElementById('projectNoteDbImportButton'),
+        importResult: document.getElementById('projectNoteDbImportResult'),
+        totalCount: document.getElementById('projectNoteTotalCount'),
+        egCount: document.getElementById('projectNoteEgCount'),
+        koCount: document.getElementById('projectNoteKoCount'),
+        warningCount: document.getElementById('projectNoteWarningCount'),
+        cautionCount: document.getElementById('projectNoteCautionCount'),
+        noteCount: document.getElementById('projectNoteNoteCount'),
+        tipCount: document.getElementById('projectNoteTipCount'),
+        filteredCount: document.getElementById('projectNoteFilteredCount')
+    }
+};
 // QSG DB 화면의 테이블 본문, 요약 문구, 상단 통계 카드.
 const qsgDbTableBody =
     document.getElementById('qsgDbTableBody');
@@ -412,12 +462,16 @@ function switchAdminView(view){
     const isBerAsisTobeView = view === 'ber-asis-tobe';
     // 사이드바의 data-admin-view="qsg-db" 버튼과 연결되는 QSG DB 화면 분기.
     const isQsgDbView = view === 'qsg-db';
+    const isProjectTextDbView = view === 'project-text-db';
+    const isProjectNoteDbView = view === 'project-note-db';
     const isReplaceDarkSymbolView = view === 'replace-dark-symbol';
     const isLogView = view === 'project-logs';
     const isUserView = view === 'users';
     colorCheckSection.hidden = !isColorCheckView;
     berAsisTobeSection.hidden = !isBerAsisTobeView;
     qsgDbSection.hidden = !isQsgDbView;
+    projectTextDbSection.hidden = !isProjectTextDbView;
+    projectNoteDbSection.hidden = !isProjectNoteDbView;
     replaceDarkSymbolSection.hidden = !isReplaceDarkSymbolView;
     projectLogSection.hidden = !isLogView;
     userSection.hidden = !isUserView;
@@ -438,6 +492,12 @@ function switchAdminView(view){
      */
     if(isQsgDbView && qsgDbState.items.length === 0){
         loadQsgDbItems();
+    }
+    if(isProjectTextDbView && projectDbStates.text.items.length === 0){
+        loadProjectDbItems('text');
+    }
+    if(isProjectNoteDbView && projectDbStates.note.items.length === 0){
+        loadProjectDbItems('note');
     }
     if(isReplaceDarkSymbolView
             && replaceDarkSymbolState.items.length === 0){
@@ -501,6 +561,15 @@ function updateBerAsisTobeFilteredCount(){
     }
     const info = berAsisTobeDataTable.page.info();
     updateBerAsisTobeSummary(info.recordsDisplay);
+}
+
+function updateProjectDbFilteredCount(dbType){
+    const state = projectDbStates[dbType];
+    if(!state.dataTable){
+        return;
+    }
+    const info = state.dataTable.page.info();
+    updateProjectDbSummary(dbType, info.recordsDisplay);
 }
 
 function updateQsgDbFilteredCount(){
@@ -601,6 +670,67 @@ function initQsgDbDataTable(){
         drawCallback: updateQsgDbFilteredCount
     });
     updateQsgDbFilteredCount();
+}
+
+function initProjectDbDataTable(dbType){
+    if(dbType === 'note'){
+        initNoteDbDataTable();
+        return;
+    }
+    const state = projectDbStates[dbType];
+    const config = projectDbConfigs[dbType];
+    if(!window.jQuery || !jQuery.fn || !jQuery.fn.DataTable){
+        updateProjectDbSummary(dbType, state.filteredItems.length);
+        return;
+    }
+
+    state.dataTable = $(config.tableSelector).DataTable({
+        language: dataTableLanguage(),
+        pageLength: 50,
+        autoWidth: false,
+        order: [ [0, 'asc'] ],
+        columnDefs: [
+            {targets: [0, 1, 5, 6], className: 'text-center'},
+            {targets: [6], orderable: false, searchable: false},
+            {targets: [0], width: '70px'},
+            {targets: [1], width: '90px'},
+            {targets: [2], width: '520px'},
+            {targets: [3, 4], width: '360px'},
+            {targets: [5], width: '140px'},
+            {targets: [6], width: '90px'}
+        ],
+        drawCallback: () => updateProjectDbFilteredCount(dbType)
+    });
+    updateProjectDbFilteredCount(dbType);
+}
+
+function initNoteDbDataTable(){
+    const state = projectDbStates.note;
+    const config = projectDbConfigs.note;
+    if(!window.jQuery || !jQuery.fn || !jQuery.fn.DataTable){
+        updateProjectDbSummary('note', state.filteredItems.length);
+        return;
+    }
+
+    state.dataTable = $(config.tableSelector).DataTable({
+        language: dataTableLanguage(),
+        pageLength: 50,
+        autoWidth: false,
+        order: [ [0, 'asc'] ],
+        columnDefs: [
+            {targets: [0, 1, 3, 5, 6], className: 'text-center'},
+            {targets: [6], orderable: false, searchable: false},
+            {targets: [0], width: '70px'},
+            {targets: [1], width: '70px'},
+            {targets: [2], width: '320px'},
+            {targets: [3], width: '80px'},
+            {targets: [4], width: '620px'},
+            {targets: [5], width: '150px'},
+            {targets: [6], width: '90px'}
+        ],
+        drawCallback: () => updateProjectDbFilteredCount('note')
+    });
+    updateProjectDbFilteredCount('note');
 }
 
 function initReplaceDarkSymbolDataTable(){
@@ -1122,6 +1252,332 @@ function applyBerAsisTobeFilter(){
     renderBerAsisTobeTable();
 }
 
+function renderProjectDbTable(dbType){
+    if(dbType === 'note'){
+        renderNoteDbTable();
+        return;
+    }
+    const state = projectDbStates[dbType];
+    const config = projectDbConfigs[dbType];
+    destroyDataTable(state.dataTable);
+    state.dataTable = null;
+    config.tableBody.innerHTML = '';
+
+    state.filteredItems.forEach((item, index) => {
+        const row = document.createElement('tr');
+        const values = [
+            index + 1,
+            safeText(item.region),
+            safeText(item.hash),
+            safeText(item.oldText),
+            safeText(item.newText),
+            formatDate(item.updatedAt),
+            ''
+        ];
+
+        values.forEach((value, columnIndex) => {
+            const cell = document.createElement('td');
+            if(columnIndex === 1){
+                cell.className = 'ber-region-cell';
+                cell.textContent = value;
+            }else if(columnIndex === 2){
+                cell.className = 'ber-hash-cell';
+                cell.textContent = value;
+                if(value !== '-'){
+                    cell.title = value;
+                }
+            }else if(columnIndex === 3 || columnIndex === 4){
+                cell.className = 'ber-long-text-cell';
+                const textBox = document.createElement('div');
+                textBox.className = 'ber-clamped-text';
+                textBox.textContent = value;
+                cell.appendChild(textBox);
+                cell.title = value;
+            }else if(columnIndex === 6){
+                const actions = document.createElement('div');
+                actions.className = 'admin-row-actions';
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'admin-icon-btn danger';
+                deleteButton.type = 'button';
+                deleteButton.title = '삭제';
+                deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+                deleteButton.addEventListener(
+                    'click',
+                    () => deleteProjectDbItem(dbType, item));
+                actions.appendChild(deleteButton);
+                cell.appendChild(actions);
+            }else{
+                cell.textContent = value;
+            }
+            row.appendChild(cell);
+        });
+
+        config.tableBody.appendChild(row);
+    });
+    initProjectDbDataTable(dbType);
+}
+
+function renderNoteDbTable(){
+    const state = projectDbStates.note;
+    const config = projectDbConfigs.note;
+    destroyDataTable(state.dataTable);
+    state.dataTable = null;
+    config.tableBody.innerHTML = '';
+
+    state.filteredItems.forEach((item, index) => {
+        const row = document.createElement('tr');
+        const values = [
+            index + 1,
+            safeText(item.region),
+            safeText(item.hash),
+            safeText(noteDbType(item)),
+            safeText(noteDbText(item)),
+            formatDate(item.updatedAt),
+            ''
+        ];
+
+        values.forEach((value, columnIndex) => {
+            const cell = document.createElement('td');
+            if(columnIndex === 2){
+                cell.className = 'ber-hash-cell';
+                cell.textContent = value;
+                if(value !== '-'){
+                    cell.title = value;
+                }
+            }else if(columnIndex === 1 || columnIndex === 3 || columnIndex === 4){
+                cell.className = columnIndex === 1 || columnIndex === 3
+                    ? 'ber-region-cell'
+                    : 'ber-long-text-cell';
+                const textBox = document.createElement('div');
+                textBox.className = columnIndex === 1 || columnIndex === 3
+                    ? ''
+                    : 'ber-clamped-text';
+                textBox.textContent = value;
+                cell.appendChild(textBox);
+                if(columnIndex === 3){
+                    cell.classList.add('admin-editable-cell');
+                    cell.title = value === '-'
+                        ? '더블클릭해서 수정'
+                        : value + '\n\n더블클릭해서 수정';
+                    cell.addEventListener('dblclick', () => {
+                        startProjectDbCellEdit(
+                                'note',
+                                cell,
+                                item,
+                                'noteType');
+                    });
+                }else{
+                    cell.title = value;
+                }
+            }else if(columnIndex === 6){
+                const actions = document.createElement('div');
+                actions.className = 'admin-row-actions';
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'admin-icon-btn danger';
+                deleteButton.type = 'button';
+                deleteButton.title = '삭제';
+                deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+                deleteButton.addEventListener(
+                    'click',
+                    () => deleteProjectDbItem('note', item));
+                actions.appendChild(deleteButton);
+                cell.appendChild(actions);
+            }else{
+                cell.textContent = value;
+            }
+            row.appendChild(cell);
+        });
+
+        config.tableBody.appendChild(row);
+    });
+    initNoteDbDataTable();
+}
+
+function noteDbType(item){
+    return item.noteType || item.note_type || item.type || '';
+}
+
+function noteDbText(item){
+    return item.noteText || item.note_text || item.text || '';
+}
+
+function startProjectDbCellEdit(dbType, cell, item, field){
+    const state = projectDbStates[dbType];
+    const config = projectDbConfigs[dbType];
+    if(state.editingCell){
+        return;
+    }
+
+    const originalValue = item[field] || '';
+    state.editingCell = cell;
+    cell.innerHTML = '';
+    cell.title = '';
+
+    const editor = document.createElement('textarea');
+    editor.className = 'admin-inline-editor ber-inline-editor';
+    editor.value = originalValue;
+
+    let closed = false;
+    const finish = async shouldSave => {
+        if(closed){
+            return;
+        }
+        closed = true;
+        const value = editor.value;
+
+        if(!shouldSave || value === originalValue){
+            restoreProjectDbCell(cell, originalValue);
+            state.editingCell = null;
+            return;
+        }
+
+        try{
+            const updatedItem = await saveProjectDbField(
+                    dbType,
+                    item,
+                    field,
+                    value);
+            Object.assign(item, updatedItem);
+            restoreProjectDbCell(cell, updatedItem[field] || '');
+        }catch(error){
+            restoreProjectDbCell(cell, originalValue);
+            config.summary.textContent =
+                    error.message || config.displayName + ' 항목을 저장하지 못했습니다.';
+        }finally{
+            state.editingCell = null;
+        }
+    };
+
+    editor.addEventListener('keydown', event => {
+        if(event.key === 'Escape'){
+            event.preventDefault();
+            finish(false);
+        }
+        if((event.ctrlKey || event.metaKey) && event.key === 'Enter'){
+            event.preventDefault();
+            editor.blur();
+        }
+    });
+    editor.addEventListener('blur', () => finish(true));
+    cell.appendChild(editor);
+    editor.focus();
+    editor.select();
+}
+
+function restoreProjectDbCell(cell, value){
+    cell.innerHTML = '';
+    const textBox = document.createElement('div');
+    textBox.className = 'ber-clamped-text';
+    const displayValue = value || '-';
+    textBox.textContent = displayValue;
+    cell.appendChild(textBox);
+    cell.title = displayValue === '-'
+        ? '더블클릭해서 수정'
+        : displayValue + '\n\n더블클릭해서 수정';
+}
+
+async function saveProjectDbField(dbType, item, field, value){
+    const config = projectDbConfigs[dbType];
+    const payload = dbType === 'note'
+        ? {
+            region:item.region || 'EG',
+            hash:item.hash,
+            noteType:noteDbType(item),
+            noteText:noteDbText(item)
+        }
+        : {
+        region:item.region,
+        hash:item.hash,
+        oldText:item.oldText || '',
+        newText:item.newText || ''
+    };
+    payload[field] = value;
+
+    const response = await fetch(config.urlBase + '/items', {
+        method:'PUT',
+        headers:{
+            'Content-Type':'application/json',
+            'Accept':'application/json'
+        },
+        body:JSON.stringify(payload)
+    });
+
+    if(!response.ok){
+        throw new Error(await response.text());
+    }
+
+    return response.json();
+}
+
+function updateProjectDbSummary(dbType, showing){
+    const state = projectDbStates[dbType];
+    const config = projectDbConfigs[dbType];
+    const total = state.items.length;
+    if(dbType === 'note'){
+        const egCount = state.items.filter(item => item.region === 'EG').length;
+        const koCount = state.items.filter(item => item.region === 'KO').length;
+        const warningCount = state.items
+            .filter(item => noteDbType(item) === 'warning').length;
+        const cautionCount = state.items
+            .filter(item => noteDbType(item) === 'caution').length;
+        const noteCount = state.items
+            .filter(item => noteDbType(item) === 'note').length;
+        const tipCount = state.items
+            .filter(item => noteDbType(item) === 'tip').length;
+        config.summary.textContent = total === showing
+            ? '총 ' + total.toLocaleString('ko-KR') + '건'
+            : '총 ' + total.toLocaleString('ko-KR') + '건 중 '
+                + showing.toLocaleString('ko-KR') + '건 표시';
+        config.totalCount.textContent = total.toLocaleString('ko-KR');
+        config.egCount.textContent = egCount.toLocaleString('ko-KR');
+        config.koCount.textContent = koCount.toLocaleString('ko-KR');
+        config.warningCount.textContent =
+            warningCount.toLocaleString('ko-KR');
+        config.cautionCount.textContent =
+            cautionCount.toLocaleString('ko-KR');
+        config.noteCount.textContent = noteCount.toLocaleString('ko-KR');
+        config.tipCount.textContent = tipCount.toLocaleString('ko-KR');
+        config.filteredCount.textContent = showing.toLocaleString('ko-KR');
+        return;
+    }
+    if(dbType === 'text'){
+        const egCount = state.items.filter(item => item.region === 'EG').length;
+        const koCount = state.items.filter(item => item.region === 'KO').length;
+        const otherCount = total - egCount - koCount;
+        config.summary.textContent = total === showing
+            ? '총 ' + total.toLocaleString('ko-KR') + '건'
+            : '총 ' + total.toLocaleString('ko-KR') + '건 중 '
+                + showing.toLocaleString('ko-KR') + '건 표시';
+        config.totalCount.textContent = total.toLocaleString('ko-KR');
+        config.egCount.textContent = egCount.toLocaleString('ko-KR');
+        config.koCount.textContent = koCount.toLocaleString('ko-KR');
+        config.otherCount.textContent = otherCount.toLocaleString('ko-KR');
+        config.filteredCount.textContent = showing.toLocaleString('ko-KR');
+        return;
+    }
+    const euCount = state.items.filter(item => item.region === 'EU').length;
+    const euRgCount = state.items
+        .filter(item => item.region === 'EU_RG').length;
+    const usCount = state.items.filter(item => item.region === 'US').length;
+
+    config.summary.textContent = total === showing
+        ? '총 ' + total.toLocaleString('ko-KR') + '건'
+        : '총 ' + total.toLocaleString('ko-KR') + '건 중 '
+            + showing.toLocaleString('ko-KR') + '건 표시';
+    config.totalCount.textContent = total.toLocaleString('ko-KR');
+    config.euCount.textContent = euCount.toLocaleString('ko-KR');
+    config.euRgCount.textContent = euRgCount.toLocaleString('ko-KR');
+    config.usCount.textContent = usCount.toLocaleString('ko-KR');
+    config.filteredCount.textContent = showing.toLocaleString('ko-KR');
+}
+
+function applyProjectDbFilter(dbType){
+    const state = projectDbStates[dbType];
+    state.filteredItems = [...state.items];
+    updateProjectDbSummary(dbType, state.filteredItems.length);
+    renderProjectDbTable(dbType);
+}
+
 function renderQsgDbTable(){
     destroyDataTable(qsgDbDataTable);
     qsgDbDataTable = null;
@@ -1598,6 +2054,197 @@ async function deleteBerAsisTobeItem(item){
     }
 }
 
+async function loadProjectDbItems(dbType){
+    const state = projectDbStates[dbType];
+    const config = projectDbConfigs[dbType];
+    config.refresh.disabled = true;
+    config.summary.textContent = config.displayName + '를 불러오는 중입니다.';
+
+    try{
+        const response = await fetch(config.urlBase + '/items', {
+            headers:{'Accept':'application/json'}
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        state.items = await response.json();
+        applyProjectDbFilter(dbType);
+    }catch(error){
+        config.tableBody.innerHTML = '';
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.colSpan = 7;
+        cell.className = 'admin-empty-cell';
+        cell.textContent = config.displayName + '를 불러오지 못했습니다.';
+        row.appendChild(cell);
+        config.tableBody.appendChild(row);
+        config.summary.textContent =
+            error.message || '조회 중 오류가 발생했습니다.';
+    }finally{
+        config.refresh.disabled = false;
+    }
+}
+
+async function deleteProjectDbItem(dbType, item){
+    const config = projectDbConfigs[dbType];
+    if(dbType === 'note'){
+        const region = item.region || '';
+        const hash = item.hash || '';
+        if(!region || !hash || !confirm(region + ' / ' + hash + ' 항목을 삭제할까요?')){
+            return;
+        }
+
+        try{
+            const response = await fetch(
+                config.urlBase
+                + '/items/'
+                + encodeURIComponent(region)
+                + '/'
+                + encodeURIComponent(hash),
+                {method:'DELETE'});
+
+            if(!response.ok){
+                throw new Error(await response.text());
+            }
+
+            await loadProjectDbItems(dbType);
+        }catch(error){
+            config.summary.textContent =
+                error.message || '삭제하지 못했습니다.';
+        }
+        return;
+    }
+
+    const region = item.region || '';
+    const hash = item.hash || '';
+
+    if(!region
+            || !hash
+            || !confirm(region + ' / ' + hash + ' 항목을 삭제할까요?')){
+        return;
+    }
+
+    try{
+        const response = await fetch(
+            config.urlBase
+                + '/items/'
+                + encodeURIComponent(region)
+                + '/'
+                + encodeURIComponent(hash),
+            {method:'DELETE'});
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        await loadProjectDbItems(dbType);
+    }catch(error){
+        config.summary.textContent =
+            error.message || '삭제하지 못했습니다.';
+    }
+}
+
+function setProjectDbImportResult(dbType, message, details){
+    const config = projectDbConfigs[dbType];
+    config.importResult.hidden = false;
+    config.importResult.innerHTML = '';
+
+    const summaryLine = document.createElement('div');
+    summaryLine.className = 'admin-import-result-summary';
+    summaryLine.textContent = message;
+    config.importResult.appendChild(summaryLine);
+
+    if(details && details.length > 0){
+        const list = document.createElement('ul');
+        details.slice(0, 5).forEach(detail => {
+            const item = document.createElement('li');
+            item.textContent = '행 '
+                + detail.excelRowNumber
+                + ' - '
+                + safeText(detail.region)
+                + ' / '
+                + safeText(detail.hash)
+                + ': '
+                + safeText(detail.note || detail.status);
+            list.appendChild(item);
+        });
+
+        if(details.length > 5){
+            const item = document.createElement('li');
+            item.textContent = '외 '
+                + (details.length - 5).toLocaleString('ko-KR')
+                + '건';
+            list.appendChild(item);
+        }
+
+        config.importResult.appendChild(list);
+    }
+}
+
+async function importProjectDbExcel(dbType, event){
+    if(event){
+        event.preventDefault();
+    }
+
+    const config = projectDbConfigs[dbType];
+    const file = config.importFile.files && config.importFile.files[0];
+    if(!file){
+        setProjectDbImportResult(
+                dbType,
+                '업로드할 엑셀 파일을 선택해 주세요.');
+        config.importFile.focus();
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('file', file);
+    config.importButton.disabled = true;
+    setProjectDbImportResult(
+            dbType,
+            config.displayName
+                + (dbType === 'note'
+                    ? ' XML을 업로드하는 중입니다.'
+                    : ' 엑셀을 업로드하는 중입니다.'));
+
+    try{
+        const response = await fetch(config.urlBase + '/import', {
+            method:'POST',
+            headers:{'Accept':'application/json'},
+            body:formData
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        const result = await response.json();
+        const skippedDetails = (result.details || [])
+            .filter(detail => detail.status === '제외');
+        setProjectDbImportResult(
+            dbType,
+            '업로드 완료: 신규 '
+                + result.insertedCount.toLocaleString('ko-KR')
+                + '건, 수정 '
+                + result.updatedCount.toLocaleString('ko-KR')
+                + '건, 변경 없음 '
+                + result.unchangedCount.toLocaleString('ko-KR')
+                + '건, 제외 '
+                + result.skippedCount.toLocaleString('ko-KR')
+                + '건',
+            skippedDetails);
+        config.importFile.value = '';
+        await loadProjectDbItems(dbType);
+    }catch(error){
+        setProjectDbImportResult(
+                dbType,
+                error.message || '엑셀 업로드에 실패했습니다.');
+    }finally{
+        config.importButton.disabled = false;
+    }
+}
+
 function setBerAsisTobeImportResult(message, details){
     berAsisTobeImportResult.hidden = false;
     berAsisTobeImportResult.innerHTML = '';
@@ -1693,6 +2340,30 @@ function openBerSentenceImportPopup(){
     const popup = window.open(
         '/admin/ber-asis-tobe/sentence-import-popup',
         'berSentenceImportPopup',
+        'width=680,height=500'
+    );
+
+    if(popup){
+        popup.focus();
+    }
+}
+
+function openNoteDbImportPopup(){
+    const popup = window.open(
+        '/admin/project-note-db/import-popup',
+        'noteDbImportPopup',
+        'width=680,height=500'
+    );
+
+    if(popup){
+        popup.focus();
+    }
+}
+
+function openTextDbImportPopup(){
+    const popup = window.open(
+        '/admin/project-text-db/import-popup',
+        'textDbImportPopup',
         'width=680,height=500'
     );
 
@@ -2298,6 +2969,39 @@ qsgDbRefresh.addEventListener('click', loadQsgDbItems);
 qsgDbImportForm.addEventListener('submit', importQsgDbExcel);
 qsgDbImportButton.addEventListener('click', () => qsgDbImportFile.click());
 qsgDbImportFile.addEventListener('change', importQsgDbExcel);
+Object.keys(projectDbConfigs).forEach(dbType => {
+    const config = projectDbConfigs[dbType];
+    config.refresh.addEventListener(
+        'click',
+        () => loadProjectDbItems(dbType));
+    if(dbType === 'text'){
+        config.importForm.addEventListener('submit', event => {
+            event.preventDefault();
+            openTextDbImportPopup();
+        });
+        config.importButton.addEventListener(
+            'click',
+            openTextDbImportPopup);
+    }else if(dbType === 'note'){
+        config.importForm.addEventListener('submit', event => {
+            event.preventDefault();
+            openNoteDbImportPopup();
+        });
+        config.importButton.addEventListener(
+            'click',
+            openNoteDbImportPopup);
+    }else{
+        config.importForm.addEventListener(
+            'submit',
+            event => importProjectDbExcel(dbType, event));
+        config.importButton.addEventListener(
+            'click',
+            () => config.importFile.click());
+        config.importFile.addEventListener(
+            'change',
+            event => importProjectDbExcel(dbType, event));
+    }
+});
 replaceDarkSymbolRefresh.addEventListener('click', loadReplaceDarkSymbolItems);
 window.addEventListener('message', function(event){
     if(event.origin !== window.location.origin){
@@ -2305,6 +3009,12 @@ window.addEventListener('message', function(event){
     }
     if(event.data && event.data.type === 'BER_SENTENCE_IMPORT_DONE'){
         loadBerAsisTobeItems();
+    }
+    if(event.data && event.data.type === 'NOTE_DB_IMPORT_DONE'){
+        loadProjectDbItems('note');
+    }
+    if(event.data && event.data.type === 'TEXT_DB_IMPORT_DONE'){
+        loadProjectDbItems('text');
     }
 });
 userRefresh.addEventListener('click', loadUsers);

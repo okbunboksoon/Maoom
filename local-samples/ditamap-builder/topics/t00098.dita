@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00098">
+	<title>Comfort stretching</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00696">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00697">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV025086.eps" placement="break" width="2.244in" id="e00698"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_print" id="e00699">
+			<title>Operation</title>
+			<ul id="e00700">
+				<li>
+					<p>Each time the comfort stretch control switch located on the driver’s door is pressed, the mode changes in the following order and is displayed on the infotainment system screen.</p>
+					<ul id="e00701">
+						<li>
+							<p> <uicontrol>Pelvic stretching</uicontrol>: The cushion part moves to help the pelvis move left and right.</p>
+						</li>
+						<li>
+							<p> <uicontrol>Lumbar stretching</uicontrol>: The lumbar support moves and helps exercise the back and front of the waist.</p>
+						</li>
+						<li>
+							<p> <uicontrol>Whole body stretching</uicontrol>: The cushion and lumbar support move sequentially to help the whole body exercise to relieve fatigue.</p>
+						</li>
+						<li>
+							<p> <uicontrol>Off</uicontrol>: Disable the comfort stretching function.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Comfort Stretching can be turned off by pressing the switch for approximately 1 second or longer during comfort stretching operation.</p>
+				</li>
+				<li>
+					<p>During the operation of the Comfort Stretching function, press any of the seat adjustment switches (cushion support, lumbar support, bolster adjustment device), so the operation stops.</p>
+				</li>
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Seats</uicontrol><uicontrol>Ergo-motion seat</uicontrol><uicontrol>Comfortable stretch</uicontrol></menucascade> from the infotainment system to change the intensity and duration of the comfort stretching feature.</p>
+					<ul id="e00702">
+						<li>
+							<p>Intensity: <uicontrol>Normal</uicontrol> / <uicontrol>Strong</uicontrol> </p>
+						</li>
+						<li>
+							<p>Duration: <uicontrol>Short (10 min.)</uicontrol>, <uicontrol>Normal (15 min.)</uicontrol>, <uicontrol>Long (20 min.)</uicontrol> </p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

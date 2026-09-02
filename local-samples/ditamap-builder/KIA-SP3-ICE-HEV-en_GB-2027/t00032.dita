@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" otherprops="legalnotice_europe-general_egall_2023_20230101_00023" id="t00032">
+	<title>Fuel label</title>
+	<shortdesc>The fuel label is attached on the fuel filler door.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>fuel label</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<fig id="e00138">
+			<title>For Europe</title>
+			<figgroup>
+				<image href="images/N_SP327_D03_004_E.jpg" scale="100" align="center" placement="break"/>
+			</figgroup>
+		</fig>
+		<fig id="e00139">
+			<title>Except Europe</title>
+			<figgroup>
+				<image href="images/N_SP327_D03_005_E.jpg" scale="100" align="center" placement="break"/>
+			</figgroup>
+		</fig>
+		<ul id="e00140">
+			<li>
+				<p>(A). Octane rating of unleaded Gasoline (Gasoline)</p>
+				<ol id="e00141">
+					<li>
+						<p>RON/ROZ: Research Octane Number</p>
+					</li>
+					<li>
+						<p>(R+M)/2, AKI: Anti Knock Index</p>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<p>(B). Identifiers for Gasoline-type fuels</p>
+				<p>This symbol means usable fuel. Do not use any other fuel.</p>
+			</li>
+			<li>
+				<p>(C). For further details, refer to Fuel requirements.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00015.dita#t00015" role="parent" scope="local" type="concept">
+				<linktext>Specifications </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00618">
+	<title>Leading Vehicle Departure Alert</title>
+	<conbody>
+		<p>Warning message: <uicontrol>Leading vehicle is driving on</uicontrol> </p>
+		<p>When a detected vehicle in front departs from a stop, Leading Vehicle Departure Alert will inform the driver by displaying the warning message on the cluster and an audible warning will sound.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>If any other function’s warning message is displayed or audible warning is generated, Leading Vehicle Departure Alert’s warning message may not be displayed and audible warning may not be generated.</p>
+				</li>
+				<li>
+					<p>The driver should hold the responsibility to safely drive and control the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Leading Vehicle Departure Alert is a supplemental function and may not alert the driver whenever the front vehicle departs from a stop.</p>
+				</li>
+				<li>
+					<p>Always check the front of the vehicle and road conditions before departure.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>The images and colors in the instrument cluster may differ depending on the cluster type or theme selected from the settings menu.</p>
+		</note>
+	</conbody>
+</concept>

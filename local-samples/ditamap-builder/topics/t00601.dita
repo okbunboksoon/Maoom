@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00601">
+	<title>Limitations of Smart Cruise Control</title>
+	<conbody>
+		<p>Smart Cruise Control may not operate normally under the following circumstances:</p>
+		<ul>
+			<li>
+				<p>The detecting sensor or the surroundings are contaminated or damaged</p>
+			</li>
+			<li>
+				<p>Washer fluid is continuously sprayed, or the wiper is on</p>
+			</li>
+			<li>
+				<p>The camera lens is contaminated due to tinted, filmed or coated windshield, damaged glass, or sticky foreign material (sticker, bug, etc.) on the glass</p>
+			</li>
+			<li>
+				<p>If the surface of the glass is not clean or has imperfections such as scratches</p>
+			</li>
+			<li>
+				<p>Moisture is not removed or frozen on the windshield</p>
+			</li>
+			<li>
+				<p>The field of view of the front view camera is obstructed by sun glare</p>
+			</li>
+			<li>
+				<p>Streetlight or light from an oncoming vehicle is reflected on the wet road surface, such as a puddle on the road</p>
+			</li>
+			<li>
+				<p>The temperature around the front view camera is high or low</p>
+			</li>
+			<li>
+				<p>An object is placed on the instrument panel</p>
+			</li>
+			<li>
+				<p>The surrounding is very bright</p>
+			</li>
+			<li>
+				<p>The surrounding is very dark, such as in a tunnel, etc.</p>
+			</li>
+			<li>
+				<p>The brightness changes suddenly, for example when entering or exiting a tunnel</p>
+			</li>
+			<li>
+				<p>The brightness outside is low, and the headlamps are not on or are not bright</p>
+			</li>
+			<li>
+				<p>Driving in heavy rain or snow, or thick fog</p>
+			</li>
+			<li>
+				<p>Driving through steam, smoke, or shadow</p>
+			</li>
+			<li>
+				<p>Only part of the vehicle is detected</p>
+			</li>
+			<li>
+				<p>The vehicle in front has no tail lights, tail lights are located unusually, etc.</p>
+			</li>
+			<li>
+				<p>The brightness outside is low, and the tail lights are not on or are not bright</p>
+			</li>
+			<li>
+				<p>The rear of the front vehicle is small or does not look normal (for example, tilted, overturned, etc.)</p>
+			</li>
+			<li>
+				<p>The front vehicle’s ground clearance is low or high</p>
+			</li>
+			<li>
+				<p>A vehicle suddenly cuts in front</p>
+			</li>
+			<li>
+				<p>Your vehicle is being towed</p>
+			</li>
+			<li>
+				<p>An object reflecting off the front radar such as a guardrail, nearby vehicle, etc.</p>
+			</li>
+			<li>
+				<p>When a shape projected onto water or reflective objects on the road is recognized as an actual object</p>
+			</li>
+			<li>
+				<p>When small particles such as sand contaminate the road surface with a color different from that of the lane</p>
+			</li>
+			<li>
+				<p>When the type of detected object differs from the actual object</p>
+			</li>
+			<li>
+				<p>The bumper around the front radar is impacted, damaged, or the front radar is out of position</p>
+			</li>
+			<li>
+				<p>The temperature around the front radar is high or low</p>
+			</li>
+			<li>
+				<p>When objects that strongly reflect the front radar, such as guardrails or nearby vehicles, are present near the target</p>
+			</li>
+			<li>
+				<p>When the target is made of a material that poorly reflects the front radar</p>
+			</li>
+			<li>
+				<p>When there is a low-lying or small-sized obstacle in front of the vehicle</p>
+			</li>
+			<li>
+				<p>The vehicle in front is made of material that does not reflect on the front radar</p>
+			</li>
+			<li>
+				<p>Driving near a highway (or motorway) interchange or tollgate</p>
+			</li>
+			<li>
+				<p>Driving on a slippery surface due to snow, water puddle, ice, etc.</p>
+			</li>
+			<li>
+				<p>Driving on a curved road</p>
+			</li>
+			<li>
+				<p>The vehicle in front is detected late</p>
+			</li>
+			<li>
+				<p>The vehicle in front is suddenly blocked by an obstacle</p>
+			</li>
+			<li>
+				<p>The vehicle in front suddenly changes a lane or suddenly reduces speed</p>
+			</li>
+			<li>
+				<p>The vehicle in front is bent out of shape</p>
+			</li>
+			<li>
+				<p>The front vehicle’s speed is fast or slow</p>
+			</li>
+			<li>
+				<p>With a vehicle in front, your vehicle changes a lane suddenly at low speed</p>
+			</li>
+			<li>
+				<p>The vehicle in front is covered with snow</p>
+			</li>
+			<li>
+				<p>Unstable driving</p>
+			</li>
+			<li>
+				<p>You are on a roundabout and the vehicle in front is not detected</p>
+			</li>
+			<li>
+				<p>You are continuously driving in a circle</p>
+			</li>
+			<li>
+				<p>The adverse road conditions cause excessive vehicle vibrations while driving</p>
+			</li>
+			<li>
+				<p>Your vehicle height is low or high due to heavy loads, abnormal tire pressure, etc.</p>
+			</li>
+			<li>
+				<p>Driving in following places</p>
+				<ul>
+					<li>
+						<p>Driving in a car park</p>
+					</li>
+					<li>
+						<p>Driving through a construction area, unpaved road, partial paved road, uneven road, speed bumps, etc.</p>
+					</li>
+					<li>
+						<p>Driving on an inclined road, curved road, etc.</p>
+					</li>
+					<li>
+						<p>Driving through a roadside with trees or streetlights</p>
+					</li>
+					<li>
+						<p>Driving through a narrow road where trees or grass are overgrown</p>
+					</li>
+					<li>
+						<p>There is interference by electromagnetic waves, such as driving in an area with strong radio waves or electrical noise</p>
+					</li>
+					<li>
+						<p>Driving on a curved road</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Driving through a tunnel or iron bridge</p>
+			</li>
+			<li>
+				<p>Driving near areas containing metal substances, such as a construction zone, railroad, etc.</p>
+			</li>
+			<li>
+				<p>Driving in vast areas where there are few vehicles or structures (for example, desert, meadow, suburb, etc.)</p>
+				<ul>
+					<li>
+						<p>Driving through steam, smoke, or shadow</p>
+					</li>
+					<li>
+						<p>Driving near a highway (or motorway) interchange or tollgate</p>
+					</li>
+					<li>
+						<p>Driving near areas containing metal substances, such as a construction zone, railroad, etc.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1">
+							<p>Limitations</p>
+						</entry>
+						<entry colname="col2">
+							<p>Details</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<title>Driving on a curved road</title>
+								<figgroup>
+									<image align="center" href="../../images/OOV055053_2.eps" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>On curves, Smart Cruise Control may not detect a vehicle in the same lane, and may accelerate to the set speed. Also, vehicle speed may rapidly decrease when the vehicle ahead is detected suddenly.</p>
+							<p>Select the appropriate set speed on curves and apply the brake pedal or accelerator pedal according to the road and driving conditions ahead.</p>
+							<p>Your vehicle speed can be reduced due to a vehicle in the adjacent lane.</p>
+							<p>Check to be sure that the road conditions permit safe operation of Smart Cruise Control and if necessary, depress the brake pedal to reduce your driving speed in order to maintain a safe distance</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<title>Driving on an inclined road</title>
+								<figgroup>
+									<image align="center" href="../../images/OOV055054.eps" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>During uphill or downhill driving, the Smart Cruise Control may not detect a moving vehicle in your lane, and cause your vehicle to accelerate to the set speed. Also, vehicle speed will rapidly decrease when the vehicle ahead is detected suddenly.</p>
+							<p>Select the appropriate set speed on inclines and apply the brake pedal or accelerator pedal according to the road and driving conditions ahead.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<title>Changing lanes</title>
+								<figgroup>
+									<image align="center" href="../../images/OOV055032.eps" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Your vehicle,</p>
+								</li>
+								<li>
+									<p>Lane changing vehicle</p>
+								</li>
+							</ol>
+							<p>When a vehicle (2) moves into your lane from an adjacent lane, it cannot be detected by the sensor until it is in the sensor’s detection range. Smart Cruise Control may not immediately detect the vehicle when the vehicle changes lanes abruptly. In this case, you must maintain a safe braking distance, and if necessary, depress the brake pedal to reduce your driving speed in order to maintain a safe distance.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<title>Detecting a vehicle</title>
+								<figgroup>
+									<image align="center" href="../../images/OOV055033.eps" placement="break"/>
+								</figgroup>
+							</fig>
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OOV055034_2.eps" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>In the following cases, some vehicles in your lane cannot be detected by the sensor:</p>
+							<ul>
+								<li>
+									<p>Vehicles offset to one side</p>
+								</li>
+								<li>
+									<p>Slow-moving vehicles or sudden-decelerating vehicles</p>
+								</li>
+								<li>
+									<p>Vehicles with higher ground clearance or vehicles carrying loads that stick out of the back of the vehicle</p>
+								</li>
+								<li>
+									<p>Vehicles that have the front lifted due to heavy loads</p>
+								</li>
+								<li>
+									<p>Vehicles within approximately 2 m (6 ft.) from your vehicle</p>
+								</li>
+								<li>
+									<p>Oncoming vehicles</p>
+								</li>
+								<li>
+									<p>Stopped vehicles</p>
+								</li>
+								<li>
+									<p>Vehicles with small rear profile, such as trailers</p>
+								</li>
+								<li>
+									<p>Narrow vehicles, such as motorcycles, bicycles, or powered two-wheelers</p>
+								</li>
+								<li>
+									<p>Special vehicles</p>
+								</li>
+								<li>
+									<p>Animals and pedestrians</p>
+								</li>
+							</ul>
+							<p>In the following cases, the vehicle in front cannot be detected by the sensor. Always pay attention to the road and driving conditions and drive safely. If necessary, adjust your vehicle speed.</p>
+							<ul>
+								<li>
+									<p>You are steering your vehicle</p>
+								</li>
+								<li>
+									<p>Driving on narrow or sharply curved roads</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<title>When a vehicle ahead disappears at an intersection</title>
+								<figgroup>
+									<image align="center" href="../../images/OOV055055.eps" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>When a vehicle ahead disappears at an intersection, your vehicle may accelerate.</p>
+							<p>Always pay attention to road and driving conditions while driving.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<title>When a vehicle in front of you merges out of the lane</title>
+								<figgroup>
+									<image align="center" href="../../images/OOV055056.eps" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>When a vehicle in front of you merges out of the lane, Smart Cruise Control may not immediately detect the new vehicle that is now in front of you.</p>
+							<p>Always pay attention to road and driving conditions while driving.</p>
+						</entry>
+					</row>
+					<row rowsep="0" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<title>Always look out for pedestrians</title>
+								<figgroup>
+									<image align="center" href="../../images/OOV055050.eps" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Always look out for pedestrians when your vehicle is maintaining a distance with the vehicle ahead.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

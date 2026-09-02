@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00026">
+	<title>Vehicle Identification Number (VIN)</title>
+	<shortdesc>Use your Vehicle Identification Number (VIN) to register your vehicle and in all legal matters pertaining to ownership.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications
+					<indexterm>vehicle identification number (VIN)</indexterm>
+				</indexterm>
+				<indexterm>vehicle identification number (VIN)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" otherprops="legalnotice_europe-general_gen-mid_2023_20230101_00005" id="e00110">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00111">
+								<title>VIN</title>
+								<image href="images/N_SP3i25_D03_002_1_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The VIN is punched into the floor underneath the passenger (or driver) seat. To check the VIN, open the cover.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00112">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00113">
+								<title>VIN label</title>
+								<image href="images/N_SP327_D03_001.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The VIN is also on a plate attached to the top of the instrument panel. You can see the VIN on the plate through the windshield from outside.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00015.dita#t00015" role="parent" scope="local" type="concept">
+				<linktext>Specifications </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

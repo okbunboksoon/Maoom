@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0384">
+	<title>Auto Hold-Funktion anwenden</title>
+	<conbody>
+		<ol>
+			<li>
+				<p>Betätigen Sie zum Starten des Fahrzeugs das Bremspedal.</p>
+			</li>
+			<li>
+				<p>Drücken Sie die Auto Hold-Taste. Die weiße <term translate="no">AUTO HOLD</term>-Kontrollleuchte leuchtet und zeigt damit an, dass das System betriebsbereit ist.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M045011L_2.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Bevor Auto Hold eingreift, müssen die Fahrertür und die Motorhaube geschlossen sein.</p>
+			</li>
+		</ol>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M044013N_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn Sie das Fahrzeug vollständig mit dem Bremspedal anhalten, wechselt die Farbe der <term translate="no">AUTO HOLD</term>-Kontrollleuchte von Weiß zu Grün, was die Aktivierung der <term translate="no">AUTO HOLD</term>-Funktion anzeigt. Das Fahrzeug bleibt stehen, selbst wenn Sie das Bremspedal freigeben.</p>
+		<p>Wenn <term translate="no">EPB</term> betätigt ist, wird Auto Hold freigegeben.</p>
+		<p>Wenn Sie das Gaspedal betätigen, während sich der Schalthebel im Fahrmodus D (Fahren) oder im manuellen Modus befindet, wird der Auto Hold automatisch aufgehoben und das Fahrzeug setzt sich in Bewegung. Die Kontrollleuchte wechselt von Grün zu Weiß und zeigt damit an, dass Auto Hold betriebsbereit ist und die <term translate="no">EPB</term> gelöst wurde.</p>
+		<p>Achten Sie immer auf Ihre Umgebung, wenn Sie das Gaspedal betätigen und aus dem Auto Hold losfahren.</p>
+		<p>Treten Sie langsam auf das Gaspedal, um einen sanften Start zu ermöglichen.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0383.dita#CL4m_HEV-ca_ES-2027-t0383" role="parent" scope="local" type="concept">
+				<linktext>AUTO HOLD</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00654">
+	<title>Setting vehicle distance</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25E057_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Each time the button is pressed, the headway changes as follows:</p>
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/ODEEV078136NR.eps" scale="95" outputclass="nolabel" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>For example, if you drive at 90 km/h (56 mph), the distance is maintained as follows:</p>
+		<ul>
+			<li>
+				<p>Distance 4: approximately 52.5 m (172 ft)</p>
+			</li>
+			<li>
+				<p>Distance 3: approximately 40 m (130 ft)</p>
+			</li>
+			<li>
+				<p>Distance 2: approximately 32.5 m (106 ft)</p>
+			</li>
+			<li>
+				<p>Distance 1: approximately 25 m (82 ft)</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>The distance is set to the last set distance when the vehicle is restarted, or when Smart Cruise Control was temporarily canceled.</p>
+		</note>
+	</conbody>
+</concept>

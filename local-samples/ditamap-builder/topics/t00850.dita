@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00850">
+	<title id="e05312">Vehicle certification label</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>vehicle certification label</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05313">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05314">
+								<title>Type A</title>
+								<figgroup>
+									<image href="../../images/OOV085002.eps" align="center" height="1.740in" placement="break" id="e05315"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="fig_opz_43s_n3c">
+								<title>Type B</title>
+								<figgroup>
+									<image href="../../images/OOV085003.eps" align="center" height="1.740in" placement="break" id="image_ppz_43s_n3c"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The vehicle certification label attached on the driver’s (or front passenger’s) side center pillar gives the vehicle identification number (VIN).</p>
+	</conbody>
+</concept>

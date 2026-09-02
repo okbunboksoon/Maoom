@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00052">
+	<title>Setting the charge level of the portable charger</title>
+	<conbody>
+		<section deliveryTarget="except_digital" id="e00313">
+			<title>Simple operation</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00314">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00315">
+									<figgroup>
+										<image align="center" height="1.575in" href="../../images/OOVQ015062.eps" placement="break" width="2.244in" id="e00316"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e00317">
+									<figgroup>
+										<image align="center" height="1.575in" href="../../images/OOVQ015063.eps" placement="break" width="2.244in" id="e00318"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol id="e00319">
+				<li>
+					<p>Check the rated current of the household electric outlet and connect the plug to it.</p>
+				</li>
+				<li>
+					<p>Press the button (1) on the back of the control box for 2 to 8 seconds.</p>
+				</li>
+				<li>
+					<p>Press the button (1) several times until the display window shows the charge level needed.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print" id="e00320">
+			<title>Operation</title>
+			<ol id="e00321">
+				<li>
+					<p>Check the rated current of the electric outlet prior to connecting the plug to the outlet.</p>
+				</li>
+				<li>
+					<p>Connect the plug to a household electric outlet.</p>
+				</li>
+				<li>
+					<p>Check the display window on the control box.</p>
+				</li>
+				<li>
+					<p>Press the button (1) on the control box for 2 to 8 seconds to adjust the charge level. (Refer to charging cable type and example for setting the charge level.)</p>
+				</li>
+				<li>
+					<p>The charge level on the display window of the control box changes every time you press the button (1).</p>
+				</li>
+				<li>
+					<p>When setting the charge level is complete, start charging according to the portable charge procedure.</p>
+				</li>
+			</ol>
+		</section>
+		<section id="e00322">
+			<title>Example for setting the ICCB charge level</title>
+			<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1" id="e00323">
+				<desc>
+					<p importance="default">The example is only for reference and may vary according to the surrounding environment.</p>
+				</desc>
+				<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="1*"/>
+					<colspec colname="col2" colnum="2" colwidth="1*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1">
+								<p>Outlet current</p>
+							</entry>
+							<entry colname="col2">
+								<p>ICCB charge level</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>8–9A</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>6A</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>10–11A</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>8A</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>12–13A</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>10A</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>14–16A</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>12A</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+</concept>

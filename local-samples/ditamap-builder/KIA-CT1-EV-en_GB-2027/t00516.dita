@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00516">
+	<title>Collision Warning</title>
+	<conbody>
+		<p>Collision Warning will alert the driver with the Forward Safety warning light (<image href="../../images/WKIA_037.eps" scale="15" align="left" placement="inline"/>) blinking, a warning message, an audible warning and steering wheel vibration.</p>
+		<p>Warning message: <uicontrol>Collision warning!</uicontrol> </p>
+		<p>The collision warning system operates under the following vehicle speed conditions, depending on the vehicle in front.</p>
+		<ul>
+			<li>
+				<p>Vehicle or powered two-wheeler: 10–200 km/h (6–124 mph)</p>
+			</li>
+			<li>
+				<p>Pedestrian or cyclist: 10–85 km/h (6–53 mph)</p>
+			</li>
+			<li>
+				<p>The target enters the operating area of the function.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

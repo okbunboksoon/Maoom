@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00484">
+	<title>Lane Safety</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03305">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03306">
+								<image href="images/N_TK25Z013_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03307">
+								<li>
+									<p><uicontrol>Driver Assistance</uicontrol></p>
+								</li>
+								<li>
+									<p><uicontrol>Driving Safety</uicontrol></p>
+								</li>
+								<li>
+									<p><uicontrol>Lane Safety</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>While the vehicle is <term translate="no">ON</term>, tap <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver Assistance</uicontrol><uicontrol>Driving Safety</uicontrol></menucascade> on the infotainment system screen to change the Lane Safety settings.</p>
+		<p><uicontrol>Lane Safety</uicontrol>: When a potential lane departure is detected, the system assists with steering to prevent you from leaving the lane. If you leave the lane, the system alerts you with an audible sound and steering wheel vibration (if equipped). If you deselect Lane Safety, the indicator light (<image href="images/WKIA_198.jpg" scale="15" align="left" placement="inline"/>) turns yellow.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Lane Keeping Assist does not control the steering wheel when you drive in the middle of the lane.</p>
+				</li>
+				<li>
+					<p>You should always be aware of the surroundings and steer the vehicle if Lane Safety is deselected.</p>
+				</li>
+				<li>
+					<p><b>Except Middle East</b></p>
+					<p>When the vehicle is restarted, Lane Keeping Assist always turns on and Lane safety is automatically selected.</p>
+				</li>
+				<li>
+					<p><b>For Middle East</b></p>
+					<p>When the vehicle is restarted, the Lane safety will maintain the last setting.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip">
+			<ul id="e03308">
+				<li>
+					<p>Pressing the Lane Driving Assist button (<image href="images/WKIA_274.jpg" scale="15" align="left" placement="inline"/>) for more than 2 seconds turns <term translate="no">OFF</term> Lane Keeping Assist and deactivates Lane Safety.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00483.dita#t00483" role="parent" scope="local" type="concept">
+				<linktext>Lane Keeping Assist settings</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00270">
+	<title>Vehicles with smart key system</title>
+	<taskbody>
+		<steps>
+			<step>
+				<cmd>Carry the smart key or leave it inside the vehicle.</cmd>
+			</step>
+			<step>
+				<cmd>Make sure that the parking brake is firmly applied.</cmd>
+			</step>
+			<step>
+				<cmd>Shift the gear to P (Park). You cannot start the vehicle if the gear is in N (Neutral).</cmd>
+			</step>
+			<step>
+				<cmd>Engage the brake pedal.</cmd>
+			</step>
+			<step>
+				<cmd>Press the <term translate="no">ENGINE START/STOP</term> button. If the hybrid system starts, the <term translate="no">READY</term> indicator displays.</cmd>
+				<info>
+					<p>The engine should start without engaging the accelerator whether the engine is cold or warm.</p>
+				</info>
+			</step>
+		</steps>
+		<postreq>
+			<p>After you follow the starting procedure, the <term translate="no">READY</term> indicator displays on the instrument cluster.</p>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00269.dita#t00269" role="parent" scope="local" type="concept">
+				<linktext>Starting the vehicle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

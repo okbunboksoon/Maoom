@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00089">
+	<title>Emergency tailgate safety release</title>
+	<taskbody>
+		<context id="e00431">
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00432">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00433">
+									<image href="images/N_SP327_B03_005_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e00434">
+									<image href="images/N_SP327_B03_006_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To unlock and open the tailgate manually from inside the luggage compartment, perform the following procedure:</p>
+		</context>
+		<steps id="e00435">
+			<step>
+				<cmd>Remove the cover at the bottom of the tailgate.</cmd>
+			</step>
+			<step>
+				<cmd>Slide the latch in the direction of the arrow to unlock the tailgate.</cmd>
+			</step>
+			<step>
+				<cmd>Push the tailgate to open it.</cmd>
+				<info>
+					<note type="warning" id="e00436">
+						<ul id="e00437">
+							<li>
+								<p>In case of emergency, be fully aware of: 
+									<ul id="e00438">
+										<li>
+											<p>the location of the emergency tailgate safety release latch in the vehicle</p>
+										</li>
+										<li>
+											<p>how to open the tailgate if you are accidentally locked in the luggage compartment</p>
+										</li>
+									</ul>
+								</p>
+							</li>
+							<li>
+								<p>No one, including animals, should be allowed to occupy the luggage compartment of the vehicle at any time. The luggage compartment is a very dangerous location in the event of an accident.</p>
+							</li>
+							<li>
+								<p>Use the release latch for emergencies only. Use extreme caution, especially while the vehicle is in motion.</p>
+							</li>
+						</ul>
+					</note>
+				</info>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00078.dita#t00078" role="parent" scope="local" type="concept">
+				<linktext>Power tailgate</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

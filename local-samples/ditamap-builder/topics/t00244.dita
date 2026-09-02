@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00244">
+	<title>Sunroof open warning</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>wide sunroof 
+					<indexterm>sunroof open warning</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01789">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01790">
+								<figgroup>
+									<image align="center" height="1.575in" placement="break" href="../../images/OOV035102.eps" id="e01791"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>If the driver turns off the vehicle when the sunroof is not fully closed, the warning chime will sound for several seconds and the sunroof open warning will appear on the cluster LCD display.</p>
+		<p>Close the sunroof securely when leaving your vehicle.</p>
+		<note deliveryTarget="except_print" type="caution" id="e01792">
+			<p>Make sure the sunroof is closed fully when leaving your vehicle.</p>
+			<p>If the sunroof is left open, rain or snow may wet the interior of the vehicle. Also, leaving the sunroof open when the vehicle is unattended may invite theft.</p>
+		</note>
+	</conbody>
+</concept>

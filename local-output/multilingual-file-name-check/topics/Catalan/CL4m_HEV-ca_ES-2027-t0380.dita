@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0380">
+	<title>Feststellbremse betätigen</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M045009L_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Zum manuellen Betätigen der EPB (elektronischen Feststellbremse):</title>
+			<ol>
+				<li>
+					<p>Halten Sie das Fahrzeug an.</p>
+				</li>
+				<li>
+					<p>Treten Sie das Bremspedal und ziehen Sie den <term translate="no">EPB</term>-Schalter hoch. Achten Sie darauf, dass die Kontrollleuchte aufleuchtet.</p>
+				</li>
+			</ol>
+		</section>
+		<section>
+			<title>Die EPB kann automatisch betätigt werden, wenn:</title>
+			<ul>
+				<li>
+					<p>Von anderen Systemen angefordert.</p>
+				</li>
+				<li>
+					<p>Wenn die Fahrertür bei laufendem Motor geöffnet wird, kann die <term translate="no">EPB</term> automatisch aktiviert werden.</p>
+				</li>
+				<li>
+					<p>Wenn der Fahrer die <term translate="no">EPB</term> bei Motor in Position <term translate="no">ON</term> betätigt und dann den Motor abstellt, kann die <term translate="no">EPB</term> automatisch wieder betätigt werden.</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M034136N.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<p><term translate="no">A</term>: Feststellbremse automatisch angezogen</p>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>Wenn der Fahrer den Motor versehentlich abstellt, während Auto Hold (ausstattungsabhängig) in Betrieb ist, wird die <term translate="no">EPB</term> automatisch betätigt. Wenn der Fahrer jedoch den Motor abstellt und den <term translate="no">EPB</term>-Schalter innerhalb 1 Sekunde betätigt, reagiert die <term translate="no">EPB</term> nicht.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Notbremsung</title>
+			<ul>
+				<li>
+					<p>Wenn Sie beim Fahren ein Problem mit dem Bremspedal feststellen, können Sie eine Notbremsung durch Hochziehen und Halten des <term translate="no">EPB</term>-Schalters durchführen. Das Bremsen ist nur möglich, wenn Sie den <term translate="no">EPB</term>-Schalter halten. Wenn Sie den <term translate="no">EPB</term>-Schalter loslassen, geht die Bremskraft verloren. Wenn Sie den <term translate="no">EPB</term>-Schalter und den Fahrzeugstopp gedrückt halten, wird die <term translate="no">EPB</term> betätigt.</p>
+				</li>
+				<li>
+					<p>Bei einer Notbremsung durch die <term translate="no">EPB</term> leuchtet die Warnleuchte der Feststellbremse auf und es ertönen Warntöne, um anzuzeigen, dass das System in Betrieb ist.</p>
+				</li>
+				<li>
+					<p>Der Bremsweg kann länger sein als bei normaler Bremsung.</p>
+				</li>
+			</ul>
+			<p><term translate="no">EPB</term> bedeutet elektronische Feststellbremse.</p>
+			<note type="warning">
+				<p>Die Feststellbremse darf nur in einer Notsituation während der Fahrt betätigt werden. Dadurch kann das Fahrzeugsystem beschädigt und die Fahrsicherheit beeinträchtigt werden.</p>
+			</note>
+			<note type="caution">
+				<p>Wenn Sie bei einer Notbremsung mit der <term translate="no">EPB</term> ein anhaltendes Geräusch oder Brandgeruch wahrnehmen, lassen Sie das System von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0379.dita#CL4m_HEV-ca_ES-2027-t0379" role="parent" scope="local" type="concept">
+				<linktext>Elektronische Feststellbremse (EPB) </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

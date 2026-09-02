@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00517">
+	<title>Emergency Braking</title>
+	<conbody>
+		<p>Emergency braking will alert the driver with the Forward Safety warning light (<image href="../../images/WKIA_037.eps" scale="15" align="left" placement="inline"/>) blinking, a warning message, an audible warning and steering wheel vibration.</p>
+		<p>Warning message: <uicontrol>Emergency braking</uicontrol> </p>
+		<p>The brake assist will be activated to help avoid a collision with a vehicle, pedestrian, cyclist and powered two-wheeler.</p>
+		<ul>
+			<li>
+				<p>Vehicle or powered two-wheeler:</p>
+				<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+					<tgroup cols="3" colsep="1" rowsep="1" outputclass="formatc">
+						<colspec colname="newCol1" colnum="1" colwidth="1*"/>
+						<colspec colnum="2" colname="2" colwidth="1.22*"/>
+						<colspec colnum="3" colname="3" colwidth="1.35*"/>
+						<thead>
+							<row rowsep="1">
+								<entry/>
+								<entry>
+									<p>Driving target</p>
+								</entry>
+								<entry>
+									<p>Stopped target</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row rowsep="1">
+								<entry align="center">
+									<p>Weak braking power</p>
+								</entry>
+								<entry align="center" valign="middle" namest="2" nameend="3">
+									<p>10–200 km/h (6–124 mph)</p>
+								</entry>
+							</row>
+							<row rowsep="0">
+								<entry align="center" valign="middle">
+									<p>Strong braking power</p>
+								</entry>
+								<entry colname="2" align="center" valign="middle">
+									<p>10–130 km/h (6–81 mph)</p>
+								</entry>
+								<entry colname="3" align="center" valign="middle">
+									<p>10–85 km/h (6–53 mph)</p>
+									<p>(10–100 km/h (6–62 mph))*</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>*: If Forward Collision-Avoidance Assist determines that a collision cannot be avoided even by changing lanes due to the surrounding conditions of the vehicle, braking assistance is provided earlier. When the target object is stationary, Forward Collision-Avoidance Assist may operate at speeds between about 10-100 km/h (6-62 mph) (if equipped).</p>
+			</li>
+			<li>
+				<p>The pedestrian or cyclist speed is approximately 10-65 km/h (6-40 mph).</p>
+			</li>
+			<li>
+				<p>The target enters the operating area of the function.</p>
+			</li>
+		</ul>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>The function operation range may decrease due to the front traffic condition or the surroundings of the vehicle.</p>
+				</li>
+				<li>
+					<p>When driving at night, the performance of powered two-wheeler recognition is decreased, so the Forward Collision-Avoidance Assist system may be temporarily limited or may not work.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

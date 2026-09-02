@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00688">
+	<title>Rear cross-traffic safety</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/N_TK25Z006_E.eps" placement="break" width="2.244in"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol outputclass="a1804409">Driver assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1804506">Parking safety</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1804499">Rear cross-traffic safety</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle on, select <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Parking safety</uicontrol><uicontrol>Rear cross-traffic safety</uicontrol></menucascade> on the infotainment system screen to turn on Rear Cross-Traffic Collision-Avoidance Assist.</p>
+		<note type="warning">
+			<p>When the vehicle is restarted, <uicontrol>Rear Cross-Traffic Collision-Avoidance Assist</uicontrol> will automatically turn on. You can deactivate the function in the settings menu, but in that case, you will not be able to receive <uicontrol>Rear Cross-Traffic Collision-Avoidance Assist</uicontrol> from the system. Always drive with caution.</p>
+			<p>When the vehicle and the trailer are connected electrically, Rear Cross-Traffic Collision-Avoidance Assist will always turn on. However, if is deselected after the vehicle is restarted, the driver should always be aware of the surroundings and drive safely.</p>
+		</note>
+		<note type="caution" id="e04503">
+			<p>When the trailer connector is connected, Rear Cross-Traffic Collision-Avoidance Assist automatically turns off. In this case, you cannot get help from Rear Cross-Traffic Collision-Avoidance Assist. Always drive with care. (if Kia genuine part equipped)</p>
+		</note>
+	</conbody>
+</concept>

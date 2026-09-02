@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00027">
+	<title>Utility mode</title>
+	<conbody>
+		<p>The high voltage battery is used instead of the 12V auxiliary battery for operating the convenient features of the vehicle. When driving is not necessary such as while camping or when stopping the vehicle for a long time, it is possible to use the electrical devices (audio, lights, air conditioner, heater, etc.) for long hours.</p>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00154">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00155">
+								<figgroup>
+									<image href="../../images/N_CT25Q019_E.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e00156"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e00157">
+								<li>
+									<p> <uicontrol outputclass="a2008013">Utility mode</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Activate utility mode</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e00158">
+			<title>System setting and activation</title>
+			<sectiondiv><ph>System setting</ph>
+				<p>The driver can activate the Utility mode function when the following conditions are satisfied.</p>
+				<ul id="e00159">
+					<li>
+						<p outputclass="across">The vehicle is in <term translate="no">POWER ON</term>, <term translate="no">DRIVE READY</term> mode and the gear is shifted to P (Park).</p>
+					</li>
+					<li>
+						<p>The EPB (Electronic Parking Brake) is not a malfunction.</p>
+					</li>
+					<li>
+						<p outputclass="across"> <menucascade><uicontrol outputclass="a1702234">Settings</uicontrol><uicontrol outputclass="a2008013">Electric vehicle</uicontrol><uicontrol outputclass="a2008013">Utility mode</uicontrol></menucascade> is selected on the infotainment system screen.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>System activation</ph>
+				<p>When the system is activated:</p>
+				<ul id="e00160">
+					<li>
+						<p outputclass="across">The <term translate="no" outputclass="ready000">READY</term> indicator will turn off when the vehicle is in <term translate="no">DRIVE READY</term> mode. And the <term translate="no" outputclass="across">UTIL</term> indicator will appear on the cluster and the EPB is applied.</p>
+					</li>
+					<li>
+						<p>All electric devices are usable but the vehicle cannot be driven.</p>
+					</li>
+					<li>
+						<p>The EPB can not be canceled by pressing the EPB switch.</p>
+					</li>
+				</ul>
+				<p outputclass="across">Gear cannot be shifted out of P (Park). If a shift attempt is made, <uicontrol outputclass="c0117">Shifting conditions not met</uicontrol> message will be displayed on the infotainment system screen.</p>
+			</sectiondiv>
+			<sectiondiv><ph>System deactivation</ph>
+				<p outputclass="across">The Utility mode can be deactivated by pressing the EV button to the OFF position. And the function can be OFF from the <uicontrol outputclass="a1702234">Electric Vehicle</uicontrol> menu.</p>
+			</sectiondiv>
+		</section>
+	</conbody>
+</concept>

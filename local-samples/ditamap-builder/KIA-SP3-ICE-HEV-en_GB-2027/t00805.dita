@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00805">
+	<title>Spark plugs</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>scheduled maintenance items
+					<indexterm>spark plugs</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Install new spark plugs for the correct heat range.</p>
+		<p>To prevent contamination of the spark plug insulator when assembling parts, use a soft cloth to wipe the inside and outside of the boot bottom of the ignition coil and the spark plug insulator.</p>
+		<note type="caution">
+			<p>Do not disconnect and inspect spark plugs when the engine is hot. You may burn yourself.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00796.dita#t00796" role="parent" scope="local" type="concept">
+				<linktext>Explanation of scheduled maintenance items</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

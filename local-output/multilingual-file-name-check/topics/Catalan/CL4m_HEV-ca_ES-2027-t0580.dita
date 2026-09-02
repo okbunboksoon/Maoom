@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0580">
+	<title>Tempomatsteuerung ausschalten</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054007N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Drücken Sie die Fahrassistent-Taste, um die Tempomatsteuerung auszuschalten. Die Tempomat-Kontrollleuchte (<image align="left" href="../../images/WKIA_357.eps" scale="15" placement="inline"/>) erlischt.</p>
+		<p>Drücken Sie immer die Fahrassistenz-Taste, um die Tempomatsteuerung auszuschalten, wenn sie nicht benutzt wird.</p>
+		<note type="note">
+			<p>Wenn Ihr Fahrzeug mit dem manuellen Geschwindigkeitsbegrenzungsassistenten ausgestattet ist, halten Sie die Fahrassistenz-Taste gedrückt, um die Tempomatsteuerung auszuschalten. Der manuelle Geschwindigkeitsbegrenzungsassistent wird jedoch aktiviert.</p>
+		</note>
+		<note type="warning">
+			<p>Beachten Sie folgende Vorsichtsmaßnahmen, wenn Sie die Tempomatsteuerung verwenden:</p>
+			<ul>
+				<li>
+					<p>Stellen Sie die Fahrzeuggeschwindigkeit nie höher ein als die zulässige Höchstgeschwindigkeit in Ihrem Land.</p>
+				</li>
+				<li>
+					<p>Schalten Sie deshalb die Tempomatsteuerung ab, wenn sie nicht benötigt wird, um eine unbeabsichtigte Einstellung einer Geschwindigkeit zu vermeiden. Überprüfen Sie, dass die Tempomatanzeige (<image align="left" href="../../images/WKIA_357.eps" scale="15" placement="inline"/>) ausgeschaltet ist.</p>
+				</li>
+				<li>
+					<p>Die Tempomatsteuerung ersetzt nicht das richtige und sichere Fahren. Es liegt in der Verantwortung des Fahrers, immer vorsichtig zu fahren und stets mit unerwarteten oder plötzlich auftretenden Situationen zu rechnen.</p>
+				</li>
+				<li>
+					<p>Fahren Sie vorausschauend, damit keine unerwarteten oder plötzlichen Situationen auftreten können. Achten Sie immer auf die Fahrbahnbedingungen.</p>
+				</li>
+				<li>
+					<p>Benutzen Sie die Tempomatsteuerung nicht, wenn eine gleichbleibende Dauergeschwindigkeit möglicherweise nicht sicher ist:</p>
+					<ul>
+						<li>
+							<p>Bei starkem Verkehr oder schwierigen Verkehrsbedingungen kann es problematisch sein, mit konstanter Geschwindigkeit zu fahren.</p>
+						</li>
+						<li>
+							<p>Bei Fahrt auf vereisten, regennassen oder schneebedeckten Straßen</p>
+						</li>
+						<li>
+							<p>Bei Fahrten auf hügeligen oder windigen Straßen</p>
+						</li>
+						<li>
+							<p>Bei Fahrten in windigen Gebieten</p>
+						</li>
+						<li>
+							<p>Bei Fahren mit schlechter Sicht (möglicherweise aufgrund ungünstiger Witterung wie Schnee, Nebel, Regen oder Sandsturm)</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0573.dita#CL4m_HEV-ca_ES-2027-t0573" role="parent" scope="local" type="concept">
+				<linktext>Bedienung der Tempomatsteuerung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

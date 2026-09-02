@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00377">
+	<title>Adjusting the driver and passenger side temperature to the same value</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system 
+					<indexterm>adjusting the driver and passenger side temperature to the same value</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig>
+								<figgroup>
+									<image href="../../images/N_CT25C088.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Touch the <term translate="no">SYNC</term> icon. When the <term translate="no">SYNC</term> icon indicator illuminates, the passenger’s seat temperature is controlled same as the driver’s seat.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ol>
+				<li>
+					<p>Touch the <term translate="no">SYNC</term> icon.</p>
+				</li>
+				<li>
+					<p>When the <term translate="no">SYNC</term> icon indicator illuminates, the temperature control doesn't operate individually. And the climate control of the passenger’s seat will work equally to that of driver’s seat.</p>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+</concept>

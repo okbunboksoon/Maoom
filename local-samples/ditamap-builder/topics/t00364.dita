@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00364">
+	<title id="e02612">Seat warmer</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features 
+					<indexterm>seat warmer</indexterm>
+				</indexterm>
+				<indexterm>seat warmer</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02613">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry>
+							<fig id="e02614">
+								<figgroup>
+									<image href="../../images/OOV035043.eps" align="center" height="1.740in" placement="break" id="e02615"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<fig id="e02616">
+								<figgroup>
+									<image href="../../images/OOV035022.eps" align="center" height="1.740in" placement="break" id="e02617"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the <term translate="no">EV</term> button is in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position:</p>
+		<p>The seat warmer is provided to warm the front and rear seats during cold weather.</p>
+		<p>The seat warmer defaults to the OFF position whenever the <term translate="no">EV</term> button is turned on.</p>
+		<ul>
+			<li>
+				<p>Push either of the buttons to warm the front and rear seats.</p>
+			</li>
+		</ul>
+		<p>During mild weather or under conditions where the operation of the seat warmer is not needed, keep the switches in the OFF position.</p>
+		<section>
+			<sectiondiv><ph>Temperature control (Manual)</ph>
+				<ul>
+					<li>
+						<p>Each time you press the switch, the temperature setting of the seat will change as follows:</p>
+						<ul id="e02618">
+							<li>
+								<p> <term>OFF</term> &gt; <term>High</term> &gt; <term>Medium</term> &gt; <term>Low</term> &gt; <term>OFF</term> </p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>Temperature control (Automatic)</ph>
+				<p>The seat warmer starts to automatically control the seat temperature in order to prevent low-temperature burns after being manually turned ON.</p>
+				<table colsep="1" frame="none" outputclass="formatc" rowsep="1" id="e02619">
+					<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<thead>
+							<row rowsep="1">
+								<entry align="center" colname="col1" valign="middle">
+									<p>Temperature</p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>Duration</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row rowsep="1" valign="middle">
+								<entry align="center" colname="col1" valign="middle">
+									<p>OFF</p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>-</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry align="center" colname="col1" valign="middle">
+									<p>High</p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>30 minutes</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry align="center" colname="col1" valign="middle">
+									<p>Medium</p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>60 minutes</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry align="center" colname="col1" valign="middle">
+									<p>Low</p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>-</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>You may manually press the button to increase the seat temperature. However, it soon returns to the automatic mode again.</p>
+				<ul>
+					<li>
+						<p>When pressing the switch for more than 1.5 seconds with the seat warmer operating, the seat warmer will turn <i>OFF</i>.</p>
+					</li>
+				</ul>
+				<note type="note">
+					<p>With the seat warmer switch in the ON position, the heating system in the seat turns off or on automatically depending on the seat temperature.</p>
+				</note>
+				<note type="caution">
+					<ul>
+						<li>
+							<p>When cleaning the seats, do not use an organic solvent such as paint thinner, benzene, alcohol and gasoline. Doing so may damage the surface of the heater or seats.</p>
+						</li>
+						<li>
+							<p>To prevent overheating the seat warmer, do not place anything on the seats that insulates against heat, such as blankets, cushions or seat covers while the seat warmer is in operation.</p>
+						</li>
+						<li>
+							<p>Do not place heavy or sharp objects on seats equipped with seat warmers. Damage to the seat warming components could occur.</p>
+						</li>
+						<li>
+							<p>Do not change the seat cover. It may damage the seat warmer or air ventilation system.</p>
+						</li>
+					</ul>
+				</note>
+				<note type="warning">
+					<p importance="high">Seat warmer burns</p>
+					<p>Passengers should use extreme caution when using seat warmers due to the possibility of excess heating or burns. The seat warmer may cause burns even at low temperatures, especially if used for long periods of time. In particular, the driver must exercise extreme care for the following types of passengers:</p>
+					<ol>
+						<li>
+							<p>Infants, children, elderly or handicapped persons, or hospital outpatients</p>
+						</li>
+						<li>
+							<p>Persons with sensitive skin or those that burn easily</p>
+						</li>
+						<li>
+							<p>Fatigued individuals</p>
+						</li>
+						<li>
+							<p>Intoxicated individuals</p>
+						</li>
+						<li>
+							<p>Individuals taking medication that can cause drowsiness or sleepiness (sleeping pills, cold tablets, etc.)</p>
+						</li>
+					</ol>
+				</note>
+			</sectiondiv>
+		</section>
+		<section id="e02620">
+			<title>Last Mode</title>
+			<p>This function retains the temperature level of the driver’s seat warmer and ventilation seat even after the vehicle is turned off and restarted. For example, if the driver’s seat warmer was operating at Level 3 (High) before the vehicle was turned off, it will automatically resume at Level 3 (High) when the vehicle is restarted. Only the temperature levels of the driver’s seat warmer and ventilation seat are retained.</p>
+			<sectiondiv><ph>Setting Last Mode</ph>
+				<ul id="e02621">
+					<li>
+						<p>You can enable or disable this function by selecting <menucascade><uicontrol>Seats</uicontrol><uicontrol>Heated/Ventilated Convenience</uicontrol><uicontrol>Retain Driver Heated/Ventilated Settings</uicontrol></menucascade> in the infotainment system.</p>
+					</li>
+					<li>
+						<p>Settings adjusted automatically will either not be saved or will revert to the state before the change.</p>
+						<ul id="e02622">
+							<li>
+								<p>If the seat warmer temperature level is lowered due to automatic adjustment and the vehicle is turned off, the system will save the level set before the automatic lowering.</p>
+							</li>
+							<li>
+								<p>If the Smart Temperature Comfort Control System (for driver’s seat) is being activated, the temperature level will not be saved. For more information, refer to <xref href="t00347.dita#t00347"/>.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</sectiondiv>
+		</section>
+	</conbody>
+</concept>

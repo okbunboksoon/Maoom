@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA 1.3 Reference//EN" "reference.dtd">
+<reference id="t00168">
+	<title id="e01018">Indicator lights </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>warning and indicator lights
+					<indexterm>indicator lights</indexterm>
+				</indexterm>
+				<indexterm>indicator lights</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section importance="optional" id="e01019">
+			<title>Low beam indicator light <image href="images/WKIA_047.jpg" scale="15"/></title>
+			<p>This indicator light appears when the headlights are <term translate="no">ON</term>.</p>
+		</section>
+		<section id="e01020">
+			<title id="e01021">Turn signal indicator light <image href="images/WKIA_045.jpg" scale="15"/></title>
+			<p>This indicator light blinks when you engage the turn signal.</p>
+			<p>The turn signal system may be malfunctioning and should be inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner if the indicator light does any of the following:</p>
+			<ul id="e01022">
+				<li id="e01023">
+					<p>The indicator light appears but does not blink.</p>
+				</li>
+				<li id="e01024">
+					<p>The indicator light blinks more rapidly.</p>
+				</li>
+				<li id="e01025">
+					<p>The indicator light does not appear at all.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01026">
+			<title id="e01027">Immobilizer indicator light (without smart key) <image href="images/WKIA_044.jpg" scale="15"/></title>
+			<ul id="e01028">
+				<li>
+					<p>This indicator light appears when the vehicle properly detects your key’s immobilizer while the vehicle is in <term translate="no">ON</term> position. The indicator light will disappear after you start the engine.</p>
+				</li>
+				<li>
+					<p>This indicator light blinks when the immobilizer system is malfunctioning. In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+			<p>This indicator light blinks:</p>
+			<ul id="e01029">
+				<li id="e01030">
+					<p>When the immobilizer system is malfunctioning.</p>
+					<p>In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01031">
+			<title id="e01032">Immobilizer indicator light (with smart key) <image href="images/WKIA_044.jpg" scale="15"/></title>
+			<sectiondiv id="e01033">
+				<p>This indicator light appears for up to 30 seconds when the vehicle properly detects the smart key inside of the vehicle while the vehicle is in the <term translate="no">ACC</term> or <term translate="no">ON</term> position. The indicator light will disappear after you start the engine.</p>
+			</sectiondiv>
+			<sectiondiv id="e01034">
+				<p>This indicator light blinks for a few seconds when the smart key is not in the vehicle. You will not be able to start the engine.</p>
+			</sectiondiv>
+			<sectiondiv id="e01035">
+				<p>This indicator light appears for 2 seconds then disappears when the vehicle cannot detect the smart key in the vehicle and the vehicle is in <term translate="no">ON</term> position. In this case, have the vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</sectiondiv>
+			<sectiondiv><ph id="e01036">This indicator light blinks: </ph>
+				<ul id="e01037">
+					<li>
+						<p>When the smart key battery is weak. You will not be able to start the engine unless you press the <term translate="no">ENGINE START/STOP</term> button with the smart key. (For more details, refer to <xref href="t00040.dita#t00040"/>).</p>
+					</li>
+					<li>
+						<p>When the immobilizer system is malfunctioning. In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+		</section>
+		<section importance="optional" id="e01038">
+			<title>All Wheel Drive (AWD) LOCK indicator light <image href="images/WKIA_264.jpg" scale="15"/></title>
+			<p>This indicator light appears:</p>
+			<ul id="e01039">
+				<li>
+					<p>For approximately 3 seconds when you press the <term translate="no">ENGINE START/STOP</term> button in the <term translate="no">ON</term> position.</p>
+				</li>
+				<li>When you select AWD <term translate="no">LOCK</term> mode by pressing theAWD LOCKbutton. AWD LOCKmode increases drive power when driving on wet pavement, snowy roads, or offroad.</li>
+			</ul>
+			<note id="e01040"><data>
+					<title>AWD LOCK mode</title></data>
+				<p>Do not use AWD LOCKmode on dry paved roads or highways, as this can cause noise, vibration, or damage to AWD related parts.</p>
+			</note>
+		</section>
+		<section importance="optional" id="e01041">
+			<title>Front fog indicator light <image href="images/WKIA_051.jpg" scale="15"/></title>
+			<p>This indicator light appears when the front fog lights are <term translate="no">ON</term>.</p>
+		</section>
+		<section id="e01042">
+			<title>Rear fog indicator light <image href="images/WKIA_352.jpg" scale="15"/></title>
+			<p>This indicator light appears when the rear fog lights are <term translate="no">ON</term>.</p>
+		</section>
+		<section importance="optional" id="e01043">
+			<title>Drive mode indicator light (ECO/SPORT/SNOW)</title>
+			<p>This indicator light appears according to which drive mode you select.</p>
+			<p>For more details, refer to <xref href="t00424.dita#t00424"/>.</p>
+		</section>
+		<section id="e01044">
+			<title>Downhill Brake Control (DBC) indicator light <image href="images/WKIA_056.jpg" scale="15"/></title>
+			<p>This indicator light appears:</p>
+			<ul id="e01045">
+				<li>
+					<p>For approximately 3 seconds when the vehicle is in the <term translate="no">ON</term> position.</p>
+				</li>
+				<li>
+					<p>When you activate the system by pressing the DBC button.</p>
+				</li>
+			</ul>
+			<p>This indicator light blinks when DBC is operating.</p>
+			<p>This indicator light appears yellow when the DBC system is malfunctioning.</p>
+			<p>In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			<p>For more details, refer to <xref href="t00420.dita#t00420"/>.</p>
+		</section>
+		<section id="e01046">
+			<title>AUTO HOLD indicator light</title>
+			<p>This indicator light appears:</p>
+			<ul id="e01047">
+				<li>
+					<p>White when you activate the Auto Hold system by pressing the <term translate="no">AUTO HOLD</term> button.</p>
+				</li>
+				<li>
+					<p>Green when you stop the vehicle completely by engaging the brake pedal with the Auto Hold system activated.</p>
+				</li>
+				<li>
+					<p>Yellow when there is a malfunction with the Auto Hold system. In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+			<p>For more details, refer to <xref href="t00408.dita#t00408"/>.</p>
+		</section>
+		<section id="e01048">
+			<title id="e01049">Electronic stability control (ESC) indicator light <image href="images/WKIA_041.jpg" scale="15"/></title>
+			<p>This indicator light appears:</p>
+			<ul id="e01050">
+				<li id="e01051">
+					<p>For approximately 3 seconds when you turn the vehicle is in the <term translate="no">ON</term> position.</p>
+				</li>
+				<li id="e01052">
+					<p>When there is an ESC system malfunction. In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+			<p>This indicator light blinks while the ESC is operating.</p>
+			<p>For more details, refer to <xref href="t00415.dita#t00415"/>.</p>
+		</section>
+		<section id="e01053">
+			<title id="e01054">Electronic stability control (ESC) OFF indicator light <image href="images/WKIA_042.jpg" scale="15"/></title>
+			<p>This indicator light appears:</p>
+			<ul id="e01055">
+				<li id="e01056">
+					<p>For approximately 3 seconds when you press the vehicle is in the <term translate="no">ON</term> position.</p>
+				</li>
+				<li id="e01057">
+					<p>When you deactivate the ESC system by pressing the <term translate="no">ESC OFF</term> button.</p>
+				</li>
+			</ul>
+			<p>For more details, refer to <xref href="t00415.dita#t00415"/>.</p>
+		</section>
+		<section importance="optional" id="e01058">
+			<title>Cruise Control indicator light <image href="images/WKIA_357.jpg" scale="15"/></title>
+			<p>This indicator light appears when the Smart Cruise Control system is enabled.</p>
+			<p>For more details, refer to <xref href="t00579.dita#t00579"/>.</p>
+		</section>
+		<section importance="optional" id="e01059">
+			<title>Lane Safety indicator light <image href="images/WKIA_198.jpg" scale="15"/></title>
+			<p>This indicator light appears:</p>
+			<ul id="e01060">
+				<li>
+					<p>For approximately 3 seconds when you press the vehicle is in the <term translate="no">ON</term> position.</p>
+				</li>
+				<li>
+					<p>Gray when Lane Keeping Assist operating conditions are not satisfied.</p>
+				</li>
+				<li>
+					<p>Green when Lane Keeping Assist operating conditions are satisfied.</p>
+				</li>
+				<li>
+					<p>Yellow when Lane Safety is deselected or disabled, or a malfunction is detected.</p>
+					<p>If the yellow warning light remains illuminated after the sensor has been uncovered or unblocked when Lane Safety is <term translate="no">ON</term>, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+			<p>The indicator light blinks green when Lane Keeping Assist is operating.</p>
+			<p>For more details, refer to <xref href="t00482.dita#t00482"/>.</p>
+		</section>
+		<section importance="optional" id="e01061">
+			<title>Lane Following Assist indicator light <image href="images/WKIA_011.jpg" scale="15"/></title>
+			<p>This indicator light appears:</p>
+			<ul id="e01062">
+				<li>
+					<p>When you press the Lane Following Assist button <term translate="no">ON</term>.</p>
+				</li>
+				<li>
+					<p>Yellow when there is a problem with the Lane Following Assist function.</p>
+				</li>
+			</ul>
+			<p>For more details, refer to <xref href="t00496.dita#t00496"/>.</p>
+		</section>
+		<section importance="optional" id="e01063">
+			<title>High Beam Assist indicator light <image href="images/WKIA_048.jpg" scale="15"/></title>
+			<p>This indicator light appears:</p>
+			<ul id="e01064">
+				<li>
+					<p>When the light switch is set to <term translate="no">AUTO</term> and the high beam lights are <term translate="no">ON</term>.</p>
+				</li>
+				<li>
+					<p>If your vehicle detects oncoming vehicles or vehicles ahead, High Beam Assist will automatically switch the headlight from high beam to low beam.</p>
+				</li>
+			</ul>
+			<p>For more details, refer to <xref href="t00172.dita#t00172"/>.</p>
+		</section>
+		<section importance="optional" id="e01065">
+			<title>Inattentive Driving indicator light <image href="images/WKIA_059.jpg" scale="15"/></title>
+			<p>This indicator light appears:</p>
+			<ul id="e01066">
+				<li>
+					<p>For approximately 3 seconds when the vehicle is in the <term translate="no">ON</term> position.</p>
+				</li>
+				<li>
+					<p>Yellow when the Driver Attention Warning is disabled or malfunctioning.</p>
+					<p>If the indicator light remains yellow after you have uncovered or unblocked the front view camera, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+			<p>This indicator light blinks yellow when the Driver Attention Warning recommends that you take a break from driving.</p>
+			<p>For more details, refer to <xref href="t00557.dita#t00557"/>.</p>
+		</section>
+	</refbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00166.dita#t00166" role="parent" scope="local" type="concept">
+				<linktext>Warning and indicator lights </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</reference>

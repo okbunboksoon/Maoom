@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00816">
+	<title>Using the Tire Mobility Kit</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02605">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02606">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25F006_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02607">
+								<li>
+									<p>Compressor</p>
+								</li>
+								<li>
+									<p>Sealant bottle</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Remove the compressor (1) and sealant bottle from the luggage room.</p>
+		<section>
+			<title>Operation</title>
+			<ol>
+				<li>
+					<p>Shake the sealant bottle.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02608">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e02609">
+											<figgroup>
+												<image align="center" href="../../images/N_CT25F032.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>Connect the compressor hose to the compressor hose connector, located on the sealant bottle (1). Make sure the sealant bottle is sitting upright.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02610">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e02611">
+											<figgroup>
+												<image align="center" href="../../images/N_CT25F033_1.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>Unscrew the valve cap of the damaged tire and screw the sealant bottle filling hose onto the tire valve.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02612">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e02613">
+											<figgroup>
+												<image align="center" href="../../images/N_CT25F013_E.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<note type="note" id="e02614">
+						<p>Make sure the tire inflation pressure adjustment valve is closed.</p>
+					</note>
+				</li>
+				<li>
+					<p>Make sure the compressor is turned off, then connect the power outlet connector.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02615">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e02616">
+											<figgroup>
+												<image align="center" href="../../images/N_CT25F0010_1.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>Start the vehicle, turn on the compressor, and run for approximately 5-7 minutes before injecting the sealant.</p>
+				</li>
+				<li>
+					<p>Inject the sealant to ensure recommended tire air pressure. Check and adjust the tire pressures later. For the recommended air pressure, Refer to the <xref type="concept" href="t00872.dita#t00872">Tires and wheels</xref>.</p>
+				</li>
+				<li>
+					<p>Turn off the compressor and disconnect the sealant bottle’s injection hose from the tire.</p>
+				</li>
+				<li>
+					<p>After using it, leave the TMK (Tire Mobility Kit) in place in the vehicle with the injection hose in the sealant bottle side and the injection hose in the compressor side assembled.</p>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00821">
+	<title>Motor compartment fuse panel</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05164">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05165">
+								<figgroup>
+									<image href="../../images/OOV075014.eps" align="center" height="1.740in" placement="break" id="e05166"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<fig id="e05167">
+			<figgroup>
+				<image href="../../images/OOV075036.eps" align="center" placement="break" id="e05168"/>
+			</figgroup>
+		</fig>
+		<fig id="e05169">
+			<figgroup>
+				<image href="../../images/OOV075049L.eps" align="center" placement="break" id="e05170"/>
+			</figgroup>
+		</fig>
+		<section>
+			<title>Circuit (P/R Junction Block)</title>
+			<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+				<tgroup cols="5" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="1*"/>
+					<colspec colnum="2" colname="2" colwidth="1.4*"/>
+					<colspec colnum="3" colname="3" colwidth="1.58*"/>
+					<colspec colnum="4" colname="4" colwidth="2.77*"/>
+					<colspec colnum="5" colname="5" colwidth="7.34*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1" align="center" valign="middle">
+								<p>Type</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Name</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>Layout</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>Rating</p>
+							</entry>
+							<entry colname="5" align="center" valign="middle">
+								<p>Circuit Protected</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry valign="middle" morerows="9">
+								<p>MULTI FUSE-1</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>MDPS1</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>45</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 100A</p>
+							</entry>
+							<entry colname="5">
+								<p>MDPS Unit (Motor Driven Power Steering Unit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>COOLING FAN</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>44</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 80A</p>
+							</entry>
+							<entry colname="5">
+								<p>Cooling Fan Motor</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>SPARE</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>43</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 50A</p>
+							</entry>
+							<entry colname="5">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>B+1</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>42</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 50A</p>
+							</entry>
+							<entry colname="5">
+								<p>PDC Junction Block (IPS1,IPS2,IPS3,IPS4,IPS5,IPS6,IPS7)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>SPARE</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>41</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 50A</p>
+							</entry>
+							<entry colname="5">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>BLOWER</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>40</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 50A</p>
+							</entry>
+							<entry colname="5">
+								<p>Blower Relay</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>POWER OUTLET1</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>39</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 40A</p>
+							</entry>
+							<entry colname="5">
+								<p>Power Outlet Relay</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>EOP</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>38</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 40A</p>
+							</entry>
+							<entry colname="5">
+								<p>Rear EOP (Electric Oil Pump)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>TRAILER1</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>37</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 40A</p>
+							</entry>
+							<entry colname="5">
+								<p>TRAILER</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>IG2</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>36</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 30A</p>
+							</entry>
+							<entry colname="5">
+								<p>PCB Block (IG2 Relay)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry valign="middle" morerows="9">
+								<p>MULTI FUSE-2</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>IEB2</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>55</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 60A</p>
+							</entry>
+							<entry colname="5">
+								<p>IEB_UNIT (Intergrated Electronic Brake)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>COOLING MODULE1</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>54</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 60A</p>
+							</entry>
+							<entry colname="5">
+								<p>Coolant Driver</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>IEB1</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>53</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 60A</p>
+							</entry>
+							<entry colname="5">
+								<p>IEB_UNIT (Intergrated Electronic Brake)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>B+3</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>52</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 50A</p>
+							</entry>
+							<entry colname="5">
+								<p>PDC Junction Block (Fuse: CHARGE, POWER TAILGATE, P/SEAT DRIV, P/SEAT PASS, SUNROOF1, SUNROOF2, S/HEATER FRT, COOLING MODULE3, P/WINDOW RH, P/WINDOW LH, ECS, WIRELESS DCU, E-SHIFTER1, USB CHARGER2, MODULE8)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>SPARE</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>51</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 50A</p>
+							</entry>
+							<entry colname="5">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>REAR HEATED</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>50</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 40A</p>
+							</entry>
+							<entry colname="5">
+								<p>Rear Heated Relay</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>HEAD LAMP</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>49</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 40A</p>
+							</entry>
+							<entry colname="5">
+								<p>PE_BOX (Fuse: HEAD LAMP LH, HEAD LAMP RH)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>SPARE</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>48</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 40A</p>
+							</entry>
+							<entry colname="5">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>VPC1</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>47</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 40A</p>
+							</entry>
+							<entry colname="5">
+								<p>VPC (Vehicle Platform Controller)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>SPARE</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>46</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MULTI 30A</p>
+							</entry>
+							<entry colname="5">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry valign="middle" morerows="12">
+								<p>MICRO FUSE</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>VPC3</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>21</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 20A</p>
+							</entry>
+							<entry colname="5">
+								<p>VPC (Vehicle Platform Controller)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>COOLING MODULE2</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>22</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry colname="5">
+								<p>Refrigerant System Driver</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>A/C1</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>23</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 15A</p>
+							</entry>
+							<entry colname="5">
+								<p>DATC (Dual Automatic Temperature Control)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>TRAILER2</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>24</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 20A</p>
+							</entry>
+							<entry colname="5">
+								<p>TRAILER</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>TRAILER3</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>25</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 20A</p>
+							</entry>
+							<entry colname="5">
+								<p>TRAILER</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>VPC2</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>26</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 20A</p>
+							</entry>
+							<entry colname="5">
+								<p>VPC (Vehicle Platform Controller)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>OBC</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>27</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry colname="5">
+								<p>VCMS (Vehicle Charging Managemaent System), ICCU SIGNAL</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>SPARE</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>30</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 20A</p>
+							</entry>
+							<entry colname="5">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>SPARE</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>31</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 20A</p>
+							</entry>
+							<entry colname="5">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>IG3 9</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>1,2</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry colname="5">
+								<p>BMS (Battery Management System)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>WIPER RR</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>28,29</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 15A</p>
+							</entry>
+							<entry colname="5">
+								<p>Rear Wiper</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>HEAD LAMP LH</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>56,57</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 20A</p>
+							</entry>
+							<entry colname="5">
+								<p>Head Lamp Module LH</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>HEAD LAMP RH</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>58,59</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>MICRO 20A</p>
+							</entry>
+							<entry colname="5">
+								<p>Head Lamp Module RH</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry valign="middle" morerows="3">
+								<p>S/B M FUSE</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>B+4</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>32</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>S/B M 40A</p>
+							</entry>
+							<entry colname="5">
+								<p>PDC Junction Block (Long Term Latch Relay, IPS13, Fuse: MULTIMEDIA, MEMORY1, MEMORY2, CHILD LOCK, BRAKE SW, MODULE9, CCU, SBCM DRV, SBCM PASS, DR LOCK, TAILGATE OPEN)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>B+5</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>33</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>S/B M 40A</p>
+							</entry>
+							<entry colname="5">
+								<p>PDC Junction Block (Fuse: AMP, BDC, A/BAG2, INVERTER2, BMS S/HEATER RR)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>IG1</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>34</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>S/B M 40A</p>
+							</entry>
+							<entry colname="5">
+								<p>PCB Block (IG1 Relay, ACC Relay)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>B+2</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>35</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>S/B M 40A</p>
+							</entry>
+							<entry colname="5">
+								<p>PDC Junction Block (IPS8,IPS9,IPS11,IPS12)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry valign="middle" morerows="1">
+								<p>S/B LP FUSE</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>B+6</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>69</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>S/B LP 60A</p>
+							</entry>
+							<entry colname="5">
+								<p>PDC Junction Block (IG3 Relay, Fuse: HORN, B/ALARM HORN)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2" align="center" valign="middle">
+								<p>INVERTER1</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>70</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>S/B LP 30A</p>
+							</entry>
+							<entry colname="5">
+								<p>Front Inverter</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" valign="middle">
+								<p>S/B ET FUSE</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>SPARE</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>86</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>S/B ET 60A</p>
+							</entry>
+							<entry colname="5">
+								<p>Not Used</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section>
+			<title>PCB Block</title>
+			<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="1*"/>
+					<colspec colnum="2" colname="2" colwidth="1*"/>
+					<colspec colnum="3" colname="4" colwidth="1.35*"/>
+					<colspec colnum="4" colname="5" colwidth="3.61*"/>
+					<thead>
+						<row rowsep="1">
+							<entry>
+								<p>Fuse Name</p>
+							</entry>
+							<entry>
+								<p>Layout</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>Fuse Rating</p>
+							</entry>
+							<entry colname="5" valign="middle">
+								<p>Circuit Protected</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry colname="1">
+								<p>IG3 1</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE21</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 20A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>PDC Junction Block (IG3_6, IG3_7, IG3_8)</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>IG3 2</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE10</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>E-COMP, VCMS (Vehicle Charging Managemaent System)</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>SPARE</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE5</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 15A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>IG3 3</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE17</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Front Inverter, ICCU Signal, Coolant Driver, VPC, PE_BOX (IG3_9)</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>IG3 4</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE18</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Refrigerant System Driver,</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>SPARE</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE9</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 15A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>IG3 5</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE6</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 15A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Cooling Fan</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>AMS</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE8</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Battery Sensor</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>MODULE1</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE4</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>CDM (Charger Door Module)</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>SPARE</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE3</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 20A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>HORN</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE15</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 20A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>HORN</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>B/ALARM HORN</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE16</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>B/ALARM HORN</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>WIPER1</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE1</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 30A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>PCB Block (Wiper Main Relay)</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>WIPER2</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE2</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Front Wiper</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>POWER OUTLET2</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE13</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 20A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>USB Extension</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>SPARE</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE14</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>VPC4</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE12</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>VPC (Vehicle Platform Controller)</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>SPARE</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE19</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>SPARE</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE7</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 15A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>IEB3</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE20</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>IEB_UNIT (Intergrated Electronic Brake)</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>SPARE</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE11</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1">
+								<p>SPARE</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>FUSE22</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>MICRO 10A</p>
+							</entry>
+							<entry align="left" valign="middle">
+								<p>Not Used</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section>
+			<title>Relay</title>
+			<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+				<desc>
+					<p>Refer to the following table for the relay type.</p>
+				</desc>
+				<tgroup cols="5" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="2.72*"/>
+					<colspec colname="newCol2" colnum="2" colwidth="1*"/>
+					<colspec colname="newCol5" colnum="3" colwidth="4.43*"/>
+					<colspec colnum="4" colname="3" colwidth="2.72*"/>
+					<colspec colname="newCol4" colnum="5" colwidth="2.72*"/>
+					<thead valign="middle">
+						<row rowsep="1">
+							<entry align="center" valign="middle" namest="1" nameend="newCol2">
+								<p>Relay Name</p>
+							</entry>
+							<entry>
+								<p>Number</p>
+							</entry>
+							<entry align="center" valign="middle" namest="3" nameend="newCol4">
+								<p>TYPE</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody valign="middle">
+						<row rowsep="1" valign="middle">
+							<entry align="left" valign="middle" namest="1" nameend="newCol2">
+								<p>BLOWER</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>13, 14, 15, 16</p>
+							</entry>
+							<entry align="center" valign="middle" namest="3" nameend="newCol4">
+								<p>3725 MINI 4P</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="left" valign="middle" namest="1" nameend="newCol2">
+								<p>REAR HEATED</p>
+							</entry>
+							<entry align="center">
+								<p>17, 18, 19, 20</p>
+							</entry>
+							<entry align="center" valign="middle" namest="3" nameend="newCol4">
+								<p>3725 MINI 4P</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="left" valign="middle" namest="1" nameend="newCol2">
+								<p>RESERVE</p>
+							</entry>
+							<entry align="center">
+								<p>60, 61, 62, 63</p>
+							</entry>
+							<entry align="center" valign="middle" namest="3" nameend="newCol4">
+								<p>3725 MINI 4P</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="left" valign="middle" namest="1" nameend="newCol2">
+								<p>WIPER RR</p>
+							</entry>
+							<entry align="center">
+								<p>76, 77, 78, 79, 80</p>
+							</entry>
+							<entry align="center" valign="middle" namest="3" nameend="newCol4">
+								<p>H/C MICRO 4P</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="left" valign="middle" namest="1" nameend="newCol2">
+								<p>CHARGER UNLOCK</p>
+							</entry>
+							<entry align="center">
+								<p>3, 4, 5, 6, 7</p>
+							</entry>
+							<entry align="center" valign="middle" namest="3" nameend="newCol4">
+								<p>MICRO 5P</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="left" valign="middle" namest="1" nameend="newCol2">
+								<p>CHARGER LOCK</p>
+							</entry>
+							<entry align="center">
+								<p>8, 9, 10, 11, 12</p>
+							</entry>
+							<entry align="center" valign="middle" namest="3" nameend="newCol4">
+								<p>MICRO 5P</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="left" valign="middle" namest="1" nameend="newCol2">
+								<p>RESERVE</p>
+							</entry>
+							<entry align="center">
+								<p>81, 82, 83, 84, 85</p>
+							</entry>
+							<entry align="center" valign="middle" namest="3" nameend="newCol4">
+								<p>H/C MICRO 5P</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="left" valign="middle" namest="1" nameend="newCol2">
+								<p>RESERVE</p>
+							</entry>
+							<entry align="center">
+								<p>71, 72, 73, 74, 75</p>
+							</entry>
+							<entry align="center" valign="middle" namest="3" nameend="newCol4">
+								<p>H/C MICRO 5P</p>
+							</entry>
+						</row>
+						<row rowsep="0" valign="middle">
+							<entry align="left" valign="middle" nameend="newCol2" namest="1">
+								<p>RESERVE</p>
+							</entry>
+							<entry align="center">
+								<p>64, 65, 66, 67, 68</p>
+							</entry>
+							<entry align="center" valign="middle" namest="3" nameend="newCol4">
+								<p>H/C MICRO 5P</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+</concept>

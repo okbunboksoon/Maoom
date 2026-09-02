@@ -1,0 +1,24 @@
+===== Options ===== 
+RAW_ARGS=TITLE_FILE_NAME_PREFIX=Y REMOVE_SIMPLE=Y DELETE_DRAFT=Y TEXT_DB_APPLY=Y NOTE_DB_APPLY=Y 
+FILE_NAME_CHANGE=Y 
+FILE_NAME_MODE=TITLE_PREFIX 
+TITLE_FILE_NAME_PREFIX=Y 
+INPUT_TYPE= 
+OUTPUT_TYPE= 
+REMOVE_SIMPLE=Y 
+REMOVE_SIMPLE_OPERATION=Y 
+REMOVE_DELIVERY_TARGET=Y 
+DELETE_DRAFT=Y 
+TEXT_DB_APPLY=Y 
+NOTE_DB_APPLY=Y 
+FORBIDDEN_QC_REPORT=N 
+DITAMAP_NAME=KIA-KA4i-ICE-HEV-en_IN-2026.ditamap 
+DB_LANGUAGE=EG 
+SENTENCE_DB=asis-tobe_eg.xml 
+NOTE_DB=note_db_eg.xml 
+TEXT_DB_APPLY applied: temp\0340-kus-db-apply.xml 
+NOTE_DB_APPLY applied: temp\0340-note-db-apply.xml 
+REMOVE_SIMPLE_OPERATION=Y applied: temp\0402-remove_simple_operation_deliverytarget.xml 
+REMOVE_DELIVERY_TARGET=Y applied: temp\0402-remove_simple_operation_deliverytarget.xml 
+DELETE_DRAFT applied: temp\0401-remove_review_Delete_Draft_Comment.xml 
+REPORT_SOURCE=temp\0401-remove_review_Delete_Draft_Comment.xml 

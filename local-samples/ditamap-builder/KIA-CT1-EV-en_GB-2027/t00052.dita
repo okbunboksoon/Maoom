@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_019_04" id="t00052">
+	<title>How to delete Digital Key 2 (Card key)</title>
+	<shortdesc/>
+	<conbody>
+		<ol id="e00203">
+			<li>
+				<p>Turn the vehicle on with the smart key and make sure to keep the smart key inside the vehicle during the digital key (card key) deleting process.</p>
+			</li>
+			<li>
+				<p>With the vehicle on, place the card key on the In-vehicle authentication pad (wireless charging pad). With the vehicle on, touch <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Digital key</uicontrol><uicontrol>NFC card key</uicontrol><uicontrol>Delete</uicontrol></menucascade> on the infotainment system.</p>
+				<p>The <uicontrol>Delete</uicontrol> menu will be disabled if there is no digital key (card key) saved.</p>
+				<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00204">
+					<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+						<colspec colnum="1" colname="1" colwidth="50*"/>
+						<colspec colnum="2" colname="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="1" colsep="0">
+									<fig id="e00205">
+										<figgroup>
+											<image href="../../images/N_CT25Z087_E.eps" scale="95" align="center" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="2">
+									<ol outputclass="callout" id="e00206">
+										<li>
+											<p> <uicontrol>Digital key</uicontrol> </p>
+										</li>
+										<li>
+											<p> <uicontrol>NFC card Key</uicontrol> </p>
+										</li>
+										<li>
+											<p> <uicontrol>Use</uicontrol> </p>
+										</li>
+										<li>
+											<p> <uicontrol>Delete</uicontrol> </p>
+										</li>
+									</ol>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>When the digital key (card key) is deleted, a message will appear on the infotainment screen or cluster.</p>
+			</li>
+		</ol>
+		<note type="tip" deliveryTarget="except_print" id="e00207">
+			<p>The infotainment system may change after software updates. For more information, refer to the user’s manual provided in the infotainment system and the quick reference guide.</p>
+		</note>
+	</conbody>
+</concept>

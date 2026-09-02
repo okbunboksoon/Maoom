@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0688">
+	<title>Fahren</title>
+	<conbody>
+		<p>Der Fahrer kann während der Fahrt die Hecksicht auf dem Bildschirm kontrollieren, sie soll beim Zurücksetzen unterstützen.</p>
+		<section>
+			<title>Betriebsbedingungen</title>
+			<ul>
+				<li>
+					<p>Die Hecksicht wird durch Drücken der Taste Parken/Sicht (2) nach dem Drücken der Taste Parken/Sicht (1) ausgewählt, während sich der Gang in N (Neutral) oder D (Fahren) befindet und die Fahrzeuggeschwindigkeit über 10 km/h (6 mph) liegt. Sie können die Hecksicht oder die 3D-Ansicht mit der Taste Ansicht ändern (2) auswählen.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Ausschalt-Bedingungen</title>
+			<ul>
+				<li>
+					<p>Der Wahlhebel wird in die Stellung P (Parkstufe) gebracht.</p>
+				</li>
+				<li>
+					<p>Die Taste Parken/Sicht (1) oder die Bildschirmtaste des Infotainment-Systems (3) wird gedrückt.</p>
+				</li>
+				<li>
+					<p>Die vorherige Taste (&lt;) ist ausgewählt.</p>
+				</li>
+				<li>
+					<p>Wenn die Hecksicht während der Fahrt aktiviert ist, wird der zuletzt verwendete Ansichtsmodus angezeigt.</p>
+				</li>
+				<li>
+					<p>Die Rückfahrhilfeparklinien sind während der Hecksicht während der Fahrt nicht aktiv.</p>
+				</li>
+				<li>
+					<p>Die Hecksicht während der Fahrt schaltet sich auch dann nicht aus, wenn die Fahrzeuggeschwindigkeit unter 10 km/h (6 mph) liegt, sobald sie eingeschaltet ist.</p>
+				</li>
+				<li>
+					<p>Wenn die Hecksicht während der Fahrt aktiv ist, werden die Rückansicht von oben und die hintere Seitenansicht bei jeder Geschwindigkeit deaktiviert.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0686.dita#CL4m_HEV-ca_ES-2027-t0686" role="parent" scope="local" type="concept">
+				<linktext>Hecksicht</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

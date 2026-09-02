@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0619">
+	<title>Betriebsbedingungen</title>
+	<conbody>
+		<p>Die navigationsgestützte intelligente Tempomatsteuerung ist einsatzbereit, wenn alle folgenden Bedingungen erfüllt sind:</p>
+		<ul>
+			<li>
+				<p>Auswählen der Einstellungen für die ‚Automatische Geschwindigkeitsänderung auf der Autobahn‘ am Kombiinstrument/auf dem Bildschirm des Infotainment-Systems.</p>
+			</li>
+			<li>
+				<p>Die intelligente Tempomatsteuerung ist aktiv.</p>
+			</li>
+			<li>
+				<p>Fahrten auf Fernstraßen (oder Autobahnen)</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>Weitere Einzelheiten zur Bedienung der intelligenten Tempomatsteuerung finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0581.dita#CL4m_HEV-ca_ES-2027-t0581"/>.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0618.dita#CL4m_HEV-ca_ES-2027-t0618" role="parent" scope="local" type="concept">
+				<linktext>Bedienung der navigationsgestützten intelligenten Tempomatsteuerung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0658">
+	<title>Einschränkungen des Autobahn-Fahrassistenten</title>
+	<conbody>
+		<p>Der Autobahn-Fahrassistent und die Autobahn-Fahrspurwechselhilfe funktionieren unter den folgenden Umständen möglicherweise nicht richtig:</p>
+		<ul>
+			<li>
+				<p>Wenn die Kartenangaben und die tatsächliche Straße voneinander abweichen, weil das Navigationssystem nicht aktualisiert ist.</p>
+			</li>
+			<li>
+				<p>Die Karteninformationen und die tatsächliche Straße weichen aufgrund von Fehlern der Echtzeit-GPS-Daten oder aufgrund von Fehlern der Kartenangaben voneinander ab.</p>
+			</li>
+			<li>
+				<p>Das Infotainment-System wird durch die gleichzeitige Ausführung von Funktionen wie Routensuche, Videowiedergabe, Spracherkennung usw. überlastet.</p>
+			</li>
+			<li>
+				<p>GPS-Signale werden in Bereichen wie Tunneln blockiert</p>
+			</li>
+			<li>
+				<p>Sie kommen vom Kurs ab, setzen die Navigationsroute zurück, indem Sie das Ziel ändern (einschließlich Routenänderung gemäß Echtzeit-Verkehrsinformationen) oder die Route zum Ziel abbrechen</p>
+			</li>
+			<li>
+				<p>Das Fahrzeug fährt in eine Tankstelle oder auf einen Rastplatz.</p>
+			</li>
+			<li>
+				<p>Android Auto oder CarPlay ist in Betrieb.</p>
+			</li>
+			<li>
+				<p>Das Navigationssystem kann die aktuelle Position des Fahrzeugs nicht erkennen (z. B. erhöhte Straßenlage, einschließlich Überführungen, die an allgemeine Straßen oder nahe gelegene Parallelstraßen angrenzen)</p>
+			</li>
+			<li>
+				<p>Wenn das Fahrzeug die weißen, einfach gestrichelten Fahrspurlinien und Straßenbegrenzungen nicht erkennt</p>
+			</li>
+			<li>
+				<p>Wenn manche Spuren vorübergehend eingeschränkt sind</p>
+			</li>
+			<li>
+				<p>Wenn es in der Mitte der Straße keine physischen Trennstrukturen, wie z.B. einen Mittelstreifen, gibt</p>
+			</li>
+			<li>
+				<p>Wenn die Spur, auf die Sie wechseln wollen, eine Busspur oder eine variable Spur ist</p>
+			</li>
+			<li>
+				<p>Wenn Sie einen Anhänger, Carrier oder andere Ausrüstung angehängt haben</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>Weitere Einzelheiten zur Frontansicht, zum Frontradar, zum vorderen Eckradar und zum hinteren Eckradarsensor finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0440.dita#CL4m_HEV-ca_ES-2027-t0440"/>.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0656.dita#CL4m_HEV-ca_ES-2027-t0656" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion und Einschränkungen des Autobahn-Fahrassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00118">
+	<title>Adjusting steering wheel angle and height</title>
+	<conbody>
+		<section>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00602">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00603">
+									<image href="images/N_SP3i26_B05_001_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+						<row>
+							<entry colname="col1">
+								<fig id="e00604">
+									<image href="images/N_SP3i26_B05_002_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e00605">
+									<image href="images/N_SP3i26_B05_003_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol>
+				<li>
+					<p>To change the steering wheel angle, pull down the lock release lever (1).</p>
+				</li>
+				<li>
+					<p>Adjust the steering wheel to the desired forward or back (2) and distance (3).</p>
+					<p>Move the steering wheel so that it points toward your chest, not toward your face. Make sure you can see the instrument panel warning lights and gauges. After adjusting, pull up the lock.</p>
+				</li>
+				<li>
+					<p>Push the steering wheel both up and down to make sure it is locked into position.</p>
+				</li>
+				<li>
+					<p>Adjust the steering wheel to the desired position before driving.</p>
+				</li>
+			</ol>
+			<note outputclass="tip" type="note">
+				<p>After adjustment, sometimes the lock-release lever may not lock the steering wheel. If this happens, adjust the steering wheel again to get it to lock. This is not a malfunction. It happens when 2 gears engage, and a small adjustment of either angle or height will correct the issue.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00117.dita#t00117" role="parent" scope="local" type="concept">
+				<linktext>Tilt and telescopic steering wheel </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

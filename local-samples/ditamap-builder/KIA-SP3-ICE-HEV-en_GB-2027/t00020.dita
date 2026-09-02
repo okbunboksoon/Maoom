@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA 1.3 Reference//EN" "reference.dtd">
+<reference base="Anywhere" id="t00020">
+	<title id="e00073">Luggage volume </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications
+					<indexterm>luggage volume</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="e00074">
+			<title>For Smartstream G1.6 T-GDI/Smartstream G1.6 T-GDI (EURO 7)/Smartstream G2.0</title>
+			<table frame="all" rowsep="1" colsep="1" pgwide="1" outputclass="formatc" id="e00075">
+				<desc>
+					<ul id="e00076">
+						<li>
+							<p><term translate="no">MIN</term>: Behind rear seat to upper edge of the seat back.</p>
+						</li>
+						<li>
+							<p><term translate="no">MAX</term>: Behind front seat to roof.</p>
+						</li>
+					</ul>
+				</desc>
+				<tgroup cols="4" colsep="1" rowsep="1">
+					<colspec colnum="1" colname="col1" colwidth="1.562*"/>
+					<colspec colnum="2" colname="col2" colwidth="0.781*"/>
+					<colspec colnum="3" colname="col3" colwidth="1.172*"/>
+					<colspec colnum="4" colname="newCol4" colwidth="1.172*"/>
+					<thead>
+						<row rowsep="1">
+							<entry namest="col1" nameend="newCol4" align="center" valign="middle">
+								<p>Item</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1" morerows="1" align="center" valign="middle">
+								<p>Luggage volume (VDA) [L (cu. ft.)]</p>
+							</entry>
+							<entry colname="col2" align="center" valign="middle">
+								<p><term translate="no">MIN</term>.</p>
+							</entry>
+							<entry align="center" namest="col3" nameend="newCol4" valign="middle">
+								<p>536 (18.9)</p>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry colname="col2" align="center" valign="middle">
+								<p><term translate="no">MAX</term>.</p>
+							</entry>
+							<entry align="center" namest="col3" nameend="newCol4" valign="middle">
+								<p>1,511 (53.4)</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section id="section_mts_plh_4jc">
+			<title>For Smartstream 1.6 GDi HEV/Smartstream 1.6 GDi HEV (EURO 7)</title>
+			<table frame="all" rowsep="1" colsep="1" pgwide="1" outputclass="formatc" id="table_nts_plh_4jc">
+				<desc>
+					<ul id="ul_ots_plh_4jc">
+						<li>
+							<p><term translate="no">MIN</term>: Behind rear seat to upper edge of the seat back.</p>
+						</li>
+						<li>
+							<p><term translate="no">MAX</term>: Behind front seat to roof.</p>
+						</li>
+					</ul>
+				</desc>
+				<tgroup cols="4" colsep="1" rowsep="1">
+					<colspec colnum="1" colname="col1" colwidth="1.562*"/>
+					<colspec colnum="2" colname="col2" colwidth="0.781*"/>
+					<colspec colnum="3" colname="col3" colwidth="1.172*"/>
+					<colspec colnum="4" colname="newCol4" colwidth="1.172*"/>
+					<thead>
+						<row rowsep="1">
+							<entry namest="col1" nameend="newCol4" align="center" valign="middle">
+								<p>Item</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1" morerows="1" align="center" valign="middle">
+								<p>Luggage volume (VDA) [L (cu. ft.)]</p>
+							</entry>
+							<entry colname="col2" align="center" valign="middle">
+								<p><term translate="no">MIN</term>.</p>
+							</entry>
+							<entry align="center" namest="col3" nameend="newCol4" valign="middle">
+								<p>536 (18.9)</p>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry colname="col2" align="center" valign="middle">
+								<p><term translate="no">MAX</term>.</p>
+							</entry>
+							<entry align="center" namest="col3" nameend="newCol4" valign="middle">
+								<p>1,494 (52.8)</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</refbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00015.dita#t00015" role="parent" scope="local" type="concept">
+				<linktext>Specifications </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</reference>

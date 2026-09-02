@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otherprops 비교 상세</title>
+    <link rel="stylesheet" href="/user/css/DitamapBuilder.css">
+</head>
+<body>
+<main class="ditamap-builder-page otherprops-report-page">
+    <header class="ditamap-view-header">
+        <div>
+            <h1>otherprops 비교 상세</h1>
+            <p id="reportPathText">비교 결과를 불러오는 중입니다.</p>
+        </div>
+    </header>
+
+    <section id="reportSummary"
+             class="otherprops-report-summary"></section>
+
+    <section class="otherprops-report-guide">
+        <div>branch는 해당 topic 하나만 교체하는 게 아니라 지정된 범위 전체를 교체 대상으로 보는 항목이고,</div>
+        <div>topic은 매칭된 topic 하나만 개별 교체 대상으로 보는 항목입니다.</div>
+    </section>
+
+    <div id="reportContent"
+         class="otherprops-report-content"></div>
+</main>
+
+<script>
+const reportParams = new URLSearchParams(location.search);
+const reportId = reportParams.get('report') || '';
+const reportPathText = document.getElementById('reportPathText');
+const reportSummary = document.getElementById('reportSummary');
+const reportContent = document.getElementById('reportContent');
+
+function createElement(tag, className, text){
+    const element = document.createElement(tag);
+
+    if(className){
+        element.className = className;
+    }
+
+    if(text != null){
+        element.textContent = text;
+    }
+
+    return element;
+}
+
+function rowText(row){
+    return [
+        row.otherprops || '-',
+        'LM L' + (row.level || ''),
+        row.fileName || '',
+        row.title || ''
+    ].filter(Boolean).join(' | ');
+}
+
+function candidateText(row){
+    return [
+        'L' + (row.level || ''),
+        row.fileName || '',
+        row.title || ''
+    ].filter(Boolean).join(' | ');
+}
+
+function renderSummary(report){
+    const items = [
+        ['대상', report.summary.targetCount],
+        ['성공', report.summary.successCount],
+        ['실패', report.summary.failureCount],
+        ['보류', report.summary.pendingCount],
+        ['branch 성공', report.summary.branchSuccessCount],
+        ['topic 성공', report.summary.topicSuccessCount]
+    ];
+
+    reportSummary.innerHTML = '';
+
+    items.forEach(([label, value]) => {
+        const item = createElement('div', 'otherprops-summary-item');
+        item.appendChild(createElement('span', '', label));
+        item.appendChild(createElement('strong', '', String(value || 0)));
+        reportSummary.appendChild(item);
+    });
+}
+
+function renderSimpleSection(title, description, rows){
+    const section = createElement('section', 'otherprops-report-section');
+    const heading = createElement('h2', '', title);
+    const desc = createElement('p', '', description);
+    const list = createElement('div', 'otherprops-report-list');
+
+    section.appendChild(heading);
+    section.appendChild(desc);
+
+    if(rows.length === 0){
+        list.appendChild(createElement('div', 'otherprops-report-empty', '해당 항목이 없습니다.'));
+    }else{
+        rows.forEach(row => {
+            const item = createElement('article', 'otherprops-report-item');
+            item.appendChild(createElement('strong', '', row.otherprops || '-'));
+            item.appendChild(createElement(
+                    'div',
+                    'otherprops-report-row-text',
+                    'LM L' + row.level + ' ' + row.fileName + ' | ' + row.title));
+            list.appendChild(item);
+        });
+    }
+
+    section.appendChild(list);
+    reportContent.appendChild(section);
+}
+
+function renderPendingSection(rows){
+    const section = createElement('section', 'otherprops-report-section');
+    const heading = createElement('h2', '', '보류: 후보가 여러 개라 자동 선택 제외');
+    const desc = createElement(
+            'p',
+            '',
+            '실제 쪽에서 같은 otherprops 후보가 여러 개 발견되어 자동 체크하지 않은 항목입니다.');
+    const list = createElement('div', 'otherprops-report-list');
+
+    section.appendChild(heading);
+    section.appendChild(desc);
+
+    if(rows.length === 0){
+        list.appendChild(createElement('div', 'otherprops-report-empty', '해당 항목이 없습니다.'));
+    }else{
+        rows.forEach(row => {
+            const item = createElement('article', 'otherprops-report-item is-pending');
+            const candidates = createElement('ul', 'otherprops-report-candidates');
+
+            item.appendChild(createElement('strong', '', row.otherprops || '-'));
+            item.appendChild(createElement(
+                    'div',
+                    'otherprops-report-row-text',
+                    'LM L' + row.level + ' ' + row.fileName + ' | ' + row.title));
+            item.appendChild(createElement(
+                    'div',
+                    'otherprops-report-candidate-title',
+                    '실제 후보 ' + (row.candidates || []).length + '개'));
+
+            (row.candidates || []).forEach(candidate => {
+                candidates.appendChild(createElement('li', '', candidateText(candidate)));
+            });
+
+            item.appendChild(candidates);
+            list.appendChild(item);
+        });
+    }
+
+    section.appendChild(list);
+    reportContent.appendChild(section);
+}
+
+function renderReport(report){
+    reportPathText.textContent = report.path || '입력 경로 정보 없음';
+    renderSummary(report);
+    reportContent.innerHTML = '';
+    renderSimpleSection(
+            'branch 실패: 범위 전체 교체 대상 - 실제 otherprops 후보 없음',
+            'LM에는 legal-select-branch와 otherprops가 있지만 실제 파일 전체에서 같은 otherprops를 찾지 못한 항목입니다.',
+            report.branchFailed || []);
+    renderSimpleSection(
+            'topic 실패: 개별 topic 교체 대상 - 실제 otherprops 후보 없음',
+            'LM에는 otherprops가 있지만 실제 파일 전체에서 같은 otherprops를 찾지 못한 항목입니다.',
+            report.topicMissing || []);
+    renderPendingSection(report.topicMultiple || []);
+}
+
+function renderEmpty(message){
+    reportPathText.textContent = message;
+    reportSummary.hidden = true;
+    reportContent.innerHTML = '';
+}
+
+if(!reportId){
+    renderEmpty('비교 상세 정보를 찾지 못했습니다.');
+}else{
+    const stored = localStorage.getItem('ditamapOtherpropsReport:' + reportId);
+
+    if(!stored){
+        renderEmpty('비교 상세 정보가 만료되었거나 없습니다.');
+    }else{
+        renderReport(JSON.parse(stored));
+    }
+}
+</script>
+</body>
+</html>

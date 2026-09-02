@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0579">
+	<title>Tempomatsteuerung wieder aktivieren</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054010N_3.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Betätigen Sie die Taste (+), (-) oder den (<image align="left" href="../../images/WKIA_079.eps" scale="15" placement="inline"/>)-Schalter.</p>
+		<p>Wenn Sie den Schalter (+) nach oben oder den Schalter (-) nach unten drücken, wird die eingestellte Geschwindigkeit auf die aktuelle Geschwindigkeit auf dem Kombiinstrument eingestellt.</p>
+		<p>Wenn Sie die Taste (<image align="left" href="../../images/WKIA_079.eps" scale="15" placement="inline"/>) drücken, kehrt das Fahrzeug zu der voreingestellten Geschwindigkeit zurück.</p>
+		<p>Die Fahrzeuggeschwindigkeit muss über 30 km/h (20 mph) liegen, damit die Tempomatsteuerung wieder genutzt werden kann.</p>
+		<note type="warning">
+			<p>Prüfen Sie die Fahrbedingungen, bevor Sie den Schalter (<image align="left" href="../../images/WKIA_079.eps" scale="15" placement="inline"/>) betätigen. Die Fahrgeschwindigkeit kann sich abrupt erhöhen oder verringern, wenn Sie den Schalter (<image align="left" href="../../images/WKIA_079.eps" scale="15" placement="inline"/>) drücken.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0573.dita#CL4m_HEV-ca_ES-2027-t0573" role="parent" scope="local" type="concept">
+				<linktext>Bedienung der Tempomatsteuerung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

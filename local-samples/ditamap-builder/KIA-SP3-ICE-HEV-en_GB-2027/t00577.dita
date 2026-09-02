@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00577">
+	<title>Forward Attention Warning disabled</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e03685">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e03686">
+								<figgroup>
+									<image href="images/N_QVe27_C00_143_E.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e03687">
+								<li>
+									<p><uicontrol>In-cabin Monitoring System unavailable Camera obscured.</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When there is an object right in front of the in-cabin camera or between the driver and the camera for a certain period of time, Forward Attention Warning does not operate properly. If this occurs, the warning message appears on the instrument cluster for several seconds, the Forward attention warning light (<image href="images/WKIA_353.jpg" scale="15" align="left" placement="inline"/>) and the Master warning light (<image href="images/WKIA_040.jpg" scale="15" align="left" placement="inline"/>) lights up on the instrument cluster, and an audible warning sounds once.</p>
+		<p>If the object is removed or the camera is able to detect the driver’s face, the function will operate normally. If Forward Attention Warning does not operate properly after the object is removed, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="caution" id="e03688">
+			<ul id="e03689">
+				<li>
+					<p>Do not impact the surface of the camera or around the camera. If the in-cabin camera is damaged, Forward Attention Warning may not work properly.</p>
+				</li>
+				<li>
+					<p>Do not place anything on the camera or in front of the camera while driving. The in-cabin camera may not operate properly.</p>
+				</li>
+				<li>
+					<p>When cleaning the camera, wipe with a soft and clean cloth to prevent damage to the surface of the camera lens. In addition, do not use sharp tools near the camera and do not use chemicals to clean the camera.</p>
+				</li>
+				<li>
+					<p>Always keep the camera and its surroundings clean and dry.</p>
+				</li>
+				<li>
+					<p>Do not place foreign objects, such as stickers, around the infrared LED located near the camera.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip" id="e03690">
+			<p>The infrared LED lights may appear on the camera in the following conditions:</p>
+			<ul id="e03691">
+				<li>
+					<p>The outside brightness is dim or when driving at night</p>
+				</li>
+				<li>
+					<p>The vehicle drives inside a building, such as a basement car park, garage or tunnel</p>
+				</li>
+				<li>
+					<p>The camera case is partially broken</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00576.dita#t00576" role="parent" scope="local" type="concept">
+				<linktext>Forward Attention Warning malfunction</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

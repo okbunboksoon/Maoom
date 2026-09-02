@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00570">
+	<title>Limitations of Forward Attention Warning</title>
+	<conbody>
+		<p>Forward Attention Warning may not operate properly or may operate unexpectedly under the following circumstances:</p>
+		<ul id="e04210">
+			<li>
+				<p>The driver is wearing sunglasses, special glasses, infrared cutoff glasses, refracting glasses or thick glasses</p>
+			</li>
+			<li>
+				<p>The driver has heavy eye makeup (eyeliner, mascara, color makeup, false eyelash) or piercings around the eyes</p>
+			</li>
+			<li>
+				<p>The view of the driver is blocked by their hair, hat, etc.</p>
+			</li>
+			<li>
+				<p>The driver is winking or wearing an eye patch on one eye</p>
+			</li>
+			<li>
+				<p>The driver’s face is covered partially by a mask, muffler, etc.</p>
+			</li>
+			<li>
+				<p>The view of the driver is blocked by incoming light from outside the vehicle</p>
+			</li>
+			<li>
+				<p>Light from outside, sunlight or infrared LED light of the camera is reflected by glasses or sunglasses</p>
+			</li>
+			<li>
+				<p>The driver turns or lowers their head so that the face or eyes are hidden from the camera</p>
+			</li>
+			<li>
+				<p>The driver shakes their head or adverse road conditions cause excessive vehicle vibrations while driving</p>
+			</li>
+			<li>
+				<p>The driver is improperly positioned in the driver’s seat so that their face is not detected</p>
+			</li>
+			<li>
+				<p>The driver is too tall or short</p>
+			</li>
+			<li>
+				<p>The camera is blocked by the driver’s grip on the steering wheel</p>
+			</li>
+			<li>
+				<p>More than two people are looking at the instrument cluster simultaneously from the driver’s seat</p>
+			</li>
+			<li>
+				<p>The driver’s eyes are narrowed due to laughing or sun glare</p>
+			</li>
+			<li>
+				<p>The camera incorrectly recognizes a picture or mannequin that is of similar size to the driver’s face</p>
+			</li>
+			<li>
+				<p>There are other devices using infrared light in the vehicle</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00210">
+	<title id="e01596">Opening the hood</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>hood 
+					<indexterm>opening the hood</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ol id="e01597">
+			<li>
+				<p>Pull the release lever (1) to unlatch the hood. The hood should pop open slightly.</p>
+				<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e01598">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig id="e01599">
+										<figgroup>
+											<image href="../../images/OOV035085.eps" align="center" placement="break" id="e01600"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<note type="warning" id="e01601">
+					<p>Open the hood after turning off the vehicle on a flat surface, shifting the shift lever to the P (Park) position and setting the parking brake.</p>
+				</note>
+			</li>
+			<li>
+				<p>Go to the front of the vehicle, raise the hood slightly, push the secondary hood release lever (1) inside the hood center and lift the hood.</p>
+				<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e01602">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig id="e01603">
+										<figgroup>
+											<image href="../../images/OOV035086.eps" align="center" placement="break" scale="95" id="e01604"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Raise the hood. It will completely rise by itself after it has been raised about halfway.</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

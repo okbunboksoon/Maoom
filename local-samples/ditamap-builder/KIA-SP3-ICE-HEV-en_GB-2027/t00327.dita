@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00327">
+	<title>Mode selection</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system
+					<indexterm>mode selection</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02081">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02082">
+								<image href="images/N_CT25C039_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e02083">
+								<image href="images/N_SP327_C08_006.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The mode selection lever/icon controls the direction of airflow through the ventilation system.</p>
+		<p><image href="images/WKIA_060.jpg" scale="15" align="center" placement="inline"/><b>Face-Level (2, 4, 6)</b></p>
+		<p>Air flow is directed toward the upper body and face. You can control the direction of the airflow from each vent.</p>
+		<p><image href="images/WKIA_061.jpg" scale="15" align="center" placement="inline"/><b>Bi-Level (2, 3, 4, 5, 6)</b></p>
+		<p>Air flow is directed toward the upper body and face and the floor.</p>
+		<p><image href="images/WKIA_062.jpg" scale="15" align="center" placement="inline"/><b>Floor-Level (1, 3, 4, 5)</b></p>
+		<p>Most of the airflow is directed to the floor, and a small amount is directed to the windshield, side window defrosters, and side air vents.</p>
+		<p><image href="images/OSV034323.jpg" scale="15" align="center" placement="inline"/><b>Floor/Defrost-Level (1, 3, 4, 5)</b></p>
+		<p>Most of the airflow is directed to the floor and windshield, and a small amount is directed to the side window defrosters and side air vents.</p>
+		<p><image href="images/WKIA_181.jpg" scale="15" align="center" placement="inline"/><b>Defrost-Level (1, 4)</b></p>
+		<p>Most of the air flow is directed to the windshield, and a small amount is directed to the side window defrosters and side air vents.</p>
+		<section id="e02084">
+			<title>Instrument panel vents</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02085">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02086">
+									<title>Front</title>
+									<image href="images/N_SP327_C08_008_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e02087">
+									<title>Center</title>
+									<image href="images/N_SP327_C08_009.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>You can adjust the direction of a vent’s airflow using the vent control lever as shown.</p>
+			<p>The vent’s airflow stops when you move the air vent control lever to the closed position (<image href="images/WKIA_065.jpg" scale="15" align="center" placement="inline"/>).</p>
+			<p>Air flows through the vent when you move the air vent control lever to the open position (<image href="images/WKIA_305.jpg" scale="15" align="center" placement="inline"/>).</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00326.dita#t00326" role="parent" scope="local" type="task">
+				<linktext>Manual heating and air conditioning (A/C) operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

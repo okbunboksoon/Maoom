@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00855">
+	<title>Wheel alignment and tire balance</title>
+	<shortdesc>The wheels on your vehicle were aligned and balanced carefully at the factory to give you the longest tire life and best overall performance.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tires and wheels
+					<indexterm>wheel alignment and tire balance</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>If you notice unusual tire wear, or if your vehicle pulls or drifts in one direction or the other, you may need to have the alignment reset.</p>
+		<p>If you notice your vehicle vibrating when you drive on a smooth road, you may need to have your wheels rebalanced.</p>
+		<note type="caution">
+			<p>Wheel weight</p>
+			<p>Improper wheel weights can damage your vehicle’s aluminum wheels. Use only approved wheel weights.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00850.dita#t00850" role="parent" scope="local" type="concept">
+				<linktext>Tires and wheels</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

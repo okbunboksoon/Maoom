@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task otherprops="legalnotice_europe-general_egall_2023_20230101_0000929" id="t00886">
+	<title>Replacing the rear turn signal lamp (Bulb type)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>replacing the rear turn signal lamp (bulb type)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context id="e05214">
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05215">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e05216">
+									<image href="images/N_SP3i26_B12_069_1_IR.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To replace the rear turn signal lamp (Bulb type), follow these steps:</p>
+		</context>
+		<steps id="e05217">
+			<step>
+				<cmd>Make sure the vehicle is in the <term translate="no">OFF</term> position and disconnect the negative 12V battery terminal.</cmd>
+			</step>
+			<step>
+				<cmd>Open the tailgate.</cmd>
+			</step>
+			<step>
+				<cmd>Open the service cover.</cmd>
+			</step>
+			<step>
+				<cmd>Use a Phillips head screwdriver to loosen the lamp assembly retaining screws.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05218">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e05219">
+											<image href="images/N_SP3i26_B12_070_1_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>Remove the rear combination lamp assembly from the body of the vehicle.</cmd>
+			</step>
+			<step>
+				<cmd>Disconnect the rear combination lamp connector.</cmd>
+			</step>
+			<step>
+				<cmd>To remove the socket from the assembly, turn the socket counterclockwise until the tabs on the socket align with the slots on the assembly.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05220">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e05221">
+											<image href="images/N_SP3i26_B12_071_1_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>Press the bulb in to the socket and rotate it counterclockwise until the tabs on the bulb align with the socket. Then, remove the bulb from the socket.</cmd>
+			</step>
+			<step>
+				<cmd>Insert a new bulb into the socket and rotate it clockwise until it locks into place.</cmd>
+			</step>
+			<step>
+				<cmd>To install the socket back into the assembly, align the tabs on the socket with the slots in the assembly, push the socket into the assembly, and turn the socket clockwise.</cmd>
+			</step>
+			<step>
+				<cmd>Reinstall the lamp assembly onto the vehicle body and securely fasten the retaining screws with a Phillips head screwdriver.</cmd>
+			</step>
+			<step>
+				<cmd>Close the service cover.</cmd>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00884.dita#t00884" role="parent" scope="local" type="concept">
+				<linktext>Replacing lights (Bulb type)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0533">
+	<title>Geschwindigkeitsbegrenzung</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054092N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Fahrerassistenz</p>
+								</li>
+								<li>
+									<p>Geschwindigkeitsbegrenzung</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn das Fahrzeug eingeschaltet ist, wählen Sie <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Fahrerassistenz</uicontrol><uicontrol>Geschwindigkeitsbegrenzung</uicontrol></menucascade> auf dem Infotainment-System.</p>
+		<ul>
+			<li>
+				<p><b>Geschwindigkeitsbegrenzungsassistent</b>: Der intelligente Geschwindigkeitsbegrenzungsassistent informiert den Fahrer über die geltende Geschwindigkeitsbegrenzung und weitere Verkehrsschilder und warnt den Fahrer, wenn das Fahrzeug schneller als die Geschwindigkeitsbegrenzung gefahren wird. Darüber hinaus informiert der Intelligente Geschwindigkeitsbegrenzungsassistent den Fahrer über die Änderung der eingestellten Geschwindigkeit des Manuellen Geschwindigkeitsbegrenzungsassistenten oder der Intelligenten Tempomatsteuerung, um ihm zu helfen, das Tempolimit einzuhalten.</p>
+			</li>
+			<li>
+				<p><b>Warnung bei Geschwindigkeitsbegrenzung</b>: Der Intelligente Geschwindigkeitsbegrenzungsassistent informiert den Fahrer über die geltende Geschwindigkeitsbegrenzung und weitere Verkehrsschilder. Zudem warnt der intelligente Geschwindigkeitsbegrenzungsassistent den Fahrer, wenn das Fahrzeug schneller als die Geschwindigkeitsbegrenzung gefahren wird.</p>
+			</li>
+			<li>
+				<p><b>Aus</b>: Der intelligente Geschwindigkeitsbegrenzungsassistent schaltet sich aus. Die Warnleuchte des Intelligenten Geschwindigkeitsbegrenzungsassistenten (<image align="left" href="../../images/WKIA_082.eps" scale="15" placement="inline"/>) wird im Kombiinstrument angezeigt.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<p>Wenn Sie das Fahrzeug ausschalten und neu starten, schaltet sich die Tempolimitwarnung automatisch ein. Achten Sie darauf, dass Sie an einem sicheren Ort parken, bevor Sie den Intelligenten Geschwindigkeitsbegrenzungsassistenten einstellen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0532.dita#CL4m_HEV-ca_ES-2027-t0532" role="parent" scope="local" type="concept">
+				<linktext>Einstellungen des Intelligenten Geschwindigkeitsbegrenzungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

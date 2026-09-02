@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_gen_std_005_01" base="Anywhere" id="t00021">
+	<title>Vehicle Identification Number (VIN)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>vehicle identification number (VIN)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00048">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00049">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25H001.eps" scale="100" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00050">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25H001_E.eps" scale="100" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The Vehicle Identification Number (VIN) is the number used in registering your vehicle and in all legal matters pertaining to its ownership, etc.</p>
+		<ul>
+			<li>
+				<p>Written on a plate attached to the top left of the instrument panel.</p>
+			</li>
+			<li>
+				<p>Engraved on the floor under the front left or right seat. Open the cover to check the VIN.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

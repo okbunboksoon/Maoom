@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0386">
+	<title>Warnmeldungen</title>
+	<shortdesc>Die Auto Hold-Funktion zeigt unter bestimmten Bedingungen eine Warnmeldung mit akustischem Signal an.</shortdesc>
+	<conbody>
+		<p>Wird die <term translate="no">EPB</term> über die Auto Hold-Funktion aktiviert, ertönt ein Warnsignal, und es erscheint ein entsprechender Hinweis.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034136N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Feststellbremse automatisch angezogen</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn der Wechsel von Auto Hold (automatisches halten) zu <term translate="no">EPB</term> nicht ordnungsgemäß funktioniert, ertönt ein Warnsignal, und es erscheint eine Meldung.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034135N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: <term translate="no">AUTO HOLD</term> ausschalten! Bremse betätigen</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note">
+			<p>Wenn diese Mitteilung angezeigt wird, funktionieren die Auto Hold-Funktion und die <term translate="no">EPB</term>-Funktion nicht. Betätigen Sie zu Ihrer Sicherheit das Bremspedal.</p>
+		</note>
+		<p>Wenn Sie das Bremspedal nicht betätigen, während Sie die Auto Hold-Funktion mit dem [<term translate="no">AUTO HOLD</term>]-Schalter freigeben, ertönt ein Warnsignal und es wird eine Meldung angezeigt.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034137N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Bremse drücken zum Deaktivieren von <term translate="no">AUTO HOLD</term></p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn Sie den Schalter [<term translate="no">AUTO HOLD</term>] drücken, aber die Fahrertür oder die Motorhaube nicht geschlossen ist, ertönt ein Warnsignal, und es erscheint eine Meldung auf dem LCD-Display.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034160N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: <term translate="no">AUTO HOLD</term> Bedingungen nicht erfüllt. Schließen Sie Tür, Motorhaube und Kofferraum/Heckklappe.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Drücken Sie nach dem Schließen der Fahrertür bzw. der Motorhaube dann die Taste [<term translate="no">AUTO HOLD</term>].</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0383.dita#CL4m_HEV-ca_ES-2027-t0383" role="parent" scope="local" type="concept">
+				<linktext>AUTO HOLD</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

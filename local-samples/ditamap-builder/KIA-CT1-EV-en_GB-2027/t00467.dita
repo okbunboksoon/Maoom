@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00467">
+	<title>To apply Electronic Parking Brake (EPB) manually</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>electronic parking brake (EPB) 
+					<indexterm>to apply Electronic Parking Brake (EPB) manually</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01898">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e01899">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25D019_1_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e01900">
+			<title>Operation</title>
+			<ul id="e01901">
+				<li>
+					<p>Depress the brake pedal and pull the <term translate="no">EPB</term> switch up to apply the parking brake.</p>
+					<p>Make sure the parking brake warning light (<image align="left" href="../../images/WKIA_127.eps" scale="15" placement="inline"/>) comes on.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

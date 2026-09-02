@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00316">
+	<title>Turning Plug n charge (PnC) on or off</title>
+	<conbody>
+		<p>When charging using Plug n Charge (PnC), the PnC contract is installed during charging. Select <menucascade><uicontrol>Electric Vehicle</uicontrol><uicontrol>Plug n charge</uicontrol></menucascade> menu on the infotainment system to enable or disable PnC contract management.</p>
+		<ul>
+			<li>
+				<p>Within the PnC contract, contract company information and expiry date (year/month) are displayed.</p>
+			</li>
+			<li>
+				<p>You can delete the contract by pressing 'Delete contract' button.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>If you do not have a PnC contract, we recommend that you turn off the Plug n Charge (PnC) function. If you leave the Plug n Charge (PnC) function on without signing a contract, problems may occur during charging.</p>
+		</note>
+	</conbody>
+</concept>

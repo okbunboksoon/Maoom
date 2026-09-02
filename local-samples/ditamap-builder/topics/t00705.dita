@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00705">
+	<title>Side Parking Distance Warning</title>
+	<conbody>
+		<p>Side Parking Distance Warning will operate when one of the condition is satisfied.</p>
+		<ul>
+			<li>
+				<p>Shifting the gear to R (Reverse)</p>
+			</li>
+			<li>
+				<p>The gear is in D (Drive) and the Parking Safety (<image href="../../images/WKIA_087.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) button indicator light is on</p>
+			</li>
+			<li>
+				<p>Forward Parking Distance Warning warns the driver when the vehicle is in D (Drive)</p>
+				<p>(If <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Parking safety</uicontrol><uicontrol>Auto PDW (Parking Distance Warning)</uicontrol></menucascade> on the infotainment system selected)</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Your driving speed is below 10 km/h (6 mph).</p>
+				</li>
+				<li>
+					<p>Side Parking Distance Warning only works when the vehicle speed is below 10 km/h (6 mph).</p>
+				</li>
+				<li>
+					<p>Side Parking Distance Warning function works only when the Forward/Reverse Parking Distance Warning function is turned on.</p>
+				</li>
+			</ul>
+		</note>
+		<section>
+			<title>Warning indication and warning sound</title>
+			<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="26*"/>
+					<colspec colnum="2" colname="2" colwidth="22*"/>
+					<colspec colnum="3" colname="3" colwidth="22*"/>
+					<colspec colnum="4" colname="4" colwidth="31*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1" morerows="1">
+								<p>Distance from object</p>
+							</entry>
+							<entry namest="2" nameend="3">
+								<p>Warning indicator</p>
+							</entry>
+							<entry colname="4" morerows="1">
+								<p>Warning sound</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="2">
+								<p>Cluster</p>
+							</entry>
+							<entry colname="3">
+								<p>Infotainment</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry colname="1" align="center" valign="middle">
+								<p>60–120 cm (24–48 in)</p>
+							</entry>
+							<entry colname="2">
+								<fig>
+									<figgroup>
+										<image href="../../images/OOV055126.eps" align="center" placement="break" height="0.395in" width="0.395in" outputclass="nolabel"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="3">
+								<fig>
+									<figgroup>
+										<image href="../../images/OOV055135.eps" align="center" placement="break" height="0.395in" width="0.395in" outputclass="nolabel"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="4" align="center">
+								<p>-</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry colname="1" align="center">
+								<p>30–60 cm (12–24 in)</p>
+							</entry>
+							<entry colname="2">
+								<fig>
+									<figgroup>
+										<image href="../../images/OOV055127.eps" align="center" placement="break" height="0.395in" width="0.395in" outputclass="nolabel"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="3">
+								<fig>
+									<figgroup>
+										<image href="../../images/OOV055136.eps" align="center" placement="break" height="0.395in" width="0.395in" outputclass="nolabel"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="4" align="center">
+								<p>-</p>
+							</entry>
+						</row>
+						<row rowsep="0" valign="middle">
+							<entry colname="1" align="center">
+								<p>within 30 cm (12 in)</p>
+							</entry>
+							<entry colname="2">
+								<fig>
+									<figgroup>
+										<image href="../../images/OOV055128.eps" align="center" placement="break" height="0.395in" width="0.395in" outputclass="nolabel"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="3">
+								<fig>
+									<figgroup>
+										<image href="../../images/OOV055137.eps" align="center" placement="break" height="0.395in" width="0.395in" outputclass="nolabel"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>Beeps continuously</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul>
+				<li>
+					<p>When the side ultrasonic sensor detects a person or object, it displays indicator lights for each distance on the cluster or infotainment system screen.</p>
+				</li>
+				<li>
+					<p>A warning sounds when an object within 30 cm (12 in) of the side is detected in the vehicle’s exit path.</p>
+				</li>
+				<li>
+					<p>If it detects an object to the side outside the vehicle’s exit path, it only displays the indicator light.</p>
+				</li>
+				<li>
+					<p>In D (Drive), when the distance from the object is 30 cm (12 in) or more, the side-way warning is not displayed on the cluster.</p>
+				</li>
+				<li>
+					<p>The shape of the indicator in the illustration may differ from the actual vehicle.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

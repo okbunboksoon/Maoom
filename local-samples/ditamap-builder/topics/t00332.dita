@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00332">
+	<title>Heating and air conditioning manually</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system 
+					<indexterm>heating and air conditioning manually</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The heating and cooling system can be controlled manually by touching icons other than the <term translate="no">AUTO</term> icon.</p>
+		<fig>
+			<figgroup>
+				<image href="../../images/OOV035301.eps" align="center" height="3.857in" placement="break"/>
+			</figgroup>
+		</fig>
+		<p>In this case, the system works sequentially according to the order of icons selected.</p>
+		<ol outputclass="callout">
+			<li>
+				<p>Start the vehicle.</p>
+			</li>
+			<li>
+				<p>Set the mode to the desired position.</p>
+				<p>For improving the effectiveness of heating and cooling;</p>
+				<ul>
+					<li>
+						<p>Heating: <image href="../../images/WKIA_062.eps" align="left" placement="inline" outputclass="nolabel" scale="15"/> </p>
+					</li>
+					<li>
+						<p>Cooling: <image href="../../images/WKIA_060.eps" align="left" placement="inline" outputclass="nolabel" scale="15" id="e02479"/> </p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Set the temperature control to the desired position.</p>
+			</li>
+			<li>
+				<p>Set the air intake control to the outside (fresh) air position.</p>
+			</li>
+			<li>
+				<p>Set the fan speed control to the desired speed.</p>
+			</li>
+			<li>
+				<p>If air conditioning is desired, turn the air conditioning system on.</p>
+				<p>Touch the <term translate="no">AUTO</term> icon in order to convert to fully automatic control of the system.</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

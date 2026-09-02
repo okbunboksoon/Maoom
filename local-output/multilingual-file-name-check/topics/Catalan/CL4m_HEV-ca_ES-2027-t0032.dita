@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_031_01" id="CL4m_HEV-ca_ES-2027-t0032">
+	<title>Kraftstoffaufkleber</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Spezifikationen
+					<indexterm>Kraftstoffaufkleber</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Der Kraftstoffaufkleber ist auf der Tankklappe angebracht.</p>
+		<fig id="e00078">
+			<title>Nur Europa</title>
+			<figgroup>
+				<image align="center" href="../../images/OCD084012L.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<fig expanse="page" id="e00079">
+			<title>Außer Europa</title>
+			<figgroup>
+				<image align="center" href="../../images/ONQ5053183L.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<ul>
+			<li>
+				<p>A. Oktan-Klassifizierung von unverbleitem Benzin</p>
+				<ol>
+					<li>
+						<p>RON/ROZ: Research-Oktanzahl</p>
+					</li>
+					<li>
+						<p>(R+M)/2, AKI: Anti-Knock-Index</p>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<p>B. Identifikatoren für Ottokraftstoffe</p>
+				<p>Dieses Symbol steht für geeignete Kraftstoffe. Verwenden Sie keine anderen Kraftstoffe.</p>
+			</li>
+			<li>
+				<p>C. Weitere Details finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0003.dita#CL4m_HEV-ca_ES-2027-t0003"/>.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0015-CH04.dita#CL4m_HEV-ca_ES-2027-t0015-CH04" role="parent" scope="local" type="concept">
+				<linktext>Spezifikationen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

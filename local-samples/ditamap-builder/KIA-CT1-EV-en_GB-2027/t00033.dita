@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00033">
+	<title id="e00110">Smart key</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00111">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00112">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C070_ER.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Door Lock <image href="../../images/WKIA_019.eps" scale="15" align="left" placement="inline"/> </p>
+			</li>
+			<li>
+				<p>Door Unlock <image href="../../images/WKIA_021.eps" scale="15" align="left" placement="inline"/> </p>
+			</li>
+			<li>
+				<p>Trunk unlock</p>
+				<p>Power trunk unlock/open/close <image href="../../images/N_CT25C180.eps" align="left" scale="6" outputclass="nolabel"/> </p>
+			</li>
+			<li>
+				<p importance="optional">Remote Smart Parking Assist (Backward) <image href="../../images/WKIA_110.eps" scale="15" align="center" placement="inline"/> </p>
+			</li>
+			<li>
+				<p importance="optional">Remote Smart Parking Assist (Forward) <image href="../../images/WKIA_109.eps" scale="15" align="center" placement="inline"/> </p>
+			</li>
+			<li>
+				<p>Remote start <image href="../../images/WKIA_108.eps" scale="15" align="left" placement="inline"/> </p>
+			</li>
+		</ol>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Press the corresponding button.</p>
+				</li>
+				<li>
+					<p>To start vehicle remotely, press the door lock button (1) and hold the remote start button (6) for 2 seconds.</p>
+				</li>
+				<li>
+					<p>Press the forward/backward buttons (5, 4) to move the vehicle forward/backward.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Press the corresponding button.</p>
+				</li>
+				<li>
+					<p>Press the door lock button (1) and hold the remote start button (6) for 2 seconds to start the vehicle remotely.</p>
+				</li>
+				<li>
+					<p>Press the forward/backward buttons (5, 4) to move the vehicle forward/backward.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Non-operating conditions</title>
+			<ul id="e00113">
+				<li>
+					<p>Being in or near a police station, government office, broadcasting station, military unit, transmission tower, airport, port, etc.</p>
+				</li>
+				<li>
+					<p>Carrying a smart key with a cellular electronic system (two-way radio, cellular phone, portable wired and wireless charger, heat transfer device and electronic cigarette) and materials that can block radio waves (coins and metal products).</p>
+				</li>
+				<li id="e00114">
+					<p>Being close to a radio transmitter such as a radio station or an airport which can interfere with normal operation of the smart key.</p>
+				</li>
+				<li id="e00115">
+					<p>Being near a cellular two-way radio system or a cellular phone.</p>
+				</li>
+				<li id="e00116">
+					<p>Another vehicle’s smart key is being operated close to your vehicle.</p>
+				</li>
+				<li>
+					<p>Linking an external device to the power outlet and placing the smart key near the external device.</p>
+				</li>
+			</ul>
+			<note type="tip">
+				<ul>
+					<li>
+						<p>If you press the trunk unlock/open/close button for longer than a second, the lock will be released or the trunk will be opened according to the options of the vehicle.</p>
+					</li>
+					<li>
+						<p>If any door, hood or trunk remains open, the hazard warning lights will not operate.</p>
+					</li>
+					<li>
+						<p>After pressing unlock button, the doors will lock automatically unless you open any door within 30 seconds.</p>
+					</li>
+					<li>
+						<p>After pressing the Lock/Unlock button, The hazard warning lights will flash.</p>
+					</li>
+					<li>
+						<p>To start the vehicle remotely, the smart key should be detected within 10 m (32 ft) distance from the vehicle, and the remote start button should be pressed within 4 seconds after the doors are locked.</p>
+					</li>
+					<li>
+						<p>If no further action for operating/driving the vehicle is taken, the vehicle will be turned off 10 minutes after starting the vehicle remotely.</p>
+					</li>
+					<li>
+						<p>The driver can move the vehicle forward or backward using the forward/backward buttons (5, 4) on the smart key. For more details of Remote Smart Parking Assist (RSPA), refer to <xref type="concept" href="t00789.dita#t00789"/>.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning" id="e00117">
+				<p importance="high">THE <term translate="no">SMART</term> KEY CONTAINS A LITHIUM BUTTON BATTERY</p>
+				<p>If swallowed, a lithium button battery can cause severe or fatal injuries within 2 hours.</p>
+				<p>Keep batteries out of reach of children. Make sure to keep batteries out of reach of children.</p>
+				<p>If you think batteries may have been swallowed or placed inside any part of the body, seek immediate medical attention.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

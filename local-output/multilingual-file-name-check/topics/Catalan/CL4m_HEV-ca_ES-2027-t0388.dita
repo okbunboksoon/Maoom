@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0388">
+	<title id="e00860">Elektronische Stabilitätskontrolle (ESC) </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Bremsanlage
+					<indexterm>Elektronische Stabilitätskontrolle (ESC)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M044014N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die elektronische Stabilitätskontrolle (ESC) dient dazu, das Fahrzeug bei Kurvenfahrten bzw. Ausweichmanövern in einem stabilen Zustand zu halten. Die ESC vergleicht den Lenkradeinschlag mit der tatsächlichen Bewegung des Fahrzeugs.</p>
+		<p>Die ESC kann einzelne Räder abbremsen und greift in die Motorsteuerung ein, wenn das Fahrzeug stabilisiert werden muss.</p>
+		<note type="warning">
+			<p>Passen Sie Ihre Geschwindigkeit immer dem Straßenzustand an und durchfahren Sie Kurven nie mit zu hoher Geschwindigkeit. Die elektronische Stabilitätskontrolle (ESC) kann Unfälle nicht verhindern. Überhöhte Geschwindigkeiten bei Kurvenfahrten, abrupte Lenkbewegungen und Aquaplaning können auch bei Fahrzeugen mit ESC zu schweren Unfällen führen. Nur durch eine Vermeidung von Fahrmanövern, bei denen das Fahrzeug die Traktion verliert, kann ein sicherer und aufmerksamer Fahrer Unfälle verhindern. Beachten Sie auch bei Fahrzeugen mit ESC die üblichen Fahrsicherheitsregeln – insbesondere das Fahren mit Geschwindigkeiten, die den jeweiligen Situationen angepasst sind.</p>
+		</note>
+		<p>Die elektronische Stabilitätskontrolle (ESC) ist ein System, das dem Fahrer hilft, unter widrigen Umständen die Kontrolle über das Fahrzeug zu behalten. Es ist kein Ersatz für eine sichere Fahrweise. Faktoren wie Geschwindigkeit, Straßenzustand und Stärke des Lenkeinschlags können dazu führen, dass das ESC-System den Verlust der Kontrolle über das Fahrzeug nicht mehr verhindern kann. Es liegt weiterhin in Ihrer Verantwortung das Fahrzeug zu fahren, Kurven mit angemessener Geschwindigkeit zu durchfahren und genügend Sicherheitsreserven einzuhalten.</p>
+		<p>Wenn Sie Ihre Bremsen in Bedingungen anwenden, die die Räder blockieren könnten, hören Sie ein Tickgeräusch von den Bremsen oder spüren ein entsprechendes Gefühl am Bremspedal. Dies ist ein normaler Vorgang, der belegt, dass das ESC-System aktiv ist.</p>
+		<note type="note">
+			<p>Möglicherweise ist im Motorraum ein Klickgeräusch zu hören, wenn sich das Fahrzeug nach starten des Motors zu bewegen beginnt. Dies ist normal und zeigt an, dass die elektronische Stabilitätskontrolle (ESC) ordnungsgemäß funktioniert.</p>
+		</note>
+		<section>
+			<title>ESC-Betrieb</title>
+			<sectiondiv><ph>ESC <term translate="no">ON</term>-Zustand</ph>
+				<ul>
+					<li>
+						<p>Nach dem Schalten der Zündung auf <term translate="no">ON</term> leuchten die Kontrollleuchten ESC und <term translate="no">ESC OFF</term> etwa 3 Sekunden lang auf und das ESC-System wird eingeschaltet.</p>
+					</li>
+					<li>
+						<p>Drücken Sie die Taste <term translate="no">ESC OFF</term> mindestens eine halbe Sekunde lang, nachdem Sie das Fahrzeug <term translate="no">ON</term> ausgeschaltet haben, um das ESC auszuschalten. (<term translate="no">ESC OFF</term>-Kontrollleuchte leuchtet auf). Um den ESC einzuschalten, drücken Sie die Taste <term translate="no">ESC OFF</term> (die Kontrollleuchte <term translate="no">ESC OFF</term> erlischt).</p>
+					</li>
+					<li>
+						<p>Beim Starten des Motors kann ein leises Ticker-Geräusch hörbar sein. Dieses Geräusch entsteht während der automatischen Eigendiagnose des ESC-Systems und stellt keine Störung dar.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>Während des ESC-Betriebs</ph>
+				<p><image align="center" href="../../images/WKIA_041.eps" scale="15" placement="inline"/> Wenn das ESC-System aktiv ist, blinkt die ESC-Kontrollleuchte.</p>
+				<p/>
+				<ul>
+					<li>
+						<p>Wenn die elektronische Stabilitätskontrolle ordnungsgemäß aktiv ist, können Sie ein leichtes Pulsieren im Fahrzeug verspüren. Dies ist ein Effekt der Bremsenregelung und stellt keine Störung dar.</p>
+					</li>
+					<li>
+						<p>Beim Verlassen einer verschmutzten oder glatten Straße erhöht sich möglicherweise die Motordrehzahl nicht, wenn Sie das Gaspedal fest treten. Damit sollen Stabilität und Traktion Ihres Fahrzeugs aufrechterhalten werden, das Verhalten stellt kein Problem dar.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph><term translate="no">ESC OFF</term> Zustand</ph>
+				<p><image align="center" href="../../images/WKIA_042.eps" scale="15" placement="inline"/> ESC-Betrieb abbrechen:</p>
+				<p/>
+				<p/>
+			</sectiondiv>
+			<ul>
+				<li>
+					<p>Status 1</p>
+					<p>Drücken Sie kurz die <term translate="no">ESC OFF</term>-Taste (die <term translate="no">ESC OFF</term>-Kontrollleuchte leuchtet und die Meldung (ausstattungsabhängig) erscheint). In diesem Zustand ist die Motorsteuerfunktion nicht aktiv. Mit anderen Worten: Die Traktionskontrolle funktioniert nicht, aber die Bremssteuerfunktion ist aktiv.</p>
+				</li>
+				<li>
+					<p>Status 2</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OBL7M043110.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Drücken Sie die <term translate="no">ESC OFF</term>-Taste länger als 3 Sekunde. Die Kontrollleuchte <term translate="no">ESC OFF</term> leuchtet und die Meldung (ausstattungsabhängig) erscheint und es ertönt das akustische Warnsignal für <term translate="no">ESC OFF</term>. In diesem Zustand sind die Motorsteuerfunktion und die Bremssteuerfunktion nicht aktiv. Mit anderen Worten: Die Fahrzeugstabilitätskontrolle funktioniert nicht mehr.</p>
+					<p>Wenn der Zündschalter oder die <term translate="no">ENGINE START/STOP</term>-Taste bei ausgeschalteter ESC in Position <term translate="no">LOCK/OFF</term> gebracht wird, bleibt ESC aus. Bei erneutem starten des Motors schaltet ESC sich automatisch wieder ein.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Kontrollleuchte</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<title>ESC-Kontrollleuchte</title>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_041.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig>
+									<title>Anzeigeleuchte ESC AUS</title>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_042.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Nach dem Schalten des Zündschalters oder des <term translate="no">ENGINE START/STOP</term>-Knopfs (MOTOR-START/STOPP) auf <term translate="no">ON</term> leuchtet die Kontrollleuchte kurz auf und erlischt danach. Dies zeigt an, dass das ESC-System normal funktioniert.</p>
+			<p>Die ESC-Kontrollleuchte erscheint immer wenn die ESC in Betrieb ist oder nicht funktioniert.</p>
+			<p>Die <term translate="no">ESC OFF</term>-Kontrollleuchte leuchtet auf, wenn die ESC mit der Taste ausgeschaltet wurde.</p>
+			<note type="caution">
+				<p>Bei der Verwendung unterschiedlicher Reifen oder unterschiedlicher Reifengrößen kann es zur Fehlfunktion des ESC-Systems kommen. Achten Sie beim Reifenwechsel darauf, dass sie den gleichen Typ, die gleiche Größe, die gleiche Marke, die gleiche Bauweise und das gleiche Profil wie die Originalreifen haben.</p>
+			</note>
+			<note type="warning">
+				<p>Die elektronische Stabilitätskontrolle ist lediglich eine Fahrhilfe. Beachten Sie die Sicherheitshinweise für sicheres Fahren, wenn Sie in Kurven, auf verschneiten oder vereisten Straßen abbremsen. Fahren Sie langsam und versuchen Sie nicht zu beschleunigen, während die ESC-Kontrollleuchte blinkt oder die Straßenoberfläche glatt oder rutschig ist.</p>
+			</note>
+		</section>
+		<section>
+			<title>Verwendung der ESC OFF-Taste</title>
+			<sectiondiv><ph>Während der Fahrt</ph>
+				<ul>
+					<li>
+						<p>Sofern möglich, sollte die Stabilitätskontrolle (ESC) für das tägliche Fahren eingeschaltet sein.</p>
+					</li>
+					<li>
+						<p>Wenn Sie das ESC-System während der Fahrt abschalten möchten, drücken Sie die Taste <term translate="no">ESC OFF</term>, während Sie auf ebenem Straßenbelag fahren.</p>
+					</li>
+				</ul>
+				<p>Drücken Sie niemals die Taste <term translate="no">ESC OFF</term>, während ESC in Betrieb ist (ESC-Kontrollleuchte blinkt).</p>
+				<p>Wenn das ESC-System während einer aktiven Regelphase (ESC-Kontrollleuchte blinkt) abgeschaltet wird, kann das Fahrzeug außer Kontrolle und ins Schleudern geraten.</p>
+				<note type="note">
+					<ul>
+						<li>
+							<p>Bei einem Test des Fahrzeugs auf einem Rollenprüfstand sollten Sie sicherstellen, dass die Stabilitätskontrolle mit der <term translate="no">ESC OFF</term>-Taste ausgeschaltet ist. Drücken Sie dazu die Taste 3 Sekunden (die <term translate="no">ESC OFF</term>-Kontrollleuchte erscheint). Wenn das ESC-System während der Messung eingeschaltet ist, kann dies zu einer Verfälschung des Messergebnisses führen, da das ESC-System die Motordrehzahl reduzieren kann.</p>
+						</li>
+						<li>
+							<p>Das Abschalten des ESC-Systems hat keinen Einfluss auf das ABS-System bzw. die Funktionsfähigkeit der Bremsanlage.</p>
+						</li>
+					</ul>
+				</note>
+				<note type="warning">
+					<p>Drücken Sie niemals die Taste <term translate="no">ESC OFF</term>, während ESC in Betrieb ist (ESC-Kontrollleuchte blinkt).</p>
+					<p>Wenn das ESC-System während einer aktiven Regelphase (ESC-Kontrollleuchte blinkt) abgeschaltet wird, kann das Fahrzeug außer Kontrolle und ins Schleudern geraten.</p>
+					<p>Wenn Sie das ESC-System während der Fahrt abschalten möchten, drücken Sie die Taste <term translate="no">ESC OFF</term>, während Sie auf ebenem Straßenbelag fahren.</p>
+				</note>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0375.dita#CL4m_HEV-ca_ES-2027-t0375" role="parent" scope="local" type="concept">
+				<linktext>Bremsanlage </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

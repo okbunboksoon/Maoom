@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00481">
+	<title>Forward Collision-Avoidance Assist disabled</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03632">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03633">
+								<figgroup>
+									<image href="../../images/OOV055184L.eps" align="center" height="1.740in" placement="break" id="e03634"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03635">
+								<li>
+									<p> <uicontrol outputclass="c0586">Driver assistance system limited. Camera obscured.</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03636">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03637">
+								<figgroup>
+									<image href="../../images/OOV055185L.eps" align="center" height="1.740in" placement="break" id="e03638"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03639">
+								<li>
+									<p> <uicontrol outputclass="c0586">Driver assistance system limited. Radar blocked.</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the front windshield where the front view camera is located, front radar cover, bumper or sensor is covered with foreign material, such as snow or rain, it can reduce the detecting performance and temporarily limit or disable Forward Collision-Avoidance Assist.</p>
+		<p>If this occurs the warning message, and the yellow (<image align="left" height="0.117in" href="../../images/WKIA_037.eps" outputclass="nolabel" placement="inline" width="0.143in" scale="15" id="e03640"/>), (<image href="../../images/WKIA_077.eps" align="left" placement="inline" height="0.118in" width="0.170in" outputclass="nolabel" scale="15" id="e03641"/>) and (<image align="left" height="0.117in" href="../../images/WKIA_040.eps" outputclass="nolabel" placement="inline" width="0.117in" scale="15" id="e03642"/>) warning lights will appear on the cluster.</p>
+		<p>Forward Collision-Avoidance Assist will operate properly when snow, rain or foreign material is removed.</p>
+		<p>If Forward Collision-Avoidance Assist does not operate properly after obstruction (snow, rain, or foreign material) is removed (including trailer, carrier, etc. from the rear bumper), have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="warning" id="e03643">
+			<ul id="e03644">
+				<li>
+					<p outputclass="across">Even though the warning message or warning light does not appear on the cluster, Forward Collision-Avoidance Assist may not properly operate.</p>
+				</li>
+				<li>
+					<p outputclass="across">Forward Collision-Avoidance Assist may not properly operate in an area (e.g. open terrain), where there is nothing to detect, or detecting sensor is covered in foreign material after turning ON the vehicle.</p>
+				</li>
+				<li>
+					<p outputclass="across">Even after starting the vehicle again, Forward Collision-Avoidance Assist may not function properly when the obstruction or malfunction condition persists.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e03645">
+			<p>You can check it in the service message of the utility information view of the cluster display window.</p>
+		</note>
+	</conbody>
+</concept>

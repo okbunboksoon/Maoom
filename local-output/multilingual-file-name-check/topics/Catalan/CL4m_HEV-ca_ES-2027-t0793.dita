@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_gen_std_017_02" id="CL4m_HEV-ca_ES-2027-t0793">
+	<title>ERA-GLONASS-System</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M065049L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Taste <term translate="no">SOS TEST</term></p>
+								</li>
+								<li>
+									<p>LED</p>
+								</li>
+								<li>
+									<p>Taste <term translate="no">SOS</term></p>
+								</li>
+								<li>
+									<p>Mikrofon</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p><term translate="no">SOS</term> Taste: Der Fahrer/Beifahrer stellt durch Drücken der Taste eine Verbindung mit der Notrufzentrale her.</p>
+		<p><term translate="no">SOS TEST</term>-Taste (Test): Die Taste dient zur Überprüfung der Funktionsfähigkeit des Systems im offiziellen Kia-Händlerbetrieb. Der Modus „SOS TEST“ kann ausschließlich durch den Spezialisten der Kia-Händler oder Servicepartner aktiviert werden. Um Fehlanrufe zu vermeiden, drücken Sie bitte nicht diese Taste und aktivieren Sie den Modus „SOS TEST“ nicht selbst.</p>
+		<p>LED: Die rote/grüne LED leuchtet 3 Sekunden auf, wenn der Zündschalter in Stellung <term translate="no">ON</term> steht. Danach werden die LEDs bei Normalbetrieb des Systems abgeschaltet.</p>
+		<p>Bei Problemen mit dem System bleibt die LED rot.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0792.dita#CL4m_HEV-ca_ES-2027-t0792" role="parent" scope="local" type="concept">
+				<linktext>ERA-GLONASS-Notruf</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

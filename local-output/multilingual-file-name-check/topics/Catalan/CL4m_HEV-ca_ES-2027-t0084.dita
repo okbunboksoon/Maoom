@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0084">
+	<title>So deaktivieren Sie die intelligente Heckklappe mit automatischer Öffnungsfunktion mithilfe des Smart-Keys</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Intelligente Heckklappe mit automatischer Öffnungsfunktion
+					<indexterm>So deaktivieren Sie (Smart-Key)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ol outputclass="callout">
+			<li>
+				<p>Verriegeln <image align="left" href="../../images/WKIA_019.eps" scale="15" placement="inline"/></p>
+			</li>
+			<li>
+				<p>Entriegeln <image align="left" href="../../images/WKIA_021.eps" scale="15" placement="inline"/></p>
+			</li>
+			<li>
+				<p>Heckklappe entriegeln/öffnen <image align="left" href="../../images/WKIA_020.eps" scale="15" placement="inline"/></p>
+			</li>
+			<li>
+				<p>Fernstart <image align="left" href="../../images/WKIA_108.eps" scale="15" placement="inline"/></p>
+			</li>
+		</ol>
+		<p>Wenn Sie während der Such- und Alarmphase eine Taste auf dem Smart-Key drücken, wird die intelligente Heckklappe mit automatischer Öffnungsfunktion deaktiviert.</p>
+		<p>Sie müssen wissen, wie Sie die intelligente Heckklappe mit automatischer Öffnungsfunktion in Notfällen deaktivieren.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn Sie die Türentriegelungstaste (5) drücken, wird die intelligente Heckklappe mit automatischer Öffnungsfunktion vorübergehend deaktiviert. Wenn Sie jedoch innerhalb von 30 Sekunden keine Tür öffnen, wird die intelligente Heckklappe mit automatischer Öffnungsfunktion wieder aktiviert.</p>
+				</li>
+				<li>
+					<p>Wenn Sie die Taste zum Öffnen der Heckklappe (6) länger als 1 Sekunde drücken, öffnet sich die Heckklappe.</p>
+				</li>
+				<li>
+					<p>Wenn Sie die Türentriegelungstaste (4) oder die Taste zum Öffnen der Heckklappe (6) drücken und sich die intelligente Heckklappe mit Öffnungsfunktion nicht in der Such- und Alarmphase befindet, wird die intelligente Heckklappe mit Öffnungsfunktion nicht deaktiviert.</p>
+				</li>
+				<li>
+					<p>Falls Sie die intelligente Heckklappe mit automatischer Öffnungsfunktion durch Drücken der Smart-Key-Taste deaktiviert und eine Tür geöffnet haben, kann die intelligente Heckklappe mit automatischer Öffnungsfunktion durch Schließen und Verriegeln aller Türen erneut aktiviert werden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0082.dita#CL4m_HEV-ca_ES-2027-t0082" role="parent" scope="local" type="concept">
+				<linktext>Intelligente Heckklappe mit automatischer Öffnungsfunktion</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

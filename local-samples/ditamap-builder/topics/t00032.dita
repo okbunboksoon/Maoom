@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00032">
+	<title outputclass="across">Charging types</title>
+	<prolog>
+		<metadata>
+			<keywords/>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatd" id="e00174">
+			<tgroup cols="5" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="1" colwidth="16*"/>
+				<colspec colnum="2" colname="2" colwidth="10*"/>
+				<colspec colnum="3" colname="3" colwidth="25*"/>
+				<colspec colnum="4" colname="4" colwidth="25*"/>
+				<colspec colnum="5" colname="5" colwidth="25*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="1" nameend="2" valign="middle">
+							<p>Category</p>
+						</entry>
+						<entry colname="3">
+							<p>AC Charge</p>
+						</entry>
+						<entry colname="4">
+							<p>DC Charge</p>
+						</entry>
+						<entry colname="5">
+							<p>Portable Charge*</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry align="center" valign="middle" namest="1" nameend="2">
+							<p>Charging Inlet (Vehicle)</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<fig id="e00175">
+								<title>Type A</title>
+								<figgroup>
+									<image href="../../images/OOVQ015004L.eps" align="center" placement="break" height="0.748in" width="1.063in" id="e00176"/>
+								</figgroup>
+							</fig>
+							<fig id="e00177">
+								<title>Type B</title>
+								<figgroup>
+									<image href="../../images/OOVCQ014002L.eps" align="center" placement="break" height="0.748in" width="1.063in" id="e00178"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<fig id="e00179">
+								<title>Type A</title>
+								<figgroup>
+									<image href="../../images/OOVQ015005L.eps" align="center" placement="break" height="0.748in" width="1.063in" id="e00180"/>
+								</figgroup>
+							</fig>
+							<fig id="e00181">
+								<title>Type B</title>
+								<figgroup>
+									<image href="../../images/OOVCQ014003L.eps" align="center" placement="break" height="0.748in" width="1.063in" id="e00182"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<fig id="e00183">
+								<title>Type A</title>
+								<figgroup>
+									<image href="../../images/OOVQ015004L.eps" align="center" placement="break" height="0.748in" width="1.063in" id="e00184"/>
+								</figgroup>
+							</fig>
+							<fig id="e00185">
+								<title>Type B</title>
+								<figgroup>
+									<image href="../../images/OOVCQ014002L.eps" align="center" placement="break" height="0.748in" width="1.063in" id="e00186"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="1" nameend="2" align="center" valign="middle">
+							<p>Charging Connector</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<fig id="e00187">
+								<title>Type A</title>
+								<figgroup>
+									<image href="../../images/OOVQ015059.eps" align="center" placement="break" height="0.746in" width="1.063in" id="e00188"/>
+								</figgroup>
+							</fig>
+							<fig id="e00189">
+								<title>Type B</title>
+								<figgroup>
+									<image href="../../images/OOVQ015008L.eps" align="center" placement="break" height="0.746in" width="1.063in" id="e00190"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<fig id="e00191">
+								<title>Type A</title>
+								<figgroup>
+									<image href="../../images/OOVQ015060.eps" align="center" placement="break" height="0.746in" width="1.063in" id="e00192"/>
+								</figgroup>
+							</fig>
+							<fig id="e00193">
+								<title>Type B</title>
+								<figgroup>
+									<image href="../../images/OOVQ015009L.eps" align="center" placement="break" height="0.746in" width="1.063in" id="e00194"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<fig id="e00195">
+								<title>Type A</title>
+								<figgroup>
+									<image href="../../images/OOVQ015059.eps" align="center" placement="break" height="0.746in" width="1.063in" id="e00196"/>
+								</figgroup>
+							</fig>
+							<fig id="e00197">
+								<title>Type B</title>
+								<figgroup>
+									<image href="../../images/OOVQ015008L.eps" align="center" placement="break" height="0.746in" width="1.063in" id="e00198"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry namest="1" nameend="2" align="center" valign="middle">
+							<p>How to Charge</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>Use AC charger installed at home or public charging station</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>Use the DC charger at public charging station</p>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>Use household current</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e00199">
+			<li>
+				<p outputclass="across">Actual charger image and charging method may vary in accordance with the charger manufacturer.</p>
+			</li>
+			<li>
+				<p>For your safety, your vehicle may stop charging if the external charger is outdated or defective. Try charging the vehicle using a different charger that works properly.</p>
+			</li>
+			<li>
+				<p outputclass="across">A maximum diagnosis time of 3 minutes may be added to check the battery condition during the battery charging process.</p>
+			</li>
+			<li>
+				<p outputclass="across">Charger removal time may vary by charging service provider. Instrument cluster indicator or message may differ by charger type. Reconnection may be required depending on the charging status.</p>
+			</li>
+		</ul>
+		<p importance="default">Depending on your region, ICCB cable for trickle charge may not be provided in your vehicle.</p>
+	</conbody>
+</concept>

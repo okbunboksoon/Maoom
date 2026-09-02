@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00144">
+	<title>Rest Mode</title>
+	<shortdesc/>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00696">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="53*"/>
+				<colspec colnum="2" colname="2" colwidth="47*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00697">
+								<figgroup>
+									<image href="../../images/N_CT25Z097_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Rest Mode in the infotainment system set vehicle to a state optimized for relaxation.</p>
+		<section id="e00698">
+			<title>Simple operation</title>
+			<ul id="e00699">
+				<li>
+					<p>Select the <menucascade><uicontrol>Settings</uicontrol><uicontrol>Rest Mode</uicontrol></menucascade> on the infotainment system to set Rest Mode.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e00700">
+			<title>Operation</title>
+			<ul id="e00701">
+				<li>
+					<p>Select the <menucascade><uicontrol>Settings</uicontrol><uicontrol>Rest Mode</uicontrol></menucascade> on the infotainment system.</p>
+				</li>
+				<li>
+					<p>Using this feature works as follows:</p>
+					<ul id="e00702">
+						<li>
+							<p>All displays turn off</p>
+						</li>
+						<li>
+							<p>Ambient lights turn off</p>
+						</li>
+						<li>
+							<p>The outside (fresh) air position turns on</p>
+						</li>
+						<li>
+							<p>Change to a temperature optimized for rest</p>
+						</li>
+						<li>
+							<p>The selected seat (driver’s seat/passenger’s seat) will swith to relaxation comfort seat</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section id="e00703">
+			<title>Operation condition(s)</title>
+			<p>The vehicle is on Utility mode</p>
+			<note type="caution" id="e00704">
+				<p>Make sure there is enough space in the rear seat before using rest mode.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00703">
+	<title>Highway Driving Assist settings</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>highway driving assist (HDA) 
+					<indexterm>settings</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig>
+								<figgroup>
+									<image href="../../images/N_CT25Z023_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol>Driver assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Driving Convenience</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>HDA (Motorway Driving Assist)</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Lane change assist (motorway)</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle is in <term translate="no">DRIVE READY</term>, touch or select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Driving Convenience</uicontrol></menucascade> on the infotainment system to set whether to use each function.</p>
+		<ul>
+			<li>
+				<p>If <uicontrol>HDA (highway Driving Assist)</uicontrol> is selected, it helps maintain distance from the vehicle ahead, maintain the set speed, and helps center the vehicle in the lane.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

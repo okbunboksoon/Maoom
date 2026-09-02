@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00475">
+	<title>Emergency Steering</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03585">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03586">
+								<figgroup>
+									<image href="../../images/OOV055151L.eps" align="center" height="1.740in" placement="break" id="e03587"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e03588">
+								<figgroup>
+									<image href="../../images/OOV055152L.eps" align="center" height="1.740in" placement="break" id="e03589"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e03590">
+			<li>
+				<p> <uicontrol>Emergency Steering</uicontrol> </p>
+			</li>
+		</ol>
+		<p>To warn the driver that emergency steering will be assisted, the emergency steering warning light blinking (<image href="../../images/WKIA_077.eps" align="left" placement="inline" height="0.118in" width="0.170in" outputclass="nolabel" scale="15" id="e03591"/>), warning message will appear on the cluster, steering wheel will vibrate (if equipped) and an audible warning will sound.</p>
+		<p outputclass="across">The warning light on the outside rearview mirror (side view mirror) will appear when the vehicle on both lanes is detected from the rear. Steering will be assisted to avoid collision.</p>
+		<p>Emergency steering will be activated in following conditions.</p>
+		<ul id="e03592">
+			<li>
+				<p>Your driving speed: Approximately 40–145 km/h (25–90 mph)</p>
+			</li>
+			<li>
+				<p>Side vehicle and powered two-wheeler speed: While driving.</p>
+			</li>
+			<li>
+				<p>Within a certain period of time after the system determines that the vehicle has departed from the lane.</p>
+			</li>
+			<li>
+				<p>When the target enters the operating area of the function.</p>
+			</li>
+			<li>
+				<p>When driving on a straight road.</p>
+			</li>
+			<li>
+				<p>When both lane markings are detected.</p>
+			</li>
+			<li>
+				<p>When there is no risk of secondary collision.</p>
+			</li>
+		</ul>
+		<note type="caution" id="e03593">
+			<ul id="e03594">
+				<li>
+					<p>Lane-Change Side function does not operate if the oncoming vehicle or powered two-wheeler at the side is stopped.</p>
+				</li>
+				<li>
+					<p>These functions do not work when a flanking car or two-wheeled vehicle is stationary.</p>
+				</li>
+				<li>
+					<p>The detection range of the front-side and rear-side radars is based on the standard road width of ordinary roads. On narrow roads, warnings may be triggered by a vehicle or powered two-wheeler driving in the next lane. Conversely, on wide roads, radars may fail to recognize a vehicle or powered two-wheeler driving in the next lane and not issue warnings.</p>
+				</li>
+				<li>
+					<p>The lateral approaching vehicle response function is deactivated in the following situations:</p>
+					<ul id="e03595">
+						<li>
+							<p>If you drive more than a certain distance into the next lane</p>
+						</li>
+						<li>
+							<p>If you move away from the direction where there is a risk of collision</p>
+						</li>
+						<li>
+							<p>If the steering wheel is rotated rapidly</p>
+						</li>
+						<li>
+							<p>If you step on the brake pedal</p>
+						</li>
+						<li>
+							<p>If Forward Collision-Avoidance Assist is activated</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>After the lateral approaching vehicle response function has been triggered or after changing lanes, be sure to move into the center of the lane. If you continue to drive along the edge of the lane without moving to the lane’s center, the lateral approaching vehicle response function will be deactivated.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e03596">
+			<ul id="e03597">
+				<li>
+					<p>If an additional accident is expected due to emergency steering, only a collision warning will be issued to notify of the danger.</p>
+				</li>
+				<li>
+					<p>If the driver’s seat is on the left, a collision warning may be issued when turning left; if the driver’s seat is on the right, a collision warning may be issued when turning right.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

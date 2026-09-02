@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00542">
+	<title>Speeding warning</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04078">
+			<tgroup cols="2" colsep="1" outputclass="FormatC" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e04079">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV055111.eps" placement="break" width="2.244in" id="e04080"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>If you exceed the displayed speed limit, the sign will blink and an audible warning will be triggered.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

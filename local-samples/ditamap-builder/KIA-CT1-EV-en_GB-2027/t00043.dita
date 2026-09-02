@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" id="t00043">
+	<title id="e00141">Disarmed stage</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>theft-alarm system 
+					<indexterm>disarmed stage</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section deliveryTarget="except_digital" id="e00142">
+			<title>Simple operation</title>
+			<ol id="e00143">
+				<li>
+					<p>The hazard warning lights will blink twice after the doors are unlocked.</p>
+				</li>
+				<li>
+					<p>After pressing the door unlock button, if any door (or trunk) is not opened within 30 seconds, the system will be rearmed.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print" id="e00144">
+			<title>Operation</title>
+			<ol id="e00145">
+				<li>
+					<p>The hazard warning lights will blink twice after the doors are unlocked.</p>
+				</li>
+				<li>
+					<p>After pressing the door unlock button, if any door (or trunk) is not opened within 30 seconds, the system will be rearmed.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operating condition(s)</title>
+			<ul id="e00146">
+				<li id="e00147">
+					<p>Door unlock button is pressed.</p>
+				</li>
+				<li>
+					<p>The sensor of the front outside door is pressed while carrying the smart key.</p>
+				</li>
+				<li id="e00148">
+					<p>The vehicle is started. (within 3 seconds)</p>
+				</li>
+				<li id="e00149">
+					<p>After pressing the unlock button, the hazard warning lights will blink and the chime will sound twice (in smart key) to indicate that the system is disarmed.</p>
+				</li>
+				<li>
+					<p>After pressing the unlock button, if any door (or trunk) is not opened within 30 seconds, the system will be rearmed.</p>
+				</li>
+			</ul>
+			<note type="caution" id="e00150">
+				<ul id="e00151">
+					<li>
+						<p>Do not change, alter or adjust the theft-alarm system because it could cause the theft-alarm system to malfunction. In this case, have the system serviced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>Malfunctions caused by improper alterations, adjustments or modifications to the theft-alarm system are not covered by your vehicle manufacturer warranty.</p>
+					</li>
+					<li>
+						<p>Do not attempt to alter this system or add other devices to it. Electrical problems could result that may make your vehicle inoperable.</p>
+					</li>
+				</ul>
+			</note>
+			<note deliveryTarget="except_print" type="note" id="e00152">
+				<ul id="e00153">
+					<li>
+						<p>Avoid trying to start the vehicle while the alarm is activated. The vehicle starting motor is disabled during the theft-alarm stage.</p>
+					</li>
+					<li>
+						<p>If the system is not disarmed with the key, turn the vehicle to the <term translate="no">DRIVE READY</term> position and wait for 30 seconds. Then the system will be disarmed.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

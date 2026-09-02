@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00592">
+	<title>Accelerating temporarily</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV056116L.eps" placement="break" width="2.243in"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>If you want to speed up temporarily without altering the set speed while Smart Cruise Control is operating, depress the accelerator pedal. While the accelerator pedal is depressed, the set speed, distance level and target distance will blink on the cluster.</p>
+							<p>However, if the accelerator pedal is depressed insufficiently, the vehicle may decelerate.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning">
+			<p>Be careful when accelerating temporarily, because the speed and distance is not controlled automatically even if there is a vehicle in front of you.</p>
+		</note>
+	</conbody>
+</concept>

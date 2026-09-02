@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00557">
+	<title>Limitations of Lane Keeping Assist</title>
+	<conbody>
+		<p>Lane Keeping Assist and other functions that use the same sensor may not operate or may operate abnormally under the following conditions. Drive with caution.</p>
+		<ul>
+			<li>
+				<p>The lane is contaminated or difficult to detect because:</p>
+				<ul>
+					<li>
+						<p>The lane markings (or road edges) are covered with rain, snow, dirt, oil, etc.</p>
+					</li>
+					<li>
+						<p>The color of the lane marking (or road edges) is not distinguishable from the road</p>
+					</li>
+					<li>
+						<p>There are markings (or road edges) on the road near the lane or the markings (or road edges) on the road look similar to the lane markings (or road edges)</p>
+					</li>
+					<li>
+						<p>The lane marking (or road edges) is indistinct or damaged</p>
+					</li>
+					<li>
+						<p>When the shadow of objects around the road (central reservation, crash barrier, noise barrier, surrounding bushes, etc.) or the shadow of a vehicle covers the lane.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>The lane number increases or decreases, or the lane markings (or road edges) are crossing</p>
+			</li>
+			<li>
+				<p>There are more than two lane markings (or road edges) on the road</p>
+			</li>
+			<li>
+				<p>The lane markings (or road edges) are complicated or a structure substitutes for the lines, such as a construction area</p>
+			</li>
+			<li>
+				<p>There are road markings, such as zigzag lanes, crosswalk markings and road signs</p>
+			</li>
+			<li>
+				<p>The lane suddenly disappears, such as at the intersection</p>
+			</li>
+			<li>
+				<p>The lane (or road width) is very wide or narrow</p>
+			</li>
+			<li>
+				<p>There is a road edge without a lane</p>
+			</li>
+			<li>
+				<p>There is a boundary structure in the roadway, such as a tollgate, sidewalk, curb, etc.</p>
+			</li>
+			<li>
+				<p>The distance to the front vehicle is extremely short or the vehicle in front is covering the lane marking (or road edge)</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>For more details on the limitations of the front view camera, refer to <xref href="t00507.dita#t00507"/>.</p>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>The driver should hold the responsibility to safely drive and control the vehicle. Do not solely rely on Lane Keeping Assist and drive dangerously.</p>
+				</li>
+				<li>
+					<p>The operation of Lane Keeping Assist can be canceled or not work properly if lane (including road edge) detected properly depending on road conditions and surroundings.</p>
+				</li>
+				<li>
+					<p>Refer to <xref type="concept" href="t00554.dita#t00554">Lane Keeping Assist malfunction and limitations</xref>, if the lane is not detected properly.</p>
+				</li>
+				<li>
+					<p>When you are towing a trailer or another vehicle, turn off Lane Keeping Assist for safety reasons.</p>
+				</li>
+				<li>
+					<p>If the vehicle is driven at high speed, the steering wheel will not be controlled. The driver must always follow the speed limit when using Lane Keeping Assist.</p>
+				</li>
+				<li>
+					<p>If any other function’s warning message is displayed or audible warning is generated, Lane Keeping Assist warning message may not be displayed and audible warning may not be generated.</p>
+				</li>
+				<li>
+					<p>You may not hear the warning sound of Lane Keeping Assist if the surrounding is noisy. Adjust the vehicle volume moderately and always pay attention to the surrounding.</p>
+				</li>
+				<li>
+					<p>If you attach objects to the steering wheel, steering may not be assisted properly.</p>
+				</li>
+				<li>
+					<p>Lane Keeping Assist may not operate for approximately 15 seconds after the vehicle is started, or the front view camera is initialized.</p>
+				</li>
+				<li>
+					<p>Lane Keeping Assist will not operate when:</p>
+					<ul>
+						<li>
+							<p>When right after turned on or off the turn signal or hazard warning flasher within a certain period of time.</p>
+						</li>
+						<li>
+							<p>The vehicle is not driven in the center of the lane when Lane Keeping Assist is turned on or right after changing a lane.</p>
+						</li>
+						<li>
+							<p>ESC (Electronic Stability Control) or VSM (Vehicle Stability Management) is activated.</p>
+						</li>
+						<li>
+							<p>The vehicle is turning quickly on a curved road.</p>
+						</li>
+						<li>
+							<p>Vehicle speed is below 55 km/h (35 mph) or above 210 km/h (130 mph).</p>
+						</li>
+						<li>
+							<p>The vehicle makes sharp lane changes.</p>
+						</li>
+						<li>
+							<p>The vehicle brakes suddenly.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Loading in excess of the maximum load allowance or concentrated loading at one point in the cargo compartment can reduce the vehicle’s driving stability, which can in turn reduce the effectiveness of Lane Keeping Assist.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

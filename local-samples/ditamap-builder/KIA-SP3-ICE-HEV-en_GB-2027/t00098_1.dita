@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="t00098_1" importance="optional">
+    <title>Remote window closing/opening (power window lock button)</title>
+    <shortdesc/>
+    <conbody>
+            <table outputclass="formatc_none" frame="none" rowsep="0" colsep="0"
+                id="table_l42_3p4_43c">
+                <tgroup cols="2" colsep="0" rowsep="0">
+                    <colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+                    <colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+                    <tbody>
+                        <row rowsep="0">
+                            <entry colname="col1">
+                                <fig id="fig_m42_3p4_43c">
+                                    <figgroup>
+                                        <image href="images/N_SP3i26_B04_047_E.jpg"
+                                            align="center" placement="break" scale="95" id="e00545"
+                                        />
+                                    </figgroup>
+                                </fig>
+                            </entry>
+                            <entry colname="col2">
+                                <ol outputclass="callout" id="e00546">
+                                    <li>
+                                        <p>Door lock button <image href="images/WKIA_019.jpg"
+                                                align="left" width="0.157in" height="0.157in"
+                                                placement="inline" outputclass="nolabel" id="e00547"
+                                            /></p>
+                                    </li>
+                                    <li>
+                                        <p>Door unlock button <image
+                                                href="images/WKIA_021.jpg" align="left"
+                                                width="0.157in" height="0.157in" placement="inline"
+                                                outputclass="nolabel" id="e00548"/></p>
+                                    </li>
+                                </ol>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p>You can still control the window's movement with the engine turned off.</p>
+            <ul id="ul_n42_3p4_43c">
+                <li>
+                    <p>Press the door lock button (1) for more than 3 seconds. The window moves up
+                        after the doors are locked, as long as you press the door lock button
+                        (1).</p>
+                    <p>The window movement stops, when you release the door lock button (1).</p>
+                </li>
+            </ul>
+            <ul id="ul_o42_3p4_43c">
+                <li>
+                    <p>Press the door unlock button (2) for more than 3 seconds. The window moves
+                        down after the doors are unlocked, as long as you press the door unlock
+                        button (2).</p>
+                    <p>The window movement stops, when you release the door unlock button (2).</p>
+                </li>
+            </ul>
+            <p>You can activate or deactivate the remote window closing/opening system by selecting <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>Vehicle</uicontrol>
+                    <uicontrol>Door</uicontrol>
+                    <uicontrol>Remote Window Control</uicontrol>
+                </menucascade>.</p>
+            <p importance="default">Remote window closing/opening features operate only on seats
+                equipped with auto up and down safety windows. </p>
+            <note type="caution" id="note_p42_3p4_43c">
+                <ul id="ul_q42_3p4_43c">
+                    <li>
+                        <p>The remote window closing/opening function may abruptly stop, when you
+                            move away from your vehicle during operation. Stay in proximity from
+                            your vehicle, while monitoring the window movement.</p>
+                    </li>
+                    <li>
+                        <p>One of the windows may stop operating, when the window is interrupted by
+                            certain force.</p>
+                        <p>However, the other windows will keep operating.</p>
+                        <p>Thus, you should make sure that all windows are closed.</p>
+                    </li>
+                    <li>
+                        <p>Be careful when using the remote window opening function, as the doors
+                            will be unlocked.</p>
+                    </li>
+                </ul>
+            </note>
+            <note type="tip" id="note_r42_3p4_43c">
+                <p>The infotainment system may change after software updates. For more information,
+                    refer to the manual provided in the infotainment system and the quick reference
+                    guide.</p>
+            </note>
+        
+    </conbody>
+    <related-links>
+        <linkpool>
+            <link format="dita" href="t00092.dita#t00092" role="parent" scope="local" type="concept">
+                <linktext>Windows </linktext>
+            </link>
+        </linkpool>
+    </related-links>
+</concept>

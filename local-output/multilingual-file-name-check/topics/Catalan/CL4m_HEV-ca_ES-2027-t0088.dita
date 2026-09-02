@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0088">
+	<title>Elektrische Fensterheber</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Fenster
+					<indexterm>Elektrische Fensterheber</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Der Zündschalter oder die Taste <term translate="no">ENGINE START/STOP</term> muss sich in der Stellung <term translate="no">ON</term> befinden, damit die elektrischen Fensterheber funktionieren.</p>
+		<p>Alle Türen sind mit Fensterheberschaltern ausgestattet. In der Fahrertür befindet sich ein Fensterheber-Sperrschalter, mit dem die Funktion der anderen Fensterheber gesperrt werden kann. Die elektrischen Fensterheber können etwa 3 Minuten lang betätigt werden, nachdem der Zündschalter entfernt oder in die <term translate="no">ACC</term>- oder <term translate="no">LOCK/OFF</term>-Position gedreht wurde oder der <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) in die <term translate="no">ACC</term>- oder <term translate="no">OFF</term>-Position gedreht wurde.</p>
+		<p>Wenn jedoch die Vordertüren geöffnet werden, können die elektrischen Fensterheber innerhalb der 30 Sekunden nicht betätigt werden.</p>
+		<p>Wenn das Fahrzeug aufgrund von blockierenden Objekten nicht geschlossen werden kann, entfernen Sie die Objekte und schließen Sie das Fenster.</p>
+		<note type="note">
+			<p>Beim Fahren mit geöffneten (oder halb geöffneten) hinteren Fenstern und mit geöffnetem (oder halb geöffnetem) Schiebedach (ausstattungsabhängig) kann es zu Windgeräuschen oder einem pulsierenden Geräusch kommen. Dieses Geräusch ist normal und kann wie folgt verringert oder beseitigt werden. Wenn das Geräusch zwischen einem oder zwei geöffneten Fenstern hinten auftritt, schließen Sie die beiden vorderen Fenster um ca. 2,5 cm (1 Zoll). Wenn das Geräusch durch ein geöffnetes Schiebedach entsteht, verringern Sie leicht die Öffnung des Schiebedachs.</p>
+		</note>
+		<note type="warning">
+			<p>Bauen Sie kein Zubehör im Fensterbereich ein. Es kann sonst den Klemmschutz beeinträchtigen.</p>
+		</note>
+		<section>
+			<title>Fenster öffnen und schließen</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034031N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>In der Fahrertür befindet sich ein Fensterhebersperre-Schalter, mit dem alle Fenster des Fahrzeugs gesteuert werden.</p>
+			<p>Um ein Fenster zu öffnen oder zu schließen, drücken oder ziehen Sie das vordere Ende der Schaltertaste bis zur ersten Raststufe (1).</p>
+		</section>
+		<section importance="optional">
+			<title>Fenster mit Öffnungs-/Schließautomatik</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034032N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Wenn Sie die Schaltertaste kurzzeitig bis in die zweite Rastung (2) niederdrücken oder ziehen, öffnet oder schließt sich das Fenster vollständig, auch wenn Sie den Schalter wieder loslassen. Wenn Sie die automatische Fensterbewegung in einer bestimmten Position stoppen möchten, ziehen oder drücken Sie den Schalter kurzzeitig in die entgegengesetzte Richtung der Fensterbewegung.</p>
+			<p>Wenn der Fensterheber nicht ordnungsgemäß funktioniert, muss ein Reset des automatischen Fensterhebers wie folgt durchgeführt werden:</p>
+			<ol>
+				<li>
+					<p>Bringen Sie das Fahrzeug in Position <term translate="no">ON</term>.</p>
+				</li>
+				<li>
+					<p>Schließen Sie alle Fenster und ziehen Sie, nachdem das Fenster vollständig geschlossen ist, mindestens 1 Sekunde lang den Fensterheberschalter auf der Fahrerseite nach oben.</p>
+				</li>
+			</ol>
+			<sectiondiv><ph>Automatisch umkehren</ph>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/ODEPV042019.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Wenn die Aufwärtsbewegung des Fensters durch einen Gegenstand oder ein Körperteil blockiert wird, erkennt der Fensterheber den Widerstand und stoppt die Aufwärtsbewegung. Danach senkt sich das Fenster um ca. 30 cm (11,8 Zoll), damit das Objekt entfernt werden kann.</p>
+				<p>Wenn der Fensterheber den Widerstand erkennt, während der Fensterheberschalter dauerhaft nach oben gezogen wird, wird die Aufwärtsbewegung gestoppt und das Fenster senkt sich danach um ca. 2,5 cm (1 Zoll).</p>
+				<p>Wenn der Fensterheberschalter innerhalb von 5 Sekunden, nachdem der Klemmschutz das Fenster automatisch gesenkt hat, wieder dauerhaft nach oben gezogen wird, ist die Klemmschutzfunktion aufgehoben.</p>
+				<note type="note">
+					<p>Der Klemmschutz (automatisches Senken) des Fahrertürfensters ist nur aktiv, wenn die Funktion „automatisch Schließen“ durch vollständiges Ziehen des Fensterheberschalters aktiviert wird. Der Klemmschutz (automatisches Senken) ist nicht aktiv, wenn der Fensterheberschalter nur bis zum ersten Schalterwiderstand gezogen wird.</p>
+				</note>
+				<note type="warning">
+					<p>Bevor Sie ein Fenster schließen, achten Sie immer darauf, dass es nicht durch Gegenstände behindert wird, um Verletzungen und Beschädigungen zu vermeiden. Wenn ein Gegenstand mit einem Durchmesser von unter 4 mm (0,16 Zoll) zwischen Fensterscheibe und oberem Türrahmen eingeklemmt wird, kann der Klemmschutz den Widerstand möglicherweise nicht erkennen. In diesem Fall stoppt der Fensterheber nicht und senkt sich auch nicht.</p>
+				</note>
+				<note type="warning">
+					<p>Der Klemmschutz wird nicht aktiviert, wenn das Fensterhebersystem zurückgestellt wird.</p>
+					<p>Achten Sie beim Schließen der Fenster darauf, dass keine Körperteile oder Gegenstände im Weg sind, damit niemand verletzt und das Fahrzeug nicht beschädigt wird.</p>
+				</note>
+				<note type="warning">
+					<p>Die automatische Umkehrfunktion kann versagen, wenn beim Öffnen oder Schließen von Fenstern Zubehör wie Antennen usw. an den Fenstern angebracht sind.</p>
+				</note>
+			</sectiondiv>
+		</section>
+		<section importance="optional" otherprops="legal_eu_std_007_02" id="e00224">
+			<title>Fensterheber-Sperrschalter</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M035033L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul>
+				<li>
+					<p>Der Fahrer kann die Fensterheberschalter der anderen Türen deaktivieren, indem er den Fensterheber-Sperrschalter in die Position <term translate="no">LOCK</term> drückt (nach unten).</p>
+				</li>
+				<li>
+					<p>Wenn sich die Taste für die Fensterhebersperre in der Position <term translate="no">LOCK</term> (gedrückt) befindet, kann der Schalter für die Fensterhebersperre alle elektrischen Fensterheber betätigen. Mit der Steuerung der Beifahrertür lässt sich das Fenster des Beifahrers bedienen. Mit den Bedienelementen auf der Beifahrerseite können die Fenster auf der Beifahrerseite nicht bedient werden.</p>
+				</li>
+			</ul>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Um eine Beschädigung des elektrischen Fensterhebersystems zu vermeiden, öffnen und schließen Sie nicht mehr als zwei Fenster gleichzeitig. Dies verlängert die Lebensdauer der entsprechenden Sicherung.</p>
+					</li>
+					<li>
+						<p>Versuchen Sie niemals, den Haupt-Fensterheberschalter an der Fahrertür und einen Fensterheberschalter der betreffenden Tür gleichzeitig in unterschiedliche Richtungen zu betätigen. Das betreffende Fenster bleibt in diesem Fall stehen und kann nicht mehr geöffnet oder geschlossen werden.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning">
+				<p>Fenster</p>
+				<ul>
+					<li>
+						<p>Lassen Sie den Schlüssel niemals unbeaufsichtigt im Fahrzeug, wenn der Motor läuft.</p>
+					</li>
+					<li>
+						<p>Lassen Sie nie ein oder mehrere Kinder unbeaufsichtigt im Fahrzeug zurück. Selbst sehr junge Kinder können ungewollt verursachen, dass sich das Fahrzeug in Bewegung setzt, dass sie in einem Fenster eingeklemmt werden oder dass sie sich selbst oder Andere verletzen.</p>
+					</li>
+					<li>
+						<p>Vergewissern Sie sich jedes Mal vor dem Schließen eines Fensters, dass sich weder Arme, Hände, ein Kopf oder irgendwelche Gegenstände im Gefahrenbereich der Fensterscheibe befinden.</p>
+					</li>
+					<li>
+						<p>Erlauben Sie Kindern nicht, mit den elektrischen Fensterhebern zu spielen. Halten Sie den Fensterheber-Sperrschalter der Fahrertür in der Position <term translate="no">LOCK</term> (niedergedrückt). Die unbeabsichtigte Betätigung eines Fensterhebers durch ein Kind kann zu schweren Verletzungen führen.</p>
+					</li>
+					<li>
+						<p>Strecken Sie während der Fahrt nicht Kopf oder Arme aus dem Fenster.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0087.dita#CL4m_HEV-ca_ES-2027-t0087" role="parent" scope="local" type="concept">
+				<linktext>Fenster </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

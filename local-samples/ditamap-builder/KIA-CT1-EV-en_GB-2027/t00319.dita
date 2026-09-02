@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00319">
+	<title>Setting the charge level of the portable charger</title>
+	<conbody>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01400">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01401">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q052.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e01402">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q053.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol>
+				<li>
+					<p>Check the rated current of the household electric outlet and connect the plug to it.</p>
+				</li>
+				<li>
+					<p>Press the button (1) on the back of the control box for 2 to 8 seconds.</p>
+				</li>
+				<li>
+					<p>Press the button (1) several times until the display window shows the charge level needed.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ol>
+				<li>
+					<p>Check the rated current of the electric outlet prior to connecting the plug to the outlet.</p>
+				</li>
+				<li>
+					<p>Connect the plug to a household electric outlet.</p>
+				</li>
+				<li>
+					<p>Check the display window on the control box.</p>
+				</li>
+				<li>
+					<p>Press the button (1) on the control box for 2 to 8 seconds to adjust the charge level. (Refer to charging cable type and example for setting the charge level.)</p>
+				</li>
+				<li>
+					<p>The charge level on the display window of the control box changes every time you press the button (1).</p>
+				</li>
+				<li>
+					<p>When setting the charge level is complete, start charging according to the portable charge procedure.</p>
+				</li>
+			</ol>
+		</section>
+		<section>
+			<title>Example for setting the ICCB charge level</title>
+			<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+				<desc>
+					<p importance="default">The example is only for reference and may vary according to the surrounding environment.</p>
+				</desc>
+				<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="1*"/>
+					<colspec colname="col2" colnum="2" colwidth="1*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1">
+								<p>Outlet current</p>
+							</entry>
+							<entry colname="col2">
+								<p>ICCB charge level</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>8–9A</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>6A</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>10–11A</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>8A</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>12–13A</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>10A</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>14–16A</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>12A</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+</concept>

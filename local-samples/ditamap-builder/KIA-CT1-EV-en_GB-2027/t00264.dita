@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00264">
+	<title>Air bag non-inflation conditions</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc" rowsep="1" id="e01244">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry align="center" nameend="col2" namest="col1" valign="middle">
+							<p>Air bag non-inflation conditions</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry align="center" colname="col1" valign="middle">
+							<fig id="e01245">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B064.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry align="left" colname="col2" valign="middle">
+							<p>In certain low-speed collisions the air bags may not deploy.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry align="center" colname="col1" valign="middle">
+							<fig id="e01246">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B066.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry align="left" colname="col2" valign="middle">
+							<p>air bags are not designed to inflate in rear collisions.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry align="center" colname="col1" valign="middle">
+							<fig id="e01247">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B069.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry align="left" colname="col2" valign="middle">
+							<p>Heavy braking lowers the front portion of the vehicle causing it to “ride” under a vehicle with a higher ground clearance.</p>
+							<p>air bags may not inflate in this “under-ride” situation because deceleration forces that are detected by sensors may be significantly reduced by such “under-ride” collisions.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig id="e01248">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B068.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry align="left" colname="col2" valign="middle">
+							<p>In an angled collision, the force of impact may send the occupants in a direction where the air bags would not be able to provide any additional benefit; thus, the sensors may not deploy any air bags.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig id="e01249">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B067.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry align="left" colname="col2" valign="middle">
+							<p>Front air bags may not inflate in side impact collisions.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig id="e01250">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B070.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry align="left" colname="col2" valign="middle">
+							<p>air bags may not inflate in rollover accidents because the vehicle cannot detect the rollover.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig id="e01251">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B071.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry align="left" colname="col2" valign="middle">
+							<p>air bags may not inflate if the vehicle collides with objects such as utility poles or trees, meaning the point of impact is concentrated in one area and the full force of the impact is not delivered to the sensors.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning" id="e01252">
+			<ul id="e01253">
+				<li>
+					<p>The SRS is designed to deploy the front air bags only when an impact is sufficiently severe and when the impact angle is less than 30° from the forward longitudinal ax­ is of the vehicle.</p>
+				</li>
+				<li>
+					<p>Front air bags are not intended to deploy in side-impact, rear-impact or rollover crashes. In addition, front air bags will not deploy in frontal crashes below the deployment threshold.</p>
+				</li>
+				<li>
+					<p>The side and curtain air bags deploy only in certain side impact or rollover conditions (Only vehicle equipped with rollover sensor) severe enough to cause significant injury to the vehicle occupants.</p>
+				</li>
+				<li>
+					<p>Deactivate the passenger’s front air bag only when the vehicle is in <term translate="no">OFF</term> position, or the malfunction may occur in the SRS Control Module. And there may be a danger that the driver’s and/or front passenger’s and/or side and curtain air bag may fail to trigger, or not trigger correctly during a collision.</p>
+				</li>
+				<li>
+					<p>If an air bag deploys, there may be a loud noise followed by a fine dust released in the vehicle. These conditions are not hazardous.</p>
+				</li>
+				<li>
+					<p>The air bags are packed in this fine power. The dust generated during air bag deployment It may cause skin or eye irritation as well as aggravate asthma for some persons. Always wash all exposed skin areas thoroughly with cold water and a mild soap after an accident in which the air bags were deployed.</p>
+				</li>
+				<li>
+					<p>For cleaning the air bag pad covers, use only a soft, dry cloth or one which has been moistened with plain water.</p>
+				</li>
+				<li>
+					<p>Solvents or cleaners could adversely affect the air bag covers and proper deployment of the system.</p>
+				</li>
+				<li>
+					<p>Keep the SRS parts and wiring away from water or any liquid. If the SRS components are inoperative due to exposure to water or liquids, it may cause fire or severe injury.</p>
+				</li>
+				<li>
+					<p>If any of the following conditions occurs, this indicates a malfunction of the SRS. In this case, have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					<ul id="e01254">
+						<li>
+							<p>The light does not turn on briefly when you turn the vehicle <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term>.</p>
+						</li>
+						<li>
+							<p>The light stays on after illuminating for approximately 6 seconds.</p>
+						</li>
+						<li>
+							<p>The light comes on while the vehicle is in motion.</p>
+						</li>
+						<li>
+							<p>The light blinks when the <term translate="no">EV</term> button is in <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Before you replace a fuse or disconnect a battery terminal, turn the <term translate="no">EV</term> button to <term translate="no">OFF</term> position. Never remove or replace the air bag related fuse(s) when the <term translate="no">EV</term> button is in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position. Failure to heed this warning will cause the SRS air bag warning light to appear.</p>
+				</li>
+				<li>
+					<p>Do not tamper with or disconnect wiring or other components of the SRS system, including the addition of any kind of badges to the pad covers or modifications to the body structure. Doing so could adversely affect SRS performance and lead to possible injury. If necessary, have the system serviced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>If your vehicle was flooded and has soaked carpeting or water on flooring, you shouldn't try to start the vehicle; In this situation, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>Air bags can only be used once. If the air bags inflate, have the system replaced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>If components of the air bag system must be discarded, or if the vehicle must be scrapped, certain safety precautions must be observed, such as removing SRS and pre-tensioners from a vehicle due to the risk of fire. Failure to follow these precautions and procedures could increase the risk of personal injury. An authorized Kia dealer knows these precautions and can give you the necessary information.</p>
+				</li>
+			</ul>
+		</note>
+		<note deliveryTarget="except_print" type="note" id="e01255">
+			<ul id="e01256">
+				<li>
+					<p importance="high">With rollover sensor</p>
+					<p>The side and curtain air bags are designed to inflate when a rollover is detected by a rollover sensor. The air bags may inflate in a rollover, when it is detected by the rollover sensor.</p>
+				</li>
+				<li>
+					<p importance="high">Without rollover sensor</p>
+					<p>The side and/or curtain air bags may inflate when the vehicle is rolled over by a side impact collision, if the vehicle is equipped with side air bags and curtain air bags.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

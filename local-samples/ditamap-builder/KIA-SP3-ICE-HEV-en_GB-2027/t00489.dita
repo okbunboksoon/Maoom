@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00489">
+	<title>Lane Departure Warning</title>
+	<conbody>
+		<p>The Lane Departure Warning is issued through a green indicator light on the instrument cluster, a blinking indicator in the direction you departed from, an audible warning sound and steering wheel vibration (if equipped).</p>
+		<p>Lane Departure Warning can activate in the following conditions.</p>
+		<ul id="e03327">
+			<li>
+				<p>Your driving speed: Approximately 60-200 km/h (40-120 mph)</p>
+			</li>
+			<li>
+				<p>Road conditions meet the operating requirements (e.g., lane width, road curvature, etc.)</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00488.dita#t00488" role="parent" scope="local" type="concept">
+				<linktext>Warning and control</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

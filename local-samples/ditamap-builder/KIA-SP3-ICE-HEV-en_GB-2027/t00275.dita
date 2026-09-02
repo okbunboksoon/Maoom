@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00275">
+	<title>Battery</title>
+	<conbody>
+		<p>The vehicle has a high voltage battery and a 12V battery. The high voltage battery powers the motor and the air conditioning. The 12V battery contains the HEV battery, which powers lamps, wipers, and the audio system. The 12V battery automatically charges when the vehicle is in <term translate="no">READY</term> mode.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00272.dita#t00272" role="parent" scope="local" type="concept">
+				<linktext>Special features</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

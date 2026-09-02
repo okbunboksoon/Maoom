@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00122">
+	<title>For rear center seat</title>
+	<shortdesc/>
+	<conbody>
+		<section id="e00855">
+			<title>Operating conditions</title>
+			<ul id="e00856">
+				<li>
+					<p>When the vehicle is ON, the warning light will illuminate for approximately 6 seconds. Afterward, regardless of passenger occupancy, if the seat belt is not fastened, the warning light will stay illuminated for approximately 70 seconds.</p>
+				</li>
+				<li>
+					<p>If the seat belt is unfastened while driving after it has been initially fastened, and the vehicle’s speed is below approximately 20 km/h (12 mph), the warning light will remain illuminated for approximately 70 seconds. If the vehicle’s speed is above approximately 20 km/h (12 mph), the warning light (flashing) and warning sound will operate for approximately 35 seconds.</p>
+				</li>
+			</ul>
+			<note type="warning" id="e00857">
+				<p>Riding in an improper position adversely affects the front seat belt warning system. It is important for the driver to instruct the passenger to properly be seated as instructed in this manual.</p>
+			</note>
+			<note type="note" id="e00858">
+				<ul id="e00859">
+					<li>
+						<p>Although the front passenger seat is not occupied, the seat belt warning light will blink or illuminate for 6 seconds.</p>
+					</li>
+					<li>
+						<p>The front passenger’s seat belt warning may operate when luggage is placed.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e00860">
+			<title>Non-operating conditions</title>
+			<ul id="e00861">
+				<li>
+					<p>When the rear door is opened or closed, and the vehicle speed is under 10 km/h (6 mph)</p>
+					<p>- Seat belt warning light and the seat belt warning chime will not work even if the vehicle speed is over approximately 20 km/h (12 mph).</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

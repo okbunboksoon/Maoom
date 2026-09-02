@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00555">
+	<title>Taking a break</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04137">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e04138">
+								<figgroup>
+									<image href="../../images/OOV055187L.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e04139"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e04140">
+								<li>
+									<p> <uicontrol outputclass="c0586">Consider taking a break</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The inattentive warning light (<image align="left" height="0.157in" href="../../images/OMV033422.eps" outputclass="nolabel" placement="inline" width="0.157in"/>) blinking and warning message will appear on the cluster and an audible warning will sound to suggest that the driver take a break, when the driver’s attention level is below a certain level.</p>
+		<ul>
+			<li>
+				<p outputclass="across">Driver Attention Warning will not suggest a break when the total driving time is shorter than 4 minutes or 4 minutes has not passed after the last break was suggested.</p>
+			</li>
+		</ul>
+		<p>The driver’s attention level is determined when the vehicle has met the following conditions:</p>
+		<ul>
+			<li>
+				<p>The driver’s individual driving patterns such as steering, acceleration, and deceleration.</p>
+			</li>
+			<li>
+				<p>Driving conditions such as driving time.</p>
+			</li>
+		</ul>
+		<p>Driver attention level is reset under the following conditions:</p>
+		<ul id="e04141">
+			<li>
+				<p>When the driver’s seat belt is unfastened and the door is opened and closed while stationary.</p>
+			</li>
+			<li>
+				<p>When the vehicle is stopped for more than 10 minutes.</p>
+			</li>
+			<li>
+				<p>When the vehicle is restarted.</p>
+			</li>
+		</ul>
+		<p>To deactivate the inattentive driving warning function, please press the <term translate="no">OK</term> button.</p>
+		<p>Taking a break activates under the following condition:</p>
+		<ul id="e04142">
+			<li>
+				<p>Vehicle speed: approximately 60 km/h or higher</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<p>For your safety, change the Settings after parking the vehicle at a safe location.</p>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Driver Attention Warning may suggest a break depending on the driver’s driving pattern or habits, even if the driver doesn't feel fatigue.</p>
+				</li>
+				<li>
+					<p>Driver Attention Warning is a supplemental function and may not be able to determine whether the driver is inattentive.</p>
+				</li>
+				<li>
+					<p>The driver who feels fatigued should take a break at a safe location, even though there is no break suggestion by Driver Attention Warning.</p>
+				</li>
+				<li>
+					<p importance="optional">While the Forward Attention Warning is active, the Inattentive Driving Warning is limited.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

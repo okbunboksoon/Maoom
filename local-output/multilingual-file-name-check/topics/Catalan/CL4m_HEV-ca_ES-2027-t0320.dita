@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0320">
+	<title id="e00747">Sitzbelüftung </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Sitzbelüftung</indexterm>
+				<indexterm>Innenausstattung
+					<indexterm>Sitzbelüftung</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034070N_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Temperatureinstellung des Sitzes ändert sich entsprechend der Tastenstellung.</p>
+		<ul>
+			<li>
+				<p>Drücken Sie die Taste, um das Sitzpolster zu lüften.</p>
+				<p>Immer wenn Sie die Taste drücken, ändert sich der Luftstrom wie folgt:</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image href="../../images/ODEEV068232NR.eps" scale="15" align="center" placement="inline"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+		</ul>
+		<p>Wird die Taste bei laufender Sitzbelüftung länger als 1,5 Sekunden gedrückt, schaltet sich das Sitzbelüftungssystem aus.</p>
+		<p>Die Sitzbelüftung ist standardmäßig ausgeschaltet, sobald das Fahrzeug eingeschaltet wird.</p>
+		<note type="caution">
+			<p>Beschädigung der Sitze</p>
+			<p>Verwenden Sie für die Reinigung der Sitze keine Lösungsmittel wie Verdünnung, Benzin oder Alkohol. Dies kann die Sitzbelüftung beschädigen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0315.dita#CL4m_HEV-ca_ES-2027-t0315" role="parent" scope="local" type="concept">
+				<linktext>Innenausstattung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

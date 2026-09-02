@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00586">
+	<title>Resuming Cruise Control</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e03723">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e03724">
+								<figgroup>
+									<image href="images/N_SP3i25_B10_036_2_IR.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Operate the (+), (-) or (<image href="images/WKIA_079.jpg" scale="15" align="left" placement="inline"/>) switch.</p>
+		<p>If you push the (+) switch up or (-) switch down, the set speed will be set to the current speed on the cluster.</p>
+		<p>If you press the (<image href="images/WKIA_079.jpg" scale="15" align="left" placement="inline"/>) switch, vehicle speed will resume to the preset speed.</p>
+		<p>The vehicle speed must be above 30 km/h (20 mph) for Cruise Control to resume.</p>
+		<note type="warning" id="e03725">
+			<p>Check the driving condition before using the (<image href="images/WKIA_079.jpg" scale="15" align="left" placement="inline"/>) switch. Driving speed may sharply increase or decrease when you press the (<image href="images/WKIA_079.jpg" scale="15" align="left" placement="inline"/>) switch.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00580.dita#t00580" role="parent" scope="local" type="concept">
+				<linktext>Cruise Control operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0556">
+	<title>Fahreraufmerksamkeits-Warnsystem vorne (FAW)</title>
+	<shortdesc>Das Fahreraufmerksamkeits-Warnsystem nutzt die Innenraumkamera, um den Fahrer durch einen akustischen Warnton und eine Warnleuchte vor Ablenkung während der Fahrt zu schützen.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Fahreraufmerksamkeits-Warnsystem vorne (FAW)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Erkennungssensor</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M055011L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout">
+									<li>
+										<p>Innenraumkamera</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die Abbildung oben zeigt die genaue Position des Erkennungssensors.</p>
+			<note type="caution">
+				<p>Halten Sie die Kamera in der Kabine immer in gutem Zustand, um die optimale Leistung des Fahreraufmerksamkeits-Warnsystems zu erhalten.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0437-CH10.dita#CL4m_HEV-ca_ES-2027-t0437-CH10" role="parent" scope="local" type="concept">
+				<linktext>Fahrerassistenzleitfaden</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

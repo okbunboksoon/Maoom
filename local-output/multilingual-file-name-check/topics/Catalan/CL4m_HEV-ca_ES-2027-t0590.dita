@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0590">
+	<title>Vermindern der eingestellten Geschwindigkeit</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054014N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Drücken Sie die Schaltwippe (-) nach unten und lassen Sie sie sofort los. Die eingestellte Geschwindigkeit verringert sich bei jeder kurzen Bewegung der Schaltwippe nach unten um 1 km/h (1 mph).</p>
+			</li>
+			<li>
+				<p>Drücken Sie die Schaltwippe (-) nach unten und halten Sie sie gedrückt. Die eingestellte Geschwindigkeit verringert sich bei jeder kurzen Bewegung der Schaltwippe nach unten um 10 km/h (5 mph).</p>
+				<p>Sie können die eingestellte Geschwindigkeit auf 30 km/h (20 mph) verringern.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0587.dita#CL4m_HEV-ca_ES-2027-t0587" role="parent" scope="local" type="concept">
+				<linktext>Intelligente Tempomatsteuerung anschalten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

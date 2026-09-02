@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00295">
+	<title>Daytime Running Light (DRL)</title>
+	<shortdesc>Daytime Running Light (DRL) improves visibility, making it easier for other drivers and pedestrians to see the front of your vehicle during daylight hours.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lighting 
+					<indexterm>daytime running light (DRL)</indexterm>
+				</indexterm>
+				<indexterm>daytime running light (DRL)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The DRL is useful in various driving conditions, especially after dawn and before sunset.</p>
+		<p>The DRL will turn <term translate="no">OFF</term> in the following cases:</p>
+		<ul>
+			<li>
+				<p>When the headlight switch is <term translate="no">ON</term>.</p>
+			</li>
+			<li>
+				<p>When the vehicle is in <term translate="no">OFF</term> position.</p>
+			</li>
+			<li>
+				<p>When the hazard warning flasher is <term translate="no">ON</term>.</p>
+			</li>
+			<li>
+				<p>When the parking brake is engaged.</p>
+			</li>
+			<li>
+				<p>When the turn signal is <term translate="no">ON</term> (only the DRL on the side where the turn signal is operating will turn off).</p>
+			</li>
+		</ul>
+		<note otherprops="legal_eu_std_011_01" type="note">
+			<p importance="high" otherprops="legal_eu_std_011_01">Traffic Change (For Europe)</p>
+			<p>The low beam light distribution is asymmetric. If you go abroad to a country with opposite traffic direction, this asymmetric part will dazzle oncoming car driver. To prevent dazzle, ECE regulation demand several technical solutions (ex. automatic change system, adhesive sheet, down aiming). These headlamps are designed not to dazzle opposite drivers. So, you need not change your headlamps in a country with opposite traffic direction.</p>
+		</note>
+	</conbody>
+</concept>

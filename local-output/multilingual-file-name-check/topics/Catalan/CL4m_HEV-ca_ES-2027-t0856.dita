@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0856">
+	<title>Batteriekapazitätsaufkleber</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Batterie
+					<indexterm>Batteriekapazitätsaufkleber</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<fig id="e01450">
+			<title>Beispiel</title>
+			<figgroup>
+				<image align="center" href="../../images/OCV071057L.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<p>Die tatsächliche Batteriekennzeichnung im Fahrzeug kann von der Abbildung abweichen.</p>
+		<ol outputclass="callout">
+			<li>
+				<p>Der Kia-Modellname für die Batterie</p>
+			</li>
+			<li>
+				<p>Die Nennkapazität (in Ah)</p>
+			</li>
+			<li>
+				<p>Die Nenn-Reservekapazität (in Min.)</p>
+			</li>
+			<li>
+				<p>Die Nennspannung</p>
+			</li>
+			<li>
+				<p>Die Kälteteststromstärke in Ampere nach SAE</p>
+			</li>
+			<li>
+				<p>Die Kälteteststromstärke in Ampere nach EN</p>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0854.dita#CL4m_HEV-ca_ES-2027-t0854" role="parent" scope="local" type="concept">
+				<linktext>Batterie </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

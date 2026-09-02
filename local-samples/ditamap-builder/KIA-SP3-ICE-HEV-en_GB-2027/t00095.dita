@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00095">
+	<title id="e00462">Windows </title>
+	<shortdesc>The doors of this vehicle are equipped with power windows that you can operate with a switch.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>windows</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e00463">
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00464">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00465">
+									<image href="images/N_SP3i26_B04_017_1_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e00466">
+									<li id="e00467">
+										<p>Power window lock switch</p>
+									</li>
+									<li id="e00468">
+										<p>Rear door (left) power window switch</p>
+									</li>
+									<li id="e00469">
+										<p>Rear door (right) power window switch</p>
+									</li>
+									<li id="e00470">
+										<p>Driver’s door power window switch</p>
+									</li>
+									<li id="e00471">
+										<p>Front passenger’s door power window switch</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<note type="tip" id="e00472">
+				<p>In cold and wet climates, power windows may not work properly due to freezing conditions.</p>
+			</note>
+			<p>The vehicle must be in the <term translate="no">ON</term> position for the power windows to operate.</p>
+			<p>Each door has a power window switch that controls that door’s window. The driver has a power window lock button, which can block the operation of rear passenger windows. You can operate the power windows for approximately 3 minutes after turning the vehicle to the <term translate="no">ACC</term> or <term translate="no">LOCK</term> position. If you open the front doors, you cannot operate the power windows, even within the 3-minute period.</p>
+			<p>If the window cannot close because objects are blocking it, remove the objects and close the window.</p>
+			<note type="tip" id="e00473">
+				<p>While driving with the rear windows down or with the sunroof (if equipped) in an open (or partially open) position, position, you may hear a wind buffeting (or pulsation) noise in your vehicle. This noise is normal and can be reduced or eliminated by taking the following actions: 
+					<ul>
+						<li>
+							<p>If the noise occurs with 1 or both of the rear windows down, partially lower both front windows approximately 2.5 cm (1 inch).</p>
+						</li>
+						<li>
+							<p>If the noise occurs with the sunroof open, slightly reduce the size of the sunroof opening.</p>
+						</li>
+					</ul>
+				</p>
+			</note>
+			<note type="note">
+				<p>Do not install any accessories in the vehicle that extend into the open window area. Such objects will impact the proper function of the Automatic reversal Jam Protection feature.</p>
+			</note>
+			<note type="note">
+				<p>If you press the 1-touch window button to make a small adjustment, the glass will go down to a specific location for your convenience.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00033.dita#t00033" role="parent" scope="local" type="concept">
+				<linktext>Opening and Closing</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

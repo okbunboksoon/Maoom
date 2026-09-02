@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00738">
+	<title>Hazard lights switch</title>
+	<shortdesc>The hazard lights warn other drivers to exercise extreme caution when approaching, overtaking, or passing your vehicle.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>road warning
+					<indexterm>hazard lights switch</indexterm>
+				</indexterm>
+				<indexterm>hazard lights switch</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04459">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04460">
+								<image align="center" placement="break" scale="95" href="images/N_SP3i26_C11_001_1_I.jpg"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Use the hazard lights when your vehicle is stopped near the edge of the road or undergoing emergency repairs.</p>
+		<p>Push the hazard lights switch when the vehicle is in any position. The hazard lights switch is located in the center front panel. All turn signal lights blink simultaneously.</p>
+		<ul id="e04461">
+			<li>
+				<p>The hazard lights switch operates whether your vehicle is running or not.</p>
+			</li>
+			<li>
+				<p>Turn signal lights do not work when hazard lights are on.</p>
+			</li>
+			<li>
+				<p>Be careful using the hazard lights while the vehicle is being towed.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00737.dita#t00737" role="parent" scope="local" type="concept">
+				<linktext>Road warning</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

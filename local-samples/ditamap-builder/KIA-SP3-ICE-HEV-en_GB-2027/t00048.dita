@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00048">
+	<title>With the remote key</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00243">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00244">
+								<title>Manual type</title>
+								<figgroup>
+									<image align="center" placement="break" href="images/N_SP3i26_B04_002_1_E.jpg" scale="95"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e00245">
+			<title id="e00246">Locking </title>
+			<p>Press the remote key lock button to lock the door.</p>
+			<p>For more details on the operating door locks with the remote key, refer to <xref href="t00035.dita#t00035"/></p>
+		</section>
+		<section id="e00247">
+			<title>Unlocking (Manual type)</title>
+			<ol id="e00248">
+				<li>
+					<p>Press the remote key unlock button to unlock the door.</p>
+					<p>For more details on the operating door locks with the remote key, refer to <xref href="t00035.dita#t00035"/>.</p>
+				</li>
+				<li>
+					<p>Once the doors are unlocked, press the front of the door handle then rear of the door handle will pop out.</p>
+				</li>
+				<li>
+					<p>Pull the outside door handle to open the door.</p>
+					<p>After pressing the button, the doors will lock automatically unless you open any door within 30 seconds.</p>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00047.dita#t00047" role="parent" scope="local" type="concept">
+				<linktext>Door locks </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

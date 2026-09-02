@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00585">
+	<title>Collision warning when a exiting vehicle</title>
+	<conbody>
+		<p>The warning light on the outside rear view mirror will blink and the warning message will appear on the cluster, and an audible warning will sound.</p>
+		<p>Warning message: <uicontrol>Collision warning</uicontrol> </p>
+		<ul>
+			<li>
+				<p>Collision warning when exiting vehicle will warn under the following circumstances:</p>
+				<ul>
+					<li>
+						<p>Your driving speed: below 3 km/h (2 mph)</p>
+					</li>
+					<li>
+						<p>The speed of the approaching vehicle from the rear: above 6 km/h (4 mph)</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</conbody>
+</concept>

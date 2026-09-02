@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0120">
+	<title id="e00276">Kombiinstrument </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Kombiinstrument</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<fig expanse="page">
+			<title>Typ A</title>
+			<figgroup>
+				<image align="center" href="../../images/OCL4M034105.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<fig expanse="page">
+			<title>Typ B</title>
+			<figgroup>
+				<image align="center" href="../../images/OCL4M03106L.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<ol outputclass="callout">
+			<li>
+				<p>Tachometer</p>
+			</li>
+			<li>
+				<p>Warn- und Kontrollleuchten</p>
+			</li>
+			<li>
+				<p>Ganganzeige</p>
+			</li>
+			<li>
+				<p>Restreichweite</p>
+			</li>
+			<li>
+				<p>Drehzahlmesser</p>
+			</li>
+			<li>
+				<p>Tankanzeige</p>
+			</li>
+			<li>
+				<p>Kilometerzähler</p>
+			</li>
+			<li>
+				<p>Außentemperaturanzeige</p>
+			</li>
+			<li>
+				<p>Motorkühlmitteltemperaturanzeige</p>
+			</li>
+		</ol>
+		<p>Das tatsächlich in Ihrem Fahrzeug vorhandene Kombiinstrument kann von der Abbildung abweichen.</p>
+		<p>Weitere Details finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0121.dita#CL4m_HEV-ca_ES-2027-t0121"/>.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0104-CH06.dita#CL4m_HEV-ca_ES-2027-t0104-CH06" role="parent" scope="local" type="concept">
+				<linktext>Fahrereinstellungen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

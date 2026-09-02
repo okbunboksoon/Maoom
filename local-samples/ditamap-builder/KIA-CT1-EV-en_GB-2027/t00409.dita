@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" base="Anywhere" importance="optional" id="t00409">
+	<title id="e01676">V2L power outlet</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features 
+					<indexterm>V2L power outlet</indexterm>
+				</indexterm>
+				<indexterm>V2L power outlet</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01677">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01678">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q014.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01679">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q015.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The V2L power outlet supplies 3.68 kVA (3-phase regions, 230 V/16 A)/3.52 kVA (1-phase regions, 220 V/16 A) electric power to operate electric accessories or equipment in the vehicle.</p>
+		<p>If you wish to use the V2L power outlet, open up the cover and connect a plug to it with the vehicle is in <term translate="no">POWER ON</term>, <term translate="no">DRIVE READY</term>, or Utility Mode</p>
+		<p>For more details, refer to <xref type="concept" href="t00284.dita#t00284">Suitability of each seating position for belted &amp; ISOFIX Child Restraint Systems (CRS) according to UN regulations (Information for use by vehicle users and CRS manufacturers)</xref> </p>
+		<p>V2L stands for Vehicle to Load.</p>
+		<note deliveryTarget="except_print" type="note">
+			<ul>
+				<li>
+					<p>Rated voltage: AC 230V</p>
+				</li>
+				<li>
+					<p>Maximum electric power:</p>
+					<ul id="e01680">
+						<li>
+							<p>3-phase regions: 3.68 kVA (230 V/16 A)</p>
+						</li>
+						<li>
+							<p>1-phase regions: 3.52 kVA (220 V/16 A)</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>In order to avoid an electrical system failure, electric shock, etc., be sure to read owner’s manual before use.</p>
+				</li>
+				<li>
+					<p>Be sure to close the cover except for when in use.</p>
+				</li>
+				<li>
+					<p>After using an electric accessory or equipment, pull the plug out. Leaving the accessory or equipment plugged in for a long time may cause battery discharge.</p>
+				</li>
+				<li>
+					<p>Do not use an electric accessory or equipment the power consumption of which is greater than 3.68 kVA (3-phase regions, 230 V/16 A)/3.52 kVA (1-phase regions, 220 V/16 A).</p>
+				</li>
+				<li>
+					<p>When the V2L input voltage is less than min. discharging voltage (245 V), power will turn off. The V2L will operate as normal when the voltage is increased.</p>
+				</li>
+				<li>
+					<p>While the power consumption of some electrical devices/appliances may be within the AC inverter’s electric power range, it may malfunction in below cases.</p>
+					<ul id="e01681">
+						<li>
+							<p>If the device/appliance requires high electric power for initial start up</p>
+						</li>
+						<li>
+							<p>If the device/appliance processes precise/very accurate data</p>
+						</li>
+						<li>
+							<p>If the device/appliance requires very stable supply of electricity</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+		<note deliveryTarget="except_print" type="caution">
+			<p importance="high">Electric accessory devices</p>
+			<ul>
+				<li>
+					<p>Do not use broken electric accessories which may damage the V2L power outlet and electrical systems of the vehicle.</p>
+				</li>
+				<li>
+					<p>Do not use two or more electric accessories at the same time. It may cause damage to the electrical systems of the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

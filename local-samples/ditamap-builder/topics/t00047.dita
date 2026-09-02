@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00047">
+	<title>How to disconnect DC charger</title>
+	<conbody>
+		<ol id="e00295">
+			<li>
+				<p>Remove the charging connector when DC charging is complete, or after you stop charging with the DC charger. The charging connector cannot be removed when locked. The lock is automatically released after charging is complete, so you can remove the charging connector. If the lock is not released after charging is complete, pull the emergency cable for a few seconds. Refer to each respective DC charger manual for details about how to disconnect the charging connector.</p>
+			</li>
+			<li>
+				<p>Make sure to completely close the charging door.</p>
+			</li>
+		</ol>
+		<note type="caution" id="e00296">
+			<p>High frequency noise is heard when the vehicle operates the function to reduce electromagnetic waves on its own to maintain charging. Thus, it is the normal functional behavior of the vehicle which does not affect charging or vehicle performance.</p>
+		</note>
+		<note type="note" id="e00297">
+			<p>If you use a DC charger when the vehicle is already fully charged, some DC chargers will send out an error message. When the vehicle is fully charged, do not charge the vehicle.</p>
+		</note>
+	</conbody>
+</concept>

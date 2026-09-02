@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Top" otherprops="legalnotice_europe-general_egall_2023_20230101_00014" id="t00249">
+	<title outputclass="across">Suitability of each seating position for belted &amp; ISOFIX Child Restraint Systems (CRS)according to UN regulations (Information for use by vehicle users and CRS manufacturers)</title>
+	<shortdesc/>
+	<conbody>
+		<ul id="e01595">
+			<li>
+				<p>Yes: Suitable for fitment of the designated category of CRS</p>
+			</li>
+			<li>
+				<p>No: Not suitable for fitment of the designated category of CRS</p>
+			</li>
+			<li>
+				<p>“-”: Not applicable</p>
+			</li>
+			<li>
+				<p>The table is based on LHD vehicle. Except for the front passenger seat, the table is valid for RHD vehicle. For RHD vehicle front passenger of number 1, please use information for the seating position number 3.</p>
+			</li>
+		</ul>
+		<p><term translate="no">F</term>: Forward facing</p>
+		<p><term translate="no">R</term>: Rearward facing</p>
+		<table frame="all" colsep="1" rowsep="1" pgwide="1" outputclass="formatc" id="e01596">
+			<tgroup cols="8" colsep="1" rowsep="1" outputclass="FormatC">
+				<colspec colnum="1" colname="1" colwidth="30*"/>
+				<colspec colnum="2" colname="2" colwidth="18*"/>
+				<colspec colnum="3" colname="3" colwidth="9*"/>
+				<colspec colnum="4" colname="4" colwidth="9*"/>
+				<colspec colnum="5" colname="5" colwidth="10*"/>
+				<colspec colnum="6" colname="6" colwidth="8*"/>
+				<colspec colnum="7" colname="7" colwidth="8*"/>
+				<colspec colnum="8" colname="8" colwidth="8*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="1" nameend="2" morerows="2" valign="middle">
+							<p>CRS categories</p>
+						</entry>
+						<entry namest="3" nameend="8" align="center" valign="middle">
+							<p>Seating positions</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="3" morerows="1">
+							<p>1</p>
+						</entry>
+						<entry namest="4" nameend="5">
+							<p>3</p>
+						</entry>
+						<entry colname="6" morerows="1">
+							<p>4</p>
+						</entry>
+						<entry colname="7" morerows="1">
+							<p>5</p>
+						</entry>
+						<entry colname="8" morerows="1">
+							<p>6</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="4">
+							<p>Airbag</p>
+							<p><term translate="no">ON</term></p>
+						</entry>
+						<entry colname="5">
+							<p>Airbag</p>
+							<p>Off</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry valign="middle">
+							<p>Universal belted CRS</p>
+						</entry>
+						<entry valign="middle">
+							<p>All mass groups</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>Yes <sup>1</sup> F, R </p>
+						</entry>
+						<entry colname="6" align="center" valign="middle">
+							<p>Yes</p>
+							<p><term translate="no">F</term>, <term translate="no">R</term></p>
+						</entry>
+						<entry colname="7" align="center" valign="middle">
+							<p>Yes <sup>1</sup> F, R </p>
+						</entry>
+						<entry colname="8" align="center" valign="middle">
+							<p>Yes</p>
+							<p><term translate="no">F</term>, <term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" valign="middle">
+							<p>i-Size CRS</p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>ISOFIX CRF</p>
+							<p>(F2,F2X,R1,R2)</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="6" align="center" valign="middle">
+							<p>Yes</p>
+							<p><term translate="no">F</term>, <term translate="no">R</term></p>
+						</entry>
+						<entry colname="7" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="8" align="center" valign="middle">
+							<p>Yes</p>
+							<p><term translate="no">F</term>, <term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" valign="middle">
+							<p>Carry cot</p>
+							<p>(ISOFIX lateral facing CRS)</p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>ISOFIX CRF</p>
+							<p>(L1,L2)</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="6" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="7" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="8" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" valign="middle">
+							<p>ISOFIX infant* CRS</p>
+							<p>(*: ISOFIX baby CRS)</p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>ISOFIX CRF</p>
+							<p>(R1)</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="6" align="center" valign="middle">
+							<p>Yes</p>
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="7" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="8" align="center" valign="middle">
+							<p>Yes</p>
+							<p><term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" valign="middle">
+							<p>ISOFIX toddler CRS - small</p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>ISOFIX CRF</p>
+							<p>(F2,F2X, R2, R2X)</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="6" align="center" valign="middle">
+							<p>Yes</p>
+							<p><term translate="no">F</term>, <term translate="no">R</term></p>
+						</entry>
+						<entry colname="7" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="8" align="center" valign="middle">
+							<p>Yes</p>
+							<p><term translate="no">F</term>, <term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" valign="middle">
+							<p>ISOFIX toddler CRS - large*</p>
+							<p>(*: not booster seats)</p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>ISOFIX CRF</p>
+							<p>(F3, R3)</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="6" align="center" valign="middle">
+							<p>Yes <sup>2</sup> F, R </p>
+						</entry>
+						<entry colname="7" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="8" align="center" valign="middle">
+							<p>Yes <sup>2</sup> F, R </p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" valign="middle">
+							<p>Booster seat-Reduced width</p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>ISO CRF</p>
+							<p>(B2)</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="6" align="center" valign="middle">
+							<p>Yes</p>
+						</entry>
+						<entry colname="7" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="8" align="center" valign="middle">
+							<p>Yes</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="1" valign="middle">
+							<p>Booster seat-Full width</p>
+						</entry>
+						<entry colname="2" valign="middle">
+							<p>ISO CRF</p>
+							<p>(B3)</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="6" align="center" valign="middle">
+							<p>Yes</p>
+						</entry>
+						<entry colname="7" align="center" valign="middle">
+							<p>No</p>
+						</entry>
+						<entry colname="8" align="center" valign="middle">
+							<p>Yes</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol id="e01597">
+			<li>
+				<p>To install Universal CRS, 1st row passenger seatback should be up at most upright position.</p>
+			</li>
+			<li>
+				<p>To install R3 size CRS. 
+					<ul id="e01598">
+						<li>
+							<p>Front Driver Seat: Seat Height should be up highest position.</p>
+						</li>
+						<li>
+							<p>Front Passenger Seat: Seat should be moved foremost position.</p>
+						</li>
+					</ul>
+				</p>
+			</li>
+		</ol>
+		<p>Never place a rearward facing Child Restraint System on the front passenger seat, unless the air bag is deactivated.</p>
+		<p>For semi-universal or vehicle specific CRS (ISOFIX or belted CRS), please see the vehicle list provided in the manual of CRS.</p>
+		<p>If the vehicle headrest prevents proper installation of a CRS, the headrest of the seating position shall be readjusted or entirely removed.</p>
+		<p>When Installing Child Restraint system on 2nd row seats, move the seat to mid-position.</p>
+		<table outputclass="formatc" frame="all" rowsep="1" colsep="1" pgwide="1" id="e01599">
+			<tgroup cols="3" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="0.911*"/>
+				<colspec colnum="2" colname="col2" colwidth="1.347*"/>
+				<colspec colnum="3" colname="col3" colwidth="2.440*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1" align="center" valign="middle">
+							<p>Seat Number</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>Position in the vehicle</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>Seating positions</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1" align="center" valign="middle">
+							<p>1</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>Front left</p>
+						</entry>
+						<entry colname="col3" morerows="4" align="center" valign="middle">
+							<fig id="e01600">
+								<figgroup>
+									<image href="images/N_SP327_C06_007_E.jpg" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" align="center" valign="middle">
+							<p>3</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>Front right</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" align="center" valign="middle">
+							<p>4</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>2 <sup>nd</sup> row left </p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" align="center" valign="middle">
+							<p>5</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>2 <sup>nd</sup> row center </p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="center" valign="middle">
+							<p>6</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2 <sup>nd</sup> row right </p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e01601">
+			<title>Recommended CRS for Vehicle according to UN regulations</title>
+			<p>(Information for use by vehicle users and CRS manufacturers)</p>
+			<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc" id="e01602">
+				<tgroup cols="4" colsep="1" rowsep="1" outputclass="formatc">
+					<colspec colnum="1" colname="1" colwidth="1*"/>
+					<colspec colnum="2" colname="2" colwidth="1.25*"/>
+					<colspec colnum="3" colname="3" colwidth="1.41*"/>
+					<colspec colnum="4" colname="4" colwidth="2.5*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1" align="center" valign="middle">
+								<p>Child Height</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Name</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>Manufacturer</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>Type of Fixation</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1" align="center" valign="middle">
+								<p>40–105 cm</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Pearl 360 (with FamilyFix 360 Base)</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>MAXI-COSI</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>ISOFIX mounted with support leg</p>
+								<p>(Rearward–facing)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" align="center" valign="middle">
+								<p>76–105 cm</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Trifix 2 i-Size</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>BRITAX</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>ISOFIX mounted with top-tether</p>
+								<p>(Rearward–facing)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" align="center" valign="middle">
+								<p>100–150 cm</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Solution T i-Fix</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>Cybex</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>ISOFIX and Vehicle belt</p>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry colname="1" align="center" valign="middle">
+								<p>135–150 cm</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Graco Eversure Lite R129</p>
+							</entry>
+							<entry colname="3" align="center" valign="middle">
+								<p>Cybex</p>
+							</entry>
+							<entry colname="4" align="center" valign="middle">
+								<p>Vehicle belt</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<sectiondiv><ph>CRS Manufacturer information</ph>
+				<p>MAXI-SOSI: https://www.maxi-cosi.com</p>
+				<p>Britax: http://www.britax.com</p>
+				<p>Cybex: https://www.cybex-online.com</p>
+				<p>Graco: https://gracobaby.eu/en</p>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00246.dita#t00246" role="parent" scope="local" type="concept">
+				<linktext>ISOFIX low anchorage and ISOFIX top tether anchorage (ISOFIX anchorage system) for children </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

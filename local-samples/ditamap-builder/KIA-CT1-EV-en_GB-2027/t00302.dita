@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" deliveryTarget="except_print" id="t00302">
+	<title>Scheduled charging</title>
+	<conbody>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Set the charging schedule for your vehicle from the infotainment system, Kia App, or Kia Connect app.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Set the charging schedule for your vehicle on the Infotainment system, Kia App, or Kia Connect app.</p>
+				</li>
+				<li>
+					<p>Scheduled charging operates only with a slow charger or a portable charger (ICCB: In Cable Control Box).</p>
+				</li>
+				<li>
+					<p>When scheduled charging is set and a slow charger or portable charger (ICCB: In Cable Control Box) is connected, the charging status indicator on the charging door will appear orange.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01346">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e01347">
+											<figgroup>
+												<image align="center" href="../../images/N_CT25Q036.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>When scheduled charging is set, connecting a slow charger or portable charger (ICCB: In Cable Control Box) will not start charging immediately.</p>
+				</li>
+				<li>
+					<p>To start charging immediately, disable the scheduled charging setting through the infotainment system or the Kia App or Kia Connect app.</p>
+				</li>
+				<li>
+					<p>You can also press and hold the immediate charging switch for about 2 seconds to cancel scheduled charging and start charging immediately.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01348">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e01349">
+											<figgroup>
+												<image align="center" href="../../images/N_CT25Q037.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>If scheduled charging is set, the system calculates the start time automatically. In some cases, charging may begin immediately after the charger is connected.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operating conditions</title>
+			<ul>
+				<li>
+					<p>Following charger type is connected</p>
+					<ul>
+						<li>
+							<p>AC charger</p>
+						</li>
+						<li>
+							<p>Portable charger (ICCB)*</p>
+						</li>
+					</ul>
+					<p>*: Depending on your region, this cable may not be provided in your vehicle.</p>
+				</li>
+			</ul>
+			<note type="tip">
+				<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

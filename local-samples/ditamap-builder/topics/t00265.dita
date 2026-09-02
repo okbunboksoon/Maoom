@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legalnotice_europe-general_gen-mex_2023_20230101_00015" id="t00265">
+	<title>Power/Charge gauge</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01892">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01893">
+								<figgroup>
+									<image href="../../images/OOV035105.eps" align="center" placement="break" id="e01894"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The Power/Charge Gauge shows the energy consumption rate of the vehicle and the charge/discharge status of the regenerative brakes.</p>
+		<ul id="e01895">
+			<li>
+				<p> <term translate="no">CHARGE</term>: It shows the energy consumption rate of the vehicle when driving uphill or accelerating. The more electric energy is used, the higher the gauge level.</p>
+			</li>
+			<li>
+				<p> <term translate="no">POWER</term>: It shows the charging status of the battery when it is being charged by the regenerative brakes (decelerating or driving on a downhill road). The more electric energy is charged, the lower the gauge level.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

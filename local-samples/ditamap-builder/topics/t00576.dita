@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00576">
+	<title>Blind-Spot View Monitor</title>
+	<conbody>
+		<section>
+			<title>Operating conditions</title>
+			<ul>
+				<li>
+					<p>When the left or right turn signal turns on, the image on the instrument cluster will turn on.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Off conditions</title>
+			<p>Blind-Spot View Monitor will turn off when one of the following conditions are satisfied:</p>
+			<ul>
+				<li>
+					<p>When the turn signal is turned off.</p>
+				</li>
+				<li>
+					<p>When the hazard warning flasher is on.</p>
+				</li>
+				<li>
+					<p>When other important warning is displayed on the instrument cluster.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

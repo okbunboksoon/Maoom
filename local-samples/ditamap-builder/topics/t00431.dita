@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00431">
+	<title>Launch Control (For GT)</title>
+	<shortdesc>Launch Control provides maximum acceleration when the vehicle is at a complete stop. It also controls the vehicle to avoid unnecessary wheel spin when accelerating on the slippery road, optimizing vehicle’s acceleration from a stationary position.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>launch control</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e03186">
+			<title>Launch Control settings</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03187">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e03188">
+									<image href="../../../images/OOVQ016072L.eps" align="center" placement="break" scale="95" id="e03189"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e03190">
+									<li>
+										<p> <uicontrol>Launch Control</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When the vehicle is in <uicontrol translate="no">DRIVE READY</uicontrol> state, tap <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Drive Mode</uicontrol><uicontrol>Launch Control</uicontrol></menucascade> from the infotainment system screen.</p>
+		</section>
+		<section id="e03191">
+			<title>Launch Control operation</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03192">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e03193">
+									<image href="../../../images/OOVQ016073L.eps" align="center" placement="break" scale="95" id="e03194"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e03195">
+									<li>
+										<p> <uicontrol>Launch Control Ready</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul id="e03196">
+				<li>
+					<p>Step on the brake pedal over a certain level and then depress the accelerator pedal lightly. <uicontrol>Launch Control Ready</uicontrol> warning message will appear on the instrument cluster once Launch Control is ready to activate.</p>
+				</li>
+				<li>
+					<p>Once Launch Control is ready, pre-torque will be automatically initiated.</p>
+				</li>
+				<li>
+					<p>Start driving after releasing the brake pedal within 8 seconds.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e03197">
+			<title>Operating conditions</title>
+			<p>Launch Control will be activated when all of the following conditions are satisfied:</p>
+			<ul id="e03198">
+				<li>
+					<p>Drive mode is in <uicontrol translate="no">GT</uicontrol> (<uicontrol translate="no">MY DRIVE</uicontrol> mode: <uicontrol translate="no">SPORT+</uicontrol>)</p>
+				</li>
+				<li>
+					<p>ESC is in <uicontrol translate="no">SPORT</uicontrol> or <uicontrol translate="no">OFF</uicontrol> </p>
+				</li>
+				<li>
+					<p>Vehicle is in D (Drive)</p>
+				</li>
+				<li>
+					<p>Steering wheel is in straight position</p>
+				</li>
+				<li>
+					<p>No warning indicator lights</p>
+				</li>
+				<li>
+					<p>Normal wheel speed</p>
+				</li>
+				<li>
+					<p>Normal motor temperature</p>
+				</li>
+			</ul>
+			<note type="tip" id="e03199">
+				<ul id="e03200">
+					<li>
+						<p>Launch Control will be canceled once you release the accelerator pedal.</p>
+					</li>
+					<li>
+						<p>If you want to use Launch Control again, you must cool down the vehicle for more than approximately 2 minutes. (If the ready state exceeds 8 seconds, it is considered as used.)</p>
+					</li>
+					<li>
+						<p>Launch Control is limited when Speed Limit Assist is operating or the motor control unit is overheated.</p>
+					</li>
+					<li>
+						<p>Pre-torque: Torque is responsible for making your vehicle accelerate quickly from a stationary position.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

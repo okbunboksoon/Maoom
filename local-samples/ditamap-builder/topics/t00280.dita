@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00280">
+	<title id="e02103">Current trip</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e02104">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e02105">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV035119L.eps" placement="break" width="2.244in" id="e02106"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<ol outputclass="callout" id="e02107">
+								<li>
+									<p> <uicontrol>Current Trip Info</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Trip</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Timer</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Avg.</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e02108">
+			<li id="e02109">
+				<p>The trip computer mode displays information related to vehicle driving parameters including average energy consumption, tripmeter information, and vehicle speed.</p>
+			</li>
+			<li id="e02110">
+				<p>Turn off the vehicle and open the driver’s seat door or turn on the vehicle 3 minutes after turning it off, and the Current trip is automatically initialized.</p>
+			</li>
+			<li id="e02111">
+				<p>If the vehicle is running, even when the vehicle is not in motion, the information will be accumulated.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

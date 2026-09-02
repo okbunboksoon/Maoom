@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00093">
+	<title>Adjusting lumbar support</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00664">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00665">
+								<figgroup>
+									<image href="../../images/OOV025010_2.eps" align="center" height="1.740in" placement="break" id="e00666"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<fig id="e00667">
+								<figgroup>
+									<image href="../../images/OOV025011_2.eps" align="center" height="1.740in" placement="break" id="e00668"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The lumbar support can be adjusted by pressing the lumbar support switch on the side of the seat.</p>
+		<ol>
+			<li>
+				<p>Press the front portion of the switch to increase support, or the rear portion of the switch, to decrease support.</p>
+			</li>
+			<li>
+				<p>Press the upper portion of the switch to raise the support, or the lower portion of the switch, to lower the support.</p>
+			</li>
+			<li>
+				<p>Release the switch once it reaches the desired position.</p>
+			</li>
+		</ol>
+		<note type="note" id="e00669">
+			<ul id="e00670">
+				<li>
+					<p>Do not continue to operate the lumbar support when the lumbar support provides its maximum support. Damage to the lumbar support motor could occur.</p>
+				</li>
+				<li>
+					<p>Make sure to turn off the lumbar massage switch while your vehicle is turned off.</p>
+					<p>Otherwise, the 12V battery will still be consumed for up to 15 minutes, potentially causing your vehicle to fail to restart.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

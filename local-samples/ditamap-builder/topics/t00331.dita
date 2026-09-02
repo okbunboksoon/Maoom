@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00331">
+	<title>Heating and air conditioning automatically</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system 
+					<indexterm>heating and air conditioning automatically</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ol>
+			<li>
+				<p>Touch the <term translate="no">AUTO</term> icon.</p>
+				<p>The modes, fan speeds, air intake and air-conditioning will be controlled automatically by setting the temperature.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02469">
+					<tgroup cols="2" colsep="0" rowsep="1">
+						<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e02470">
+										<figgroup>
+											<image href="../../images/N_CT25C086.eps" align="center" height="1.740in" placement="break" id="e02471"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Push the temperature control lever up or down to the desired temperature.</p>
+			</li>
+		</ol>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02472">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02473">
+								<figgroup>
+									<image href="../../images/OOV035304.eps" align="center" height="1.740in" placement="break" id="e02474"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note">
+			<ul>
+				<li>
+					<p>To turn the automatic operation off, select any button or lever of the following:</p>
+					<ul>
+						<li>
+							<p>Mode selection icon/lever</p>
+						</li>
+						<li>
+							<p>Air conditioning icon</p>
+						</li>
+						<li>
+							<p>Front windshield defroster icon (Touch the icon one more time to deselect the front windshield defroster function. The <term translate="no">AUTO</term> sign will illuminate on the information display once again.)</p>
+						</li>
+						<li>
+							<p>Fan speed control icon/lever</p>
+						</li>
+					</ul>
+					<p>The selected function will be controlled manually while other functions operate automatically.</p>
+				</li>
+				<li>
+					<p>For your convenience and to improve the effectiveness of the climate control, use the <term translate="no">AUTO</term> icon and set the temperature to 22 °C (72 °F).</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Never place anything over the sensor (1) located on the instrument panel to ensure better control of the heating and cooling system.</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02475">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02476">
+									<figgroup>
+										<image href="../../images/OOV035002.eps" align="center" height="1.740in" placement="break" id="e02477"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00487">
+	<title>Turning Lane Keeping Assist ON and OFF</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03316">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03317">
+								<image href="images/N_SP3i25_B10_021_1_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To turn Lane Keeping Assist <term translate="no">ON</term> or <term translate="no">OFF</term>, press and hold the Lane Driving Assist (<image href="images/WKIA_274.jpg" scale="15" align="left" placement="inline"/>) button on the steering wheel while the vehicle is <term translate="no">ON</term>.</p>
+		<p>The gray or green indicator (<image href="images/WKIA_198.jpg" scale="15" align="left" placement="inline"/>) appears on the instrument cluster if you turn <term translate="no">ON</term> Lane Keeping Assist.</p>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>If Lane Keeping Assist is not met, the gray indicator (<image href="images/WKIA_198.jpg" scale="15" align="left" placement="inline"/>) appears on the instrument cluster.</p>
+				</li>
+				<li>
+					<p>If Lane Keeping Assist is met, the green indicator (<image href="images/WKIA_198.jpg" scale="15" align="left" placement="inline"/>) appears on the instrument cluster.</p>
+				</li>
+			</ul>
+		</note>
+		<section id="e03318">
+			<title>Automatic Activation</title>
+			<p>Lane Keeping Assist automatically turns on in the following situations:</p>
+			<ul id="e03319">
+				<li>
+					<p>When both Lane Following Assist (LFA) and Smart Cruise Control (SCC) are activated.</p>
+				</li>
+				<li>
+					<p>When Highway Driving Assist (HDA) turns on. (if equipped)</p>
+				</li>
+			</ul>
+			<p>If Lane Keeping Assist is automatically turned on under these conditions, attempting to turn off Lane Keeping Assist will display a warning, and Lane Keeping Assist will not turn off.</p>
+			<p>To turn off Lane Keeping Assist, temporarily deactivate Smart Cruise Control or turn off the driving assistance functions by pressing the Lane Keeping Assist or Driving Assist button, then try again.</p>
+			<note type="warning" id="e03320">
+				<ul id="e03321">
+					<li><b>Except Middle East</b>
+						<p>Lane Keeping Assist will remain on even if you turn off the driving convenience functions.</p>
+					</li>
+					<li><b>For Middle East</b>
+						<p>When the vehicle is restarted, the Lane safety will maintain the last setting.</p>
+					</li>
+					<li>
+						<p>To turn off Lane Keeping Assist, temporarily deactivate Smart Cruise Control or turn off the driving assistance functions by pressing the Lane Keeping Assist or Driving Assist button, then try again.</p>
+					</li>
+					<li>
+						<p>When connecting a trailer or carrier, set the trailer or carrier menu (if equipped). If the driver manually sets the menu or the trailer or carrier connection is automatically recognized through genuine parts, the functions of the driver assistance system may be limited. Please refer to <xref href="t00734.dita#t00734"/> and always drive with caution.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00486.dita#t00486" role="parent" scope="local" type="concept">
+				<linktext>Lane Keeping Assist operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

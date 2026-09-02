@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00651">
+	<title>Highway Driving Assist malfunction</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04005">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04006">
+								<image href="images/OCL4M055096N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e04007">
+								<li>
+									<p><uicontrol>Check Driver Assistance system</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When Highway Driving Assist is not working properly, the Master warning light (<image href="images/WKIA_040.jpg" scale="15" align="left" placement="inline"/>) appears on the instrument cluster, along with a warning message that lasts for several seconds. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="warning" id="e04008">
+			<ul id="e04009">
+				<li>
+					<p>You are responsible for driving safely and controlling the vehicle.</p>
+				</li>
+				<li>
+					<p>Always keep your hands on the steering wheel while driving.</p>
+				</li>
+				<li>
+					<p>Highway Driving Assist is a supplemental function that assists you in driving the vehicle. It is not a completely autonomous driving system. Always check road conditions and take the appropriate actions to drive safely.</p>
+				</li>
+				<li>
+					<p>Always keep your eyes on the road. It is your responsibility to avoid violating traffic laws. Kia is not responsible for any traffic violations or accidents you cause.</p>
+				</li>
+				<li>
+					<p>Highway Driving Assist may not recognize all traffic situations. Highway Driving Assist may not detect possible collisions due to the function’s limitations. Always be aware of the function’s limitations. The function may not detect obstacles (such as vehicles, motorcycles, bicycles, pedestrians, or unspecified objects) or structures (such as guardrails or tollgates) that may collide with your vehicle.</p>
+				</li>
+				<li>
+					<p>Highway Driving Assist automatically turns <term translate="no">OFF</term> in the following situations:</p>
+					<ul id="e04010">
+						<li>
+							<p>When driving on roads where Highway Driving Assist is not operable, such as rest areas, intersections, junctions, and so on.</p>
+						</li>
+						<li>
+							<p>When the navigation system does not operate properly (for example, when it is updating or restarting).</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Highway Driving Assist may inadvertently operate or turn <term translate="no">OFF</term> depending on road conditions, navigation information, and surroundings.</p>
+				</li>
+				<li>
+					<p>The Lane Following Assist function may be temporarily disabled when the front view camera cannot detect lane lines properly or when the hands-off warning appears.</p>
+				</li>
+				<li>
+					<p>You may not hear the Highway Driving Assist warning sounds if your surroundings are noisy.</p>
+				</li>
+				<li>
+					<p>If you drive your vehicle above a certain speed on a curve, your vehicle may veer to one side or depart from the driving lane.</p>
+				</li>
+				<li>
+					<p>If you are towing a trailer or another vehicle, turn Highway Driving Assist <term translate="no">OFF</term> for safety reasons.</p>
+				</li>
+				<li>
+					<p>The hands-off warning message may appear early or late depending on road conditions and how you steer. Always keep your hands on the steering wheel while driving.</p>
+				</li>
+				<li>
+					<p>For your safety, please read the owner’s manual before using Highway Driving Assist.</p>
+				</li>
+				<li>
+					<p>Highway Driving Assist will not operate when you start the vehicle or initialize the detection sensors or navigation.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip" id="e04011">
+			<p>You can check it in the service message of the utility information view of the instrument cluster display window.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00650.dita#t00650" role="parent" scope="local" type="concept">
+				<linktext>Highway Driving Assist malfunction and limitations</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

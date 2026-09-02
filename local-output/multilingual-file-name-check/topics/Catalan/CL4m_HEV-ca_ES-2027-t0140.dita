@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0140">
+	<title>Einstellung des Fahrerassistenzsystems (Infotainment-System)</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034114.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wählen Sie <menucascade><uicontrol>Fahrzeug</uicontrol><uicontrol>Fahrerassistenz</uicontrol></menucascade> auf dem Bildschirm des Infotainment-Systems, um die Funktion Fahrerassistenz einzustellen.</p>
+		<ul id="e00357">
+			<li>
+				<p>Fahrerassistenz</p>
+				<ul id="e00358">
+					<li>
+						<p>Komfort beim Fahren</p>
+					</li>
+					<li>
+						<p>Geschwindigkeitsbegrenzung</p>
+					</li>
+					<li>
+						<p>Warnmethoden</p>
+					</li>
+					<li>
+						<p>Fahrsicherheit</p>
+					</li>
+					<li>
+						<p>Parksicherheit</p>
+					</li>
+				</ul>
+				<note deliveryTarget="full_only" type="tip">
+					<p>Das Infotainment-System kann sich nach Aktualisierungen ändern. Weitere Informationen finden Sie in der Anleitung des Infotainment-Systems und in der Kurzanleitung.</p>
+				</note>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0134.dita#CL4m_HEV-ca_ES-2027-t0134" role="parent" scope="local" type="concept">
+				<linktext>LCD-Display </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

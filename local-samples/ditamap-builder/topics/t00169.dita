@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00169">
+	<title id="e01236">Disarmed stage</title>
+	<conbody>
+		<p>The system will be disarmed when:</p>
+		<section id="e01237">
+			<title id="e01238">Smart key</title>
+			<ul id="e01239">
+				<li id="e01240">
+					<p>The door unlock button is pressed.</p>
+				</li>
+				<li id="e01241">
+					<p>The button of the front outside door is pressed while carrying the smart key.</p>
+				</li>
+				<li id="e01242">
+					<p>The vehicle is started.</p>
+				</li>
+			</ul>
+			<p>After the doors are unlocked, the hazard warning lights will blink twice to indicate that the system is disarmed.</p>
+			<p>After pressing the unlock button, if any door (or tailgate) is not opened within 30 seconds, the system will be rearmed.</p>
+		</section>
+	</conbody>
+</concept>

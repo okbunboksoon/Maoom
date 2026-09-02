@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00018">
+	<title>Bulb wattage</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>bulb wattage</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+			<desc>
+				<p importance="default">: if equipped</p>
+			</desc>
+			<tgroup cols="4" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="22*"/>
+				<colspec colnum="2" colname="2" colwidth="33*"/>
+				<colspec colnum="3" colname="3" colwidth="22*"/>
+				<colspec colnum="4" colname="4" colwidth="22*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="1" nameend="2" align="center" valign="middle">
+							<p>Items</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>Type</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>Wattage (Watt)</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="1" morerows="2" align="left" valign="middle">
+							<p>Front</p>
+						</entry>
+						<entry colname="2" align="left" valign="middle">
+							<p>Low beam</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="left" valign="middle">
+							<p>High beam</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="2" align="left" valign="middle">
+							<p>Turn signal lamps</p>
+							<p>Position lamps</p>
+							<p>Daytime running lamps</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="left">
+							<p>Side</p>
+						</entry>
+						<entry colname="2">
+							<p>Side repeater lamps</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry align="left" valign="middle" morerows="6">
+							<p>Rear</p>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>Stop lamps</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="left" valign="middle">
+							<p>Tail lamps</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry align="left" valign="middle">
+							<p>Turn signal lamps</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry align="left" valign="middle">
+							<p>Backup lamps</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="2">
+							<p>Rear fog lamps*</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="2" align="left" valign="middle">
+							<p>High mounted stop lamp</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="2" align="left" valign="middle">
+							<p>License plate lamps</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry morerows="5" align="left" valign="middle">
+							<p>Interior</p>
+						</entry>
+						<entry colname="2" align="left" valign="middle">
+							<p>Map lamps</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="2" align="left" valign="middle">
+							<p>Room lamps</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="2" align="left" valign="middle">
+							<p>Vanity mirror lamps *</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="2" align="left" valign="middle">
+							<p>Glove box lamp</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="2" align="left" valign="middle">
+							<p>Luggage room lamp</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="2" align="left" valign="middle">
+							<p>Ambient light*</p>
+						</entry>
+						<entry colname="3" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

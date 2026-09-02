@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00533">
+	<title>Emergency Steering</title>
+	<conbody>
+		<p>Emergency steering will alert the driver with the Emergency Steering warning light (<image href="../../images/WKIA_077.eps" scale="15" align="left" placement="inline"/>) blinking, a warning message, an audible warning and steering wheel vibration. The steering assist will be activated to help avoid a collision with an oncoming vehicle or powered two-wheelers.</p>
+		<p>Warning message: <uicontrol>Emergency steering</uicontrol> </p>
+		<p>Emergency steering will be activated in following conditions.</p>
+		<ul>
+			<li>
+				<p>Your driving speed: Approximately 40–145 km/h (25–90 mph)</p>
+			</li>
+			<li>
+				<p>Oncoming vehicle or powered two-wheeler speed: Approximately above 10 km/h (6 mph)</p>
+			</li>
+			<li>
+				<p>Relative speed of your vehicle, oncoming vehicle and powered two-wheeler: Approximately below 200 km/h (124 mph)</p>
+			</li>
+			<li>
+				<p>Your vehicle and the oncoming vehicle or powered two-wheeler are moving in opposite directions.</p>
+			</li>
+			<li>
+				<p>Within a certain period of time after the system determines that the vehicle has departed from the lane.</p>
+			</li>
+			<li>
+				<p>The target enters the operating area of the function.</p>
+			</li>
+			<li>
+				<p>Driving on a straight road.</p>
+			</li>
+			<li>
+				<p>Both lane markings are detected.</p>
+			</li>
+			<li>
+				<p>There is no risk of secondary collision.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

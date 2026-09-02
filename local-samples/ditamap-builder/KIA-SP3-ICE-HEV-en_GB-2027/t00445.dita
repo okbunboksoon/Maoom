@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00445">
+	<title>Forward Collision-avoidance Assist (FCA) (Sensor Fusion)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>forward collision-avoidance assist (FCA)</indexterm>
+				<indexterm>forward collision-avoidance assist (FCA)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Basic function</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03097">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e03098">
+									<image href="images/N_SP3i25_B10_003_IR.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Forward Collision-Avoidance Assist can detect a vehicle, a motorcyclist, pedestrian, or cyclist ahead on the road and may warn you of a possible collision with a warning message on the instrument cluster and a warning sound. Also, Forward Collision-Avoidance Assist may assist with braking your vehicle to help reduce collision speed or avoid a collision.</p>
+			<p importance="optional">Forward Collision-Avoidance Assist can detect vehicles ahead of you and in adjacent lanes even at high speeds. If the driver makes a lane change at those speeds, your vehicle may apply emergency braking to mitigate or avoid a collision.</p>
+		</section>
+		<section>
+			<title>Junction Turning function</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03099">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e03100">
+									<image href="images/N_SP327_B10_045.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When you turn left (right-hand drive) or right (left-hand drive) at a crossroad with the turn signal <term translate="no">ON</term>, Junction Turning can apply emergency braking to help you avoid a collision with a vehicle, motorcyclist, or cyclist in an oncoming lane.</p>
+		</section>
+		<section>
+			<title>Direct Oncoming function</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03101">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e03102">
+									<image href="images/N_SP3i25_B10_006_IR.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e03103">
+									<li>
+										<p>Oncoming vehicle</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Direct Oncoming function can help reduce the speed of a collision when it detects a vehicle or motorcyclist approaching from the opposite direction.</p>
+		</section>
+		<section importance="optional">
+			<title>Junction Crossing function</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03104">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e03105">
+									<image href="images/N_SP3i26_B10_002_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Junction Crossing function can apply emergency braking to help mitigate or avoid a collision with oncoming vehicles on your left or right side when you cross an intersection.</p>
+		</section>
+		<section importance="optional">
+			<title>Lane-Change Oncoming function</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03106">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e03107">
+									<image href="images/N_SP3i25_B10_007_IR.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e03108">
+									<li>
+										<p>Oncoming vehicle</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When changing lanes, Lane-Change Oncoming can assist with your steering to help mitigate or avoid a collision with an oncoming vehicle or motorcyclist.</p>
+		</section>
+		<section importance="optional">
+			<title>Lane-Change Side function</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03109">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e03110">
+									<image href="images/N_SP3i25_B10_009_IR.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e03111">
+									<image href="images/N_SP3i25_B10_008_IR.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol outputclass="callout" id="e03112">
+				<li>
+					<p>Approaching car from side</p>
+				</li>
+			</ol>
+			<p>When changing lanes, Lane-Change Side can assist with your steering to help mitigate or avoid a collision with vehicles or motorcyclists in the next lane.</p>
+		</section>
+		<section importance="optional">
+			<title>Evasive Steering Assist function</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03113">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e03114">
+									<image href="images/N_SP327_B10_022.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul>
+				<li>
+					<p>Driver Steering Assist</p>
+					<p>If your vehicle detects a possible collision with a vehicle, motorcyclist, pedestrian, or cyclist ahead, Evasive Steering Assist can assist you in steering to avoid the collision.</p>
+				</li>
+				<li>
+					<p>Evasive Steering Assist</p>
+					<p>Evasive Steering Assist can help mitigate or avoid a collision with a pedestrian, motorcyclist, or cyclist in the same lane ahead of you. If your vehicle detects a risk of collision, Evasive Steering Assist can warn you and assist your steering if you move the steering wheel.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Detection sensor</title>
+			<p>Please refer to <xref href="t00444.dita#t00444"/> for the applicable sensors and their locations.</p>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Never damage or disassemble the detection sensor or sensor assembly.</p>
+					</li>
+					<li>
+						<p>If the detection sensors have been replaced or repaired, have the vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>If the vehicle experiences an impact to or around the radar, Forward Collision-Avoidance Assist may not operate properly, even if the instrument cluster does not display a warning message. Have the vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>Never tint or install any accessories or stickers on the windshield.</p>
+					</li>
+					<li>
+						<p>Be extremely careful to keep the front view camera dry.</p>
+					</li>
+					<li>
+						<p>Never place any reflective objects (for example, white paper or a mirror) over the instrument cluster.</p>
+					</li>
+					<li>
+						<p>Do not place any objects near or install any accessories on the windshield. This can affect the performance of the climate control system’s defogging and defrosting function, which may prevent the Driver Assistance systems from operating.</p>
+					</li>
+					<li>
+						<p>Do not apply a license plate frame or objects (such as a bumper sticker, film, or a bumper guard), near the front radar cover.</p>
+					</li>
+					<li>
+						<p>Always keep the front radar cover clean and free of dirt and debris.</p>
+						<p>Use only a soft cloth to wash the vehicle. Do not spray pressurized water directly on the sensor or sensor cover.</p>
+					</li>
+					<li>
+						<p>If you apply paint on or change the front, front corner and/or rear corner radar sensor cover, Forward Collision-Avoidance Assist may not function properly.</p>
+						<p>Use only Kia genuine parts or those of an equivalent standard with proven quality and performance to repair or replace the radar sensor covers.</p>
+					</li>
+					<li>
+						<p>The function may not work properly if the bumper was replaced, or the surroundings of the front corner radar or rear corner radar were damaged or paint was applied.</p>
+					</li>
+					<li>
+						<p>If you install a trailer or carrier, this may adversely affect the performance of Forward Collision-Avoidance Assist and prevent it from operating properly.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00442.dita#t00442" role="parent" scope="local" type="concept">
+				<linktext>Driver assistance guide</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

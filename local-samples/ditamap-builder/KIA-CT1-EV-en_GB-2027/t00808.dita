@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00808">
+	<title>Precautions</title>
+	<conbody>
+		<note type="warning" id="e02583">
+			<ul id="e02584">
+				<li id="e02585">
+					<p>Keep all flames or sparks away from the battery. The battery produces hydrogen gas which may explode if exposed to flame or sparks. If these instructions are not followed exactly, serious personal injury and damage to the vehicle may occur! If you are not sure how to follow this procedure, seek qualified assistance. Automobile batteries contain sulfuric acid. This is poisonous and highly corrosive. When jump-starting, wear protective glasses and be careful not to get acid on yourself, your clothing or on the vehicle.</p>
+				</li>
+				<li id="e02586">
+					<p>Do not attempt to jump start the vehicle if the discharged battery is frozen or if the electrolyte level is low; the battery may rupture or explode.</p>
+				</li>
+				<li id="e02587">
+					<p>Do not allow the (+) and (-) jumper cables to touch. It may cause sparks.</p>
+				</li>
+				<li>
+					<p>Never attempt to check the electrolyte level of the battery as this may cause the battery to rupture or explode causing serious injury.</p>
+				</li>
+				<li>
+					<p>The battery may rupture or explode when you jump start with a low or frozen battery.</p>
+				</li>
+				<li>
+					<p>The electrical starting system works with high voltage. NEVER touch these components with the <image align="left" href="../../images/WKIA_326.eps" scale="15" placement="inline"/> indicator <term translate="no">ON</term> or when the <term translate="no">EV</term> button is in the <term translate="no">ON</term> position.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<p>Use only a 12-volt jumper system. You can damage other electrical parts beyond repair by use of a 24-volt power supply (either two 12-volt batteries in series or a 24-volt motor generator set).</p>
+		</note>
+		<note type="note">
+			<p>Do not connect the jumper cable from the negative terminal of the booster battery to the negative terminal of the discharged battery. This can cause the discharged battery to overheat and crack, releasing battery acid. Make sure to connect one end of the jumper cable to the negative terminal of the booster battery, and the other end to a metallic point, far away from the battery.</p>
+		</note>
+	</conbody>
+</concept>

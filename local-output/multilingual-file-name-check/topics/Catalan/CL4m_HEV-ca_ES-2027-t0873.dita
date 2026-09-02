@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0873">
+	<title id="e01475">Austausch der Sicherung im Innenpaneel </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Sicherungen
+					<indexterm>Austausch der Sicherung im Innenpaneel</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M074015N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01476">
+								<figgroup>
+									<image align="center" href="../../images/OCL4M074016N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol>
+			<li>
+				<p>Schalten Sie die Zündung und alle elektrischen Schalter aus.</p>
+			</li>
+			<li>
+				<p>Öffnen Sie den Sicherungskastendeckel.</p>
+			</li>
+			<li>
+				<p>Ziehen Sie die vermutlich schadhafte Sicherung gerade aus ihrem Sockel. Verwenden Sie das Ausbauwerkzeug aus dem Hauptsicherungskasten im Motorraum.</p>
+			</li>
+			<li>
+				<p>Prüfen Sie die ausgebaute Sicherung und ersetzen Sie, wenn sie durchgebrannt ist.</p>
+				<p>Ersatzsicherungen befinden sich im Sicherungskasten im Armaturenbrett (oder im Sicherungskasten im Motorraum).</p>
+			</li>
+			<li>
+				<p>Setzen Sie eine neue Sicherung mit der gleichen Amperezahl ein und achten Sie darauf, dass sie stramm in ihrem Sockel sitzt.</p>
+			</li>
+		</ol>
+		<p>Wenn die neue Sicherung nicht fest sitzt, wenden Sie sich an eine Fachwerkstatt. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<p>Wenn keine Ersatzsicherung mit derselben Amperezahl zur Verfügung steht, entnehmen Sie ersatzweise eine Sicherung aus einem anderen Stromkreis, der momentan nicht benötigt wird (z.B. Zigarettenanzünder).</p>
+		<p>Wenn die Scheinwerfer, Heckleuchten, Bremsleuchten, Einstiegsleuchten oder die Tagesfahrleuchten nicht funktionieren und die Sicherungen <term translate="no">OK</term> sind, überprüfen Sie den Sicherungskasten im Motorraum. Ersetzen Sie eventuell durchgebrannte Sicherungen.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0872.dita#CL4m_HEV-ca_ES-2027-t0872" role="parent" scope="local" type="concept">
+				<linktext>Sicherungen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

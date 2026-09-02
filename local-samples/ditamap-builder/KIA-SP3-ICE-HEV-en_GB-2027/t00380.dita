@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00380">
+	<title>To stay in N (Neutral) when vehicle is OFF</title>
+	<shortdesc>If you want to stay in N (Neutral) after the engine is off (in <term translate="no">ACC</term> position), do the following:</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic transmission
+					<indexterm>manual mode</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02499">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e02500">
+								<figgroup>
+									<image href="images/N_SP327_C09_008_1.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e02501">
+								<figgroup>
+									<image href="images/N_SP327_C09_012_1.jpg" scale="100" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol id="e02502">
+			<li>
+				<p>Deactivate <term translate="no">AUTO HOLD</term> and release the parking brake when the vehicle is in <term translate="no">ON</term> position.</p>
+			</li>
+			<li>
+				<p>Depress the brake pedal.</p>
+			</li>
+			<li>
+				<p>Shift to N (Neutral).</p>
+			</li>
+			<li>
+				<p>Take your foot off the brake pedal, and the warning message will appear on the instrument cluster.</p>
+			</li>
+			<li>
+				<p>Press and hold the <term translate="no">OK</term> button on the steering wheel for more than 1 second.</p>
+				<p>If the <term translate="no">EPB</term> is applied, release the Electronic Parking Brake (<term translate="no">EPB</term>) manually while depressing the brake pedal.</p>
+				<p>If equipped with Electronic Parking Brake, it is not released automatically when you shift to N (Neutral).</p>
+			</li>
+			<li>
+				<p>Press the <term translate="no">ENGINE START/STOP</term> button after the message appears on the instrument cluster. The vehicle stays in N (Neutral) after turning off the vehicle.</p>
+			</li>
+		</ol>
+		<note type="tip" id="e02503">
+			<p>However, if you open the driver’s door within 30 minutes in <term translate="no">ACC</term> position, the vehicle will automatically shift to P (Park) and the vehicle will change to <term translate="no">OFF</term> position.</p>
+		</note>
+		<note type="caution" id="e02504">
+			<p>Do not open the driver’s door when going through an automatic car wash tunnel machine. Failure to follow this instruction can damage your vehicle or the car wash machine.</p>
+			<p>If the driver’s door is opened within 30 minutes after shifting to N (Neutral), your vehicle will automatically shift to P (Park).</p>
+			<p>For vehicles equipped with <term translate="no">EPB</term>, the parking brake is automatically applied.</p>
+		</note>
+		<note type="note" id="e02505">
+			<p>With the vehicle in N (Neutral), the vehicle will be in the <term translate="no">ACC</term> position. Note that the doors cannot be locked in <term translate="no">ACC</term> position or the 12V battery may discharge if left in the <term translate="no">ACC</term> position for a long period.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00376.dita#t00376" role="parent" scope="local" type="concept">
+				<linktext>Intelligent variable transmission (IVT)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

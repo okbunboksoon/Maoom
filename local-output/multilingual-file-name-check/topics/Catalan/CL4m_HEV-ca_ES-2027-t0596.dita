@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="CL4m_HEV-ca_ES-2027-t0596">
+	<title>Je nach Fahrstil aktiviert</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054101.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Je nach Fahrstil werden im Kombiinstrument der eingestellte Abstand zum vorausfahrenden Fahrzeug und der Zielabstand in weißer Farbe angezeigt. Es zeigt auch die Entfernungsstufe und die Zielentfernung auf der Grundlage Ihres Fahrverhaltens an.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0594.dita#CL4m_HEV-ca_ES-2027-t0594" role="parent" scope="local" type="concept">
+				<linktext>Anzeige und Steuerung der intelligenten Tempomatsteuerung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

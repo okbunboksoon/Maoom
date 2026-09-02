@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00415">
+	<title>LCD display messages</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>AUTO HOLD 
+					<indexterm>LCD display messages</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatd" pgwide="true" rowsep="1" id="e03033">
+			<tgroup cols="2" colsep="1" outputclass="FormatD" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1" valign="middle">
+							<p>Message</p>
+						</entry>
+						<entry colname="col2">
+							<p>Description</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1" valign="middle">
+							<p> <term>Parking brake automatically engaged</term> </p>
+						</entry>
+						<entry colname="col2" valign="middle">
+							<p>When EPB is applied while <term>AUTO HOLD</term> is activated, a warning will sound and a message will appear</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" valign="middle">
+							<p> <term>AUTO HOLD turning Off Press brake pedal</term> </p>
+						</entry>
+						<entry colname="col2" valign="middle">
+							<p>When the conversion from <term>AUTO HOLD</term> to Electronic Parking Brake (EPB) is not working properly a warning will sound and a message will appear</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" valign="middle">
+							<p> <term>Press brake pedal to deactivate AUTO HOLD</term> </p>
+						</entry>
+						<entry colname="col2" valign="middle">
+							<p>When the conversion from <term>AUTO HOLD</term> to Electronic Parking Brake (EPB) is not working properly a warning will sound and a message will appear</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note" id="e03034">
+			<p>When the message is displayed, the <term>AUTO HOLD</term> and EPB may not operate. For your safety, press the brake pedal.</p>
+		</note>
+	</conbody>
+</concept>

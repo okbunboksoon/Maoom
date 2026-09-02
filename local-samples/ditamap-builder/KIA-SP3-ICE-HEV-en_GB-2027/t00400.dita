@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00400">
+	<title>Smart ISG</title>
+	<conbody>
+		<section id="e02663">
+			<title>Early Engine Restart</title>
+			<p>When ISG automatically stops the engine, Early Engine Restart can automatically restart the engine without driver action when the front view camera detects the vehicle ahead driving away.</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02664">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02665">
+									<image href="images/OMQ4A055029.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e02666">
+									<image href="images/OMQ4A045032.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>If Early Engine Restart automatically restarts the engine, a message appears on the instrument cluster (if equipped) when you select the <uicontrol>AUTO STOP</uicontrol> page on the instrument cluster.</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02667">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02668">
+									<image href="images/OCL4M045024N.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+								<fig id="e02669">
+									<image href="images/OCL4M045026N.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e02670">
+									<li>
+										<p><uicontrol>Timer</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>Auto Start: vehicle ahead is driving away</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<note type="tip" id="e02671">
+				<ul id="e02672">
+					<li>
+						<p>Even when the vehicle ahead drives away, Early Engine Restart may not restart the engine due to limitations of the front view camera and its ability to detect the movement of the vehicle ahead.</p>
+					</li>
+					<li>
+						<p>For more information on limitations of the front view camera, refer to Limitations of Smart ISG features.</p>
+					</li>
+					<li>
+						<p>When ISG turns the engine off, you can restart it at any time (regardless of Early Engine Restart) by releasing the brake pedal.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00394.dita#t00394" role="parent" scope="local" type="concept">
+				<linktext>Idle Stop and Go (ISG)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

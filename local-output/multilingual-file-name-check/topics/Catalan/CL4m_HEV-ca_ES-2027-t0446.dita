@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0446">
+	<title>Warnmethoden</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034150N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Fahrerassistenz</p>
+								</li>
+								<li>
+									<p>Warnmethoden</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>in unserem Fahrzeug können Sie die Einstellung der Warnmethoden ändern. Wählen Sie dazu im Infotainment-System <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Fahrerassistenz</uicontrol><uicontrol>Warnmethoden</uicontrol></menucascade>, um die folgenden Einstellungen zu ändern:</p>
+		<ul>
+			<li>
+				<p><b>Warntonlautstärke</b>: Passt die Lautstärke des Warntons an. Wenn Sie die Warntonlautstärke ausschalten, warnt Sie die Funktion zu Ihrer Sicherheit möglicherweise mit einer geringen Lautstärke.</p>
+			</li>
+			<li>
+				<p importance="optional"><b>Haptische Warnung</b>: Aktivieren Sie Lenkradvibrationswarnung.</p>
+			</li>
+			<li>
+				<p><b>Vorrang der Fahrsicherheit</b>: Verringert alle anderen Audiolautstärken, wenn das Fahrsicherheitssystem eine Warnung ausgibt.</p>
+			</li>
+		</ul>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>Stellen Sie sicher, dass die von Ihnen eingestellten Warnmethoden auch für die Warnmethoden anderer Fahrerassistenzsysteme gelten können.</p>
+				</li>
+				<li>
+					<p>Es werden die letzten Einstellungen der Warnmethoden beibehalten, wenn das Fahrzeug neu gestartet wird.</p>
+				</li>
+				<li>
+					<p>Abhängig von den Fahrzeugmerkmalen und -spezifikationen ist das Einstellmenü für Ihr Fahrzeug möglicherweise nicht verfügbar.</p>
+				</li>
+				<li>
+					<p importance="optional">Die Warntonlautstärke und Haptische Warnung können nicht gleichzeitig ausgeschaltet werden. Wenn eine der Warnungen ausgeschaltet ist, wird die andere aktiviert.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0441.dita#CL4m_HEV-ca_ES-2027-t0441" role="parent" scope="local" type="concept">
+				<linktext>Einstellungen des Frontalkollisions-Vermeidungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>
