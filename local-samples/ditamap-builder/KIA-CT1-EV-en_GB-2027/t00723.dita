@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00723">
+	<title>Limitations of Highway Driving Assist</title>
+	<conbody>
+		<p>Highway Driving Assist and Highway Lane Change Assist may not operate properly, or it may not operate under the following circumstances:</p>
+		<ul>
+			<li>
+				<p>The map information and the actual road is different because the navigation is not updated</p>
+			</li>
+			<li>
+				<p>The map information and the actual road is different because of real-time GPS data or map information error</p>
+			</li>
+			<li>
+				<p>The infotainment system is overloaded by simultaneously performing functions such as route search, video playback, voice recognition.</p>
+			</li>
+			<li>
+				<p>GPS signals are blocked in areas such as a tunnel</p>
+			</li>
+			<li>
+				<p>The driver goes off course, or resetting the navigation route by changing the destination (including route change according to real-time road traffic information), or canceling the route to the destination</p>
+			</li>
+			<li>
+				<p>The vehicle enters a service station or rest area</p>
+			</li>
+			<li>
+				<p>Android Auto or CarPlay is operating</p>
+			</li>
+			<li>
+				<p>The navigation cannot detect the current vehicle position (for example, elevated roads, including overpassing adjacent to general roads or nearby roads exist in a parallel way)</p>
+			</li>
+			<li>
+				<p>If the vehicle fails to recognize white single dashed lane lines and road boundaries</p>
+			</li>
+			<li>
+				<p>If some lanes are temporarily restricted</p>
+			</li>
+			<li>
+				<p>If there are no physical separation structures, such as a center median, in the middle of the road</p>
+			</li>
+			<li>
+				<p>If the lane you intend to change to is a bus lane or a variable lane</p>
+			</li>
+			<li>
+				<p>If you have a trailer, carrier, or other equipment attached</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>For more details of front camera, front radar, front corner radar and rear corner radar sensor, refer to <xref type="concept" href="t00507.dita#t00507"/> and <xref type="concept" href="t00558.dita#t00558"/>.</p>
+		</note>
+	</conbody>
+</concept>

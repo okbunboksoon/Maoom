@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_023_01" id="t00421">
+	<title otherprops="legal_eu_std_023_01">Multi-Collision Brake (MCB)</title>
+	<shortdesc>Multi-Collision Brake (MCB) controls the brake automatically in the event of an accident where the air bag deploys to reduce the risk of additional accidents that may occur.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle safety system 
+					<indexterm>multi-collision brake (MCB)</indexterm>
+				</indexterm>
+				<indexterm>multi-collision brake (MCB)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ul id="e03072">
+			<li>
+				<p>From the time the seat belt pre-tensioner is activated or air bag deploys, MCB monitors the depression intensity of the brake pedal and accelerator pedal for a short period. The system operates when the following conditions are met:</p>
+				<ul id="e03073">
+					<li>
+						<p>Vehicle speed is under 180 km/h (112 mph) at the time of collision.</p>
+					</li>
+					<li>
+						<p>The brake pedal and accelerator pedal are hardly depressed.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>When the driver steps on the brake pedal over a certain level while MCB is active, the braking power takes priority over automatic braking by MCB. However, if the driver takes the foot off the brake pedal, MCB will maintain automatic braking.</p>
+			</li>
+			<li>
+				<p>When MCB is activated and the vehicle comes to a stop, the EPB may automatically engage under normal conditions in vehicles equipped with an Electronic Parking Brake (EPB).</p>
+			</li>
+		</ul>
+		<section id="e03074">
+			<title>Non-operating conditions</title>
+			<p>MCB is canceled in the following situations:</p>
+			<ul id="e03075">
+				<li>
+					<p>The accelerator pedal is depressed over a certain level when the vehicle’s <term translate="no">DRIVE READY</term> indicator is on.</p>
+				</li>
+				<li>
+					<p>If ESC or electronic devices has malfunctioned.</p>
+				</li>
+				<li>
+					<p>When the system cannot be operated normally.</p>
+				</li>
+				<li>
+					<p>Approximately 10 minutes have passed since the brake has been controlled automatically by MCB.</p>
+				</li>
+				<li>
+					<p>When the Electronic Parking Brake (EPB) is engaged or the vehicle is in P (Park) position after the vehicle is stopped</p>
+				</li>
+				<li>
+					<p>When the vehicle is stopped and in <term translate="no">OFF</term> position</p>
+				</li>
+			</ul>
+			<note type="warning" id="e03076">
+				<ul id="e03077">
+					<li>
+						<p>MCB decreases vehicle speed after a collision and reduces the risk of a second collision, but it does not entirely prevent a second collision. You may drive away from the collision spot to avoid other dangerous situations by depressing the accelerator pedal.</p>
+					</li>
+					<li>
+						<p>After the vehicle is stopped by MCB, the system stops controlling the brakes.</p>
+						<p>Depending on the situation, the driver should depress the brake or the accelerator pedal to prevent further accidents.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00594">
+	<title>Operating conditions</title>
+	<conbody>
+		<section>
+			<title>Basic function</title>
+			<p>Smart Cruise Control operates under the following conditions:</p>
+			<ul>
+				<li>
+					<p>The gear is in D (Drive).</p>
+				</li>
+				<li>
+					<p>Your speed is within the operating range:</p>
+					<ul>
+						<li>
+							<p>MT (manual transmission): 20–180 km/h (13–110 mph)</p>
+						</li>
+						<li>
+							<p>AT (Automatic Transmission):</p>
+							<ul id="e03751">
+								<li>
+									<p>when there is no vehicle ahead: 10-180 km/h (5-110 mph)</p>
+									<ul id="e03752">
+										<li>
+											<p>HEV: 10-140 km/h (5-90 mph)</p>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<p>when there is a vehicle ahead: 0-180 km/h (0-110 mph)</p>
+									<ul id="e03753">
+										<li>
+											<p>HEV: 0-140 km/h (0-90 mph)</p>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Electronic Stability Control (ESC) or Anti-lock Braking System (ABS) is <term translate="no">ON</term>.</p>
+				</li>
+				<li>
+					<p>When the vehicle is stopped or traveling below 10 km/h (5 mph) with no vehicle detected ahead.</p>
+				</li>
+				<li>
+					<p>When the brake pedal is pressed while driving (excluding when stopped).</p>
+				</li>
+			</ul>
+			<p>Smart Cruise Control does not operate in the following conditions.</p>
+			<ul>
+				<li>
+					<p>The driver’s door is open.</p>
+				</li>
+				<li>
+					<p>Engine RPM is high.</p>
+				</li>
+				<li>
+					<p>Engine RPM is low (MT (manual transmission) models, if equipped).</p>
+				</li>
+				<li>
+					<p>Electronic Parking Brake (<term translate="no">EPB</term>) is engaged.</p>
+				</li>
+				<li>
+					<p>ESC or ABS is controlling the vehicle.</p>
+				</li>
+				<li>
+					<p>Forward Collision-Avoidance Assist brake control is operating.</p>
+				</li>
+				<li>
+					<p>Remote Smart Parking Assist brake control is operating (if equipped).</p>
+				</li>
+				<li>
+					<p>When the vehicle is stopped or traveling below 10 km/h (5 mph) with no vehicle detected ahead.</p>
+				</li>
+				<li>
+					<p>When the brake pedal is pressed while driving (excluding when stopped).</p>
+				</li>
+			</ul>
+			<note type="tip">
+				<p>When you are stopped behind another vehicle, you can turn on Smart Cruise Control while the brake pedal is engaged (Except for MT (manual transmission)).</p>
+			</note>
+		</section>
+		<section>
+			<title>Overtaking Acceleration Assist function</title>
+			<p>Overtaking Acceleration Assist operates when you turn the turn signal indicator <term translate="no">ON</term> to the left (left-hand drive) or the right (right-hand drive) while Smart Cruise Control is operating under the following conditions:</p>
+			<ul>
+				<li>
+					<p>Your speed is above 60 km/h (40 mph).</p>
+				</li>
+				<li>
+					<p>A vehicle is detected ahead of you.</p>
+				</li>
+			</ul>
+			<p>Overtaking Acceleration Assist does not operate under the following conditions:</p>
+			<ul>
+				<li>
+					<p>The hazard lights are <term translate="no">ON</term>.</p>
+				</li>
+				<li>
+					<p>You have reduced your speed to maintain following distance from a vehicle ahead.</p>
+				</li>
+			</ul>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>When you turn the turn signal indicator <term translate="no">ON</term> to the left (left-hand drive) or the right (right-hand drive) while there is a vehicle ahead, your vehicle may accelerate temporarily. Always pay attention to the road conditions.</p>
+					</li>
+					<li>
+						<p>Regardless of your country’s driving direction, Overtaking Acceleration Assist operates when the conditions are satisfied. When using the function in countries with a different driving direction, always check the road conditions.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00593.dita#t00593" role="parent" scope="local" type="concept">
+				<linktext>Smart Cruise Control operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

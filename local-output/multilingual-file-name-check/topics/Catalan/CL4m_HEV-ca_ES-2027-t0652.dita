@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0652">
+	<title>Einschalten der Autobahn-Fahrspurwechselhilfe</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054176N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Drücken Sie die Taste <term translate="no">OK</term>, um den Spurwechselassistenten zu aktivieren.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Während die Funktion Autobahn-Fahrspurwechselhilfe aktiv ist, ist die Funktion betriebsbereit, wenn alle folgenden Bedingungen erfüllt sind:</p>
+		<ul>
+			<li>
+				<p>Der Autobahn-Fahrassistent ist aktiv.</p>
+			</li>
+			<li>
+				<p>Der Spurfolgeassistent ist in Betrieb.</p>
+			</li>
+			<li>
+				<p>Ein Fahrzeug hinter Ihrem Fahrzeug wird mehr als einmal erkannt, nachdem das Fahrzeug eingeschaltet wurde</p>
+			</li>
+			<li>
+				<p>Ihre Fahrgeschwindigkeit liegt über 30 km/h (20 mph)</p>
+			</li>
+			<li>
+				<p>Bei niedrigen Geschwindigkeiten von 30 km/h bis 60 km/h (20 mph–40 mph) kann das Fahrzeug nur betrieben werden, wenn die Fahrzeuge auf der linken und rechten Nachbarspur erkannt werden und beim Spurwechsel keine Kollisionsgefahr besteht.</p>
+			</li>
+			<li>
+				<p>Lenkradwarnung wird nicht im Kombiinstrument angezeigt</p>
+			</li>
+			<li>
+				<p>Die Warnblinkanlage ist ausgeschaltet.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Solange die Spurwechselhilfe eingeschaltet ist (Blinker an), wird der Spurfolgeassistent nicht abgebrochen, auch wenn der Blinker oder die Warnblinkanlage aktiv ist.</p>
+				</li>
+				<li>
+					<p>Der Spurwechselassistent schaltet sich bei folgenden Verkehrsverhältnissen automatisch ab:</p>
+					<ul>
+						<li>
+							<p>Eine Fahrspur</p>
+						</li>
+						<li>
+							<p>Straßen ohne physische Mitteltrennungsstrukturen (wie Leitplanken)</p>
+						</li>
+						<li>
+							<p>Bei einem Fußgänger oder Radfahrer auf der Straße vor dem Fahrzeug.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Verlangsamt sich die Fahrgeschwindigkeit im Zustand Betriebsbereit auf weniger als 25 km/h (15 mph), wechselt das Gerät in den Standby-Modus.</p>
+				</li>
+				<li>
+					<p>Bei niedrigen Geschwindigkeiten von 30 km/h bis 60 km/h (20 mph–40 mph) wechselt das Fahrzeug in den Standby-Zustand, wenn es von Fahrzeugen auf der linken und rechten Nachbarspur nicht erkannt wird.</p>
+				</li>
+				<li>
+					<p>Wird eine Kollisionsgefahr erkannt, wechselt das System in den Standby-Modus.</p>
+				</li>
+				<li>
+					<p>Die Bilder oder Farben werden je nach Spezifikation des Kombiinstruments oder des Themas anders angezeigt.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning">
+			<p>Wenn die Autobahn-Fahrspurwechselhilfe während des Betriebs ausgeschaltet wird, wird die Lenkhilfe vorübergehend deaktiviert. Fahren Sie immer vorsichtig.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0650.dita#CL4m_HEV-ca_ES-2027-t0650" role="parent" scope="local" type="concept">
+				<linktext>Autobahn-Fahrspurwechselhilfe</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0166">
+	<title>Einschränkungen des Fernlichtassistenten</title>
+	<conbody>
+		<p>Der Fernlichtassistent funktioniert in den folgenden Situationen nicht einwandfrei:</p>
+		<ul>
+			<li>
+				<p>Das Licht von einem Fahrzeug wird nicht erkannt, weil der Scheinwerfer defekt oder nicht sichtbar ist usw.</p>
+			</li>
+			<li>
+				<p>Der Scheinwerfer eines Fahrzeugs ist mit Staub, Schnee oder Wasser bedeckt.</p>
+			</li>
+			<li>
+				<p>Die Scheinwerfer eines Fahrzeugs sind ausgeschaltet, aber die Nebelscheinwerfer eingeschaltet usw.</p>
+			</li>
+			<li>
+				<p>Es gibt eine Lampe, die eine ähnliche Form wie ein Fahrzeugscheinwerfer hat.</p>
+			</li>
+			<li>
+				<p>Die Scheinwerfer wurden beschädigt oder nicht richtig repariert.</p>
+			</li>
+			<li>
+				<p>Die Scheinwerfer sind nicht richtig ausgerichtet.</p>
+			</li>
+			<li>
+				<p>Sie fahren auf einer schmalen kurvigen Straße, einer unebenen Straße, bergauf oder bergab.</p>
+			</li>
+			<li>
+				<p>Das vorausfahrende Fahrzeug ist auf einer Kreuzung oder einer kurvigen Straße nur teilweise sichtbar.</p>
+			</li>
+			<li>
+				<p>In Fahrtrichtung befindet sich eine Ampel, ein Reflektor, ein Blinksignal oder Spiegel.</p>
+			</li>
+			<li>
+				<p>Es gibt einen temporären Reflektor oder Blinkgeber (Baustelle).</p>
+			</li>
+			<li>
+				<p>Die Fahrbahnbedingungen sind schlecht, beispielsweise durch nasse, vereiste oder verschneite Fahrbahn.</p>
+			</li>
+			<li>
+				<p>In einer Kurve taucht plötzlich ein Fahrzeug auf.</p>
+			</li>
+			<li>
+				<p>Das Fahrzeug steht wegen einem Reifenschaden schräg oder wird abgeschleppt.</p>
+			</li>
+			<li>
+				<p>Das Licht eines Fahrzeugs wird aufgrund von Rauch, Nebel, Schnee usw. nicht erkannt.</p>
+			</li>
+		</ul>
+		<note deliveryTarget="full_only" type="note">
+			<ul>
+				<li>
+					<p>Sie können dies in der Servicemeldung in der Ansicht nützlicher Informationen der Anzeige des Kombiinstruments überprüfen.</p>
+				</li>
+				<li>
+					<p>Weitere Hinweise zu den Beschränkungen der Frontkamera finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0440.dita#CL4m_HEV-ca_ES-2027-t0440"/>.</p>
+				</li>
+			</ul>
+		</note>
+		<note deliveryTarget="full_only" type="warning">
+			<ul>
+				<li>
+					<p>Der Fernlichtassistent schaltet das Fernlicht möglicherweise nicht jedes Mal aus. Die Funktion dient nur Ihrem Komfort. Es liegt in der Verantwortung des Fahrers und ist zu Ihrer Sicherheit erforderlich, die Straßenverhältnisse zu überprüfen und die Scheinwerfer entsprechend einzustellen, auch mit Hilfe der Betriebsanleitung.</p>
+				</li>
+				<li>
+					<p>Es reagiert möglicherweise 15 Sekunden lang nicht, nachdem der Motor gestartet oder die Kamera initialisiert wurde oder neu gestartet.</p>
+				</li>
+				<li>
+					<p>Wenn der Fernlichtassistent nicht einwandfrei funktioniert, schalten Sie die Scheinwerfer manuell ein.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0164.dita#CL4m_HEV-ca_ES-2027-t0164" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktionen und Einschränkungen des Fernlichtassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legalnotice_europe-general_egall_2023_20230101_00062" id="t00889">
+	<title>Headlamp aiming (for Europe)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>headlamp aiming</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05235">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05236">
+								<figgroup>
+									<title>Type A</title>
+									<image align="center" href="images/N_SP327_A12_001_E.jpg" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e05237">
+								<figgroup>
+									<title>Type B</title>
+									<image align="center" href="images/N_SP327_A12_003_E.jpg" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note" id="e05238">
+			<ul id="e05239">
+				<li>
+					<p>Inflate the tires to the specified pressure and remove any loads from the vehicle except the driver, spare tire, and tools.</p>
+				</li>
+				<li>
+					<p>The vehicle should be placed on a flat floor.</p>
+				</li>
+				<li>
+					<p>Draw vertical lines (Vertical lines passing through respective head lamp centers) and a horizontal line (Horizontal line passing through center of head lamps) on the screen.</p>
+				</li>
+				<li>
+					<p>With the head lamp and battery in normal condition, aim the head lamps so the brightest portion falls on the horizontal and vertical lines.</p>
+				</li>
+				<li>
+					<p>To aim the low beam left or right, turn the screwdriver (1) clockwise or counterclockwise. To aim the low beam up or down, turn the screwdriver (2) clockwise or counterclockwise.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00874.dita#t00874" role="parent" scope="local" type="concept">
+				<linktext>Light bulbs</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

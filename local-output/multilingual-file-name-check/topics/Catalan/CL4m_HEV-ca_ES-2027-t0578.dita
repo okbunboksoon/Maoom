@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0578">
+	<title>Tempomatsteuerung vorübergehend stoppen</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054015N_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die intelligente Tempomatsteuerung wird in folgenden Fällen gestoppt:</p>
+		<ul>
+			<li>
+				<p>Das Bremspedal wird betätigt.</p>
+			</li>
+			<li>
+				<p>Drücken Sie den (<image align="left" href="../../images/WKIA_079.eps" scale="15" placement="inline"/>)-Schalter.</p>
+			</li>
+			<li>
+				<p>Es wird auf N (Neutralstellung) geschaltet.</p>
+			</li>
+			<li>
+				<p>Die Geschwindigkeit wird auf weniger als etwa 30 km/h (20 mph) gedrosselt.</p>
+			</li>
+			<li>
+				<p>ESC (elektronische Stabilitätskontrolle) ist aktiviert.</p>
+			</li>
+		</ul>
+		<p>Die eingestellte Geschwindigkeit wird ausgeschaltet, aber die Tempomatanzeige (<image align="left" href="../../images/WKIA_357.eps" scale="15" placement="inline"/>) bleibt eingeschaltet.</p>
+		<note type="note">
+			<p>Wenn die Tempomatsteuerung in einer nicht erwähnten Situation pausiert, lassen Sie Ihr Fahrzeug in einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0573.dita#CL4m_HEV-ca_ES-2027-t0573" role="parent" scope="local" type="concept">
+				<linktext>Bedienung der Tempomatsteuerung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00185">
+	<title>Turn and lane change signal operation</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lighting control
+					<indexterm>turn and lane change signal operation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context id="e01143">
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01144">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01145">
+									<image align="center" placement="break" scale="95" href="images/N_SP327_B05_008.jpg"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The vehicle must be in the <term translate="no">ON</term> position for the turn signals to function.</p>
+		</context>
+		<steps-unordered id="e01146">
+			<step>
+				<cmd>To engage the turn signal, move the lever up or down (1).</cmd>
+				<stepresult>
+					<p>The green arrow indicators on the instrument panel indicate which turn signal is operating.</p>
+					<p>The turn signal will cancel itself after you complete a turn. If the indicator continues to flash after a turn, manually return the lever to the <term translate="no">OFF</term> position.</p>
+				</stepresult>
+			</step>
+			<step>
+				<cmd>To signal a lane change, move the turn signal lever slightly and hold it in position (2).</cmd>
+				<stepresult>
+					<p>The lever will return to the <term translate="no">OFF</term> position when released.</p>
+				</stepresult>
+			</step>
+		</steps-unordered>
+		<result id="e01147">
+			<p>If an indicator stays on and does not flash, or if it flashes abnormally, one of the turn signal bulbs may be burned out and need to be replaced.</p>
+		</result>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00184.dita#t00184" role="parent" scope="local" type="concept">
+				<linktext>Lighting control</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

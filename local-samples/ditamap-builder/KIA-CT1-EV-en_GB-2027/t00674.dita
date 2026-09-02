@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00674">
+	<title>Emergency Stop forewarning and braking control</title>
+	<shortdesc/>
+	<conbody>
+		<p>Emergency Stop determines that the driver is unresponsive if the hands-off warning continues or the driver’s forward inattention continues. Upon determining that the driver is unresponsive, the system issues a forewarning to the driver via a warning message, an audible alert, and steering wheel vibration.</p>
+		<p>Warning message: <uicontrol>Take control of the vehicle immediately. Vehicle is stopping.</uicontrol> </p>
+		<p>If the driver is still unresponsive despite the forewarning, Emergency Stop controls the steering wheel and brake pedal to stop the vehicle within the driving lane. It is also notified to the driver that Emergency Stop is operating with a warning message, a warning sound, and vibration on the steering wheel.</p>
+		<p>Warning message: <uicontrol>Take control of the vehicle immediately.Vehicle is stopping.</uicontrol> </p>
+		<p>The forewarning and Emergency Stop are deactivated if one of the following conditions is met:</p>
+		<ul id="e02334">
+			<li>
+				<p>When the driver holds and operates the steering wheel.</p>
+			</li>
+			<li>
+				<p>Smart Cruise Control is temporarily disabled or turned off.</p>
+			</li>
+			<li>
+				<p>Lane Following Assist is turned off.</p>
+			</li>
+		</ul>
+		<note type="note" id="e02335">
+			<ul id="e02336">
+				<li>
+					<p>During Emergency Stop operation, the Smart Cruise Control following distance is set and displayed at level 4. Once the Emergency Stop is released, it returns to the previously set value.</p>
+				</li>
+				<li>
+					<p>This includes the operation of Smart Cruise Control within Navigation-based Smart Cruise Control and Highway Driving Assist.</p>
+				</li>
+				<li>
+					<p>For more details on <xref href="t00647.dita#t00647"/>, <xref href="t00680.dita#t00680"/>, <xref href="t00691.dita#t00691"/> and <xref href="t00702.dita#t00702"/>, please refer to the respective sections.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

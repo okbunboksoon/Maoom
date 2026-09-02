@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0101">
+	<title>Automatisch umkehren</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Panoramadach
+					<indexterm>Automatisch umkehren</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCV041031L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn die elektrische Sonnenblende oder das Schiebedachglas beim automatischen Schließen ein Hindernis erkennt, wird die Bewegungsrichtung umgekehrt und dann angehalten.</p>
+		<p>Die Klemmschutzfunktion funktioniert möglicherweise nicht, wenn ein dünnes oder weiches Objekt zwischen der elektrischen Sonnenblende bzw. dem Schiebedachglas und dem Schiebedachrahmen eingeklemmt ist.</p>
+		<note type="warning" otherprops="legal_eu_std_007_04">
+			<ul>
+				<li>
+					<p>Stellen Sie sicher, dass Köpfe, Hände, Arme oder andere Körperteile oder Gegenstände nicht im Weg sind, wenn Sie das Schiebedach betätigen. Körperteile oder Gegenstände können eingeklemmt werden und Verletzungen oder Schäden verursachen.</p>
+				</li>
+				<li>
+					<p>Testen Sie niemals absichtlich die automatische Umkehrfunktion mit Körperteilen. Die elektrische Sonnenblende bzw. das Schiebedachglas kann zwar die Richtung umkehren, es besteht aber dennoch Verletzungsgefahr.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Drücken Sie den Hebel des Schiebedachs nicht weiter, wenn das Schiebedach schon voll geöffnet, geschlossen oder gekippt ist. Es können Schäden am Schiebedachmotor auftreten.</p>
+				</li>
+				<li>
+					<p>Fortgesetzter Betrieb wie Auf-/Zuschieben, Auf-/Zukippen, usw. kann zu einer Fehlfunktion des Motors oder des Sonnenblendensystems führen.</p>
+				</li>
+				<li>
+					<p>Entfernen Sie regelmäßig Schmutzablagerungen auf der Schiebedachführung.</p>
+				</li>
+				<li>
+					<p>Schmutzablagerungen zwischen dem Schiebedach und dem Dachblech können Geräusche verursachen. Öffnen Sie das Schiebedach und entfernen Sie den Staub regelmäßig mit einem sauberen Tuch.</p>
+				</li>
+				<li>
+					<p>Versuchen Sie nicht bei Frost, ein vereistes oder mit Schnee bedecktes Schiebedach zu öffnen. Das Schiebedach funktioniert eventuell nicht ordnungsgemäß und kann brechen, wenn es gewaltsam geöffnet wird.</p>
+				</li>
+				<li>
+					<p>Direkt nach einem Regenschauer oder nach dem Waschen des Fahrzeugs das Schiebedachglas nicht öffnen. Durch das Wasser kann der Fahrzeuginnenraum nass werden.</p>
+				</li>
+				<li>
+					<p>Lassen Sie beim Fahren kein Gepäck aus dem Schiebedach ragen. Bei plötzlichem Bremsen kann es zu Schäden am Fahrzeug kommen.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" otherprops="legal_eu_std_007_05">
+			<p>Halten Sie Kopf, Arme, andere Körperteile oder Gegenstände während der Fahrt nicht aus dem Schiebedach. Bei plötzlichem Bremsen kann es zu Verletzungen kommen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0097.dita#CL4m_HEV-ca_ES-2027-t0097" role="parent" scope="local" type="concept">
+				<linktext>Breites Schiebedach </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

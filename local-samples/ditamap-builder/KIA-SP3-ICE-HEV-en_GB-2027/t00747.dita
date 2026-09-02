@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00747">
+	<title>Tire Pressure Monitoring System (TPMS)</title>
+	<shortdesc>The Tire Pressure Monitoring System (TPMS) detects the pressure of the vehicle’s tires and displays it on the instrument cluster.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tire pressure monitoring system (TPMS)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" otherprops="legalnotice_europe-general_egall_2023_20230101_00003" id="e04529">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04530">
+								<image href="images/N_SP3i26_C11_003_1_I.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e04531">
+								<image href="images/N_SP3i25_C00_065_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e04532">
+			<li>
+				<p>Low tire pressure or TPMS malfunction indicator light</p>
+			</li>
+			<li>
+				<p>Low tire pressure position indicator light (shown on the instrument cluster)</p>
+			</li>
+		</ol>
+		<section id="e04533">
+			<title>Tire pressure indicator</title>
+			<ul id="e04534">
+				<li>
+					<p>You can check the tire pressure in assist mode on the instrument cluster.</p>
+				</li>
+				<li>
+					<p>The tire pressure indicator appears 1–2 minutes after you start driving.</p>
+				</li>
+				<li>
+					<p>If the tire pressure does not display when you stop the vehicle, Drive to display warning message displays. After driving, check the tire pressure again.</p>
+				</li>
+				<li>
+					<p>You can choose from the following tire pressure units in the user settings on the instrument cluster: psi, kPa, and bar.</p>
+				</li>
+			</ul>
+			<note type="tip" id="e04535">
+				<ul id="e04536">
+					<li>
+						<p>The tire pressure may change due to factors such as parking conditions, driving style, and altitude above sea level.</p>
+					</li>
+					<li>
+						<p>The tire pressure shown on the instrument cluster may differ from the tire pressure measured by a tire pressure gauge.</p>
+					</li>
+					<li>
+						<p>A low tire pressure warning may sound when a tire’s pressure unit is equal to or lower than the nearby tires. This is normal operation due to the change in tire pressure along with the tire temperature.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00736.dita#t00736" role="parent" scope="local" type="concept">
+				<linktext>What to do in an emergency</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

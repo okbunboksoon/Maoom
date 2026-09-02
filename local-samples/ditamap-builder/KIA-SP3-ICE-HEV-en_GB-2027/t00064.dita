@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legalnotice_europe-general_gen-ind_2023_20231004_12216" id="t00064">
+	<title id="e00339">How to register Digital Key 2 (Smartphone) </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>how to register digital key 2 (smartphone)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Kia digital key 2 can only be used on the smartphones that support this function, and the smartphone’s digital key 2 function is provided by the smartphone manufacturer. Some functions may not work depending on whether the vehicle is provided with such service.</p>
+		<p>While updating the digital key 2 controller, the smart key function may not work temporarily. In this case, it can be operated with the door lock/unlock button of the smart key.</p>
+		<section>
+			<title>Smartphone set up</title>
+			<p>In order to use digital key 2 (Smartphone) function, install the Kia App or Kia Connect app on your smartphone and register your information and subscribe the service.</p>
+		</section>
+		<section>
+			<title>Smartphone Registration</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00340">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00341">
+									<figgroup>
+										<image align="center" href="images/OCL4M035125N.jpg" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e00342">
+									<li>
+										<p><uicontrol>Smartphone key</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>My Smartphone key</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>Save</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol outputclass="callout">
+				<li>
+					<p>Turn the vehicle on with the smart key and make sure to keep the smart key inside the vehicle during digital key registration.</p>
+				</li>
+			</ol>
+			<ol>
+				<li>
+					<p>Shift to P (Park), press Register Vehicle Digital Key Setting on Kia App or Kia Connect app on your smartphone, and register according to the messages on the app.</p>
+					<ul>
+						<li>
+							<p>For smartphones without UWB support, place the NFC antenna of the smartphone on the center of the wireless charging pad (1).</p>
+							<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00343">
+								<tgroup cols="2" colsep="0" rowsep="1">
+									<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+									<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+									<tbody>
+										<row rowsep="1">
+											<entry colname="col1">
+												<fig id="e00344">
+													<figgroup>
+														<image align="center" href="images/N_SP327_D03_001_E.jpg" scale="95" placement="break"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="e00345">
+													<li>
+														<p><uicontrol>Charging pad</uicontrol></p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+						</li>
+						<li>
+							<p>For smartphones with UWB support, even if you don’t put your smartphone on the indoor authentication pad (wireless charging pad) (1), if you carry your smartphone in the vehicle, you can register the digital key wirelessly.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>When the digital key (smartphone) is saved, a message will appear on the instrument cluster or the infotainment system screen.</p>
+				</li>
+			</ol>
+			<note type="tip">
+				<ul>
+					<li>
+						<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+					</li>
+					<li>
+						<p>Vehicle</p>
+						<p>When there is a digital key (smartphone) already saved in the vehicle, Delete All will be displayed on the Smartphone Key menu screen of the infotainment system and Delete will be displayed on the My Smartphone Key screen. If you want to save a digital key again, 'How to delete Digital Key (Smartphone)'.</p>
+					</li>
+					<li>
+						<p>Smartphone</p>
+						<p>The digital key cannot be saved again while the vehicle’s digital key is saved in the owner’s smartphone. Save the digital key after deleting the digital key from the smartphone OEM wallet App or in the vehicle.</p>
+					</li>
+					<li>
+						<p>During the digital key 2 saving process, the process will cancel when:</p>
+						<ul>
+							<li>
+								<p>The smartphone is removed from the in-vehicle authentication pad (wireless charging pad)</p>
+							</li>
+							<li>
+								<p>Changing the infotainment system or instrument cluster screen</p>
+							</li>
+							<li>
+								<p>The vehicle is turned off</p>
+							</li>
+							<li>
+								<p>The gear is shifted</p>
+							</li>
+							<li>
+								<p>There is no smart key (saving process will not begin)</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>As the in-vehicle authentication pad may not work smoothly depending on the internal structure of the smartphones, the digital key may not be registered. In this case, register the procedure by moving the smartphone to the left or right of the in-vehicle authentication pad (wireless charging pad).</p>
+					</li>
+					<li>
+						<p>UWB (Ultra Wide Band) means ultra-wideband wireless communication technology. NFC (Near Field Communication) means short-range wireless communication.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>When it is not registered on the Kia App or Kia Connect app on your smartphone</title>
+			<p>Even if you put your smartphone on the indoor authentication pad, if the message of Registering... is not displayed on the infotainment system screen, you can register it as below.</p>
+			<ol>
+				<li>
+					<p>After turning the vehicle <term translate="no">OFF</term>, use the smart key to turn the vehicle <term translate="no">ON</term> again, then place the smart key inside the vehicle.</p>
+				</li>
+				<li>
+					<p>Select <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Digital Keys</uicontrol><uicontrol>Smartphone key</uicontrol><uicontrol>My Smartphone Key</uicontrol></menucascade> on the infotainment system screen while the vehicle is in P (Park) position.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00346">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e00347">
+											<figgroup>
+												<image align="center" href="images/OCL4M035125N.jpg" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<ol outputclass="callout" id="e00348">
+											<li>
+												<p><uicontrol>Smartphone key</uicontrol></p>
+											</li>
+											<li>
+												<p><uicontrol>My Smartphone key</uicontrol></p>
+											</li>
+											<li>
+												<p><uicontrol>Save</uicontrol></p>
+											</li>
+										</ol>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>Place the NFC antenna of the smartphone on the center of the indoor authentication pad (wireless charging pad).</p>
+				</li>
+			</ol>
+			<p>When the digital key (smartphone) is saved, a message will appear on the infotainment system screen.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00063.dita#t00063" role="parent" scope="local" type="concept">
+				<linktext>Digital Key 2 (Smartphone)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

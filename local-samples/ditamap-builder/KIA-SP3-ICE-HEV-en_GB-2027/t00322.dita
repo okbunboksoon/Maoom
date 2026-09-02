@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00322">
+	<title>Controlling fan speed</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system
+					<indexterm>controlling fan speed</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02042">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02043">
+								<image href="images/N_SP3i26_C08_015_I.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e02044">
+			<li>
+				<p>Use the fan speed control lever to set the desired fan speed.</p>
+			</li>
+			<li>
+				<p>To change the fan speed, turn the button up to increase the fan speed or press it down to decrease the fan speed.</p>
+			</li>
+			<li>
+				<p>To turn the fan speed control <term translate="no">OFF</term>, press down the fan speed control button several times or keep pressing it down.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00318.dita#t00318" role="parent" scope="local" type="task">
+				<linktext>Heating and air conditioning (A/C) operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

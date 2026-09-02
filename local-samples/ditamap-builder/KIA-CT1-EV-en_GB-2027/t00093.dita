@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00093">
+	<title>Opening/closing the manual trunk</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00418">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00419">
+								<figgroup>
+									<image href="../../images/N_CT25C147_1.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital" id="e00420">
+			<title>Simple operation</title>
+			<ol id="e00421">
+				<li>
+					<p>Press the outside handle switch to open the trunk.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print" id="e00422">
+			<title>Operation</title>
+			<ol id="e00423">
+				<li>
+					<p>Press the outside handle switch to open the trunk.</p>
+				</li>
+				<li>
+					<p>Pull up the trunk.</p>
+				</li>
+				<li>
+					<p>Push down the trunk to close the trunk. Make sure that the trunk is securely latched.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print" id="e00424">
+			<title>Operating condition(s)</title>
+			<ul id="e00425">
+				<li>
+					<p>The trunk is locked or unlocked using the key or central door lock switch.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

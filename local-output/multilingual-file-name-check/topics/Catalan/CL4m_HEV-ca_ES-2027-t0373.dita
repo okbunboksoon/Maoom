@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0373">
+	<title>Warnmeldung des LCD</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OMQ4033169L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Auto Stop ist aus. Betätigen Sie das Kupplungspedal und starten Sie den Motor manuell.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Das System erfordert möglicherweise einen manuellen Neustart des Motors, wenn die Leuchte auf der Taste ISG <term translate="no">OFF</term> leuchtet und wenn bei Ausstattung Ihres Fahrzeug mit Anzeige <term translate="no">AUTO</term> STOP die Warnmeldung kontinuierlich angezeigt wird.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OMQ4033164L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: A: Geben Sie für Auto-Start das Bremspedal frei</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Der Motor lässt sich nicht starten, wenn der Schalthebel bzw. Schaltknopf von der Neutralstellung N in die Fahrstufe D, den manuellen Modus oder den Rückwärtsgang R geschaltet wird, ohne bei automatisch angehaltenem Motor das Bremspedal zu betätigen. Wenn Sie in diesem Moment die Bremse betätigen, startet der Motor neu.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/ONQ5E031428L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: A: Schalten Sie für Auto-Start in die Neutralstellung</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Ein herkömmliches Fahrzeug mit Schaltgetriebe kann den Motor nur im Leerlauf neu starten. Wenn Sie einen Gang einlegen, ohne dabei das Kupplungspedal ganz zu betätigen, wird eine Warnung mit einem akustischen Signal angezeigt. Sie sollten den Motor in der Neutralstellung (N) neu starten.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/ONQ5E031429L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: A: Betätigen Sie für Auto-Start das Kupplungspedal</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn der Motor abgeschaltet ist oder das Fahrzeug sich bewegt, während der Gang eingelegt ist und das Kupplungspedal nicht betätigt wird, zeigt das System die nachstehende Warnmeldung an. Wenn der Fahrer zu diesem Zeitpunkt das Kupplungspedal bis zum Anschlag betätigt, startet der Motor automatisch neu.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0372.dita#CL4m_HEV-ca_ES-2027-t0372" role="parent" scope="local" type="concept">
+				<linktext>Kontrollleuchte des ISG-Systems</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

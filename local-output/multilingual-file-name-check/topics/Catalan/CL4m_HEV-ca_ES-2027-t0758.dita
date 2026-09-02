@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0758">
+	<title>Bestandteile des Reifen-Mobilitäts-Kits</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Reifen-Mobilitäts-Kit
+					<indexterm>Bestandteile des Reifen-Mobilitäts-Kits</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<fig expanse="page">
+			<figgroup>
+				<image align="center" href="../../images/OCL4M065043L_2.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<p>Verbinder, Kabel und Anschlussschlauch befinden sich im Kompressorgehäuse.</p>
+		<p>Halten Sie die angegebene Reihenfolge strikt ein, andernfalls kann das Dichtmittel unter hohem Druck austreten.</p>
+		<ol outputclass="callout">
+			<li>
+				<p>Aufkleber mit der Angabe der Höchstgeschwindigkeit</p>
+			</li>
+			<li>
+				<p>Dichtmittelflasche</p>
+			</li>
+			<li>
+				<p>Dichtmittel-Befüllschlauch</p>
+			</li>
+			<li>
+				<p>Stecker für die Steckdose</p>
+			</li>
+			<li>
+				<p>Dichtmittelflaschenhalter</p>
+			</li>
+			<li>
+				<p>Kompressor</p>
+			</li>
+			<li>
+				<p>Schalter <term translate="no">ON/OFF</term></p>
+			</li>
+			<li>
+				<p>Reifenluftdruckmesser</p>
+			</li>
+			<li>
+				<p>Reifenluftdruckventil</p>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0757.dita#CL4m_HEV-ca_ES-2027-t0757" role="parent" scope="local" type="concept">
+				<linktext>Im Fall einer Reifenpanne (mit Reifen-Mobilität-Kit)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

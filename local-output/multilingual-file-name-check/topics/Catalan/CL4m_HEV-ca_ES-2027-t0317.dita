@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0317">
+	<title>Becherhalter</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Becherhalter</indexterm>
+				<indexterm>Innenausstattung
+					<indexterm>Becherhalter</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Vorn (Typ A)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034004N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Vorn (Typ B)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034004.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Hinten (ausstattungsabhängig)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034078N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>In den Becherhaltern können Becher und kleine Getränkedosen abgestellt werden.</p>
+		<note type="warning">
+			<p>Heiße Flüssigkeiten</p>
+			<ul id="e00735">
+				<li id="e00736">
+					<p>Stellen Sie während der Fahrt keine Behälter mit heißen Flüssigkeiten ab, die nicht mit einem Deckel verschlossen sind. Wenn heiße Flüssigkeiten auslaufen, könnten Sie sich verbrennen. Eine solche Verbrennung könnte dazu führen, dass der Fahrer die Kontrolle über das Fahrzeug verliert.</p>
+				</li>
+				<li id="e00737">
+					<p>Um die Gefahr von Verletzungen bei plötzlichen Bremsungen oder Zusammenstößen zu verringern, sollten Sie keine ungesicherten oder offenen Flaschen, Gläser, Dosen usw. in dem Becherhalter platzieren, wenn das Fahrzeug sich bewegt.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" id="e00738">
+			<p>Lagern Sie Dosen oder Flaschen nicht im direkten Sonnenlicht und bringen Sie diese nicht in ein Fahrzeug, das sich aufgeheizt hat. Es kann sonst zu Explosionen kommen.</p>
+		</note>
+		<note type="note" id="e00739">
+			<ul id="e00740">
+				<li id="e00741">
+					<p>Sorgen Sie dafür, dass Ihre Getränke während der Fahrt verschlossen sind, um Verschütten Ihres Getränks zu vermeiden. Wenn Flüssigkeit verschüttet wird, kann diese in die elektrische/elektronische Anlage des Fahrzeugs gelangen und die elektrischen/elektronischen Teile beschädigen.</p>
+				</li>
+				<li id="e00742">
+					<p>Trocknen Sie nach dem Entfernen von verschütteten Flüssigkeiten den Becherhalter nicht mit hohen Temperaturen. Dies kann den Becherhalter beschädigen.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0315.dita#CL4m_HEV-ca_ES-2027-t0315" role="parent" scope="local" type="concept">
+				<linktext>Innenausstattung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

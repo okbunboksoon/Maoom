@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00168">
+	<title id="e01230">Theft-alarm stage</title>
+	<conbody>
+		<p>The alarm will be activated if any of the following occurs while the system is armed.</p>
+		<ul id="e01231">
+			<li id="e01232">
+				<p>A door is opened without using the smart key.</p>
+			</li>
+			<li id="e01233">
+				<p>The tailgate is opened without using the smart key.</p>
+			</li>
+			<li id="e01234">
+				<p>The hood is opened.</p>
+			</li>
+		</ul>
+		<p>The horn will sound and the hazard warning lights will blink continuously for approximately 30 seconds. To turn off the system, unlock the doors with the smart key.</p>
+	</conbody>
+</concept>

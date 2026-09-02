@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00796">
+	<title>1. Getting ready to remotely move forward and backward</title>
+	<conbody>
+		<p>There are two ways to operate Remote Operation function.</p>
+		<section>
+			<title>Method (1): Using the function with vehicle off</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig>
+									<figgroup>
+										<image href="../../images/N_CT25E0102_2.eps" scale="95" align="center" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout" id="e02551">
+									<li>
+										<p> <uicontrol>Door lock</uicontrol> <image href="../../images/WKIA_019.eps" scale="15" align="left" placement="inline"/> </p>
+									</li>
+									<li>
+										<p> <uicontrol>Remote Start</uicontrol> <image href="../../images/WKIA_108.eps" scale="15" align="left" placement="inline"/> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol id="e02552">
+				<li>
+					<p>Within a certain range from the vehicle press the door lock (<image href="../../images/WKIA_019.eps" scale="15" align="left" placement="inline"/>) button on the smart key and lock all doors.</p>
+				</li>
+				<li>
+					<p>Press and hold the Remote Start button (<image href="../../images/WKIA_108.eps" scale="15" align="left" placement="inline"/>) within 4 seconds until the vehicle starts.</p>
+				</li>
+			</ol>
+			<p importance="default">For more details on remotely starting the vehicle, refer to <xref type="concept" href="t00033.dita#t00033"/>.</p>
+		</section>
+		<section>
+			<title>Method (2): Using the function with vehicle on</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02553">
+				<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1" colsep="0">
+								<fig id="e02554">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25E105_2.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e02555">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Z072_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol outputclass="callout">
+				<li>
+					<p> <uicontrol>Leave the vehicle (keep the key) and close the doors.</uicontrol> </p>
+				</li>
+				<li>
+					<p> <uicontrol>Press and hold the parking button on the Smart Key.</uicontrol> </p>
+				</li>
+			</ol>
+			<ol>
+				<li>
+					<p>Park the vehicle in front of the space where you want to use Remote Operation function, and shift the gear to P (Park).</p>
+				</li>
+				<li>
+					<p>Press and hold the Parking/View (<image href="../../images/WKIA_106.eps" scale="15" align="left" placement="inline"/>) button to turn on Smart Parking Assist. A message <uicontrol>Under REMOTE control</uicontrol> will appear on the infotainment system screen.</p>
+				</li>
+				<li>
+					<p>Get out of the vehicle with the smart key and close all doors.</p>
+					<p>When using the Digital Key, press the 'Remote Smart Parking Assist' button to enter the Remote Forward/Backward screen.</p>
+				</li>
+			</ol>
+			<note type="note">
+				<ul>
+					<li>
+						<p> <uicontrol>Agree</uicontrol> must be selected on the infotainment system screen and the infotainment system has to operate properly to use Remote Operation function.</p>
+					</li>
+					<li>
+						<p>Before initiating the Remote Operation function from outside the vehicle, make sure not to leave any smart keys or digital keys inside the vehicle. The Remote Operation function will not work if there is a spare smart key or spare digital key inside the vehicle.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

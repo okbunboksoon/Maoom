@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00100">
+	<title>Lumbar Stabilization System while driving</title>
+	<shortdesc/>
+	<conbody>
+		<p>This function repeats the adjustment of the lumbar support in a regular pattern to reduce back fatigue when driving continuously for a long time.</p>
+		<section deliveryTarget="except_print" id="e00709">
+			<title>Operation</title>
+			<ul id="e00710">
+				<li>
+					<p>Select <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Seats</uicontrol><uicontrol>Ergo-motion seat</uicontrol><uicontrol>Lumbar Stabilization System while driving (Off, 30 min, 1hour)</uicontrol></menucascade> from the infotainment system.</p>
+				</li>
+				<li>
+					<p>If you press the lumbar support adjustment switch while the lumbar support function is operating while driving, the operation stops.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00711">
+			<title>Operating condition(s)</title>
+			<ul id="e00712">
+				<li>
+					<p>Activates automatically after 30 minutes or 1 hour of continuous driving.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

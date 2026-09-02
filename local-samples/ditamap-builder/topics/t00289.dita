@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00289">
+	<title id="e02211">Head-Up Display (HUD)</title>
+	<shortdesc>The head up display is a transparent display which projects a shadow of some information of the instrument cluster and navigation on the HUD screen.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>head-up display (HUD)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02212">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02213">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV035410.eps" placement="break" width="2.244in" id="e02214"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e02215">
+			<li>
+				<p>The head up display image on the HUD screen may be invisible when:</p>
+				<ul id="e02216">
+					<li>
+						<p>Sitting posture is bad.</p>
+					</li>
+					<li>
+						<p>Wearing polarized sunglasses.</p>
+					</li>
+					<li>
+						<p>There is an object on the cover of the head up display.</p>
+					</li>
+					<li>
+						<p>Driving on a wet road.</p>
+					</li>
+					<li>
+						<p>An inadequate lighting is turned on inside the vehicle.</p>
+					</li>
+					<li>
+						<p>Any light comes from the outside.</p>
+					</li>
+					<li>
+						<p>Wearing an inadequate glasses to your eyesight.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>If the head up display image is not shown well, adjust the height, rotation or illumination of the head up display in the cluster.</p>
+			</li>
+			<li>
+				<p>When the head up display needs inspection or repair, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e02217">
+			<p importance="high">Head-Up Display</p>
+			<p>Do not place any accessories on the Head-Up Display shutter. It might fall into Head-Up Display and can damage Head-Up Display.</p>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00949" otherprops="legalnotice_europe-general_egall_2023_20230101_00077">
+    <title>Malfunction with the SCR system</title>
+    <conbody>
+        <table outputclass="formatd" frame="all" rowsep="1" colsep="1" pgwide="1"
+            id="table_scc_xy3_pjc">
+            <tgroup cols="3" colsep="1" rowsep="1">
+                <colspec colnum="1" colname="col1" colwidth="1.562*"/>
+                <colspec colnum="2" colname="col2" colwidth="1.562*"/>
+                <colspec colnum="3" colname="col3" colwidth="1.562*"/>
+                <thead valign="middle">
+                    <row rowsep="1">
+                        <entry colname="col1"/>
+                        <entry colname="col2">
+                            <p>Upon detecting a malfunction</p>
+                        </entry>
+                        <entry colname="col3">
+                            <p>Driving 50 km after detecting a malfunction</p>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody valign="middle">
+                    <row rowsep="1">
+                        <entry colname="col1" align="center" valign="middle">
+                            <p>Urea solution system failure</p>
+                            <p>(= no urea solution injection)</p>
+                        </entry>
+                        <entry colname="col2" align="center" valign="top">
+                            <fig id="fig_tcc_xy3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073095L.jpg" scale="95"
+                                        align="center" placement="break" id="image_ucc_xy3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                        <entry colname="col3" align="center" valign="top">
+                            <fig id="fig_vcc_xy3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073098L.jpg" scale="95"
+                                        align="center" placement="break" id="image_wcc_xy3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="col1" align="center" valign="middle">
+                            <p>Incorrect urea solution detected</p>
+                            <p>(= abnormal urea solution)</p>
+                        </entry>
+                        <entry colname="col2" align="center" valign="top">
+                            <fig id="fig_xcc_xy3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073030L.jpg" scale="95"
+                                        align="center" placement="break" id="image_ycc_xy3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                        <entry colname="col3" align="center" valign="top">
+                            <fig id="fig_zcc_xy3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073036NL.jpg" scale="95"
+                                        align="center" placement="break" id="image_adc_xy3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                    </row>
+                    <row rowsep="0">
+                        <entry colname="col1" align="center" valign="middle">
+                            <p>Abnormal urea-solution consumption</p>
+                            <p>(= post treatment failure)</p>
+                        </entry>
+                        <entry colname="col2" align="center" valign="top">
+                            <fig id="fig_bdc_xy3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073097L.jpg" scale="95"
+                                        align="center" placement="break" id="image_cdc_xy3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                        <entry colname="col3" align="center" valign="top">
+                            <fig id="fig_ddc_xy3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073098L.jpg" scale="95"
+                                        align="center" placement="break" id="image_edc_xy3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>SCR system has malfunction due to disconnected electrical components, incorrect urea
+            solution and so on.</p>
+        <p>"000 km (mile)" represents the remaining travel distance allowed, so do not continue
+            driving to the limit of the remaining travel distance without fixing the source of the
+            malfunction. Otherwise, the vehicle can't be restarted once the engine is turned off. In
+            this case, have your vehicle inspected by a professional workshop. Kia recommends
+            visiting an authorized Kia dealer or service partner.</p>
+    </conbody>
+</concept>

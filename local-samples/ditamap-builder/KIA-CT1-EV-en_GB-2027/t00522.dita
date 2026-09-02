@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00522">
+	<title>Stopping vehicle and ending brake control</title>
+	<conbody>
+		<p>When the vehicle is stopped due to emergency braking, the warning message will appear on the cluster.</p>
+		<ul>
+			<li>
+				<p>Warning message: <uicontrol>Drive carefully</uicontrol> </p>
+			</li>
+		</ul>
+		<p>For your safety, the driver should depress the brake pedal immediately and check the surroundings.</p>
+		<ul>
+			<li>
+				<p>Brake control will end after the vehicle is stopped by emergency braking for approximately 2 seconds.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>The warning sound during collision warning and emergency braking can be switched off by pressing the hazard warning light.</p>
+		</note>
+		<note type="tip" id="e02071">
+			<p>When turning right (left-hand drive) or left (right-hand drive) at an intersection, braking is assisted to reduce or avoid collisions if there is a collision risk with a cyclist approaching at the speed of 15–70 km/h (9–44 mph) from the opposite side.</p>
+		</note>
+	</conbody>
+</concept>

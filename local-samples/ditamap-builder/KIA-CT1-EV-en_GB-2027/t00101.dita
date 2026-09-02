@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00101">
+	<title>Smart trunk</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>smart trunk</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00500">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00501">
+								<figgroup>
+									<image href="../../images/N_CT25C035_1.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Door</uicontrol><uicontrol>Smart trunk</uicontrol></menucascade> on the infotainment system.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Door</uicontrol><uicontrol>Smart trunk</uicontrol></menucascade> on the infotainment system.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operating condition(s)</title>
+			<ul>
+				<li>
+					<p>After 15 seconds when all doors are closed and locked.</p>
+				</li>
+				<li>
+					<p>Positioned in the detecting area for more than 3 seconds.</p>
+				</li>
+				<li>
+					<p>Disconnecting the charging connector</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Non-operating condition(s)</title>
+			<ul>
+				<li>
+					<p>The Smart Key is detected less than 15 seconds after the doors are closed and locked and is continuously detected.</p>
+				</li>
+				<li>
+					<p>The Smart Key is detected less than 15 seconds after the doors are closed and locked and 1.5 m from the front door handles (for vehicles equipped with Welcome Light).</p>
+				</li>
+				<li>
+					<p>A door is not locked or closed.</p>
+				</li>
+				<li>
+					<p>The smart key is in the vehicle.</p>
+				</li>
+				<li>
+					<p>The vehicle is on charge</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Limitation(s)</title>
+			<ul>
+				<li>
+					<p>Smart key is not detected within 50-100 cm (28-40 inches) radius behind the vehicle</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

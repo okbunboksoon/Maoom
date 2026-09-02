@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00404">
+	<title>Smart regeneration system malfunction and limitations</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>smart regeneration system 
+					<indexterm>malfunction and limitations</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02915">
+			<title>Smart regeneration system malfunction</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e02916">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e02917">
+									<figgroup>
+										<image href="../../images/OOV055207L.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02918"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout" id="e02919">
+									<li>
+										<p> <uicontrol>Check smart recuperation system</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The following message will appear when the smart regeneration system is not functioning normally.</p>
+			<p>The system will be canceled and (<image href="../../images/WKIA_336.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02920"/>) on the instrument cluster will disappear and instead display regenerative braking level.</p>
+			<p>Check for foreign substances on the front radar. Remove any dirt, snow, or debris that could interfere with the radar sensors.</p>
+			<p>If the system still does not operate normally, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+		<section id="e02921">
+			<title>Limitations of smart regeneration system</title>
+			<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc" id="e02922">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+					<colspec colnum="1" colname="1" colwidth="52*"/>
+					<colspec colnum="2" colname="2" colwidth="48*"/>
+					<thead>
+						<row rowsep="1">
+							<entry namest="1" nameend="2">
+								<p>Limitations of smart regeneration system</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry colname="1" align="center" valign="middle">
+								<fig id="e02923">
+									<title>Driving on a curved road</title>
+									<figgroup>
+										<image href="../../images/OOV045019_2.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02924"/>
+									</figgroup>
+								</fig>
+								<fig id="e02925">
+									<figgroup>
+										<image href="../../images/OOV045020.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02926"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2" valign="middle">
+								<p>When driving on the curve, the system may not detect the vehicle in your lane and the regenerative braking level will reduce automatically, making you feel that the vehicle is accelerating.</p>
+								<p>Also, if the system suddenly recognizes the vehicle in front, the regenerative braking level will increase automatically, making you feel that the vehicle is decelerating.</p>
+								<p>The driver must maintain a safe braking distance, and if necessary, depress the brake pedal to reduce your driving speed in order to maintain a safe distance.</p>
+								<p>The smart regeneration system may recognize a vehicle in an adjacent lane when driving on a curved road. In this case, the system increases the braking level and slow the vehicle.</p>
+								<p>Always pay attention to road and driving conditions while driving. If necessary, depress the brake pedal to reduce your driving speed in order to maintain a safe distance. Also, when necessary, you may depress the accelerator pedal to prevent the system from unnecessarily decelerating your vehicle.</p>
+								<p>Always check the traffic conditions around the vehicle.</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry colname="1" align="center" valign="top">
+								<fig id="e02927">
+									<title>Driving on a sloped road</title>
+									<figgroup>
+										<image href="../../images/OOV045021.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02928"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<p>When driving on an uphill or downhill, the system may not detect the vehicle in your lane and the regenerative braking level will reduce automatically, making you feel that the vehicle is accelerating.</p>
+								<p>Also, if the system suddenly recognizes the vehicle in front, the regenerative braking level will increase automatically, making you feel that the vehicle is decelerating.</p>
+								<p>The driver must maintain a safe braking distance, and if necessary, depress the brake pedal to reduce your driving speed in order to maintain a safe distance.</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry colname="1" align="center" valign="top">
+								<fig id="e02929">
+									<title>Changing lanes</title>
+									<figgroup>
+										<image href="../../images/OOV045022.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02930"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<p>When a vehicle changes lanes in front of you, the smart regeneration system may not immediately detect the vehicle, especially if the vehicle changes lanes abruptly. In this case, you must maintain a safe braking distance, and if necessary, depress the brake pedal to reduce your driving speed in order to maintain a safe distance.</p>
+							</entry>
+						</row>
+						<row rowsep="0" valign="middle">
+							<entry colname="1" align="center" valign="middle">
+								<fig id="e02931">
+									<title>Recognizing the vehicle</title>
+									<figgroup>
+										<image href="../../images/OOV045023.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02932"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<p>Some vehicles in your lane cannot be recognized by the sensor:</p>
+								<ul id="e02933">
+									<li>
+										<p>Narrow vehicles such as motorcycles or bicycles</p>
+									</li>
+									<li>
+										<p>Vehicles offset to one side</p>
+									</li>
+									<li>
+										<p>Slow-moving vehicles or sudden-decelerating vehicles</p>
+									</li>
+									<li>
+										<p>Stopped vehicles (When the vehicle ahead drives away, the system may not detect a stopped vehicle.)</p>
+									</li>
+									<li>
+										<p>Vehicles with small rear profile such as trailers with no loads</p>
+									</li>
+								</ul>
+								<p>A vehicle ahead cannot be recognized correctly by the sensor if any of following occurs:</p>
+								<ul id="e02934">
+									<li>
+										<p>When the vehicle is pointing upwards due to overloading in the luggage compartment</p>
+									</li>
+									<li>
+										<p>While the steering wheel is operating</p>
+									</li>
+									<li>
+										<p>When driving to one side of the lane</p>
+									</li>
+									<li>
+										<p>When driving on narrow lanes or on curves</p>
+									</li>
+								</ul>
+								<p>Apply the brake or accelerator pedal if necessary.</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<note type="warning" id="e02935">
+				<p>When using smart regeneration system, take the following precautions:</p>
+				<ul id="e02936">
+					<li>
+						<p>In an emergency, always apply the brakes to stop the vehicle.</p>
+					</li>
+					<li>
+						<p>Maintain a safe distance from the vehicle ahead, considering road conditions and vehicle speed. A short following distance at high speed may lead to a serious collision.</p>
+					</li>
+					<li>
+						<p>Always keep sufficient braking distance and decelerate by applying the brake pedal when necessary.</p>
+					</li>
+					<li>
+						<p>Smart regeneration system uses radar signals to detect and monitor vehicles ahead. It is not designed to detect oncoming vehicles, pedestrians, bicycles, motorcycles, or small wheeled objects such as luggage bags, shopping carts, or strollers.</p>
+					</li>
+					<li>
+						<p>The system may experience delays in response to vehicles that change lanes frequently or may respond to vehicles in adjacent lanes. Always drive attentively and be prepared for unexpected situations.</p>
+					</li>
+					<li>
+						<p>Smart regeneration system may not recognize complex driving scenarios. Continuously monitor road conditions and adjust your vehicle’s speed as needed.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e02937">
+				<p>Smart regeneration system may not operate temporarily due to:</p>
+				<ul id="e02938">
+					<li>
+						<p>Electrical interference</p>
+					</li>
+					<li>
+						<p>Modification of the suspension</p>
+					</li>
+					<li>
+						<p>Differences in tire wear or pressure</p>
+					</li>
+					<li>
+						<p>Installation of different type of tires</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

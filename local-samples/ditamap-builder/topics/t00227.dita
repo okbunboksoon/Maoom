@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00227">
+	<title>Resetting the power tailgate</title>
+	<conbody>
+		<p>In some circumstances resetting the power tailgate operation may need to be performed. Some instances where resetting the power tailgate may be required include:</p>
+		<ul>
+			<li>
+				<p>When the 12-volt battery is recharged</p>
+			</li>
+			<li>
+				<p>When the 12-volt battery is reinstalled after removal or replacement</p>
+			</li>
+			<li>
+				<p>When the related fuse is reinstalled after removal or replacement</p>
+			</li>
+		</ul>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e01665">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01666">
+								<figgroup>
+									<image href="../../images/OOV035424L_2.eps" align="center" placement="break" id="e01667"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol>
+			<li>
+				<p>With the vehicle in <term>OFF</term> or <term>DRIVE READY</term> position, shift to P (Park).</p>
+			</li>
+			<li>
+				<p>Press the power tailgate open/close inner button (1) and outer button (2) simultaneously until a chime sounds.</p>
+			</li>
+			<li>
+				<p>Slowly close the tailgate manually.</p>
+			</li>
+			<li>
+				<p>Press the power tailgate open/close outer button. The power tailgate will open with a chime sound.</p>
+				<p>Wait until the tailgate fully opens to complete resetting. If the tailgate stops before it is fully open, resetting cannot be completed.</p>
+			</li>
+		</ol>
+		<note type="tip">
+			<p>If the power tailgate does not operate properly after the above procedure, have it inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</note>
+	</conbody>
+</concept>

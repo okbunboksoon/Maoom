@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0048">
+	<title>Digitaler Schlüssel 2 (Kartenschlüssel)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Digital Key 2 Touch
+					<indexterm>Kartenschlüssel</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section otherprops="legal_eu_std_019_03">
+			<title>So registrieren Sie den Digital-Key 2 (Kartenschlüssel)</title>
+			<p>Um den Kartenschlüssel als digitalen Schlüssel 2 zu verwenden, registrieren Sie den Kartenschlüssel gemäß den folgenden Verfahren im Fahrzeugsystem.</p>
+			<ol>
+				<li>
+					<p>Steigen Sie mit zwei Smart-Keys in das Fahrzeug ein.</p>
+				</li>
+				<li>
+					<p>Überprüfen Sie, ob das Verwendungsmenü aktiviert ist.</p>
+					<p>Tippen Sie bei eingeschaltetem Fahrzeug auf <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Digitale Schlüssel</uicontrol><uicontrol>NFC-Kartenschlüssel</uicontrol><uicontrol>Anwenden</uicontrol></menucascade> am Infotainment-System.</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OMV033150N.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<ol outputclass="callout">
+											<li>
+												<p>Digital-Keys</p>
+											</li>
+											<li>
+												<p>NFC-Kartenschlüssel</p>
+											</li>
+											<li>
+												<p>Verwendung</p>
+											</li>
+											<li>
+												<p>Speichern</p>
+											</li>
+										</ol>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>Legen Sie bei eingeschaltetem Fahrzeug den Kartenschlüssel auf das Authentifizierungspad im Fahrzeug (kabelloses Ladepad) und drücken Sie am Bildschirm des Infotainment-Systems das Speichermenü. Das Verfahren zum Speichern beginnt automatisch.</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M035060L.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<ol outputclass="callout">
+											<li>
+												<p>Ladestation</p>
+											</li>
+										</ol>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>Wenn der digitale Schlüssel (Kartenschlüssel) gespeichert wird, erscheint eine Meldung auf dem Bildschirm des Infotainment-Systems.</p>
+				</li>
+			</ol>
+			<note deliveryTarget="full_only" type="tip">
+				<ul>
+					<li>
+						<p>Das Infotainment-System kann sich nach Aktualisierungen ändern. Weitere Informationen finden Sie in der Anleitung des Infotainment-Systems und in der Kurzanleitung.</p>
+					</li>
+					<li>
+						<p>Wenn bereits ein digitaler Schlüssel (Kartenschlüssel) im Fahrzeug gespeichert ist, ist das Menü Speichern deaktiviert. Wenn Sie einen digitalen Schlüssel erneut speichern möchten, schlagen Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0048.dita#CL4m_HEV-ca_ES-2027-t0048/e00128"/> nach und befolgen Sie zunächst das Löschverfahren, bevor Sie einen digitalen Schlüssel speichern.</p>
+					</li>
+					<li>
+						<p>Um den digitalen Schlüssel (Kartenschlüssel) zu registrieren, müssen sich die beiden Smart-Keys im Fahrzeug befinden.</p>
+					</li>
+					<li>
+						<p>Der registrierte digitale Schlüssel (Kartenschlüssel) kann nicht für ein anderes Fahrzeug verwendet werden.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>So verwenden Sie den Digital-Key 2 (Kartenschlüssel)</title>
+			<sectiondiv><ph>Kartenschlüssel Tipp-Steuerung</ph>
+				<p>Der Fahrer kann die Tür ver- und entriegeln, indem er mit dem Kartenschlüssel den Türgriff antippt. Auch kann das Fahrzeug gestartet werden, indem der Kartenschlüssel auf das Authentifizierungspad im Fahrzeug (kabelloses Ladepad) gelegt wird.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M035022L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<ol outputclass="callout" id="e00127">
+										<li>
+											<p>Authentifizierungspad am Türgriff</p>
+										</li>
+										<li>
+											<p>Kartenschlüssel NFC-Antenne</p>
+										</li>
+									</ol>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+			<sectiondiv><ph>Ver-/Entriegeln der Türen</ph>
+				<ul>
+					<li>
+						<p>Wenn der Fahrer die NFC-Antenne des registrierten Kartenschlüssels auf dem Authentifizierungspad (1) am Türgriff der Fahrer- oder Beifahrertür mehr als 2 Sekunden lang berührt, wird die Tür ver- bzw. entriegelt.</p>
+					</li>
+					<li>
+						<p>Überprüfen Sie nach dem Verriegeln der Tür unbedingt den Verriegelungszustand. Nach dem Entriegeln der Türen werden diese nach 30 Sekunden automatisch wieder verriegelt, es sei denn, eine Tür wird geöffnet.</p>
+					</li>
+					<li>
+						<p>Es funktioniert nur, wenn die Mitte des NFC-Kartenschlüssels genau auf das NFC-Authentifizierungspad des Fahrzeugtürgriffs getippt wird.</p>
+					</li>
+				</ul>
+				<note deliveryTarget="full_only" type="note">
+					<p>Wenn Sie sich der NFC-Antenne des Smartphones in der Mitte des Authentifizierungspads des Außentürgriffs nähern, werden die Türen unter den folgenden Bedingungen nicht mit einem Signalton verriegelt:</p>
+					<ul>
+						<li>
+							<p>Wenn sich der Smart-Key sich im Fahrzeug befindet</p>
+						</li>
+						<li>
+							<p>Wenn sich der Zündschalter oder der <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) in der Position <term translate="no">ACC</term> oder <term translate="no">ON</term> befindet.</p>
+						</li>
+						<li>
+							<p>Wenn eine oder mehrere Türen, Motorhauben oder der Kofferraum/die Heckklappe geöffnet sind</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+			<sectiondiv><ph>Fahrzeug starten</ph>
+				<p>Nachdem Sie den registrierten Kartenschlüssel 2 auf das Authentifizierungspad im Fahrzeug (kabelloses Ladepad) gelegt haben, treten Sie auf das Bremspedal und drücken Sie den <term translate="no">EV</term>-Knopf (MOTOR-START/STOPP), um das Fahrzeug zu starten.</p>
+				<ul>
+					<li>
+						<p>Nachdem das Fahrzeug gestartet ist, können Sie den Kartenschlüssel vom Pad abnehmen.</p>
+					</li>
+				</ul>
+				<note type="warning">
+					<p>Das Fahrzeug kann gestartet werden, wenn der registrierte Kartenschlüssel auf das fahrzeuginterne Authentifizierungspad (kabelloses Ladepad) gelegt wird. Lassen Sie daher keine Kinder oder Personen, die das System nicht kennen, unbeaufsichtigt, da dies zu schweren oder tödlichen Verletzungen führen könnte. Sie sollten den registrierte Kartenschlüssel stets bei sich haben, um einen Fahrzeugdiebstahl zu verhindern, wenn Sie das Fahrzeug verlassen.</p>
+				</note>
+				<note deliveryTarget="full_only" type="caution">
+					<ul>
+						<li>
+							<p>Der digitale Schlüssel (Kartenschlüssel) funktioniert unter den folgenden Bedingungen möglicherweise nicht:</p>
+							<ul>
+								<li>
+									<p>Wenn der digitale Schlüssel (Kartenschlüssel) die Mitte des Authentifizierungspads am Türgriff oder des Authentifizierungspads im Fahrzeug (kabelloses Ladepad) nicht richtig berührt.</p>
+								</li>
+								<li>
+									<p>Wenn der digitale Schlüssel (Kartenschlüssel) überlappend mit NFC-fähigen Karten wie Kreditkarten oder Smartphones verwendet wird.</p>
+								</li>
+								<li>
+									<p>Wenn der digitale Schlüssel (Kartenschlüssel) nicht funktioniert, entfernen Sie den Kartenschlüssel etwa 10 cm (4 in.) vom Authentifizierungspad und tippen Sie ihn dann erneut an.</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p>Der digitale Schlüssel (Kartenschlüssel) kann durch Stöße beschädigt sein. Wenn der digitale Schlüssel (Kartenschlüssel) beschädigt ist, ersetzen Sie den digitalen Schlüssel (Kartenschlüssel) durch einen neuen und registrieren Sie ihn erneut.</p>
+						</li>
+						<li>
+							<p>Der Kartenschlüssel ist ein allgemeiner Verbrauchsartikel, dessen Reparatur nicht unter Garantieanspruch fällt. Wenn er also aufgrund von Unachtsamkeit des Kunden beschädigt wird oder verloren geht, ist keine kostenlose Erstattung verfügbar.</p>
+						</li>
+						<li>
+							<p>Wenn der Kartenschlüssel über einen längeren Zeitraum hohen Temperaturen ausgesetzt wird, kann es zu Fehlfunktionen kommen. Achten Sie darauf, dass der Schlüssel weder direktem Sonnenlicht noch hohen Temperaturen ausgesetzt wird.</p>
+						</li>
+						<li>
+							<p>Wenn der digitale Schlüssel (Kartenschlüssel) während der Fahrt auf dem Authentifizierungspad im Fahrzeug (kabelloses Ladepad) liegen bleibt, kann dies zu einer Fehlfunktion des digitalen Schlüssels (Kartenschlüssels) führen. Nehmen Sie den digitalen Schlüssel (Kartenschlüssel) nach dem Starten des Fahrzeugs unbedingt vom Authentifizierungspad im Fahrzeug (kabelloses Ladepad).</p>
+						</li>
+						<li>
+							<p>Wenn sich der digitale Schlüssel (Kartenschlüssel) zwischen dem Authentifizierungspad im Fahrzeug (kabelloses Ladepad) und dem Smartphone befindet und das Smartphone kabellos aufgeladen wird, kann dies zu einer Fehlfunktion des digitalen Schlüssels (Kartenschlüssels) führen. Dies ist beispielsweise der Fall, wenn Sie das Smartphone aufladen, während der digitale Schlüssel (Kartenschlüssel) an der Rückseite des Smartphone-Gehäuses angebracht ist. Stellen Sie sicher, dass Sie den digitalen Schlüssel (Kartenschlüssel) aufladen, nachdem Sie ihn vom Smartphone entfernt haben.</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+		</section>
+		<section otherprops="legal_eu_std_019_04" id="e00128">
+			<title>So löschen Sie den Digital-Key 2 (Kartenschlüssel)</title>
+			<ol>
+				<li>
+					<p>Schalten Sie das Fahrzeug mit dem Smart-Key ein und achten Sie darauf, dass der Smart-Key während des Verfahrens zum Löschen des digitalen Schlüssels (Kartenschlüssel) im Fahrzeug verbleibt.</p>
+				</li>
+				<li>
+					<p>Tippen Sie bei eingeschaltetem Fahrzeug auf <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Digitaler Schlüssel</uicontrol><uicontrol>NFC-Kartenschlüssel</uicontrol><uicontrol>Löschen</uicontrol></menucascade> am Infotainment-System.</p>
+					<p>Das Menü Löschen wird deaktiviert, wenn kein digitaler Schlüssel (Kartenschlüssel) gespeichert ist.</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OMV033188N.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<ol outputclass="callout">
+											<li>
+												<p>Digitaler Schlüssel</p>
+											</li>
+											<li>
+												<p>NFC-Kartenschlüssel</p>
+											</li>
+											<li>
+												<p>Verwendung</p>
+											</li>
+											<li>
+												<p>Löschen</p>
+											</li>
+										</ol>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>Wenn der digitale Schlüssel (Kartenschlüssel) gelöscht wird, erscheint eine Meldung auf dem Infotainment-Bildschirm oder im Kombiinstrument.</p>
+				</li>
+			</ol>
+			<note deliveryTarget="full_only" type="tip">
+				<p>Das Infotainment-System kann sich nach Aktualisierungen ändern. Weitere Informationen finden Sie in der Anleitung des Infotainment-Systems und in der Kurzanleitung.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0043.dita#CL4m_HEV-ca_ES-2027-t0043" role="parent" scope="local" type="concept">
+				<linktext>Digitaler Schlüssel 2 </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00455">
+	<title>Emergency Braking</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03150">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03151">
+								<image href="images/N_SP3i25_C00_011_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03152">
+								<li>
+									<p><uicontrol>Emergency Braking</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Emergency Braking can alert you with Forward Safety warning light blinking (<image href="images/WKIA_037.jpg" scale="15" align="left" placement="inline"/>), a warning message, an audible warning and steering wheel vibration (if equipped).</p>
+		<p>Emergency Braking can be activated according to oncoming objects and danger levels under the following conditions:</p>
+		<ul>
+			<li>
+				<p>Vehicle or motorcyclist *:</p>
+				<table frame="all" rowsep="1" colsep="1" pgwide="0" outputclass="formatc">
+					<tgroup cols="3" colsep="1" rowsep="1">
+						<colspec colnum="1" colname="col1" colwidth="0.672*"/>
+						<colspec colnum="2" colname="col2" colwidth="0.786*"/>
+						<colspec colnum="3" colname="col3" colwidth="0.786*"/>
+						<thead>
+							<row rowsep="1">
+								<entry colname="col1">
+									<p>-</p>
+								</entry>
+								<entry colname="col2">
+									<p>Driving target</p>
+								</entry>
+								<entry colname="col3">
+									<p>Stopped target</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p>Weak braking power</p>
+								</entry>
+								<entry namest="col2" nameend="col3" align="center" valign="middle">
+									<p>Approximately 10-200 km/h (6-124 mph)</p>
+								</entry>
+							</row>
+							<row rowsep="0">
+								<entry colname="col1" align="center" valign="middle">
+									<p>Strong braking power</p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>Approximately 10-130 km/h (6-80 mph)</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>Approximately 10-85 km/h (6-53 mph)</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>*: If FCA determines that a collision cannot be avoided even by changing lanes due to the surrounding conditions of the vehicle, braking assistance is provided earlier. When the target object is stationary, FCA may operate at speeds between about 10-100 km/h (6-62 mph) (if equipped)</p>
+			</li>
+			<li>
+				<p>Pedestrian or cyclist: approximately 10-80 km/h (6-49 mph)</p>
+			</li>
+			<li>
+				<p>A target enters the operating range of the Forward Collision-Avoidance Assist system.</p>
+			</li>
+		</ul>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>The function’s operational range may decrease due to the traffic ahead of or the surroundings of the vehicle.</p>
+				</li>
+				<li>
+					<p>When driving at night, the ability to detect motorcycles is decreased. Thus, the Forward Collision- Avoidance Assist system may temporarily be limited or not work.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00453.dita#t00453" role="parent" scope="local" type="concept">
+				<linktext>Basic function</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

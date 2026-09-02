@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00653">
+	<title>Canceling Highway Lane Change Assist</title>
+	<conbody>
+		<p>The function will be canceled when:</p>
+		<ul>
+			<li>
+				<p>The turn signal lever is turned on in the opposite direction of lane change</p>
+			</li>
+			<li>
+				<p>The steering wheel is steered sharply</p>
+			</li>
+			<li>
+				<p>If the turn signal switch is moved to position (1) while the Lane Change Assist is operating and then returned to the N (Neutral) position before changing lanes</p>
+			</li>
+			<li>
+				<p>When the driver operates the steering wheel</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>While the function is operating, the function will cancel if one of the following occurs:</p>
+					<ul>
+						<li>
+							<p>Highway Driving Assist is turned off</p>
+						</li>
+						<li>
+							<p>Lane Following Assist or Smart Cruise Control is turned off or temporarily canceled</p>
+						</li>
+						<li>
+							<p>Hands-off warning message is displayed on the cluster</p>
+						</li>
+						<li>
+							<p>The turn signal lever is placed at (1) position</p>
+						</li>
+						<li>
+							<p>The hazard warning flasher is turned on</p>
+						</li>
+						<li>
+							<p>Forward Collision-Avoidance Assist or Blind-Spot Collision-Avoidance Assist warning message is displayed</p>
+						</li>
+						<li>
+							<p>Possible collision is detected in the next lane, even though there are no Forward Collision-Avoidance Assist and Blind Spot Collision-Avoidance Assist warning</p>
+						</li>
+						<li>
+							<p>The target lane to make a lane change disappears</p>
+						</li>
+						<li>
+							<p>The target lane to make a lane change is not detected</p>
+						</li>
+						<li>
+							<p>There is a problem with turn signal lamps</p>
+						</li>
+						<li>
+							<p>Highway Lane Change Assist function is off (The function turns off when the function is turned off from the settings menu, when the road changes to a one-way road, when there is an intersection or crosswalk ahead, when you enter a road with no structure, such as a medium strip, guardrail, etc., or when there is a pedestrian or cyclist on the driving lane.)</p>
+						</li>
+						<li>
+							<p>If the driving speed slows down to less than 25 km/h (15 mph) when it is in ready state, it will change to standby state.</p>
+						</li>
+						<li>
+							<p>When driving at low speeds (30–80 km/h (20–50 mph)), the vehicle will change to standby state if it is not recognized by vehicles in the left and right adjacent lanes.</p>
+						</li>
+						<li>
+							<p>If a risk of collision is detected</p>
+						</li>
+						<li>
+							<p>A road section under construction</p>
+						</li>
+						<li>
+							<p>When the lane in the direction of the lane change is not a single dashed line</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>While the function is operating, when the function is canceled, depending on the driving conditions, the vehicle may drive to the middle of the driving lane or steering assist may stop. Always pay attention to road and driving conditions while driving.</p>
+				</li>
+				<li>
+					<p>The function may not operate normally on roads with pedestrians or cyclists, such as an intersection or crosswalk. Always pay attention to road and driving conditions while driving.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

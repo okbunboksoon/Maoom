@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00055">
+	<title>How to disconnect portable charger (ICCB: In-Cable Control Box)</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00352">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1">
+							<fig id="e00353">
+								<figgroup>
+									<image href="../../images/OOVQ015033.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e00354"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital" id="e00355">
+			<title>Simple operation</title>
+			<ol id="e00356">
+				<li>
+					<p>Remove the charging plug from the electrical outlet of the charging station.</p>
+				</li>
+				<li>
+					<p>Close the charging door.</p>
+				</li>
+			</ol>
+			<p deliveryTarget="except_digital">For more details, refer to the full manual on the vehicle system.</p>
+		</section>
+		<section deliveryTarget="except_print" id="e00357">
+			<title>Operation</title>
+			<ol id="e00358">
+				<li>
+					<p>Hold the charging connector handle and pull it out (2) while pushing the unlock button (1) on the charging connector.</p>
+				</li>
+				<li>
+					<p>Make sure to completely close the charging door.</p>
+				</li>
+				<li>
+					<p>Disconnect the plug from the household electric outlet. Do not pull the cable when disconnecting the plug.</p>
+				</li>
+				<li>
+					<p>Close the protection caps of the charging connector and the charging plug to protect them from foreign substances.</p>
+				</li>
+				<li>
+					<p>If the personal charging connector is used, store the connector in the cable compartment.</p>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+</concept>

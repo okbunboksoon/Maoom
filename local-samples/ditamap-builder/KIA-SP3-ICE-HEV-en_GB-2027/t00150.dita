@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00150">
+	<title id="e00747">Outside temperature gauge </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>gauges
+					<indexterm>outside temperature gauge</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00748">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00749">
+								<image href="images/N_QVe27_C00_098_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>This gauge indicates the current outside air temperatures by 1°C or (1°F).</p>
+		<ul id="e00750">
+			<li id="e00751">
+				<p>Temperature range: -40°C–60°C (-40°F–140°F)</p>
+			</li>
+		</ul>
+		<p>To prevent distracted driving, the outside temperature on the display may not change immediately as a regular thermometer would.</p>
+		<p>To change the temperature unit from Fahrenheit to Celsius or vice versa, use infotainment system’s SETUPmenu.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00143.dita#t00143" role="parent" scope="local" type="concept">
+				<linktext>Gauges </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

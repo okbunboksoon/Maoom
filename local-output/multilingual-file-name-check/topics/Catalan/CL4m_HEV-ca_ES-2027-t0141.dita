@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0141">
+	<title id="e00360">Benachrichtigungen auf dem LCD-Display </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>LCD-Displays
+					<indexterm>Benachrichtigungen auf dem LCD-Display</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title id="e00361">Tür, Motorhaube, Kofferraum/Heckklappe, Schiebedach offen </title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034108N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul id="e00362">
+				<li id="e00363">
+					<p>Diese Warnung wird angezeigt, wenn eine Tür, die Motorhaube, der Kofferraum/die Heckklappe oder das Schiebedach geöffnet ist.</p>
+				</li>
+			</ul>
+			<note type="note">
+				<p>Vergewissern Sie sich, bevor Sie das Fahrzeug fahren, dass die Türen/Haube/Kofferraum/Heckklappe/Sonnendach vollständig geschlossen sind. Vergewissern Sie sich auch, dass im Kombiinstrument keine Warnleuchte für offene Türen/Hauben/Kofferraum/Heckklappe/Sonnendach oder eine entsprechende Meldung angezeigt wird.</p>
+			</note>
+		</section>
+		<section>
+			<title id="e00364">Beleuchtungsmodus </title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034129N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p><term translate="no">A</term>: Leuchten</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Diese Kontrollleuchte zeigt an, welche Außenleuchte mit der Lichtregelung ausgewählt wurde.</p>
+		</section>
+		<section>
+			<title id="e00365">Wischermodus </title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034130N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p><term translate="no">A</term>: Windschutzscheibenwischer</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Diese Kontrollleuchte zeigt an, welche Wischergeschwindigkeit über die Wischersteuerung ausgewählt ist.</p>
+		</section>
+		<section>
+			<title id="e00366">Überhitzung des Motors </title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034131N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p><term translate="no">A</term>: Überhitzung des Motors</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul id="e00367">
+				<li>
+					<p>Diese Warnmeldung erscheint, wenn die Temperatur des Motorkühlmittels 120 °C (248 °F) übersteigt. Dies bedeutet, dass der Motor überhitzt ist und beschädigt werden könnte.</p>
+				</li>
+			</ul>
+			<p>Bei Überhitzen des Fahrzeugs finden Sie weitere Informationen unter <xref href="CL4m_HEV-ca_ES-2027-t0745.dita#CL4m_HEV-ca_ES-2027-t0745"/>.</p>
+		</section>
+		<section importance="optional">
+			<title>Niedriger Motorölstand</title>
+			<ul>
+				<li>
+					<p>Diese Warnmeldung erscheint, wenn der Motorölstand zu niedrig ist.</p>
+				</li>
+				<li>
+					<p>Füllen Sie das Motoröl nach.</p>
+				</li>
+			</ul>
+			<p>Weitere Details finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0834.dita#CL4m_HEV-ca_ES-2027-t0834"/>.</p>
+			<note type="warning">
+				<p>Wenn die Warnleuchte für den Motorölstand aufleuchtet, muss überprüft werden, ob der Wartungsplan (Motorölwechsel) in der Bedienungsanleitung befolgt wurde, bevor das Öl nachgefüllt wird; falls dies nicht der Fall ist, muss das Motoröl zuerst ersetzt werden.</p>
+			</note>
+		</section>
+		<section importance="optional">
+			<title>Bald fälliger Motorölwechsel. Öllebensdauer nach Ölwechsel zurücksetzen</title>
+			<ul>
+				<li>
+					<p>Diese Warnmeldung leuchtet auf, wenn die verbleibende Lebensdauer des Motoröls 5 % oder weniger erreicht.</p>
+				</li>
+				<li>
+					<p>Ersetzen Sie das Motoröl bei einem Kia-Vertragshändler oder Servicepartner. Wählen Sie danach im Menü Einstellungen auf dem Bildschirm des Infotainment-Systems <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Komfort</uicontrol><uicontrol>Ölwechselerinnerung</uicontrol></menucascade>, um die verbleibende Öllebensdauer zurückzusetzen.</p>
+				</li>
+			</ul>
+			<p>Weitere Details finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0834.dita#CL4m_HEV-ca_ES-2027-t0834"/>.</p>
+			<note type="tip">
+				<p>Das Infotainment-System kann sich nach Aktualisierungen ändern. Weitere Informationen finden Sie im Benutzerhandbuch des Infotainment-Systems und in der Kurzanleitung.</p>
+			</note>
+		</section>
+		<section importance="optional">
+			<title>Fälliger Motorölwechsel. Öllebensdauer nach Ölwechsel zurücksetzen</title>
+			<ul>
+				<li>
+					<p>Diese Warnmeldung leuchtet auf, wenn die verbleibende Lebensdauer des Motoröls 1 % oder weniger erreicht.</p>
+				</li>
+				<li>
+					<p>Tauschen Sie das Motoröl sofort bei einem Kia-Vertragshändler oder Servicepartner aus. Wählen Sie danach im Menü Einstellungen auf dem Bildschirm des Infotainment-Systems <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Komfort</uicontrol><uicontrol>Ölwechselerinnerung</uicontrol></menucascade>, um die verbleibende Öllebensdauer zurückzusetzen.</p>
+				</li>
+			</ul>
+			<p>Weitere Details finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0834.dita#CL4m_HEV-ca_ES-2027-t0834"/>.</p>
+			<note type="tip">
+				<p>Das Infotainment-System kann sich nach Aktualisierungen ändern. Weitere Informationen finden Sie im Benutzerhandbuch des Infotainment-Systems und in der Kurzanleitung.</p>
+			</note>
+		</section>
+		<section>
+			<title>Schlüsselbatterie ist schwach (Smart-Key-System)</title>
+			<ul id="e00368">
+				<li id="e00369">
+					<p>Diese Warnmeldung erscheint, wenn die Batterie des Smart-Keys leer ist, sobald der <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) in die Position <term translate="no">OFF</term> wechselt.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e00370">Fahrzeugschlüssel nicht im Fahrzeug (Smart-Key-System) </title>
+			<ul>
+				<li id="e00371">
+					<p>Diese Warnmeldung erscheint, wenn sich der Smart-Key nicht im Fahrzeug befindet, wenn Sie die Taste <term translate="no">ENGINE START/STOP</term> drücken.</p>
+				</li>
+				<li id="e00372">
+					<p>Das bedeutet, dass Sie den Smart-Key immer bei sich tragen sollten.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e00373">Fahrzeugschlüssel nicht erkannt (Smart-Key-System) </title>
+			<ul id="e00374">
+				<li id="e00375">
+					<p>Diese Warnmeldung erscheint, wenn der Smart-Key beim Drücken der Taste <term translate="no">ENGINE START/STOP</term> nicht erkannt wird.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e00376">Starten: Schalthebel in Stufe P (Parkstufe) oder N (neutral) (Smart-Key-System) </title>
+			<ul id="e00377">
+				<li id="e00378">
+					<p>Diese Warnmeldung leuchtet auf, wenn Sie versuchen, den Motor zu starten, wenn der Schalthebel nicht in der Stellung P (Parkstufe) oder N (Neutralstellung) steht.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e00379">Bremse für Motorstart betätigen (Smart-Key-System). </title>
+			<ul id="e00380">
+				<li id="e00381">
+					<p>Diese Warnleuchte erscheint, wenn der <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) in die Position <term translate="no">ACC</term> gebracht wird, indem Sie die Taste mehrmals ohne Betätigen des Bremspedals drücken.</p>
+				</li>
+				<li id="e00382">
+					<p>Das heißt, dass Sie das Bremspedal zum Anlassen des Motors betätigen sollten.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e00383">Batterie entlädt aufgrund von externen elektrischen Geräten </title>
+			<p>Das Fahrzeug kann Selbstentladung der Batterie aufgrund von Überstrom erkennen, der von nicht autorisierten Geräten, wie Dashcams (Kameras auf der Instrumententafel), während des Parkens erzeugt wird.</p>
+			<p>Wenn die Vorsicht weiterhin angezeigt wird, nachdem externe elektrische Geräte getrennt wurden, lassen Sie Ihr Fahrzeug in einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		</section>
+		<section>
+			<title id="e00384">START-Knopf nochmals drücken (Smart-Key-System) </title>
+			<ul id="e00385">
+				<li id="e00386">
+					<p>Diese Warnleuchte erscheint, wenn Sie den <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) nicht bedienen können, da ein Problem mit dem System des <term translate="no">ENGINE START/STOP</term>-Knopfs (MOTOR-START/STOPP) aufgetreten ist.</p>
+				</li>
+				<li id="e00387">
+					<p>Das heißt, Sie können den Motor anlassen, indem Sie den <term translate="no">ENGINE START/STOP</term>-Knopf noch einmal drücken.</p>
+				</li>
+				<li id="e00388">
+					<p>Falls die Warnmeldung jedes Mal aufleuchtet, wenn Sie den <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) drücken, sollten Sie das Fahrzeug von einer Fachwerkstatt überprüfen lassen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e00389">START-knopf mit Schlüssel drücken (Smart-Key-System) </title>
+			<ul id="e00390">
+				<li id="e00391">
+					<p>Diese Warnmeldung erscheint, wenn Sie den <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) drücken, während die Warnmeldung „Schlüssel nicht erkannt“ angezeigt wird.</p>
+				</li>
+				<li id="e00392">
+					<p>Gleichzeitig blinkt die Kontrollleuchte für die Wegfahrsperre.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title id="e00393">Scheinwerfer sind aus </title>
+			<ul>
+				<li>
+					<p>Diese Warnmeldung erscheint, wenn die Scheinwerfer bei dunkler Umgebung ausgeschaltet sind.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0134.dita#CL4m_HEV-ca_ES-2027-t0134" role="parent" scope="local" type="concept">
+				<linktext>LCD-Display </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

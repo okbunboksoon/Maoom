@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00716">
+	<title>Parking Safety button</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV055018.eps" placement="break" width="2.243in"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Press and hold the Parking Safety (<image align="left" href="../../images/WKIA_087.eps" outputclass="nolabel" placement="inline" scale="15"/>) button (1) more than 2 seconds to turn the Parking Collision-Avoidance Assist on or off.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning" id="e04582">
+			<p>If Parking Collision-Avoidance Assist is turned off, the function will not be available. Always drive with caution.</p>
+		</note>
+	</conbody>
+</concept>

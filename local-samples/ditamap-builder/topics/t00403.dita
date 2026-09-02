@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00403">
+	<title>Smart regeneration system operation</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>smart regeneration system 
+					<indexterm>operation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02892">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e02893">
+								<figgroup>
+									<image href="../../images/OOV045011.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02894"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e02895">
+								<figgroup>
+									<image href="../../images/OSWQ015075.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e02896"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e02897">
+			<li>
+				<p>Pull and hold the right side (<image href="../../images/WKIA_292.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02898"/>) of the paddle shifter for approximately more than 1 second to activate smart regeneration system. (<image href="../../images/WKIA_336.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02899"/>) indicator will appear on the instrument cluster.</p>
+			</li>
+			<li>
+				<p>Pull and hold the right side (<image href="../../images/WKIA_292.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02900"/>) of the paddle shifter again for approximately more than 1 second to deactivate smart regeneration system. (<image href="../../images/WKIA_336.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02901"/>) indicator will disappear on the instrument cluster.</p>
+			</li>
+		</ul>
+		<note type="tip" id="e02902">
+			<p>Smart regeneration system will automatically deactivate when:</p>
+			<ul id="e02903">
+				<li>
+					<p>The vehicle is in P (Park), R (Reverse), or N (Neutral).</p>
+				</li>
+				<li>
+					<p>Smart Cruise Control (SCC) is operating.</p>
+				</li>
+				<li>
+					<p>Electronic Stability Control (ESC) or Anti-lock Brake System (ABS) is operating.</p>
+				</li>
+				<li>
+					<p> <term>DRIVE MODE</term> is in <term>SNOW</term> mode.</p>
+				</li>
+				<li>
+					<p>Downhill Brake Control (DBC) is active.</p>
+				</li>
+			</ul>
+		</note>
+		<section id="e02904">
+			<title>Operating conditions</title>
+			<ul id="e02905">
+				<li>
+					<p>When the vehicle speed is above approximately 10 km/h (6 mph).</p>
+				</li>
+				<li>
+					<p>The road gradient changes.</p>
+				</li>
+				<li>
+					<p>Distance from the vehicle ahead reduces or increases.</p>
+				</li>
+				<li>
+					<p>Speed of the vehicle ahead reduces or increases.</p>
+				</li>
+				<li>
+					<p>Taking a left or right turn in the crossroads.</p>
+				</li>
+				<li>
+					<p>Approaching a roundabout.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e02906">
+			<title>Non-operating conditions</title>
+			<ul id="e02907">
+				<li>
+					<p>When the vehicle’s high-voltage battery is fully charged (100%).</p>
+				</li>
+				<li>
+					<p>The vehicle is in P (Park), R (Reverse), or N (Neutral).</p>
+				</li>
+				<li>
+					<p>Smart Cruise Control is operating.</p>
+				</li>
+				<li>
+					<p>Electronic Stability Control (ESC) or Anti-lock Braking System (ABS) is operating.</p>
+				</li>
+			</ul>
+			<note type="warning" id="e02908">
+				<ul id="e02909">
+					<li>
+						<p>Smart regeneration system, which automatically controls regenerative braking during coasting, is a supplemental system for driver convenience.</p>
+					</li>
+					<li>
+						<p>Do not rely solely on this system to stop the vehicle. The system cannot fully stop the vehicle in all situations or prevent all collisions.</p>
+					</li>
+					<li>
+						<p>Braking may be insufficient if a vehicle ahead stops suddenly, cuts in unexpectedly, or when driving on steep slopes.</p>
+					</li>
+					<li>
+						<p>Always remain alert and observe road conditions to prevent unexpected situations.</p>
+					</li>
+					<li>
+						<p>When the smart regeneration system automatically cancels, adjust your speed by using the accelerator or brake pedal according to road conditions.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e02910">
+				<ul id="e02911">
+					<li>
+						<p>If the front radar does not detect a vehicle ahead, the (<image href="../../images/WKIA_336.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02912"/>) indicator appears in white.</p>
+					</li>
+					<li>
+						<p>If a vehicle ahead is detected, the (<image href="../../images/WKIA_336.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02913"/>) indicator appears in green. In this case, the vehicle decelerates automatically based on the distance and speed of the vehicle ahead, and the regenerative braking level is displayed with an arrow symbol.</p>
+					</li>
+					<li>
+						<p>If the accelerator pedal is pressed, the system is temporarily deactivated.</p>
+					</li>
+					<li>
+						<p>The infotainment system may change after a software update. For more details, refer to the user’s manual in the infotainment system or the quick reference guide.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

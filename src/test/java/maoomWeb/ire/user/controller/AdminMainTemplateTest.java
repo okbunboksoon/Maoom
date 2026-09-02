@@ -34,6 +34,8 @@ class AdminMainTemplateTest {
                 .contains("data-admin-view=\"color-check\"")
                 .contains("data-admin-view=\"ber-asis-tobe\"")
                 .contains("data-admin-view=\"qsg-db\"")
+                .contains("data-admin-view=\"project-text-db\"")
+                .contains("data-admin-view=\"project-note-db\"")
                 .contains("data-admin-view=\"project-logs\"")
                 .contains("id=\"userTable\"")
                 .contains("id=\"colorCheckTable\"")
@@ -42,6 +44,12 @@ class AdminMainTemplateTest {
                 .contains("As-is/To-be 신규 반영")
                 .contains("id=\"qsgDbTable\"")
                 .contains("QSG DB")
+                .contains("id=\"projectTextDbTable\"")
+                .contains("TEXT DB")
+                .contains("id=\"projectNoteDbTable\"")
+                .contains("NOTE DB")
+                .contains("id=\"projectNoteNoteCount\"")
+                .contains("id=\"projectNoteTipCount\"")
                 .contains("id=\"projectLogTable\"")
                 .doesNotContain("onclick=\"location.href='/main'\"");
     }

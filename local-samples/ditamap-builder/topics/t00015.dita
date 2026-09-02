@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" deliveryTarget="except_print" id="t00015">
+	<title>Next departure/Departure time</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00058">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00059">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/N_CT25Q011_E.eps" placement="break" width="2.244in" id="e00060"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Set anticipated departure time for scheduled charging and target temperature.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00061">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/N_CT25Q012_E.eps" placement="break" width="2.244in" id="e00062"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e00063">
+								<li>
+									<p>Departure Time</p>
+								</li>
+								<li>
+									<p>Departure Day</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Select the day of the week to activate scheduled charging and target temperature for departure time.</p>
+	</conbody>
+</concept>

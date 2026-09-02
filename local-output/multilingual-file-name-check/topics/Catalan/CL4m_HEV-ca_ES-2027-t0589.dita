@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0589">
+	<title>Erhöhen der eingestellten Geschwindigkeit</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054013N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Drücken Sie die Schaltwippe nach oben (+) und lassen Sie sie sofort los. Die eingestellte Geschwindigkeit erhöht sich bei jeder kurzen Bewegung der Schaltwippe nach oben um 1 km/h (1 mph).</p>
+			</li>
+			<li>
+				<p>Drücken Sie die Schaltwippe (+) nach oben und halten Sie sie gedrückt. Die eingestellte Geschwindigkeit erhöht sich bei jeder kurzen Bewegung der Schaltwippe nach oben um 10 km/h (5 mph).</p>
+				<p>Sie können die eingestellte Geschwindigkeit auf 180 km/h (110 mph) erhöhen.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<p>Prüfen Sie den Fahrzustand, bevor Sie die Schaltwippe (+) betätigen. Die Fahrgeschwindigkeit steigt stark an, wenn Sie die Schaltwippe (+) nach oben drücken und halten.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0587.dita#CL4m_HEV-ca_ES-2027-t0587" role="parent" scope="local" type="concept">
+				<linktext>Intelligente Tempomatsteuerung anschalten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

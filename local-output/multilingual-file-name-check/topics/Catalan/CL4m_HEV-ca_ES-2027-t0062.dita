@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0062">
+	<title id="e00181">Öffnen des Kofferraums </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Kofferraum (für 4-Türer)
+					<indexterm>Öffnen des Kofferraums</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ul>
+			<li>
+				<p>Vergewissern Sie sich, dass der Schalthebel in P (Parken, bei Automatikgetriebe) oder im ersten Gang bzw. in R (Rückwärtsgang, bei Schaltgetriebe) steht und ziehen Sie die Feststellbremse an.</p>
+			</li>
+			<li>
+				<p>Um den Kofferraum von außen zu öffnen, drücken Sie den Fernbedienungsschlüssel oder die Smart-Key-Taste für das Kofferraumschloss länger als eine Sekunde.</p>
+			</li>
+			<li>
+				<p>Bei Fahrzeugen, die mit Smart-Key ausgestattet sind, können Sie zusätzlich:</p>
+				<ul>
+					<li>
+						<p>Während alle Türen entriegelt sind, drücken Sie den Schalter am Kofferraum, um den Kofferraum mit oder ohne Smart-Key zu öffnen.</p>
+					</li>
+					<li>
+						<p>Wenn eine oder alle Türen verriegelt sind, kann der Schalter weiterhin zum Öffnen des Kofferraums verwendet werden, sofern Sie den Smart Key bei sich tragen.</p>
+					</li>
+				</ul>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M034024N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Um den Kofferraum vom Fahrzeuginneren aus zu öffnen, ziehen Sie den Entriegelungshebel des Kofferraumdeckels.</p>
+				<p>Wenn der Kofferraumdeckel geöffnet und danach wieder geschlossen wird, wird er automatisch verriegelt. Das Schlüsselloch im Kofferraum ist nicht vorhanden.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M034023N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+		</ul>
+		<note type="note">
+			<p>Bei kalten und feuchten Wetterbedingungen kann es vorkommen, dass die Funktion des Schließ- und Verriegelungsmechanismus des Kofferraums durch Vereisung gestört wird.</p>
+		</note>
+		<note type="warning">
+			<p>Der Kofferraumdeckel schwingt nach oben. Vergewissern Sie sich beim Öffnen des Kofferraums davon, dass sich keine Objekte oder Personen in der Nähe des Kofferraumdeckels befinden.</p>
+		</note>
+		<note type="caution">
+			<p>Achten Sie darauf, den Kofferraum vor Fahrtantritt zu schließen. Wenn der Kofferraum vor der Fahrt nicht geschlossen wird, können die Gasdruckfedern des Kofferraums und die daran befestigten Teile beschädigt werden.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0061.dita#CL4m_HEV-ca_ES-2027-t0061" role="parent" scope="local" type="concept">
+				<linktext>Kofferraum (für 4-Türer) </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

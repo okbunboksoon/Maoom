@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00262">
+	<title>Air bag collision sensors</title>
+	<conbody>
+		<fig expanse="page" id="e01232">
+			<figgroup>
+				<image align="center" href="../../images/N_CT25B059_4.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<p importance="default">The actual features in your vehicle may not necessarily be available due to the selected options or regions.</p>
+		<ol outputclass="callout" id="e01233">
+			<li>
+				<p>Front impact sensor</p>
+			</li>
+			<li>
+				<p>Supplemental Restraint System (SRS) control module/rollover sensor</p>
+			</li>
+			<li>
+				<p>Side pressure sensors (front door)</p>
+			</li>
+			<li>
+				<p>Side impact sensor (B-pillar)</p>
+			</li>
+		</ol>
+		<note type="warning" id="e01234">
+			<ul id="e01235">
+				<li>
+					<p>Do not hit or allow any objects to impact the locations where air bag or sensors are installed.</p>
+					<p>This may cause unexpected air bag deployment, which could result in serious personal injury or death.</p>
+				</li>
+				<li>
+					<p>If the installation location or angle of the sensors is altered in any way, the air bags may deploy when they should not or they may not deploy when they should, causing severe injury or death.</p>
+					<p>Therefore, do not try to perform maintenance on or around the air bag sensors. Have the system serviced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>Problems may arise if the sensor installation angles are changed due to the deformation of the front bumper, body or B pillar where side collision sensors are installed. In this case, have the system serviced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>Your vehicle has been designed to absorb impact and deploy the air bag(s) in certain collisions.</p>
+					<p>Use only Kia Genuine Parts or those of an equivalent standard to install bumper guards or replace a bumper. If not, it may adversely affect your vehicle’s collision and air bag deployment performance.</p>
+				</li>
+				<li>
+					<p importance="high">If equipped with rollover sensor</p>
+					<p>If your vehicle is equipped with side and curtain air bag, press <term translate="no">EV</term> button to <term translate="no">OFF</term> position and wait for 3 minutes when the vehicle is being towed.</p>
+					<p>The side and curtain air bag may deploy when the <term translate="no">EV</term> button is in <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> or <term translate="no">OFF</term> position within 3 minutes, and the rollover sensor detects the situation as a rollover.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

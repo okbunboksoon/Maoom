@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="maoomWeb.ire.user.mapper.NoteDbItemMapper">
+
+    <resultMap id="NoteDbItemResultMap"
+            type="maoomWeb.ire.user.dto.NoteDbItem">
+        <id property="id" column="id"/>
+        <result property="region" column="region"/>
+        <result property="hash" column="hash"/>
+        <result property="noteType" column="note_type"/>
+        <result property="noteText" column="note_text"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="NoteDbItemResultMap">
+        SELECT
+            id,
+            region,
+            hash,
+            note_type,
+            note_text,
+            created_at,
+            updated_at
+        FROM tb_project_note_db
+        ORDER BY region ASC, updated_at DESC, id DESC
+    </select>
+
+    <select id="findByRegion" resultMap="NoteDbItemResultMap">
+        SELECT
+            id,
+            region,
+            hash,
+            note_type,
+            note_text,
+            created_at,
+            updated_at
+        FROM tb_project_note_db
+        WHERE region = #{region}
+        ORDER BY updated_at DESC, id DESC
+    </select>
+
+    <select id="findByRegionAndHash" resultMap="NoteDbItemResultMap">
+        SELECT
+            id,
+            region,
+            hash,
+            note_type,
+            note_text,
+            created_at,
+            updated_at
+        FROM tb_project_note_db
+        WHERE region = #{region}
+          AND hash = #{hash}
+    </select>
+
+    <insert id="upsert">
+        INSERT INTO tb_project_note_db (
+            region,
+            hash,
+            note_type,
+            note_text
+        ) VALUES (
+            #{region},
+            #{hash},
+            #{noteType},
+            #{noteText}
+        )
+        ON DUPLICATE KEY UPDATE
+            note_type = VALUES(note_type),
+            note_text = VALUES(note_text)
+    </insert>
+
+    <delete id="deleteByRegionAndHash">
+        DELETE FROM tb_project_note_db
+        WHERE region = #{region}
+          AND hash = #{hash}
+    </delete>
+
+</mapper>

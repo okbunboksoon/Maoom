@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00151">
+	<title>Utility information view</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p>LCD displays</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>Displayed contents</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<fig id="e00734">
+								<figgroup>
+									<image href="../../images/N_CT25Z032_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p> <uicontrol>(A) Low tire pressure</uicontrol> </p>
+							<ul>
+								<li>
+									<p>Information related to tire pressure.</p>
+									<p>Refer to <xref type="concept" href="t00824.dita#t00824"/>.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<fig>
+								<figgroup>
+									<image href="../../images/N_CT25Z028_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p> <uicontrol>(A) Current Driving Info</uicontrol> </p>
+							<p>The driver’s door is opened after turning off the vehicle or the vehicle is turned on after 3 minutes have passed, the Drive Info screen will reset.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<fig id="e00735">
+								<figgroup>
+									<image href="../../images/N_CT25Z029_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p> <uicontrol>(A) After Recharging</uicontrol> </p>
+							<p>The information after recharging.</p>
+							<p>To manually reset the information, press and hold the <term translate="no">OK</term> button when viewing the <uicontrol>After Recharging</uicontrol>.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<fig id="e00736">
+								<figgroup>
+									<image href="../../images/N_CT25Z030_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p> <uicontrol>(A) Accumulated Info</uicontrol> </p>
+							<p>The information is accumulated starting from the last reset.</p>
+							<p>To manually reset the information, press and hold the <term translate="no">OK</term> button when viewing the <uicontrol>Accumulated Info</uicontrol>.</p>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1">
+							<fig id="e00737">
+								<figgroup class="- topic/figgroup ">
+									<image align="center" href="../../images/N_CT25Z015.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e00738">
+								<li>
+									<p> <uicontrol>Instant energy economy</uicontrol> Instant energy economy</p>
+								</li>
+								<li>
+									<p> <uicontrol>Average energy economy</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<fig id="e00739">
+								<figgroup>
+									<image href="../../images/N_TK25Z046_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p> <uicontrol>(A) Check headlamp LED</uicontrol> </p>
+							<p>This mode informs you of the following situations:</p>
+							<ul id="e00740">
+								<li>
+									<p>Driver assistance system malfunction, limitation or radar/camera blockage, LED headlamp malfunction, lamp malfunction, TPMS failure, low tire pressure, etc.</p>
+								</li>
+							</ul>
+							<p>At this time, a Master Warning icon (<image href="../../images/WKIA_040.eps" scale="15" align="left" placement="inline"/>) will appear on the LCD display. If the warning situation is solved, the master warning light will be turned off and the master warning icon will disappear.</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="1">
+							<fig>
+								<figgroup>
+									<image href="../../images/N_CT25Z021.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>At this time, a Master Warning icon (<image align="left" href="../../images/WKIA_007.eps" scale="15" placement="inline"/>) will appear in the lower right corner on the LCD display. If the warning situation is solved, the master warning light will be turned off and the Master Warning icon will disappear.</p>
+							<p>This mode informs you of the following situations:</p>
+							<ul>
+								<li>
+									<p>Driver assistance system malfunction, limitation or radar/camera blockage</p>
+								</li>
+								<li>
+									<p>LED headlamp malfunction</p>
+								</li>
+								<li>
+									<p>Lamp malfunction</p>
+								</li>
+								<li>
+									<p>TPMS failure, low tire pressure, etc.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" valign="middle">
+							<fig id="e00741">
+								<figgroup>
+									<image href="../../images/N_CT25Z082_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e00742">
+								<li>
+									<p> <uicontrol>Range guide</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Distance to empty</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Distance to empty (high energy consumption)</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Energy consumption gauge</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Distance to empty (low energy consumption)</uicontrol> </p>
+								</li>
+							</ol>
+							<p>The <uicontrol>Range guide</uicontrol> helps drivers achieve economic driving.</p>
+							<p>The Distance to empty (2) is determined by analyzing historical driving data and the current battery charge status. The 'estimated distance to empty' is calculated based on the measured energy consumption since the start of this trip and the remaining battery. The energy-saving level for this trip is visually indicated with a green or orange bar (4).</p>
+							<p>The length of the bar is proportional to the degree of energy-saving.</p>
+							<ul id="e00743">
+								<li>
+									<p>Green: Driving with less energy than usual</p>
+								</li>
+								<li>
+									<p>Orange: Driving with more energy than usual</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note" deliveryTarget="except_print">
+			<ul>
+				<li>
+					<p>The vehicle must be driven for a minimum of 300 meters (0.19 miles) since the last cycle before the accumulated driving information is recalculated.</p>
+				</li>
+				<li>
+					<p>The average energy economy is not displayed for more accurate calculation if the vehicle does not drive more than 10 seconds or 50 meters (0.03 miles) since the <term translate="no">EV</term> button is turned to <term translate="no">ON</term>.</p>
+				</li>
+				<li>
+					<p>Range guide</p>
+					<ul id="e00744">
+						<li>
+							<p>The energy consumption gauge displays bars after calculating the current trip’s efficiency and driving a certain distance.</p>
+						</li>
+						<li>
+							<p>This function offers extra data to help drivers achieve energy consumption driving. However, please keep in mind that its effectiveness may differ depending on various traffic conditions and road environments, such as traffic jams, inclines, declines, or curved roads. It is important to always take into account real-time driving conditions, including the distance between your car and the ones in front and behind you as you drive.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

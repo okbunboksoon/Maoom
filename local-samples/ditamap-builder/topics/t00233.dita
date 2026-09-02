@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00233">
+	<title>Emergency tailgate safety release</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tailgate 
+					<indexterm>emergency tailgate safety release</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e01700">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01701">
+								<figgroup>
+									<image href="../../images/OOV035075.eps" align="center" placement="break" id="e01702"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To unlock and open the tailgate manually from inside the luggage compartment, perform the following procedure:</p>
+		<ol>
+			<li>
+				<p>Insert a long, flat object into the opening at the bottom of the tailgate.</p>
+			</li>
+			<li>
+				<p>Slide the latch in the direction of the arrow to unlock the tailgate</p>
+			</li>
+			<li>
+				<p>Push the tailgate to open.</p>
+			</li>
+		</ol>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>For emergencies, be fully aware of the location of the emergency tailgate safety release lever in the vehicle and how to open the tailgate if you are accidentally locked in the luggage compartment.</p>
+				</li>
+				<li>
+					<p>No one should be allowed to occupy the cargo area of the vehicle at any time. The cargo area is a very dangerous location in the event of a crash.</p>
+				</li>
+				<li>
+					<p>Use the release lever for emergencies only. Use with extreme caution, especially while the vehicle is in motion.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning">
+			<p>Do not grasp the part supporting the tailgate (gas lifter), as this may cause serious injury.</p>
+			<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e01703">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01704">
+									<figgroup>
+										<image href="../../images/OOV035077.eps" align="center" placement="break" id="e01705"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</note>
+	</conbody>
+</concept>

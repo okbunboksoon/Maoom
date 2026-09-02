@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legalnotice_europe-general_gen-mex_2023_20230101_00016" id="t00262">
+	<title id="e01880">Instrument cluster</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>instrument cluster</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<fig id="e01881">
+			<figgroup>
+				<image href="../../images/OOV035103.eps" align="center" placement="break" scale="100" id="e01882"/>
+			</figgroup>
+		</fig>
+		<p importance="default">The actual cluster in the vehicle may differ from the illustration.</p>
+		<ol outputclass="callout" id="e01883">
+			<li>
+				<p>Warning and indicator lights</p>
+			</li>
+			<li>
+				<p>Speedometer</p>
+			</li>
+			<li>
+				<p>Distance to empty</p>
+			</li>
+			<li>
+				<p>Power/Charge gauge</p>
+			</li>
+			<li>
+				<p>Outside temperature gauge</p>
+			</li>
+			<li>
+				<p>Gear shift indicator</p>
+			</li>
+			<li>
+				<p>Battery SOC (State of Charge) gauge</p>
+			</li>
+			<li>
+				<p>Regenerative braking level indicator</p>
+			</li>
+			<li>
+				<p>Odometer</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

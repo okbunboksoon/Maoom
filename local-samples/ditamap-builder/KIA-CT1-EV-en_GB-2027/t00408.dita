@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" base="Anywhere" id="t00408">
+	<title>Power outlet</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features 
+					<indexterm>power outlet</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01673">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01674">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C116_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>The power outlet allows drivers and passengers to charge their digital devices such as smartphones and tablets.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_print">
+			<title>Operating condition(s)</title>
+			<ul>
+				<li>
+					<p>The devices should draw less than 15 A when the vehicle is in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+				</li>
+			</ul>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Use the power outlet only when the vehicle is on and remove the accessory plug after use. Using the accessory plug for prolonged periods of time with the vehicle off could cause the battery to discharge.</p>
+					</li>
+					<li>
+						<p>Only use 12 V electric accessories which are less than 15 A in electric capacity.</p>
+					</li>
+					<li>
+						<p>Adjust the air-conditioner or heater to the lowest operating level when using the power outlet.</p>
+					</li>
+					<li>
+						<p>Close the cover when not in use.</p>
+					</li>
+					<li>
+						<p>Some electronic devices can cause electronic interference when plugged into a vehicle’s power outlet. These devices may cause excessive audio static and malfunctions in other electronic systems or devices used in your vehicle.</p>
+					</li>
+					<li>
+						<p>Push the plug in as far as it will go. If good contact is not made, the plug may overheat and the fuse may open.</p>
+					</li>
+					<li>
+						<p>Plug in battery equipped electronic devices with reverse current protection. The current from the battery may flow into the vehicle’s electrical/electronic system and cause system malfunction.</p>
+					</li>
+					<li>
+						<p>Do not put a finger or a foreign object (pen, etc.) into a power outlet and do not touch with a wet hand. You may get an electric shock.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

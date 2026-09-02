@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" id="t00362">
+	<title>Map lamp</title>
+	<prolog>
+		<metadata>
+			<keywords/>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01537">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="53*"/>
+				<colspec colnum="2" colname="2" colwidth="47*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e01538">
+								<figgroup>
+									<image href="../../images/N_CT25C160.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e01539">
+								<li>
+									<p> <image href="../../images/WKIA_348.eps" scale="15" align="left" placement="inline"/> </p>
+								</li>
+								<li>
+									<p> <image href="../../images/WKIA_070.eps" scale="15" align="left" placement="inline"/> </p>
+								</li>
+								<li>
+									<p> <image href="../../images/WKIA_347.eps" scale="15" align="left" placement="inline"/> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Operation</title>
+			<ol outputclass="callout">
+				<li>
+					<p>If you press the button at each location (1), the map lamp of the corresponding location turns on, and if you press it again, the lamp turns off.</p>
+					<p>If you press and hold the corresponding button for about 3 seconds or more while the lamp is on, the brightness of the left and right map lamps changes, and if you release the button at the desired brightness, the set brightness is saved.</p>
+				</li>
+				<li>
+					<p>The front and rear seat lamps turn on, and pressing again turns all lamps off.</p>
+					<p>If you press and hold the corresponding button for about 1.5 seconds or more while the status indicator is on, the brightness of the front and rear seat lamps changes simultaneously. When you release the button at the desired brightness, the set brightness is saved.</p>
+					<p>To reset the overall brightness of the interior lights, press and hold for more than 3 seconds while the status indicator is off, the lights blink twice and are initialized.</p>
+				</li>
+				<li>
+					<p importance="high">When <term translate="no">DOOR</term> mode OFF (3) indicator light is off (<term translate="no">DOOR</term> mode)</p>
+					<ul id="e01540">
+						<li>
+							<p>The map lamp and room lamp come on approximately 30 seconds.</p>
+							<ul id="e01541">
+								<li>
+									<p>When a door is opened.</p>
+								</li>
+								<li>
+									<p>When doors are unlocked with a smart key as long as the doors are not opened.</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p>The map lamp and room lamp will stay on</p>
+							<ul id="e01542">
+								<li>
+									<p>If a door is opened with the vehicle in the <term translate="no">OFF</term> position. (20 minutes)</p>
+								</li>
+								<li>
+									<p>If the door is opened with the vehicle in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position. (continuously)</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p>The map lamp and room lamp will go out</p>
+							<ul id="e01543">
+								<li>
+									<p>If the vehicle is changed to the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position or all doors are locked. (immediately)</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<p importance="high">When <term translate="no">DOOR</term> mode OFF (3) indicator light is on (ROOM mode)</p>
+					<ul id="e01544">
+						<li>
+							<p>The operating condition of the interior light interlocked with the opening and closing of the door is released.</p>
+						</li>
+					</ul>
+				</li>
+			</ol>
+			<note type="note" id="e01545">
+				<p>The <term translate="no">DOOR</term> mode and ROOM mode cannot be selected at the same time.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

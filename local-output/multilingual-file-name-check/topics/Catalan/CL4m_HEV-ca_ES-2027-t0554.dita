@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0554">
+	<title>Fahreraufmerksamkeits-Warnsystem deaktiviert</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054164N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Fahrerassistenzsystem eingeschränkt. Kamerasicht eingeschränkt.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn die Windschutzscheibe, an der sich die Frontkamera befindet, oder der Sensor mit Fremdkörpern wie Schnee oder Regen bedeckt ist, kann dies die Erkennungsleistung verringern und die Fahreraufmerksamkeits-Warnung vorübergehend einschränken oder deaktivieren.</p>
+		<p>Es erscheint in diesem Fall die Warnmeldung und die Hauptwarnleuchte (<image align="left" href="../../images/WKIA_040.eps" scale="15" placement="inline"/>) leuchtet auf dem Kombiinstrument auf. Dies ist ganz normal.</p>
+		<p>Das Fahreraufmerksamkeits-Warnsystem funktioniert einwandfrei, nachdem Schnee, Regen oder Fremdkörper entfernt wurden.</p>
+		<p>Wenn das Fahreraufmerksamkeits-Warnsystem nicht einwandfrei funktioniert, nachdem ein Hindernis (Schnee, Regen oder Fremdkörper) vom hinteren Stoßfänger entfernt wurde (einschließlich Anhänger, Träger usw.), lassen Sie Ihr Fahrzeug in einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Auch wenn die Warnmeldung oder die Warnleuchte nicht auf dem Kombiinstrument angezeigt wird, funktioniert die Fahreraufmerksamkeits-Warnsystem möglicherweise nicht einwandfrei.</p>
+				</li>
+				<li>
+					<p>Das Fahreraufmerksamkeits-Warnsystem funktioniert möglicherweise nicht richtig in einem Bereich (z.B. offenes Gelände), in dem es nichts zu erkennen gibt, oder der Erkennungssensor ist nach dem Schalten des Fahrzeugs auf <term translate="no">ON</term> mit Fremdmaterial bedeckt.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Sie können dies in der Servicemeldung in der Ansicht nützlicher Informationen der Anzeige des Kombiinstruments überprüfen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0553.dita#CL4m_HEV-ca_ES-2027-t0553" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion des Fahreraufmerksamkeits-Warnsystems</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

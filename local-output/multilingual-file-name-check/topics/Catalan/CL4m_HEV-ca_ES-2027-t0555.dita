@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0555">
+	<title>Einschränkungen des Fahreraufmerksamkeits-Warnsystems</title>
+	<conbody>
+		<p>Das Fahreraufmerksamkeits-Warnsystem funktioniert möglicherweise in folgenden Situationen nicht richtig:</p>
+		<ul>
+			<li>
+				<p>Das Fahrzeug wird rücksichtslos gefahren.</p>
+			</li>
+			<li>
+				<p>Das Fahrzeug überquert absichtlich immer wieder die Fahrspuren.</p>
+			</li>
+			<li>
+				<p>Das Fahrzeug wird durch ein Fahrerassistenzsystem, beispielsweise den Spurhalteassistenten, gesteuert.</p>
+			</li>
+			<li>
+				<p>Wenn die Fahrspurmarkierungen verschwommen oder gelöscht sind</p>
+			</li>
+		</ul>
+		<section>
+			<title>Hinweis auf Weiterfahrt des vor Ihnen stehenden Fahrzeugs</title>
+			<ul>
+				<li>
+					<p>Wenn das vorausfahrende Fahrzeug einschert</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M055196L.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M056197L.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<ol outputclass="callout">
+						<li>
+							<p>Ihr Fahrzeug</p>
+						</li>
+						<li>
+							<p>Vorausfahrendes Fahrzeug</p>
+						</li>
+					</ol>
+					<p>Wenn ein Fahrzeug vor Ihrem Fahrzeug einschert, funktioniert die Warnung bei Start des vorausfahrenden Fahrzeugs möglicherweise nicht richtig.</p>
+				</li>
+				<li>
+					<p>Wenn das Fahrzeug vor Ihnen abrupt lenkt</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M056198L.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<ol outputclass="callout" id="e01060">
+											<li>
+												<p>Ihr Fahrzeug</p>
+											</li>
+											<li>
+												<p>Vorausfahrendes Fahrzeug</p>
+											</li>
+										</ol>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Wenn das vorausfahrende Fahrzeug eine scharfe Kurve macht, z. B. nach links oder rechts oder eine 180°-Wendung usw., funktioniert die Warnung Spurwechsel vorausfahrendes Fahrzeug möglicherweise nicht richtig.</p>
+				</li>
+				<li>
+					<p>Wenn das vorausfahrende Fahrzeug abrupt losfährt</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M054066N.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Wenn das vorausfahrende Fahrzeug abrupt losfährt, funktioniert die Warnung bei Start des vorausfahrenden Fahrzeugs möglicherweise nicht richtig.</p>
+				</li>
+				<li>
+					<p>Wenn sich ein Fußgänger oder Radfahrer zwischen Ihnen und dem vorausfahrenden Fahrzeug befindet</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M055199L.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Wenn sich Fußgänger oder Radfahrer zwischen Ihnen und dem vorausfahrenden Fahrzeug befinden, funktioniert die Warnung bei Start des vorausfahrenden Fahrzeugs möglicherweise nicht richtig.</p>
+				</li>
+				<li>
+					<p>Auf Parkplätzen</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M055200L.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Wenn sich ein vor Ihnen geparktes Fahrzeug von Ihnen entfernt, kann Sie die Warnung Spurwechsel vorausfahrendes Fahrzeug darauf aufmerksam machen, dass das geparkte Fahrzeug anfährt.</p>
+				</li>
+				<li>
+					<p>An Mautstellen oder Kreuzungen</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M055201L.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Wenn Sie eine Mautstelle oder eine Kreuzung mit vielen Fahrzeugen passieren oder wenn Fahrspuren zusammengeführt werden oder sich teilen, funktioniert die Warnung Spurwechsel vorausfahrendes Fahrzeug möglicherweise nicht richtig.</p>
+				</li>
+			</ul>
+			<note type="warning">
+				<p>Das Fahreraufmerksamkeits-Warnsystem funktioniert möglicherweise erst 15 Sekunden nach dem Start des Fahrzeugs oder der Initialisierung der Kamera.</p>
+			</note>
+			<note type="note">
+				<p>Weitere Vorsichtsmaßnahmen zur Frontkamera finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0440.dita#CL4m_HEV-ca_ES-2027-t0440"/>.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0552.dita#CL4m_HEV-ca_ES-2027-t0552" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion und Einschränkungen des Fahreraufmerksamkeits-Warnsystems</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

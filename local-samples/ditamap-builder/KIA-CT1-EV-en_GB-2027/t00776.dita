@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00776">
+	<title>Parking Distance Warning disabled</title>
+	<conbody>
+		<p>If this occurs, the warning message appears on the cluster.</p>
+		<p>Warning message: <uicontrol>Parking Distance Warning system limited. Ultrasonic sensor blocked</uicontrol> </p>
+		<p>The ultrasonic sensor is a sensor that detects objects around the vehicle. The Parking Distance Warning may be temporarily limited or may not operate if snow, rain, foreign substances, etc. get on the sensor. You can check the detection sensor blind warning target (ultrasonic sensor) in the service message of the utility information view in the cluster display window. The Parking Distance Warning will work normally if you remove the contamination from the recognition sensor. Always keep it clean. If the function still does not work properly even after you remove the contamination, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>The Master warning light (<image align="left" href="../../images/WKIA_040.eps" scale="15" placement="inline"/>) is displayed in the target direction if a malfunction or ultrasonic sensor is blocked while the Parking Distance Warning is operating.</p>
+				</li>
+				<li>
+					<p>You can check it in the service message of the utility information view of the cluster display window.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

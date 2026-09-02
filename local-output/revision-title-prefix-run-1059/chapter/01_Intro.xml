@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter filename="01_Intro.xml" chapnum="01">
+	<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0002-CH02.dita">
+		<concept id="KA4i-ICE-HEV-en_IN-2026-t0002-CH02">
+			<title id="e00012">Introduction </title>
+			<related-links>
+				<linkpool>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0003-CH02.dita#KA4i-ICE-HEV-en_IN-2026-t0003-CH02" role="child" scope="local" type="concept">
+							<linktext>Fuel requirements</linktext>
+						</link>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0004-CH02.dita#KA4i-ICE-HEV-en_IN-2026-t0004-CH02" role="child" scope="local" type="concept">
+							<linktext>Vehicle modifications</linktext>
+						</link>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0005-CH02.dita#KA4i-ICE-HEV-en_IN-2026-t0005-CH02" role="child" scope="local" type="concept">
+							<linktext>Breaking in your vehicle</linktext>
+						</link>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0006-CH02.dita#KA4i-ICE-HEV-en_IN-2026-t0006-CH02" role="child" scope="local" type="concept">
+							<linktext>Vehicle handling instructions</linktext>
+						</link>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0007-CH02.dita#KA4i-ICE-HEV-en_IN-2026-t0007-CH02" role="child" scope="local" type="concept">
+							<linktext>HEV powertrain</linktext>
+						</link>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0008-CH02.dita#KA4i-ICE-HEV-en_IN-2026-t0008-CH02" role="child" scope="local" type="concept">
+							<linktext>Open source software notice</linktext>
+						</link>
+					</linkpool>
+				</linkpool>
+			</related-links>
+		</concept>
+		<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0003-CH02.dita">
+			<concept id="KA4i-ICE-HEV-en_IN-2026-t0003-CH02">
+				<title>Fuel requirements</title>
+				<prolog>
+					<metadata>
+						<keywords>
+							<indexterm>fuel requirements</indexterm>
+						</keywords>
+					</metadata>
+				</prolog>
+				<conbody>
+					<section id="e00014">
+						<title>Petrol engine</title>
+						<p><b>Unleaded</b></p>
+						<p>Your new vehicle is designed to use only unleaded fuel having an Octane Rating of RON (Research Octane Number) 91/AKI (Antiknock Index) 87 or higher. (Do not use methanol blended fuels)</p>
+						<p>Your new vehicle is designed to obtain maximum performance with UNLEADED FUEL, and minimise exhaust emissions and spark plug fouling.</p>
+						<p>Never add any fuel system cleaning agents to the fuel tank other than what has been specified. Have your vehicle inspected by a professional workshop. Kia recommends to visit an authorised Kia dealer/service partner for details.</p>
+						<note type="caution" id="e00015">
+							<p>NEVER USE LEADED FUEL. The use of leaded fuel is detrimental to the catalytic converter and will damage the engine control system's oxygen sensor and affect emission control.</p>
+							<p>Never add any fuel system cleaning agents to the fuel tank other than what has been specified. (Kia recommends to consult an authorised Kia dealer/service partner for details.)</p>
+						</note>
+						<note type="warning" id="e00016">
+							<p importance="high">Refuelling</p>
+							<ul id="e00017">
+								<li>
+									<p>Do not “top off” after the nozzle automatically shuts off. Attempts to force more fuel into the tank can cause fuel overflow onto you and the ground, causing a risk of fire.</p>
+								</li>
+								<li>
+									<p>Always check that the fuel cap is installed securely to prevent fuel spillage, especially in the event of an accident.</p>
+								</li>
+							</ul>
+						</note>
+					</section>
+					<section otherprops="legal_ind_std_011_01" id="e00018">
+						<title>Petrol containing alcohol and methanol</title>
+						<p>Gasohol, a mixture of petrol and ethanol (also known as grain alcohol), and petrol or gasohol containing methanol (also known as wood alcohol) are being marketed along with or instead of leaded or unleaded petrol.</p>
+						<p>Do not use gasohol containing more than 20% ethanol. Ethanol provides less energy than petrol and attracts water. Thus, it is likely to reduce your vehicle’s fuel efficiency and could lower your MPG results.</p>
+						<p>Do not use petrol or gasohol containing any methanol. Methanol may cause drivability problems and damage to the fuel system, engine control system, and emission control system.</p>
+						<p>Discontinue using gasohol of any kind if drivability problems occur.</p>
+						<p>Vehicle damage or drivability problems may not be covered by the manufacturer’s warranty if they result from the use of any of the following:</p>
+						<ol id="e00019">
+							<li>
+								<p>Gasohol containing more than 20% ethanol.</p>
+							</li>
+							<li>
+								<p>Petrol or gasohol containing methanol.</p>
+							</li>
+							<li>
+								<p>Leaded fuel or leaded gasohol.</p>
+							</li>
+						</ol>
+						<note type="caution" id="e00020">
+							<p>Never use any fuel containing methanol. Discontinue use of any methanol containing products which may inhibit proper drivability.</p>
+						</note>
+					</section>
+					<section id="e00021">
+						<title>Other fuels</title>
+						<p>Using fuels that contain Silicone (Si), Methylcyclopentadienyl Manganese Tricarbonyl (MMT), Manganese (Mn), and other metallic additives may cause vehicle and engine damage or misfiring, poor acceleration, engine stalling, catalyst melting, clogging, abnormal corrosion, life cycle reduction, and so on. Ferrocene (Fe) contained fuel, and other metallic additives contained fuels, may cause vehicle and engine damage or cause plugging, misfiring, poor acceleration, engine stalling, catalyst melting, abnormal corrosion, life cycle reduction, etc. The Malfunction Indicator Lamp (MIL) may illuminate if you use fuel with the additives listed.</p>
+						<note type="tip" id="e00022">
+							<p>Damage to the fuel system or performance problems caused by the use of these other fuels may not be covered by your New Vehicle Limited Warranty.</p>
+						</note>
+					</section>
+					<section id="e00023">
+						<title id="e00024">Use of MTBE </title>
+						<p>Kia recommends avoiding fuels containing MTBE (Methyl Tertiary Butyl Ether) over 15.0% vol. (Oxygen Content 2.7% weight) in your vehicle.</p>
+						<p>Fuel containing MTBE over 15.0% vol. (Oxygen Content 2.7% weight) may reduce vehicle performance and produce vapour lock or hard starting.</p>
+						<note type="caution" id="e00025">
+							<p>Your New Vehicle Limited Warranty may not cover damage to the fuel system and any performance problems that are caused by the use of fuels containing methanol or fuels containing MTBE (Methyl Tertiary Butyl Ether) over 15.0% vol. (Oxygen Content 2.7% weight.)</p>
+						</note>
+					</section>
+					<section id="e00026">
+						<title>Do not use methanol</title>
+						<p>Fuels containing methanol (wood alcohol) should not be used in your vehicle. This type of fuel can reduce vehicle performance and damage components of the fuel system, engine control system, and emission control system.</p>
+					</section>
+					<section id="e00027">
+						<title>Fuel Additives</title>
+						<p>Kia recommends that you use unleaded petrol which has an octane rating of RON (Research Octane Number) 91/AKI (Antiknock Index) 87 or higher.</p>
+						<p>For customers who do not use good quality petrols including fuel additives regularly, and have problems starting or the engine does not run smoothly, one bottle of additives should be added to the fuel tank when the engine oil is replaced.</p>
+						<p>Additives are available from a professional workshop along with information on how to use them. Kia recommends to visit an authorised Kia dealer/service partner.</p>
+					</section>
+					<section id="e00028">
+						<title>Operation in foreign countries</title>
+						<p>If you are going to drive your vehicle in another country, be sure to:</p>
+						<ul id="e00029">
+							<li>
+								<p>Observe all regulations regarding registration and insurance.</p>
+							</li>
+							<li>
+								<p>Determine that acceptable fuel is available.</p>
+							</li>
+						</ul>
+					</section>
+					<section id="e00030">
+						<title>Diesel engine</title>
+						<p><b>Diesel fuel</b></p>
+						<p>Diesel engines must be operated only on commercially available diesel fuel that complies with EN 590 or comparable standard. (EN stands for "European Norm"). Do not use marine diesel fuel, heating oils, or non-approved fuel additives, as this will increase wear and cause damage to the engine and fuel system. The use of non-approved fuels and/or fuel additives will result in a limitation of your warranty rights.</p>
+						<p>Diesel fuel of above cetane 51 is used in your vehicle. If two types of diesel fuels are available, use summer or winter fuel properly according to the following temperature conditions.</p>
+						<ul id="e00031">
+							<li>
+								<p>Above -5°C (23°F) ... Summer type diesel fuel.</p>
+							</li>
+							<li>
+								<p>Below -5°C (23°F) ... Winter type diesel fuel.</p>
+							</li>
+						</ul>
+						<p>Watch the fuel level in the tank very carefully: If the engine stops through fuel failure, the circuits must be completely purged to restart.</p>
+						<note type="caution" id="e00032">
+							<p>Do not let any petrol or water enter the tank. This would make it necessary to drain it out and to bleed the lines to avoid jamming the injection pump and damaging the engine.</p>
+							<p><uicontrol>Diesel Fuel (if equipped with DPF)</uicontrol></p>
+							<p>It is recommended to use the regulated automotive diesel fuel for diesel vehicle equipped with the DPF system. (if equipped) If you use diesel fuel including high sulfur (more than 50 ppm sulfur) and unspecified additives, it can cause the DPF system to be damaged and white smoke can be emitted. (if equipped)</p>
+						</note>
+					</section>
+				</conbody>
+				<related-links>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0002-CH02.dita#KA4i-ICE-HEV-en_IN-2026-t0002-CH02" role="parent" scope="local" type="concept">
+							<linktext>Introduction </linktext>
+						</link>
+					</linkpool>
+				</related-links>
+			</concept>
+		</topicref>
+		<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0004-CH02.dita">
+			<concept id="KA4i-ICE-HEV-en_IN-2026-t0004-CH02">
+				<title>Vehicle modifications</title>
+				<prolog>
+					<metadata>
+						<keywords>
+							<indexterm>vehicle modifications</indexterm>
+						</keywords>
+					</metadata>
+				</prolog>
+				<conbody>
+					<p>This vehicle should not be modified. Modification of your vehicle could affect its performance, safety, or durability and may even violate governmental safety and emissions regulations.</p>
+					<note type="tip" id="e00034">
+						<p>Damage or performance problems resulting from any modification may not be covered under the warranty.</p>
+					</note>
+					<note type="note" id="e00035">
+						<p>If you use an unauthorised electronic device, it may cause wire damage, battery discharge, fire, or abnormal vehicle operation. For your safety, do not use unauthorised electronic devices.</p>
+					</note>
+				</conbody>
+				<related-links>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0002-CH02.dita#KA4i-ICE-HEV-en_IN-2026-t0002-CH02" role="parent" scope="local" type="concept">
+							<linktext>Introduction </linktext>
+						</link>
+					</linkpool>
+				</related-links>
+			</concept>
+		</topicref>
+		<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0005-CH02.dita">
+			<concept id="KA4i-ICE-HEV-en_IN-2026-t0005-CH02">
+				<title>Breaking in your vehicle</title>
+				<prolog>
+					<metadata>
+						<keywords>
+							<indexterm>breaking in your vehicle</indexterm>
+						</keywords>
+					</metadata>
+				</prolog>
+				<conbody>
+					<p>Following these simple precautions for the first 1,000 km (600 miles) may increase the performance, economy, and lifespan of your vehicle:</p>
+					<ul id="e00037">
+						<li>
+							<p>Do not race the engine.</p>
+						</li>
+						<li>
+							<p>Avoid sudden acceleration.</p>
+						</li>
+						<li>
+							<p>Do not maintain a single engine speed, either fast or slow, for long periods of time. Varying engine speeds is necessary to properly break in the engine.</p>
+						</li>
+						<li>
+							<p>Avoid hard stops, except in emergencies, to allow the brakes to seat properly.</p>
+						</li>
+						<li>
+							<p>Don’t tow a trailer during the first 2,000 km (1,200 miles) of operation.</p>
+						</li>
+						<li>
+							<p>Depending on your break-in process, fuel economy and engine performance may vary and will stabilize after 6,000 km (4,000 miles). The engine may consume more oil during the break-in period.</p>
+						</li>
+					</ul>
+				</conbody>
+				<related-links>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0002-CH02.dita#KA4i-ICE-HEV-en_IN-2026-t0002-CH02" role="parent" scope="local" type="concept">
+							<linktext>Introduction </linktext>
+						</link>
+					</linkpool>
+				</related-links>
+			</concept>
+		</topicref>
+		<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0006-CH02.dita">
+			<concept id="KA4i-ICE-HEV-en_IN-2026-t0006-CH02">
+				<title>Vehicle handling instructions</title>
+				<prolog>
+					<metadata>
+						<keywords>
+							<indexterm>vehicle handling instructions</indexterm>
+						</keywords>
+					</metadata>
+				</prolog>
+				<conbody>
+					<p>As with all vehicles of this type, failure to operate this vehicle correctly may result in loss of control, an accident, or vehicle rollover.</p>
+					<p>Specific design characteristics, such as higher ground clearance and track, give this vehicle a higher centre of gravity than other types of vehicles. This vehicle is not designed for turning at the same speeds as conventional 2-wheel drive vehicles.</p>
+					<p>Avoid sharp turns and abrupt manoeuvres. Failure to operate this vehicle correctly may result in loss of control, an accident, or vehicle rollover.</p>
+					<p importance="normal">Be sure to read <xref href="KA4i-ICE-HEV-en_IN-2026-t0405-CH10.dita#KA4i-ICE-HEV-en_IN-2026-t0405-CH10/e01451"/>.</p>
+				</conbody>
+				<related-links>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0002-CH02.dita#KA4i-ICE-HEV-en_IN-2026-t0002-CH02" role="parent" scope="local" type="concept">
+							<linktext>Introduction </linktext>
+						</link>
+					</linkpool>
+				</related-links>
+			</concept>
+		</topicref>
+		<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0007-CH02.dita">
+			<concept id="KA4i-ICE-HEV-en_IN-2026-t0007-CH02">
+				<title>HEV powertrain</title>
+				<prolog>
+					<metadata>
+						<keywords>
+							<indexterm>HEV powertrain</indexterm>
+						</keywords>
+					</metadata>
+				</prolog>
+				<conbody>
+					<p>By following a few simple precautions for the first 6,000 km (4,000 miles) you may increase the performance economy and life of your vehicle.</p>
+					<ul id="e00040">
+						<li>
+							<p>Do not race the engine.</p>
+						</li>
+						<li>
+							<p>Avoid hard stops, except in emergencies, to allow the brakes to seat properly.</p>
+						</li>
+					</ul>
+				</conbody>
+				<related-links>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0002-CH02.dita#KA4i-ICE-HEV-en_IN-2026-t0002-CH02" role="parent" scope="local" type="concept">
+							<linktext>Introduction </linktext>
+						</link>
+					</linkpool>
+				</related-links>
+			</concept>
+		</topicref>
+		<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0008-CH02.dita">
+			<concept otherprops="legal_all_std_001_01" id="KA4i-ICE-HEV-en_IN-2026-t0008-CH02">
+				<title>Open source software notice</title>
+				<prolog>
+					<metadata>
+						<keywords>
+							<indexterm>open source software notice</indexterm>
+						</keywords>
+					</metadata>
+				</prolog>
+				<conbody>
+					<p>This vehicle contains software with open source licenses.</p>
+					<p>Open source software information including the source code, copyright notices and referred license terms may be obtained on the website https://worldwide.kia.com/en/opensource.</p>
+					<p>Kia Corporation will provide the open source code to you in storage medium such as CD-ROM for minimum charge covering the cost of performing source distribution upon email request to opensource@kia.com within a period of 3 years from the date of product purchase.</p>
+				</conbody>
+				<related-links>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0002-CH02.dita#KA4i-ICE-HEV-en_IN-2026-t0002-CH02" role="parent" scope="local" type="concept">
+							<linktext>Introduction </linktext>
+						</link>
+					</linkpool>
+				</related-links>
+			</concept>
+		</topicref>
+	</topicref>
+</chapter>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0674">
+	<title>Warnmethoden</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054167N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Fahrerassistenz</p>
+								</li>
+								<li>
+									<p>Warnmethoden</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Warnmethoden können bei eingeschaltetem Fahrzeug eingestellt werden. Wählen Sie <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Fahrerassistenz</uicontrol><uicontrol>Warnmethoden</uicontrol></menucascade> im Einstellungsmenü des Infotainment-Systems, um die folgenden Einstellungen zu ändern:</p>
+		<ul>
+			<li>
+				<p><b>Vorrang für sicheres Parken</b>: Verringert alle anderen Audiolautstärken, wenn der Umgebungsüberwachungs-Monitor aktiv ist.</p>
+			</li>
+		</ul>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>Wenn Sie die Warnmethoden ändern, kann dies auf jede Funktion des Fahrerassistenzsystems angewendet werden. Überprüfen und ändern Sie sie bitte in jeder Funktion.</p>
+				</li>
+				<li>
+					<p>Wenn das Fahrzeug neu gestartet wird, halten die Warnmethoden die letzte Einstellung bei.</p>
+				</li>
+				<li>
+					<p>Das Einstellungsmenü ist je nach Fahrzeugausführung möglicherweise nicht vorhanden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0673.dita#CL4m_HEV-ca_ES-2027-t0673" role="parent" scope="local" type="concept">
+				<linktext>Einstellungen der Umgebungsüberwachung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

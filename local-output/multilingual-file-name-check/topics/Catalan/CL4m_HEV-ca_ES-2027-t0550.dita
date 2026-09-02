@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0550">
+	<title>Eine Pause machen</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M074126N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Ziehen Sie eine Pause in Betracht</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Warnleuchte für unaufmerksame Fahrweise (<image align="left" href="../../images/WKIA_059.eps" scale="15" placement="inline"/>) blinkt und eine Warnmeldung erscheint auf dem Kombiinstrument. Mit einem Warnton wird dem Fahrer empfohlen, eine Pause zu machen, wenn sein Aufmerksamkeitsniveau unter einem bestimmten Niveau liegt.</p>
+		<ul>
+			<li>
+				<p>Das Fahreraufmerksamkeits-Warnsystem schlägt keine Pause vor, wenn die Gesamtfahrzeit kürzer als 4 Minuten ist oder seit der letzten vorgeschlagenen Pause noch keine 4 Minuten verstrichen sind.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<p>Ändern Sie zu Ihrer Sicherheit die Einstellungen, nachdem Sie das Fahrzeug an einem sicheren Ort geparkt haben.</p>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Das Fahreraufmerksamkeits-Warnsystem schlägt möglicherweise je nach Fahrverhalten oder Fahrstil des Fahrers auch eine Pause vor, wenn der Fahrer keine Müdigkeit verspürt.</p>
+				</li>
+				<li>
+					<p>Das Fahreraufmerksamkeits-Warnsystem ist ein ergänzendes System und kann möglicherweise nicht feststellen, ob der Fahrer unaufmerksam ist.</p>
+				</li>
+				<li>
+					<p>Ein müder Fahrer sollte eine Pause machen, selbst wenn das Fahreraufmerksamkeits-Warnsystem keine Pause vorschlägt.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0549.dita#CL4m_HEV-ca_ES-2027-t0549" role="parent" scope="local" type="concept">
+				<linktext>Warnfunktion bei unaufmerksamer Fahrweise</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

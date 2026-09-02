@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0703">
+	<title>Heckverkehr-Kollisionsvermeidungsassistent deaktiviert</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054165N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Fahrerassistenzsystem eingeschränkt. Radar blockiert.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn die hintere Stoßstange um das hintere Radar oder den hinteren Sensor mit Fremdkörpern wie Schnee oder Regen bedeckt oder ein Anhänger oder Träger installiert ist, können sich die Erkennungseigenschaften verschlechtern, so dass die Funktion des Heckverkehr-Kollisionsvermeidungsassistenten vorübergehend eingeschränkt oder deaktiviert wird.</p>
+		<p>In diesem Fall erscheint eine Warnmeldung auf dem Kombiinstrument.</p>
+		<p>Das Heckverkehr-Kollisionsvermeidungsassistent funktioniert wieder ordnungsgemäß, wenn solche Fremdkörper oder Anhänger usw. entfernt sind.</p>
+		<p>Wenn der Heckverkehr-Kollisionsvermeidungsassistent nach dem Ausbau nicht normal funktioniert, lassen Sie Ihr Fahrzeug in einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Auch wenn keine Warnmeldung auf dem Kombiinstrument erscheint, funktioniert der Heckverkehr-Kollisionsvermeidungsassistent möglicherweise nicht richtig.</p>
+				</li>
+				<li>
+					<p>Der Heckverkehr-Kollisionsvermeidungsassistent funktioniert in bestimmten Bereichen möglicherweise nicht einwandfrei (Beispiel: in offenem Gelände), in denen nach dem Schalten des Fahrzeugs auf <term translate="no">ON</term> keine Objekte erkannt wurden.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<p>Schalten Sie den Heckverkehr-Kollisionsvermeidungsassistenten aus, um einen Anhänger, einen Gepäckträger oder ein anderes Anbaugerät anzubringen oder zu entfernen. Schalten Sie den Heckverkehr-Kollisionsvermeidungsassistenten anschließend wieder an.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0702.dita#CL4m_HEV-ca_ES-2027-t0702" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion des Heckverkehr-Kollisionsvermeidungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

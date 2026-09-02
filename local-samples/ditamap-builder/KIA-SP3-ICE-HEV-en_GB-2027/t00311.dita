@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00311">
+	<title>Ambient light</title>
+	<shortdesc>The ambient lights are applied to the front instrument panel and front door.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior lights
+					<indexterm>ambient light</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01978">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01979">
+								<image href="images/N_SP327_C08_007_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the vehicle is in <term translate="no">ON</term> position, select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Ambient Lighting</uicontrol></menucascade> from the infotainment system.</p>
+		<note type="note" id="e01980">
+			<p>The infotainment system may change after a software update. For more details, refer to the user’s manual in the infotainment system or the quick reference guide.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00302.dita#t00302" role="parent" scope="local" type="concept">
+				<linktext>Interior lights</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00819">
+	<title>Checking fluid levels</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>scheduled maintenance items
+					<indexterm>fluid levels</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>When you check the engine oil, engine coolant, brake fluid, and washer fluid, always be sure to clean the area around any filler plug, drain plug, or dipstick before checking or draining any lubricant or fluid. This is especially important in dusty or sandy areas, and when you use the vehicle on unpaved roads. Cleaning the plug and dipstick areas prevents dirt and grit from entering and damaging the engine and other mechanisms.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00796.dita#t00796" role="parent" scope="local" type="concept">
+				<linktext>Explanation of scheduled maintenance items</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

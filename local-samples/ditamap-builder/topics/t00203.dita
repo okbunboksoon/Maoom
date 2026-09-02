@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00203">
+	<title>Recalling memory positions</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>driver position memory system 
+					<indexterm>recalling positions</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ol id="e01533">
+			<li>
+				<p>Shift to P (Park) while the <term>EV</term> button is in the <term>POWER ON</term> or <term>DRIVE READY</term> position.</p>
+			</li>
+			<li>
+				<p>Press the desired memory button (1 or 2). The system will beep once, and then driver’s seat position, outside rearview mirror position, and head-up display height will automatically adjust to the stored positions.</p>
+			</li>
+			<li>
+				<p> <uicontrol>Driver 1 (or 2) settings applied</uicontrol> will appear on the infotainment screen.</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

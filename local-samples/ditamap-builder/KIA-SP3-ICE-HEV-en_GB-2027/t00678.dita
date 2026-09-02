@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00678">
+	<title>Rear-view</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04076">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04077">
+								<image href="images/N_SP327_C00_009_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e04078">
+								<image href="images/N_SP3i26_B10_012_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>(2) View switching button</p>
+		<p>(3) back button</p>
+		<p>(4) infotainment system operation button</p>
+		<p>The Surround View Monitor’s Rear-view function assists you with safe parking by displaying activity behind the vehicle on the navigation system, according to your selected settings.</p>
+		<section>
+			<title>Parking</title>
+			<p>The Surround View Monitor’s Rear-view function activates when you are parking under the following conditions:</p>
+			<ul>
+				<li>
+					<p>You press the Parking/View button (1), then select Rear View with the view switching button (2) while the gear is set to P (Park), N (Neutral), or D (Drive) with a speed below 10 km/h (6 mph).</p>
+				</li>
+				<li>
+					<p>You shift the gear to R (Reverse).</p>
+				</li>
+			</ul>
+			<p>Press the view switching button (2) on the Surround View Monitor to select Top View, Front View, Side View, or Wide View.</p>
+			<p>The Surround View Monitor’s Rear-view function turns <term translate="no">OFF</term> when you are parking under the following conditions and the gear is set to P (Park), N (Neutral), or D (Drive):</p>
+			<ul>
+				<li>
+					<p>You shift the gear from N (Neutral) or D (Drive) to P (Park).</p>
+				</li>
+				<li>
+					<p>You press the Parking/View button (1).</p>
+				</li>
+				<li>
+					<p>You press the back button (3) on the Surround View Monitor screen.</p>
+				</li>
+				<li>
+					<p>You press the infotainment system power button (4).</p>
+				</li>
+				<li>
+					<p>You drive above 10 km/h (6 mph).</p>
+				</li>
+			</ul>
+			<p>The Surround View Monitor’s Rear-view function turns <term translate="no">OFF</term> when you shift the gear from R (Reverse) to P (Park).</p>
+			<note type="tip">
+				<ul>
+					<li>
+						<p>The Rear View always displays when you shift the gear to R (Reverse).</p>
+					</li>
+					<li>
+						<p>When you shift the gear to R (Reverse), the video does not turn <term translate="no">OFF</term> if you press the infotainment system power button (4).</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00675.dita#t00675" role="parent" scope="local" type="concept">
+				<linktext>Surround View Monitor operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

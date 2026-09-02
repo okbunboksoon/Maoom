@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0291">
+	<title>Beschlagfreie Innenscheibe mit manueller Klimaanlage</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Beschlagfrei halten (Windschutzscheibe)
+					<indexterm>Manuelle Klimaregelung</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034321N_4.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol>
+			<li>
+				<p>Wählen Sie eine beliebige Gebläsestufe außer der Aus-Stellung.</p>
+			</li>
+			<li>
+				<p>Wählen Sie die gewünschte Temperatur aus.</p>
+			</li>
+			<li>
+				<p>Wählen Sie den Modus <image align="left" href="../../images/WKIA_063.eps" scale="15" placement="inline"/> oder <image align="left" href="../../images/WKIA_181.eps" scale="15" placement="inline"/>.</p>
+			</li>
+			<li>
+				<p>Der Frischluftmodus und die Klimaanlage werden automatisch aktiviert.</p>
+			</li>
+		</ol>
+		<p>Wenn die Aktivierung der Klimaanlage und des Frischluftmodus nicht automatisch erfolgt, betätigen Sie die entsprechende Taste manuell.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0290.dita#CL4m_HEV-ca_ES-2027-t0290" role="parent" scope="local" type="concept">
+				<linktext>Windschutzscheibe beheizen und beschlagfrei halten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

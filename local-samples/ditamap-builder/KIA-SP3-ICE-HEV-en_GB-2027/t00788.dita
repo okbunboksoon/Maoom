@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00788">
+	<title>Manual accident reporting</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04795">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04796">
+								<image align="center" href="images/N_SP327_D10_007_2_E.jpg" scale="95" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e04797">
+								<li>
+									<p>Pressing the <term translate="no">SOS</term> button</p>
+								</li>
+								<li>
+									<p>Connection with the Public Safety Answering Point (PSAP)</p>
+								</li>
+								<li>
+									<p>Emergency services</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The driver or passenger can manually make an emergency call to the Public Safety Answering Point (PSAP) by pressing the <term translate="no">SOS</term> button to call the necessary emergency services.</p>
+		<p>A call to the emergency services through the Emergency Call (eCall) System can be canceled by pressing the <term translate="no">SOS</term> button again within 3 seconds only before the call connection.</p>
+		<p>After activation of emergency call in the manual mode (for proper emergency services and support), the Emergency Call (eCall) System automatically transmits the road accident data, or data on other accident to the officer of the Public Safety Answering Point (PSAP) (during emergency call) by pressing the <term translate="no">SOS</term> button.</p>
+		<p>If the driver or passenger accidentally presses the <term translate="no">SOS</term> button, the call can be canceled by pressing the button within 3 seconds before the connection. It cannot be canceled after that.</p>
+		<p>In the event of a road accident or other accident, activation of an emergency call in manual mode requires the following:</p>
+		<ol id="e04798">
+			<li>
+				<p>Stop the vehicle in accordance with traffic rules to ensure safety to yourself and other participants of road traffic.</p>
+			</li>
+			<li>
+				<p>Press the <term translate="no">SOS</term> button, which initiates registration of the device via the cellular phone network and sends a minimal amount of data about the vehicle and its location as collected in accordance with of the technical requirements of the service.</p>
+				<p>After that, direct contact is made with an officer of the Emergency Call (eCall) System in order to establish the reasons for the emergency call and the related circumstances.</p>
+			</li>
+			<li>
+				<p>After establishing the reasons for the emergency call, the officer of the Public Safety Answering Point (PSAP) sends emergency services and completes the emergency call.</p>
+			</li>
+		</ol>
+		<p>If the emergency call is not carried out in accordance with the procedure mentioned above, the call will be considered erroneous.</p>
+		<note type="warning" id="e04799">
+			<p>Emergency power supply of the Emergency Call (eCall) System from the battery</p>
+			<ul id="e04800">
+				<li>
+					<p>The Emergency Call (eCall) System battery supplies power during 1 hour in case main power source of the vehicle is cut off due to the collision during the emergency situations.</p>
+				</li>
+				<li>
+					<p otherprops="legalnotice_europe-general_gen-mid_2023_20230101_0001411">The Emergency Call (eCall) System battery should be replaced every 4 years. For more information, refer to <xref/>.</p>
+				</li>
+			</ul>
+		</note>
+		<section id="e04801">
+			<title>SOS warning light (system malfunction)</title>
+			<p>If the <term translate="no">SOS</term> warning light remains illuminated on the instrument cluster in normal driving conditions, this can indicate malfunction of the Emergency Call (eCall) System. Have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner. Otherwise correct operation of the Emergency Call (eCall) System device, installed in your vehicle is not guaranteed. Owner of the vehicle incurs liability for consequences, occurred as a result of nonobservance of conditions, mentioned above.</p>
+		</section>
+		<section id="e04802">
+			<title>Arbitrary removal or modification</title>
+			<p>The Emergency Call (eCall) System calls emergency services for assistance. Thus, any arbitrary removal or changes to the Emergency Call (eCall) System settings may affect your driving safety. Also, it may even make an erroneous emergency call to the Public Safety Answering Point (PSAP). Thereby, we kindly ask you not to make any changes by yourself or by the third parties in the settings of the equipment of the Emergency Call (eCall) System, installed in your vehicle.</p>
+		</section>
+		<section otherprops="legalnotice_europe-general_gen-mid_2023_20230101_0001412" id="e04803">
+			<title>eCall certification label</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04804">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e04805">
+									<figgroup>
+										<image align="center" href="images/KIAPB003.jpg" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e04806">
+									<figgroup>
+										<image align="center" href="images/KIAPB004.jpg" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+						<row>
+							<entry colname="col1">
+								<fig id="e04807">
+									<figgroup>
+										<image align="center" href="images/KIAPB005.jpg" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e04808">
+									<figgroup>
+										<image align="center" href="images/KIAPB006.jpg" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00786.dita#t00786" role="parent" scope="local" type="concept">
+				<linktext>Emergency Call (eCall) System operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

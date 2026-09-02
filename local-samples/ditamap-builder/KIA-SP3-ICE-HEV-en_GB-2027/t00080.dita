@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00080">
+	<title>Power tailgate open/close button (smart key, instrument panel)</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00411">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00412">
+								<image href="images/N_SP327_B04_008.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00413">
+								<image href="images/N_SP327_B04_005_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e00414">
+			<li>
+				<p>Power tailgate open/close button</p>
+			</li>
+		</ol>
+		<section>
+			<p>Press the power tailgate open/close button for 1 second. The tailgate opens or closes with a warning sound.</p>
+			<p>While the tailgate is opening or closing, press the button to stop tailgate operation.</p>
+			<p>If the smart key is not within operating range (approximately 10 m) from the vehicle, tailgate operation will stop with a warning sound for 5 seconds.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00079.dita#t00079" role="parent" scope="local" type="concept">
+				<linktext>Operating the power tailgate</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

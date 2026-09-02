@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00277">
+	<title>Power gauge</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01747">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01748">
+								<title>Type A</title>
+								<image href="images/N_SP327_B00_005_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01749">
+								<title>Type B</title>
+								<image href="images/N_SP327_B00_006_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The hybrid system gauge indicates whether the current driving condition is fuel efficient or not.</p>
+		<ul>
+			<li>
+				<p><term translate="no">CHARGE</term>:</p>
+				<p>Shows that the energy made by the vehicle is converting to electrical energy (Regenerated energy).</p>
+			</li>
+			<li>
+				<p><term translate="no">ECO</term>:</p>
+				<p>Shows that you are driving the vehicle in an eco-friendly manner.</p>
+			</li>
+			<li>
+				<p><term translate="no">POWER</term>:</p>
+				<p>Shows that the vehicle is exceeding the eco-friendly range.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00276.dita#t00276" role="parent" scope="local" type="concept">
+				<linktext>Hybrid system gauge</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00842">
+	<title>Blade replacement</title>
+	<shortdesc>When the wipers no longer clean adequately, the blades may be worn or cracked, and require replacement.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>wiper blades
+					<indexterm>blade replacement</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<note type="note" id="e04952">
+			<ul id="e04953">
+				<li>
+					<p>To prevent damage to the wiper arms or other components, do not attempt to move the wipers manually.</p>
+				</li>
+				<li>
+					<p>The use of a non-specified wiper blade could result in wiper malfunction and failure.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00840.dita#t00840" role="parent" scope="local" type="concept">
+				<linktext>Wiper blades</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

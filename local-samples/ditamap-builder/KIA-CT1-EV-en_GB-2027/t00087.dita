@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" id="t00087">
+	<title>Tilt open/close</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>panorama sunroof 
+					<indexterm>tilt open/close (front)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00400">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00401">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C045_1E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00402">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C049.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Push the sunroof switch upward, the sunroof glass tilts open. However, if the power sunshade is close, the sunshade will open first.</p>
+			</li>
+			<li>
+				<p>Push the sunroof switch upward or forward when the sunroof glass is tilt opened, the sunroof glass automatically closes.</p>
+			</li>
+		</ul>
+		<p>To stop the sunroof movement at any point, push the sunroof switch in any direction.</p>
+	</conbody>
+</concept>

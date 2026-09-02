@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00795">
+	<title>Maintenance When the Oil Life Management System Alert Appears (for EURO 7 engine)</title>
+	<shortdesc/>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Maintenance When the Oil Life Management System Alert Appears (for EURO 7 engine)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<note type="note" id="e04836">
+			<p>Your vehicle may be equipped with the Oil Life Management System that predicts engine oil life based on the driver’s driving history and alerts the driver to change engine oil.</p>
+			<ul id="e04837">
+				<li>
+					<p>If the deterioration of the engine oil increases depending on the driver’s driving severity, the remaining oil life alert appears on the instrument cluster before the normal engine oil replacement interval. Have the engine oil and filter be changed by an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>Oil Life Management System works when the recommended engine oil is used. So, if recommended engine oil is not used, replace the engine oil according to the maintenance schedule under severe usage condition.</p>
+					<p>Check the amount of engine oil regularly as this system assumes that the engine oil is being filled normally.</p>
+				</li>
+				<li>
+					<p>Always reset the remaining engine oil life whenever the engine oil is changed. Otherwise, the Oil Life Management System will not be correct.</p>
+				</li>
+				<li>
+					<p>If there is no alert until the maximum maintenance interval, have vehicle be inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00794.dita#t00794" role="parent" scope="local" type="concept">
+				<linktext>Scheduled maintenance service precautions</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

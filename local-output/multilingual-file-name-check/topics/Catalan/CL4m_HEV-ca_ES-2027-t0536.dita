@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0536">
+	<title>Warnung und Kontrolle</title>
+	<conbody>
+		<p>Der intelligente Geschwindigkeitsbegrenzungsassistent wird durch die folgende Stufe gewarnt und gesteuert.</p>
+		<ul>
+			<li>
+				<p>Anzeigen des Tempolimits</p>
+			</li>
+			<li>
+				<p>Warnung vor Geschwindigkeitsüberschreitung</p>
+			</li>
+			<li>
+				<p>Ändern der eingestellten Geschwindigkeit</p>
+			</li>
+			<li>
+				<p>Automatisch eingestellte Geschwindigkeitsänderung</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0535.dita#CL4m_HEV-ca_ES-2027-t0535" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Intelligenten Geschwindigkeitsbegrenzungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

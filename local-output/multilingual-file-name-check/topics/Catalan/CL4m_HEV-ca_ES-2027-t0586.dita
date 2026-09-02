@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0586">
+	<title>Betriebsbedingungen</title>
+	<conbody>
+		<section>
+			<title>Grundlegende Funktion</title>
+			<p>Die intelligente Tempomatsteuerung funktioniert, wenn die folgenden Bedingungen erfüllt sind.</p>
+			<ul>
+				<li>
+					<p>Der Gang ist in Stellung D (Fahren)</p>
+				</li>
+				<li>
+					<p>Ihre Fahrgeschwindigkeit liegt innerhalb des Betriebsgeschwindigkeitsbereichs.</p>
+					<ul>
+						<li>
+							<p>10-180 km/h (5-110 mph): wenn kein Fahrzeug vor Ihnen fährt</p>
+						</li>
+						<li>
+							<p>0-180 km/h (0-110 mph): wenn ein Fahrzeug vor Ihnen fährt</p>
+						</li>
+						<li>
+							<p>20–180 km/h (13–110 mph): wenn Sie ein Fahrzeug mit Schaltgetriebe fahren</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>ESC (elektronische Stabilitätskontrolle) oder ABS ist aktiv.</p>
+				</li>
+			</ul>
+			<p>Die intelligente Tempomatsteuerung funktioniert nicht unter den folgenden Bedingungen.</p>
+			<ul>
+				<li>
+					<p>Die Fahrertür ist offen.</p>
+				</li>
+				<li>
+					<p>Die Motordrehzahl ist zu hoch oder zu niedrig.</p>
+				</li>
+				<li>
+					<p><term translate="no">EPB</term> (Elektronische Feststellbremse) wird betätigt</p>
+				</li>
+				<li>
+					<p>Die ESC (Elektronische Stabilitätskontrolle) bzw. das ABS-System sind in Betrieb.</p>
+				</li>
+				<li>
+					<p>Bremssteuerung durch Frontalkollisions-Vermeidungsassistent funktioniert.</p>
+				</li>
+			</ul>
+			<note type="note">
+				<p>Wenn Sie hinter einem anderen Fahrzeug zum Stillstand gekommen sind, können Sie die intelligente Tempomatsteuerung einschalten, während Sie das Bremspedal betätigen (außer bei Schaltgetriebe).</p>
+			</note>
+		</section>
+		<section>
+			<title>Beschleunigungshilfe beim Überholen</title>
+			<p>Der Überholassistent wird aktiviert, wenn bei eingeschalteter intelligenter Tempomatsteuerung der linke Blinker (Linkslenker) bzw. der rechte (Rechtslenker) eingeschaltet wird und folgende Bedingungen erfüllt sind:</p>
+			<ul>
+				<li>
+					<p>Ihre Fahrgeschwindigkeit liegt über 60 km/h (40 mph)</p>
+				</li>
+				<li>
+					<p>Ein Fahrzeug wird vor Ihnen erkannt</p>
+				</li>
+			</ul>
+			<p>Der Überholassistent funktioniert nicht unter den folgenden Bedingungen.</p>
+			<ul>
+				<li>
+					<p>Die Warnblinkanlage wird eingeschaltet</p>
+				</li>
+				<li>
+					<p>Die Fahrzeuggeschwindigkeit wird verringert, um den Abstand zu einem vorausfahrenden Fahrzeug zu halten.</p>
+				</li>
+			</ul>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Wenn der linke Blinker (Linkslenker) oder der rechte Blinker (Rechtslenker) eingeschaltet wird und sich ein anderes Fahrzeug vor dem Fahrzeug befindet, kann unser Fahrzeug vorübergehend beschleunigen. Achten Sie immer auf den Straßenzustand.</p>
+					</li>
+					<li>
+						<p>Unabhängig von der Fahrtrichtung Ihres Landes funktioniert der Überholassistent, wenn die Bedingungen erfüllt sind. Wenn Sie die Funktion in Ländern mit abweichender Fahrtrichtung verwenden, müssen Sie immer die Straßenverhältnisse prüfen.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0585.dita#CL4m_HEV-ca_ES-2027-t0585" role="parent" scope="local" type="concept">
+				<linktext>Bedienung der intelligenten Tempomatsteuerung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

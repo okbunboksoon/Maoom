@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0761">
+	<title>Reifendruck prüfen</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Reifen-Mobilitäts-Kit
+					<indexterm>Reifendruck prüfen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Betrieb</title>
+			<ul>
+				<li>
+					<p>Nachdem Sie etwa 7–10 km (4–6 Meilen) oder 10 Minuten gefahren sind, halten Sie das Fahrzeug an einem sicheren, ebenen Ort.</p>
+				</li>
+				<li>
+					<p>Schließen Sie den Befüllschlauch direkt am Reifenventil an.</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M065040L.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>Schließen Sie den Stecker an die Steckdose an.</p>
+				</li>
+				<li>
+					<p>Prüfen und korrigieren Sie bei Bedarf den Reifendruck.</p>
+					<ul>
+						<li>
+							<p>Schalten Sie den Kompressor ein, um den Reifendruck zu erhöhen. Zur Prüfung des aktuellen Reifendrucks schalten Sie den Kompressor kurz aus.</p>
+						</li>
+						<li>
+							<p>Drehen Sie das Ventil am Kompressor, um den Reifendruck zu verringern.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Lassen Sie den Kompressor nicht länger als 10 Minuten laufen, da das Gerät sonst überhitzt und beschädigt werden könnte.</p>
+					</li>
+					<li>
+						<p>Der Reifenfülldruck muss auf den korrekten Druck aufgepumpt werden (siehe <xref href="CL4m_HEV-ca_ES-2027-t0019.dita#CL4m_HEV-ca_ES-2027-t0019"/>). Andernfalls dürfen Sie die Fahrt nicht fortsetzen. Rufen Sie einen Pannen- oder Abschleppdienst zu Hilfe.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Wenn der Reifendruck nicht gehalten wird, fahren Sie das Fahrzeug ein zweites Mal und schlagen in dem Abschnitt <xref href="CL4m_HEV-ca_ES-2027-t0760.dita#CL4m_HEV-ca_ES-2027-t0760"/>nach. Wiederholen Sie dann die Schritte 1 bis 4.</p>
+					</li>
+					<li>
+						<p>Die Verwendung des TMK ist bei größeren Reifenschäden von etwa 4 mm (0,16 Zoll) nicht sinnvoll.</p>
+					</li>
+					<li>
+						<p>Wenden Sie sich an eine Fachwerkstatt, wenn der Reifen mit dem Reifen-Mobilitäts-Kit nicht straßentauglich gemacht werden kann.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note">
+				<p>Bei der Montage des reparierten bzw. ersetzten Reifens und der zugehörigen Felge am Fahrzeug ziehen Sie die Radmuttern mit 108–127 N·m (11-13 kgf·m; 79–94 lbf·ft) an.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0757.dita#CL4m_HEV-ca_ES-2027-t0757" role="parent" scope="local" type="concept">
+				<linktext>Im Fall einer Reifenpanne (mit Reifen-Mobilität-Kit)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

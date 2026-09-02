@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00846">
+	<title>Automatic accident reporting</title>
+	<conbody>
+		<ol>
+			<li>
+				<p>System operation in the event of a traffic accident</p>
+			</li>
+			<li>
+				<p>Connection with the Public Safety Answering Point (PSAP)</p>
+			</li>
+			<li>
+				<p>Emergency services</p>
+			</li>
+		</ol>
+		<p>The UAE eCall device automatically makes an emergency call to the Public Safety Answering Point (PSAP) for proper rescuing operations in event of vehicle accident.</p>
+		<p>For proper emergency services and support the UAE eCall system automatically transmits the accident data to the Public Safety Answering Point (PSAP) when a traffic accident is detected.</p>
+		<p>In this case, the emergency call cannot be hung up by pressing the <term translate="no">SOS</term> button and the UAE eCall system remains connected until the emergency service officer, receiving the call, disconnects the emergency call.</p>
+		<p>In minor traffic accidents the UAE eCall system may not execute an emergency call. However, an emergency call may be made manually by pressing the <term translate="no">SOS</term> button.</p>
+		<note type="caution">
+			<p>Operation of the system is impossible in case of absence of cellular transmission and GPS and Galileo signals.</p>
+		</note>
+	</conbody>
+</concept>

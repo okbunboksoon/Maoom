@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00292">
+	<title>When the hybrid vehicle turns OFF</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>components of the hybrid/plug-in hybrid vehicle
+					<indexterm>when the hybrid vehicle shuts off</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context>
+			<p>When the high voltage battery or 12V battery discharges, or the fuel tank is empty, the hybrid system might not operate while driving. When the hybrid system does not operate, perform the following steps:</p>
+		</context>
+		<steps>
+			<step>
+				<cmd>Gradually reduce your speed and pull over in a safe location.</cmd>
+			</step>
+			<step>
+				<cmd>Shift the gear to P (Park).</cmd>
+			</step>
+			<step>
+				<cmd>Activate the hazard lights.</cmd>
+			</step>
+			<step>
+				<cmd>Turn <term translate="no">OFF</term> the vehicle. While engaging the brake pedal and pressing the <term translate="no">ENGINE START/STOP</term> button in the <term translate="no">ON</term> position, try to restart the hybrid system again.</cmd>
+			</step>
+		</steps>
+		<postreq>
+			<p>Before you jump start the vehicle, check the fuel level and the jump starting procedure. When the fuel level is low, do not attempt to drive the vehicle exclusively with the battery power. If you do, the high voltage battery might discharge and the hybrid system turns off.</p>
+			<note type="warning">
+				<p>Vehicular accident</p>
+				<p>Never touch the electric wires or cables. An electric shock might occur if exposed electric wires or cables are visible inside or outside of the vehicle.</p>
+			</note>
+			<note type="warning">
+				<p>Extinguishing a fire</p>
+				<p>Never use a small amount of water to extinguish a vehicle fire. Using a small amount of water could cause serious injuries or death from an electric shock. In case of a fire, immediately evacuate the vehicle and contact your local fire department.</p>
+			</note>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00286.dita#t00286" role="parent" scope="local" type="concept">
+				<linktext>Components of the hybrid/plug-in hybrid vehicle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

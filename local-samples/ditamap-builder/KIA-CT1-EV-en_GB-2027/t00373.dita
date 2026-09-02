@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00373">
+	<title>Controlling the opening/closing and directions of the vents</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01571">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01572">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C082_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01573">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C084.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Adjust the direction of the front and rear (if equipped) ventilation outlet using the vertical and horizontal direction adjustment lever.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul id="e01574">
+				<li>
+					<p>Adjust the direction of the front and rear (if equipped) ventilation outlet using the vertical and horizontal direction adjustment lever.</p>
+				</li>
+				<li>
+					<p>Push the front and rear (if equipped) ventilation outlet open/close lever all the way to the closed position (<image align="left" href="../../images/WKIA_065.eps" scale="15" placement="inline"/>) to close the ventilation outlet.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

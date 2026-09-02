@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_019_01" id="CL4m_HEV-ca_ES-2027-t0045">
+	<title id="e00114">So registrieren Sie den Digital-Key 2 (Smartphone) </title>
+	<conbody>
+		<p>Der digitale Schlüssel 2 von Kia kann nur mit Smartphones verwendet werden, die diese Funktion unterstützen, wobei die Funktion des digitalen Schlüssels 2 des Smartphones vom Hersteller des Smartphones bereitgestellt wird. Manche Funktionen funktionieren möglicherweise nicht, je nachdem, ob das Fahrzeug mit einem solchen Dienst ausgestattet ist.</p>
+		<p>Während der Aktualisierung des Controllers des digitalen Schlüssel 2 funktioniert die Smart-Key-Funktion möglicherweise vorübergehend nicht. In diesem Fall kann sie mit der Türver-/Entriegelungstaste des Smart-Key bedient werden.</p>
+		<section>
+			<title>Smartphone einrichten</title>
+			<p>Um die Digital-Key-2-Funktion (Smartphone) nutzen zu können, installieren Sie die Kia App oder die Kia Connect App auf Ihrem Smartphone, registrieren Sie Ihre Daten und abonnieren Sie den Dienst.</p>
+		</section>
+		<section>
+			<title>Registrierung eines Smartphone</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OMV033187N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout">
+									<li>
+										<p>Smartphone-Schlüssel</p>
+									</li>
+									<li>
+										<p>Mein Smartphone-Schlüssel</p>
+									</li>
+									<li>
+										<p>Speichern</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol>
+				<li>
+					<p>Schalten Sie das Fahrzeug mit dem Smart-Key ein und achten Sie darauf, dass der Smart-Key während der Registrierung des digitalen Schlüssels im Fahrzeug verbleibt.</p>
+				</li>
+				<li>
+					<p>Schalten Sie auf P (Parken), drücken Sie auf Ihrem Smartphone in der Kia App oder der KIA Connect-App auf Registrieren der Einstellungen für den digitalen Schlüssel des Fahrzeugs und registrieren Sie sich gemäß der Anleitung in der App.</p>
+					<ul id="e00115">
+						<li>
+							<p>Bei Smartphones ohne UWB-Unterstützung legen Sie die NFC-Antenne des Smartphones auf die Mitte des kabellosen Ladepads (1).</p>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e00116">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig id="e00117">
+													<figgroup>
+														<image align="center" href="../../images/OCL4M035060L.eps" scale="95" placement="break"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="e00118">
+													<li>
+														<p>Ladestation</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+						</li>
+						<li>
+							<p>Bei Smartphones mit UWB-Unterstützung kann der Digital-Key drahtlos registriert werden, auch ohne das Smartphone auf das Authentifizierungspad im Innenraum (kabelloses Ladepad) (1) zu legen – es genügt, das Smartphone im Fahrzeug mitzuführen.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Wenn der digitale Schlüssel (Smartphone) gespeichert ist, erscheint eine Meldung auf dem Kombiinstrument oder auf dem Bildschirm des Infotainment-Systems.</p>
+				</li>
+			</ol>
+			<note deliveryTarget="full_only" type="tip" id="e00119">
+				<ul id="e00120">
+					<li>
+						<p>Das Infotainment-System kann sich nach Aktualisierungen ändern. Weitere Informationen finden Sie in der Anleitung des Infotainment-Systems und in der Kurzanleitung.</p>
+					</li>
+					<li>
+						<p>Fahrzeug</p>
+						<p>Wenn bereits ein digitaler Schlüssel (Smartphone) im Fahrzeug gespeichert ist, wird am Infotainment-System-Menübildschirm des <uicontrol>Smartphone-Schlüssels</uicontrol><uicontrol>Alle löschen</uicontrol> angezeigt und auf dem Bildschirm <uicontrol>Mein Smartphone-Schlüssel</uicontrol> wird <uicontrol>Löschen</uicontrol> angezeigt. Wenn Sie wieder einen Digital-Key speichern möchten, <xref href="CL4m_HEV-ca_ES-2027-t0047.dita#CL4m_HEV-ca_ES-2027-t0047"/>.</p>
+					</li>
+					<li>
+						<p>Smartphone</p>
+						<p>Der digitale Schlüssel kann nicht erneut gespeichert werden, solange der digitale Schlüssel des Fahrzeugs auf dem Smartphone des Besitzers gespeichert ist. Speichern Sie den digitalen Schlüssel nach dem Löschen des digitalen Schlüssels in der OEM Wallet App des Smartphones oder im Fahrzeug.</p>
+					</li>
+					<li>
+						<p>Während des Speicherverfahrens für den digitalen Schlüssel 2 wird das Verfahren abgebrochen, wenn:</p>
+						<ul id="e00121">
+							<li>
+								<p>Das Smartphone aus dem fahrzeugeigenen Authentifizierungspad (kabelloses Ladepad) entfernt wird</p>
+							</li>
+							<li>
+								<p>Ändern des Bildschirms des Infotainment-Systems oder des Kombiinstruments</p>
+							</li>
+							<li>
+								<p>Das Fahrzeug ausgeschaltet ist.</p>
+							</li>
+							<li>
+								<p>Der Gang ist eingelegt.</p>
+							</li>
+							<li>
+								<p>Es gibt keinen Smart-Key (das Verfahren zum Speichern wird nicht gestartet)</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>Da das Authentifizierungspad im Fahrzeug (kabelloses Ladepad) je nach der internen Struktur der Smartphones möglicherweise nicht reibungslos funktioniert, kann der digitale Schlüssel möglicherweise nicht registriert werden. In diesem Fall registrieren Sie das Verfahren, indem Sie das Smartphone nach links oder rechts vom fahrzeuginternen Authentifizierungspad (kabelloses Ladepad) bewegen.</p>
+					</li>
+					<li>
+						<p>UWB (Ultra Wide Band) steht für kabellose Ultrabreitband-Kommunikationstechnologie. NFC (Near Field Communication) steht für kabellose Kommunikation mit kurzer Reichweite.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>Wenn er nicht in der Kia App bzw. nicht in der KIA Connect-App auf Ihrem Smartphone registriert ist</title>
+			<p>Auch wenn Sie Ihr Smartphone auf das Authentifizierungspad im Fahrzeug legen und die Meldung <uicontrol>Registrierung läuft</uicontrol> nicht auf dem Bildschirm des Infotainmentsystems angezeigt wird, können Sie es wie folgt registrieren.</p>
+			<ol>
+				<li>
+					<p>Nachdem Sie das Fahrzeug ausgeschaltet (<term translate="no">OFF</term>) haben, schalten Sie es mit dem Smart-Key wieder auf <term translate="no">ON</term> und legen Sie den Smart-Key in das Fahrzeug.</p>
+				</li>
+				<li>
+					<p>Wählen Sie <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Digitale Schlüssel </uicontrol><uicontrol>Smartphone-Schlüssel</uicontrol><uicontrol>Mein Smartphone-Schlüssel</uicontrol></menucascade> auf dem Bildschirm des Infotainment-Systems, während sich das Fahrzeug in der Stellung P (Parken) befindet.</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCV034131L.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>Bringen Sie die NFC-Antenne des Smartphones in die Mitte des Innenraum-Authentifizierungspads (kabelloses Ladepad)</p>
+				</li>
+			</ol>
+			<p>Wenn der digitale Schlüssel (Smartphone) gespeichert wird, erscheint eine Meldung auf dem Bildschirm des Infotainment-Systems.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0044.dita#CL4m_HEV-ca_ES-2027-t0044" role="parent" scope="local" type="concept">
+				<linktext>Digital-Key 2 (Smartphone)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

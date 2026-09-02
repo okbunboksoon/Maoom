@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0791">
+	<title>Manuelle Unfallmeldung</title>
+	<conbody>
+		<table frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="0.222*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.022*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" align="right">
+							<p>1</p>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M065051L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1" align="right">
+							<p>2</p>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCV061027L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1" align="right">
+							<p>3</p>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCV061028L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Der Fahrer oder Beifahrer kann einen Notruf an die Notrufzentrale (PSAP) manuell durch Drücken der Taste <term translate="no">SOS</term> tätigen, um die entsprechenden Rettungsdienste anzurufen.</p>
+		<p>Ein Anruf beim Rettungsdienst über das Notruf-System (eCall) kann durch erneute Betätigung der Taste <term translate="no">SOS</term> innerhalb von 3 Sekunden nur abgebrochen werden, wenn die Verbindung noch nicht aufgebaut ist.</p>
+		<p>Nach manueller Aktivierung des Notrufs (zur Verständigung des Rettungsdienstes und der Unfallhilfe) sendet das Notruf-System (eCall) während des Notrufs automatisch die Daten des Verkehrsunfalls bzw. eines sonstigen Notfalls an den Mitarbeiter der Notrufzentrale (PSAP), sobald die <term translate="no">SOS</term>-Taste gedrückt ist.</p>
+		<p>Wenn der Fahrer oder Beifahrer versehentlich die Taste <term translate="no">SOS</term> drückt, kann er die Funktion durch erneutes Drücken der Taste innerhalb von 3 Sekunden abbrechen, wenn die Verbindung noch nicht aufgebaut ist. Danach kann der Verbindungsaufbau nicht mehr rückgängig gemacht werden.</p>
+		<p>Im Falle eines Verkehrsunfalls oder eines anderen Unfalls ist für die Auslösung eines Notrufs im manuellen Modus Folgendes erforderlich:</p>
+		<ol id="e01350">
+			<li>
+				<p>Halten Sie das Fahrzeug entsprechend den Verkehrsregeln an, um die Sicherheit für sich und andere Verkehrsteilnehmer zu gewährleisten.</p>
+			</li>
+			<li>
+				<p>Drücken Sie die Taste <term translate="no">SOS</term>, die die Registrierung des Geräts über das Mobilfunknetz einleitet und eine minimale Menge an Daten über das Fahrzeug und seinen Standort sendet, die gemäß den technischen Anforderungen des Dienstes gesammelt wurden.</p>
+				<p>Danach wird ein direkter Kontakt mit einem Mitarbeiter des Notruf-Systems (eCall) hergestellt, um die Gründe für den Notruf und die damit verbundenen Umstände zu ermitteln.</p>
+			</li>
+			<li>
+				<p>Nach Feststellung der Gründe des Notrufs sendet der Mitarbeiter der Notrufzentrale (PSAP) Rettungsdienste aus und beendet den Notruf.</p>
+			</li>
+		</ol>
+		<p>Wird der Notruf nicht gemäß dem vorstehend genannten Verfahren ausgeführt, wird der Ruf als irrtümlicher Anruf betrachtet.</p>
+		<note type="warning" id="e01351">
+			<p importance="high">Notstromversorgung des Notruf-Systems (eCall) von der Batterie</p>
+			<ul id="e01352">
+				<li>
+					<p>Die Batterie des Notruf-Systems (eCall) liefert 1 Stunde lang Strom, wenn die Hauptstromquelle des Fahrzeugs aufgrund der Kollision in der Notsituation abgeschnitten wurde.</p>
+				</li>
+				<li>
+					<p otherprops="legal_gen_std_008_04">Die Batterie des Notruf-System (eCall) sollte alle 4 Jahre ausgetauscht werden. Weitere Informationen finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0804.dita#CL4m_HEV-ca_ES-2027-t0804"/>.</p>
+				</li>
+			</ul>
+		</note>
+		<section id="e01353">
+			<title>SOS-Warnleuchte (Systemfehlfunktion)</title>
+			<p>Wenn die Warnleuchte <term translate="no">SOS</term> auf dem Kombiinstrument bei normaler Fahrt eingeschaltet bleibt, kann dies auf eine Fehlfunktion des Notruf-Systems (eCall) hindeuten. Lassen Sie die Anlage von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners. Anderenfalls kann der korrekte Betrieb des in Ihrem Fahrzeug angebrachten Geräts des Notruf-Systems (eCall) nicht garantiert werden. Der Eigentümer des Fahrzeugs trägt die Verantwortung für Konsequenzen, die als Folge der Nichtbefolgung der vorstehend genannten Bedingungen entstehen.</p>
+		</section>
+		<section id="e01354">
+			<title>Eigenmächtiger Ausbau oder Modifikation</title>
+			<p>Das Notruf-System (eCall) ruft Rettungsdienste zur Hilfe. Eine willkürliche Entfernung oder Veränderungen an den Einstellungen des Notruf-Systems (eCall) können daher die Fahrsicherheit beeinträchtigen. Es kann zudem irrtümlicherweise einen Notruf an die Notrufzentrale (PSAP) vornehmen. Sie werden daher gebeten, selbst oder durch Dritte keine Änderungen an den Einstellungen der in Ihrem Fahrzeug angebrachten Ausrüstung des Notruf-Systems (eCall) vorzunehmen.</p>
+		</section>
+		<section otherprops="legal_gen_std_008_05" id="e01355">
+			<title>eCall-Zertifizierungssiegel</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01356">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01357">
+									<figgroup>
+										<image align="center" href="../../../images/KIAPB003.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e01358">
+									<figgroup>
+										<image align="center" href="../../../images/KIAPB004.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+						<row>
+							<entry colname="col1">
+								<fig id="e01359">
+									<figgroup>
+										<image align="center" href="../../../images/KIAPB005.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e01360">
+									<figgroup>
+										<image align="center" href="../../../images/KIAPB006.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0789.dita#CL4m_HEV-ca_ES-2027-t0789" role="parent" scope="local" type="concept">
+				<linktext>Bedienung des Notruf-Systems (eCall)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

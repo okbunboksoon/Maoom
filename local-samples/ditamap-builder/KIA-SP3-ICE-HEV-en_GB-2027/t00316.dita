@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00316">
+	<title>Checking the amount of air conditioner (A/C) refrigerant and compressor lubricant</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>climate control system
+					<indexterm>checking the amount of air conditioner (A/C) refrigerant</indexterm>
+				</indexterm>
+				<indexterm>climate control system
+					<indexterm>checking the amount of compressor lubricant</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Low refrigerant reduces the <term translate="no">A/C</term> system performance. Overfilling the refrigerant also adversely impacts the <term translate="no">A/C</term> system.</p>
+		<p>If abnormal operation occurs, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="danger" id="e02012">
+			<p>The oil and refrigerant in your vehicle’s <term translate="no">A/C</term> system are under very high pressure. If proper service procedures are not followed, an explosion may result. To reduce the risk of serious injury or death, the <term translate="no">A/C</term> system in your vehicle should only be serviced by trained and certified Kia technicians.</p>
+		</note>
+		<note type="warning" id="e02013">
+			<p>Vehicles equipped with R-134a</p>
+			<p><image href="images/WKIA_315.jpg" scale="50"/></p>
+			<p>Because the refrigerant is at very high pressure, the air conditioning system should only be serviced by trained and certified technicians. It is important that the correct type and amount of oil and refrigerant is used.</p>
+			<p>Otherwise, it may cause damage to the vehicle and personal injury.</p>
+		</note>
+		<note type="warning" id="e02014">
+			<p>Vehicles equipped with R-1234yf</p>
+			<p><image href="images/WKIA_067.jpg" scale="50"/></p>
+			<p>It is important that you use the correct type and amount of oil and refrigerant. Reclaim all refrigerants with the proper equipment. Venting refrigerants directly to the atmosphere is harmful to individuals and the environment. Failure to heed these warnings can lead to serious injuries.</p>
+		</note>
+		<note type="note" id="e02015">
+			<p>It is important that you use the correct type and amount of oil and refrigerant. Otherwise, damage to the vehicle may occur. To prevent damage, the <term translate="no">A/C</term> system in your vehicle should only be serviced by trained and certified technicians.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00312.dita#t00312" role="parent" scope="local" type="concept">
+				<linktext>Climate control system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

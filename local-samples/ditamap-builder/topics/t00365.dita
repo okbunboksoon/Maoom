@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00365">
+	<title id="e02624">Air ventilation seat</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features 
+					<indexterm>air ventilation seat</indexterm>
+				</indexterm>
+				<indexterm>air ventilation seat</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02625">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02626">
+								<figgroup>
+									<image href="../../images/OOV035053.eps" align="center" height="1.740in" placement="break" id="e02627"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The temperature setting of the seat changes according to the switch position.</p>
+		<ul>
+			<li>
+				<p>To ventilate your seat cushion, press the switch.</p>
+				<p>Each time you press the switch, the airflow will change as follows:</p>
+				<p> <term>OFF</term> &gt; <term>High</term> &gt; <term>Medium</term> &gt; <term>Low</term> &gt; <term>OFF</term> </p>
+			</li>
+		</ul>
+		<p>The seat warmer (with air ventilation) defaults to the <i>OFF</i> position whenever the <term translate="no">EV</term> button is turned on.</p>
+		<note type="caution">
+			<p importance="high">Seat damage</p>
+			<p>When cleaning the seats, do not use an organic solvent such as paint thinner, benzene, alcohol and gasoline. Doing so may damage the air ventilation seat.</p>
+		</note>
+	</conbody>
+</concept>

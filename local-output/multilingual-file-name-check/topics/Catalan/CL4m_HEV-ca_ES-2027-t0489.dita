@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0489">
+	<title>Spurhalteassistent deaktiviert</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054164N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Fahrerassistenzsystem eingeschränkt. Kamerasicht eingeschränkt.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn Fremdkörper wie Schnee oder Regen die Sensoren oder die Windschutzscheibe, an der sich die Frontkamera befindet, blockieren, kann die Erkennungsleistung verringert sein, was dazu führt, dass die Funktion des Spurhalteassistenten vorübergehend eingeschränkt oder deaktiviert ist.</p>
+		<p>In diesem Fall wird eine Warnmeldung mit der Hauptwarnleuchte (<image align="left" href="../../images/WKIA_040.eps" scale="15" placement="inline"/>) und den Spursicherheit-Warnleuchten (<image align="left" href="../../images/WKIA_198.eps" scale="15" placement="inline"/>) auf dem Kombiinstrument angezeigt. Dies ist ganz normal.</p>
+		<p>Der Spurhalteassistent funktioniert einwandfrei, nachdem Schnee, Regen und Fremdkörpern entfernt wurden. Halten Sie es immer sauber.</p>
+		<p>Wenn der Spurhalteassistent nach dem Reinigen von Fremdkörpern (Schnee, Regen usw.) oder dem Entfernen von Hindernissen (z. B. Anhänger, Gepäckträger usw. vom hinteren Stoßfänger) immer noch nicht richtig funktioniert, lassen Sie Ihr Fahrzeug in einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Auch wenn die Warnmeldung oder die Warnleuchte nicht auf dem Kombiinstrument erscheint, funktioniert der Spurhalteassistent möglicherweise nicht normal.</p>
+				</li>
+				<li>
+					<p>Auch nach dem erneuten Starten des Fahrzeugs funktioniert der Spurhalteassistent möglicherweise nicht einwandfrei, wenn das Hindernis oder die Störung weiterhin besteht.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Sie können dies in der Servicemeldung in der Ansicht nützlicher Informationen der Anzeige des Kombiinstruments überprüfen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0488.dita#CL4m_HEV-ca_ES-2027-t0488" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion des Spurhalteassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00646">
+	<title>Driving to one side within lane</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig importance="optional">
+								<figgroup>
+									<image href="../../images/OOV055062.eps" align="center" placement="break" height="1.573in" width="2.243in"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>When vehicle speed is above 60 km/h (40 mph), if a vehicle around you is driving at a close distance, your vehicle will control steering in the opposite direction of the vehicle to assist in safe driving. If there are vehicles in both sides of the lane that are driving close to you, the function will not veer to the opposite side of the lane.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

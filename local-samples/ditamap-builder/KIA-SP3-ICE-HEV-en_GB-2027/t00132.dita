@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00132">
+	<title>Reverse parking aid function</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>outside rear view mirror
+					<indexterm>reverse parking aid function</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>When you shift the gear to the R (Reverse) position, the outside rearview mirrors will rotate downward to aid in driving in reverse.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00660">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00661">
+								<image href="images/N_SP3i26_B05_014_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00662">
+								<image href="images/N_SP3i26_B05_019_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The position of the outside rearview mirror switch (1) determines whether or not the mirrors will move.</p>
+		<p>Left or right: When you select either the L (Left) or R (Right) switch, both of the outside rearview mirrors move.</p>
+		<p>Neutral: When you do not select either switch, the outside rearview mirrors will not move.</p>
+		<p>The outside rearview mirrors will automatically revert to their original positions in the following cases:</p>
+		<ul>
+			<li>
+				<p>You set the vehicle set to either <term translate="no">OFF</term> or <term translate="no">ACC</term>.</p>
+			</li>
+			<li>
+				<p>You shift the gear to any position except R (Reverse).</p>
+			</li>
+			<li>
+				<p>You do not select the remote control outside rearview mirror switch.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00127.dita#t00127" role="parent" scope="local" type="concept">
+				<linktext>Outside rearview mirror </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

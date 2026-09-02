@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00423">
+	<title>Brake Assist System (BAS)</title>
+	<shortdesc>Brake Assist System (BAS) provides additional pressure when the brake pedal is momentarily and strongly depressed in a situation sudden braking is required while driving.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle safety system 
+					<indexterm>brake assist system (BAS)</indexterm>
+				</indexterm>
+				<indexterm>brake assist system (BAS)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>BAS reduces the time for ABS control to enter and consequently reduces the braking distance, by providing additional pressure up to the point of ABS intervention.</p>
+		<p>When the vehicle speed is more than 30 km/h (20 mph) and the ABS control is not entered. When the brake pedal is depressed strongly over a certain level. When the friction of the road surface is above a certain level.</p>
+		<section id="e03084">
+			<title>Non-operating conditions</title>
+			<ul id="e03085">
+				<li>
+					<p>The vehicle speed is below 10 km/h (6 mph)</p>
+				</li>
+				<li>
+					<p>The brake pedal is depressed over certain conditions</p>
+				</li>
+				<li>
+					<p>The friction of the road surface is below a certain level.</p>
+				</li>
+			</ul>
+			<note type="warning" id="e03086">
+				<p>BAS may not operate depending on driver’s driving habit, the degree to which the brake pedal is depressed and the road surface condition.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

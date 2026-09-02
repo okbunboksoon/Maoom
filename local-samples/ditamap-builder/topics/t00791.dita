@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00791">
+	<title>Washer fluid</title>
+	<conbody>
+		<p>The reservoir is translucent so that you can check the level with a quick visual inspection.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05067">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05068">
+								<figgroup>
+									<image href="../../images/OOV075031.eps" align="center" height="1.575in" placement="break" id="e05069"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e05070">
+			<li>
+				<p>Check the fluid level in the washer fluid reservoir and add fluid if necessary. Plain water may be used if washer fluid is not available.</p>
+				<p>However, use washer solvent with antifreeze characteristics in cold climates to prevent freezing.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e05071">
+			<p importance="high">Washer fluid</p>
+			<ul id="e05072">
+				<li>
+					<p>Do not use coolant or antifreeze in the washer fluid reservoir.</p>
+				</li>
+				<li>
+					<p>Coolant can severely obscure visibility when sprayed on the windshield and may cause loss of vehicle control or damage to paint and body trim.</p>
+				</li>
+				<li>
+					<p>Windshield Washer fluid agents contain some amounts of alcohol and can be flammable under certain circumstances. Do not allow sparks or flame to contact the washer fluid or the washer fluid reservoir. Damage to the vehicle or occupants could occur.</p>
+				</li>
+				<li>
+					<p>Windshield washer fluid is poisonous to humans and animals. Do not drink and avoid contacting windshield washer fluid. Serious injury or death could occur.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

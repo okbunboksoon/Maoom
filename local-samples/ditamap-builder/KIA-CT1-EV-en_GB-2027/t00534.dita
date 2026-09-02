@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00534">
+	<title>Lane-Change Side function</title>
+	<conbody>
+		<p>The for Lane-change side function is warned and controlled in the following way.</p>
+		<ul id="e02097">
+			<li>
+				<p>Collision Warning</p>
+			</li>
+			<li>
+				<p>Emergency Steering</p>
+			</li>
+		</ul>
+		<note type="note" id="e02098">
+			<ul id="e02099">
+				<li>
+					<p>The following warning message will appear on the LCD display.</p>
+					<p>For more details, refer to the warning and control section of the function.</p>
+					<ul id="e02100">
+						<li>
+							<p importance="high">Collision warning</p>
+						</li>
+						<li>
+							<p importance="high">Emergency steering</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

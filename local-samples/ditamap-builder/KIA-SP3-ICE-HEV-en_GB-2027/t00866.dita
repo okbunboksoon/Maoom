@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00866">
+	<title>Snow tires</title>
+	<shortdesc>If you equip your vehicle with snow tires, they should be the same size and have the same load capacity as the original tires.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tires and wheels
+					<indexterm>snow tires</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Install snow tires on all four wheels. Doing otherwise may result in poor handling.</p>
+		<p>Snow tires should carry 28 kPa (4 psi) more air pressure than the pressure recommended for standard tires on the tire label on the driver side center pillar, or up to the maximum pressure shown on the tire sidewall, whichever is less.</p>
+		<p>Do not drive at speeds above 120 km/h (75 mph) when your vehicle is equipped with snow tires.</p>
+		<note type="warning" id="e05095">
+			<p>Do not use summer tires at temperatures below 7°C (45°F) or when driving on snow or ice. At temperatures below 7°C (45°F), summer tires can lose elasticity, and therefore lose traction and braking power. Change the tires on your vehicle to winter or all season tires of the same size as the standard tires on the vehicle. Both types of tires are identified by the M+S (Mud and Snow) marking. Using summer tires at very cold temperatures could cause cracks to form and permanently damage the tires.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00850.dita#t00850" role="parent" scope="local" type="concept">
+				<linktext>Tires and wheels</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

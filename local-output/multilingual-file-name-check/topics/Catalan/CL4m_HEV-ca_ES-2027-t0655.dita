@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0655">
+	<title>Abbruch der Autobahn-Fahrspurwechselhilfe</title>
+	<conbody>
+		<p>Die Funktion wird unter folgenden Umständen deaktiviert:</p>
+		<ul>
+			<li>
+				<p>Der Blinkerhebel wird in die entgegengesetzte Richtung des Fahrspurwechsels gedreht</p>
+			</li>
+			<li>
+				<p>Das Lenkrad wird scharf eingelenkt.</p>
+			</li>
+			<li>
+				<p>Wenn der Blinkerschalter während des Betriebs des Spurwechselassistenten in Position (A) gebracht wird und dann vor dem Spurwechsel in die N-Position (Neutralstellung) zurückkehrt</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Während die Funktion läuft, wird sie abgebrochen, wenn einer der folgenden Fälle eintritt:</p>
+					<ul>
+						<li>
+							<p>Der Autobahn-Fahrassistent ist ausgeschaltet.</p>
+						</li>
+						<li>
+							<p>Der Spurfolgeassistent oder die intelligente Tempomatsteuerung ist ausgeschaltet oder vorübergehend deaktiviert.</p>
+						</li>
+						<li>
+							<p>Die Lenkradwarnung wird auf dem Kombiinstrument angezeigt.</p>
+						</li>
+						<li>
+							<p>Der Blinkerhebel befindet sich in Stellung (A).</p>
+						</li>
+						<li>
+							<p>Die Warnblinkanlage wird eingeschaltet</p>
+						</li>
+						<li>
+							<p>Die Warnmeldung des Frontalkollisions-Vermeidungsassistenten oder des Totwinkel-Kollisionsvermeidungsassistent wird angezeigt.</p>
+						</li>
+						<li>
+							<p>Es werden mögliche Kollisionen auf der benachbarten Spur erkannt, auch wenn der Frontalkollisions-Vermeidungsassistent und das Totwinkel-Erkennungssystem keine Warnung ausgeben.</p>
+						</li>
+						<li>
+							<p>Fahrten auf einer im Bau befindlichen Straße</p>
+						</li>
+						<li>
+							<p>Die Zielspur verschwindet.</p>
+						</li>
+						<li>
+							<p>Die Zielspur wird nicht erkannt.</p>
+						</li>
+						<li>
+							<p>Es gibt ein Problem mit den Blinkleuchten.</p>
+						</li>
+						<li>
+							<p>Die Autobahn-Fahrspurwechselhilfe ist ausgeschaltet. (Die Funktion schaltet sich aus, wenn sie über das Einstellungsmenü ausgeschaltet wird, wenn die Straße in eine Einbahnstraße umgewandelt wird, wenn eine Kreuzung oder ein Zebrastreifen vor Ihnen ist, wenn Sie in eine Straße einfahren, auf der sich keine Struktur befindet, wie z. B. ein Mittelstreifen, eine Leitplanke usw., oder wenn sich ein Fußgänger oder Radfahrer auf der Fahrspur befindet).</p>
+						</li>
+						<li>
+							<p>Verlangsamt sich die Fahrgeschwindigkeit im Zustand Betriebsbereit auf weniger als 25 km/h (15 mph), wechselt das Gerät in den Standby-Modus.</p>
+						</li>
+						<li>
+							<p>Bei niedrigen Geschwindigkeiten (30 – 60 km/h (20 – 40 mph)) wechselt das Fahrzeug in den Standby-Zustand, wenn es von Fahrzeugen auf der linken und rechten Nachbarspur nicht erkannt wird.</p>
+						</li>
+						<li>
+							<p>Bei Erkennung eines Kollisionsrisikos</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Wenn die Funktion während des Betriebs deaktiviert wird, kann das Fahrzeug je nach Fahrbedingungen in die Mitte der Fahrspur fahren oder die Lenkung anhalten. Achten Sie stets auf die Straßen- und Fahrbedingungen.</p>
+				</li>
+				<li>
+					<p>Die Funktion funktioniert auf Straßen mit Fußgängern oder Radfahrern, beispielsweise an einer Kreuzung oder einem Zebrastreifen, möglicherweise nicht richtig. Achten Sie stets auf die Straßen- und Fahrbedingungen.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0650.dita#CL4m_HEV-ca_ES-2027-t0650" role="parent" scope="local" type="concept">
+				<linktext>Autobahn-Fahrspurwechselhilfe</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

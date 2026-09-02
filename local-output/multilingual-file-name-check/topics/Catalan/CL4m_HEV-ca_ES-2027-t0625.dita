@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0625">
+	<title>Einschränkungen der navigationsgestützten intelligenten Tempomatsteuerung</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Navigationsgestützte intelligente Tempomatsteuerung (NSCC)
+					<indexterm>Einschränkungen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Unter folgenden Umständen funktioniert die navigationsgestützte intelligente Tempomatsteuerung möglicherweise nicht richtig:</p>
+		<ul>
+			<li>
+				<p>Das Navigationssystem funktioniert nicht richtig.</p>
+			</li>
+			<li>
+				<p>Karteninformationen werden aufgrund einer Fehlfunktion des Infotainment-Systems nicht übertragen.</p>
+			</li>
+			<li>
+				<p>Die Karteninformationen und die tatsächliche Straße weichen aufgrund von Fehlern der Echtzeit-GPS-Daten oder aufgrund von Fehlern der Kartenangaben voneinander ab.</p>
+			</li>
+			<li>
+				<p>Das Navigationssystem sucht während der Fahrt nach einer Route.</p>
+			</li>
+			<li>
+				<p>GPS-Signale werden in Bereichen wie Tunneln blockiert</p>
+			</li>
+			<li>
+				<p>Das Fahrzeug fährt in eine Tankstelle oder auf einen Rastplatz.</p>
+			</li>
+			<li>
+				<p>Android Auto oder CarPlay ist in Betrieb.</p>
+			</li>
+			<li>
+				<p>Das Navigationssystem kann die aktuelle Fahrzeugposition nicht erkennen (z. B. Hochstraßen, einschließlich Überführungen, verlaufen neben allgemeinen Straßen oder es gibt parallel verlaufende Straßen).</p>
+			</li>
+			<li>
+				<p>Das Navigationssystem wird während der Fahrt aktualisiert.</p>
+			</li>
+			<li>
+				<p>Das Navigationssystem wird während der Fahrt neu gestartet.</p>
+			</li>
+			<li>
+				<p>Die Geschwindigkeitsbegrenzung einiger Abschnitte ändert sich je nach den Straßenverhältnissen.</p>
+			</li>
+			<li>
+				<p>Fahrten auf einer im Bau befindlichen Straße</p>
+			</li>
+			<li>
+				<p>Fahrten auf einer Straße mit kontrollierten Auf- und Abfahrten</p>
+			</li>
+			<li>
+				<p>Bei schlechtem Wetter, wie starkem Regen und starkem Schneefall.</p>
+			</li>
+			<li>
+				<p>Fahrten auf einer Straße mit scharfer Kurve</p>
+			</li>
+		</ul>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054037N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Festgelegte Navigationsroute</p>
+								</li>
+								<li>
+									<p>Nebenstrecke</p>
+								</li>
+								<li>
+									<p>Fahrtroute</p>
+								</li>
+								<li>
+									<p>Hauptstrecke</p>
+								</li>
+								<li>
+									<p>Kurviger Straßenabschnitt</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Wenn es einen Unterschied zwischen der festgelegten Navigationsroute (Nebenstrecke) und der Fahrtroute (Hauptstrecke) gibt, kann die Funktion zur automatischen Verzögerung in Autobahnkurven erst funktionieren, wenn die Fahrtroute als Hauptstrecke erkannt wird.</p>
+			</li>
+			<li>
+				<p>Wenn die Fahrtroute des Fahrzeugs als Hauptstrecke erkannt und anstelle der eingestellten Navigationsroute beibehalten wird, wird die Funktion zur automatischen Verzögerung in Autobahnkurven aktiv. Je nach dem Abstand zur Kurve und der aktuellen Fahrzeuggeschwindigkeit kann die Fahrzeugverzögerung nicht ausreichend sein oder das Fahrzeug schnell gebremst werden.</p>
+			</li>
+		</ul>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054038N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Hauptstrecke</p>
+								</li>
+								<li>
+									<p>Nebenstrecke</p>
+								</li>
+								<li>
+									<p>Fahrtroute</p>
+								</li>
+								<li>
+									<p>Festgelegte Navigationsroute</p>
+								</li>
+								<li>
+									<p>Kurviger Straßenabschnitt</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Wenn es einen Unterschied zwischen der Navigationsroute (Hauptstrecke) und der Fahrstrecke (Nebenstrecke) gibt, arbeitet die Funktion zur automatischen Verzögerung in Autobahnkurven vorübergehend mit den Kurveninformationen für die Hauptstrecke.</p>
+			</li>
+			<li>
+				<p>Wenn das System feststellt, dass Sie die Route durch die Einfahrt in das Autobahnkreuz oder die Kreuzung verlassen, funktioniert die automatische Verzögerung in Autobahnkurven nicht.</p>
+			</li>
+		</ul>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054039N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Fahrtroute</p>
+								</li>
+								<li>
+									<p>Nebenstrecke</p>
+								</li>
+								<li>
+									<p>Kurviger Straßenabschnitt</p>
+								</li>
+								<li>
+									<p>Hauptstrecke</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Wenn kein Ziel im Navigationssystem festgelegt wurde, arbeitet die Funktion zur automatischen Verzögerung in Autobahnkurven mit den Kurveninformationen der Hauptstrecke.</p>
+			</li>
+			<li>
+				<p>Selbst wenn Sie von der Hauptstraße abfahren, kann die Funktion zur automatischen Verzögerung in Autobahnkurven aufgrund von Navigationsinformationen des Autobahnkurvenabschnitts vorübergehend aktiviert sein.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Die vom Navigationssystem unterstützte intelligente Tempomatsteuerung ist kein Ersatz für sicheres Fahren, sondern nur eine Komfortfunktion. Behalten Sie immer die Straße im Auge, und halten Sie die Straßenverkehrsordnung ein.</p>
+				</li>
+				<li>
+					<p>Die Geschwindigkeitsbegrenzungsangabe der Navigation kann von der tatsächlich Geschwindigkeitsbegrenzung für die Straße abweichen. Es liegt in der Verantwortung des Fahrers, die Geschwindigkeitsbeschränkung auf der tatsächlichen Fahrstrecke oder Fahrspur zu prüfen.</p>
+				</li>
+				<li>
+					<p>Die Funktion Automatische Verzögerung in Autobahnkurven wird automatisch abgebrochen, wenn Sie die Fernstraße (bzw. Autobahn) verlassen, um auf die normale Straße oder den Bereich (Autobahnkreuz, Kreuzung, Rastplatz usw.) einzufahren.</p>
+				</li>
+				<li>
+					<p>Die navigationsgestützte intelligente Tempomatsteuerung funktioniert aufgrund des Vorhandenseins vorausfahrender Fahrzeuge und der Fahrbedingungen des Fahrzeugs möglicherweise nicht. Achten Sie während der Fahrt immer auf die Straßen- und Fahrbedingungen.</p>
+				</li>
+				<li>
+					<p>Wenn Sie einen Anhänger oder etwas ähnliches ziehen, reicht die Verzögerung des Fahrzeugs möglicherweise nicht aus. Fahren Sie stets umsichtig.</p>
+				</li>
+				<li>
+					<p>Wenn Sie eine Mautstelle auf einer Autobahn passiert haben, arbeitet die navigationsgestützte intelligente Tempomatsteuerung für die erste Fahrspur. Wenn Sie in eine der anderen Spuren einfahren, funktioniert die navigationsgestützte intelligente Tempomatsteuerung möglicherweise nicht einwandfrei.</p>
+				</li>
+				<li>
+					<p>Das Fahrzeug beschleunigt, wenn der Fahrer das Gaspedal tritt und die navigationsgestützte intelligente Tempomatsteuerung aktiv ist, und die Funktion bremst das Fahrzeug nicht ab. Wenn das Gaspedal jedoch nur unzureichend durchgedrückt wird, kann das Fahrzeug abbremsen.</p>
+				</li>
+				<li>
+					<p>Wenn der Fahrer beschleunigt und das Gaspedal freigibt, während die navigationsgestützte intelligente Tempomatsteuerung aktiv ist, wird das Fahrzeug möglicherweise nicht ausreichend verzögert oder schnell auf eine sichere Geschwindigkeit abgebremst.</p>
+				</li>
+				<li>
+					<p>Wenn die Kurve zu groß oder zu klein ist, funktioniert die navigationsgestützte intelligente Tempomatsteuerung möglicherweise nicht.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Es kann zu einer zeitlichen Verzögerung zwischen der Routenführung der Navigation und dem Beginn und Ende des Betriebs der navigationsgestützten intelligenten Tempomatsteuerung kommen.</p>
+				</li>
+				<li>
+					<p>Die Geschwindigkeitsinformationen auf dem Kombiinstrument und im Navigationssystem können sich unterscheiden.</p>
+				</li>
+				<li>
+					<p>Selbst wenn Sie mit einer Geschwindigkeit fahren, die niedriger ist als die von der intelligenten Tempomatsteuerung eingestellte Geschwindigkeit, kann die Beschleunigung durch die vor Ihnen liegenden Kurvenabschnitte begrenzt sein.</p>
+				</li>
+				<li>
+					<p>Wenn die navigationsbasierte intelligente Tempomatsteuerung aktiv ist, wenn Sie die Hauptfahrbahn verlassen, um in ein Autobahnkreuz, eine Anschlussstelle oder eine Rastanlage, usw. einzufahren, kann die Funktion noch einige Zeit in Betrieb sein.</p>
+				</li>
+				<li>
+					<p>Die Verzögerung durch die navigationsgestützte intelligente Tempomatsteuerung kann aufgrund der Straßenverhältnisse wie unebenen Fahrbahnen und engen Gassen als nicht ausreichend empfunden werden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0615.dita#CL4m_HEV-ca_ES-2027-t0615" role="parent" scope="local" type="concept">
+				<linktext>Navigationsgestützte intelligente Tempomatsteuerung (NSCC)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

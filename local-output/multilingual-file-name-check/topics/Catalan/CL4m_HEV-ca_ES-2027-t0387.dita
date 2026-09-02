@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0387">
+	<title>ABS-Bremssystem</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Bremsanlage
+					<indexterm>ABS-Bremssystem</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<note type="warning">
+			<p>ABS (oder ESC) kann Unfälle infolge unangemessener Fahrweise oder riskanter Fahrmanöver nicht verhindern. Obwohl die Kontrolle über das Fahrzeug bei Notbremsungen verbessert wird, halten Sie immer einen sicheren Abstand zu Objekten vor Ihnen ein. In extremen Fahrbedingungen sollte die Fahrgeschwindigkeit immer reduziert werden.</p>
+			<p>Der Bremsweg für ein Fahrzeug mit Antiblockiersystem (oder elektronischer Stabilitätskontrolle ESC) kann bei den folgenden Straßenbedingungen länger als für ein Fahrzeug ohne diese Ausstattung sein.</p>
+			<p>Unter den folgenden Bedingungen sollte die Fahrgeschwindigkeit reduziert werden:</p>
+			<ul>
+				<li>
+					<p>Auf unebener Fahrbahn, auf Kies oder auf schneebedeckten Straßen</p>
+				</li>
+				<li>
+					<p>Bei Verwendung von Schneeketten</p>
+				</li>
+				<li>
+					<p>Auf Straßen mit Schlaglöchern oder mit unterschiedlichen Höhen der Fahroberfläche</p>
+				</li>
+			</ul>
+			<p>Die Sicherheitsfunktionen von Fahrzeugen mit ABS (oder ESC) sollten nicht durch schnelles Fahren oder schnelle Kurvenfahrten getestet werden. Dies könnte Ihre Sicherheit oder die Sicherheit anderer gefährden.</p>
+		</note>
+		<p>Das ABS erkennt kontinuierlich die Drehzahl der Räder. Wenn die Räder blockieren werden, moduliert das ABS-System wiederholt den hydraulischen Bremsdruck auf den Rädern.</p>
+		<p>Wenn Sie Ihre Bremsen in Bedingungen anwenden, die die Räder blockieren könnten, hören Sie ein Tickgeräusch von den Bremsen oder spüren ein entsprechendes Gefühl am Bremspedal. Dies ist ein normaler Vorgang, der belegt, dass das ABS-System aktiv ist.</p>
+		<p>Um Ihr ABS in einer Notsituation optimal zu nutzen, sollten Sie nicht versuchen, den Bremsdruck zu modulieren, und die Bremsen nicht wiederholt durchtreten und freigeben. Drücken Sie Ihr Bremspedal so stark wie möglich bzw. so stark, wie in der Situation erforderlich, und lassen Sie das ABS die Kraft regeln, die auf die Bremsen angewendet wird.</p>
+		<note type="note">
+			<p>Möglicherweise ist im Motorraum ein Klickgeräusch zu hören, wenn sich das Fahrzeug nach starten des Motors zu bewegen beginnt. Dies ist normal und zeigt an, dass das Antiblockiersystem ordnungsgemäß funktioniert.</p>
+		</note>
+		<ul>
+			<li>
+				<p>Selbst mit dem Antiblockiersystem benötigt Ihr Fahrzeug immer noch einen ausreichenden Bremsweg. Halten Sie immer einen ausreichenden Sicherheitsabstand zu vor Ihnen fahrenden Fahrzeugen.</p>
+			</li>
+			<li>
+				<p>Reduzieren Sie immer vor Kurvenfahrten die Geschwindigkeit. Das Antiblockiersystem kann keine Unfälle verhindern, die durch übermäßig hohe Geschwindigkeiten verursacht werden.</p>
+			</li>
+			<li>
+				<p>Auf losen oder unebenen Straßenoberflächen kann der Betrieb des Antiblockiersystems zu einem längeren Bremsweg führen als bei Fahrzeugen mit herkömmlicher Bremsanlage.</p>
+			</li>
+		</ul>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Wenn die ABS-Warnleuchte dauerhaft aufleuchtet, liegt möglicherweise ein Problem am ABS vor. In diesem Fall funktionieren die normalen Bremsen jedoch noch ordnungsgemäß.</p>
+				</li>
+				<li>
+					<p><image align="center" href="../../images/W-78.eps" scale="30" placement="inline"/>Nach dem Drehen des Zündschalters in Positoin <term translate="no">ON</term> leuchtet die ABS-Warnleuchte für ca. 3 Sekunden auf. Während dieser Zeit durchläuft das ABS eine Selbstdiagnose. Ist alles normal, erlischt die Leuchte. Wenn die Warnleuchte nicht erlischt, könnte eine Störung des ABS-Systems vorliegen.</p>
+					<p>Lassen Sie das Fahrzeug in diesem Fall von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Wenn Sie auf einer Straße mit geringer Haftung fahren, wie beispielsweise auf einer vereisten Straße, und Sie die Bremsen kontinuierlich betätigen, ist das ABS dauerhaft aktiv und die ABS-Warnleuchte erscheint möglicherweise. Bringen Sie Ihr Fahrzeug in diesem Fall an einer sicheren Stelle zum Stillstand und stellen Sie den Motor ab.</p>
+				</li>
+				<li>
+					<p>Starten Sie den Motor erneut. Wenn die ABS-Warnleuchte erlischt, ist die Funktion des ABS-Systems ordnungsgemäß.</p>
+					<p>Andernfalls liegt möglicherweise ein Problem am ABS vor. Lassen Sie das Fahrzeug in diesem Fall von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Wenn Ihr Fahrzeug wegen einer entladenen Batterie mit Starthilfekabeln angelassen werden muss, kann es sein, dass der Motor weniger gleichmäßig läuft als üblich und dass gleichzeitig die ABS-Warnleuchte aufleuchtet. Dies ist eine Folge der zu geringen Batteriespannung. Es bedeutet nicht, dass das ABS nicht ordnungsgemäß funktioniert.</p>
+			<ul>
+				<li>
+					<p>Pumpen Sie nicht mit dem Bremspedal!</p>
+				</li>
+				<li>
+					<p>Lassen Sie vor Fahrtantritt die Batterie laden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0375.dita#CL4m_HEV-ca_ES-2027-t0375" role="parent" scope="local" type="concept">
+				<linktext>Bremsanlage </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

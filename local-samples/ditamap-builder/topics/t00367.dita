@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00367">
+	<title id="e02633">USB charger</title>
+	<shortdesc>The <i>USB</i> car charger allows drivers to charge their digital devices like smartphones, and PC tablets. </shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features 
+					<indexterm>USB charger</indexterm>
+				</indexterm>
+				<indexterm>USB charger</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02634">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02635">
+								<figgroup>
+									<image href="../../images/OOV035052.eps" align="center" height="1.740in" placement="break" id="e02636"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e02637">
+								<figgroup>
+									<image href="../../images/OOV035045.eps" align="center" height="1.740in" placement="break" id="e02638"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Plug the cable to the <i>USB</i> port, charging will begin.</p>
+		<p>The <i>USB</i> car charger is available with either the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position. See the display screen of the device to check its charging process completion. Your smartphone or table PC could get heated up while charging. This is no reason to worry, as it doesn't impact life or functions of the device. For the safety reason, charging can be stopped if the battery gets heated up to a certain point of temperature that the devices can be negatively affected. Charging some digital devices is not available or requires special dedicated adapters if their charging methods don't fit the way the USB car charger works. Quick Charge 2.0 is available on the smartphone or the table PC equipped with fast charging capabilities. The applicable is as follows: (https://www.qualcomm.com/documents/quick-charge-device-list)</p>
+		<p>The smartphone or PC tablet without fast charging is charged at a regular speed.</p>
+		<ul>
+			<li>
+				<p>Rated output: 9.0V/Max 3.0A</p>
+			</li>
+		</ul>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Use the USB car charger with the <term translate="no">EV</term> button is in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+				</li>
+				<li>
+					<p>Use the official <i>USB</i> cable of the manufacturer of the digital device to be charged.</p>
+				</li>
+				<li>
+					<p>Make sure that any foreign object, drinks, and water do not come into contact with the <i>USB</i> car charger. Water or foreign object can damage the <i>USB</i> charger.</p>
+				</li>
+				<li>
+					<p>Do not connect an electrical device that generates excessive electromagnetic noise to the <i>USB</i> car port. If you do so, noise can be caused or vehicle electronic devices can be interrupted while audio or AV is on.</p>
+				</li>
+				<li>
+					<p>If the charger is connected incorrectly, it can cause serious damage on the devices. Please note that damages due to incorrect usage are not covered by warranty service.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

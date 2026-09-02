@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00245">
+	<title id="e01550">Securing a Child Restraint System with a lap/shoulder belt </title>
+	<shortdesc/>
+	<conbody>
+		<p>When not using the ISOFIX system, all Child Restraint Systems must be secured to a rear seat with the lap part of a lap/shoulder belt.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01551">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01552">
+								<figgroup>
+									<image href="images/N_SP3i26_D06_051_E.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To install a Child Restraint System on the rear seats, do the following:</p>
+		<ol id="e01553">
+			<li id="e01554">
+				<p>Place the Child Restraint System on a rear seat and route the lap/ shoulder belt around or through the Child Restraint System, following the Child Restraint System manufacturer’s instructions.</p>
+				<p>Make sure the seat belt webbing is not twisted.</p>
+			</li>
+			<li id="e01555">
+				<p>Fasten the lap/shoulder belt latch into the buckle. Listen for the distinct “click” sound. Position the release button so that it is easy to access in case of an emergency.</p>
+			</li>
+			<li id="e01556">
+				<p>Remove as much slack from the belt as possible by pushing down on the Child Restraint System while feeding the shoulder belt back into the retractor.</p>
+			</li>
+			<li id="e01557">
+				<p>Push and pull on the Child Restraint System to confirm that the seat belt is holding it firmly in place.</p>
+			</li>
+		</ol>
+		<p>If your Child Restraint System manufacturer recommends the use of a ISOFIX top tether strap with the lap/shoulder belt, see Securing a Child Restraint System seat with “ISOFIX top tether anchorage” system section in this chapter.</p>
+		<p>To remove the Child Restraint System, press the release button on the buckle and then pull the lap/shoulder belt out of the Child Restraint System and allow the seat belt to retract fully.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00240.dita#t00240" role="parent" scope="local" type="concept">
+				<linktext>Child Restraint System (CRS)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00419">
+	<title>Turning vehicle ON/OFF</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>EV button 
+					<indexterm>turning vehicle ON/OFF</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01704">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e01705">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25D016_1_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01706">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25D017_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p> <term translate="no">OFF</term> </p>
+					<ul>
+						<li>
+							<p>To completely turn off <term translate="no">DRIVE READY</term> or <term translate="no">POWER ON</term>, stop the vehicle, shift to P (Park), and press the <term translate="no">EV</term> button with the brake pedal pressed.</p>
+						</li>
+						<li>
+							<p>While depressing the brake, press the <term translate="no">EV</term> button.</p>
+						</li>
+					</ul>
+					<note type="note" id="e01707">
+						<p>When starting the vehicle while shifting to other than P (Park):</p>
+						<ul id="e01708">
+							<li>
+								<p>The vehicle will automatically switch to P (Park) from R (Reverse)/D (Drive)/N (Neutral) and then turn off.</p>
+							</li>
+						</ul>
+					</note>
+				</li>
+				<li>
+					<p> <term translate="no">POWER ON</term> </p>
+					<ul>
+						<li>
+							<p>Press the <term translate="no">EV</term> button twice without depressing the brake pedal.</p>
+						</li>
+						<li>
+							<p>In 14 minutes after <term translate="no">POWER ON</term>, the infotainment system screen shows the below. To continue to use the vehicle power, press Start Utility Mode on the infotainment system. 
+								<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01709">
+									<tgroup cols="2" colsep="1" rowsep="1">
+										<colspec colname="col1" colnum="1" colwidth="50*"/>
+										<colspec colname="col2" colnum="2" colwidth="50*"/>
+										<tbody>
+											<row rowsep="0">
+												<entry colname="col1" colsep="0">
+													<fig id="e01710">
+														<figgroup>
+															<image align="center" href="../../images/N_CT25Z158_E.eps" scale="95" placement="break"/>
+														</figgroup>
+													</fig>
+												</entry>
+												<entry colname="col2">
+													<ol outputclass="callout" id="e01711">
+														<li>
+															<p> <uicontrol>Start Utility Mode</uicontrol> </p>
+														</li>
+													</ol>
+												</entry>
+											</row>
+										</tbody>
+									</tgroup>
+								</table> </p>
+						</li>
+						<li>
+							<p>If <term translate="no">POWER ON</term> is maintained for 15 minutes without converting to the utility mode, the power is turned <term translate="no">OFF</term>.</p>
+						</li>
+					</ul>
+					<note type="note" id="e01712">
+						<ul id="e01713">
+							<li>
+								<p>If the high-voltage battery charging and outdoor V2L features are used with <term translate="no">POWER ON</term>, the utility mode is operated and the power is not turned <term translate="no">OFF</term>.</p>
+							</li>
+							<li>
+								<p>The infotainment system can be changed through updates. For more information, refer to <xref type="concept" href="t00445.dita#t00445">Drive mode integrated control system</xref>.</p>
+							</li>
+						</ul>
+					</note>
+				</li>
+				<li>
+					<p> <term translate="no">DRIVE READY</term> </p>
+					<ul>
+						<li>
+							<p>In <term translate="no">OFF</term> or <term translate="no">POWER ON</term> state, press the <term translate="no">EV</term> button while pressing the brake pedal in P (Park).</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Never press the <term translate="no">EV</term> button while the vehicle is in motion. This would result in loss of directional control and braking function, which could cause an accident.</p>
+					</li>
+					<li>
+						<p>Before leaving the driver’s seat, always make sure the vehicle is shifted to P (Park) position, set the parking brake fully and shut the vehicle off. Unexpected and sudden vehicle movement may occur if these precautions are not taken.</p>
+					</li>
+					<li>
+						<p>Never reach for the <term translate="no">EV</term> button or any other controls through the steering wheel while the vehicle is in motion. The presence of your hand or arm in the area could cause loss of vehicle control, an accident and serious bodily injury or death.</p>
+					</li>
+					<li>
+						<p>Do not place any movable objects around the driver’s seat as they may move while driving, interfere with the driver and lead to an accident.</p>
+					</li>
+					<li>
+						<p>The vehicle will start, only when the smart key is in the vehicle. Never allow children or any person who is unfamiliar with the vehicle touch the <term translate="no">EV</term> button or related parts. Pushing the <term translate="no">EV</term> button while the smart key is in the vehicle may result in unintended vehicle activation and/or unintended vehicle movement.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>If you press the <term translate="no">EV</term> button without pressing the brake pedal, the vehicle will only switch repeatedly between <menucascade><uicontrol>OFF</uicontrol><uicontrol>POWER ON</uicontrol><uicontrol>OFF</uicontrol></menucascade> and will not start.</p>
+					</li>
+					<li>
+						<p>In an emergency situation while the vehicle is in motion, you are able to turn the vehicle off and to the <term translate="no">POWER ON</term> position by pressing the <term translate="no">EV</term> button for more than 2 seconds or 3 times repeatedly within 3 seconds. If the vehicle is still moving, to restart the vehicle:</p>
+						<ul>
+							<li>
+								<p>Press the <term translate="no">EV</term> button when vehicle speed is over approximately 5 km/h (3 mph).</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>If the vehicle is turned off while the vehicle is in motion, do not attempt to shift to P (Park) position. If the traffic and road conditions permit, you may shift to N (Neutral) position while the vehicle is still moving and press the <term translate="no">EV</term> button in an attempt to restart the vehicle.</p>
+					</li>
+					<li id="e01714">
+						<p>Do not press the <term translate="no">EV</term> button for more than 10 seconds except when the stop lamp fuse is blown.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e01715">
+				<ul>
+					<li>
+						<p>If you leave the <term translate="no">EV</term> button in the <term translate="no">POWER ON</term> position for a long time, the battery will discharge.</p>
+					</li>
+					<li>
+						<p>If you press the <term translate="no">EV</term> button without pressing the brake pedal, the vehicle will not start and the <term translate="no">EV</term> button changes as follows:</p>
+						<ul>
+							<li>
+								<p> <menucascade><uicontrol>OFF</uicontrol><uicontrol>POWER ON</uicontrol><uicontrol>OFF</uicontrol></menucascade> </p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>If the steering wheel doesn't unlock properly, the <term translate="no">EV</term> button will not work. Press the <term translate="no">EV</term> button while turning the steering wheel right and left to release the tension.</p>
+					</li>
+					<li>
+						<p>You are able to turn off the vehicle only when the vehicle is not in motion.</p>
+					</li>
+					<li>
+						<p>If the battery is weak or the smart key does not work correctly, you can start the vehicle by pressing the <term translate="no">EV</term> button with the smart key. When you press the <term translate="no">EV</term> button directly with the smart key, the smart key should contact the button at a right angle.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

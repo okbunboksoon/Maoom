@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00826">
+	<title>Light position (Rear)</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e05187">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e05188">
+								<title>Type A</title>
+								<figgroup>
+									<image href="../../images/OOV075021L.eps" align="center" placement="break" scale="95" id="e05189"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<fig id="e05190">
+								<title>Type B</title>
+								<figgroup>
+									<image href="../../images/OOVGT075001.eps" align="center" placement="break" scale="95" id="e05191"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" colsep="0">
+							<fig id="fig_vdq_jfy_k3c">
+								<title>Type C (GT)</title>
+								<figgroup>
+									<image href="../../images/OOVGT076001L.eps" align="center" placement="break" scale="95" id="image_wdq_jfy_k3c"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<fig id="fig_bcd_jfy_k3c">
+								<title>License plate lamp</title>
+								<figgroup>
+									<image href="../../images/OOV075022.eps" align="center" placement="break" scale="95" id="image_ccd_jfy_k3c"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Stop lamp (LED type)</p>
+			</li>
+			<li>
+				<p>Rear position lamp (LED type)</p>
+			</li>
+			<li>
+				<p>Rear turn signal lamp (LED type)</p>
+			</li>
+			<li>
+				<p>High mounted stop lamp (LED type)</p>
+			</li>
+			<li>
+				<p>Backup lamp (LED type)</p>
+			</li>
+			<li>
+				<p>License plate lamp (LED type)</p>
+			</li>
+			<li>
+				<p>Rear fog lamp (LED type)</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

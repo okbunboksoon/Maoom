@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00454">
+	<title>Electronic Control Suspension (ECS) with Road Preview (For GT)</title>
+	<shortdesc>Electronically Controlled Suspension (ECS) with Road Preview controls the vehicle suspension automatically using the front view camera and vehicle sensors to maximize driving comfort by taking into account the driving conditions such as speed, surface of the road, cornering, stopping requirements and acceleration.</shortdesc>
+	<conbody>
+		<section id="e01843">
+			<title>Detecting sensor</title>
+			<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e01844">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e01845">
+									<title>Front view camera</title>
+									<figgroup>
+										<image href="../../../images/P_CT27_B09_004.eps" scale="95" align="center" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The front view camera is a sensor that detects the front road. If the windshield or the front view camera is covered with snow, rain or foreign matters, the data collected by the camera is limited due to the degradation of the camera’s performance. Always keep the front view camera clean.</p>
+			<note type="note" id="e01846">
+				<ul id="e01847">
+					<li>
+						<p>Never install any accessories or stickers on the front windshield, or tint the front windshield.</p>
+					</li>
+					<li>
+						<p>Never place any reflective objects (for example, white paper, mirror) over the instrument panel. Any light reflection may prevent the system from functioning properly.</p>
+					</li>
+					<li>
+						<p>Pay extreme caution to keep the camera dry.</p>
+					</li>
+					<li>
+						<p>Never disassemble the camera assembly, or apply any impact on the camera assembly.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="tip" id="e01848">
+				<p>Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner when:</p>
+				<ul id="e01849">
+					<li>
+						<p>The windshield glass is replaced.</p>
+					</li>
+					<li>
+						<p>The front view camera or cover gets damaged or replaced.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e01850">
+			<title>ECS malfunction and limitations</title>
+			<sectiondiv><ph>ECS malfunction</ph>
+				<p>When Electronically Controlled Suspension (ECS) with Road Preview is not working properly, the warning message will appear on the instrument cluster. If this occurs, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				<note type="note" id="e01851">
+					<p>If the battery level is high or low, Electronically Controlled Suspension (ECS) with Road Preview may not work temporarily to protect the system. If this occurs, the warning message will appear.</p>
+				</note>
+			</sectiondiv>
+			<sectiondiv><ph>Limitations of ECS</ph>
+				<p>Electronically Controlled Suspension (ECS) with Road Preview always operates while driving according to the vehicle’s movement, and the preview function starts to work when the front view camera detects road conditions such as speed bumps.</p>
+				<p>Therefore, the preview function is limited when there is an extreme condition that the front view camera may not work normally. In this case, Electronically Controlled Suspension (ECS) operates without the preview function in accordance with vehicle movement.</p>
+			</sectiondiv>
+		</section>
+	</conbody>
+</concept>

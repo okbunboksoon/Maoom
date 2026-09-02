@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00059">
+	<title>Locking/unlocking with the smart key</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00224">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00225">
+								<title>Electric type</title>
+								<figgroup>
+									<image align="center" placement="break" href="../../images/N_CT25C010_1.eps" scale="95"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<fig id="e00226">
+								<title>Manual type</title>
+								<figgroup>
+									<image align="center" placement="break" href="../../images/N_CT25C047_1_E.eps" scale="95"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e00227">
+			<title>Locking/unlocking with the smart key (Manual type)</title>
+			<sectiondiv deliveryTarget="except_digital"><ph>Simple operation</ph>
+				<ol id="e00228">
+					<li>
+						<p otherprops="legal_eu_std_024_01">Once the doors are unlocked, when press the front of the door handle then rear of the door handle will pop out.</p>
+					</li>
+					<li>
+						<p>Pull the outside door handle to open the door.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+			<sectiondiv deliveryTarget="except_print"><ph>Operation</ph>
+				<ol id="e00229">
+					<li>
+						<p>Push the button on the front outside door handle (the engraved part) while carrying the Smart Key with you, all doors will unlock.</p>
+					</li>
+					<li>
+						<p>The hazard warning lights will blink and chime also sounds.</p>
+						<ul id="e00230">
+							<li>
+								<p>Locking: Once</p>
+							</li>
+							<li>
+								<p>Unlocking: Twice</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p otherprops="legal_eu_std_024_01">Once the doors are unlocked, when press the front of the door handle then rear of the door handle will pop out.</p>
+						<p>Pull the outside door handle to open the door.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+			<sectiondiv deliveryTarget="except_print"><ph>Non-operating condition(s)</ph>
+				<ul id="e00231">
+					<li>
+						<p>Smart key is in the vehicle.</p>
+					</li>
+					<li>
+						<p>The vehicle is in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+					</li>
+					<li>
+						<p>Any of the doors are open except for the trunk.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv deliveryTarget="except_print"><ph>Limitation(s)</ph>
+				<ul id="e00232">
+					<li>
+						<p>Smart key is detected within 0.7–1 m (28–40 inches) radius.</p>
+					</li>
+				</ul>
+				<note type="tip" id="e00233">
+					<p>The chime will sound for a few seconds.</p>
+				</note>
+			</sectiondiv>
+		</section>
+		<section importance="optional" id="e00234">
+			<title>Locking/unlocking with the smart key (Electric type)</title>
+			<p>The outside door handle will slide out and the doors will unlock when the driver approaches the vehicle possessing the smart key. (Approach unlock system)</p>
+			<sectiondiv deliveryTarget="except_digital"><ph>Simple operation</ph>
+				<ol id="e00235">
+					<li>
+						<p>Touch the front outside door handle sensor (the engraved part).</p>
+					</li>
+					<li>
+						<p>The outside door handle will pop out and the door will unlock.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+			<sectiondiv deliveryTarget="except_print"><ph>Operation</ph>
+				<ol id="e00236">
+					<li>
+						<p>Touch the front outside door handle sensor (the engraved part).</p>
+					</li>
+					<li>
+						<p>The outside door handle will pop out and the door will unlock. The hazard warning lights will blink twice and the chime will sound twice.</p>
+					</li>
+					<li>
+						<p>The doors will lock automatically, and the outside door handle retracts back, after 30 seconds unless a door is opened.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+			<sectiondiv><ph>When Approach Unlock is selected</ph>
+				<ol id="e00237">
+					<li>
+						<p>Approach the front outside door handle within 1 m (40 in) while possessing the smart key or digital key.</p>
+					</li>
+					<li>
+						<p>The outside door handles will pop out. The door will unlock, the hazard warning lights will blink twice, and the chime will sound twice.</p>
+						<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Door</uicontrol><uicontrol>Approach Unlock</uicontrol></menucascade> on the infotainment system.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+			<sectiondiv><ph>When Approach Unlock is deselected</ph>
+				<ol id="e00238">
+					<li>
+						<p>Touch the front outside door handle sensor (the engraved part) while possessing the smart key or digital key.</p>
+					</li>
+					<li>
+						<p>The outside door handles will pop out. The door will unlock, the hazard warning lights will blink twice, and the chime will sound twice.</p>
+						<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Door</uicontrol><uicontrol>Approach Unlock</uicontrol></menucascade> on the infotainment system.</p>
+					</li>
+				</ol>
+				<note type="tip" id="e00239">
+					<ul id="e00240">
+						<li>
+							<p>The driver can activate/deactivate the Approach unlock system on the infotainment screen.</p>
+						</li>
+						<li>
+							<p>In emergency situations, such as battery is dead, the outside electric door handle can still be operated in a way that the outside manual door handle operate.</p>
+						</li>
+						<li>
+							<p>If Approach unlock system is deactivated, the door handle will not pop out even when the driver approaches to the vehicle with the smart key. To unlock doors when Approach unlock system is deactivated, touch the lock/unlock sensor on the handle.</p>
+						</li>
+						<li>
+							<p>Press the lock button on the smart key and hold the lock and unlock button simultaneously for more than approximately 4 seconds to prevent unintentional door lock/unlock. The hazard warning lights will blink 4 times. The doors will not lock or unlock even though the touch sensor is touched on the outside door handle. Press the door lock or unlock button on the smart key to deactivate the function.</p>
+						</li>
+						<li>
+							<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+						</li>
+					</ul>
+				</note>
+				<note type="note" id="e00241">
+					<ul id="e00242">
+						<li>
+							<p>The doors will lock automatically, and the outside door handle retracts back, after 30 seconds unless a door is opened.</p>
+						</li>
+						<li>
+							<p>The doors will not be locked under the following conditions:</p>
+							<ul id="e00243">
+								<li>
+									<p>The smart key or digital key is in the vehicle.</p>
+								</li>
+								<li>
+									<p>Any door including the trunk is open.</p>
+								</li>
+								<li>
+									<p>The vehicle is in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p>To open the door, pull the outside door handle after unlocking the doors. When closing the door, push the door by hand.</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+			<sectiondiv><ph>When washing the vehicle</ph>
+				<p>Self car wash</p>
+				<ul id="e00244">
+					<li>
+						<p>Keep the door locked with the outside door handle closed.</p>
+					</li>
+					<li>
+						<p>The door handle might pop out when moisture or a cloth touched lock/unlock sensor. Stay the key away at least 2 m (78 inches) from the vehicle to prevent the outside door handle operates.</p>
+					</li>
+					<li>
+						<p>Leave the key inside the vehicle, keeping the vehicle in <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position when there is an unintended warning sound.</p>
+					</li>
+				</ul>
+				<p>Auto car wash</p>
+				<ul id="e00245">
+					<li>
+						<p>Enter the auto car washer with the vehicle <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> and keep the gear in N (Neutral) position.</p>
+					</li>
+					<li>
+						<p> <b>Car wash mode</b> </p>
+						<ul id="e00246">
+							<li>
+								<p>Select the <b>Car wash mode</b> at the infotainment system home screen</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>If the smart key is not in the vehicle, turn off the vehicle and stay the smart key away at least 2 m (78 inches) from the vehicle to prevent the outside door handle operates.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<note id="e00247">
+				<ul id="e00248">
+					<li>
+						<p> <b>Car wash mode</b> turns off automatically in the following conditions:</p>
+						<ul id="e00249">
+							<li>
+								<p>Vehicle speed is over 20 km/h (12.5 mph)</p>
+							</li>
+							<li>
+								<p>Vehicle is <term translate="no">OFF</term> </p>
+							</li>
+							<li>
+								<p>The door is unlocked</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</note>
+			<note type="caution" id="e00250">
+				<ul id="e00251">
+					<li>
+						<p>When you use auto car wash with the door handles out, door handles can be damaged or the doors can be opened.</p>
+					</li>
+					<li>
+						<p>If the door is closed with strong force or the outside door handle is pulled at high speed, the safety device inside the outside door handle is activated and the door may not be opened even if the door handle is pulled.</p>
+						<p>At this time, if you pull the outside door handle once more, you can open the door.</p>
+					</li>
+					<li>
+						<p>If Forward Collision-Avoidance Assist (FCA) is activated, the outside door handle may pop out to rescue occupants after a collision. Then, when Forward Collision-Avoidance Assist (FCA) is released, the outside door handle automatically return to their original positions.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00023">
+	<title>V2L LCD display messages</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc" id="e00124">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1">
+							<p>Display Message</p>
+						</entry>
+						<entry colname="2">
+							<p>Conditions</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p>V2L has ended. Battery level has reached the set value</p>
+						</entry>
+						<entry colname="2" align="left" valign="middle">
+							<ul id="e00125">
+								<li>
+									<p>When the high voltage battery level reaches the discharging limit set level</p>
+								</li>
+								<li>
+									<p>Set the discharging limit lower than the present battery level.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p>V2L stopped due to excessive power use</p>
+						</entry>
+						<entry colname="2" align="left" valign="middle">
+							<p>If you use an electrical appliance that exceeds the maximum power output the vehicle can supply</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="1" align="center" valign="middle">
+							<p>V2L conditions not met</p>
+						</entry>
+						<entry colname="2" align="left" valign="middle">
+							<p>If V2L is interrupted for any of the following reasons</p>
+							<ul id="e00126">
+								<li>
+									<p>V2L connector switch off</p>
+								</li>
+								<li>
+									<p>V2L connector overheating</p>
+								</li>
+								<li>
+									<p>Opening the charging door while using the V2L indoor outlet</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning" id="e00127">
+			<ul id="e00128">
+				<li>
+					<p>Do not touch the V2L connector of the terminal of the vehicle charging hole.</p>
+				</li>
+				<li>
+					<p>Do not put metal objects to the V2L connector or charging hole. It might be a cause of electric shock.</p>
+				</li>
+				<li>
+					<p>Do not touch the V2L connector, charging hole or power plug with a wet hand. It might be a cause of electric shock. Please handle with a dry hand all the time.</p>
+				</li>
+				<li>
+					<p>Confirm whether there is foreign substance such as water or dust on the V2L connector, charging hole or power plug before connecting. If you connect it with foreign substances, it may be a cause of fire or electric shock.</p>
+				</li>
+				<li>
+					<p>Do not remodel or disassemble the V2L connector. There is a risk of fire, electric shock or injury.</p>
+				</li>
+				<li>
+					<p>When the power plug is connected or disconnected to the V2L connector or open or close the connector cover of the V2L, be careful not to be scratched on the hand.</p>
+				</li>
+				<li>
+					<p>Do not charge in the following conditions. The accident might occur.</p>
+					<ul id="e00129">
+						<li>
+							<p>The V2L connector, charging hole, power plug or cable is damaged, corroded or rusted.</p>
+						</li>
+						<li>
+							<p>The connection part is loose.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Do not use if the sheath of home appliance cables is damaged or broken. There is a risk of fire, electric shock or injury.</p>
+				</li>
+				<li>
+					<p>Never use an electric heating appliance like iron, coffee pot, and toaster in the vehicle. It may cause a fire and injury.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution" id="e00130">
+			<ul id="e00131">
+				<li>
+					<p>Be well-informed of the manual to prevent accidents.</p>
+				</li>
+				<li>
+					<p>The V2L discharging mode is blocked automatically in case of overheating. (When the discharging mode is blocked, check whether the V2L connector or power plug is contaminated, worn, corroded or broken, or the home appliance capacity is over 16 A. If the temperature falls to proper level after it is left unattended, you can use it again. Use proper home appliances.)</p>
+				</li>
+				<li>
+					<p>Do not remodel or disassemble the provided V2L connector. The failure caused by remodeling or disassembling is not covered by the warrant.</p>
+				</li>
+				<li>
+					<p>Do not drop the V2L connector or give a strong impact to it.</p>
+				</li>
+				<li>
+					<p>Do not place objects on the V2L connector.</p>
+				</li>
+				<li>
+					<p>Be sure to disconnect the V2L connector from the vehicle when you are finished using V2L.</p>
+				</li>
+				<li>
+					<p>When the high voltage battery charge reaches the set discharging limit (%), the operation stops, and a warning message is displayed on the instrument cluster. If you want V2L operation, set the discharging limit (%) lower than the current battery charge.</p>
+				</li>
+				<li>
+					<p>When using various electric products, use them below the maximum power capacity that can be supplied by the vehicle.</p>
+				</li>
+				<li>
+					<p>If you use an electrical appliance that exceeds the maximum power capacity that the vehicle can supply, the operation will stop and a warning message will be displayed on the instrument cluster. Make sure the total power consumption of the electrical appliance you use does not exceed the V2L maximum power capacity.</p>
+				</li>
+				<li>
+					<p>Some electric products may not operate normally even if the product has power consumption less than the maximum power capacity provided by the vehicle.</p>
+					<ul id="e00132">
+						<li>
+							<p>Electrical products that require high power during initial operation.</p>
+						</li>
+						<li>
+							<p>Measuring devices that need to process accurate data.</p>
+						</li>
+						<li>
+							<p>Electric products sensitive to inverter type AC power supply. (Inverter: A device that converts DC power into AC power)</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Do not use products that require a continuous power supply, such as medical equipment. The power supply may be interrupted depending on the vehicle’s condition.</p>
+				</li>
+				<li>
+					<p>Only use home appliances under 16 A.</p>
+				</li>
+				<li>
+					<p>Put the power plug fully and use the qualified plug that meets the standard. If you use worn, corroded or broken plug or improper plug, it might be a cause of malfunction.</p>
+				</li>
+				<li>
+					<p>Use the power plug with ground connection.</p>
+				</li>
+				<li>
+					<p>Do not use high power home appliances such as air conditioner, washing machine or dryer.</p>
+				</li>
+				<li>
+					<p>Do not hang home appliances on to the wire.</p>
+				</li>
+				<li>
+					<p>For various devices connected to a power outlet, use only products that have obtained national safety certification. For usage and precautions, refer to the manual of the device. (Electrical appliances, multi-outlets, cord extension cables, etc.)</p>
+				</li>
+				<li>
+					<p>For electronic devices that are used outdoors in a vehicle, use a product with a waterproof function or use it in a waterproof environment. Do not use in environments with rain or high humidity. (Electrical appliances, multi-outlets, cord extension cables, etc.)</p>
+				</li>
+				<li>
+					<p>If there is a risk of lightning, do not use the V2L function outside the vehicle.</p>
+				</li>
+				<li>
+					<p>Do not connect multiple portable multi-outlets.</p>
+				</li>
+				<li>
+					<p>When using an extension cable, if the cable is twisted or overlapped by itself may cause a fire. Be sure to use the cable without twisting it.</p>
+				</li>
+				<li>
+					<p>When using the vehicle’s outdoor V2L connector, power is also supplied to the vehicle’s indoor power outlet. Unplug electrical appliances that are not in use from the indoor power outlet.</p>
+				</li>
+				<li>
+					<p>When using the V2L, the cooling fan in the vehicle motor compartment can operate automatically even if the vehicle is turned off. Do not put your hand near the cooling fan in the V2L operating state.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e00133">
+			<ul id="e00134">
+				<li>
+					<p>Please connect the V2L connector to the charging hole within 60 seconds after the charging cover opens. To prevent theft after connecting, it is changed to auto lock automatically so that it is impossible to separate.</p>
+				</li>
+				<li>
+					<p>When using V2L, cancel the scheduled air conditioning setting. V2L may not be available to operate if the scheduled air conditioning is being activated.</p>
+				</li>
+				<li>
+					<p>When the vehicle is in <term>POWER ON</term>, <term>DRIVE READY</term>, or Utility Mode and using interior V2L, if the vehicle is turned off, the V2L discharge mode will automatically stop.</p>
+				</li>
+				<li>
+					<p>If the electronic device does not work even though the green indicator is on, reconnect the electronic device plug to the power outlet.</p>
+				</li>
+				<li>
+					<p>Opening the charging door or connecting the V2L connector to the charging inlet, the V2L discharging mode will shut off. If you want to use the indoor and outdoor V2L simultaneously, firstly connect the V2L connector to the charging inlet and use the indoor V2L.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

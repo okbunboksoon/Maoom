@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00281">
+	<title>After Recharging</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e02113">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e02114">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV035120L.eps" placement="break" width="2.244in" id="e02115"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<ol outputclass="callout" id="e02116">
+								<li>
+									<p> <uicontrol>After Recharging</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Trip</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Timer</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Avg.</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To reset manually, press the OK button on the steering wheel for more than 1 second when 'After Recharging' appears.</p>
+	</conbody>
+</concept>

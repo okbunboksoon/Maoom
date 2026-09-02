@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_019_02" id="CL4m_HEV-ca_ES-2027-t0047">
+	<title id="e00125">So löschen Sie den Digital-Key (Smartphone) </title>
+	<conbody>
+		<p>Schalten Sie das Fahrzeug mit dem Smart-Key ein und achten Sie darauf, dass der Smart-Key während des Verfahrens zum Löschen des digitalen Schlüssels (Smart-Phone) im Fahrzeug verbleibt.</p>
+		<ol>
+			<li>
+				<p>Alle Digital-Keys (Smartphone) löschen</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OKA4035484N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<ol outputclass="callout">
+										<li>
+											<p>Digital-Keys</p>
+										</li>
+										<li>
+											<p>Smartphone-Schlüssel</p>
+										</li>
+										<li>
+											<p>Alle löschen</p>
+										</li>
+									</ol>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Wenn das Fahrzeug eingeschaltet ist, tippen Sie auf <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Digitale Schlüssel</uicontrol><uicontrol>Smartphone-Schlüssel</uicontrol><uicontrol>Alle löschen</uicontrol></menucascade> am Infotainment-System.</p>
+				<ul>
+					<li>
+						<p>Der Schlüssel des Besitzers und des gemeinsamen Benutzers wird gelöscht.</p>
+					</li>
+					<li>
+						<p>Wenn es keinen registrierten Schlüssel gibt, kann das Menü nicht ausgewählt werden.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Meinen Smart-Key löschen</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OMV033149N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<ol outputclass="callout">
+										<li>
+											<p>Digital-Keys</p>
+										</li>
+										<li>
+											<p>Smartphone-Schlüssel</p>
+										</li>
+										<li>
+											<p>Mein Smartphone-Schlüssel</p>
+										</li>
+										<li>
+											<p>Löschen</p>
+										</li>
+									</ol>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Wenn das Smartphone des Besitzers gewechselt wurde, kann das neue Smartphone registriert werden, nachdem der vorherige Digitale Schlüssel 2 (Smartphone) gelöscht wurde.</p>
+				<p>Tippen Sie bei eingeschaltetem Fahrzeug auf <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Digitale Schlüssel</uicontrol><uicontrol>Smartphone-Schlüssel</uicontrol><uicontrol>Mein Smartphone-Schlüssel</uicontrol><uicontrol>Löschen</uicontrol></menucascade> am Infotainment-System.</p>
+				<ul>
+					<li>
+						<p>Nach dem Löschen von Mein Smartphone-Key kann das neue Smartphone registriert werden.</p>
+					</li>
+				</ul>
+			</li>
+		</ol>
+		<section>
+			<title>Gemeinsame Schlüssel löschen</title>
+			<p>Wählen Sie <menucascade><uicontrol>Einstellung</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Digitale Schlüssel</uicontrol><uicontrol>Smartphone-Taste</uicontrol><uicontrol>Gemeinsame Schlüssel</uicontrol><uicontrol>[Group] (Gruppe)</uicontrol><uicontrol>Alle löschen</uicontrol></menucascade> auf dem Bildschirm des Infotainment-Systems.</p>
+			<p>Andere digitale Schlüssel als Mein Smartphone-Schlüssel (Smartphone) werden durch [Gruppe] klassifiziert und als „Gemeinsamer Schlüssel“ angezeigt.</p>
+			<p>Wenn das am Smartphone angemeldete Konto dasselbe ist, wird es als dieselbe [Gruppe] angezeigt. Sie können Gemeinsamer Schlüssel mit der Einheit [Gruppe] löschen.</p>
+			<note deliveryTarget="full_only" type="note">
+				<ul>
+					<li>
+						<p>Wenn der Digital-Key (Smartphone) gelöscht wird, wird auch der im Smartphone gespeicherte Digital-Key gelöscht.</p>
+					</li>
+					<li>
+						<p>Wenn der digitale Schlüssel (Smartphone) auf dem Smartphone gelöscht wird, wird auch der im Fahrzeug gespeicherte digitale Schlüssel gelöscht.</p>
+					</li>
+					<li>
+						<p>Der digitale Schlüssel (Smartphone) wird nicht gelöscht, auch wenn Kia App oder die KIA Connect-App auf dem Smartphone gelöscht wird.</p>
+					</li>
+					<li>
+						<p>Der digitale Schlüssel kann über die Kia App oder die Kia App bzw. Kia Connect App des Smartphone-Herstellers aktiviert oder deaktiviert werden.</p>
+					</li>
+				</ul>
+			</note>
+			<note deliveryTarget="full_only" type="tip">
+				<p>Das Infotainment-System kann sich nach Aktualisierungen ändern. Weitere Informationen finden Sie in der Anleitung des Infotainment-Systems und in der Kurzanleitung.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0044.dita#CL4m_HEV-ca_ES-2027-t0044" role="parent" scope="local" type="concept">
+				<linktext>Digital-Key 2 (Smartphone)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

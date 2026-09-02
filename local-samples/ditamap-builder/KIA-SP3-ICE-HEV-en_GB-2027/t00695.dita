@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Top" id="t00695">
+	<title>Limitations of Rear Cross-Traffic Collision-Avoidance Assist</title>
+	<conbody>
+		<p>Rear Cross-Traffic Collision-Avoidance Assist may operate abnormally or unexpectedly under the following circumstances:</p>
+		<ul>
+			<li>
+				<p>If the area around the rear-side radar is obstructed by the vehicle, a pillar, a wall, or other objects.</p>
+			</li>
+			<li>
+				<p>You are departing from areas with overgrown foliage.</p>
+			</li>
+			<li>
+				<p>You are departing from areas where roads are wet.</p>
+			</li>
+			<li>
+				<p>The speed of an approaching vehicle is fast or slow.</p>
+			</li>
+			<li>
+				<p>If the area around the rear-side radar is blocked when exiting simultaneously with an adjacent vehicle.</p>
+			</li>
+		</ul>
+		<p>Braking control may not work, and your attention is required in the following circumstances:</p>
+		<ul>
+			<li>
+				<p>The vehicle vibrates severely while you drive over a bumpy, uneven road or pothole.</p>
+			</li>
+			<li>
+				<p>You drive on a slippery surface such as snow, rain, ice, and so on.</p>
+			</li>
+			<li>
+				<p>The tire pressure is low or a tire is damaged.</p>
+			</li>
+			<li>
+				<p>Remote Smart Parking Assist is operating (if equipped).</p>
+			</li>
+			<li>
+				<p>If the brakes are modified.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>For more information about the rear corner radar, refer to <xref href="t00507.dita#t00507"/>.</p>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>You are driving near a vehicle or structure</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04135">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04136">
+											<image href="images/N_SP3i25_B10_059_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<ol outputclass="callout">
+											<li>
+												<p>Structure</p>
+											</li>
+										</ol>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist may be limited when you drive near a vehicle or structure, and it may not detect a vehicle approaching from the left or right. The function may not warn you or control the brakes when necessary.</p>
+					<p>Always check your surroundings while backing up.</p>
+				</li>
+				<li>
+					<p>The vehicle is in a complex parking environment</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04137">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04138">
+											<image href="images/N_SP3i25_B10_060_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist may detect vehicles that are parking or pulling out near your vehicle (for example, a vehicle leaving from beside your vehicle, a vehicle parking or pulling out behind your vehicle, a vehicle that is approaching your vehicle making a turn, and so on).</p>
+					<p>The function may unnecessarily warn you and control the brake.</p>
+					<p>Always check your surroundings while backing up.</p>
+				</li>
+				<li>
+					<p>The vehicle is parked diagonally</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04139">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04140">
+											<image href="images/N_SP3i25_B10_061_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist may be limited when you back up diagonally and may not detect a vehicle approaching from the left or right. The function may not warn you or control the brakes when necessary.</p>
+					<p>Always check your surroundings while backing up.</p>
+				</li>
+				<li>
+					<p>The vehicle is on or near a slope</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04141">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04142">
+											<image href="images/N_SP327_D10_003_E.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist may be limited when your vehicle is on or near an uphill or downhill slope, and it may not detect a vehicle approaching from the left or right. The function may not warn you or control the brakes when necessary.</p>
+					<p>Always check your surroundings while backing up.</p>
+				</li>
+				<li>
+					<p>You are pulling into a parking space where there is a structure</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04143">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04144">
+											<image href="images/N_SP3i25_B10_063_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<ol outputclass="callout">
+											<li>
+												<p>Structure</p>
+											</li>
+											<li>
+												<p>Wall</p>
+											</li>
+										</ol>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist may detect vehicles passing ahead of you when you park in reverse into a parking space with a wall or structure in the rear or side area. The function may unnecessarily warn you and control the brake.</p>
+					<p>Always check your surroundings while backing up.</p>
+				</li>
+				<li>
+					<p>The vehicle is parked backward</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04145">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04146">
+											<image href="images/N_SP3i25_B10_064_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist may detect vehicles passing behind you when you park in a parking space in reverse. The function may unnecessarily warn you and control the brake.</p>
+					<p>Always check your surroundings while backing up.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>When you are towing a trailer or another vehicle, turn <term translate="no">OFF</term> Rear Cross-Traffic Collision-Avoidance Assist for safety reasons.</p>
+				</li>
+				<li>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist may not operate properly if there is strong electromagnetic interference.</p>
+				</li>
+				<li>
+					<p>Rear Cross-Traffic Collision-Avoidance Assist may not activate for 3 seconds after you start your vehicle or initialize the rear corner radars.</p>
+				</li>
+				<li>
+					<p>Even if you restart the vehicle with the sensors blocked or malfunctioning, Rear Cross-Traffic Collision-Avoidance Assist may not operate properly, as the function maintains its last setting.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00692.dita#t00692" role="parent" scope="local" type="concept">
+				<linktext>Rear Cross-Traffic Collision-Avoidance Assist malfunction and limitations</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

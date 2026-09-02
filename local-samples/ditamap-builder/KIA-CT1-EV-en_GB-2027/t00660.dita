@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00660">
+	<title>Smart Cruise Control display and control</title>
+	<conbody>
+		<p>You can see the status of the Smart Cruise Control operation in the Driving Assist view on the cluster. Refer to <xref type="concept" href="t00148.dita#t00148">LCD display modes</xref>.</p>
+		<p>Smart Cruise Control will be displayed as below depending on the status of the function.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Z106.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Smart Cruise Control will be displayed as below depending on the status of the function.</p>
+							<ul>
+								<li>
+									<p>When operating</p>
+									<ol outputclass="callout">
+										<li>
+											<p>Whether there is a vehicle ahead and the selected distance level</p>
+										</li>
+										<li>
+											<p>Set speed</p>
+										</li>
+										<li>
+											<p>Whether there is a vehicle ahead and the target vehicle distance</p>
+										</li>
+									</ol>
+								</li>
+								<li>
+									<p>When temporarily canceled</p>
+									<ol outputclass="callout">
+										<li>
+											<p>Your vehicle (gray)</p>
+										</li>
+										<li>
+											<p>Previous set speed (gray)</p>
+										</li>
+										<li>
+											<p importance="optional">Whether there is a vehicle ahead (gray)</p>
+										</li>
+									</ol>
+								</li>
+							</ul>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note">
+			<ul>
+				<li>
+					<p>The distance of the front vehicle on the cluster is displayed according to the actual distance between your vehicle and the vehicle ahead.</p>
+				</li>
+				<li>
+					<p>The target distance may vary according to the vehicle speed and the set distance level. If vehicle speed is low, even though the vehicle distance have changed, the change of the target vehicle distance may be small.</p>
+				</li>
+				<li>
+					<p>Surrounding objects displayed on the cluster may differ from reality.</p>
+				</li>
+				<li>
+					<p>The images or colors displayed on the cluster may vary depending on the cluster specifications or themes.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

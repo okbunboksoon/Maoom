@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00317">
+	<title>Manual climate control system</title>
+	<shortdesc>The manual climate control system cools or heats the inside of the vehicle for the comfort of you and your passengers.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>manual climate control system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<fig id="e02017">
+			<image href="images/N_SP3i26_C08_008_I.jpg" scale="95" align="center" placement="break"/>
+		</fig>
+		<ol outputclass="callout" id="e02018">
+			<li>
+				<p>Fan speed control/off button</p>
+			</li>
+			<li>
+				<p>Front windshield defroster button</p>
+			</li>
+			<li>
+				<p>Rear window defroster button</p>
+			</li>
+			<li>
+				<p>Mode selection button</p>
+			</li>
+			<li>
+				<p>Air conditioning <term translate="no">A/C</term> button</p>
+			</li>
+			<li>
+				<p>Air intake control button</p>
+			</li>
+			<li>
+				<p>Temperature control button</p>
+			</li>
+		</ol>
+		<note type="note" id="e02019">
+			<p>Operating the blower fan when the vehicle is in <term translate="no">ACC</term> position may cause the 12V battery to discharge. Only operate the blower fan when the vehicle is running.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00293.dita#t00293" role="parent" scope="local" type="concept">
+				<linktext>Control and Features</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

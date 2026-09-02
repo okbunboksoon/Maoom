@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0757">
+	<title>Im Fall einer Reifenpanne (mit Reifen-Mobilität-Kit)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Notfall
+					<indexterm>Reifen-Mobilitäts-Kit</indexterm>
+				</indexterm>
+				<indexterm>Reifen-Mobilitäts-Kit</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>4-Türer</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M065044L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>5-Türer</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M065045L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Kombi</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MW065002L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Kompressor</p>
+			</li>
+			<li>
+				<p>Dichtmittelflasche</p>
+			</li>
+			<li>
+				<p>Abschlepphaken</p>
+			</li>
+		</ol>
+		<p>Das Reifen-Mobilitäts-Kit ist nicht für als dauerhafte Reifeninstandsetzung vorgesehen und kann nur für einen Reifen verwendet werden.</p>
+		<p>Das aus einem Kompressor und Dichtmittel bestehende System dichtet die meisten Perforationen von Reifen ab, die durch Nägel oder ähnliche Gegenstände hervorgerufen wurden, und pumpt den Reifen wieder auf. Große Perforationen oder Schäden an den Seitenwänden können nicht vollständig abgedichtet werden.</p>
+		<p>Nachdem Sie sich davon überzeugt haben, dass der Reifen ordnungsgemäß abgedichtet wurde, können Sie mit dem Reifen vorsichtig und mit einer Höchstgeschwindigkeit von 80 km/h (50 mph) bis zu 200 km (124 Meilen) weit fahren, um eine Werkstatt oder einen Reifenhandel zu erreichen, bei der/dem der Reifen ersetzt werden kann.</p>
+		<p>Vermeiden Sie abrupte Lenkbewegungen und andere kritische Fahrmanöver, wenn das Fahrzeug stark beladen ist oder wenn Sie einen Anhänger ziehen.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Verwenden Sie das Reifen-Mobilitäts-Kit nicht für die Reparatur von Durchstichen in den Reifenwänden. Dies kann zu einem Unfall aufgrund des Reifenschadens führen.</p>
+				</li>
+				<li>
+					<p>Lassen Sie Ihren Reifen so bald wie möglich reparieren. Der Reifen kann jederzeit nach Aufpumpen mit dem Reifen-Mobilitäts-Kit Reifendruck verlieren.</p>
+				</li>
+				<li>
+					<p>Verwenden Sie das TMK nicht, wenn ein Reifen stark beschädigt ist, weil er vorher platt oder mit zu geringem Luftdruck gefahren wurde. Nur punktuelle Undichtigkeiten im Bereich der Reifenlauffläche können mit dem TMK abgedichtet werden.</p>
+				</li>
+				<li>
+					<p>Verwenden Sie kein Reifendichtmittel, wenn dessen Lagerzeit (d. h. das Verfallsdatum auf dem Dichtmittelbehälter) abgelaufen ist. Dadurch kann sich die Gefahr von Reifenpannen erhöhen.</p>
+				</li>
+				<li>
+					<p>Bewahren Sie das Dichtmittel außerhalb der Reichweite von Kindern auf. Vermeiden Sie den Kontakt mit den Augen und verschlucken Sie das Dichtmittel nicht.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<p>Wenn zwei oder mehr Reifen defekt sind, verwenden Sie das Reifen-Mobilitäts-Kit nicht, da das Dichtmittel im Reifen-Mobilitäts-Kit nur für einen defekten Reifen reicht.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0732-CH11.dita#CL4m_HEV-ca_ES-2027-t0732-CH11" role="parent" scope="local" type="concept">
+				<linktext>Maßnahmen bei einem Notfall</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

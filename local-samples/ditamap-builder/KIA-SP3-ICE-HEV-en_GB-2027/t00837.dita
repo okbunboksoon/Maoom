@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00837">
+	<title>Replacing the air cleaner filter</title>
+	<shortdesc>Replace the air cleaner filter when necessary, and do not wash it.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>air cleaner
+					<indexterm>replacing the air cleaner filter</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context id="e04917">
+			<p>You can clean the filter when inspecting the air cleaner compartment. Use compressed air to clean the filter.</p>
+		</context>
+		<steps id="e04918">
+			<step>
+				<cmd>Loosen the air cleaner cover attaching clips (1) and open the cover.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04919">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04920">
+											<image align="center" placement="break" scale="95" href="images/N_SP327_D12_061_1.jpg"/>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<fig id="e04921">
+											<image align="center" placement="break" scale="95" href="images/N_SP327_D12_016_1.jpg"/>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>Pull up the air cleaner cover (2) and open it.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04922">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04923">
+											<image href="images/N_SP327_D12_015_2.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<fig id="e04924">
+											<image align="center" placement="break" scale="95" href="images/N_SP327_D12_018_1.jpg"/>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>Wipe the inside of the air cleaner filter cover.</cmd>
+			</step>
+			<step>
+				<cmd>Replace the air cleaner filter.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04925">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04926">
+											<image href="images/N_SP327_D12_059_1.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<fig id="e04927">
+											<image align="center" placement="break" scale="95" href="images/N_SP327_D12_060_1.jpg"/>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>Reassemble the air cleaner filter parts and cover in the reverse order of disassembly.</cmd>
+			</step>
+			<step>
+				<cmd>Install the air cleaner cover by first inserting the hinge part (3) correctly, and then attaching the clips.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04928">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04929">
+											<image href="images/N_SP327_D12_057_1.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<fig id="e04930">
+											<image align="center" placement="break" scale="95" href="images/N_SP327_D12_058_1.jpg"/>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+		</steps>
+		<postreq id="e04931">
+			<p>Replace the filter according to the Maintenance Schedule.</p>
+			<p>If you drive your vehicle in extremely dusty or sandy areas, replace the filter more often than the usual recommended intervals. (Refer to <xref href="t00793.dita#t00793"/>.)</p>
+			<note type="note" id="e04932">
+				<ul id="e04933">
+					<li>
+						<p>Do not drive with the air cleaner filter removed. This results in excessive engine wear.</p>
+					</li>
+					<li>
+						<p>When removing the air cleaner filter, make sure that dust or dirt does not enter the air intake, as this can cause damage.</p>
+					</li>
+					<li>
+						<p>Use genuine replacement parts from a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+				</ul>
+			</note>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00836.dita#t00836" role="parent" scope="local" type="concept">
+				<linktext>Air cleaner</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

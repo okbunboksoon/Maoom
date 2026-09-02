@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00816">
+	<title>Replacing motor room fuse</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05148">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05149">
+								<figgroup>
+									<image href="../../images/OOV075014.eps" align="center" height="1.740in" placement="break" id="e05150"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Operation</title>
+			<ol>
+				<li>
+					<p>Press the EV button to the OFF position and turn all other switches off.</p>
+				</li>
+				<li>
+					<p>Remove the fuse panel cover by pressing the tab and pulling the cover up.</p>
+					<p>When the blade type fuse is disconnected, remove it by using the clip designed for changing fuses located in the fuse panel cover. Upon removal, securely insert reserve fuse of equal quantity.</p>
+				</li>
+				<li>
+					<p>Check the removed fuse; replace it if it is blown. To remove or insert the fuse, use the fuse puller in the fuse panel cover.</p>
+				</li>
+				<li>
+					<p>Push in a new fuse of the same rating, and make sure it fits tightly in the clips. If the new fuse does not fit tightly, consult a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ol>
+			<note type="caution">
+				<p>After checking the fuse panel in the motor compartment, securely install the fuse panel cover through the audible clicking sound. If not, electrical failures may occur from water contact.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

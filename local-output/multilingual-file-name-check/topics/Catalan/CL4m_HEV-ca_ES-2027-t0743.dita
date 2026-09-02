@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0743">
+	<title>Anlassen über Starthilfekabel</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Zentralverriegelung mit Fernbedienung
+					<indexterm>Batterie ersetzen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Klemmen Sie die Starthilfekabel in numerischer Reihenfolge an und klemmen Sie die Kabel in der umgekehrten Reihenfolge ab.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M064015N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Das Starten eines Motors mit Hilfe von Starthilfekabeln kann gefährlich sein, wenn die Starthilfe unsachgemäß durchgeführt wird. Um Personenschäden und Beschädigungen Ihres Fahrzeugs und der Fahrzeugbatterie zu vermeiden, folgen Sie den Hinweisen zur Starthilfe. Lassen Sie sich Starthilfe von einem qualifizierten Techniker oder Pannenhilfsdienst geben, wenn Sie sich bzgl. der Vorgehensweise nicht sicher sind.</p>
+		<note type="caution">
+			<p>Benutzen Sie ausschließlich ein 12-V-Starthilfesystem. Bei Verwendung einer 24-V-Spannungsquelle (zwei in Reihe geschaltete 12 V-Batterien oder ein 24-V-Generator) kann das elektrische 12V-System Ihres Fahrzeugs inklusive Anlasser, Zündanlage und anderer Bauteile irreparabel beschädigt werden.</p>
+		</note>
+		<note type="warning">
+			<p>Batterie</p>
+			<p>Versuchen Sie niemals, die spezifische Dichte der Batteriesäure zu prüfen. Die Batterie könnte platzen oder explodieren und schwere Verletzung verursachen.</p>
+		</note>
+		<note type="warning">
+			<p>Batterie</p>
+			<ul>
+				<li>
+					<p>Halten Sie Feuer und Funken von der Batterie fern. Eine Batterie produziert wasserstoffhaltige Gase, die von Feuer und Funken zur Explosion gebracht werden können.</p>
+					<p>Wenn diese Anweisungen nicht exakt befolgt werden, kann dies zu schweren Verletzungen und zur Beschädigung des Fahrzeugs führen! Wenn Sie sich nicht sicher sind ob Sie die Schritte dieses Verfahrens befolgen können, rufen Sie qualifizierte Hilfe hinzu. Autobatterien enthalten Schwefelsäure. Diese ist giftig und äußerst aggressiv. Tragen Sie bei der Durchführung einer Starthilfe eine Schutzbrille und achten Sie darauf, dass Säure weder mit Ihnen, noch mit Ihrer Kleidung und auch nicht mit dem Fahrzeug in Kontakt gerät.</p>
+				</li>
+				<li>
+					<p>Versuchen Sie niemals, den Motor mit Starthilfekabeln anzulassen, wenn die entladene Batterie eingefroren oder der Säurestand zu gering ist. Die Batterie könnte platzen oder explodieren.</p>
+				</li>
+				<li>
+					<p>Achten Sie darauf, dass die Starthilfekabel (+) und (-) einander nicht berühren. Dadurch kann es zu Funkenbildung kommen.</p>
+				</li>
+				<li>
+					<p>Die Batterie kann bersten oder explodieren, wenn Sie mit einer eingefrorenen Batterie oder einer Batterie mit niedriger Kapazität starten.</p>
+				</li>
+			</ul>
+		</note>
+		<section>
+			<title>Starthilfeverfahren</title>
+			<ol>
+				<li>
+					<p><indexterm>Starthilfe<indexterm>Starthilfeverfahren</indexterm></indexterm>Vergewissern Sie sich, dass die stromabgebende Batterie eine 12-V-Batterie ist und dass ihr Minuskabel an der Fahrzeugmasse befestigt ist.</p>
+				</li>
+				<li>
+					<p>Wenn sich die stromabgebende Batterie in einem anderen Fahrzeug befindet, dürfen sich die Fahrzeuge nicht berühren.</p>
+				</li>
+				<li>
+					<p>Schalten Sie alle nicht benötigten elektrischen Verbraucher ab.</p>
+				</li>
+				<li>
+					<p>Schließen Sie die Starthilfekabel exakt in der im Bild gezeigten Reihenfolge an. Schließen Sie zuerst eine Klammer des Plus-Kabels (rot) an den Pluspol der entladenen Batterie an (1). Schließen Sie danach die andere Klammer des Plus-Kabels (rot) an den Pluspol der stromabgebenden Batterie an (2).</p>
+					<p>Schließen Sie nun eine Klammer des Minus-Kabels (schwarz) an den Minuspol der stromabgebenden Batterie an (3). Die andere Klammer des Minus-Kabels schließen Sie an ein solides festes Metallteil (z. B. Lasche zum Anheben des Motors) im Motorraum des zu startenden Fahrzeugs in einiger Entfernung von der Batterie an (4). Befestigen Sie die Klammer nicht an oder neben einem Bauteil, welches sich beim Starten bewegt.</p>
+					<p>Achten Sie darauf, dass die Kabelklemmen keine anderen Teile als die beschriebenen Batteriepole oder den beschriebenen Massepunkt am Motor berühren. Beugen Sie sich nicht über die Batterie, während Sie die Klammern an den Batteriepolen befestigen.</p>
+					<note type="caution">
+						<p>Starthilfekabel</p>
+						<ul>
+							<li>
+								<p>Schließen Sie das Starthilfekabel vom Minuspol der stromabgebenden Batterie nicht direkt an den Minuspol der entladenen Batterie an. Die entladene Batterie kann überhitzen, bersten und Batteriesäure kann auslaufen.</p>
+							</li>
+							<li>
+								<p>Achten Sie darauf, ein Ende des Starthilfekabels an den Minuspol der stromabgebenden Batterie und das andere Ende an einen Metallelement in möglichst großer Entfernung von der Batterie anzuschließen.</p>
+							</li>
+						</ul>
+					</note>
+				</li>
+				<li>
+					<p>Starten Sie den Motor des stromabgebenden Fahrzeugs und lassen Sie ihn mit einer Drehzahl von ca. 2.000 U/min laufen. Lassen Sie danach den Motor des Fahrzeugs mit der entladenen Batterie an.</p>
+				</li>
+			</ol>
+			<p>Wenn der Grund für die Entladung der Batterie nicht ersichtlich ist, lassen Sie die Anlage von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0742.dita#CL4m_HEV-ca_ES-2027-t0742" role="parent" scope="local" type="concept">
+				<linktext>Starthilfe</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

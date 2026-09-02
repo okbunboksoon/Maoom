@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00396">
+	<title>AUTO START</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>idle stop and go (ISG)
+					<indexterm>AUTO START</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02641">
+			<title>Restarting the engine from Idle STOP mode</title>
+			<sectiondiv><ph>Manual Transmission</ph>
+				<ul id="e02642">
+					<li>
+						<p><b>Conventional Restart</b></p>
+						<ul id="e02643">
+							<li>
+								<p>Press the clutch pedal when the vehicle is in N (Neutral).</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p><b>Late Restart</b></p>
+						<ul id="e02644">
+							<li>
+								<p>Engage the clutch pedal.</p>
+							</li>
+							<li>
+								<p>Shift the gear.</p>
+							</li>
+							<li>
+								<p>Release the brake pedal.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>Dual Clutch Transmission/Intelligent Variable Transmission</ph>
+				<ul id="e02645">
+					<li>
+						<p>Release the brake pedal.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<note type="note" id="e02646">
+				<ul id="e02647">
+					<li>
+						<p>The Late Restart function operates only when the vehicle is on level ground and stable.</p>
+						<p>To start the engine when the brake is not pressed or a gear is already engaged, press the brake pedal first, and then press the clutch pedal for safety.</p>
+					</li>
+					<li>
+						<p>To start the engine without vehicle movement while the brake pedal is pressed (if equipped with Late Restart):</p>
+						<ol id="e02648">
+							<li>
+								<p>Press and release the clutch pedal.</p>
+							</li>
+							<li>
+								<p>Immediately press the clutch pedal again.</p>
+							</li>
+						</ol>
+					</li>
+					<li>
+						<p>After the vehicle has stalled, the engine will restart if you follow these steps:</p>
+						<ol id="e02649">
+							<li>
+								<p>Release the clutch pedal after the engine has completely stopped.</p>
+							</li>
+							<li>
+								<p>Depress the clutch pedal again.</p>
+							</li>
+						</ol>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00394.dita#t00394" role="parent" scope="local" type="concept">
+				<linktext>Idle Stop and Go (ISG)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

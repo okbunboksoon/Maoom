@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00062">
+	<title>With a digital key</title>
+	<conbody>
+		<p>Hold your smartphone and touch the tactile portion on the outside door handle to activate the door lock sensor.</p>
+		<p>If your smartphone or card key does not support UWB, touch the digital key to the door handle for about 2 seconds or longer.</p>
+		<p>For more details on how to use the digital key, refer to <xref type="concept" href="t00044.dita#t00044"/>.</p>
+		<section>
+			<title id="e00261">Automatic door lock and unlock features</title>
+			<p>Your vehicle is equipped with features that will automatically lock or unlock your vehicle based on settings you select in the infotainment system screen.</p>
+			<ol>
+				<li>
+					<p>To activate Approach Unlock system, select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Door</uicontrol><uicontrol>Approach Unlock</uicontrol></menucascade> in the infotainment system.</p>
+				</li>
+				<li>
+					<p>Approach the outside door handle of the driver’s side.</p>
+					<p>The outside door handle gets automatically unlocked and pops out. The hazard warning lights blink twice, and a warning alarm will ring twice.</p>
+					<p>If you don't touch the digital key on the door lock sensor of the door handle within about 2 seconds after the handle pops out, all the doors will be locked again, and the outside door handle will retract.</p>
+				</li>
+			</ol>
+		</section>
+		<section>
+			<title>Auto lock enable on speed</title>
+			<p>When this feature is set in the infotainment system screen, all the doors will be locked automatically when the vehicle exceeds 15 km/h (9 mph).</p>
+		</section>
+		<section>
+			<title>Auto lock enable on shift</title>
+			<p>When this feature is set in the infotainment system screen, all the doors will be locked automatically when the vehicle is shifted out of P (Park) while the vehicle is running.</p>
+		</section>
+		<section>
+			<title>Auto unlock on shift to P</title>
+			<p>When this feature is set in the infotainment system screen, all the doors will be unlocked automatically when the vehicle is shifted out of P (Park) while the vehicle is running.</p>
+		</section>
+		<section>
+			<title>Auto unlock vehicle off</title>
+			<p>When this feature is set in the infotainment system screen, all the doors will be unlocked automatically when the vehicle is turned off.</p>
+		</section>
+		<section>
+			<title>Impact sensing door unlock system</title>
+			<p>All doors will automatically unlock when an impact causes the air bags to deploy.</p>
+		</section>
+		<section>
+			<title>Additional unlock safety feature air bag deployment</title>
+			<p>When this feature is set in the infotainment system screen, all the doors will be unlocked automatically when the vehicle is turned off.</p>
+			<note type="tip" deliveryTarget="except_print">
+				<ul>
+					<li>
+						<p>The driver can activate/deactivate the Approach unlock system on the infotainment screen.</p>
+					</li>
+					<li>
+						<p>The driver can activate/deactivate the Approach unlock system on the infotainment screen.</p>
+					</li>
+					<li>
+						<p>In emergency situations, such as battery is dead, the outside electric door handle can still be operated in a way that the outside manual door handle operate.</p>
+					</li>
+					<li>
+						<p>If Approach unlock system is deactivated, the door handle will not pop out even when the driver approaches to the vehicle with the smart key. To unlock doors when Approach unlock system is deactivated, touch the lock/unlock sensor on the handle.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

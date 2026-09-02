@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00760">
+	<title>Components of the Tire Mobility Kit</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tire mobility kit
+					<indexterm>components of the tire mobility kit</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<fig expanse="page" id="e04644">
+			<image align="center" href="images/N_SP327_C11_008_3.jpg" scale="95" placement="break"/>
+		</fig>
+		<p>Connectors, cable and compressor hose are stored in the compressor housing.</p>
+		<p>Strictly follow the specified sequence, otherwise the sealant may escape under high pressure.</p>
+		<ol outputclass="callout" id="e04645">
+			<li>
+				<p>Sealant bottle filling hose</p>
+			</li>
+			<li>
+				<p>Compressor hose connector</p>
+			</li>
+			<li>
+				<p>Tire inflation pressure adjustment valve</p>
+			</li>
+			<li>
+				<p>Compressor connector</p>
+			</li>
+			<li>
+				<p>Tire pressure control valve</p>
+			</li>
+			<li>
+				<p>Tire inflation pressure gaugee</p>
+			</li>
+			<li>
+				<p>Compressor</p>
+			</li>
+			<li>
+				<p>Compressor <term translate="no">ON/OFF</term> switch</p>
+			</li>
+			<li>
+				<p>Speed restriction label</p>
+			</li>
+			<li>
+				<p>Sealant bottle</p>
+			</li>
+			<li>
+				<p>Vehicle power outlet connector/cable</p>
+			</li>
+			<li>
+				<p>Compressor hose</p>
+			</li>
+		</ol>
+		<note type="warning" id="e04646">
+			<p>Expired sealant</p>
+			<p>Do not use the Tire sealant after the sealant has expired (i.e. past the expiration date on the sealant container). This can increase the risk of tire failure.</p>
+		</note>
+		<note type="warning" id="e04647">
+			<p>Sealant</p>
+			<ul id="e04648">
+				<li>
+					<p>Keep out of reach of children.</p>
+				</li>
+				<li>
+					<p>Avoid contact with eyes.</p>
+				</li>
+				<li>
+					<p>Do not swallow.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" id="e04649">
+			<ul id="e04650">
+				<li>
+					<p>Before using the TMK, follow the instructions on the sealant bottle.</p>
+				</li>
+				<li>
+					<p>Remove the label with the speed restriction from the sealant bottle and apply it to the steering wheel.</p>
+				</li>
+				<li>
+					<p>Please note the expiration date on the sealant bottle.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution" id="e04651">
+			<p>Before using the TMK, carefully read the instructions attached on the sealant bottle. Detach the speed limit label on the sealant bottle and place it in a highly visible area in the vehicle, such as on the steering wheel, to remind you not to drive too fast.</p>
+		</note>
+		<note type="note" id="e04652">
+			<p>The sealant bottle and insert hose cannot be reused.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00759.dita#t00759" role="parent" scope="local" type="concept">
+				<linktext>If you have a flat tire (with Tire Mobility Kit)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

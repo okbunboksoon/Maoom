@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00660">
+	<title>Camera Settings</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="fig_al4_5td_s3c">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OLQ2AH005045.eps" placement="break" width="2.244in" id="image_bl4_5td_s3c"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol outputclass="a1804409">Camera settings</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Display contents</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle on, select the setup icon (<image href="../../images/WKIA_152.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) on the screen or <menucascade><uicontrol outputclass="a1701754">Settings</uicontrol><uicontrol outputclass="a1701772">Vehicle</uicontrol><uicontrol outputclass="a1804409">Driver assistance</uicontrol><uicontrol outputclass="a1804506">Parking safety</uicontrol><uicontrol outputclass="a1703498">Camera settings</uicontrol></menucascade> from the infotainment system screen to change the Rear View Monitor settings.</p>
+		<p> <uicontrol outputclass="a1804506">Extend rear camera use</uicontrol> </p>
+		<p>If Extend rear camera use is selected, the rear camera is displayed even when shifting from R (Reverse) to N (Neutral) or D (Drive).</p>
+		<p> <uicontrol outputclass="a1804506">Rear view reference lines</uicontrol> </p>
+		<p>If Rear view reference lines in the display information is selected, Rear view reference lines and Top Rear View Parking Guidance are displayed in the rear monitor.</p>
+		<note type="note">
+			<p>The setting menu may not be available for your vehicle depending on the vehicle specifications.</p>
+		</note>
+		<note type="note">
+			<p>The horizontal lines of the Rear View Parking Guidance indicate distances of 0.5 m (20 in), 1 m (40 in), and 2.3 m (91 in) from the vehicle. The horizontal scale of the Top View Parking Guidance indicates distances of tailgate opening distance and 1.5 m (60 in) from the vehicle.</p>
+		</note>
+	</conbody>
+</concept>

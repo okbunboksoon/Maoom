@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00300">
+	<title id="e02280">Operating rear fog lamp</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lighting 
+					<indexterm>operating rear fog lamp</indexterm>
+				</indexterm>
+				<indexterm>operating rear fog lamp</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02281">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02282">
+								<figgroup>
+									<image href="../../images/OSW035467L.eps" align="center" height="1.740in" placement="break" id="e02283"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e02284">
+			<li>
+				<p>To turn on the rear fog lamp, turn the rear fog lamp switch (1) to the <term translate="no">ON</term> position with the headlights turned on.</p>
+				<p>The rear fog lamp also turn on when the rear fog lamp switch is turned on after the headlight switch is in the position lamp (<image href="../../images/WKIA_049.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02285"/>) position.</p>
+			</li>
+			<li>
+				<p>To turn off the rear fog lamp, turn the rear fog light switch to the <term translate="no">ON</term> position again.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

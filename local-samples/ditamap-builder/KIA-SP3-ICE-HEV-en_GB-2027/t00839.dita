@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00839">
+	<title>Inspecting the climate control air filter</title>
+	<shortdesc>Replace the climate control air filter according to the maintenance schedule. If you drive your vehicle in severely air-polluted cities or on dusty rough roads for a long period of time, have the filter inspected more frequently and replaced earlier. Perform the following procedure to replace the climate control air filter, and be careful to avoid damaging other components.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>climate control air filter
+					<indexterm>inspecting the climate control air filter</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<steps id="e04936">
+			<step>
+				<cmd>Open the glove box.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04937">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04938">
+											<image align="center" placement="break" scale="95" href="images/N_SP3i25_B12_011_1_IR.jpg"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>With the glove box open, push both sides of the glove box.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04939">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04940">
+											<image href="images/N_SP3i26_B12_003_E.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>Remove the climate control air filter cover by pulling out one side of the cover.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04941">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04942">
+											<image href="images/N_SP327_D12_012_ER.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>Replace the climate control air filter.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04943">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04944">
+											<image href="images/N_CT25G010.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>Reassemble the climate control air filter parts and cover in the reverse order of disassembly.</cmd>
+			</step>
+		</steps>
+		<postreq id="e04945">
+			<note type="note" id="e04946">
+				<p>When you replace the climate control air filter, be sure to install it properly. Otherwise, you may hear noise from the system and notice a reduction in the filter’s effectiveness.</p>
+			</note>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00838.dita#t00838" role="parent" scope="local" type="concept">
+				<linktext>Climate control air filter</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

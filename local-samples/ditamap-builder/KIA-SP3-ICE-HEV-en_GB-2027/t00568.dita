@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00568">
+	<title>Forward Attention Warning (FAW)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>forward attention warning (FAW)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Forward Attention Warning uses the in-cabin camera to help prevent the driver from being distracted while driving with an audible warning and warning light.</p>
+		<section id="e03638">
+			<title>Detecting sensor</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e03639">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e03640">
+									<figgroup>
+										<image href="images/N_QVe27_A10_001_E.jpg" scale="95" align="center" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout" id="e03641">
+									<li>
+										<p><uicontrol>In-cabin camera</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The picture above shows the detailed location of the detecting sensor.</p>
+			<note type="caution" id="e03642">
+				<ul id="e03643">
+					<li>
+						<p>Always keep the in-cabin camera in good condition to maintain optimal performance of Forward Attention Warning.</p>
+					</li>
+					<li>
+						<p>If the inside rear view mirror is excessively tilted, causing the in-cabin camera to be out of range and unable to detect the driver, Forward Attention Warning may not operate properly, and may display Limitations of Forward Attention Warning message.</p>
+					</li>
+					<li>
+						<p>If the in-cabin camera is excessively tilted or obstructed by objects, the Forward Attention Warning may not operate properly, and a warning light and warning message appear on the instrument cluster.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00442.dita#t00442" role="parent" scope="local" type="concept">
+				<linktext>Driver assistance guide</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

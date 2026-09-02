@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0497">
+	<title>Kollisionsvermeidungsassistent (beim Anfahren)</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054090N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Notbremsung</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Warnleuchte am Außenspiegel, ein akustisches Warnsignal und die Vibration des Lenkrads (sofern vorhanden) warnen den Fahrer vor einem Zusammenstoß. Er unterstützt die Bremssteuerung, um eine Kollision mit einem herannahenden Fahrzeug im toten Winkel zu verhindern.</p>
+		<p>Der Kollisionsvermeidungsassistent wird unter folgenden Umständen aktiviert.</p>
+		<ul>
+			<li>
+				<p>Fahrgeschwindigkeit: Unter 3 km/h (2 mph)</p>
+			</li>
+			<li>
+				<p>Geschwindigkeit des Fahrzeugs im Totwinkel: über 5 km/h (3 mph)</p>
+			</li>
+		</ul>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054168N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Vorsichtig fahren</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn das Fahrzeug aufgrund einer Notbremsung angehalten wurde, erscheint die Warnmeldung auf dem Kombiinstrument. Zur Sicherheit sollte der Fahrer sofort das Bremspedal betätigen und die Umgebung prüfen.</p>
+		<ul>
+			<li>
+				<p>Die Bremssteuerung wird beendet, sobald das Fahrzeug durch eine Notbremsung für etwa 2 Sekunden angehalten wurde.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Ändern Sie zu Ihrer Sicherheit die Einstellungen, nachdem Sie das Fahrzeug an einem sicheren Ort geparkt haben.</p>
+				</li>
+				<li>
+					<p>Wenn die Warnmeldung einer anderen Funktion angezeigt oder ein Warnton ausgegeben wird, wird die Warnmeldung des Totwinkel-Kollisionsvermeidungsassistenten möglicherweise nicht angezeigt und ggf. kein Warnton ausgegeben.</p>
+				</li>
+				<li>
+					<p>Möglicherweise hören Sie den Warnton des Totwinkel-Kollisionsvermeidungsassistenten nicht, wenn die Umgebung laut ist. Seien Sie immer aufmerksam und halten Sie die Fahrzeuglautstärke auf einem moderaten Niveau.</p>
+				</li>
+				<li>
+					<p>Der Totwinkel-Kollisionsvermeidungsassistent funktioniert nicht, wenn der Fahrer das Bremspedal betätigt, um eine Kollision zu vermeiden.</p>
+				</li>
+				<li>
+					<p>Bei aktiviertem Totwinkel-Kollisionsvermeidungsassistent wird die Bremssteuerung durch die Funktion automatisch aufgehoben, wenn der Fahrer das Gaspedal kräftig tritt oder das Fahrzeug hart einlenkt.</p>
+				</li>
+				<li>
+					<p>Während der Nutzung des Totwinkel-Kollisionsvermeidungsassistenten kann es vorkommen, dass das Fahrzeug plötzlich anhält und dabei Mitfahrer verletzt und lose Gegenstände verschoben werden. Legen Sie immer den Sicherheitsgurt an und sichern Sie lose Gegenstände.</p>
+				</li>
+				<li>
+					<p>Selbst wenn ein Problem mit dem Totwinkel-Kollisionsvermeidungsassistenten auftritt, funktioniert die Bremsanlage des Fahrzeugs normal.</p>
+				</li>
+				<li>
+					<p>Der Totwinkel-Kollisionsvermeidungsassistent funktioniert möglicherweise nicht in allen Situationen, und selbst wenn er funktioniert, ist er möglicherweise nicht in der Lage, eine Kollision zu verhindern.</p>
+				</li>
+				<li>
+					<p>Der Totwinkel-Kollisionsvermeidungsassistent kann den Fahrer je nach Fahrbahn und Fahrbedingungen verspätet oder gar nicht warnen.</p>
+				</li>
+				<li>
+					<p>Die Verantwortung für den Betrieb des Fahrzeugs liegt beim Fahrer. Verlassen Sie sich beim Fahren nicht ausschließlich auf den Totwinkel-Kollisionsvermeidungsassistenten, sondern überprüfen Sie immer auch direkt die Umgebungsbedingungen und fahren Sie sicher.</p>
+				</li>
+				<li>
+					<p>Testen Sie niemals den Totwinkel-Kollisionsvermeidungsassistenten mit Personen, Tieren, Gegenständen usw. Dies kann zu schweren oder tödlichen Verletzungen führen.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning">
+			<p>Die Bremssteuerung funktioniert je nach Status der ESC (elektronischen Stabilitätskontrolle) nicht richtig.</p>
+			<p>Es wird nur in folgenden Fällen eine Warnung ausgegeben:</p>
+			<ul>
+				<li>
+					<p>Die ESC-Warnleuchte (Elektronische Stabilitätskontrolle) leuchtet.</p>
+				</li>
+				<li>
+					<p>Die ESC (Elektronische Stabilitätskontrolle) wird für eine andere Funktion benötigt.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0495.dita#CL4m_HEV-ca_ES-2027-t0495" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Totwinkel-Kollisionsvermeidungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

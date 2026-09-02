@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0880">
+	<title id="e01503">Glühlampenposition (hinten) </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Glühlampen
+					<indexterm>Glühlampenposition (hinten)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Kombileuchte hinten (4 Türen) (Typ A)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M076027L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01504">
+								<title>Kombileuchte hinten (4 Türen) (Typ B)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MGTL075006L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01505">
+								<title>Kombileuchte hinten (5 Türen) (Typ A)</title>
+								<figgroup>
+									<image align="center" scale="95" placement="break" href="../../images/OCL4M076154L.eps"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01506">
+								<title>Kombileuchte hinten (5 Türen) (Typ B)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MGTL075009L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01507">
+								<title>Hintere Kombileuchten (Kombi) (Typ A)</title>
+								<figgroup>
+									<image align="center" scale="95" placement="break" href="../../images/OCL4MW076007L.eps"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01508">
+								<title>Hintere Kombileuchte (Kombi) (Typ B)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MW075002L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01509">
+								<title>Hoch angebrachte dritte Bremsleuchte (4 Türen)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M074063N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01510">
+								<title>Hoch angebrachte dritte Bremsleuchte (5 Türen)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MGTL075007L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01511">
+								<title>Hoch angebrachte dritte Bremsleuchte (Kombi)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MW075003L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Rückleuchte (LED-Typ)</p>
+			</li>
+			<li>
+				<p>Bremsleuchte (Glühlampe)</p>
+			</li>
+			<li>
+				<p>Blinkleuchte (Glühlampe)</p>
+			</li>
+			<li>
+				<p>Kennzeichenleuchte (LED-Lampe)</p>
+			</li>
+			<li>
+				<p>Hinterer Reflektor</p>
+			</li>
+			<li>
+				<p>Rückfahrscheinwerfer/Nebelscheinwerfer hinten (Glühlampe/LED)</p>
+			</li>
+			<li>
+				<p>Hoch angebrachte dritte Bremsleuchte (Glühlampe/LED)</p>
+			</li>
+			<li>
+				<p>Blinkleuchte (LED)</p>
+			</li>
+			<li>
+				<p>Bremsleuchte (LED-Typ)</p>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0876.dita#CL4m_HEV-ca_ES-2027-t0876" role="parent" scope="local" type="concept">
+				<linktext>Glühlampen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00636">
+	<title>Highway Driving Assist settings</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>highway driving assist (HDA) 
+					<indexterm>settings</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig>
+								<figgroup>
+									<image href="../../images/N_TK25Z004_E.eps" align="center" placement="break" height="1.575in" width="2.244in"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol outputclass="a1804409">Driver assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1906778">Driving Convenience</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1804448">Highway Driving Assist</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1804451">Highway Lane Change Assist</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle on, touch or select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Driving Convenience</uicontrol></menucascade> on the infotainment system to set whether to use each function.</p>
+		<ul>
+			<li>
+				<p>If <uicontrol outputclass="a1804448">Highway Driving Assist</uicontrol> is selected, it helps maintain distance from the vehicle ahead, maintain the set speed, and helps center the vehicle in the lane.</p>
+			</li>
+			<li>
+				<p importance="optional">If <uicontrol outputclass="a1804451">Highway Lane Change Assist</uicontrol> is selected, it helps change lanes safely.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e04374">
+			<p>For your safety, change the Settings after parking the vehicle at a safe location.</p>
+		</note>
+		<note type="caution" id="e04375">
+			<p>When the vehicle and the trailer are connected electrically, Highway Driving Assist automatically turns off. In this case, you cannot get help from Highway Driving Assist. Always drive with care. (if Kia genuine part equipped)</p>
+		</note>
+		<note type="note" id="e04376">
+			<ul id="e04377">
+				<li>
+					<p>Highway Driving Assist should be selected to use Highway Lane Change Assist.</p>
+				</li>
+				<li>
+					<p>If there is a problem with the functions, the settings cannot be changed. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>If the vehicle is restarted, the functions will maintain the last setting.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00631">
+	<title>Hands-off warning</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04352">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e04353">
+								<figgroup>
+									<image href="../../images/OOV055153L.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e04354"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e04355">
+								<li>
+									<p> <uicontrol outputclass="c0047">Keep hands on steering wheel</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p outputclass="across">If the driver takes their hands off the steering wheel for several seconds, the warning message will appear and an audible warning will sound in stages.</p>
+		<ul>
+			<li>
+				<p>First stage: Warning message</p>
+			</li>
+			<li>
+				<p>Second stage: Warning message (red steering wheel) and audible warning</p>
+			</li>
+		</ul>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04356">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e04357">
+								<figgroup>
+									<image href="../../images/OOV055188L.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e04358"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e04359">
+								<li>
+									<p> <uicontrol>LFA (Lane Following Assist) cancelled</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>If the driver still does not have their hands on the steering wheel after the hands-off warning the warning message will appear and Lane Following Assist will be automatically canceled.</p>
+		<p>If the driver fails to respond to the Hands-off Level 2 warning while Smart Cruise Control is operating, the Emergency Stop function will activate. For details, refer to <xref type="concept" href="t00602.dita#t00602">SCC (Smart Cruise Control)</xref>.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p outputclass="across">The steering wheel may not be assisted if the steering wheel is held very tight or the steering wheel is steered over a certain degree.</p>
+				</li>
+				<li>
+					<p>Lane Following Assist does not operate at all times. It is the responsibility of the driver to safely steer the vehicle and to maintain the vehicle in its lane.</p>
+				</li>
+				<li>
+					<p>The hands-off warning message may appear late depending on road conditions. Always have your hands on the steering wheel while driving.</p>
+				</li>
+				<li>
+					<p>If gloves are worn or the steering wheel is held very lightly, the hands-off warning message may appear because Lane Following Assist may not recognize that the driver has their hands on the steering wheel.</p>
+				</li>
+				<li>
+					<p>If you attach objects to the steering wheel, the hands-off warning may not work properly.</p>
+				</li>
+				<li>
+					<p>When Lane Keeping Assist reaches its system limits, the indicator will blink white and a warning sound will alert the driver.</p>
+					<ul id="e04360">
+						<li>
+							<p>System limits: when the driver’s hands are off the steering wheel and the vehicle departs from the lane while Lane Keeping Assist is operating.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Lane Keeping Assist may not operate or may operate abnormally when driving on sharp curves.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>When both lane markings are detected, the lane lines on the cluster will change from gray to white.</p>
+					<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04361">
+						<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+							<colspec colnum="1" colname="1" colwidth="50*"/>
+							<colspec colnum="2" colname="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="1" colsep="0">
+										<fig id="e04362">
+											<title>Lane undetected</title>
+											<figgroup>
+												<image href="../../images/OOV055097.eps" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="2">
+										<fig id="e04363">
+											<title>Lane detected</title>
+											<figgroup>
+												<image align="center" href="../../images/OOV055096.eps" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>The images and colors in the instrument cluster may differ depending on the cluster type or theme selected from the settings menu.</p>
+				</li>
+				<li>
+					<p>The lane lines shown on the instrument cluster may differ from the actual lane markings.</p>
+				</li>
+				<li>
+					<p>If lane markings are not detected, steering wheel control by Lane Following Assist can be limited depending on whether a vehicle is in front or the driving conditions of the vehicle.</p>
+				</li>
+				<li>
+					<p>Even though the steering is assisted by Lane Following Assist, the driver may control the steering wheel.</p>
+				</li>
+				<li>
+					<p>The steering wheel may feel heavier or lighter when the steering wheel is assisted by Lane Following Assist than when it is not.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

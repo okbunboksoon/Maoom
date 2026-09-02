@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00556">
+	<title>Limitations of Intelligent Speed Limit Assist</title>
+	<conbody>
+		<p>Intelligent Speed Limit Assist may operate abnormally or unexpectedly under the following circumstances:</p>
+		<ul id="e03578">
+			<li>
+				<p>The road sign is dirty or difficult to read.</p>
+				<ul id="e03579">
+					<li>
+						<p>The road sign is difficult to see due to inclement weather, such as rain, snow, or fog.</p>
+					</li>
+					<li>
+						<p>The road sign is partially obscured by surrounding objects or shadows.</p>
+					</li>
+					<li>
+						<p>The road sign is bent or installed at an angle.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>The road signs do not conform to the standard expected by Intelligent Speed Limit Assist.</p>
+				<ul id="e03580">
+					<li>
+						<p>The text or picture on the road sign is different from the standard expected by Intelligent Speed Limit Assist.</p>
+					</li>
+					<li>
+						<p>The road sign is installed between the main road and the exit road, or between diverging roads.</p>
+					</li>
+					<li>
+						<p>A sign is attached to another vehicle</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>The distance between the vehicle and the road signs is far</p>
+			</li>
+			<li>
+				<p>When traffic signs are installed high above the road</p>
+			</li>
+			<li>
+				<p>When the vehicle speed is high and there is insufficient time to recognize the traffic sign</p>
+			</li>
+			<li>
+				<p>When frequently using turn signals in lanes adjacent to an exit</p>
+			</li>
+			<li>
+				<p>When driving closely behind a preceding vehicle</p>
+			</li>
+			<li>
+				<p>When supplementary signs or advertisements are installed near the traffic sign</p>
+			</li>
+			<li>
+				<p>When communication with the map server is unstable</p>
+			</li>
+			<li>
+				<p>When the navigation system reboots while driving</p>
+			</li>
+			<li>
+				<p>When there is a change of country</p>
+				<ul id="e03581">
+					<li>
+						<p>When the vehicle crosses a national border</p>
+					</li>
+					<li>
+						<p>When the country setting is changed via the country selection menu</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>The road signs are illuminated.</p>
+			</li>
+			<li>
+				<p>Intelligent Speed Limit Assist incorrectly recognizes numbers or pictures in the street signs or other signs as the speed limit</p>
+			</li>
+			<li>
+				<p>Intelligent Speed Limit Assist detects a sign on a nearby road.</p>
+			</li>
+			<li>
+				<p>Multiple signs are installed close together</p>
+			</li>
+			<li>
+				<p>A minimum speed limit sign is mistakenly recognized as a maximum speed limit sign.</p>
+			</li>
+			<li>
+				<p>The brightness changes suddenly (for example, when you enter or exit a tunnel).</p>
+			</li>
+			<li>
+				<p>You are not using the headlights, or the brightness of the headlights is weak at night or in a tunnel.</p>
+			</li>
+			<li>
+				<p>Glare from the sun obstructs the front view camera’s field of view.</p>
+			</li>
+			<li>
+				<p>Road signs are difficult to recognize due to the reflection of sunlight, street lights, or oncoming vehicles</p>
+			</li>
+			<li>
+				<p>The navigation or GPS information contains errors.</p>
+			</li>
+			<li>
+				<p>You do not follow the guidance of the navigation.</p>
+			</li>
+			<li>
+				<p>You are driving on a sharply or continuously curved road.</p>
+			</li>
+			<li>
+				<p>You are driving over speed bumps, or driving up and down or left to right on steep inclines.</p>
+			</li>
+			<li>
+				<p>The vehicle is shaking heavily.</p>
+			</li>
+			<li>
+				<p>You are driving on a new road.</p>
+			</li>
+			<li>
+				<p>You are driving on a road under construction.</p>
+			</li>
+			<li>
+				<p>The navigation software updates while you are driving.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e03582">
+			<ul id="e03583">
+				<li>
+					<p>Intelligent Speed Limit Assist is a supplemental function that can help you comply with the posted speed limit. This function may not display the correct speed limit or control the driving speed properly.</p>
+				</li>
+				<li>
+					<p>It is your responsibility to follow the speed limit.</p>
+				</li>
+				<li>
+					<p>Intelligent Speed Limit Assist may not operate for 15 seconds after you start the vehicle or initialize or restart the front view camera.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00553.dita#t00553" role="parent" scope="local" type="concept">
+				<linktext>Intelligent Speed Limit Assist malfunction and limitations</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

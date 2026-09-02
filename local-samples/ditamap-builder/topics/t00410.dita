@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00410">
+	<title>LCD display messages</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>electronic parking brake (EPB) 
+					<indexterm>LCD display messages</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc" id="e03006">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1">
+							<p>Message</p>
+						</entry>
+						<entry colname="2">
+							<p>Description</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <term>To release EPB, close the doors, the hood and the tailgate and fasten the seatbelt.</term> </p>
+						</entry>
+						<entry colname="2">
+							<p>If the driver’s seat belt is unfastened, or the hood, tailgate, doors are open, and you try to drive with Electronic Parking Brake (EPB) applied, a warning sounds and a message appears.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <term>Press brake pedal to deactivate AUTO HOLD</term> </p>
+						</entry>
+						<entry colname="2">
+							<p>When the conversion from AUTO HOLD to Electronic Parking Brake (EPB) is not working properly a warning will sound and a message will appear.</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <term>Parking brake automatically applied</term> </p>
+						</entry>
+						<entry colname="2">
+							<p>When Electronic Parking Brake (EPB) is applied while AUTO HOLD is activated, a warning will sound and a message will appear.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning" id="e03007">
+			<ul id="e03008">
+				<li>
+					<p>Whenever leaving the vehicle or parking, always come to a complete stop and continue to depress the brake pedal.</p>
+					<p>Shift to P (Park), pull the EPB switch, and press the <term>EV</term> button to the <term>OFF</term> position. Take the smart key with you when leaving the vehicle.</p>
+					<p>Vehicles not fully engaged in P (Park) with the parking brake set are at risk for moving inadvertently and causing injury to yourself or others.</p>
+				</li>
+				<li>
+					<p>Never allow a passenger to touch the parking brake. If the parking brake is released unintentionally, serious injury may occur.</p>
+				</li>
+				<li>
+					<p>Only release EPB when you are seated inside the vehicle with your foot firmly on the brake pedal.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e03009">
+			<ul id="e03010">
+				<li>
+					<p>Do not apply the accelerator pedal while the parking brake is engaged. If you depress the accelerator pedal with EPB engaged, a warning will sound and a message will appear. Damage to the parking brake may occur.</p>
+				</li>
+				<li>
+					<p>Driving with the parking brake on can overheat the braking system and cause premature wear or damage to brake parts. Make sure EPB is released and the Parking Brake warning light is off before driving.</p>
+				</li>
+				<li>
+					<p>A click or electric brake motor whine sound may be heard while operating or releasing the EPB. These conditions are normal and indicate that the EPB is functioning properly.</p>
+				</li>
+				<li>
+					<p>When leaving your keys with a parking lot attendant or valet, make sure to inform him/her how to operate the EPB.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

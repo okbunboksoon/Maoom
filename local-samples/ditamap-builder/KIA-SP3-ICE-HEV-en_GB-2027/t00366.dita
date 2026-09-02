@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00366">
+	<title>Necessary inspections</title>
+	<shortdesc/>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>necessary inspections</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Fluid levels, such as engine oil, engine coolant, brake fluid, and washer fluid, should be checked on a regular basis, at the specific recommended interval depending on the fluid. Further details are provided in <xref href="t00789.dita#t00789"/>.</p>
+		<note type="caution" id="e02355">
+			<p>Distracted driving</p>
+			<p>Focus on the road while driving. Your primary responsibility is in the safe and legal operation of the vehicle. Do not use any handheld devices, other equipment, or vehicle systems that could distract you while driving.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00363.dita#t00363" role="parent" scope="local" type="concept">
+				<linktext>Before driving</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

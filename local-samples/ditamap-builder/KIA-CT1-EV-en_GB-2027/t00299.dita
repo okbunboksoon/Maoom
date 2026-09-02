@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00299">
+	<title>Checking charging status</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01335">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01336">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q033.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01337">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q034.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e01338">
+			<li>
+				<p>Charging indicator lamp</p>
+			</li>
+			<li>
+				<p>Standby/Unlock</p>
+			</li>
+			<li>
+				<p>Start charging/charging</p>
+			</li>
+			<li>
+				<p>Scheduled charging</p>
+			</li>
+			<li>
+				<p>Charging failure</p>
+			</li>
+		</ol>
+		<p>When charging the high voltage battery, the charge level can be checked from outside the vehicle.</p>
+		<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+			<tgroup cols="3" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="1*"/>
+				<colspec colname="col2" colnum="2" colwidth="1.24*"/>
+				<colspec colname="col3" colnum="3" colwidth="4.57*"/>
+				<thead>
+					<row rowsep="1">
+						<entry align="center" valign="middle">
+							<p>Color</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Time</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Notes</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry morerows="1" align="left" valign="middle">
+							<p>Sky Blue</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Continuously</p>
+						</entry>
+						<entry>
+							<p>The indicator light turns continuously when the charging door is open or when the vehicle is in standby mode.</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>Blink</p>
+						</entry>
+						<entry>
+							<p>The indicator light blinks when the charging connector is connected, and the vehicle is communicating with the charger.</p>
+						</entry>
+					</row>
+					<row>
+						<entry morerows="1" align="left" valign="middle">
+							<p>Green</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Continuously</p>
+						</entry>
+						<entry>
+							<p>The indicator light turns continuously when the charge level reaches target charge level.</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>Blink</p>
+						</entry>
+						<entry>
+							<p>The indicator light blinks while charging is in progress.</p>
+							<p importance="default">The indicator light blinks more slowly as the vehicle’s charge level increases.</p>
+						</entry>
+					</row>
+					<row>
+						<entry colname="col1" align="left" valign="middle">
+							<p>Orange</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Continuously</p>
+						</entry>
+						<entry>
+							<p>The indicator light turns continuously when scheduled charging is set.</p>
+						</entry>
+					</row>
+					<row>
+						<entry colname="col1" align="left" valign="middle">
+							<p>Red</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Blink</p>
+						</entry>
+						<entry>
+							<p>The indicator light blinks if there is an issue preventing charging due to a problem with the vehicle or the charger.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Charging may not occur under the following circumstances:</p>
+		<ul id="e01339">
+			<li>
+				<p>When the gear is not in P (Park) position.</p>
+			</li>
+			<li>
+				<p>If there is an issue with the vehicle’s internal charging system.</p>
+			</li>
+			<li>
+				<p>When the internal battery temperature of the vehicle is excessively high.</p>
+			</li>
+		</ul>
+		<ul id="e01340">
+			<li>
+				<p>If the temperature of the external charger is excessively high or low.</p>
+			</li>
+			<li>
+				<p>When the voltage of the external charger is too high or too low.</p>
+			</li>
+			<li>
+				<p>If the external charger’s cable is not properly connected.</p>
+			</li>
+		</ul>
+		<note type="note" id="e01341">
+			<ul id="e01342">
+				<li>
+					<p>To prevent driver glare, the brightness of the charging status indicator may be dimmer at night compared to daytime.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

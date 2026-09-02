@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0108">
+	<title>Einstellen von Lenksäulenwinkel und -höhe</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034047N_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol>
+			<li>
+				<p>Ziehen Sie den Entriegelungshebel (1) nach unten, um den Neigungswinkel der Lenksäule zu verändern.</p>
+			</li>
+			<li>
+				<p>Bringen Sie das Lenkrad in den gewünschten Winkel (2) und vor/zurück in den gewünschten Abstand (3).</p>
+				<p>Bewegen Sie das Lenkrad, so dass es zu Ihrem Brustkorb und nicht Ihrem Gesicht zeigt. Achten Sie darauf, dass Sie die Warnleuchten und Anzeigen auf dem Armaturenbrett sehen können. Ziehen Sie nach der Einstellung die Verriegelung nach oben.</p>
+			</li>
+			<li>
+				<p>Ziehen Sie den Entriegelungshebel nach oben, um die Lenksäule zu fixieren</p>
+				<p>Drücken Sie nach der Verstellung das Lenkrad nach oben oder nach unten, um sicherzustellen, dass das Lenkrad fest in seiner Position eingerastet ist.</p>
+			</li>
+			<li>
+				<p>Bringen Sie die Lenksäule immer vor Fahrtantritt in die gewünschte Stellung.</p>
+			</li>
+		</ol>
+		<note type="note" id="e00257">
+			<p>Nach der Einstellung verriegelt der Sicherungshebel möglicherweise das Lenkrad nicht.</p>
+			<p>Dies ist keine Fehlfunktion. Dieser Fall tritt ein, wenn zwei Zahnräder ineinander klemmen. Stellen Sie in diesem Fall das Lenkrad nach und verriegeln Sie es dann.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0107.dita#CL4m_HEV-ca_ES-2027-t0107" role="parent" scope="local" type="concept">
+				<linktext>Höhen- und neigungsverstellbare Lenksäule </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

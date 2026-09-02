@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00688">
+	<title>Pause/driver operation</title>
+	<conbody>
+		<p>If Smart Cruise Control cannot be operated due to pause or rerouting, the gray (<image align="left" href="../../images/WKIA_151.eps" scale="15" placement="inline"/>) indicator will appear on the cluster.</p>
+		<p>If the accelerator pedal is depressed, the white (<image align="left" href="../../images/WKIA_151.eps" scale="15" placement="inline"/>) indicator will blink on the cluster.</p>
+		<note type="warning">
+			<p>The warning message will appear in the following circumstances:</p>
+			<p>Warning message: <uicontrol>Drive carefully</uicontrol> </p>
+			<ul>
+				<li>
+					<p>Navigation-based Smart Cruise Control is not able to slow down your vehicle to a safe speed</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>The images and colors in the instrument cluster may differ depending on the cluster type or theme selected from the settings menu.</p>
+		</note>
+	</conbody>
+</concept>

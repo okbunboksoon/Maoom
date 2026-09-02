@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00566">
+	<title>Driver Drowsiness Attention Warning</title>
+	<conbody>
+		<p>The Driver Drowsiness Attention Warning monitors your eyes while driving. When the driver’s eyes are constantly closed or not facing forward frequently, the Driver Drowsiness Attention Warning recommends a break to help with safe driving.</p>
+		<p>An inattentive warning light (<image href="../../images/OMV033422.eps" align="left" placement="inline" height="0.157in" width="0.157in" outputclass="nolabel" id="e04184"/>) appears on the cluster, and an audible warning sounds until the conditions to turn it off are met.</p>
+		<section id="e04185">
+			<title>Operating conditions</title>
+			<ul id="e04186">
+				<li>
+					<p>When the driver’s eyes are constantly closed or not facing forward frequently while driving above 10 km/h (6 mph)</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e04187">
+			<title>Off conditions</title>
+			<ul id="e04188">
+				<li>
+					<p>When the driver’s gaze is focused on the road</p>
+				</li>
+			</ul>
+			<note type="warning" id="e04189">
+				<p>If any other system’s warning message is displayed or audible warning is generated, Forward Attention Warning’s warning message may not be displayed and an audible warning may not be generated.</p>
+			</note>
+			<note type="caution" id="e04190">
+				<ul id="e04191">
+					<li>
+						<p>Forward Attention Warning may warn the driver even when the driver is focused on the road due to their driving style or driving pattern.</p>
+					</li>
+					<li>
+						<p>Forward Attention Warning is a supplemental function and may not determine whether the driver is distracted while driving.</p>
+					</li>
+					<li>
+						<p>The driver is responsible for safe driving and must focus on the road.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="tip" id="e04192">
+				<ul id="e04193">
+					<li>
+						<p>Forward Attention Warning does not transmit recorded videos outside the vehicle or store the video.</p>
+					</li>
+					<li>
+						<p>The Warning Method for Forward Attention Warning cannot be changed.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

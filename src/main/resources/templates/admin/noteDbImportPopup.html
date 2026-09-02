@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOTE DB 업로드</title>
+<link rel="stylesheet" href="/user/css/RevisionPopup.css">
+<style>
+.note-db-import-page .type-row > strong{
+    flex:0 0 78px;
+}
+
+.note-db-import-page .path-row input[type="text"]{
+    width:100%;
+    height:38px;
+    padding:0 12px;
+    border:1px solid #c7ced7;
+    border-radius:6px;
+    background:#fff;
+    color:#24292f;
+    font-size:14px;
+    outline:none;
+}
+
+.note-db-import-page .path-row input[type="text"]::placeholder{
+    color:#9aa3ad;
+}
+
+.note-db-import-page .path-row input[type="text"]:focus{
+    border-color:#2f80ed;
+    box-shadow:0 0 0 3px rgba(47,128,237,.12);
+}
+
+.note-db-import-page .result-panel{
+    margin-top:14px;
+    min-height:72px;
+    padding:12px 14px;
+}
+
+.note-db-import-drop-row{
+    padding:10px;
+    border:1px dashed transparent;
+    border-radius:7px;
+    transition:border-color .15s ease, background .15s ease;
+}
+
+.note-db-import-drop-row.is-dragging{
+    border-color:#2475d0;
+    background:#f2f7ff;
+}
+</style>
+</head>
+<body>
+<main class="revision-page revision-estimate-page note-db-import-page">
+    <header class="revision-header">
+        <div>
+            <h1>NOTE DB 업로드</h1>
+            <p>선택한 Region 기준으로 NOTE DB XML 또는 엑셀을 반영합니다.</p>
+        </div>
+    </header>
+
+    <section class="revision-panel" aria-label="NOTE DB 업로드">
+        <div class="step-title">
+            <span>1</span>
+            <div>
+                <strong>Region 선택</strong>
+                <small>반영할 NOTE DB 지역을 선택하세요.</small>
+            </div>
+        </div>
+
+        <div class="type-row" aria-label="Region">
+            <strong>Region</strong>
+            <label>
+                <input type="radio" name="region" value="EG" checked>
+                EG
+            </label>
+            <label>
+                <input type="radio" name="region" value="KO">
+                KO
+            </label>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <div class="step-title">
+            <span>2</span>
+            <div>
+                <strong>XML/엑셀 선택</strong>
+                <small>NOTE DB XML 또는 hash, type, text 구조의 엑셀을 선택하세요.</small>
+            </div>
+        </div>
+
+        <div id="noteDbImportDropRow" class="path-row full-path-row note-db-import-drop-row">
+            <label for="noteDbImportFileName">파일</label>
+            <div class="file-name-row">
+                <input id="noteDbImportFileName"
+                       type="text"
+                       placeholder="예: note_db.xml 또는 NOTE_DB.xlsx"
+                       autocomplete="off"
+                       readonly>
+                <button type="button" id="noteDbImportBrowse"
+                        class="action-button">찾기</button>
+            </div>
+            <small class="drop-hint">XML, XLSX, XLS 파일을 업로드할 수 있습니다.</small>
+            <input id="noteDbImportFile"
+                   type="file"
+                   class="hidden-file-input"
+                   accept=".xml,.xlsx,.xls,text/xml,application/xml,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+        </div>
+
+        <footer class="popup-actions">
+            <button type="button" id="runButton" class="action-button primary">
+                반영
+            </button>
+            <button type="button" class="action-button" onclick="window.close()">
+                취소
+            </button>
+        </footer>
+
+        <section id="resultPanel" class="result-panel" hidden aria-live="polite">
+            <div class="result-heading">
+                <span id="statusIndicator" class="status-indicator"></span>
+                <strong id="resultTitle">실행 준비 중</strong>
+            </div>
+            <p id="resultMessage"></p>
+        </section>
+    </section>
+</main>
+
+<script>
+const runButton = document.getElementById('runButton');
+const browseButton = document.getElementById('noteDbImportBrowse');
+const fileInput = document.getElementById('noteDbImportFile');
+const fileNameInput = document.getElementById('noteDbImportFileName');
+const dropRow = document.getElementById('noteDbImportDropRow');
+const resultPanel = document.getElementById('resultPanel');
+const resultTitle = document.getElementById('resultTitle');
+const resultMessage = document.getElementById('resultMessage');
+const statusIndicator = document.getElementById('statusIndicator');
+
+function selectedRegion(){
+    return document.querySelector('input[name="region"]:checked').value;
+}
+
+function showResult(type, title, message){
+    resultPanel.hidden = false;
+    resultPanel.dataset.status = type;
+    resultTitle.textContent = title;
+    resultMessage.textContent = message;
+    statusIndicator.classList.toggle('is-running', type === 'running');
+    statusIndicator.classList.toggle('is-success', type === 'success');
+    statusIndicator.classList.toggle('is-error', type === 'error');
+    resizePopupForResult();
+}
+
+function resizePopupForResult(){
+    try{
+        const contentHeight = Math.ceil(
+            document.documentElement.scrollHeight
+            || document.body.scrollHeight
+            || 0);
+        const targetHeight = Math.max(500, contentHeight + 90);
+        window.resizeTo(680, targetHeight);
+    }catch(error){
+        // 브라우저가 팝업 크기 변경을 막으면 현재 창 크기를 그대로 사용한다.
+    }
+}
+
+async function readErrorMessage(response){
+    const fallback = 'NOTE DB 업로드에 실패했습니다.';
+    const text = await response.text();
+
+    if(!text){
+        return fallback;
+    }
+
+    try{
+        const body = JSON.parse(text);
+        return body.message || body.error || text;
+    }catch(error){
+        return text;
+    }
+}
+
+browseButton.addEventListener('click', function(){
+    fileInput.click();
+});
+
+fileNameInput.addEventListener('click', function(){
+    fileInput.click();
+});
+
+fileInput.addEventListener('change', function(){
+    const file = fileInput.files && fileInput.files[0];
+    fileNameInput.value = file ? file.name : '';
+});
+
+['dragenter', 'dragover'].forEach(function(eventName){
+    dropRow.addEventListener(eventName, function(event){
+        event.preventDefault();
+        dropRow.classList.add('is-dragging');
+    });
+});
+
+['dragleave', 'drop'].forEach(function(eventName){
+    dropRow.addEventListener(eventName, function(event){
+        event.preventDefault();
+        dropRow.classList.remove('is-dragging');
+    });
+});
+
+dropRow.addEventListener('drop', function(event){
+    const file = event.dataTransfer.files && event.dataTransfer.files[0];
+
+    if(!file){
+        return;
+    }
+
+    const transfer = new DataTransfer();
+    transfer.items.add(file);
+    fileInput.files = transfer.files;
+    fileNameInput.value = file.name;
+});
+
+runButton.addEventListener('click', async function(){
+    const file = fileInput.files && fileInput.files[0];
+
+    if(!file){
+        showResult('error', '파일 선택 필요',
+            'NOTE DB XML 또는 엑셀 파일을 선택해 주세요.');
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('region', selectedRegion());
+    formData.append('file', file);
+
+    runButton.disabled = true;
+    runButton.textContent = '반영 중...';
+    showResult('running', '업로드 중',
+        '선택한 Region 기준으로 NOTE DB를 반영 중입니다.');
+
+    try{
+        const response = await fetch('/admin/project-note-db/import', {
+            method:'POST',
+            headers:{'Accept':'application/json'},
+            body:formData
+        });
+
+        if(!response.ok){
+            throw new Error(await readErrorMessage(response));
+        }
+
+        const result = await response.json();
+        showResult(
+            'success',
+            '반영 완료',
+            'Region '
+                + selectedRegion()
+                + ' / 전체 '
+                + result.totalRows
+                + '건 / 신규 '
+                + result.insertedCount
+                + '건 / 수정 '
+                + result.updatedCount
+                + '건 / 변경 없음 '
+                + result.unchangedCount
+                + '건 / 제외 '
+                + result.skippedCount
+                + '건');
+
+        if(window.opener && !window.opener.closed){
+            window.opener.postMessage({
+                type:'NOTE_DB_IMPORT_DONE'
+            }, window.location.origin);
+        }
+    }catch(error){
+        showResult(
+            'error',
+            '반영 실패',
+            error.message || 'NOTE DB 업로드에 실패했습니다.');
+    }finally{
+        runButton.disabled = false;
+        runButton.textContent = '반영';
+    }
+});
+</script>
+</body>
+</html>

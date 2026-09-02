@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00337">
+	<title>Fan speed control</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system 
+					<indexterm>fan speed control</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02506">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry>
+							<fig id="e02507">
+								<figgroup>
+									<image href="../../images/N_CT25C090.eps" align="center" height="1.740in" placement="break" id="e02508"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<fig id="e02509">
+								<figgroup>
+									<image href="../../images/OOV035305.eps" align="center" height="1.740in" placement="break" id="e02510"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The fan speed can be set to the desired speed by touching the left or right icon or operating the fan speed control lever.</p>
+		<p>The higher the fan speed is, the more air is delivered.</p>
+	</conbody>
+</concept>

@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00481">
+	<title>Limitations of Forward Collision-Avoidance Assist</title>
+	<conbody>
+		<p>For detailed limitations of the in-cabin camera, refer to <xref href="t00568.dita#t00568"/>.</p>
+		<p>The function’s operational range may decrease due to the traffic ahead of or the surroundings of the vehicle.</p>
+		<p>When driving at night, the ability to detect vehicles, motorcyclists, pedestrians, and cyclists is decreased. Thus, the Forward Collision- Avoidance Assist system may temporarily be limited or not work.</p>
+		<p>If your vehicle or the oncoming vehicle is not driving straight, the Front Oncoming function warning and control may be late or may not operate.</p>
+		<p>If the angle of possible collision with the crossing vehicle is beyond a certain range, Junction Crossing warning and control may be late or may not operate.</p>
+		<p>Emergency Steering automatically ends when risk factors disappear.</p>
+		<p>Emergency Steering may deactivate during operation if the steering wheel is held tightly or steered in the opposite direction.</p>
+		<p>When steering is assisted to avoid a collision with another vehicle, a pedestrian, or a cyclist, Evasive steering assist will deactivate if collisions are expected with other vehicles, motorcyclists, pedestrians, or cyclists.</p>
+		<p>Evasive steering assist may not operate if there is insufficient space to avoid a collision.</p>
+		<p>Forward Collision-Avoidance Assist does not activate for carts, bicycles, or other objects pushed or pulled by pedestrians or cyclists.</p>
+		<p>Forward Collision-Avoidance Assist may not operate normally if there is strong electromagnetic interference.</p>
+		<p>Forward Collision-Avoidance Assist may not activate for 15 seconds after you start the vehicle or initialize the front view camera.</p>
+		<p>Forward Collision-Avoidance Assist may operate abnormally or unexpectedly in certain circumstances, including the following:</p>
+		<ul id="e03242">
+			<li>
+				<p>The surface of the windshield is dirty or has damage such as scratches.</p>
+			</li>
+			<li>
+				<p>A windshield whose quality and performance have not been verified is used.</p>
+			</li>
+			<li>
+				<p>The forward camera’s field of view is reduced due to window tint film.</p>
+			</li>
+			<li>
+				<p>Washer fluid is sprayed continuously or the windshield wipers are operating.</p>
+			</li>
+			<li>
+				<p>It is dark and the tail lamps of the vehicle or motorcycle ahead are off or dim.</p>
+			</li>
+			<li>
+				<p>The rear of the vehicle ahead is small or not clearly visible (e.g., when the vehicle ahead is driving at an angle, only the side of the vehicle is visible, or the vehicle is overturned).</p>
+			</li>
+			<li>
+				<p>The detected object enters the front blind spot area of a cab-over type vehicle.</p>
+			</li>
+			<li>
+				<p>Reflections or shapes projected by moisture or reflective objects on the road are recognized as objects.</p>
+			</li>
+			<li>
+				<p>Driving near tunnels or railway bridges.</p>
+			</li>
+			<li>
+				<p>The detected object is made of a material that does not reflect well to the front radar.</p>
+			</li>
+			<li>
+				<p>There is a low-height or small obstacle ahead.</p>
+			</li>
+			<li>
+				<p>A sensor is obscured or damaged.</p>
+			</li>
+			<li>
+				<p>The temperature around the front-view camera is extremely high or low.</p>
+			</li>
+			<li>
+				<p>The camera lens is obscured by a windshield tint, film, or coating, damaged glass, or objects on the glass such as a sticker or insect.</p>
+			</li>
+			<li>
+				<p>There is moisture or ice on the windshield.</p>
+			</li>
+			<li>
+				<p>Heavy rain, snow, or fog obscures the camera’s view.</p>
+			</li>
+			<li>
+				<p>Glare from the sun obstructs the front view camera’s field of view.</p>
+			</li>
+			<li>
+				<p>Light reflects off of a wet road surface, such as a puddle.</p>
+			</li>
+			<li>
+				<p>There is an object on the instrument panel.</p>
+			</li>
+			<li>
+				<p>Your vehicle’s surroundings are excessively bright or dark.</p>
+			</li>
+			<li>
+				<p>The light changes suddenly, such as when you enter or exit a tunnel.</p>
+			</li>
+			<li>
+				<p>You are in dark conditions and your vehicle’s headlights are not on or are obscured.</p>
+			</li>
+			<li>
+				<p>Another vehicle or a motorcyclist, pedestrian, or cyclist is only partially visible.</p>
+			</li>
+			<li>
+				<p>The vehicle ahead is a bus, heavy truck, or vehicle with bulky cargo or a trailer.</p>
+			</li>
+			<li>
+				<p>The vehicle or motorcyclist ahead does not have tail lights or has an unusual tail light configuration.</p>
+			</li>
+			<li>
+				<p>If the ground clearance of the vehicle in front is low or high</p>
+			</li>
+			<li>
+				<p>A vehicle, motorcyclist, pedestrian, or cyclist suddenly crosses ahead of your vehicle.</p>
+			</li>
+			<li>
+				<p>The front radar sensor is damaged or out of position.</p>
+			</li>
+			<li>
+				<p>The temperature near the front radar is high or low.</p>
+			</li>
+			<li>
+				<p>You are driving in areas where there are few vehicles or structures, such as a desert or meadow.</p>
+			</li>
+			<li>
+				<p>You are driving near areas with a lot of metal, such as a construction zone, railroad, or road with metal plates.</p>
+			</li>
+			<li>
+				<p>The shadow is on the lane marking by a median strip, trees, guardrail, noise barriers, etc.</p>
+			</li>
+			<li>
+				<p>Your view of the vehicle or motorcyclist ahead is suddenly obscured.</p>
+			</li>
+			<li>
+				<p>The vehicle or motorcycle ahead is detected late.</p>
+			</li>
+			<li>
+				<p>The vehicle or motorcycle ahead suddenly becomes obscured by an obstacle and cannot be detected.</p>
+			</li>
+			<li>
+				<p>The vehicle or motorcycle ahead is at a significantly angled orientation.</p>
+			</li>
+			<li>
+				<p>The vehicle or motorcycle ahead has an unusual shape.</p>
+			</li>
+			<li>
+				<p>The vehicle or motorcyclist ahead suddenly changes lanes or reduces speed.</p>
+			</li>
+			<li>
+				<p>The vehicle ahead is covered in snow.</p>
+			</li>
+			<li>
+				<p>You are departing or returning to the lane.</p>
+			</li>
+			<li>
+				<p>If your driving is unstable.</p>
+			</li>
+			<li>
+				<p>You are driving in a traffic circle and the curvature of the road prevents detection of the vehicle or motorcyclist ahead.</p>
+			</li>
+			<li>
+				<p>You are driving on a steep hill, which puts the vehicle or motorcyclist ahead out of range of your vehicle’s camera or radar.</p>
+			</li>
+		</ul>
+		<p>The following illustration shows the kinds of images of a vehicle, motorcyclist, pedestrian, or cyclist that the front view camera and front radar can detect:</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03243">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03244">
+								<image href="images/OMQ4A055001.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The system may not detect a pedestrian or cyclist ahead that is:</p>
+		<ul id="e03245">
+			<li>
+				<p>Leaning over or not walking fully upright.</p>
+			</li>
+			<li>
+				<p>Wearing clothing or equipment that makes them difficult to detect.</p>
+			</li>
+			<li>
+				<p>Moving very quickly ahead of your vehicle.</p>
+			</li>
+			<li>
+				<p>Short or crouching.</p>
+			</li>
+			<li>
+				<p>Moving opposite of the flow of traffic or having impaired mobility.</p>
+			</li>
+			<li>
+				<p>Part of a large crowd ahead of your vehicle.</p>
+			</li>
+			<li>
+				<p>Difficult to distinguish from their surroundings.</p>
+			</li>
+		</ul>
+		<p>The system may not detect a pedestrian, motorcyclist or cyclist ahead when you are driving:</p>
+		<ul id="e03246">
+			<li>
+				<p>Through steam, smoke, or shadow.</p>
+			</li>
+			<li>
+				<p>Driving through a tunnel or steel bridge</p>
+			</li>
+			<li>
+				<p>In large areas where there are few vehicles or structures, such as a desert, field, or suburban area.</p>
+			</li>
+			<li>
+				<p>In a parking lot.</p>
+			</li>
+			<li>
+				<p>Through a tollgate, construction area, or rough or bumpy terrain.</p>
+			</li>
+			<li>
+				<p>Near areas with a lot of metal, like a construction zone or railroad.</p>
+			</li>
+			<li>
+				<p>On a steep or curving road.</p>
+			</li>
+			<li>
+				<p>The vehicle moves unstably or shakes severely.</p>
+			</li>
+			<li>
+				<p>The vehicle height changes significantly due to abnormal tire pressure, excessive cargo loading, etc..</p>
+			</li>
+			<li>
+				<p>Through a roadside with trees or street lights.</p>
+			</li>
+			<li>
+				<p>Along a narrow road with dense trees or overgrowth.</p>
+			</li>
+			<li>
+				<p>Through electromagnetic waves, such an area with strong radio waves or electrical noise.</p>
+			</li>
+			<li>
+				<p>A snow chain, spare tire, or wheel of a different size is installed</p>
+			</li>
+		</ul>
+		<section id="e03247">
+			<title>Limitations of Basic function, Junction Turning function, and Direct Oncoming function</title>
+			<p>The Forward Collision-Avoidance Assist may operate abnormally in the following situations:</p>
+			<ul id="e03248">
+				<li>
+					<p>When vehicles ahead, bicyclists, or pedestrians are outside the operating range.</p>
+					<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03249">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig id="e03250">
+											<figgroup>
+												<image href="images/N_SP327_B10_023.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+			</ul>
+			<p>The Junction Turning function may not operate normally in the following situations:</p>
+			<ul id="e03251">
+				<li>
+					<p>When oncoming vehicles, motorcycles, or bicyclists are outside the operating range or only partially detected.</p>
+					<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03252">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig id="e03253">
+											<figgroup>
+												<image href="images/N_SP327_B10_024.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03254">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig id="e03255">
+											<figgroup>
+												<image href="images/N_SP327_B10_025.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+			</ul>
+			<p>The Direct Oncoming function may not operate normally in the following situations:</p>
+			<ul id="e03256">
+				<li>
+					<p>When oncoming vehicles or motorcycles are outside the operating range.</p>
+					<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03257">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig id="e03258">
+											<figgroup>
+												<image href="images/N_SP327_B10_026.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>When traveling in the same direction.</p>
+					<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03259">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig id="e03260">
+											<figgroup>
+												<image href="images/N_SP327_B10_027.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+			</ul>
+		</section>
+		<section importance="optional" id="e03261">
+			<title>Junction Crossing, Lane-Change Oncoming, Lane-Change Side, Evasive Steering Assist function</title>
+			<p>The Junction Crossing, Lane-Change Oncoming, Lane-Change Side, and Evasive Steering Assist functions may operate abnormally or unexpectedly in certain circumstances, including the following:</p>
+			<ul id="e03262">
+				<li>
+					<p>The temperature around the front or rear side radar is too high or too low.</p>
+				</li>
+				<li>
+					<p>You have installed a trailer or carrier near the rear corner radar.</p>
+				</li>
+				<li>
+					<p>The front or rear corner radar is covered with snow, rain, dirt, and so on.</p>
+				</li>
+				<li>
+					<p>The bumper around front corner or rear corner radar is covered with objects, such as a bumper sticker, bumper guard, bike rack, etc.</p>
+				</li>
+				<li>
+					<p>The bumper near the front or rear corner radar is damaged, or the radar is out of position.</p>
+				</li>
+				<li>
+					<p>The front or rear corner radar is blocked by other vehicles, walls, or pillars.</p>
+				</li>
+				<li>
+					<p>You are driving on a highway ramp.</p>
+				</li>
+				<li>
+					<p>You are driving on a road with a high guardrail or wall.</p>
+				</li>
+				<li>
+					<p>Another vehicle or motorcyclist drives very close behind or passes close by your vehicle.</p>
+				</li>
+				<li>
+					<p>Another vehicle or motorcyclist passes you at a very high speed.</p>
+				</li>
+				<li>
+					<p>Your vehicle passes another vehicle or motorcyclist.</p>
+				</li>
+				<li>
+					<p>You are accelerating at the same rate as a vehicle or motorcycle in the next lane.</p>
+				</li>
+				<li>
+					<p>A vehicle or motorcycle moves into or out of the lane next to you, or you move into the lane next to another vehicle.</p>
+				</li>
+				<li>
+					<p>The function detects a motorcycle or bicycle.</p>
+				</li>
+				<li>
+					<p>The function detects a flat trailer.</p>
+				</li>
+				<li>
+					<p>The function detects a large vehicle, such as a bus or truck.</p>
+				</li>
+				<li>
+					<p>The function detects a small moving obstacle, such as a pedestrian, animal, shopping cart, or stroller.</p>
+				</li>
+				<li>
+					<p>The function detects a shorter vehicle, such as a sports car.</p>
+				</li>
+				<li>
+					<p>The lane is difficult to see due to foreign material, such as rain, snow, dust, sand, oil and water puddles.</p>
+				</li>
+				<li>
+					<p>Lane markings are obscured or not distinct from the road.</p>
+				</li>
+				<li>
+					<p>Adjacent lanes end or lane markings merge together.</p>
+				</li>
+				<li>
+					<p>There are more than 2 lane markings on the road.</p>
+				</li>
+				<li>
+					<p>Lane markings are complicated or otherwise affected by roadwork.</p>
+				</li>
+				<li>
+					<p>There are road markings, such as zigzag lanes, crosswalk markings and road signs.</p>
+				</li>
+				<li>
+					<p>The lane suddenly disappears, such as at an intersection.</p>
+				</li>
+				<li>
+					<p>The lane is very wide or narrow.</p>
+				</li>
+				<li>
+					<p>The vehicle ahead is obscuring the lane markings.</p>
+				</li>
+				<li>
+					<p>You are driving very close to the vehicle ahead.</p>
+				</li>
+				<li>
+					<p>On wet road surfaces or when there is insufficient contrast between the lane and the road surface.</p>
+				</li>
+				<li>
+					<p>When the lane is covered by shadows cast by roadside objects such as median barriers, guardrails, sound barriers, or nearby vegetation.</p>
+				</li>
+			</ul>
+		</section>
+		<section importance="optional" id="e03263">
+			<title>Limitations of Junction Crossing function</title>
+			<p>The Junction Crossing function may not operate normally in the following situations:</p>
+			<ul id="e03264">
+				<li>
+					<p>When the oncoming vehicle or motorcycle is outside the operating range.</p>
+					<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03265">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig id="e03266">
+											<figgroup>
+												<image href="images/N_SP327_B10_028.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>When the target vehicle is moving faster than your vehicle.</p>
+					<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03267">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig id="e03268">
+											<figgroup>
+												<image href="images/N_SP327_B10_029.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+			</ul>
+		</section>
+		<section importance="optional" id="e03269">
+			<title>Limitations of Lane-Change Oncoming, Lane-Change Side function</title>
+			<p>The Lane-Change Oncoming function and Lane-Change Side function may not operate normally in the following situations:</p>
+			<ul id="e03270">
+				<li>
+					<p>When using these functions may create a risk of a secondary collision.</p>
+					<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03271">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig id="e03272">
+											<figgroup>
+												<image href="images/N_SP327_B10_030.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+			</ul>
+		</section>
+		<section importance="optional" id="e03273">
+			<title>Limitations of Evasive Steering Assist function</title>
+			<p>The Evasive Steering Assist function may not operate normally in the following situations:</p>
+			<ul id="e03274">
+				<li>
+					<p>When pedestrians or bicyclists are outside the operating range.</p>
+					<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03275">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig id="e03276">
+											<figgroup>
+												<image href="images/N_SP327_B10_031.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>When pedestrians or bicyclists are moving laterally.</p>
+					<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03277">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig id="e03278">
+											<figgroup>
+												<image href="images/N_SP327_B10_032.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>When pedestrians or bicyclists are within the operating range but there is insufficient space to perform evasive steering.</p>
+					<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03279">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig id="e03280">
+											<figgroup>
+												<image href="images/N_SP327_B10_033.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>When using Evasive Steering Assist may create a risk of a secondary collision.</p>
+					<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03281">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig id="e03282">
+											<figgroup>
+												<image href="images/N_SP327_B10_034.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+			</ul>
+			<note type="tip" id="e03283">
+				<p>For more information about the limitations of detecting rear corner vehicles and cautions regarding the rear corner sensor, refer to <xref href="t00507.dita#t00507"/>.</p>
+			</note>
+			<note type="warning" id="e03284">
+				<ul id="e03285">
+					<li>
+						<p>Driving on a curved road</p>
+						<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03286">
+							<tgroup cols="2" colsep="0" rowsep="1">
+								<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+								<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+								<tbody>
+									<row rowsep="1">
+										<entry colname="col1">
+											<fig id="e03287">
+												<image href="images/N_SP3i25_B10_015_3_IR.jpg" scale="95" align="center" placement="break"/>
+											</fig>
+										</entry>
+										<entry colname="col2">
+											<fig id="e03288">
+												<image href="images/N_SP3i25_B10_016_3_IR.jpg" scale="95" align="center" placement="break"/>
+											</fig>
+										</entry>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+						<p>Forward Collision-Avoidance Assist may not detect other vehicles, motorcyclists, pedestrians, or cyclists ahead of you when you drive on curved roads. This may result in no warning, braking assist, or steering assist when needed.</p>
+						<p>When driving on a curve, you must maintain a safe braking distance and, if necessary, steer the vehicle and engage the brake pedal to reduce your speed.</p>
+						<p>Forward Collision-Avoidance Assist may detect a vehicle, motorcyclist, pedestrian, or cyclist in the adjacent lane or outside of the lane when you drive on a curved road.</p>
+						<p>If this occurs, Forward Collision-Avoidance Assist may unnecessarily warn you and control the braking or steering. Always monitor traffic conditions.</p>
+					</li>
+					<li>
+						<p>Driving on an incline</p>
+						<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03289">
+							<tgroup cols="2" colsep="0" rowsep="1">
+								<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+								<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+								<tbody>
+									<row rowsep="1">
+										<entry colname="col1">
+											<fig id="e03290">
+												<image href="images/N_SP3i25_B10_017_3_IR.jpg" scale="95" align="center" placement="break"/>
+											</fig>
+										</entry>
+										<entry colname="col2"/>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+						<p>Forward Collision-Avoidance Assist may not detect other vehicles, motorcyclists, pedestrians, or cyclists ahead of you when you drive uphill or downhill, and adversely affect sensor performance.</p>
+						<p>The function may not help with warning, braking, or steering when necessary.</p>
+						<p>Also, Emergency Braking may activate if the function suddenly detects a vehicle, motorcyclist, pedestrian, or cyclist ahead.</p>
+						<p>Always keep your eyes on the road and steer your vehicle and engage the brake pedal to reduce your driving speed and maintain safe following and braking distances.</p>
+					</li>
+					<li>
+						<p>Changing lanes</p>
+						<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03291">
+							<tgroup cols="2" colsep="0" rowsep="1">
+								<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+								<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+								<tbody>
+									<row rowsep="1">
+										<entry colname="col1">
+											<fig id="e03292">
+												<image href="images/N_SP3i25_B10_018_IR.jpg" scale="95" align="center" placement="break"/>
+											</fig>
+										</entry>
+										<entry colname="col2">
+											<ol outputclass="callout" id="e03293">
+												<li>
+													<p>Your vehicle</p>
+												</li>
+												<li>
+													<p>Lane changing vehicle or motorcyclist</p>
+												</li>
+											</ol>
+										</entry>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+						<p>When a vehicle or motorcyclist (2) moves into your lane from an adjacent lane, it will not be detected until it is within the sensor’s range.</p>
+						<p>Forward Collision-Avoidance Assist may not immediately detect a vehicle or motorcyclist when it changes lanes abruptly. In this case, you must maintain a safe braking distance and, if necessary, steer your vehicle and engage the brake pedal to reduce your speed.</p>
+						<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03294">
+							<tgroup cols="2" colsep="0" rowsep="1">
+								<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+								<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+								<tbody>
+									<row rowsep="1">
+										<entry colname="col1">
+											<fig id="e03295">
+												<image href="images/N_SP3i25_B10_019_IR.jpg" scale="95" align="center" placement="break"/>
+											</fig>
+										</entry>
+										<entry colname="col2">
+											<ol outputclass="callout" id="e03296">
+												<li>
+													<p>Your vehicle</p>
+												</li>
+												<li>
+													<p>Lane changing vehicle or motorcyclist</p>
+												</li>
+												<li>
+													<p>Same lane vehicle</p>
+												</li>
+											</ol>
+										</entry>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+						<p>When a vehicle (2) ahead of you merges into another lane, Forward Collision-Avoidance Assist may not immediately detect a vehicle or motorcyclist (3) that is now ahead of you. In this case, you must maintain a safe braking distance and, if necessary, steer your vehicle and engage the brake pedal to reduce your speed.</p>
+					</li>
+					<li>
+						<p>Detecting a vehicle</p>
+						<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03297">
+							<tgroup cols="2" colsep="0" rowsep="1">
+								<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+								<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+								<tbody>
+									<row rowsep="1">
+										<entry colname="col1">
+											<fig id="e03298">
+												<image href="images/N_SP3i25_B10_020_1_IR.jpg" scale="95" align="center" placement="break"/>
+											</fig>
+										</entry>
+										<entry colname="col2"/>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+						<p>If the vehicle ahead of yours has cargo extending backward from the cab or high ground clearance, pay special attention. Forward Collision-Avoidance Assist may not be able to detect the cargo extending from the vehicle. In this case, you must maintain a safe braking distance from the rearmost object and, if necessary, steer your vehicle and engage the brake pedal to reduce your speed.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="tip" id="e03299">
+				<ul id="e03300">
+					<li>
+						<p>When you are towing a trailer or another vehicle, turn <term translate="no">OFF</term> Forward Collision-Avoidance Assist for safety reasons.</p>
+					</li>
+					<li>
+						<p>Forward Collision-Avoidance Assist may activate if it detects objects similar to vehicles, motorcyclists, pedestrians, or cyclists.</p>
+					</li>
+					<li>
+						<p>Forward Collision-Avoidance Assist does not activate for carts, bicycles, or other objects pushed or pulled by pedestrians or cyclists.</p>
+					</li>
+					<li>
+						<p>Forward Collision-Avoidance Assist may not operate normally if there is strong electromagnetic interference.</p>
+					</li>
+					<li>
+						<p>Forward Collision-Avoidance Assist may not activate for 15 seconds after you start the vehicle or initialize the front view camera.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="tip" id="e03301">
+				<p>For more information about the limitations of detecting rear corner vehicles and cautions regarding the rear corner sensor, refer to <xref href="t00507.dita#t00507"/>.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00478.dita#t00478" role="parent" scope="local" type="concept">
+				<linktext>Forward Collision-Avoidance Assist malfunction and limitations</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

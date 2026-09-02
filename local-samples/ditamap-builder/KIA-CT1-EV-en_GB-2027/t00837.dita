@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00837">
+	<title>Manual accident reporting</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02683">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02684">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25F007_3_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02685">
+								<li>
+									<p>Pressing the <term translate="no">SOS</term> button</p>
+								</li>
+								<li>
+									<p>Connection with the single duty dispatch service</p>
+								</li>
+								<li>
+									<p>Emergency services</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The driver or passenger can manually make an emergency call to the Public Safety Answering Point (PSAP) by pressing the <term translate="no">SOS</term> button, which will connect him/her with the necessary emergency services.</p>
+		<p>A call to the emergency services through the Pan-European eCall system can be canceled by pressing the <term translate="no">SOS</term> button again in 3 seconds only before the call connection.</p>
+		<p>After activation of an emergency call in manual mode (to obtain appropriate emergency services and support), the Pan-European eCall system automatically transmits data about the road accident or other type of accident to the officer of the Public Safety Answering Point (PSAP). This occurs during the emergency call initiated by pressing the <term translate="no">SOS</term> button.</p>
+		<p>If the driver or passenger accidentally presses the <term translate="no">SOS</term> button, the call can be canceled by pressing the button in 3 seconds before the connection. It cannot be canceled after that.</p>
+		<p>In the event of a road accident or other accident, activation of an emergency call in manual mode requires the following:</p>
+		<ol>
+			<li>
+				<p>Stop the car in accordance with traffic rules to ensure your safety and that of other participants of road traffic.</p>
+			</li>
+			<li>
+				<p>Press the <term translate="no">SOS</term> button, which initiates registration of the device via the cellular phone network and sends a minimal amount of data about the car and its location as collected in accordance with of the technical requirements of the service.</p>
+				<p>After that, direct contact is made with an officer of the Pan-European eCall system in order to establish the reasons for the emergency call and the related circumstances.</p>
+			</li>
+			<li>
+				<p>After establishing the reasons for the emergency call, the officer of the Public Safety Answering Point (PSAP) sends emergency services and completes the emergency call.</p>
+			</li>
+		</ol>
+		<p>If the emergency call is not carried out in accordance with the procedure mentioned above, the call will be considered erroneous.</p>
+		<note type="warning">
+			<ul id="e02686">
+				<li>
+					<p>Emergency power supply of the Pan-European eCall system from the battery</p>
+				</li>
+				<li>
+					<ul id="e02687">
+						<li>
+							<p>The Pan-European eCall system battery supplies power during 1 hour in case main power source of the vehicle is cut off due to the collision during the emergency situations.</p>
+						</li>
+						<li>
+							<p otherprops="legal_eu_std_017_05">The Pan-European eCall system battery should be replaced every 4 years.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p importance="high">LED illumination in red (system malfunction)</p>
+					<p>If red LED illuminates in normal driving conditions, this can indicate malfunction of the Pan-European eCall system. Have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner. Otherwise correct operation of the Pan-European eCall system device, installed in your car is not guaranteed. Owner of the car incurs liability for consequences, occurred as a result of nonobservance of conditions, mentioned above.</p>
+				</li>
+				<li>
+					<p importance="high">Arbitrary Removal or Modification</p>
+					<p>The Pan-European eCall system calls emergency services for assistance. Thus, any arbitrary removal or changes to the Pan-European eCall system settings may affect your driving safety. Also, it may even make an erroneous emergency call to the Public Safety Answering Point (PSAP). Thereby, we kindly ask you not to make any changes by yourself or by the third parties in the settings of the equipment of the Pan-European eCall system, installed in your car.</p>
+				</li>
+			</ul>
+		</note>
+		<note otherprops="legal_eu_std_017_06" type="note" id="e02688">
+			<p>The mobile network operators will phase out the 2G and 3G in many countries around the world. The decision to phase out 2G and/or 3G network technology was solely at the discretion of mobile network operators and therefore beyond the control of Kia.</p>
+			<p>Due to decision of the network operators to discontinue their 2G and/or 3G, the automatic/manual eCall will no longer be available in the event of an accident or a situation requiring an emergency service.</p>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00200">
+	<title id="e01260">Moving forward and backward </title>
+	<shortdesc>Adjust the seat before driving. Make sure the seat is locked securely by trying to move forward and backward without using the lever. If the seat moves, it is not locked properly.</shortdesc>
+	<taskbody id="e01261">
+		<context>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01262">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01263">
+									<image href="images/N_SP327_B06_003_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To move the seat forward or backward:</p>
+		</context>
+		<steps>
+			<step>
+				<cmd>Pull the seat slide adjustment lever up and hold it.</cmd>
+			</step>
+			<step>
+				<cmd>Slide the seat to the position you desire.</cmd>
+			</step>
+			<step>
+				<cmd>Release the lever and make sure the seat is locked in place.</cmd>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00199.dita#t00199" role="parent" scope="local" type="concept">
+				<linktext>Front seat adjustment for manual seat </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

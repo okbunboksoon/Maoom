@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="legal_06">
+	<title>Declarations of Conformity</title>
+	<shortdesc/>
+	<conbody>
+		<p/>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<linkpool>
+				<link format="dita" href="legal_06_01.dita#legal_06_01" role="child" scope="local" type="concept">
+					<linktext>Certification information</linktext>
+				</link>
+				<link format="dita" href="legal_06_02.dita#legal_06_02" role="child" scope="local" type="concept">
+					<linktext>Radio frequency component information</linktext>
+				</link>
+			</linkpool>
+		</linkpool>
+	</related-links>
+</concept>

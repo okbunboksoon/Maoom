@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Top" id="t00739">
+	<title>If the engine does not start</title>
+	<shortdesc>If the engine does not start, first check to see how much fuel there is and whether the 12V battery is discharged.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>if the engine does not start</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e04463">
+			<title>If the engine does not turn over or turns over slowly</title>
+			<ol id="e04464">
+				<li>
+					<p>Be sure the vehicle is in N (Neutral) or P (Park) and the emergency brake is applied.</p>
+				</li>
+				<li>
+					<p>Check the 12V battery connections to be sure they are clean and tight.</p>
+				</li>
+				<li>
+					<p>Turn the interior light on. If the light dims or goes out when you operate the starter, the battery is discharged.</p>
+				</li>
+				<li>
+					<p>Check the starter connections to be sure they are securely tightened.</p>
+				</li>
+			</ol>
+			<note type="caution" id="e04465">
+				<p>Do not push or pull the vehicle to start it. This could cause damage to your vehicle. Refer to <xref href="t00744.dita#t00744"/></p>
+			</note>
+		</section>
+		<section id="e04466">
+			<title>If the engine turns over normally but does not start</title>
+			<ol id="e04467">
+				<li>
+					<p>Check the fuel level and add fuel if necessary.</p>
+				</li>
+				<li>
+					<p>With the vehicle in <term translate="no">OFF</term> position, check all connectors at the ignition coils and spark plugs. Reconnect any that may be disconnected or loose.</p>
+				</li>
+				<li>
+					<p>Check the fuel line in the engine compartment.</p>
+				</li>
+				<li>
+					<p>If the engine still does not start, contact a professional workshop or seek other qualified assistance. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ol>
+		</section>
+		<section id="e04468">
+			<title>If the hybrid vehicle shuts off</title>
+			<p>When the high-voltage battery or 12V battery is discharged, or when the fuel tank is empty, the hybrid system may not operate while driving.</p>
+			<ol id="e04469">
+				<li>
+					<p>Pull over your vehicle off the road in a safe area and shift to P (Park).</p>
+				</li>
+				<li>
+					<p>Turn on the hazard warning flashers.</p>
+				</li>
+				<li>
+					<p>Turn off the vehicle and try to start the hybrid system again, while depressing the brake and pressing the <term translate="no">ENGINE START/STOP</term> button.</p>
+				</li>
+				<li>
+					<p>If the engine still does not start, contact a professional workshop or seek other qualified assistance. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ol>
+			<p>When the hybrid system still does not operate, refer to <xref href="t00743.dita#t00743"/>.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00736.dita#t00736" role="parent" scope="local" type="concept">
+				<linktext>What to do in an emergency</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

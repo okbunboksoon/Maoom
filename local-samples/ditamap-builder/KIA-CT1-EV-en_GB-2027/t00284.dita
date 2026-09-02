@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" id="t00284">
+	<title>Vehicle to load (V2L)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>EV menu 
+					<indexterm>vehicle to load (V2L)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>V2L is the system that provides AC power using the high voltage battery for driving to operate several electronic products.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q015_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Select the icon on the screen.</p>
+		<section>
+			<title>Battery discharging limit</title>
+			<p>You can set the battery discharging limit for high voltage battery for driving.</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q016_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout">
+									<li>
+										<p> <uicontrol>Electricity Usage settings (V2L)</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol>Min.%</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>If the vehicle reaches to the limit, it automatically cut supply of electricity.</p>
+		</section>
+		<section id="e01300">
+			<title>Transferring V2L</title>
+			<p>Check various information about the V2L in the infotainment system when using the V2L.</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01301">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01302">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q045_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01303">
+									<li>
+										<p> <uicontrol>Min. %</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol>Time remaining</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol>State of charge</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol>Distance to empty</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>If the vehicle reaches to the limit, it automatically cut supply of electricity.</p>
+		</section>
+	</conbody>
+</concept>

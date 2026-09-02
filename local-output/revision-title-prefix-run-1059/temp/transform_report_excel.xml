@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+   <Styles>
+      <Style ss:ID="Header">
+         <Font ss:Bold="1"/>
+         <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+         <Interior ss:Color="#D9EAF7" ss:Pattern="Solid"/>
+      </Style>
+      <Style ss:ID="Center">
+         <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+      </Style>
+      <Style ss:ID="Wrap">
+         <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+      </Style>
+   </Styles>
+   <Worksheet ss:Name="요약">
+      <Table>
+         <Column ss:Width="180"/>
+         <Column ss:Width="70"/>
+         <Column ss:Width="420"/>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Header">
+               <Data ss:Type="String">항목</Data>
+            </Cell>
+            <Cell ss:StyleID="Header">
+               <Data ss:Type="String">개수</Data>
+            </Cell>
+            <Cell ss:StyleID="Header">
+               <Data ss:Type="String">수정 내용</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">map title</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">-</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">KIA-KA4i-ICE-HEV-en_IN-2026</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">파일명 형식</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">-</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">KA4i_IN_t00000.dita</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">파일명 변경 옵션</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">-</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">차종_언어코드_기존파일명 형식</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">InputType</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">-</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">-</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">OutputType</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">-</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">-</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">deliveryTarget 삭제 옵션</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">-</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">적용</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">Simple operation 삭제 옵션</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">-</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">적용</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">draft-comment 삭제 옵션</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">-</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">적용</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">문장 DB 적용 옵션</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">-</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">적용</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">note type DB 적용 옵션</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">-</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">적용</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">tgroup 병합 대상 table</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">2</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">tgroup이 2개 이상인 table을 하나의 tgroup으로 병합</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">image href 파일명 치환</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">1</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">dark_symbol DB 기준으로 image 파일명을 치환</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">inline image scale 설정</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">248</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">placement=inline인 image에 scale=15를 설정</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">break image scale 설정</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">828</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">placement=break인 image에 scale=95를 설정</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">image 속성 삭제</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">118</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">image의 width, height, xoffset, yoffset, id 및 inline image의 outputclass 삭제</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">term translate=no 추가</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">1026</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">영문 유지 단어 term translate=no 추가</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">Simple operation 삭제</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">1</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">section title=Simple operation 삭제한 수</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">deliveryTarget 속성 삭제</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">3</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">deliveryTarget 삭제한 수</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">draft-comment 삭제</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">1</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">draft-comment 삭제한 수</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">outputclass=review 삭제</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">4</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">outputclass의 review 삭제한 수</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">outputclass=legal 삭제</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">3</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">outputclass의 legal 삭제한 수</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">text 문장 변경</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">0</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">asis-tobe DB 기준으로 변경된 텍스트 수</Data>
+            </Cell>
+         </Row>
+         <Row ss:Height="30">
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="String">note type 변경</Data>
+            </Cell>
+            <Cell ss:StyleID="Center">
+               <Data ss:Type="Number">0</Data>
+            </Cell>
+            <Cell ss:StyleID="Wrap">
+               <Data ss:Type="String">note_db 기준으로 type이 변경된 note 수</Data>
+            </Cell>
+         </Row>
+      </Table>
+      <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+         <Zoom>85</Zoom>
+      </WorksheetOptions>
+   </Worksheet>
+</Workbook>

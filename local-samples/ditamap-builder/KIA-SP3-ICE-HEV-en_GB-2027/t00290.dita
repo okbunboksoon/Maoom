@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00290">
+	<title>Service interlock connector</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>components of the hybrid/plug-in hybrid vehicle
+					<indexterm>service interlock connector</indexterm>
+				</indexterm>
+				<indexterm>service interlock connector</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01875">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01876">
+								<image href="images/N_SP327_D07_001_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The service interlock connector, located within the motor compartment, is a safety device that disables the high voltage battery. This function is for vehicle inspections at an authorized Kia dealer.</p>
+		<p>To access the service interlock connector, open the hood, and find it near the fuse box.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>To prevent severe injury or death from electric shock, avoid touching the service interlock connector.</p>
+				</li>
+				<li>
+					<p>If the service interlock connector requires inspection or maintenance, have the vehicle inspected by an authorized Kia dealer.</p>
+				</li>
+				<li>
+					<p>Only disconnect or tamper with the service interlock connector in an emergency. Doing so might cause significant issues with the vehicle, such as failure to start.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00286.dita#t00286" role="parent" scope="local" type="concept">
+				<linktext>Components of the hybrid/plug-in hybrid vehicle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

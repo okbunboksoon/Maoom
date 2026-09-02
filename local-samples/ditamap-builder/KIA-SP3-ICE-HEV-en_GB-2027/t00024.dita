@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00024">
+	<title id="e00095">Recommended lubricants and capacities </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications
+					<indexterm>lubricants and capacities</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>To help achieve proper engine and powertrain performance and durability, use only correct lubricants. Correct lubricants also promote engine efficiency, which improves fuel economy. Use the following lubricants and fluids in your vehicle:</p>
+		<table outputclass="formatd" frame="all" rowsep="1" colsep="1" id="e00096">
+			<tgroup cols="5" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="1.54*"/>
+				<colspec colnum="2" colname="col2" colwidth="1.41*"/>
+				<colspec colname="newCol4" colnum="3" colwidth="1.28*"/>
+				<colspec colnum="4" colname="col4" colwidth="1*"/>
+				<colspec colnum="5" colname="col6" colwidth="1.57*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="col1" nameend="newCol4" align="center" valign="middle">
+							<p>Lubricant</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>Volume (L)</p>
+						</entry>
+						<entry>
+							<p>Classification</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1" morerows="4" align="left" valign="middle">
+							<p>Engine oil <fn><p>Refer to <xref href="t00025.dita#t00025"/>.</p></fn> (drain and refill) </p>
+							<fig id="e00097">
+								<figgroup>
+									<image href="images/TotalEnergies_Logo.jpg" scale="95" align="left" placement="break" outputclass="nolabel"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>Smartstream G1.6 T-GDi/Smartstream G1.6 T-GDi (EURO 7)</p>
+						</entry>
+						<entry valign="middle">
+							<p>For Europe</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>4.8</p>
+						</entry>
+						<entry colname="col6" align="left" valign="middle">
+							<p>SAE 0W-20, API SN PLUS/SP or ILSAC GF-6 <fn id="e00098"><p>Requires &lt;API SN PLUS (or above) Full synthetic &gt; grade engine oil. If a lower grade engine oil (mineral oil including Semi-synthetic) is used, then the engine oil and engine oil filter must be replaced as indicated severe maintenance condition.</p></fn></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry morerows="1" align="left" valign="middle">
+							<p>Smartstream G2.0</p>
+						</entry>
+						<entry>
+							<p>Except Middle East, Iran, Morocco, Algeria, Tunisia, Libya, Egypt, Sudan, India</p>
+						</entry>
+						<entry morerows="1" align="center" valign="middle">
+							<p>4.3</p>
+						</entry>
+						<entry colname="col6" align="left" valign="middle">
+							<p>SAE 0W-20, API SN PLUS/SP or ILSAC GF-6 <xref href="t00024.dita#t00024/e00098"/></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry>
+							<p>For Middle East, Iran, Morocco, Algeria, Tunisia, Libya, Egypt, Sudan, India</p>
+						</entry>
+						<entry colname="col6" align="left" valign="middle">
+							<p>SAE 5W-30/0W-30, ACEA A5/B5 / API SN PLUS/SP or ILSAC GF-6 <fn><p>Requires &lt;API SN PLUS (or above) or ACEA A5/B5 Full synthetic &gt; grade engine oil. If a lower grade engine oil (mineral oil including Semi-synthetic) is used, then the engine oil and engine oil filter must be replaced as indicated severe maintenance condition.</p></fn></p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 GDi HEV</p>
+						</entry>
+						<entry align="center" valign="middle" morerows="1">
+							<p>3.8</p>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>SAE 5W-30, ACEA A5/B5 <fn><p>Requires &lt;ACEA A5/B5 Full synthetic &gt; grade engine oil. If a lower grade engine oil (mineral oil including Semi-synthetic) is used, then the engine oil and engine oil filter must be replaced as indicated severe maintenance condition.</p></fn></p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle">
+							<p>Smartstream G1.6 GDi (EURO 7)</p>
+						</entry>
+						<entry valign="middle">
+							<p>For Europe</p>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>SAE 0W-16, API SN PLUS/SP or ILSAC GF-6 <xref href="t00024.dita#t00024/e00098"/></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" align="left" valign="middle">
+							<p>Manual transmission (MT) fluid <fn id="e00099"><p>If the genuine oil that is developed for best performance is not used, it may cause the problems of transmission performance.</p></fn></p>
+						</entry>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 T-GDi/Smartstream G1.6 T-GDi (EURO 7)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>1.5–1.6</p>
+						</entry>
+						<entry valign="middle">
+							<p>SAE 70W, API GL-4, HK SYN MTF 70W (SK), SPIRAX S6 GHME 70W MTF (SHELL), GS MTF HD 70W (GS CALTEX), Kia genuine MTF&amp;DCTF 70W SYNTHETIC</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="left" valign="middle" morerows="1">
+							<p>Dual clutch transmission (DCT) fluid <xref href="t00024.dita#t00024/e00099"/></p>
+						</entry>
+						<entry namest="col2" nameend="newCol4" align="left" valign="middle">
+							<p>Smartstream G1.6 T-GDi/Smartstream G1.6 T-GDi (EURO 7)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>1.6–1.7</p>
+						</entry>
+						<entry valign="middle" morerows="1">
+							<p>HK D DCTF TGO-10 PLUS (SK), SPIRAX S6 GHDE 70W DCTF PLUS (SHELL), Kia genuine DCTF 70W SYNTHETIC PLUS</p>
+						</entry>
+					</row>
+					<row>
+						<entry namest="col2" nameend="newCol4" align="left" valign="middle">
+							<p>Smartstream G1.6 GDi HEV/Smartstream G1.6 GDi HEV (EURO 7)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>1.6</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" align="left" valign="middle">
+							<p>Intelligent Variable Transmission (IVT) fluid <xref href="t00024.dita#t00024/e00099"/></p>
+						</entry>
+						<entry namest="col2" nameend="newCol4" align="left" valign="middle">
+							<p>Smartstream G2.0</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>6.7</p>
+						</entry>
+						<entry valign="middle">
+							<p>MICHANG SP-CVT1, Kia Genuine ATF SP-CVT1</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="left" valign="middle" morerows="1">
+							<p>Rear differential oil (AWD)</p>
+						</entry>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 T-GDi/Smartstream G1.6 T-GDi (EURO 7)</p>
+						</entry>
+						<entry align="center" valign="middle" morerows="1">
+							<p>0.4–0.5</p>
+						</entry>
+						<entry align="left" valign="middle" morerows="3">
+							<p>Hypoid gear oil API Gl-5, SAE 75W/85 (Recommended: SK HCT-5 GEAR OIL 75W/85 or equivalent)</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G2.0</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="left" valign="middle" morerows="1">
+							<p>Transfer case oil (AWD)</p>
+						</entry>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 T-GDi/Smartstream G1.6 T-GDi (EURO 7)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>0.48–0.52</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G2.0</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>0.62–0.68</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="left" valign="middle" morerows="4">
+							<p>Engine coolant</p>
+						</entry>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 T-GDi</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>7.6</p>
+						</entry>
+						<entry valign="middle" morerows="4">
+							<p>An Phosphate based ethylene glycol based coolant</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 T-GDi (EURO 7)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>7.9</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G2.0</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>6.5</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 GDi HEV</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>문의중</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 GDi HEV (EURO 7)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>문의중</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" morerows="1">
+							<p>Water cooled intercooler coolant</p>
+						</entry>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 T-GDi (EURO 7)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>2.1</p>
+						</entry>
+						<entry valign="middle" morerows="1">
+							<p>A Phosphate based ethylene glycol based coolant</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 GDi HEV (EURO 7)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>문의중</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" morerows="1">
+							<p>Inverter coolant</p>
+						</entry>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 GDi HEV</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>문의중</p>
+						</entry>
+						<entry valign="middle" morerows="1">
+							<p>An Phosphate based ethylene glycol based coolant</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 GDi HEV (EURO 7)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>문의중</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="newCol4" align="left" valign="middle">
+							<p>Brake/clutch fluid <fn><p>To maintain your vehicle’s best brake and ABS/ESC performance, use Kia genuine brake fluid or those of an equivalent standard brake fluid as in the specification.</p></fn></p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>As required</p>
+						</entry>
+						<entry valign="middle">
+							<p>SAEJ1704 DOT-4 LV, FMVSS 116 DOT-4, ISO 4925 CLASS-6</p>
+						</entry>
+					</row>
+					<row>
+						<entry namest="col1" nameend="newCol4" align="left" valign="middle">
+							<p>Engine clutch actuator fluid</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>As required</p>
+						</entry>
+						<entry valign="middle">
+							<p>SAEJ1704 DOT-4 LV, FMVSS 116 DOT-4, ISO 4925 CLASS-6</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry align="left" valign="middle" morerows="1">
+							<p>Fuel</p>
+						</entry>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 T-GDi/Smartstream G1.6 T-GDi (EURO 7)/Smartstream G2.0</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>50</p>
+						</entry>
+						<entry valign="middle" morerows="1">
+							<p>Gasoline</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle" namest="col2" nameend="newCol4">
+							<p>Smartstream G1.6 GDi HEV/Smartstream G1.6 GDi HEV (EURO 7)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>38</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00015.dita#t00015" role="parent" scope="local" type="concept">
+				<linktext>Specifications </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

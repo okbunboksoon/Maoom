@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00621">
+	<title>Navigation-based Smart Cruise Control pause/driver operation</title>
+	<conbody>
+		<p>If Smart Cruise Control cannot be operated due to pause or rerouting, the gray (<image href="../../images/WKIA_151.eps" align="left" placement="inline" outputclass="nolabel" scale="15" id="e04330"/>) indicator will appear on the cluster.</p>
+		<p>If the accelerator pedal is depressed, the white (<image href="../../images/WKIA_151.eps" align="left" placement="inline" outputclass="nolabel" scale="15" id="e04331"/>) indicator will blink on the cluster.</p>
+		<note type="warning">
+			<p>The warning message will appear in the following circumstances:</p>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04332">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e04333">
+									<figgroup>
+										<image href="../../images/OOV055266L.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e04334"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout" id="e04335">
+									<li>
+										<p> <uicontrol outputclass="c1668">Drive carefully</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul>
+				<li>
+					<p>Navigation-based Smart Cruise Control is not able to slow down your vehicle to a safe speed</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>The images and colors in the instrument cluster may differ depending on the cluster type or theme selected from the settings menu.</p>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task importance="optional" id="CL4m_HEV-ca_ES-2027-t0307">
+	<title>Laderaumboden</title>
+	<shortdesc>In diesem Staufach können Sie Verbandkasten, Warndreieck, Werkzeuge usw. unterbringen – Dinge, die Sie bei Bedarf schnell brauchen.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Staufach
+					<indexterm>Laderaumboden</indexterm>
+				</indexterm>
+				<indexterm>Laderaumboden</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MW035003L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</context>
+		<steps>
+			<step>
+				<cmd>Erfassen Sie den Griff oben an der Abdeckung und heben Sie die Abdeckung damit an.</cmd>
+			</step>
+			<step>
+				<cmd>Klappen Sie den hinteren Teil des Kofferraumbodens nach vorne.</cmd>
+			</step>
+			<step>
+				<cmd>Ziehen Sie den Kofferraumboden nach vorne (Kofferraumboden steht selbsttätig).</cmd>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0303.dita#CL4m_HEV-ca_ES-2027-t0303" role="parent" scope="local" type="concept">
+				<linktext>Staufächer</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

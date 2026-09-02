@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00409">
+	<title>Applying AUTO HOLD function</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>AUTO HOLD
+					<indexterm>applying</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02763">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e02764">
+								<title>Type A</title>
+								<image href="images/N_SP327_C09_001_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e02765">
+								<title>Type B</title>
+								<image href="images/N_SP327_C09_001_1_A.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<fig id="e02766">
+								<title>Type C</title>
+								<image href="images/N_SP327_C09_022_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e02767">
+								<title/>
+								<image href="images/N_SP3i26_C09_021_2_I.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol id="e02768">
+			<li>
+				<p>Engage the brake pedal and start your vehicle.</p>
+			</li>
+			<li>
+				<p>Press the <term translate="no">AUTO HOLD</term> button. The white <term translate="no">AUTO HOLD</term> indicator light appears, indicating that the system is in standby.</p>
+				<p>Before the <term translate="no">AUTO HOLD</term> function engages, you must close the driver’s side door and the hood.</p>
+			</li>
+		</ol>
+		<note type="note" id="e02769">
+			<ul id="e02770">
+				<li>
+					<p>When you come to a complete stop by engaging the brake pedal, the <term translate="no">AUTO HOLD</term> indicator light changes from white to green, indicating that <term translate="no">AUTO HOLD</term> is engaged. Your vehicle remains at a standstill even if you release the brake pedal.</p>
+				</li>
+				<li>
+					<p>If the <term translate="no">EPB</term> is applied, <term translate="no">AUTO HOLD</term> will be released.</p>
+				</li>
+				<li>
+					<p>If you engage the accelerator pedal with the vehicle in D (Drive) or manual mode, the <term translate="no">AUTO HOLD</term> function is released automatically, and your vehicle starts to move. The <term translate="no">AUTO HOLD</term> indicator light changes from green to white, indicating that the <term translate="no">AUTO HOLD</term> function is in standby and the <term translate="no">EPB</term> is released.</p>
+				</li>
+				<li>
+					<p>When driving after releasing <term translate="no">AUTO HOLD</term> by engaging the accelerator pedal, always check your surroundings.</p>
+				</li>
+				<li>
+					<p>Engage the accelerator pedal slowly for a smooth forward motion.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00408.dita#t00408" role="parent" scope="local" type="concept">
+				<linktext>AUTO HOLD</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

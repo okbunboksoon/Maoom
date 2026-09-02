@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0177">
+	<title>Vorwärts/rückwärts</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024012N_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Um den Sitz nach vorn oder nach hinten zu bewegen:</p>
+		<ol>
+			<li id="e00522">
+				<p>Ziehen Sie den Einstellhebel zum Verschieben des Sitzes nach oben und halten Sie ihn in der Position.</p>
+			</li>
+			<li id="e00523">
+				<p>Schieben Sie den Sitz in die gewünschte Position.</p>
+			</li>
+			<li id="e00524">
+				<p>Geben Sie den Hebel frei und stellen Sie sicher, dass der Sitz in seiner Position arretiert ist.</p>
+			</li>
+		</ol>
+		<p>Stellen Sie den Sitz vor der Fahrt ein und stellen Sie sicher, dass er fest eingerastet ist, indem Sie versuchen, ihn ohne Anziehen des Hebels nach vorn oder hinten zu schieben. Wenn sich der Sitz bewegen lässt, ist er nicht ordnungsgemäß eingerastet.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0176.dita#CL4m_HEV-ca_ES-2027-t0176" role="parent" scope="local" type="concept">
+				<linktext>Vordersitze manuell einstellen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00607">
+	<title>Deceleration assist</title>
+	<conbody>
+		<p>If the driver does not respond in advance warning, an <uicontrol>Emergency Stop</uicontrol> will be initiated. The vehicle will automatically engage steering and deceleration assistance to safely bring the car to stop. This will be alerted by warning messages, warning sounds, hazard warning flasher, and steering wheel vibrations.</p>
+		<p>Warning message: <uicontrol>Take control of the vehicle immediately. Vehicle is stopping.</uicontrol> </p>
+		<note type="tip" id="e04304">
+			<p>When <uicontrol>Emergency Stop</uicontrol> operates, distance of <uicontrol>Smart Cruise Control</uicontrol> will set and displayed by Distance 4. If <uicontrol>Emergency Stop</uicontrol> stops, it will return to preset.</p>
+		</note>
+	</conbody>
+</concept>

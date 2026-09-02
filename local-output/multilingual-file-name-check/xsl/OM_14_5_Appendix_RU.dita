@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "technicalContent/dtd/concept.dtd" [
+]>
+
+<?Fm Condition prolog_cond AsIs NO_OVERRIDE hide AsIs?>
+<concept id="OM_14_5_Appendix_RU">
+    <title>Табличка компрессора кондиционера</title>
+    <titlealts/>
+    <prolog>
+        <metadata>
+            <keywords>
+                <indexterm> replacing components <indexterm>характеристики:табличка компрессора
+                        кондиционера</indexterm>
+                </indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="table_j5h_xz2_2gc">
+            <tgroup cols="2" colsep="0" rowsep="1">
+                <colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+                <colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+                <tbody>
+                    <row rowsep="1">
+                        <entry colname="col1">
+                            <fig id="fig_mrl_xz2_2gc">
+                                <figgroup>
+                                    <image align="center" href="../../images/OCV081006L.eps"
+                                        placement="break" scale="95"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                        <entry colname="col2"/>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>Табличка компрессора содержит сведения о типе компрессора, которым оснащен автомобиль, в
+            частности модель, номер по каталогу поставщика, серийный номер, хладагент и
+            компрессорное масло.</p>
+    </conbody>
+</concept>

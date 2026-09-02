@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" deliveryTarget="except_print" id="t00868">
+	<title>Battery</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>replacing components 
+					<indexterm>battery</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02756">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02757">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25G013_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Keep the battery securely mounted.</p>
+			</li>
+			<li>
+				<p>Keep the top of the battery clean and dry.</p>
+			</li>
+			<li>
+				<p>Keep the terminals and connections clean, tight, and coated with petroleum jelly or terminal grease.</p>
+			</li>
+			<li>
+				<p>Immediately rinse any electrolyte spilled from the battery using a solution of water and baking soda.</p>
+			</li>
+			<li>
+				<p>If the vehicle is not going to be used for an extended period, disconnect the battery cables.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<table otherprops="legal_gen_std_002_01" colsep="1" frame="none" outputclass="formatc_none" pgwide="true" rowsep="1">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="14*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="86*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_114.eps" scale="50" outputclass="nolabel" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2" valign="middle">
+								<p>Always read the following instructions carefully when handling a battery.</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col1" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_115.eps" scale="50" outputclass="nolabel" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2" valign="middle">
+								<p>Keep lighted cigarettes and all other flames or sparks away from the battery.</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col1" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_116.eps" scale="50" outputclass="nolabel" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2" valign="middle">
+								<p>Hydrogen, a highly combustible gas, is always present in battery cells and may explode if ignited.</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col1" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_117.eps" scale="50" outputclass="nolabel" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2" valign="middle">
+								<p>Keep batteries out of the reach of children because batteries contain highly corrosive SULFURIC ACID. Do not allow battery acid to contact your skin, eyes, clothing or paint finish.</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col1" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_118.eps" scale="50" outputclass="nolabel" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2" valign="middle">
+								<p>If any electrolyte gets into your eyes, flush your eyes with clean water for at least 15 minutes and get immediate medical attention. If electrolyte gets on your skin, thoroughly wash the contacted area. If you feel pain or burning sensation, get medical attention immediately.</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col1" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_119.eps" scale="50" outputclass="nolabel" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2" valign="middle">
+								<p>Wear eye protection when charging or working near a battery. Always provide ventilation when working in an enclosed space.</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col1" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_120.eps" scale="50" outputclass="nolabel" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2" valign="middle">
+								<p>An inappropriately disposed battery can be harmful to the environment and human health. Dispose the battery according to your local law(s) or regulation.</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul>
+				<li>
+					<p>When lifting a plastic-cased battery, excessive pressure on the case may cause battery acid to leak, resulting in personal injury. Lift with a battery carrier or with your hands on opposite corners.</p>
+				</li>
+				<li>
+					<p>Never attempt to recharge the battery when the battery cables are connected.</p>
+				</li>
+				<li>
+					<p>The electrical ignition system works with high voltage. Never touch these components with the <image align="left" href="../../images/WKIA_326.eps" scale="15" placement="inline"/> indicator <term translate="no">ON</term> or when the <term translate="no">EV</term> button is in the <term translate="no">ON</term> position.</p>
+				</li>
+			</ul>
+			<p>Failure to follow the above warnings can result in serious bodily injury or death.</p>
+		</note>
+		<note type="caution">
+			<p>If you connect unauthorized electronic devices to the battery, the battery may be discharged. Never use unauthorized devices.</p>
+		</note>
+		<note type="note">
+			<p>Your vehicle is equipped with maintenance free battery. If your vehicle is equipped with the battery marked with LOWER and UPPER on the side, you can check the electrolyte level. The electrolyte level should be between LOWER and UPPER. If the electrolyte level is low, it needs to add distilled (demineralized) water (Never add sulfuric acid or other electrolyte). When you refill, be careful not to splash the battery and adjacent components. And do not overfill the battery cells. It can cause corrosion on other parts. Make sure that the cell caps are tightened.</p>
+			<p>Contact a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</note>
+	</conbody>
+</concept>

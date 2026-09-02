@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00036">
+	<title>Mechanical key</title>
+	<shortdesc/>
+	<conbody>
+		<p>When the battery of the remote key is discharged, or the remote key does not operate normally, you can lock or unlock the door using the mechanical key.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00161">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00162">
+								<image align="center" placement="break" scale="95" href="images/N_SP3i26_B04_048_IR.jpg"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e00163">
+			<li>
+				<p>To unfold the key, press the release button then the key will unfold automatically.</p>
+			</li>
+			<li>
+				<p>To fold the key, fold the key manually while pressing the release button.</p>
+			</li>
+		</ul>
+		<note type="caution" id="e00164">
+			<p>Do not fold the key without pressing the release button. This may damage the key.</p>
+		</note>
+		<section id="e00165">
+			<title id="e00166">Remote key precautions </title>
+			<p>The remote key may not operate if any of the following occur:</p>
+			<ul id="e00167">
+				<li>
+					<p>The ignition key is in ignition switch.</p>
+				</li>
+				<li>
+					<p>You exceed the operating distance limit (about 10 m [30 feet]).</p>
+				</li>
+				<li>
+					<p>The battery in the remote key is weak.</p>
+				</li>
+				<li>
+					<p>Other vehicles or objects may be blocking the signal.</p>
+				</li>
+				<li>
+					<p>The weather is extremely cold.</p>
+				</li>
+				<li>
+					<p>The remote key is close to a radio transmitter such as a radio station or an airport which can interfere with normal operation of the transmitter.</p>
+				</li>
+			</ul>
+			<p>When the remote key does not work correctly, try the spare, or open and close the door with the ignition key. When your remote key does not work correctly, consult a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			<p>If the remote key is near your cell phone or smartphone, the phone could be blocking the transmitter’s signal. This is especially likely when the phone is active, such as when making or receiving calls, text messaging, and sending or receiving emails. Avoid placing the remote key and your cell phone or smartphone in the same pants or jacket pocket. Maintain adequate distance between the 2 devices.</p>
+			<p>If you do not move the remote key for some time, its detection function (if equipped) will pause. Lift the transmitter to reactivate the detection function.</p>
+			<note type="note" id="e00168">
+				<p>Losing the smart key</p>
+				<p>A maximum of 2 smart keys can be registered to a single vehicle.</p>
+				<p>If you happen to lose both smart keys, you will not be able to start the vehicle. You should immediately contact an authorized Kia dealer or service partner for assistance. Tow the vehicle if necessary to protect it from potential theft.</p>
+			</note>
+			<note type="note" id="e00169">
+				<p>Remote key</p>
+				<p>Keep the remote key away from water or any liquid, as it can become damaged and not function properly.</p>
+			</note>
+			<note type="caution" id="e00170">
+				<p>Changes or modifications not expressly approved by the party responsible for compliance could void the user’s authority to operate the equipment. If the keyless entry system is inoperative due to changes or modifications not expressly approved by the party responsible for compliance, it will not be covered by your manufacturer’s vehicle warranty.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00035.dita#t00035" role="parent" scope="local" type="concept">
+				<linktext>Remote key</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

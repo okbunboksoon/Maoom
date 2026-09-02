@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00848">
+	<title>12V battery capacity label</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>12V battery
+					<indexterm>12V battery capacity label</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05011">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05012">
+								<image align="center" href="images/KIAPB162.jpg" scale="95" placement="break"/>
+							</fig>
+						</entry>
+						<entry>
+							<fig id="e05013">
+								<image align="center" href="images/KIAPB164.jpg" scale="95" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e05014">
+			<li>
+				<p>The Kia model name of battery</p>
+			</li>
+			<li>
+				<p>The nominal voltage</p>
+			</li>
+			<li>
+				<p>The nominal capacity (in Ampere hours)</p>
+			</li>
+			<li>
+				<p>The cold-test current in amperes by SAE/EN</p>
+			</li>
+			<li>
+				<p>The nominal reserve capacity (in min.)</p>
+			</li>
+		</ol>
+		<p>The actual battery label in the vehicle may differ from the illustration.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00845.dita#t00845" role="parent" scope="local" type="concept">
+				<linktext>12V Battery</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

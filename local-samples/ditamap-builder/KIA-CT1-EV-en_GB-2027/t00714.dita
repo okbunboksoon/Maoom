@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00714">
+	<title>Standby</title>
+	<conbody>
+		<p>When the Smart Cruise Control is temporarily canceled while Highway Driving Assist is operating, Highway Driving Assist will be in the standby state. At this time, Lane Following Assist will operate properly.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Driving Speed Limit helps you drive below 60 km/h (40 mph). At this time, the vehicle decelerates due to the vehicle ahead. After the vehicle has decelerated, it cannot automatically accelerate.</p>
+				</li>
+				<li>
+					<p>Driving Speed Limit will cancel in the following circumstances:</p>
+					<ul>
+						<li>
+							<p>When the driver grabs the steering wheel again</p>
+						</li>
+						<li>
+							<p>When the driver turns on Lane Following Assist by pressing the Lane Driving Assist button</p>
+						</li>
+						<li>
+							<p>When (<image align="left" href="../../images/WKIA_334.eps" scale="15" placement="inline"/>), (<image align="left" href="../../images/WKIA_335.eps" scale="15" placement="inline"/>), (<image align="left" href="../../images/WKIA_079.eps" scale="15" placement="inline"/>) switch is operated, or the accelerator pedal or the brake pedal is depressed</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

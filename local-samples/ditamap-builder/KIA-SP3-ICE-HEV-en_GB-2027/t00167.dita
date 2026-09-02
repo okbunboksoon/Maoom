@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA 1.3 Reference//EN" "reference.dtd">
+<reference id="t00167">
+	<title id="e00915">Warning lights </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>warning and indicator lights
+					<indexterm>warning lights</indexterm>
+				</indexterm>
+				<indexterm>warning lights</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<section id="e00916">
+			<p>The warning lights indicate situations that require the driver to pay extra attention.</p>
+			<note type="tip" id="e00917">
+				<p>Warning lights</p>
+				<p>Make sure that all warning lights are <term translate="no">OFF</term> after starting the engine. If any light is still <term translate="no">ON</term>, it indicates a situation that needs immediate attention.</p>
+			</note>
+		</section>
+		<section id="e00918">
+			<title id="e00919">Air bag warning light <image href="images/WKIA_027.jpg" scale="15" align="left" placement="inline"/></title>
+			<p>This warning light appears:</p>
+			<ul id="e00920">
+				<li id="e00921">
+					<p>When the vehicle is in <term translate="no">ON</term> position. The light illuminates for approximately 3–6 seconds and then disappears.</p>
+				</li>
+				<li id="e00922">
+					<p>When there is an SRS malfunction. If this happens, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e00923">
+			<title id="e00924">Seat belt warning light <image href="images/WKIA_028.jpg" scale="15" align="left" placement="inline"/></title>
+			<p>This warning light informs the driver that the seat belt is not fastened.</p>
+			<p>For more details, refer to <xref href="t00227.dita#t00227"/>.</p>
+		</section>
+		<section id="e00925">
+			<title>Door ajar warning light <image href="images/WKIA_058.jpg" scale="15"/></title>
+			<p>This warning light appears when a door is not closed securely.</p>
+		</section>
+		<section id="e00926">
+			<title id="e00927">Master warning light <image href="images/WKIA_040.jpg" scale="15"/></title>
+			<p>This warning light appears in the following situations:</p>
+			<ul id="e00928">
+				<li>
+					<p>LED headlamp malfunction</p>
+				</li>
+				<li>
+					<p>Lamp malfunction</p>
+				</li>
+				<li>
+					<p>High Beam Assist malfunction (if equipped)</p>
+				</li>
+				<li>
+					<p>Driver assistance system malfunction, limitation, or a radar or camera interference (if equipped)</p>
+				</li>
+			</ul>
+			<p>To identify the details of the warning, look at the LCD display.</p>
+			<p>If the warning situation is solved, the master warning light will turn off.</p>
+		</section>
+		<section id="e00929">
+			<title>Motor Driven Power Steering (MDPS) warning light <image href="images/WKIA_031.jpg" scale="15"/></title>
+			<p>This warning light appears:</p>
+			<ul id="e00930">
+				<li>
+					<p>When the vehicle is in <term translate="no">ON</term> position.</p>
+					<ul id="e00931">
+						<li>
+							<p>his indicator light comes on after the vehicle is in the <term translate="no">ON</term> position and then goes out after approximately 3 seconds.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>When there is a malfunction with the MDPS.</p>
+					<p>In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e00932">
+			<title>Tailgate open warning light <image href="images/WKIA_489.jpg" scale="15"/></title> This warning light appears when the tailgate is not closed securely. 
+		</section>
+		<section id="e00933">
+			<title>LED headlamp warning light <image href="images/WKIA_050.jpg" scale="15"/></title>
+			<sectiondiv><ph>This warning light appears:</ph>
+				<ul id="e00934">
+					<li>
+						<p>For approximately 3 seconds when the vehicle is in the <term translate="no">ON</term> position.</p>
+					</li>
+					<li>
+						<p>When there is a malfunction with the LED headlamp.</p>
+					</li>
+				</ul>
+				<p>Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</sectiondiv>
+			<sectiondiv><ph>This warning light blinks:</ph>
+				<ul id="e00935">
+					<li>
+						<p>When there is a malfunction with an LED headlamp related part.</p>
+					</li>
+				</ul>
+				<p>Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				<note type="note" id="e00936">
+					<p>LED headlamp warning light</p>
+					<p>Continuous driving with the LED Headlamp Warning Light on or blinking can reduce LED headlight (low beam) life.</p>
+				</note>
+			</sectiondiv>
+		</section>
+		<section id="e00937">
+			<title>Low fuel level warning light <image href="images/WKIA_026.jpg" scale="15"/></title>
+			<p>This warning light appears when the fuel tank is nearly empty. Add fuel as soon as possible.</p>
+			<p>If the fuel tank is nearly empty, add fuel as soon as possible.</p>
+			<note type="note" id="e00938">
+				<p>Low fuel level</p>
+				<p>Driving with the Low Fuel Level warning light on or with the fuel level below “E” can cause the engine to misfire and damage the catalytic converter.</p>
+			</note>
+		</section>
+		<section id="e00939">
+			<title>All Wheel Drive (AWD) warning light</title>
+			<p>This warning light appears when there is a malfunction with the 4WD system.</p>
+		</section>
+		<section importance="optional" otherprops="legalnotice_europe-general_gen-ind_2023_20231004_12228" id="e00940">
+			<title>Exhaust system (GPF) warning light <image href="images/WKIA_054.jpg" scale="15"/></title>
+			<ul id="e00941">
+				<li>
+					<p>This warning light illuminates, when accumulated soot reaches a certain amount.</p>
+				</li>
+				<li>
+					<p>With the GPF warning light on, the warning light turns off under the following conditions: 
+						<ul id="e00942">
+							<li>
+								<p>You drive over 100 km/h (60 mph).</p>
+							</li>
+							<li>
+								<p>Your vehicle’s engine speed is between 2,500 and 4,000 rpm.</p>
+							</li>
+							<li>
+								<p>You drive in third gear or higher.</p>
+							</li>
+						</ul>
+					</p>
+				</li>
+				<li>
+					<p>For your safety, be sure to adjust to the above conditions on a road that is not congested.</p>
+				</li>
+				<li>
+					<p>Accelerate up to 2,500-4,000 rpm and 100 km/h (60 mph) in third gear or higher and release the accelerator pedal and wait for at least 10 seconds.</p>
+				</li>
+				<li>
+					<p>Repeat this process until the GPF warning light turns off.</p>
+				</li>
+				<li>
+					<p>For dual clutch transmission (DCT), manually change from <term translate="no">SPORT</term> driving mode to third or higher gears and follow the procedure above.</p>
+				</li>
+			</ul>
+			<note id="e00943">
+				<p>If you continue to drive with the GPF warning light blinking for a long time, the GPF system can be damaged and fuel consumption can worsen.</p>
+			</note>
+		</section>
+		<section id="e00944">
+			<title id="e00945">Malfunction Indicator Lamp (MIL) <image href="images/WKIA_032.jpg" scale="15"/></title>
+			<p>This warning light appears:</p>
+			<ul id="e00946">
+				<li id="e00947">
+					<p>For approximately 3 seconds when the vehicle is in the <term translate="no">ON</term> position.</p>
+				</li>
+				<li id="e00948">
+					<p>Whenever there is a malfunction with the emission control system, engine, or vehicle powertrain, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+			<note type="note" id="e00949">
+				<p>MIL</p>
+				<ul id="e00950">
+					<li>
+						<p>Driving with the MIL on may cause damage to the emission control systems, which could affect drivability and fuel economy.</p>
+					</li>
+					<li>
+						<p>If the enhanced engine protection system is activated due to a lack of engine oil, the engine will have limited power. If this continues, the MIL will appear.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution" id="e00951">
+				<p>If the oil pressure lowers due to insufficient engine oil or another cause, the engine oil pressure warning light will turn on, and an enhanced engine protection system that limits the engine’s power activates. The engine warning light will turn on if you continue driving.</p>
+			</note>
+			<note type="note" id="e00952">
+				<p>If the MIL appears, catalytic converter damage is possible, which could result in loss of engine power. In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</note>
+		</section>
+		<section id="e00953">
+			<title>Engine Oil Level Warning Light <image href="images/WKIA_034.jpg" scale="15"/></title>
+			<p>This warning light appears when the engine oil pressure is low.</p>
+			<p>Check the engine oil level as soon as possible and add engine oil as required.</p>
+		</section>
+		<section id="e00954">
+			<title id="e00955">Engine oil pressure warning light <image href="images/WKIA_034.jpg" scale="15"/></title>
+			<sectiondiv id="e00956"><ph id="e00957">This warning light appears: </ph>
+				<ul id="e00958">
+					<li id="e00959">
+						<p>When the vehicle is in the <term translate="no">ON</term> position until the engine starts.</p>
+					</li>
+					<li id="e00960">
+						<p>When the engine oil pressure is low.</p>
+					</li>
+					<li>
+						<p>Drive carefully to the nearest safe location and stop your vehicle.</p>
+					</li>
+					<li>
+						<p>Turn the engine off and check the engine oil level (for more details, refer to <xref href="t00821.dita#t00821"/>). If the level is low, add oil as required.</p>
+					</li>
+					<li>
+						<p>If the warning light remains on after you add oil, or if oil is not available, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner. Continuing to drive with the warning light on may cause engine failure.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<note type="tip" id="e00961">
+				<ul id="e00962">
+					<li id="e00963">
+						<p>When engine oil pressure decreases due to insufficient engine oil or another cause, the engine oil pressure warning light will appear.</p>
+					</li>
+					<li id="e00964">
+						<p>The enhanced engine protection system, which limits engine power, will activate.</p>
+						<p>For Smartstream G1.6 GDi HEV/Smartstream G1.6 GDi HEV (EURO 7), if the engine oil pressure is restored, the Engine Oil Pressure warning light and the enhanced engine protection system will turn off.</p>
+						<p>For Smartstream G1.6 T-GDi/Smartstream G1.6 T-GDi (EURO 7)/Smartstream G2.0, When the engine oil pressure is restored, the warning light and the enhanced engine protection system will turn off after you restart the engine.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e00965">
+				<p>Engine overheating</p>
+				<p>Do not continue driving when the engine is overheated. Otherwise, the engine may be damaged.</p>
+			</note>
+			<note type="caution" id="e00966">
+				<p>Engine damage</p>
+				<p>After the engine oil pressure warning light appears and stays on while the engine is running, serious engine damage may occur if you do not stop the engine immediately.</p>
+			</note>
+		</section>
+		<section importance="optional" otherprops="legalnotice_europe-general_gen-mid_2023_20230101_00004" id="e00967">
+			<title>Overspeed Warning Light <image href="images/WKIA_128.jpg" scale="15" align="center" placement="inline"/></title>
+			<sectiondiv><ph>This warning light illuminates:</ph>
+				<ul id="e00968">
+					<li>
+						<p>When you drive the vehicle more than 120 km/ (75 mph).</p>
+						<ul id="e00969">
+							<li>
+								<p>This is to prevent you from driving your vehicle with over speed.</p>
+							</li>
+							<li>
+								<p>The overspeed warning chime also sound for approximately 5 seconds.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<p>To identify the details of the warning look at the LCD display.</p>
+				<p>If the warning situation is solved, the master warning light will turn off.</p>
+			</sectiondiv>
+		</section>
+		<section id="e00970">
+			<title>Charging system warning light <image href="images/WKIA_033.jpg" scale="15" align="left" placement="inline"/></title>
+			<sectiondiv><ph>This warning light appears:</ph>
+				<ul id="e00971">
+					<li>
+						<p>When the vehicle is in the <term translate="no">ON</term> position.</p>
+					</li>
+					<li>
+						<p>When either the alternator or electrical charging system is malfunctioning.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv>If either the alternator or electrical charging system is malfunctioning, follow these steps. 
+				<ol id="e00972">
+					<li>
+						<p>Drive carefully to the nearest safe location and stop your vehicle.</p>
+					</li>
+					<li>
+						<p>Turn the engine off and check the alternator drive belt for looseness or breakage.</p>
+						<p>In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+		</section>
+		<section importance="optional" id="e00973">
+			<title>Icy road warning light <image href="images/WKIA_057.jpg" scale="15"/></title>
+			<p>This warning light appears when the temperature on the outside temperature gauge is below approximately 4 °C (40 °F) to warn the driver that the road may be icy. The outside temperature gauge blinks before the Icy Road Warning appears and the warning chime sounds once.</p>
+		</section>
+		<section id="e00974">
+			<title id="e00975">Parking brake and brake fluid warning light <image href="images/WKIA_029.jpg" scale="15" align="left" placement="inline"/></title>
+			<sectiondiv id="e00976"><ph id="e00977">This warning light appears: </ph>
+				<ul id="e00978">
+					<li id="e00979">
+						<p>When the vehicle is in the <term translate="no">ON</term> position.</p>
+						<ul id="e00980">
+							<li id="e00981">
+								<p>The light appears for approximately 3 seconds.</p>
+							</li>
+							<li id="e00982">
+								<p>The light remains on if the parking brake is applied.</p>
+							</li>
+						</ul>
+					</li>
+					<li id="e00983">
+						<p>When you apply the parking brake.</p>
+					</li>
+					<li id="e00984">
+						<p>When the brake fluid level in the reservoir is low.</p>
+						<ul id="e00985">
+							<li id="e00986">
+								<p>If the warning light appears when you release the parking brake, the brake fluid level in the reservoir is low.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph id="e00987">If the brake fluid level in the reservoir is low, follow these steps: </ph>
+				<ol id="e00988">
+					<li id="e00989">
+						<p>Drive carefully to the nearest safe location and stop your vehicle.</p>
+					</li>
+					<li id="e00990">
+						<p>With the engine stopped, check the brake fluid level immediately and add fluid as required (for more details, refer to <xref href="t00830.dita#t00830"/>). Then check all brake components for fluid leaks. Do not drive the vehicle if you find a leak in the brake system, the warning light remains on, or the brakes do not operate properly.</p>
+						<p>Have your vehicle towed to and serviced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+			<sectiondiv id="e00991"><ph id="e00992">Dual-diagonal braking system </ph>
+				<p>Your vehicle is equipped with dual-diagonal braking systems, which means you still have braking on 2 wheels even if one of the dual systems should fail.</p>
+				<p>With only 1 of the dual systems working, you need to press the pedal further and harder to stop the vehicle.</p>
+				<p>The vehicle will not stop in as short a distance with only a portion of the brake system working.</p>
+				<p>If the brakes fail while you are driving, shift to a lower gear for additional engine braking and stop the vehicle as soon as it is safe to do so.</p>
+				<note type="note" id="e00993">
+					<p>Parking brake and brake fluid warning light</p>
+					<p>Driving the vehicle with a warning light <term translate="no">ON</term> is dangerous. If the Parking brake and brake fluid warning light appears while the parking brake is released, it indicates that the brake fluid level is low.</p>
+					<p>In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</note>
+			</sectiondiv>
+		</section>
+		<section id="e00994">
+			<title>Electronic Parking Brake (EPB) warning light <image align="left" href="images/WKIA_036.jpg" scale="15" placement="inline"/></title>
+			<p>This warning light appears:</p>
+			<ul id="e00995">
+				<li>
+					<p>For approximately 3 seconds when the vehicle is in the <term translate="no">ON</term> position.</p>
+				</li>
+				<li>
+					<p>When the <term translate="no">EPB</term> is malfunctioning. In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e00996">
+			<title id="e00997">Anti-lock brake system (ABS) warning light <?oxy_comment_start author="sammy@maoom.com" timestamp="20251031T113602+0900" comment="ABS(Anti-lock Braking System) or ESC &lt;12인치 CLU&gt; 북미: 문자, 북미외: 심볼 &lt;4인치 CLU&gt; ALL심볼"?><image href="images/WKIA_107.jpg" scale="15" align="left" placement="inline"/><?oxy_comment_end?></title>
+			<p>This warning light appears:</p>
+			<ul id="e00998">
+				<li id="e00999">
+					<p>For approximately 3 seconds when the vehicle is in the <term translate="no">ON</term> position.</p>
+				</li>
+				<li id="e01000">
+					<p>If the ABS malfunctions, the normal braking system will still be operational.</p>
+					<p>In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01001">
+			<title>EBD system warning light <?oxy_comment_start author="sammy@maoom.com" timestamp="20251031T113736+0900" comment="With BRAKE [Area: DOM, USA, CAN] Symbol Only [Area: other]"?><image href="images/WKIA_127.jpg" scale="15" align="left" placement="inline"/><?oxy_comment_end?><image href="images/WKIA_107.jpg" scale="15" align="left" placement="inline"/></title>
+			<p>These 2 warning lights appear at the same time when both the ABS and regular brake system are not working. In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			<note type="caution" id="e01002">
+				<p>EBD system warning light</p>
+				<p>When both the ABS and Parking brake and brake fluid warning lights are on, the brake system will not work normally, and sudden braking may cause a dangerous or unexpected situation.</p>
+				<p>Avoid high speed driving and abrupt braking.</p>
+				<p>In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</note>
+		</section>
+		<section importance="optional" id="e01003">
+			<title>Washer Fluid Warning Light <image href="images/WKIA_179.jpg" scale="15"/></title>
+			<p>This warning light appears when the washer fluid level in the reservoir is nearly empty. In this case, you should refill the washer fluid.</p>
+		</section>
+		<section id="e01004">
+			<title>Forward Safety warning light <image href="images/WKIA_037.jpg" scale="15"/></title>
+			<p>This warning light appears:</p>
+			<ul id="e01005">
+				<li>
+					<p>For approximately 3 seconds when the vehicle is in the <term translate="no">ON</term> position.</p>
+				</li>
+				<li>
+					<p>Yellow: When Forward Collision-avoidance Assist Forward Safety is deselected or disabled, or when a malfunction is detected.</p>
+					<p>If the yellow warning light remains on after the sensor has been uncovered or unblocked when you set Forward Safety, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+			<p>This warning light blinks red when the Forward Safety or Forward Cross-traffic Safety function is operating.</p>
+			<p>For more details, refer to <xref href="t00568.dita#t00568"/>.</p>
+		</section>
+		<section importance="optional" id="e01006">
+			<title>Emergency steering warning light <image href="images/WKIA_077.jpg" scale="15"/></title>
+			<p>This warning light appears:</p>
+			<ul id="e01007">
+				<li>
+					<p>For approximately 3 seconds when the vehicle is in <term translate="no">ON</term> position.</p>
+				</li>
+				<li>
+					<p>Yellow: When Forward Collision-avoidance Assist Forward/Side Safety is deselected or disabled, or when a malfunction is detected.</p>
+					<p>If the warning light remains on after the sensor has been uncovered or unblocked when Forward/Side Safety is on, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+			<p>This warning light blinks red when the Forward/Side Safety function is operating.</p>
+			<p>For more details, refer to <xref href="t00445.dita#t00445"/>.</p>
+		</section><?oxy_comment_start author="sammy@maoom.com" timestamp="20260305T113640+0900" comment="FAW 적용 시"?>
+		<section id="e01008">
+			<title>Forward Attention Warning light <image align="left" href="images/WKIA_353.jpg" scale="15" placement="inline"/></title>
+			<sectiondiv><ph>This warning light illuminates:</ph>
+				<ul id="e01009">
+					<li>
+						<p>When the vehicle <?oxy_comment_start author="sammy@maoom.com" timestamp="20260305T113656+0900" comment="EV"?> is in the <?oxy_comment_end?><term translate="no">ON</term> position. It illuminates for about 3 seconds and then goes off.</p>
+					</li>
+					<li>
+						<p>When Forward Attention Warning is disabled or a malfunction is detected. If the warning light remains on after the in-cabin camera has been uncovered or unblocked, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>This warning light blinks:</ph>
+				<ul id="e01010">
+					<li>
+						<p>Forward Attention Warning warns the driver to keep eyes on the road.</p>
+					</li>
+				</ul>
+				<p>For more information, refer to the <xref href="t00568.dita#t00568"/>.</p>
+			</sectiondiv>
+		</section><?oxy_comment_end?>
+		<section id="e01011">
+			<title>Low tire pressure warning light <image href="images/WKIA_035.jpg" scale="15"/></title>
+			<sectiondiv><ph>This warning light appears:</ph>
+				<ul id="e01012">
+					<li>
+						<p>For approximately 3 seconds when the vehicle is in <term translate="no">ON</term> position.</p>
+					</li>
+					<li>
+						<p>When 1 or more of your tires are significantly underinflated. The LCD display shows the location of any underinflated tire.)</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv>
+				<p>This warning light remains on after blinking for approximately 60 seconds or repeats blinking on and off at intervals of approximately 3 seconds when the TPMS malfunctions. In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				<p>For more details, refer to <xref href="t00747.dita#t00747"/>.</p>
+				<note type="warning" id="e01013">
+					<p>Low tire pressure</p>
+					<ul id="e01014">
+						<li>
+							<p>Significantly low tire pressure makes the vehicle unstable and can contribute to loss of control and increased braking distances.</p>
+						</li>
+						<li>
+							<p>Continued driving on low pressure tires will cause the tires to overheat and fail.</p>
+						</li>
+					</ul>
+				</note>
+				<note type="warning" id="e01015">
+					<p>Safe stopping</p>
+					<ul id="e01016">
+						<li>
+							<p>The TPMS cannot alert you about severe and sudden tire damage caused by external factors.</p>
+						</li>
+						<li>
+							<p>If you notice any vehicle instability, immediately take your foot off the accelerator pedal, apply the brakes gradually with light force, and slowly move to a safe position off the road.</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+		</section>
+	</refbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00166.dita#t00166" role="parent" scope="local" type="concept">
+				<linktext>Warning and indicator lights </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</reference>

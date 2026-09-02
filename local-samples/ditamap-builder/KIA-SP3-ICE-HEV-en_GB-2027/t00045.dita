@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00045">
+	<title id="e00229">Disarmed stage </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>theft-alarm system
+					<indexterm>disarmed stage</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The system disarms when:</p>
+		<section id="e00230">
+			<title>Using the remote key</title>
+			<ul id="e00231">
+				<li>
+					<p>You press the door unlock button.</p>
+				</li>
+				<li>
+					<p>The engine is started with the ignition switch.</p>
+				</li>
+				<li>
+					<p>The ignition switch is in the “ON” position for 30 seconds or more.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e00232">
+			<title>Using the smart key</title>
+			<ul id="e00233">
+				<li>
+					<p>You press the door unlock button.</p>
+				</li>
+				<li>
+					<p>You press the button on the front outside door handle with the smart key in your possession.</p>
+				</li>
+				<li>
+					<p>You start the engine (within 3 seconds).</p>
+				</li>
+			</ul>
+			<p>After you press the unlock button, the hazard warning lights will blink, and the chime will sound twice (in the smart key) to indicate that the system is disarmed.</p>
+			<p>After you press the unlock button, if you do not open any door (or tailgate) within 30 seconds, the system will rearm.</p>
+			<note type="note" id="e00234">
+				<ul id="e00235">
+					<li>
+						<p>Avoid trying to start the engine while the alarm is activated. The vehicle starting motor is disabled during the theft-alarm stage.</p>
+					</li>
+					<li>
+						<p>If you lose your keys, contact a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>Malfunctions caused by improper alterations, adjustments, or modifications to the theft-alarm system are not covered by your vehicle manufacturer warranty.</p>
+					</li>
+				</ul>
+				<p>Adjusting alarm system</p>
+				<ul id="e00236">
+					<li>
+						<p>Do not change, alter or adjust the immobilizer system because it could cause the immobilizer system to malfunction. In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>Malfunctions caused by improper alterations, adjustments or modifications to the immobilizer system are not covered by your vehicle manufacturer warranty.</p>
+					</li>
+					<li>Do not attempt to alter this system or add other devices to it. Electrical problems could result that may make your vehicle inoperable.</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00042.dita#t00042" role="parent" scope="local" type="concept">
+				<linktext>Theft-alarm system </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

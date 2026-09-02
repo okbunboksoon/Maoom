@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00382">
+	<title>Automatic air ventilation</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system 
+					<indexterm>automatic air ventilation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>When operating heater and air conditioner for the vehicle ventilation, if you maintain the Recirculation mode for 30 minutes or over at low temperature, it automatically changes to Fresh mode.</p>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Climate</uicontrol><uicontrol>Automatic ventilation</uicontrol><uicontrol>Auto dehumidify</uicontrol></menucascade> on the Infotainment System screen.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Climate</uicontrol><uicontrol>Automatic ventilation</uicontrol><uicontrol>Auto dehumidify</uicontrol></menucascade> to activate or deactivate from the Settings menu in the Infotainment System screen. The “REC” indicator blinks 6 times in 0.25 second of intervals.</p>
+			<p>To cancel or reset the automatic ventilation:</p>
+			<ul>
+				<li>
+					<p>Air conditioning system is on.</p>
+				</li>
+				<li>
+					<p>Select Face Level <image href="../../images/WKIA_060.eps" scale="15" align="left" placement="inline"/> mode.</p>
+				</li>
+				<li>
+					<p>Touch the recirculated air position icon more than five times within 3 seconds.</p>
+					<p>The “REC” indicator blinks 3 times in 0.5 second of intervals.</p>
+				</li>
+			</ul>
+			<p importance="high">The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+		</section>
+	</conbody>
+</concept>

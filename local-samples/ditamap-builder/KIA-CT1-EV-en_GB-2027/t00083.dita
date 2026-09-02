@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00083">
+	<title>Remote window closing/opening</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>windows 
+					<indexterm>remote window closing/opening</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C046.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Lock <image placement="inline" scale="15" href="../../images/WKIA_019.eps"/> </p>
+								</li>
+								<li>
+									<p>Unlock <image placement="inline" scale="15" href="../../images/WKIA_021.eps"/> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Press and hold the door lock button (1) on the smart key 3 seconds to close the windows.</p>
+				</li>
+				<li>
+					<p>Press and hold the door unlock button (2) on the smart key 3 seconds to open the windows.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Press and hold the door lock button on the smart key approximately 3 seconds to close the windows. The windows will move up as long as the button is pressed.</p>
+				</li>
+				<li>
+					<p>Press and hold the door unlock button on the smart key approximately 3 seconds to open the windows. The windows will move down as long as the button is pressed.</p>
+				</li>
+				<li>
+					<p>Remote window operation can be activated or deactivated through the infotainment system menu.</p>
+				</li>
+			</ul>
+			<note otherprops="legal_eu_std_007_01" type="warning" id="e00373">
+				<ul>
+					<li>
+						<p>Do not install any accessories in the area of windows. It may impact jam protection.</p>
+					</li>
+					<li>
+						<p>Always check for obstructions before raising any window to avoid injuries or vehicle damage. If an object less than 4 mm (0.16 inches) in diameter is caught between the window glass and the upper window channel, the automatic reverse window may not detect the resistance and will not stop and reverse direction.</p>
+					</li>
+					<li>
+						<p>The automatic reverse feature is not activated while resetting power window system. Make sure body parts or other objects are safely out of the way before closing the windows to avoid injuries or vehicle damage.</p>
+					</li>
+					<li id="e00374">
+						<p>Never leave the keys in your vehicle with unsupervised children, when the vehicle is running.</p>
+					</li>
+					<li>
+						<p>Never leave any child unattended in the vehicle. Even very young children may inadvertently cause the vehicle to move, entangle themselves in the windows, or otherwise injure themselves or others.</p>
+					</li>
+					<li>
+						<p>Always double-check to make sure all arms, hands, head and other obstructions are safely out of the way before closing a window.</p>
+					</li>
+					<li>
+						<p>Do not allow children play with the power windows. Keep the driver’s door power window lock button in the <term translate="no">LOCK</term> position (pressed). Serious injury can result from unintentional window operation by the child.</p>
+					</li>
+					<li>
+						<p>Do not extend heads or any limbs outside the window while the vehicle is in motion.</p>
+					</li>
+					<li>
+						<p>Make sure body parts of other objects are safely out of the way before remote closing the windows to avoid injuries or vehicle damage.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution" id="e00375">
+				<ul id="e00376">
+					<li id="e00377">
+						<p>To prevent possible damage to the power window system, do not open or close two windows or more at the same time. This will also ensure the longevity of the fuse.</p>
+					</li>
+					<li id="e00378">
+						<p>Never try to operate the main switch on the driver’s door and the individual door window switch in opposite directions at the same time. If this is done, the window will stop and cannot be opened or closed.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e00379">
+				<ul>
+					<li>
+						<p>While driving with the rear windows down or with the sunroof (if equipped) in an open (or partially open) position, your vehicle may demonstrate a wind buffeting or pulsation noise. This noise is a normal occurrence and can be reduced or eliminated by taking the following actions. If the noise occurs with one or both of the rear windows down, partially lower both front windows approximately one inch. If you experience the noise with the sunroof open, slightly reduce the size of the sunroof opening.</p>
+					</li>
+					<li>
+						<p>In cold and wet climates, power windows may not work properly due to freezing conditions.</p>
+					</li>
+					<li>
+						<p>Remote window closing/opening features operate only on seats equipped with auto up and down safety windows. The automatic reverse feature will not operate if the window is raised using the halfway position on the power window switch.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

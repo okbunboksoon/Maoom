@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00640">
+	<title>Turning on Highway Driving Assist</title>
+	<conbody>
+		<p>Highway Driving Assist operates under the following conditions:</p>
+		<ul id="e03960">
+			<li>
+				<p>Press the Drive Assist button to turn Highway Driving Assist <term translate="no">ON</term> while driving on controlled access roads.</p>
+			</li>
+			<li>
+				<p>When entering a highway main road while Smart Cruise Control is operating, Highway Driving Assist will not turn <term translate="no">ON</term> if Lane Following Assist is turned <term translate="no">OFF</term>.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00638.dita#t00638" role="parent" scope="local" type="concept">
+				<linktext>Highway Driving Assist</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

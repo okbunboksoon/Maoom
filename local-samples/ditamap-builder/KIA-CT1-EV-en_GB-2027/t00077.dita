@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00077">
+	<title>Windows</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>opening and closing 
+					<indexterm>windows</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<fig id="e00351">
+			<figgroup>
+				<image href="../../images/N_CT25C039_4.eps" scale="95" align="center" placement="break"/>
+			</figgroup>
+		</fig>
+		<ol outputclass="callout" id="e00352">
+			<li>
+				<p>Power window lock switch</p>
+			</li>
+			<li>
+				<p importance="optional">Rear door (left) power window switch</p>
+			</li>
+			<li>
+				<p>Driver’s door power window switch</p>
+			</li>
+			<li>
+				<p importance="optional">Rear door (right) power window switch</p>
+			</li>
+			<li>
+				<p importance="optional">Front passenger’s door power window switch</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0700">
+	<title>Fahrzeug anhalten und Bremssteuerung beenden</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054168N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Vorsichtig fahren</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn das Fahrzeug aufgrund einer Notbremsung angehalten wurde, erscheint die Warnmeldung auf dem Kombiinstrument.</p>
+		<p>Zur Sicherheit sollte der Fahrer sofort das Bremspedal betätigen und die Umgebung prüfen.</p>
+		<ul>
+			<li>
+				<p>Die Bremssteuerung wird beendet, sobald das Fahrzeug durch eine Notbremsung für etwa 2 Sekunden angehalten wurde.</p>
+			</li>
+			<li>
+				<p>Bei einer Notbremsung bricht die Bremssteuerung des Heckverkehr-Kollisionsvermeidungsassistenten automatisch ab, wenn der Fahrer das Bremspedal übermäßig stark betätigt.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Ändern Sie zu Ihrer Sicherheit die Einstellungen, nachdem Sie das Fahrzeug an einem sicheren Ort geparkt haben.</p>
+				</li>
+				<li>
+					<p>Wenn eine andere Warnmeldung angezeigt oder ein Warnton ausgegeben wird, wird die Warnmeldung des Heckverkehr-Kollisionsvermeidungsassistenten möglicherweise nicht angezeigt und ggf. kein Warnton ausgegeben.</p>
+				</li>
+				<li>
+					<p>Möglicherweise hören Sie den Warnton des Heckverkehr-Kollisionsvermeidungsassistenten nicht, wenn die Umgebung laut ist.</p>
+				</li>
+				<li>
+					<p>Der Heckverkehr-Kollisionsvermeidungsassistent funktioniert möglicherweise nicht, wenn der Fahrer das Bremspedal betätigt, um eine Kollision zu vermeiden.</p>
+				</li>
+				<li>
+					<p>Während der Nutzung des Heckverkehr-Kollisionsvermeidungsassistenten kann es vorkommen, dass das Fahrzeug plötzlich anhält und dabei Mitfahrer verletzt und lose Gegenstände verschoben werden. Legen Sie immer den Sicherheitsgurt an und sichern Sie lose Gegenstände.</p>
+				</li>
+				<li>
+					<p>Selbst wenn ein Problem mit dem Heckverkehr-Kollisionsvermeidungsassistenten auftritt, funktioniert die Bremsanlage des Fahrzeugs normal.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Bei aktiviertem Heckverkehr-Kollisionsvermeidungsassistenten wird die Bremssteuerung durch die Funktion automatisch aufgehoben, wenn der Fahrer das Gaspedal übermäßig stark betätigt.</p>
+				</li>
+				<li>
+					<p>Der Heckverkehr-Kollisionsvermeidungsassistent funktioniert nicht in allen Situationen und kann nicht alle Kollisionen vermeiden.</p>
+				</li>
+				<li>
+					<p>Der Heckverkehr-Kollisionsvermeidungsassistent kann den Fahrer je nach Fahrbahn und Fahrbedingungen verspätet oder gar nicht warnen.</p>
+				</li>
+				<li>
+					<p>Der Fahrer trägt weiterhin die Verantwortung für die Führung des Fahrzeugs. Verlassen Sie sich nicht allein auf den Heckverkehr-Kollisionsvermeidungsassistenten. Halten Sie stattdessen einen Sicherheitsabstand ein und treten Sie gegebenenfalls das Bremspedal, um die Fahrgeschwindigkeit zu verringern oder das Fahrzeug zu stoppen.</p>
+				</li>
+				<li>
+					<p>Testen Sie niemals absichtlich den Heckverkehr-Vermeidungsassistenten mit Personen, Tiere, Gegenständen usw. Dies kann zu schweren oder tödlichen Verletzungen führen.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning">
+			<p>Die Bremssteuerung funktioniert je nach Status der ESC (elektronischen Stabilitätskontrolle) nicht richtig.</p>
+			<p>Es wird nur in folgenden Fällen eine Warnung ausgegeben:</p>
+			<ul>
+				<li>
+					<p>Die ESC-Warnleuchte (Elektronische Stabilitätskontrolle) leuchtet.</p>
+				</li>
+				<li>
+					<p>Die ESC (Elektronische Stabilitätskontrolle) wird für eine andere Funktion benötigt.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn der Heckverkehr-Kollisionsvermeidungsassistent Sie beim Bremsen unterstützt, muss der Fahrer sofort das Bremspedal treten und die Fahrzeugumgebung überprüfen.</p>
+				</li>
+				<li>
+					<p>Nach dem der Ganghebel in Position R (Rückwärtsgang) gebracht wurde, wird die Bremssteuerung einmalig für das linke und das rechte Fahrzeug aktiviert.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0697.dita#CL4m_HEV-ca_ES-2027-t0697" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Heckverkehr-Kollisionsvermeidungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

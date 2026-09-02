@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00278">
+	<title>Hybrid battery SOC (State of Charge) gauge</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01751">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01752">
+								<image href="images/P_SP327_B00_002_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The hybrid battery State of Charge (SOC) gauge indicates the remaining level of hybrid battery power. If the gauge is near the Low (L) level, the vehicle automatically operates the engine to charge the battery.</p>
+		<p>If the Service Indicator (<image href="images/WKIA_267.jpg" scale="15" align="left" placement="inline"/>) and Malfunction Indicator Lamp (MIL) (<image href="images/WKIA_032.jpg" scale="15" align="left" placement="inline"/>) illuminate when the SOC gauge is near the Low (L) level, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00276.dita#t00276" role="parent" scope="local" type="concept">
+				<linktext>Hybrid system gauge</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

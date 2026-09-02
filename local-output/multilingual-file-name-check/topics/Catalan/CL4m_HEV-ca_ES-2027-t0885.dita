@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_011_04" id="CL4m_HEV-ca_ES-2027-t0885">
+	<title>Abblendlicht (ÖHD, Fahrzeug)</title>
+	<conbody>
+		<fig expanse="page">
+			<title>Basierend auf einer Projektionsfläche im Abstand von 10 m</title>
+			<figgroup>
+				<image align="center" href="../../images/OCV071055L.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<ul>
+			<li>
+				<p><term translate="no">A</term>: Fahrzeugachse</p>
+			</li>
+			<li>
+				<p><term translate="no">B</term>: Vertikale Linie des Mittelpunkts der linken Scheinwerferlampe</p>
+			</li>
+			<li>
+				<p><term translate="no">C</term>: Vertikale Linie des Zentrums der rechten Scheinwerferlampe</p>
+			</li>
+			<li>
+				<p><term translate="no">D</term>: Horizontale Linie der Scheinwerferbirnenmitte</p>
+			</li>
+			<li>
+				<p><term translate="no">E</term>: Boden</p>
+			</li>
+			<li>
+				<p><term translate="no">F</term>: Grenzlinie</p>
+			</li>
+		</ul>
+		<section>
+			<title>Betrieb</title>
+			<ul>
+				<li>
+					<p>Schalten Sie das Abblendlicht ein, wobei der Fahrersitz unbesetzt bleibt.</p>
+				</li>
+				<li>
+					<p>Die Grenzlinie muss wie in der Abbildung gezeigt projiziert werden.</p>
+				</li>
+				<li>
+					<p>Beim Einstellen des Abblendlichts sollte zunächst die horizontale und erst dann die vertikale Einstellung erfolgen.</p>
+				</li>
+				<li>
+					<p>Lösen Sie die Feststellbremse und bringen Sie den Gang auf N (Neutralstellung). Stellen Sie außerdem den Schalter der Leuchtweitenregulierung (ausstattungsabhängig) auf „0“.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0884.dita#CL4m_HEV-ca_ES-2027-t0884" role="parent" scope="local" type="concept">
+				<linktext>Ausrichtungspunkt</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0287">
+	<title>Umluft</title>
+	<conbody>
+		<p>Diese Funktion schaltet die Klimaanlage auf der Grundlage der Navigationskarteninformationen und der Geschwindigkeit des Fahrzeugs automatisch in den Modus der internen Luftzirkulation, um zu verhindern, dass verschmutzte Luft in den Innenraum gelangt, wenn man durch einen Tunnel oder einen Bereich mit Geruch fährt.</p>
+		<section deliveryTarget="full_only">
+			<title>Betrieb</title>
+			<ul>
+				<li>
+					<p>Wählen Sie auf dem Bildschirm des Infotainment-Systems <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Klima</uicontrol><uicontrol>Umluft</uicontrol></menucascade>.</p>
+					<ul>
+						<li>
+							<p>Bei Verwendung von Waschflüssigkeit aktivieren: Das Eindringen von Gerüchen der Waschflüssigkeit in den Innenraum wird automatisch verhindert.</p>
+						</li>
+						<li>
+							<p>Beim Betreten von Tunneln aktivieren: Automatisches Schließen der Fenster und Aktivierung der internen Luftzirkulation bei Einfahrt in einen Tunnel.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="full_only">
+			<title>Betriebsbedingung(en)</title>
+			<ul>
+				<li>
+					<p>Wenn das Fahrzeug auf einer Landstraße (oder Autobahn) fährt.</p>
+				</li>
+				<li>
+					<p>Wenn sich die Klimaanlage im Frischluftansaugmodus befindet</p>
+				</li>
+			</ul>
+			<note type="caution">
+				<p>Achten Sie darauf, dass Sie sich beim Schließen der Fenster kein Körperteil einklemmen.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0284.dita#CL4m_HEV-ca_ES-2027-t0284" role="parent" scope="local" type="concept">
+				<linktext>Automatische Klimaanlage </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

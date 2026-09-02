@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" otherprops="legal_eu_std_028_03" id="CL4m_HEV-ca_ES-2027-t0133">
+	<title id="e00319">Schalthebelanzeige Doppelkupplungsgetriebe </title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Typ A</title>
+								<figgroup>
+									<image align="center" href="../../images/OMQ4033117.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<title>Typ B</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M036174L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Diese Anzeige zeigt an, welche Schalthebelposition ausgewählt ist.</p>
+		<ul id="e00320">
+			<li id="e00321">
+				<p>Parkstufe: P</p>
+			</li>
+			<li id="e00322">
+				<p>Rückwärtsgang: R</p>
+			</li>
+			<li id="e00323">
+				<p>Neutralstellung: N</p>
+			</li>
+			<li id="e00324">
+				<p>Fahrstufe: D1, D2, D3, D4, D5, D6, D7</p>
+			</li>
+			<li>
+				<p>Handschaltmodus: S1, S2, S3, S4, S5, S6,S7</p>
+			</li>
+		</ul>
+		<p>Hochschalten: ▲2, ▲3, ▲4, ▲5, ▲6, ▲7</p>
+		<p>Herunterschalten: ▼1, ▼2, ▼3, ▼4, ▼5, ▼6</p>
+		<p>Zum Beispiel 
+			<ul id="e00325">
+				<li>
+					<p>▲3: Empfiehlt das Herunterschalten in den 3. Gang (zurzeit befindet sich der Ganghebel im 2. oder 1. Gang).</p>
+				</li>
+				<li>
+					<p>▼3: Empfiehlt das Herunterschalten in den 3. Gang (zurzeit befindet sich der Schalthebel im 4., 5., 6. oder 7. Gang).</p>
+				</li>
+			</ul>
+		</p>
+		<p>Wenn das System nicht ordnungsgemäß funktioniert, erscheint diese Anzeige nicht.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0129.dita#CL4m_HEV-ca_ES-2027-t0129" role="parent" scope="local" type="concept">
+				<linktext>Ganganzeige </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

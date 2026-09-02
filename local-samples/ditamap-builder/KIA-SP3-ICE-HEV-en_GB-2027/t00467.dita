@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00467">
+	<title>Emergency Braking</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03189">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03190">
+								<image href="images/N_SP3i25_C00_016_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03191">
+								<li>
+									<p><uicontrol>Emergency Braking</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Emergency Braking can alert the you with Forward Safety warning light blinking (<image href="images/WKIA_037.jpg" scale="15" align="left" placement="inline"/>), a warning message, an audible warning and steering wheel vibration (if equipped). Brake assist may activate to help avoid a collision with a vehicle.</p>
+		<p>Emergency Braking may be activated in the following conditions:</p>
+		<ul>
+			<li>
+				<p>Your driving speed is approximately 10-65 km/h (6-40 mph).</p>
+			</li>
+			<li>
+				<p>The crossing vehicle speed is approximately 10-65 km/h (6-40 mph).</p>
+			</li>
+			<li>
+				<p>A target enters the operating range of the Junction Crossing function.</p>
+			</li>
+			<li>
+				<p>The target vehicle approaches slower than the own vehicle speed.</p>
+			</li>
+		</ul>
+		<section id="e03192">
+			<title>For vehicles with European and Australian specifications*</title>
+			<p>After stopping and restarting, when accelerating, collision warning or emergency braking will operate once for each side even if the target vehicle approaches faster than the own vehicle speed under the following conditions:</p>
+			<ul id="e03193">
+				<li>
+					<p>Own vehicle speed: approximately 12 km/h (7 mph) or lower</p>
+				</li>
+				<li>
+					<p>Crossing vehicle speed: approximately 18–90 km/h (11–56 mph)</p>
+				</li>
+			</ul>
+			<p>*: This function also operates on vehicles sold in countries where European/Australian specifications are applied. For more details, consult a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00465.dita#t00465" role="parent" scope="local" type="concept">
+				<linktext>Junction Crossing function</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

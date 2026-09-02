@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00412">
+	<title>Applying AUTO HOLD</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>AUTO HOLD 
+					<indexterm>applying</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03013">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e03014">
+								<figgroup>
+									<image href="../../images/OOV045009.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e03015"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e03016">
+								<figgroup>
+									<image href="../../images/OOV045008.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e03017"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol id="e03018">
+			<li>
+				<p>Depress the brake pedal and start the vehicle.</p>
+			</li>
+			<li>
+				<p>Press the <term>AUTO HOLD</term> button. The white <term>AUTO HOLD</term> indicator will illuminate, indicating the system is in standby mode.</p>
+				<p>Before <term>AUTO HOLD</term> can engage, ensure that the driver’s door, tailgate, and hood are all closed.</p>
+			</li>
+		</ol>
+		<note type="note" id="e03019">
+			<ul id="e03020">
+				<li>
+					<p>When coming to a complete stop by pressing the brake pedal, the <term>AUTO HOLD</term> indicator changes from white to green indicating the <term>AUTO HOLD</term> is engaged. The vehicle will remain at a standstill even if you release the brake pedal.</p>
+				</li>
+				<li>
+					<p>If EPB is applied, <term>AUTO HOLD</term> will be released.</p>
+				</li>
+				<li>
+					<p>If you depress the accelerator pedal with the vehicle in D (Drive), or R (Reverse), the <term>AUTO HOLD</term> will be released automatically and the vehicle will start to move. The indicator changes from green to white indicating the <term>AUTO HOLD</term> is in standby and the EPB is released.</p>
+				</li>
+				<li>
+					<p>When driving off from <term>AUTO HOLD</term> by depressing the accelerator pedal, always check the surrounding area near your vehicle.</p>
+				</li>
+				<li>
+					<p>Slowly depress the accelerator pedal for a smooth launch.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

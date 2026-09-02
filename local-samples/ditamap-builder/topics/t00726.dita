@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00726">
+	<title>Remote Smart Parking button</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1" id="e04609">
+			<tgroup cols="3" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<colspec colname="newCol3" colnum="3" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1">
+							<p>Parking/View button</p>
+						</entry>
+						<entry colname="col2">
+							<p>Smart key</p>
+						</entry>
+						<entry>
+							<p importance="optional">Digital key</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="0">
+						<entry align="center" valign="middle">
+							<fig id="e04610">
+								<figgroup>
+									<image href="../../images/OOV055016.eps" align="center" placement="break" width="1.51in" id="e04611"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry align="center" valign="middle">
+							<fig id="e04612">
+								<figgroup>
+									<image href="../../images/OOV055019.eps" align="center" placement="break" width="1.51in" id="e04613"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<fig id="e04614">
+								<figgroup>
+									<image href="../../images/OOV055277.eps" align="center" placement="break" width="1.51in" id="e04615"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+			<tgroup cols="4" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="14*"/>
+				<colspec colname="col2" colnum="2" colwidth="17*"/>
+				<colspec colname="col3" colnum="3" colwidth="10*"/>
+				<colspec colname="col4" colnum="4" colwidth="59*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1">
+							<p>Location</p>
+						</entry>
+						<entry colname="col2">
+							<p>Name</p>
+						</entry>
+						<entry colname="col3">
+							<p>Symbol</p>
+						</entry>
+						<entry colname="col4">
+							<p>Description</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry align="center" valign="middle">
+							<p>Inside vehicle</p>
+						</entry>
+						<entry align="center" colname="col2" valign="middle">
+							<p>Parking/View button</p>
+						</entry>
+						<entry align="center" colname="col3" valign="middle">
+							<p> <image align="left" height="0.233in" href="../../images/WKIA_106.eps" outputclass="nolabel" placement="inline" width="0.233in"/> </p>
+						</entry>
+						<entry align="left" colname="col4">
+							<ul>
+								<li>
+									<p>Press and hold the Parking/View button to turn on Remote Smart Parking Assist. Also, Forward/Reverse Parking Distance warning will automatically turn on.</p>
+									<p>(However, functions may differ depending on the situations. Refer to each function’s description for more details in the following pages.)</p>
+								</li>
+								<li>
+									<p>Press and hold the Parking/View button while Smart Parking or Smart Exit function is on to operate the function.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="center" valign="middle" morerows="2">
+							<p>Smart key</p>
+						</entry>
+						<entry align="center" colname="col2" valign="middle">
+							<p>Remote Start button</p>
+						</entry>
+						<entry align="center" colname="col3" valign="middle">
+							<p> <image align="left" height="0.233in" href="../../images/WKIA_108.eps" outputclass="nolabel" placement="inline" width="0.233in"/> </p>
+						</entry>
+						<entry align="left" colname="col4">
+							<ul>
+								<li>
+									<p>Press the Remote Start button after the door is locked with the vehicle off to start the vehicle remotely.</p>
+								</li>
+								<li>
+									<p>Press the Remote Start button while Remote Operation function is operating to end function operation.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="center" colname="col2" valign="middle">
+							<p>Forward button</p>
+						</entry>
+						<entry align="center" colname="col3" valign="middle">
+							<p> <image align="left" height="0.233in" href="../../images/WKIA_109.eps" outputclass="nolabel" placement="inline" width="0.233in"/> </p>
+						</entry>
+						<entry align="left" morerows="1">
+							<ul>
+								<li>
+									<p>When using Remote Parking function, regardless of which direction button is pressed, reverse parking is supported while the button is pressed.</p>
+								</li>
+								<li>
+									<p>When using the Remote Operation function, the vehicle moves in the direction of the button while the button is pressed.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry align="center" valign="middle" colname="col2" rowsep="1">
+							<p>Backward button</p>
+						</entry>
+						<entry align="center" valign="middle" colname="col3" rowsep="1">
+							<p> <image align="left" height="0.233in" href="../../images/WKIA_110.eps" outputclass="nolabel" placement="inline" width="0.233in"/> </p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p importance="optional">Digital key</p>
+						</entry>
+						<entry align="center" colname="col2" valign="middle">
+							<p>Remote Smart Parking button</p>
+						</entry>
+						<entry align="center" colname="col3" valign="middle">
+							<p> <image align="left" href="../../images/N_TK25E162.eps" outputclass="nolabel" placement="inline" scale="15" id="e04616"/> </p>
+						</entry>
+						<entry align="left">
+							<ul id="e04617">
+								<li>
+									<p>When using Remote Forward/Backward, swipe the vehicle icon to move the vehicle in the desired direction</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

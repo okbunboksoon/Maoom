@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00449">
+	<title>DRIVE MODE characteristics</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>drive mode integrated control system 
+					<indexterm>drive mode characteristics</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>DRIVE MODE</title>
+			<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+				<tgroup cols="7" colsep="1" outputclass="formatc" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="19*"/>
+					<colspec colname="col2" colnum="2" colwidth="18*"/>
+					<colspec colname="col3" colnum="3" colwidth="15*"/>
+					<colspec colname="col4" colnum="4" colwidth="16*"/>
+					<colspec colname="col5" colnum="5" colwidth="16*"/>
+					<colspec colname="newCol6" colnum="6" colwidth="16*"/>
+					<colspec colname="col6" colnum="7" colwidth="16*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1">
+								<p> <term translate="no">DRIVE MODE</term> </p>
+							</entry>
+							<entry colname="col2">
+								<p> <term translate="no">ECO</term> </p>
+							</entry>
+							<entry colname="col3">
+								<p> <term translate="no">NORMAL</term> </p>
+							</entry>
+							<entry colname="col4">
+								<p> <term translate="no">SPORT</term> </p>
+							</entry>
+							<entry colname="col5">
+								<p> <term translate="no">MY DRIVE</term> </p>
+							</entry>
+							<entry><?oxy_comment_start author="jsche" timestamp="20260223T155605+0900" comment="for GT"?>
+								<p> <uicontrol>GT*</uicontrol> </p><?oxy_comment_end?>
+							</entry>
+							<entry colname="col6">
+								<p> <term translate="no">SNOW</term> </p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>Characteristics</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>High electric energy economy mode</p>
+							</entry>
+							<entry align="center" colname="col3" valign="middle">
+								<p>Normal driving mode</p>
+							</entry>
+							<entry align="center" colname="col4" valign="middle">
+								<p>Sporty driving mode</p>
+							</entry>
+							<entry align="center" colname="col5" valign="middle">
+								<p>Adjusts modes of each driving system</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>More sportier and firm riding mode</p>
+							</entry>
+							<entry align="center" colname="col6" valign="middle">
+								<p>Snow driving</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>Button activation</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>Press</p>
+							</entry>
+							<entry align="center" colname="col3" valign="middle">
+								<p>Press</p>
+							</entry>
+							<entry align="center" colname="col4" valign="middle">
+								<p>Press</p>
+							</entry>
+							<entry align="center" colname="col5" valign="middle">
+								<p>Press</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Press</p>
+							</entry>
+							<entry align="center" colname="col6" valign="middle">
+								<p>Press</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>Cluster indicator</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p> <image href="../../images/WKIA_329.eps" scale="15" align="left" placement="inline"/> </p>
+							</entry>
+							<entry align="center" colname="col3" valign="middle">
+								<p>-</p>
+							</entry>
+							<entry align="center" colname="col4" valign="middle">
+								<p> <image href="../../images/WKIA_330.eps" scale="15" align="left" placement="inline"/> </p>
+							</entry>
+							<entry align="center" colname="col5" valign="middle">
+								<p> <image href="../../images/WKIA_331.eps" scale="15" align="left" placement="inline"/> </p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p> <term translate="no">GT</term> </p>
+							</entry>
+							<entry align="center" colname="col6" valign="middle">
+								<p> <image href="../../images/WKIA_332.eps" scale="15" align="left" placement="inline"/> </p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>Regenerative braking level</p>
+							</entry>
+							<entry align="center" nameend="newCol6" namest="col2">
+								<p>0–3 (Existing value maintained regardless of drive mode)</p>
+							</entry>
+							<entry align="center" colname="col6" valign="middle">
+								<p>0–1</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section>
+			<title>Infotainment system</title>
+			<p>*: if equipped</p>
+			<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+				<tgroup cols="7" colsep="1" outputclass="formatc" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="26*"/>
+					<colspec colname="col2" colnum="2" colwidth="13*"/>
+					<colspec colname="col3" colnum="3" colwidth="14*"/>
+					<colspec colname="col4" colnum="4" colwidth="13*"/>
+					<colspec colname="col5" colnum="5" colwidth="16*"/>
+					<colspec colname="col6" colnum="6" colwidth="16*"/>
+					<colspec colname="newCol7" colnum="7" colwidth="16*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1">
+								<p> <term translate="no">DRIVE MODE</term> </p>
+							</entry>
+							<entry colname="col2">
+								<p> <term translate="no">ECO</term> </p>
+							</entry>
+							<entry colname="col3">
+								<p> <term translate="no">NORMAL</term> </p>
+							</entry>
+							<entry colname="col4">
+								<p> <term translate="no">SPORT</term> </p>
+							</entry>
+							<entry colname="col5">
+								<p> <term translate="no">MY DRIVE</term> </p>
+							</entry>
+							<entry colname="col6">
+								<p> <term translate="no">SNOW</term> </p>
+							</entry>
+							<entry align="center" valign="middle"><?oxy_comment_start author="jsche" timestamp="20260223T155605+0900" comment="for GT"?>
+								<p> <uicontrol>GT*</uicontrol> </p><?oxy_comment_end?>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>Climate system control</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p> <term translate="no">ECO/NORMAL</term> *</p>
+							</entry>
+							<entry align="center" colname="col3" valign="middle">
+								<p> <term translate="no">NORMAL</term> </p>
+							</entry>
+							<entry align="center" colname="col4" valign="middle">
+								<p> <term translate="no">NORMAL</term> </p>
+							</entry>
+							<entry align="center" colname="col5" valign="middle">
+								<p> <term translate="no">NORMAL</term> </p>
+							</entry>
+							<entry align="center" colname="col6" valign="middle">
+								<p> <term translate="no">NORMAL</term> </p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p> <term translate="no">NORMAL</term> </p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>Brake mode</p>
+							</entry>
+							<entry align="center" nameend="newCol7" namest="col2">
+								<p> <term translate="no">NORMAL/SPORT</term> * (Mode can be set in infotainment system regardless of drive mode)</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<note type="note">
+				<ul>
+					<li>
+						<p>If there is a problem with the instrument cluster, the drive mode will be in <term translate="no">NORMAL</term> mode and may not change to <term translate="no">ECO</term> mode or <term translate="no">SPORT</term> mode.</p>
+					</li>
+					<li>
+						<p>Efficiency depends on the driver’s driving habit and road condition.</p>
+					</li>
+					<li>
+						<p>In <term translate="no">SPORT</term> mode, the electric energy economy may decrease.</p>
+					</li>
+					<li>
+						<p>When <term translate="no">GT</term> mode is selected, automatically changed to ESC Limited State and the <term translate="no">ESC OFF</term> indicator light (<term translate="no">ESC OFF</term>) comes on.</p>
+					</li>
+					<li>
+						<p>Limiting the ESC function during rapid acceleration or cornering on a slippery road can cause the vehicle to suddenly skid, leading to a dangerous situation. It is recommended to switch to <term translate="no">GT</term> mode while driving at a constant speed on a flat, straight road or when the vehicle is stationary.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="tip">
+				<p>It is possible to set the climate system control and brake mode separately.</p>
+				<p>Select <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Drive mode</uicontrol><uicontrol>Brake mode or ECO mode climate control</uicontrol></menucascade> from the infotainment system.</p>
+				<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00418">
+	<title>Electronic Stability Control (ESC)</title>
+	<shortdesc>Electronic Stability Control (ESC) is designed to stabilize the vehicle during cornering maneuvers.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle safety system 
+					<indexterm>electronic stability control (ESC)</indexterm>
+				</indexterm>
+				<indexterm>electronic stability control (ESC)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03043">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e03044">
+								<figgroup>
+									<image align="center" placement="break" height="1.575in" width="2.244in" href="../../images/OOV045014.eps" id="e03045"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning" id="e03046">
+			<p>ESC is not a substitute for safe driving practices. Factors such as speed, road conditions, and driver steering input can all affect whether ESC will be effective in preventing loss of control.</p>
+		</note>
+		<section id="e03047">
+			<title>ESC ON</title>
+			<ul id="e03048">
+				<li>
+					<p>When the vehicle is turned on, ESC and ESC OFF indicator lights appear for approximately 3 seconds, then ESC is turned on.</p>
+				</li>
+				<li>
+					<p>When the ESC is in operation, the ESC indicator light (<image align="left" href="../../images/WKIA_041.eps" outputclass="nolabel" placement="inline" scale="15" id="e03049"/>) blinks. When the ESC is operating properly, you can feel a slight pulsation in the vehicle. This is only the effect of brake control and indicates nothing unusual. When moving out of the mud or driving on a slippery road, pressing the accelerator pedal may not cause the vehicle to accelerate.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e03050">
+			<title>ESC OFF</title>
+			<ul id="e03051">
+				<li>
+					<p>This vehicle has 2 states of ESC OFF conditions. If the vehicle stops when ESC is off, ESC remains off. Upon restarting the vehicle, the ESC will automatically turn on again.</p>
+				</li>
+				<li>
+					<p>To turn off the traction control function and only operate the brake control function of the ESC, press the ESC OFF button for approximately half a second. ESC OFF indicator light (<image align="left" href="../../images/WKIA_042.eps" outputclass="nolabel" placement="inline" scale="15" id="e03052"/>) will appear and the warning chime will sound.</p>
+				</li>
+				<li>
+					<p>To turn off the traction control function and the brake control function of the ESC, press the ESC OFF button for more than 3 seconds. ESC OFF indicator light (<image align="left" href="../../images/WKIA_042.eps" outputclass="nolabel" placement="inline" scale="15" id="e03053"/>) will appear and the warning chime will sound. At this state, the vehicle stability control function does not operate anymore.</p>
+				</li>
+				<li>
+					<p>To turn ESC on again, press the ESC OFF button. ESC OFF indicator light (<image align="left" href="../../images/WKIA_042.eps" outputclass="nolabel" placement="inline" scale="15" id="e03054"/>) will go off.</p>
+				</li>
+			</ul>
+			<note type="warning" id="e03055">
+				<ul id="e03056">
+					<li>
+						<p>For maximum protection, always wear your seat belt. No system, no matter how advanced, can compensate for all driver error and/or driving conditions. Always drive responsibly.</p>
+					</li>
+					<li>
+						<p>Drive carefully even though your vehicle has Electronic Stability Control. It can only assist you in maintaining control under certain circumstances.</p>
+					</li>
+					<li>
+						<p>When ESC is deactivated, the vehicle will lose the traction and stability if the vehicle is driven by abrupt steering wheel control. It is possible that the tire may make a collision with the connected parts of the tire. We recommend that you do not turn off ESC while driving the vehicle for your safety.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e03057">
+				<ul id="e03058">
+					<li>
+						<p>A click sound may be heard in the vehicle compartment when the vehicle begins to move after the vehicle is started. These conditions are normal and indicate that the ESC is functioning properly.</p>
+					</li>
+					<li>
+						<p>When operating the vehicle on a dynamometer, ensure that the ESC is turned off (ESC OFF light on). If the ESC is left on, it may prevent the vehicle speed from increasing, and result in false diagnosis.</p>
+					</li>
+					<li>
+						<p>Turning the ESC off does not affect ABS or brake system operation.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

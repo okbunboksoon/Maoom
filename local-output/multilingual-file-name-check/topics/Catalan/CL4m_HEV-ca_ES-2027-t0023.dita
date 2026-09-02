@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0023">
+	<title>Klimaanlage</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Klimaanlage</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="all" rowsep="1" colsep="1" pgwide="1" outputclass="formatc">
+			<desc>
+				<p>Wenden Sie sich wegen weiteren Informationen an eine Fachwerkstatt. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+			</desc>
+			<tgroup cols="3" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="1.562*"/>
+				<colspec colnum="2" colname="col2" colwidth="1.562*"/>
+				<colspec colnum="3" colname="col3" colwidth="1.562*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1" align="center" valign="middle">
+							<p>Element</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>Volumengewicht</p>
+						</entry>
+						<entry colname="col3" align="center">
+							<p>Klassifikation</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1" morerows="1" align="left" valign="middle">
+							<p>Kältemittel</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>550 ±25 g</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>R-134a</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" align="center" valign="middle">
+							<p>500 ±25 g</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>R-1234yf</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1" align="left" valign="middle">
+							<p>Kompressoröl</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>100 ±10 g</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>PAG (FD46XG)</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0015-CH04.dita#CL4m_HEV-ca_ES-2027-t0015-CH04" role="parent" scope="local" type="concept">
+				<linktext>Spezifikationen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

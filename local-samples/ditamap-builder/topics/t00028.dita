@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00028">
+	<title>Battery conditioning mode</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00162">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00163">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/N_CT25Q020_E.eps" placement="break" width="2.244in" id="e00164"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e00165">
+								<li>
+									<p> <uicontrol outputclass="a1702046">Battery conditioning</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1702046">Battery conditioning</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1702046">Activate</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e00166">
+			<li>
+				<p>The Battery conditioning mode is efficient during the winter time when the high voltage battery temperature is low. This mode is recommended to improve DC charging performance during winter. However, the driving distance may be reduced as more energy is required to increase battery temperature.</p>
+			</li>
+			<li>
+				<p>If you set a DC charging station as a destination or a waypoint in battery conditioning mode, you can secure the charging performance as at room temperature by raising the battery temperature to an adequate level when you arrive. However, the mode is not operated to ensure driving distance when the battery level is low.</p>
+			</li>
+			<li>
+				<p>The Battery conditioning mode indicator light illuminates while battery conditioning mode is activated.</p>
+			</li>
+		</ul>
+		<note type="note" id="e00167">
+			<ul id="e00168">
+				<li>
+					<p>This mode is available for the vehicles equipped with the battery heater.</p>
+				</li>
+				<li>
+					<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

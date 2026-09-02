@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00448">
+	<title>Selecting DRIVE MODE</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>drive mode integrated control system 
+					<indexterm>selecting drive mode</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01776">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e01777">
+								<title>Type A</title>
+								<figgroup>
+									<image align="center" placement="break" href="../../images/N_CT25D012_1_E.eps" scale="95"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01778">
+								<title>Type B</title>
+								<figgroup>
+									<image align="center" placement="break" href="../../images/P_CT27_B09_002_1.eps" scale="95"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Press the <term translate="no">DRIVE MODE</term> button.</p>
+				</li>
+				<li>
+					<p> <term translate="no">DRIVE MODE</term> will change to <term translate="no">NORMAL</term> mode when the vehicle is restarted.</p>
+				</li>
+				<li>Depending on the region, the vehicle switches to <term translate="no">ECO</term> mode or <term translate="no">NORMAL</term> mode upon restart.</li>
+				<li>
+					<p>Press the <term translate="no">GT</term> button to change to <term translate="no">GT</term> mode.</p>
+				</li>
+			</ul>
+			<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+				<desc>
+					<p importance="default">: for <term translate="no">GT</term> </p>
+				</desc>
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+					<colspec colnum="1" colname="1" colwidth="23*"/>
+					<colspec colnum="2" colname="2" colwidth="77*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1" align="center" valign="middle">
+								<p>Mode</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Characteristics</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="1" align="center" valign="middle">
+								<p> <term translate="no">ECO</term> </p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Drive motor control to prevent electric economy from deteriorating</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" align="center" valign="middle">
+								<p> <term translate="no">NORMAL</term> </p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Typical mode of driving, used for driving on general roads, urban areas and highways.</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" align="center" valign="middle">
+								<p> <term translate="no">SPORT</term> </p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Provides fast and dynamic driving with steering wheel and drive motor control</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="1" align="center" valign="middle">
+								<p> <term translate="no">SNOW</term> </p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Control the front wheel’s driving force on slippery roads such as snow to enable a stable start and suppress tires from slipping.</p>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry colname="1" align="center" valign="middle">
+								<p> <term translate="no">MY DRIVE</term> </p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Drive mode selectable for each preferred component within the theme system</p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="1" align="center" valign="middle">
+								<p><?oxy_comment_start author="jsche" timestamp="20260223T155259+0900" comment="for GT"?> <term translate="no">GT</term> * <?oxy_comment_end?></p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Provides sportier and firm riding for maximum performance</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+</concept>

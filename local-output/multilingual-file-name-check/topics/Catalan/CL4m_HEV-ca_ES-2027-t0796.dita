@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0796">
+	<title>Test-Modus</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M065049L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Taste <term translate="no">SOS TEST</term></p>
+								</li>
+								<li>
+									<p>LED</p>
+								</li>
+								<li>
+									<p>Taste <term translate="no">SOS</term></p>
+								</li>
+								<li>
+									<p>Mikrofon</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Elemente des Systems ERA-GLONASS, installiert im Fahrgastraum:</p>
+		<p>Es gibt eine technische Möglichkeit, die Funktionsfähigkeit des in Ihrem Fahrzeug installierten ERA-GLONASS-Geräts zu überprüfen. Um Fehlalarme und Fehlbedienungen des Systems zu vermeiden, darf eine Überprüfung des ERA-GLONASS-Systems in Ihrem Fahrzeug nur durch Spezialisten von Kia-Vertragshändlern oder Serivcepartnern in Ihrem jeweiligen Territorium gemäß der folgenden Anleitung durchgeführt werden (siehe Verwendung der Benutzeroberfläche für den Testmodus).</p>
+		<p>Sie können den ERA-GLONASS-Testmodus starten, indem Sie die Taste <term translate="no">SOS TEST</term> drücken. Der Testmodus beginnt mit einer Sprachführung, um die Funktionsfähigkeit des ERA-GLONASS-Geräts zu überprüfen. Bei der Überprüfung der Funktionsfähigkeit des ERA-GLONASS-Gerätes leuchten die rote und grüne LED.</p>
+		<p>Drücken Sie die Taste <term translate="no">SOS TEST</term> erneut, um den Testmodus während der Sprachsteuerung zu deaktivieren.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0793.dita#CL4m_HEV-ca_ES-2027-t0793" role="parent" scope="local" type="concept">
+				<linktext>ERA-GLONASS-System</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

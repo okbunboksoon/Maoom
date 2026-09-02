@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00523">
+	<title>Collision warning when exiting vehicle</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03954">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e03955">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV055143L.eps" placement="break" width="2.244in" id="e03956"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03957">
+								<li>
+									<p> <uicontrol>Collision warning!</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p outputclass="across">The warning light on the side view mirror will blink and the warning message will appear on the cluster, and an audible warning will sound.</p>
+		<ul id="e03958">
+			<li>
+				<p outputclass="across">Collision warning when exiting vehicle will warn under the following circumstances:</p>
+				<ul id="e03959">
+					<li>
+						<p>Your driving speed: below 3 km/h (2 mph)</p>
+					</li>
+					<li>
+						<p>The speed of the approaching vehicle from the rear: above 6 km/h (4 mph)</p>
+					</li>
+					<li>
+						<p>When the target enters the operating area of the function.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</conbody>
+</concept>

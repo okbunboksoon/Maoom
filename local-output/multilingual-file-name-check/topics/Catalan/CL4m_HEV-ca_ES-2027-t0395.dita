@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0395">
+	<title>DRIVE MODE</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>integrierte Steuerung für den Fahrmodus
+					<indexterm>Fahrmodus</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M044015N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Betrieb</title>
+			<ul>
+				<li>
+					<p>Der Modus ändert sich, wenn Sie die Fahrmodustaste drücken.</p>
+				</li>
+			</ul>
+			<table frame="all" rowsep="1" colsep="1" pgwide="0">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colnum="1" colname="col1" colwidth="0.732*"/>
+					<colspec colnum="2" colname="col2" colwidth="1.508*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1" align="center" valign="middle">
+								<p>Modus</p>
+							</entry>
+							<entry colname="col2" align="center" valign="middle">
+								<p>Eigenschaften</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1" align="center" valign="middle">
+								<p><term translate="no">ECO</term></p>
+							</entry>
+							<entry colname="col2" align="left" valign="middle">
+								<p>Im ECO-Modus wird die Regelung für sparsamen, umweltfreundlichen Betrieb optimiert.</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col1" align="center" valign="middle">
+								<p><term translate="no">NORMAL</term></p>
+							</entry>
+							<entry colname="col2" align="left" valign="middle">
+								<p>Sorgt für eine ruhige Fahrt und bequemes Fahrgefühl.</p>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry colname="col1" align="center" valign="middle">
+								<p><term translate="no">SPORT</term></p>
+							</entry>
+							<entry colname="col2" align="left" valign="middle">
+								<p>Ermöglicht eine sportliche, stabile Fahrt.</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<note type="tip">
+				<ul>
+					<li>
+						<p>Bei einem Neustart aus dem <term translate="no">ECO</term>-Modus wird der <term translate="no">ECO</term>-Modus beibehalten, und bei einem Neustart aus einem anderen Modus wird in den <term translate="no">NORMAL</term>-Modus gewechselt.</p>
+					</li>
+					<li>
+						<p>Je nach Region schaltet das Fahrzeug beim Neustart in den <term translate="no">ECO</term>-Modus oder in den <term translate="no">NORMAL</term>-Modus.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0394.dita#CL4m_HEV-ca_ES-2027-t0394" role="parent" scope="local" type="concept">
+				<linktext>Integrierte Steuerung für den Fahrmodus </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

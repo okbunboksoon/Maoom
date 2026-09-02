@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00399">
+	<title>ISG malfunction indicator</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02658">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02659">
+								<image href="images/OMQ4A045032.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>ISG may not operate in the event of an ISG related sensor or system error, and the following will occur:</p>
+		<ul id="e02660">
+			<li>
+				<p>The yellow <uicontrol>AUTO STOP</uicontrol> indicator (<image href="images/WKIA_075.jpg" scale="15" align="center" placement="inline"/>) blinks for 5 second then remains illuminated on the instrument cluster.</p>
+			</li>
+			<li>
+				<p>The light on the ISG <term translate="no">OFF</term> button illuminates.</p>
+			</li>
+		</ul>
+		<p>If the ISG system continuously does not work correctly, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<p>When the engine is in Idle STOP mode, the engine can restart, even if you do not take any action. Before you leave your vehicle or do anything in the engine compartment, turn off the vehicle to stop the engine.</p>
+		<note type="note" id="e02661">
+			<p>If you reconnect or replace the Absorbent Glass Mat (AGM) battery, ISG does not operate immediately. Before ISG can activate, the battery sensor must calibrate for approximately 4 hours with the vehicle in <term translate="no">OFF</term> position. After the battery sensor calibrates, turn the engine on and off 2 or 3 times.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00394.dita#t00394" role="parent" scope="local" type="concept">
+				<linktext>Idle Stop and Go (ISG)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

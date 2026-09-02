@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0574">
+	<title>Geschwindigkeit einstellen</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054007N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol>
+			<li>
+				<p>Beschleunigen Sie bis zur gewünschten Geschwindigkeit, die jedoch mehr als etwa 30 km/h (20 mph) betragen muss.</p>
+			</li>
+			<li>
+				<p>Drücken Sie bei der gewünschten Geschwindigkeit die Fahrassistenz-Taste. Die Sollgeschwindigkeit und die Tempomatanzeige (<image align="left" href="../../images/WKIA_357.eps" scale="15" placement="inline"/>) leuchten auf dem Kombiinstrument auf.</p>
+			</li>
+			<li>
+				<p>Lassen Sie das Gaspedal los.</p>
+				<p>Das Fahrzeug hält die eingestellte Geschwindigkeit auch dann bei, wenn das Gaspedal nicht gedrückt wird.</p>
+			</li>
+		</ol>
+		<note type="note">
+			<ul>
+				<li>
+					<p>An Steigungen und bei Gefälle verlangsamt bzw. beschleunigt das Fahrzeug möglicherweise geringfügig.</p>
+				</li>
+				<li>
+					<p>Das Symbol der Fahrassistententaste kann je nach Fahrzeugoption variieren.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0573.dita#CL4m_HEV-ca_ES-2027-t0573" role="parent" scope="local" type="concept">
+				<linktext>Bedienung der Tempomatsteuerung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

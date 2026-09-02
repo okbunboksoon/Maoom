@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0479">
+	<title>Spursicherheit</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054085N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Fahrerassistenz</p>
+								</li>
+								<li>
+									<p>Fahrsicherheit</p>
+								</li>
+								<li>
+									<p>Spursicherheit</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn das Fahrzeug eingeschaltet ist, wählen Sie <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Fahrerassistenz</uicontrol><uicontrol>Fahrsicherheit</uicontrol></menucascade> auf dem Infotainment-System.</p>
+		<ul>
+			<li>
+				<p><b>Spursicherheit</b>: Wenn ein Verlassen der Fahrspur erkannt wird, unterstützt das System die Lenkung, um ein Verlassen der Fahrspur zu verhindern, und warnt den Fahrer mit einem akustischen Signal und der Vibration des Lenkrads (ausstattungsabhängig), wenn die Fahrspur verlassen wird. Wenn Spursicherheit abgewählt wird, leuchtet die gelbe Kontrollleuchte (<image align="left" href="../../images/WKIA_198.eps" scale="15" placement="inline"/>) auf dem Kombiinstrument auf.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Der Spurhalteassistent steuert das Lenkrad nicht, wenn das Fahrzeug in der Mitte der Fahrspur gefahren wird.</p>
+				</li>
+				<li>
+					<p>Wenn die Spursicherheit abgewählt ist, erhalten Sie keine Unterstützung durch den Spurhalteassistenten. Fahren Sie stets umsichtig.</p>
+				</li>
+				<li>
+					<p>Wenn das Fahrzeug ausgeschaltet und neu gestartet wird, schaltet sich der Spurhalteassistent automatisch ein und die Spursicherheit wird automatisch ausgewählt.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<p>Wenn der Stecker des Anhängers angeschlossen ist, schaltet sich der Spurhalteassistent automatisch aus. In diesem Fall können Sie keine Hilfe vom Spurhalteassistenten erhalten. Fahren Sie besonders umsichtig, wenn die Funktion nicht aktiv ist. (Bei einem Original Anhänger-Kit von Kia erkennt das Fahrzeug, wenn ein Anhänger angeschlossen ist.)</p>
+		</note>
+		<note type="note">
+			<p>Drücken und halten Sie die Fahrassistent-Taste (<image align="left" href="../../images/WKIA_274.eps" scale="15" placement="inline"/>), der Spurhalteassistent sowie die Spursicherheit werden deaktiviert.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0478.dita#CL4m_HEV-ca_ES-2027-t0478" role="parent" scope="local" type="concept">
+				<linktext>Einstellungen des Spurhalteassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

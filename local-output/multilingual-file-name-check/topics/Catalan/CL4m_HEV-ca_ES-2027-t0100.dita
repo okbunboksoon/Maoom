@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0100">
+	<title>Aufschieben/schließen</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Panoramadach
+					<indexterm>Aufschieben/schließen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M035046L_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Drücken Sie den Schiebedachschalter nach hinten in die erste Raststellung: Das Schiebedachglas öffnet sich. Bei geschlossener elektrischer Sonnenblende öffnet sich zunächst die Sonnenblende.</p>
+				<p>Drücken Sie den Schiebedachschalter nach vorne in die erste Raststellung: Das Schiebedachglas schließt sich. Bei geschlossenem Schiebedachglas wird jedoch die elektrische Sonnenblende geschlossen.</p>
+			</li>
+			<li>
+				<p>Drücken Sie den Schiebedachschalter nach vorn oder hinten in die zweite Raststellung: Die Sonnenblende und das Schiebedachglas werden automatisch betätigt (automatischer Schiebe-Modus).</p>
+			</li>
+		</ul>
+		<p>Um die Schiebedachbewegung an einem beliebigen Punkt zu stoppen, drücken Sie den Schiebedachhebel in eine beliebige Richtung.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0097.dita#CL4m_HEV-ca_ES-2027-t0097" role="parent" scope="local" type="concept">
+				<linktext>Breites Schiebedach </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

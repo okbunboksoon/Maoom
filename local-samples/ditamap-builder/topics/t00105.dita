@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00105">
+	<title>Resetting relaxation comfort seat (Passenger’s seat)</title>
+	<shortdesc/>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00740">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00741">
+								<figgroup>
+									<image href="../../images/OOV025078.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e00742"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_print" id="e00743">
+			<title>Operation</title>
+			<ol id="e00744">
+				<li>
+					<p>Stop the vehicle and open the passenger’s door with the EV button in the POWER ON position and the vehicle shifted to P (Park).</p>
+				</li>
+				<li>
+					<p>Adjust the passenger’s seat and seatback to the foremost position.</p>
+				</li>
+				<li>
+					<p>Press the passenger’s seat movement switch (reclining, cushion height) forward over 2 seconds simultaneously.</p>
+				</li>
+			</ol>
+			<note type="caution" id="e00745">
+				<p>Make sure there are no obstacles around the driver’s seat before initialization.</p>
+			</note>
+			<ul id="e00746">
+				<li>
+					<p>The initialization process is as follows.</p>
+					<ul id="e00747">
+						<li>
+							<p>The forward/backward position, seatback angle, height adjustment, and cushion tilt operate in sequence.</p>
+						</li>
+						<li>
+							<p>After all operations, initialization is complete.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00748">
+			<title>Non-operating conditions</title>
+			<p>The initialization process will be interrupted in the following situations.</p>
+			<ul id="e00749">
+				<li>
+					<p>When shifting out of the P (Park) position into another position</p>
+				</li>
+				<li>
+					<p>When the passenger’s side seat adjustment switch is pressed</p>
+				</li>
+				<li>
+					<p>When the vehicle speed is above 5 km/h (3 mph)</p>
+				</li>
+				<li>
+					<p>When the passenger’s side door is closed</p>
+				</li>
+			</ul>
+			<p>If the passenger’s seat operation stop during initialization, start initialization again.</p>
+			<p>After initialization, adjust the seat to suit the passenger.</p>
+		</section>
+	</conbody>
+</concept>

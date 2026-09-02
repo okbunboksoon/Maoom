@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0508">
+	<title>Kollisionswarnung beim Verlassen des Fahrzeugs</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054059N_4.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054091N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p><term translate="no">A</term>: Kollisionswarnung</p>
+		<p>Die Warnleuchte am Außenspiegel blinkt, und eine Warnmeldung erscheint auf dem Kombiinstrument und es ertönt ein Warnton.</p>
+		<ul>
+			<li>
+				<p>Die Ausstiegswarnung warnt unter folgenden Umständen:</p>
+				<ul>
+					<li>
+						<p>Ihre Fahrzeuggeschwindigkeit: unter 3 km/h (2 mph)</p>
+					</li>
+					<li>
+						<p>Geschwindigkeit eines sich von hinten annähernden Fahrzeugs über 6 km/h (4 mph)</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Ändern Sie zu Ihrer Sicherheit die Einstellungen, nachdem Sie das Fahrzeug an einem sicheren Ort geparkt haben.</p>
+				</li>
+				<li>
+					<p>Wenn die Warnmeldung einer anderen Funktion angezeigt oder ein anderer Warnton ausgegeben wird, wird die Meldung der Ausstiegswarnung möglicherweise nicht angezeigt und es wird kein Warnton ausgegeben.</p>
+				</li>
+				<li>
+					<p>Möglicherweise hören Sie den Warnton der Ausstiegswarnung nicht, wenn die Umgebung laut ist.</p>
+				</li>
+				<li>
+					<p>Die Ausstiegswarnung funktioniert möglicherweise nicht in allen Situationen oder kann nicht alle Kollisionen verhindern.</p>
+				</li>
+				<li>
+					<p>Die Ausstiegswarnung warnt den Fahrer je nach Fahrzeug und Fahrbedingungen ggf. zu spät oder gar nicht. Überprüfen Sie immer die Fahrzeugumgebung.</p>
+				</li>
+				<li>
+					<p>Der Fahrer und die Mitfahrer sind für beim Aussteigen aus dem Fahrzeug verursachte Unfälle verantwortlich. Prüfen Sie immer die Umgebung, bevor Sie das Fahrzeug verlassen.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn das Fahrzeug ausgeschaltet wurde, funktioniert die Ausstiegswarnung etwa 3 Minuten, schaltet sich aber sofort aus, wenn die Türen verriegelt werden.</p>
+				</li>
+				<li>
+					<p>Bilder oder Farben können je nach den Spezifikationen oder dem Design des Kombiinstruments unterschiedlich angezeigt werden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0507.dita#CL4m_HEV-ca_ES-2027-t0507" role="parent" scope="local" type="concept">
+				<linktext>Warnung und Kontrolle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

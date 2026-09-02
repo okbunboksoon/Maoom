@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0072">
+	<title>Taste zum Öffnen/Schließen der Heckklappe (Smart-Key/Armaturenbrett)</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MW035021L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MW035022L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<p>Wenn die Heckklappe geschlossen ist, drücken Sie die Taste zum Öffnen/Schließen der elektrischen Heckklappe <image align="left" href="../../images/WKIA_020.eps" scale="15" placement="inline"/> 1 Sekunde lang. Die elektrische Heckklappe öffnet sich mit einem Warnton.</p>
+			<p>Drücken Sie während des Öffnens der Heckklappe die Taste, um den Betrieb der Heckklappe zu beenden. Bei geöffneter Heckklappe die Taste zum Öffnen/Schließen der elektrischen Heckklappe drücken und gedrückt halten, um die Heckklappe zu schließen. Wenn Sie die Taste loslassen, während sich die Heckklappe schließt, wird der Betrieb der elektrischen Heckklappe mit einem Warnton für 5 Sekunden unterbrochen.</p>
+			<p>Wenn sich der Smart-Key nicht in Reichweite (etwa 10 m) des Fahrzeugs befindet, wird der Betrieb der elektrischen Heckklappe mit einem Warnton 5 Sekunden lang unterbrochen.</p>
+			<note type="warning">
+				<p>Vergewissern Sie sich, dass sich keine Personen oder Gegenstände im Weg der Heckklappe befinden, bevor Sie die Taste zum Öffnen/Schließen der elektrischen Heckklappe und den Smart-Key drücken. Andernfalls kann es zu schweren Verletzungen oder Schäden am Fahrzeug oder an Gegenständen kommen.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0071.dita#CL4m_HEV-ca_ES-2027-t0071" role="parent" scope="local" type="concept">
+				<linktext>Elektrische Heckklappe bedienen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

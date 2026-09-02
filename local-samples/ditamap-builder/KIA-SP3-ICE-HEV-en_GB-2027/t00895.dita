@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00895">
+	<title>Gasoline Particulate Filter</title>
+	<shortdesc/>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>gasoline particulate filter</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<sectiondiv>
+				<p>The Gasoline Particulate Filter (GPF) is the system that removes the soot from the exhaust gas. Unlike a disposable air filter, the GPF system automatically burns (oxidizes) and removes the accumulated soot while driving.</p>
+				<p>However, repeated short-distance driving or long-distance driving at a low speed can stop the accumulated soot from automatically being removed by the GPF system. If the accumulated soot reaches a certain amount, the GPF warning light (<image href="images/WKIA_054.jpg" scale="15"/>) will appear. To re-operate the GPF system, the vehicle should be driven for more than 30 minutes at a speed of 80 km/h (50 mph) and faster. Ensure the following conditions are met: safe road conditions, 3rd gear or above, and engine speed of 1,500-4,000 rpm. Driving at 80 km/h (50 mph) or faster for recommended hours will get the GPF system back to work and stop the GPF warning light.</p>
+				<p>If the GPF warning light stays on or <uicontrol>Check exhaust system</uicontrol> message appears in spite of the procedure, have GPF system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner. Constant driving with the GPF warning light on can damage the GPF system and undermine fuel economy.</p>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00894.dita#t00894" role="parent" scope="local" type="concept">
+				<linktext>Emission control system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00309">
+	<title>Welcome system</title>
+	<shortdesc>The welcome system illuminates the vehicle’s surroundings or interior to improve visibility when the driver approaches or exits the vehicle.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lighting 
+					<indexterm>welcome system</indexterm>
+				</indexterm>
+				<indexterm>welcome system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02326">
+			<title>Welcome light (door handle)</title>
+			<ul id="e02327">
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Welcome mirror/light</uicontrol><uicontrol>On door unlock</uicontrol></menucascade> or <uicontrol>On driver approach</uicontrol> on the infotainment system screen to enable the welcome light function.</p>
+				</li>
+				<li>
+					<p>When activated, the door handle lights turn on for approximately 15 seconds.</p>
+				</li>
+			</ul>
+			<sectiondiv><ph>Operating conditions</ph>
+				<ul id="e02328">
+					<li>
+						<p>The lighting switch must be <term translate="no">ON</term> (<term translate="no">AUTO</term> position operates only at night).</p>
+					</li>
+					<li>
+						<p>All doors must be closed and locked.</p>
+					</li>
+				</ul>
+				<ul id="e02329">
+					<li>
+						<p>When <term>On door unlock</term> is selected:</p>
+						<ul id="e02330">
+							<li>
+								<p>Press the door unlock button on the smart key or digital key.</p>
+							</li>
+							<li>
+								<p>Touch the sensor on the front outside door handle while carrying the smart key or digital key.</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>When <term>On driver approach</term> is selected:</p>
+						<ul id="e02331">
+							<li>
+								<p>Approach the front outside door handle within 1 m (40 inches) while carrying the smart key or digital key.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</sectiondiv>
+		</section>
+		<section id="e02332">
+			<title>Welcome light (exterior lights)</title>
+			<ul id="e02333">
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Welcome mirror/light</uicontrol><uicontrol>On door unlock</uicontrol></menucascade> or <uicontrol>On driver approach</uicontrol> on the infotainment system screen to enable the welcome light function.</p>
+				</li>
+				<li>
+					<p>When activated, the exterior lights turn on for approximately 15 seconds.</p>
+				</li>
+			</ul>
+			<sectiondiv><ph>Operating conditions</ph>
+				<ul id="e02334">
+					<li>
+						<p>The lighting switch must be <term translate="no">ON</term> (<term translate="no">AUTO</term> position operates only at night).</p>
+					</li>
+					<li>
+						<p>All doors must be closed and locked. with the vehicle in <term translate="no">OFF</term> position</p>
+					</li>
+					<li>
+						<p>Press the door unlock button on the smart key or digital key.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+		</section>
+		<section id="e02335">
+			<title>Welcome light (room lamp)</title>
+			<p>When the welcome light function is enabled, the interior room lamps illuminate for approximately 30 seconds under the following conditions:</p>
+			<ul id="e02336">
+				<li>
+					<p>All doors (and tailgate) are closed and locked.</p>
+				</li>
+				<li>
+					<p>The touch sensor on the front outside door handle is touched.</p>
+				</li>
+				<li>
+					<p>The door unlock button on the smart key or digital key is pressed.</p>
+				</li>
+			</ul>
+			<note type="note" id="e02337">
+				<ul id="e02338">
+					<li>
+						<p>For more details, please scan the QR code in a separately supplied Car Infotainment System Quick Reference Guide.</p>
+					</li>
+					<li>
+						<p>The infotainment system may change after software updates. For more details, please refer to the web manual in the quick reference guide.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e02339">
+			<title>Dynamic welcome light</title>
+			<p>This feature dynamically illuminates the vehicle’s lights for a brief period when the driver unlocks the vehicle, enhancing its aesthetic appeal.</p>
+			<ul id="e02340">
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Headlight time-out</uicontrol></menucascade> on the infotainment system screen to enable or adjust dynamic welcome light function.</p>
+				</li>
+				<li>
+					<p>When activated, the dynamic welcome light turns on for approximately 2 seconds.</p>
+				</li>
+			</ul>
+			<sectiondiv><ph>Operating conditions</ph>
+				<ul id="e02341">
+					<li>
+						<p>The welcome light (exterior lights) operational conditions must be met.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+		</section>
+		<section id="e02342">
+			<title>Dynamic escort light</title>
+			<sectiondiv><ph>Operating conditions</ph>
+				<p>This feature dynamically illuminates the vehicle’s lights for a short period after the driver turns off the vehicle with the headlamps <term translate="no">ON</term>, enhancing its aesthetic appeal.</p>
+				<ul id="e02343">
+					<li>
+						<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Headlight time-out</uicontrol></menucascade> on the infotainment system screen to enable or adjust dynamic escort light function.</p>
+					</li>
+					<li>
+						<p>When activated, the dynamic escort light turns on after the headlamp escort function operating conditions are met.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+		</section>
+	</conbody>
+</concept>

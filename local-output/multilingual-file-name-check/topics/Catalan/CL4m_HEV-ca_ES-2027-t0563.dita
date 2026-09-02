@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0563">
+	<title>Fehlfunktion des Fahreraufmerksamkeits-Warnsystems vorne</title>
+	<conbody>
+		<p>Wenn die Fahreraufmerksamkeitswarnung vorne nicht einwandfrei funktioniert, erscheint die Warnmeldung mehrere Sekunden lang im Kombiinstrument, die Leuchte für die Fahreraufmerksamkeitswarnung vorne (<image align="left" href="../../images/WKIA_353.eps" scale="15" placement="inline"/>) leuchtet im Kombiinstrument auf und es ertönt ein akustisches Warnsignal, bis sie wieder einwandfrei funktioniert.</p>
+		<p>Warnmeldung: Fahreraufmerksamkeits-Warnsystem überprüfen</p>
+		<p>Lassen Sie die Funktion in diesem Fall von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<section>
+			<title>Fahreraufmerksamkeits-Warnsystem vorne deaktiviert</title>
+			<p>Wenn sich für eine bestimmte Zeit ein Objekt direkt vor der Innenraumkamera oder zwischen Fahrer und Innenraumkamera befindet, funktioniert die Fahreraufmerksamkeitswarnung vorne nicht richtig. In diesem Fall erscheint die Warnmeldung mehere Sekunden lang im Kombiinstrument, die Warnleuchte für die Vorwärtsfahrt (<image align="left" href="../../images/WKIA_353.eps" scale="15" placement="inline"/>) leuchtet im Kombiinstrument auf und es ertönt ein akustischer Warnton, bis es wieder ordnungsgemäß funktioniert.</p>
+			<p>Warnmeldung: Fahreraufmerksamkeits-Warnsystem vorne deaktiviert Kamerasicht eingeschränkt</p>
+			<p>Wenn das Objekt entfernt wird und die Innenraumkamera das Gesicht des Fahrers erkennen kann, funktioniert die Funktion normal. Wenn das Fahreraufmerksamkeits-Warnsystem nach dem Entfernen des Objekts nicht ordnungsgemäß funktioniert, lassen Sie Ihr Fahrzeug von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Schlagen Sie nicht auf die Oberfläche der Innenraumkamera oder um die Innenraumkamera herum. Wenn die Innenraumkamera beschädigt ist, funktioniert das Fahreraufmerksamkeits-Warnsystem möglicherweise nicht richtig.</p>
+					</li>
+					<li>
+						<p>Legen Sie während der Fahrt keine Gegenstände, wie z.B. das Mobiltelefon, auf die Innenraumkamera oder vor die Innenraumkamera. Die Innenraumkamera funktioniert möglicherweise nicht richtig.</p>
+					</li>
+					<li>
+						<p>Wenn Sie die Innenraumkamera reinigen, wischen Sie sie mit einem weichen und sauberen Tuch ab, um eine Beschädigung der Objektivoberfläche der Innenraumkamera zu vermeiden. Verwenden Sie außerdem keine scharfen Werkzeuge in der Nähe der Innenraumkamera und verwenden Sie keine Chemikalien zur Reinigung der Innenraumkamera.</p>
+					</li>
+					<li>
+						<p>Halten Sie die Innenraumkamera und ihre Umgebung stets sauber und trocken.</p>
+					</li>
+					<li>
+						<p>Es dürfen keine Fremdkörper, wie z.B. Aufkleber, um die Infrarot-LED in der Nähe der Innenraumkamera gebracht werden.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="tip">
+				<p>Unter den folgenden Bedingungen können zwei rote Leuchten auf der Kamera aufleuchten:</p>
+				<ul>
+					<li>
+						<p>Die Außenhelligkeit ist schwach oder wenn Sie bei Nacht fahren</p>
+					</li>
+					<li>
+						<p>Das Fahrzeug fährt innerhalb eines Gebäudes, z. B. in einer Tiefgarage, Garage oder einem Tunnel</p>
+					</li>
+					<li>
+						<p>Das Gehäuse der Kamera ist teilweise gebrochen</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0562.dita#CL4m_HEV-ca_ES-2027-t0562" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion und Einschränkungen des Fahreraufmerksamkeits-Warnsystems vorne</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

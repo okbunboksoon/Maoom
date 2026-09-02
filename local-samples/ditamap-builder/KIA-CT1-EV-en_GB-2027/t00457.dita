@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00457">
+	<title>Drift Mode (For GT)</title>
+	<shortdesc>Drift Mode is a driving mode that automatically activates rear wheels (2WD) and brakes or Electronic Limited Slip Differential (e-LSD) to easily achieve drift with a small steering wheel angle and accelerator pedal.</shortdesc>
+	<conbody>
+		<section id="e01877">
+			<title>Activating Drift Mode</title>
+			<ul id="e01878">
+				<li>
+					<p>Pull and hold the both side of the paddle shifter for more than approximately 3 seconds at the same time to switch to Drift Mode.</p>
+				</li>
+				<li>
+					<p>When Drift Mode is activated, <uicontrol>Drift Mode activated</uicontrol> warning message and <uicontrol>DRIFT</uicontrol> indicator will appear on the instrument cluster.</p>
+				</li>
+			</ul>
+			<p>To activate the Drift Mode, satisfy all the following conditions:</p>
+			<ul id="e01879">
+				<li>
+					<p>The vehicle is in P (Park)</p>
+				</li>
+				<li>
+					<p> <term translate="no">ESC OFF</term> is in state 2 (Press and hold the <term translate="no">ESC OFF</term> button for approximately 3–5 seconds)</p>
+				</li>
+				<li>
+					<p>The vehicle is in <term translate="no">SPORT</term> or <term translate="no">GT</term> mode</p>
+				</li>
+				<li>
+					<p>Engaging the brake pedal to the bottom</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01880">
+			<title>Deactivating Drift Mode</title>
+			<p>Drift Mode will be canceled or limited when:</p>
+			<ul id="e01881">
+				<li>
+					<p>If the <term translate="no">DRIVE MODE</term> is changed to a mode other than <term translate="no">SPORT</term> or <term translate="no">GT</term> mode during Drift Mode operation</p>
+				</li>
+				<li>
+					<p> <term translate="no">ESC OFF</term> is not in state 2</p>
+				</li>
+				<li>
+					<p>Pull and hold the both side of the paddle shifter for more than approximately 3 seconds at the same time during Drift Mode operation</p>
+				</li>
+				<li>
+					<p>Power down indicator (<image href="../../../images/WKIA_313.eps" scale="15" align="left" placement="inline"/>) or service warning indicator (<image href="../../../images/WKIA_267.eps" scale="15" align="left" placement="inline"/>) is illuminated</p>
+				</li>
+				<li>
+					<p>The ESC or e-LSD indicator is illuminated</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

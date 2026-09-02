@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00635">
+	<title>Highway Driving Assist (HDA)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>highway driving assist (HDA)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1">
+							<p>Function</p>
+						</entry>
+						<entry colname="col2">
+							<p>Details</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<title>Highway Driving Assist</title>
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV055060.eps" placement="break" width="2.243in"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Highway Driving Assist detect lanes and vehicles ahead, and help maintain the distance from the vehicle ahead and the set speed, and center your vehicle in the lane while driving on the highway (or motorway).</p>
+						</entry>
+					</row>
+					<row rowsep="0" valign="middle">
+						<entry colname="col1">
+							<fig>
+								<title>Highway Lane Change Assist (if equipped)</title>
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV055061.eps" placement="break" width="2.243in"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Highway Lane Change Assist function helps change lanes to the direction you operate the turn signal switch if the function judges that lane change is possible.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Highway Driving Assist is available only on controlled access road of certain highways.</p>
+					<p importance="default">Controlled access road indicates roads with limited entrances and exits that allow uninterrupted high speed traffic flow. Only passenger cars and motorcycles are allowed on controlled access roads.</p>
+				</li>
+				<li>
+					<p>Additional highways may be expanded by future navigation updates.</p>
+				</li>
+			</ul>
+			<p>Highway Driving Assist operates on main roads of highways (or motorways), and does not operate on interchanges or junctions.</p>
+			<p>For detailed limitations of the front camera, front radar, front side radar, and rear side radar sensors, please refer to <xref type="concept" href="t00479.dita#t00479"/>, <xref type="concept" href="t00504.dita#t00504"/> </p>
+		</note>
+		<section>
+			<title>Detecting sensor</title>
+			<p>Highway Driving Assist uses front camera, front radar, front corner radar (if equipped), and rear corner radar (if equipped). Please refer to <xref type="concept" href="t00445.dita#t00445"/> for the sensor locations.</p>
+		</section>
+	</conbody>
+</concept>

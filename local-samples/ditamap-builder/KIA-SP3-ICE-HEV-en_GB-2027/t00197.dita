@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Top" importance="optional" id="t00197">
+	<title>Seat assistance settings (infotainment system)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>seat
+					<indexterm>seat assistance settings (infotainment system)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig>
+								<image align="center" href="images/N_CT25_C00_208_A.jpg" scale="95" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e01248">
+								<li>
+									<p>Vehicle</p>
+								</li>
+								<li>
+									<p>Seat</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To use various convenience functions, tap <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Seats</uicontrol></menucascade> from the Settings menu on the infotainment system screen.</p>
+		<ul id="e01249">
+			<li>
+				<p><uicontrol>Save driver’s seat ventilation settings</uicontrol>: The ventilated driver’s seat can be adjusted automatically.</p>
+			</li>
+			<li>
+				<p><uicontrol>Seat Easy Access</uicontrol>: The seat moves automatically when you enter or exit the vehicle.</p>
+			</li>
+			<li>
+				<p><uicontrol>Seat position change alert</uicontrol>: When the seat position changes, an image of the seat shows the details of the change.</p>
+			</li>
+		</ul>
+		<note type="note" id="e01250">
+			<ul id="e01251">
+				<li>
+					<p>The information displayed on the infotainment system may not have some menu or may appear different from this user manual depending on the specifications of your vehicle.</p>
+					<p>For more details, access the manual using the QR code in the infotainment system quick reference guide.</p>
+				</li>
+				<li>
+					<p>The infotainment system might change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00196.dita#t00196" role="parent" scope="local" type="concept">
+				<linktext>Seats </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

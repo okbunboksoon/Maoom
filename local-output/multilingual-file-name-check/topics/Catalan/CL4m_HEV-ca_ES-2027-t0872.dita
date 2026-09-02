@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0872">
+	<title>Sicherungen</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Sicherungen</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Flachsicherungstyp</title>
+								<figgroup>
+									<image align="center" href="../../images/OCV071014L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01471">
+								<title>Kartuschentyp</title>
+								<figgroup>
+									<image align="center" href="../../images/OCV071015L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01472">
+								<title>Mehrfachsicherung</title>
+								<figgroup>
+									<image align="center" href="../../images/OCV071017L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01473">
+								<title>BFT</title>
+								<figgroup>
+									<image align="center" href="../../images/OCV071018L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Links: Normal</p>
+		<p>Rechte Seite: Durchgebrannt</p>
+		<p>Die elektrische Anlage eines Fahrzeugs ist mit Sicherungen gegen Überlastung geschützt.</p>
+		<p>Das Fahrzeug ist mit 2 (oder 3) Sicherungskästen ausgestattet. Ein Sicherungskasten befindet sich auf der Fahrerseite hinter einer Abdeckung im Armaturenbrett, die anderen befinden sich im Motorraum in der Nähe der Batterie.</p>
+		<p>Wenn eine der Leuchten, Zubehöre oder Steuerungen Ihres Fahrzeugs nicht funktioniert, prüfen Sie die entsprechenden Sicherung. Wenn eine Sicherung durchgebrannt ist, schmilzt das Element in der Sicherung.</p>
+		<p>Wenn die Elektroanlage nicht funktioniert, prüfen Sie zunächst den Sicherungskasten auf der Fahrerseite.</p>
+		<p>Bevor Sie eine durchgebrannte Sicherung austauschen, trennen Sie das Batterie-Minuskabel.</p>
+		<p>Ersetzen Sie eine durchgebrannte Sicherung immer durch eine Sicherung mit denselben Nennwerten.</p>
+		<p>Wenn auch die Ersatzsicherung durchbrennt, weist dies auf ein Problem in der Elektrik hin. Vermeiden Sie den Betrieb der betroffenen Anlage und wenden Sie sich umgehend an eine Fachwerkstatt. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<p>Es werden drei Arten von Sicherungen verwendet: Flachsicherungen für niedrigere Stromstärken, Kartuschen und Mehrfachsicherungen für höhere Stromstärken.</p>
+		<note type="warning">
+			<p>Sicherungen ersetzen</p>
+			<ul>
+				<li>
+					<p>Ersetzen Sie eine Sicherung niemals durch eine Sicherung mit einer anderen Amperezahl.</p>
+				</li>
+				<li>
+					<p>Eine Sicherung mit höherer Nennleistung könnte Schäden und möglicherweise einen Brand verursachen.</p>
+				</li>
+				<li>
+					<p>Verwenden Sie niemals einen Draht oder Aluminiumfolie statt der ordnungsgemäßen Sicherung, nicht einmal als provisorische Reparatur. Dies könnte zu einer erheblichen Beschädigung der elektrischen Anlage und auch zu einem Brand führen.</p>
+				</li>
+				<li>
+					<p>Verändern Sie die Verkabelung des Fahrzeugs nicht und fügen Sie keine Geräte hinzu.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<p>Verwenden Sie für den Ausbau einer Sicherung weder einen Schraubendreher noch einen anderen Gegenstand aus Metall, weil dies einen Kurzschluss auslösen und die elektrische Anlage beschädigen kann.</p>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Stellen Sie für den Austausch von Sicherungen die Zündung auf „OFF“, schalten Sie alle elektrischen Geräte aus und klemmen Sie den Batterieminuspol ab.</p>
+				</li>
+				<li>
+					<p>Das Etikett des Sicherungs-/Relaiskastens kann je nach Ausstattung abweichen.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Achten Sie beim Austauschen einer durchgebrannten Sicherung oder eines Relais mit einem neuen Bauteil darauf, dass die neue Sicherung bzw. das neue Relais fest in den Klammern sitzt. Nicht richtig sitzende Sicherungen oder Relais können Schäden an der Verkabelung und der Elektroanlage des Fahrzeugs und möglicherweise einen Brand verursachen.</p>
+				</li>
+				<li>
+					<p>Bauen Sie keine Sicherungen, Relais und Klemmen aus, die mit Schrauben oder Muttern gesichert sind. Die Sicherungen, Relais und Klemmen werden möglicherweise unvollständig befestigt, was zu einem Brand führen kann. Lassen Sie Ihr Fahrzeug von einer Fachwerkstatt überprüfen, wenn mit Schrauben oder Muttern befestigte Sicherungen, Relais und Anschlüsse durchbrennen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+				<li>
+					<p>Setzen Sie keine anderen Objekte als Sicherungen oder Relais (wie Schraubenzieher oder Kabel) in die Sicherungs-/Relaisanschlüsse ein. Dies kann zu einem Kontaktfehler und zu einer Fehlfunktion des Systems führen.</p>
+				</li>
+				<li>
+					<p>Führen Sie keine Schraubendreher oder Zubehörverkabelung in die Klemme ein, die nur für Sicherungen und Relais vorgesehen ist. Die elektrische Anlage und Verkabelung des Fahrzeuginnenraums kann durch Kontaktfehler beschädigt oder verbrannt werden.</p>
+				</li>
+				<li>
+					<p>Bei direktem Anschluss des Kabels an die Rückleuchte oder Austausch der Glühlampe durch eine Glühlampe mit höherer als der vorgesehenen Leistung, z. B. bei Anhängerbetrieb, kann der innere Klemmenblock in Brand geraten.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<p>Prüfen Sie per Augenschein, ob die Batterieabdeckung dicht ist. Wenn die Batterieabdeckung nicht dicht ist, kann Feuchtigkeit in das System eindringen und die elektrischen Komponenten beschädigen.</p>
+		</note>
+		<note type="note">
+			<p>Die eigenmächtige Verkabelung bei der Nachrüstung von Geräten ist verboten</p>
+			<p>Eine eigenmächtige Verkabelung im Fahrzeug kann zu Gefahren durch Fehlfunktionen und zu Beeinträchtigungen der Leistungsfähigkeit des Fahrzeugs führen.</p>
+			<p>Eine eigenmächtige Verkabelung insbesondere bei der Nachrüstung von AVN- oder Diebstahlalarmsystemen, Motorfernsteuerungen, PKW-Telefonanlagen oder Radio kann das Fahrzeug beschädigen und zu Bränden führen.</p>
+		</note>
+		<note type="note">
+			<p>Umbau verboten</p>
+			<p>Versuchen Sie nicht, das Fahrzeug umzubauen. Dies ist unzulässig und kann die Leistungsfähigkeit, Lebensdauer und Sicherheit des Fahrzeugs beeinträchtigen. Darüber hinaus sind durch Umbau verursachte Probleme nicht von der Garantie abgedeckt.</p>
+			<p>Bedenken Sie die Sicherheitsprobleme, die durch den Umbau des Fahrzeugs mit nicht genehmigten elektrischen Vorrichtungen (Leuchten, Black Box, elektrische Geräte, Diagnosegeräte, Kommunikationsgeräte usw.) entstehen. Umbauten können Fehlfunktionen des Fahrzeugs, Beschädigungen der Verkabelung, Entladungen der Batterie, Beschädigungen der elektrischen Anschlüsse und Brände verursachen.</p>
+		</note>
+		<note type="note">
+			<p>Vorsichtsmaßnahmen bei der Tönung von Scheiben</p>
+			<p>Scheibentönungen (insbesondere Metallfolien) können zu Kommunikationsproblemen, schlechtem Radioempfang und zu Fehlfunktionen des automatischen Lichtsystems durch starke Veränderungen der Ausleuchtung innerhalb des Fahrzeugs führen. Die verwendete Lösung kann darüber hinaus elektrische und elektronische Geräte beeinträchtigen und zu Fehlfunktionen und Defekten führen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0797-CH12.dita#CL4m_HEV-ca_ES-2027-t0797-CH12" role="parent" scope="local" type="concept">
+				<linktext>Wartung </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

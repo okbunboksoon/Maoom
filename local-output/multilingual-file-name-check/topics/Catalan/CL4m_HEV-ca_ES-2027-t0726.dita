@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0726">
+	<title>Ausschalt-Bedingungen</title>
+	<conbody>
+		<p>Der Bremsassistent wird nach 5 Minuten ausgelöst. Treten Sie sofort auf das Bremspedal und überprüfen Sie die Umgebung des Fahrzeugs.</p>
+		<p>Der Bremsassistent wird auch unter den folgenden Bedingungen ausgelöst:</p>
+		<ul>
+			<li>
+				<p>Der Schalthebel wird in Position P (Parkstellung) oder D (Fahren) gebracht.</p>
+			</li>
+			<li>
+				<p>Der Fahrer tritt das Bremspedal mit ausreichender Kraft.</p>
+			</li>
+			<li>
+				<p>Die Warnung wird freigegeben, wenn der Schalthebel in die Position P (Parkstufe), N (Neutralstellung) oder D (Fahren) gebracht wird.</p>
+			</li>
+		</ul>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054119N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn der Kollisionsvermeidungsassistent aktiviert wird, erscheint eine Linie hinter dem Fahrzeugbild im Kombiinstrument.</p>
+		<note type="note">
+			<p>Der Kollisionsvermeidungsassistent ist nur aktiv, wenn der Rückwärtsgang (R) eingelegt ist. Um den Kollisionsvermeidungsassistenten erneut zu aktivieren, schalten Sie von einem anderen Gang in den Rückwärtsgang (R).</p>
+		</note>
+		<note type="note">
+			<p>Wenn der Kollisionsvermeidungsassistent beim Rückwärtseinparken aktiviert ist, wird die Bremskontrolle nach 5 Minuten ausgelöst und die elektronische Feststellbremse (<term translate="no">EPB</term>) aktiviert.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0722.dita#CL4m_HEV-ca_ES-2027-t0722" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Kollisionsvermeidungs-Assistenten zum Rückwärtseinparken</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

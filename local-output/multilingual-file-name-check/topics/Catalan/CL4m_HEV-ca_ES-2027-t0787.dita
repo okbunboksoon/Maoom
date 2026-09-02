@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0787">
+	<title>Vorkehrungen für die Datenverarbeitung</title>
+	<conbody>
+		<p>Das eCall-Bordsystem ist so konzipiert, dass die im Systemspeicher enthaltenen Daten außerhalb des Systems erst verfügbar sind, wenn ein eCall ausgelöst wird. Ggf. weitere Anmerkungen: Entfällt</p>
+		<p>Das eCall-Bordsystem ist so konzipiert, dass sichergestellt ist, dass es im normalen Betriebszustand nicht verfolgbar ist und keiner kontinuierlichen Verfolgung unterliegt. Ggf. weitere Anmerkungen: Entfällt</p>
+		<p>Das eCall-Bordsystem ist so konzipiert, dass Daten im systeminternen Speicher automatisch und kontinuierlich entfernt werden.</p>
+		<p>Die Fahrzeugstandortdaten werden im internen Speicher des Systems laufend überschrieben, so dass immer maximal die drei letzten aktuellen Standorte des Fahrzeugs verfügbar sind, die für die normale Funktion des Systems benötigt werden.</p>
+		<p>Das Protokoll der Aktivitätsdaten des eCall-Bordsystems wird nur so lange gespeichert, wie für die Bearbeitung des Notfall-eCalls erforderlich ist, und keinesfalls länger als 13 Stunden ab dem Zeitpunkt der Auslösung des Notfall-eCalls. Ggf. weitere Anmerkungen: Entfällt</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0785.dita#CL4m_HEV-ca_ES-2027-t0785" role="parent" scope="local" type="concept">
+				<linktext>Informationen zur Datenverarbeitung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00537">
+	<title>Speed Limit</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04051">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e04052">
+								<figgroup>
+									<image href="../../images/N_TK25Z018_E.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e04053"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e04054">
+								<li>
+									<p> <uicontrol outputclass="a1804409">Driver assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1906856">Speed limit</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1906856">Speed limit assist</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1906857">SLW (Speed Limit Warning)</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1701660">Off</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle on, select <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Speed limit</uicontrol></menucascade> on the infotainment system.</p>
+		<ul id="e04055">
+			<li>
+				<p> <uicontrol>Country selection</uicontrol>: If navigation is not enabled, you can manually select the country from the menu. Please select the country you are currently driving in for proper functionality.</p>
+			</li>
+			<li>
+				<p> <uicontrol>Speed limit assist</uicontrol>: Intelligent Speed Limit Assist will inform the driver of speed limit and additional road signs. In addition, Intelligent Speed Limit Assist will inform the driver to change set speed of Manual Speed Limit Assist or Smart Cruise Control (If equipped) to help the driver stay within the speed limit.</p>
+			</li>
+			<li>
+				<p> <uicontrol>Speed limit Warning</uicontrol>: Intelligent Speed Limit Assist will inform the driver of speed limit and additional road signs. In addition, Intelligent Speed Limit Assist will warn the driver when the vehicle is driven faster than the speed limit.</p>
+			</li>
+			<li>
+				<p> <uicontrol>Off</uicontrol>: Intelligent Speed Limit Assist will turn off. Intelligent Speed Limit Assist warning light (<image href="../../images/WKIA_082.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel" scale="15" id="e04056"/>) will appear on the cluster.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e04057">
+			<p>However, if Intelligent Speed Limit Assist is set to Off and the vehicle is restarted, Speed Limit Warning is automatically selected. Be sure to park in a safe place before setting Intelligent Speed Limit Assist.</p>
+		</note>
+	</conbody>
+</concept>

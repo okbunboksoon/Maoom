@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00761">
+	<title>Rear Cross-Traffic Collision-Avoidance Assist malfunction and limitations</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>rear cross-traffic collision-avoidance assist (RCCA) 
+					<indexterm>malfunction and limitations</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<note type="note">
+			<ul>
+				<li>
+					<p>The following warning message will appear on the LCD display.</p>
+					<p>For more details, refer to the malfunction and limitations section of the function.</p>
+					<ul>
+						<li>
+							<p importance="high">Check driver assistance system.</p>
+						</li>
+						<li>
+							<p importance="high">Check outside mirror warning icon</p>
+						</li>
+						<li>
+							<p importance="high">Driver assistance system limited. Radar blocked.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

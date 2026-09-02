@@ -295,6 +295,8 @@ launcherGuideLink.addEventListener('click', function(event){
  *   클릭한 사용자 PC에 등록된 로컬 프로토콜로 실행한다.
  * - 도안의뢰서 작성: /pdf/artwork-request -> UserController.artworkRequest() -> artworkRequest.html
  *   실행 API는 ArtworkRequestController, 업무 처리는 ArtworkRequestService 쪽을 본다.
+ * - 인쇄 배열표: /pdf/auto-counting -> UserController.autoCounting()
+ *   PDF 페이지 계산과 초판/개정 발주표 생성을 연결할 작업 선택 팝업이다.
  */
 const launcherMenus = [
     {
@@ -367,6 +369,15 @@ const launcherMenus = [
         icon:'fa-file-signature',
         action:openArtworkRequestPopup
     },
+    /**
+    {
+        title:'인쇄 배열표',
+        description:'PDF 페이지 계산 및 발주표 생성',
+        category:'PDF, EXCEL',
+        icon:'fa-table-cells',
+        action:openAutoCountingPopup
+    },
+        **/
     {
         title:'인쇄데이터 검증',
         description:'인쇄데이터 폴더 검사 및 결과 엑셀 생성',
@@ -912,6 +923,21 @@ function openArtworkRequestPopup(){
 }
 
 /*
+ * 인쇄 배열표.
+ *
+ * 화면 위치: templates/user/autoCounting/autoCounting.html
+ * 호출 URL: GET /pdf/auto-counting -> UserController.autoCounting()
+ * AutoCounting Swing 도구의 초판/개정/페이지 계산 기능을 웹 화면으로 옮길 진입점이다.
+ */
+function openAutoCountingPopup(){
+    openPopupWindow(
+        '/pdf/auto-counting',
+        'autoCountingPopup',
+        popupWindowOptions(900, 1400, 4)
+    );
+}
+
+/*
  * 인쇄데이터 검증.
  *
  * 화면 위치: templates/user/printCheck/printCheck.html
@@ -927,7 +953,7 @@ function openPdfPrintCheckPopup(){
     openPopupWindow(
         '/pdf/print-check',
         'pdfPrintCheckPopup',
-        popupWindowOptions(720, 500, 4)
+        popupWindowOptions(720, 500, 5)
     );
 }
 
@@ -1008,7 +1034,7 @@ function openRevisionPopup(){
     openPopupWindow(
         '/revision/list',
         'revisionPopup',
-        popupWindowOptions(680, 560, 8)
+        popupWindowOptions(680, 870, 8)
     );
 }
 

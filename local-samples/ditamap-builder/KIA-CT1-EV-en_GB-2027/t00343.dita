@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00343">
+	<title>Shark-fin antenna/USB port</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01482">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01483">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C121.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01484">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C122_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e01485">
+			<li>
+				<p>USB port/USB charger change button</p>
+			</li>
+			<li>
+				<p>USB port and charger indicator light</p>
+			</li>
+		</ol>
+		<ul id="e01486">
+			<li>
+				<p>Shark-fin antenna transmit and receive signals such as AM/FM and GPS. Additional signals are sent and received according to vehicle options.</p>
+			</li>
+			<li>
+				<p>Press the button (1) and when the USB port and charger indicator light turns on (2), you can use the USB port to plug in a USB.</p>
+			</li>
+		</ul>
+		<note type="note" id="e01487">
+			<ul id="e01488">
+				<li>
+					<p>Be careful of antenna damage by checking the height of the vehicle before entering low-ceiling spaces such as automated parking lots or automated washing machines.</p>
+				</li>
+				<li>
+					<p>Be careful not to contact the antenna when loading cargo on the roof rack. Antenna transmission/reception performance may be degraded.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00876">
+	<title>Tire rotation</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/KIA_A12_001.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To equalize tread wear, it is recommended that the tires be rotated every 10,000 km (6,500 miles) or sooner if irregular wear develops.</p>
+		<p>After rotation, be sure to bring the front and rear tire pressure to specification and check nut torque (proper torque is 11–13 kgf·m [79–94 lbf ·ft]).</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Do not use the compact spare tire for tire rotation.</p>
+				</li>
+				<li>
+					<p>Do not mix bias ply and radial ply tires under any circumstances. This may cause unusual handling characteristics that could result in death, severe injury, or property damage.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Rotate radial tires that have an asymmetric tread pattern only from front to rear and not from right to left.</p>
+		</note>
+	</conbody>
+</concept>

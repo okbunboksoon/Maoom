@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00875">
+	<title>Bulb replacement precautions</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>light bulbs
+					<indexterm>bulb replacement precautions</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>You should keep extra light bulbs with appropriate specifications handy in case of emergency. For more information, refer to <xref href="t00022.dita#t00022"/>.</p>
+		<p>When you change a light bulb, make sure the vehicle is in the <term translate="no">OFF</term> position in a safe place, firmly apply the parking brake, and remove the negative 12V battery terminal.</p>
+		<note type="caution" id="e05155">
+			<p>Working on the lights</p>
+			<p>Before you work on the lights, make sure the vehicle is in the <term translate="no">LOCK/OFF</term> position in a safe place, firmly apply the parking brake, and turn the lights off to avoid sudden vehicle movement, which could cause finger burns or electric shock.</p>
+		</note>
+		<note type="note" id="e05156">
+			<p>Light replacement</p>
+			<p>To prevent damage to the fuse or electric wiring system when you replace a light bulb, only use bulbs with the same wattage rating as the burned out bulb.</p>
+			<p>To prevent damage or fire, make sure light bulbs (and any parts used to secure them) you install are fully seated and locked. Failure to do so may result in heat damage, fire, or water entering the headlamp unit. Any of these results may damage the headlamps or cause condensation to build up on the lens.</p>
+		</note>
+		<note type="note" id="e05157">
+			<p>Headlamp lens</p>
+			<p>To prevent damage, do not clean the headlamp lens with chemical solvents or strong detergents.</p>
+			<p>To prevent damage to the headlamp lens, do not clean it with chemical solvents or strong detergents.</p>
+		</note>
+		<note type="note" id="e05158">
+			<p>After an accident or headlamp assembly reinstallation, have your headlamp adjusted by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</note>
+		<note type="tip" id="e05159">
+			<ul id="e05160">
+				<li>
+					<p>If the light bulb or lamp connector is removed while the lamp is still on, the fuse box’s electronic system may log it as a malfunction. Therefore, a lamp malfunction incident may be recorded as a Diagnostic Trouble Code (DTC) in the fuse box.</p>
+				</li>
+				<li>
+					<p>It is normal for an operating lamp to flicker momentarily due to a stabilization function of the vehicle’s electronic control device. If the lamp lights up normally after blinking momentarily, it is functioning as normal.</p>
+					<p>However, if the lamp continues to flicker several times or turns off completely, there may be an error in the vehicle’s electronic control device. In this case, have your vehicle serviced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip" id="e05161">
+			<p>After you wash your vehicle or drive in the rain, you may find moisture inside the lamp lenses. This is normal condensation caused by the temperature difference between the inside and the outside of the lamp. It does not indicate a problem with the lamp’s functions. The moisture inside the lamp disappears if you drive the vehicle with the headlamps on. However, the level at which moisture dissipates may differ depending on the size, location, and condition of the lamp. If the moisture remains inside the lamp, have your vehicle serviced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</note>
+		<p>If you lack the necessary tools, correct light bulbs, or expertise to replace a light bulb, have your vehicle serviced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner. In many cases, replacing vehicle light bulbs is difficult because you must remove other parts of the vehicle before you can access the bulb. This is especially true if you have to remove the headlamp assembly to access the bulb.</p>
+		<p>Removing or reinstalling the headlamp assembly can damage the vehicle. Using non-genuine parts or substandard bulbs may blow a fuse or cause other wiring damage.</p>
+		<p>Do not install extra lamps or LED lights on your vehicle. Installing additional lights may lead to lamp malfunctions, lamp flickering, or damage to the fuse box and other wiring.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00874.dita#t00874" role="parent" scope="local" type="concept">
+				<linktext>Light bulbs</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

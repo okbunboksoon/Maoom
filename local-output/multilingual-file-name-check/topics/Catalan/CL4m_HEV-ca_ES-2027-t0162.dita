@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0162">
+	<title>Einstellungen Fernlichtassistent</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034328.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Leuchten</p>
+								</li>
+								<li>
+									<p>Fernlichtassistent</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wählen Sie bei Fahrzeug in Position <term translate="no">ON</term><menucascade><uicontrol>Benutzereinstellungen</uicontrol><uicontrol>Lichter</uicontrol><uicontrol>Fernlichtassistent</uicontrol></menucascade> im Kombiinstrument, um den Fernlichtassistenten einzuschalten.</p>
+		<note type="tip">
+			<p>Die am Infotainment-System angezeigten Informationen verfügen möglicherweise nicht über alle Menüs dieser Betriebsanleitung oder können je nach Ausführung Ihres Fahrzeugs von dieser Betriebsanleitung abweichen. Das Infotainment-System kann sich nach Aktualisierungen ändern. Weitere Einzelheiten finden Sie in der Anleitung des Infotainment-Systems, die Sie über den QR-Code in der Kurzanleitung aufrufen können.</p>
+		</note>
+		<note type="warning">
+			<p>Ändern Sie zu Ihrer Sicherheit die Einstellungen, nachdem Sie das Fahrzeug an einem sicheren Ort geparkt haben.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0161.dita#CL4m_HEV-ca_ES-2027-t0161" role="parent" scope="local" type="concept">
+				<linktext>Fernlichtassistent (HBA)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

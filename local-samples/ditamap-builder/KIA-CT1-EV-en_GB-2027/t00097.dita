@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" deliveryTarget="except_print" id="t00097">
+	<title>Automatic reverse</title>
+	<shortdesc>During power trunk operation, if the power trunk senses any obstacle, the trunk will stop or will fully open. The automatic reverse feature may not operate properly, or it may operate unexpectedly.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>power trunk 
+					<indexterm>automatic reverse</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e00462">
+			<title>Operating condition(s)</title>
+			<ul id="e00463">
+				<li>
+					<p>If a strong impact is applied with no obstructions placed</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e00464">
+			<title>Non-operating condition(s)</title>
+			<ul id="e00465">
+				<li>
+					<p>If the detected resistance is below a certain level</p>
+				</li>
+				<li>
+					<p>If the trunk is almost fully closed near the latched position</p>
+				</li>
+			</ul>
+			<note type="warning" id="e00466">
+				<p>Never intentionally place any object or part of your body in the path of the power trunk to make sure the automatic reverse feature operates. Serious injury, or damage to the vehicle or object may occur.</p>
+			</note>
+			<note type="note" id="e00467">
+				<p>The power trunk may stop operating if the automatic reverse feature operates more than two times while attempting to open or close the trunk. If this occurs, carefully open or close the trunk manually, and then after 30 seconds try to operate the power trunk automatically again.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

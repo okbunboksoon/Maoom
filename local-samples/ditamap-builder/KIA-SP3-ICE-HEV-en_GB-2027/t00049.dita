@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00049">
+	<title id="e00250">With the smart key </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>door locks
+					<indexterm>with the smart key</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00251">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry>
+							<fig id="e00252">
+								<title>Manual type</title>
+								<figgroup>
+									<image align="center" placement="break" href="images/N_SP327_D03_001_1_A.jpg" scale="95"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<fig id="e00253">
+								<title>Auto type</title>
+								<figgroup>
+									<image align="center" placement="break" href="images/N_SP327_D03_002_1_A.jpg" scale="95"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Carrying the smart key, you may lock and unlock the vehicle doors (and tailgate). Also, you may start the vehicle. Refer to the following for more details.</p>
+		<section id="e00254">
+			<title id="e00255">Locking </title>
+			<p>Touch or press the button (the engraved part) of the front door handles with all doors closed and any door unlocked, locks all the doors. If all doors and hood are closed, the hazard warning lights will blink once to indicate that all doors are locked.</p>
+			<p>The button will only operate when the smart key is within 0.7–1 m (28–40 inches) from the front door handles.</p>
+			<p>Even though you touch or press the front door handle buttons, the doors will not lock if any of following occur:</p>
+			<ul id="e00256">
+				<li id="e00257">
+					<p>The smart key is in the vehicle.</p>
+				</li>
+				<li id="e00258">
+					<p>The vehicle is in the <term translate="no">ACC</term> or <term translate="no">ON</term> position.</p>
+				</li>
+				<li id="e00259">
+					<p>Any door including the tailgate is open.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00047.dita#t00047" role="parent" scope="local" type="concept">
+				<linktext>Door locks </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

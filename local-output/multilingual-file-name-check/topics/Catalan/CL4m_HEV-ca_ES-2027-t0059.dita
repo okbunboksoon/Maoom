@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0059">
+	<title>Fahrgastwarnung hinten (ROA) (Typ A)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Fahrgastwarnung hinten (ROA)</indexterm>
+				<indexterm>Türschlösser
+					<indexterm>Fahrgastwarnung hinten (ROA)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Der Rücksitzalarm (ROA) verhindert ein Verlassen des Fahrzeugs, wenn sich noch ein Fahrgast im Fond des Fahrzeugs befindet.</p>
+		<ul>
+			<li>
+				<p>Wenn Sie die vordere Tür nach Öffnen und Schließen der hinteren Tür und Abstellen des Motors öffnen, erscheint die Warnmeldung auf dem Kombiinstrument.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M034143N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<p><term translate="no">A</term>: Überprüfen Sie, ob sich auf dem Rücksitz Passagiere oder Gegenstände befinden.</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M035165L.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<p><term translate="no">A</term>: Lassen Sie Kinder und Haustiere nicht allein.</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+		</ul>
+		<p>Sie können den Rücksitzalarm aktivieren und deaktivieren, indem Sie im Infotainment-System <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Komfort</uicontrol><uicontrol>Rücksitzalarm</uicontrol></menucascade> auswählen.</p>
+		<note type="warning">
+			<p>Die Fahrgastwarnung hinten (ROA) erkennt keine Objekte oder Personen auf dem Rücksitz. Durch Nutzung des Öffnungs- und Schließverlaufs der hinteren Türen informiert das System den Fahrer, dass sich etwas bzw. jemand auf dem Rücksitz befinden könnte.</p>
+		</note>
+		<note type="caution">
+			<p>Der Rücksitz-Insassen Alarm verwendet den Öffnungs- und Schließverlauf der hinteren Türen.</p>
+			<p>Der Verlauf wird nach normalem Ausschalten der Zündung, Verlassen des Fahrzeugs und Fernverriegelung der Türen mit der Zentralverriegelung mit Fernbedienung zurückgesetzt. Wenn eine hintere nicht wieder geöffnet wird, kann daher eine Warnung der Fahrgastwarnung hinten auftreten.</p>
+			<p>Wenn der Fahrer beispielsweise nach Auftreten der Warnung durch die Fahrgastwarnung hinten die Tür nicht verriegelt und dann weiterfährt, kann die Warnung auftreten.</p>
+		</note>
+		<note type="warning">
+			<p>Das Türverriegelungssystem funktioniert möglicherweise nicht, wenn die Elektroanlage beeinträchtigt ist. Weisen Sie minderjährige Fahrgäste daher entsprechend ein, wie sie die Fahrzeugtür von Hand öffnen, bevor eine Notsituation eintritt. Auf diese Weise können sie im Falle einer Notsituation die Tür von Hand öffnen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0052.dita#CL4m_HEV-ca_ES-2027-t0052" role="parent" scope="local" type="concept">
+				<linktext>Türschlösser </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

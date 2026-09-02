@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00258">
+	<title id="e01869">Folding the outside rearview mirror</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>outside rearview mirror 
+					<indexterm>folding the outside rearview mirror</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The outside rearview mirror can be folded or unfolded by pressing the switch when the <term translate="no">EV</term> button is in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position as below.</p>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e01870">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01871">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV035408.eps" placement="break" width="2.244in" id="e01872"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>To fold the outside rearview mirror depress the button.</p>
+			</li>
+			<li>
+				<p>To unfold it, depress the button again.</p>
+			</li>
+		</ul>
+		<note type="caution">
+			<p>The electric type outside rearview mirror operates even though the <term translate="no">EV</term> button is in the <term translate="no">OFF</term> position. However, to prevent unnecessary battery discharge, do not adjust the mirrors longer than necessary while the vehicle is not running.</p>
+		</note>
+		<note type="caution">
+			<p>In case it is an electric type outside rearview mirror, don't fold it by hand. It could cause motor failure.</p>
+		</note>
+	</conbody>
+</concept>

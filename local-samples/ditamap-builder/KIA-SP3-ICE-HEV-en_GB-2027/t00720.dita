@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00720">
+	<title>Limitations of Reverse Parking Collision-Avoidance Assist</title>
+	<conbody>
+		<p>Parking Collision-Avoidance Assist may not assist you with braking, even if there are pedestrians or objects behind the vehicle, under the following circumstances:</p>
+		<ul>
+			<li>
+				<p>There is a problem with the vehicle:</p>
+				<ul>
+					<li>
+						<p>You install any non-factory equipment or accessory.</p>
+					</li>
+					<li>
+						<p>You modify the braking system components, such as brake discs and calipers.</p>
+					</li>
+					<li>
+						<p>The wheels are misaligned, or the suspension components are modified.</p>
+					</li>
+					<li>
+						<p>You have attached accessories to the steering wheel or modified the steering components.</p>
+					</li>
+					<li>
+						<p>Your vehicle is unstable due to an accident or other causes.</p>
+					</li>
+					<li>
+						<p>You have modified the bumper height or ultrasonic sensor installation.</p>
+					</li>
+					<li>
+						<p>The overall height of the vehicle is severely tilted due to abnormal tire pressure or excessive loading in the cargo area.</p>
+					</li>
+					<li>
+						<p>The wide view cameras or ultrasonic sensors are damaged.</p>
+					</li>
+					<li>
+						<p>The wide view cameras or ultrasonic sensors are covered with foreign material such as snow or dirt.</p>
+					</li>
+					<li>
+						<p>You have installed a snow chain, spare tire, or wheel of a different size.</p>
+					</li>
+					<li>
+						<p>If the luggage compartment (trailer or carrier) is mounted at the rear of the vehicle.</p>
+					</li>
+					<li>
+						<p>If the vehicle is equipped with trailer attachment.</p>
+					</li>
+					<li>
+						<p>When the cargo in the cargo compartment protrudes to the rear of the vehicle.</p>
+					</li>
+					<li>
+						<p>If the license plate other than the official specification is fitted.</p>
+					</li>
+					<li>
+						<p>When the mounting state of the camera is poor or the location is changed due to damage to the outside mirror.</p>
+					</li>
+					<li>
+						<p>When decorations are attached around the ultrasonic sensor.</p>
+					</li>
+					<li>
+						<p>When the ultrasonic sensor and the periphery are arbitrarily separated.</p>
+					</li>
+					<li>
+						<p>When the surface of the ultrasonic sensor is pressed hard or an impact is applied with a hard object.</p>
+					</li>
+					<li>
+						<p>If the surface of the ultrasonic sensor is damaged by scratching it with a sharp object.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>There is a problem with the surroundings:</p>
+				<ul>
+					<li>
+						<p>There is a pattern on the road.</p>
+					</li>
+					<li>
+						<p>There is a shadow or reflected light on the ground</p>
+					</li>
+					<li>
+						<p>Pedestrians or objects are near the vehicle’s path.</p>
+					</li>
+					<li>
+						<p>You are driving through a narrow track or a parking space.</p>
+					</li>
+					<li>
+						<p>You are driving on an uneven road such as an unpaved road, gravel road, speed bump, or inclined road.</p>
+					</li>
+					<li>
+						<p>You have installed a trailer or carrier at the rear of the vehicle.</p>
+					</li>
+					<li>
+						<p>Wide view cameras are obscured by a light source or by inclement weather, such as heavy rain, fog, snow, and so on.</p>
+					</li>
+					<li>
+						<p>The surroundings are extremely bright or dark.</p>
+					</li>
+					<li>
+						<p>Outside temperature is extremely high or low.</p>
+					</li>
+					<li>
+						<p>The wind is either strong (above 20 km/h (12 mph)) or blowing perpendicular to the rear bumper.</p>
+					</li>
+					<li>
+						<p>Objects that generate excessive noise (such as vehicle horns, loud motorcycles, or truck air brakes) are near your vehicle.</p>
+					</li>
+					<li>
+						<p>Objects that generate ultrasonic waves are near your vehicle.</p>
+					</li>
+					<li>
+						<p>A wireless device with a transmission function is operating near the rear ultrasonic sensor.</p>
+					</li>
+					<li>
+						<p>Your vehicle is affected by another vehicle’s parking distance warning function.</p>
+					</li>
+					<li>
+						<p>The road is slippery or inclined.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>There is a situation with pedestrians or objects:</p>
+				<ul>
+					<li>
+						<p>The pedestrian is difficult to detect.</p>
+					</li>
+					<li>
+						<p>There is ground height difference between your vehicle and the pedestrian.</p>
+					</li>
+					<li>
+						<p>The image of the pedestrian in the wide-rear view camera is indistinguishable from the background.</p>
+					</li>
+					<li>
+						<p>The pedestrian is near the rear edge of the vehicle.</p>
+					</li>
+					<li>
+						<p>The pedestrian is not standing upright.</p>
+					</li>
+					<li>
+						<p>The pedestrian is either too short or tall to detect.</p>
+					</li>
+					<li>
+						<p>The pedestrian is wearing clothing that easily blends into the background, making them difficult to detect.</p>
+					</li>
+					<li>
+						<p>The pedestrian is wearing clothing that does not reflect ultrasonic waves.</p>
+					</li>
+					<li>
+						<p>The object’s size, thickness, height, or shape does not reflect ultrasonic waves (for example, a pole, bush, curb, cart, the edge of a wall, and so on).</p>
+					</li>
+					<li>
+						<p>The pedestrian or object is moving.</p>
+					</li>
+					<li>
+						<p>The pedestrian or object is very close to the rear of your vehicle.</p>
+					</li>
+					<li>
+						<p>There is a large object (such as a wall) behind the pedestrian or the object.</p>
+					</li>
+					<li>
+						<p>The object is not located near the front or rear center of your vehicle.</p>
+					</li>
+					<li>
+						<p>The object is not parallel with the rear bumper.</p>
+					</li>
+					<li>
+						<p>The face of the object is not parallel with the rear bumper.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>There is a situation with the driving conditions:</p>
+				<ul>
+					<li>
+						<p>You drive the vehicle immediately after shifting the gear to R (Reverse) or D (Drive).</p>
+					</li>
+					<li>
+						<p>You accelerate or drive in a circle.</p>
+					</li>
+					<li>
+						<p>You drive immediately after starting the vehicle.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Always use extreme caution while driving. You are responsible for controlling the brake for safe driving.</p>
+				</li>
+				<li>
+					<p>Always look around your vehicle to make sure there are no pedestrians or objects before moving your vehicle.</p>
+				</li>
+				<li>
+					<p>The performance of Parking Collision-Avoidance Assist may vary under certain conditions. If the vehicle’s speed is above 4 km/h (2 mph), Parking Collision-Avoidance Assist will operate only when pedestrians are detected. Always look around and pay attention when driving your vehicle.</p>
+				</li>
+				<li>
+					<p>Some objects may not be detected by the rear ultrasonic sensors due to the objects’ distance from the vehicle, size, or material, all of which can limit the effectiveness of the sensors.</p>
+				</li>
+				<li>
+					<p>Parking Collision-Avoidance Assist may not operate properly or may operate unnecessarily depending on the road conditions and surroundings.</p>
+				</li>
+				<li>
+					<p>Do not solely rely on Parking Collision-Avoidance Assist. Doing so may lead to vehicle damage or injuries.</p>
+				</li>
+				<li>
+					<p>Always keep the Wide Rear View camera and ultrasonic sensors clean.</p>
+				</li>
+				<li>
+					<p>Do not use any cleaner containing acid or alkaline detergents when cleaning the camera lens. Use only a mild soap or neutral detergent and rinse thoroughly with water.</p>
+				</li>
+				<li>
+					<p>Do not spray the Wide Rear View camera, the rear ultrasonic sensors, or their surrounding areas directly with a high pressure washer. This may cause the Wide Rear View camera or ultrasonic sensors to malfunction.</p>
+				</li>
+				<li>
+					<p>Do not apply objects (such as a bumper sticker or bumper guard) near the Wide Rear View camera or ultrasonic sensors, or apply paint to the bumper. Doing so may adversely affect the performance of Parking Collision-Avoidance Assist.</p>
+				</li>
+				<li>
+					<p>Never disassemble or damage the Wide Rear View camera or the components of the ultrasonic sensor.</p>
+				</li>
+				<li>
+					<p>Do not apply unnecessary force to the Wide Rear View camera or ultrasonic sensors. Parking Collision-Avoidance Assist may not operate properly if you forcibly move the Wide Rear View camera or ultrasonic sensors out of proper alignment. If Parking Collision-Avoidance Assist does not operate properly, have the vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>You may hear noise when braking suddenly to avoid a collision.</p>
+				</li>
+				<li>
+					<p>If any other warning sound (such as the seatbelt warning chime) is already generated, the Parking Collision-Avoidance Assist warning may not sound.</p>
+				</li>
+				<li>
+					<p>Parking Collision-Avoidance Assist may not work properly if the bumper has been damaged, replaced, or repaired.</p>
+				</li>
+				<li>
+					<p>Parking Collision-Avoidance Assist may not operate properly in areas with strong electromagnetic interference.</p>
+				</li>
+				<li>
+					<p>Playing the vehicle audio system at a high volume may prevent passengers from hearing Parking Collision-Avoidance Assist warning sounds.</p>
+				</li>
+				<li>
+					<p>The brake control may not operate properly depending on the status of brake system.</p>
+					<p>There will only be a warning when:</p>
+					<ul>
+						<li>
+							<p>The brake system warning light is illuminated.</p>
+						</li>
+						<li>
+							<p>brake system is activated in a different function.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Check your brake fluid and brake pad conditions regularly. The brake performance may decrease depending on the brakes’ condition.</p>
+				</li>
+				<li>
+					<p>Turn <term translate="no">OFF</term> Parking Collision-Avoidance Assist when towing a trailer. If you are towing and moving in reverse, Parking Collision-Avoidance Assist will detect the trailer and activate.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip">
+			<p>Parking Collision-Avoidance Assist can detect a pedestrian or an object when:</p>
+			<ul>
+				<li>
+					<p>A pedestrian is standing behind the vehicle.</p>
+				</li>
+				<li>
+					<p>A large obstacle, such as another vehicle, is parked in the rear center of your vehicle.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00717.dita#t00717" role="parent" scope="local" type="concept">
+				<linktext>Reverse Parking Collision-Avoidance Assist malfunction and limitations</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

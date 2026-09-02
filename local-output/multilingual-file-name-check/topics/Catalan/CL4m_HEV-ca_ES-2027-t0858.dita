@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0858">
+	<title>Komponenten, die ein Reset benötigen</title>
+	<conbody>
+		<p>Nach dem Abklemmen oder der Entladung der Batterie muss für folgende Komponenten ein Reset durchgeführt werden.</p>
+		<ul>
+			<li>
+				<p>Fenster mit Öffnungs-/Schließautomatik</p>
+			</li>
+			<li>
+				<p>Trip-Computer</p>
+			</li>
+			<li>
+				<p>Klimaanlage</p>
+			</li>
+			<li>
+				<p>Audio</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0854.dita#CL4m_HEV-ca_ES-2027-t0854" role="parent" scope="local" type="concept">
+				<linktext>Batterie </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

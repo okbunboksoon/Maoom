@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00304">
+	<title>Interior lights always on</title>
+	<shortdesc>Interior lights always on function keeps the interior button lights illuminated at all times, day or night, making it easier to locate the buttons.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior lights
+					<indexterm>interior lights always on</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>Interior Lights Always On</uicontrol></menucascade> from the infotainment system to activate Interior lights always on function.</p>
+		<p>The interior button lights turn on or off under the following conditions:</p>
+		<ul id="e01946">
+			<li>
+				<p>When all doors are closed and locked, if you unlock and open a door, the interior button lights will remain on for approximately 5 minutes.</p>
+			</li>
+			<li>
+				<p>When the vehicle is turned off, the interior button lights will remain on for approximately 5 minutes.</p>
+			</li>
+			<li>
+				<p>During this time, if you open and close the door or lock it, the lights will turn off immediately.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00302.dita#t00302" role="parent" scope="local" type="concept">
+				<linktext>Interior lights</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

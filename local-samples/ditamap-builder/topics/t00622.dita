@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00622">
+	<title>Highway Curve Zone Auto Slowdown</title>
+	<conbody>
+		<p>When the dedicated road mainline has a curved section, the vehicle will automatically decelerate according to the curvature to maintain a safe speed while passing through the curved section. After the curved section, it will continue at the set speed of Smart Cruise Control.</p>
+		<note type="note">
+			<p>The timing of deceleration initiation depends on the vehicle’s speed and the curvature of the road. The higher the driving speed, the sooner the deceleration initiates.</p>
+		</note>
+	</conbody>
+</concept>

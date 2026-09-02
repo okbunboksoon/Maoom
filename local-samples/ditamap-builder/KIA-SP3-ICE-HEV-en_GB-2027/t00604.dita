@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00604">
+	<title>Based on Driving Style operating</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03788">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03789">
+								<image href="images/N_SP3i25_C00_030_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When Based on Driving Style is enabled, the instrument cluster displays the set vehicle distance level and target vehicle distance in white. It also displays the distance level and target distance based on your driving style.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00602.dita#t00602" role="parent" scope="local" type="concept">
+				<linktext>Smart Cruise Control display and control</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

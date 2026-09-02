@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00429">
+	<title>LCD display messages</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1">
+							<p>Message</p>
+						</entry>
+						<entry colname="2">
+							<p>Content</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <uicontrol>Shifting conditions not met. Reduce speed, then shift</uicontrol> </p>
+						</entry>
+						<entry colname="2">
+							<ul>
+								<li>
+									<p>When driving speed is too fast to shift the gear.</p>
+								</li>
+								<li>
+									<p>When the gear is shifted while the vehicle is in Utility mode.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <uicontrol>Press brake pedal to change gear</uicontrol> </p>
+						</entry>
+						<entry colname="2">
+							<ul>
+								<li>
+									<p>When the brake pedal is not depressed while shifting the gear.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <uicontrol>Shift to P after stopping</uicontrol> </p>
+						</entry>
+						<entry colname="2">
+							<ul>
+								<li>
+									<p>When the gear is shifted to P (Park) while the vehicle is moving.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <uicontrol>Gear already selected</uicontrol> </p>
+						</entry>
+						<entry colname="2">
+							<ul>
+								<li>
+									<p>When the selected gear position is selected again.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <uicontrol>PARK malfunction. Engage parking brake when parking vehicle</uicontrol> </p>
+						</entry>
+						<entry colname="2">
+							<ul>
+								<li>
+									<p>When there is a problem with function engaging P (Park) position.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <uicontrol>Check P button</uicontrol> </p>
+						</entry>
+						<entry colname="2">
+							<ul>
+								<li>
+									<p>When there is problem with the P button.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <uicontrol>Check shifter lever</uicontrol> </p>
+						</entry>
+						<entry colname="2">
+							<ul>
+								<li>
+									<p>When there is problem with the shift lever.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="1">
+							<p> <uicontrol>Rotary shifter stuck</uicontrol> </p>
+						</entry>
+						<entry colname="2">
+							<ul>
+								<li>
+									<p>When the shift lever is continuously stuck or there is problem with the shift lever.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+					<row rowsep="0" valign="middle">
+						<entry colname="1">
+							<p> <uicontrol id="e01731">Shift button held down</uicontrol> </p>
+						</entry>
+						<entry colname="2">
+							<ul>
+								<li>
+									<p>When the shift button is stuck.</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

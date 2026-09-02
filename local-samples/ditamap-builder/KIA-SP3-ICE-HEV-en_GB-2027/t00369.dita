@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00369">
+	<title>Starting the engine</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>ignition switch
+					<indexterm>starting the engine</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02380">
+			<title>Starting the gasoline engine</title>
+			<ol id="e02381">
+				<li>
+					<p>Make sure the parking brake is applied.</p>
+				</li>
+				<li>
+					<p><b>Manual Transmission</b> - Depress the clutch pedal fully and shift to N (Neutral).</p>
+					<p>Keep the clutch pedal and brake pedal depressed while turning the ignition switch to <term translate="no">START</term> position.</p>
+					<p><b>Intelligent Variable Transmission/Dual Clutch Transmission</b> - Shift to P (Park).</p>
+					<p>Depress the brake pedal fully. You may start the engine when the gear is in N (Neutral).</p>
+				</li>
+				<li>
+					<p>Turn the ignition switch to <term translate="no">START</term> position and hold it until the engine starts (maximum 10 seconds).</p>
+					<p>Do not depress the accelerator pedal while starting.</p>
+				</li>
+				<li>
+					<p>Do not warm up the engine while the vehicle is stationary.</p>
+					<p>Start driving at moderate engine speeds. Avoid sudden acceleration or deceleration.</p>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00368.dita#t00368" role="parent" scope="local" type="concept">
+				<linktext>Ignition switch</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

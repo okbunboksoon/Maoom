@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00260">
+	<title id="e01214">Side air bag and front center side air bag</title>
+	<shortdesc/>
+	<conbody>
+		<p>Your vehicle is equipped with a side air bag in each front and front center side air bag in front driver side seat.</p>
+		<p>The purpose of the air bag is to provide the vehicle’s driver and/or front passenger with protection in addition to that offered by the seat belt alone.</p>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01215">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0" valign="middle">
+							<fig id="e01216">
+								<figgroup>
+									<image href="../../images/N_CT25B007_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" valign="middle">
+							<fig id="e01217">
+								<figgroup>
+									<image href="../../images/N_CT25B010_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e01218">
+			<li>
+				<p>Side air bag</p>
+			</li>
+		</ol>
+		<p importance="default">The actual air bags in the vehicle may differ from the illustration.</p>
+		<p>The side air bags and front center side air bag are designed to deploy only during certainside-impact collisions, depending on the crash severity. The side air bags and driver’s center air bag are not designed to deploy in all side impact situations.</p>
+		<p>If the vehicle is equipped with the swivelingseats, the 2nd row seat side air bags will not be deployed when the second row seats are rotated.</p>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01219">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0" valign="middle">
+							<fig id="e01220">
+								<figgroup>
+									<image href="../../images/N_CT25B055.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" valign="middle">
+							<fig id="e01221">
+								<figgroup>
+									<image href="../../images/N_CT25B015_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol importance="required" outputclass="callout" id="e01222">
+			<li>
+				<p importance="optional">Front center side air bag</p>
+			</li>
+		</ol>
+		<p importance="default">The actual air bags in the vehicle may differ from the illustration.</p>
+		<note type="note" id="e01223">
+			<p>Refer to the WARNING, CAUTION and NOTE of ‘Air bag Precautions.’</p>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00414">
+	<title>Anti-lock Brake System (ABS)</title>
+	<shortdesc>The ABS is designed to help prevents the wheels from locking so that your vehicle remains stable and you can still steer it.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle safety system
+					<indexterm>anti-lock brake system (ABS)</indexterm>
+				</indexterm>
+				<indexterm>anti-lock brake system (ABS)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The ABS (or ESC) does not prevent accidents due to improper or dangerous driving maneuvers, or due to other than normal environmental conditions. Even though emergency braking improves vehicle control, always maintain a safe distance between your vehicle and objects ahead. Always reduce the vehicle speed during challenging or unusual road conditions under circumstances, including but not limited to:</p>
+		<ul id="e02802">
+			<li>
+				<p>When driving on rough, gravel, or snow-covered roads</p>
+			</li>
+			<li>
+				<p>When driving with tire chains installed</p>
+			</li>
+			<li>
+				<p>When driving on roads where the surface is irregular, such as different surfaces, is pitted, or has different surface heights.</p>
+			</li>
+		</ul>
+		<p>Driving in these conditions increases the required stopping distance for your vehicle.</p>
+		<p>The ABS continuously senses the speed of the wheels. If any wheel is about to lock, the ABS repeatedly modulates the hydraulic brake pressure to the affected wheels.</p>
+		<p>When you engage the brake pedal under conditions that may ordinarily lock the wheels, you may hear a “tik-tik” sound from the brakes or feel a corresponding sensation in the brake pedal. This is normal and means your ABS is active.</p>
+		<p>To obtain the maximum benefit from your ABS in an emergency, do not try to modulate your brake pressure or pump your brakes. Engage your brake pedal as hard as possible to allow the ABS to control the force being delivered to the brakes.</p>
+		<note type="tip" id="e02803">
+			<p>You may hear a click sound when your vehicle begins to move after you start it. This is normal and indicates that the ABS is functioning properly.</p>
+		</note>
+		<p>Even with the ABS, your vehicle still requires sufficient stopping distance. Always maintain a safe distance from vehicles ahead.</p>
+		<p>Always slow down when turning. The ABS cannot prevent accidents resulting from excessive speeds.</p>
+		<p>On loose or uneven road surfaces, operation of the ABS may result in a longer stopping distance than is required for vehicles equipped with a conventional brake system.</p>
+		<p>The ABS warning light (<image href="images/WKIA_107.jpg" scale="15" align="left" placement="inline"/>) stays on for approximately 3 seconds after the vehicle is in <term translate="no">ON</term> position.</p>
+		<p>The ABS goes through self-diagnosis, and the ABS warning light turns off if everything is normal. If the light stays on, there may be a problem with the ABS. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<p>When you drive on a road with poor traction (such as an icy road), and you have engaged the brake pedal continuously, the ABS will be continuously active, and the ABS warning light may appear. Pull over to a safe place and stop your vehicle.</p>
+		<p>Restart your vehicle. If the ABS warning light turns off, then your ABS is normal. If it remains on, you may have a problem with the ABS. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="tip" id="e02804">
+			<p>When you jump start your vehicle because of a drained 12V battery, your vehicle may not run as smoothly, and the ABS warning light may appear at the same time. This happens because of low 12V battery voltage and does not indicate an ABS malfunction.</p>
+			<ul id="e02805">
+				<li>
+					<p>Do not pump your brakes.</p>
+				</li>
+				<li>
+					<p>Recharge the 12V battery before driving your vehicle.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00413.dita#t00413" role="parent" scope="local" type="concept">
+				<linktext>Vehicle safety system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

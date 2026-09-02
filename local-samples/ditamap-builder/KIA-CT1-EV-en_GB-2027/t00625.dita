@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00625">
+	<title>Forward attention warning</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig>
+								<figgroup>
+									<image href="../../images/N_TK25Z020_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" base="Anywhere">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol>Driver assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>DAW (Driver attention warning)</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Forward attention warning</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle is in <term translate="no">DRIVE READY</term>, select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>DAW (Driver Attention Warning)</uicontrol><uicontrol>Forward attention warning</uicontrol></menucascade> in the infotainment system to set whether to use the function.</p>
+		<ul>
+			<li>
+				<p> <uicontrol>Forward attention warning</uicontrol>: It will warn the driver when the driver’s gaze is not focused on the road.</p>
+			</li>
+		</ul>
+		<note type="tip">
+			<p>Forward Attention Warning will always turn on when the vehicle restarts.</p>
+		</note>
+	</conbody>
+</concept>

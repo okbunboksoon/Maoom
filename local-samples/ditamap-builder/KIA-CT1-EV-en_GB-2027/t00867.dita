@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00867">
+	<title>Replacing the front wiper blade</title>
+	<conbody>
+		<section>
+			<title>Operation</title>
+			<table>
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row>
+							<entry colname="col1">
+								<fig id="e02752">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25G011_1.eps" scale="95" placement="break" id="image_lzf_rj3_fjc"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+						<row>
+							<entry colname="col1">
+								<fig id="e02753">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25G032_1.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e02754">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25G034.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol>
+				<li>
+					<p>Turn off the vehicle.</p>
+				</li>
+				<li>
+					<p>Move the wiper switch to the single wiping (<term translate="no">MIST</term> /1x) position within 20 seconds.</p>
+				</li>
+				<li>
+					<p>Hold the wiper switch for more than 2 seconds.</p>
+				</li>
+				<li>
+					<p>Raise the wiper arm.</p>
+				</li>
+				<li>
+					<p>Lift the wiper blade clip up. Pull down the blade assembly and remove it.</p>
+				</li>
+				<li>
+					<p>Install the new blade assembly.</p>
+				</li>
+				<li>
+					<p>Upon starting the vehicle, the wiper arms will return to their normal operating position.</p>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+</concept>

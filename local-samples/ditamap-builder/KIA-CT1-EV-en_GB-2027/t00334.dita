@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" base="Anywhere" id="t00334">
+	<title>State of charge (SOC) gauge for high voltage battery</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1">
+							<fig>
+								<figgroup>
+									<image href="../../images/N_CT25Q064.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The SOC gauge shows the charging status of the high voltage battery.</p>
+		<p>The low percentage number on the indicator indicates that there is not enough energy in the high voltage battery. 100% indicates that the driving battery is fully charged.</p>
+		<p>When driving on highways or motorways, make sure to check in advance if the driving battery is charged enough.</p>
+		<p>When the remaining battery is lower than 25% (20% for extended type battery) on the SOC gauge, the warning light (<image href="../../images/WKIA_314.eps" scale="15" align="left" placement="inline"/>) turns <term translate="no">ON</term> to alert you of the battery level.</p>
+		<section>
+			<title>If the distance to empty is insufficient</title>
+			<ul>
+				<li>
+					<p>If the battery warning light is on, recharge immediately at the nearest charging station.</p>
+				</li>
+				<li>
+					<p>Drive efficiently according to Operating tips to improve driving range.</p>
+				</li>
+				<li>
+					<p>If the remaining battery is 0%, do not drive too hard and go to a safe place to request rescue.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

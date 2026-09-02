@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0717">
+	<title>Einschränkungen der Einparkhilfe</title>
+	<conbody>
+		<p>Die Einparkhilfe funktioniert in folgenden Fällen nicht einwandfrei:</p>
+		<ul>
+			<li>
+				<p>Der Sensor ist vereist.</p>
+			</li>
+			<li>
+				<p>Der Sensor ist mit Fremdkörpern wie Schnee oder Wasser bedeckt (die Einparkhilfe funktioniert normal, wenn diese Fremdkörper entfernt werden.)</p>
+			</li>
+			<li>
+				<p>Das Wetter ist extrem heiß oder kalt.</p>
+			</li>
+			<li>
+				<p>Der Sensor oder die Sensorbaugruppe ist demontiert.</p>
+			</li>
+			<li>
+				<p>Die Oberfläche des Sensors wird stark gedrückt oder ein Schlag mit einem harten Objekt wirkt ein.</p>
+			</li>
+			<li>
+				<p>Die Oberfläche des Sensors wurde mit einem scharfen Objekt zerkratzt.</p>
+			</li>
+			<li>
+				<p>Die Sensoren oder der umgebende Bereich werden von einem Hochdruckreiniger mit Wasser bespritzt.</p>
+			</li>
+			<li>
+				<p>Wenn sich Objekte in der Nähe befinden, die Ultraschallwellen aussenden, wie z. B. die Hupe eines Fahrzeugs, der Motor eines Motorrads oder die Druckluftbremsen eines großen Fahrzeugs.</p>
+			</li>
+		</ul>
+		<p>Die Einparkhilfe funktioniert in folgenden Fällen nicht einwandfrei:</p>
+		<ul>
+			<li>
+				<p>Bei starkem Regen und Sprühwasser</p>
+			</li>
+			<li>
+				<p>Wasser fließt über die Oberfläche des Sensors</p>
+			</li>
+			<li>
+				<p>Beeinträchtigung durch die Sensoren eines anderen Fahrzeugs</p>
+			</li>
+			<li>
+				<p>Die Sensoren sind mit Schnee oder Eis bedeckt.</p>
+			</li>
+			<li>
+				<p>Bei Fahrten auf unebenen Straßen, Schotterstraßen oder im Gebüsch</p>
+			</li>
+			<li>
+				<p>Ultraschallwellen erzeugende Objekte befinden sich in der Nähe des Sensors.</p>
+			</li>
+			<li>
+				<p>Das Nummernschild ist an anderer Stelle als vorgesehen installiert.</p>
+			</li>
+			<li>
+				<p>Die Höhe des Stoßfängers oder der Einbau des Ultraschallsensors wurde verändert.</p>
+			</li>
+			<li>
+				<p>Geräte oder Zubehör in der Nähe der Ultraschallsensoren anbauen</p>
+			</li>
+		</ul>
+		<p>Die folgenden Objekte werden möglicherweise nicht erkannt:</p>
+		<ul>
+			<li>
+				<p>Spitze oder dünne Objekte, z.B. Seile, Ketten oder schmale Pfosten.</p>
+			</li>
+			<li>
+				<p>Schmale Objekte wie die Ecken einer quadratischen Säule</p>
+			</li>
+			<li>
+				<p>Gegenstände/Objekte, die das Sensorsignal absorbieren können, z. B. Kleidung, Schaumstoff oder Schnee.</p>
+			</li>
+			<li>
+				<p>Bei Objekten, die kleiner als 100 cm (40 in.) und im Durchmesser kleiner als 14 cm (6 in.) sind.</p>
+			</li>
+			<li>
+				<p>Fußgänger, Tiere oder Objekte, die sich sehr nahe an den Ultraschallsensoren befinden.</p>
+			</li>
+			<li>
+				<p>Objekte im seitlichen Bereich zwischen dem vorderen Ultraschallsensor und dem hinteren Ultraschallsensor oder Annäherung an den Seitenraum.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Die Einparkhilfe ist ein Assistenzsystem. Der Betrieb der Einparkhilfe kann durch viele Faktoren (auch durch äußere Einflüsse) beeinträchtigt werden. Es liegt in der Verantwortung des Fahrers, vor und während des Einparkens stets die Vorder- und Rückansicht zu prüfen.</p>
+				</li>
+				<li>
+					<p>Ihre Neufahrzeug-Garantie deckt keine Unfälle oder Schäden am Fahrzeug ab, die auf eine Fehlfunktion der Einparkhilfe zurückzuführen sind.</p>
+				</li>
+				<li>
+					<p>Achten Sie beim Einparken auf die Nähe von Objekten, Fußgängern und vor allem Kindern. Einige Objekte können aufgrund ihrer Entfernung, Größe oder Materialbeschaffung nicht von den Ultraschallsensoren erkannt werden. Alle diese Eigenschaften können die Effektivität der Sensoren beeinträchtigen.</p>
+				</li>
+				<li>
+					<p>Die Einparkhilfe warnt Sie nicht in der Reihenfolge der Erkennung. Sie variiert je nach der Geschwindigkeit des Fahrzeugs oder der Form einer Person, eines Tieres oder eines Gegenstandes.</p>
+				</li>
+				<li>
+					<p>Wenn die Parkdistanzwarnung nicht ordnungsgemäß funktioniert, lassen Sie Ihr Fahrzeug von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0714.dita#CL4m_HEV-ca_ES-2027-t0714" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion und Vorsichtsmaßnahmen für die Einparkhilfe</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

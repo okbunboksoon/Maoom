@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0280">
+	<title>Kennzeichnung des Kältemittels für die Klimaanlage</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e00689">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e00690">
+								<title>Beispiel - Typ A</title>
+								<figgroup>
+									<image align="center" href="../../images/OGL3034405L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00691">
+								<title>Beispiel - Typ B</title>
+								<figgroup>
+									<image align="center" href="../../images/ONQ5EP035006.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e00692">
+			<li>
+				<p>Vorsicht</p>
+			</li>
+			<li>
+				<p>Klassifizierung des Kältemittels</p>
+			</li>
+			<li>
+				<p>Klassifizierung des Kompressoröls</p>
+			</li>
+			<li>
+				<p>Servicehandbuch</p>
+			</li>
+			<li>
+				<p>Menge des Kältemittels</p>
+			</li>
+			<li>
+				<p>CO<sub>2</sub>-Äquivalent des Kältemittels</p>
+			</li>
+		</ol>
+		<p>Auf der Kennzeichnung im Motorraum steht, welches Kältemittel in der Klimaanlage Ihres Fahrzeugs verwendet wird.</p>
+		<p>Siehe <xref href="CL4m_HEV-ca_ES-2027-t0031.dita#CL4m_HEV-ca_ES-2027-t0031"/> für weitere Einzelheiten.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0277.dita#CL4m_HEV-ca_ES-2027-t0277" role="parent" scope="local" type="concept">
+				<linktext>Klimaanlage</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

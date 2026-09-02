@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0396">
+	<title>ECO-Modus</title>
+	<conbody>
+		<ul>
+			<li>
+				<p>Die Logik der Motor- und Getriebesteuerung wird geändert, um den Kraftstoffverbrauch zu optimieren.</p>
+			</li>
+			<li>
+				<p>Die <term translate="no">ECO</term>-Kontrollleuchte leuchtet auf.</p>
+			</li>
+			<li>
+				<p>Bei einem Neustart aus dem <term translate="no">ECO</term>-Modus wird der <term translate="no">ECO</term>-Modus beibehalten.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>Der Kraftstoffverbrauch hängt vom Fahrverhalten des Fahrers und den Straßenbedingungen ab.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0395.dita#CL4m_HEV-ca_ES-2027-t0395" role="parent" scope="local" type="concept">
+				<linktext>DRIVE MODE</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

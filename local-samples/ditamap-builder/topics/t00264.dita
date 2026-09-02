@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legalnotice_europe-general_gen-mex_2023_20230101_00012" id="t00264">
+	<title id="e01887">Speedometer</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>speedometer</indexterm>
+				<indexterm>gauges 
+					<indexterm>speedometer</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01888">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01889">
+								<figgroup>
+									<image href="../../images/OOV035104.eps" align="center" placement="break" id="e01890"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The speedometer indicates the speed of the vehicle and is calibrated in kilometers per hour (km/h) and miles per hour (mph).</p>
+	</conbody>
+</concept>

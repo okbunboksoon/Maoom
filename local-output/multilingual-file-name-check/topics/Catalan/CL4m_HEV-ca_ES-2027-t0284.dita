@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0284">
+	<title id="e00698">Automatische Klimaanlage </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Automatische Klimaanlage</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e00699">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig expanse="page" id="e00700">
+								<title>Anzeige der Klimaanlage</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MH086010L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<fig expanse="page">
+			<title>Armaturenbrett</title>
+			<figgroup>
+				<image align="center" href="../../images/OCL4M034301N.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<ol outputclass="callout">
+			<li>
+				<p>Taste <term translate="no">SYNC</term></p>
+				<ul>
+					<li>
+						<p>Drücken Sie die Taste <term translate="no">SYNC</term>, um die Temperatur auf der Fahrer- und Fahrgastseite auf denselben Wert einzustellen.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Moduswahltaste</p>
+			</li>
+			<li>
+				<p>Gebläsedrehzahlregelung/Aus-Taste</p>
+			</li>
+			<li>
+				<p>Bildschirm des Infotainment-Systems Ein/Aus-Taste</p>
+			</li>
+			<li>
+				<p>Taste der Heizung für die Windschutzscheibe</p>
+			</li>
+			<li>
+				<p>Schalter Heckscheibenheizung</p>
+			</li>
+			<li>
+				<p>Frischluft-/Umlufttaste</p>
+			</li>
+			<li>
+				<p>Taste (<term translate="no">A/C</term>) Klimaanlage</p>
+			</li>
+			<li>
+				<p>Taste <term translate="no">AUTO</term> (automatische Steuerung)</p>
+			</li>
+			<li>
+				<p>Temperaturregelungshebel auf der Fahrerseite</p>
+			</li>
+			<li>
+				<p>Gebläsedrehzahlregler/Aus-Schalter</p>
+			</li>
+			<li>
+				<p>Moduswahlhebel</p>
+			</li>
+			<li>
+				<p>Temperaturregelungshebel auf der Beifahrerseite</p>
+			</li>
+			<li>
+				<p>Taste für die Frontscheibenheizung</p>
+			</li>
+		</ol>
+		<note type="caution">
+			<p>Der Betrieb des Gebläses in Position <term translate="no">ON</term> kann zur Entladung der Batterie führen. Benutzen Sie den Lüfter, wenn der Motor läuft.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0260-CH08.dita#CL4m_HEV-ca_ES-2027-t0260-CH08" role="parent" scope="local" type="concept">
+				<linktext>Bedienelemente und Funktionen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

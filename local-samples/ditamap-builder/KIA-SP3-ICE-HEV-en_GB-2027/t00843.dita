@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00843">
+	<title>Front wiper blade replacement</title>
+	<taskbody>
+		<context id="e04955">
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04956">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e04957">
+									<image href="images/N_SP3i26_B12_005_1_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To replace the wiper blade, lift the arm first and replace the windshield wiper blades as per procedure.</p>
+			<note type="note" id="e04958">
+				<p>Wiper arms</p>
+				<p>Do not allow the wiper arm to fall against the windshield, as it may crack or chip the glass.</p>
+			</note>
+		</context>
+		<steps id="e04959">
+			<step>
+				<cmd>Raise the wiper arm.</cmd>
+			</step>
+			<step>
+				<cmd>For Type A, lift up the wiper blade clip. Then pull down the blade assembly and remove it.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04960">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04961">
+											<title>Type A</title>
+											<image href="images/N_SP3i26_B12_006_1_E.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>For Type B, rotate the wiper blade in the direction of the arrow.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04962">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04963">
+											<title>Type B</title>
+											<image href="images/N_SP3i26_B12_090_I.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>For Type A, install the new blade assembly.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04964">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04965">
+											<title>Type A</title>
+											<image align="center" placement="break" scale="95" href="images/N_SP3i26_B12_007_E.jpg"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>For Type B, remove the front wiper blade by pressing the lock pin in the direction of the arrow.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04966">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04967">
+											<title>Type B</title>
+											<image align="center" placement="break" scale="95" href="images/N_SP3i26_B12_091_I.jpg"/>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<fig id="e04968">
+											<title>Type B</title>
+											<image align="center" placement="break" scale="95" href="images/N_SP3i26_B12_092_I.jpg"/>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>Make sure that both blade assemblies are installed firmly by trying to pull them slightly.</cmd>
+			</step>
+			<step>
+				<cmd>Return the wiper arms to the windshield.</cmd>
+			</step>
+			<step>
+				<cmd>Start the vehicle to the <term translate="no">ON</term> position to return the wiper arms to their normal operating position.</cmd>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00842.dita#t00842" role="parent" scope="local" type="concept">
+				<linktext>Blade replacement</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

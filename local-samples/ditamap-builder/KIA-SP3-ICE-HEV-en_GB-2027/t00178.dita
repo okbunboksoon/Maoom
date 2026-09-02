@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00178">
+	<title>High Beam Assist limitations</title>
+	<conbody>
+		<p>HBA may not work properly in the following situations:</p>
+		<ul>
+			<li>
+				<p>Light from another vehicle is not detected for any reason.</p>
+			</li>
+			<li>
+				<p>The headlights are dirty with dust, snow, or water.</p>
+			</li>
+			<li>
+				<p>The headlight is off but the fog light is on.</p>
+			</li>
+			<li>
+				<p>Your vehicle detects a lamp that is shaped like a vehicle headlight.</p>
+			</li>
+			<li>
+				<p>The headlamps are damaged or incorrectly repaired.</p>
+			</li>
+			<li>
+				<p>The headlamps are not aimed properly.</p>
+			</li>
+			<li>
+				<p>You are driving on a narrow, curved, rough, or steep road.</p>
+			</li>
+			<li>
+				<p>You are driving on a crossroad or curved road and a vehicle in front of you is partially visible.</p>
+			</li>
+			<li>
+				<p>There is a traffic light, reflective or flashing sign, or mirror ahead.</p>
+			</li>
+			<li>
+				<p>There is a temporary reflector or flash ahead from a construction area.</p>
+			</li>
+			<li>
+				<p>Road conditions are wet, icy, snowy, or otherwise poor.</p>
+			</li>
+			<li>
+				<p>A vehicle suddenly appears from around a curve.</p>
+			</li>
+			<li>
+				<p>A vehicle is tilted because of a flat tire or is being towed.</p>
+			</li>
+			<li>
+				<p>Light from a vehicle is not detected because of exhaust fumes, smoke, fog, snow, or other obstructions.</p>
+			</li>
+		</ul>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>The HBA function is only for your convenience and may not work properly at times. It is the responsibility of the driver to maintain safe driving practices and always watch the road.</p>
+				</li>
+				<li>
+					<p>HBA may not operate for 15 seconds after you start the vehicle or after you initialize or restart the front view camera.</p>
+				</li>
+				<li>
+					<p>When HBA does not operate normally, manually switch the headlights between high and low beam.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00176.dita#t00176" role="parent" scope="local" type="concept">
+				<linktext>High Beam Assist malfunction and limitations</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

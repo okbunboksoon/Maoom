@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00503">
+	<title>Vehicle weight</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle weight</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>This section will give you guidance on the proper loading of your vehicle to keep your loaded vehicle weight within its design rating capability. Properly loading your vehicle will help you use the vehicle’s design performance to maximum advantage. Before loading your vehicle, familiarize yourself with the following terms for determining your vehicle’s weight ratings, which are used in the vehicle’s specifications and on the certification label (if equipped):</p>
+		<section id="e02005">
+			<title>Base curb weight</title>
+			<p>This is the weight of the vehicle including all standard equipment. It does not include passengers, cargo, or optional equipment.</p>
+		</section>
+		<section id="e02006">
+			<title>Vehicle curb weight</title>
+			<p>This is the weight of the vehicle including high voltage battery and all standard equipment. It does not include passengers, cargo, or optional equipment.</p>
+		</section>
+		<section id="e02007">
+			<title>Cargo weight</title>
+			<p>This figure includes all weight added to the Base Curb Weight, including cargo and optional equipment.</p>
+		</section>
+		<section id="e02008">
+			<title>GAW (Gross axle weight)</title>
+			<p>This is the total weight placed on each axle (front and rear) including vehicle curb weight and all payload.</p>
+		</section>
+		<section id="e02009">
+			<title>GAWR (Gross axle weight rating)</title>
+			<p>This is the maximum allowable weight that can be carried by a single axle (front or rear). These numbers are shown on the certification label (if equipped).</p>
+			<p>The total load on each axle must never exceed its GAWR.</p>
+		</section>
+		<section id="e02010">
+			<title>GVW (Gross vehicle weight)</title>
+			<p>This is the base curb weight plus the actual cargo weight plus passengers.</p>
+		</section>
+		<section id="e02011">
+			<title>GVWR (Gross vehicle weight rating)</title>
+			<p>This is the maximum allowable weight of the fully loaded vehicle (including all options, equipment, passengers, and cargo). The GVWR is shown on the certification label (if equipped) located on the driver’s (or front passenger’s) door sill.</p>
+		</section>
+		<section id="e02012">
+			<title>Overloading</title>
+			<note type="warning" id="e02013">
+				<p importance="high">Vehicle weight</p>
+				<p>The gross axle weight rating (GAWR) and the gross vehicle weight rating (GVWR) for your vehicle are on the Certification Label attached to the driver’s (or front passenger’s) door. Exceeding these ratings can cause an accident or vehicle damage. You can calculate the weight of your load by weighing the items (and people) before putting them in the vehicle. Be careful not to overload your vehicle.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

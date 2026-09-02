@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00103">
+	<title>Panorama sunroof</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>panorama sunroof</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>If your vehicle is equipped with a sunroof, you can slide or tilt it with the sunroof switch located on the overhead console.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00540">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00541">
+								<image href="images/N_SP3i26_B04_025_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>You can only operate the sunroof when the ignition switch or <term translate="no">ENGINE START/STOP</term> button is in the <term translate="no">ON</term> or <term translate="no">START</term> position.</p>
+		<p>You can operate the sunroof for approximately 3 minutes after turning the ignition switch or <term translate="no">ENGINE START/STOP</term> button to the <term translate="no">ACC</term> or <term translate="no">LOCK/OFF</term> position. If you open the front doors, you cannot operate the power windows or sunroof, even within the 3-minute period.</p>
+		<note type="tip">
+			<p>Do not operate the sunroof when roof bars are installed on the vehicle or when there is luggage on the roof.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00033.dita#t00033" role="parent" scope="local" type="concept">
+				<linktext>Opening and Closing</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00217">
+	<title id="e00997">Adjusting the height up and down</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00998">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00999">
+								<title>Type A</title>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B020_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01000">
+								<title>Type B (GT)</title>
+								<figgroup>
+									<image align="center" href="../../images/N_CT27_C06_001_1_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>*Before adjusting the headrest, check the lever position for your seat type.</p>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Pull up the headrest to raise it. Push and hold the release button (1) to lower the headrest.</p>
+				</li>
+				<li>
+					<p>Pull the headrest fully forward and release it. (if equipped)</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Pull up the headrest to raise it. Push and hold the release button (1) to lower the headrest.</p>
+				</li>
+				<li>
+					<p>Pull the headrest to the front to adjust the position. If you pull the headrest forward as far as it will go, the headrest will return to its original position. (if equipped)</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

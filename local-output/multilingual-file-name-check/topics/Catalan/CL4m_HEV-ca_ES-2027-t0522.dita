@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0522">
+	<title>Fehlfunktion des Ausstiegsassistenten</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OJAPE073102L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Fahrerassistenz-System überprüfen.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn der Ausstiegsassistent nicht einwandfrei funktioniert, erscheint die Warnmeldung mehrere Sekunden auf dem Kombiinstrument und die Haupptwarnleuchte (<image align="left" href="../../images/WKIA_040.eps" scale="15" placement="inline"/>) wird auf dem Kombiinstrument angezeigt. Bei einer Fehlfunktion des Ausstiegsassistenten wird für eine bestimmte Zeit eine Warnmeldung auf der Anzeige des Kombiinstruments angezeigt und die Hauptwarnleuchte (<image align="left" href="../../images/WKIA_040.eps" scale="15" placement="inline"/>) leuchtet auf. Wenn es weiterhin nicht funktioniert, empfehlen wir, sich an einen Kia-Vertragshändler oder Servicepartner zu wenden.</p>
+		<p>Lassen Sie Ihr Fahrzeug von einer Fachwerkstatt warten. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OJAPE073083L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Warnleuchte des Seitenspiegels prüfen</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn die Außenrückspiegel-Warnleuchte nicht einwandfrei funktioniert, erscheint die Warnmeldung für einige Sekunden auf dem Kombiinstrument und die Haupt-Warnleuchte (<image align="left" href="../../images/WKIA_040.eps" scale="15" placement="inline"/>) erscheint auf dem Kombiinstrument.</p>
+		<p>Lassen Sie Ihr Fahrzeug von einer Fachwerkstatt warten. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0521.dita#CL4m_HEV-ca_ES-2027-t0521" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion und Einschränkungen des Ausstiegsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

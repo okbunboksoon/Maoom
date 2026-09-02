@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00201">
+	<title>Integrated memory system</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>integrated memory system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Integrated memory system for the driver’s seat is provided to store and recall the following memory settings with a simple button operation.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01523">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01524">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV035069.eps" placement="break" width="2.244in" id="e01525"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e01526">
+			<li>
+				<p>Driver’s seat position</p>
+			</li>
+			<li>
+				<p>Outside rearview mirror</p>
+			</li>
+			<li>
+				<p>Head-Up Display (HUD)</p>
+			</li>
+		</ul>
+		<note type="warning" id="e01527">
+			<p>Never attempt to operate the integrated memory system while the vehicle is moving.</p>
+			<p>This could result in loss of control, and an accident causing death, serious injury, or property damage.</p>
+		</note>
+		<note deliveryTarget="except_print" type="note" id="e01528">
+			<ul id="e01529">
+				<li>
+					<p>If the battery is disconnected, the memory settings will be erased.</p>
+				</li>
+				<li>
+					<p>If integrated memory system does not operate normally, have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner..</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

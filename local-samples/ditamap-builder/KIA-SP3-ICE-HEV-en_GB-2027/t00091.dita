@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00091">
+	<title>How to use the smart tailgate with auto open</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>smart tailgate with auto open
+					<indexterm>how to use</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>You can open the tailgate with no-touch activation under the following circumstances:</p>
+		<ul>
+			<li>
+				<p>After 15 seconds, when all doors are closed and locked</p>
+			</li>
+			<li>
+				<p>When you are positioned in the detecting area for more than 3 seconds</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>The smart tailgate with <term translate="no">AUTO</term> open does not operate when:</p>
+			<ul>
+				<li>
+					<p>The smart key is detected within 15 seconds after the doors are closed and locked, and is continuously detected afterward.</p>
+				</li>
+				<li>
+					<p>The smart key is detected within 15 seconds after the doors are closed and locked, and is 1.5 m (60 in) from the front door handles (for vehicles equipped with Welcome Light).</p>
+				</li>
+				<li>
+					<p>A door is not locked or closed.</p>
+				</li>
+				<li>
+					<p>The smart key is inside the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+		<ol>
+			<li><ph importance="high">Setting</ph><itemgroup>
+					<p>To activate the smart tailgate with <term translate="no">AUTO</term> open, go to <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Door</uicontrol><uicontrol>Smart tailgate</uicontrol></menucascade> in the infotainment system.</p></itemgroup></li>
+			<li><ph importance="high">Detect and alert</ph><itemgroup>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00443">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e00444">
+											<image href="images/N_SP327_D04_008_1.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>If you are positioned in the detecting area (20–40 in [50–100 cm] behind the vehicle) while carrying a smart key, the hazard warning lights will blink and the chime will sound to alert you that the smart key has been detected. The tailgate will open.</p>
+					<note type="note">
+						<p>Do not approach the detecting area if you do not want the tailgate to open. If you have unintentionally entered the detecting area and the hazard lights and chime start to operate, leave the detecting area with the smart key in your possession. The tailgate will stay closed.</p>
+					</note></itemgroup></li>
+			<li><ph importance="high">Automatic opening</ph><itemgroup>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00445">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e00446">
+											<image href="images/N_SP327_D04_008_1.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>The hazard warning lights will blink and the chime will sound 6 times, and then the tailgate will open.</p>
+					<note type="warning">
+						<ul>
+							<li>
+								<p>Make sure you close the tailgate before driving your vehicle.</p>
+							</li>
+							<li>
+								<p>Make sure there are no people or objects around the tailgate before opening or closing it.</p>
+							</li>
+							<li>
+								<p>Make sure objects in the rear cargo area do not come out when opening the tailgate on a slope. This may cause serious injury.</p>
+							</li>
+							<li>
+								<p>Make sure to deactivate the smart tailgate with <term translate="no">AUTO</term> open when washing your vehicle. Otherwise, the tailgate may open accidentally.</p>
+							</li>
+							<li>
+								<p>Keep the key out of reach of children. Children may accidentally open the smart tailgate with <term translate="no">AUTO</term> open while playing around the rear area of the vehicle.</p>
+							</li>
+						</ul>
+					</note>
+					<note type="note">
+						<p>tailgate gas lifters</p>
+						<p>Make sure to close the tailgate before driving your vehicle. Possible damage to the tailgate gas lifters and attached hardware may occur if you do not close the tailgate prior to driving.</p>
+					</note></itemgroup></li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00090.dita#t00090" role="parent" scope="local" type="concept">
+				<linktext>Smart tailgate with auto open</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00851">
+	<title id="e05317">Tire specification and pressure label</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>tire specification and pressure label</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="table_sz4_m3s_n3c">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05126">
+								<title>Type A</title>
+								<figgroup>
+									<image href="../../images/OOV085003.eps" align="center" height="1.740in" placement="break" id="e05127"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="fig_m1w_k3s_n3c">
+								<title>Type B</title>
+								<figgroup>
+									<image href="../../images/OOV085002.eps" align="center" height="1.740in" placement="break" id="image_n1w_k3s_n3c"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The tires supplied on your new vehicle are chosen to provide the best performance for normal driving.</p>
+		<p>The tire label located on the driver’s (of front passenger’s) side center pillar gives the tire pressures recommended for your vehicle.</p>
+	</conbody>
+</concept>

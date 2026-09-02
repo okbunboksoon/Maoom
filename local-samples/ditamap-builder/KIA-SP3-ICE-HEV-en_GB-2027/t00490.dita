@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00490">
+	<title>Lane Keeping Assist</title>
+	<conbody>
+		<p>The green indicator (<image href="images/WKIA_198.jpg" scale="15" align="left" placement="inline"/>) light blinks on the instrument cluster, and the steering wheel makes adjustments to keep the vehicle inside the lane.</p>
+		<p>Lane Keeping Assist can activate in the following conditions.</p>
+		<ul id="e03329">
+			<li>
+				<p>Your driving speed: Approximately 60-200 km/h (40-120 mph)</p>
+			</li>
+			<li>
+				<p>Road conditions meet the operating requirements (e.g., lane width, road curvature, etc.)</p>
+			</li>
+		</ul>
+		<note type="warning" id="e03330">
+			<p>Lane Keeping Assist will not operate when the vehicle speed is below 55 km/h (35 mph) or exceeds 210 km/h (130 mph).</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00488.dita#t00488" role="parent" scope="local" type="concept">
+				<linktext>Warning and control</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

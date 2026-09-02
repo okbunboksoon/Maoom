@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00210">
+	<title>Returning relaxion comfort seat</title>
+	<shortdesc/>
+	<conbody>
+		<section deliveryTarget="except_print" id="e01312">
+			<title>Operation</title>
+			<ul id="e01313">
+				<li>
+					<p>While the seat is in the relaxion comfort seat position, press the front portion of the relaxion comfort seat switch (1) for more than approximately 1 second.</p>
+					<p>The seat cushion and seatback are returned to their original positions in the reverse order of the relaxion seat operation.</p>
+					<ul id="e01314">
+						<li>
+							<p>Driver’s seat: Seat position when the last shift position is in P (Park)</p>
+						</li>
+						<li>
+							<p>Passenger’s seat: Stored seat position (initial set position)</p>
+						</li>
+					</ul>
+					<p>Do not operate both switches at the same time. It may damage the relaxion comfort seat system.</p>
+				</li>
+			</ul>
+			<note type="caution" id="e01315">
+				<p>Do not operate both switches at the same time. It may damage the relaxion comfort seat system.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00208.dita#t00208" role="parent" scope="local" type="concept">
+				<linktext>Relaxion comfort seat</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

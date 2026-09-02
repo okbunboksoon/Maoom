@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00303">
+	<title>High Beam Assist operation</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>high beam assist (HBA) 
+					<indexterm>operation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Display and control</title>
+			<ul>
+				<li>
+					<p>After selecting 'High Beam Assist' in the Settings menu, High Beam Assist will operate by following the procedure below.</p>
+					<ul>
+						<li>
+							<p>Place the headlamp switch in the <term translate="no">AUTO</term> position and push the headlamp lever towards the instrument cluster. High Beam Assist (<image href="../../images/WKIA_048.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02297"/>) indicator light will appear on the cluster and the function will be enabled.</p>
+						</li>
+						<li>
+							<p>When the function is enabled, high beam will turn on when vehicle speed is above 30 km/h (20 mph). When vehicle speed is below 20 km/h (12 mph), high beam will not turn on.</p>
+						</li>
+						<li>
+							<p>The High Beam (<image href="../../images/WKIA_046.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02298"/>) indicator light will appear on the cluster when high beam is on.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>When High Beam Assist is operating, if the headlamp lever or switch is used, the function operates as follows:</p>
+					<ul>
+						<li>
+							<p>If the headlamp lever is pulled towards you when the high beam is off, the high beam will turn on without High Beam Assist canceled. When you let go of the headlamp lever, the lever will move to the middle and the high beam will turn off.</p>
+						</li>
+						<li>
+							<p>If the headlamp lever is pulled towards you when the high beam is on by High Beam Assist, low beam will be on and the function will turn off.</p>
+						</li>
+						<li>
+							<p>If the headlamp switch is placed from <term translate="no">AUTO</term> to another position (headlamp/position/off), High Beam Assist will turn off and the corresponding lamp will turn on.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>When High Beam Assist is operating, high beam switches to low beam if any of the following conditions occur:</p>
+					<ul>
+						<li>
+							<p>When the headlamp of an oncoming vehicle is detected.</p>
+						</li>
+						<li>
+							<p>When the tail lamp of a vehicle in front is detected.</p>
+						</li>
+						<li>
+							<p>When the headlamp or tail lamp of a motorcycle or a bicycle is detected.</p>
+						</li>
+						<li>
+							<p>When the surrounding ambient light is bright enough that high beams are not required.</p>
+						</li>
+						<li>
+							<p>When streetlights or other lights are detected.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section id="e02299">
+			<title>High Beam Control Standby</title>
+			<p>When High Beam Assist is on and the vehicle speed is outside the operating range but within a certain threshold, the high beam will not turn on and the system enters High Beam Control Standby mode. The white High Beam Assist indicator (<image href="../../images/WKIA_048.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02300"/>) will appear.</p>
+			<ul id="e02301">
+				<li>
+					<p> <term>High Beam Control Standby Speed</term>: below 20 km/h or over 210 km/h (below 12 mph or over 130 mph)</p>
+				</li>
+			</ul>
+			<note type="note" id="e02302">
+				<ul id="e02303">
+					<li>
+						<p>Images and colors in the instrument cluster may appear different depending on the instrument cluster options or themes.</p>
+					</li>
+					<li>
+						<p>Even when driving at a speed lower than the operating speed range during High Beam Control operation, the system remains in High Beam Control operation if the speed exceeds the standby speed.</p>
+					</li>
+					<li>
+						<p>Even when driving at a speed higher than the operating speed range during High Beam Control operation, the system remains in High Beam Control operation if the speed is lower than the standby speed.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

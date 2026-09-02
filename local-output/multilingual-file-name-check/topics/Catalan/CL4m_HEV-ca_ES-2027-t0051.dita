@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0051">
+	<title>Funktionsbeschränkungen</title>
+	<conbody>
+		<ul>
+			<li>
+				<p>Der digitale Schlüssels 2 funktioniert unter den folgenden Bedingungen nicht:</p>
+				<ul>
+					<li>
+						<p>Die Batterie des Smartphones oder die Batterie des Fahrzeugs ist ausgelaufen</p>
+					</li>
+					<li>
+						<p>NFC oder Bluetooth ist in den Einstellungen des Smartphones ausgeschaltet</p>
+					</li>
+					<li>
+						<p>Eine Kreditkarte wird auf der Rückseite Ihres Smartphones eingesteckt oder es wird eine Metall- oder dicke Smartphonehülle verwendet</p>
+					</li>
+					<li>
+						<p>Der Kartenschlüssel (ausstattungsabhängig) wird mit anderen Karten oder in einer Brieftasche oder einem Kartenhalter verwendet.</p>
+					</li>
+					<li>
+						<p>Es gibt elektronische Interferenzen durch andere Fahrzeuge, Gegenstände, o.ä.</p>
+					</li>
+					<li>
+						<p>Es kann zu einem Kommunikationsfehler mit der Digital-Key 2 NFC-Funktion kommen, wenn die Metallabdeckung oder das Kommunikationsgerät am Smartphone befestigt ist. Wenn eine Fehlfunktion des Digital-Key 2 vorliegt, entfernen Sie die am Smartphone befestigte Abdeckung und versuchen Sie es erneut.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Das Fahrzeug kann möglicherweise nicht über das Smartphone gesteuert werden, wenn einer der folgenden Fälle eintritt:</p>
+				<ul>
+					<li>
+						<p>Grundlegende und notwendige Funktionen des Smartphones sind in Betrieb (gewöhnlicher Anruf, dringender Anruf, Audio oder NFC-Zahlung)</p>
+					</li>
+					<li>
+						<p>Verwendung eines kabellosen Kopfhörers (gewöhnlicher Anruf, dringender Anruf, oder Audio)</p>
+					</li>
+					<li>
+						<p>Wenn die Funktion der Digital-Key 2-App aufgrund der Standardeinstellungen des Smartphones oder der Prioritätsrichtlinie für den Start der App durch den Hersteller eingeschränkt ist</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<note type="note" id="e00132">
+			<p>Wenn Sie ein als digitaler Schlüssel registriertes UWB-fähiges Smartphone für einen längeren Zeitraum im Bluetooth-Verbindungsbereich des Fahrzeugs mitführen, kann es zu Verbrauch der Niederspannungsbatterie kommen.</p>
+			<p>Um eine Entladung der Batterie zu verhindern, schalten Sie die Funktion für den passiven Eintritt des digitalen Schlüssels in der Wallet-App des Smartphones aus.</p>
+		</note>
+		<section otherprops="legalnotice_europe-general_gen-mid_2023_20230101_0001412" id="e00133">
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00134">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row>
+							<entry colname="col1">
+								<fig id="e00135">
+									<figgroup>
+										<image align="center" href="../../../images/KIAPB183.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section base="Top" id="e00136">
+			<fig id="e00137">
+				<figgroup>
+					<image align="center" href="../../../images/KIAPB184.eps" scale="95" placement="break"/>
+				</figgroup>
+			</fig>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0043.dita#CL4m_HEV-ca_ES-2027-t0043" role="parent" scope="local" type="concept">
+				<linktext>Digitaler Schlüssel 2 </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

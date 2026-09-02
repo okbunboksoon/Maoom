@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0527">
+	<title>Geschwindigkeitsbegrenzung einstellen</title>
+	<conbody>
+		<ol>
+			<li>
+				<p>Halten Sie die Fahrassistenz-Taste (<image align="left" href="../../images/WKIA_080.eps" scale="15" placement="inline"/>) bei der gewünschten Geschwindigkeit gedrückt. Die Kontrollleuchte für die Geschwindigkeitsbegrenzung (<image align="left" href="../../images/WKIA_081.eps" scale="15" placement="inline"/>) leuchtet am Kombiinstrument auf.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M054007N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Drücken Sie den Schalter (+) nach oben oder den Schalter (-) nach unten und lassen Sie ihn bei der gewünschten Geschwindigkeit los.</p>
+				<p>Drücken Sie den Schalter (+) nach oben oder den Schalter (-) nach unten und halten Sie ihn gedrückt. Die Geschwindigkeit erhöht sich bzw. verringert sich um ein Vielfaches von 10 km/h (5 mph).</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M054008N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Die eingestellte Geschwindigkeitsbegrenzung wird auf dem Kombiinstrument angezeigt.</p>
+				<p>Wenn Sie schneller als mit der voreingestellten Geschwindigkeit fahren möchten, betätigen Sie das Gaspedal.</p>
+				<p>Dann blinkt die eingestellte Höchstgeschwindigkeit und es ertönt ein Warnsignal, bis Sie wieder die Höchstgeschwindigkeit einhalten.</p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image align="center" href="../../images/OCL4M054171N.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+		</ol>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Um schneller als die eingestellte Geschwindigkeitsbegrenzung zu fahren, drücken Sie das Gaspedal tief durch, bis die Kickdown-Funktion aktiviert wird.</p>
+				</li>
+				<li>
+					<p>Die eingestellte Höchstgeschwindigkeit hängt von den technischen Daten des Fahrzeugs ab. Die eingestellte Geschwindigkeit kann nicht über die eingestellte Höchstgeschwindigkeit hinaus erhöht werden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0526.dita#CL4m_HEV-ca_ES-2027-t0526" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des manuellen Geschwindigkeitsbegrenzungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

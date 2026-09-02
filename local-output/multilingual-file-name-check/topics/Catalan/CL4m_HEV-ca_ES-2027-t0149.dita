@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0149">
+	<title>Stromsparfunktion</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Beleuchtung
+					<indexterm>Stromsparfunktion</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Diese Funktion soll verhindern, dass die Batterie entladen wird, wenn die Leuchten auf <term translate="no">ON</term> verblieben sind.</p>
+		<p>Das System schaltet das Standlicht automatisch nach Abschalten des Motors und Öffnen der Fahrertür ab.</p>
+		<p>Die Positionsleuchten bleiben jedoch auch bei geöffneter Fahrertür auf <term translate="no">ON</term>, wenn der Lichtschalter nach dem Abstellen des Motors betätigt wird.</p>
+		<p>Falls erforderlich, können Sie die Lampen eingeschaltet lassen, indem Sie nach dem Abstellen des Motors die Positionsleuchten <term translate="no">OFF</term> und <term translate="no">ON</term> erneut mit dem Scheinwerferschalter an der Lenksäule einschalten.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0148.dita#CL4m_HEV-ca_ES-2027-t0148" role="parent" scope="local" type="concept">
+				<linktext>Beleuchtung </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

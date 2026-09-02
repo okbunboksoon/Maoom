@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00159">
+	<title>Utility information view</title>
+	<conbody>
+		<section id="e00785">
+			<title>Low pressure warning display</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00786">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00787">
+									<image href="images/N_SP3i25_C00_008_IR.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e00788">
+									<li>
+										<p><uicontrol>Low tire pressure</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This warning message displays when the tire pressure is low and indicates which tire is low.</p>
+			<p>For more details, refer to <xref href="t00747.dita#t00747"/>.</p>
+		</section>
+		<section base="Top" id="e00789">
+			<title id="e00790">Fuel economy </title>
+			<p>This information is always displayed at the bottom center of the Full LCD information cluster.</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00791">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00792">
+									<image href="images/OCL4M035147C.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e00793">
+									<li>
+										<p><uicontrol>Average fuel economy</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>Instant fuel economy</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<sectiondiv id="e00794"><ph id="e00795">Average fuel economy </ph>
+				<ul id="e00796">
+					<li id="e00797">
+						<p><indexterm>trip information (trip computer)<indexterm>fuel economy</indexterm></indexterm>Average fuel economy is calculated using the total driving distance and fuel consumption of the last trip.</p>
+						<ul id="e00798">
+							<li id="e00799">
+								<p>Fuel economy range: 0–99.9 mpg or km/L, L/100 km</p>
+							</li>
+						</ul>
+						<note type="tip" id="e00800">
+							<p>For more accurate calculation, the average fuel economy is not displayed if you do not drive the vehicle for more than 10 seconds or 50 m (0.03 mi) after you turn the <term translate="no">ENGINE START/STOP</term> button <term translate="no">ON</term> position.</p>
+						</note>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv id="e00801"><ph id="e00802">Instant fuel economy </ph>
+				<ul id="e00803">
+					<li>
+						<p>This mode displays the instant fuel economy during the last few seconds when the vehicle speed is more than 10 km/h (6.2 mph).</p>
+						<ul id="e00804">
+							<li>
+								<p>Fuel economy range: 0.0–50.0 mpg or 0.0–30 km/L, L/100 km</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</sectiondiv>
+			<note id="e00805">
+				<p>Instant fuel economy gauges may differ depending on the vehicle specifications.</p>
+			</note>
+		</section>
+		<section base="Top" id="e00806">
+			<title id="e00807">Drive Info display </title>
+			<p><indexterm>trip information (trip computer)<indexterm>drive info display</indexterm></indexterm>The Drive Info display shows the trip distance, average fuel efficiency, and total driving time once per ignition cycle.</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00808">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00809">
+									<image href="images/OCL4M035148C.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e00810">
+									<li>
+										<p><uicontrol>Current Trip</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>Trip</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>Timer</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>Avg.</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul id="e00811">
+				<li id="e00812">
+					<p>After the vehicle runs for more than 300 m (0.19 miles), the Fuel efficiency is calculated.</p>
+				</li>
+				<li id="e00813">
+					<p>The information will automatically reset when the driver’s door is opened after the ignition is turned off, or approximately 3 minutes after the ignition is turned off.</p>
+				</li>
+				<li id="e00814">
+					<p>If you press the “OK” button for more than approximately 1 second after the driving information is displayed, the information will be reset.</p>
+				</li>
+				<li id="e00815">
+					<p>Information is accumulated when the engine is running, even if the vehicle is not in motion.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e00816">
+			<title>Information since refueling</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00817">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00818">
+									<image href="images/OCL4M035149C.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e00819">
+									<li>
+										<p><uicontrol>Since Refueling</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>Trip</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>Timer</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>Avg.</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This display shows the trip distance, the average fuel efficiency, and the instant fuel efficiency (or the total driving time) since refueling.</p>
+			<ul id="e00820">
+				<li>
+					<p>After the vehicle runs for more than 300 m (0.19 miles), the information since refueling is calculated.</p>
+				</li>
+				<li>
+					<p>If you press the “OK” button for more than 1 second after the information since refueling is displayed, the information is reset.</p>
+				</li>
+				<li>
+					<p>When driving after refueling, the information is automatically reset.</p>
+				</li>
+				<li>
+					<p>Information is accumulated when the engine is running, even if the vehicle is not in motion.</p>
+				</li>
+			</ul>
+			<note type="tip" id="e00821">
+				<p>The vehicle must be driven for at least 300 m (0.19 miles) since the last ignition cycle before the average accumulated driving information is recalculated.</p>
+			</note>
+		</section>
+		<section id="e00822">
+			<title id="e00823">Accumulated driving information mode </title>
+			<p><indexterm>trip information (trip computer)<indexterm>accumulated driving information mode</indexterm></indexterm>This display shows the accumulated trip distance, the average fuel efficiency, and the total driving time.</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00824">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00825">
+									<image href="images/OCL4M035150C.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e00826">
+									<li>
+										<p><uicontrol>Since Last Reset</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>Trip</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>Timer</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>Avg.</uicontrol></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul id="e00827">
+				<li id="e00828">
+					<p>After the vehicle runs for more than 300 m (0.19 miles), the Accumulated information is calculated.</p>
+				</li>
+				<li id="e00829">
+					<p>If you press the “OK” button for more than 1 second after the Cumulative Information is displayed, the information will be reset.</p>
+				</li>
+				<li id="e00830">
+					<p>Information is accumulated when the engine is running, even if the vehicle is not in motion.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00156.dita#t00156" role="parent" scope="local" type="concept">
+				<linktext>LCD display modes </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

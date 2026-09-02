@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00014">
+	<title>Gross vehicle weight</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>gross vehicle weight</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e00031">
+			<tgroup cols="6">
+				<colspec colnum="1" colwidth="1*" colname="col1"/>
+				<colspec colnum="2" colwidth="1*" colname="col2"/>
+				<colspec colnum="3" colwidth="1*" colname="col3"/>
+				<colspec colnum="4" colname="col4" colwidth="1*"/>
+				<colspec colnum="5" colname="col5" colwidth="1*"/>
+				<colspec colnum="6" colname="col6" colwidth="1*"/>
+				<thead>
+					<row>
+						<entry namest="col1" nameend="col6" align="center" valign="middle">
+							<p>Gross Vehicle Weight [kg (lbs.)]</p>
+						</entry>
+					</row>
+					<row>
+						<entry namest="col1" nameend="col2" align="center" valign="middle">
+							<p>Standard Type</p>
+						</entry>
+						<entry namest="col3" nameend="col6" align="center" valign="middle">
+							<p>Extended Type</p>
+						</entry>
+					</row>
+					<row>
+						<entry namest="col1" nameend="col2" align="center" valign="middle">
+							<p>2WD</p>
+						</entry>
+						<entry namest="col3" nameend="col4" align="center" valign="middle">
+							<p>2WD</p>
+						</entry>
+						<entry namest="col5" nameend="col6" align="center" valign="middle">
+							<p>AWD</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry align="center" valign="middle">
+							<p>17 inch tire</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>19 inch tire</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>17 inch tire</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>19 inch tire</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>19 inch tire</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>20 inch tire</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>2,270 (5,004)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2,270 (5,004)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2,355 (5,192)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2,355 (5,192)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2,460 (5,423)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2,460 (5,423)</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>* Please contact your local authorized Kia dealer for the specs of your region.</p>
+	</conbody>
+</concept>

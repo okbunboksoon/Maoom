@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00861">
+	<title>Brake fluid</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>replacing fluid 
+					<indexterm>brake fluid</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25G001_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Clean the area around the reservoir cap.</p>
+				</li>
+				<li>
+					<p>Periodically check that the fluid level in the brake fluid reservoir is between <term translate="no">MIN</term> and <term translate="no">MAX</term>. The level will fall as the vehicle’s mileage increases. This is a normal condition associated with the wear of the brake linings.</p>
+				</li>
+			</ul>
+			<p>Use only the specified brake fluid. (Refer to <xref type="concept" href="t00020.dita#t00020">Recommended lubricants and capacities</xref>.)</p>
+			<note type="tip">
+				<p>If the fluid level is excessively low, have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</note>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>In the event the brake system requires frequent additions of fluid, have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>When changing and adding brake fluid, handle it carefully. Do not let it come in contact with your eyes. If brake fluid should come in contact with your eyes, immediately flush them with a large quantity of fresh tap water. Have your eyes examined by a doctor as soon as possible.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution">
+				<p>Do not allow brake fluid to contact the vehicle’s body paint, as paint damage will result. Brake fluid, which has been exposed to open air for an extended time should never be used as its quality cannot be guaranteed. It should be properly disposed. Don't put in the wrong kind of fluid. A few drops of mineral-based oil in your brake system can damage brake system parts.</p>
+			</note>
+			<note type="note">
+				<p>To maintain your vehicle’s best brake and ABS/ESC performance, use Kia genuine brake fluid or those of an equivalent standard brake fluid as in the specification.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

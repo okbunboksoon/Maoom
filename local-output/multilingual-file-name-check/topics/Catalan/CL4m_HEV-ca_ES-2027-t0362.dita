@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0362">
+	<title>Funktionsvoraussetzungen für den Leerlaufassistenten</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Leerlaufassistent (SSC) (MHEV-Motor)
+					<indexterm>Funktionsvoraussetzungen für den Leerlaufassistenten</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Der Leerlaufassistent wird unter den folgenden Bedingungen aktiviert.</p>
+		<ul>
+			<li>
+				<p><term translate="no">ECO</term> ist als Fahrmodus ausgewählt.</p>
+			</li>
+			<li>
+				<p>Die Fahrzeuggeschwindigkeit bleibt konstant.</p>
+			</li>
+			<li>
+				<p>Das Bremspedal oder das Gaspedal wird nicht betätigt.</p>
+			</li>
+		</ul>
+		<p>Bei aktiviertem Leerlaufassistenten erscheint auf dem Kombiinstrument die Meldung „Leerlaufassistent“.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0361.dita#CL4m_HEV-ca_ES-2027-t0361" role="parent" scope="local" type="concept">
+				<linktext>Leerlaufassistent (SSC) (MHEV-Motor)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

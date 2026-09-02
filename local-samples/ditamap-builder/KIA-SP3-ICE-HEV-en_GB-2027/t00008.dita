@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legalnotice_europe-general_egall_2023_20230101_00008" id="t00008">
+	<title>Importer information for United Kingdom</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>importer information for United Kingdom</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<image href="images/N_CT25Y094_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Name: Kia UK Limited</p>
+		<p>Address: Kia UK Limited, Walton Green, Walton-On-Thames, Surrey, KT12 1FJ, UK</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00002.dita#t00002" role="parent" scope="local" type="concept">
+				<linktext>Introduction </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

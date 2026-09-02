@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00767">
+	<title>Pan-European eCall System operation</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04971">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04972">
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV065023L.eps" placement="break" width="2.243in" id="e04973"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e04974">
+								<li>
+									<p>SOS warning light</p>
+								</li>
+								<li>
+									<p>SOS button</p>
+								</li>
+								<li>
+									<p>Microphone</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>SOS warning light: The SOS warning light appears on the instrument cluster for 3 seconds when the vehicle is in <term>POWER ON</term> position. Other than that, they will disappear during normal operation of the vehicle.</p>
+		<p>SOS button: The driver/passenger makes an emergency call to the Public Safety Answering Point (PSAP) by pressing the button.</p>
+		<p>If there is a problem with the system, the SOS warning light will remain illuminated on the instrument cluster.</p>
+	</conbody>
+</concept>

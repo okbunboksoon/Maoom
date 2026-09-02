@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00521">
+	<title>Warning Methods</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03446">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03447">
+								<image href="images/N_SP3i25_C00_067_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03448">
+								<li>
+									<p><uicontrol>Driver Assistance</uicontrol></p>
+								</li>
+								<li>
+									<p><uicontrol>Warning Methods</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To change the Warning Methods settings while the vehicle is <term translate="no">ON</term>, tap <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver Assistance</uicontrol><uicontrol>Warning Methods</uicontrol></menucascade> on the infotainment system screen. You can change the following settings:</p>
+		<ul>
+			<li>
+				<p><uicontrol>Warning Volume</uicontrol>: Adjusts the volume of the warning sound.</p>
+			</li>
+			<li>
+				<p><uicontrol>Driving Safety Priority</uicontrol>: Lowers all other audio volumes when the Driving Safety system sounds a warning.</p>
+			</li>
+		</ul>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>Your <uicontrol>Warning Methods</uicontrol> settings may apply to the Warning Methods of other driver assistance systems.</p>
+				</li>
+				<li>
+					<p><uicontrol>Warning Methods</uicontrol> maintain their last settings when you turn <term translate="no">OFF</term> and restart the vehicle.</p>
+				</li>
+				<li>
+					<p>The setting menu may not be available for your vehicle depending on your vehicle features and specifications.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" id="e03449">
+			<ul id="e03450">
+				<li>
+					<p>When towing a trailer or installing a carrier, vehicle stability may be reduced. Disable the function if necessary and always drive safely with caution.</p>
+				</li>
+				<li>
+					<p>Do not use the system when towing another vehicle or when installing equipment that may affect sensor performance or vehicle balance. The system may not operate properly.</p>
+				</li>
+				<li>
+					<p>When connecting a trailer or carrier, set the trailer or carrier menu (if equipped). If the driver manually sets the menu or the trailer or carrier connection is automatically recognized through genuine parts, the functions of the driver assistance system may be limited. Please refer to <xref href="t00734.dita#t00734"/> and always drive with caution.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00519.dita#t00519" role="parent" scope="local" type="concept">
+				<linktext>Safe Exit Warning settings</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

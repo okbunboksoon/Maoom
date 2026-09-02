@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00411">
+	<title>Instrument cluster display for warning message</title>
+	<shortdesc>The instrument cluster displays each of the following warning messages when applicable:</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>AUTO HOLD
+					<indexterm>warning messages</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>When you apply the <term translate="no">EPB</term> from <term translate="no">AUTO HOLD</term>:</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02785">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02786">
+								<image href="images/OCL4M035106N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02787">
+								<li>
+									<p><uicontrol>Parking brake automatically engaged</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the conversion from <term translate="no">AUTO HOLD</term> to the <term translate="no">EPB</term> does not work properly:</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02788">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02789">
+								<image href="images/OCL4M035107N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02790">
+								<li>
+									<p><term translate="no">AUTO HOLD</term> turning Off! Press brake pedal</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note" id="e02791">
+			<p>When this message appears, the <term translate="no">AUTO HOLD</term> function and the <term translate="no">EPB</term> may not operate. For your safety, engage the brake pedal.</p>
+		</note>
+		<p>If you do not engage the brake pedal when you release the <term translate="no">AUTO HOLD</term> function by pressing the <term translate="no">AUTO HOLD</term> button, a warning sounds and a message appears:</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02792">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02793">
+								<image href="images/OCL4M035105N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02794">
+								<li>
+									<p>Press brake pedal to deactivate <term translate="no">AUTO HOLD</term></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When you press the <term translate="no">AUTO HOLD</term> button while the driver side door and hood are open, a warning sounds and a message appears:</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02795">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02796">
+								<image href="images/OCL4M035109N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02797">
+								<li>
+									<p><term translate="no">AUTO HOLD</term> conditions not met. Close door and hood.</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Press the <term translate="no">AUTO HOLD</term> button after closing the driver side door and hood.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00408.dita#t00408" role="parent" scope="local" type="concept">
+				<linktext>AUTO HOLD</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Top" id="CL4m_HEV-ca_ES-2027-t0808">
+	<title>Normaler Wartungsplan – Für alle Regionen, einschließlich Russland, außer Europa</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Wartungsplan
+					<indexterm>Normaler Wartungsplan – außer Europa (einschließlich Russland)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Die folgenden Wartungsarbeiten müssen durchgeführt werden, um die ordnungsgemäße Funktion der Abgasregelung und die Leistung sicherzustellen. Bewahren Sie die Nachweise aller Abgasuntersuchungen auf, um Ihre Garantie aufrechtzuerhalten. Wenn sowohl eine Fahrleistung als auch eine Frist angegeben sind, richtet sich das Wartungsintervall danach, welches Limit zuerst erreicht ist.</p>
+		<table frame="all" rowsep="1" colsep="1" pgwide="1" outputclass="formatc">
+			<desc>
+				<p><term translate="no">I</term>: Prüfen und bei Bedarf einstellen, korrigieren, reinigen oder ersetzen.</p>
+				<p><term translate="no">R</term>: Ersetzen oder wechseln.</p>
+			</desc>
+			<tgroup cols="11" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="0.794*"/>
+				<colspec colnum="2" colname="col2" colwidth="0.693*"/>
+				<colspec colnum="3" colname="col3" colwidth="1.170*"/>
+				<colspec colnum="4" colname="col4" colwidth="0.253*"/>
+				<colspec colnum="5" colname="col5" colwidth="0.253*"/>
+				<colspec colnum="6" colname="col6" colwidth="0.253*"/>
+				<colspec colnum="7" colname="col7" colwidth="0.253*"/>
+				<colspec colnum="8" colname="col8" colwidth="0.253*"/>
+				<colspec colnum="9" colname="col9" colwidth="0.253*"/>
+				<colspec colnum="10" colname="col10" colwidth="0.253*"/>
+				<colspec colnum="11" colname="col11" colwidth="0.253*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col11" align="left" valign="middle">
+							<p>Anzahl der Monate oder Fahrstrecke, je nach dem, was zuerst eintrifft</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Monate</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>12</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>24</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>36</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p>48</p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>60</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p>72</p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>84</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p>96</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Meilen x 1000</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>10</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>20</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>30</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p>40</p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>50</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p>60</p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>70</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p>80</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Km x 1000</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>15</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>30</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>45</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p>60</p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>75</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p>90</p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>105</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p>120</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1" morerows="13" align="left" valign="middle">
+							<p>Motoröl und Motorölfilter<fn><p importance="high">Motoröl und Motorölfilter</p><p>Da es normal ist, dass Motoröl während der Fahrt verbraucht wird, sollte der Motorölstand regelmäßig überprüft werden.</p><p>Das Motorölwechselintervall für normale Betriebsbedingungen basiert auf der Verwendung der empfohlenen Motorspezifikation. Wenn nicht die empfohlene Motorölspezifikation verwendet wird, muss das Motoröl wie unter schweren Einsatzbedingungen gewechselt werden.</p><p>Geben Sie dem Motoröl niemals Additive zu. Additive für Motoröle können dessen Eigenschaften ändern und einem schweren Motorausfall verursachen.</p></fn></p>
+						</entry>
+						<entry colname="col2" morerows="3" align="left" valign="middle">
+							<p>(Benzinmotor) 1.6 MPI</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Außer Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- &amp; Südamerika, Brasilien, Mexiko, China</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- &amp; Südamerika, Brasilien</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 10.000 km (6.500 Meilen) oder 12 Monate ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für Mexiko</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 10.000 km (6.500 Meilen) oder 6 Monate ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für China</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 5.000 km (3.000 Meilen) oder 6 Monate ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" morerows="2" align="left" valign="middle">
+							<p>(Benzinmotor) 2.0 MPI</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Außer Naher Osten, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- und Südamerika, Brasilien, China</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- &amp; Südamerika, Brasilien</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 10.000 km (6.500 Meilen) oder 12 Monate ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für China</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 5.000 km (3.000 Meilen) oder 6 Monate ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" morerows="3" valign="middle">
+							<p>Smartstream G2.0 MPI</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Außer Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- &amp; Südamerika, Brasilien, Mexiko, China</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- &amp; Südamerika, Brasilien</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 10.000 km (6.500 Meilen) oder 12 Monate ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für Mexiko</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 10.000 km (6.500 Meilen) oder 6 Monate ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für China</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 5.000 km (3.000 Meilen) oder 6 Monate ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" morerows="2" align="left" valign="middle">
+							<p>Smartstream G1.6 T-GDi</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Außer Mexiko, China</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 10.000 km (6.500 Meilen) oder 12 Monate ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für Mexiko</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 10.000 km (6.500 Meilen) oder 6 Monate ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für China</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 5.000 km (3.000 Meilen) oder 6 Monate ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Kühlmittel (Motor)<fn><p importance="high">Kühlmittel (Motor)</p><p>Verwenden Sie zum Auffüllen des Kühlsystems ausschließlich deionisiertes oder weiches Wasser und mischen Sie das werkseitig aufgefüllte Kühlmittel niemals mit hartem Leitungswasser. Ein falsches Kühlmittelgemisch kann schwere Fehlfunktionen oder Motorschäden verursachen.</p><p>Kann auf Ihren Wunsch auch im Rahmen anderer Wartungsarbeiten vor Ablauf des Intervalls ersetzt werden.</p></fn></p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Zuerst nach 180.000 km (120.000 Meilen) oder 120 Monaten ersetzen</p>
+							<p>Danach alle 30 000 km (20 000 Meilen) bzw. alle 24 Monate ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Antriebsriemen (Motor)<fn><p importance="high">Antriebsriemen (Motor)</p><p>Prüfen Sie den Antriebsriemen für Lichtmaschine, Wasserpumpe und Klimaanlage und reparieren oder ersetzen Sie ihn gegebenenfalls.</p><p>Überprüfen Sie den Gurtstraffer sowie die Umlenkrolle und Riemenscheibe und ersetzen oder reparieren Sie die Teile gegebenenfalls.</p></fn></p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" align="left" valign="middle">
+							<p>Ventilspiel<fn><p importance="high">Ventilspiel</p><p>Achten Sie auf extreme Ventilgeräusche und/oder Motorvibrationen und korrigieren Sie bei Bedarf. Lassen Sie die Anlage in diesem Fall von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p></fn></p>
+						</entry>
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>(Benzinmotor) 1.6 MPI</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Unterdruck- und Kurbelgehäuse-Entlüftungsschläuche</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" morerows="3" align="left" valign="middle">
+							<p>Zündkerzen<fn><p importance="high">Zündkerzen</p><p>Kann auf Ihren Wunsch auch im Rahmen anderer Wartungsarbeiten vor Ablauf des Intervalls ersetzt werden.</p></fn></p>
+						</entry>
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>(Benzinmotor) 1.6 MPI</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 60.000 km (40.000 Meilen) ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>(Benzinmotor) 2.0 MPI</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 150.000 km (100.000 Meilen) ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col2" nameend="col3">
+							<p>Smartstream G2.0 MPI</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 150.000 km (100.000 Meilen) ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>Smartstream G1.6 T-GDi</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 70.000 km (45.500 Meilen) ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Automatikgetriebeöl (AT) <sup>*</sup></p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Keine Prüfung, keine Wartung erforderlich</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Flüssigkeit des Schaltgetriebes (MT)<sup>*</sup></p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Keine Prüfung, keine Wartung erforderlich</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Flüssigkeit des intelligenten variablen Getriebes (IVT) <sup>*</sup></p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Keine Prüfung, keine Wartung erforderlich</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Doppelkupplungsgetriebeflüssigöl (DCT)<sup>*</sup></p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Keine Prüfung, keine Wartung erforderlich</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Antriebswelle und Manschetten</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" morerows="2" align="left" valign="middle">
+							<p>Kraftstoffzusätze<fn><p importance="high">Kraftstoffzusätze</p><p>Kia empfiehlt die Verwendung von bleifreiem Benzin mit einer Oktanzahl von RON 91 (Research Octane Number)/AKI 87 (Anti Knock Index) oder höher.</p><p>Kunden, die nicht regelmäßig hochwertiges Benzin mit Kraftstoffzusätzen tanken und Probleme mit dem Anlassen oder Rundlauf des Motors haben, sollten beim Wechsel des Motoröls eine Flasche Kraftstoffzusatz in den Kraftstofftank geben. Kraftstoffzusätze erhalten Sie von Fachwerkstätten zusammen mit Informationen zu deren Verwendung. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners. Mischen Sie diese nicht mit anderen Zusätzen.</p></fn></p>
+						</entry>
+						<entry colname="col2" morerows="2" align="left" valign="middle">
+							<p>Smartstream G1.6 T-GDi</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Außer Mexiko, China</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 10000 km (6500 Meilen) oder 12 Monate auffüllen.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für Mexiko</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 10000 km (6500 Meilen) oder 6 Monate auffüllen.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für China</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 5000 km (3000 Meilen) oder 6 Monate auffüllen.</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" align="left" valign="middle">
+							<p>Kraftstofffilter</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für China, Brasilien</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Kraftstoffleitungen, Schläuche und deren Anschlüsse</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" morerows="1" align="left" valign="middle">
+							<p>Kraftstofftank-Belüftungsfilter</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Außer China</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für China</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Belüftungsschlauch und Tankdeckel</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" morerows="1" align="left" valign="middle">
+							<p>Luftfiltereinsatz</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Außer China, Indien, Nahost</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für China, Indien, Nahost</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" align="left" valign="middle">
+							<p>Zwischenkühler, Zu-/Ablaufschlauch, Luftansaugschlauch</p>
+						</entry>
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>Smartstream G1.6 T-GDi</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 10.000 km (6.500 Meilen) bzw. alle 12 Monate prüfen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p otherprops="legal_eu_std_029_05">Abgasanlage</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Kühlsystem</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Klimaanlagenkompressor/Kältemittel</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" morerows="1" align="left" valign="middle">
+							<p>Luftfilter der Klimaanlage</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Außer Australien und Neuseeland</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Nur Australien und Neuseeland</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3">
+							<p>Bremstrommeln und Bremsbeläge</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p otherprops="legal_eu_std_006_03">Bremsscheiben und Bremsbeläge</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Bremsleitungen, Schläuche und deren Anschlüsse</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" morerows="1" align="left" valign="middle">
+							<p>Brems-/Kupplungsflüssigkeit</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Außer Australien und Neuseeland</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Nur Australien und Neuseeland</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Feststellbremse (Handbremse)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Lenkgetriebe, Lenkgestänge und Manschetten</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Kugelgelenke der Radaufhängung</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Reifen (Reifendruck und Profilverschleiß)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2" morerows="1" align="left" valign="middle">
+							<p>Akkuzustand (12 V)</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Außer Naher Osten</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für den Nahen Osten</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center" valign="middle">
+							<p>Alle 10.000 km (6.500 Meilen) bzw. alle 6 Monate prüfen</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3">
+							<p otherprops="legal_gen_std_017_05">ERA-GLONASS-System (falls vorhanden)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3">
+							<p otherprops="legal_gen_std_017_06">Batterie des ERA-GLONASS-Systems (falls vorhanden)</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center">
+							<p>Alle 4 Jahre ersetzen</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry namest="col1" nameend="col3">
+							<p otherprops="legal_gen_std_008_07">Batterie des Notruf-Systems (eCall) (ausstattungsabhängig)</p>
+						</entry>
+						<entry namest="col4" nameend="col11" align="center">
+							<p>Alle 4 Jahre ersetzen</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e01381">
+			<sectiondiv><ph>* Getriebeflüssigkeit</ph>
+				<p>Die Getriebeflüssigkeit muss immer dann gewechselt werden, wenn sie mit Wasser in Berührung kam.</p>
+			</sectiondiv>
+			<sectiondiv><ph>Kraftstofffilter (Verbrennungsmotor)</ph>
+				<p>Der Kraftstofffilter ist in der Regel wartungsfrei. Es wird jedoch empfohlen, ihn im Rahmen der planmäßigen Wartungsarbeiten regelmäßig zu überprüfen, um festzustellen, ob er durch eine schlechte Kraftstoffqualität beeinträchtigt ist.</p>
+				<p>Bei Sicherheitsrisiken wie Beeinträchtigung des Kraftstoffdurchflusses, sprunghaftem Drehzahlanstieg, Leistungsverlust oder Startschwierigkeiten muss der Kraftstofffilter unabhängig vom Wartungsplan sofort ausgetauscht werden. Wenden Sie sich für weitere Informationen an eine Fachwerkstatt. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0804.dita#CL4m_HEV-ca_ES-2027-t0804" role="parent" scope="local" type="concept">
+				<linktext>Wartungsplan </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

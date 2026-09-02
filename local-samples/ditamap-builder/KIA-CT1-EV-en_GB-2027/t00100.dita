@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00100">
+	<title>Emergency trunk safety release</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>power trunk 
+					<indexterm>emergency trunk safety release</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00485">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00486">
+								<figgroup>
+									<image href="../../images/N_CT25C028_1.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00487">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00488">
+								<figgroup>
+									<image href="../../images/N_CT25C030_1.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<fig id="e00489">
+								<figgroup>
+									<image href="../../images/N_CT25C031.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e00490">
+			<li>
+				<p>Cable cover</p>
+			</li>
+			<li>
+				<p>Cable loop</p>
+			</li>
+		</ol>
+		<section deliveryTarget="except_digital" id="e00491">
+			<title>Simple operation</title>
+			<sectiondiv><ph>Inside the trunk</ph>
+				<ol id="e00492">
+					<li>
+						<p>Move the lever in the direction of the arrow.</p>
+					</li>
+					<li>
+						<p>Push the trunk lid to open.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+			<sectiondiv><ph>Inside the vehicle</ph>
+				<ol id="e00493">
+					<li>
+						<p>Remove the cable cover (1) under the rear seat using a mechanical key.</p>
+					</li>
+					<li>
+						<p>Pull the cable loop (2) all the way out.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+		</section>
+		<section deliveryTarget="except_print" id="e00494">
+			<title>Operation</title>
+			<sectiondiv><ph>Inside the trunk</ph>
+				<ol id="e00495">
+					<li>
+						<p>Move the lever in the direction of the arrow.</p>
+					</li>
+					<li>
+						<p>Push the trunk lid to open.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+			<sectiondiv><ph>Inside the vehicle</ph>
+				<ol id="e00496">
+					<li>
+						<p>Remove the cable cover (1) under the rear seat using a mechanical key.</p>
+					</li>
+					<li>
+						<p>Pull the cable loop (2) all the way out. The power trunk unlocks.</p>
+					</li>
+					<li>
+						<p>Push the trunk lid to open.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+			<note type="warning" id="e00497">
+				<ul id="e00498">
+					<li>
+						<p>For emergencies, be fully aware of the location of the emergency trunk safety release latch in the vehicle and how to open the trunk if you are accidentally locked in the luggage compartment.</p>
+					</li>
+					<li>
+						<p>No one, including animals, should be allowed to occupy the luggage compartment of the vehicle at any time. The luggage compartment is a very dangerous location in the event of an accident.</p>
+					</li>
+					<li>
+						<p>Use the release latch for emergencies only. Use extreme caution, especially while the vehicle is in motion.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

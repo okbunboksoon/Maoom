@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0539">
+	<title>Ändern der eingestellten Geschwindigkeit</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054094.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054095.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn sich die Geschwindigkeitsbegrenzung der Straße während des Betriebs des manuellen Geschwindigkeitsbegrenzungsassistenten oder der intelligenten Tempomatsteuerung ändert, wird ein nach oben oder unten zeigender Pfeil angezeigt, um den Fahrer zu informieren, dass die eingestellte Geschwindigkeit geändert werden muss. Zu diesem Zeitpunkt kann der Fahrer die eingestellte Geschwindigkeit entsprechend der Geschwindigkeitsbegrenzung ändern, indem er den Schalter (+) oder (-) am Lenkrad betätigt.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0536.dita#CL4m_HEV-ca_ES-2027-t0536" role="parent" scope="local" type="concept">
+				<linktext>Warnung und Kontrolle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

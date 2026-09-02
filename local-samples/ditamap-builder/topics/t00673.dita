@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00673">
+	<title>Camera Settings</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/N_TK25Z091_E.eps" placement="break" width="2.244in"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol outputclass="a1804409">Camera settings</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1804473">Display contents</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Display settings</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle on, select the setup icon (<image align="left" height="0.117in" href="../../images/WKIA_152.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) on the screen or <menucascade><uicontrol outputclass="a1701754">Settings</uicontrol><uicontrol outputclass="a1701772">Vehicle</uicontrol><uicontrol outputclass="a1804409">Driver assistance</uicontrol><uicontrol outputclass="a1804506">Parking safety</uicontrol><uicontrol outputclass="a1703498">Camera settings</uicontrol></menucascade> from the infotainment system screen to change the Rear View Monitor settings.</p>
+		<ul>
+			<li>
+				<p> <uicontrol>Display contents</uicontrol>: Specify information that will be displayed on the parking assistance screen.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

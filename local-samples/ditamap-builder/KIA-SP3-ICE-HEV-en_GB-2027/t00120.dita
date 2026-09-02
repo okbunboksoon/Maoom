@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00120">
+	<title>Steering wheel heater</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00612">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00613">
+								<image href="images/N_SP327_B05_018_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e00614">
+			<li>
+				<p>Press the steering wheel heater button. When you press the steering wheel heater button, the indicator lights up and the steering wheel will warm.</p>
+			</li>
+			<li>
+				<p>To prevent low-temperature burns,the steering wheel temperature is automatically adjusted after the steering wheel heater is manually turned on.</p>
+				<table colsep="1" frame="none" outputclass="formatc" rowsep="1" id="e00615">
+					<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<thead>
+							<row rowsep="1">
+								<entry colname="col1">
+									<p>Steering wheel heater level</p>
+								</entry>
+								<entry colname="col2">
+									<p>Operating time</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row rowsep="1" valign="middle">
+								<entry align="center" colname="col1" valign="middle">
+									<p>Off</p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>-</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry align="center" colname="col1" valign="middle">
+									<p>2 (Strong)</p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>30 minutes</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry align="center" colname="col1" valign="middle">
+									<p>1 (Weak)</p>
+								</entry>
+								<entry align="center" colname="col2" valign="middle">
+									<p>Until restart</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<ul id="e00616">
+					<li>
+						<p>When using the steering wheel heater in the 2nd level (strong), it automatically lowers to the 1st level (weak) after about 30 minutes.</p>
+					</li>
+					<li>
+						<p>If the user does not manually operate the steering wheel heater, it is maintained at the 1st level (weak)until the vehicle is turned off.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>To turn off the steering wheel heater,press and hold the steering wheel heating button until the indicator light goes out.</p>
+			</li>
+		</ul>
+		<note type="caution" id="e00617">
+			<ul id="e00618">
+				<li>
+					<p>Do not install any type of grip cover for the steering wheel, it may impair the function of the heated steering wheel system.</p>
+				</li>
+				<li>
+					<p>When cleaning the heated steering wheel, do not use an organic solvent such as paint thinner, benzene, alcohol or gasoline. Doing so may damage the surface of the steering wheel.</p>
+				</li>
+				<li>
+					<p>If the surface of the steering wheel is struck by a sharp object, damage to the heated steering wheel components could occur.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" id="e00619">
+			<p>If the steering wheel becomes too warm, turn the system off. The heated steering wheel may cause burns even at low temperatures, especially if used for a long time.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00115.dita#t00115" role="parent" scope="local" type="concept">
+				<linktext>Steering wheel </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

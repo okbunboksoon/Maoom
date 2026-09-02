@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00299">
+	<title>How vehicle radio works</title>
+	<conbody>
+		<p>Transmitter towers located around your city broadcast AM and FM radio signals. The radio antenna on your vehicle intercepts these signals. The radio processes these signals and sends them to your vehicle speakers.</p>
+		<p>In some cases, the signal coming to your vehicle may not be strong and clear.</p>
+		<p>This may be due to several factors, such as the distance from the radio station, the closeness of other strong radio stations, or the presence of buildings, bridges, or other large obstructions in the area.</p>
+		<section id="e01918">
+			<title>FM reception</title>
+			<p>FM broadcasts are transmitted at high frequencies and do not bend to follow the earth’s surface. Because of this, FM broadcasts generally begin to fade within short distances from the station. FM signals are easily affected by buildings, mountains, and obstructions. The obstructions can cause unpleasant listening conditions. This is not a problem with your radio.</p>
+		</section>
+		<section id="e01919">
+			<title>AM reception</title>
+			<p>AM broadcasts are received at greater distances than FM broadcasts because AM radio waves are transmitted at low frequencies. These long distance, low frequency radio waves follow the curvature of the earth rather than traveling straight. In addition, they curve around obstructions resulting in better signal coverage.</p>
+		</section>
+		<section id="e01920">
+			<title>Radio station</title>
+			<p>The following conditions are normal and do not indicate radio trouble:</p>
+			<ul id="e01921">
+				<li>
+					<p>Fading: As your vehicle moves away from the radio station, the signal will weaken, and the sound will begin to fade. When this occurs, select another station with a stronger signal.</p>
+				</li>
+				<li>
+					<p>Flutter or static: Weak FM signals or large obstructions between the transmitter and your radio can disturb the signal, causing static or fluttering noises. Reducing the treble level may lessen this effect until the disturbance clears.</p>
+				</li>
+				<li>
+					<p>Station swapping: As an FM signal weakens, a more powerful signal near the same frequency may begin to play. This is because your radio is designed to lock onto the clearest signal. If this occurs, select another station with a stronger signal.</p>
+				</li>
+				<li>
+					<p>Multi-path cancellation: Radio signals received from several directions can cause distortion or fluttering. This is caused by a direct and reflected signal from the same station, or by signals from 2 stations with close frequencies. Select another station until the condition has passed.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01922">
+			<title>Using a mobile phone or 2-way radio</title>
+			<p>Using a mobile phone inside the vehicle may produce noise from the audio system. This does not mean that something is wrong with the audio equipment. Operate mobile devices as far from the audio equipment as possible.</p>
+			<p>When using a communication system (such as a mobile phone or a radio set) inside the vehicle, you must affix a separate external antenna. When you use a mobile phone or radio set with only the internal antenna, it may interfere with the vehicle’s electrical system and adversely affect the safe operation of the vehicle.</p>
+			<note type="warning" id="e01923">
+				<p>Distracted driving</p>
+				<p>Driving while distracted can result in a loss of control that may lead to an accident, severe bodily injury, or death. The driver’s primary responsibility is in the safe and legal operation of a vehicle. Any use of handheld devices, other equipment, or vehicle systems that take the driver’s eyes, attention, and focus away from the safe operation of a vehicle are not permissible by law. These devices should never be used during the operation of the vehicle.</p>
+			</note>
+			<note type="caution" id="e01924">
+				<p>Mobile phone use</p>
+				<p>Do not use a mobile phone while driving. Stop at a safe location to use a mobile phone.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00296.dita#t00296" role="parent" scope="local" type="concept">
+				<linktext>Audio system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00108">
+	<title>Automatic reversal</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00558">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00559">
+								<image href="images/N_SP3i26_B04_032_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>If the power sunshade or sunroof glass senses any obstacle while it is closing automatically, it will reverse direction, then stop at a certain position.</p>
+		<p>The auto reverse function may not work if there is a thin or soft object caught between the sliding power sunshade or sunroof glass and sunroof sash.</p>
+		<note type="warning" otherprops="legalnotice_europe-general_egall_2023_20230101_00054">
+			<ul>
+				<li>
+					<p>Make sure heads, hands, arms, or any other body parts or objects are out of the way before operating the sunroof. Body parts or objects may get caught, causing injuries or vehicle damage.</p>
+				</li>
+				<li>
+					<p>Never deliberately use your body parts to test the automatic reversal function. There is a risk of injury, even if the glass or shade reverses direction.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Do not continue to push the sunroof switch after the sunroof is fully opened, closed, or tilted. This can damage the sunroof motor.</p>
+				</li>
+				<li>
+					<p>Continuous operations, such as slide open or close, tilt open or close, and so on, may cause the motor or sunroof system to malfunction.</p>
+				</li>
+				<li>
+					<p>Regularly remove any accumulated dust on the sunroof rail.</p>
+				</li>
+				<li>
+					<p>Open the sunroof and remove dust between the sunroof and roof panel regularly using a clean cloth.</p>
+				</li>
+				<li>
+					<p>Do not try to open the sunroof when the temperature is below freezing or when the sunroof is covered with snow or ice. The sunroof may not work properly and may break if opened by force.</p>
+				</li>
+				<li>
+					<p>Do not open the sunroof or drive with the sunroof glass open immediately after it rains or after you wash the vehicle. The interior of the vehicle may get wet.</p>
+				</li>
+				<li>
+					<p>Do not extend any luggage through the sunroof while driving. Vehicle damage may occur if the vehicle suddenly stops.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" otherprops="legalnotice_europe-general_egall_2023_20230101_00055">
+			<p>Do not extend your head, arms, body parts, or objects through the sunroof while driving. Injuries may occur if the vehicle suddenly stops.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00107.dita#t00107" role="parent" scope="local" type="concept">
+				<linktext>Panorama sunroof precautions</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0699">
+	<title>Notbremsung</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054059N_4.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054179N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054117N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p><term translate="no">A</term>: Notbremsung</p>
+		<p>Die Kollisionswarnung warnt den Fahrer durch eine Warnleuchte in den Außenspiegeln, mit einer Warnmeldung, sowie durch einen Warnton und Lenkradvibration.</p>
+		<p>Die Kollisionswarnung wird auch auf dem Bildschirm des Infotainment-Systems angezeigt (ausstattungsabhängig).</p>
+		<p>Eine Notbremsung wird unterstützt, um eine Kollision mit Fahrzeugen zu verhindern, die sich von links und rechts nähern.</p>
+		<p>Die Notbremsung wird ausgelöst, wenn alle folgenden Bedingungen erfüllt sind:</p>
+		<ul>
+			<li>
+				<p>Es wurde in den Rückwärtsgang (R) geschaltet während die Fahrzeuggeschwindigkeit unter 8 km/h (5 mph) ist.</p>
+			</li>
+			<li>
+				<p>Das sich nähernde Fahrzeug befindet sich maximal 1,5 m (5 ft) von der linken und rechten Seite Ihres Fahrzeugs entfernt.</p>
+			</li>
+			<li>
+				<p>Die Geschwindigkeit des Fahrzeugs, das sich von links und rechts nähert, liegt über 5 km/h (3 mph).</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<p>Die Bremskontrolle endet, wenn die Bedingungen des sich nähernden Fahrzeugs von der hinteren linken oder rechten Seite wie folgt sind:</p>
+			<ul>
+				<li>
+					<p>Das sich nähernde Fahrzeug befindet sich außerhalb des Erkennungsbereichs.</p>
+				</li>
+				<li>
+					<p>Das sich nähernde Fahrzeug fährt hinter Ihrem Fahrzeug vorbei.</p>
+				</li>
+				<li>
+					<p>Das sich nähernde Fahrzeug fährt nicht auf Ihr Fahrzeug zu.</p>
+				</li>
+				<li>
+					<p>Die Geschwindigkeit des sich nähernden Fahrzeugs sinkt.</p>
+				</li>
+				<li>
+					<p>Der Fahrer tritt das Bremspedal mit ausreichender Kraft.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0697.dita#CL4m_HEV-ca_ES-2027-t0697" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Heckverkehr-Kollisionsvermeidungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

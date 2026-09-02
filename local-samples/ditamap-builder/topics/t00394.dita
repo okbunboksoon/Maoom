@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00394">
+	<title>Shift lock system</title>
+	<shortdesc>For your safety, the vehicle is equipped with a shift lock system. This system prevents shifting from P (Park) or N (Neutral) to R (Reverse) or D (Drive) unless the brake pedal is depressed.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>shift lever 
+					<indexterm>shift lock system</indexterm>
+				</indexterm>
+				<indexterm>shift lock system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>To shift from P (Park) or N (Neutral) into R (Reverse) or D (Drive), from R (Reverse) into D (Drive) or from D (Drive) into R (Reverse):</p>
+		<ol id="e02807">
+			<li>
+				<p>Depress and hold the brake pedal.</p>
+			</li>
+			<li>
+				<p>Start the vehicle.</p>
+			</li>
+			<li>
+				<p>Shift to R (Reverse) or D (Drive).</p>
+			</li>
+		</ol>
+		<note type="note" id="e02808">
+			<p>If <term>Disable i-PEDAL when Reversing</term> is not selected, shifting between D (Drive) and R (Reverse) at low speeds is possible without pressing the brake pedal.</p>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0163">
+	<title>Betrieb des Fernlichtassistenten</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Fernlichtassistent (HBA)
+					<indexterm>Betrieb</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<ul>
+				<li>
+					<p>Nachdem Sie HBA (Fernlichtassistent) in den Einstellungen ausgewählt haben, funktioniert der Fernlichtassistent wie folgt.</p>
+					<ul>
+						<li>
+							<p>Bringen Sie den Scheinwerferschalter in Position <term translate="no">AUTO</term> und drücken Sie den Scheinwerferhebel in Richtung Kombiinstrument. Die Kontrollleuchte des Fernlichtassistenten (<image align="left" href="../../images/WKIA_048.eps" scale="15" placement="inline"/>) erscheint auf dem Kombiinstrument auf und das System wird aktiviert.</p>
+						</li>
+						<li>
+							<p>Wenn das System aktiviert ist, wird das Fernlicht eingeschaltet, sobald die Fahrzeuggeschwindigkeit über 30 km/h (20 mph) liegt. Wenn die Fahrzeuggeschwindigkeit unter 20 km/h (12 mph) liegt, schaltet sich das Fernlicht nicht ein.</p>
+						</li>
+						<li>
+							<p>Die Fernlicht-Kontrollleuchte (<image align="left" href="../../images/WKIA_046.eps" scale="15" placement="inline"/>) erscheint auf dem Kombiinstrument auf, wenn das Fernlicht eingeschaltet ist.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Wenn der Fernlichtassistent in Betrieb ist und der Scheinwerferhebel betätigt wird, reagiert das System wie folgt:</p>
+					<ul>
+						<li>
+							<p>Wenn Sie den Scheinwerferschalter bei ausgeschaltetem Fernlicht in Ihre Richtung ziehen, wird das Fernlicht eingeschaltet, ohne dass der Fernlichtassistent deaktiviert wird. Wenn Sie den Scheinwerferhebel freigeben, schaltet sich der Fernlichtassistent wieder ein.</p>
+						</li>
+						<li>
+							<p>Wenn Sie den Scheinwerferschalter zum Kombiinstrument drücken, wird das Fernlicht eingeschaltet und der Fernlichtassistent ausgeschaltet.</p>
+						</li>
+						<li>
+							<p>Wenn der Scheinwerferhebel zu Ihnen gezogen wird, während das Fernlicht durch den Fernlichtassistenten eingeschaltet ist, wird das Abblendlicht eingeschaltet und die Funktion ausgeschaltet.</p>
+						</li>
+						<li>
+							<p>Wird der Scheinwerferschalter von <term translate="no">AUTO</term> auf eine andere Position (Scheinwerfer/Position/Aus) gestellt, schaltet sich der Fernlichtassistent aus und die entsprechende Lampe schaltet sich ein.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Wenn der Fernlichtassistent eingeschaltet ist, blendet er den Scheinwerfer ab, wenn eine der folgenden Bedingungen eintritt:</p>
+					<ul>
+						<li>
+							<p>Wenn der Scheinwerfer eines entgegenkommenden Fahrzeugs erkannt wird.</p>
+						</li>
+						<li>
+							<p>Wenn die Rückleuchte eines vorausfahrenden Fahrzeugs erkannt wird.</p>
+						</li>
+						<li>
+							<p>Wenn der Scheinwerfer bzw. die Rückleuchte eines Fahrrads oder Motorrads erkannt wird.</p>
+						</li>
+						<li>
+							<p>Wenn die Umgebungshelligkeit groß genug ist, sodass kein Fernlicht benötigt wird.</p>
+						</li>
+						<li>
+							<p>Wenn Straßenlaternen oder andere Leuchten erkannt werden.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0161.dita#CL4m_HEV-ca_ES-2027-t0161" role="parent" scope="local" type="concept">
+				<linktext>Fernlichtassistent (HBA)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00578">
+	<title>Limitations of Forward Attention Warning</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e03693">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e03694">
+								<figgroup>
+									<image href="images/N_QVe27_C00_144_E.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e03695">
+								<li>
+									<p><uicontrol>Forward Attention Warning system limited. Full face not visible</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the driver’s face cannot be recognized, Forward Attention Warning does not operate properly. If this occurs, the warning message appears on the instrument cluster for several seconds, the Forward attention warning light (<image href="images/WKIA_353.jpg" scale="15" align="left" placement="inline"/>) and Master warning light (<image href="images/WKIA_040.jpg" scale="15" align="left" placement="inline"/>) lights up on the instrument cluster, and an audible warning sounds once.</p>
+		<p>This does not indicate a malfunction of Forward Attention Warning. Forward Attention Warning operates properly when the camera can correctly recognize the driver’s face again.</p>
+		<p>Forward Attention Warning may not operate properly or may operate unexpectedly under the following circumstances:</p>
+		<ul id="e03696">
+			<li>
+				<p>The driver is wearing sunglasses, special glasses, infrared cutoff glasses, refracting glasses or thick glasses</p>
+			</li>
+			<li>
+				<p>The driver has heavy eye makeup (eyeliner, mascara, color makeup, false eyelash) or piercings around the eyes</p>
+			</li>
+			<li>
+				<p>The view of the driver is blocked by their hair, hat, etc.</p>
+			</li>
+			<li>
+				<p>The driver is winking or wearing an eye patch on one eye</p>
+			</li>
+			<li>
+				<p>The driver’s face is covered partially by a mask, muffler, etc.</p>
+			</li>
+			<li>
+				<p>The view of the driver is blocked by incoming light from outside the vehicle</p>
+			</li>
+			<li>
+				<p>Light from outside, sunlight or infrared LED light of the camera is reflected by glasses or sunglasses</p>
+			</li>
+			<li>
+				<p>The driver turns or lowers their head so that the face or eyes are hidden from the camera</p>
+			</li>
+			<li>
+				<p>The driver shakes their head or adverse road conditions cause excessive vehicle vibrations while driving</p>
+			</li>
+			<li>
+				<p>The driver is improperly positioned in the driver’s seat so that their face is not detected</p>
+			</li>
+			<li>
+				<p>The driver is too tall or short</p>
+			</li>
+			<li>
+				<p>More than two people are looking at the instrument cluster simultaneously from the driver’s seat</p>
+			</li>
+			<li>
+				<p>The driver’s eyes are narrowed due to laughing or sun glare</p>
+			</li>
+			<li>
+				<p>The camera incorrectly recognizes a picture or mannequin that is of similar size to the driver’s face</p>
+			</li>
+			<li>
+				<p>There are other devices using infrared light in the vehicle</p>
+			</li>
+			<li>
+				<p>The inside rearview mirror is excessively tilted, causing the in-cabin camera’s field of view to be out of range.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00575.dita#t00575" role="parent" scope="local" type="concept">
+				<linktext>Forward Attention Warning malfunction and limitations</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

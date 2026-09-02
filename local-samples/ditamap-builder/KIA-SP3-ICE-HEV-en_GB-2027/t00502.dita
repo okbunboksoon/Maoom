@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00502">
+	<title>Lane Following Assist</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03363">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03364">
+								<image href="images/N_SP3i25_C00_023_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When both lane lines, or a preceding vehicle within the recognized lane (when lane lines are not detected during both-lane recognition–based control), are detected and the vehicle speed is below the operating speed, the system assists with steering to help keep the vehicle centered in the lane. The indicator light (<image href="images/WKIA_011.jpg" scale="15" align="left" placement="inline"/>) on the instrument cluster is displayed in green.</p>
+		<ul id="e03365">
+			<li>
+				<p>When both lane lines are detected: 0–180 km/h (0–110 mph) (HEV: 0-140 km/h (90 mph))</p>
+			</li>
+			<li>
+				<p>When a preceding vehicle is detected: 0–75 km/h (0–45 mph)</p>
+			</li>
+		</ul>
+		<note type="tip">
+			<p>When the steering wheel is not being assisted, the white indicator light (<image href="images/WKIA_011.jpg" scale="15" align="left" placement="inline"/>) blinks and changes to gray.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00501.dita#t00501" role="parent" scope="local" type="concept">
+				<linktext>Warning and control</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

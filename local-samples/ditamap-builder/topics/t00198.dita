@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00198">
+	<title>Fingerprint authentication system settings</title>
+	<shortdesc>To use the system, the driver’s fingerprint should be enrolled in the driver’s profile. The drivers can set or delete their fingerprint through the infotainment system. Follow the following procedure.</shortdesc>
+	<conbody>
+		<section id="e01498">
+			<title>Enrolling fingerprint</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01499">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01500">
+									<figgroup>
+										<image href="../../images/OOV035020.eps" align="center" placement="break" id="e01501"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol id="e01502">
+				<li>
+					<p>Turn on the vehicle.</p>
+				</li>
+				<li>
+					<p>Select <menucascade><uicontrol>Setup</uicontrol><uicontrol>User Profile</uicontrol><uicontrol>Driver 1</uicontrol><uicontrol>Fingerprint Identification</uicontrol><uicontrol>Set/Delete Fingerprint</uicontrol><uicontrol>Set</uicontrol></menucascade> in the infotainment.</p>
+				</li>
+				<li>
+					<p>Place your finger that you wish to enroll on the fingerprint sensor according to the instruction.</p>
+				</li>
+				<li>
+					<p>Following the instructions, place several parts of your fingerprint until the scanning process is complete.</p>
+				</li>
+				<li>
+					<p>Once the scanning process is completed, the message <uicontrol>Saving fingerprint…</uicontrol> appears and the fingerprint enrollment process is proceeded.</p>
+				</li>
+				<li>
+					<p>When the fingerprint enrollment process is completed in the vehicle, the status is displayed on the infotainment system.</p>
+				</li>
+			</ol>
+			<note type="note" id="e01503">
+				<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+			</note>
+		</section>
+		<section id="e01504">
+			<title>Deleting fingerprint</title>
+			<ol id="e01505">
+				<li>
+					<p>Select <menucascade><uicontrol>Setup</uicontrol><uicontrol>User Profile</uicontrol><uicontrol>Driver 1</uicontrol><uicontrol>Fingerprint Identification</uicontrol><uicontrol>Set/Delete Fingerprint</uicontrol><uicontrol>Delete</uicontrol></menucascade> in the infotainment.</p>
+				</li>
+				<li>
+					<p>Delete the enrolled fingerprint according to the message <uicontrol>Delete all Driver 1 fingerprints?</uicontrol> </p>
+				</li>
+				<li>
+					<p>Once the fingerprint is deleted, the status is displayed on the infotainment system screen.</p>
+				</li>
+			</ol>
+			<note type="note" id="e01506">
+				<ul id="e01507">
+					<li>
+						<p>If no fingerprint is enrolled in the infotainment system, the sensor will not operate.</p>
+					</li>
+					<li>
+						<p>If no fingerprint is enrolled in the infotainment system, the sensor will not operate.</p>
+					</li>
+					<li>
+						<p>The maximum number of fingerprints that can be enrolled is two. Driver 1 and Driver 2 can enroll one fingerprint each.</p>
+					</li>
+					<li>
+						<p>Please remove all substances including protection film on the fingerprint sensor and enroll your fingerprint.</p>
+					</li>
+					<li>
+						<p>The fingerprint enrollment process is canceled when the following condition occurs:</p>
+					</li>
+					<li>
+						<ul id="e01508">
+							<li>
+								<p>The infotainment system screen is altered.</p>
+							</li>
+							<li>
+								<p>The EV button turns on or off.</p>
+							</li>
+							<li>
+								<p>The gear is shifted and the vehicle is driven.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</note>
+			<note type="caution" id="e01509">
+				<p>Do not participate in duplicating your fingerprint with anyone.</p>
+			</note>
+			<note type="note" id="e01510">
+				<p>Touch the fingerprint authentication sensor gently. Fingerprint authentication attempts with excessive force may fail.</p>
+			</note>
+			<note type="tip" id="e01511">
+				<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

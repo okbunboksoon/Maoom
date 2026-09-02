@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00757">
+	<title>Rear Cross-Traffic Collision-Avoidance Assist operation</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>rear cross-traffic collision-avoidance assist (RCCA) 
+					<indexterm>operation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Rear Cross-Traffic Collision-Avoidance Assist will warn and control the vehicle depending on collision risk level:</p>
+		<ul>
+			<li>
+				<p>Collision warning</p>
+			</li>
+			<li>
+				<p>Emergency braking</p>
+			</li>
+			<li>
+				<p>Stopping vehicle and ending brake control</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00254">
+	<title>Passenger’s front air bag ON/OFF switch</title>
+	<shortdesc/>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01623">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0" valign="middle">
+							<fig id="e01624">
+								<figgroup>
+									<image href="images/N_SP3i26_D06_057_E.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" valign="middle">
+							<fig id="e01625">
+								<figgroup>
+									<image href="images/N_SP3i26_D06_059_1_E.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_print" id="e01626">
+			<title>Operation</title>
+			<ol id="e01627">
+				<li>
+					<p>Insert the mechanical key into the passenger’s front air bag <term translate="no">ON/OFF</term> switch.</p>
+				</li>
+				<li>
+					<p>Turn the key to activate/deactivate passenger’s front air bag.</p>
+					<ul id="e01628">
+						<li>
+							<p>When you install the child restraint on the front passenger’s seat.</p>
+						</li>
+						<li>
+							<p>When the seat is unoccupied.</p>
+						</li>
+					</ul>
+				</li>
+			</ol>
+		</section>
+		<section id="e01629">
+			<title>Front passenger air bag ON/OFF indicator <image href="images/WKIA_121.jpg" scale="15" align="center" placement="inline"/><image href="images/OCV041510L.jpg" scale="15" align="center" placement="inline"/></title>
+			<sectiondiv><ph>Operating condition(s)</ph>
+				<ul id="e01630">
+					<li>
+						<p>After the vehicle starts</p>
+						<ul id="e01631">
+							<li>
+								<p>The front passenger air bag <term translate="no">ON/OFF</term> indicator illuminates for approximately 4 seconds.</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>When you set the front passenger air bag <term translate="no">ON/OFF</term> switch to the <term translate="no">ON/OFF</term> position</p>
+						<ul id="e01632">
+							<li>
+								<p>The front passenger air bag <term translate="no">ON/OFF</term> indicator illuminates</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>Non-operating condition(s)</ph>
+				<ul id="e01633">
+					<li>
+						<p>When the vehicle is running within approximately 3 minutes after the vehicle is turned off</p>
+						<ul id="e01634">
+							<li>
+								<p>The front air bag <term translate="no">ON/OFF</term> indicator does not appear.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</sectiondiv>
+			<note type="caution" id="e01635">
+				<ul id="e01636">
+					<li>If the passenger’s front air bag <term translate="no">ON/OFF</term> switch is not working properly, the air bag warning light on the instrument panel will appear. And, the passenger’s front air bag <term translate="no">OFF</term> indicator (<image align="left" href="images/WKIA_122.jpg" scale="15" placement="inline"/>) will not appear (The passenger’s front air bag <term translate="no">ON</term> indicator comes on), the SRS Control Module reactivate the passenger’s front air bag and the passenger’s front air bag will inflate in frontal impact crashes even if the passenger’s front air bag <term translate="no">ON/OFF</term> switch is set to the <term translate="no">OFF</term> position (<image align="left" href="images/WKIA_122.jpg" scale="15" placement="inline"/>). In this case, have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</li>
+				</ul>
+			</note>
+			<note type="note" id="e01637">
+				<ul id="e01638">
+					<li>
+						<p>When the passenger front air bag <term translate="no">ON/OFF</term> switch is set to the <term translate="no">ON</term> position, the passenger front air bag activates, and you should not install a child or infant seat on the front passenger seat.</p>
+					</li>
+					<li>
+						<p>When the passenger front air bag <term translate="no">ON/OFF</term> switch is set to the <term translate="no">OFF</term> position, the passenger front air bag deactivates.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00252.dita#t00252" role="parent" scope="local" type="concept">
+				<linktext>Overview</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

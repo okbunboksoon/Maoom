@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00024">
+	<title id="e00062">Air conditioner compressor label/refrigerant label</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>air conditioner compressor label</indexterm>
+				</indexterm>
+				<indexterm>specifications 
+					<indexterm>refrigerant label</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00063">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00064">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25H004_1_E.eps" scale="100" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00065">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25H003_E.eps" scale="100" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Refrigerant</p>
+			</li>
+			<li>
+				<p>Refrigerant oil</p>
+			</li>
+		</ol>
+		<p>A compressor label informs you the type of compressor your vehicle is equipped with such as model, supplier part number, production number, refrigerant (1) and refrigerant oil (2).</p>
+		<p>The refrigerant label is located as shown.</p>
+	</conbody>
+</concept>

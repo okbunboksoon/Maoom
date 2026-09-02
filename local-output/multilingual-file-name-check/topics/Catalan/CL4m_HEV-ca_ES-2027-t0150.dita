@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0150">
+	<title>Scheinwerfer mit Escort-Funktion</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Beleuchtung
+					<indexterm>Scheinwerfer mit Escort-Funktion</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Die Scheinwerfer (und/oder Rücklichter) bleiben noch etwa 5 Minuten lang eingeschaltet, nachdem der Zündschalter entfernt wurde, wenn der Motor ausgeschaltet ist oder der <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) auf Position OFF steht. Wenn jedoch die Fahrertür geöffnet oder geschlossen wird, werden die Scheinwerfer nach 15 Sekunden ausgeschaltet.</p>
+		<p>Die Scheinwerfer können durch zweimaliges Drücken der Verriegelungstaste auf der Fernbedienung oder dem Smart-Key ausgeschaltet werden. Alternativ können Sie auch den Lichtschalter aus der Stellung "Scheinwerfer" oder "Licht-Automatik" in die Stellung OFF drehen.</p>
+		<note type="caution">
+			<p>Wenn der Fahrer das Fahrzeug durch eine andere Tür verlässt (nicht durch die Fahrertür), funktioniert die Batteriesparfunktion nicht und die Scheinwerferverzögerungsfunktion wird nicht automatisch ausgeschaltet. Deshalb wird die Batterie entladen. Prüfen Sie in diesem Fall, ob Sie die Leuchte ausgeschaltet haben, bevor Sie das Fahrzeug verlassen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0148.dita#CL4m_HEV-ca_ES-2027-t0148" role="parent" scope="local" type="concept">
+				<linktext>Beleuchtung </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00190">
+	<title id="e01429">With the door handle</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01430">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01431">
+								<figgroup>
+									<image href="../../images/OOV035070.eps" align="center" placement="break" id="e01432"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Front door</p>
+				<p>If the inner door handle is pulled when the door is locked, the door will unlock and open.</p>
+			</li>
+			<li>
+				<p>Rear door</p>
+				<p>If the inner door handle is pulled once when the door is locked, the door will unlock.</p>
+				<p>If the inner door handle is pulled once more, the door will open.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e01433">
+			<p importance="high">Door lock malfunction</p>
+			<p>If a power door lock ever fails to function while you are in the vehicle, try one or more of the following techniques to exit:</p>
+			<ul id="e01434">
+				<li id="e01435">
+					<p>Operate the door unlock feature repeatedly (both electronic and manual) while simultaneously pulling on the door handle.</p>
+				</li>
+				<li id="e01436">
+					<p>Operate the other door locks and handles, front and rear.</p>
+				</li>
+				<li id="e01437">
+					<p>Lower a front window and use the key to unlock the door from outside.</p>
+				</li>
+				<li id="e01438">
+					<p>Move to the cargo area and open the tailgate.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" id="e01439">
+			<p>Do not pull the inner door handle of driver’s (or passenger’s) door while the vehicle is moving.</p>
+		</note>
+	</conbody>
+</concept>

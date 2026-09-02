@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" deliveryTarget="except_print" id="t00325">
+	<title>Starting the vehicle</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>driving electric vehicle 
+					<indexterm>starting the vehicle</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ol>
+			<li>
+				<p>Holding the smart key or registered digital key 2, sit in the driver’s seat.</p>
+			</li>
+			<li>
+				<p>Fasten the seat belt before starting the vehicle.</p>
+			</li>
+			<li>
+				<p>Make sure to engage the parking brake.</p>
+			</li>
+			<li>
+				<p>Check the position of the accelerator pedal and the brake pedal and the clearance with your right foot.</p>
+			</li>
+			<li>
+				<p>Make sure to depress and hold the brake pedal.</p>
+			</li>
+			<li>
+				<p>While depressing the brake pedal, shift to P (Park).</p>
+			</li>
+			<li>
+				<p>Depress and hold the brake pedal while pressing the <term translate="no">EV</term> button.</p>
+			</li>
+			<li>
+				<p>When the <image align="left" href="../../images/WKIA_326.eps" scale="15" placement="inline"/> indicator is <term translate="no">ON</term>, you can drive the vehicle. When the <image align="left" href="../../images/WKIA_326.eps" scale="15" placement="inline"/> indicator is <term translate="no">OFF</term>, you cannot drive the vehicle. Restart the vehicle.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig>
+										<title>Vehicle ON to <image align="left" href="../../images/WKIA_326.eps" scale="15" placement="inline"/> (green)</title>
+										<figgroup>
+											<image align="center" href="../../images/OSVQ014035_2.eps" scale="95" placement="break"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Depress and hold the brake pedal and shift to the desired position</p>
+			</li>
+			<li>
+				<p>Release the parking brake and slowly release the brake pedal. Check if the vehicle slowly moves forward, then depress the accelerator pedal.</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

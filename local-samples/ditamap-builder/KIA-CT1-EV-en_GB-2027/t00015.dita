@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_001_02" base="Anywhere" id="t00015">
+	<title>Reference weight when towing a trailer</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>reference weight when towing a trailer</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p> 
+			<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e00033">
+				<tgroup cols="8">
+					<colspec colnum="1" colwidth="1*" colname="col1"/>
+					<colspec colnum="2" colwidth="1*" colname="col2"/>
+					<colspec colnum="3" colwidth="1.5*" colname="col3"/>
+					<colspec colnum="4" colwidth="1.5*" colname="col4"/>
+					<colspec colnum="5" colwidth="1.5*" colname="col5"/>
+					<colspec colnum="6" colwidth="1.5*" colname="col6"/>
+					<colspec colnum="7" colname="col7" colwidth="1.5*"/>
+					<colspec colnum="8" colname="col8" colwidth="1.5*"/>
+					<thead>
+						<row>
+							<entry namest="col1" nameend="col2" morerows="3" align="center" valign="middle">
+								<p>Item</p>
+							</entry>
+							<entry namest="col3" nameend="col8" align="center" valign="middle">
+								<p>Weight</p>
+							</entry>
+						</row>
+						<row>
+							<entry namest="col3" nameend="col4" align="center" valign="middle">
+								<p>Standard Type</p>
+							</entry>
+							<entry namest="col5" nameend="col8" align="center" valign="middle">
+								<p>Extended Type</p>
+							</entry>
+						</row>
+						<row>
+							<entry namest="col3" nameend="col4" align="center" valign="middle">
+								<p>2WD</p>
+							</entry>
+							<entry namest="col5" nameend="col6" align="center" valign="middle">
+								<p>2WD</p>
+							</entry>
+							<entry namest="col7" nameend="col8" align="center" valign="middle">
+								<p>AWD</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" valign="middle">
+								<p>17 inch tire</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>19 inch tire</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>17 inch tire</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>19 inch tire</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>19 inch tire</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>20 inch tire</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry morerows="1" align="center" valign="middle">
+								<p>Maximum trailer weight</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>With brake system</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>500 kg (1,102 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>500 kg (1,102 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>1,000 kg (2,205 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>1,000 kg (2,205 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>1,500 kg (3,307 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>1,500 kg (3,307 lbs.)</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" valign="middle">
+								<p>Without brake system</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>500 kg (1,102 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>500 kg (1,102 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>750 kg (1,653 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>750 kg (1,653 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>750 kg (1,653 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>750 kg (1,653 lbs.)</p>
+							</entry>
+						</row>
+						<row>
+							<entry namest="col1" nameend="col2" align="center" valign="middle">
+								<p>Maximum permissible static vertical load on the coupling device</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>100 kg (220 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>100 kg (220 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>100 kg (220 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>100 kg (220 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>100 kg (220 lbs.)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>100 kg (220 lbs.)</p>
+							</entry>
+						</row>
+						<row>
+							<entry namest="col1" nameend="col2" align="center" valign="middle">
+								<p>Recommended distance from rear wheel center to coupling point</p>
+							</entry>
+							<entry namest="col3" nameend="col8" align="center" valign="middle">
+								<p>1,182 mm (46.5 inches)</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table> * Please contact your local authorized Kia dealer for the specs of your region.</p>
+	</conbody>
+</concept>

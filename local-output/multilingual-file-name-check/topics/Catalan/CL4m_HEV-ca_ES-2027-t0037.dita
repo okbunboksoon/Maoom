@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0037">
+	<title id="e00086">Fernbedienungstaste </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Fernbedienungstaste</indexterm>
+				<indexterm>Schlüssel
+					<indexterm>Fernbedienungstaste</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Mit einem Fernbedienungsschlüssel können Sie die Tür und den Kofferraum/Heckklappe ver- und entriegeln.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OKA4033466L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e00087">
+			<title>Verriegeln (1) <image align="left" href="../../images/WKIA_019.eps" scale="15" placement="inline"/></title>
+			<p>Wenn die Verriegelungstaste gedrückt wird, werden alle Türen verriegelt, wenn alle Türen geschlossen sind.</p>
+			<p>Die Warnblinker leuchten einmal kurz auf, um anzuzeigen, dass alle Türen verriegelt wurden.</p>
+			<p>Wenn jedoch eine Tür, die Motorhaube oder der Kofferraum/die Heckklappe offen bleibt, leuchten die Warnblinker nicht auf. Wenn alle Türen, die Motorhaube und der Kofferraum/die Heckklappe nach dem Drücken der Verriegelungstaste geschlossen werden, blinken die Warnblinker einmal auf.</p>
+		</section>
+		<section id="e00088">
+			<title>Entriegeln (2) <image align="left" href="../../images/WKIA_021.eps" scale="15" placement="inline"/></title>
+			<p>Wenn die Entriegelungstaste gedrückt wird, werden alle Türen entriegelt.</p>
+			<p>Die Warnblinker leuchten zweimal kurz auf, um anzuzeigen, dass alle Türen entriegelt sind.</p>
+			<p>Wenn innerhalb von 30 Sekunden nach dem Drücken dieser Taste keine Tür geöffnet wird, werden alle Türen automatisch wieder verriegelt.</p>
+		</section>
+		<section>
+			<title>Entriegelung Kofferraum/Heckklappe (3) <image align="left" href="../../images/WKIA_020.eps" scale="15" placement="inline"/></title>
+			<p>Wenn Sie diese Taste länger als eine Sekunde drücken, wird die Verriegelung aufgehoben.</p>
+			<p>Wenn der Kofferraum/die Heckklappe geöffnet und wieder geschlossen wird, verriegelt sich der Kofferraum/die Heckklappe automatisch.</p>
+		</section>
+		<section importance="optional" id="e00089">
+			<note type="note">
+				<p>Zum Verhindern von Schäden am Fernbedienungsschlüssel:</p>
+				<ul>
+					<li>
+						<p>Lassen Sie weder Wasser noch andere Flüssigkeiten auf den Fernbedienungsschlüssel gelangen. Wenn das Innere des Fernbedienungsschlüssels feucht wird (durch Getränke oder Feuchtigkeit) oder sich erwärmt, kann der innere Schaltkreis versagen. In diesem Fall ist das Fahrzeug von der Garantie ausgenommen.</p>
+					</li>
+					<li>
+						<p>Vermeiden Sie, den Fernbedienungsschlüssel fallen zu lassen oder zu werfen.</p>
+					</li>
+					<li>
+						<p>Schützen Sie den Fernbedienungsschlüssel vor extremen Temperaturen.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning" id="e00090">
+				<p>Kia empfiehlt, für den Austausch Teile von einem autorisierten Kia-Händler oder Servicepartner zu verwenden. Wenn ein Ersatzschlüssel verwendet wird, kehrt der Zündschalter möglicherweise nicht zurück in die Position <term translate="no">ON</term> nachdem <term translate="no">START</term>. Wenn dieser Fall eintritt, läuft der Anlasser weiter, was zu einer Beschädigung des Anlassermotors führt. Weiterhin besteht Brandgefahr durch Überlastung der Verkabelung.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0034.dita#CL4m_HEV-ca_ES-2027-t0034" role="parent" scope="local" type="concept">
+				<linktext>Schlüssel</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

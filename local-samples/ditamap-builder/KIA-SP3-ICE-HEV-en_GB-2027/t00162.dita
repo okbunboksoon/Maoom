@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00162">
+	<title id="e00840">Service interval </title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00841">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00842">
+								<image href="images/OCL4M035116C.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e00843">
+								<li>
+									<p><uicontrol>Service in</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The vehicle calculates and displays when you need a scheduled maintenance service (based on mileage or days).</p>
+		<p>If the remaining mileage or time reaches 1,500 km (900 miles) or 30 days, the “Service Interval” message displays for several seconds each time you turn the <term translate="no">ENGINE START/STOP</term> button to the <term translate="no">ON</term> position.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00161.dita#t00161" role="parent" scope="local" type="concept">
+				<linktext>Service mode </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0501">
+	<title>Einschränkungen des Totwinkel-Kollisionsvermeidungsassistenten</title>
+	<conbody>
+		<p>Unter folgenden Umständen funktioniert der Totwinkel-Kollisionsvermeidungsassistent möglicherweise nicht einwandfrei, oder er wird unerwartet aktiviert:</p>
+		<ul>
+			<li>
+				<p>Bei schlechtem Wetter, z. B. starkem Schnee und starkem Regen</p>
+			</li>
+			<li>
+				<p>Der Erkennungssensor ist durch Schnee, Regen, Schmutz usw. verdeckt.</p>
+			</li>
+			<li>
+				<p>Die Temperatur in der Umgebung des Erkennungssensors ist aufgrund der Umgebung zu hoch oder niedrig.</p>
+			</li>
+			<li>
+				<p>Der Erkennungssensor ist blockiert, wenn Sie sich einem Fahrzeug, einer Säule oder einer Wand nähern.</p>
+			</li>
+			<li>
+				<p>Fahrten auf einer Autobahn- (oder Fernstraßen-) Auffahrt oder durch eine Mautstelle.</p>
+			</li>
+			<li>
+				<p>Wenn das Fahrbahnpflaster bzw. der Boden in der Umgebung ungewöhnlich viele Metallteile enthält, beispielsweise über einem U-Bahn-Tunnel.</p>
+			</li>
+			<li>
+				<p>In der Nähe des Fahrzeugs befindet sich ein festes Objekt, z.B. Schallschutzwände, Leitplanken, Mitteltrennwände, Einfahrtsschranken, Straßenlaternen, Schilder, Tunnel, Wände usw. (einschließlich Doppelstrukturen)</p>
+			</li>
+			<li>
+				<p>Fahrten auf einer schmalen Straße, die durch Bäume oder Gras überwachsen ist.</p>
+			</li>
+			<li>
+				<p>Bei Fahrten in offenem Gelände, in denen es nur wenige Fahrzeuge oder Objekte gibt (z.B. Wüste, Wiese, Vorort usw.)</p>
+			</li>
+			<li>
+				<p>Fahrten auf nasser Fahrbahn, z. B. mit einer Pfütze auf der Straße</p>
+			</li>
+			<li>
+				<p>Das andere Fahrzeug fährt sehr dicht hinter Ihrem Fahrzeug oder fährt in unmittelbarer Nähe an Ihrem Fahrzeug vorbei.</p>
+			</li>
+			<li>
+				<p>Die Geschwindigkeit des anderen Fahrzeugs ist sehr hoch, so dass es schnell an Ihrem Fahrzeug vorbeifährt.</p>
+			</li>
+			<li>
+				<p>Ihr Fahrzeug überholt das andere Fahrzeug.</p>
+			</li>
+			<li>
+				<p>Ihr Fahrzeug wechselt die Spur.</p>
+			</li>
+			<li>
+				<p>Ihr Fahrzeug ist gleichzeitig mit dem daneben befindlichen Fahrzeug losgefahren und hat beschleunigt.</p>
+			</li>
+			<li>
+				<p>Das Fahrzeug in der Nebenspur wechselt in die übernächste Spur oder das Fahrzeug in der übernächsten Spur in die Nebenspur.</p>
+			</li>
+			<li>
+				<p>Ein Anhänger oder Träger ist im Bereich des hinteren Eckradars installiert.</p>
+			</li>
+			<li>
+				<p>Der Stoßfänger ist im Bereich um das Eckradar hinten durch Fremdkörper wie Aufkleber, Stoßfänger, Fahrradträger, usw. verdeckt.</p>
+			</li>
+			<li>
+				<p>Der Stoßfänger im Bereich um das Eckradar hinten wird einem Stoß ausgesetzt, beschädigt oder das Radar wird aus seiner Position bewegt.</p>
+			</li>
+			<li>
+				<p>Ihre Fahrzeughöhe ist aufgrund schwerer Lasten, eines anormalen Reifendrucks usw. zu niedrig oder zu hoch.</p>
+			</li>
+			<li>
+				<p>Wenn die folgenden Objekte erkannt werden:</p>
+				<ul>
+					<li>
+						<p>Es wird ein Motorrad oder ein Fahrrad erkannt.</p>
+					</li>
+					<li>
+						<p>Es wird ein Fahrzeug, z.B. ein flacher Anhänger, erkannt.</p>
+					</li>
+					<li>
+						<p>Es wird ein großes Fahrzeug, z.B. ein Bus oder LKW, erkannt.</p>
+					</li>
+					<li>
+						<p>Es wird ein bewegliches Hindernis wie ein Fußgänger, ein Tier, ein Einkaufswagen oder ein Kinderwagen erkannt.</p>
+					</li>
+					<li>
+						<p>Es wird ein Fahrzeug mit geringer Höhe, z.B. ein Sportwagen, erkannt.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Seien Sie achtsam. Die Bremssteuerung funktioniert möglicherweise unter folgenden Bedingungen nicht:</p>
+		<ul>
+			<li>
+				<p>Das Fahrzeug vibriert stark, weil es über eine unebene, holprige Straße oder einen Betonstreifen fährt</p>
+			</li>
+			<li>
+				<p>Bei Fahrten auf rutschigem Untergrund aufgrund von Schnee, Wasserpfützen, Eis usw.</p>
+			</li>
+			<li>
+				<p>Bei zu niedrigem Reifendruck oder beschädigtem Reifen</p>
+			</li>
+			<li>
+				<p>Das Bremssystem wurde geändert</p>
+			</li>
+			<li>
+				<p>Bei einem scharfen Einschlagen des Lenkrads</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Fahrten in einer Kurve</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M054060N.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Der Totwinkel-Kollisionsvermeidungsassistent funktioniert nicht ordnungsgemäß, wenn Sie auf einer kurvigen Straße fahren. Der Totwinkel-Kollisionsvermeidungsassistent kann das Fahrzeug in der benachbarten Fahrspur nicht erkennen.</p>
+					<p>Achten Sie während der Fahrt immer auf die Straßen- und Fahrbedingungen.</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M054061N.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Der Totwinkel-Kollisionsvermeidungsassistent funktioniert nicht ordnungsgemäß, wenn Sie auf einer kurvigen Straße fahren. Der Totwinkel-Kollisionsvermeidungsassistent kann das Fahrzeug auf derselben Spur nicht erkennen.</p>
+					<p>Achten Sie während der Fahrt immer auf die Straßen- und Fahrbedingungen.</p>
+				</li>
+				<li>
+					<p>Fahren am Hang</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M054062N_2.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Der Totwinkel-Kollisionsvermeidungsassistent funktioniert nicht ordnungsgemäß, wenn Sie auf einer kurvigen Straße fahren. Das System kann das Fahrzeug in der benachbarten Fahrspur möglicherweise nicht oder den Boden oder die Konstruktion falsch erkennen.</p>
+					<p>Achten Sie während der Fahrt immer auf die Straßen- und Fahrbedingungen.</p>
+				</li>
+				<li>
+					<p>Fahrten, bei denen sich die Straße verbindet/teilt.</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M054063N.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Der Totwinkel-Kollisionsvermeidungsassistent funktioniert möglicherweise nicht richtig, wenn sich Straßen gabeln oder zusammengeführt werden. In bestimmten Fällen erkennt das System das Fahrzeug in der Nachbarspur nicht.</p>
+					<p>Achten Sie während der Fahrt immer auf die Straßen- und Fahrbedingungen.</p>
+				</li>
+				<li>
+					<p>Fahrten, bei denen die Höhen der Fahrbahnen unterschiedlich sind.</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M054064N.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>Achten Sie während der Fahrt immer auf die Straßen- und Fahrbedingungen.</p>
+					<p>Der Totwinkel-Kollisionsvermeidungsassistent funktioniert möglicherweise nicht richtig, wenn die Spuren während der Fahrt abweichende Höhen haben. In manchen Fällen kann das System ein Fahrzeug auf einer Straße mit unterschiedlichen Fahrspurhöhen nicht erkennen (an Unterführungs-Verbindungsabschnitten, kreuzungsfreien Abschnitten usw.).</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Wenn Sie einen Anhänger oder ein anderes Fahrzeug ziehen, müssen Sie den Totwinkel-Kollisionsvermeidungsassistenten ausschalten.</p>
+				</li>
+				<li>
+					<p>Der Totwinkel-Kollisionsvermeidungsassistent funktioniert möglicherweise nicht einwandfrei, wenn er durch starke elektromagnetische Wellen gestört wird.</p>
+				</li>
+				<li>
+					<p>Der Totwinkel-Kollisionsvermeidungsassistent funktioniert möglicherweise nach dem Start des Fahrzeugs oder der Initialisierung der Frontkamera oder der Eckradarsensoren hinten erst nach etwa 3 Sekunden.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning">
+			<p>Bei Ausstattung mit einem Schaltgetriebe</p>
+			<p>Das Fahrzeug kann sich ausschalten, wenn die Notbremsung des Totwinkel-Kollisionsvermeidungsassistenten aktiviert ist.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0498.dita#CL4m_HEV-ca_ES-2027-t0498" role="parent" scope="local" type="concept">
+				<linktext>Totwinkel-Kollisionsvermeidungsassistent defekt und eingeschränkt</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

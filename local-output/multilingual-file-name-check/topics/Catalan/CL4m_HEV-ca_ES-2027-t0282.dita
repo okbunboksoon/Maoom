@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0282">
+	<title id="e00695">Manuelle Klimaregelung </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Manuelle Klimaregelung</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Die manuelle Klimaregelung verwendet Kühlung und Heizung, um im Fahrzeug eine angenehme Umgebung zu bewahren.</p>
+		<fig expanse="page">
+			<figgroup>
+				<image align="center" href="../../images/OCL4M034312N.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<ol outputclass="callout">
+			<li>
+				<p>Gebläsedrehzahlregelung/Aus-Taste</p>
+			</li>
+			<li>
+				<p>Taste der Heizung für die Windschutzscheibe</p>
+			</li>
+			<li>
+				<p>Taste Heckscheibenheizung</p>
+			</li>
+			<li>
+				<p>Moduswahltaste</p>
+			</li>
+			<li>
+				<p>Taste <term translate="no">A/C</term></p>
+			</li>
+			<li>
+				<p>Frischluft-/Umlufttaste</p>
+			</li>
+			<li>
+				<p>Temperaturregler</p>
+			</li>
+		</ol>
+		<note type="caution">
+			<p>Der Betrieb des Gebläses in Position <term translate="no">ON</term> kann zur Entladung der Batterie führen. Benutzen Sie den Lüfter, wenn der Motor läuft.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0260-CH08.dita#CL4m_HEV-ca_ES-2027-t0260-CH08" role="parent" scope="local" type="concept">
+				<linktext>Bedienelemente und Funktionen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

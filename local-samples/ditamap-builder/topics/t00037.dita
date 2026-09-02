@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" deliveryTarget="except_print" id="t00037">
+	<title>Scheduled charging</title>
+	<conbody>
+		<section deliveryTarget="except_digital" id="e00225">
+			<title>Simple operation</title>
+			<ul id="e00226">
+				<li>
+					<p>Set the charging schedule for your vehicle from the infotainment system or Kia App or Kia Connect app.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00227">
+			<title>Operation</title>
+			<ul id="e00228">
+				<li>
+					<p>Set the charging schedule for your vehicle on the Infotainment system or Kia App or Kia Connect app.</p>
+				</li>
+				<li>
+					<p>When scheduled charging is set and the charger is connected for charging, the indicator lamp turns from green light to amber light to indicate that scheduled charging is set.</p>
+				</li>
+				<li>
+					<p>When immediate charging is required, deactivate the scheduled charge setting on the infotainment system or Kia App or Kia Connect app.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00229">
+			<title>Operating conditions</title>
+			<ul id="e00230">
+				<li>
+					<p>Following charger type is connected</p>
+					<ul id="e00231">
+						<li>
+							<p>AC charger</p>
+						</li>
+						<li>
+							<p>Portable charger (ICCB)*</p>
+						</li>
+					</ul>
+					<p>*Depending on your region, this cable may not be provided in your vehicle.</p>
+				</li>
+			</ul>
+			<note type="tip" id="e00232">
+				<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

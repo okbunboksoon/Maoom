@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0171">
+	<title id="e00500">Automatische Steuerung </title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Typ A</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M035007L_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00501">
+								<title>Typ B</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M035006L_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e00502">
+								<title>Typ C</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M035006R_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Der Regensensor (1), der sich am oberen Rand der Windschutzscheibe befindet, erkennt die Niederschlagsmenge und steuert die Wischzyklen entsprechend. Bei zunehmendem Niederschlag wischen die Scheibenwischer schneller. Wenn kein Niederschlag mehr fällt, stoppen die Scheibenwischer.</p>
+		<p>Um die Wischgeschwindigkeit zu verändern, drehen Sie den Geschwindigkeitsregler.</p>
+		<p>Wenn der Wischerschalter auf <term translate="no">AUTO</term>-Modus eingestellt ist, während sich das Fahrzeug in der Position <term translate="no">ON</term> befindet, führt der Wischer einen einmaligen Wischvorgang zur Selbstüberprüfung des Systems durch. Schalten Sie den Wischerschalter in die Position <term translate="no">OFF</term>, wenn die Scheibenwischer nicht benötigt werden.</p>
+		<note type="caution" id="e00503">
+			<p>Wenn sich das Fahrzeug in der Position <term translate="no">ON</term> befindet und der Wischerschalter der Windschutzscheibe in den <term translate="no">AUTO</term>-Modus gestellt wird, beachten Sie folgende Sicherheitshinweise, um Verletzungen an den Händen oder anderen Körperteilen zu vermeiden:</p>
+			<ul id="e00504">
+				<li id="e00505">
+					<p>Berühren Sie die Windschutzscheibe oben im Bereich des Regensensors nicht von außen.</p>
+				</li>
+				<li id="e00506">
+					<p>Wischen Sie nicht mit einem feuchten oder nassen Tuch über den oberen Rand der Frontscheibe.</p>
+				</li>
+				<li id="e00507">
+					<p>Üben Sie keinen Druck auf die Windschutzscheibe aus.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution" id="e00508">
+			<ul id="e00509">
+				<li id="e00510">
+					<p>Bringen Sie den Wischerschalter vor einer Wagenwäsche in Position <term translate="no">OFF</term>, um die automatische Wischersteuerung zu deaktivieren.</p>
+					<p>Wenn sich der Schalter während einer Wagenwäsche in der Stellung <term translate="no">AUTO</term> befindet, könnten sich die Scheibenwischer einschalten und beschädigt werden.</p>
+				</li>
+				<li id="e00511">
+					<p>Bauen Sie nicht die Sensorabdeckung am oberen Windschutzscheibenrand ab. Es könnten Schäden an Systemkomponenten auftreten, die eventuell nicht von der Fahrzeuggarantie abgedeckt sind.</p>
+				</li>
+				<li id="e00512">
+					<p>Wenn Sie den Motor im Winter starten, schalten Sie den Wischerschalter in die Position <term translate="no">OFF</term>. Andernfalls könnten sich die Scheibenwischer einschalten und Eis könnte die Wischerblätter beschädigen. Entfernen Sie immer erst den Schnee und das Eis und beheizen Sie die Windschutzscheibe gründlich, bevor Sie die Scheibenwischer einschalten.</p>
+				</li>
+				<li id="e00513">
+					<p>Beim Verdunkeln der Windschutzscheibe achten Sie darauf, dass keine Flüssigkeit in den Sensor gelangt, der sich in der oberen Mitte der Windschutzscheibe befindet. Sie kann die zugehörigen Teile beschädigen.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0167.dita#CL4m_HEV-ca_ES-2027-t0167" role="parent" scope="local" type="concept">
+				<linktext>Scheibenwischer und Waschanlage </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

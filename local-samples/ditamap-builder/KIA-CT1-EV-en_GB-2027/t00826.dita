@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00826">
+	<title>When the telltale lights up</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tire pressure monitoring system (TPMS) 
+					<indexterm>when the telltale lights up</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Condition(s)</title>
+			<ul>
+				<li>
+					<p>One or more of the tires is significantly under-inflated.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02662">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e02663">
+											<figgroup>
+												<image align="center" href="../../images/N_CT25Z032_E.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<p>(A) <uicontrol>Low tire pressure</uicontrol> </p>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>The corresponding position light will light up to indicate which tire is significantly under-inflated.</p>
+				</li>
+				<li>
+					<p>Reduce your speed, avoid hard cornering, and anticipate increased stopping distances.</p>
+				</li>
+				<li>
+					<p>Stop and check the tires as soon as possible.</p>
+				</li>
+				<li>
+					<p>Inflate the tires to the specified pressure.</p>
+				</li>
+				<li>
+					<p>Replace the underinflated tire with a spare tire if this is not possible.</p>
+				</li>
+				<li>
+					<p>If you drive the vehicle for about 10 minutes at speeds above 25 km/h (16 mph) after replacing the low pressure tire with the spare tire, one of the following will happen:</p>
+					<ul id="e02664">
+						<li>
+							<p>The TPMS malfunction indicator may blink for approximately 1 minute and then remain continuously appeared because the TPMS sensor is not mounted on the spare wheel. (changed tire equipped with a sensor not in the vehicle)</p>
+						</li>
+						<li>
+							<p>The TPMS malfunction indicator will remain continuously appeared while driving because the TPMS sensor is not mounted on the spare wheel. (changed tire equipped with a sensor in the vehicle)</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

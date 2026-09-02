@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00170">
+	<title>Head Up Display information</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01074">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1" valign="middle">
+							<fig id="e01075">
+								<figgroup>
+									<image align="center" href="images/N_SP3i25_C00_069_IR.jpg" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2" valign="middle">
+							<ol outputclass="callout" id="e01076">
+								<li id="e01077">
+									<p>Turn By Turn (TBT) navigation information</p>
+								</li>
+								<li>
+									<p importance="optional">Surrounding vehicle information</p>
+								</li>
+								<li id="e01078">
+									<p importance="optional">SCC set speed information</p>
+								</li>
+								<li>
+									<p importance="optional">Lane Following Assist information</p>
+								</li>
+								<li>
+									<p importance="optional">SCC vehicle distance information</p>
+								</li>
+								<li>
+									<p importance="optional">Lane Safety information</p>
+								</li>
+								<li id="e01079">
+									<p importance="optional">Blind-Spot Safety information</p>
+								</li>
+								<li id="e01080">
+									<p>Speedometer information</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00169.dita#t00169" role="parent" scope="local" type="concept">
+				<linktext>Head-Up Display (HUD)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

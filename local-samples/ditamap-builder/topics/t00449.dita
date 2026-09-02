@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00449">
+	<title>Forward cross-traffic safety</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03422">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e03423">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/N_TK25Z009_E.eps" placement="break" width="2.244in" id="e03424"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03425">
+								<li>
+									<p> <uicontrol outputclass="a1804409">Driver assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1804489">Driving safety</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1804492">Forward cross-traffic safety</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle on, select <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Driving safety</uicontrol><uicontrol>Forward cross-traffic Safety</uicontrol></menucascade> from the infotainment system screen to turn on Junction Crossing function and deselect to turn off the function.</p>
+	</conbody>
+</concept>

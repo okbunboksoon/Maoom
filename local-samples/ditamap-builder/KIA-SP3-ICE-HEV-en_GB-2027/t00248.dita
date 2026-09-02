@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00248">
+	<title id="e01582">Securing a Child Restraint System seat with “ISOFIX top tether anchorage” system </title>
+	<shortdesc/>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01583">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01584">
+								<figgroup>
+									<image href="images/N_SP327_C06_010_1_E.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Child Restraint hook holders are located on the back of the rear cushions.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01585">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01586">
+								<figgroup>
+									<image href="images/N_SP3i26_D06_050_1_E.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol id="e01587">
+			<li>
+				<p>Route the ISOFIX top tether strap over the seatback.</p>
+				<p>For vehicles with adjustable headrest, route the tether strap under the headrest and between the headrest posts, otherwise route the tether strap over the top of the seatback.</p>
+			</li>
+			<li>
+				<p>Connect the ISOFIX top tether strap to the ISOFIX top tether anchorage, then tighten the ISOFIX top tether strap according to the instructions of your Child Restraint System’s manufacturer to firmly attach the Child Restraint System to the seat.</p>
+			</li>
+		</ol>
+		<note type="warning" id="e01588">
+			<p>Take the following precautions when installing the ISOFIX top tether strap:</p>
+			<ul id="e01589">
+				<li id="e01590">
+					<p>Read and follow all installation instructions provided with your Child Restraint System.</p>
+				</li>
+				<li id="e01591">
+					<p>NEVER attach more than one Child Restraint System to a single ISOFIX top tether anchorage. This could cause the anchorage or attachment to come loose or break.</p>
+				</li>
+				<li id="e01592">
+					<p>Do not attach the ISOFIX top tether strap to anything other than the correct ISOFIX top tether anchorage. It may not work properly if attached to something else.</p>
+				</li>
+				<li id="e01593">
+					<p>Child Restraint System anchorages are designed to withstand only those loads imposed by correctly fitted Child Restraint System.</p>
+					<p>Under no circumstances are they to be used for adult seatbelts or harnesses or for attaching other items or equipment to the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00246.dita#t00246" role="parent" scope="local" type="concept">
+				<linktext>ISOFIX low anchorage and ISOFIX top tether anchorage (ISOFIX anchorage system) for children </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0294">
+	<title>Beschlagentfernung auf der Außenseite der Windschutzscheibe mit automatischer Klimaregelung</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Windschutzscheibe beheizen und beschlagfrei halten
+					<indexterm>Beschlagentfernung auf der Außenseite der Windschutzscheibe mit automatischer Klimaregelung</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034310N_4.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol>
+			<li>
+				<p>Drehen Sie den Gebläseregler in die höchste Stellung.</p>
+			</li>
+			<li>
+				<p>Drehen Sie den Temperaturregler (<term translate="no">HI</term>) auf die höchste Temperatur.</p>
+			</li>
+			<li>
+				<p>Drücken Sie die Taste für die Scheibenheizung <image align="left" href="../../images/WKIA_181.eps" scale="15" placement="inline"/>.</p>
+			</li>
+			<li>
+				<p>Die Frischluftposition wird automatisch ausgewählt und die Klimaanlage wird abhängig von der erkannten Umgebungstemperatur eingeschaltet.</p>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0290.dita#CL4m_HEV-ca_ES-2027-t0290" role="parent" scope="local" type="concept">
+				<linktext>Windschutzscheibe beheizen und beschlagfrei halten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

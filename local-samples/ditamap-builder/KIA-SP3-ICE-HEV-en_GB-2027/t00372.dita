@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00372">
+	<title>Manual Transmission (MT)</title>
+	<shortdesc>The manual transmission is fully synchronized in all 6 forward gears, allowing smooth shifting to a higher or lower gear.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>manual transmission</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02417">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e02418">
+								<image href="images/N_SP3i25_C09_008_2_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e02419">
+			<li>
+				<p><image href="images/WKIA_144.jpg" scale="15" align="center" placement="inline"/> The shift lever can be moved without pulling the button.</p>
+			</li>
+			<li>
+				<p><image href="images/WKIA_143.jpg" scale="15" align="center" placement="inline"/> The button should be pressed when moving the shift lever into R (Reverse).</p>
+			</li>
+		</ul>
+		<section id="e02420">
+			<title>Manual transmission operation</title>
+			<ul id="e02421">
+				<li>
+					<p>Pull the button (1) located below the shift knob and pull the shift lever to the left sufficiently, and then shift into R (Reverse).</p>
+				</li>
+				<li>
+					<p>This shift pattern is imprinted on the shift knob. The transmission is fully synchronized in all forward gears so shifting to either a higher or a lower gear is easily accomplished.</p>
+				</li>
+				<li>
+					<p>Depress the clutch pedal down fully while shifting, then release it slowly.</p>
+				</li>
+				<li>
+					<p>If your vehicle is equipped with an ignition lock switch, the engine will not start when starting the engine without depressing the clutch pedal.</p>
+				</li>
+				<li>
+					<p>Make sure the vehicle is completely stopped before shifting into R (Reverse).</p>
+				</li>
+				<li>
+					<p>Never operate the engine at an excessively high engine speed (rpm).</p>
+				</li>
+				<li>
+					<p>During cold weather, shifting may be difficult until the transmission lubricant warms up. This condition is normal and does not damage the transmission.</p>
+				</li>
+				<li>
+					<p>If the vehicle is at a complete stop and it is hard to shift into 1st gear or R (Reverse), place the shift lever in N (Neutral) and release the clutch pedal. Then, press the clutch pedal again and shift into 1st or R (Reverse).</p>
+				</li>
+			</ul>
+			<note type="warning" id="e02422">
+				<ul id="e02423">
+					<li>
+						<p>Before leaving the driver’s seat, always apply the parking brake fully and turn off the engine. When parking on a level surface or uphill grade, shift the transmission into 1st gear. When parking on a downhill grade, shift the transmission into R (Reverse). Failure to follow these steps in order may result in unexpected vehicle movement.</p>
+					</li>
+					<li>
+						<p>Do not use the engine brake (shifting from a high gear to lower gear) rapidly on slippery roads, as this may cause the vehicle to skid and result in an accident.</p>
+					</li>
+					<li>
+						<p>The vehicle may stall when emergency braking is activated by FCA, BCA, or RCCA.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution" id="e02424">
+				<ul id="e02425">
+					<li>
+						<p>When downshifting from 5th to 4th gear, be careful not to move the shift lever sideways into 2nd gear. A sudden downshift to 2nd gear may cause the engine speed (rpm) too high, which can result in severe engine or transmission damage.</p>
+					</li>
+					<li>
+						<p>Do not downshift more than two gears at a time. When shifting to a lower gear, make sure the engine speed does not enter the red zone when the clutch engages. Such abrupt downshifting may damage the engine, clutch, and transmission.</p>
+					</li>
+					<li>
+						<p>To prevent premature clutch wear or damage, do not rest your foot on the clutch pedal while driving. Do not use the clutch to hold the vehicle on an uphill grade, at a traffic light, or in similar situations.</p>
+					</li>
+					<li>
+						<p>Do not rest your hand on the shift lever while driving, as this may cause premature wear of the transmission shift forks.</p>
+					</li>
+					<li>
+						<p>To avoid clutch damage, do not start in 2nd gear except on slippery roads.</p>
+					</li>
+					<li>
+						<p>Do not overload the vehicle. Overloading can cause excessive heat and abnormal wear to the clutch disc and clutch cover.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00362.dita#t00362" role="parent" scope="local" type="concept">
+				<linktext>Driving your vehicle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

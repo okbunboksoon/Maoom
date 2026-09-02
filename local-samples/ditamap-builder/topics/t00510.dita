@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00510">
+	<title>Safe exit</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03877">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e03878">
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/N_TK25Z016_E.eps" placement="break" width="2.243in" id="e03879"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03880">
+								<li>
+									<p> <uicontrol outputclass="a1804409">Driver assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1804496">Driving safety</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1804496">Safe exit</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle on, select <menucascade><uicontrol outputclass="a1804409">Settings</uicontrol><uicontrol outputclass="a1804409">Vehicle</uicontrol><uicontrol outputclass="a1804496">Driver assistance</uicontrol><uicontrol outputclass="a1906761">Driving safety</uicontrol><uicontrol outputclass="a1906761">Safe exit</uicontrol></menucascade> on the infotainment system.</p>
+		<note type="warning" id="e03881">
+			<p>If <uicontrol outputclass="a1906761">Safe exit</uicontrol> is deselected, Safe Exit Warning cannot warn you. The driver should always be aware of unexpected and sudden situations from occurring.</p>
+		</note>
+		<note type="note" id="e03882">
+			<p>If the vehicle is restarted, Safe Exit Warning will maintain the last setting.</p>
+		</note>
+		<note type="caution" id="e03883">
+			<p>When the vehicle and the trailer are connected electrically, Safe Exit Warning automatically turns off. In this case, you cannot get help from Safe Exit Warning. Always drive with care. (if Kia genuine part equipped)</p>
+		</note>
+	</conbody>
+</concept>

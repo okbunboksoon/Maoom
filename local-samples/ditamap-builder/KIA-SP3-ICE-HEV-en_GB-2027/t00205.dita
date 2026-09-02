@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00205">
+	<title id="e01280">Reclining seatback </title>
+	<taskbody>
+		<context>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01281">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01282">
+									<image href="images/N_SP327_B06_007_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To recline the seatback:</p>
+		</context>
+		<steps>
+			<step>
+				<cmd>Push the control switch forward or backward to move the seatback to the desired angle.</cmd>
+			</step>
+			<step>
+				<cmd>Release the switch once the seat reaches the desired position.</cmd>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00203.dita#t00203" role="parent" scope="local" type="concept">
+				<linktext>Front seat adjustment for power seat </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

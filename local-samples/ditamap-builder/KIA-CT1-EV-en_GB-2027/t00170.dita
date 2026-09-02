@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00170">
+	<title>Operating lights</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00814">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00815">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C017_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry morerows="2">
+							<ol outputclass="callout" id="e00816">
+								<li>
+									<p>Low beam (<image align="left" href="../../images/WKIA_047.eps" scale="15" placement="inline"/>)</p>
+								</li>
+								<li>
+									<p>Position &amp; Taillamp (<image align="left" href="../../images/WKIA_049.eps" scale="15" placement="inline"/>): Tail lamp, position lamp, License plate lamp and cluster light</p>
+								</li>
+								<li>
+									<p> <term translate="no">AUTO</term> </p>
+									<ul id="e00817">
+										<li>
+											<p>The headlamps and tail lamps will turn <term translate="no">ON</term> or <term translate="no">OFF</term> automatically depending on the external ambient light level.</p>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<p> <term translate="no">OFF</term> (O)</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+					<row>
+						<entry colname="col1">
+							<fig id="e00818">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C018_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="col1">
+							<fig id="e00819">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C019_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital" id="e00820">
+			<title>Simple operation</title>
+			<ul id="e00821">
+				<li>
+					<p>Turn the switch to the dedicated position.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul id="e00822">
+				<li>
+					<p>Turn the switch to the dedicated position.</p>
+				</li>
+			</ul>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Never place anything over the sensor located on the instrument cluster as this will ensure better auto-light system control.</p>
+					</li>
+					<li>
+						<p>Don't clean the sensor using a window cleaner, the cleaner may leave a light film which could interfere with sensor operation.</p>
+					</li>
+					<li>
+						<p>If your vehicle has window tint or other types of metallic coating on the front windshield, the Auto light system may not work properly.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="note_t4c_lxy_djc">
+				<ul id="ul_qy4_ll3_fjc">
+					<li>
+						<p>The <term translate="no">EV</term> button is in <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> to turn on the headlights.</p>
+					</li>
+					<li>
+						<p>For Europe</p>
+						<ul id="ul_ry4_ll3_fjc">
+							<li>
+								<p>Even when the light switch is in the OFF position, the headlights (low beam) automatically turn on when driving at night or in low ambient light. These headlights cannot be turned off manually while driving.</p>
+							</li>
+							<li>
+								<p>The position lamps and tail lamps automatically turn on regardless of the light switch position. However, they can be turned off when the vehicle is in P (Park) or the parking brake is engaged, and the light switch is set to the OFF position.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

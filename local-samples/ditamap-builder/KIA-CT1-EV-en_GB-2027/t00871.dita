@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00871">
+	<title>Battery capacity label</title>
+	<conbody>
+		<fig>
+			<figgroup>
+				<image align="center" href="../../images/KIAPB164.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<p importance="default">The actual battery label in the vehicle may differ from the illustration.</p>
+		<ol outputclass="callout">
+			<li>
+				<p>The Kia model name of battery</p>
+			</li>
+			<li>
+				<p>The nominal voltage</p>
+			</li>
+			<li>
+				<p>The nominal capacity (in Ampere hours)</p>
+			</li>
+			<li>
+				<p>The cold-test current in amperes by SAE/EN</p>
+			</li>
+			<li>
+				<p>The nominal reserve capacity (in min.)</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

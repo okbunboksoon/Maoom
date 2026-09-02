@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00503">
+	<title>Hands-off warning</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03367">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03368">
+								<image href="images/OCL4M055099N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03369">
+								<li>
+									<p><uicontrol>Keep hands on steering wheel</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When you take your hands off the steering wheel for a few seconds, a warning message appears and an audible warning sounds in stages.</p>
+		<ul>
+			<li>
+				<p>First stage: Warning message</p>
+			</li>
+			<li>
+				<p>Second stage: Warning message (red steering wheel) and audible warning</p>
+			</li>
+		</ul>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03370">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03371">
+								<image href="images/OCL4M055100N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03372">
+								<li>
+									<p><uicontrol>Lane Following Assist deactivated</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>If you do not return your hands to the steering wheel after the hands-off warning message appears, Lane Following Assist is automatically canceled.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Lane Following Assist may not assist with steering if you hold the steering wheel very tight or steer it over a certain degree.</p>
+				</li>
+				<li>
+					<p>Lane Following Assist does not operate at all times. It is your responsibility to safely steer the vehicle and stay in your lane.</p>
+				</li>
+				<li>
+					<p>The hands-off warning message may appear late depending on road conditions. Always keep your hands on the steering wheel while driving.</p>
+				</li>
+				<li>
+					<p>If you attach objects to the steering wheel, the hands-off warning may not work properly.</p>
+				</li>
+				<li>
+					<p>If you wear gloves or hold the steering wheel lightly, Lane Following Assist may not detect your hands on the steering wheel and may display the hands-off warning.</p>
+				</li>
+				<li>
+					<p>When the Lane Following Assist reaches its system limit, the indicator light flashes white and a warning sound is emitted.</p>
+					<ul id="e03373">
+						<li>
+							<p>System limit: When the driver releases the steering wheel or the vehicle departs from the lane while Lane Following Assist is active.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>On sharp curved roads, Lane Following Assist may not operate or may operate abnormally.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>When both lane markings are detected, the lane lines on the instrument cluster change from gray to white.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03374">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e03375">
+											<title>Lane undetected</title>
+											<image href="images/N_SP3i25_C00_024_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<fig id="e03376">
+											<title>Lane detected</title>
+											<image href="images/N_SP3i25_C00_023_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>The images or colors may display differently depending on the specifications of the instrument cluster or theme.</p>
+				</li>
+				<li>
+					<p>If lane markings are not detected, steering wheel assistance by Lane Following Assist may be limited depending on whether a vehicle is ahead or on the driving conditions of the vehicle.</p>
+				</li>
+				<li>
+					<p>You can control the steering wheel even when Lane Following Assist assists with steering.</p>
+				</li>
+				<li>
+					<p>The steering wheel may feel heavier or lighter than usual when Lane Following Assist assists with steering.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00501.dita#t00501" role="parent" scope="local" type="concept">
+				<linktext>Warning and control</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

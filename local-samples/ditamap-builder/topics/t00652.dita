@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00652">
+	<title>Highway Lane Change Assist standby</title>
+	<conbody>
+		<p>Highway Lane Change Assist function will be in the standby state when one of the ready state condition is not satisfied, or when entering or driving on one of the following roads:</p>
+		<ul>
+			<li>
+				<p>Road within a certain distance from the tollgate on the main road of the highway (or motorway)</p>
+			</li>
+			<li>
+				<p>The road ahead ends without an interchange or junction</p>
+			</li>
+			<li>
+				<p>Road with sharp curves</p>
+			</li>
+			<li>
+				<p>Road with narrow lanes</p>
+			</li>
+			<li>
+				<p>A road section under construction</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

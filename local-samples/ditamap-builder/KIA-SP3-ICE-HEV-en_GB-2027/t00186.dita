@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00186">
+	<title>One-touch lane change function</title>
+	<shortdesc>To use the one-touch lane change function, move the turn signal lever slightly, then release it. The lane change signals will blink 3, 5, or 7 times.</shortdesc>
+	<conbody>
+		<p>Select <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Lights</uicontrol><uicontrol>One Touch Turn Signal</uicontrol></menucascade> from the infotainment system to activate or deactivate the one-touch lane change function or choose the length of blinking (3, 5, or 7 times).</p>
+		<note type="note" id="e01149">
+			<p>If an indicator flash is abnormally quick or slow, a bulb may have a poor electrical connection in the circuit, or it may be burned out and need to be replaced.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00185.dita#t00185" role="parent" scope="local" type="task">
+				<linktext>Turn and lane change signal operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

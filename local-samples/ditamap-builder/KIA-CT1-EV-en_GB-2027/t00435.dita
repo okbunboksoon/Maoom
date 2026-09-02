@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00435">
+	<title>i-Pedal</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>regenerative braking system 
+					<indexterm>i-Pedal</indexterm>
+				</indexterm>
+				<indexterm>i-Pedal</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>i-Pedal is controlled by acceleration pedal. It provides vehicle speed control without manually controlling the paddle shifter.</p>
+		<section id="e01741">
+			<title>i-PEDAL Settings</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01742">
+				<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1" colsep="0">
+								<fig id="e01743">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Z089_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01744">
+									<li>
+										<p> <uicontrol>Electric Vehicle</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol>i-PEDAL</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul id="e01745">
+				<li>
+					<p>On the home screen of the infotainment system, <menucascade><uicontrol>Electric Vehicle</uicontrol><uicontrol><image href="../../images/WKIA_307.eps" scale="15" align="left" placement="inline"/></uicontrol><uicontrol>i-PEDAL</uicontrol></menucascade> allows you to choose whether to use i-PEDAL when reversing.</p>
+				</li>
+				<li>
+					<p>If you enable Do not use i-Pedal when reversing, shifting to R (Reverse) while using i-Pedal will turn off the i-Pedal function, then shifting to D (Drive) and automatically turning on the i-Pedal function when driving above 20 km/h (12 mph).</p>
+				</li>
+				<li>
+					<p>If you disable Do not use i-Pedal when reversing, the i-Pedal function is automatically turned on by shifting D (Drive) or R (Reverse).</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Operation</title>
+			<ol>
+				<li>
+					<p>Pull the left side (<image href="../../images/WKIA_291.eps" scale="15" align="left" placement="inline"/>) of the paddle shifter for approximately 1 second during all regenerative braking steps. It will turn on the i-Pedal function and the i-Pedal indicator symbol will be displayed in the cluster.</p>
+				</li>
+				<li>
+					<p>Pull the left side <image href="../../images/WKIA_291.eps" scale="15" align="left" placement="inline"/> of the paddle shifter for approximately 1 second again to turn off the i-PEDAL function and the i-Pedal indicator symbol will disappear in the cluster.</p>
+					<ul>
+						<li>
+							<p>Check i-Pedal indicator symbol i-Pedal on the instrument cluster.</p>
+						</li>
+					</ul>
+				</li>
+			</ol>
+			<note type="note" id="e01746">
+				<p>If you turn off the vehicle with i-Pedal set to a specific level, the same setting is retained when you restart the vehicle.</p>
+			</note>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Non-operating condition(s)</title>
+			<ul>
+				<li>
+					<p>A road with a steep uphill or downhill slope</p>
+				</li>
+				<li>
+					<p>The point at which the slope ends</p>
+				</li>
+				<li>
+					<p>When starting and stopping repeatedly on an inclined road</p>
+				</li>
+				<li>
+					<p>When the Downhill Brake Control (DBC) function is operating</p>
+				</li>
+			</ul>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Do not solely rely on i-Pedal to stop the vehicle. Stopping the vehicle may not be possible depending on vehicle and road conditions. Pay attention to the road condition ahead and apply the brake if necessary.</p>
+					</li>
+					<li>
+						<p>Avoid increasing the regenerative braking level suddenly on slippery roads (like snow or icy conditions) because it may lead slipping of the tires and skidding of vehicle. It can be dangerous due to the loss of the vehicle’s steering force.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution">
+				<p>When the vehicle is stopped or parked by i-Pedal on steep hills, be sure to depress the brake pedal.</p>
+			</note>
+			<note type="note">
+				<p>When the deceleration rate and the vehicle’s level of deceleration reaches a certain level while the i-Pedal function is on, brake lights may turn on without depressing the brake pedal.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

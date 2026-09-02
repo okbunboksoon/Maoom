@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" otherprops="Legal_EU_europe_20_001" id="t00696">
+	<title>Parking Distance Warning (PDW)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>parking distance warning (PDW)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Parking Distance Warning uses the front (if equipped), side (if equipped), and rear ultrasonic sensors to detect and warn you if a person, animal, or object is within a certain distance when your vehicle is stopped or driving at low speed.</p>
+		<section>
+			<title>Detection sensor</title>
+			<p>Please refer to <xref href="t00444.dita#t00444"/> for the applicable sensors and their locations.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00442.dita#t00442" role="parent" scope="local" type="concept">
+				<linktext>Driver assistance guide</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

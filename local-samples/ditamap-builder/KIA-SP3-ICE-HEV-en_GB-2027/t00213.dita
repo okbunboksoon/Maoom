@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00213">
+	<title>Seatback angle</title>
+	<shortdesc/>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01328">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01329">
+								<figgroup>
+									<image href="images/N_SP327_B06_017_1.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To recline the seatback:</p>
+		<ol id="e01330">
+			<li>
+				<p>Pull up the seatback recline lever.</p>
+			</li>
+			<li>
+				<p>Hold the lever and adjust the seatback of the seat to the position you desire.</p>
+			</li>
+			<li>
+				<p>Release the lever and make sure the seatback is locked in place. (The lever MUST return to its original position for the seatback to lock.)</p>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00212.dita#t00212" role="parent" scope="local" type="concept">
+				<linktext>Rear seat adjustment</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

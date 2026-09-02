@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00220">
+	<title>Reinstalling headrest</title>
+	<taskbody>
+		<context>
+			<p>To reinstall the headrest:</p>
+		</context>
+		<steps id="e01367">
+			<step id="e01368">
+				<cmd>Recline the seatback with the recline lever or switch.</cmd>
+			</step>
+			<step id="e01369">
+				<cmd>Put the headrest poles into the holes while pressing the release button.</cmd>
+			</step>
+			<step id="e01370">
+				<cmd>Adjust the headrest to the appropriate height.</cmd>
+				<info>
+					<note type="warning">
+						<p>Headrest reinstallation</p>
+						<p>To reduce the risk of injury to the head or neck, always make sure the headrest is locked into position and adjusted properly after reinstalling.</p>
+					</note>
+				</info>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00216.dita#t00216" role="parent" scope="local" type="concept">
+				<linktext>Front seat headrest</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

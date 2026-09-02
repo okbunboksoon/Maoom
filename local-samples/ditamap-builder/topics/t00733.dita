@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00733">
+	<title>Operating order</title>
+	<conbody>
+		<p>Parking function operates in the following order:</p>
+		<ol>
+			<li>
+				<p>Getting ready for parking</p>
+			</li>
+			<li>
+				<p>Searching for parking space</p>
+			</li>
+			<li>
+				<p>Select parking type and operating mode</p>
+			</li>
+			<li>
+				<p>Smart Parking</p>
+			</li>
+			<li>
+				<p>Remote Parking</p>
+			</li>
+		</ol>
+		<section>
+			<title>1. Getting ready for parking</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig>
+									<figgroup>
+										<image href="../../images/OOV055099.eps" align="center" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<p>(1) Parking/View button</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol id="e04651">
+				<li>
+					<p>With the vehicle turned on, depress the brake pedal and shift the gear to D (Drive) or N (Neutral).</p>
+				</li>
+				<li>
+					<p>Press and hold the Parking/View (<image href="../../images/WKIA_106.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel" id="e04652"/>) button (1) to turn on Remote Smart Parking Assist.</p>
+				</li>
+			</ol>
+			<note type="note">
+				<ul>
+					<li>
+						<p> <uicontrol outputclass="a2008811">Agree</uicontrol> must be selected on the infotainment system screen and the infotainment system has to operate properly to use Parking function.</p>
+					</li>
+					<li>
+						<p>If you drive above 5 km/h (3 mph) with the vehicle on, you may use the Parking function with the gear shifted to N (Neutral).</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>2. Searching for parking space</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig>
+									<figgroup>
+										<image href="../../images/OOV055163L.eps" align="center" placement="break" height="1.740in" width="2.410in"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout">
+									<li>
+										<p> <uicontrol outputclass="a1906316">Searching for parking space...</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol outputclass="a2009236">Drive forward slowly and keep close to the side on which you want to park.</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Slowly drive forward maintaining the distance of approximately 100 cm (40 inches) from the parked vehicles. The vehicle will search for a parking space from the side or front/rear of parked vehicle.</p>
+			<p>When searching for a parking space is complete, a message will appear on the infotainment system screen. <uicontrol outputclass="a1906322">Select parking type</uicontrol> will be displayed and the selected parking space will appear on Top View screen of Surround View Monitor.</p>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Remote Smart Parking Assist searches for parking spaces that are next to parked vehicles, or parking spaces with parked vehicles in front or rear.</p>
+					</li>
+					<li>
+						<p>While searching for a parking space, when vehicle speed is above 20 km/h (12 mph), a message will appear on the infotainment system screen informing you to slow down. When vehicle speed is above 30 km/h (18 mph), Parking function will turn off.</p>
+					</li>
+					<li>
+						<p>Searching for a parking space will be completed when there is enough space to move the vehicle in addition to the parking space.</p>
+					</li>
+					<li>
+						<p>Even if an audible sound is heard to notify that searching for a parking space is complete, search completion can be canceled immediately depending on surroundings.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note">
+				<ul>
+					<li>
+						<p>If the distance is below 50 cm (20 inches) or over 150 cm (59 inches), Remote Smart Parking Assist may not be able to search for a parking space.</p>
+						<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+							<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+								<colspec colnum="1" colname="1" colwidth="50*"/>
+								<colspec colnum="2" colname="2" colwidth="50*"/>
+								<tbody>
+									<row rowsep="0">
+										<entry colname="1" colsep="0">
+											<fig>
+												<figgroup>
+													<image href="../../images/OOV055078.eps" align="center" placement="break" height="1.575in" width="2.244in"/>
+												</figgroup>
+											</fig>
+										</entry>
+										<entry colname="2"/>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+					</li>
+					<li>
+						<p>If you do not maintain a certain distance from the parked vehicle, the performance to search for a parking space may reduce.</p>
+					</li>
+					<li>
+						<p>Even if a diagonal parking space is searched as a parking space, parking is not assisted normally.</p>
+					</li>
+					<li>
+						<p>Due to abnormal performance of the ultrasonic sensor or the influence of the surroundings, Parking function may not be able to search for a parking space even if there is a parking space, or may search for a space that is not suitable for parking.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>3. Select parking type and operating mode</title>
+			<sectiondiv><ph>1. Parking type – Perpendicular reverse (Left/Right), Parallel reverse (Left/Right)</ph>
+				<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+					<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+						<colspec colnum="1" colname="1" colwidth="50*"/>
+						<colspec colnum="2" colname="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="1" colsep="0">
+									<fig>
+										<figgroup>
+											<image href="../../images/OOV055164L.eps" align="center" placement="break" height="1.740in" width="2.410in"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="2">
+									<ol outputclass="callout">
+										<li>
+											<p> <uicontrol outputclass="a1906322">Select parking type</uicontrol> </p>
+										</li>
+										<li>
+											<p> <uicontrol outputclass="a1906321">Parking type can only be selected at standstill.</uicontrol> </p>
+										</li>
+									</ol>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>With the vehicle stopped by depressing the brake pedal, touch the infotainment system screen to select the desired parking type.</p>
+				<note type="note">
+					<ul>
+						<li>
+							<p>If you continue to drive without stopping after the parking type selection screen appears, Remote Smart Parking Assist will return to the previous stage and search for a parking space.</p>
+						</li>
+						<li>
+							<p>If Parking function is canceled unintentionally by pressing the Parking/View (<image href="../../images/OCV041426L.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) button before the parking type is selected, you can return to the parking type selection stage by pressing and holding the button again while the vehicle is stopped.</p>
+						</li>
+					</ul>
+				</note>
+				<note type="warning">
+					<p>Before selecting the Parking type, the driver should check whether the parking space is suitable.</p>
+					<p>If the searched parking space by Remote Smart Parking Assist is narrow or unsuitable for parking, do not select the Parking type and move the vehicle to search for another parking space.</p>
+				</note>
+			</sectiondiv>
+			<sectiondiv outputclass="continue"><ph>2. Operating mode – Remote Parking, Smart Parking</ph>
+				<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+					<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+						<colspec colnum="1" colname="1" colwidth="50*"/>
+						<colspec colnum="2" colname="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="1" colsep="0">
+									<fig>
+										<figgroup>
+											<image href="../../images/OOV055165L.eps" align="center" placement="break" height="1.740in" width="2.410in"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="2">
+									<ol outputclass="callout">
+										<li>
+											<p> <uicontrol outputclass="a2007862">Select operating mode</uicontrol> </p>
+										</li>
+										<li>
+											<p> <uicontrol outputclass="a1906302">REMOTE Parking</uicontrol> </p>
+										</li>
+										<li>
+											<p> <uicontrol outputclass="a1906304">SMART Parking</uicontrol> </p>
+										</li>
+									</ol>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>After selecting a parking type, the infotainment system screen will guide you with Remote Parking function and Smart Parking function. Follow the instructions to operate Remote Smart Parking Assist.</p>
+				<note type="note">
+					<ul>
+						<li>
+							<p>Operating instructions will be displayed on the screen for each desired function you select.</p>
+						</li>
+						<li>
+							<p>Do not take your foot off the brake pedal during the Parking function guide. When the vehicle moves, Remote Smart Parking Assist will turn off.</p>
+						</li>
+					</ul>
+				</note>
+				<note type="note">
+					<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+						<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+							<colspec colnum="1" colname="1" colwidth="50*"/>
+							<colspec colnum="2" colname="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="1" colsep="0">
+										<fig>
+											<figgroup>
+												<image href="../../images/OOV055166L.eps" align="center" placement="break" height="1.573in" width="2.243in"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="2">
+										<ol outputclass="callout">
+											<li>
+												<p> <uicontrol outputclass="a1906328">SMART Parking</uicontrol> </p>
+											</li>
+											<li>
+												<p> <uicontrol outputclass="a1906305">1. Take hands off steering wheel.</uicontrol> </p>
+											</li>
+											<li>
+												<p> <uicontrol outputclass="a19063051">2. Press and hold parking/view button.</uicontrol> </p>
+											</li>
+										</ol>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<p>If Remote Smart Parking Assist cannot activate Remote Parking function, only the Smart Parking guide will be displayed on the infotainment system screen.</p>
+				</note>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>4. Smart Parking</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04653">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e04654">
+									<figgroup>
+										<image href="../../images/OOV055174.eps" align="center" placement="break" width="2.243in" id="e04655"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<fig id="e04656">
+									<figgroup>
+										<image href="../../images/OOV056175L.eps" align="center" placement="break" width="2.243in" id="e04657"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol>
+				<li>
+					<p>Press the Parking/View (<image href="../../images/WKIA_106.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) button when the vehicle is stopped by depressing the brake pedal.</p>
+				</li>
+				<li>
+					<p>Release the brake pedal while holding the Parking/View (<image href="../../images/WKIA_106.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) button.</p>
+					<ul>
+						<li>
+							<p>Remote Smart Parking Assist will automatically control the steering wheel, vehicle speed and gear shift.</p>
+						</li>
+						<li>
+							<p>If you do not hold down the Parking/View button, the vehicle will stop and function control will pause. The function will start operating again when the Parking/View button is pressed and held again.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Hold the Parking/View (<image href="../../images/WKIA_106.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) button until the vehicle reaches the target parking position.</p>
+					<ul>
+						<li>
+							<p>Message will appear on the infotainment system screen to inform you that parking is complete. The vehicle will automatically shift to P (Park) and engage the parking brake.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>If you need to change the vehicle’s position or location, manually complete parking your vehicle.</p>
+				</li>
+			</ol>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Smart Parking function will not operate if the door is open or the seat belt is not fastened.</p>
+					</li>
+					<li>
+						<p>The parking location indicator is displayed on Surround View Monitor screen and is displayed until the vehicle enters the parking space for the first time by Smart Parking function.</p>
+					</li>
+					<li>
+						<p>Vehicle speed can be adjusted by depressing the brake pedal while Smart Parking function is operating. However, the vehicle does not accelerate even when the accelerator pedal is depressed.</p>
+					</li>
+					<li>
+						<p>Depending on parking environments, if the vehicle is stopped by a stopper, parking may be completed.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>5. Remote Parking</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig>
+									<figgroup>
+										<image href="../../images/OOV055167L.eps" align="center" placement="break" height="1.740in" width="2.410in"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout">
+									<li>
+										<p> <uicontrol outputclass="a1906312">Remote Parking Instructions</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol outputclass="a1906311">1. Shift to P.</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol outputclass="a19063112">2. Leave car (keep the key) and close doors.</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol>3. Press and hold forward/backward button on car key.</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol>
+				<li>
+					<p>Shift the gear to P (Park).</p>
+				</li>
+				<li>
+					<p>Get out of the vehicle with the smart key, and close all doors.</p>
+				</li>
+				<li>
+					<p>Press and hold one of the Forward (<image href="../../images/WKIA_109.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) or Backward <image href="../../images/WKIA_110.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) button on the smart key.</p>
+					<ul>
+						<li>
+							<p>Remote Smart Parking Assist will automatically control the steering wheel, vehicle speed and gear shift.</p>
+						</li>
+						<li>
+							<p>If you do not hold down the Forward (<image href="../../images/WKIA_109.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) or Backward (<image href="../../images/WKIA_110.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) button, the vehicle will stop and function control will pause. The function will start operating again when the button is pressed and held again.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Hold the Forward (<image href="../../images/WKIA_109.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) or Backward (<image href="../../images/WKIA_110.eps" align="left" placement="inline" height="0.117in" width="0.117in" outputclass="nolabel"/>) button on the smart key until the parking is complete.</p>
+					<ul>
+						<li>
+							<p>When the vehicle reaches the target parking position, a message will appear on the infotainment system screen to inform you that parking is complete. The vehicle will automatically shift to P (Park), engage EPB (Electronic Parking Brake) and the vehicle will turn off.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>If you need to change the vehicle’s position or location, manually complete parking your vehicle.</p>
+				</li>
+			</ol>
+			<note type="note">
+				<ul>
+					<li>
+						<p>When operating Remote Parking function, make sure all smart keys are outside the vehicle.</p>
+					</li>
+					<li>
+						<p>Remote Parking function will operate only when the smart key is within 4 m (13 ft.) from the vehicle. If there is no vehicle movement even when the Remote Forward or Backward button is pressed on the smart key, check the distance to the vehicle and press the button again.</p>
+					</li>
+					<li>
+						<p>The detecting range of the smart key may vary depending on the surroundings that are affected by radio waves such as transmission tower, broadcast station, etc.</p>
+					</li>
+					<li>
+						<p>The parking location indicator is displayed on Surround View Monitor screen and is displayed until the vehicle enters the parking space for the first time by Remote Parking function.</p>
+					</li>
+					<li>
+						<p>Depending on parking environments, if the vehicle is stopped by a stopper, parking may be completed.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>When using Remote Parking function, make sure that all passengers have gotten out of the vehicle.</p>
+					</li>
+					<li>
+						<p>After ending or turning off Remote Parking function, before leaving the vehicle, close windows and sunroofs, and make sure the vehicle is off before locking the doors.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>Smart Parking function</title>
+			<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+				<tgroup cols="3" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="25*"/>
+					<colspec colnum="2" colname="2" colwidth="25*"/>
+					<colspec colname="newCol4" colnum="3" colwidth="25*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="1">
+								<p>Operation status</p>
+							</entry>
+							<entry colname="2">
+								<p>Smart key LED</p>
+							</entry>
+							<entry>
+								<p>Turn signal</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry colname="1" align="center" valign="middle">
+								<p>Under control</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Green LED continuously blinks</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>The turn signal of the parking direction blinks until the first reverse is complete.</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry colname="1" align="center">
+								<p>Pause</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Red LED continuously blinks</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>-</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry colname="1" align="center">
+								<p>Off</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Red LED illuminates for 4 seconds and then turns off</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>-</p>
+							</entry>
+						</row>
+						<row rowsep="0" valign="middle">
+							<entry colname="1" align="center">
+								<p>Complete</p>
+							</entry>
+							<entry colname="2" align="center" valign="middle">
+								<p>Green LED illuminates for 4 seconds and then turns off</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>-</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<note type="note">
+				<p>If the smart key is not within the operating range from the vehicle (approximately 4 m (13 ft.)), the smart key LED will not appear or blink. Use the smart key within the operating range.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

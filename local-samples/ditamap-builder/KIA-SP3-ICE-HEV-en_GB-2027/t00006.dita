@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00006">
+	<title>Vehicle handling instructions</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle handling instructions</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>As with all vehicles of this type, failure to operate this vehicle correctly may result in loss of control, an accident, or vehicle rollover.</p>
+		<p>Specific design characteristics, such as higher ground clearance and track, give this vehicle a higher center of gravity than other types of vehicles. This vehicle is not designed for turning at the same speeds as conventional 2-wheel drive vehicles.</p>
+		<p>Avoid sharp turns and abrupt maneuvers. Failure to operate this vehicle correctly may result in loss of control, an accident, or vehicle rollover.</p>
+		<p>Be sure to read <xref href="t00439.dita#t00439/e03024"/>.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00002.dita#t00002" role="parent" scope="local" type="concept">
+				<linktext>Introduction </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

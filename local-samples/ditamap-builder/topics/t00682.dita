@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00682">
+	<title>3D view function</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04490">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e04491">
+								<figgroup>
+									<image href="../../images/OOV055264L.eps" align="center" placement="break" scale="95" id="e04492"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>(2) View switching button</p>
+							<p>(3) Back button</p>
+							<p>(4) Infotainment system operation button</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The 3D view function of the Surround View Monitor shows the surroundings of the vehicle from various angles. You can adjust the angle by touching and dragging the screen. Pressing the 3D view button again restores the initial angle setting.</p>
+		<p>The 3D view of the Surround View Monitor is activated under the following conditions:</p>
+		<ul>
+			<li>
+				<p>P (Parking) or N (Neutral) or D (Drive) position with a vehicle speed slower than 10 km/h (6 mph), or when selecting the 3D view button (2) while the Surround View Monitor is activated in R (Reverse) mode.</p>
+			</li>
+		</ul>
+		<p>The 3D view function of the Surround View Monitor while parking will be turned off under the following conditions:</p>
+		<ul>
+			<li>
+				<p>Shifting from N (Neutral) or D (Drive) to P (Parking)</p>
+			</li>
+			<li>
+				<p>Pressing the Parking/View button (1)</p>
+			</li>
+			<li>
+				<p>Pressing the back button (3) on the Surround View Monitor screen</p>
+			</li>
+			<li>
+				<p>Pressing the infotainment system power button (4)</p>
+			</li>
+			<li>
+				<p>Driving faster than 10 km/h (6 mph)</p>
+			</li>
+		</ul>
+		<p>When the vehicle is in R (Reverse), the 3D view function of the Surround View Monitor will be turned off under the following conditions:</p>
+		<ul>
+			<li>
+				<p>Shifting to P (Parking)</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>The 3D view does not display parking guidelines.</p>
+		</note>
+	</conbody>
+</concept>

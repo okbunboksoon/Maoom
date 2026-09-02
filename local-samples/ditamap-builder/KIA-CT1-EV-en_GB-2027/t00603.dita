@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00603">
+	<title>Displaying speed limit</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="FormatC" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Z094.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Speed limit information is displayed on the instrument cluster.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note">
+			<ul>
+				<li>
+					<p>If speed limit information of the road cannot be recognized, '---' sign will be displayed. Please refer to <xref type="concept" href="t00607.dita#t00607">Intelligent Speed Limit Assist malfunction and limitations</xref> if the road signs are difficult to recognize.</p>
+				</li>
+				<li>
+					<p>Intelligent Speed Limit Assist provides additional road sign information in addition to speed limit. The additional road sign information provided may vary according to your country.</p>
+				</li>
+				<li>
+					<p>Supplementary sign displayed under the speed limit or overtaking restriction sign means the conditions under which the signs must be followed. If the supplementary sign is not recognized, it is displayed as blank. (for Europe)</p>
+				</li>
+				<li>
+					<p>The images and colors in the instrument cluster may differ depending on the cluster type or theme selected from the settings menu.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

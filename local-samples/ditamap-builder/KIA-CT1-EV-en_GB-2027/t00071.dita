@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00071">
+	<title>Rear Occupant Alert (ROA) (Type A)</title>
+	<conbody>
+		<p>The Rear Occupant Alert (ROA) is provided to help prevent exiting the vehicle with a rear passenger left in the vehicle.</p>
+		<section deliveryTarget="except_digital" id="e00306">
+			<title>Simple operation</title>
+			<ul id="e00307">
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Convenience</uicontrol><uicontrol>Rear Occupant Alert</uicontrol></menucascade> on the infotainment system screen.</p>
+				</li>
+			</ul>
+			<p importance="default">For detailed information, refer to Navigation Quick Reference Guide.</p>
+		</section>
+		<section deliveryTarget="except_print" id="e00308">
+			<title>Operation</title>
+			<ul id="e00309">
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Convenience</uicontrol><uicontrol>Rear Occupant Alert</uicontrol></menucascade> on the infotainment system screen.</p>
+				</li>
+			</ul>
+			<p importance="default">For detailed information, refer to Navigation Quick Reference Guide.</p>
+		</section>
+		<section id="e00310">
+			<title>1st alert operation</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00311">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e00312">
+									<figgroup>
+										<image href="../../images/N_CT25Z159_E.eps" scale="95" align="center" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry>
+								<p>(A) <uicontrol>Do not leave children or pets alone. Detection starts after locking vehicle.</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When the rear passenger door has been opened and closed, and you turn off the vehicle and open the driver’s door after driving, a warning message appears on the cluster.</p>
+		</section>
+		<section importance="optional" id="e00313">
+			<title>2nd alert operation</title>
+			<p>After the first alert, the second alert operates when any movement is detected in the vehicle after the driver’s door is closed and all the doors are locked. The horn will sound for approximately 25 seconds. Also, a text message is sent once to members of Kia Connect Services (if equipped). If the system continues to detect a movement, the alert operates up to 8 times at regular intervals. Unlock the doors with the smart key to stop the alert.</p>
+			<p>The system detects movement in the vehicle for a certain period of time after the door is locked.</p>
+		</section>
+	</conbody>
+</concept>

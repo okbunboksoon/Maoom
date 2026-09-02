@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0249">
+	<title>Beifahrer-Frontairbag EIN/AUS-Kontrollleuchte <image align="left" href="../../images/OCV041556L.eps" scale="15" placement="inline"/><image align="left" href="../../images/OCV041510L.eps" scale="15" placement="inline"/></title>
+	<conbody>
+		<section>
+			<title>Betriebsbedingungen</title>
+			<ul>
+				<li>
+					<p>Nachdem das Fahrzeug läuft</p>
+					<ul>
+						<li>
+							<p>Die <term translate="no">ON/OFF</term>-Kontrollleuchte des Beifahrer-Airbags leuchtet etwa 4 Sekunden lang.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Der <term translate="no">ON/OFF</term>-Schalter des Beifahrer-Frontairbags befindet sich in der Position <term translate="no">ON/OFF</term>.</p>
+					<ul>
+						<li>
+							<p>Die <term translate="no">ON/OFF</term>-Kontrollleuchte des Beifahrer-Airbags leuchtet auf.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Nicht-Betriebsbedingungen</title>
+			<ul>
+				<li>
+					<p>Das Fahrzeug läuft innerhalb von ca. 3 Minuten, nachdem das Fahrzeug ausgeschaltet wurde.</p>
+					<ul>
+						<li>
+							<p>Die Kontrollleuchte „Beifahrer-Frontairbag <term translate="no">ON/OFF</term>“ leuchtet nicht auf.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Wenn der Schalter für den <term translate="no">ON/OFF</term>-Beifahrer-Airbag nicht richtig funktioniert, leuchtet die Airbag-Warnleuchte auf dem Armaturenbrett auf. Außerdem wird die Anzeige (<image align="left" href="../../images/OCV041510L.eps" scale="15" placement="inline"/>) für den Beifahrer-Airbag <term translate="no">OFF</term> nicht angezeigt (die Anzeige für den Beifahrer-Airbag <term translate="no">ON</term> leuchtet auf), das SRS-Steuermodul reaktiviert den Beifahrer-Airbag und der Beifahrer-Airbag wird bei einem Frontalaufprall ausgelöst, selbst wenn der Schalter für den Beifahrer-Airbag <term translate="no">ON/OFF</term> auf die Position <term translate="no">OFF</term> (<image align="left" href="../../images/OCV041510L.eps" scale="15" placement="inline"/>) gestellt ist. Lassen Sie die Anlage in diesem Fall von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Wenn der <term translate="no">ON/OFF</term>-Schalter des Beifahrer-Airbags in der Stellung <term translate="no">ON</term> steht, wird der Beifahrer-Airbag aktiviert und ein Kinder- oder Babysitz darf nicht auf dem Beifahrersitz installiert werden.</p>
+					</li>
+					<li>
+						<p>Wenn der <term translate="no">ON/OFF</term>-Schalter des Beifahrer-Airbags in die Position <term translate="no">OFF</term> gestellt wird, wird der Beifahrer-Frontairbag deaktiviert.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0248.dita#CL4m_HEV-ca_ES-2027-t0248" role="parent" scope="local" type="concept">
+				<linktext>Schalter Beifahrer-Frontairbag EIN/AUS</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

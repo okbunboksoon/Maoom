@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0302">
+	<title>Windschutzscheibenheizung</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Windschutzscheibenheizung</indexterm>
+				<indexterm>Windschutzscheibe beheizen und beschlagfrei halten
+					<indexterm>Windschutzscheibenheizung</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Die Windschutzscheibenheizung erwärmt bei laufendem Motor die Windschutzscheibe, um Raureif, Feuchtigkeit und dünnes Eis innen und außen von der Scheibe zu entfernen.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/ONQ5031373L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn die Windschutzscheibe mit einer dicken Schneeschicht bedeckt ist, fegen sie erst den Schnee von der Windschutzscheibe, bevor Sie die Heckscheibenheizung einschalten.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/ONQ5031350L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Zum Aktivieren der Frontscheibenheizung:</p>
+		<ul>
+			<li>
+				<p>Drücken Sie die Taste der Frontglasheizung. Die Anzeige auf der Taste für die Windschutzscheibenheizung leuchtet, wenn die Windschutzscheibenheizung <term translate="no">ON</term> ist.</p>
+			</li>
+		</ul>
+		<p>Die Windschutzscheibenheizung schaltet sich nach ca. 15 Minuten oder beim Ausschalten des Fahrzeugs selbsttätig ab. Wenn Sie jedoch die Taste erneut drücken, nachdem sich das Heizgerät nach 15 Minuten automatisch ausgeschaltet hat, bleibt das Heizgerät nur etwa 5 Minuten lang eingeschaltet. Um die Windschutzscheibenheizung auszuschalten, während sie in Betrieb ist, drücken Sie die Taste für die Windschutzscheibenheizung erneut.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0290.dita#CL4m_HEV-ca_ES-2027-t0290" role="parent" scope="local" type="concept">
+				<linktext>Windschutzscheibe beheizen und beschlagfrei halten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

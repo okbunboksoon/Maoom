@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00095">
+	<title>Smart support (Driver’s seat)</title>
+	<shortdesc/>
+	<conbody>
+		<p>When driving in SPORT mode, the driver’s seat bolster tightens to provide additional support to the driver’s waist, which helps improve stability during sporty driving.</p>
+		<section deliveryTarget="except_print" id="e00678">
+			<title>Operation</title>
+			<ul id="e00679">
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Seats</uicontrol><uicontrol>Smart posture care</uicontrol></menucascade> from the infotainment system.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e00680">
+			<title>Operating conditions</title>
+			<ul id="e00681">
+				<li>
+					<p>When SPORT mode is selected in the Drive Mode</p>
+					<ul id="e00682">
+						<li>
+							<p>The seat bolster is tightened</p>
+						</li>
+						<li>
+							<p>The cushion support position returns to the vehicle’s initial setting position.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>The seat bolster is tightened further when the vehicle’s speed is approximately 130 km/h (80 mph) or higher.</p>
+				</li>
+				<li>
+					<p>If both conditions below are satisfied, the seat bolster and cushion support position returns to the previous state.</p>
+					<ul id="e00683">
+						<li>
+							<p>When the Drive Mode other than SPORT mode is selected</p>
+						</li>
+						<li>
+							<p>When the vehicle’s speed is below approximately 110 km/h (70 mph).</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

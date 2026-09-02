@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0115">
+	<title>Zurücksetzen des Systems</title>
+	<conbody>
+		<p>Gehen Sie wie folgt vor, um das integrierte Memory-System zurückzusetzen, wenn es nicht ordnungsgemäß funktioniert.</p>
+		<section>
+			<title>Zurücksetzen des integrierten Memory-Systems</title>
+			<ol>
+				<li>
+					<p>Halten Sie das Fahrzeug an und öffnen Sie die Fahrertür, wenn sich der Start-/Stopp-Knopf in der Position <term translate="no">ON</term> befindet und das Fahrzeug in P (Parkstufe) geschaltet ist.</p>
+				</li>
+				<li>
+					<p>Stellen Sie den Fahrersitz und die Rückenlehne auf die vorderste Position ein.</p>
+				</li>
+				<li>
+					<p>Drücken Sie die Memory-Taste 1 (oder 2) und drücken Sie gleichzeitig den Fahrersitz-Bewegungsschalter über 2 Sekunden nach vorne.</p>
+				</li>
+			</ol>
+		</section>
+		<section>
+			<title>Beim Zurücksetzen des integrierten Memory-Systems</title>
+			<ol>
+				<li>
+					<p>Das Zurücksetzen beginnt mit einem Benachrichtigungston.</p>
+				</li>
+				<li>
+					<p>Der Fahrersitz und die Rückenlehne werden mit dem Benachrichtigungston in die hintere Position eingestellt.</p>
+				</li>
+				<li>
+					<p>Der Fahrersitz und die Rückenlehne werden mit dem Benachrichtigungston in die Standardposition (Mittelstellung) zurückgestellt. In den folgenden Fällen können jedoch der Rücksetzvorgang und der Benachrichtigungston gestoppt werden.</p>
+					<ul>
+						<li>
+							<p>Die Memory-Taste ist gedrückt.</p>
+						</li>
+						<li>
+							<p>Der Sitzsteuerungsschalter wird betätigt.</p>
+						</li>
+						<li>
+							<p>Der Gang wird aus P (Parkstufe) herausgeschaltet.</p>
+						</li>
+						<li>
+							<p>Wenn die Fahrgeschwindigkeit 5 km/h (3 mph) überschreitet.</p>
+						</li>
+						<li>
+							<p>Die Fahrertür ist geschlossen.</p>
+						</li>
+					</ul>
+					<note type="note">
+						<ul>
+							<li>
+								<p>Wenn während des Zurücksetzens des integrierten Memory-Systems das Zurücksetzen und der Benachrichtigungston unvollständig abbricht, starten Sie den Rücksetzvorgang noch einmal.</p>
+							</li>
+							<li>
+								<p>Stellen Sie sicher, dass sich keine Gegenstände um den Fahrersitz befinden, bevor Sie das integrierte Memory-System zurücksetzen.</p>
+							</li>
+							<li>
+								<p>Nach dem Zurücksetzen des integrierten Memory-Systems muss die Einstellung für den Fahrersitz erneut gespeichert werden, um die Memory-Position abzurufen.</p>
+							</li>
+						</ul>
+					</note>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0111.dita#CL4m_HEV-ca_ES-2027-t0111" role="parent" scope="local" type="concept">
+				<linktext>Integriertes Memory-System</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

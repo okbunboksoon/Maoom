@@ -1,0 +1,1949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0875">
+	<title>Beschreibung der Sicherungs- und Relaiskästen</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Sicherungen
+					<indexterm>Beschreibung der Sicherungs- und Relaiskästen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Sicherungskasten auf der Fahrerseite</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M076020L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<title>Sicherungskasten im Motorraum</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M076016L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>In diesem Abschnitt finden Sie das Sicherungs-/Relaisetikett mit der Bezeichnung und Kapazität der Sicherung/des Relais.</p>
+		<note type="note">
+			<p>Die in diesem Handbuch abgedruckten Legenden für die Sicherungskästen beziehen sich auf den Zeitpunkt der Drucklegung. Möglicherweise treffen deshalb nicht alle Beschreibungen auf Ihr Fahrzeug zu. Wenn Sie einen Sicherungskasten in Ihrem Fahrzeug prüfen, richten Sie sich nach der Legende in dem jeweiligen Sicherungskastendeckel.</p>
+		</note>
+		<section>
+			<title>Sicherungskasten auf der Fahrerseite</title>
+			<p>Auf der Innenseite der Abdeckungen der Sicherungstafel finden Sie das Sicherungsetikett mit dem Namen und der Kapazität der Sicherung.</p>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M076020L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<fig expanse="page">
+				<figgroup>
+					<image align="center" href="../../images/OCL4M075037L.eps" scale="95" placement="break"/>
+				</figgroup>
+			</fig>
+			<sectiondiv><ph>Kombiinstrument (Sicherungskasten auf der Fahrerseite)</ph>
+				<table frame="all" rowsep="1" colsep="1" outputclass="formatc">
+					<tgroup cols="3" colsep="1" rowsep="1">
+						<colspec colnum="1" colname="col1" colwidth="1.277*"/>
+						<colspec colnum="2" colname="col2" colwidth="0.488*"/>
+						<colspec colnum="3" colname="col3" colwidth="2.929*"/>
+						<thead>
+							<row rowsep="1">
+								<entry colname="col1">
+									<p>Bezeichnung der Sicherung</p>
+								</entry>
+								<entry colname="col2">
+									<p>Nennwert der Sicherung</p>
+								</entry>
+								<entry colname="col3">
+									<p>Geschützter Stromkreis</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">SPARE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">P/WINDOW DRV</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RELAISSPULE FENSTERHEBER FAHRER AUF/AB</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">A/C2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>DATC (Duale automatische Temperaturregelung) MTC (manuelle Temperaturregelung) DATC-Panel PTC-Heizungsrelais-Spule AIRCON COMP TGDI</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">BRAKE SWITCH</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>BDC-Bremspedalschalter</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MEMORY1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>HUD, DATC (Dual-Klimaautomatik) MTC (Manuelle Klimasteuerung) DATC-Panel Kombiinstrument Ambientebeleuchtung Fahrer Ambientebeleuchtung Beifahrer Ambientebeleuchtung Cockpit Ambientebeleuchtung MLM (Multi-LED-Modul) ADAS-Park-ECU (Fahrerassistenzsystem Park-ECU) BDC (V_PDWPOWER_IN) ISG LDC 450 W (ISG-Niederspannungs-DC/DC-Wandler)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RÜCKWÄRTSFAHRT</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RÜCKWÄRTSFAHRT</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RÜCKWÄRTSFAHRT</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MODULE8</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Schlüsselverriegelung Regensensor Warnblinkerschalter OBD (Borddiagnose) MUT ELEKTRISCHE HECKKLAPPE ICC-Einheit</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RESERVE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">SPARE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">CCU</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>CCU (Zentrale Kommunikationseinheit)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MEMORY2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Kabellose Aufladung, USB-Buchse vorn</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">BDC2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>BDC (Body-Domain-Controller) BMS-Erweiterung (Batterie-Management-System)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MODULE2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>CCU (Zentrale Kommunikationseinheit) DCU (Daten-Konnektivitätseinheit, eCALL)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RESERVE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RESERVE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">wireless DCU</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>DCU (Datenkonnektivitätseinheit)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">CHILD LOCK</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>DR RL ACTR PCL (CHILD LOCK) DR RR ACTR PCL (CHILD LOCK)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MULTIMEDIA</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>25 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>ccNC (vernetztes Navigations-Cockpit) ISG LDC 200 W (ISG-Niederspannungs-DC/DC-Wandler)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MODULE5</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>ICC Einheit ccNC (vernetztes Navigations-Cockpit) OBD (Borddiagnose) VDMS Innenspiegel OHCL DATC (Dual-Klimaautomatik) MTC (Manuelle Klimasteuerung) DATC PANEL Obere Mittelkonsole EXTN ISG LDC 200 W (ISG-Niederspannungs-DC/DC-Wandler) ISG LDC 450 W (ISG-Niederspannungs-DC/DC-Wandler) CDU WPC (Kabelloses Ladegerät) Externer Verstärker (Harman) Fahrersitz elektrische Sitzsteuerung (IMS) Beifahrertür-Heizung Lüftungsschalter Fahrertür-Heizung Lüftungsschalter (IMS) Hauptscheinwerfer LH/RH Crush-Pad-Schalter</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">CLUSTER</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>HUD (Head Up Display) CLUSTER</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RESERVE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">OMU</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Außenspiegelmotor_DRV / PASS</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">SUNROOF</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Schiebedachmotor</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MODULE7</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Lithium-12-V-Batterie (20 AH) W/S BEHEIZTES GLAS LH/RH Relais-Spule</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">TRUNK OPEN</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Stelleinheit Heckklappenverriegelung</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RESERVE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MODULE3</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Fensterheberschalter FAHRER</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MDPS2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>MDPS_SIG</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MODULE1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>BDC (Body-Domain-Controller) DCU (Daten-Konnektivitätseinheit) CCU (Zentrale Kommunikationseinheit) VDMS AVN-Tastatur OHCL (E-CALL) Power-Outlet-Relais-Spule ADAS-Park-ECU (Fahrerassistenzsystem Park-ECU) Externer Verstärker (Harman) ccNC (vernetztes Navigations-Cockpit) ISG LDC 200 W (ISG-Niederspannungs-DC/DC-Wandler) ISG LDC 450 W (ISG-Niederspannungs-DC/DC-Wandler)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>30 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RESERVE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">S/HEATER FRT</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>25 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Beifahrersitz elektrische Sitzverstellung</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">WASHER</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Multifunktionsschalter (Scheibenwaschanlagenmotor)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">AIR BAG2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>ACU (Airbag-Steuergerät)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">BDC1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>BDC (Body-Domain-Controller) ATM-HEBEL (AT/CVT/DCT) BLE-Einheit vorne BLE-Einheit hinten UWB-Einheit Kofferraum UWB-Einheit hinten links UWB-Einheit hinten rechts UWB-Einheit vorne links UWB-Einheit vorne rechts</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RESERVE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">A/C3</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>GEBLÄSEMOTOR (DATC / MTC)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">AIR BAG1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>ACU</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">USB CHARGER1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>MAIN_EXTN (USB hinten)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">USB CHARGER2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>USB CHARGER</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>25 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RESERVE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">P/WINDOW RH</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>25 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Fensterheber-Sicherheits-ECU (rechts) Fensterhebermotor (rechts)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MODULE6</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>BDC</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">BMS</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>BMS-Erweiterung (Batteriemanagementsystem)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>25 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RESERVE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">AMP</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>25 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Externer Verstärker ISG LDC</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RESERVE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MODULE4</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Frontkamera ADAS Parken ECU Obere Verlängerung der Konsole ADAS Fahren ECU Eckradar Frontradar IGN_LOCK_CLUTCH SW</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">P/SEAT DRV</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>30 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>SITZERWEITERUNG FAHRER</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">P/WINDOW LH</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>25 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Fensterheber-Sicherheits-ECU (links) Fensterhebermotor (links)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">BATTERY C/FAN</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>BMS-Erweiterung (Batteriemanagementsystem)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">DOOR LOCK</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Türverriegelungs-/Entriegelungs-Stelleinheit</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">S/HEATER RR</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>25 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Rücksitz</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MODULE9</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>P_WDW_HAUPTSCHALTER Außengriff-Baugruppe vorne rechts Außengriff-Baugruppe vorne links Sitzerweiterung Fahrer</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">START</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>Inhibitor-Schalter</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>30 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RESERVE</p>
+								</entry>
+							</row>
+							<row rowsep="0">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">RESERVE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>25 A</p>
+								</entry>
+								<entry colname="col3" align="left" valign="middle">
+									<p>RESERVE</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Sicherungskasten im Motorraum</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M076016L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<fig id="e01480">
+				<figgroup>
+					<image align="center" href="../../images/OCL4MW075005L.eps" scale="95" placement="break"/>
+				</figgroup>
+			</fig>
+			<p><indexterm>Sicherungen<indexterm>Sicherungskasten im Motorraum</indexterm></indexterm></p>
+			<sectiondiv><ph>Sicherungskasten im Motorraum</ph>
+				<table frame="all" rowsep="1" colsep="1" outputclass="formatc">
+					<tgroup align="center" cols="4" colsep="1" rowsep="1">
+						<colspec colnum="1" colname="col1" colwidth="0.888*"/>
+						<colspec colnum="2" colname="col2" colwidth="0.645*"/>
+						<colspec colnum="3" colname="col3" colwidth="0.546*"/>
+						<colspec colnum="4" colname="col4" colwidth="2.608*"/>
+						<thead>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p>Bezeichnung der Sicherung</p>
+								</entry>
+								<entry colname="col2">
+									<p>Symbol</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>Nennwert der Sicherung</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Geschützter Stromkreis</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">A/C1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_232.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Klimaanlagen-Relais</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">ABS1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_202.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>25 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>ESC (Elektronische Stabilitätskontrolle), ABS (Antiblockiersystem), EPB (Elektronische Feststellbremse)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">ABS2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_215.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>ESC (Elektronische Stabilitätskontrolle), ABS (Antiblockiersystem), EPB (Elektronische Feststellbremse)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">ABS3</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074099.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>ESC (Elektronische Stabilitätskontrolle), ABS (Antiblockiersystem), EPB (Elektronische Feststellbremse)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">ALT</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074068.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>180 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>NUR GAMMA2-TURBOMOTOR</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">ALT</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074068.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>150 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Lichtmaschinenausgang, MHSG (Milder Hybridstarter und Generator) Ausgang, BATT +</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">AMS</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074070.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Batteriesensor</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">AUX BATT</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074082.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>50 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>P-LBM (Lithium-Batterie)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">B/ALARM HORN</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074095.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>B/Alarmhupe, LO_B/Alarmhupen-Relais</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">B+1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_213.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>60 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>PDC (IPS1, IPS2, IPS3, IPS4, IPS5, IPS6, IPS7)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">B+2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074101.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>50 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>PDC (IPS8, IPS9, IPS10, IPS11, IPS12)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">B+3</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M075143.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>60 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>PDC (Sicherung – ERSATZ, P/SEAT DRV, S/HEATER FRT, P/WINDOW (LH/RH/DRV), OMU, SUNROOF, Drahtlos-DCU, MODULE8</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">B+4</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_216.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>60 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>PDC (Relais – Langzeitverriegelungsrelais, Relais TÜRVERRIEGELUNG/ENTRIEGELUNG, Relais Zweifachverriegelung/Totverriegelung, Relais Kofferraum/Heckklappe offen, Sicherung – MULTIMEDIA, MEMORY1, MEMORY2, BDC1, BREMSSCHALTER, CCU, SITZHEIZUNG HINTEN, TÜRVERRIEGELUNG, Kofferraum offen, Heckklappe offen)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">B+5</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074102.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>50 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>PDC (Sicherung – VERST., AIR BAG2, BMS, MODULE9, BATTERIE KÜHLGEBL., A/C3, USB-LADE2</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">B+6</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_208.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>60 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Motorraum-Verbindungsblock PCB-Block</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">BLOWER</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074098.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>50 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Gebläsemotor-Relais</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">COOLING FAN1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074106.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>80 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Kühllüfter BLDC (Bürstenloser Gleichstrommotor)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">COOLING FAN2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074105.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>40 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Kühllüfter 1, 2 Relais</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">CVVD</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074088.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>40 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>CVVD (Continuous Variable Valve Duration)-Stelleinheit</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">DCT1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074084.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>40 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>TCU (Getriebesteuergerät)_7DCT (7DCT (Doppelkupplungsgetriebe)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">DCT2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074086.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>40 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>TCU (Getriebesteuergerät)_7DCT (7DCT (Doppelkupplungsgetriebe)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">DCT3</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074069.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>40 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Einspritzdüse, MHSG (Mild-Hybridstarter and Generator)-Signal</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">ECU1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_251.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>ECU (Motorsteuergerät)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">ECU2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_238.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>ECU (Motorsteuergerät)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">ECU3</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M075138L.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>ECU (Motorsteuergerät)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">ECU4</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M075139L.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>ECU (Motorsteuergerät)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">ECU5</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M075140L.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>ECU (Motorsteuergerät)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">EWP1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074072.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>EWP (Elektrische Wasserpumpe)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">EWP2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074075.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Einspritzdüse, MHSG (Milder Hybridstarter und Generator) Signal, EWP (Elektrische Wasserpumpe)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">EWP3</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074076.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>7,5 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>EWP (Elektrische Wasserpumpe)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">FUEL PUMP1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074071.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Kraftstoffpumpenrelais</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">FUEL PUMP2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074077.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Kraftstoffpumpenrelais</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">HEAD LAMP LH</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074073.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>HEAD LAMP LH</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">HEAD LAMP RH</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074074.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>HEAD LAMP RH</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">HEATED MIRROR</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074089.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>ECU (Elektronisches Steuergerät), Fahrer-/Beifahrer-Außenspiegel elektrisch</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">HORN</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_244.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Relais HORN</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">IG1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074087.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>40 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>IG1-Relais, ACC-Relais, Zündschalter</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">IG2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074085.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>40 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Zündschalter, IG2-Relais, Startrelais</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">IGN COIL</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074078.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Zündspule</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">INJECTOR</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074075.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Einspritzdüse, MHSG (Mild-Hybridstarter and Generator)-Signal</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">LDC</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074067.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>O2-Sensor</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MDPS1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_205.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>80 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>MDPS-Einheit (motorgetriebene Servolenkung)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">MHSG</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074075.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Einspritzdüse, MHSG (Milder Hybridstarter und Generator) Signal, EWP (Elektrische Wasserpumpe)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">POWER OUTLET1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_018.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>40 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Motorraum Verteilerblock Steckdosenrelais</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">POWER OUTLET2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074065.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Steckdose vorn</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">POWER OUTLET3</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074066.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Steckdose Reisegepäck</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">POWER TAILGATE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074100.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>40 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Einheit Elektrische Heckklappe</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">PTC HEATER1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074080.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>50 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>PTC (positiver Temperaturkoeffizient)-Heizungsrelais</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">PTC HEATER2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074081.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>50 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>PTC (positiver Temperaturkoeffizient)-Heizungsrelais</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">REAR HEATED</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_210.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>50 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Rear Heated Relay</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">SENSOR1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_237.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>O2-Sensor</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">SENSOR2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_237.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>OCV (Ölregelventil), Ölstandsensor, PCSV (Spülregelventil), VIS (variables Ansaugsystem)/VOP (variable Ölpumpe), RCV (Rückführregelventil)/OPSV, CCV (Kanisterverschlussventil)</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">SENSOR3</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_241.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Kühllüfter BLDC (bürstenloser Gleichstrommotor), Kühllüfter Hoch-Relais, Kühllüfter Niedrig-Relais</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">SPARE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>SPARE</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">SPARE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>SPARE</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">SPARE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>SPARE</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">SPARE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>SPARE</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">SPARE</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>SPARE</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>SPARE</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">TCU1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_226.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>TA8 8AT (Automatikgetriebe), TCU (Getriebesteuergerät), 6AT TCU, CVT (Stufenloses Getriebe) TCU, 7DCT (Doppelkupplungsgetriebe) TCU</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">TCU2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_248.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>7DCT (Doppelkupplungsgetriebe) TCU (Getriebesteuergerät), 8AT (Automatikgetriebe) TCU</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">TRAILER1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074092.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>30 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>ANHÄNGER</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">TRAILER2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_225.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>ANHÄNGER</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">TRAILER3</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074093.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>20 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>ANHÄNGER</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">W/S HEATED GLASS LH</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074097.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>60 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Windschutzscheibenheizung L</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">W/S HEATED GLASS RH</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074094.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>60 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Windschutzscheibenheizung R</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">WIPER FRT1</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074091.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>30 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Scheibenwischermotor, Wischer vorn Niedrig Relais</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">WIPER FRT2</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074090.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>10 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Scheibenwischer Parkschalter IN</p>
+								</entry>
+							</row>
+							<row rowsep="0">
+								<entry colname="col1" align="center" valign="middle">
+									<p><term translate="no">WIPER RR</term></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074096.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>15 A</p>
+								</entry>
+								<entry colname="col4" align="left" valign="middle">
+									<p>Scheibenwischer hinten</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+			<sectiondiv><ph>Relais</ph>
+				<table frame="all" rowsep="1" colsep="1" pgwide="1" outputclass="formatc">
+					<tgroup cols="3" colsep="1" rowsep="1">
+						<colspec colnum="1" colname="col1" colwidth="0.681*"/>
+						<colspec colnum="2" colname="col2" colwidth="2.105*"/>
+						<colspec colnum="3" colname="col3" colwidth="1.908*"/>
+						<thead valign="middle">
+							<row rowsep="1">
+								<entry colname="col1">
+									<p>Symbol</p>
+								</entry>
+								<entry colname="col2">
+									<p>Relaisbezeichnung</p>
+								</entry>
+								<entry colname="col3">
+									<p>Typ</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody valign="middle">
+							<row rowsep="1" valign="middle">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/OCL4M074080.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>PTC-Heizungsrelais</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MINI</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry colname="col1" align="center" valign="middle">
+									<p><image align="center" href="../../images/OCL4M074106.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>PTC-Heizungsrelais, Kühllüfter1-Relais</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MINI</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/OCL4M074081.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>PTC-Heizungsrelais, Kühllüfter1-Relais</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MINI</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/WKIA_210.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>Rear Heated Relay</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MINI</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/OCL4M074098.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>Relais für Klimaanlagengebläsemotor</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MICRO</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/OCL4M074096.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>Scheibenwischer hinten Niedrig Relais</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MICRO</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/OCL4M074097.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>Scheibenheizung vorn/hint. Relais</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MICRO</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/OCL4M074105.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>Kühlgebläserelais 2</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MICRO</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/OCL4M074094.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>Scheibenheizung vorn/hint. Relais</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MICRO</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/OCL4M074105.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>Kühlgebläserelais 1</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MICRO</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center" valign="middle">
+									<p><image align="center" href="../../images/WKIA_217.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>Kraftstoffpumpenrelais</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MICRO</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/WKIA_195.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>Relais START</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MICRO</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/OCL4M074079.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>Power Outlet Relay</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MICRO</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/OCL4M074103.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>El. Fenster-Auf-Relais</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MICRO</p>
+								</entry>
+							</row>
+							<row rowsep="0">
+								<entry colname="col1" align="center">
+									<p><image align="center" href="../../images/OCL4M074104.eps" scale="15" placement="inline"/></p>
+								</entry>
+								<entry colname="col2" align="center" valign="middle">
+									<p>El. Fenster runter Relais</p>
+								</entry>
+								<entry colname="col3" align="center" valign="middle">
+									<p>MICRO</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0874.dita#CL4m_HEV-ca_ES-2027-t0874" role="parent" scope="local" type="concept">
+				<linktext>Motorraum-Sicherungen ersetzen </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

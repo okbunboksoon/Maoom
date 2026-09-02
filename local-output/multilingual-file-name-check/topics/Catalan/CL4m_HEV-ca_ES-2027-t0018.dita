@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0018">
+	<title id="e00044">Glühlampen-Wattzahl </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Glühlampen-Wattzahl</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="all" rowsep="1" colsep="1" pgwide="1" outputclass="formatc">
+			<desc>
+				<p importance="default">ausstattungsabhängig</p>
+			</desc>
+			<tgroup cols="5" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="0.394*"/>
+				<colspec colnum="2" colname="col2" colwidth="1.835*"/>
+				<colspec colnum="3" colname="col3" colwidth="0.693*"/>
+				<colspec colnum="4" colname="col4" colwidth="0.825*"/>
+				<colspec colnum="5" colname="col5" colwidth="0.939*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3">
+							<p>Glühlampe</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>Lampentyp</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Watt (W)</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1" morerows="6" align="left" valign="middle">
+							<p>Vorn</p>
+						</entry>
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>Fernlicht</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col2" nameend="col3">
+							<p>Abblendlicht</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col2" nameend="col3">
+							<p>Positionsleuchten und Tagesfahrlicht</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2">
+							<p>Blinkleuchte</p>
+						</entry>
+						<entry colname="col3">
+							<p>Typ A</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>PY21W</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>21</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2">
+							<p>Blinkleuchte</p>
+						</entry>
+						<entry colname="col3">
+							<p>Typ B</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>Blinkleuchte (im Außenspiegel integriert)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>Nebelleuchte</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" morerows="10" align="left" valign="middle">
+							<p>Hinten</p>
+						</entry>
+						<entry colname="col2" morerows="1" align="left" valign="middle">
+							<p>Bremslicht</p>
+						</entry>
+						<entry colname="col3">
+							<p>Typ A</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>PY21W</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>21</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3">
+							<p>Typ B</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col2" nameend="col3">
+							<p>Rücklicht</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" morerows="1" valign="middle">
+							<p>Blinkleuchte</p>
+						</entry>
+						<entry colname="col3">
+							<p>Typ A</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>PY21W</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>21</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3">
+							<p>Typ B</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry morerows="1">
+							<p>Rückfahrleuchte</p>
+						</entry>
+						<entry>
+							<p>Typ A</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>PY21W</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>21</p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<p>Typ B</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>W16W</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>16</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" morerows="1">
+							<p>Dritte Bremsleuchte</p>
+						</entry>
+						<entry colname="col3">
+							<p>Typ A</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>P21W</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>21</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3">
+							<p>Typ B</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>Kennzeichenleuchte</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row>
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>Nebelschlussleuchte</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col1" morerows="5" align="left" valign="middle">
+							<p>Innen</p>
+						</entry>
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>Leseleuchte*</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>Innenraumleuchte*</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row>
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>Leseleuchte*</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col2" nameend="col3" align="left" valign="middle">
+							<p>Schminkspiegelleuchte*</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" morerows="1" valign="middle">
+							<p>Kofferraumleuchte</p>
+						</entry>
+						<entry colname="col3">
+							<p>Typ A</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>FESTOON</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>5</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col3">
+							<p>Typ B</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>LED</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0015-CH04.dita#CL4m_HEV-ca_ES-2027-t0015-CH04" role="parent" scope="local" type="concept">
+				<linktext>Spezifikationen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

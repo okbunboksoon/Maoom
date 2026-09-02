@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00618">
+	<title>Release</title>
+	<conbody>
+		<p><uicontrol>Emergency Stop</uicontrol> will release when the following conditions are satisfied.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03862">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03863">
+								<image href="images/OLQ2A005122.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03864">
+								<li>
+									<p><uicontrol>Drive carefully</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e03865">
+			<li>
+				<p>The driver focuses on the road ahead (if equipped) and controls the steering wheel</p>
+			</li>
+			<li>
+				<p>If the accelerator pedal is strongly engaged and maintained</p>
+			</li>
+			<li>
+				<p>If the brake pedal is strongly engaged</p>
+			</li>
+			<li>
+				<p>If the Lane Following Assist button (<image align="left" href="images/WKIA_011.jpg" scale="15" placement="inline"/>) is pressed</p>
+			</li>
+			<li>
+				<p>If the Driver Assistance button is pressed</p>
+			</li>
+			<li>
+				<p>Hazard warning flasher button is pressed after the vehicle stops.</p>
+			</li>
+			<li>
+				<p>The front seat door (driver or front passenger) is opened.</p>
+			</li>
+			<li>
+				<p>The driver cancels an <term translate="no">SOS</term> call (if the function is provided).</p>
+			</li>
+			<li>
+				<p>Shifting from P (Park) to another gear.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e03866">
+			<p>After the vehicle comes to a stop due to an <uicontrol>Emergency Stop</uicontrol>, to activate <uicontrol>Lane Following Assist</uicontrol> or <uicontrol>Highway Driving Assist</uicontrol>, the vehicle needs to be restarted.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00614.dita#t00614" role="parent" scope="local" type="concept">
+				<linktext>Emergency Stop operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

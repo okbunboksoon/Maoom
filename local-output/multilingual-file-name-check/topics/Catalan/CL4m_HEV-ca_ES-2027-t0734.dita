@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0734">
+	<title id="e01252">Warnblinkanlage </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Zentralverriegelung mit Fernbedienung
+					<indexterm>Batterie ersetzen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M064014.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Warnblinker dienen als Warnsignal für andere Verkehrsteilnehmer, damit diese sich beim Heranfahren, beim Überholen oder beim Vorbeifahren besonders vorsichtig verhalten.</p>
+		<p>Sie sollte verwendet werden, wenn Notreparaturen durchgeführt werden oder wenn das Fahrzeug am Straßenrand angehalten wurde.</p>
+		<p>Drücken Sie den Schalter der Warnblinkanlage. Der Zündschalter oder der <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) kann sich dabei in einer beliebigen Position befinden. Der Schalter der Warnblinkanlage befindet sich auf der Schalttafel an der Mittelkonsole. Alle Blinker blinken gleichzeitig.</p>
+		<ul>
+			<li>
+				<p>Die Warnblinkanlage funktioniert bei laufendem oder abgestelltem Fahrzeug.</p>
+			</li>
+			<li>
+				<p>Die Blinker funktionieren nicht, wenn die Warnblinkanlage eingeschaltet ist.</p>
+			</li>
+			<li>
+				<p>Achten Sie darauf, die Warnblinkanlage einzuschalten, wenn das Fahrzeug abgeschleppt wird.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0733.dita#CL4m_HEV-ca_ES-2027-t0733" role="parent" scope="local" type="concept">
+				<linktext>Straßenwarnung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

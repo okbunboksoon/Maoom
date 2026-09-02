@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00683">
+	<title>Limitations of Surround View Monitor</title>
+	<conbody>
+		<p>When the vehicle is stopped for a long time in winter or when the vehicle is parked in an indoor parking lot, the exhaust fumes may temporarily blur the image.</p>
+		<ul>
+			<li>
+				<p>The screen may display abnormally and show an icon at the top left side under the following circumstances:</p>
+				<ul>
+					<li>
+						<p>You open the tailgate.</p>
+					</li>
+					<li>
+						<p>You open the driver’s door, or the front passenger opens their door.</p>
+					</li>
+					<li>
+						<p>You fold the outside rearview mirror.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Always look for objects or obstacles around your vehicle before moving. What you see on the screen may differ from the vehicle’s actual location.</p>
+				</li>
+				<li>
+					<p>Distance shown on the Surround View Monitor screen may differ from actual distance due to image calibration by the Wide Rear View camera. If your vehicle is tilted due to loaded cargo, Rear Parking Guidelines may be incorrect. When you are parking or driving, be sure to directly check your vehicle’s surroundings for safety.</p>
+				</li>
+				<li>
+					<p>The Surround View Monitor is designed to be used on a flat surface, and the image on the screen may not look correct when used on roads with varying heights, such as curbs and speed bumps.</p>
+				</li>
+				<li>
+					<p>Always keep the camera lens clean to maintain optimal camera performance and Surround View Monitor operation. Do not clean the camera lens with chemical solvents that may damage it, including strong detergents that contain high alkaline or volatile organic solvents such as gasoline, acetone, and so on.</p>
+				</li>
+				<li>
+					<p>Driving with the tailgate open is abnormal. For your safety, be aware and drive safely.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip">
+			<p>The Surround View Monitor displays images of your vehicle’s surroundings using cameras mounted on the vehicle. The images shown on the screen may look unnatural depending on the vehicle and its surrounding conditions. Daily driving can calibrate and improve the Surround View Monitor’s image.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00681.dita#t00681" role="parent" scope="local" type="concept">
+				<linktext>Surround View Monitor malfunction and limitations</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

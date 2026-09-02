@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00392">
+	<title>Smart ventilation</title>
+	<conbody>
+		<p>The smart ventilation system maintains pleasant/fresh air conditioning inside the passenger compartment by automatically detecting/controlling the temperature and humidity level.</p>
+		<section>
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>When the smart ventilation system starts to operate, the message will appear for approximately 5 seconds.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Non-operating condition(s)</title>
+			<ul>
+				<li>
+					<p>Climate control system is <term translate="no">OFF</term>.</p>
+				</li>
+				<li>
+					<p>Any of the icon of the climate control is selected for operation.</p>
+				</li>
+			</ul>
+			<note type="note">
+				<p>The smart ventilation system may not operate when the vehicle is driven at low speed.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

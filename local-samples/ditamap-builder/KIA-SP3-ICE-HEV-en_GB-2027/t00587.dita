@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00587">
+	<title>Turning off Cruise Control</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e03727">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e03728">
+								<figgroup>
+									<image href="images/N_SP3i25_B10_033_1_IR.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Press the Driving Assist button to turn Cruise Control off. The Cruise (<image href="images/WKIA_357.jpg" scale="15" align="left" placement="inline"/>) indicator will go off.</p>
+		<p>Always press the Driving Assist button to turn Cruise Control off when not in use.</p>
+		<note type="note" id="e03729">
+			<p>If your vehicle is equipped with Manual Speed Limit Assist, press and hold the Driving Assist button to turn off Cruise Control. However, Manual Speed Limit Assist will turn on.</p>
+		</note>
+		<note type="warning" id="e03730">
+			<p>Take the following precautions when using Cruise Control:</p>
+			<ul id="e03731">
+				<li>
+					<p>Always set the vehicle speed under the speed limit in your country.</p>
+				</li>
+				<li>
+					<p>Keep Cruise Control off when the function is not in use, to avoid inadvertently setting a speed. Check that the Cruise (<image href="images/WKIA_357.jpg" scale="15" align="left" placement="inline"/>) indicator is off.</p>
+				</li>
+				<li>
+					<p>Cruise Control does not substitute for proper and safe driving. It is the responsibility of the driver to always drive safely and should always be aware of unexpected and sudden situations from occurring.</p>
+				</li>
+				<li>
+					<p>Always drive cautiously to prevent unexpected and sudden situations from occurring. Pay attention to the road conditions at all times.</p>
+				</li>
+				<li>
+					<p>Do not use Cruise Control when it may be unsafe to keep the vehicle at a constant speed:</p>
+					<ul id="e03732">
+						<li>
+							<p>When driving in heavy traffic, or when traffic conditions make it difficult to drive at a constant speed</p>
+						</li>
+						<li>
+							<p>When driving on rainy, icy, or snow-covered roads</p>
+						</li>
+						<li>
+							<p>When driving on hilly or windy roads</p>
+						</li>
+						<li>
+							<p>When driving in windy areas</p>
+						</li>
+						<li>
+							<p>When driving with limited view (possibly due to bad weather, such as fog, snow, rain and sandstorm)</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00580.dita#t00580" role="parent" scope="local" type="concept">
+				<linktext>Cruise Control operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

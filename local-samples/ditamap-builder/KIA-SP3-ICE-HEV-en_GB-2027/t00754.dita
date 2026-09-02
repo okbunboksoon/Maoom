@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00754">
+	<title>Removing and storing the spare tire</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>flat tire (with spare tire)
+					<indexterm>removing and storing</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ol id="e04582">
+			<li>
+				<p>Turn the tire hold-down wing bolt (1) counterclockwise to remove.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04583">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e04584">
+										<image align="center" placement="break" scale="95" href="images/N_SP3i26_C11_005_I.jpg"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Store the tire in the reverse order of removal.</p>
+			</li>
+			<li>
+				<p>To prevent the spare tire and toolsfrom “rattling” while the vehicle is in motion, store them properly.</p>
+			</li>
+		</ol>
+		<p>If it is hard to loosen the tire hold down wing bolt by hand, you can loosen it easily using the jack handle.</p>
+		<ol id="e04585">
+			<li>
+				<p>Put the jack handle (1) inside the tire hold-down wing bolt.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04586">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e04587">
+										<image href="images/N_SP3i26_C11_006_I.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>Turn the tire hold-down wing bolt counterclockwise with the jack handle.</p>
+				<p>Use caution when utilizing the sharp jack handle.</p>
+			</li>
+		</ol>
+		<note type="warning" id="e04588">
+			<p>Touching surface of the luggage compartment floor</p>
+			<p>Do not touch the metal surface of the luggage compartment floor while the engine is running or hot, as this could result in serious bodily injury.</p>
+			<p>Turn the engine off and wait until it cools down, or wear gloves to remove the spare tire from the luggage compartment.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00752.dita#t00752" role="parent" scope="local" type="concept">
+				<linktext>If you have a flat tire (with spare tire)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

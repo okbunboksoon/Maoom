@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0089">
+	<title>Ferngesteuertes Öffnen/Schließen des Fensters</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Fernbedienungstaste</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034410.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<title>Smart-Key</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034411.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Türverriegelungstaste <image align="left" href="../../images/WKIA_019.eps" scale="15" placement="inline"/></p>
+			</li>
+			<li>
+				<p>Türentriegelungstaste <image align="left" href="../../images/WKIA_021.eps" scale="15" placement="inline"/></p>
+			</li>
+		</ol>
+		<p>Sie können die Bewegung des Fensters auch bei ausgeschaltetem Motor steuern.</p>
+		<ul>
+			<li>
+				<p>Drücken Sie die Türverriegelungstaste (1) länger als 3 Sekunden. Das Fenster bewegt sich nach oben, nachdem die Türen verriegelt wurden, solange Sie die Türverriegelungstaste (1) drücken.</p>
+				<p>Wenn Sie die Türschlosstaste (1) freigeben, stoppt die Fensterbewegung.</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<p>Drücken Sie die Türentriegelungstaste (2) länger als 3 Sekunden. Das Fenster bewegt sich nach unten, nachdem die Türen entriegelt wurden, solange Sie die Türentriegelungstaste (2) drücken.</p>
+				<p>Die Fensterbewegung stoppt, wenn Sie die Türentriegelungstaste (2) loslassen.</p>
+			</li>
+		</ul>
+		<p>Sie können die Fernbedienung für das Öffnen/Schließen der Fenster aktivieren oder deaktivieren, indem Sie <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Tür</uicontrol><uicontrol>Fensterfernbedienung</uicontrol></menucascade> wählen.</p>
+		<p>Für die Fernöffnung des Fensters muss das Fenster mit Öffnungs-/Schließautomatik verwendet werden.</p>
+		<note type="caution" otherprops="legal_eu_std_007_01">
+			<ul>
+				<li>
+					<p>Die ferngesteuerte Fensterschließ-/-öffnungsfunktion kann abrupt stoppen, wenn Sie sich während des Vorgangs von Ihrem Fahrzeug entfernen. Bleiben Sie in der Nähe Ihres Fahrzeugs, während Sie die Fensterbewegung überwachen.</p>
+				</li>
+				<li>
+					<p>Eines der Fenster kann anhalten, wenn die Fensterbewegung durch eine bestimmte Kraft unterbrochen wird.</p>
+					<p>Die anderen Fenster funktionieren jedoch weiterhin.</p>
+					<p>Stellen Sie daher sicher, dass alle Fenster geschlossen sind.</p>
+				</li>
+				<li>
+					<p>Seien Sie bei der Verwendung der Fernöffnungsfunktion der Fenster umsichtig, da die Türen entriegelt werden.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Die Funktion zum Schließen/Öffnen der Fenster per Fernbedienung funktioniert nur bei Sitzen, die mit automatisch öffnenden und schließenden Sicherheitsfenstern ausgestattet sind.</p>
+		</note>
+		<note type="tip">
+			<p>Das Infotainment-System kann sich nach Aktualisierungen ändern. Weitere Informationen finden Sie in der Anleitung des Infotainment-Systems und in der Kurzanleitung.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0088.dita#CL4m_HEV-ca_ES-2027-t0088" role="parent" scope="local" type="concept">
+				<linktext>Elektrische Fensterheber</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

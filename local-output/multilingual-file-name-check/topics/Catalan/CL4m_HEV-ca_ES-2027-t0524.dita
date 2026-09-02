@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0524">
+	<title>Einschränkungen des Ausstiegsassistenten</title>
+	<conbody>
+		<p>Der Ausstiegsassistent funktioniert unter den folgenden Bedingungen eventuell nicht einwandfrei oder kann unerwartet reagieren:</p>
+		<ul>
+			<li>
+				<p>Aussteigen aus dem Fahrzeug in der Nähe von Bäumen oder hohem Gras</p>
+			</li>
+			<li>
+				<p>Aussteigen aus dem Fahrzeug bei nasser Straße</p>
+			</li>
+			<li>
+				<p>Das herannahende Fahrzeug ist sehr schnell oder sehr langsam</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>Weitere Einzelheiten zu den Einschränkungen des hinteren Eckradars finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0491.dita#CL4m_HEV-ca_ES-2027-t0491"/>.</p>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Der Ausstiegsassistent funktioniert möglicherweise nicht einwandfrei, wenn er durch starke elektromagnetische Wellen gestört wird.</p>
+				</li>
+				<li>
+					<p>Der Ausstiegsassistent funktioniert möglicherweise nach dem Start des Fahrzeugs oder der Initialisierung des Eckradars hinten erst nach 3 Sekunden.</p>
+				</li>
+				<li>
+					<p>Auch nach dem erneuten Starten des Fahrzeugs funktioniert der Ausstiegsassistent möglicherweise nicht einwandfrei, wenn das Hindernis oder die Störung weiterhin besteht.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0521.dita#CL4m_HEV-ca_ES-2027-t0521" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion und Einschränkungen des Ausstiegsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

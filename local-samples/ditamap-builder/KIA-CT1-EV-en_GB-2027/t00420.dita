@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00420">
+	<title>Starting the vehicle with smart key</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>EV button 
+					<indexterm>starting the vehicle with smart key</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01717">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01718">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25D013_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The vehicle will check for the smart key when:</p>
+		<ul>
+			<li>
+				<p>The vehicle doors are opened</p>
+			</li>
+			<li>
+				<p>The <term translate="no">EV</term> button is pressed</p>
+			</li>
+		</ul>
+		<p>If the smart key is not in the vehicle, the indicator (<image align="left" href="../../images/WKIA_044.eps" scale="15" placement="inline"/>) and the message will appear on the instrument cluster.</p>
+	</conbody>
+</concept>

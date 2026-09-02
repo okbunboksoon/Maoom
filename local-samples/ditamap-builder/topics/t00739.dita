@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00739">
+	<title>Remote Smart Parking Assist malfunction</title>
+	<conbody>
+		<section>
+			<title>Remote Smart Parking Assist check</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04676">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e04677">
+									<figgroup>
+										<image href="../../images/OOV055171L.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e04678"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout" id="e04679">
+									<li>
+										<p> <uicontrol outputclass="a1906285">Check Parking Assist</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol outputclass="a1906286">Visit A Nearby Service Center.</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When Remote Smart Parking Assist is not working properly, the <uicontrol outputclass="a1906285">Check Parking Assist</uicontrol> warning message will appear on the infotainment system screen. If the message appears, stop using the function, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+		<section>
+			<title>Remote Smart Parking Assist canceled</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04680">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e04681">
+									<figgroup>
+										<image href="../../images/OOV055172L.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e04682"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout" id="e04683">
+									<li>
+										<p> <uicontrol outputclass="a1906262">Parking Assist Canceled.</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol outputclass="a1906263">Please Refer To Owner’s Manual.</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When Remote Smart Parking Assist is operating, the function can be canceled, and the <uicontrol outputclass="a1906262">Parking Assist Canceled.</uicontrol> warning message may appear regardless of the parking order. Other messages may appear depending on the situations. Follow the instructions provided on the infotainment system screen while parking your vehicle with Remote Smart Parking Assist. Always look around and pay attention when using the function.</p>
+		</section>
+		<section>
+			<title>Remote Smart Parking Assist standby</title>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04684">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e04685">
+									<figgroup>
+										<image href="../../images/OOV055173L.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e04686"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout" id="e04687">
+									<li>
+										<p> <uicontrol outputclass="a1906287">Parking Assist Conditions Not Met</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol outputclass="a1906263">Please Refer To Owner’s Manual.</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When <uicontrol outputclass="a1906287">Parking Assist Conditions Not Met</uicontrol> message appears, when Parking/View (<image align="left" href="../../images/WKIA_106.eps" outputclass="nolabel" placement="inline" scale="15"/>) button has been pressed and held, Remote Smart Parking Assist is in standby. After a while, press and hold the Parking/View (<image align="left" href="../../images/WKIA_106.eps" outputclass="nolabel" placement="inline" scale="15" id="e04688"/>) button again to see if the function works.</p>
+			<p>The message appears even when the smart key’s battery is low. Check the smart key battery level.</p>
+		</section>
+	</conbody>
+</concept>

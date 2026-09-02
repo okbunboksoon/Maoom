@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00403">
+	<title>Electronic Parking Brake (EPB)</title>
+	<shortdesc>After parking your vehicle, apply the <term translate="no">EPB</term> to prevent any external force from moving your vehicle.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>brake system
+					<indexterm>electronic parking brake (EPB)</indexterm>
+				</indexterm>
+				<indexterm>electronic parking brake (EPB)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00402.dita#t00402" role="parent" scope="local" type="concept">
+				<linktext>Brake system </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

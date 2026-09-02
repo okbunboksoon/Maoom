@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0483">
+	<title>Warnung und Kontrolle</title>
+	<conbody>
+		<p>Die Funktion Spurhalteassistent warnt wie folgt und wird auf folgende Weise gesteuert.</p>
+		<ul>
+			<li>
+				<p>Spurhaltewarnsystem</p>
+			</li>
+			<li>
+				<p>Spurhalteassistent</p>
+			</li>
+		</ul>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Spurhaltewarnsystem (links)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054087N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<title>Spurhaltewarnsystem (rechts)</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054086N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0481.dita#CL4m_HEV-ca_ES-2027-t0481" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Spurhalteassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

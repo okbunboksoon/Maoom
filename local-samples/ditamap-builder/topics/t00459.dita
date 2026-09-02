@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00459">
+	<title>Collision Warning</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03489">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03490">
+								<figgroup>
+									<image href="../../images/OOV055146L.eps" align="center" height="1.740in" placement="break" id="e03491"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03492">
+								<li>
+									<p> <uicontrol>Collision Warning</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Collision Warning will alert the driver with the Forward Safety warning light blinking (<image align="left" height="0.117in" href="../../images/WKIA_037.eps" outputclass="nolabel" placement="inline" width="0.143in" scale="15" id="e03493"/>), warning message, steering wheel vibration and an audible warning.</p>
+		<p outputclass="across">Collision warning will be activated in the following conditions:</p>
+		<ul id="e03494">
+			<li>
+				<p>Your driving speed: Approximately 10-30 km/h (6-19 mph)</p>
+			</li>
+			<li>
+				<p>Oncoming vehicle speed: Approximately 30–70 km/h (19–44mph)</p>
+			</li>
+			<li>
+				<p>Powered two-wheeler or cyclist speed: 15-70 km/h (9-44 mph)*</p>
+			</li>
+			<li>
+				<p>When the target enters the operating area of the function.</p>
+				<p importance="default">: It also operates when your vehicle turns right or left.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

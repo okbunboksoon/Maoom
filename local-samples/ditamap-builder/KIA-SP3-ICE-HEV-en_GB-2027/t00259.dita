@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00259">
+	<title id="e01684">Curtain air bag </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>air bag
+					<indexterm>curtain air bag</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01685">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01686">
+								<image align="center" placement="break" href="images/N_SP3i26_D06_084_E.jpg" scale="95"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01687">
+								<image href="images/N_SP3i26_D06_082_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e01688">
+			<li>
+				<p>Curtan air bag</p>
+			</li>
+		</ol>
+		<p>The actual air bags in the vehicle may differ from the illustration.</p>
+		<p>Curtain air bags are located along both sides of the roof rails above the front and rear doors.</p>
+		<p>They protect the head of the front seat occupants and the rear outboard seat occupants during certain side impact collisions.</p>
+		<p>The curtain air bags deploy during certain side impact collisions, depending on the crash severity. The curtain air bags do not deploy in all side impact or rollover situations, or during collisions from the front or rear of the vehicle or in most rollover situations.</p>
+		<note type="note" id="e01689">
+			<p>Refer to the WARNING, CAUTION and NOTE of <xref href="t00251.dita#t00251"/>.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00252.dita#t00252" role="parent" scope="local" type="concept">
+				<linktext>Overview</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

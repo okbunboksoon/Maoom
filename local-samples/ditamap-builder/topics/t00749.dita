@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00749">
+	<title>When the telltale lights up</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tire pressure monitoring system (TPMS) 
+					<indexterm>when the telltale lights up</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04825">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04826">
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV035114L.eps" placement="break" id="e04827"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e04828">
+								<li>
+									<p> <term>Tire pressure</term> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the tire pressure monitoring system warning indicators are illuminated and warning message displayed on the instrument cluster, one or more of your tires is significantly under-inflated. The low tire pressure position telltale light will indicate which tire is significantly under-inflated by illuminating the corresponding position light.</p>
+		<p>If either telltale illuminates, immediately reduce your speed, avoid hard cornering and anticipate increased stopping distances. You should stop and check your tires as soon as possible. Inflate the tires to the proper pressure as indicated on the vehicle’s placard or tire inflation pressure label located on the driver’s (or front passenger’s) side center pillar outer panel. If you cannot reach a service station or if the tire cannot hold the newly added air, replace the low pressure tire with a spare tire.</p>
+		<p>If you drive the vehicle for about 10 minutes at speeds above 25 km/h (16 mph) after replacing the low pressure tire with the spare tire, one of the following will happen:</p>
+		<ul id="e04829">
+			<li>
+				<p>The TPMS malfunction indicator may blink for approximately 1 minute and then remain continuously illuminated because the TPMS sensor is not mounted on the spare wheel. (changed tire equipped with a sensor not in the vehicle)</p>
+			</li>
+			<li>
+				<p>The TPMS malfunction indicator will remain continuously illuminated while driving because the TPMS sensor is not mounted on the spare wheel. (changed tire equipped with a sensor in the vehicle)</p>
+			</li>
+		</ul>
+		<note type="warning" id="e04830">
+			<p importance="high">Low pressure damage</p>
+			<p>Significantly low tire pressure makes the vehicle unstable and can contribute to loss of vehicle control and increased braking distances.</p>
+			<p>Continued driving on low pressure tires can cause the tires to overheat and fail.</p>
+		</note>
+		<note type="caution" id="e04831">
+			<ul id="e04832">
+				<li>
+					<p>In winter or cold weather, the low tire pressure telltale may illuminate if the tire pressure was adjusted to the recommended tire inflation pressure in warm weather. It does not mean your TPMS is malfunctioning because the decreased temperature leads to a lowering of tire pressure.</p>
+				</li>
+				<li>
+					<p>When you drive your vehicle from a warm area to a cold area or from a cold area to a warm area, or the outside temperature is higher or lower, you should check the tire inflation pressure and adjust the tires to the recommended tire inflation pressure.</p>
+				</li>
+				<li>
+					<p>When filling tires with more air, conditions to turn off the low tire pressure telltale may not be met. This is because a tire inflator has a margin of error in performance. The low tire pressure telltale will be turned off if the tire pressure is above the recommended tire inflation pressure.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

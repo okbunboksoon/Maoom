@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00199">
+	<title>Fingerprint authentication system operation</title>
+	<conbody>
+		<section id="e01513">
+			<title>Touch control</title>
+			<p>The convenient features such as personal information access, profile unlock, and valet mode exit (if equipped) are available with the fingerprint authentication system. When the fingerprint shape appears on the infotainment system screen, you should place your finger on the recognition sensor in the vehicle according to the instruction message for authorization and then you can operate the linked features without entering the password. If the fingerprint authentication system does not work, pull your finger away from the fingerprint authentication sensor and then try again.</p>
+			<p>Fingerprint linked features can be turned on or off from the Settings menu. Select:</p>
+			<ul id="e01514">
+				<li>
+					<p> <menucascade><uicontrol>Setup</uicontrol><uicontrol>User Profile</uicontrol><uicontrol>Driver 1 (or Driver 2)</uicontrol><uicontrol>Fingerprint Identification</uicontrol></menucascade> </p>
+				</li>
+			</ul>
+			<table frame="none" rowsep="1" colsep="1" outputclass="formatc" id="e01515">
+				<tgroup cols="2" align="left">
+					<colspec colname="c1" colnum="1" colwidth="1*"/>
+					<colspec colname="c2" colnum="2" colwidth="1*"/>
+					<thead>
+						<row>
+							<entry>
+								<p>Fingerprint linked features</p>
+							</entry>
+							<entry>
+								<p>Characteristic</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry>
+								<p>Personal information access</p>
+							</entry>
+							<entry morerows="2" align="center" valign="middle">
+								<p>Use with a fingerprint without a password</p>
+							</entry>
+						</row>
+						<row>
+							<entry>
+								<p>Profile unlock</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="left" valign="middle">
+								<p>Valet mode exit (if equipped)</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<note type="note" id="e01516">
+				<p>You cannot link a profile with the same fingerprint for Driver 1 and Driver 2. The personalization function works with the recently linked profile, and the previously linked profile will be automatically canceled.</p>
+			</note>
+			<note type="tip" id="e01517">
+				<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

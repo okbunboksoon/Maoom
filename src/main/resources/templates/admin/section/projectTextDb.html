@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <section th:fragment="projectTextDbSection" id="projectTextDbSection"
+             class="admin-content project-db-section"
+             data-project-db-type="text"
+             aria-label="TEXT DB 테이블"
+             hidden>
+        <header class="admin-content-header">
+            <div>
+                <h1>TEXT DB</h1>
+                <p id="projectTextDbSummary">데이터를 불러오는 중입니다.</p>
+            </div>
+            <div class="admin-header-actions">
+                <form id="projectTextDbImportForm" class="admin-header-import-form">
+                    <input id="projectTextDbImportFile"
+                           type="file"
+                           accept=".xml,.xlsx,.xls,text/xml,application/xml,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+                           hidden>
+                    <button id="projectTextDbImportButton"
+                            class="admin-tool-btn primary"
+                            type="button">
+                        <i class="fas fa-upload"></i>
+                        XML/엑셀 업로드
+                    </button>
+                </form>
+                <a class="admin-export-btn" href="/admin/project-text-db/export">
+                    <i class="fas fa-file-excel"></i>
+                    엑셀 내보내기
+                </a>
+            </div>
+        </header>
+
+        <div class="admin-dashboard-cards">
+            <article class="admin-stat-card border-left-primary">
+                <div><span>전체 항목</span><strong id="projectTextTotalCount">0</strong></div>
+                <i class="fas fa-database"></i>
+            </article>
+            <article class="admin-stat-card border-left-success">
+                <div><span>EG 항목</span><strong id="projectTextEgCount">0</strong></div>
+                <i class="fas fa-language"></i>
+            </article>
+            <article class="admin-stat-card border-left-warning">
+                <div><span>KO 항목</span><strong id="projectTextKoCount">0</strong></div>
+                <i class="fas fa-language"></i>
+            </article>
+            <article class="admin-stat-card border-left-danger">
+                <div><span>기타 항목</span><strong id="projectTextOtherCount">0</strong></div>
+                <i class="fas fa-layer-group"></i>
+            </article>
+            <article class="admin-stat-card border-left-info">
+                <div><span>검색 결과</span><strong id="projectTextFilteredCount">0</strong></div>
+                <i class="fas fa-filter"></i>
+            </article>
+        </div>
+
+        <div class="card shadow mb-4 admin-table-card">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">TEXT DB 목록</h6>
+            </div>
+            <div class="card-body">
+                <div class="admin-table-tools">
+                    <button id="projectTextDbRefresh" class="admin-tool-btn" type="button">
+                        <i class="fas fa-sync-alt"></i>
+                        새로고침
+                    </button>
+                </div>
+                <div id="projectTextDbImportResult" class="admin-import-result" hidden></div>
+                <div class="table-responsive">
+                    <table id="projectTextDbTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Region</th>
+                            <th scope="col">Hash</th>
+                            <th scope="col">Old</th>
+                            <th scope="col">New</th>
+                            <th scope="col">수정일</th>
+                            <th scope="col">관리</th>
+                        </tr>
+                        </thead>
+                        <tbody id="projectTextDbTableBody">
+                        <tr><td colspan="7" class="admin-empty-cell">데이터를 불러오는 중입니다.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

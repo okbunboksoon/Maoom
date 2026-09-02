@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0609">
+	<title>Notbremswarnung und Verzögerungsassistent</title>
+	<conbody>
+		<p>Die Notbremsung stellt fest, dass der Fahrer nicht reagiert, wenn die Lenkradwarnung fortgesetzt wird. Wenn festgestellt wird, dass der Fahrer nicht reagiert, erscheint eine Warnmeldung auf dem Kombiinstrument, es ertönt ein akustisches Warnsignal und das Lenkrad vibriert (ausstattungsabhängig) als Vorwarnung.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M055215L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Übernehmen Sie sofort die Kontrolle über das Fahrzeug.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn die Notbremswarnung weiterhin angezeigt wird, werden die Lenkregelung und die Verzögerungsregelung aktiviert, um das Fahrzeug innerhalb der Fahrspur zum Stillstand zu bringen. Eine Warnmeldung, ein Warnton, die Warnblinkanlage und Lenkradvibration (ausstattungsabhängig) weisen Sie darauf hin, dass eine Notbremsung erfolgt.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCV054217N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Übernehmen Sie sofort die Kontrolle über das Fahrzeug. Das Fahrzeug stoppt.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Vorwarnung und die Notbremsung werden während der Vorwarnung und der Verzögerungsregelung unter folgenden Bedingungen deaktiviert:</p>
+		<ul>
+			<li>
+				<p>Wenn Sie die Kontrolle über das Lenkrad übernehmen</p>
+			</li>
+			<li>
+				<p>Wenn Sie die intelligente Tempomatsteuerung vorübergehend deaktivieren oder ausschalten</p>
+			</li>
+			<li>
+				<p>Wenn Sie den Spurhalteassistenten ausschalten</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Im Notbremsbetrieb stellt die intelligente Tempomatsteuerung den Fahrzeugabstand in vier Stufen ein und zeigt ihn an. Wenn Sie die Notbremsung deaktivieren, kehrt das System zum zuvor eingestellten Abstand zurück.</p>
+				</li>
+				<li>
+					<p>Das betrifft die navigationsgestützte intelligente Tempomatsteuerung und die intelligente Tempomatsteuerung des Autobahn-Fahrassistenten.</p>
+				</li>
+				<li>
+					<p>Weitere Informationen zum intelligenten Tempomaten, zum navigationsgestützten intelligenten Tempomaten, zum Spurfolgeassistenten und zum Autobahn-Fahrassistenten finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0581.dita#CL4m_HEV-ca_ES-2027-t0581"/>, <xref href="CL4m_HEV-ca_ES-2027-t0615.dita#CL4m_HEV-ca_ES-2027-t0615"/>, <xref href="CL4m_HEV-ca_ES-2027-t0626.dita#CL4m_HEV-ca_ES-2027-t0626"/>, <xref href="CL4m_HEV-ca_ES-2027-t0637.dita#CL4m_HEV-ca_ES-2027-t0637"/>.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0607.dita#CL4m_HEV-ca_ES-2027-t0607" role="parent" scope="local" type="concept">
+				<linktext>Betrieb der Notbremsung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

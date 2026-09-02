@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00549">
+	<title>Turning Lane Keeping Assist On/Off</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02142">
+			<tgroup cols="2" colsep="1" outputclass="FormatC" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e02143">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25E030_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>For Europe/Australia</title>
+			<p>Whenever the vehicle is turned on, Lane Keeping Assist will always turn on and a gray indicator light will appear on the cluster.</p>
+			<p>If you want to turn off Lane Keeping Assist, press and hold the Lane Driving Assist button (<image href="../../images/WKIA_274.eps" scale="15" align="left" placement="inline"/>) to turn off the function. The indicator light will turn yellow if you turn off Lane Keeping Assist.</p>
+		</section>
+		<section>
+			<title>Except Europe/Australia</title>
+			<p>With the vehicle on, press and hold the Lane Driving Assist button (<image href="../../images/WKIA_274.eps" scale="15" align="left" placement="inline"/>) located on the steering wheel to turn on and off Lane Keeping Assist.</p>
+			<p>The indicator light on the cluster will light up if you turn on Lane Keeping Assist.The indicator light will turn yellow if you turn off Lane Keeping Assist.</p>
+			<note type="note">
+				<ul>
+					<li>
+						<p>When the Lane Driving Assist button is pressed shortly, Lane Following Assist will turn on and off.</p>
+					</li>
+					<li>
+						<p>Lane Keeping Assist function will maintain its last setting even if the vehicle is restarted.</p>
+					</li>
+					<li>
+						<p>When the operating condition of LKA are met, the cluster is illuminated with a green (<image href="../../images/WKIA_198.eps" scale="15" align="left" placement="inline"/>) indicator.</p>
+					</li>
+					<li>
+						<p>When the operating conditions are not met, a grey (<image href="../../images/WKIA_198.eps" scale="15" align="left" placement="inline"/>) indicator is illuminated.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e02144">
+			<title>Automatic Activation</title>
+			<p>Lane Keeping Assist will automatically turn on under the following conditions:</p>
+			<ul id="e02145">
+				<li>
+					<p>When both Lane Keeping Assist and Smart Cruise Control are turned on.</p>
+				</li>
+				<li>
+					<p importance="optional">When Highway Driving Assist is turned on</p>
+				</li>
+			</ul>
+			<p>If the Lane Keeping Assist is automatically activated based on the above conditions, a warning message will appear and the system will not turn off even if you attempt to deactivate it.</p>
+			<sectiondiv><b>For Europe/Australia</b>
+			</sectiondiv>
+			<p importance="optional">If the in cabin camera detects that the driver is drowsy, Lane Keeping Assist may automatically turn on. In this case, you can turn off Lane Keeping Assist by pressing and holding the Lane Driving Assist button (<image href="../../images/WKIA_274.eps" scale="15" align="left" placement="inline"/>) for more than 2 seconds.</p>
+			<note type="warning" id="e02146">
+				<p> <b>Except Middle East</b> </p>
+				<ul id="e02147">
+					<li>
+						<p>When Lane Keeping Assist is activated, it remains on even if the driving convenience functions are turned off.</p>
+					</li>
+					<li>
+						<p>To turn off Lane Keeping Assist, temporarily deactivate Smart Cruise Control, or press the Lane Driving Assist button or the Driving Assist button to turn off the driving convenience fuinction.</p>
+					</li>
+				</ul>
+				<p> <b>For Middle East</b> </p>
+				<p>If the driving convenience features are turned off, Lane Keeping Assist will return to the previous setting.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

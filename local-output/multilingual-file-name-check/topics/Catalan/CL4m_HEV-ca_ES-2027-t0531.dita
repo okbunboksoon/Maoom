@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" otherprops="legal_eu_std_021_01" id="CL4m_HEV-ca_ES-2027-t0531">
+	<title id="e01035">Intelligenter Geschwindigkeitsbegrenzungsassistent (ISLA) </title>
+	<conbody>
+		<p>Der intelligente Geschwindigkeitsbegrenzungsassistent nutzt Informationen von den erfassten Verkehrsschildern und Daten vom Navigationssystem, um Sie über die Geschwindigkeitsbegrenzung zu informieren und bei der Einhaltung der Geschwindigkeitsbegrenzung auf der Straße zu unterstützen.</p>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Der intelligente Geschwindigkeitsbegrenzungsassistent funktioniert möglicherweise nicht einwandfrei, wenn die Funktion in anderen Ländern verwendet wird.</p>
+				</li>
+				<li>
+					<p>Wenn Ihr Fahrzeug mit einem Navigationssystem ausgestattet ist, muss dieses regelmäßig aktualisiert werden, damit der intelligente Geschwindigkeitsbegrenzungsassistent einwandfrei funktioniert.</p>
+				</li>
+			</ul>
+		</note>
+		<section>
+			<title>Erkennungssensor</title>
+			<p>Die zutreffenden Sensoren und ihre Standorte finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0439.dita#CL4m_HEV-ca_ES-2027-t0439"/>.</p>
+			<note type="caution">
+				<p>Weitere Vorsichtsmaßnahmen zur Frontkamera finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0440.dita#CL4m_HEV-ca_ES-2027-t0440"/>.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0437-CH10.dita#CL4m_HEV-ca_ES-2027-t0437-CH10" role="parent" scope="local" type="concept">
+				<linktext>Fahrerassistenzleitfaden</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

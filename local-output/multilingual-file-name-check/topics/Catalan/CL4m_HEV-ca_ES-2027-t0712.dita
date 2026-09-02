@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="CL4m_HEV-ca_ES-2027-t0712">
+	<title>Seitliche Einparkhilfe</title>
+	<conbody>
+		<p>Die seitliche Einparkhilfe ist aktiv, wenn eine der folgenden Bedingungen erfüllt ist.</p>
+		<ul>
+			<li>
+				<p>Beim Schalten in R (Rückwärtsgang)</p>
+			</li>
+			<li>
+				<p>Die Fahrstufe (D) ist eingelegt und die Kontrollleuchte der Parksicherheitstaste (<image align="left" href="../../images/WKIA_087.eps" scale="15" placement="inline"/>) leuchtet.</p>
+			</li>
+			<li>
+				<p>Die Einparkhilfe vorn warnt den Fahrer, wenn der Schaltregler in Position D (Fahren) steht.</p>
+				<p>(Wenn <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Fahrerassistenz</uicontrol><uicontrol>Parksicherheit</uicontrol><uicontrol>Parkabstands-Warnung Auto Ein</uicontrol></menucascade> auf dem Infotainment-System ausgewählt ist)</p>
+			</li>
+			<li>
+				<p>Die Fahrzeuggeschwindigkeit beträgt weniger als 10 km/h (6 mph).</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Die seitliche Einparkhilfe funktioniert nur, wenn die Fahrzeuggeschwindigkeit unter 10 km/h (6 mph) liegt.</p>
+				</li>
+				<li>
+					<p>Die seitliche Einparkhilfe funktioniert nur, wenn die Einparkhilfe hinten eingeschaltet ist.</p>
+				</li>
+			</ul>
+		</note>
+		<section>
+			<title>Warnanzeige und Warnton</title>
+			<table outputclass="formatc" frame="all" rowsep="1" colsep="1">
+				<tgroup cols="4" colsep="1" rowsep="1">
+					<colspec colnum="1" colname="col1" colwidth="0.565*"/>
+					<colspec colnum="2" colname="col2" colwidth="0.484*"/>
+					<colspec colnum="3" colname="col3" colwidth="0.574*"/>
+					<colspec colnum="4" colname="col4" colwidth="0.600*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1" morerows="1">
+								<p>Abstand zum Objekt</p>
+							</entry>
+							<entry namest="col2" nameend="col3">
+								<p>Warnleuchte</p>
+							</entry>
+							<entry colname="col4" morerows="1">
+								<p>Warnton</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col2">
+								<p>Kombiinstrument</p>
+							</entry>
+							<entry colname="col3">
+								<p>Infotainment-System</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry colname="col1" align="center" valign="middle">
+								<p>60 – 120 cm (24 – 48 in.)</p>
+							</entry>
+							<entry colname="col2" align="center" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_094.eps" scale="30" placement="inline"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col3" align="center" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_095.eps" scale="30" placement="inline"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col4" align="center">
+								<p>-</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry colname="col1" align="center">
+								<p>30 – 60 cm (12 – 24 in.)</p>
+							</entry>
+							<entry colname="col2" align="center" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_096.eps" scale="30" placement="inline"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col3" align="center" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_097.eps" scale="30" placement="inline"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col4" align="center">
+								<p>-</p>
+							</entry>
+						</row>
+						<row rowsep="0" valign="middle">
+							<entry colname="col1" align="center">
+								<p>innerhalb von 30 cm (12 Zoll)</p>
+							</entry>
+							<entry colname="col2" align="center" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_098.eps" scale="30" placement="inline"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col3" align="center" valign="middle">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/WKIA_099.eps" scale="30" placement="inline"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col4" align="center" valign="middle">
+								<p>Piept kontinuierlich</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul>
+				<li>
+					<p>Wenn der seitliche Ultraschallsensor eine Person oder ein Objekt erkennt, zeigt er Kontrollleuchten für jeden Abstand auf der Anzeige des Kombiinstruments oder des Infotainment-Systems an.</p>
+				</li>
+				<li>
+					<p>Eine Warnung ertönt, wenn ein Objekt innerhalb von 30 cm (12 in.) seitlich im Ausfahrweg des Fahrzeugs erkannt wird.</p>
+				</li>
+				<li>
+					<p>Wenn ein Objekt seitlich außerhalb des Ausstiegsbereichs des Fahrzeugs erkannt wird, leuchtet nur die Kontrollleuchte auf.</p>
+				</li>
+				<li>
+					<p>Wenn in Stellung D (Fahren) der Abstand zum Objekt über 30 cm (12 in.) beträgt, wird die seitliche Warnung nicht auf dem Kombiinstrument angezeigt.</p>
+				</li>
+				<li>
+					<p>Die Form der Anzeige kann vom tatsächlichen Fahrzeug abweichen.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0709.dita#CL4m_HEV-ca_ES-2027-t0709" role="parent" scope="local" type="concept">
+				<linktext>Betrieb der Einparkhilfe</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

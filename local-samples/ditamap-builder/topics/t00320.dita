@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00320">
+	<title>Vanity mirror lamp</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior lights 
+					<indexterm>vanity mirror lamp</indexterm>
+				</indexterm>
+				<indexterm>vanity mirror lamp</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02409">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry>
+							<fig id="e02410">
+								<figgroup>
+									<image href="../../images/OOV035006.eps" align="center" height="1.740in" placement="break" id="e02411"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The lamp turns on automatically when the sun visor vanity mirror cover is opened.</p>
+		<note type="caution">
+			<p>Always close the sun visor vanity mirror cover to turn the lamp <term translate="no">OFF</term> when not in use. If the sun visor is closed while the lamp remains on, it may cause 12V battery discharge or damage the sun visor.</p>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<project name="schematron-ant-sample" basedir="." default="excel-report">
+
+	<target name="check" description="Simple test">
+		<copy todir="topics">
+			<fileset dir="dtd">
+				<include name="*.dtd"/>
+			</fileset>
+		</copy>
+	    <taskdef name="schematron" classname="com.schematron.ant.SchematronTask"/>
+	    <schematron schema="sch/test.sch" failonerror="false">
+			<fileset dir="topics">
+				<include name="*.dita"/>
+			</fileset>
+	    </schematron>
+		<delete>
+			<fileset dir="topics">
+				<include name="*.dtd"/>
+			</fileset>
+		</delete>
+	</target>
+
+    <target name="excel-report" depends="check">
+        <xslt in="result.xml" out="nsremoved.xml" style="xsl/nsremove.xsl"/>
+        <xslt in="nsremoved.xml" out="extract.xml" style="xsl/report.xsl"/>
+        <!--예외 처리-->
+        <xslt in="extract.xml" out="extract_exceptions.xml" style="xsl/extract_exceptions.xsl"/>
+        <!--오류 부분 span 넣기-->
+        <xslt in="extract_exceptions.xml" out="report_data.xml" style="xsl/rule_check.xsl"/>
+        <!--html 및 엑셀 생성-->
+        <xslt in="report_data.xml" out="temp/QC_LINT_Report.xml" style="xsl/make-excel.xsl"/>
+        <xslt in="report_data.xml" out="temp/QC_LINT_Report.html" style="xsl/make-html.xsl"/>
+        <delete file="result.xml"/>
+        <delete file="extract.xml"/>
+        <delete file="nsremoved.xml"/>
+        <delete file="extract_exceptions.xml"/>
+        <delete file="report_data.xml"/>
+    </target>
+
+</project>

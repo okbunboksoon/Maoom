@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0689">
+	<title>3D-Ansichtsfunktion</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054146.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054018N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die 3D-Ansichtsfunktion zeigt das Fahrzeug in verschiedenen Winkeln. Drücken Sie das 3D-Ansichtssymbol auf dem Bildschirm Umgebungsüberwachung, um den Winkel auszuwählen. Drücken Sie das 3D-Ansichtssymbol erneut, um den Winkel zurückzusetzen.</p>
+		<p>Die 3D-Ansicht des Umgebungsüberwachungs-Monitors wird unter den folgenden Bedingungen aktiviert:</p>
+		<ul>
+			<li>
+				<p>P (Parken) oder N (Neutral) oder D (Fahren) bei einer Fahrzeuggeschwindigkeit von weniger als 10 km/h (6 mph), oder wenn Sie die Taste 3D-Ansicht (2) wählen, während der Umgebungsüberwachungs-Monitor im Modus R (Rückwärts) aktiviert ist.</p>
+			</li>
+		</ul>
+		<p>Die 3D-Ansichtsfunktion des Umgebungsüberwachungs-Monitors während des Parkens wird unter den folgenden Bedingungen ausgeschaltet:</p>
+		<ul>
+			<li>
+				<p>Schalten von N (Neutral) oder D (Fahren) auf P (Parkstellung)</p>
+			</li>
+			<li>
+				<p>Drücken der Taste Parken/Sicht (1)</p>
+			</li>
+			<li>
+				<p>Drücken der Taste Zurück (3) auf dem Umgebungsüberwachungs-Monitor</p>
+			</li>
+			<li>
+				<p>Drücken der Einschalttaste des Infotainment-Systems (4)</p>
+			</li>
+			<li>
+				<p>Fahren mit einer Geschwindigkeit über 10 km/h (6 mph)</p>
+			</li>
+		</ul>
+		<p>Wenn sich das Fahrzeug im Modus R (Rückwärts) befindet, wird die 3D-Ansichtsfunktion des Umgebungsüberwachungs-Monitors unter den folgenden Bedingungen ausgeschaltet:</p>
+		<ul>
+			<li>
+				<p>Schalten auf P (Parkstellung)</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Die 3D-Ansicht zeigt keine Einparkhilfe an.</p>
+				</li>
+				<li>
+					<p>Der Bildschirm für die Draufsicht, der mit einer Front-/Heckansicht oder einer 3D-Ansicht angezeigt wird, wandelt die von den vier Weitwinkelkameras erfassten Originalbilder in ein 360-Grad-Bild rund um das Fahrzeug um, das von unten betrachtet wird.</p>
+				</li>
+				<li>
+					<p>Bei Weitsicht von vorne/hinten wird die Draufsicht nicht angezeigt.</p>
+				</li>
+				<li>
+					<p>Vergrößern oder verkleinern Sie die Draufsicht, indem Sie in den Bereich der Draufsicht drücken.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0681.dita#CL4m_HEV-ca_ES-2027-t0681" role="parent" scope="local" type="concept">
+				<linktext>Bedienung der Umgebungsüberwachungs-Monitors</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

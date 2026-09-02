@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00135">
+	<title>Integrated memory system</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>adjusting
+					<indexterm>integrated memory system</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Integrated memory system for the driver’s seat is provided to store and recall the following memory settings with a simple button operation.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00666">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00667">
+								<figgroup>
+									<image align="center" href="images/N_SP3i26_B05_015_1_E.jpg" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e00668">
+			<li>
+				<p>Driver’s seat position</p>
+			</li>
+			<li>
+				<p>Outside rearview mirror</p>
+			</li>
+			<li>
+				<p>Head up display (HUD)</p>
+			</li>
+		</ul>
+		<note type="warning" id="e00669">
+			<p>Never attempt to operate the integrated memory system while the vehicle is moving.</p>
+			<p>This could result in loss of control, and an accident causing death, serious injury, or property damage.</p>
+		</note>
+		<note type="note" id="e00670">
+			<ul id="e00671">
+				<li>
+					<p>Even if the battery is disconnected, the memory setting will be retained.</p>
+				</li>
+				<li>
+					<p>If integrated memory system does not operate normally, have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00114.dita#t00114" role="parent" scope="local" type="concept">
+				<linktext>Driver Adjustments </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

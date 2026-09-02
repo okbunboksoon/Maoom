@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00149">
+	<title id="e01052">SRS components and functions</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>air bag 
+					<indexterm>SRS components and functions</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01053">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0" valign="middle">
+							<fig id="e01054">
+								<figgroup>
+									<image href="../../images/OOV025040L.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e01055"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" valign="middle">
+							<ol outputclass="callout" id="e01056">
+								<li>
+									<p>Front impact sensors</p>
+								</li>
+								<li id="e01057">
+									<p>SRS control module (SRSCM)/rollover sensor</p>
+								</li>
+								<li id="e01058">
+									<p>Passenger’s front airbag module</p>
+								</li>
+								<li>
+									<p>Side pressure sensors</p>
+								</li>
+								<li>
+									<p>Passenger air bag on/off switch</p>
+								</li>
+								<li id="e01059">
+									<p>Side airbag modules</p>
+								</li>
+								<li id="e01060">
+									<p>Curtain airbag modules</p>
+								</li>
+								<li>
+									<p>Side impact sensors</p>
+								</li>
+								<li>
+									<p>Driver’s center airbag module</p>
+								</li>
+								<li id="e01061">
+									<p>Air bag warning light</p>
+								</li>
+								<li id="e01062">
+									<p>Driver’s front airbag module</p>
+								</li>
+								<li>
+									<p>Retractor pre-tensioner assemblies</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p importance="default">The actual features in your vehicle may not necessarily be available due to the selected options or regions.</p>
+		<section deliveryTarget="except_print" id="e01063">
+			<title>Operating conditions</title>
+			<ul id="e01064">
+				<li>
+					<p>When <term translate="no">EV</term> button is in <term translate="no">POWER ON</term> position, the SRS air bag warning light will appear for approximately 6 seconds and go out.</p>
+				</li>
+			</ul>
+			<note type="warning" id="e01065">
+				<p>If any of the following conditions occurs, this indicates a malfunction of the SRS. In this case, have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				<ul id="e01066">
+					<li>
+						<p>The light does not turn on briefly when you turn the vehicle ON.</p>
+					</li>
+					<li>
+						<p>The light stays on after illuminating for approximately 6 seconds.</p>
+					</li>
+					<li>
+						<p>The light comes on while the vehicle is in motion.</p>
+					</li>
+					<li>
+						<p>The light blinks when the vehicle is in <term translate="no">POWER ON</term> position.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

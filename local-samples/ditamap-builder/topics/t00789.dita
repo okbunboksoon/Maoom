@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00789">
+	<title>Coolant</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05051">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05052">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV075030.eps" placement="break" id="e05053"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e05054">
+			<p>When the message 'Refill coolant' displayed on cluster, stop driving and have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			<note type="warning" id="e05055">
+				<p> <image align="left" height="0.239in" href="../../images/WKIA_360.eps" outputclass="nolabel" placement="inline" id="e05056"/> </p>
+				<p>The electric motor for the cooling fan may continue to operate or start up when the vehicle is not running and can cause serious injury.</p>
+				<p>Keep hands, clothing and tools away from the rotating fan blades of the cooling fan.</p>
+				<p>The electric motor for the cooling fan is controlled by vehicle coolant temperature, refrigerant pressure and vehicle speed. As the vehicle coolant temperature decreases, the electric motor will automatically shut off. This is a normal condition.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

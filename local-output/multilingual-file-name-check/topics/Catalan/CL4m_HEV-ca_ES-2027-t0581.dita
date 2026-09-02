@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0581">
+	<title>Intelligente Tempomatsteuerung (SCC)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Intelligente Tempomatsteuerung (SCC)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Grundlegende Funktion</title>
+			<p>Die Intelligente Tempomatsteuerung erkennt ein vorausfahrendes Fahrzeug und kann helfen, den Abstand zum vorausfahrenden Fahrzeug und die eingestellte Geschwindigkeit einzuhalten.</p>
+			<note type="note">
+				<p>Die intelligente Tempomatsteuerung schaltet bei Fahrzeugen mit Schaltgetriebe nicht automatisch. Lesen Sie die Bedienungsanleitung sorgfältig durch und bedienen Sie das Getriebe gemäß den Anweisungen.</p>
+			</note>
+		</section>
+		<section>
+			<title>Beschleunigungshilfe beim Überholen</title>
+			<p>Wenn die intelligente Tempomatsteuerung erkennt, dass Sie versuchen, ein vorausfahrendes Fahrzeug zu überholen, hilft die Funktion beim Beschleunigen.</p>
+		</section>
+		<section importance="optional">
+			<title>Funktion Je nach Fahrstil</title>
+			<p>Die intelligente Tempomatsteuerung wird abhängig vom Fahrstil des Fahrers (d. h. Abstand zwischen den Fahrzeugen, Beschleunigung, Reaktionszeit) aktiviert.</p>
+		</section>
+		<section>
+			<title>Erkennungssensor</title>
+			<p>Die zutreffenden Sensoren und ihre Standorte finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0439.dita#CL4m_HEV-ca_ES-2027-t0439"/>.</p>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Halten Sie Frontkamera und Frontradar immer in gutem Zustand, um die optimalen Eigenschaften der intelligenten Tempomatsteuerung aufrechtzuerhalten.</p>
+					</li>
+					<li>
+						<p>Weitere Vorsichtsmaßnahmen zur Frontkamera und zum Frontradar finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0440.dita#CL4m_HEV-ca_ES-2027-t0440"/>.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0437-CH10.dita#CL4m_HEV-ca_ES-2027-t0437-CH10" role="parent" scope="local" type="concept">
+				<linktext>Fahrerassistenzleitfaden</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

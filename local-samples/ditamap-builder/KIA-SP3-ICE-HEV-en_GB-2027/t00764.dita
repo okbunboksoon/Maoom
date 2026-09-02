@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00764">
+	<title>Technical data</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>tire mobility kit
+					<indexterm>technical data</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ul id="e04682">
+			<li>
+				<p>System voltage: DC 12 V</p>
+			</li>
+			<li>
+				<p>Working voltage: DC 12 V</p>
+			</li>
+			<li>
+				<p>Amperage rating: max. 15 A</p>
+			</li>
+			<li>
+				<p>Suitable temperatures: -40 to 70°C (-40 to 158°F)</p>
+			</li>
+			<li>
+				<p>Max. working pressure: 72.5 psi (5.0 bar)</p>
+			</li>
+		</ul>
+		<p>Sealant and spare parts can be obtained and replaced at an authorized vehicle or tire dealer. Empty sealant bottles may be disposed of at home. Liquid residue from the sealant should be disposed of by your vehicle or tire dealer or in accordance with local waste disposal regulations.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00759.dita#t00759" role="parent" scope="local" type="concept">
+				<linktext>If you have a flat tire (with Tire Mobility Kit)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

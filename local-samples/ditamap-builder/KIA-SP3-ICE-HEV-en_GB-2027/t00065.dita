@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00065">
+	<title>How to Use the Digital Key 2 (Smartphone)</title>
+	<shortdesc/>
+	<conbody>
+		<section>
+			<title>Smartphone touch control</title>
+			<p>The driver can lock and unlock the door by touching the smart phone on the door handle without activating the Kia App or Kia Connect app. Also, the vehicle can be started by placing the smartphone on the in-vehicle authentication pad (wireless charging pad).</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00350">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00351">
+									<figgroup>
+										<image align="center" href="images/N_SP327_B04_012.jpg" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e00352">
+									<li>
+										<p><uicontrol>Door handle authentication pad</uicontrol></p>
+									</li>
+									<li>
+										<p><uicontrol>NFC antenna on the back of the smartphone</uicontrol> (The antenna position differs depending on models.) <uicontrol/></p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<note type="note">
+				<p>You can check the location of the NFC antenna on your Samsung smartphone in the <menucascade><uicontrol>Settings app</uicontrol><uicontrol>Connections</uicontrol><uicontrol>NFC and contactless payments</uicontrol></menucascade>. The Apple iPhone <tm tmtype="reg"/> `s NFC antenna is located at the top of the back of the device, and the Apple Watch <tm tmtype="reg"/> `s NFC antenna is located in the center of the screen. Make sure that the location of the smartphone’s NFC antenna touches the in-vehicle authentication pad (wireless charging pad).</p>
+				<p>However, as the location of the smartphone’s NFC antenna may differ by smartphone model, contact the smartphone manufacturer for more details.</p>
+			</note>
+		</section>
+		<section>
+			<title>Locking/Unlocking the doors</title>
+			<ul>
+				<li>
+					<p>If the driver touches the smartphone NFC antenna to the driver’s or passenger’s door handle authentication pad for more than 2 seconds, the door will lock or unlock.</p>
+				</li>
+				<li>
+					<p>If 2 Press Unlock function is set, only the driver’s door will be unlocked by touching the smart phone on the driver’s door handle. Touch the smart phone once more within 4 seconds to unlock all doors.</p>
+				</li>
+				<li>
+					<p>After unlocking the doors, the doors will automatically re-lock after 30 seconds unless a door is opened.</p>
+				</li>
+				<li>
+					<p>If the smartphone digital key does not operate, move the smartphone more than 0.1 m (4 inches) from the door handle authentication pad and try it again.</p>
+				</li>
+			</ul>
+			<sectiondiv><ph>For smartphones without UWB support:</ph>
+				<p>To lock or unlock the doors with a registered smartphone, contact the NFC antenna on the back of the smartphone with the authentication pad of the driver’s or passenger’s outside door handle for about 2 seconds.</p>
+			</sectiondiv>
+			<sectiondiv><ph>For smartphones with UWB support:</ph>
+				<ul>
+					<li>
+						<p>To lock or unlock the doors, carry your smartphone and touch the door handle lock/unlock sensor (carved area) on the outside door handle.</p>
+					</li>
+				</ul>
+				<note type="warning">
+					<ul>
+						<li>
+							<p>If you put the smartphone in a back pocket or bag, it may be blocked by the body part, which limits the Bluetooth connection and cause operation delay when locking/unlocking doors or starting the vehicle.</p>
+						</li>
+						<li>
+							<p>If a tinting film containing metal components is applied, the digital key may not function properly.</p>
+						</li>
+					</ul>
+				</note>
+				<note deliveryTarget="full_only" type="note">
+					<p>Note that the door will unlock and a beep sounds when using the digital key 2 if any of the following occur:</p>
+					<ul>
+						<li>
+							<p>When the Smart Key is in the vehicle</p>
+						</li>
+						<li>
+							<p>The vehicle is in <term translate="no">ACC</term> or <term translate="no">ON</term> position</p>
+						</li>
+						<li>
+							<p>Attempting to lock the door when more than one door, or hood, tailgate is opened</p>
+						</li>
+						<li>
+							<p>If a tinting film containing metal substances is applied to the digital key, it may not function properly.</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Starting the vehicle</title>
+			<p>After placing your registered smartphone on the in-vehicle authentication pad (wireless charging pad), depress the brake pedal and start the vehicle.</p>
+			<ul>
+				<li>
+					<p>Once the vehicle is started, you can remove the smartphone from the pad.</p>
+				</li>
+			</ul>
+			<sectiondiv><ph>For smartphones without UWB support:</ph>
+				<ul>
+					<li>
+						<p>Place the NFC antenna of the smartphone on the center of the indoor authentication pad (wireless charging pad), press the brake pedal, and then press the start button to start the vehicle.</p>
+					</li>
+					<li>
+						<p>After starting the vehicle, you can remove the smartphone from the indoor authentication pad (wireless charging pad).</p>
+					</li>
+					<li>
+						<p>Some smartphones may not have smooth NFC communication due to their internal structure. In such cases, move the smartphone to the right or left of the indoor authentication pad (wireless charging pad) to operate it.</p>
+					</li>
+					<li>
+						<p>The Apple iPhone <tm tmtype="reg"/> `s NFC antenna is located at the top of the back of the device, and the Apple Watch <tm tmtype="reg"/> `s NFC antenna is located in the center of the screen. Make sure that the location of the smartphone’s NFC antenna touches the in-vehicle authentication pad (wireless charging pad). However, as the location of the smartphone’s NFC antenna may be different by smartphone model, contact the smartphone manufacturer for more details.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>For smartphones with UWB support:</ph>
+				<ul>
+					<li>
+						<p>Carry the smartphone inside the vehicle, press the brake pedal, and then press the start button to start the vehicle.</p>
+					</li>
+					<li>
+						<p>To start the vehicle remotely, use the Kia app or an app provided by the smartphone manufacturer and press the remote start button. The vehicle will start and the hazard warning lights will flash.</p>
+					</li>
+					<li>
+						<p>To turn off the vehicle, press the remote start button again.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Operating the tailgate</title>
+			<sectiondiv><ph>For smartphones with UWB support:</ph>
+				<ul>
+					<li>
+						<p>When the vehicle is locked, press the tailgate open button while carrying a registered smartphone to open the tailgate.</p>
+					</li>
+					<li>
+						<p>When the Smart Tailgate feature is selected, the tailgate automatically opens if you stand in the detection area behind it for more than 3 seconds while carrying a smartphone registered with Digital Key 2.</p>
+					</li>
+				</ul>
+				<note type="caution">
+					<ul>
+						<li>
+							<p>When closing the tailgate, please check that the registered smartphone is inside the vehicle. If you leave your smartphone inside the vehicle, the doors may not unlock when you close the tailgate while the doors are locked or when you close the tailgate using the tailgate close button.</p>
+						</li>
+						<li>
+							<p>The vehicle can be started by anyone if the registered smartphone is inside the vehicle. Therefore, do not leave children or individuals unfamiliar with the vehicle’s system alone in the vehicle, which could result in serious bodily injury or death. In addition, always keep the smartphone registered with Digital Key 2 on you to prevent theft when leaving the vehicle.</p>
+						</li>
+					</ul>
+				</note>
+				<p>For smartphone with UWB support, Digital Key 2 is only available when the vehicle and smartphone are connected via Bluetooth.</p>
+				<ul>
+					<li>
+						<p>The effective range of a Bluetooth connection may vary depending on the surrounding environment.</p>
+					</li>
+					<li>
+						<p>If the smartphone is in a back pocket or bag, the signal may be blocked, potentially limiting the Bluetooth connection and causing delays when locking/unlocking doors or starting the vehicle.</p>
+					</li>
+				</ul>
+				<p>For smartphone with UWB support, Digital Key 2 is only available for a limited time to optimize the vehicle and smartphone batteries.</p>
+				<p>You can check the connection between the vehicle and the smartphone in the smartphone’s settings or through an app provided by the smartphone manufacturer.</p>
+				<note type="warning">
+					<p>The vehicle can be started when the registered smartphone is placed on the in-vehicle authentication pad (wireless charging pad). Therefore, do not leave unsupervised children or people who are not aware of the system since it can result in serious injury or death. In addition, always have the registered smartphone with you to prevent vehicle theft when leaving the vehicle.</p>
+				</note>
+				<note deliveryTarget="full_only" type="note">
+					<p>The operation time of digital key 2 for shared user may extend during the first time use.</p>
+					<p>Approach your digital key 2 (smartphone) on the authentication pad located in the outside door handle until the vehicle door lock/unlock function operates.</p>
+					<p>If the inner authentication pad is used for the first time, 1st vehicle start function may not operate.</p>
+				</note>
+			</sectiondiv>
+		</section>
+		<section id="e00353">
+			<title>Remote Smart Parking Assist (RSPA) operation</title>
+			<p>Remote Smart Parking Assist (RSPA) can be operated near the vehicle via the Kia App or Kia Connect app on a UWB-supported smartphone registered with Digital Key, even without the smart key.</p>
+			<note type="note" id="e00354">
+				<ul id="e00355">
+					<li>
+						<p>For detailed instructions, refer to the guide in the Kia App or Kia Connect app or the “Remote Smart Parking Assist” section</p>
+						<p>RSPA can only be operated with a Digital Key on vehicles and smartphones that support UWB.</p>
+					</li>
+					<li>
+						<p>RSPA with Digital Key can be operated only via the Kia App or Kia Connect app. This feature is not available in apps provided by smartphone manufacturers.</p>
+					</li>
+					<li>
+						<p>To allow shared users to operate RSPA, both the Digital Key and the vehicle must be shared via the Kia App or Kia Connect app.</p>
+					</li>
+					<li>
+						<p>RSPA is available only with Digital Keys that have Full or Valet access rights.</p>
+					</li>
+					<li>
+						<p>Check the Bluetooth connection between the vehicle and smartphone before using RSPA.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00063.dita#t00063" role="parent" scope="local" type="concept">
+				<linktext>Digital Key 2 (Smartphone)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00482">
+	<title id="e03647">Limitations of Forward Collision-Avoidance Assist</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>forward collision-avoidance assist (FCA) (sensor fusion) 
+					<indexterm>limitations of forward collision-avoidance assist</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Forward Collision-Avoidance Assist may not operate normally, or it may operate unexpectedly under the following circumstances:</p>
+		<ul id="e03648">
+			<li>
+				<p>The detecting sensor or the surroundings are contaminated or damaged</p>
+			</li>
+			<li>
+				<p>The temperature around the front view camera is high or low due to surrounding environment</p>
+			</li>
+			<li>
+				<p>The camera lens is contaminated due to tinted, filmed or coated windshield, damaged glass, or sticky foreign material (sticker, bug, etc.) on the glass</p>
+			</li>
+			<li>
+				<p>Moisture is not removed or frozen on the windshield</p>
+			</li>
+			<li>
+				<p>Washer fluid is continuously sprayed, or the wiper is on</p>
+			</li>
+			<li>
+				<p>Driving in heavy rain or snow, or thick fog</p>
+			</li>
+			<li>
+				<p>The field of view of the front view camera is obstructed by sun glare</p>
+			</li>
+			<li>
+				<p>Streetlight or light from oncoming traffic is reflected on the wet road surface, such as a puddle on the road</p>
+			</li>
+			<li>
+				<p>An object is placed on the instrument panel</p>
+			</li>
+			<li>
+				<p>Your vehicle is being towed</p>
+			</li>
+			<li>
+				<p>The surrounding is very bright, or the surrounding is very dark, such as in a tunnel, etc.</p>
+			</li>
+			<li>
+				<p>The brightness changes suddenly, for example when entering or exiting a tunnel</p>
+			</li>
+			<li>
+				<p>The brightness outside is low, and the headlamps are not on or are not bright</p>
+			</li>
+			<li>
+				<p>Only part of the vehicle, powered two-wheeler, pedestrian or cyclist is detected</p>
+			</li>
+			<li>
+				<p>The vehicle or powered two-wheeler in front is a bus, heavy truck, truck with an unusually shaped cargo, trailer, etc.</p>
+			</li>
+			<li>
+				<p>The vehicle or powered two-wheeler in front has no tail lights, tail lights are located unusually, etc.</p>
+			</li>
+			<li>
+				<p>The brightness outside is low, and the tail lights are not on or are not bright</p>
+			</li>
+			<li>
+				<p>The rear of the front vehicle is small, or the vehicle does not look normal, such as when the vehicle is tilted, overturned, or the side of the vehicle is visible, etc.</p>
+			</li>
+			<li>
+				<p>The front vehicle’s ground clearance is low or high</p>
+			</li>
+			<li>
+				<p>A vehicle, powered two-wheeler, pedestrian or cyclist suddenly cuts in front</p>
+			</li>
+			<li>
+				<p>The bumper around the front radar is impacted, damaged, or the front radar is out of position</p>
+			</li>
+			<li>
+				<p>The temperature around the front radar is high or low</p>
+			</li>
+			<li>
+				<p>Driving through a tunnel or iron bridge</p>
+			</li>
+			<li>
+				<p>Driving in vast areas where there are few vehicles or structures (for example, desert, meadow, suburb, etc.)</p>
+			</li>
+			<li>
+				<p>Driving near areas containing metal substances, such as a construction zone, railroad, etc.</p>
+			</li>
+			<li>
+				<p>A material is near that reflects very well on the front radar, such as a guardrail, nearby vehicle, etc.</p>
+			</li>
+			<li>
+				<p>The cyclist in front is on a bicycle made of material that does not reflect on the front radar</p>
+			</li>
+			<li>
+				<p>The vehicle or powered two-wheeler in front is detected late</p>
+			</li>
+			<li>
+				<p>The vehicle or powered two-wheeler in front is suddenly blocked by an obstacle</p>
+			</li>
+			<li>
+				<p>The vehicle or powered two-wheeler in front suddenly changes a lane or suddenly reduces speed</p>
+			</li>
+			<li>
+				<p>The vehicle or powered two-wheeler in front is bent out of shape</p>
+			</li>
+			<li>
+				<p>The vehicle in front is covered with snow</p>
+			</li>
+			<li>
+				<p>You are departing or returning to the lane</p>
+			</li>
+			<li>
+				<p>Unstable driving</p>
+			</li>
+			<li>
+				<p>You are on a roundabout and the vehicle or powered two-wheeler in front is not detected</p>
+			</li>
+			<li>
+				<p>You are continuously driving in a circle</p>
+			</li>
+			<li>
+				<p>The vehicle or powered two-wheeler in front has an unusual shape</p>
+			</li>
+			<li>
+				<p>The vehicle or powered two-wheeler in front is driving uphill or downhill</p>
+			</li>
+			<li>
+				<p>The pedestrian or cyclist is not fully detected, for example, if the pedestrian is leaning over or is not fully walking upright</p>
+			</li>
+			<li>
+				<p>The pedestrian or cyclist is wearing clothing or equipment that makes it difficult to detect</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03649">
+					<tgroup cols="2" colsep="1" outputclass="FormatC" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image href="../../images/OOV055281.eps" align="center" height="1.573in" placement="break" id="e03650"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<p>The illustration above shows the image the front view camera and front radar are capable of detecting as a vehicle, powered two-wheeler, pedestrian and cyclist.</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+			<li>
+				<p>The pedestrian or cyclist in front is moving very quickly</p>
+			</li>
+			<li>
+				<p>The pedestrian or cyclist in front is short or is posing a low posture</p>
+			</li>
+			<li>
+				<p>The pedestrian or cyclist in front has impaired mobility or moving intersected with the driving direction</p>
+			</li>
+			<li>
+				<p>There is a group of pedestrians, cyclists or a large crowd in front</p>
+			</li>
+			<li>
+				<p>The pedestrian or cyclist is wearing clothing that easily blends into the background, making it difficult to detect</p>
+			</li>
+			<li>
+				<p>The pedestrian or cyclist is difficult to distinguish from the similarly shaped structure in the surroundings</p>
+			</li>
+			<li>
+				<p>You are driving by a pedestrian, cyclist, traffic signs, structures, etc., near the intersection</p>
+			</li>
+			<li>
+				<p>When driving in the following places</p>
+				<ul id="e03651">
+					<li>
+						<p>Driving through steam, smoke, or shadow</p>
+					</li>
+					<li>
+						<p>Driving through a tunnel or iron bridge</p>
+					</li>
+					<li>
+						<p>Driving in large areas where there are few vehicles or structures (i.e. desert, meadow, suburb, etc.)</p>
+					</li>
+					<li>
+						<p>Driving in a car park</p>
+					</li>
+					<li>
+						<p>Driving through tollgate, construction areas, partially paved roads, bumpy roads, speed bumps, etc.</p>
+					</li>
+					<li>
+						<p>Driving near areas containing metal substances, such as a construction zone, railroad, etc.</p>
+					</li>
+					<li>
+						<p>Driving on an inclined road, curved road, etc.</p>
+					</li>
+					<li>
+						<p>Driving through a roadside with trees or streetlights</p>
+					</li>
+					<li>
+						<p>Driving through a narrow road where trees or grass are overgrown</p>
+					</li>
+					<li>
+						<p>There is interference by electromagnetic waves, such as driving in an area with strong radio waves or electrical noise</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>The adverse road conditions cause excessive vehicle vibrations while driving</p>
+			</li>
+			<li>
+				<p>Your vehicle height is low or high due to heavy loads, abnormal tire pressure, etc.</p>
+			</li>
+			<li>
+				<p>Your vehicle is installed with a snow chain, spare tire or different size wheel.</p>
+			</li>
+		</ul>
+		<section importance="optional" id="e03652">
+			<title>Junction Crossing, Lane-Change Oncoming, Lane-Change Side, Evasive Steering Assist function</title>
+			<ul id="e03653">
+				<li>
+					<p>The temperature around the front corner radar or rear corner radar is high or low</p>
+				</li>
+				<li>
+					<p>A trailer or carrier is installed around the rear corner radar</p>
+				</li>
+				<li>
+					<p>The front corner radar or rear corner radar is covered with snow, rain, dirt, etc.</p>
+				</li>
+				<li>
+					<p>The bumper around the front corner radar or rear corner radar is covered with objects, such as a bumper sticker, bumper guard, bike rack, etc.</p>
+				</li>
+				<li>
+					<p>The bumper around the front corner radar or rear corner radar is impacted, damaged or the radar is out of position</p>
+				</li>
+				<li>
+					<p>The front corner radar or rear corner radar is blocked by other vehicles, walls or pillars</p>
+				</li>
+				<li>
+					<p>Driving on a highway (or motorway) ramp</p>
+				</li>
+				<li>
+					<p>Driving on a road where the guardrail or wall is in double structure</p>
+				</li>
+				<li>
+					<p>The other vehicle or powered two-wheeler drives very close behind your vehicle, or the other vehicle passes by your vehicle in proximity</p>
+				</li>
+				<li>
+					<p>The speed of the other vehicle or powered two-wheeler is very fast that it passes by your vehicle in a short time</p>
+				</li>
+				<li>
+					<p>Your vehicle passes by the other vehicle or powered two-wheeler</p>
+				</li>
+				<li>
+					<p>Your vehicle has started at the same time as the vehicle or powered two-wheeler next to you and has accelerated</p>
+				</li>
+				<li>
+					<p>The vehicle or powered two-wheeler in the next lane moves two lanes away from you, or when the vehicle two lanes away moves to the next lane from you</p>
+				</li>
+				<li>
+					<p>A motorcycle or bicycle is detected</p>
+				</li>
+				<li>
+					<p>A vehicle such as a flat trailer is detected</p>
+				</li>
+				<li>
+					<p>A big vehicle such as a bus or truck is detected</p>
+				</li>
+				<li>
+					<p>A small moving obstacle such as a pedestrian, animal, shopping cart or a baby pushchair is detected</p>
+				</li>
+				<li>
+					<p>A vehicle with low height such as a sports car is detected</p>
+				</li>
+				<li>
+					<p>The lane is difficult to see due to foreign material, such as rain, snow, dust, sand, oil and water puddles</p>
+				</li>
+				<li>
+					<p>The color of the lane marking is not distinguishable from the road</p>
+				</li>
+				<li>
+					<p>There are markings on the road near the lane or the markings on the road looks similar to the lane markings</p>
+				</li>
+				<li>
+					<p>The shadow is on the lane marking by a median strip, trees, guardrail, noise barriers, etc.</p>
+				</li>
+				<li>
+					<p>The lane number increases or decreases, or the lane markings are crossing</p>
+				</li>
+				<li>
+					<p>There are more than two-lane markings on the road</p>
+				</li>
+				<li>
+					<p>The lane markings are complicated or a structure substitutes for the lines, such as a construction area</p>
+				</li>
+				<li>
+					<p>There are road markings, such as zigzag lanes, crosswalk markings and road signs</p>
+				</li>
+				<li>
+					<p>The lane suddenly disappears, such as at the intersection</p>
+				</li>
+				<li>
+					<p>The lane is very wide or narrow</p>
+				</li>
+				<li>
+					<p>There is a curb or road edges without a lane</p>
+				</li>
+				<li>
+					<p>The vehicle in front is driving with one side on the lane marking</p>
+				</li>
+				<li>
+					<p>The distance to the front vehicle is extremely short</p>
+				</li>
+			</ul>
+			<note type="warning" id="e03654">
+				<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1" id="e03655">
+					<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<thead>
+							<row rowsep="1">
+								<entry colname="col1">
+									<p>Limitations</p>
+								</entry>
+								<entry colname="col2">
+									<p>Details</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row rowsep="1" valign="middle">
+								<entry colname="col1">
+									<fig id="e03656">
+										<title>Driving on a curved road</title>
+										<figgroup>
+											<image align="center" height="1.573in" href="../../images/OOV055029_4.eps" placement="break" width="2.243in" id="e03657"/>
+										</figgroup>
+									</fig>
+									<fig id="e03658">
+										<figgroup>
+											<image align="center" height="1.573in" href="../../images/OOV055030_4.eps" placement="break" width="2.243in" id="e03659"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<p>Forward Collision-Avoidance Assist may not detect other vehicles, powered two-wheelers, pedestrians or cyclists in front of you when driving on curved roads adversely affecting the performance of the sensors. This may result in no warning, braking assist or steering assist (if equipped) when necessary.</p>
+									<p>When driving on a curve, you must maintain a safe braking distance, and if necessary, steer the vehicle and depress the brake pedal to reduce your driving speed in order to maintain a safe distance.</p>
+									<p>Forward Collision-Avoidance Assist may detect a vehicle, powered two-wheeler, pedestrian or cyclist in the next lane or outside the lane when driving on a curved road.</p>
+									<p>If this occurs, Forward Collision-Avoidance Assist may unnecessarily warn the driver and control the brake or steering (if equipped). Always check the traffic conditions around the vehicle.</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry colname="col1">
+									<fig id="e03660">
+										<title>Driving on an inclined road</title>
+										<figgroup>
+											<image align="center" height="1.573in" href="../../images/OOV055031_4.eps" placement="break" width="2.243in" id="e03661"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<p>Forward Collision-Avoidance Assist may not detect other vehicles, powered two-wheelers, pedestrians or cyclists in front of you while driving uphill or downhill, adversely affecting the performance of the sensors.</p>
+									<p>This may result in unnecessary warning, braking assist, steering assist (if equipped) or no warning, braking assist, steering assist (if equipped) when necessary.</p>
+									<p>Also, vehicle speed may rapidly decrease when a vehicle, powered two-wheeler, pedestrian or cyclist ahead is suddenly detected.</p>
+									<p>Always have your eyes on the road while driving uphill or downhill and if necessary, steer your vehicle and depress the brake pedal to reduce your driving speed in order to maintain a safe distance.</p>
+								</entry>
+							</row>
+							<row rowsep="1" valign="middle">
+								<entry colname="col1">
+									<fig id="e03662">
+										<title>Changing lanes</title>
+										<figgroup>
+											<image align="center" height="1.573in" href="../../images/OOV055032.eps" placement="break" width="2.243in" id="e03663"/>
+										</figgroup>
+									</fig>
+									<fig id="e03664">
+										<figgroup>
+											<image align="center" height="1.573in" href="../../images/OOV055033.eps" placement="break" width="2.243in" id="e03665"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<ol outputclass="callout" id="e03666">
+										<li>
+											<p>Your vehicle</p>
+										</li>
+										<li>
+											<p>Lane changing vehicle or powered two-wheeler</p>
+										</li>
+										<li>
+											<p>Same lane vehicle</p>
+										</li>
+									</ol>
+									<p>When a vehicle or a powered two-wheeler (2) moves into your lane from an adjacent lane, it cannot be detected by the sensor until it is in the sensor’s detection range.</p>
+									<p>Forward Collision-Avoidance Assist may not immediately detect a vehicle or a powered two-wheeler when a vehicle changes lanes abruptly. In this case, you must maintain a safe braking distance, and if necessary, steer your vehicle and depress the brake pedal to reduce your driving speed in order to maintain a safe distance.</p>
+									<p>When a vehicle or a powered two-wheeler (2) in front of you merges out of the lane, Forward Collision-Avoidance Assist may not immediately detect a vehicle or a powered two-wheeler (3) that is now in front of you. In this case, you must maintain a safe braking distance, and if necessary, steer your vehicle and depress the brake pedal to reduce your driving speed in order to maintain a safe distance.</p>
+								</entry>
+							</row>
+							<row rowsep="0" valign="middle">
+								<entry colname="col1">
+									<fig id="e03667">
+										<title>Detecting a vehicle</title>
+										<figgroup>
+											<image align="center" height="1.573in" href="../../images/OOV056034L_2.eps" placement="break" width="2.243in" id="e03668"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<p>If the vehicle in front of you has cargo that extends rearward from the cab, or when the vehicle in front of you has higher ground clearance, additional special attention is required. Forward Collision-Avoidance Assist may not be able to detect the cargo extending from the vehicle. In these instances, you must maintain a safe braking distance from the rearmost object, and if necessary, steer your vehicle and depress the brake pedal to reduce your driving speed in order to maintain distance.</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</note>
+			<note type="warning" id="e03669">
+				<ul id="e03670">
+					<li>
+						<p>When you are towing a trailer or another vehicle, we recommend that Forward Collision-Avoidance Assist is turned off due to safety reasons.</p>
+					</li>
+					<li>
+						<p>Forward Collision-Avoidance Assist may operate if objects that are similar in shape or characteristics to vehicles, powered two-wheelers, pedestrians and cyclists are detected.</p>
+					</li>
+					<li>
+						<p>Forward Collision-Avoidance Assist does not operate on bicycles, motorcycles, or smaller wheeled objects, such as luggage bags, shopping carts, or strollers.</p>
+					</li>
+					<li>
+						<p>Forward Collision-Avoidance Assist may not operate normally if interfered by strong electromagnetic waves.</p>
+					</li>
+					<li>
+						<p>Forward Collision-Avoidance Assist may not operate for 15 seconds after the vehicle is started, or the front view camera is initialized.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e03671">
+				<p>For more details on the limitations of detecting rear corner vehicles and cautions regarding the rear corner sensor, please refer to the <xref type="concept" href="t00497.dita#t00497">Blind-Spot Collision-Avoidance Assist (BCA)</xref>.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00474">
+	<title>Emergency Steering</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03215">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03216">
+								<image href="images/N_SP3i25_C00_017_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03217">
+								<li>
+									<p><uicontrol>Emergency Steering</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Emergency Steering can alert you with Emergency Steering warning light blinking (<image href="images/WKIA_077.jpg" scale="15" align="left" placement="inline"/>), a warning message, an audible warning and steering wheel vibration (if equipped).</p>
+		<p>The warning light on the outside rearview mirror appears when a vehicle is detected in the right or left lane from the rear. Emergency Steering may activate to avoid a collision.</p>
+		<p>Emergency Steering activates when your speed is approximately 40-145 km/h (25-90 mph).</p>
+		<ul id="e03218">
+			<li>
+				<p>When your vehicle and the oncoming vehicle or powered two-wheeler are moving in opposite directions.</p>
+			</li>
+			<li>
+				<p>Within a certain period of time after the system determines that the vehicle has departed from the lane.</p>
+			</li>
+			<li>
+				<p>When driving on a straight road.</p>
+			</li>
+			<li>
+				<p>When both lane markings are detected.</p>
+			</li>
+			<li>
+				<p>When there is no risk of secondary collision.</p>
+			</li>
+			<li>
+				<p>A target enters the operating range of the Lane-Change Side function.</p>
+			</li>
+		</ul>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Lane-Change Side function does not operate if the oncoming vehicle is stopped.</p>
+				</li>
+				<li>
+					<p>These functions do not work when a car or motorcyclist in the next lane is stationary.</p>
+				</li>
+				<li>
+					<p>The front-side and rear-side radar detection range is based on the width of standard roads. On narrow roads, warnings may be triggered by a vehicle or motorcyclist driving in the next lane. Conversely, on wide roads, radars may fail to recognize a vehicle or motorcyclist driving in the next lane.</p>
+				</li>
+				<li>
+					<p>The Lane-Change Side function deactivates in the following situations:</p>
+					<ul>
+						<li>
+							<p>You drive more than a certain distance into the next lane.</p>
+						</li>
+						<li>
+							<p>You move away from the direction where there is a risk of collision.</p>
+						</li>
+						<li>
+							<p>You turn the steering wheel rapidly.</p>
+						</li>
+						<li>
+							<p>You engage the brake pedal.</p>
+						</li>
+						<li>
+							<p>Forward Collision-Avoidance Assist activates.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>After the Lane-Change Side function is triggered or after you change lanes, be sure to move into the center of the lane. If you continue to drive along the edge of the lane, the Lane-Change Side function may deactivate.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>If an additional accident risk is detected due to Emergency Steering, only a Collision Warning may be issued to notify you of the danger.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00472.dita#t00472" role="parent" scope="local" type="concept">
+				<linktext>Lane-Change Side function</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

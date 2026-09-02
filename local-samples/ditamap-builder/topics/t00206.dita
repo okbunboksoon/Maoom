@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00206">
+	<title id="e01552">Windows</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>windows</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The doors of this vehicle are equipped with power windows that can be operated by a switch.</p>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01553">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e01554">
+								<figgroup>
+									<image href="../../images/OOV035083.eps" align="center" height="1.573in" placement="break" width="2.243in" id="e01555"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e01556">
+			<li id="e01557">
+				<p>Power window lock switch</p>
+			</li>
+			<li id="e01558">
+				<p>Rear door (left) power window switch</p>
+			</li>
+			<li id="e01559">
+				<p>Rear door (right) power window switch</p>
+			</li>
+			<li id="e01560">
+				<p>Driver’s door power window switch</p>
+			</li>
+			<li id="e01561">
+				<p>Front passenger’s door power window switch</p>
+			</li>
+		</ol>
+		<p>The <term translate="no">EV</term> button must be in the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position for power windows to operate.</p>
+		<p>Each door has a power window switch that controls the door’s window. The driver has a power window lock button which can block the operation of rear passenger windows. The power windows can be operated for approximately 3 minutes after <term translate="no">EV</term> button turned to the <term translate="no">OFF</term> position. However, if the front doors are opened, the power windows cannot be operated even within the 3 minutes period.</p>
+		<p>The driver’s door has a master power window switch that controls all the windows in the vehicle.</p>
+		<p>If the window cannot be closed because it is blocked by objects, remove the objects and close the window.</p>
+		<note type="note" id="e01562">
+			<p>In cold and wet climates, power windows may not work properly due to freezing conditions.</p>
+		</note>
+		<note type="note" id="e01563">
+			<p>While driving with the rear windows down or with the sunroof (if equipped) in an open (or partially open) position, your vehicle may demonstrate a wind buffeting or pulsation noise. This noise is a normal occurrence and can be reduced or eliminated by taking the following actions. If the noise occurs with one or both of the rear windows down, partially lower both front windows approximately one inch. If you experience the noise with the sunroof open, slightly reduce the size of the sunroof opening.</p>
+		</note>
+		<note otherprops="legal_eu_std_007_01" type="warning" id="e01564">
+			<p otherprops="legal_eu_std_007_01">Do not install any accessories in the area of windows. It may impact jam protection.</p>
+		</note>
+	</conbody>
+</concept>

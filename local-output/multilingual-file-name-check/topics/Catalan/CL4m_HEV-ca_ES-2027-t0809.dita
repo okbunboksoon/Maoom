@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Top" id="CL4m_HEV-ca_ES-2027-t0809">
+	<title>Wartung unter schweren Einsatzbedingungen – für alle Regionen, einschließlich Russland, außer Europa</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Wartungsplan
+					<indexterm>Wartungsplan für erschwerte Einsatzbedingungen - Außer Europa (einschließlich Russland)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="all" rowsep="1" colsep="1" pgwide="1" outputclass="formatc">
+			<desc>
+				<p><term translate="no">I</term>: Prüfen und bei Bedarf einstellen, korrigieren, reinigen oder ersetzen.</p>
+				<p><term translate="no">R</term>: Ersetzen oder wechseln.</p>
+			</desc>
+			<tgroup cols="6" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="0.866*"/>
+				<colspec colnum="2" colname="col2" colwidth="0.527*"/>
+				<colspec colnum="3" colname="col3" colwidth="1.131*"/>
+				<colspec colnum="4" colname="col4" colwidth="0.574*"/>
+				<colspec colnum="5" colname="col5" colwidth="0.910*"/>
+				<colspec colnum="6" colname="col6" colwidth="0.692*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Wartungselement</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>WARTUNGSART</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>WARTUNGSINTERVALLE</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>Fahrbedingung</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1" morerows="10" align="left" valign="middle">
+							<p>Motoröl und Motorölfilter</p>
+						</entry>
+						<entry colname="col2" morerows="2" align="left" valign="middle">
+							<p>(Benzinmotor) 1.6 MPI</p>
+						</entry>
+						<entry colname="col3">
+							<p>Außer Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- &amp; Südamerika, Brasilien, Mexiko, China</p>
+						</entry>
+						<entry colname="col4" morerows="2" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 7500 km (5000 Meilen) oder 6 Monate</p>
+						</entry>
+						<entry colname="col6" morerows="2" align="center" valign="middle">
+							<p>A, B, C, D, E, F, G, H, I, J, K, L</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3">
+							<p>Für Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- &amp; Südamerika, Brasilien</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 5000 km (3000 Meilen) oder 6 Monate</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für Mexiko, China</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 5000 km (3000 Meilen) oder 3 Monate</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" morerows="2" align="left" valign="middle">
+							<p>(Benzinmotor) 2.0 MPI</p>
+						</entry>
+						<entry colname="col3">
+							<p>Außer Naher Osten, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- und Südamerika, Brasilien, China</p>
+						</entry>
+						<entry colname="col4" morerows="2" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 7500 km (5000 Meilen) oder 6 Monate</p>
+						</entry>
+						<entry colname="col6" morerows="2" align="center" valign="middle">
+							<p>A, B, C, D, E, F, G, H, I, J, K, L</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3">
+							<p>Für Naher Osten, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- und Südamerika, Brasilien, China</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 5000 km (3000 Meilen) oder 6 Monate</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für China</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 5000 km (3000 Meilen) oder 3 Monate</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" morerows="2" valign="middle">
+							<p>Smartstream G2.0 MPI</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Außer Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- &amp; Südamerika, Brasilien, Mexiko, China</p>
+						</entry>
+						<entry colname="col4" morerows="2" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 7500 km (5000 Meilen) oder 6 Monate</p>
+						</entry>
+						<entry colname="col6" morerows="2" align="center" valign="middle">
+							<p>A, B, C, D, E, F, G, H, I, J, K, L</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- &amp; Südamerika, Brasilien</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 5000 km (3000 Meilen) oder 6 Monate</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für Mexiko, China</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 5000 km (3000 Meilen) oder 3 Monate</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" morerows="1" align="left" valign="middle">
+							<p>Smartstream G1.6 T-GDi</p>
+						</entry>
+						<entry colname="col3" align="left" valign="middle">
+							<p>Außer Mexiko, China</p>
+						</entry>
+						<entry colname="col4" morerows="1" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 5000 km (3000 Meilen) oder 6 Monate</p>
+						</entry>
+						<entry colname="col6" morerows="1" align="center" valign="middle">
+							<p>A, B, C, D, E, F, G, H, I, J, K, L</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col3" align="left" valign="middle">
+							<p>Für Mexiko, China</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 5000 km (3000 Meilen) oder 3 Monate</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Zündkerzen</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>A, B, F, G, H, I, K</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Flüssigkeit des Automatikgetriebes (AT)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 90.000 km (60.000 Meilen)</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>A, C, F, G, H, I, J, K</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" valign="middle">
+							<p>Flüssigkeit des Schaltgetriebes (MT)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 120.000 km (80.000 Meilen)</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>C, D, F, G, H, I, J</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" valign="middle">
+							<p>Fluid des intelligenten variablen Getriebes (IVT)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 90.000 km (60.000 Meilen)</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>A, C, F, G, H, I, J, K</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" valign="middle">
+							<p>Doppelkupplungsgetriebeflüssigöl (DCT)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 120.000 km (80.000 Meilen)</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>C, D, F, G, H, I, J</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Antriebswelle und Manschetten</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>C, D, E, F, G, H, I, J</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Luftfiltereinsatz</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>C, E</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Luftfilter der Klimaanlage</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">R</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>C, E, G</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p otherprops="legal_eu_std_006_04">Bremsscheiben, Bremsbeläge und Bremssättel</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>C, D, E, G, H, I, J, K</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" valign="middle">
+							<p>Bremstrommeln und Bremsbeläge</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>C, D, E, G, H, I, J, K</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Feststellbremse (Handbremse)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>C, D, G, H</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Lenkgetriebe, Lenkgestänge und Manschetten</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>C, D, E, F, G</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Kugelgelenke der Radaufhängung</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Häufiger</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>C, D, E, G, H, I</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p otherprops="legal_gen_std_017_07">ERA-GLONASS-System (falls vorhanden)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p><term translate="no">I</term></p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>Alle 7500 km (5000 Meilen) oder 6 Monate</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>A, K</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0804.dita#CL4m_HEV-ca_ES-2027-t0804" role="parent" scope="local" type="concept">
+				<linktext>Wartungsplan </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0111">
+	<title>Integriertes Memory-System</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Integriertes Memory-System</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Das integrierte Memory-System für den Fahrersitz ermöglicht das Speichern und Abrufen der folgenden Speichereinstellungen mit einer einfachen Tastenbetätigung.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034067N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Position des Fahrersitzes</p>
+			</li>
+			<li>
+				<p>Außenspiegelstellung</p>
+			</li>
+			<li>
+				<p>Head-Up-Display</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<p>Versuchen Sie nie, das integrierte Memory-System während der Fahrt zu verwenden.</p>
+			<p>Sie könnten die Kontrolle über das Fahrzeug verlieren. Dies könnte zu tödlichen oder schweren Verletzungen oder Sachschäden führen.</p>
+		</note>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>Wenn die Batterie getrennt ist, werden die Speichereinstellungen gelöscht.</p>
+				</li>
+				<li>
+					<p>Wenn das integrierte Memory-System immer noch nicht einwandfrei funktioniert, lassen Sie das System von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0104-CH06.dita#CL4m_HEV-ca_ES-2027-t0104-CH06" role="parent" scope="local" type="concept">
+				<linktext>Fahrereinstellungen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

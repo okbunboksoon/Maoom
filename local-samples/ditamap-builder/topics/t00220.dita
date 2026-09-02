@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00220">
+	<title>Power tailgate open/close button (Outside the power tailgate)</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01652">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01653">
+								<figgroup>
+									<image href="../../images/OOV035031.eps" align="center" placement="break" id="e01654"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the tailgate is closed, press the power tailgate open/close button to open the tailgate.</p>
+		<p>If the vehicle is locked, press the power tailgate open/close button with the smart key in your possession.</p>
+		<p>If the tailgate is unlocked, the tailgate will open or close with a warning sound when the power tailgate open/close button is pressed without carrying the smart key.</p>
+	</conbody>
+</concept>

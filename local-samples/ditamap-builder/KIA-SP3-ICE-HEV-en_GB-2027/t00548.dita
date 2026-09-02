@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00548">
+	<title>Warning and control</title>
+	<conbody>
+		<p>Intelligent Speed Limit Assist has the following warnings and controls:</p>
+		<ul id="e03539">
+			<li>
+				<p>Displaying the speed limit</p>
+			</li>
+			<li>
+				<p>Speeding warning</p>
+			</li>
+			<li>
+				<p>Manual set speed change</p>
+			</li>
+			<li>
+				<p>Auto set speed change</p>
+			</li>
+		</ul>
+		<p>Speed Limit Menu Setting Status</p>
+		<ul id="e03540">
+			<li>
+				<p><b>When the navigation system is applied</b>: Auto Assist, Manual Assist, Warning</p>
+			</li>
+			<li>
+				<p><b>When the navigation system is not applied</b>: Speed Limit Assist, Speed Limit Warning</p>
+			</li>
+		</ul>
+		<note type="tip" id="e03541">
+			<p>Intelligent Speed Limit Assist warnings and controls operate based on adjusting the Offset to “0”.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00547.dita#t00547" role="parent" scope="local" type="concept">
+				<linktext>Intelligent Speed Limit Assist operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

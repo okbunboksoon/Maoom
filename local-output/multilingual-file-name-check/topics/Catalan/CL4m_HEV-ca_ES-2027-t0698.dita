@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0698">
+	<title>Kollisionswarnung</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054059N_4.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054178N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/ODL3053006.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p><term translate="no">A</term>: Kollisionswarnung</p>
+		<p>Die Kollisionswarnung warnt den Fahrer durch eine Warnleuchte in den Außenspiegeln, mit einer Warnmeldung, sowie durch einen Warnton und eine Lenkradvibration (ausstattungsabhängig).</p>
+		<p>Eine Kollisionswarnung erscheint auf dem Bildschirm des Infotainment-Systems.</p>
+		<p>Die Kollisionswarnung wird aktiviert, wenn alle folgenden Bedingungen erfüllt sind:</p>
+		<ul>
+			<li>
+				<p>Es wurde in den Rückwärtsgang (R) geschaltet während die Fahrzeuggeschwindigkeit unter 8 km/h (5 mph) ist.</p>
+			</li>
+			<li>
+				<p>Das sich nähernde Fahrzeug befindet sich maximal 25 m (82 ft) von der linken und rechten Seite Ihres Fahrzeugs entfernt.</p>
+			</li>
+			<li>
+				<p>Die Geschwindigkeit des Fahrzeugs, das sich von links und rechts nähert, liegt über 5 km/h (3 mph).</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn die Betriebsbedingungen erfüllt sind, wird eine Warnung ausgegeben, wenn sich das Fahrzeug von der linken oder rechten Seite nähert, selbst wenn Ihr Fahrzeug gestoppt ist.</p>
+				</li>
+				<li>
+					<p>Die Bilder und Farben im Kombiinstrument können sich je nach Typ oder ausgewähltem Thema des Kombiinstruments unterscheiden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0697.dita#CL4m_HEV-ca_ES-2027-t0697" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Heckverkehr-Kollisionsvermeidungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

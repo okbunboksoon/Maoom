@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00684">
+	<title>Rear Cross-traffic Collision-avoidance Assist (RCCA)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>rear cross-traffic collision-avoidance assist (RCCA)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Rear Cross-Traffic Collision-Avoidance Assist detects vehicles approaching the rear of your vehicle from the left or right while reversing and uses a warning message and sound to warn you of a possible collision. Rear Cross-Traffic Collision-Avoidance Assist may also assist with braking your vehicle to help you avoid a collision.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04093">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04094">
+								<image href="images/N_SP327_A10_009_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Rear Cross-Traffic Collision Warning operating range</p>
+			</li>
+			<li>
+				<p>Rear Cross-Traffic Collision-Avoidance Assist operating range</p>
+			</li>
+		</ol>
+		<note type="tip">
+			<p>The warning time may vary depending on the speed of approaching vehicle.</p>
+		</note>
+		<section>
+			<title>Detection sensor</title>
+			<p>Please refer to <xref href="t00444.dita#t00444"/> for the applicable sensors and their locations.</p>
+			<note type="note">
+				<p>For more information about the rear corner radar, refer to <xref href="t00507.dita#t00507"/>.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00442.dita#t00442" role="parent" scope="local" type="concept">
+				<linktext>Driver assistance guide</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

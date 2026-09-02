@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0042">
+	<title id="e00103">Diebstahl-Alarmanlage </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Diebstahl-Alarmanlage</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Die Diebstahlwarnanlage ist als Schutz vor unbefugtem Zutritt zu dem Fahrzeug konzipiert.</p>
+		<p>Dieses System funktioniert in drei Stufen:</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034013N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e00104">
+								<li>
+									<p>System nicht aktiviert</p>
+								</li>
+								<li>
+									<p>System aktiviert</p>
+								</li>
+								<li>
+									<p>Diebstahl-Alarm aktiviert</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn eine Auslösung stattfindet, gibt das System akustischen Alarm und schaltet gleichzeitig die Warnblinker ein.</p>
+		<note type="caution" otherprops="legal_eu_std_018_01">
+			<ul>
+				<li>
+					<p>Ändern oder modifizieren Sie die Diebstahl-Alarmanlage nicht, da dies die Diebstahl-Alarmanlage beschädigen könnte. Lassen Sie die Anlage in diesem Fall von einer Fachwerkstatt warten. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+				<li>
+					<p>Fehlfunktionen der Diebstahl-Alarmanlage, die durch unsachgemäße Arbeiten, Änderungen und Einstellungen verursacht werden, unterliegen nicht der Garantie des Fahrzeugherstellers.</p>
+				</li>
+				<li>
+					<p>Versuchen Sie nicht, die Anlage zu modifizieren oder zu erweitern. Elektrische Probleme können zur Folge haben, dass Ihr Fahrzeug nicht mehr funktioniert.</p>
+				</li>
+			</ul>
+		</note>
+		<section>
+			<title id="e00105">System aktiviert </title>
+			<p>Die Diebstahlwarnanlage wechselt nach 30 Sekunden ab Verriegeln der Türen mit einem Schalter am äußeren Türgriff/einer Verriegelungstaste auf dem Schlüssel in den aktivierten Zustand.</p>
+		</section>
+		<section>
+			<title id="e00106">Verwenden des Smart-Key </title>
+			<p>Parken Sie das Fahrzeug und stellen Sie den Motor ab. Aktivieren Sie das System wie im Folgenden beschrieben:</p>
+			<ol>
+				<li>
+					<p>Stellen Sie den Motor ab.</p>
+				</li>
+				<li>
+					<p>Vergewissern Sie sich, dass alle Türen (und Kofferraum/Heckklappe) und die Motorhaube geschlossen und verriegelt sind.</p>
+				</li>
+				<li>
+					<p>Führen Sie einen der folgenden Vorgänge aus:</p>
+					<ul>
+						<li>
+							<p>Verriegeln Sie die Türen mit der Taste auf dem vorderen Außentürgriff, wenn Sie den Smart-Key bei sich tragen. Nach den obigen Schritten leuchten die Blinkleuchten einmal kurz auf, um anzuzeigen, dass die Diebstahlwarnanlage aktiviert ist. Wenn eine Tür offen bleibt, werden die Türen nicht verriegelt und der Gong ertönt für einige Sekunden. Schließen Sie die Türen und versuchen Sie erneut, die Türen zu verriegeln. Wenn Kofferraum/Heckklappe oder Motorhaube geöffnet bleiben, funktioniert die Warnblinkanlage nicht und die Diebstahlwarnanlage wird nicht aktiviert. Wenn danach der Kofferraum/die Heckklappe und die Motorhaube geschlossen werden, leuchten die Blinkleuchten einmal kurz auf.</p>
+						</li>
+						<li>
+							<p>Verriegeln Sie die Türen mit der Taste auf dem vorderen Außentürgriff, wenn Sie den Smart-Key bei sich tragen. Nach den obigen Schritten leuchten die Blinkleuchten einmal kurz auf, um anzuzeigen, dass die Diebstahlwarnanlage aktiviert ist. Wenn noch eine Tür offen ist, lassen sich die Türen nicht verriegeln und es ertönt 3 Sekunden lang ein akustisches Signal. Schließen Sie die Türen und versuchen Sie erneut, die Türen zu verriegeln. Wenn Kofferraum/Heckklappe oder Motorhaube geöffnet bleiben, funktioniert die Warnblinkanlage nicht und die Diebstahlwarnanlage wird nicht aktiviert. Wenn danach der Kofferraum/die Heckklappe und die Motorhaube geschlossen werden, leuchten die Blinkleuchten einmal kurz auf.</p>
+						</li>
+						<li>
+							<p>Verriegeln Sie die Türen durch Drücken der Verriegelungstaste auf dem Smart-Key. Nach den obigen Schritten leuchten die Blinkleuchten einmal kurz auf, um anzuzeigen, dass die Diebstahlwarnanlage aktiviert ist. Wenn eine Tür (oder der Kofferraum/die Heckklappe) oder die Motorhaube noch offen ist, leuchten die Blinkleuchten nicht auf und die Diebstahlwarnanlage wird nicht aktiviert. Wenn danach alle Türen (einschließlich der Kofferraum/die Heckklappe) und die Motorhaube geschlossen sind, leuchten die Blinkleuchten einmal kurz auf.</p>
+						</li>
+					</ul>
+				</li>
+			</ol>
+		</section>
+		<section>
+			<title id="e00107">Verwenden des Fernbedienungsschlüssels </title>
+			<p>Parken Sie das Fahrzeug und stellen Sie den Motor ab. Aktivieren Sie das System wie im Folgenden beschrieben:</p>
+			<ol>
+				<li>
+					<p>Stellen Sie den Motor ab und ziehen Sie den Zündschlüssel ab.</p>
+				</li>
+				<li>
+					<p>Vergewissern Sie sich, dass alle Türen (und Kofferraum/Heckklappe) und die Motorhaube geschlossen und verriegelt sind.</p>
+				</li>
+				<li>
+					<p>Verriegeln Sie die Türen durch Drücken der Verriegelungstaste auf dem Fernbedienungsschlüssel. Nach Abschluss der obigen Schritte leuchten die Warnblinkleuchten einmal auf, um anzuzeigen, dass das System scharfgeschaltet ist. Wenn eine Tür (oder der Kofferraum/die Heckklappe) oder die Motorhaube noch offen ist, leuchten die Blinkleuchten nicht auf und die Diebstahlwarnanlage wird nicht aktiviert. Wenn danach alle Türen (einschließlich der Kofferraum/die Heckklappe) und die Motorhaube geschlossen sind, leuchten die Blinkleuchten einmal kurz auf.</p>
+				</li>
+			</ol>
+		</section>
+		<section>
+			<title id="e00108">Diebstahl-Alarm aktiviert </title>
+			<p>Alarm wird bei aktivierter Alarmanlage ausgelöst, wenn einer der folgenden Faktoren auftritt:</p>
+			<ul>
+				<li>
+					<p>Wenn eine Tür ohne Verwendung des Transponderschlüssels oder Smart-Keys geöffnet wird.</p>
+				</li>
+				<li>
+					<p>Der Kofferraum/die Heckklappe wird ohne Fernbedienungsschlüssel oder Smart-Key geöffnet.</p>
+				</li>
+				<li>
+					<p>Der Kofferraum/die Heckklappe wird ohne Fernbedienungsschlüssel oder Smart-Key geöffnet.</p>
+				</li>
+				<li>
+					<p>Die Motorhaube wird geöffnet.</p>
+				</li>
+			</ul>
+			<p>Die Hupe ertönt und die Warnblinker blinken durchgehend ca. 30 Sekunden lang. Um die Alarmanlage abzuschalten, entriegeln Sie die Türen mit dem Fernbedienungsschlüssel oder Smart-Key.</p>
+		</section>
+		<section>
+			<title id="e00109">System nicht aktiviert </title>
+			<p>Das System ist in folgenden Fällen nicht aktiv:</p>
+			<sectiondiv><ph>Fernbedienungstaste</ph>
+				<ul>
+					<li>
+						<p>Die Türentriegelungstaste gedrückt wird.</p>
+					</li>
+					<li>
+						<p>Der Motor gestartet wird.</p>
+					</li>
+					<li>
+						<p>Das Fahrzeug befindet sich seit mindestens 30 Sekunden in der Position „ON“.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>Smart-Key</ph>
+				<ul>
+					<li>
+						<p>Die Türentriegelungstaste gedrückt wird.</p>
+					</li>
+					<li>
+						<p>Die Taste auf der vorderen Außentür gedrückt wird und der Smart-Key sich in der Nähe befindet.</p>
+					</li>
+					<li>
+						<p>Der Motor gestartet wird.</p>
+					</li>
+				</ul>
+				<p>Nach dem Entriegeln der Türen leuchten die Warnblinker zweimal kurz auf, um anzuzeigen, dass das System deaktiviert wurde.</p>
+				<p>Wenn nach dem Drücken der Entriegelungstaste eine Tür (oder Kofferraum/Heckklappe) nicht innerhalb von 30 Sekunden geöffnet wird, wird das System erneut scharfgeschaltet.</p>
+				<note type="note">
+					<p>Aufhebung der Wegfahrsperre</p>
+					<ul>
+						<li>
+							<p>Vermeiden Sie es, den Motor bei aktiviertem Alarm zu starten. Bei aktivem Diebstahl-Alarm ist der Anlasser des Fahrzeugs deaktiviert.</p>
+							<p>Wenn das System nicht mit dem Transponder deaktiviert wurde, führen Sie den Schlüssel in den Zündschalter ein, drehen Sie den Zündschalter in Position <term translate="no">ON</term> und warten Sie 30 Sekunden. Danach ist das System deaktiviert.</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0033-CH05.dita#CL4m_HEV-ca_ES-2027-t0033-CH05" role="parent" scope="local" type="concept">
+				<linktext>Öffnen und Schließen </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

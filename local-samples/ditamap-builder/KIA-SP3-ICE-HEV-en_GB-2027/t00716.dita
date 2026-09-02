@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00716">
+	<title>Non-operating conditions</title>
+	<conbody>
+		<p>Braking assist releases after 5 minutes. Immediately engage the brake pedal and check your surroundings.</p>
+		<p>Braking assist also releases under the following conditions:</p>
+		<ul>
+			<li>
+				<p>You manually brake with sufficient power.</p>
+			</li>
+			<li>
+				<p>You release the warning by shifting to P (Park), N (Neutral), or D (Drive).</p>
+			</li>
+		</ul>
+		<note type="tip">
+			<p>When Parking Collision-Avoidance Assist activates while you are reversing, braking control is released after 5 minutes, and the Electronic Parking Brake (<term translate="no">EPB</term>) is engaged.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00713.dita#t00713" role="parent" scope="local" type="concept">
+				<linktext>Reverse Parking Collision-Avoidance Assist operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

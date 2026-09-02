@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00033">
+	<title>Charging time information</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc" id="e00201">
+			<desc>
+				<ul id="e00202">
+					<li>
+						<p>Depending on the condition and durability of the high voltage battery, charger specifications, and ambient temperature, the time required for charging the high voltage battery may vary.</p>
+					</li>
+					<li>
+						<p>A maximum diagnosis time of 3 minutes may be added to check the battery condition during the battery charging process.</p>
+					</li>
+				</ul>
+			</desc>
+			<tgroup cols="4" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="12*"/>
+				<colspec colnum="2" colname="2" colwidth="10*"/>
+				<colspec colnum="3" colname="3" colwidth="10*"/>
+				<colspec colnum="4" colname="5" colwidth="35*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="1" nameend="3">
+							<p>Charging type</p>
+						</entry>
+						<entry colname="5">
+							<p>Extended battery type</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry namest="1" nameend="3" align="center" valign="middle">
+							<p>AC charge (230V, 16A, 3P)</p>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>7 h 20 min. (SOC: 10–100%)</p>
+						</entry>
+					</row>
+					<row>
+						<entry namest="1" nameend="3" align="center" valign="middle">
+							<p>AC charge (230V, 32A, 3P)</p>
+						</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>3 h 50 min. (SOC: 10–100%)</p>
+						</entry>
+					</row>
+					<row>
+						<entry namest="1" nameend="3" align="center" valign="middle">DC charge</entry>
+						<entry colname="5" align="center" valign="middle">
+							<p>30 min. (SOC: 10–80%)</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

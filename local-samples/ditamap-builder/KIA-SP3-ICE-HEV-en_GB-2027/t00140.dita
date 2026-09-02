@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00140">
+	<title>Seat position initialization and re-learning</title>
+	<taskbody>
+		<steps>
+			<step>
+				<cmd>Stop the vehicle and open the driver’s door with the <term translate="no">ENGINE START/STOP</term> button in the <term translate="no">ON</term> position and the vehicle shifted to P (Park).</cmd>
+			</step>
+			<step>
+				<cmd>Adjust the driver’s seat and seatback to the foremost position.</cmd>
+			</step>
+			<step>
+				<cmd>Push the seatback angle forward switch and forward the driver’s seat movement switch over 2 seconds simultaneously.</cmd>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00139.dita#t00139" role="parent" scope="local" type="concept">
+				<linktext>Resetting the system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

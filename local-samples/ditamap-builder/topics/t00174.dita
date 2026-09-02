@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_019_01" id="t00174">
+	<title id="e01262" otherprops="legal_eu_std_019_01">How to register Digital Key 2 (Smartphone)</title>
+	<conbody>
+		<p>Kia Digital Key 2 can only be used on the smartphones that support this function, and the smartphone’s Digital Key 2 function is provided by the smartphone manufacturer. Some functions may not work depending on whether the vehicle is provided with such service.</p>
+		<p>While updating the digital key 2 controller, the smart key function may not work temporarily. In this case, it can be operated with the door lock/unlock button of the smart key.</p>
+		<section id="e01263">
+			<title>Smartphone Set Up</title>
+			<p>In order to use Digital Key 2 (Smartphone) function, install the Kia App or Kia Connect app on your smartphone and register your information and subscribe the service.</p>
+			<p>For more details, access the web manual using the QR code in the infotainment system quick reference guide.</p>
+		</section>
+		<section id="e01264">
+			<title>Smartphone Registration</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01265">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01266">
+									<figgroup>
+										<image align="center" height="1.573in" href="../../images/N_CT25Z083_E.eps" placement="break" width="2.243in" id="e01267"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e01268">
+									<li>
+										<p> <uicontrol>Smartphone key</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol>My Smartphone key</uicontrol> </p>
+									</li>
+									<li>
+										<p> <uicontrol>Save</uicontrol> </p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol id="e01269">
+				<li>
+					<p>Turn the vehicle on with the Smart key and make sure to keep the smart key inside the vehicle during digital key registration.</p>
+				</li>
+			</ol>
+			<ol outputclass="continue" id="e01270">
+				<li>
+					<p>After pressing <menucascade><uicontrol>Digital Key Settings</uicontrol><uicontrol>Register</uicontrol></menucascade> on Kia App or Kia Connect app, place the backside of the smartphone on the In-vehicle authentication pad (wireless charging pad).</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01271">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e01272">
+											<figgroup>
+												<image align="center" height="1.573in" href="../../images/OOV035017.eps" placement="break" width="2.243in" id="e01273"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<ol outputclass="callout" id="e01274">
+											<li>
+												<p>In-vehicle authentication pad (wireless charging pad)</p>
+											</li>
+										</ol>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<ul id="e01275">
+						<li>
+							<p>As long as the device is supported from additional vehicle services, the Digital Key can be registered wirelessly.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Select <uicontrol>Save</uicontrol> menu on the instrument cluster or on the infotainment system screen. The saving process will begin automatically.</p>
+				</li>
+				<li>
+					<p>When the digital key (smartphone) is saved, a message will appear on the instrument cluster or the infotainment system screen.</p>
+				</li>
+				<li>
+					<p>Remove the smartphone from the pad and complete the saving process under the guidance of the smartphone screen.</p>
+				</li>
+			</ol>
+			<note deliveryTarget="except_print" type="tip" id="e01276">
+				<ul id="e01277">
+					<li>
+						<p>The infotainment system may change after software updates. For more information, refer to the user’s manual provided in the infotainment system and the quick reference guide.</p>
+					</li>
+					<li>
+						<p>Vehicle</p>
+						<p>When there is a digital key (smartphone) already saved in the vehicle, Delete All will be displayed on the Smartphone Key menu screen of the infotainment system and Delete will be displayed on the My Smartphone Key screen. If you want to save a digital key again, <xref href="t00176.dita#t00176"/>.</p>
+					</li>
+					<li>
+						<p>Smartphone</p>
+						<p>The digital key cannot be saved again while the vehicle’s digital key is saved in the owner’s smartphone. Save the digital key after deleting the digital key from the Kia App or Kia Connect app.</p>
+					</li>
+					<li>
+						<p>During the digital key 2 saving process, the process will cancel when:</p>
+						<ul id="e01278">
+							<li>
+								<p>The smartphone is removed from the in-vehicle authentication pad (wireless charging pad)</p>
+							</li>
+							<li>
+								<p>Changing the infotainment system or instrument cluster screen</p>
+							</li>
+							<li>
+								<p>The vehicle is turned off</p>
+							</li>
+							<li>
+								<p>The gear is shifted</p>
+							</li>
+							<li>
+								<p>There is no smart key (saving process will not begin)</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>As the In-vehicle authentication pad (wireless charging pad) may not work smoothly depending on the internal structure of the smartphones, the digital key may not be registered. In this case, register the procedure by moving the smartphone to the left or right of the in-vehicle authentication pad (wireless charging pad).</p>
+					</li>
+					<li>
+						<p>UWB (Ultra Wide Band) means ultra-wideband wireless communication technology. NFC (Near Field Communication) means short-range wireless communication.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

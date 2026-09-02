@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legalnotice_europe-general_gen-ind_2023_20231004_12221" id="t00903">
+	<title>IMPORTER &amp; DISTRIBUTOR INFORMATION (EU 2023/1542)</title>
+	<shortdesc>Provide importer and distributor information on the battery parts below.</shortdesc>
+	<conbody>
+		<table outputclass="formatc" frame="all" rowsep="1" colsep="1" id="e05334">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="1.105*"/>
+				<colspec colnum="2" colname="col2" colwidth="1.131*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="col1" nameend="col2">
+							<p>Battery Type (if equipped)</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1" align="center" valign="middle">
+							<p>Electric vehicle battery</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>SLI battery</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1" align="center" valign="middle">
+							<p>Portable battery</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>Portable battery of general use</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>
+			<ol id="e05335">
+				<li>
+					<p>Name of Importer &amp; Distributor: KIA Europe GmbH</p>
+				</li>
+				<li>
+					<p>Trade Name: KIA</p>
+				</li>
+				<li>
+					<p>Address: Theodor-Heuss-Allee 11 D-60486 Frankfurt am Main, Germany</p>
+				</li>
+				<li>
+					<p>Single contact point: +49 (0) 69 8509280</p>
+				</li>
+				<li>
+					<p>Web address: www.kia-hotline.com</p>
+				</li>
+				<li>
+					<p>E-mail: info@kia-europe.com</p>
+				</li>
+			</ol>
+		</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00902.dita#t00902" role="parent" scope="local" type="concept">
+				<linktext>Information for EU Battery Regulation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

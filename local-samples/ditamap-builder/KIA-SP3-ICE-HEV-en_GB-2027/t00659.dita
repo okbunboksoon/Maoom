@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00659">
+	<title>Rear view</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04030">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04031">
+								<image href="images/N_SP327_C00_007_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e04032">
+								<image href="images/N_SP3i26_B10_012_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>(2) View switching button</p>
+		<p>(3) back button</p>
+		<p>(4) infotainment system operation button</p>
+		<section>
+			<title>Operating conditions</title>
+			<p>Rear View turns <term translate="no">ON</term> under the following conditions:</p>
+			<ul>
+				<li>
+					<p>You shift the gear to R (Reverse).</p>
+				</li>
+				<li>
+					<p>You press the Parking/View button (1) while the gear shift is in P (Park), D (Drive) or N (Neutral). If the gear is in N (Neutral), vehicle speed must be lower than 10 km/h (6 mph) to operate the Rear View function.</p>
+				</li>
+			</ul>
+			<p>To select Rear Top View, Rear View, or Rear Wide View, press the View switching button (2) on the Rear Top View screen.</p>
+		</section>
+		<section>
+			<title>Non-operating conditions</title>
+			<p>Rear View turns <term translate="no">OFF</term> when you are parking under the following conditions:</p>
+			<ul>
+				<li>
+					<p>You shift the gear to P (Park).</p>
+				</li>
+				<li>
+					<p>You press the Parking/View button (1).</p>
+				</li>
+				<li>
+					<p>You press the back button (3) on the Rear View Monitor screen.</p>
+				</li>
+				<li>
+					<p>You press the infotainment system operation button (4).</p>
+				</li>
+				<li>
+					<p>The gear is in N (Neutral) or D (Drive) and the vehicle speed is above 10 km/h (6 mph).</p>
+				</li>
+			</ul>
+			<note type="tip">
+				<p>When the gear is in R (Reverse), Rear View does not turn <term translate="no">OFF</term>.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00657.dita#t00657" role="parent" scope="local" type="concept">
+				<linktext>Rear View Monitor operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00686">
+	<title>Rear Cross-Traffic Collision-Avoidance Assist (RCCA)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>rear cross-traffic collision-avoidance assist (RCCA)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04497">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="1*"/>
+				<colspec colname="col2" colnum="2" colwidth="1.07*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e04498">
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV055063.eps" placement="break" width="2.243in" id="e04499"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>Rear Cross-Traffic Collision-Avoidance Assist detects vehicles approaching from the rear left or right while your vehicle is reversing and warns you of a possible collision with a warning message and a warning sound. Also, Rear Cross-Traffic Collision-Avoidance Assist may assist with braking your vehicle to help avoid a collision.</p>
+							<ol outputclass="callout" id="e04500">
+								<li>
+									<p>Rear Cross-Traffic Collision-Avoidance Assist operating range</p>
+								</li>
+								<li>
+									<p>Rear Cross-Traffic Collision Warning operating range</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="caution">
+			<p>Warning timing may vary depending on vehicle speed of the approaching vehicle.</p>
+		</note>
+		<section>
+			<title>Detecting sensor</title>
+			<p>Rear Cross-Traffic Collision-Avoidance Assist uses the rear corner radar. Please refer to <xref type="concept" href="t00445.dita#t00445"/> for the sensor locations.</p>
+			<note type="note">
+				<p>For more details on the precautions of the rear corner radar, refer to <xref type="concept" href="t00497.dita#t00497"/>.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

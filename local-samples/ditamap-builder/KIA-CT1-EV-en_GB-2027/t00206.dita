@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00206">
+	<title>Operating relaxation comfort seat</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig>
+								<title>Driver’s seat</title>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B010_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00965">
+								<title>Passenger’s seat</title>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25B012_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Press the rear portion of the switch (1) more than 0.5 second.</p>
+				</li>
+				<li>
+					<p>If the seat adjustment switch (reclining, cushion height) is operated during relaxation comfort seat operating, the operation will stop.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ol>
+				<li>
+					<p>Press the rear portion of the switch (1) more than 0.5 second.</p>
+				</li>
+				<li>
+					<p>If the seat adjustment switch (reclining, cushion height) is operated during relaxation comfort seat operating, the operation will stop.</p>
+				</li>
+				<li>
+					<p>After the operation is complete, it can be adjusted more using the seat adjustment switch for a more comfortable posture.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operating conditions</title>
+			<p>Driver’s seat</p>
+			<ul>
+				<li>
+					<p> <term translate="no">EV</term> button is <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+				</li>
+				<li>
+					<p>P (Park) gear position is selected.</p>
+				</li>
+				<li>
+					<p>Driver’s side rear seat seatbelt is not fastened</p>
+				</li>
+			</ul>
+			<p>Passenger’s seat</p>
+			<ul id="e00966">
+				<li>
+					<p> <term translate="no">EV</term> button is <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position</p>
+				</li>
+				<li>
+					<p>Passenger’s side rear seat seatbelt is not fastened</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

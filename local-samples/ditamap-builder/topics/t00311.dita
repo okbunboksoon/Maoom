@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00311">
+	<title id="e02357">Auto control</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>wipers and washers 
+					<indexterm>auto control</indexterm>
+				</indexterm>
+				<indexterm>auto control</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02358">
+								<figgroup>
+									<image href="../../images/OOV035418L.eps" align="center" height="1.773in" placement="break" id="e02359"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e02360">
+			<li>
+				<p>You can adjust the wiping speed by turning the speed control knob (1).</p>
+			</li>
+			<li>
+				<p>The rain sensor (2), located at the upper end of the windshield, detects the amount of rainfall and automatically adjusts the wiper cycle. The heavier the rain, the faster the wipers operate. When the rain stops, the wipers stop.</p>
+			</li>
+			<li>
+				<p>If the wiper switch is set to <term translate="no">AUTO</term> mode when the vehicle is in the <term translate="no">POWER ON</term> position or the <term translate="no">DRIVE READY</term> indicator is on, the wipers will operate once to perform a system self-check.</p>
+			</li>
+			<li>
+				<p>Set the wiper switch to the <term translate="no">OFF</term> position when the wipers are not in use.</p>
+			</li>
+		</ul>
+		<note type="caution">
+			<p>When the vehicle is in the <term translate="no">POWER ON</term> position or the <term translate="no">DRIVE READY</term> indicator is on and the windshield wiper switch is in <term translate="no">AUTO</term> mode, use caution to avoid injury to your hands or other parts of the body:</p>
+			<ul>
+				<li>
+					<p>Do not touch the upper end of the windshield glass where the rain sensor is located.</p>
+				</li>
+				<li>
+					<p>Do not wipe the upper end of the windshield glass with a damp or wet cloth.</p>
+				</li>
+				<li>
+					<p>Do not apply pressure to the windshield glass.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>When washing the vehicle, set the wiper switch to the <term translate="no">OFF</term> position to prevent automatic wiper operation.</p>
+					<p>The wipers may operate and be damaged if the switch is in <term translate="no">AUTO</term> mode while washing the vehicle.</p>
+				</li>
+				<li>
+					<p>Do not remove the sensor cover located at the upper end of the windshield. Removing it may damage system components and may not be covered by your vehicle warranty.</p>
+				</li>
+				<li>
+					<p>In winter, set the wiper switch to the <term translate="no">OFF</term> position before starting the vehicle. Otherwise, the wipers may operate, and ice may damage the wiper blades. Always remove all snow and ice and properly defrost the windshield before operating the wipers.</p>
+				</li>
+				<li>
+					<p>When tinting the windshield, prevent any fluid from entering the sensor located at the top center of the front windshield, as it may cause damage to related components.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

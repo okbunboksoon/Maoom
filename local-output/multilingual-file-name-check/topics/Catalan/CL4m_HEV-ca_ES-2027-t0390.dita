@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_023_01" id="CL4m_HEV-ca_ES-2027-t0390">
+	<title>Multi-Kollisionsbremse (MCB)</title>
+	<shortdesc>Die Multikollisionsbremse regelt bei einem Unfall, bei dem der Airbag aktiviert wird, die Bremse automatisch, um die Gefahr zusätzlicher Unfälle zu reduzieren.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Bremsanlage
+					<indexterm>Multi-Kollisionsbremse (MCB)</indexterm>
+				</indexterm>
+				<indexterm>Multi-Kollisionsbremse (MCB)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Systemfunktion</title>
+			<ul>
+				<li>
+					<p>Von dem Moment, in dem der Airbag aktiviert, überwacht die Multi-Kollisionsbremse für kurze Zeit die Intensität der Brems- und Gaspedalbetätigung. Das System ist aktiviert, wenn die folgenden Bedingungen erfüllt sind:</p>
+					<ul>
+						<li>
+							<p>Fahrgeschwindigkeit zum Zeitpunkt des Unfalls liegt unter 180 km/h (112 mph).</p>
+						</li>
+						<li>
+							<p>Das Bremspedal und das Gaspedal werden kaum betätigt.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Wenn der Fahrer das Bremspedal über ein bestimmtes Maß hinaus betätigt, während die Multikollisionsbremse aktiv ist, hat die Bremsleistung Priorität gegenüber der automatischen Bremsung durch die Multikollisionsbremse. Wenn der Fahrer jedoch den Fuß vom Bremspedal nimmt, wird die automatische Bremsung durch die Multikollisionsbremse auch weiterhin beibehalten.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>System Aus</title>
+			<p>Die Multi-Kollisionsbremse wird in den folgenden Situationen deaktiviert:</p>
+			<ul>
+				<li>
+					<p>Wenn das Gaspedal bei laufendem Motor über ein bestimmtes Maß hinaus betätigt wird.</p>
+				</li>
+				<li>
+					<p>Das Fahrzeug hält an.</p>
+				</li>
+				<li>
+					<p>Es liegt eine Störung der elektronischen Stabilitätskontrolle (ESC) oder elektronischer Geräte vor.</p>
+				</li>
+				<li>
+					<p>Zehn Sekunden sind verlaufen, seit die Bremse durch die Multi-Kollisionsbremse automatisch geregelt wurde.</p>
+				</li>
+			</ul>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Die Multi-Kollisionsbremse verringert die Fahrgeschwindigkeit nach einer Kollision und vermindert die Gefahr einer zweiten Kollision. Sie verhindert jedoch eine zweite Kollision nicht unbedingt. Sie können sich vom Kollisionsort entfernen, um weitere gefährliche Situationen zu vermeiden, indem Sie das Gaspedal betätigen.</p>
+					</li>
+					<li>
+						<p>Nachdem das Fahrzeug von der Multikollisionsbremse angehalten wurde, beendet das System die Regelung der Bremsen. Je nach Situation sollte der Fahrer das Brems- oder Gaspedal betätigen, um einen weiteren Unfall zu verhindern.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0375.dita#CL4m_HEV-ca_ES-2027-t0375" role="parent" scope="local" type="concept">
+				<linktext>Bremsanlage </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

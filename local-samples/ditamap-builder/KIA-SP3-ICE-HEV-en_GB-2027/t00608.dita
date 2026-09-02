@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00608">
+	<title>Warning road conditions ahead</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03803">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03804">
+								<image href="images/N_SP3i25_C00_031_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03805">
+								<li>
+									<p><uicontrol>Watch for surrounding vehicles</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the function detects surrounding vehicles, a warning message appears on the instrument cluster, and an audible warning sounds to warn you about the road conditions ahead.</p>
+		<note type="warning" id="e03806">
+			<ul id="e03807">
+				<li>
+					<p>Always pay attention to vehicles or objects that may suddenly appear ahead of you and, if necessary, engage the brake pedal to reduce your speed and maintain a safe distance.</p>
+				</li>
+				<li>
+					<p>Smart Cruise Control does not substitute for proper and safe driving. It is your responsibility to always check your speed and distance from a vehicle ahead.</p>
+				</li>
+				<li>
+					<p>Unexpected situations may occur on the road while the vehicle is able to automatically restart, so always remain attentive.</p>
+				</li>
+				<li>
+					<p>Smart Cruise Control may not recognize unexpected, sudden, or complex situations, so always pay attention to driving conditions and control the speed of your vehicle.</p>
+				</li>
+				<li>
+					<p>Keep Smart Cruise Control <term translate="no">OFF</term> when you are not using it to avoid inadvertently setting a speed.</p>
+				</li>
+				<li>
+					<p>Do not open any door or leave the vehicle while Smart Cruise Control is operating, even if the vehicle is stopped.</p>
+				</li>
+				<li>
+					<p>Always be aware of the selected speed and distance ahead.</p>
+				</li>
+				<li>
+					<p>Keep a safe distance according to the road conditions and vehicle speed. Driving at a high speed at too close a distance may result in a serious collision.</p>
+				</li>
+				<li>
+					<p>When maintaining distance with a vehicle ahead, if that vehicle disappears from view, Smart Cruise Control may suddenly accelerate to the set speed. Always be aware of unexpected and sudden situations.</p>
+				</li>
+				<li>
+					<p>The vehicle speed may decrease on an upward slope and increase on a downward slope.</p>
+				</li>
+				<li>
+					<p>Always be aware of unexpected situations, such as when a vehicle cuts into your lane suddenly.</p>
+				</li>
+				<li>
+					<p>When the vehicle is heavily loaded or driving on a slope, control may be difficult depending on road conditions. Pay attention and, if necessary, press the brake pedal to manually control the speed.</p>
+				</li>
+				<li>
+					<p>When towing a trailer or something similar, your vehicle may experience frequent shifting and high RPM, and the performance of Smart Cruise Control may be compromised. Always drive with caution.</p>
+				</li>
+				<li>
+					<p>Turn <term translate="no">OFF</term> Smart Cruise Control when your vehicle is being towed.</p>
+				</li>
+				<li>
+					<p>Smart Cruise Control may not operate properly in areas with strong electromagnetic interference.</p>
+				</li>
+				<li>
+					<p>Smart Cruise Control may not detect an obstacle ahead, leading to a collision. Always look ahead to prevent unexpected and sudden situations from occurring.</p>
+				</li>
+				<li>
+					<p>Vehicles frequently changing lanes ahead of you may cause a delayed Smart Cruise Control reaction, or may cause Smart Cruise Control to react to a vehicle that is actually in an adjacent lane. Always drive cautiously to prevent unexpected and sudden situations from occurring.</p>
+				</li>
+				<li>
+					<p>Always be aware of your surroundings and drive safely, even when a warning message does not appear or an audible warning does not sound.</p>
+				</li>
+				<li>
+					<p>Smart Cruise Control may not display a warning message or generate an audible warning if any other function’s warning message is displayed or audible warning is generated at the same time.</p>
+				</li>
+				<li>
+					<p>You may not hear the warning sound of Smart Cruise Control if your surroundings are noisy.</p>
+				</li>
+				<li>
+					<p>The vehicle manufacturer is not responsible for any traffic violation or accident you cause.</p>
+				</li>
+				<li>
+					<p>Always set the vehicle speed under the posted speed limit.</p>
+				</li>
+				<li>
+					<p>If your driving style changes, the distance, acceleration, and reaction speed may change.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution" id="e03808">
+			<ul id="e03809">
+				<li>
+					<p>You must drive your vehicle sufficiently for it to analyze your actual driving style, including vehicle distance, acceleration, and reaction speed.</p>
+				</li>
+				<li>
+					<p>Based on Driving Style may not reflect your driving style or the driving conditions, which could affect safe driving.</p>
+				</li>
+				<li>
+					<p>If you are driving in inclement conditions, such as snow, rain, fog, or steep hills, Smart Cruise Control may not drive your vehicle according to your driving style.</p>
+				</li>
+				<li>
+					<p>When the Overtaking Acceleration Assist function is activated, distance control may operate for vehicles in the adjacent lane. Turn off the function if you do not want it.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip" id="e03810">
+			<ul id="e03811">
+				<li>
+					<p>Smart Cruise Control may not operate for a few seconds after you restart the vehicle or initialize the front view camera or front radar.</p>
+				</li>
+				<li>
+					<p>You may hear a sound when Smart Cruise Control engages the brake.</p>
+				</li>
+				<li>
+					<p>Based on Driving Style may not reflect your driving style in unsafe ways, such as rapid acceleration.</p>
+				</li>
+				<li>
+					<p>Based on Driving Style does not reflect any aspects of driving style besides vehicle distance, acceleration, and reaction speed.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00602.dita#t00602" role="parent" scope="local" type="concept">
+				<linktext>Smart Cruise Control display and control</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

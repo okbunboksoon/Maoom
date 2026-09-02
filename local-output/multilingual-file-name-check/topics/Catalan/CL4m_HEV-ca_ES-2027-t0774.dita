@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" otherprops="legal_eu_std_017_03" id="CL4m_HEV-ca_ES-2027-t0774">
+	<title>Europaweites eCall-System</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Europaweites eCall-System</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M064025.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Das Fahrzeug ist mit einer Vorrichtung <sup>*1</sup> ausgestattet, die mit dem europaweiten eCall-System verbunden ist, um in einer Notsituation einen Anruf an Nothilfeteams zu senden. Das europaweite eCall-System ist ein automatischer Notrufdienst, der bei einem Verkehrsunfall oder anderen <sup>*2</sup> Unfällen auf den Straßen Europas ausgelöst wird. (nur in Ländern mit Vorschriften für dieses System)</p>
+		<p>Das System ermöglicht die Kontaktaufnahme mit einem Mitarbeiter der Notrufzentrale bei Unfällen auf den Straßen Europas. (Nur in Ländern, in denen dieses System zugelassen ist).</p>
+		<p>1. Wie in der Betriebsanleitung beschrieben, ist im Fahrzeug ein Paneuropäisches eCall-Gerät installiert, das für die Verbindung mit dem Paneuropäischen eCall-System geeignet ist.</p>
+		<p>2. Mit „andere Unfälle“ sind alle Unfälle auf den Straßen Europas (nur in Ländern mit Regelung für dieses System) gemeint, die zu Verletzten bzw. Hilfsbedarf geführt haben. Im Fall eines Unfalls ist es notwendig, das Fahrzeug anzuhalten und die Taste <term translate="no">SOS</term> zu drücken. Während des Anrufs erfasst das System Informationen zum Fahrzeug (von dem aus der Anruf getätigt wird). Anschließend verbindet es das Fahrzeug mit einem Mitarbeiter der Notrufzentrale (PSAP), damit der Fahrer den Grund für den Notruf erklären kann.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0732-CH11.dita#CL4m_HEV-ca_ES-2027-t0732-CH11" role="parent" scope="local" type="concept">
+				<linktext>Maßnahmen bei einem Notfall</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

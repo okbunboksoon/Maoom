@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00116">
+	<title id="e00598">Motor Driven Power Steering (MDPS) </title>
+	<shortdesc>Power steering uses the motor to assist you in steering the vehicle.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>steering wheel
+					<indexterm>motor driven power steering</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>If the engine is off or if the power steering system becomes inoperable, you may still steer the vehicle, but it will require increased steering effort.</p>
+		<p>The power steering unit, which senses the steering wheel torque and vehicle speed to command the motor, controls the MDPS.</p>
+		<p>For better control of the steering wheel, the steering effort becomes heavier as the vehicle’s speed increases and lighter as the speed decreases.</p>
+		<p>Should you notice any change in the effort required to steer during normal vehicle operation, have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="note">
+			<p>The following behaviors may occur during normal vehicle operation:</p>
+			<ul>
+				<li>
+					<p>When the <term translate="no">ENGINE START/STOP</term> button is the <term translate="no">ON</term> position, the steering wheel enters normal operation mode after diagnosing the MDPS system (for about 3 seconds).</p>
+				</li>
+				<li>
+					<p>You may hear a click noise from the MDPS relay after turning the <term translate="no">ENGINE START/STOP</term> button to the <term translate="no">ON</term> or <term translate="no">OFF</term> position.</p>
+				</li>
+				<li>
+					<p>If you operate the steering wheel when the vehicle is not in motion or when driving at a low speed, you may hear some noise.</p>
+				</li>
+				<li>
+					<p>If the MDPS system does not operate normally, the warning light appears or blinks on the instrument cluster. If the power assistance for steering fails, you will need to use more force to steer.</p>
+				</li>
+				<li>
+					<p>Operating the steering wheel at lower temperatures may require more force and cause more accompanying noise. When the temperature increases, steering returns to normal.</p>
+				</li>
+				<li>
+					<p>When the charging system warning light comes on due to the low voltage (when the alternator or battery does not operate normally or malfunctions), you may need to use more force to steer.</p>
+				</li>
+				<li>
+					<p>When jump starting the vehicle after battery discharge, the steering wheel may not function properly. This is a temporary situation due to low battery voltage, and upon stable battery charging, the steering wheel will function normally again. Please move the steering wheel around to make sure it is functioning properly before driving the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip">
+			<p>When you continuously operate the steering wheel, the overcurrent protection device activates and requires more force to operate the steering wheel. This doesn’t indicate a malfunction, and it works for your safety and will return to normal after some time.</p>
+		</note>
+		<note type="warning">
+			<p>If the MDPS (Motor Driven Power Steering) system does not work or an error occurs, the warning light on the instrument panel may turn on or blink, and it may require more force to operate the steering wheel. Hold the steering wheel more tightly than usual and operate with greater force. Then immediately pull your vehicle over to a safe place and have it inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00115.dita#t00115" role="parent" scope="local" type="concept">
+				<linktext>Steering wheel </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

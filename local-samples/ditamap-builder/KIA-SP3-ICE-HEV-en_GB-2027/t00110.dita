@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00110">
+	<title>Sunroof open warning</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>panorama sunroof
+					<indexterm>sunroof open warning</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00564">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00565">
+								<image href="images/N_SP3i25_C00_002_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>If the sunroof is not fully closed when the driver turns off the engine, a warning chime sounds for several seconds, and a warning appears on the instrument cluster display.</p>
+		<p>Close the sunroof securely when leaving your vehicle.</p>
+		<note type="note">
+			<p>Make sure the sunroof is closed fully when leaving your vehicle. If you leave the sunroof open, it may invite theft, and rain or snow may wet the interior.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00103.dita#t00103" role="parent" scope="local" type="concept">
+				<linktext>Panorama sunroof</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

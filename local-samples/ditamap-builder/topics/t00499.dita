@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00499">
+	<title>Blind-Spot Safety</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03777">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e03778">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/N_TK25Z014_E.eps" placement="break" width="2.244in" id="e03779"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03780">
+								<li>
+									<p> <uicontrol outputclass="a1804409">Driver assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1804496">Driving safety</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1804496">Blind-spot safety</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle on, select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Driving safety</uicontrol><uicontrol>Blind-spot safety</uicontrol></menucascade> on the infotainment system.</p>
+		<ul id="e03781">
+			<li>
+				<p> <uicontrol>Blind-spot safety</uicontrol>: Blind-Spot Collision-Avoidance Assist will warn and braking assist will be applied depending on the collision risk levels.</p>
+			</li>
+		</ul>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03782">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e03783">
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV055189L.eps" placement="break" width="2.243in" id="e03784"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03785">
+								<li>
+									<p> <uicontrol outputclass="a1804409">Blind spot safety system is Off</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When activating Blind-Spot Collision-Avoidance Assist or restarting the vehicle with this function activated, the warning light on the side mirrors will appear for approximately 3 seconds.</p>
+		<p>When the vehicle is restarted with Blind-Spot Collision-Avoidance Assist inactivated, the warning message will appear on the cluster.</p>
+		<note type="warning" id="e03786">
+			<p>If <uicontrol>Blind-Spot Safety</uicontrol> is deselected, the driver should always be aware of the surroundings and drive safely.</p>
+		</note>
+		<note type="note" id="e03787">
+			<p>If the vehicle is restarted, Blind-Spot Collision-Avoidance Assist will maintain the last setting.</p>
+		</note>
+		<note type="caution" id="e03788">
+			<p>When the vehicle and the trailer are connected electrically, Blind-Spot Collision-Avoidance Assist automatically turns off. In this case, you cannot get help from Blind-Spot Collision-Avoidance Assist. Always drive with care. (if Kia genuine part equipped)</p>
+		</note>
+	</conbody>
+</concept>

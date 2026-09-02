@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00034">
+	<title id="e00144">Keys </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>keys</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<note type="warning">
+			<p>Smart key</p>
+			<p>Never leave the keys in your vehicle with unsupervised children. Leaving children unattended in a vehicle with a manual ignition key or a smart key is dangerous.</p>
+			<p>Children imitate adults, and they could press the start button. The key would allow children to operate power windows or other controls, or even make the vehicle move, which could result in serious bodily injury or death.</p>
+		</note>
+		<note type="note" id="e00145">
+			<p>Aftermarket keys</p>
+			<p>Use only Kia original parts for the ignition key in your vehicle. If you use an aftermarket key, the <term translate="no">ENGINE START/STOP</term> button may not return to <term translate="no">ON</term> after <term translate="no">START</term>. The starter will continue to operate, causing excessive current in the wiring, which could result in a possible fire.</p>
+		</note>
+		<note type="warning" id="e00146">
+			<p>Never leave the keys in your vehicle</p>
+			<p>Leaving children unattended in a vehicle with the keys is dangerous, even if the vehicle is in <term translate="no">ON</term>. Unattended children could press the start button and may operate power windows or other controls, or even make the vehicle move, which could result in serious bodily injury or death. Never leave the keys in your vehicle with unsupervised children when the vehicle is running.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00033.dita#t00033" role="parent" scope="local" type="concept">
+				<linktext>Opening and Closing</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

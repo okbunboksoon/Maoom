@@ -1,0 +1,2114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "technicalContent/dtd/concept.dtd" [
+]>
+
+<?Fm Condition prolog_cond AsIs NO_OVERRIDE hide AsIs?>
+<concept id="OM_14_4_Appendix_RU">
+    <title>Аудиосистема</title>
+    <titlealts/>
+    <conbody>
+        <table frame="all" colsep="1" rowsep="1" outputclass="formatc">
+            <tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+                <colspec colnum="1" colname="1" colwidth="30*"/>
+                <colspec colnum="2" colname="2" colwidth="70*"/>
+                <thead>
+                    <row rowsep="1" valign="middle">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Наименование</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Описание</p>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>FM1</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>FM1</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>FM2</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>FM2</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>FMA</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>FM радио (автосохранение)</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>AM</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>AM</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>AMA</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>AM радио (Автосохранение)</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>P1~P6</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Предустановка кнопок 1~6</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>ST</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Стерео</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>SCAN</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>СКАНИРОВАНИЕ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Auto Store</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Автоматическое сохранение</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>AST</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Автоматическое сохранение</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>P. SCAN</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Искать станции</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>PTY</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Тип программы вещания</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>PTY Search</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Поиск по типу передачи</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>PT Search</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Поиск по типу передачи</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Station</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Станция отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>ST</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Стерео</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>AF (Alternative Frequency)</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Альтернативная частота</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>TA</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Функция информирования о плотности дорожного движения</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>LO</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Местные</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>REG</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Регион</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>SCAN</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>СКАНИРОВАНИЕ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>DISC RPT</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Повторное воспроизведение диска</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>RPT</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Повтор</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>FLD. RPT</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Повторное воспроизведение всех треков в папке</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>ALL RDM</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Воспроизведение (всех) композиций в произвольном порядке</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>FLD.RDM</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Произвольное воспроизведение всех треков в папке</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>AUX</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Дополнительно</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>RSE</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Развлекательная система заднего сиденья</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Loading <tm tmtype="reg">iPod</tm></p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Загрузка <tm tmtype="reg">iPod</tm></p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>RDM</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Воспроизведение (всех) композиций в произвольном порядке</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>ALB.RDM</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Воспроизведение треков альбома в произвольном порядке</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>ALB.RDM RPT</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Воспроизведение треков альбома в произвольном порядке + повтор</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>RDM RPT</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Повтор в произвольном порядке</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>None</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ОТСУТСТВУЮТ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>News</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>НОВОСТИ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Affairs</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>СОБЫТИЯ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Info</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ИНФОРМАЦИЯ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Sport</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>СПОРТ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Educate</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ОБРАЗОВАНИЕ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Drama</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ДРАМА</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Culture</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>КУЛЬТУРА</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Science</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>НАУКА</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Varied</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>РАЗНОЕ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Pop M</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Поп-музыка</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Rock M</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Рок-музыка</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Easy M</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Легкая музыка</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Light M</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Легкая классика</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Classics</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Серьезная классика</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Other M</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Другая музыка</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Weather</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ПОГОДА</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Finance</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ФИНАНСЫ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Children</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Программы для детей</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Social</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Общественные события</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Religion</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>РЕЛИГИЯ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Phone-In</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ВХОД ДЛЯ ТЕЛЕФОНА</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Travel</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ДВИЖЕНИЕ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Leisure</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ОТДЫХ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Jazz</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Джаз</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Country</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Музыка кантри</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Nation M</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Этническая музыка</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Oldies</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Старая музыка</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Folk M</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Народная музыка</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Document</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Документальные передачи</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>PTY None</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Тип программы вещания ОТСУТСТВУЕТ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>RDS Search</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Повтор в произвольном порядке</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>TMC</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Канал дорожных сообщений</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>CD</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>КОМПАКТ-ДИСК</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Reading Error</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Ошибка чтения</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Deck Init</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Инициализация проигрывателя компакт-дисков</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Disc Checking</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Проверка диска</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Wait</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Ожидание</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Disc</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Диск отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Disc Full</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Диск заполнен</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Reading CD</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Чтение компакт-диска</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Loading CD</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Загрузка компакт-диска</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Changing CD</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Замена компакт-диска</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Insert CD</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Вставить компакт-диск</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Ejecting CD</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Извлечение компакт-диска</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Audio Track 00</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Аудио-трек 00</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Audio CD</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Звуковой компакт-диск</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Track</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Трек</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Disc Title</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название диска</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Disc Artist</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Исполнитель диска</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Track Title</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название трека</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Track Artist</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Исполнитель трека</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Total Track</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Всего треков</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Disc Title</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название диска отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Disc Artist</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Исполнитель диска отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Track Title</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название трека отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Track Artist</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Исполнитель трека отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>File Name</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название файла</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Title</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Artist</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Исполнитель</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Album</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Альбом</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Folder</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Папка</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Total File</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Всего файлов</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Title</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Artist Name</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Имя исполнителя отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Album Name</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название исполнителя отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Root</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Корень папки</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Connected</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Подключено</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Media</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Носитель информации отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Reading USB</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Чтение USB-устройства</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Empty USB</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Пустое USB-устройство</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>File Name</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название файла</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Title</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Folder</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Папка</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Total File</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Всего файлов</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Title</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Artist Name</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Имя исполнителя отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Album Name</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название исполнителя отсутствует</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Root</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Корень папки</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Reading <tm tmtype="reg">iPod</tm></p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Чтение <tm tmtype="reg">iPod</tm></p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Not Support</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Не поддерживается</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Empty <tm tmtype="reg">iPod</tm></p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Пустой <tm tmtype="reg">iPod</tm></p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Reading Error</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Ошибка чтения</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Title</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Название</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>All</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Все</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Albums</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Альбомы</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Artists</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Исполнители</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Playlists</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Списки воспроизведения</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Songs</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Композиции</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Genres</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Жанры</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Composers</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Композиторы</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Root</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Корень</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Rear Seat Entertainment Not Ready</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Развлекательная система заднего сиденья не готова</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Battery Discharge Warning</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Предупреждение о разрядке батареи</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Battery Discharge Start the Engine</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Батарея разряжена, запустить двигатель</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Start the Engine</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Запустить двигатель</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Scroll</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Прокрутка текста</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>SDVC</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Регулировка громкости в зависимости от скорости / Регулировка гр. в
+                                зависимости от скорости</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Sound</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Звуковой эффект</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>P.Bass</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Усиление низких частот</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Low</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Низкие</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Mid</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Средние</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>High</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Высокие</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>V-EQ</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Настраиваемый эквалайзер</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Normal</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Нормально</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Dynamic</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Динамически</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Surround</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Объемный звук</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Phone</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Настройки телефона</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Pair</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Сопряжение с телефоном</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Select</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Выбор и подключение телефона</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Delete</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Удалить телефон</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Priority (change Priority)</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Изменить приоритет</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Music</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Потоковая передача звука по Bluetooth</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>BT Off</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Выключить Bluetooth</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>BT Setup</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Настройка Bluetooth</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>BT Vol.</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Громкость Bluetooth</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Bluetooth Vol. MAX</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Максимальная громкость Bluetooth</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Bluetooth Vol. MIN</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Минимальная громкость Bluetooth</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Clock</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Настройка часов</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>12/24 Hr.</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Формат времени (12/24 ч)</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Time</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Установка времени</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Use Tuning Knob</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Используйте ручку настройки</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Automatic RDS Time</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Время автоматической системы передачи данных по каналу
+                                радиотрансляции</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Manual Setting</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Ручная настройка</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Display</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Настройка дисплея</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Temp.</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Настройка отображения температуры</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Radio</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Настройка радио</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>SAT</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Спутниковое радио SIRIUS</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Cat./Ch.</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>КАТЕГОРИЯ/КАНАЛ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Artist/Title</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Исполнитель/Название</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Language</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Выбор языка</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>RDS</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>RDS (система передачи данных по каналу радиотрансляции)</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Radio Data System News</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Новости системы передачи данных по каналу радиотрансляции</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>AF</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Альтернативная частота</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" morerows="1" align="left" valign="middle">
+                            <p>TA Vol.</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Громкость дорожных оповещений/ Гр. дорожных оповещений</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Громкость дор. оп.</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" morerows="1" align="left" valign="middle">
+                            <p>TA Volume</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Громкость дорожных оповещений/ Гр. дорожных оповещений</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Громкость дор. оп.</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Region</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Регион</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>On / Off</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>On/Off (вкл/выкл)</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Auto</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Автоматич.</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Return</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Возврат</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Main</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Основные настройки</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Media</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Информация проигрывания MP3</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>German</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Немецкий</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>English(UK)</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Английский (UK)</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>French</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Французский</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Italian</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Итальянский</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Spanish</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Испанский</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Dutch</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Нидерландский</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Swedish</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Шведский</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Danish</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Датский</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Russian</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Русский</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Portuguese</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Португальский</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Sound</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Настройка аудио</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Bass</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Низкие частоты</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Middle</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Средние</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Treble</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Высокие частоты</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Fader</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Микшер</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Balance</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Баланс</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Incoming Call</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Входящий вызов</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Private Mode</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Режим скрытой связи</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Call Ended</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Вызов завершен</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>System Not Ready Please Wait a Moment</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Система не готова, Пожалуйста, подождите</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Searching - - -Passkey 0000</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Поиск- - - Ключ доступа 0000</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Pairing Over</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Сопряжение окончено</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Connecting</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Соединение</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Phone slot is full</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Телефонный разъем занят</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>CONN</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>СОЕДИНЕНИЕ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Connection Complete</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Соединение завершено</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Connection Failed</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Сбой соединения</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Pairing Failed</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Сбой сопряжения</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Priority</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Приоритет</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>DEL PHONE</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>УДАЛ. ТЕЛЕФОН</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>BT ON</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ВКЛ BT</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>BT OFF</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ВЫКЛ BT</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Deleted</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Удалено</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Listening</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Прослушивание</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Back</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Назад</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Vehicle is moving Not available</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Не доступно - автомобиль в движении</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Call Ended</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Вызов завершен</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Active Call</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Активный вызов</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Phone Number</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Номер телефона</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Redial</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Повтор</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Pairing Complete</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Сопряжение завершено</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Select Phone</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Выбрать телефон</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Connection Complete</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Соединение завершено</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Connection Failed</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Сбой соединения</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Connecting</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Соединение</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Delete Phone</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Удалить телефон</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Deleted</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Удалено</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Transfer Complete</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Передача завершена</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Pairing Over</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Сопряжение завершено</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Pair Phone</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Сопряжение с телефоном</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Searching - - - Passkey 0000</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Поиск - - - Ключ доступа 0000</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Priority</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Приоритет</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Phone Priority</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Приоритет телефона</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Phonebook</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Телефонная книга</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Bluetooth System ON</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Система Bluetooth вкл</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Bluetooth System OFF</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Система Bluetooth выкл</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Downloading Phonebook</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Загрузка списка контактов</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Please say a command</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Пожалуйста, произнесите команду</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>No Phone paired</p>
+                            <p>Please pair a phone</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Телефон не сопряжен, подключите телефон</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Help</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Справка</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Call Transferred</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Переадресация вызова</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Please Wait</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Пожалуйста, подождите</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>MP3 Play</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>MP3 Pla</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Mic Mute Off</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Выкл блок. микрофона</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Mic Mute On</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Вкл блок. микрофона</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Mute (AUDIO MUTE)</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Выкл. звук (ВЫКЛ. АУДИО)</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Volume</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Громкость</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Min</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Минимум</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Max</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Максимум</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Incoming Volume</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Входящая громкость</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Max</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Максимум</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>R</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ВПРАВО</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>L</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ВЛЕВО</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>F</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ПЕРЕДНИЙ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>R</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ЗАДНИЙ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>SETUP</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>НАСТРОЙКА</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Text Scroll</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Прокрутка текста</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>On</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Вкл</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Off</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Выкл.</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>MP3 Play Info.</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Информация проигрывания MP3</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>Power Bass</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Усиление низких частот</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>UK ENGLISH</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>АНГЛИЙСКИЙ (UK)</p>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>POLISH</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>ПОЛЬСКИЙ</p>
+                        </entry>
+                    </row>
+                    <row rowsep="0">
+                        <entry colname="1" align="left" valign="middle">
+                            <p>“Call” Say “By number” or “By name”</p>
+                        </entry>
+                        <entry colname="2" align="left" valign="middle">
+                            <p>Для набора номера произнести «По номеру» по «По имени»</p>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </conbody>
+</concept>

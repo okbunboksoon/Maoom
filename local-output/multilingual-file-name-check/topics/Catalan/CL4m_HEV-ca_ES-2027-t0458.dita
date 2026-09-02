@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0458">
+	<title>Notbremsung</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034110N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Notbremsung</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Bei einer Notbremsung kann der Fahrer durch Blinken der Warnleuchte für Sicherheit vorne (<image align="left" href="../../images/WKIA_037.eps" scale="15" placement="inline"/>), eine Warnmeldung, ein akustisches Warnsignal und eine Vibration des Lenkrads (ausstattungsabhängig) gewarnt werden.</p>
+		<p>Die Notbremsung wird unter folgenden Bedingungen aktiviert.</p>
+		<ul>
+			<li>
+				<p>Fahrgeschwindigkeit: Etwa 30-130 km/h (19-80 mph)</p>
+			</li>
+			<li>
+				<p>Entgegenkommendes Fahrzeug oder motorisiertes Zweirad: Über etwa 10 km/h (6 mph)</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0456.dita#CL4m_HEV-ca_ES-2027-t0456" role="parent" scope="local" type="concept">
+				<linktext>Funktion Direkter Gegenverkehr</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

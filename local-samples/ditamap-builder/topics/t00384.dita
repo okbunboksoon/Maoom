@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00384">
+	<title>Preparing software update</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02700">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02701">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/N_CT25Z003_E.eps" placement="break" width="2.244in" id="e02702"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02703">
+								<li>
+									<p> <uicontrol>Update Now</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Cancel Update</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>If you press the <uicontrol>Update Now</uicontrol> button on the screen, the vehicle will begin installing the update automatically. The following conditions must be satisfied:</p>
+		<ul id="e02704">
+			<li>
+				<p>The vehicle must be off.</p>
+			</li>
+			<li>
+				<p>The gear must be in P (Park).</p>
+			</li>
+			<li>
+				<p>The Electronic Parking Brake (EPB) must be applied.</p>
+			</li>
+			<li>
+				<p>The exterior lights must be turned off.</p>
+			</li>
+			<li>
+				<p>The hood must be closed.</p>
+			</li>
+			<li>
+				<p>The battery must be sufficiently charged.</p>
+			</li>
+			<li>
+				<p>The systems to be updated must not be running.</p>
+			</li>
+		</ul>
+		<ul id="e02705">
+			<li>
+				<p>To update immediately, press <uicontrol>Update Now</uicontrol> (1).</p>
+			</li>
+			<li>
+				<p>To cancel the update, press <uicontrol>Cancel Update</uicontrol> (2).</p>
+			</li>
+		</ul>
+		<note type="tip" id="e02706">
+			<p>The battery and system status are automatically checked by the vehicle.</p>
+		</note>
+	</conbody>
+</concept>

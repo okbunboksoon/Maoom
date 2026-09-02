@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" deliveryTarget="except_print" id="t00275">
+	<title>EV mode screen</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>EV menu 
+					<indexterm>EV mode screen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01287">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01288">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q007_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Energy information</p>
+			</li>
+			<li>
+				<p>Nearby stations</p>
+			</li>
+			<li>
+				<p>Other menu</p>
+			</li>
+			<li>
+				<p> <term translate="no">EV</term> menu</p>
+			</li>
+			<li>
+				<p>Energy economy</p>
+			</li>
+			<li>
+				<p>Reserved charging</p>
+			</li>
+			<li>
+				<p> <term translate="no">EV</term> settings</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

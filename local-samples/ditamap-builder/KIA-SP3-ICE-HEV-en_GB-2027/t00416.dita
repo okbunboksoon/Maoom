@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00416">
+	<title>Vehicle Stability Management (VSM)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle safety system
+					<indexterm>vehicle stability management (VSM)</indexterm>
+				</indexterm>
+				<indexterm>vehicle stability management (VSM)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The VSM further enhances the vehicle stability and steering responses under the following conditions:</p>
+		<ul id="e02831">
+			<li>
+				<p>When driving on a slippery road.</p>
+			</li>
+			<li>
+				<p>When the vehicle detects a change in the coefficient of friction between the left and right wheels.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e02832">
+			<p>Tire and wheel size</p>
+			<p>When replacing tires and wheels, make sure they are the same size as the original tires and wheels. Driving with varying tire or wheel sizes may diminish any supplemental safety benefits of the VSM.</p>
+		</note>
+		<section id="e02833">
+			<title>VSM operation</title>
+			<p>When the VSM is operating properly, you may feel a slight pulsation in your vehicle or abnormal steering responses (MDPS). This is normal.</p>
+			<sectiondiv>The VSM does not operate under the following conditions: 
+				<ul id="e02834">
+					<li>
+						<p>You are driving on a banked road, such as a gradient or incline.</p>
+					</li>
+					<li>
+						<p>You are driving in R (Reverse).</p>
+					</li>
+					<li>
+						<p>The <term translate="no">ESC OFF</term> indicator light remains on the instrument cluster.</p>
+					</li>
+					<li>
+						<p>The MDPS indicator light remains on the instrument cluster.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+		</section>
+		<section id="e02835">
+			<title>VSM operation OFF</title>
+			<p>If you press the <term translate="no">ESC OFF</term> button to turn the ESC system off, the VSM system also cancels, and the <term translate="no">ESC OFF</term> indicator light <image href="images/WKIA_042.jpg" scale="15"/>) appears.</p>
+			<p>To turn the VSM system on, press the <term translate="no">ESC OFF</term> button again. The <term translate="no">ESC OFF</term> indicator light turns off.</p>
+			<note type="warning" id="e02836">
+				<p>VSM management</p>
+				<p>Drive carefully even though your vehicle has VSM. It can only assist you with maintaining control of your vehicle under certain circumstances. It is always your responsibility to drive safely.</p>
+			</note>
+		</section>
+		<section id="e02837">
+			<title>Malfunction indicator</title>
+			<p>The VSM may deactivate even if you do not press the <term translate="no">ESC OFF</term> button to cancel VSM operation. This indicates that a malfunction has been detected somewhere in the MDPS system or VSM. If the ESC indicator light or MDPS warning light remains on, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			<p>The VSM is only a supplementary function, not a substitute for safe driving practices. It is your responsibility to always check the speed and distance from a vehicle ahead. Always hold the steering wheel firmly while driving.</p>
+			<p>Your vehicle is designed to handle in response to driver inputs, even with VSM installed. Always follow all the normal precautions for driving at safe speeds for the conditions, including driving in inclement weather and/or on a slippery road.</p>
+			<note type="warning" id="e02838">
+				<p>For maximum protection, always wear your seat belt. No system, no matter how advanced, can compensate for all driver errors or driving conditions. Always drive responsibly.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00413.dita#t00413" role="parent" scope="local" type="concept">
+				<linktext>Vehicle safety system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

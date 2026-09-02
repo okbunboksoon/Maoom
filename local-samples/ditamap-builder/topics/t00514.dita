@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00514">
+	<title>Safe Exit Warning malfunction</title>
+	<shortdesc/>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03900">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03901">
+								<figgroup>
+									<image href="../../images/OOV055180L.eps" align="center" height="1.740in" placement="break" id="e03902"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03903">
+								<li>
+									<p> <uicontrol>Check driver assistance system.</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When Safe Exit Warning is not working properly, the warning message will appear on the cluster, and the master warning light (<image href="../../images/WKIA_040.eps" align="left" placement="inline" outputclass="nolabel" scale="15" id="e03904"/>) will appear on the cluster. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03905">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03906">
+								<figgroup>
+									<image href="../../images/OOV055186L.eps" align="center" height="1.740in" placement="break" id="e03907"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03908">
+								<li>
+									<p> <uicontrol>Check outside mirror warning icon</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the outside rearview mirror warning light is not working properly, the warning message will appear on the cluster for several seconds, and the master warning light (<image href="../../images/WKIA_040.eps" align="left" placement="inline" outputclass="nolabel" scale="15" id="e03909"/>) will appear on the cluster. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+	</conbody>
+</concept>

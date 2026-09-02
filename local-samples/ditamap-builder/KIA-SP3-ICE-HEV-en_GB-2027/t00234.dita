@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00234">
+	<title id="e01467">Pretensioner seat belt </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>seat belt restraint system
+					<indexterm>pretensioner seat belt</indexterm>
+				</indexterm>
+				<indexterm>pretensioner seat belt</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01468">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01469">
+								<image href="images/N_SP327_B06_035.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Your vehicle is equipped with driver’s and front passenger’s pre-tensioner seat belts (retractor pretensioner and EFD (Emergency Fastening Device)(if equipped)), as well as the second row’s retractor pretensioner seat belts (if equipped).</p>
+		<p>The purpose of the pretensioner is to make sure that the seat belt fits tightly against the occupant’s body in certain collisions.</p>
+		<p>The pretensioner seat belts may activate in crashes where the collision is severe enough.</p>
+		<p>When the vehicle stops suddenly, or if the occupant tries to lean forward too quickly, the seat belt retractor will lock into position. In certain frontal collisions, the pretensioner will activate and pull the seat belt into tighter contact against the occupant’s body.</p>
+		<ol outputclass="callout" id="e01470">
+			<li>
+				<p>Retractor Pre-tensioner</p>
+				<p>The purpose of the retractor pre-tensioner is to make sure that the shoulder belts fit in tightly against the occupant’s upper body in certain frontal collisions.</p>
+			</li>
+			<li>
+				<p>EFD (Emergency Fastening Device)</p>
+				<p>The purpose of the EFD is to make sure that the pelvis belts fit in tightly against the occupant’s lower body in certain frontal collisions.</p>
+			</li>
+		</ol>
+		<p>If the system senses excessive tension on the front driver, front passenger, and rear passenger seat belts (except center, if equipped) when the pretensioner system activates, the load limiter (if equipped) inside the retractor pretensioner will release some of the pressure on the affected seat belt.</p>
+		<note type="warning">
+			<p>For your safety, be sure that the belt webbing is not loose or twisted, and always sit properly on your seat.</p>
+		</note>
+		<note type="tip">
+			<p>The pretensioner may activate in both a frontal or side collision if the vehicle is equipped with a side or curtain air bag.</p>
+		</note>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01471">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01472">
+								<image href="images/N_SP327_B06_036.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e01473">
+			<li id="e01474">
+				<p>SRS air bag warning light</p>
+			</li>
+			<li id="e01475">
+				<p>Front retractor pretensioner assembly, Emergency fastening device (EFD)</p>
+			</li>
+			<li id="e01476">
+				<p>SRS control module</p>
+			</li>
+			<li>
+				<p>Rear retractor pre-tensioner assembly (except center)</p>
+			</li>
+		</ol>
+		<note type="caution">
+			<p>Skin irritation</p>
+			<p>Wash all exposed skin areas thoroughly after an accident in which the pretensioner seat belts were activated. The fine dust from the pretensioner activation may cause skin irritation and should not be inhaled for prolonged periods.</p>
+		</note>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>Both the driver’s and front passenger’s seat belt pretensioner systems may be activated not only in certain frontal collisions, but also in certain side collisions or rollovers if the vehicle is equipped with a side or curtain air bag.</p>
+				</li>
+				<li>
+					<p>Because the sensor that activates the SRS air bag is connected with the pretensioner seat belt, the SRS air bag warning light <image href="images/WKIA_027.jpg" scale="15" align="left" placement="inline"/> on the instrument panel will appear for approximately 3–6 seconds after the vehicle has been turned to the <term translate="no">ON</term> position. Then it should turn off.</p>
+				</li>
+				<li>
+					<p>If the pretensioner seat belt system is not working properly, this warning light will appear even if there is not a malfunction with the SRS air bag. If the SRS air bag warning light does not appear when the vehicle has been turned to the <term translate="no">ON</term> position, remains illuminated for approximately 3–6 seconds, or appears while the vehicle is being driven, have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning">
+			<p>Do not attempt to service or repair the pretensioner seat belt system in any manner. Do not attempt to inspect or replace the pretensioner seat belts yourself. Have the vehicle checked by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</note>
+		<note type="caution">
+			<p>Hot pretensioner</p>
+			<p>Do not touch the pretensioner seat belt assemblies for several minutes after they have been activated. When the pretensioner seat belt mechanism fires during a collision, the pretensioner becomes hot and can burn you.</p>
+		</note>
+		<p>Pretensioners are designed to operate only once. After activation, pretensioner seat belts must be replaced. Have the vehicle checked by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00226.dita#t00226" role="parent" scope="local" type="concept">
+				<linktext>Seat belt restraint system </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

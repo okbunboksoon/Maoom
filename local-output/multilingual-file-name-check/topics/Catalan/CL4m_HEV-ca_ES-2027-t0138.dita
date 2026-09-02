@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0138">
+	<title id="e00339">Ansicht nützlicher Informationen </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>LCD-Anzeigemodi
+					<indexterm>Informationsmodus</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Aktuelle Fahrinformationen</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M035124L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p><term translate="no">A</term>: Aktuelle Fahrt</p>
+								<ol outputclass="callout">
+									<li>
+										<p>Tageskilometer</p>
+									</li>
+									<li>
+										<p>Timer</p>
+									</li>
+									<li>
+										<p>Durchschn.</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Wenn die Fahrertür nach dem Abstellen des Fahrzeugs geöffnet oder das Fahrzeug nach Ablauf von 3 Minuten wieder eingeschaltet wird, wird der Fahrtinformationsbildschirm zurückgesetzt.</p>
+		</section>
+		<section>
+			<title id="e00340">Kraftstoffverbrauch </title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034155N.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p><term translate="no">A</term>: Aktuelle Fahrt</p>
+								<ol outputclass="callout">
+									<li>
+										<p>Tageskilometer</p>
+									</li>
+									<li>
+										<p>Timer</p>
+									</li>
+									<li>
+										<p>Durchschn.</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<sectiondiv id="e00341"><ph id="e00342">Durchschnittlicher Kraftstoffverbrauch </ph>
+				<ul id="e00343">
+					<li id="e00344">
+						<p>Der durchschnittliche Kraftstoffverbrauch wird anhand der gesamten zurückgelegten Fahrstrecke und des Kraftstoffverbrauchs seit dem letzten Zurücksetzen des durchschnittlichen Kraftstoffverbrauchs berechnet.</p>
+						<ul id="e00345">
+							<li id="e00346">
+								<p>Kraftstoffverbrauchsanzeige: 0 – 99,9 MPG oder L/100km, km/L</p>
+							</li>
+						</ul>
+					</li>
+					<li id="e00347">
+						<p>Der durchschnittliche Energieverbrauch kann sowohl manuell als auch automatisch zurückgesetzt werden.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<note type="note" id="e00348">
+				<p>Der durchschnittliche Kraftstoffverbrauch wird erst angezeigt, wenn das Fahrzeug mindestens 10 Sekunden oder 300 Meter (0,19 Meilen) gefahren ist, nachdem der <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) in Position <term translate="no">ON</term> gebracht wurde.</p>
+			</note>
+			<sectiondiv id="e00349"><ph id="e00350">Momentaner Kraftstoffverbrauch </ph>
+				<ul id="e00351">
+					<li>
+						<p>Dieser Modus zeigt den aktuellen Kraftstoffverbrauch der letzten Sekunden bei einer Fahrgeschwindigkeit von mehr als 8 km/h (5 mph) an.</p>
+						<ul id="e00352">
+							<li>
+								<p>Kraftstoffverbrauchsanzeige:</p>
+								<p>0 – 50 MPG oder 0 – 30 L/100km, km/L</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Seit dem Auftanken</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M035126L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p><term translate="no">A</term>: Seit dem Auftanken</p>
+								<ol outputclass="callout">
+									<li>
+										<p>Tageskilometer</p>
+									</li>
+									<li>
+										<p>Timer</p>
+									</li>
+									<li>
+										<p>Durchschn.</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die Informationen seit Refueling.</p>
+			<p>Um die Informationen manuell zurückzusetzen, halten Sie die <term translate="no">OK</term>-Taste gedrückt, wenn Sie die Anzeige mit Informationen seit dem Tanken sehen.</p>
+		</section>
+		<section>
+			<title>Kumulierte Informationen</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M035127L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p><term translate="no">A</term>: Seit der letzten Rücksetzung</p>
+								<ol outputclass="callout">
+									<li>
+										<p>Tageskilometer</p>
+									</li>
+									<li>
+										<p>Timer</p>
+									</li>
+									<li>
+										<p>Durchschn.</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die Informationen werden ab dem letzten Reset gesammelt.</p>
+			<p>Halten Sie zum Zurücksetzen der Details die <term translate="no">OK</term>-Taste gedrückt, wenn Sie Seit dem letzten Rücksetzen anzeigen.</p>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Das Fahrzeug seit dem letzten Zyklus mindestens 300 Meter (0,19 Meilen) gefahren worden sein, damit die kumulierten Informationen über den durchschnittlichen Energieverbrauch neu berechnet werden.</p>
+					</li>
+					<li>
+						<p>Der durchschnittliche Energieverbrauch wird zur genaueren Berechnung nicht angezeigt, wenn das Fahrzeug nicht länger als 10 Sekunden oder 50 Meter (0,03 Meilen) gefahren wurde, seit die <term translate="no">EV</term>-Taste eingeschaltet wurde.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>Hauptwarnmodus</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M036175L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Diese Modus informiert Sie über die folgenden Situationen:</p>
+			<ul id="e00353">
+				<li>
+					<p>Störung, Einschränkung oder Radar-/Kamerablockierung des Fahrerassistenzsystems</p>
+				</li>
+				<li>
+					<p>Fehlfunktion der LED-Scheinwerfer</p>
+				</li>
+				<li>
+					<p>Fehlfunktion einer Fahrzeugleuchte</p>
+				</li>
+				<li>
+					<p>TPMS-Ausfall, zu niedriger Druck usw.</p>
+				</li>
+			</ul>
+			<p>In diesem Fall erscheint ein Hauptwarnsymbol (<image align="left" href="../../images/WKIA_040.eps" scale="15" placement="inline"/>) in der unteren rechten Ecke des LCD-Displays. Wenn die Warnsituation beseitigt ist, erlischt die Hauptwarnleuchte, und das Master-Warnsymbol verschwindet.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0135.dita#CL4m_HEV-ca_ES-2027-t0135" role="parent" scope="local" type="concept">
+				<linktext>LCD-Anzeigemodi </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

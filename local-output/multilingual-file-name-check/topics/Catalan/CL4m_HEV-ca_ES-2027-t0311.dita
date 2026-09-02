@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task importance="optional" id="CL4m_HEV-ca_ES-2027-t0311">
+	<title>Kofferraumabdeckung</title>
+	<shortdesc>Mit der Kofferraumabdeckung können Sie verhindern, dass die Gegenstände im Kofferraum sichtbar sind.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Innenausstattung
+					<indexterm>Kofferraumabdeckung</indexterm>
+				</indexterm>
+				<indexterm>Kofferraumabdeckung</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MW035013L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Die Kofferraumabdeckung wird angehoben, wenn die Heckklappe geöffnet wird.</p>
+		</context>
+		<steps-unordered>
+			<step>
+				<cmd>Trennen Sie den Riemen (1) von der Halterung, wenn Sie die Abdeckung wieder in die Originalposition bringen wollen. Um die Kofferraumabdeckung komplett zu entfernen, heben Sie diese im Winkel von 40° an und ziehen Sie diese voll heraus (2).</cmd>
+			</step>
+		</steps-unordered>
+		<postreq>
+			<p>Zum Einsetzen der Kofferraumabdeckung wiederholen Sie die Schritte bei der Entfernung in umgekehrter Reihenfolge.</p>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Wenn Sie die Kofferraumabdeckung wieder in die Originalposition bringen, halten Sie die Abdeckung fest und senken Sie diese ab.</p>
+					</li>
+					<li>
+						<p>Fahren Sie nicht mit dem Fahrzeug, wenn die Kopfstützen ausgebaut sind. Anderenfalls kann die Abdeckung beschädigt werden.</p>
+					</li>
+					<li>
+						<p>Die Kofferraumabdeckung kann angehoben werden, wenn die Heckklappe geöffnet ist. Achten Sie darauf, dass das Gepäck auf der Kofferraumabdeckung an einen sicheren Ort verlagert wird.</p>
+					</li>
+					<li>
+						<p>Da die Kofferraumabdeckung verformt oder beschädigt werden kann, dürfen Sie auf die Kofferraumabdeckung keine starke Kraft ausüben und keine schweren Lasten darauf ablegen.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Legen Sie während der Fahrt keine Gegenstände auf der Kofferraumabdeckung ab. Dort abgelegte Gegenstände könnten bei einem Unfall oder beim Bremsen in den Fahrzeuginnenraum geschleudert werden und Insassen verletzen.</p>
+					</li>
+					<li>
+						<p>Lassen Sie es niemals zu, dass Personen im Kofferraum mitfahren. Der Kofferraum ist ausschließlich für Gepäck usw. vorgesehen.</p>
+					</li>
+					<li>
+						<p>Platzieren Sie schwere Ladungsstücke so weit vorn wie möglich, damit die Fahrzeugbalance nicht ungünstig beeinflusst wird.</p>
+					</li>
+				</ul>
+			</note>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0303.dita#CL4m_HEV-ca_ES-2027-t0303" role="parent" scope="local" type="concept">
+				<linktext>Staufächer</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

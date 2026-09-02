@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00482">
+	<title>Electronic Stability Control (ESC)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>driving safety features 
+					<indexterm>electronic stability control (ESC)</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01950">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e01951">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25D016_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Electronic Stability Control (ESC) is designed to stabilize the vehicle during cornering maneuvers.</p>
+		<p>Electronic Stability Control (ESC) is not a substitute for safe driving practices. Factors such as speed, road conditions, and driver steering input can all affect whether Electronic Stability Control (ESC) will be effective in preventing loss of control.</p>
+		<section id="e01952">
+			<title>Operation</title>
+			<ul id="e01953">
+				<li>
+					<p>Press the <term translate="no">ESC OFF</term> button for approximately half a second to turn Electronic Stability Control (ESC) off. <term translate="no">ESC OFF</term> indicator light (<image align="left" href="../../images/WKIA_042.eps" scale="15" placement="inline"/>) will appear and the warning chime will sound.</p>
+				</li>
+				<li>
+					<p>To turn ESC on again, press the <term translate="no">ESC OFF</term> button. <term translate="no">ESC OFF</term> indicator light (<image align="left" href="../../images/WKIA_042.eps" scale="15" placement="inline"/>) will go off.</p>
+				</li>
+			</ul>
+			<note type="warning" id="e01954">
+				<ul id="e01955">
+					<li>
+						<p>For maximum protection, always wear your seat belt. No system, no matter how advanced, can compensate for all driver error and/or driving conditions. Always drive responsibly.</p>
+					</li>
+					<li>
+						<p>Drive carefully even though your vehicle has Electronic Stability Control. It can only assist you in maintaining control under certain circumstances.</p>
+					</li>
+					<li>
+						<p>When Electronic Stability Control (ESC) is deactivated, the vehicle will lose the traction and stability if the vehicle is driven by abrupt steering wheel control. It is possible that the tire may make a collision with the connected parts of the tire. We recommend that you do not turn off Electronic Stability Control (ESC) while driving the vehicle for your safety.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e01956">
+				<ul id="e01957">
+					<li>
+						<p>A click sound may be heard in the vehicle compartment when the vehicle begins to move after the vehicle is started. These conditions are normal and indicate that the Electronic Stability Control (ESC) is functioning properly.</p>
+					</li>
+					<li>
+						<p>When operating the vehicle on a dynamometer, ensure that the Electronic Stability Control (ESC) is turned off (<term translate="no">ESC OFF</term> light on). If the Electronic Stability Control (ESC) is left on, it may prevent the vehicle speed from increasing, and result in false diagnosis.</p>
+					</li>
+					<li>
+						<p>Turning the Electronic Stability Control (ESC) off does not affect Anti-lock Brake System (ABS) or brake system operation.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

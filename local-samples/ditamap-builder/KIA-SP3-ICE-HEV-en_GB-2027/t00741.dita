@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00741">
+	<title>Charging the battery</title>
+	<shortdesc/>
+	<conbody>
+		<note id="e04472">
+			<ul id="e04473">
+				<li>
+					<p>This vehicle is not equipped with a conventional 12V battery that requires regular replacement. Instead, it uses a lithium-ion battery integrated into the HEV high voltage battery system. A battery protection function is provided, which automatically disconnects the battery from vehicle power draw to prevent complete discharge.</p>
+				</li>
+				<li>
+					<p>When the vehicle is started (<term translate="no">READY</term> indicator <term translate="no">ON</term>), the battery is charged regardless of whether the engine is running. Even if no engine sound is heard, it is not necessary to depress the accelerator pedal.</p>
+				</li>
+				<li>
+					<p>The use of external power accessories may affect vehicle performance and functionality. In particular, the use of a dash camera may result in vehicle power being turned off before the dash camera completes its automatic shutdown.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00739.dita#t00739" role="parent" scope="local" type="concept">
+				<linktext>If the engine does not start</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

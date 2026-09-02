@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00259">
+	<title>Automatic adjustment of rearview mirrors in reverse (Auto reverse)</title>
+	<conbody>
+		<p>When you shift the gear to the R (Reverse) position, the outside rearview mirror(s) will rotate downwards to aid with driving in reverse.</p>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e01874">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01875">
+								<figgroup>
+									<image align="center" height="1.575in" href="../../images/OOV035409.eps" placement="break" width="2.244in" id="e01876"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The position of the outside rearview mirror switch (1) determines whether the mirrors will move:</p>
+		<p>Left/Right: When either the L (Left) or R (Right) switch is selected, both outside rearview mirrors will move.</p>
+		<p>Neutral: When neither switch is selected, the outside rearview mirrors will not move.</p>
+		<p>The outside rearview mirrors will automatically revert to their original positions if any of the following occur:</p>
+		<ul>
+			<li>
+				<p>The <term translate="no">EV</term> button is placed to either the <term translate="no">OFF</term> position or the <term translate="no">POWER ON</term> position.</p>
+			</li>
+			<li>
+				<p>The gear is shifted to any position except R (Reverse).</p>
+			</li>
+			<li>
+				<p>The remote control outside rearview mirror switch is not selected.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

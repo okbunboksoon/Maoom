@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA 1.3 Reference//EN" "reference.dtd">
+<reference base="Top" id="t00021">
+	<title>Air conditioning system</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>air conditioning system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<refbody>
+		<table frame="all" rowsep="1" colsep="1" pgwide="1" outputclass="formatc" id="e00078">
+			<desc>
+				<p>Please contact a professional workshop for more details.</p>
+			</desc>
+			<tgroup cols="3" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="1*"/>
+				<colspec colnum="2" colname="col3" colwidth="1.32*"/>
+				<colspec colnum="3" colname="col4" colwidth="1.13*"/>
+				<thead>
+					<row rowsep="1">
+						<entry align="center" valign="middle">
+							<p>Item</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Weight of volume (g)</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>Classification</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry align="center" valign="middle" morerows="1">
+							<p>Refrigerant</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>470</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>R-134a</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>420</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>R-1234yf</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="center" valign="middle">
+							<p>Compressor lubricant</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>120 ± 10</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>PAG</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</refbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00015.dita#t00015" role="parent" scope="local" type="concept">
+				<linktext>Specifications </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</reference>

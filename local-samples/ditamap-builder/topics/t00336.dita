@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00336">
+	<title>Controlling air intake</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>automatic climate control system 
+					<indexterm>controlling air intake</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02502">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02503">
+								<figgroup>
+									<image href="../../images/N_CT25C081.eps" align="center" height="1.740in" placement="break" id="e02504"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>This is used to select the outside (fresh) air position or recirculated air position.</p>
+		<p>To change the air intake control position:</p>
+		<ul>
+			<li>
+				<p>Touch the air intake control icon.</p>
+			</li>
+		</ul>
+		<section>
+			<sectiondiv><ph>Recirculated air position</ph>
+				<p>With the recirculated air position selected, air from the passenger compartment will be drawn through the heating system and heated or cooled according to the function selected. The indicator light will turn on.</p>
+			</sectiondiv>
+			<sectiondiv><ph>Outside (fresh) air position</ph>
+				<p>With the outside (fresh) air position selected, air enters the vehicle from outside and is heated or cooled according to the function selected. The indicator light will turn off.</p>
+				<note type="note">
+					<p>Prolonged operation of the heater in the recirculated air position (without air conditioning selected) may cause fogging of the windshield and side windows and the air within the passenger compartment may become stale.</p>
+					<p>In addition, prolonged use of the air conditioning with the recirculated air position selected will result in excessively dry air in the passenger compartment.</p>
+				</note>
+				<note type="warning">
+					<ul>
+						<li>
+							<p>Continued climate control system operation in the recirculated air position may allow humidity to increase inside the vehicle which may fog the glass and obscure visibility.</p>
+						</li>
+						<li>
+							<p>Do not sleep in a vehicle with the air conditioning or heating system on. It may cause serious harm or death due to a drop in the oxygen level and/or body temperature.</p>
+						</li>
+						<li>
+							<p>Continued climate control system operation in the recirculated air position can cause drowsiness or sleepiness, and loss of vehicle control. Set the air intake control to the outside (fresh) air position as much as possible while driving.</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+		</section>
+	</conbody>
+</concept>

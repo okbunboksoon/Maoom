@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00109">
+	<title>Resetting the sunroof</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>panorama sunroof
+					<indexterm>resetting the sunroof</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00561">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00562">
+									<image href="images/N_SP3i26_B04_033_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>In some circumstances, you may need to reset the sunroof operation. Some of these instances include:</p>
+			<ul>
+				<li>
+					<p>When the 12V battery is either disconnected or discharged</p>
+				</li>
+				<li>
+					<p>When the sunroof fuse is replaced</p>
+				</li>
+				<li>
+					<p>If the sunroof 1-touch <term translate="no">AUTO</term> OPEN/CLOSE operation is not functioning properly</p>
+				</li>
+			</ul>
+			<p>Sunroof resetting procedure:</p>
+		</context>
+		<steps>
+			<step>
+				<cmd>Start the vehicle in P (Park).</cmd>
+				<info>
+					<p>It is recommended to perform the reset procedure with the vehicle engine running.</p>
+				</info>
+			</step>
+			<step>
+				<cmd>Make sure the power sunshade and sunroof glass are in the fully closed position.</cmd>
+				<info>
+					<p>If the power sunshade and sunroof glass are open, push the switch forward until the sunshade and sunroof glass are fully closed.</p>
+				</info>
+			</step>
+			<step>
+				<cmd>Release the switch when the power sunshade and sunroof glass are fully closed.</cmd>
+			</step>
+			<step>
+				<cmd>Push the switch forward until the power sunshade and sunroof glass move slightly. Then release the switch.</cmd>
+			</step>
+			<step>
+				<cmd>Once again, push and hold the sunroof switch forward until the sunroof glass slides open and closed. Do not release the switch until the operation is completed.</cmd>
+				<info>
+					<p>If you release the switch during operation, start the procedure again from step 2.</p>
+					<note type="note">
+						<p>If the sunroof does not reset when the vehicle battery is disconnected or discharged, or if the sunroof fuse is blown, the sunroof may not operate normally.</p>
+					</note>
+				</info>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00103.dita#t00103" role="parent" scope="local" type="concept">
+				<linktext>Panorama sunroof</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

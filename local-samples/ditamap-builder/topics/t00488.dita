@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00488">
+	<title>Turning Lane Keeping Assist On/Off</title>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03699">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e03700">
+								<figgroup>
+									<image href="../../images/OOV055003.eps" align="center" height="1.573in" placement="break" id="e03701"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Whenever the vehicle is turned on, Lane Keeping Assist will always turn on and a gray indicator light (<image href="../../images/WKIA_055.eps" align="left" placement="inline" outputclass="nolabel" scale="15" id="e03702"/>) will appear on the cluster.</p>
+		<p>If you want to turn off Lane Keeping Assist, press and hold the Lane Driving Assist button (<image href="../../images/WKIA_274.eps" align="left" placement="inline" outputclass="nolabel" scale="15" id="e03703"/>) to turn off the function. The indicator light will turn yellow if you turn off Lane Keeping Assist.</p>
+		<note type="note" id="e03704">
+			<ul id="e03705">
+				<li>
+					<p>When the operating condition of Lane Keeping Assist are met, the cluster is illuminated with a green (<image href="../../images/WKIA_055.eps" align="left" placement="inline" outputclass="nolabel" scale="15" id="e03706"/>) indicator.</p>
+				</li>
+				<li>
+					<p>When the operating conditions are not met, a gray (<image href="../../images/WKIA_055.eps" align="left" placement="inline" outputclass="nolabel" scale="15" id="e03707"/>) indicator is illuminated.</p>
+				</li>
+			</ul>
+		</note>
+		<section id="e03708">
+			<title>Automatic activation</title>
+			<p>Lane Keeping Assist automatically turns on when either of the following driving convenience features:</p>
+			<ul id="e03709">
+				<li>
+					<p>Both Lane Following Assist and Smart Cruise Control turn on</p>
+				</li>
+				<li>
+					<p importance="optional">Highway Driving Assist turns on</p>
+				</li>
+			</ul>
+			<p>If Lane Keeping Assist has automatically turned on and the driver attempts to turn it off, a warning message appears and Lane Keeping Assist does not turn off.</p>
+			<p importance="optional">If the in-cabin camera detects the driver’s drowsiness, Lane Keeping Assist activates automatically. In this case, the driver can deactivate Lane Keeping Assist by pressing and holding the Lane Driving Assist button for more than 2 seconds.</p>
+			<note type="warning" id="e03710">
+				<ul id="e03711">
+					<li>
+						<p>Lane Keeping Assist remains activated even if the driving convenience feature is turned off.</p>
+					</li>
+					<li>
+						<p>To deactivate Lane Keeping Assist temporarily disable Smart Cruise Control or press the Lane Driving Assist button or Driving Assist button to turn off the driving convenience feature and then attempt to deactivate it.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00061">
+	<title>Rear Occupant Alert (ROA) system</title>
+	<conbody>
+		<p>The Rear Occupant Alert (ROA) is provided to help prevent exiting the vehicle with a rear passenger left in the vehicle.</p>
+		<ul>
+			<li>
+				<p>When you open the front door after opening and closing the rear door and turning off the engine, the warning message appears on the cluster.</p>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00332">
+					<tgroup cols="2" colsep="0" rowsep="1">
+						<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e00333">
+										<image align="center" placement="break" scale="95" href="images/N_SP3i25_C00_001_IR.jpg"/>
+									</fig>
+								</entry>
+								<entry colname="col2">
+									<ol outputclass="callout" id="e00334">
+										<li>
+											<p><uicontrol>Do not leave children or pets alone.</uicontrol></p>
+										</li>
+									</ol>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</li>
+		</ul>
+		<p>You can activate or deactivate the Rear Occupant Alert by selecting <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Convenience</uicontrol><uicontrol>Rear Occupant Alert</uicontrol></menucascade> on the infotainment system.</p>
+		<note type="warning">
+			<p>The Rear Occupant Alert (ROA) system does not actually detect objects or people in the rear seat. By using a rear door opened and closed history, the system informs the driver that there may be something in the rear seat.</p>
+		</note>
+		<note type="caution">
+			<p>The Rear Occupant Alert (ROA) system uses a rear door opened and closed history.</p>
+			<p>The history is reset after the driver turns off ignition normally, exits the vehicle and locks the door remotely using the remote keyless entry. So even if a rear door does not reopen, the ROA system alert can occur.</p>
+			<p>For example, after the ROA system alert occurs, if the driver does not lock the door, and drives again, the alert can occur.</p>
+		</note>
+		<note type="warning">
+			<p>The door lock system may not work if the electrical system is compromised. Accordingly, please train children passengers regarding how to open the car door manually before an emergency situation arises. That way, they would be able to open the door manually in the event an emergency situation arises.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00047.dita#t00047" role="parent" scope="local" type="concept">
+				<linktext>Door locks </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

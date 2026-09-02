@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0543">
+	<title>Intelligenter Geschwindigkeitsbegrenzungsassistent deaktiviert</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054164N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Fahrerassistenzsystem eingeschränkt. Kamerasicht eingeschränkt.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn die Windschutzscheibe dort, wo sich die Frontkamera befindet, mit Fremdkörpern wie Schnee oder Regen bedeckt ist, kann sich die Erkennungsleistung verschlechtern und die Funktion des intelligenten Geschwindigkeitsbegrenzungsassistenten vorübergehend eingeschränkt oder deaktiviert werden. In diesem Fall werden die Warnmeldung und die Kontrollleuchte des Intelligenten Geschwindigkeitsbegrenzungsassistenten (<image align="left" href="../../images/WKIA_082.eps" scale="15" placement="inline"/>) auf dem Kombiinstrument eingeblendet.</p>
+		<p>Der Intelligente Geschwindigkeitsbegrenzungsassistent funktioniert einwandfrei, nachdem Schnee, Regen oder Fremdkörper entfernt wurden. Halten Sie es immer sauber.</p>
+		<p>Wenn der Intelligente Geschwindigkeitsbegrenzungsassistent nach dem Ausbau nicht richtig funktioniert, lassen Sie Ihr Fahrzeug in einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Auch wenn die Warnmeldung nicht auf dem Kombiinstrument erscheint bzw. die Warnleuchte nicht leuchtet, funktioniert der intelligente Geschwindigkeitsbegrenzungsassistent möglicherweise nicht ordnungsgemäß.</p>
+				</li>
+				<li>
+					<p>Selbst wenn das Fahrzeug bei blockierten oder defekten Sensoren neu gestartet wird, funktioniert der intelligente Geschwindigkeitsbegrenzungsassistent möglicherweise nicht einwandfrei, da die Funktion den defekten/abgedeckten Zustand beibehält.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Sie können dies in der Servicemeldung in der Ansicht nützlicher Informationen der Anzeige des Kombiinstruments überprüfen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0542.dita#CL4m_HEV-ca_ES-2027-t0542" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion des Intelligenten Geschwindigkeitsbegrenzungsassistenten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

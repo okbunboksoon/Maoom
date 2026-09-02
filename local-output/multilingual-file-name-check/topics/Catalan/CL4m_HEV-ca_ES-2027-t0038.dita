@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0038">
+	<title id="e00092">Mechanischer Schlüssel </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Fernbedienungstaste
+					<indexterm>Mechanischer Schlüssel</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody id="e00093">
+		<p>Wenn der Fernbedienungsschlüssel nicht normal funktioniert, können Sie die Tür (und den Kofferraum/die Heckklappe) mit dem mechanischen Schlüssel ver- oder entriegeln.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OJAPE033091.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Zum Aufklappen des Schlüssels:</p>
+		<ul>
+			<li>
+				<p>Drücken Sie die Freigabetaste; daraufhin klappt der Schlüssel automatisch aus.</p>
+			</li>
+		</ul>
+		<p>Zum Einklappen des Schlüssels:</p>
+		<ul>
+			<li>
+				<p>Während Sie die Freigabetaste drücken, klappen Sie den Schlüssel mit der Hand ein.</p>
+			</li>
+		</ul>
+		<note type="caution" id="e00094">
+			<p>Klappen Sie den Schlüssel nicht ein, ohne die Freigabetaste gedrückt zu halten. Dies könnte den Schlüssel beschädigen.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0037.dita#CL4m_HEV-ca_ES-2027-t0037" role="parent" scope="local" type="concept">
+				<linktext>Fernbedienungstaste </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

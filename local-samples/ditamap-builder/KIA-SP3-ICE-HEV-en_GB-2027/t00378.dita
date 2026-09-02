@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00378">
+	<title>Transmission ranges</title>
+	<shortdesc>The indicator on the instrument cluster displays the gear position when the vehicle is in <term translate="no">ON</term> position.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>intelligent variable transmission (IVT)
+					<indexterm>transmission ranges</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e02473">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e02474">
+								<figgroup>
+									<image align="center" placement="break" href="images/OOV035110.jpg" scale="95"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section id="e02475">
+			<title id="e02476">P (Park) </title>
+			<p>Always come to a complete stop before shifting to P (Park). This position locks the transmission and prevents the driven wheels from rotating.</p>
+			<note type="note" id="e02477">
+				<ul id="e02478">
+					<li id="e02479">
+						<p>Shifting to P (Park) while your vehicle is in motion causes the drive wheels to lock. This can damage the transmission and cause you to lose control of your vehicle.</p>
+					</li>
+					<li id="e02480">
+						<p>Do not shift to P (Park) instead of applying the parking brake. Always make sure the vehicle is in P (Park) and fully apply the parking brake.</p>
+					</li>
+					<li id="e02481">
+						<p>Never leave a child unattended in your vehicle.</p>
+					</li>
+					<li>
+						<p>Shifting the gear to P (Park) while the vehicle is in motion may damage the transmission.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e02482">
+			<title id="e02483">R (Reverse) </title>
+			<p>Shift to R (Reverse) to drive your vehicle backward.</p>
+			<note type="note" id="e02484">
+				<p>Always come to a complete stop before shifting to or from R (Reverse). Shifting to R (Reverse) while your vehicle is moving forward may damage the transmission, except as explained in <xref href="t00439.dita#t00439"/>.</p>
+			</note>
+		</section>
+		<section id="e02485">
+			<title>N (Neutral)</title>
+			<p>In N (Neutral), the wheels and transmission are not engaged. Your vehicle can roll freely, even on the slightest incline, unless you apply the parking brake or service brake.</p>
+			<note type="warning" id="e02486">
+				<ul id="e02487">
+					<li>
+						<p>Always park the vehicle in P (Park) and apply the parking brake for safety. If you leave the gear in N (Neutral), the vehicle may move and cause serious damage and injury.</p>
+					</li><?oxy_comment_start author="june" timestamp="20250820T144521+0900" comment="EPB 미적용 시 삭제"?>
+					<li>
+						<p>After you turn the vehicle to the <term translate="no">OFF</term> position, you cannot release the Electronic Parking Brake (<term translate="no">EPB</term>).</p>
+					</li>
+					<li>
+						<p>When you use the <term translate="no">AUTO HOLD</term> function while driving a vehicle equipped with <term translate="no">EPB</term>, if you turn the vehicle to the <term translate="no">OFF</term> position, the <term translate="no">EPB</term> is applied automatically. Turn the <term translate="no">AUTO HOLD</term> function off before you turn the vehicle to the <term translate="no">OFF</term> position.</p>
+					</li><?oxy_comment_end?>
+				</ul>
+			</note>
+			<note type="caution" id="e02488">
+				<p>Do not drive or park with the vehicle in N (Neutral). The engine brake does not work in N (Neutral), which may lead to an accident.</p>
+			</note>
+		</section>
+		<section id="e02489">
+			<title>D (Drive)</title>
+			<p>D (Drive) is the normal forward driving gear shift position. The transmission will automatically shift, providing the best fuel economy and power.</p>
+			<p>For extra power when passing another vehicle or climbing uphill, engage the accelerator fully. The transmission automatically shifts down to the next lowest gear.</p>
+			<note type="note" id="e02490">
+				<p>Always come to a complete stop before shifting to D (Drive).</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00376.dita#t00376" role="parent" scope="local" type="concept">
+				<linktext>Intelligent variable transmission (IVT)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

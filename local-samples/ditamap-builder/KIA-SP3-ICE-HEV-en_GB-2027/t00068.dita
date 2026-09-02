@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legalnotice_europe-general_gen-ind_2023_20231004_12218" id="t00068">
+	<title>How to register Digital Key 2 (Card Key)</title>
+	<shortdesc/>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>how to register digital key 2 (card key)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<p>To use the card key as a digital key 2, register the card key in your vehicle system in accordance with the following procedures.</p>
+			<ol>
+				<li>
+					<p>Get in the vehicle with two smart keys.</p>
+				</li>
+				<li>
+					<p>Check if the Use menu is activated.</p>
+					<p>With the vehicle on, touch <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Digital Keys</uicontrol><uicontrol>NFC Card key</uicontrol><uicontrol>Use</uicontrol></menucascade> on the infotainment system.</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image href="images/N_CT25Z086_E.jpg" scale="95" align="center" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<ol outputclass="callout">
+											<li>
+												<p><uicontrol>Digital Keys</uicontrol></p>
+											</li>
+											<li>
+												<p><uicontrol>NFC Card key</uicontrol></p>
+											</li>
+											<li>
+												<p><uicontrol>Use</uicontrol></p>
+											</li>
+											<li>
+												<p><uicontrol>Save</uicontrol></p>
+											</li>
+										</ol>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>With the vehicle on, place the card key on the in-vehicle authentication pad and press the Save menu on the infotainment system screen. The saving process will begin automatically.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00360">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e00361">
+											<image align="center" href="images/N_SP327_D03_001_E.jpg" scale="95" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<ol outputclass="callout" id="e00362">
+											<li>
+												<p>Charging pad</p>
+											</li>
+										</ol>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>When the digital key (card key) is saved, a message will appear on the infotainment system screen.</p>
+				</li>
+			</ol>
+			<note type="tip">
+				<ul>
+					<li>
+						<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+					</li>
+					<li>
+						<p>When there is a digital key (card key) already saved in the vehicle, the Save menu is disabled. If you want to save a digital key again, refer to 'How to delete digital key 2 (Card key)' and follow the deleting procedure first before saving a digital key.</p>
+					</li>
+					<li>
+						<p>To register the digital key (card key), the two smart keys must be in the vehicle.</p>
+					</li>
+					<li>
+						<p>The registered digital key (card key) cannot be used for another vehicle.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00067.dita#t00067" role="parent" scope="local" type="concept">
+				<linktext>Digital Key 2 (Card Key)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

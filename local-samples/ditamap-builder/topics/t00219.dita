@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00219">
+	<title>Power tailgate open/close button (Smart key, Instrument panel)</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01648">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01649">
+								<figgroup>
+									<image href="../../images/OOV035078.eps" align="center" placement="break" id="e01650"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<p>When the tailgate is closed, press the power tailgate open/close button for 1 second. The power tailgate opens with a warning sound.</p>
+			<p>While the tailgate is opening, press the button to stop tailgate operation.</p>
+			<p>When the power tailgate is opened, press and hold the power tailgate open/close button to close the tailgate. If you release the button while the tailgate is closing, power tailgate operation will stop with a warning sound for 5 seconds.</p>
+			<p>Also, if the smart key is not within operation range (approximately 10 m) from the vehicle, power tailgate operation will stop with a warning sound for 5 seconds.</p>
+			<note type="warning">
+				<p>Make sure that there are no people or objects in the path of the tailgate before pressing the open/close button inside the power tailgate and the smart key. Otherwise, this may cause serious injury or damage to the vehicle or object.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

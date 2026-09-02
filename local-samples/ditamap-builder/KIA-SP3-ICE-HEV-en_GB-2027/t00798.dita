@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00798">
+	<title>Hybrid Starter &amp; Generator (HSG) belt</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>scheduled maintenance items
+					<indexterm>hybrid Starter &amp; Generator (HSG) belt</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Inspect all hybrid starter &amp; generator belts for evidence of cuts, cracks, excessive wear or oil saturation and replace if necessary. Hybrid starter &amp; generator belts should be checked periodically for proper tension and adjusted as necessary.</p>
+		<note type="caution" id="e04841">
+			<p>When you are inspecting the belt, place the ignition switch in the <term translate="no">LOCK/OFF</term> or <term translate="no">ACC</term> position.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00796.dita#t00796" role="parent" scope="local" type="concept">
+				<linktext>Explanation of scheduled maintenance items</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

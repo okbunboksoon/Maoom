@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00158">
+	<title id="e01146">Air bag warning label</title>
+	<shortdesc>Air bag warning labels are attached to alert driver and passengers of potential risk of air bag system.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Air bag warning label</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01147">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0" valign="middle">
+							<fig id="e01148">
+								<figgroup>
+									<image href="../../images/OOV025064_2.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e01149"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" valign="middle"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01150">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0" valign="middle">
+							<fig id="e01151">
+								<figgroup>
+									<image href="../../images/N_TK25B014_E.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e01152"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2" valign="middle"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Air bag warning labels are attached to alert the passengers to potential risks of the airbag system.</p>
+		<p>Note that these government warnings focus on the risks to children. We also want you to be aware of the risks that adults are exposed to, which have been described in previous pages.</p>
+		<note type="warning" id="e01153">
+			<ul id="e01154">
+				<li>
+					<p>Never place a rear facing child restraint in the front passenger seat, unless the passenger-side air bag is deactivated. An inflating passenger-side air bag could impact the rear-facing child restraint and kill the child.</p>
+				</li>
+				<li>
+					<p>Extreme Hazard! Do not use a rearward facing child restraint on a seat protected by an air bag in front of it!</p>
+				</li>
+				<li>
+					<p>Never put a child restraint in the front passenger’s seat. If the front passenger air bag inflates, it can cause serious or fatal injuries.</p>
+				</li>
+				<li id="e01155">
+					<p otherprops="legal_eu_std_014_01">NEVER use a rearward facing child restraint on a seat protected by an ACTIVE AIRBAG in front of it. DEATH or SERIOUS INJURY to the CHILD can occur.</p>
+				</li>
+				<li id="e01156">
+					<p>When children are seated in the rear outboard seats of a vehicle equipped with side and/or curtain airbags, be sure to install the child restraint system as far away from the door side as possible, and securely lock the child restraint system in position.</p>
+					<p>Inflation of side and/or curtain airbags could cause serious injury or death to an infant or child.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e01157">
+			<p importance="high">If equipped with rollover sensor</p>
+			<ul id="e01158">
+				<li>
+					<p>The airbags inflate instantly in the even of a rollover (if equipped with a side air bag or curtain air bag) in order to help protect the occupants from serious physical injury.</p>
+				</li>
+				<li>
+					<p>The side and/or the curtain air bag may deploy when the rollover sensor detects the situation as a rollover.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00204">
+	<title>Seat easy access</title>
+	<shortdesc>Seat easy access will move the driver’s seat and steering wheel automatically as follows:</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>integrated memory system 
+					<indexterm>reset</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e01535">
+			<title>Exiting the vehicle:</title>
+			<p>The driver’s seat will move as follows when the <term>EV</term> button is in the <term>OFF</term> position with the gear in P (Park) and the driver’s door open.</p>
+			<ul id="e01536">
+				<li>
+					<p>Driver seat: Moves rearward depending on the distance selected from the Settings menu in the infotainment system.</p>
+				</li>
+			</ul>
+			<p>However, the driver’s seat may not move rearward if there is not enough space between the driver’s seat and the rear seats.</p>
+		</section>
+		<section id="e01537">
+			<title>Entering the vehicle:</title>
+			<p>The driver’s seat will move as follows when the <term>EV</term> button is pressed to the <term>POWER ON</term> or <term>DRIVE READY</term> position or while carrying the smart key, the driver’s door is closed with the <term>EV</term> button in the <term>OFF</term> position.</p>
+			<ul id="e01538">
+				<li>
+					<p>Driver seat: Moves back to its original position.</p>
+				</li>
+			</ul>
+			<p>You can set the Seat Easy Access function from the Settings menu in the infotainment system screen.</p>
+			<ul id="e01539">
+				<li>
+					<p>Driver seat: Select <menucascade><uicontrol outputclass="a1701754">Settings</uicontrol><uicontrol outputclass="a1701772">Vehicle</uicontrol><uicontrol outputclass="a1805350">Seats</uicontrol><uicontrol outputclass="a1906399">Seat Easy Access</uicontrol><uicontrol outputclass="a1906399">Driver seat easy access</uicontrol></menucascade> on the infotainment system.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

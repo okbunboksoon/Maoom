@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0097">
+	<title id="e00238">Breites Schiebedach </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Panoramadach</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Wenn Ihr Fahrzeug mit einem Schiebedach ausgestattet ist, können Sie das Schiebedach über den Schiebedachhebel in der Dachkonsole aufstellen oder aufschieben.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034043N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Das Schiebedach kann nur betätigt werden, wenn sich der Zündschalter oder die Taste <term translate="no">ENGINE START/STOP</term> in der Position <term translate="no">ON</term> oder <term translate="no">START</term> befindet. Das Schiebedach kann ca. 3 Minuten lang betätigt werden, nachdem der Zündschalter oder die Taste <term translate="no">ENGINE START/STOP</term> in die Position <term translate="no">ACC</term> oder <term translate="no">LOCK/OFF</term> gebracht wurde. Wenn die Vordertür geöffnet ist, kann das Schiebedach selbst innerhalb von 3 Minuten nicht bedient werden.</p>
+		<note type="warning" otherprops="legal_eu_std_007_03">
+			<ul>
+				<li>
+					<p>Betätigen Sie das Schiebedach nur, wenn das Fahrzeug stillsteht. Wenn Sie das Schiebedach während der Fahrt betätigen, kann es das Fahrverhalten stören und einen Unfall verursachen.</p>
+				</li>
+				<li>
+					<p>Selbst wenn Sie das Fahrzeug nur für kurze Zeit verlassen, schalten Sie die Zündung aus und nehmen Sie den Zündschlüssel mit, damit Kinder das Schiebedach nicht bedienen können.</p>
+				</li>
+				<li>
+					<p>Sitzen Sie nicht auf dem Dach. Das Sitzen auf dem Dach oder das Auflegen schwerer Gegenstände kann das Schiebedach beschädigen.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<p>Betätigen Sie das Schiebedach nicht, wenn Dachgepäckträger auf dem Fahrzeug montiert sind oder sich Gepäck auf dem Dach befindet.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0033-CH05.dita#CL4m_HEV-ca_ES-2027-t0033-CH05" role="parent" scope="local" type="concept">
+				<linktext>Öffnen und Schließen </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

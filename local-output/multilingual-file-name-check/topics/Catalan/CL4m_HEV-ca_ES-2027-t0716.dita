@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0716">
+	<title>Einparkhilfe hinten deaktiviert</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054180N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Fahrerassistenzsystem eingeschränkt. Ultraschallsensor blockiert.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Der Ultraschallsensor ist ein Sensor, der Objekte in der Umgebung des Fahrzeugs erkennt. Die Einparkhilfe kann vorübergehend eingeschränkt sein oder nicht funktionieren, wenn Schnee, Regen, Fremdkörper o.ä. auf den Sensor gelangen. Sie können das Erkennungssensor-Blindwarnziel (Ultraschallsensor) in der Servicemeldung der Ansicht nützlicher Informationen in der Anzeige des Kombiinstruments überprüfen. Die Einparkhilfe funktioniert normal, wenn Sie die Verunreinigung vom Erkennungssensor entfernen. Halten Sie es immer sauber. Wenn es auch nach Beseitigung der Verschmutzung nicht richtig funktioniert, lassen Sie Ihr Fahrzeug in einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Die Hauptwarnleuchte (<image align="left" href="../../images/WKIA_040.eps" scale="15" placement="inline"/>) wird in der Zielrichtung angezeigt, wenn eine Störung vorliegt oder der Ultraschallsensor blockiert ist, während die Einparkhilfe in Betrieb ist. Sie können dies in der Servicemeldung in der Ansicht nützlicher Informationen der Anzeige des Kombiinstruments überprüfen.</p>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OMQ4053173.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0715.dita#CL4m_HEV-ca_ES-2027-t0715" role="parent" scope="local" type="concept">
+				<linktext>Fehlfunktion der Einparkhilfe</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

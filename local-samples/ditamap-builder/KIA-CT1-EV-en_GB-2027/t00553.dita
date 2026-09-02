@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00553">
+	<title>Hands-off warning</title>
+	<conbody>
+		<p>If the driver takes their hands off the steering wheel for several seconds, the warning message will appear on the cluster, and an audible warning will sound in stages.</p>
+		<p>Warning message: <uicontrol>Keep hands on steering wheel</uicontrol> </p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>The steering wheel may not be assisted if the steering wheel is held very tight or the steering wheel is steered over a certain degree.</p>
+				</li>
+				<li>
+					<p>Lane Keeping Assist does not operate at all times. It is the responsibility of the driver to safely steer the vehicle and to maintain the vehicle in its lane.</p>
+				</li>
+				<li>
+					<p>The hands-off warning message may appear late depending on road conditions. Always have your hands on the steering wheel while driving.</p>
+				</li>
+				<li>
+					<p>If gloves are worn or the steering wheel is held lightly, it may be perceived as not being held, resulting in the Hands-Off Warning being displayed.</p>
+				</li>
+				<li>
+					<p>If you attach objects to the steering wheel, the hands-off warning may not work properly.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>When lane markings (or road edges) are detected, the lane lines on the cluster will change from gray to white and the green (<image align="left" href="../../images/WKIA_198.eps" scale="15" placement="inline"/>) indicator light will appear.</p>
+				</li>
+				<li>
+					<p>If you select Highway Lane Change Assist, the green lane will appear on the cluster. (if equipped)</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+						<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1" colsep="0" align="center">
+										<p>Lane undetected</p>
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/N_CT25Z082.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2" align="center">
+										<p>Lane detected</p>
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/N_CT25Z080.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+				<li>
+					<p>The images and colors in the instrument cluster may differ depending on the cluster type or theme selected from the settings menu.</p>
+				</li>
+				<li>
+					<p>The lane lines shown on the instrument cluster may differ from the actual lane markings.</p>
+				</li>
+				<li>
+					<p>Even though the steering is assisted by Lane Keeping Assist, the driver may control the steering wheel.</p>
+				</li>
+				<li>
+					<p>The steering wheel may feel heavier or lighter when the steering wheel is assisted by Lane Keeping Assist than when it is not.</p>
+				</li>
+				<li>
+					<p>For more details on the instrument cluster, refer to <xref type="concept" href="t00146.dita#t00146"/>.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

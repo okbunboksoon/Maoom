@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00743">
+	<title>Jump starting</title>
+	<shortdesc>Connect the cables in the numerical order shown in the following image (and disconnect them in the reverse order):</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>emergency starting
+					<indexterm>jump starting</indexterm>
+				</indexterm>
+				<indexterm>jump starting</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04481">
+			<title>12V Battery Jump Starting</title>
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04482">
+								<image align="center" placement="break" scale="95" href="images/N_SP3i26_C11_002_I.jpg"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e04483">
+								<li>
+									<p>(+) terminal of the booster battery</p>
+								</li>
+								<li>
+									<p>(-) terminal of the booster battery</p>
+								</li>
+								<li>
+									<p>(+) terminal of the discharged battery</p>
+								</li>
+								<li>
+									<p>(-) terminal of the discharged battery</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Jump starting can be dangerous if done incorrectly. To avoid harm to yourself or damage to your vehicle or battery, follow the jump starting procedures in this section. If in doubt, have a competent technician or towing service jump start your vehicle.</p>
+		<note type="warning" id="e04484">
+			<ul id="e04485">
+				<li>
+					<p>Do not attempt to jump start the vehicle if the discharged battery is frozen, as the battery may rupture or explode.</p>
+				</li>
+				<li>
+					<p>Never attempt to check the electrolyte level of the battery, as this may cause the battery to rupture or explode.</p>
+				</li>
+				<li id="e04486">
+					<p>Keep all flames or sparks away from the battery. The battery produces hydrogen gas, which may cause an explosion if it is exposed to flame or sparks.</p>
+					<p>If you do not follow these instructions exactly, serious personal injury and damage to the vehicle may occur. If you are not sure how to follow this procedure, seek qualified assistance. Automobile batteries contain sulfuric acid, which is poisonous and highly corrosive. When jump starting your vehicle, wear protective glasses and be careful not to get acid on yourself, your clothing, or the vehicle.</p>
+				</li>
+				<li id="e04487">
+					<p>Do not attempt to jump start the vehicle if the discharged battery is frozen or the electrolyte level is low. The battery may rupture or explode.</p>
+				</li>
+				<li id="e04488">
+					<p>Do not allow the (+) and (-) jumper cables to touch each other. This may cause sparks.</p>
+				</li>
+				<li>
+					<p>Do not connect the jumper cable from the negative terminal of the booster battery to the negative terminal of the discharged battery. This can cause the discharged battery to overheat and crack or degrade. Connect one end of the jumper cable to the negative terminal of the booster battery, and the other end to a metallic point far away from the battery.</p>
+				</li>
+				<li>
+					<p>Automobile batteries contain sulfuric acid. When jump starting your vehicle, be careful not to get sulfuric acid on yourself, your clothing, or the vehicle. This acid is poisonous and highly corrosive.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution" id="e04489">
+			<p>Do not jump start another vehicle with your hybrid vehicle. Jump starting another vehicle will damage the hybrid vehicle’s 12 volt battery.</p>
+		</note>
+		<note type="note" id="e04490">
+			<p>Use only a 12V jumper system. You can damage a 12V starting motor, ignition system, and other electrical parts beyond repair by using a 24V power supply (either two 12V batteries in a series or a 24V motor generator set).</p>
+		</note>
+		<section id="e04491">
+			<title>Jump starting instructions</title>
+			<ol id="e04492">
+				<li>
+					<p>Make sure the booster battery is 12V and that its negative terminal is grounded.</p>
+					<p>If the booster battery is in another vehicle, do not allow the vehicles to come into contact.</p>
+				</li>
+				<li>
+					<p>Turn off all unnecessary electrical loads.</p>
+				</li>
+				<li>
+					<p>Connect the jumper cables in the exact sequence shown in the following illustration:</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04493">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e04494">
+											<image align="center" placement="break" scale="95" href="images/N_SP3i26_C11_002_I.jpg"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+					<ol id="e04495">
+						<li>
+							<p>Connect one end of a jumper cable to the positive terminal of the discharged battery (3).</p>
+						</li>
+						<li>
+							<p>Connect the other end of that jumper cable to the positive terminal of the booster battery (1).</p>
+						</li>
+						<li>
+							<p>Connect one end of the other jumper cable to the negative terminal of the booster battery (2).</p>
+						</li>
+						<li>
+							<p>Connect the other end of that jumper cable to a ground: a solid, stationary, metallic point (such as the engine lifting bracket) away from the battery (4).</p>
+							<p>Do not allow the jumper cables to contact anything except the correct battery terminals or the correct ground. Do not lean over the battery when connecting the jumper cables.</p>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<p>If you have connected the jumper cables with another vehicle, start the vehicle containing the booster battery first and let it run at 2,000 rpm for several minutes.</p>
+				</li>
+				<li>
+					<p>Start the vehicle containing the discharged battery.</p>
+				</li>
+				<li>
+					<p>If the vehicle containing the discharged battery starts, disconnect the end of the jumper cable from the negative terminal of the booster battery (2). Then disconnect the other jumper cable from the positive terminal of the booster battery (1) and the discharged battery (3).</p>
+					<p>If it is not obvious why your battery was discharged, have your vehicle checked by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ol>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04496">
+				<title>Jump Starting Using the 12V BATT RESET Button</title>
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e04497">
+									<image align="center" placement="break" scale="95" href="images/N_SP327_C11_023_2.jpg"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e04498">
+									<li>
+										<p>(+) terminal of the booster battery</p>
+									</li>
+									<li>
+										<p>(-) terminal of the booster battery</p>
+									</li>
+									<li>
+										<p>(+) terminal of the discharged battery</p>
+									</li>
+									<li>
+										<p>(-) terminal of the discharged battery</p>
+									</li>
+									<li>
+										<p>(+) Charging terminal inside the engine compartment fuse panel</p>
+									</li>
+									<li>
+										<p>Latch</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Jump starting can be dangerous if done incorrectly. To avoid harm to yourself or damage to your vehicle or battery, follow the jump starting procedures in this section. If in doubt, have a competent technician or towing service jump start your vehicle.</p>
+			<note type="warning" id="e04499">
+				<ul id="e04500">
+					<li>
+						<p>Do not attempt to jump start the vehicle if the discharged battery is frozen, as the battery may rupture or explode.</p>
+					</li>
+					<li>
+						<p>Never attempt to check the electrolyte level of the battery, as this may cause the battery to rupture or explode.</p>
+					</li>
+					<li id="e04501">
+						<p>Keep all flames or sparks away from the battery. The battery produces hydrogen gas, which may cause an explosion if it is exposed to flame or sparks.</p>
+						<p>If you do not follow these instructions exactly, serious personal injury and damage to the vehicle may occur. If you are not sure how to follow this procedure, seek qualified assistance. Automobile batteries contain sulfuric acid, which is poisonous and highly corrosive. When jump starting your vehicle, wear protective glasses and be careful not to get acid on yourself, your clothing, or the vehicle.</p>
+					</li>
+					<li id="e04502">
+						<p>Do not attempt to jump start the vehicle if the discharged battery is frozen or the electrolyte level is low. The battery may rupture or explode.</p>
+					</li>
+					<li id="e04503">
+						<p>Do not allow the (+) and (-) jumper cables to touch each other. This may cause sparks.</p>
+					</li>
+					<li>
+						<p>Do not connect the jumper cable from the negative terminal of the booster battery to the negative terminal of the discharged battery. This can cause the discharged battery to overheat and crack or degrade. Connect one end of the jumper cable to the negative terminal of the booster battery, and the other end to a metallic point far away from the battery.</p>
+					</li>
+					<li>
+						<p>Automobile batteries contain sulfuric acid. When jump starting your vehicle, be careful not to get sulfuric acid on yourself, your clothing, or the vehicle. This acid is poisonous and highly corrosive.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution" id="e04504">
+				<p>Do not jump start another vehicle with your hybrid vehicle. Jump starting another vehicle will damage the hybrid vehicle’s 12 volt battery.</p>
+			</note>
+			<note type="note" id="e04505">
+				<p>Use only a 12V jumper system. You can damage a 12V starting motor, ignition system, and other electrical parts beyond repair by using a 24V power supply (either two 12V batteries in a series or a 24V motor generator set).</p>
+			</note>
+			<ol id="e04506">
+				<li>
+					<p>Make sure the booster battery is 12V and that its negative terminal is grounded.</p>
+				</li>
+				<li>
+					<p>If the booster battery is in another vehicle, do not allow the vehicles to come into contact.</p>
+				</li>
+				<li>
+					<p>Turn off all unnecessary electrical loads.</p>
+				</li>
+				<li>
+					<p>Connect the jumper cables in the exact sequence shown in the following illustration. 
+						<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04507">
+							<tgroup cols="2" colsep="0" rowsep="1">
+								<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+								<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+								<tbody>
+									<row rowsep="1">
+										<entry colname="col1">
+											<fig id="e04508">
+												<image href="images/OSG2H116009L_2.jpg" scale="95" align="center" placement="break"/>
+											</fig>
+										</entry>
+										<entry colname="col2">
+											<ol outputclass="callout" id="e04509">
+												<li>
+													<p>(+) terminal of the booster battery</p>
+												</li>
+												<li>
+													<p>(-) terminal of the booster battery</p>
+												</li>
+												<li>
+													<p>(+) Charging terminal inside the engine compartment fuse panel</p>
+												</li>
+												<li>
+													<p>Latch</p>
+												</li>
+											</ol>
+										</entry>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+						<ul id="e04510">
+							<li>
+								<p>Connect one end of a jumper cable to the charging terminal inside the engine compartment fuse panel (3).</p>
+							</li>
+							<li>
+								<p>Connect the other end of that jumper cable to the positive terminal of the booster battery (1).</p>
+							</li>
+							<li>
+								<p>Proceed to connect one end of the other jumper cable to the negative terminal of the booster battery (2).</p>
+							</li>
+							<li>
+								<p>Connect the other end of that jumper cable to a ground: a solid, stationary, metallic latch (such as the engine lifting bracket) away from the battery (4).</p>
+							</li>
+							<li>
+								<p>Do not allow the jumper cables to contact anything except the correct battery terminals or the correct ground. Do not lean over the battery when connecting the jumper cables.</p>
+							</li>
+						</ul>
+					</p>
+				</li>
+				<li>
+					<p>If you have connected the jumper cables with another vehicle, start the vehicle containing the booster battery first and let it run at 2,000 rpm for several minutes.</p>
+				</li>
+				<li>
+					<p>Press 12V BATT RESET button.</p>
+				</li>
+				<li>
+					<p>If the vehicle containing the discharged battery starts, disconnect the end of the jumper cable from the negative terminal of the booster battery (2).</p>
+				</li>
+				<li>
+					<p>Then disconnect the other jumper cable from the charging terminal inside the engine compartment fuse panel (3) and the discharged battery. 
+						<note type="note" id="e04511">
+							<p>If it is not obvious why your battery was discharged, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+						</note>
+					</p>
+				</li>
+				<li>
+					<p>Let the vehicle run for at least approximately 30 minutes.</p>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00739.dita#t00739" role="parent" scope="local" type="concept">
+				<linktext>If the engine does not start</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

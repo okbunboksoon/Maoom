@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0022">
+	<title id="e00051">Kofferraumgröße </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Spezifikationen
+					<indexterm>Kofferraumgröße</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="all" rowsep="1" colsep="1" pgwide="1" outputclass="formatc">
+			<desc>
+				<ul>
+					<li>
+						<p>Min: Hinter dem Rücksitz zur oberen Kante der Rückenlehne</p>
+					</li>
+					<li>
+						<p>Max: Hinter dem Vordersitz, bis zum Dach</p>
+					</li>
+				</ul>
+			</desc>
+			<tgroup cols="4" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="1.220*"/>
+				<colspec colnum="2" colname="col2" colwidth="1.199*"/>
+				<colspec colnum="3" colname="col3" colwidth="1.133*"/>
+				<colspec colnum="4" colname="col4" colwidth="1.133*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1" align="center" valign="middle">
+							<p>Element</p>
+						</entry>
+						<entry colname="col2" align="center">
+							<p>4-Türer</p>
+						</entry>
+						<entry colname="col3" align="center">
+							<p>5-Türer</p>
+						</entry>
+						<entry colname="col4" align="center">
+							<p>Kombi</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="0" valign="middle">
+						<entry colname="col1" align="left" valign="middle">
+							<p>Kofferraumgröße (VDA) [L (cu ft)]</p>
+						</entry>
+						<entry colname="col2" align="center">
+							<p>508 (17,9)</p>
+						</entry>
+						<entry colname="col3" align="center">
+							<p>438 (15,5)</p>
+						</entry>
+						<entry colname="col4" align="center">
+							<p>604 (21,3)</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0015-CH04.dita#CL4m_HEV-ca_ES-2027-t0015-CH04" role="parent" scope="local" type="concept">
+				<linktext>Spezifikationen</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0371">
+	<title>Betriebsbedingungen des ISG-Systems</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Start-Stopp-Automatik (ISG-System)
+					<indexterm>Betriebsbedingungen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Das ISG-System funktioniert unter folgenden Bedingungen:</p>
+		<ul>
+			<li>
+				<p>Der Sicherheitsgurt des Fahrers ist angelegt.</p>
+			</li>
+			<li>
+				<p>Die Fahrertür und die Motorhaube sind geschlossen.</p>
+			</li>
+			<li>
+				<p>Der Bremsenunterdruck ist angemessen.</p>
+			</li>
+			<li>
+				<p>Der Batteriesensor ist aktiviert und die Batterie ist ausreichend geladen.</p>
+			</li>
+			<li>
+				<p>Die Außentemperatur ist nicht zu niedrig oder zu hoch.</p>
+			</li>
+			<li>
+				<p>Die Klimaanlage erfüllt die Bedingungen.</p>
+			</li>
+			<li>
+				<p>Das Fahrzeug ist ausreichend aufgewärmt.</p>
+			</li>
+			<li>
+				<p>Das Fahrzeug befindet sich nicht an einer steil ansteigenden bzw. abfallenden Steigung (außer Schaltgetriebe).</p>
+			</li>
+			<li>
+				<p>Das Lenkrad ist nicht stark eingeschlagen.</p>
+			</li>
+			<li>
+				<p>Das Fahrzeug befindet sich nicht in großer Höhe.</p>
+			</li>
+			<li>
+				<p>Die Heizung der Windschutzscheibe ist ausgeschaltet.</p>
+			</li>
+			<li>
+				<p>Sie haben nicht den Handschaltmodus gewählt (außer Schaltgetriebe).</p>
+			</li>
+			<li>
+				<p>Nach Schalten aus der Stellung R ist eine gewisse Zeit vergangen.</p>
+			</li>
+		</ul>
+		<p>Der Motor startet in folgenden Situationen automatisch, auch ohne dass der Fahrer etwas unternimmt:</p>
+		<ul>
+			<li>
+				<p>Der Bremsenunterdruck ist zu niedrig.</p>
+			</li>
+			<li>
+				<p>Sie haben die maximale Zeit zum Ausschalten des Motors überschritten.</p>
+			</li>
+			<li>
+				<p>Die Klimaanlage steht auf <term translate="no">ON</term>, und die Lüfterdrehzahl ist auf die höchste Stellung eingestellt.</p>
+			</li>
+			<li>
+				<p>Es kann sich Beschlag auf den Fenstern bilden und die Klimaanlage ist eingeschaltet.</p>
+			</li>
+			<li>
+				<p>Die Batterie befindet sich nicht in optimalem Betriebszustand.</p>
+			</li>
+			<li>
+				<p>Die Kühl- und Heizleistung der Klimaanlage ist nicht zufrieden stellend.</p>
+			</li>
+			<li>
+				<p>Wenn Sie die Taste ISG <term translate="no">OFF</term> drücken, während der Motor automatisch ausgeschaltet ist (außer bei Schaltgetriebe).</p>
+			</li>
+			<li>
+				<p>Ihr Fahrzeug bewegt sich nach einem Stillstand.</p>
+			</li>
+			<li>
+				<p>Sie betätigen gleichzeitig das Gaspedal und das Bremspedal. (Außer bei Schaltgetriebe)</p>
+			</li>
+			<li>
+				<p>Der Sicherheitsgurt des Fahrers wird gelöst oder die Fahrertür ist geöffnet (außer bei Schaltgetriebe).</p>
+			</li>
+		</ul>
+		<p>Die grüne Anzeige <term translate="no">AUTO</term> STOP (<image align="left" href="../../images/WKIA_075.eps" scale="15" placement="inline"/>) auf dem Kombiinstrument blinkt 5 Sekunden lang.</p>
+		<note type="note">
+			<p>Wenn das ISG-System die Betriebsbedingungen nicht erfüllt, wird es deaktiviert.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0364.dita#CL4m_HEV-ca_ES-2027-t0364" role="parent" scope="local" type="concept">
+				<linktext>Start-Stopp-Automatik (ISG-System)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

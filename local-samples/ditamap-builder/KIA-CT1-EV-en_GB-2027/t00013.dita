@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00013">
+	<title>Electric vehicle specifications</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>electric vehicle specifications</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e00028">
+			<tgroup cols="8">
+				<colspec colnum="1" colwidth="1*" colname="col1"/>
+				<colspec colnum="2" colwidth="2.25*" colname="col2"/>
+				<colspec colnum="3" colwidth="2.05*" colname="col3"/>
+				<colspec colnum="4" colwidth="2.65*" colname="col4"/>
+				<colspec colnum="5" colwidth="2*" colname="col5"/>
+				<colspec colnum="6" colwidth="2*" colname="col6"/>
+				<colspec colnum="7" colwidth="2*" colname="col7"/>
+				<colspec colnum="8" colwidth="2*" colname="col8"/>
+				<thead>
+					<row>
+						<entry namest="col1" nameend="col4" morerows="1" align="center" valign="middle">
+							<p>Items</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Standard Type</p>
+						</entry>
+						<entry namest="col6" nameend="col8" align="center" valign="middle">
+							<p>Extended Type</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>2WD</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2WD</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>AWD</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p> <term translate="no">GT</term> </p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry morerows="3" align="center" valign="middle">
+							<p>Motor</p>
+						</entry>
+						<entry morerows="1" align="center" valign="middle">
+							<p>Max. output (kW)</p>
+						</entry>
+						<entry namest="col3" nameend="col4" align="center" valign="middle">
+							<p>Front</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>150</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>150</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>125</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>145</p>
+						</entry>
+					</row>
+					<row>
+						<entry namest="col2" nameend="col3" align="center" valign="middle">
+							<p>Rear</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>70</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>70</p>
+						</entry>
+					</row>
+					<row>
+						<entry morerows="1" align="center" valign="middle">
+							<p>Max. torque (Nm)</p>
+						</entry>
+						<entry namest="col3" nameend="col4" align="center" valign="middle">
+							<p>Front</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>283</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>283</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>200</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>283</p>
+						</entry>
+					</row>
+					<row>
+						<entry namest="col3" nameend="col4" align="center" valign="middle">
+							<p>Rear</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>185</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>185</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>Battery (Lithium-ion)</p>
+						</entry>
+						<entry namest="col2" nameend="col4" align="center" valign="middle">
+							<p>Capacity (kWh)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>58.3</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>81.4</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>81.4</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>81.4</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<table frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e00029">
+			<desc>
+				<p>OBC: On-Board Battery Chargers</p>
+			</desc>
+			<tgroup cols="5">
+				<colspec colnum="1" colwidth="1*" colname="col1"/>
+				<colspec colnum="2" colwidth="1*" colname="col2"/>
+				<colspec colnum="3" colwidth="1*" colname="col3"/>
+				<colspec colnum="4" colwidth="1*" colname="col4"/>
+				<colspec colnum="5" colwidth="1*" colname="col5"/>
+				<thead>
+					<row>
+						<entry namest="col1" nameend="col2" morerows="2" align="center" valign="middle">
+							<p>Item</p>
+						</entry>
+						<entry namest="col3" nameend="col5" align="center" valign="middle">
+							<p>Specification</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>11kW 1-Phase</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>11kW 3-Phase</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>22kW</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>OBC</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>OBC</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>OBC</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry namest="col1" nameend="col2" align="center" valign="middle">
+							<p>Charging Connector Type</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>CCS Type 1</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>CCS Type 2</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>CCS Type 2</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>1-Phase</p>
+						</entry>
+						<entry morerows="1" align="center" valign="middle">
+							<p>Maximum Acceptance Rate (kW)</p>
+						</entry>
+						<entry morerows="1" align="center" valign="middle">
+							<p>11 (AC 230V)</p>
+						</entry>
+						<entry morerows="1" align="center" valign="middle">
+							<p>7.3 (AC 230V)</p>
+						</entry>
+						<entry morerows="1" align="center" valign="middle">
+							<p>7.3 (AC 230V)</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>Charging</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>3-Phase</p>
+						</entry>
+						<entry morerows="1" align="center" valign="middle">
+							<p>Maximum Acceptance Rate (kW)</p>
+						</entry>
+						<entry morerows="1" align="center" valign="middle">
+							<p>-</p>
+						</entry>
+						<entry morerows="1" align="center" valign="middle">
+							<p>11 (AC 230V)</p>
+						</entry>
+						<entry morerows="1" align="center" valign="middle">
+							<p>22 (AC 230V)</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>Charging</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p importance="default">Please contact your local authorized Kia dealer for the specs of your region.</p>
+	</conbody>
+</concept>

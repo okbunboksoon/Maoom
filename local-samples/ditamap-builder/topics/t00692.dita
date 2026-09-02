@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00692">
+	<title>Emergency braking</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04518">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e04519">
+								<figgroup>
+									<image align="center" href="../../images/OOV055004_2.eps" placement="break" width="2.244in" id="e04520"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e04521">
+								<figgroup>
+									<image align="center" href="../../images/OOV055157L.eps" placement="break" width="2.244in" id="e04522"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="col1" colsep="0">
+							<fig id="e04523">
+								<figgroup>
+									<image align="center" href="../../images/OOV055256.eps" placement="break" width="2.244in" id="e04524"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e04525">
+								<li>
+									<p> <uicontrol outputclass="c0957">Emergency braking</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p importance="optional">Emergency braking will alert you with a warning light on the outside rearview mirror, a warning message, an audible warning and steering wheel vibration.</p>
+		<p>Emergency braking will also appear on the infotainment system screen.</p>
+		<p>Emergency braking assists in braking control to prevent a collision with a vehicle approaching the rear corner of your vehicle.</p>
+		<p>Emergency braking will operate when all the following conditions are satisfied:</p>
+		<ul>
+			<li>
+				<p>The gear is shifted to R (Reverse) while your driving speed is below 8 km/h (5 mph)</p>
+			</li>
+			<li>
+				<p>The approaching vehicle is within approximately 1.5 m (5 ft.) from the left and right side of your vehicle</p>
+			</li>
+			<li>
+				<p>The speed of the vehicle approaching from the left and right is above 5 km/h (3 mph)</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<p>Brake control ends when the conditions of the approaching vehicle from the rear left or right side are as below:</p>
+			<ul>
+				<li>
+					<p>The approaching vehicle is out of the detecting range</p>
+				</li>
+				<li>
+					<p>The approaching vehicle passes behind your vehicle</p>
+				</li>
+				<li>
+					<p>The approaching vehicle does not drive toward your vehicle</p>
+				</li>
+				<li>
+					<p>The approaching vehicle speed slows down</p>
+				</li>
+				<li>
+					<p>The driver depresses the brake pedal with sufficient power</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

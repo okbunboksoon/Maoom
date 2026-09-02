@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00071">
+	<title>Personalized Profile and Vehicle Settings</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>digital key 2
+					<indexterm>personalized profile and vehicle settings</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The digital key (smartphone) registered in the vehicle can be linked with user profile. If the account logged in the smartphone is the same, it is regarded as the same [Group], and all digital keys (smartphone) of the [Group] are linked. If you get on the vehicle with the digital key 2 (smartphone), it automatically operates with the linked profile. The key included in the same [Group], excluding My Smartphone Key, can be checked in the below menu.</p>
+		<note type="tip">
+			<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+		</note>
+		<p>Select <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Digital Keys</uicontrol><uicontrol>Smartphone key</uicontrol><uicontrol>Shared Keys</uicontrol><uicontrol>[Group]</uicontrol></menucascade> on the infotainment system screen.</p>
+		<section>
+			<title>Linking/Unlinking profile</title>
+			<sectiondiv><ph>How to link user profile</ph>
+				<ol>
+					<li>
+						<p>Select <menucascade><uicontrol>Setup</uicontrol><uicontrol>User profile</uicontrol><uicontrol>Profile setting</uicontrol><uicontrol>Link Digital Key (Smartphone)</uicontrol></menucascade> on the infotainment system settings menu.</p>
+					</li>
+					<li>
+						<p>If you select Link, the registered phone number’s digital key and the user profile will link. Select Link according to the instruction.</p>
+					</li>
+					<li>
+						<p>When the process is complete, the message Digital Key Link Complete. will appear on the infotainment system screen.</p>
+					</li>
+					<li>
+						<p>Click the Link button and select the digital key 2 (smartphone) you want to link among the digital keys 2 (smartphone) displayed on the screen. Link them according to the instruction.</p>
+					</li>
+					<li>
+						<p>When the process is complete, the message 'Digital Key Link Complete.' will appear on the infotainment system screen.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+			<sectiondiv><ph>How to unlink user profile</ph>
+				<ol>
+					<li>
+						<p>Select <menucascade><uicontrol>Setup</uicontrol><uicontrol>User Profile</uicontrol><uicontrol>Profile Setting</uicontrol><uicontrol>Link Digital Key (Smartphone)</uicontrol></menucascade> on the infotainment system. Unlink digital key in the User Profile settings. Unlink digital key in the User Profile settings. Unlinking is possible only when user profile is linked.</p>
+					</li>
+					<li>
+						<p>When unlinking is complete, the message 'Digital key is unlinked.' will appear on the infotainment system screen.</p>
+					</li>
+				</ol>
+				<note deliveryTarget="full_only" type="tip">
+					<ul>
+						<li>
+							<p>Use profile cannot be linked to both Driver 1 and Driver 2 that are connected to a single smartphone. Personalization will operate with the recently linked user profile, and the previously linked user profile will be automatically cancelled.</p>
+						</li>
+						<li>
+							<p>User profile can be linked when digital key is registered on the smartphone and the vehicle. The smartphone with another vehicle’s digital key cannot be linked.</p>
+						</li>
+						<li>
+							<p>NFC card key cannot be linked with personalized profile.</p>
+						</li>
+						<li>
+							<p>Once the user profile linked digital key in the smartphone is deleted, digital key 2 should be re-registered and personalized by linking the user profile again.</p>
+						</li>
+						<li>
+							<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Vehicle personalization operation</title>
+			<p>The personalization function linked with digital key 2 works under the following conditions:</p>
+			<ul>
+				<li>
+					<p>Touch the driver’s door handle with the profile linked smartphone to lock or unlock the doors (Personalization does not operate when locking or unlocking the front passenger door.).</p>
+				</li>
+				<li>
+					<p>The personalization function using the digital key can be operated after linking the digital key in the infotainment system profile menu.</p>
+				</li>
+				<li>
+					<p>The personalization function works only when the vehicle is <term translate="no">OFF</term> or when the vehicle is started remotely. If the vehicle is not started remotely, personalization function does not work with the digital key.</p>
+				</li>
+			</ul>
+			<note deliveryTarget="full_only" type="tip">
+				<p>User profile operation according to door lock/unlock system is as follows.</p>
+				<table outputclass="formatd" frame="all" rowsep="1" colsep="1">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colnum="1" colname="col1" colwidth="1.122*"/>
+						<colspec colnum="2" colname="col2" colwidth="1.122*"/>
+						<thead>
+							<row rowsep="1">
+								<entry colname="col1">
+									<p>Item</p>
+								</entry>
+								<entry colname="col2">
+									<p>Personalization operation</p>
+								</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<p>Initial value</p>
+								</entry>
+								<entry colname="col2" align="left" valign="middle">
+									<p>Guest</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1">
+									<p>Profile linked smartphone key</p>
+								</entry>
+								<entry colname="col2" align="left" valign="middle">
+									<p>Linked profile</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1">
+									<p>Profile unlinked smartphone key</p>
+								</entry>
+								<entry colname="col2" morerows="2" align="left" valign="middle">
+									<p>Recently activated profile</p>
+								</entry>
+							</row>
+							<row rowsep="1">
+								<entry colname="col1">
+									<p>NFC card key</p>
+								</entry>
+							</row>
+							<row rowsep="0">
+								<entry colname="col1">
+									<p>Smart key</p>
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</note>
+		</section>
+		<section>
+			<title>Vehicle personalization with digital key 2</title>
+			<p>The available personalization function in the vehicle is as follows.</p>
+			<table outputclass="formatc" frame="all" rowsep="1" colsep="1" pgwide="1">
+				<tgroup cols="3" colsep="1" rowsep="1">
+					<colspec colnum="1" colname="col1" colwidth="0.826*"/>
+					<colspec colnum="2" colname="col2" colwidth="0.982*"/>
+					<colspec colnum="3" colname="col3" colwidth="2.867*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1">
+								<p>System</p>
+							</entry>
+							<entry namest="col2" nameend="col3">
+								<p>Personalization Item</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1" morerows="12" align="left" valign="middle">
+								<p>Infotainment Settings menu</p>
+							</entry>
+							<entry colname="col2" align="left" valign="middle">
+								<p>Head Up Display (HUD)</p>
+							</entry>
+							<entry colname="col3" align="left" valign="middle">
+								<p>Position adjustment of image, Information display selection</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col2" align="left" valign="middle">
+								<p>Lamp</p>
+							</entry>
+							<entry colname="col3" align="left" valign="middle">
+								<p>Blink number of one-touch signal lamps</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col2" align="left" valign="middle">
+								<p>Cluster</p>
+							</entry>
+							<entry colname="col3" align="left" valign="middle">
+								<p>Information display on the cluster, Voice volume, We come sound</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col2" morerows="1" align="left" valign="middle">
+								<p>Seat</p>
+							</entry>
+							<entry colname="col3" align="left" valign="middle">
+								<p>Seat position</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col3" align="left" valign="middle">
+								<p>Smart heating wire ventilation On/Off</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col2" align="left" valign="middle">
+								<p>Door</p>
+							</entry>
+							<entry colname="col3" align="left" valign="middle">
+								<p>Automatic door lock/unlock</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col2" align="left" valign="middle">
+								<p>Smartphone wireless charging</p>
+							</entry>
+							<entry colname="col3" align="left" valign="middle">
+								<p>Wireless charging On/Off</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col2" align="left" valign="middle">
+								<p>Air conditioning</p>
+							</entry>
+							<entry colname="col3" align="left" valign="middle">
+								<p>Setting up temperature unit, Block air inflow/Automatic ventilation Window defroster On/Off</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col2" morerows="1" align="left" valign="middle">
+								<p>Navigation</p>
+							</entry>
+							<entry colname="col3" align="left" valign="middle">
+								<p>Preferred volume of the navigation system</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col3" align="left" valign="middle">
+								<p>Recent destination</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col2" align="left" valign="middle">
+								<p>User preset</p>
+							</entry>
+							<entry colname="col3" align="left" valign="middle">
+								<p>My menu list settings, Radio preset</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col2" morerows="1" align="left" valign="middle">
+								<p>Phone connectivity</p>
+							</entry>
+							<entry colname="col3" align="left" valign="middle">
+								<p>Bluetooth preferential connection</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry colname="col3" align="left" valign="middle">
+								<p>CarPlay/Android Auto/MirrorLink On/Off</p>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry colname="col1" align="left" valign="middle">
+								<p>Air conditioning</p>
+							</entry>
+							<entry colname="col2" align="left" valign="middle">
+								<p>Operating condition</p>
+							</entry>
+							<entry colname="col3" align="left" valign="middle">
+								<p>Latest operation setup of the following functions: Temperature (<term translate="no">AUTO</term>), air flow direction, air volume, air conditioner, air intake control, <term translate="no">SYNC</term>, front windshield defroster, <term translate="no">OFF</term></p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>For more information of personalization, refer to the infotainment system manual.</p>
+			<note deliveryTarget="full_only" type="caution">
+				<p>If you leave the digital key in the vehicle after locking or unlocking the doors or starting the vehicle with the smart key, the doors can be locked with the central door lock. Have the digital key with you at all times.</p>
+			</note>
+			<note type="tip">
+				<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00062.dita#t00062" role="parent" scope="local" type="concept">
+				<linktext>Digital Key 2 </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

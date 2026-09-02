@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00406">
+	<title>Instrument cluster display for warning message</title>
+	<shortdesc>The instrument cluster displays each of the following warning messages when applicable:</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>electronic parking brake (EPB)
+					<indexterm>warning messages</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>An <term translate="no">EPB</term> warning appears and an audible warning sounds in the following conditions:</p>
+		<ul id="e02742">
+			<li>
+				<p>You try to drive by engaging the accelerator pedal with the <term translate="no">EPB</term> applied, but the <term translate="no">EPB</term> doesn’t release automatically.</p>
+			</li>
+			<li>
+				<p>When you try to drive with the <term translate="no">EPB</term> on, but it doesn't release automatically, a warning will sound and a message will appear.</p>
+			</li>
+		</ul>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02743">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02744">
+								<image href="images/OCL4M035104N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02745">
+								<li>
+									<p><uicontrol>To release EPB, close the doors, the hood and the trunk/tailgate and fasten the seatbelt.</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Engage the brake pedal and release the <term translate="no">EPB</term> using the <term translate="no">EPB</term> switch.</p>
+		<note type="tip" id="e02746">
+			<p>Parking brake use</p>
+			<ul id="e02747">
+				<li>
+					<p>Never allow a passenger or anyone who is unfamiliar with your vehicle to touch the <term translate="no">EPB</term> switch. If the parking brake is released unintentionally, serious injury or death may occur.</p>
+				</li>
+				<li>
+					<p>Always fully engage the parking brake when parked to avoid inadvertent movement of your vehicle, which can injure occupants or pedestrians.</p>
+				</li>
+			</ul>
+		</note>
+		<ul id="e02748">
+			<li>
+				<p>You may hear a click or electric brake motor whine sound while engaging or releasing the <term translate="no">EPB</term>. This is normal and indicates that the <term translate="no">EPB</term> is functioning properly.</p>
+			</li>
+			<li>
+				<p>When leaving your keys with a parking lot attendant or valet, inform them how to apply the <term translate="no">EPB</term>.</p>
+			</li>
+			<li>
+				<p>The <term translate="no">EPB</term> may malfunction if you drive with it applied.</p>
+			</li>
+			<li>
+				<p>When you automatically release the <term translate="no">EPB</term> by engaging the accelerator pedal, engage it slowly.</p>
+			</li>
+		</ul>
+		<p>When the conversion from <term translate="no">AUTO HOLD</term> to <term translate="no">EPB</term> is not working properly, the system displays the following warning message with sound:</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02749">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02750">
+								<image href="images/OCL4M035105N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02751">
+								<li>
+									<p><uicontrol>Press brake pedal to deactivate AUTO HOLD</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note" id="e02752">
+			<p>When this warning message appears, engage the brake pedal to deactivate <term translate="no">AUTO HOLD</term>.</p>
+		</note>
+		<p>If you apply the <term translate="no">EPB</term> while <term translate="no">AUTO HOLD</term> is activated because of an Electronic Stability Control (ESC) signal, the system displays the following warning message with sound:</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02753">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02754">
+								<image href="images/OCL4M035106N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02755">
+								<li>
+									<p><uicontrol>Parking brake automatically engaged</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00403.dita#t00403" role="parent" scope="local" type="concept">
+				<linktext>Electronic Parking Brake (EPB)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

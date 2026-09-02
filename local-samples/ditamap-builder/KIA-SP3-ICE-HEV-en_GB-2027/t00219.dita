@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00219">
+	<title id="e01357">Removing headrest </title>
+	<taskbody>
+		<context>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01358">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01359">
+									<title>Type A</title>
+									<image href="images/N_SP327_B06_026_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e01360">
+									<title>Type B</title>
+									<image href="images/N_SP327_B06_027_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To remove the headrest:</p>
+		</context>
+		<steps id="e01361">
+			<step id="e01362">
+				<cmd>Recline the seatback with the recline lever or switch.</cmd>
+			</step>
+			<step>
+				<cmd>Push and hold the release button (1). Raise headrest as far as it can go.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01363">
+						<tgroup cols="2" colsep="0" rowsep="1">
+							<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e01364">
+											<image href="images/N_SP327_C06_013_E.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step id="e01365">
+				<cmd>Insert a short, flat object (such as a small flat-head screwdriver) into the opening on the inside base of the left post (2) and pull the headrest upward.</cmd>
+				<info>
+					<note type="warning">
+						<p>Removing headrest</p>
+						<p>NEVER allow anyone to ride in a seat with the headrest removed or reversed. Headrests can provide critical neck and head support in a crash.</p>
+					</note>
+				</info>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00216.dita#t00216" role="parent" scope="local" type="concept">
+				<linktext>Front seat headrest</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

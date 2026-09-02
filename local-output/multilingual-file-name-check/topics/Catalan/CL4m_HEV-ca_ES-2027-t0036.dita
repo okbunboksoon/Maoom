@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0036">
+	<title>Batterie ersetzen</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Zentralverriegelung mit Fernbedienung
+					<indexterm>Batterie ersetzen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<title>Fernbedienungstaste</title>
+									<figgroup>
+										<image align="center" href="../../images/OCV041005L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig>
+									<title>Smart-Key</title>
+									<figgroup>
+										<image align="center" href="../../images/OMV033004.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Der Handsender enthält eine 3 V-Lithium-Batterie, die normalerweise mehrere Jahre lang nicht ausgewechselt werden muss. Wenn die Batterie ersetzt werden muss, gehen Sie wie folgt vor:</p>
+			<ol>
+				<li>
+					<p>Führen Sie einen schmalen Gegenstand in die Gehäusenut und hebeln Sie das Handsendergehäuse vorsichtig auseinander.</p>
+				</li>
+				<li>
+					<p>Hebeln Sie die Abdeckung der Batterie (für den Fernbedienungsschlüssel) mit einem flachen Werkzeug vorsichtig auf.</p>
+				</li>
+				<li>
+					<p>Ersetzen Sie die alte Batterie durch eine neue Batterie.</p>
+					<ul>
+						<li>
+							<p>Fernbedienungsschlüssel: CR2032</p>
+						</li>
+						<li>
+							<p>Smart-Key: CR2450</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Bauen Sie die Batterie in der umgekehrten Reihenfolge des Ausbaus ein.</p>
+				</li>
+			</ol>
+			<p>Besuchen Sie zum Austausch der Fernbedienung einen Kia-Vertragshändler oder Servicepartner.</p>
+			<note type="warning">
+				<p>DIESES PRODUKT ENTHÄLT EINE KNOPFBATTERIE</p>
+				<p>Das Verschlucken einer Lithium-Knopfbatterie kann innerhalb von 2 Stunden zu schweren oder tödlichen Verletzungen führen.</p>
+				<p>Bewahren Sie Batterien außerhalb der Reichweite von Kindern auf.</p>
+				<p>Wenn Sie glauben, dass eine Batterie verschluckt oder in den Körper eingeführt wurde, suchen Sie sofort einen Arzt auf.</p>
+			</note>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Der Handsender ist so konzipiert, dass er für Jahre problemlos arbeitet. Es können jedoch Störungen auftreten, wenn er Feuchtigkeit oder elektrostatischer Aufladung ausgesetzt wird. Wenn Sie nicht sicher sind, wie Sie die Batterie verwenden oder ersetzen sollen, wenden Sie sich an einen autorisierten Kia-Händler oder Servicepartner.</p>
+					</li>
+					<li>
+						<p>Bei Verwendung der falschen Batterie funktioniert die Fernbedienung oder der Smart-Key ggf. nicht richtig. Stellen Sie sicher, dass eine korrekte Batterie eingesetzt wird.</p>
+					</li>
+					<li>
+						<p>Um eine Beschädigung des Handsenders oder Smart-Keys zu vermeiden, lassen Sie ihn nicht fallen oder nass werden und setzen Sie ihn nicht großer Hitze oder Sonneneinstrahlung aus.</p>
+					</li>
+					<li>
+						<p>Setzen Sie die Batterie des Schlüssels immer mit der richtigen Polarität ein. Falsches Einsetzen kann zu Fehlfunktionen des Schlüssels oder zu einer vorzeitigen Entladung der Batterie führen.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution">
+				<p>Nicht sachgemäß entsorgte Batterien können eine Gefahr für die Umwelt und die Gesundheit darstellen.</p>
+				<p>Entsorgen Sie die Batterie entsprechend den vor Ort geltenden Gesetzen oder Vorschriften.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0034.dita#CL4m_HEV-ca_ES-2027-t0034" role="parent" scope="local" type="concept">
+				<linktext>Schlüssel</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

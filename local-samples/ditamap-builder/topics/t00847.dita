@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00847">
+	<title id="e05300">Tires and wheels</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>tires and wheels</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table otherprops="legal_eu_std_002_03 legal_eu_std_002_02 legal_eu_std_004_02 legal_eu_std_004_03" frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e05301">
+			<tgroup cols="12" colsep="1" rowsep="1">
+				<colspec colnum="1" colname="col1" colwidth="1.43*"/>
+				<colspec colnum="2" colname="col2" colwidth="1.52*"/>
+				<colspec colnum="3" colname="col3" colwidth="1.43*"/>
+				<colspec colnum="4" colname="col4" colwidth="1*"/>
+				<colspec colnum="5" colname="col5" colwidth="1.02*"/>
+				<colspec colnum="6" colname="col6" colwidth="1*"/>
+				<colspec colnum="7" colname="col7" colwidth="1.02*"/>
+				<colspec colnum="8" colname="col8" colwidth="1.04*"/>
+				<colspec colnum="9" colname="col9" colwidth="1.11*"/>
+				<colspec colnum="10" colname="col10" colwidth="1.27*"/>
+				<colspec colnum="11" colname="col11" colwidth="1.42*"/>
+				<colspec colnum="12" colname="col12" colwidth="2.36*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="col1" morerows="2" align="center" valign="middle">
+							<p>Item</p>
+						</entry>
+						<entry colname="col2" morerows="2" align="center" valign="middle">
+							<p>Tire size</p>
+						</entry>
+						<entry colname="col3" morerows="2" align="center" valign="middle">
+							<p>Wheel size</p>
+						</entry>
+						<entry namest="col4" nameend="col5" morerows="1" align="center" valign="middle">
+							<p otherprops="legal_eu_std_002_03">Load capacity</p>
+						</entry>
+						<entry namest="col6" nameend="col7" morerows="1" align="center" valign="middle">
+							<p>Speed capacity</p>
+						</entry>
+						<entry namest="col8" nameend="col11" align="center" valign="middle">
+							<p otherprops="legal_eu_std_002_02">Inflation pressure [bar (psi, kPa)]</p>
+						</entry>
+						<entry colname="col12" morerows="2" align="center" valign="middle">
+							<p>Wheel lug nut torque kgf·m (lbf·ft, N·m)</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="col8" nameend="col9" align="center" valign="middle">
+							<p otherprops="legal_eu_std_004_02">Normal load</p>
+						</entry>
+						<entry namest="col10" nameend="col11" align="center" valign="middle">
+							<p otherprops="legal_eu_std_004_03">Maximum load</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col4" align="center" valign="middle">
+							<p>LI <sup>*1</sup> </p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>kg</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>SS <sup>*2</sup> </p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p>km/h</p>
+						</entry>
+						<entry colname="col8" align="center" valign="middle">
+							<p>Front</p>
+						</entry>
+						<entry colname="col9" align="center" valign="middle">
+							<p>Rear</p>
+						</entry>
+						<entry colname="col10" align="center" valign="middle">
+							<p>Front</p>
+						</entry>
+						<entry colname="col11" align="center" valign="middle">
+							<p>Rear</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry morerows="2" align="center" valign="middle">
+							<p>Full size tire</p>
+						</entry>
+						<entry colname="col2" align="center" valign="middle">
+							<p>235/60 R18</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>7.5J x 18</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>107</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>975</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>V</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p>240</p>
+						</entry>
+						<entry align="center" valign="middle" nameend="col9" namest="col8">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.6 (38, 260)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.75 (40, 275)</p>
+						</entry>
+						<entry align="center" valign="middle" morerows="2">
+							<p>11–13</p>
+							<p>(79–94, 107–127)</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="col2" align="center" valign="middle">
+							<p>235/55 R19</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>8.0J x 19</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">
+							<p>105</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>925</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>V</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p>240</p>
+						</entry>
+						<entry align="center" valign="middle" nameend="col9" namest="col8">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.6 (38, 260)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.75 (40, 275)</p>
+						</entry>
+					</row>
+					<row>
+						<entry colname="col2" align="center" valign="middle">
+							<p>255/45 R20</p>
+						</entry>
+						<entry colname="col3" align="center" valign="middle">
+							<p>8.0J X 20</p>
+						</entry>
+						<entry colname="col4" align="center" valign="middle">105</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>925</p>
+						</entry>
+						<entry colname="col6" align="center" valign="middle">
+							<p>W</p>
+						</entry>
+						<entry colname="col7" align="center" valign="middle">
+							<p>270</p>
+						</entry>
+						<entry align="center" valign="middle" nameend="col9" namest="col8">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.7 (39, 270)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.75 (40, 275)</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>*1. Load Index</p>
+		<p>*2. Speed Symbol</p>
+		<note type="caution">
+			<p>When replacing tires, use the same size originally supplied with the vehicle.</p>
+			<p>Using tires of a different size can damage the related parts or make it work irregularly.</p>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>We recommend that when replacing tires, use the same originally supplied with the vehicles.</p>
+					<p>If not, that affects driving performance.</p>
+				</li>
+				<li>
+					<p>When driving in high altitude grades, it is natural for the atmospheric pressure to decrease.</p>
+					<p>Therefore, please check the tire pressure and add more air when necessary.</p>
+					<p>Additionally required tire air pressure per km above sea level: 1.5 psi/km</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

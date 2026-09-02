@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00716">
+	<title>Display and control</title>
+	<conbody>
+		<p>You can see the status of the Highway Lane Change Assist function operation in the Driving Assist view on the cluster. Refer to <xref type="concept" href="t00146.dita#t00146">LCD display</xref>.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02393">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e02394">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Z126.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e02395">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Z098_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Highway Lane Change Assist function will be displayed as below depending on the status of the function.</p>
+		<ol outputclass="callout">
+			<li>
+				<p>Highway Lane Change Assist indicator</p>
+				<ul>
+					<li>
+						<p>Green (<image align="center" href="../../images/WKIA_086.eps" scale="15" placement="inline"/>) on: Ready state</p>
+					</li>
+					<li>
+						<p>Green (<image align="center" href="../../images/WKIA_086.eps" scale="15" placement="inline"/>) blink: Operating state</p>
+					</li>
+					<li>
+						<p>Gray (<image align="center" href="../../images/WKIA_086.eps" scale="15" placement="inline"/>) on: Standby state</p>
+					</li>
+					<li>
+						<p>White (<image align="center" href="../../images/WKIA_086.eps" scale="15" placement="inline"/>) blink: Canceled state (display only a certain time)</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Lane line</p>
+				<p>The lane line is displayed identical to Highway Lane Change Assist indicator (1). However, the lane detection availability will be showed on Standby state.</p>
+			</li>
+			<li>
+				<p>Green arrow and shade</p>
+				<p>The green arrow is displayed when a certain amount of time has passed after the function has started operating, and until the lane change has completed.</p>
+			</li>
+			<li>
+				<p>Message</p>
+				<ul>
+					<li>
+						<p>Message is displayed when the function does not operate even though the turn signal lever is used.</p>
+					</li>
+					<li>
+						<p>Message is displayed when the function is canceled while operating.</p>
+					</li>
+				</ul>
+			</li>
+		</ol>
+		<p>Highway Lane Change Assist function will turn on when the following conditions are satisfied.</p>
+		<ul>
+			<li>
+				<p>The Driving Assist button or Lane Driving Assist button is used to turn on Highway Driving Assist.</p>
+			</li>
+			<li>
+				<p>The <term translate="no">OK</term> button is pressed on the steering wheel while a message asking to use Highway Lane Change Assist is displayed on the cluster.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

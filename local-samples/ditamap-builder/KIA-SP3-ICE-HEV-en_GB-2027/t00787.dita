@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00787">
+	<title>Automatic accident reporting</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04790">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04791">
+								<image align="center" href="images/N_SP327_D10_006_2_E.jpg" scale="95" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol id="e04792">
+								<li>
+									<p>System operation in the event of a traffic accident</p>
+								</li>
+								<li>
+									<p>Connection with the Public Safety Answering Point (PSAP)</p>
+								</li>
+								<li>
+									<p>Emergency services</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The Emergency Call (eCall) System automatically makes an emergency call to the Public Safety Answering Point (PSAP) to request appropriate rescue operations in the event of a vehicle accident.</p>
+		<p>For the purpose of providing appropriate emergency services response and support, the Emergency Call (eCall) System automatically transmits the accident data to the Public Safety Answering Point (PSAP) when a traffic accident is detected.</p>
+		<p>In this case, the emergency call cannot be hung up by pressing the <term translate="no">SOS</term> button and the Emergency Call (eCall) System remains connected until the emergency service officer, receiving the call, disconnects the emergency call.</p>
+		<p>In minor traffic accidents, the Emergency Call (eCall) System may not execute an emergency call. However, an emergency call may be made manually by pressing the <term translate="no">SOS</term> button.</p>
+		<note type="caution" id="e04793">
+			<p>Operation of the system is impossible in case of absence of cellular transmission and GPS and Galileo signals.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00786.dita#t00786" role="parent" scope="local" type="concept">
+				<linktext>Emergency Call (eCall) System operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

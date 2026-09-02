@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00656">
+	<title>Camera Settings</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04022">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04023">
+								<image href="images/N_SP327_C00_006_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e04024">
+								<li>
+									<p><uicontrol>Camera Settings</uicontrol></p>
+								</li>
+								<li>
+									<p><uicontrol>Display Contents</uicontrol></p>
+								</li>
+								<li>
+									<p><uicontrol>Display Settings</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>While the vehicle is <term translate="no">ON</term>, tap the setup icon (<image href="images/WKIA_152.jpg" scale="15" align="left" placement="inline"/>) or tap <menucascade><uicontrol>Setup</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver Assistance</uicontrol><uicontrol>Parking Safety</uicontrol><uicontrol>Camera Settings</uicontrol></menucascade> on the infotainment system screen to change the Rear View Monitor settings.</p>
+		<p><uicontrol>Extended Rear View Monitor</uicontrol></p>
+		<p>If you activate the Extended Rear View Monitor setting, the rear camera view continues to display when you shift from R (Reverse) to N (Neutral) or D (Drive).</p>
+		<p><uicontrol>Rear View Parking Guidance</uicontrol></p>
+		<p>If you activate the Rear View Parking Guidance setting, Rear View Parking Guidance and Top Rear View Parking Guidance display on the rear monitor.</p>
+		<p><uicontrol>Display settings</uicontrol></p>
+		<p>You can set the brightness (day/night) and contrast of the camera image in Display settings.</p>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>Depending on your vehicle’s specifications, the settings menu may not be available.</p>
+				</li>
+				<li>
+					<p>The horizontal lines displayed by Rear View Parking Guidance indicate distances from your vehicle of 0.5 m (20 in), 1 m (40 in), and 2.3 m (91 in).</p>
+				</li>
+				<li>
+					<p>The horizontal scale displayed by Top View Parking Guidance indicates tailgate opening distances and the 1.5 m (60 in) distance from your vehicle.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00654.dita#t00654" role="parent" scope="local" type="concept">
+				<linktext>Rear View Monitor settings</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

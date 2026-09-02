@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00043">
+	<title>Armed stage</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>theft-alarm system
+					<indexterm>armed stage</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>After you park the vehicle, follow these ol to arm the Theft-alarm system:</p>
+		<section id="e00221">
+			<sectiondiv>
+				<p>Using the smart key</p>
+				<ol id="e00222">
+					<li>
+						<p>Press the <term translate="no">ENGINE START/STOP</term> button in the <term translate="no">OFF</term> position.</p>
+					</li>
+					<li>
+						<p>Make sure that all the doors, the hood, and the tailgate are closed and latched.</p>
+					</li>
+					<li>
+						<p>To lock the doors, press the button on the front outside door handle with the smart key in your possession.</p>
+						<p>After you complete these steps, the hazard warning lights blink once to indicate that the system is armed. If any door, the tailgate, or the hood remains open, the theft-alarm system will not arm, the hazard warning lights will not blink, and the chime will not sound. You can also arm the system by using the key to lock the doors; however, the hazard warning lights will not blink.</p>
+					</li>
+					<li>
+						<p>Press the smart key’s lock button to lock the doors.</p>
+						<p>After you complete these ol, the hazard warning lights blink once to indicate that the system is armed.</p>
+					</li>
+				</ol>
+			</sectiondiv>
+			<sectiondiv>
+				<p>Using the remote key</p>
+				<ol id="e00223">
+					<li>
+						<p>Turn off the engine and remove the ignition key from the ignition switch.</p>
+					</li>
+					<li>
+						<p>Make sure that all doors (and tailgate), the engine hood are closed and latched.</p>
+					</li>
+					<li>
+						<p>Lock the doors by pressing the lock button on the remote key. After completion of the steps above, the hazard warning lights will blink once to indicate that the system is armed.</p>
+						<p>If any door (and tailgate) or engine hood remains open, the hazard warning lights won't operate and theft-alarm will not arm. After this, if all doors (and tailgate) and engine hood are closed, the hazard warning lights blink once.</p>
+					</li>
+				</ol>
+				<note type="note" id="e00224">
+					<ul id="e00225">
+						<li>
+							<p>The theft-alarm system can be deactivated by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+						</li>
+						<li>
+							<p>Do not arm the system until all passengers have left the vehicle. If the system is armed while passengers remain in the vehicle, the alarm may activate when the remaining passengers leave the vehicle. If you open any door, the tailgate, or the hood within 30 seconds after the system is armed, the system will be disarmed to prevent unnecessary alarm.</p>
+						</li>
+					</ul>
+				</note>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00042.dita#t00042" role="parent" scope="local" type="concept">
+				<linktext>Theft-alarm system </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

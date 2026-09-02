@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00605">
+	<title>Temporarily canceling Smart Cruise Control</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03791">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03792">
+								<image href="images/OCL4M055105N.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03793">
+								<li>
+									<p><uicontrol>Smart Cruise Control deactivated</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>If Smart Cruise Control is temporarily canceled automatically, a warning message appears on the instrument cluster, and an audible warning sounds.</p>
+		<p>Smart Cruise Control is temporarily canceled automatically when:</p>
+		<ul>
+			<li>
+				<p>Your speed is above 190 km/h (120 mph) (HEV: 150 km/h (95 mph)).</p>
+			</li>
+			<li>
+				<p>Decelerating the vehicle below 20 km/h (13 mph) (MT (manual transmission), if equipped).</p>
+			</li>
+			<li>
+				<p>The vehicle is stopped for a certain period of time</p>
+			</li>
+			<li>
+				<p>You continuously engage the accelerator pedal for a certain period of time</p>
+			</li>
+			<li>
+				<p>The Smart Cruise Control operating conditions are not satisfied</p>
+			</li>
+			<li>
+				<p>When the gear is in N (Neutral), R (Reverse), P (Park), or in a non-shiftable condition.</p>
+			</li>
+			<li>
+				<p>When the Vehicle Stability Control (ESC) or ABS is turned off.</p>
+			</li>
+			<li>
+				<p>When the engine is operating at high RPM.</p>
+			</li>
+			<li>
+				<p>When the electronic parking brake (<term translate="no">EPB</term>) is engaged.</p>
+			</li>
+			<li>
+				<p>Engine RPM is low (MT (manual transmission) models, if equipped).</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>If Smart Cruise Control is temporarily canceled while the vehicle is at a standstill with the function activated, <term translate="no">EPB</term> (Electronic Parking Brake) may be applied.</p>
+		</note>
+		<note type="warning">
+			<p>When Smart Cruise Control is temporarily canceled, the distance from the vehicle ahead will not be maintained. Always have your eyes on the road and, if necessary, engage the brake pedal to reduce your speed and maintain a safe distance.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00602.dita#t00602" role="parent" scope="local" type="concept">
+				<linktext>Smart Cruise Control display and control</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

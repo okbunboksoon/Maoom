@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" otherprops="legal_gen_std_008_01" id="CL4m_HEV-ca_ES-2027-t0783">
+	<title>Notruf-System (eCall)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>UAE eCall System</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e01336">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01337">
+								<figgroup>
+									<image href="../../../images/OCL4M064025.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e01338">
+								<li>
+									<p>Verkehrsunfall</p>
+								</li>
+								<li>
+									<p>Kabelloses Netzwerk</p>
+								</li>
+								<li>
+									<p>Notrufzentrale (PSAP, Public Safety Answering Point)</p>
+								</li>
+								<li>
+									<p>Rettung</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Das Fahrzeug ist mit einer Vorrichtung<fn><p>Wie in der Bedienungsanleitung beschrieben, ist im Fahrzeug ein Notruf-System-Gerät (eCall) installiert, das für die Verbindung mit dem Notruf-System (eCall) zuständig ist.</p></fn>ausgestattet, die mit dem Notruf-System (eCall) verbunden ist, um in einer Notsituation einen Anruf an Nothilfeteams zu tätigen. Das Notruf-System (eCall) ist ein automatischer Notrufdienst, der bei einem Verkehrsunfall oder anderen<fn><p>Mit „andere Unfälle“ sind alle Unfälle auf den Straßen im Nahen Osten (nur in Ländern mit Regelung für dieses System) gemeint, die zu Verletzten bzw. Hilfsbedarf geführt haben. Zur Meldung eines Unfalls stoppen Sie das Fahrzeug, drücken die <term translate="no">SOS</term>-Taste (zur Anordnung der Taste siehe Bild im Notruf-System (eCall). Während des Anrufs erfasst das System Informationen zu dem Fahrzeug (von dem der Anruf getätigt wird). Anschließend verbindet es das Fahrzeug mit einem Mitarbeiter der Notrufzentrale (PSAP), damit der Fahrer den Grund für den Notruf erklären kann.</p></fn>Unfällen auf den Straßen des Mittleren Ostens ausgelöst wird. (nur in Ländern mit Vorschriften für dieses System)</p>
+		<p>Das System ermöglicht die Kontaktaufnahme mit einem Mitarbeiter der Notrufzentrale (PSAP) bei Unfällen auf den Straßen des Nahen Ostens. (nur in Ländern mit Vorschriften für dieses System)</p>
+		<p>Das Notrufsystem (eCall) übermittelt gemäß den Bedingungen, die in der Bedienungsanleitung sowie im Garantie- und Servicebuch genannt sind, Daten an die Notrufzentrale (PSAP, Public Safety Answering Point) wie Informationen zum Standort des Fahrzeugs, Fahrzeugtyp, VIN (Fahrzeug-Identifizierungsnummer).</p>
+		<p>Nachdem die in dem Notruf-System (eCall) gespeicherten Daten an den Notdienst gesendet wurden, um dem Fahrer und den Fahrzeuginsassen mit geeigneten Rettungsmaßnahmen zu helfen, werden die Daten nach Abschluss der Rettungsmaßnahme gelöscht.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0732-CH11.dita#CL4m_HEV-ca_ES-2027-t0732-CH11" role="parent" scope="local" type="concept">
+				<linktext>Maßnahmen bei einem Notfall</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

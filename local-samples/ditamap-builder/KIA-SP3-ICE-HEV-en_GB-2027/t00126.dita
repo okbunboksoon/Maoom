@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" base="Top" id="t00126">
+	<title>Electric Chromic Mirror (ECM)</title>
+	<shortdesc>The ECM automatically controls the glare from the headlights of vehicles behind you at night or in low-light driving conditions.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>inside rear view mirror
+					<indexterm>electronic chromic mirror (ECM)</indexterm>
+				</indexterm>
+				<indexterm>electric chromic mirror (ECM)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The sensor mounted on the rearview mirror detects the light level around the vehicle and automatically controls the headlamp glare from the vehicles behind you when the engine is running.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00124.dita#t00124" role="parent" scope="local" type="concept">
+				<linktext>Inside rearview mirror </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="CL4m_HEV-ca_ES-2027-t0327">
+	<title>Verwendung der Kofferraumabdeckung</title>
+	<taskbody>
+		<context>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MW035013L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</context>
+		<steps>
+			<step>
+				<cmd>Ziehen Sie die Kofferraumabdeckung mit dem Griff (1) in Richtung Fahrzeugheck.</cmd>
+			</step>
+			<step>
+				<cmd>Setzen Sie den Führungsstift in die Führung (2) ein.</cmd>
+				<info>
+					<note type="note">
+						<p>Ziehen Sie die Kofferraumabdeckung an dem Griff in der Mitte heraus, damit der Führungsstift aus der Führung nicht herausfällt.</p>
+					</note>
+				</info>
+			</step>
+			<stepsection>
+				<p>Wenn die Kofferraumabdeckung nicht verwendet wird:</p>
+			</stepsection>
+			<step>
+				<cmd>Ziehen Sie die Kofferraumabdeckung nach hinten und oben, um sie aus der Führung zu lösen.</cmd>
+			</step>
+			<step>
+				<cmd>Das Ladungssicherungsgitter wird automatisch wieder einfahren.</cmd>
+			</step>
+		</steps>
+		<postreq>
+			<note type="note">
+				<p>Die Kofferraumabdeckung wird möglicherweise nicht automatisch wieder eingezogen, wenn sie zuvor nicht ganz herausgezogen wurde. Ziehen Sie sie ganz heraus und lassen Sie sie dann los.</p>
+			</note>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0326.dita#CL4m_HEV-ca_ES-2027-t0326" role="parent" scope="local" type="concept">
+				<linktext>Kofferraumabdeckung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

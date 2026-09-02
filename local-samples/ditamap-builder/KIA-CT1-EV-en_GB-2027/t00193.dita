@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00193">
+	<title>Controlling the wipers</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00903">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="53*"/>
+				<colspec colnum="2" colname="2" colwidth="47*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00904">
+								<figgroup>
+									<image href="../../images/N_CT25C073.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e00905">
+								<li>
+									<p>Front wiper speed control</p>
+								</li>
+								<li>
+									<p>Intermittent control wipe time adjustment/Auto control wipe time adjustment</p>
+								</li>
+								<li>
+									<p>Wash with brief wipes</p>
+								</li>
+							</ol>
+							<p importance="optional">if equipped</p>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" colsep="0">
+							<fig id="e00906">
+								<figgroup>
+									<image href="../../images/N_CT25C034_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+					<row>
+						<entry colname="1" colsep="0">
+							<fig id="e00907">
+								<figgroup>
+									<image href="../../images/N_CT25C033_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul id="e00908">
+				<li>
+					<p>Move or turn the switch to the dedicated position.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul id="e00909">
+				<li>
+					<p>Move or turn the switch to the dedicated position.</p>
+					<ul id="e00910">
+						<li>
+							<p> <term translate="no">MIST</term> (1x): Single wipe</p>
+						</li>
+						<li>
+							<p> <term translate="no">OFF</term> (0): Off</p>
+						</li>
+						<li>
+							<p> <term translate="no">INT</term>: Intermittent wipe</p>
+							<p> <term translate="no">AUTO</term> *: Auto control wipe</p>
+						</li>
+						<li>
+							<p> <term translate="no">LO</term> (1): Low wiper speed</p>
+						</li>
+						<li>
+							<p> <term translate="no">HI</term> (2): High wiper speed</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<p importance="optional">if equipped</p>
+		</section>
+	</conbody>
+</concept>

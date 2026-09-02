@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00207">
+	<title id="e01566">Window opening and closing</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>windows 
+					<indexterm>window opening and closing</indexterm>
+				</indexterm>
+				<indexterm>window opening and closing</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>You can open and close windows using the power window switch.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01567">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01568">
+								<figgroup>
+									<image align="center" height="1.575in" placement="break" width="2.244in" href="../../images/OOV035084.eps" id="e01569"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ul id="e01570">
+								<li>
+									<p>Type A: 1</p>
+								</li>
+								<li>
+									<p>Type B - Auto up/down window (if equipped): 1, 2</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To open or close a window, press down or pull up the front portion of the corresponding switch to the first detent position (1).</p>
+		<p>Pressing or pulling up the power window switch momentarily to the second detent position (2) completely lowers or raises the window even when the switch is released. To stop the window at the desired position while the window is in operation, pull up or press down and release the switch.</p>
+		<section>
+			<title>To reset the power windows</title>
+			<p>If the power window does not operate normally, the automatic power window system must be reset as follows:</p>
+			<ol id="e01571">
+				<li>
+					<p>Turn the <term translate="no">EV</term> button to the <term translate="no">DRIVE READY</term> position.</p>
+				</li>
+				<li>
+					<p>Close the window and continue pulling up the power window switch for at least 1 second after the window is completely closed.</p>
+				</li>
+			</ol>
+		</section>
+		<section importance="optional" id="e01572">
+			<title id="e01573">Automatic reversal</title>
+			<p>If the upward movement of the window is blocked by an object or part of the body, the window will detect the resistance and will stop upward movement. The window will then lower approximately 30 cm (11.8 inches) to allow the object to be cleared.</p>
+			<p>If the window detects the resistance while the power window switch is pulled up continuously, the window will stop upward movement then lower approximately 2.5 cm (1 inch).</p>
+			<p>And if the power window switch is pulled up continuously again within 5 seconds after the window is lowered by the automatic window reversal feature, the automatic window reversal will not operate.</p>
+			<note type="note">
+				<p>The automatic reverse feature for the window is only active when the “auto up” feature is used by fully pulling up the switch. The automatic reverse feature will not operate if the window is raised using the halfway position on the power window switch.</p>
+				<p>Do not install any accessories on the windows. The automatic reverse feature may not operate.</p>
+			</note>
+			<note type="warning" id="e01574">
+				<p>Always check for obstructions before raising any window to avoid injuries or vehicle damage. If an object less than 4 mm (0.16 of an inch) in diameter is caught between the window glass and the upper window channel, the automatic reverse window may not detect the resistance and will not stop and reverse direction.</p>
+			</note>
+			<note type="warning" id="e01575">
+				<p>The automatic reverse feature is not activated while resetting power window system.</p>
+				<p>Make sure body parts or other objects are safely out of the way before closing the windows to avoid injuries or vehicle damage.</p>
+				<p>If a rollover risk is detected, any open windows may automatically close to protect the occupants.(if equipped with auto up and down safety windows). However, if a certain level of force is detected while the window is closing, the window may reopen to ensure safety.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

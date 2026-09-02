@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0374">
+	<title>ISG-Fehlfunktion</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OMQ4033168.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Das System funktioniert nicht, wenn:</p>
+		<ul>
+			<li>
+				<p>Ein Problem mit den ISG-Sensoren oder dem ISG-System auftritt.</p>
+			</li>
+		</ul>
+		<p>Die gelbe Kontrollleuchte <term translate="no">AUTO</term> STOP (<image align="left" href="../../images/WKIA_075.eps" scale="15" placement="inline"/>) am Kombiinstrument leuchtet weiter auf.</p>
+		<note type="warning">
+			<p>Befindet sich der Motor im ISG-Modus, sollte der Motor neu starten, ohne dass der Fahrer eingreift. Bevor Sie das Fahrzeug verlassen und Arbeiten am Motorraum durchführen, halten Sie den Motor an, indem Sie den Zündschalter oder den <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR_START/STOPP) in die Position <term translate="no">LOCK/OFF</term> bringen oder den Zündschlüssel abziehen.</p>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn das ISG-System weiterhin nicht richtig funktioniert, sollten Sie Ihr Fahrzeug so bald wie möglich von einer Fachwerkstatt überprüfen lassen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+				<li>
+					<p>Wenn die Taste ISG <term translate="no">OFF</term> leuchtet, erlischt sie möglicherweise, wenn Sie maximal 2 Stunden schneller als 80 km/h fahren und den Lüfterdrehzahlregler maximal in die zweite Stellung bewegen. Wenn die Taste ISG <term translate="no">OFF</term> trotzdem weiter leuchtet, sollten Sie Ihr Fahrzeug so bald wie möglich von einer Fachwerkstatt überprüfen lassen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+				<li>
+					<p>Wenn die AGM-Batterie erneut angeschlossen oder ausgetauscht wird, funktioniert das ISG-System nicht sofort. Wenn Sie das ISG-System verwenden wollen, muss der Batteriesensor bei ausgeschalteter Zündung für etwa 4 Stunden kalibriert werden. Schalten Sie den Motor nach dem Kalibrieren zwei- oder dreimal ein und aus.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0372.dita#CL4m_HEV-ca_ES-2027-t0372" role="parent" scope="local" type="concept">
+				<linktext>Kontrollleuchte des ISG-Systems</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

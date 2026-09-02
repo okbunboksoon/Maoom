@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00818">
+	<title>Checking tire inflation pressure</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02621">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02622">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25F016_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Operation</title>
+			<ol>
+				<li>
+					<p>After injecting the sealant, drive the vehicle for approximately 7–10 km (4.3-6.2 mile) or about 10 minutes, and then park in a safe place.</p>
+				</li>
+				<li>
+					<p>Connect the compressor and the tire connection hose directly to the tire valve.</p>
+				</li>
+				<li>
+					<p>Connect between compressor and the vehicle power outlet connector using the cable and connectors.</p>
+				</li>
+				<li>
+					<p>Refer to the <xref type="concept" href="t00872.dita#t00872">Tires and wheels</xref> or the <xref type="concept" href="t00022.dita#t00022">Vehicle certification label/tire specification and pressure label</xref> to check the tire pressure and adjust it to the specified pressure.</p>
+				</li>
+				<li>
+					<p>To increase the tire pressure, turn on the compressor and adjust the pressure to the specified tire pressure.</p>
+				</li>
+				<li>
+					<p>To decrease the tire pressure, turn the tire pressure adjustment knob to adjust to the appropriate tire pressure.</p>
+				</li>
+				<li>
+					<p>To check the current tire pressure, temporarily turn off the compressor.</p>
+				</li>
+			</ol>
+			<note type="warning">
+				<ul>
+					<li>
+						<p>Do not let the compressor run for more than 10 minutes, otherwise the device will overheat and may be damaged.</p>
+					</li>
+					<li>
+						<p>The tire pressure must meet the specified pressure (refer to the <xref type="concept" href="t00872.dita#t00872">Tires and wheels</xref>). If not, immediately stop driving and have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>If the inflation pressure is not maintained, drive the vehicle a second time, refer to <xref type="concept" href="t00817.dita#t00817">Distributing the sealant</xref>. Then repeat the steps.</p>
+					</li>
+					<li>
+						<p>The TMK may not cover tire punctures larger than approximately 4 mm. In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+					</li>
+					<li>
+						<p>We recommend that you contact a professional workshop if the tire cannot be made roadworthy with the Tire Mobility Kit.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note">
+				<p>When reinstalling the repaired or replaced tire and wheel on the vehicle, tighten the wheel lug nut to 11–13 kgf·m (79–94 lbf·ft).</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

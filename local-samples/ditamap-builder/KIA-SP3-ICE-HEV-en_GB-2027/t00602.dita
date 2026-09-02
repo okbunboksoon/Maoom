@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00602">
+	<title>Smart Cruise Control display and control</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>smart cruise control (SCC)
+					<indexterm>display and control</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>You can see the status of Smart Cruise Control operation in the Driving Assist view on the instrument cluster. Refer to <xref href="t00155.dita#t00155"/>.</p>
+		<p>Smart Cruise Control is displayed as shown in the following image (depending on the status of the function):</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03782">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03783">
+								<image href="images/N_SP3i25_C00_028_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>When operating:</p>
+				<ol outputclass="callout">
+					<li>
+						<p>Shows whether there is a vehicle ahead and displays the selected distance level</p>
+					</li>
+					<li>
+						<p>Displays the set speed</p>
+					</li>
+					<li>
+						<p>Shows whether there is a vehicle ahead and displays the target vehicle distance</p>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<p>When temporarily canceled:</p>
+				<ol outputclass="callout">
+					<li>
+						<p>Shows your vehicle (gray)</p>
+					</li>
+					<li>
+						<p>Displays the previous set speed (gray)</p>
+					</li>
+					<li>
+						<p>Shows whether there is a vehicle ahead (gray)</p>
+					</li>
+				</ol>
+			</li>
+		</ul>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>The instrument cluster displays the distance from the vehicle ahead according to the actual distance between that vehicle and yours.</p>
+				</li>
+				<li>
+					<p>The target distance may vary according to the vehicle speed and the set distance level. If the vehicle speed is low, even though the vehicle distance has changed, the change of the target vehicle distance may be small.</p>
+				</li>
+				<li>
+					<p>The objects displayed on the instrument cluster may differ from the actual surroundings.</p>
+				</li>
+				<li>
+					<p>The images or colors may display differently depending on the specifications of the instrument cluster or theme.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00593.dita#t00593" role="parent" scope="local" type="concept">
+				<linktext>Smart Cruise Control operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

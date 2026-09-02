@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00840">
+	<title>Description of the eCall in-vehicle system</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02696">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="58*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="42*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02697">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25F005_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02698">
+								<li>
+									<p> <term translate="no">SOS</term> Button</p>
+								</li>
+								<li>
+									<p>Crash signal</p>
+								</li>
+								<li>
+									<p>Emergency Call System</p>
+								</li>
+								<li>
+									<p>Antenna</p>
+								</li>
+								<li>
+									<p>MIC</p>
+								</li>
+								<li>
+									<p>Speaker</p>
+								</li>
+								<li>
+									<p>LEDs</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Overview of the eCall in-vehicle system, its operation and functionalities: refer to this section. The eCall service is a public service of general interest and is accessible free of charge.</p>
+		<p>The eCall in-vehicle system begins its continuous monitoring for emergency calls from the <term translate="no">ON</term> stage. It is activated automatically by means of in-vehicle sensors in the event of a severe accident.</p>
+		<p>It will also be triggered automatically when the vehicle is equipped with a TPS system which does not function in the event of a severe accident.</p>
+		<p>The eCall in-vehicle system can also be triggered manually, if needed. Instructions for manual activation of the system: refer to this section.</p>
+		<p>In the event of a critical system failure that would disable the eCall in-vehicle system, the following warning will be given to the occupants of the vehicle: refer to this section.</p>
+	</conbody>
+</concept>

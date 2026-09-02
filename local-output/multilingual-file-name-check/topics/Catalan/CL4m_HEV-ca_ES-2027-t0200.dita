@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0200">
+	<title>Sicherheitsgurtwarnung für Rücksitze</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OMQ4053160.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e00552">
+								<li>
+									<p>Links</p>
+								</li>
+								<li>
+									<p>Mitte</p>
+								</li>
+								<li>
+									<p>Rechts</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section otherprops="legal_eu_std_027_03">
+			<title>Für den linken und rechten Rücksitz (für Europa, Australien und Neuseeland)</title>
+			<p>Als Erinnerung für den Fondpassagier leuchten die Warnleuchten für den Sicherheitsgurt des Fondpassagiers jedes Mal, wenn Sie den Zündschalter oder die Taste <term translate="no">ENGINE START/STOP</term> auf <term translate="no">ON</term> stellen, etwa 6 Sekunden lang auf, unabhängig davon, ob der Gurt angelegt ist oder nicht.</p>
+			<p>Wenn Sie ohne Sicherheitsgurt losfahren oder den Sicherheitsgurt öffnen und langsamer als 20 km/h (12 mph) fahren, leuchtet die entsprechende Warnleuchte weiter.</p>
+			<p>Wenn Sie ohne angelegten Sicherheitsgurt losfahren oder bei einer Fahrgeschwindigkeit über 20 km/h (12 mph) den Sicherheitsgurt öffnen, wird etwa 35 Sekunden lang ein Warnton für den Sicherheitsgurt ausgegeben, außerdem blinkt die entsprechende Warnleuchte.</p>
+		</section>
+		<section otherprops="legal_eu_std_027_04">
+			<title>Für den mittleren Rücksitz (für Europa, Australien und Neuseeland)</title>
+			<p>Als Erinnerung für den Fondpassagier leuchten die Warnleuchten für den Sicherheitsgurt des Fondpassagiers jedes Mal, wenn Sie den Zündschalter oder die Taste <term translate="no">ENGINE START/STOP</term> auf <term translate="no">ON</term> stellen, etwa 6 Sekunden lang auf, unabhängig davon, ob der Gurt angelegt ist oder nicht.</p>
+			<p>Wenn Sie ohne angelegten Sicherheitsgurt losfahren, leuchtet die Gurtwarnleuchte etwa 70 Sekunden lang auf.</p>
+			<p>Wenn Sie bei einer Fahrgeschwindigkeit unter 20 km/h (12 mph) den Sicherheitsgurt öffnen, leuchtet die Gurtwarnleuchte etwa 70 Sekunden lang auf.</p>
+			<p>Wenn Sie den Sicherheitsgurt bei einer Geschwindigkeit über 20 km/h (12 mph) öffnen, ertönt das akustische Warnsignal für den Sicherheitsgurt etwa 35 Sekunden lang, und die entsprechende Warnleuchte blinkt.</p>
+			<p>Wenn die Heckklappe bei einer Fahrgeschwindigkeit unter 10 km/h (6 mph) geöffnet oder geschlossen wird, warnen Warnlicht und Warnton nicht, auch wenn die Fahrgeschwindigkeit 20 km/h (12 mph) übersteigt.</p>
+		</section>
+		<section>
+			<title>Für alle Rücksitze (außer Europa, Australien und Neuseeland)</title>
+			<p>Als Erinnerung für den Fondpassagier leuchten die Warnleuchten für den Sicherheitsgurt des Fondpassagiers jedes Mal, wenn Sie den Zündschalter oder die Taste <term translate="no">ENGINE START/STOP</term> auf <term translate="no">ON</term> stellen, etwa 6 Sekunden lang auf, unabhängig davon, ob der Gurt angelegt ist oder nicht.</p>
+			<p>Wenn Sie ohne angelegten Sicherheitsgurt losfahren, leuchtet die Gurtwarnleuchte etwa 70 Sekunden lang auf.</p>
+			<p>Wenn Sie bei einer Fahrgeschwindigkeit unter 20 km/h (12 mph) den Sicherheitsgurt öffnen, leuchtet die Gurtwarnleuchte etwa 70 Sekunden lang auf.</p>
+			<p>Wenn Sie den Sicherheitsgurt bei einer Geschwindigkeit über 20 km/h (12 mph) öffnen, ertönt das akustische Warnsignal für den Sicherheitsgurt etwa 35 Sekunden lang, und die entsprechende Warnleuchte blinkt.</p>
+			<p>Wenn die Heckklappe bei einer Fahrgeschwindigkeit unter 10 km/h (6 mph) geöffnet oder geschlossen wird, warnen Warnlicht und Warnton nicht, auch wenn die Fahrgeschwindigkeit 20 km/h (12 mph) übersteigt.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0197.dita#CL4m_HEV-ca_ES-2027-t0197" role="parent" scope="local" type="concept">
+				<linktext>Sicherheitsgurtwarnung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

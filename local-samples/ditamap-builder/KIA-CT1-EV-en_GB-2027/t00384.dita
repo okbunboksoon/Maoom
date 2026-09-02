@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00384">
+	<title>Internal air circulation</title>
+	<conbody>
+		<p>This function automatically switches the air conditioning system to air intake control mode based on the navigation map information and the speed of the vehicle to prevent polluted air from entering the cabin when passing through a tunnel or an area with a smell.</p>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Climate</uicontrol><uicontrol>Internal air circulation</uicontrol></menucascade> on the Infotainment System screen.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Climate</uicontrol><uicontrol>Internal air circulation</uicontrol></menucascade> on the Infotainment System screen.</p>
+					<ul>
+						<li>
+							<p> <uicontrol>Activation on washer fluid use:</uicontrol> Washer fluid scent is automatically prevented from entering the cabin.</p>
+						</li>
+						<li>
+							<p> <uicontrol>Activation upon entering a tunnel:</uicontrol> Automatic closing of windows and activation of internal air circulation upon entering a tunnel.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>About 7 seconds before the vehicle enters the tunnel, the air conditioning system automatically switches to indoor circulation mode <image href="../../images/WKIA_295.eps" scale="15" align="left" placement="inline"/>.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operating condition(s)</title>
+			<ul>
+				<li>
+					<p>When the vehicle is driving on a highway (or motorway)</p>
+				</li>
+				<li>
+					<p>When the air conditioning system is in fresh air intake mode</p>
+				</li>
+			</ul>
+			<note type="caution">
+				<p>Be careful not to get any part of your body caught when the window is closed.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00766">
+	<title>Towing service</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>towing
+					<indexterm>towing service</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04685">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04686">
+								<image href="images/N_SP3i26_C11_013_I.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e04687">
+								<image href="images/N_SP3i26_C11_014_2_I.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e04688">
+			<li>
+				<p>Wheel dollies</p>
+			</li>
+		</ol>
+		<p>If towing is necessary, we recommend having it done by an authorized Kia dealer or a commercial tow-truck service.</p>
+		<p>Proper lifting and towing procedures are necessary to prevent damage to the vehicle. The use of wheel dollies (1) or flatbed is recommended.</p>
+		<note type="warning" id="e04689">
+			<p>Side and curtain air bag</p>
+			<p>If your vehicle is equipped with side and curtain air bag, set the vehicle to <term translate="no">ACC</term> position when the vehicle is being towed. The side and curtain air bag may deploy when the vehicle is in <term translate="no">ON</term> position and the rollover sensor detects the situation as a rollover.</p>
+		</note><?oxy_comment_start author="june" timestamp="20250912T145002+0900" comment="4륜 구동 장치 있을 경우 문구 추가
+
+ICE
+
+The AWD vehicle should never be towed with the wheels on the ground. Always use wheel dollies or flatbed. If not, the transmission and the AWD system could be seriously damaged.
+
+4륜 구동 장치 없을 경우 문구 삭제
+
+EV
+
+The AWD vehicle should never be towed with the wheels on the ground. Always use wheel dollies or flatbed. If not, the power electric system and the AWD system could be seriously damaged."?>
+		<note type="caution" id="e04690">
+			<p>The AWD vehicle should never be towed with the wheels on the ground. Always use wheel dollies or flatbed. If not, the transmission and the AWD system could be seriously damaged.</p>
+		</note><?oxy_comment_end?>
+		<note type="note" id="e04691">
+			<ul id="e04692">
+				<li>
+					<p>Shift to N (Neutral) to tow a vehicle with the tires on the ground. For more details, refer to <xref href="t00380.dita#t00380"/><xref href="t00388.dita#t00388"/>.</p>
+				</li>
+				<li>
+					<p>If the Electronic Parking Brake (<term translate="no">EPB</term>) does not release normally, load your vehicle onto a flatbed tow truck and have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00765.dita#t00765" role="parent" scope="local" type="concept">
+				<linktext>Towing</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

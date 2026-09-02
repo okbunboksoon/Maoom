@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legal_eu_std_001_02" base="Anywhere" id="t00843">
+	<title otherprops="legal_eu_std_001_02">Reference weight when towing a trailer</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>reference weight when towing a trailer</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc" id="e05290">
+			<tgroup cols="4" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="1.16*"/>
+				<colspec colnum="2" colname="2" colwidth="1.64*"/>
+				<colspec colnum="3" colname="3" colwidth="1.14*"/>
+				<colspec colnum="4" colname="4" colwidth="1*"/>
+				<thead>
+					<row rowsep="1">
+						<entry namest="1" nameend="2" morerows="2">
+							<p>Item</p>
+						</entry>
+						<entry namest="3" nameend="4">
+							<p>Weight</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry namest="3" nameend="4">
+							<p>Extended type</p>
+						</entry>
+					</row>
+					<row>
+						<entry>
+							<p>2WD</p>
+						</entry>
+						<entry colname="4">
+							<p>AWD</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1" valign="middle">
+						<entry colname="1" morerows="1" align="left" valign="middle">
+							<p>Maximum trailer weight</p>
+						</entry>
+						<entry colname="2" align="left" valign="middle">
+							<p>With brake system</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>1,200 kg (2,646 lbs.)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>1,800 kg (3,968 lbs.)</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry colname="2" align="left" valign="middle">
+							<p>Without brake system</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>750 kg (1,653 lbs.)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>750 kg (1,653 lbs.)</p>
+						</entry>
+					</row>
+					<row rowsep="1" valign="middle">
+						<entry namest="1" nameend="2" align="left" valign="middle">
+							<p>Maximum permissible static vertical load on the coupling device</p>
+						</entry>
+						<entry align="center" valign="middle" namest="3" nameend="4">
+							<p>100 kg (220 lbs.)</p>
+						</entry>
+					</row>
+					<row rowsep="0" valign="middle">
+						<entry namest="1" nameend="2" align="left" valign="middle">
+							<p>Recommended distance from rear wheel center to coupling point</p>
+						</entry>
+						<entry align="center" valign="middle" namest="3" nameend="4">
+							<p>1,031 mm (40.6 in)</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>* Please contact your local authorized Kia dealer for the specs of your region.</p>
+	</conbody>
+</concept>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00291">
+	<title>Charging current</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q018_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol>AC Charging Settings</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Charging current</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>You can adjust the charging current for an AC charger. Select an appropriate charging current.</p>
+			</li>
+			<li>
+				<p>If the charging process does not start or abruptly stops in the middle, select another proper current and try charging the vehicle again.</p>
+			</li>
+			<li>
+				<p>Charging time varies depending on which charging current is selected.</p>
+			</li>
+			<li>
+				<p>In the case of some AC high-capacity chargers (chargers with a current capacity greater than the current capacity that can be received by the vehicle), there may be no change in charging current even if the setting is changed.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

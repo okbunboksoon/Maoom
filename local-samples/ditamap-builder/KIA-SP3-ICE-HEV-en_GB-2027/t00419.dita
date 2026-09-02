@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00419">
+	<title>Brake Assistant System (BAS)</title>
+	<shortdesc>The BAS provides additional pressure when you momentarily and strongly engage the brake pedal in situations where sudden braking is required.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle safety system
+					<indexterm>brake assistant system (BAS)</indexterm>
+				</indexterm>
+				<indexterm>brake assistant system (BAS)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>The BAS reduces the time required for the ABS control to activate, and consequently reduces the braking distance, by providing additional pressure to the brakes up to the point of ABS intervention.</p>
+		<section id="e02846">
+			<title>BAS operation</title>
+			<p>The BAS operates under the following circumstances:</p>
+			<ul id="e02847">
+				<li>
+					<p>Your vehicle speed is above 30 km/h (20 mph) and the ABS control is not activated.</p>
+				</li>
+				<li>
+					<p>You have fully engaged the brake pedal over a certain level.</p>
+				</li>
+				<li>
+					<p>The friction of the road surface is above a certain level.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e02848">
+			<title>BAS operation OFF</title>
+			<p>The BAS does not operate under the following circumstances:</p>
+			<ul id="e02849">
+				<li>
+					<p>Your speed is below 10 km/h (6 mph).</p>
+				</li>
+				<li>
+					<p>You engage the brake pedal in certain road conditions.</p>
+				</li>
+				<li>
+					<p>The friction of the road surface is below a certain level.</p>
+				</li>
+			</ul>
+			<note type="tip" id="e02850">
+				<p>The system operates depending on your driving habits, the vehicle speed, the degree to which you engage the brake pedal, and the conditions of the road surface.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00413.dita#t00413" role="parent" scope="local" type="concept">
+				<linktext>Vehicle safety system</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

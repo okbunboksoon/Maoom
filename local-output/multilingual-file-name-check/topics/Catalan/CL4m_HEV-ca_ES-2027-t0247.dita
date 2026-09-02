@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0247">
+	<title id="e00632">Airbag-Warnleuchte <image align="left" href="../../images/WKIA_027.eps" scale="15" placement="inline"/></title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Airbag-Warn- und Kontrollleuchte
+					<indexterm>Airbag-Warnleuchte</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Betriebsbedingungen</title>
+			<ul>
+				<li>
+					<p>Bei laufendem Motor muss die Warnleuchte etwa 3–6 Sekunden aufleuchten und dann erlöschen.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Fehlfunktion</title>
+			<ul>
+				<li>
+					<p>Die Airbag-Warnleuchte schaltet sich nicht kurz ein, wenn das Fahrzeug läuft.</p>
+				</li>
+				<li>
+					<p>Die Airbag-Warnleuchte erlischt nicht nach ca. 3 bis 6 Sekunden Leuchtdauer.</p>
+				</li>
+				<li>
+					<p>Die Airbag-Warnleuchte schaltet sich ein, während das Fahrzeug sich bewegt.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0246.dita#CL4m_HEV-ca_ES-2027-t0246" role="parent" scope="local" type="concept">
+				<linktext>Airbag-Warn- und Kontrollleuchte </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

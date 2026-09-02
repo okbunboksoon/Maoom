@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00630">
+	<title>Forward Attention Warning disabled</title>
+	<conbody>
+		<p>When there is an object right in front of the in-cabin camera or between the driver and the in-cabin camera for a certain period of time, Forward Attention Warning does not operate properly. If this occurs, the warning message appears on the instrument cluster for several seconds, the Forward attention warning light (<image href="../../images/WKIA_353.eps" scale="15" align="left" placement="inline"/>) lights up on the instrument cluster, and an audible warning sounds until it is working properly.</p>
+		<p>Warning message: <uicontrol>Forward attention warning disabled. Camera obscured</uicontrol> </p>
+		<p>If the object is removed or the in-cabin camera is able to detect the driver’s face, the function will operate normally. If Forward Attention Warning does not operate properly after the object is removed, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Do not impact the surface of the in-cabin camera or around the in-cabin camera. If the in-cabin camera is damaged, Forward Attention Warning may not work properly.</p>
+				</li>
+				<li>
+					<p>Do not place anything such as cellular phone on the in-cabin camera or in front of the in-cabin camera while driving. The in-cabin camera may not operate properly.</p>
+				</li>
+				<li>
+					<p>When cleaning the in-cabin camera, wipe with a soft and clean cloth to prevent damage to the surface of the in-cabin camera lens. In addition, do not use sharp tools near the in-cabin camera and do not use chemicals to clean the in-cabin camera.</p>
+				</li>
+				<li>
+					<p>Always keep the in-cabin camera and its surroundings clean and dry.</p>
+				</li>
+				<li>
+					<p>Do not place foreign objects, such as stickers, etc. around the infrared LED located near the in-cabin camera.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip">
+			<p>Two red lights may appear on the in-cabin camera in the following conditions:</p>
+			<ul>
+				<li>
+					<p>The outside brightness is dim or when driving at night</p>
+				</li>
+				<li>
+					<p>The vehicle drives inside a building, such as a basement car park, garage or tunnel</p>
+				</li>
+				<li>
+					<p>The camera case is partially broken</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

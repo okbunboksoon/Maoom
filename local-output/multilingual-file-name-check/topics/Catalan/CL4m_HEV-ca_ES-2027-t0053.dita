@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0053">
+	<title>Türschlösser von außen bedienen</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Türschlösser
+					<indexterm>Türschlösser von außen bedienen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Mechanischer Schlüssel</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M036014L_2.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ol>
+				<li>
+					<p>Ziehen Sie an dem Türgriff.</p>
+				</li>
+				<li>
+					<p>Drücken Sie mit einem Schlitzschraubendreher auf den Hebel im unteren Teil der Abdeckung.</p>
+				</li>
+				<li>
+					<p>Drücken Sie die Abdeckung heraus, während Sie auf den Hebel drücken.</p>
+				</li>
+				<li>
+					<p>Drehen Sie den Schlüssel zur Rückseite des Fahrzeugs, um das Fahrzeug zu entriegeln, und zur Vorderseite des Fahrzeugs, um es zu verriegeln.</p>
+				</li>
+			</ol>
+		</section>
+		<section>
+			<title id="e00141">Mit dem Smart-Key </title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<title>Tastentyp</title>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M036437L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e00142">
+									<title>Drucksensortyp</title>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M036438L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p><indexterm>Türschlösser<indexterm>mit dem Smart-Key</indexterm></indexterm>Mit dem Smart-Key können Sie die Fahrzeugtüren (und Kofferraum/Heckklappe) ver- und entriegeln. Sie können auch das Fahrzeug starten. Weitere Details finden Sie unten.</p>
+			<sectiondiv id="e00143"><ph id="e00144">Verriegeln </ph>
+				<p>Durch Drücken der Taste oder Berühren des Sensors am Türgriff der vorderen Fahrertür bei geschlossenen Türen und entriegelter Tür werden alle Türen verriegelt. Wenn alle Türen und die Motorhaube geschlossen sind, blinkt die Warnblinkanlage einmal, um anzuzeigen, dass alle Türen verriegelt sind.</p>
+				<p>Die Taste/der Sensor funktioniert nur, wenn sich der Smart-Key in einem Abstand von 0,7 bis 1 m (28–40 Zoll) zum vorderen Türgriff befindet. Wenn Sie sich vergewissern wollen, ob eine Tür verriegelt ist oder nicht, ziehen Sie am vorderen Türgriff.</p>
+				<p>Auch wenn Sie den Knopf/Sensor des vorderen Türgriffs drücken, werden die Türen nicht verriegelt und der Signalton ertönt 3 Sekunden lang, wenn eines der folgenden Ereignisse eintritt:</p>
+				<ul id="e00145">
+					<li id="e00146">
+						<p>Der Smart-Key befindet sich im Fahrzeug.</p>
+					</li>
+					<li id="e00147">
+						<p>Der Zündschalter oder der Motorknopf befindet sich in der Position <term translate="no">ACC</term> oder <term translate="no">ON</term>.</p>
+					</li>
+					<li id="e00148">
+						<p>Jede Tür mit Ausnahme des Kofferraums/der Heckklappe ist geöffnet.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv id="e00149"><ph id="e00150">Entriegeln </ph>
+				<p>Wenn Sie bei geschlossenen und verriegelten Türen die Taste des vorderen Türgriffs drücken oder die Hand in der Türgrifftasche erkannt wird, werden alle Türen entriegelt. Die Warnblinker leuchten zweimal kurz auf, um anzuzeigen, dass alle Türen entriegelt sind.</p>
+				<p>Die Taste/der Sensor funktioniert nur, wenn sich der Smart-Key in einem Abstand von 0,7 bis 1 m (28–40 Zoll) zum vorderen Türgriff befindet.</p>
+				<p>Wenn der Smart-Key nicht weiter als 0,7 bis 1 m (28–40 Zoll) vom Türgriff der Vordertür entfernt ist, können die Fahrgäste ihre Türen auch ohne den Smart-Key öffnen.</p>
+				<p>Nach Drücken der Taste oder Berühren des Sensors werden die Türen automatisch verriegelt, wenn Sie nicht innerhalb von 30 Sekunden eine Tür öffnen.</p>
+			</sectiondiv>
+			<note type="note" id="e00151">
+				<ul id="e00152">
+					<li>
+						<p>Bei kaltem und feuchtem Wetter kann es vorkommen, dass das Türschloss und die Funktion des Schließmechanismus durch Vereisung gestört werden.</p>
+					</li>
+					<li>
+						<p>Wenn das Türschloss mehrmals kurz nacheinander mit dem Fahrzeugschlüssel oder Türschlossschalter ver- und entriegelt wird, schaltet sich die Anlage vorübergehend ab, um den Stromkreis zu schützen und die Beschädigung von Systemkomponenten zu verhindern.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning" id="e00153">
+				<ul id="e00154">
+					<li>
+						<p>Wenn Sie die Tür nicht sicher schließen, kann sie sich wieder öffnen.</p>
+					</li>
+					<li>
+						<p>Achten Sie beim Schließen der Tür darauf, dass Sie niemanden einklemmen.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning" id="e00155">
+				<p>Wenn sich Personen bei sehr hohen oder sehr niedrigen Außentemperaturen über eine längere Zeit im Fahrzeug aufhalten, besteht Verletzungs- bzw. Lebensgefahr. Verschließen Sie das Fahrzeug nicht von außen, wenn sich noch Personen darin befinden.</p>
+			</note>
+			<note type="caution" id="e00156">
+				<p>Öffnen und schließen Sie Türen nicht wiederholt und üben Sie während des Betriebs der Türschließfunktion keine übermäßige Kraft auf die Tür aus.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0052.dita#CL4m_HEV-ca_ES-2027-t0052" role="parent" scope="local" type="concept">
+				<linktext>Türschlösser </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

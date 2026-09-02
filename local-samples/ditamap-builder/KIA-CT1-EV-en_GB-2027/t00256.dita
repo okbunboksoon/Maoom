@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00256">
+	<title id="e01166">Air bag warning light <image align="left" href="../../images/WKIA_027.eps" scale="15" placement="inline"/></title>
+	<conbody>
+		<section deliveryTarget="except_print" id="e01167">
+			<title>Operating condition(s)</title>
+			<ul id="e01168">
+				<li>
+					<p>When the vehicle is turned to <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term>, the air bag warning light should appear for approximately 3–6 seconds and go off.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01169">
+			<title>Malfunction</title>
+			<ul id="e01170">
+				<li>
+					<p>The air bag warning light does not turn on briefly when the vehicle is turned to <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term>.</p>
+				</li>
+				<li>
+					<p>The air bag warning light stays on after illuminating for approximately 3–6 seconds.</p>
+				</li>
+				<li>
+					<p>The air bag warning light comes on while the vehicle is moving.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

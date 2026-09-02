@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00369">
+	<title>Overview</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01561">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="53*"/>
+				<colspec colnum="2" colname="2" colwidth="47*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e01562">
+								<figgroup>
+									<image href="../../images/N_CT25C037_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<fig id="e01563">
+								<figgroup>
+									<image href="../../images/N_CT25C038_E.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Driver only select icon</p>
+			</li>
+			<li>
+				<p> <term translate="no">SYNC</term> icon</p>
+				<ul>
+					<li>
+						<p>Touch the <term translate="no">SYNC</term> icon to adjust the driver and passenger side temperature to the same value.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Mode selection icon</p>
+			</li>
+			<li>
+				<p>Fan speed control/OFF icon</p>
+			</li>
+			<li>
+				<p>Infotainment system screen <term translate="no">ON/OFF</term> icon</p>
+			</li>
+			<li>
+				<p>Front-windshield defroster icon</p>
+			</li>
+			<li>
+				<p>Rear-window defroster icon</p>
+			</li>
+			<li>
+				<p>Air intake control icon</p>
+			</li>
+			<li>
+				<p>Air conditioning <term translate="no">A/C</term> icon</p>
+			</li>
+			<li>
+				<p> <term translate="no">AUTO</term> (automatic control) icon</p>
+			</li>
+			<li>
+				<p>Driver’s side temperature control lever</p>
+			</li>
+			<li>
+				<p>Fan speed control/OFF lever</p>
+			</li>
+			<li>
+				<p>Mode selection lever</p>
+			</li>
+			<li>
+				<p>Passenger’s side temperature control lever</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00582">
+	<title>Increasing set speed</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e03709">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e03710">
+								<figgroup>
+									<image href="images/N_SP3i25_B10_047_1_IR.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e03711">
+			<li>
+				<p>Push the (+) switch up and release it immediately. The set speed will increase by 1 km/h (1 mph) increments.</p>
+			</li>
+			<li>
+				<p>To increase the set speed quickly, push and hold the (+) switch. The set speed will increase in increments of 10. If the cluster speed unit is mph, it will increase in multiples of 5.</p>
+				<p>You can set a maximum speed of 180 km/h (110 mph).</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00580.dita#t00580" role="parent" scope="local" type="concept">
+				<linktext>Cruise Control operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

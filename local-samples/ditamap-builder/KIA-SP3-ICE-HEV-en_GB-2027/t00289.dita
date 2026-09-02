@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00289">
+	<title>Hybrid battery cooling duct (Hybrid vehicle)</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e01872">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e01873">
+								<title>Inlet duct</title>
+								<image href="images/OSG2HQ011016.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The hybrid battery cooling duct is located below the rear seats. The cooling duct cools down the hybrid battery. When the hybrid battery cooling duct is blocked, the hybrid battery might overheat.</p>
+		<p>Clean the cooling duct for the hybrid battery with a dry cloth on a regular basis.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Never clean the cooling duct of the hybrid battery with a wet cloth. If any water enters the cooling duct of the hybrid battery, the hybrid battery might cause an electric shock, resulting in a serious damage, injury, or death.</p>
+				</li>
+				<li>
+					<p>Lithium-ion composes the hybrid battery. The hybrid battery is dangerous to the environment if improperly handled. The hybrid battery might also cause electric shock and severe burns, resulting in serious injury or death.</p>
+				</li>
+				<li>
+					<p>Do not spill liquid on the cooling duct of the hybrid battery. Doing so is very dangerous, and might cause electric shock or serious injury.</p>
+				</li>
+				<li>
+					<p>Do not cover the cooling duct with objects.</p>
+				</li>
+				<li>
+					<p>Do not put any objects into the cooling duct of the hybrid battery. Doing so might cause loss of the cooling duct volume. If any objects block the cooling duct, immediately contact a Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>Never place a container of liquid on or near the cooling duct. Spilled liquid might damage the hybrid battery (located in the trunk).</p>
+				</li>
+				<li>
+					<p>Before driving, secure all luggage in the trunk to prevent the luggage from being tossed around. When a sharp or heavy load strikes with a strong impact or pierces the trunk’s interior wall, the hybrid battery system might be damaged, deteriorating its performance.</p>
+				</li>
+				<li>
+					<p>Do not obstruct the cooling duct with any other objects.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00287.dita#t00287" role="parent" scope="local" type="concept">
+				<linktext>Hybrid vehicle components</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00181">
+	<title>Headlight delay function</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>lighting
+					<indexterm>headlight delay function</indexterm>
+				</indexterm>
+				<indexterm>headlight delay function</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>If you set the vehicle to <term translate="no">OFF</term> or to <term translate="no">ON</term> position with the headlamps on, the headlamps and position lamps will remain on for approximately 5 minutes.</p>
+		<p>When the vehicle is off and the driver’s door is opened and shut, the headlamps and position lamps will turn off after 15 seconds.</p>
+		<p>You can turn off the headlamps and position lamps by pressing the smart key’s lock button twice or turning the light switch to the <term translate="no">OFF</term> or <term translate="no">AUTO</term> position. Keep in mind that the headlamps will not turn off if you turn the light switch to the <term translate="no">AUTO</term> position when it is dark outside.</p>
+		<p>You can activate or deactivate the headlight delay function in the <uicontrol>Settings</uicontrol> menu on the infotainment system screen. If your vehicle is equipped with additional navigation features, refer to the infotainment system manual supplied separately.</p>
+		<note type="note" id="e01106">
+			<p>If the driver exits the vehicle through any door other than the driver’s, the battery saver function will not operate, and the headlight delay function will not turn off automatically.</p>
+			<p>In this case, the 12V battery may discharge. To avoid 12V battery discharge, turn the headlamps off manually using the headlight switch before exiting the vehicle.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00179.dita#t00179" role="parent" scope="local" type="concept">
+				<linktext>Lighting</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

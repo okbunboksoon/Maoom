@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00663">
+	<title>Rear view</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04455">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e04456">
+								<figgroup>
+									<image href="../../images/OOV055017.eps" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<p>(2) View switching button</p>
+							<p>(3) Back button</p>
+							<p>(4) Infotainment system operation button</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Operating conditions</title>
+			<p>The Rear View function will turn on under the following conditions:</p>
+			<ul>
+				<li>
+					<p>Shifting the gear to R (Reverse).</p>
+				</li>
+				<li>
+					<p>Pressing the Parking/View button (1) while P (Park), N (Neutral) or D (Drive) and the vehicle speed is slower than 10 km/h (6 mph)</p>
+				</li>
+			</ul>
+			<p>Pressing the View switching button (2) with the Rear top view on the screen allows you to select rear top view, rearview, or rear wide view.</p>
+		</section>
+		<section>
+			<title>Off conditions</title>
+			<p>The Rear View while driving function will turn off under the following conditions while parking:</p>
+			<ul>
+				<li>
+					<p>Shifting the gear to P (Park)</p>
+				</li>
+				<li>
+					<p>Pressing the Parking/View button (1)</p>
+				</li>
+				<li>
+					<p>Pressing the back button (3) on the rear monitor screen</p>
+				</li>
+				<li>
+					<p>Pressing the infotainment system operation button (4)</p>
+				</li>
+				<li>
+					<p>N (Neutral) or D (Drive) and the vehicle speed is faster than 10 km/h (6 mph)</p>
+				</li>
+			</ul>
+			<note type="note">
+				<p>Rear View will not turn off when the vehicle is in R (Reverse).</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

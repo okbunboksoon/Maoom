@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00427">
+	<title>DRIVE MODE characteristics</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>drive mode integrated control system 
+					<indexterm>drive mode characteristics</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e03119">
+			<title>DRIVE MODE</title>
+			<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1" id="e03120">
+				<desc>
+					<p importance="default">: for GT</p>
+				</desc>
+				<tgroup cols="7" colsep="1" outputclass="formatc" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="19*"/>
+					<colspec colname="col2" colnum="2" colwidth="18*"/>
+					<colspec colname="col3" colnum="3" colwidth="15*"/>
+					<colspec colname="col4" colnum="4" colwidth="16*"/>
+					<colspec colname="col5" colnum="5" colwidth="16*"/>
+					<colspec colnum="6" colname="newCol7" colwidth="16*"/>
+					<colspec colnum="7" colname="col6" colwidth="16*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1">
+								<p> <term>DRIVE MODE</term> </p>
+							</entry>
+							<entry colname="col2">
+								<p> <term>ECO</term> </p>
+							</entry>
+							<entry colname="col3">
+								<p> <term>NORMAL</term> </p>
+							</entry>
+							<entry colname="col4">
+								<p> <term>SPORT</term> </p>
+							</entry>
+							<entry colname="col5">
+								<p> <term>MY DRIVE</term> </p>
+							</entry>
+							<entry>
+								<p> <uicontrol>GT*</uicontrol> </p>
+							</entry>
+							<entry colname="col6">
+								<p> <term>SNOW</term> </p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>Characteristics</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>High electric energy economy mode</p>
+							</entry>
+							<entry align="center" colname="col3" valign="middle">
+								<p>Normal driving mode</p>
+							</entry>
+							<entry align="center" colname="col4" valign="middle">
+								<p>Sporty driving mode</p>
+							</entry>
+							<entry align="center" colname="col5" valign="middle">
+								<p>Adjusts modes of each driving system</p>
+							</entry>
+							<entry>
+								<p>More sportier and firm riding mode</p>
+							</entry>
+							<entry align="center" colname="col6" valign="middle">
+								<p>Snow driving</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>Button activation</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p>Press</p>
+							</entry>
+							<entry align="center" colname="col3" valign="middle">
+								<p>Press</p>
+							</entry>
+							<entry align="center" colname="col4" valign="middle">
+								<p>Press</p>
+							</entry>
+							<entry align="center" colname="col5" valign="middle">
+								<p>Press</p>
+							</entry>
+							<entry>
+								<p>Press</p>
+							</entry>
+							<entry align="center" colname="col6" valign="middle">
+								<p>Press</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>Cluster indicator</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p> <term>ECO</term> </p>
+							</entry>
+							<entry align="center" colname="col3" valign="middle">
+								<p> <term>-</term> </p>
+							</entry>
+							<entry align="center" colname="col4" valign="middle">
+								<p> <term>SPORT</term> </p>
+							</entry>
+							<entry align="center" colname="col5" valign="middle">
+								<p> <term>MY</term> </p>
+							</entry>
+							<entry align="center">
+								<p> <term>GT</term> </p>
+							</entry>
+							<entry align="center" colname="col6" valign="middle">
+								<p> <term>SNOW</term> </p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>Regenerative braking level</p>
+							</entry>
+							<entry align="center" nameend="newCol7" namest="col2">
+								<p>0–3 (Existing value maintained regardless of drive mode)</p>
+							</entry>
+							<entry align="center" colname="col6" valign="middle">
+								<p>0–1</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section id="e03121">
+			<title>Infotainment system</title>
+			<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1" id="e03122">
+				<desc>*: if equipped 
+				</desc>
+				<tgroup cols="7" colsep="1" outputclass="formatc" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="26*"/>
+					<colspec colname="col2" colnum="2" colwidth="13*"/>
+					<colspec colname="col3" colnum="3" colwidth="14*"/>
+					<colspec colname="col4" colnum="4" colwidth="13*"/>
+					<colspec colname="col5" colnum="5" colwidth="16*"/>
+					<colspec colnum="6" colname="newCol6" colwidth="16*"/>
+					<colspec colname="col6" colnum="7" colwidth="16*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1">
+								<p> <term>DRIVE MODE</term> </p>
+							</entry>
+							<entry colname="col2">
+								<p> <term>ECO</term> </p>
+							</entry>
+							<entry colname="col3">
+								<p> <term>NORMAL</term> </p>
+							</entry>
+							<entry colname="col4">
+								<p> <term>SPORT</term> </p>
+							</entry>
+							<entry colname="col5">
+								<p> <term>MY DRIVE</term> </p>
+							</entry>
+							<entry>
+								<p> <uicontrol>GT*</uicontrol> </p>
+							</entry>
+							<entry colname="col6">
+								<p> <term>SNOW</term> </p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>Climate system control</p>
+							</entry>
+							<entry align="center" colname="col2" valign="middle">
+								<p> <term>ECO</term> / <term>NORMAL</term> *</p>
+							</entry>
+							<entry align="center" colname="col3" valign="middle">
+								<p> <term>NORMAL</term> </p>
+							</entry>
+							<entry align="center" colname="col4" valign="middle">
+								<p> <term>NORMAL</term> </p>
+							</entry>
+							<entry align="center" colname="col5" valign="middle">
+								<p> <term>NORMAL</term> </p>
+							</entry>
+							<entry align="center">
+								<p> <uicontrol translate="no">NORMAL</uicontrol> </p>
+							</entry>
+							<entry align="center" colname="col6" valign="middle">
+								<p> <term>NORMAL</term> </p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry align="center" colname="col1">
+								<p>Brake mode</p>
+							</entry>
+							<entry align="center" nameend="col6" namest="col2">
+								<p> <term>NORMAL</term> / <term>SPORT</term> * (Mode can be set in infotainment system regardless of drive mode)</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<note type="note" id="e03123">
+				<ul id="e03124">
+					<li>
+						<p>If there is a problem with the instrument cluster, the drive mode will be in <term>NORMAL</term> mode and may not change to <term>ECO</term> mode or <term>SPORT</term> mode.</p>
+					</li>
+					<li>
+						<p>Efficiency depends on the driver’s driving habit and road condition.</p>
+					</li>
+					<li>
+						<p>In <term>SPORT</term> mode, the electric energy economy may decrease.</p>
+					</li>
+					<li>
+						<p>When <uicontrol>GT</uicontrol> mode is selected, automatically changed to ESC Limited State and the ESC OFF indicator light (ESC OFF) comes on.</p>
+					</li>
+					<li>
+						<p>Limiting the ESC function during rapid acceleration or cornering on a slippery road can cause the vehicle to suddenly skid, leading to a dangerous situation. It is recommended to switch to <uicontrol>GT</uicontrol> mode while driving at a constant speed on a flat, straight road or when the vehicle is stationary.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="tip" id="e03125">
+				<ul id="e03126">
+					<li>
+						<p>It is possible to set the climate system control and brake mode separately.</p>
+						<p>Select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Drive mode</uicontrol><uicontrol>Brake mode or ECO mode climate control</uicontrol></menucascade> from the infotainment system.</p>
+					</li>
+					<li>
+						<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

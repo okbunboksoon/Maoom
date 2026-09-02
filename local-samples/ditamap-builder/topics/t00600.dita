@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00600">
+	<title>Smart Cruise Control disabled</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04288">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e04289">
+								<figgroup>
+									<image href="../../images/OOV055185L.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e04290"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e04291">
+								<li>
+									<p> <uicontrol outputclass="c0040">Driver assistance system limited. Radar blocked.</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the front radar cover or sensor is covered with snow, rain, or foreign material, it can reduce the detecting performance and temporarily limit or disable Smart Cruise Control.</p>
+		<p>At this time, warning messages and Master warning light (<image align="left" href="../../images/WKIA_040.eps" outputclass="nolabel" placement="inline" scale="15"/>) are displayed on the cluster (and turn off after a certain period), but this does not indicate a malfunction of Smart Cruise Control.</p>
+		<p>Smart Cruise Control will operate properly when snow, rain or foreign material is removed. Always keep it clean.</p>
+		<note type="warning">
+			<p>Even though the warning message does not appear on the cluster, Smart Cruise Control may not properly operate.</p>
+		</note>
+		<note type="caution">
+			<p>Smart Cruise Control may not properly operate in an area (e.g. open terrain), where there is nothing to detect, or detecting sensor is covered in foreign material after turning ON the vehicle.</p>
+		</note>
+		<note type="note">
+			<p>You can check it in the service message of the utility information view of the cluster display window.</p>
+		</note>
+	</conbody>
+</concept>

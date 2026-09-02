@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0546">
+	<title>Einstellungen des Fahreraufmerksamkeits-Warnsystems</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Fahreraufmerksamkeits-Warnsystem (DAW)
+					<indexterm>Einstellungen</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M056098L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Fahrerassistenz</p>
+								</li>
+								<li>
+									<p>Fahreraufmerksamkeits-Warnsystem</p>
+								</li>
+								<li>
+									<p>Hinweis auf Weiterfahrt des vor Ihnen stehenden Fahrzeugs</p>
+								</li>
+								<li>
+									<p>Warnung unaufmerksame Fahrweise</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wählen Sie bei eingeschaltetem Fahrzeug <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Fahrerassistenz</uicontrol><uicontrol>Fahreraufmerksamkeits-Warnsystem</uicontrol><uicontrol>Hinweis auf Weiterfahrt des vor Ihnen stehenden Fahrzeugs</uicontrol></menucascade> am Infotainment-System.</p>
+		<ul>
+			<li>
+				<p><b>Abfahrwarnung vorausfahrendes Fahrzeug</b>: Das Fahreraufmerksamkeits-Warnsystem informiert den Fahrer, wenn das Fahrzeug vor ihm losfährt.</p>
+			</li>
+			<li>
+				<p><b>Warnung bei Unaufmerksamkeit</b>: Sie können die Warnung vor unaufmerksamen Fahren ein- und ausschalten. (außer Europa)</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>Wenn Sie das Fahrzeug ausschalten und neu starten, schaltet sich die Warnung bei unaufmerksamer Fahrweise automatisch ein.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0545.dita#CL4m_HEV-ca_ES-2027-t0545" role="parent" scope="local" type="concept">
+				<linktext>Fahreraufmerksamkeits-Warnsystem (DAW)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

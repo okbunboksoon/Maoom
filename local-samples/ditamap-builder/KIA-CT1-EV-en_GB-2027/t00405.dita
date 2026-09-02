@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" base="Anywhere" id="t00405">
+	<title>Sun visor</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features 
+					<indexterm>sun visor</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01661">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01662">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C132_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e01663">
+								<li>
+									<p>Bracket</p>
+								</li>
+								<li>
+									<p>Swing it to the side</p>
+								</li>
+								<li>
+									<p>Slide the sun visor</p>
+								</li>
+								<li>
+									<p>Mirror cover</p>
+								</li>
+								<li>
+									<p importance="optional">Ticket holder</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ol>
+				<li>
+					<p>Pull down and unsnap it from the bracket (1).</p>
+				</li>
+				<li>
+					<p>Swing it to the side (2).</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ol>
+				<li>
+					<p>Pull down and unsnap it from the bracket (1).</p>
+				</li>
+				<li>
+					<p>Swing it to the side (2).</p>
+					<ul>
+						<li>
+							<p>Slide the sun visor if necessary (3). Pull down and slide the mirror cover (3) to use the vanity mirror. The ticket holder (5, if equipped) is provided for the purpose of holding a tollgate ticket.</p>
+						</li>
+					</ul>
+				</li>
+			</ol>
+			<note type="note">
+				<p>Do not put several tickets in the ticket holder at one time. This could cause damage to the ticket holder.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

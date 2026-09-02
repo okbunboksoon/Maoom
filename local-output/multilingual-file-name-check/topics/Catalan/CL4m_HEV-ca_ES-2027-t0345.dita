@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0345">
+	<title id="e00788">Benzinmotor starten </title>
+	<conbody>
+		<ol id="e00789">
+			<li id="e00790">
+				<p>Nehmen Sie den Smart-Key an sich oder lassen Sie ihn im Fahrzeug.</p>
+			</li>
+			<li>
+				<p>Vergewissern Sie sich, dass die Feststellbremse fest angezogen ist.</p>
+			</li>
+			<li id="e00791">
+				<p><b>Schaltgetriebe</b> – Treten Sie das Kupplungspedal ganz durch und schalten Sie das Getriebe in den Leerlauf. Halten Sie das Kupplungspedal durchgetreten, während Sie den Zündschlüssel in die Stellung START drehen.</p>
+				<p><b>AT/DCT/IVT</b> – Stellen Sie den Schalthebel des Getriebes auf P (Parkstufe). Treten Sie kräftig auf das Bremspedal.</p>
+				<p>Sie können den Motor auch anlassen, während sich der Wählhebel in der Neutralstellung (N) befindet.</p>
+			</li>
+			<li id="e00792">
+				<p>Drücken Sie die Taste <term translate="no">ENGINE START/STOP</term>.</p>
+				<p>Er ist <b>ohne Betätigung des Gaspedals</b> zu starten.</p>
+			</li>
+			<li id="e00793">
+				<p>Warten Sie nicht darauf, dass sich der Motor erwärmt, während das Fahrzeug stillsteht.</p>
+				<p>Starten Sie mit mäßiger Motordrehzahl. (Schnelles Beschleunigen und schnelles Abbremsen vermeiden.)</p>
+			</li>
+		</ol>
+		<note type="caution">
+			<p>Drehen Sie den Zündschlüssel nicht in Position <term translate="no">START</term>, wenn der Motor läuft. Dies kann den Anlasser beschädigen.</p>
+		</note>
+		<ul>
+			<li>
+				<p>Auch wenn sich der Smart-Key im Fahrzeug befindet, kann der Motor eventuell nicht angelassen werden, wenn der Smart-Key zu weit von Ihnen entfernt ist.</p>
+			</li>
+			<li>
+				<p>Wenn sich die <term translate="no">ENGINE START/STOP</term>-Taste mindestens in Position <term translate="no">ACC</term> befindet und eine Tür geöffnet ist, prüft das System, ob der Smart-Key vorhanden ist. Wenn sich der Smart-Key nicht im Fahrzeug befindet, blinkt die Kontrollleuchte <image align="left" href="../../images/WKIA_1058.eps" scale="15" placement="inline"/> oder <image align="center" href="../../images/WKIA_131.eps" scale="15" placement="inline"/> oder die Warnung „Schlüssel ist nicht im Fahrzeug“ leuchtet auf dem LCD-Display. Wenn alle Türen geschlossen sind, ertönt das Warnsignal 5 Sekunden lang. Die Kontroll- oder Warnleuchte erlischt, wenn das Fahrzeug in Bewegung ist. Achten Sie darauf, dass Sie den Smart-Key immer bei sich haben.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<p>Der Motor springt nur an, wenn sich der Smart-Key im Fahrzeug befindet. Erlauben Sie niemals Kindern oder Personen, die mit der Bedienung Ihres Fahrzeugs nicht vertraut sind, die <term translate="no">ENGINE START/STOP</term>-Taste oder relevante Teile anzufassen.</p>
+		</note>
+		<note type="caution">
+			<p>Versuchen Sie nicht, den Wählhebel in die Parkstufe (P) zu schalten, wenn der Motor während der Fahrt aussetzt. Sofern es die Verkehrslage und der Straßenzustand erlauben, können Sie den Schalthebel auch während der Fahrt in N (Neutral) schalten und die <term translate="no">ENGINE START/STOP</term>-Taste drücken und versuchen, den Motor wieder anzulassen.</p>
+		</note>
+		<note type="caution">
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M044002.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<ul>
+				<li>
+					<p>Wenn die Batterie schwach ist oder der Smart-Key nicht einwandfrei funktioniert, können Sie den Motor starten, indem Sie die Taste <term translate="no">ENGINE START/STOP</term> mit dem Smart-Key drücken.</p>
+				</li>
+				<li>
+					<p>Wenn die Bremsschaltersicherung durchgebrannt ist, können Sie den Motor nicht auf die normale Art und Weise starten. Ersetzen Sie die Sicherung durch eine neue Sicherung. Wenn dies nicht möglich ist, können Sie den Motor starten, indem Sie die Taste <term translate="no">ENGINE START/STOP</term> 10 Sekunden lang in der Stellung <term translate="no">ACC</term> gedrückt halten. Der Motor kann anspringen, ohne dass Sie das Bremspedal treten müssen. Treten Sie jedoch zu Ihrer Sicherheit immer auf das Bremspedal, bevor Sie den Motor starten.</p>
+				</li>
+				<li>
+					<p>Wenn Sie die <term translate="no">ENGINE START/STOP</term>-Taste direkt mit dem Smart-Key betätigen, sollte der Smart-Key einen Kontakt mit dem Knopf im rechten Winkel haben.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<p>Drücken Sie die <term translate="no">ENGINE START/STOP</term>-Taste dann länger als 10 Sekunden, wenn die Bremslichtsicherung durchgebrannt ist.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0344.dita#CL4m_HEV-ca_ES-2027-t0344" role="parent" scope="local" type="concept">
+				<linktext>Motor starten </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

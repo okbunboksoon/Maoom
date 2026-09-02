@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0610">
+	<title>Anhalten des Fahrzeugs aufgrund einer Notbremsung</title>
+	<conbody>
+		<p>Eine Warnmeldung, ein Warnton und die Warnblinkanlage weisen Sie darauf hin, dass das Fahrzeug aufgrund einer Notbremsung angehalten hat.</p>
+		<p>Nachdem das Fahrzeug angehalten hat, wird Folgendes ausgeführt:</p>
+		<ul>
+			<li>
+				<p>Die Türen werden entriegelt.</p>
+			</li>
+			<li>
+				<p><term translate="no">SOS</term>-Anruf wird getätigt. (ausstattungsabhängig)</p>
+			</li>
+			<li>
+				<p><term translate="no">EPB</term> (Elektronische Feststellbremse) wird betätigt.</p>
+			</li>
+			<li>
+				<p>Schalten Sie in P (Parkstellung).</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0607.dita#CL4m_HEV-ca_ES-2027-t0607" role="parent" scope="local" type="concept">
+				<linktext>Betrieb der Notbremsung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

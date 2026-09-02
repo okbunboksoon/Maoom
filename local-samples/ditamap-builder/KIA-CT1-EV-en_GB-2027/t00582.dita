@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00582">
+	<title>Warning methods</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_TK25Z012_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol>Driver assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Warning methods</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The Warning methods can be set with the vehicle on. Select <uicontrol>Settings &gt; Vehicle &gt; Driver assistance &gt; Warning methods</uicontrol> from the settings menu in the infotainment system to change the following settings:</p>
+		<ul>
+			<li>
+				<p> <uicontrol>Warning Volume</uicontrol>: Adjusts the volume of the warning sound.</p>
+			</li>
+			<li>
+				<p importance="optional"> <uicontrol>Haptic warning</uicontrol>: Activate the steering wheel vibration warning.</p>
+			</li>
+			<li>
+				<p> <uicontrol>Driving Safety Priority</uicontrol>: Lowers all other audio volumes when the Driving Safety system sounds a warning.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Ensure that <uicontrol>Warning methods</uicontrol> you have set may apply to the <uicontrol>Warning methods</uicontrol> of other driver assistance systems.</p>
+				</li>
+				<li>
+					<p> <uicontrol>Warning methods</uicontrol> will maintain its last setting even if the vehicle is restarted.</p>
+				</li>
+				<li>
+					<p>The setting menu may not be available for your vehicle depending on the vehicle features and specifications.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

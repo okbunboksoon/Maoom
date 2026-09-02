@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00640">
+	<title>Setting speed</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25E046_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol>
+								<li>
+									<p>Accelerate to the desired speed, which must be more than 30 km/h (20 mph).</p>
+								</li>
+								<li>
+									<p>Press the Driving Assist button at the desired speed. The set speed and Cruise indicator (<image align="left" href="../../images/WKIA_357.eps" scale="18" placement="inline"/>) will appear on the cluster.</p>
+								</li>
+								<li>
+									<p>Release the accelerator pedal.</p>
+									<p>Vehicle speed will maintain the set speed even when the accelerator pedal is not depressed.</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="note">
+			<ul>
+				<li>
+					<p>The vehicle may slightly slow down or speed up while driving uphill or downhill.</p>
+				</li>
+				<li>
+					<p>The Driving Assist button symbol may vary depending on your vehicle option.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

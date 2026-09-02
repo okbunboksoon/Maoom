@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00087">
+	<title>User height setting</title>
+	<taskbody>
+		<steps>
+			<step>
+				<cmd>Position the tailgate manually to the height you prefer.</cmd>
+			</step>
+			<step>
+				<cmd>Press the power tailgate open/close button located inside the tailgate for more than 3 seconds.</cmd>
+				<info>
+					<p>If <uicontrol>User Height Setting</uicontrol> is selected for the power tailgate opening height, the power tailgate will automatically open to the height manually set by you.</p>
+					<note type="tip">
+						<ul>
+							<li>
+								<p>If the power tailgate opening height has not been manually set, the power tailgate will fully open when <uicontrol>User Height Setting</uicontrol> from the infotainment system is selected.</p>
+							</li>
+							<li>
+								<p>If one of the height setting (<uicontrol>Full Open</uicontrol> / <uicontrol>Level 3</uicontrol> / <uicontrol>Level 2</uicontrol> / <uicontrol>Level 1</uicontrol>) is selected from the settings menu in the infotainment system, and then <uicontrol>User Height Setting</uicontrol> is selected, the tailgate will open to the height manually set by you.</p>
+							</li>
+							<li>
+								<p>The power tailgate opening speed and opening height settings change according to the linked User Profile. If the User Profile is changed, power tailgate opening speed and opening height settings will change accordingly.</p>
+							</li>
+						</ul>
+					</note>
+				</info>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00086.dita#t00086" role="parent" scope="local" type="concept">
+				<linktext>Power tailgate opening height</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

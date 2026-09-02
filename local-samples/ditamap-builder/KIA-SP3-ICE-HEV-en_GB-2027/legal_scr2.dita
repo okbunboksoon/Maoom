@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00947">
+    <title>Urea solution level gauge</title>
+    <conbody>
+        <table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="table_fmr_sy3_pjc">
+            <tgroup cols="2" colsep="0" rowsep="0">
+                <colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+                <colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+                <tbody>
+                    <row rowsep="0">
+                        <entry colname="col1">
+                            <fig id="fig_gmr_sy3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4033118L.jpg" scale="95"
+                                        align="center" placement="break" id="image_hmr_sy3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                        <entry colname="col2">
+                            <p><term translate="no">A</term>: Urea Level</p>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>The urea solution level gauge indicates the approximate amount of remaining urea solution
+            inside the urea</p>
+        <p>solution tank.</p>
+        <p>The urea level gauge image pops up, whenever the vehicle is in <term translate="no"
+                >ON</term> position.</p>
+    </conbody>
+</concept>

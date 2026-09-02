@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0570">
+	<title>Totwinkelüberwachungsmonitor</title>
+	<conbody>
+		<section>
+			<title>Betriebsbedingungen</title>
+			<ul>
+				<li>
+					<p>Wenn der linke oder rechte Blinker eingeschaltet wird, wird das Bild auf dem Kombiinstrument eingeschaltet.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Ausschalt-Bedingungen</title>
+			<p>Die Totwinkelüberwachung schaltete sich aus, wenn eine der folgenden Bedingungen erfüllt ist:</p>
+			<ul>
+				<li>
+					<p>Der Blinker ist ausgeschaltet.</p>
+				</li>
+				<li>
+					<p>Die Warnblinkanlage ist eingeschaltet.</p>
+				</li>
+				<li>
+					<p>Wenn eine andere wichtige Warnung auf dem Kombiinstrument angezeigt wird.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0568.dita#CL4m_HEV-ca_ES-2027-t0568" role="parent" scope="local" type="concept">
+				<linktext>Bedienung des Totwinkelüberwachungsmonitors</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

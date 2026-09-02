@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00502">
+	<title>Collision Warning (while driving)</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03801">
+			<tgroup cols="2" colsep="1" outputclass="FormatA" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e03802">
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/OOV055004_4.eps" placement="break" width="2.243in" id="e03803"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p>The warning light on the outside rearview mirror (side view mirror) and head-up display (if equipped) will appear when the vehicle on both lanes is detected from the rear.</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>A vehicle is detected in the following conditions.</p>
+		<ul id="e03804">
+			<li>
+				<p>Your driving speed: Above 20 km/h (12 mph)</p>
+			</li>
+			<li>
+				<p>The speed of the vehicle in your blind spot area: Above 10 km/h (7 mph)</p>
+			</li>
+			<li>
+				<p>When the target enters the operating area of the function.</p>
+			</li>
+		</ul>
+		<p>With the vehicle detection state, Collision warning will alert the driver when the turn signal is activated to make a lane change with an adjacent car in the blind spot area.</p>
+		<ul id="e03805">
+			<li>
+				<p>Collision warning will alert the driver with the warning light on the outside rearview mirrors (side view mirrors) and head-up display (if equipped), steering wheel vibration and an audible warning.</p>
+			</li>
+			<li>
+				<p>When the turn signal is turned off or you move away from the lane, the collision warning will be canceled and the function will return to Vehicle detection state.</p>
+			</li>
+		</ul>
+		<p>Collision Warning operate in the following conditions.</p>
+		<ul id="e03806">
+			<li>
+				<p>Your driving speed: Above 40 km/h (24 mph)</p>
+			</li>
+			<li>
+				<p>The speed of the vehicle in your blind spot area: Above 10 km/h (7 mph)</p>
+			</li>
+			<li>
+				<p>When the target enters the operating area of the function.</p>
+			</li>
+		</ul>
+		<note type="warning" id="e03807">
+			<ul id="e03808">
+				<li>
+					<p outputclass="across">The detecting range of the front corner radar or rear corner radar is determined by a standard road width, therefore, on a narrow road, Blind-Spot Collision-Avoidance Assist may detect other vehicles two lanes over and warn you. In contrast, on a wide road, Blind-Spot Collision-Avoidance Assist may not be able to detect a vehicle driving in the next lane and may not warn you.</p>
+				</li>
+				<li>
+					<p>When the hazard warning flasher is on, the collision warning by the turn signal will not operate.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e03809">
+			<ul id="e03810">
+				<li>
+					<p>If the driver’s seat is on the left side, the collision warning may occur when you turn left. If the driver’s seat is on the right side, the collision warning may occur when you turn right.</p>
+					<p>Maintain a proper distance with the vehicles in the lane.</p>
+				</li>
+				<li>
+					<p>Images or colors may be displayed differently depending on the instrument cluster specifications or theme.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

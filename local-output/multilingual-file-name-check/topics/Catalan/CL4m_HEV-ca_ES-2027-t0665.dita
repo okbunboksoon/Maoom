@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0665">
+	<title>Hecksicht</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054108N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054018N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Betriebsbedingungen</title>
+			<p>Die Funktion Heckansicht wird unter den folgenden Bedingungen aktiviert:</p>
+			<ul>
+				<li>
+					<p>Beim Schalten in den Gang R (Rückwärtsgang).</p>
+				</li>
+				<li>
+					<p>Drücken Sie die Taste Parken/Sicht (1), während der Gang in P (Parkstellung), N (Neutral) oder D (Fahren) und die Fahrzeuggeschwindigkeit langsamer als 10 km/h (6 mph) ist.</p>
+				</li>
+			</ul>
+			<p>Wenn Sie die Taste zum Umschalten der Ansicht (2) drücken, während die Draufsicht hinten auf dem Bildschirm angezeigt wird, erlaubt Ihnen das System, die Rückansicht von oben, die Hecksicht oder die Weitsicht hinten zu wählen.</p>
+		</section>
+		<section>
+			<title>Ausschalt-Bedingungen</title>
+			<p>Die Funktion Hecksicht beim Einparken schaltet sich unter folgenden Bedingungen aus:</p>
+			<ul>
+				<li>
+					<p>Umschalten des Gangs in P (Parkstellung)</p>
+				</li>
+				<li>
+					<p>Drücken der Taste Parken/Sicht (1)</p>
+				</li>
+				<li>
+					<p>Drücken Sie die Zurück-Taste (3) auf dem Bildschirm des Heckmonitor</p>
+				</li>
+				<li>
+					<p>Drücken der Bildschirmtaste Infotainment-System (4)</p>
+				</li>
+				<li>
+					<p>N (Neutral) oder D (Fahrstellung) und die Fahrzeuggeschwindigkeit liegt über 10 km/h (6 mph).</p>
+				</li>
+			</ul>
+			<note type="note">
+				<p>Die Hecksicht kann nicht ausgeschaltet werden, wenn R (Rückwärtsgang) eingelegt ist.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0663.dita#CL4m_HEV-ca_ES-2027-t0663" role="parent" scope="local" type="concept">
+				<linktext>Betrieb des Heckmonitors</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

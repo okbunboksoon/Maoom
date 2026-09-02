@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Top" id="t00160">
+	<title>Other view modes</title>
+	<conbody>
+		<section id="e00832">
+			<title id="e00833">Master warning mode </title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00834">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00835">
+									<image href="images/N_CT25Z021.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This mode informs you of the following situations:</p>
+			<indexterm>LCD display modes</indexterm>
+			<indexterm>master warning mode</indexterm>
+			<ul id="e00836">
+				<li>
+					<p>Driver assistance system malfunction, limitation, or a radar or camera interference</p>
+				</li>
+				<li>
+					<p>LED headlamp malfunction</p>
+				</li>
+				<li>
+					<p>Lamp malfunction</p>
+				</li>
+				<li>
+					<p>TPMS (Tire Pressure Monitoring System) failure, low tire pressure, and so on.</p>
+				</li>
+			</ul>
+			<p>The Master Warning icon (<image href="images/WKIA_007.jpg" scale="15" align="left" placement="inline"/>) will appear. If the warning situation resolves, the master warning light will turn off and the Master Warning icon will disappear.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00156.dita#t00156" role="parent" scope="local" type="concept">
+				<linktext>LCD display modes </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

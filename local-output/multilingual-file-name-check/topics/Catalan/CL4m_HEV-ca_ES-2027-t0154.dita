@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0154">
+	<title>Lichtschalter</title>
+	<shortdesc>Der Lichtschalter hat eine Scheinwerfer- und eine Positionsleuchten-Position.</shortdesc>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Typ A</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MGTL034010.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00437">
+								<title>Typ B</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MGTL034001.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e00438">
+								<title>Typ C</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MGTL034001R.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e00439">
+								<title>Typ D</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4MGTL036010L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Zur Steuerung der Beleuchtung stellen Sie den Drehknopf am Blinkerhebel auf eine der folgenden Positionen:</p>
+		<ol outputclass="callout">
+			<li>
+				<p>Position <term translate="no">OFF</term></p>
+			</li>
+			<li>
+				<p>Automatische Lichtsteuerung</p>
+			</li>
+			<li>
+				<p>Positions- und Rückleuchte</p>
+			</li>
+			<li>
+				<p>Scheinwerferposition</p>
+			</li>
+		</ol>
+		<section>
+			<title>Positions- und Rückleuchte <image align="left" href="../../images/WKIA_049.eps" scale="15" placement="inline"/></title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<title>Typ A</title>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MGTL034002.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e00440">
+									<title>Typ B</title>
+									<figgroup>
+										<image align="center" href="../../images/OBL7M043059.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e00441">
+									<title>Typ C</title>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MGTL034002R.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e00442">
+									<title>Typ D</title>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MGTL036002L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p><indexterm>Lichtschalter<indexterm>Positions- und Rückleuchte</indexterm></indexterm>Wenn sich der Lichtschalter in der Position für Positionsleuchten befindet, schalten die Begrenzungsleuchte, die Rückleuchte und die Kennzeichenleuchte auf <term translate="no">ON</term>.</p>
+			<p importance="default">Typ <term translate="no">D</term>: Wenn Sie den Lichtschalter kurz auf die Position Positionsleuchte und Rücklicht/<term translate="no">OFF</term> stellen, wechselt die Auswahl zwischen<term translate="no">AUTO</term> und den Positionsleuchten und Rückleuchten ab. Wenn Sie den Lichtschalter in dieser Position halten, werden alle Leuchten ausgeschaltet.</p>
+			<p importance="default">Typ <term translate="no">D</term>: Nach Betrieb stellt sich der Lichtschalter automatisch wieder auf <term translate="no">AUTO</term>.</p>
+			<p importance="default">Typ <term translate="no">D</term>: Wenn <term translate="no">AUTO</term> ausgewählt wird, während sich das Fahrzeug in <term translate="no">ACC</term> oder<term translate="no">ON</term> befindet, werden die Scheinwerfer nachts oder bei niedrigem Umgebungslichtstand automatisch eingeschaltet.</p>
+		</section>
+		<section id="e00443">
+			<title>Scheinwerfer (Abblendlicht) <image align="center" href="../../images/WKIA_047.eps" scale="15" placement="inline"/></title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<title>Typ A</title>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MGTL034003.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e00444">
+									<title>Typ B</title>
+									<figgroup>
+										<image align="center" href="../../images/OBL7M043060.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e00445">
+									<title>Typ C</title>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MGTL034003R.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e00446">
+									<title>Typ D</title>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MGTL036003L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p><indexterm>Lichtschalter<indexterm>Scheinwerfer (Abblendlicht)</indexterm></indexterm>Wenn sich der Lichtschalter in der Position für Scheinwerfer befindet, schalten sich Scheinwerfer (Niedrig-Abblendlicht), Rücklicht und Kennzeichenbeleuchtung <term translate="no">ON</term>.</p>
+			<note otherprops="legal_eu_std_043_01" type="note" id="e00447">
+				<ul id="e00448">
+					<li>
+						<p>Der Zündschalter oder die Taste <term translate="no">ENGINE START/STOP</term> muss sich in der Position <term translate="no">ON</term> befinden, um die Scheinwerfer einzuschalten.</p>
+					</li>
+					<li>
+						<p>Nur Europa</p>
+						<ul id="e00449">
+							<li>
+								<p>Während der Fahrt schaltet der Lichtschalter auf<term translate="no">AUTO</term> . Nachts oder wenn das Umgebungslicht niedrig ist, schalten sich die Abblendlichtscheinwerfer automatisch ein und können nicht ausgeschaltet werden.</p>
+							</li>
+							<li>
+								<p>Die Begrenzungsleuchten und Rückleuchten schalten sich unabhängig von der Position des Lichtschalters automatisch ein. Sie können jedoch ausgeschaltet werden, wenn sich das Fahrzeug in der Stellung P (Parkstufe) befindet oder die Feststellbremse angezogen ist und der Lichtschalter in die Position <term translate="no">OFF</term> gebracht wird.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>Automatische Lichtsteuerung</title>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<title>Typ A</title>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MGTL034011.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e00450">
+									<title>Typ B</title>
+									<figgroup>
+										<image align="center" href="../../images/OCL4M034010.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e00451">
+									<title>Typ C</title>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MGTL034004R.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e00452">
+									<title>Typ D</title>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MGTL036011L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p><indexterm>Lichtschalter<indexterm>Automatische Lichtsteuerung</indexterm></indexterm>Wenn sich der Lichtschalter in der <term translate="no">AUTO</term> Lichtposition befindet, schalten sich die Rücklichter und Scheinwerfer automatisch <term translate="no">ON</term> oder <term translate="no">OFF</term>, je nach Helligkeit außerhalb des Fahrzeugs.</p>
+			<p importance="default">Typ <term translate="no">D</term>: Der Lichtschalter wechselt auch in die <term translate="no">AUTO</term> Lichtposition, wenn das Fahrzeug <term translate="no">ON</term> gebracht wird.</p>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Platzieren Sie nie Gegenstände über dem Sensor (1) auf dem Armaturenbrett, weil dadurch die automatische Beleuchtungsregelung verschlechtert wird.</p>
+					</li>
+					<li>
+						<p>Reinigen Sie den Sensor nicht mit einem Scheibenreiniger. Der Scheibenreiniger kann einen leichten Film auf dem Sensor hinterlassen, der die Sensorfunktion behindert.</p>
+					</li>
+					<li>
+						<p>Wenn die Windschutzscheibe Ihres Fahrzeugs getönt oder anderweitig metallisch beschichtet ist, kann die Funktion der automatischen Lichtsteuerung beeinträchtigt werden.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0148.dita#CL4m_HEV-ca_ES-2027-t0148" role="parent" scope="local" type="concept">
+				<linktext>Beleuchtung </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

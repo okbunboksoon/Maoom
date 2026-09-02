@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00745">
+	<title>If the vehicle does not start</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>if the vehicle does not start</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ul id="e04781">
+			<li>
+				<p>Make sure the high voltage battery is not low on the State of Charge (SOC) gauge.</p>
+			</li>
+			<li>
+				<p>Ensure that the vehicle is in P (Park). The vehicle can only be started in P (Park).</p>
+			</li>
+			<li>
+				<p>Check the 12V battery connections to ensure they are clean and securely tightened.</p>
+			</li>
+			<li>
+				<p>Turn on the interior light. If the light dims or goes out when starting the vehicle, the 12V battery may be discharged.</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

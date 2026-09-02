@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0172">
+	<title>Beheizte Waschdüse</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Scheibenwischer und Waschanlage
+					<indexterm>beheizte Waschdüse</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Bei der Heizfunktion für Waschanlagendüsen werden die Waschanlagendüsen bei Temperaturen unter dem Gefrierpunkt enteist.</p>
+		<p>Die beheizten Waschanlagendüsen werden automatisch ein- und ausgeschaltet, wenn sich das Fahrzeug in den folgenden Situationen in Position <term translate="no">ON</term> befindet bzw. der Motor läuft:</p>
+		<ul>
+			<li>
+				<p>Wird auf <term translate="no">ON</term> gestellt, wenn die Außentemperatur unter 5 °C (41 °F) liegt, und auf <term translate="no">OFF</term>, wenn sie über 10 °C (50 °F) liegt.</p>
+			</li>
+			<li>
+				<p>Das Auftauen der Waschflüssigkeit kann bei auf <term translate="no">ON</term> geschalteter Zündung oder <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) im Vergleich zu laufendem Motor langsamer sein.</p>
+			</li>
+			<li>
+				<p>Wenn die Zündung oder der <term translate="no">ENGINE START/STOP</term>-Knopf (MOTOR-START/STOPP) auf <term translate="no">ON</term> geschaltet ist, schaltet sich das System nach 20 Minuten Betrieb automatisch aus, um mögliche Batterieentladung zu verhindern.</p>
+			</li>
+			<li>
+				<p>Bei laufendem Motor wird die Waschflüssigkeit innerhalb von 5 bis 10 Minuten aufgetaut.</p>
+			</li>
+			<li>
+				<p>Wenn der Motor bei Betriebstemperatur der Heizfunktion angelassen wird, bleiben die Waschanlagendüsen auch nach 20 Minuten noch <term translate="no">ON</term>.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>In den unten stehenden Fällen funktioniert das Beheizen der Waschanlagendüsen möglicherweise nicht ordnungsgemäß.</p>
+			<ul>
+				<li>
+					<p>Die Waschflüssigkeit im Waschanlagentank ist gefroren.</p>
+				</li>
+				<li>
+					<p>Der Außentemperatursensor ist defekt.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0167.dita#CL4m_HEV-ca_ES-2027-t0167" role="parent" scope="local" type="concept">
+				<linktext>Scheibenwischer und Waschanlage </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

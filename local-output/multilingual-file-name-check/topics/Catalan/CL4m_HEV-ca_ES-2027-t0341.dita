@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0341">
+	<title id="e00776">Benzinmotor starten </title>
+	<conbody>
+		<ol outputclass="callout" id="e00777">
+			<li id="e00778">
+				<p>Vergewissern Sie sich, dass die Feststellbremse betätigt ist.</p>
+			</li>
+			<li id="e00779">
+				<p><b>Schaltgetriebe</b> – Treten Sie das Kupplungspedal ganz durch und schalten Sie das Getriebe in den Leerlauf. Halten Sie das Kupplungspedal durchgetreten, während Sie den Zündschlüssel in die Stellung START drehen.</p>
+				<p><b>AT/DCT/IVT</b> – Stellen Sie den Schalthebel des Getriebes auf P (Parkstufe). Treten Sie kräftig auf das Bremspedal.</p>
+				<p>Sie können den Motor auch anlassen, während sich der Wählhebel in der Neutralstellung (N) befindet.</p>
+			</li>
+			<li id="e00780">
+				<p>Drehen Sie den Zündschlüssel in die Stellung <term translate="no">START</term> und halten Sie ihn in dieser Stellung fest, bis der Motor angesprungen ist (maximal 10 Sekunden) und lassen Sie danach den Schlüssel los.</p>
+			</li>
+		</ol>
+		<p>Der Motor sollte sich <b>ohne Treten des Gaspedals starten lassen.</b></p>
+		<ol outputclass="callout_continue">
+			<li id="e00781">
+				<p>Warten Sie nicht darauf, dass sich der Motor erwärmt, während das Fahrzeug stillsteht.</p>
+				<p>Starten Sie mit mäßiger Motordrehzahl. (Schnelles Beschleunigen und schnelles Abbremsen vermeiden.)</p>
+			</li>
+		</ol>
+		<note type="caution">
+			<p>Versuchen Sie nicht, den Wählhebel in die Parkstufe (P) zu schalten, wenn der Motor während der Fahrt aussetzt. Sofern es die Verkehrslage und der Straßenzustand erlauben, können Sie den Schalthebel während der Fahrt in die Stufe N (Neutral) schalten und versuchen, den Motor wieder anzulassen, indem Sie den Zündschalter in die Stellung <term translate="no">START</term> drehen.</p>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Betätigen Sie den Anlasser nicht länger als 10 Sekunden. Wenn der Motor ausgeht oder nicht anspringt, warten Sie 5 bis 10 Sekunden, bevor Sie den Anlasser erneut betätigen. Bei falscher Verwendung des Anlassers kann dieser beschädigt werden.</p>
+				</li>
+				<li>
+					<p>Drehen Sie den Zündschlüssel nicht in Position <term translate="no">START</term>, wenn der Motor läuft. Dies kann den Anlasser beschädigen.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0340.dita#CL4m_HEV-ca_ES-2027-t0340" role="parent" scope="local" type="concept">
+				<linktext>Motor starten</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

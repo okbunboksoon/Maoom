@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Top" id="t00260">
+	<title id="e01691">Air bag collision sensors </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>air bag
+					<indexterm>air bag collision sensors</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<fig id="e01692">
+			<image href="images/N_SP3i26_D06_085_4_E.jpg" scale="95" placement="break"/>
+		</fig>
+		<p>The actual shape and position of sensors may differ from the illustration.</p>
+		<ol outputclass="callout" id="e01693">
+			<li>
+				<p>Front impact sensor</p>
+			</li>
+			<li>
+				<p>Supplemental Restraint System (SRS) control module/rollover sensor</p>
+			</li>
+			<li>
+				<p>Side pressure sensors (front door)*</p>
+			</li>
+			<li>
+				<p>Side impact sensor (B-pillar)</p>
+			</li>
+		</ol>
+		<p>*: if equipped</p>
+		<note type="warning" id="e01694">
+			<p><b>Air bag sensors</b></p>
+			<ul id="e01695">
+				<li>
+					<p>Do not hit or allow any objects to impact the locations where air bags or sensors are installed. This may cause unexpected air bag deployment, which could result in serious personal injury or death.</p>
+				</li>
+				<li>
+					<p>If the installation location or angle of the sensors is altered in any way, the air bags may deploy when they should not or they may not deploy when they should. Do not try to perform maintenance on or around the air bag sensors. Have the vehicle checked and repaired by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+				</li>
+				<li>
+					<p>Do not arbitrarily touch the front impact sensor. When the angle of the sensor is changed, the air bag system may malfunction.</p>
+				</li>
+			</ul>
+		</note>
+		<p>Changing the sensor installation angles due to deformation of the front bumper, front end module, body, or front doors where side collision sensors are installed may cause problems. Have the vehicle checked and repaired by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<p>Installing bumper guards, side step or running boards, or replacing a bumper (or front door module) with non-genuine parts may adversely affect your Kia collision and air bag deployment performance.</p>
+		<p>Kia Genuine bumper guards/bumpers are guaranteed for quality and performance.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00252.dita#t00252" role="parent" scope="local" type="concept">
+				<linktext>Overview</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

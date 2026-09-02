@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00067">
+	<title id="e00273">Locking/unlocking with the central locking switch</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00274">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00275">
+								<figgroup>
+									<image align="center" placement="break" href="../../images/N_CT25C114_1.eps" scale="95"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<ol outputclass="callout" id="e00276">
+								<li>
+									<p>Door lock button</p>
+								</li>
+								<li>
+									<p>Door unlock button</p>
+								</li>
+								<li>
+									<p>Door indicator light</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital">
+			<title>Simple operation</title>
+			<ul>
+				<li>
+					<p>Press the button (1) to lock and the button (2) to unlock.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operation</title>
+			<ul>
+				<li>
+					<p>Press the corresponding button below.</p>
+					<ul>
+						<li>
+							<p>Button (1): Lock</p>
+						</li>
+						<li>
+							<p>Button (2): Unlock</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<note type="tip">
+				<ul>
+					<li>
+						<p>When any door is unlocked, the indicating lights (3) on the driver’s door and passenger’s door will turn on. If all vehicle doors are locked, it would go off.</p>
+					</li>
+					<li>
+						<p>If the smart key is in the vehicle and any door is opened, the doors will not lock even though the central door lock switch is pressed.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning" id="e00277">
+				<ul id="e00278">
+					<li>
+						<p>If a power door lock ever fails to function while you are in the vehicle, try one or more of the following techniques to exit:</p>
+						<ul id="e00279">
+							<li id="e00280">
+								<p>Operate the door unlock feature repeatedly (both electronic and manual) while simultaneously pulling on the door handle.</p>
+							</li>
+							<li id="e00281">
+								<p>Operate the other door locks and handles, front and rear.</p>
+							</li>
+							<li id="e00282">
+								<p>Lower a front window and use the mechanical key to unlock the door from outside.</p>
+							</li>
+							<li id="e00283">
+								<p>Move to the cargo area and open the trunk.</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>Do not pull the inner door handle of driver’s (or passenger’s) door while the vehicle is moving.</p>
+					</li>
+					<li id="e00284">
+						<p>The doors should always be fully closed and locked while the vehicle is in motion to prevent accidental opening of the door. Locked doors will also discourage potential intruders when the vehicle stops or slows down.</p>
+					</li>
+					<li id="e00285">
+						<p>Be careful when opening doors and watch out for vehicles, motorcycles, bicycles or pedestrians approaching the vehicle in the path of the door. Opening a door when something is approaching can result in an accident to cause vehicle damage or serious injury.</p>
+					</li>
+					<li>
+						<p>Leaving your vehicle unlocked can invite theft or possible harm to you or others from someone hiding in your vehicle while you are gone. Always remove the smart key, engage the parking brake, close all windows and lock all doors when leaving your vehicle unattended.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution">
+				<p>When you leave your vehicle with the smart key, make sure to press the button on the front door handle or touch the touch sensor on the front door handle to lock the doors after close all the doors, the hood and the trunk. If you do not press the button or touch the touch sensor firmly, the doors might not be locked, or please use caution.</p>
+			</note>
+			<note type="note">
+				<ul>
+					<li>
+						<p>The outside rearview mirror will fold or unfold if <uicontrol>On door unlock</uicontrol> is selected from the Settings menu in the infotainment system screen. Select:</p>
+						<ul>
+							<li>
+								<p> <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Convenience</uicontrol><uicontrol>Welcome mirror/light</uicontrol><uicontrol>On door unlock</uicontrol></menucascade> </p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>The doors may lock or unlock if the touch sensor of the outer door handle is recognized while washing your car or due to heavy rain.</p>
+					</li>
+					<li>
+						<p>The doors may not lock or unlock in the following situations:</p>
+						<ul>
+							<li>
+								<p>If the touch sensor is touched with gloves on</p>
+							</li>
+							<li>
+								<p>If the door is suddenly approached</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

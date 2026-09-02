@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00869">
+	<title>Fuses</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>fuses</indexterm>
+				<indexterm>maintenance
+					<indexterm>fuses</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05100">
+			<desc>
+				<p>Left side: Normal</p>
+				<p>Right side: Blown</p>
+			</desc>
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e05101">
+								<title>Blade type</title>
+								<image href="images/N_CT25_A12_005_1_A.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e05102">
+								<title>Cartridge type</title>
+								<image href="images/N_CT25_A12_006_1_A.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="col1">
+							<fig id="e05103">
+								<title>Multi fuse</title>
+								<image href="images/N_CT25_A12_007_3_A.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e05104">
+								<title>High voltage fuse</title>
+								<image href="images/N_CT25_A12_008_3_A.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The actual fuse/relay panel label may differ from equipped items.</p>
+		<p>Fuses protect a vehicle’s electrical system from electrical overload damage.</p>
+		<p>Your vehicle has 2 (or 3) fuse panels: one in the driver side panel bolster, and the others in the engine compartment near the battery.</p>
+		<p>If any of your vehicle’s lights, accessories, or controls do not work, check the appropriate circuit fuse. If a fuse is blown, the element inside the fuse melts.</p>
+		<p>If the electrical system does not work, check the driver side fuse panel first.</p>
+		<p>If a replacement fuse blows, this indicates an electrical problem. Avoid using the respective system and immediately have your vehicle serviced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<p>Your vehicle uses 3 kinds of fuses: blade type for lower amperage rating, cartridge type, and multi fuse for higher amperage ratings.</p>
+		<note type="warning" id="e05105">
+			<p>Fuse replacement</p>
+			<ul id="e05106">
+				<li>
+					<p>Never replace a fuse with a fuse of a different rating. A higher capacity fuse could cause damage and possibly fire.</p>
+				</li>
+				<li>
+					<p>Never install wire or aluminum foil in place of a proper fuse, even as a temporary repair. Doing so may cause extensive wiring damage and possibly fire.</p>
+				</li>
+				<li>
+					<p>Do not arbitrarily modify or add electric wiring to the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" id="e05107">
+			<p>Electrical fire</p>
+			<p>Always ensure replacements fuses and relays are securely fastened when installed. Failure to do so can result in a vehicle fire.</p>
+			<p>Do not remove fuses, relays, and terminals fastened with bolts or nuts. The fuses, relays, and terminals may be fastened incompletely and could cause a possible fire. If fuses, relays, and terminals fastened with bolts or nuts are blown, have your vehicle serviced by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</note>
+		<note type="caution" id="e05108">
+			<ul id="e05109">
+				<li>
+					<p>Never insert objects other than fuses or relays, such as a screwdriver or wiring, into fuse or relay terminals. Doing so may cause contact failure and system malfunction.</p>
+				</li>
+				<li>
+					<p>The inner junction block can burn if you directly connect the wire on the rear combination lamp or replace its bulb with one over the regulated capacity to install a trailer.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e05110">
+			<ul id="e05111">
+				<li>
+					<p>Do not use a screwdriver or any other metal object to remove fuses. Doing so may cause a short circuit and damage the electrical system.</p>
+				</li>
+				<li>
+					<p>When replacing a blown fuse or relay, make sure the new fuse or relay fits tightly in the clips. Failure to tightly install a fuse or relay may cause damage to the wiring and electrical systems.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e05112">
+			<p>Electrical wiring repairs</p>
+			<p>All electrical repairs should be performed by authorized Kia dealer using approved Kia parts. Using other wiring components, especially when retrofitting a multimedia or theft alarm system, phone, or radio may cause vehicle damage and increase the risk of a vehicle fire.</p>
+		</note>
+		<note type="note" id="e05113">
+			<p>Rewiring prohibited</p>
+			<p>Do not rewire your vehicle in any way. Doing so may affect the performance of several safety features in your vehicle. Rewiring your vehicle may also void your warranty, which makes you responsible for any subsequent vehicle damage.</p>
+		</note>
+		<note type="tip" id="e05114">
+			<ul id="e05115">
+				<li>
+					<p>When you replace a fuse, make sure the vehicle and all other switches are in the <term translate="no">OFF</term> position, then remove the negative 12V battery terminal.</p>
+				</li>
+				<li>
+					<p>The actual fuse or relay panel label may differ from equipped items.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00789.dita#t00789" role="parent" scope="local" type="concept">
+				<linktext>Maintenance</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

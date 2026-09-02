@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0025">
+	<title>Empfohlene SAE-Viskositäten</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>empfohlene Schmiermittel und Füllmengen
+					<indexterm>Empfohlene SAE-Viskositäten</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<note type="caution">
+			<p>Stellen Sie sicher, dass der Bereich um alle Einfüllschrauben, Ablassschrauben und den Messstäbe gereinigt wird, bevor ein Füllstand geprüft oder eine Flüssigkeit abgelassen wird. Dies ist besonders wichtig, wenn das Fahrzeug in staubiger oder sandiger Umgebung oder auf unbefestigten Straßen eingesetzt wird. Durch die Reinigung der Bereiche rings um Einfüll-/Ablassschrauben und Messstäbe wird verhindert, dass Schmutz, Sand usw. in den Motor oder in andere Komponenten eindringen und diese beschädigen.</p>
+		</note>
+		<p>Die Viskosität (Zähflüssigkeit) des Motoröls beeinflusst den Kraftstoffverbrauch und den Betrieb bei niedrigen Außentemperaturen (Startverhalten und Schmierfilmbildung). Motoröle mit niedrigerer Viskosität können den Kraftstoffverbrauch senken; sie eignen sich besser für den Betrieb bei niedrigen Außentemperaturen. Bei höheren Temperaturen werden jedoch Motoröle mit höherer Viskosität für eine zufrieden stellende Schmierung benötigt. Die Verwendung von Motorölen mit nicht empfohlenen Viskositäten kann zu Motorschäden führen.</p>
+		<note type="note">
+			<p>Geben Sie dem Motoröl niemals Additive zu. Additive für Motoröle können dessen Eigenschaften ändern und einem schweren Motorausfall verursachen.</p>
+		</note>
+		<p>Berücksichtigen Sie bei der Auswahl des Motoröls den Temperaturbereich, in dem das Fahrzeug bis zum nächsten Ölwechsel betrieben werden soll. Wählen Sie die geeignete Viskosität aus der folgenden Tabelle aus.</p>
+		<section>
+			<title>Temperaturbereich für SAE-Viskositätsklassen</title>
+			<sectiondiv><ph>(Benzinmotor) 1.6 MPI</ph>
+				<p><term translate="no">A</term>: Außer Naher Osten, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Europa</p>
+				<p><term translate="no">B</term>: Für Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien</p>
+				<p><term translate="no">C</term>: Nur Europa</p>
+				<fig expanse="page">
+					<figgroup>
+						<image align="center" href="../../images/Gamma_2gen_MPI_General_Europe_SK3.eps" scale="95" placement="break" outputclass="nolabel"/>
+					</figgroup>
+				</fig>
+			</sectiondiv>
+			<sectiondiv><ph>(Benzinmotor) 2.0 MPI</ph>
+				<p><term translate="no">A</term>: Für Mittel- und Südamerika, Brasilien</p>
+				<p><term translate="no">B</term>: Für Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien</p>
+				<p><term translate="no">C</term>: Außer Naher Osten, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien, Mittel- und Südamerika, Brasilien</p>
+				<fig expanse="page">
+					<figgroup>
+						<image align="center" href="../../images/Nu_2gen_MPI_Atkinson_General_SP2.eps" scale="95" placement="break" outputclass="nolabel"/>
+					</figgroup>
+				</fig>
+			</sectiondiv>
+			<sectiondiv><ph>Für Smartstream G1.6 T-GDi/Smartstream G1.6 T-GDi (EURO 7)/Smartstream G1.0 T-GDi (EURO 7)/Smartstream G1.0 T-GDi MHEV (EURO 7)</ph>
+				<p><term translate="no">A</term>: Außer Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan</p>
+				<p><term translate="no">B</term>: Für Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan</p>
+				<fig expanse="page">
+					<figgroup>
+						<image align="center" href="../../images/Gamma_3gen_T-GDi_General_Europe.eps" scale="95" placement="break" outputclass="nolabel"/>
+					</figgroup>
+				</fig>
+			</sectiondiv>
+			<sectiondiv><ph>Smartstream G2.0 MPI</ph>
+				<p><term translate="no">A</term>: Außer Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien</p>
+				<p><term translate="no">B</term>: Für Nahost, Iran, Marokko, Algerien, Tunesien, Libyen, Ägypten, Sudan, Indien</p>
+				<fig expanse="page">
+					<figgroup>
+						<image align="center" href="../../images/Nu_3gen_T-GDi.eps" scale="95" placement="break" outputclass="nolabel"/>
+					</figgroup>
+				</fig>
+			</sectiondiv>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e00061">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="1*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="6.24*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1"><image align="center" href="../../images/api.eps" scale="15" placement="inline"/>
+							</entry>
+							<entry colname="col2">
+								<p>Ein Motoröl mit diesem Gütesiegel des American Petroleum Institute (API) erfüllt die Vorgaben des International Lubricant Specification Advisory Committee (ILSAC). Es wird empfohlen, nur Motoröle mit dem API-Gütesiegel zu verwenden.</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0024.dita#CL4m_HEV-ca_ES-2027-t0024" role="parent" scope="local" type="concept">
+				<linktext>Empfohlene Schmiermittel und Füllmengen </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

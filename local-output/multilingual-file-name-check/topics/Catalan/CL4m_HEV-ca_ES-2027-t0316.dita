@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0316">
+	<title>Aschenbecher</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Innenausstattung
+					<indexterm>Aschenbecher</indexterm>
+				</indexterm>
+				<indexterm>Aschenbecher</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M035425L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Öffnen Sie zur Verwendung des Aschenbechers die Abdeckung.</p>
+			</li>
+			<li>
+				<p>Ziehen Sie den Aschenbecher zum Reinigen oder Leeren heraus.</p>
+			</li>
+		</ul>
+		<p>Benutzen Sie den Aschenbecher, indem Sie ihn gegen den Becherhalter rechts daneben drücken.</p>
+		<note type="warning">
+			<p>Aschenbecher verwenden</p>
+			<ul>
+				<li>
+					<p>Verwenden Sie den Aschenbecher nicht als Abfallbehälter.</p>
+				</li>
+				<li>
+					<p>Streichhölzer oder Zigarettenglut könnten andere im Aschenbecher befindliche brennbare Materialien entzünden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0315.dita#CL4m_HEV-ca_ES-2027-t0315" role="parent" scope="local" type="concept">
+				<linktext>Innenausstattung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

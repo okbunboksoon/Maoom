@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="anywhere" id="t00174">
+	<title>High Beam Assist operation</title>
+	<conbody>
+		<ul>
+			<li>
+				<p>After selecting <uicontrol>High Beam Assist</uicontrol> in the Settings menu, the function operates as follows:</p>
+				<ul>
+					<li>
+						<p>To enable the function, set the headlight switch to <term translate="no">AUTO</term> and push the headlamp lever toward the instrument cluster. The HBA (<image href="images/WKIA_048.jpg" scale="15"/>) indicator light will appear on the instrument cluster.</p>
+					</li>
+					<li>
+						<p>When HBA is enabled, the high beam will turn on when the vehicle speed is above 30 km/h (20 mph). The high beam will not turn on when the vehicle speed is below 20 km/h (12 mph).</p>
+					</li>
+					<li>
+						<p>The high beam (<image href="images/WKIA_046.jpg" scale="15"/>) indicator light will appear on the cluster when the high beam is on.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>If you use the headlight lever or switch when HBA is operating, the function operates as follows:</p>
+				<ul>
+					<li>
+						<p>To turn the high beam on without canceling HBA, pull the headlight lever toward you when the high beam is off. When you let go of the headlight lever, it will move to the middle and the high beam will turn off.</p>
+					</li>
+					<li>
+						<p>To turn the high beam on and cancel HBA, push the light switch toward the instrument cluster.</p>
+					</li>
+					<li>
+						<p>If you change the headlight switch from <term translate="no">AUTO</term> to another setting, HBA will turn off and the corresponding lamp will turn on.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>When HBA is operating, the headlight switches from high to low beam in the following situations:</p>
+				<ul>
+					<li>
+						<p>When an oncoming vehicle headlight is detected.</p>
+					</li>
+					<li>
+						<p>When the taillight of a vehicle in front is detected.</p>
+					</li>
+					<li>
+						<p>When the headlight or taillight of a motorcycle or bicycle is detected.</p>
+					</li>
+					<li>
+						<p>When the surrounding ambient light is bright enough that high beams are not required.</p>
+					</li>
+					<li>
+						<p>When streetlights or other lights are detected.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00172.dita#t00172" role="parent" scope="local" type="concept">
+				<linktext>High Beam Assist (HBA)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

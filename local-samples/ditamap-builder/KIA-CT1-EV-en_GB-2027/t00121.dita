@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00121">
+	<title>Adjusting the steering wheel angle and height</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00591">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00592">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C052_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e00593">
+								<li>
+									<p>Lock-release lever</p>
+								</li>
+								<li>
+									<p>Distance adjustment</p>
+								</li>
+								<li>
+									<p>Angle adjustment</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" colsep="0">
+							<fig id="e00594">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C054.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<fig id="e00595">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C055.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_digital" id="e00596">
+			<title>Simple operation</title>
+			<ol id="e00597">
+				<li>
+					<p>Pull the lock-release lever (1) down, then adjust the steering wheel to the distance forward/back (2) and desired angle (3).</p>
+				</li>
+				<li>
+					<p>Pull the lock-release lever up.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print" id="e00598">
+			<title>Operation</title>
+			<ol id="e00599">
+				<li>
+					<p>Pull the lock-release lever (1) down.</p>
+				</li>
+				<li>
+					<p>Adjust the steering wheel to the distance forward/back (2) and desired angle (3).</p>
+				</li>
+				<li>
+					<p>Pull the lock-release lever up.</p>
+				</li>
+			</ol>
+			<note type="warning" id="e00600">
+				<ul id="e00601">
+					<li>
+						<p>Never adjust the angle and height of the steering wheel while driving. You may lose steering control and cause severe personal injury, death or accidents.</p>
+					</li>
+					<li>
+						<p>After adjusting, push the steering wheel both up and down to be certain it is locked in position.</p>
+					</li>
+					<li>
+						<p>If the steering wheel becomes too warm, turn the system off. The heated steering wheel may cause burns even at low temperatures, especially if used for long periods of time.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution" id="e00602">
+				<ul id="e00603">
+					<li>
+						<p>Do not install any type of grip cover for the steering wheel, it may impair the function of the steering wheel heater system.</p>
+					</li>
+					<li>
+						<p>When cleaning the steering wheel heater, do not use an organic solvent such as paint thinner, benzene, alcohol and gasoline. Doing so may damage the surface of the steering wheel.</p>
+					</li>
+					<li>
+						<p>If the surface of the steering wheel is damaged by a sharp object, damage to the steering wheel heater components or steering wheel grip sensor could occur.</p>
+					</li>
+					<li>
+						<p>Do not strike the horn severely to operate it, or hit it with your fist. Do not press on the horn with a sharp-pointed object.</p>
+					</li>
+					<li>
+						<p>When cleaning the steering wheel, do not use an organic solvent such as thinner, benzene, alcohol and gasoline. Doing so may damage the steering wheel.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e00604">
+				<ul id="e00605">
+					<li>
+						<p>Be sure to adjust the steering wheel to the desired position before driving.</p>
+					</li>
+					<li>
+						<p>After adjustment, sometimes the lock-release lever may not lock the steering wheel. It is not a malfunction. This occurs when two gears engage. In this case, adjust the steering wheel again and then lock the steering wheel.</p>
+					</li>
+					<li>
+						<p>The following symptoms may occur during normal vehicle operation:</p>
+						<ul id="e00606">
+							<li>
+								<p>The MDPS warning light does not appear.</p>
+							</li>
+							<li>
+								<p>The steering effort is high immediately after pressing the <term translate="no">EV</term> button to <term translate="no">DRIVE READY</term> position. This happens as the MDPS system performs the diagnostics. When the diagnostics is completed, the steering effort will return to its normal condition.</p>
+							</li>
+							<li>
+								<p>A click noise may be heard from the MDPS relay after <term translate="no">EV</term> button is in <term translate="no">DRIVE READY</term> position.</p>
+							</li>
+							<li>
+								<p>Motor noise may be heard when the vehicle is at a stop or at a low driving speed.</p>
+							</li>
+							<li>
+								<p>When the abnormality is detected in the motor driven power steering system, a deadly accident prevention purposes, steering assist functions will be stopped. At this time, the instrument cluster warning light turns on or blinks and the power to manipulate the steering will be off. Please check immediately after moving the vehicle to a safe zone.</p>
+							</li>
+							<li>
+								<p>The steering effort increases if the steering wheel is rotated continuously when the vehicle is not in motion. However, after a few minutes, it will return to its normal conditions.</p>
+							</li>
+							<li>
+								<p>If the Motor Driven Power Steering System does not operate normally, the warning light will appear or blink on the instrument cluster. The steering wheel may become difficult to control or operate abnormally. In this case, have the system inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+							</li>
+							<li>
+								<p>When you operate the steering wheel in low temperature, abnormal noise could occur. If temperature rises, the noise will disappear. This is a normal condition.</p>
+							</li>
+							<li>
+								<p>When jump-starting the vehicle after battery discharge, the steering wheel may not function properly. It is a temporary situation due to low battery voltage, and upon stable battery charging, the steering wheel will function normally again. Please move the steering wheel around to make sure the steering wheel is functioning properly before driving the vehicle.</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>The steering wheel heater will turn off automatically approximately 30 minutes after the steering wheel heater is turned on.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

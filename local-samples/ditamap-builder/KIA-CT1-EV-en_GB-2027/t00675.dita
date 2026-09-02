@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00675">
+	<title>After stopping</title>
+	<conbody>
+		<p>After the vehicle is stopped by Emergency Stop, a warning message appears on the instrument cluster, an audible warning sounds, and the hazard warning flasher blinks.</p>
+		<p>After your vehicle has stopped, the following is performed:</p>
+		<ul id="e02338">
+			<li>
+				<p>Doors are unlocked.</p>
+			</li>
+			<li>
+				<p importance="optional"> <term translate="no">SOS</term> call is made.</p>
+			</li>
+			<li>
+				<p> <term translate="no">EPB</term> is applied.</p>
+			</li>
+			<li>
+				<p>Shift to P (Park)</p>
+			</li>
+		</ul>
+	</conbody>
+</concept>

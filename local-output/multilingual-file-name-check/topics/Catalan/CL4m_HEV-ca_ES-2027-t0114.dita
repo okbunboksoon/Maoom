@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0114">
+	<title>Komforteinstiegsfunktion</title>
+	<conbody>
+		<p>Mit der Komforteinstiegsfunktion-Funktion wird der Fahrersitz automatisch wie folgt verschoben:</p>
+		<section>
+			<title>Beim Verlassen des Fahrzeugs:</title>
+			<ul>
+				<li>
+					<p>Der Fahrersitz bewegt sich wie folgt, wenn sich die Start/Stop-Taste in der Position <term translate="no">OFF</term> befindet, der Gang in P (Parkstufe) steht und die Fahrertür geöffnet ist.</p>
+				</li>
+				<li>
+					<p>Fahrersitz: Bewegt sich je nach dem im Infotainment-System im Menü Einstellungen gewählten Abstand nach hinten. Der Fahrersitz darf sich jedoch nicht nach hinten bewegen, wenn nicht genügend Platz zwischen dem Fahrersitz und den Rücksitzen vorhanden ist.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Beim Betreten des Fahrzeugs:</title>
+			<ul>
+				<li>
+					<p>Der Fahrersitz bewegt sich wie folgt, wenn die Taste <term translate="no">ACC</term>in die Position <term translate="no">ON</term> oder <term translate="no">START</term> gedrückt wird oder während Sie den Smart-Key tragen, wird die Fahrertür geschlossen, wenn sich die Taste <term translate="no">OFF</term> in der Position OFF befindet.</p>
+					<ul>
+						<li>
+							<p>Fahrersitz: Bewegt sich zurück in seine ursprüngliche Position.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Sie können die Komforteinstiegsfunktion über das Einstellungsmenü auf dem Display des Infotainment-Systems aktivieren bzw. deaktivieren. Wählen Sie Fahrersitz, <menucascade><uicontrol>Einstellungen</uicontrol><uicontrol>Fahrzeugeinstellungen</uicontrol><uicontrol>Sitz</uicontrol><uicontrol>Sitzeinstellungsassistent</uicontrol><uicontrol>Komforteinstiegsfunktion Fahrer</uicontrol><uicontrol>Normal/Erweitert/Aus.</uicontrol></menucascade></p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0111.dita#CL4m_HEV-ca_ES-2027-t0111" role="parent" scope="local" type="concept">
+				<linktext>Integriertes Memory-System</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

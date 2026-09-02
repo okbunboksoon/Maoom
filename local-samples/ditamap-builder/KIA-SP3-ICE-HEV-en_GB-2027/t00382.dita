@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00382">
+	<title>Shift lock override</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>intelligent variable transmission (IVT)
+					<indexterm>shift lock override</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02510">
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02511">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02512">
+									<image href="images/N_SP3i26_C09_009_1_I.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>If you cannot move the shift lever from P (Park) to R (Reverse) with the brake pedal engaged, continue to engage the brake, then perform the following actions:</p>
+			<ol id="e02513">
+				<li>
+					<p>Start the vehicle from the <term translate="no">LOCK</term> or <term translate="no">OFF</term> position.</p>
+				</li>
+				<li>
+					<p>Apply the parking brake.</p>
+				</li>
+				<li>
+					<p>Carefully remove the cap (1) covering the shift-lock release access hole.</p>
+				</li>
+				<li>
+					<p>Insert a tool (such as a flathead screwdriver) into the access hole and press down on the tool.</p>
+				</li>
+				<li>
+					<p>Move the shift lever.</p>
+				</li>
+				<li>
+					<p>Remove the tool from the shift lock override access hole, then replace the cap.</p>
+				</li>
+			</ol>
+			<p>If the shift lever does not move even after you perform this procedure, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00376.dita#t00376" role="parent" scope="local" type="concept">
+				<linktext>Intelligent variable transmission (IVT)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

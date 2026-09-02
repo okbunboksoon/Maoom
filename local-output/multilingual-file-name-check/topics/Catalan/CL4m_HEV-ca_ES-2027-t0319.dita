@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0319">
+	<title id="e00745">Sitzheizung </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Innenausstattung
+					<indexterm>Sitzheizung</indexterm>
+				</indexterm>
+				<indexterm>Sitzheizung</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Der Sitzwärmer dient zum Aufwärmen der Sitze bei kaltem Wetter.</p>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Vordersitz</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034069N_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<title>Rücksitz</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034079N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn sich das Fahrzeug in der Position <term translate="no">ON</term> befindet:</p>
+		<ul>
+			<li>
+				<p>Drücken Sie einen der Knöpfe, um den Fahrersitz oder den Beifahrersitz zu beheizen.</p>
+			</li>
+		</ul>
+		<p>Bei milder Witterung oder unter Bedingungen, bei denen der Betrieb der Sitzheizung nicht erforderlich ist, lassen Sie die Taste in der Aus-Stellung.</p>
+		<section>
+			<sectiondiv><ph>Temperaturregler (manuell)</ph>
+				<ul>
+					<li>
+						<p>Bei jedem Tastendruck ändert sich die Temperatureinstellung des Sitzes wie folgt:</p>
+						<ul>
+							<li>
+								<p>Vordersitz</p>
+								<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+									<tgroup cols="2" colsep="0" rowsep="0">
+										<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+										<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+										<tbody>
+											<row rowsep="0">
+												<entry colname="col1">
+													<fig>
+														<figgroup>
+															<image href="../../images/ODEEV068232NR.eps" scale="15" align="center" placement="inline"/>
+														</figgroup>
+													</fig>
+												</entry>
+												<entry colname="col2"/>
+											</row>
+										</tbody>
+									</tgroup>
+								</table>
+							</li>
+							<li>
+								<p>Rücksitz</p>
+								<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+									<tgroup cols="2" colsep="0" rowsep="0">
+										<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+										<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+										<tbody>
+											<row rowsep="0">
+												<entry colname="col1">
+													<fig>
+														<figgroup>
+															<image href="../../images/ODEEV068232NR.eps" scale="15" align="center" placement="inline"/>
+														</figgroup>
+													</fig>
+												</entry>
+												<entry colname="col2"/>
+											</row>
+										</tbody>
+									</tgroup>
+								</table>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>Nach jedem Einschalten des Fahrzeugs ist die Sitzheizung automatisch auf <term translate="no">OFF</term>.</p>
+					</li>
+				</ul>
+			</sectiondiv>
+			<sectiondiv><ph>Temperaturregler (Automatik)</ph>
+				<p>Die Sitzheizung beginnt nach dem manuellen Einschalten automatisch, die Sitztemperatur zu regeln, um Niedertemperaturverbrennungen zu vermeiden<term translate="no">ON</term></p>
+				<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+					<tgroup cols="2" colsep="0" rowsep="0">
+						<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+						<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+						<tbody>
+							<row rowsep="0">
+								<entry colname="col1">
+									<fig>
+										<figgroup>
+											<image href="../../images/ODEEV068233NR.eps" scale="15" align="center" placement="inline"/>
+										</figgroup>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				<p>Sie können die Taste manuell betätigen, um die Sitztemperatur zu erhöhen. Die Sitzheizung schaltet jedoch bald wieder auf Automatikbetrieb.</p>
+				<ul>
+					<li>
+						<p>Wenn Sie die Taste bei eingeschalteter Sitzheizung mehr als 1,5 Sekunden lang drücken, wird die Sitzheizung ausgeschaltet (<term translate="no">OFF</term>).</p>
+					</li>
+					<li>
+						<p>Die Sitzheizung ist standardmäßig auf Position <term translate="no">OFF</term> gestellt, wenn sich das Fahrzeug in der Position <term translate="no">ON</term> befindet.</p>
+					</li>
+				</ul>
+				<note type="note">
+					<p>Wenn sich die Taste für die Sitzheizung in Position <term translate="no">ON</term> befindet, schaltet sich das Sitzheizsystem abhängig von der Sitztemperatur automatisch aus oder ein.</p>
+				</note>
+				<note type="caution">
+					<ul>
+						<li>
+							<p>Verwenden Sie für die Reinigung der Sitze keine Lösungsmittel wie Verdünnung, Benzin oder Alkohol. Dies könnte die Sitzoberfläche oder die Sitzheizung beschädigen.</p>
+						</li>
+						<li>
+							<p>Legen Sie nichts auf die Sitze, was die Hitze isoliert, d. h. keine Decken, Sitzkissen oder Sitzbezüge usw., während die Sitzheizung in Betrieb ist, um eine Überhitzung der Sitzheizung zu vermeiden.</p>
+						</li>
+						<li>
+							<p>Transportieren Sie keine schweren oder scharfkantigen Gegenstände auf Sitzen, die mit einer Sitzheizung ausgerüstet sind. Komponenten der Sitzheizung könnten dadurch beschädigt werden.</p>
+						</li>
+						<li>
+							<p>Wechseln Sie den Sitzbezug nicht. Dadurch kann die Sitzheizung oder die Belüftung beschädigt werden.</p>
+						</li>
+					</ul>
+				</note>
+				<note type="warning">
+					<p>Verbrennungen durch Sitzheizung</p>
+					<p>Die Fahrzeuginsassen sollten sehr vorsichtig sein, wenn sie die Sitzheizungen einschalten, da übermäßige Temperaturen und Verbrennungen möglich sind. Die Sitzheizung kann Verbrennungen auch bei geringen Temperaturen verursachen, besonders wenn sie längere Zeit verwendet wird. Der Fahrer muss insbesondere auf folgende Mitfahrer achten:</p>
+					<ol>
+						<li>
+							<p>Säuglinge, Kinder, ältere Personen oder Personen mit Behinderung und kranke Personen</p>
+						</li>
+						<li>
+							<p>Hitzeempfindliche Personen oder Personen mit sehr empfindlicher Haut</p>
+						</li>
+						<li>
+							<p>Ermüdete Personen</p>
+						</li>
+						<li>
+							<p>Betäubte oder betrunkene Personen</p>
+						</li>
+						<li>
+							<p>Personen, die schläfrig machende Medikamente genommen haben (Schlaftabletten usw.)</p>
+						</li>
+					</ol>
+				</note>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0315.dita#CL4m_HEV-ca_ES-2027-t0315" role="parent" scope="local" type="concept">
+				<linktext>Innenausstattung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

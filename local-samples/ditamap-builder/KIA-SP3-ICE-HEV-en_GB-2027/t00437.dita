@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00437">
+	<title>If you decide to tow a trailer</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>trailer towing
+					<indexterm>if you decide to tow a trailer</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Important points if you decide to tow a trailer:</p>
+		<ul id="e03007">
+			<li>
+				<p>Consider using sway control. You can ask a trailer hitch dealer about sway control.</p>
+			</li>
+			<li>
+				<p>Do not do tow a trailer during your vehicle’s first 2,000 km (1,200 miles) to allow the engine to properly break in. Failure to heed this advice may result in serious engine or transmission damage.</p>
+			</li>
+			<li>
+				<p>When towing a trailer, consult a professional workshop on additional requirements such as a towing kit. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</li>
+			<li>
+				<p>Always drive your vehicle at a moderate speed (less than 100 km/h (60 mph)) when towing a trailer.</p>
+			</li>
+			<li>
+				<p>On a long uphill grade, do not exceed 70 km/h (45 mph) or the posted towing speed limit, whichever is lower.</p>
+			</li>
+			<li>
+				<p>The <xref href="t00019.dita#t00019"/> contains important considerations related to weight.</p>
+			</li>
+		</ul>
+		<section id="e03008">
+			<title>Weight of the trailer</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03009">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e03010">
+									<image href="images/OMQ4A045021.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<ol outputclass="callout" id="e03011">
+									<li>
+										<p>Tongue Load</p>
+									</li>
+									<li>
+										<p>Total Trailer Weight</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The maximum safe weight should never exceed the maximum trailer weight with trailer brakes. Even that may be too heavy depending on how you plan to use your trailer. For example, speed, altitude, road grades, outside temperature, and how often you tow a trailer are all important. The ideal trailer weight may also depend on any special equipment that you have on your vehicle.</p>
+		</section>
+		<section id="e03012">
+			<title>Weight of the trailer tongue</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03013">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e03014">
+									<image href="images/OMQ4A045022.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2" align="left" valign="middle">
+								<ol outputclass="callout" id="e03015">
+									<li>
+										<p>Gross Axle Weight</p>
+									</li>
+									<li>
+										<p>Gross Vehicle Weight (GVW)</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The tongue load of any trailer is an important weight to measure because it affects the total GVW. This weight includes the curb weight of your vehicle, any cargo you carry, and the people riding in your vehicle. If you tow a trailer, you must add the tongue load to the GVW because your vehicle is also carrying that weight.</p>
+			<p>The tongue load measured at the hitch when the trailer is fully loaded should not exceed 10% of the total loaded trailer weight and must remain within the permissible maximum tongue load.</p>
+			<p>After you load your trailer, weigh the trailer and the tongue separately to see if the weights are proper. If they are not, you may be able to correct them by moving some items around in the trailer.</p>
+			<note type="warning" id="e03016">
+				<p>Trailer</p>
+				<ul id="e03017">
+					<li>
+						<p>Never load a trailer with more weight in the rear than in the front. The front should be loaded with approximately 60% of the total trailer load; the rear should be loaded with approximately 40% of the total trailer load.</p>
+					</li>
+					<li>
+						<p>Never exceed the maximum weight limits of the trailer or trailer towing equipment. Improper loading can result in damage to your vehicle or personal injury. Check weights and loading on a commercial scale or at a highway patrol office equipped with scales.</p>
+					</li>
+					<li>
+						<p>An improperly loaded trailer can cause loss of control of your vehicle.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00429.dita#t00429" role="parent" scope="local" type="concept">
+				<linktext>Trailer towing</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

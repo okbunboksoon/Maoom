@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00568">
+	<title>Limitations of Blind-Spot Collision-Avoidance Assist</title>
+	<conbody>
+		<p>Blind-Spot Collision-Avoidance Assist may not operate properly, or it may operate unexpectedly under the following circumstances:</p>
+		<ul>
+			<li>
+				<p>There is inclement weather, such as heavy snow and heavy rain.</p>
+			</li>
+			<li>
+				<p>The detecting sensor is covered with snow, rain, dirt, etc.</p>
+			</li>
+			<li>
+				<p>The temperature around the detecting sensor is high or low due to the surrounding environment.</p>
+			</li>
+			<li>
+				<p>The detecting sensor is blocked while driving near a vehicle, pillar, or wall.</p>
+			</li>
+			<li>
+				<p>Driving on a highway (or motorway) ramp or driving through a tollgate.</p>
+			</li>
+			<li>
+				<p>The road pavement (or the peripheral ground) abnormally contains metallic components (for example, possibly due to subway construction).</p>
+			</li>
+			<li>
+				<p>There is a fixed object near the vehicle, such as sound barriers, guardrails, central dividers, entry barriers, streetlamps, signs, tunnels, walls, etc. (including double structures)</p>
+			</li>
+			<li>
+				<p>Driving through a narrow road where trees or grass are overgrown</p>
+			</li>
+			<li>
+				<p>Driving in vast areas where there are few vehicles or structures (for example, desert, meadow, suburb, etc.)</p>
+			</li>
+			<li>
+				<p>Driving on a wet road surface, such as a puddle on the road</p>
+			</li>
+			<li>
+				<p>The other vehicle drives very close behind your vehicle, or the other vehicle passes by your vehicle in close proximity</p>
+			</li>
+			<li>
+				<p>The speed of the other vehicle is very fast that it passes by your vehicle in a short time</p>
+			</li>
+			<li>
+				<p>Your vehicle passes by the other vehicle</p>
+			</li>
+			<li>
+				<p>Your vehicle changes lane</p>
+			</li>
+			<li>
+				<p>Your vehicle has started at the same time as the vehicle next to you and has accelerated</p>
+			</li>
+			<li>
+				<p>The vehicle in the next lane moves two lanes away from you, or when the vehicle two lanes away moves to the next lane from you</p>
+			</li>
+			<li>
+				<p>A trailer or carrier is installed around the rear corner radar</p>
+			</li>
+			<li>
+				<p>The bumper around the rear corner radar is covered with objects, such as a bumper sticker, bike rack, etc.</p>
+			</li>
+			<li>
+				<p>The bumper around the rear corner radar is impacted, damaged or the radar is out of position</p>
+			</li>
+			<li>
+				<p>Your vehicle height is low or high due to heavy loads, abnormal tire pressure, etc.</p>
+			</li>
+			<li>
+				<p>A snow chain, spare tire, or wheel of a different size is installed</p>
+			</li>
+			<li>
+				<p>When the following objects are detected:</p>
+				<ul>
+					<li>
+						<p>A motorcycle or bicycle is detected</p>
+					</li>
+					<li>
+						<p>A vehicle such as a flat trailer is detected</p>
+					</li>
+					<li>
+						<p>A big vehicle such as a bus or truck is detected</p>
+					</li>
+					<li>
+						<p>A moving obstacle such as a pedestrian, animal, shopping cart or a baby pushchair is detected</p>
+					</li>
+					<li>
+						<p>A vehicle with low height such as a sports car is detected</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Pay attention. Braking control may not operate in the following conditions:</p>
+		<ul>
+			<li>
+				<p>The vehicle severely vibrates while driving over a bumpy road, uneven road or concrete patch</p>
+			</li>
+			<li>
+				<p>Driving on a slippery surface due to snow, water puddle, ice, etc.</p>
+			</li>
+			<li>
+				<p>The tire pressure is low or a tire is damaged</p>
+			</li>
+			<li>
+				<p>The braking system has been modified</p>
+			</li>
+			<li>
+				<p>The vehicle makes abrupt lane changes</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1">
+				<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<thead>
+						<row rowsep="1">
+							<entry colname="col1">
+								<p>Limitations</p>
+							</entry>
+							<entry colname="col2">
+								<p>Details</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1" valign="middle">
+							<entry colname="col1">
+								<fig>
+									<title>Driving on a curved road</title>
+									<figgroup>
+										<image align="center" href="../../images/N_CT25E038.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/N_CT25E039.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>Blind-Spot Collision-Avoidance Assist may not operate properly when driving on a curved road. Blind-Spot Collision-Avoidance Assist may not detect the vehicle in the next lane.</p>
+								<p>Always pay attention to road and driving conditions while driving on a curved road.</p>
+								<p>Blind-Spot Collision-Avoidance Assist may not operate properly when driving on a curved road. Blind-Spot Collision-Avoidance Assist may detect a vehicle in the same lane.</p>
+								<p>Always pay attention to road and driving conditions while driving.</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry colname="col1">
+								<fig>
+									<title>Driving on an inclined road</title>
+									<figgroup>
+										<image align="center" href="../../images/M_CT27_D10_004_1_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>Blind-Spot Collision-Avoidance Assist may not operate properly when driving on an inclined road. The function may not detect the vehicle in the next lane or may incorrectly detect the ground or structure.</p>
+								<p>Always pay attention to road and driving conditions while driving on an inclined road.</p>
+							</entry>
+						</row>
+						<row rowsep="1" valign="middle">
+							<entry colname="col1">
+								<fig>
+									<title>Driving where the road is merging/dividing</title>
+									<figgroup>
+										<image align="center" href="../../images/N_CT25E043.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>Blind-Spot Collision-Avoidance Assist may not operate properly when driving where the road merges or divides. The function may not detect the vehicle in the next lane.</p>
+								<p>Always pay attention to road and driving conditions while where the road merges or divides.</p>
+							</entry>
+						</row>
+						<row rowsep="0" valign="middle">
+							<entry colname="col1">
+								<fig>
+									<title>Driving where the heights of the lanes are different</title>
+									<figgroup>
+										<image align="center" href="../../images/N_CT25E044.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>Blind-Spot Collision-Avoidance Assist may not operate properly when driving where the heights of the lanes are different. The function may not detect the vehicle on a road with different lane heights (underpass joining section, grade separated intersections, etc.).</p>
+								<p>Always pay attention to road and driving conditions while driving where the heights of the lanes are different.</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>When you are towing a trailer or another vehicle, make sure that you turn off Blind-Spot Collision-Avoidance Assist.</p>
+				</li>
+				<li>
+					<p>Blind-Spot Collision-Avoidance Assist may not operate properly if interfered by strong electromagnetic waves.</p>
+				</li>
+				<li>
+					<p>Blind-Spot Collision-Avoidance Assist may not operate for approximately 3 seconds after the vehicle is started, or the front view camera or rear corner radars are initialized.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

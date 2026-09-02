@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0520">
+	<title>Sichere Ausstiegshilfe verbunden mit elektronischer Kindersicherung</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M035166L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Überprüfen Sie den Verkehr im toten Winkel und versuchen Sie es dann erneut</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Warnleuchte am Außenrückspiegel blinkt und eine Warnmeldung erscheint auf dem Kombiinstrument.</p>
+		<ul>
+			<li>
+				<p>Die Sichere Ausstiegshilfe verbunden mit elektronischer Kindersicherung wird unter folgenden Bedingungen aktiviert:</p>
+				<ul>
+					<li>
+						<p>Ihre Fahrzeuggeschwindigkeit: unter 3 km/h (2 mph)</p>
+					</li>
+					<li>
+						<p>Geschwindigkeit eines sich von hinten annähernden Fahrzeugs über 6 km/h (4 mph)</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<note type="note">
+			<p>Weitere Einzelheiten zur elektrischen Kindersicherungstaste finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0058.dita#CL4m_HEV-ca_ES-2027-t0058"/>.</p>
+		</note>
+		<note type="warning">
+			<p>Wenn der Fahrer innerhalb von 10 Sekunden nach Anzeige der Warnmeldung erneut die Taste für die elektronische Kindersicherung drückt, erkennt der Ausstiegsassistent, dass der Fahrer die Türen entriegelt hat und bestätigt damit den Status der Fondsitze. Die elektronische Kindersicherung schaltet aus (Kontrolltaste <term translate="no">OFF</term>) und die hinteren Türen werden entriegelt. Prüfen Sie immer die Umgebung, bevor Sie die Taste für die elektronische Kindersicherung ausschalten.</p>
+		</note>
+		<note type="note">
+			<p>Wenn eine hintere Tür von außen geöffnet wird, öffnet sie sich unabhängig vom Betrieb des Ausstiegsassistenten.</p>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Ändern Sie zu Ihrer Sicherheit die Einstellungen, nachdem Sie das Fahrzeug an einem sicheren Ort geparkt haben.</p>
+				</li>
+				<li>
+					<p>Wenn die Warnmeldung einer anderen Funktion angezeigt oder ein anderer Warnton ausgegeben wird, wird die Warnmeldung des Ausstiegsassistenten möglicherweise nicht angezeigt und kein Warnton ausgegeben.</p>
+				</li>
+				<li>
+					<p>Möglicherweise hören Sie den Warnton des Ausstiegsassistenten nicht, wenn die Umgebung laut ist.</p>
+				</li>
+				<li>
+					<p>Der Ausstiegsassistent funktioniert nicht in allen Situationen und kann nicht alle Kollisionen verhindern.</p>
+				</li>
+				<li>
+					<p>Der Ausstiegsassistent warnt den Fahrer je nach Straße- und Fahrbedingungen ggf. zu spät oder gar nicht. Überprüfen Sie immer die Fahrzeugumgebung.</p>
+				</li>
+				<li>
+					<p>Der Fahrer und die Mitfahrer sind für beim Aussteigen aus dem Fahrzeug verursachte Unfälle verantwortlich. Prüfen Sie immer die Umgebung, bevor Sie das Fahrzeug verlassen.</p>
+				</li>
+				<li>
+					<p>Testen Sie niemals absichtlich den Ausstiegsassistenten. Dies kann zu schweren Verletzungen oder zum Tod führen.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Nach dem Ausschalten des Fahrzeugs ist der Ausstiegsassistent 3 Minuten lang aktiviert, wird aber sofort deaktiviert, wenn die Türen verriegelt werden.</p>
+				</li>
+				<li>
+					<p>Die Bilder und Farben im Kombiinstrument können sich je nach Typ des Kombiinstruments oder des im Einstellungsmenü ausgewählten Themas unterscheiden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0518.dita#CL4m_HEV-ca_ES-2027-t0518" role="parent" scope="local" type="concept">
+				<linktext>Warnung und Kontrolle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00789">
+	<title>Remote Smart Parking Assist (RSPA)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>remote smart parking assist (RSPA)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Remote Smart Parking Assist uses the front, front side, rear side, and rear ultrasonic sensors to detect parking spaces and control vehicle steering, speed, gear shifts, and help enter and exit parking spaces remotely from outside your vehicle.</p>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="1*"/>
+				<colspec colnum="2" colname="2" colwidth="1.39*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1">
+							<p>Function</p>
+						</entry>
+						<entry colname="2">
+							<p>Description</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p>Remote Operation</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>Remotely moving forward or backward</p>
+							<fig>
+								<figgroup>
+									<image href="../../images/N_CT25E101.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul>
+			<li>
+				<p>Remote Smart Parking Assist may be operated from outside the vehicle using the smart key or digital key.</p>
+			</li>
+			<li>
+				<p>When Remote Smart Parking Assist operates, Parking Distance Warning and Surround View Monitor will also operate. For more details, refer to <xref type="concept" href="t00765.dita#t00765"/> and <xref type="concept" href="t00737.dita#t00737"/>.</p>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Never disassemble or apply impact on the ultrasonic sensor or its surrounding.</p>
+				</li>
+				<li>
+					<p>If foreign material (snow, rain or etc.) block the ultrasonic sensor, the detecting performance may not operate properly. Check the ultrasonic sensor, if the ultrasonic sensor is dirty, clean it with a soft cloth.</p>
+				</li>
+				<li>
+					<p>Do not press the ultrasonic sensor too hard, shock it with a hard object or scratch it with a sharp object.</p>
+				</li>
+				<li>
+					<p>Do not spray the ultrasonic sensors directly with a high pressure washer.</p>
+				</li>
+				<li>
+					<p>Remote Smart Parking Assist may not operate properly when bumper height or ultrasonic sensor installation has been modified, if any accessories or stickers installed on the field of view of the ultrasonic sensor.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

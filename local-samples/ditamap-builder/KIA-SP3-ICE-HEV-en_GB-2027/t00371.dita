@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00371">
+	<title>Starting the engine</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>ENGINE START/STOP button
+					<indexterm>starting the engine</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02404">
+			<title>Starting the gasoline engine</title>
+			<ol id="e02405">
+				<li>
+					<p>Carry the smart key or leave it inside the vehicle.</p>
+				</li>
+				<li>
+					<p>Firmly apply the parking brake.</p>
+				</li>
+				<li>
+					<p><b>Manual Transmission</b> - Depress the clutch pedal fully and shift to N (Neutral).</p>
+					<p>Keep the clutch pedal and brake pedal depressed while pressing the <term translate="no">ENGINE START/STOP</term> button.</p>
+					<p><b>Intelligent Variable Transmission/Dual Clutch Transmission</b> - Shift to P (Park).</p>
+					<p>Engage the brake pedal fully. You may start the engine when the gear is in N (Neutral).</p>
+				</li>
+				<li>
+					<p>Press the <term translate="no">ENGINE START/STOP</term> button without engaging the accelerator pedal.</p>
+				</li>
+				<li>
+					<p>Do not wait for the engine to warm up while your vehicle remains stationary. Start driving at moderate engine speeds. (Avoid rapid acceleration and deceleration.)</p>
+				</li>
+			</ol>
+			<note type="note" id="e02406">
+				<p>Starting and stopping the engine for turbocharger intercooler</p>
+				<ul id="e02407">
+					<li>
+						<p>Do not race or accelerate the vehicle immediately after you start the engine.</p>
+						<p>If the engine is cold, idle it for several seconds to ensure that sufficient lubrication is applied within the turbocharger unit.</p>
+					</li>
+					<li>
+						<p>After high speed or extended driving, which puts strain on the engine load, idle the engine for about 1 minute before turning it off.</p>
+						<p>This idle time allows the turbocharger to cool before you turn off the engine.</p>
+					</li>
+					<li>
+						<p>Do not turn off the engine immediately after you have subjected it to a heavy load. Doing so may cause severe damage to the engine or turbocharger unit.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e02408">
+			<title>Starting the engine with smart key</title>
+			<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e02409">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig id="e02410">
+									<image href="images/N_SP3i26_C09_005_I.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e02411">
+									<image href="images/N_SP327_C09_002.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>At the time that the vehicle doors are opened or when the <term translate="no">ENGINE START/STOP</term> button is pressed, the vehicle will check for the smart key.</p>
+			<p>If the smart key is not in your vehicle, the (<image href="images/WKIA_044.jpg" scale="15"/>) indicator and the message appear on the instrument cluster. If all doors are closed, the chime sounds for 5 seconds. The indicator or chime turns off while your vehicle is moving. Always have the smart key with you.</p>
+			<note type="warning" id="e02412">
+				<p>The vehicle only starts when the smart key is in your vehicle. Never allow a child or any person who is unfamiliar with your vehicle to touch the <term translate="no">ENGINE START/STOP</term> button or related parts. Pressing the <term translate="no">ENGINE START/STOP</term> button while the smart key is in your vehicle may result in unintended engine operation or vehicle movement.</p>
+			</note>
+			<note type="caution" id="e02413">
+				<p>If the engine stalls while your vehicle is in motion, do not attempt to shift to P (Park). If traffic and road conditions permit, you may shift to N (Neutral) while your vehicle is still moving, and press the <term translate="no">ENGINE START/STOP</term> button to attempt to restart the engine.</p>
+			</note>
+			<note type="tip" id="e02414">
+				<ul id="e02415">
+					<li>
+						<p>If the smart key battery is weak or the smart key does not work correctly, you can start the vehicle by pressing the <term translate="no">ENGINE START/STOP</term> button with a smart key.</p>
+					</li>
+					<li>
+						<p>If the brake light fuse is blown, you cannot start the engine normally.</p>
+						<p>Replace the fuse with a new one. If this is not possible, start the vehicle by pressing the <term translate="no">ENGINE START/STOP</term> button in the <term translate="no">ACC</term> position for 10 seconds. The vehicle can start without the brake pedal engaged, but for your safety, always engage the brake pedal before starting the vehicle.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00370.dita#t00370" role="parent" scope="local" type="concept">
+				<linktext>ENGINE START/STOP button</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

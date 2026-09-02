@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00731">
+	<title>Extended Rear View Monitor</title>
+	<conbody>
+		<p>Extended Rear View Monitor function maintains the rearview of the vehicle when shifting the gear from R (Reverse) to N (Neutral) or D (Drive) to help you park safely.</p>
+		<section>
+			<title>Operating conditions</title>
+			<p>Rear View Monitor will maintain when the following conditions are satisfied:</p>
+			<ul>
+				<li>
+					<p>Shifting the gear from R (Reverse) to N (Neutral) or D (Drive).</p>
+				</li>
+				<li>
+					<p>Your driving speed is below approximately 10 km/h (6 mph).</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Off conditions</title>
+			<p>Extended Rear View Monitor function will turn off when one the following conditions are satisfied:</p>
+			<ul>
+				<li>
+					<p>Shifting the gear to P (Park)</p>
+				</li>
+				<li>
+					<p>Pressing the Parking/View button (1)</p>
+				</li>
+				<li>
+					<p>Pressing the back button (3) on the rear monitor screen</p>
+				</li>
+				<li>
+					<p>Pressing the infotainment system operation button (4)</p>
+				</li>
+				<li>
+					<p>The vehicle speed is faster than 10 km/h (6 mph)</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

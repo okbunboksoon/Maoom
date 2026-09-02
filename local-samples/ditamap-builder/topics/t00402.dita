@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00402">
+	<title>Smart regeneration system settings</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>smart regeneration system 
+					<indexterm>settings</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02881">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e02882">
+								<figgroup>
+									<image align="center" height="1.573in" href="../../images/N_CT25Z006_E.eps" placement="break" width="2.243in" id="e02883"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e02884">
+								<li>
+									<p> <uicontrol>Electric Vehicle</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol>Smart Regeneration</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e02885">
+			<li>
+				<p>Select <menucascade><uicontrol>Electric Vehicle</uicontrol><uicontrol><image href="../../images/WKIA_307.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02886"/></uicontrol><uicontrol>Smart Regeneration</uicontrol><uicontrol>Link to Navigation Route</uicontrol></menucascade> from the infotainment system.</p>
+			</li>
+			<li>
+				<p>Smart Regenerative Braking Distance level allows you to adjust the distance to the vehicle ahead according to the driver’s distance level (<term>Level 1</term> / <term>Level 2</term> / <term>Level 3</term>).</p>
+			</li>
+		</ul>
+		<section id="e02887">
+			<title>Navigation-based speed control</title>
+			<ul id="e02888">
+				<li>
+					<p>In the (<image href="../../images/WKIA_336.eps" align="left" scale="15" placement="inline" outputclass="nolabel" id="e02889"/>) stage, the speed is automatically adjusted using navigation information.</p>
+				</li>
+				<li>
+					<p>Navigation-based speed control provides more accurate information when a destination is set. If a destination is not set, some functions may not work.</p>
+				</li>
+				<li>
+					<p>The automatic deceleration function operates in the following situations:</p>
+					<ul id="e02890">
+						<li>
+							<p>When turning left/right at an intersection, it decelerates to an appropriate speed.</p>
+						</li>
+						<li>
+							<p>It decelerates to an appropriate speed on sharp curves.</p>
+						</li>
+						<li>
+							<p>When the speed limit on a road is lowered (90-50 km/h (56-30 mph), etc.), it decelerates to the speed limit once.</p>
+						</li>
+						<li>
+							<p>The automatic deceleration function for changes in road speed limits only operate in Europe.</p>
+						</li>
+						<li>
+							<p>It automatically decelerates to an appropriate speed just before entering a roundabout.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

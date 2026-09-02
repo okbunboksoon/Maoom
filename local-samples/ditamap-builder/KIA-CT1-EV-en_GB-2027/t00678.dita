@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00678">
+	<title>Emergency Stop malfunction</title>
+	<conbody>
+		<p>When is not working properly, the warning message will appear and the Master warning light () will appear on the cluster.</p>
+		<p>When <uicontrol>Emergency Stop</uicontrol> is not working properly, the Master warning light (<image align="left" href="../../images/WKIA_040.eps" scale="15" placement="inline"/>) appears on the instrument cluster, along with a warning message that lasts for several seconds.</p>
+		<p>Warning message: <uicontrol>Check driver assistance system</uicontrol> </p>
+		<p>If this occurs, have your vehicle inspected by an authorized Kia dealer.</p>
+		<note type="note" id="e02344">
+			<p>You can check the Forward Collision-Avoidance Assist status in the service message of the utility information view of the instrument cluster display window.</p>
+		</note>
+	</conbody>
+</concept>

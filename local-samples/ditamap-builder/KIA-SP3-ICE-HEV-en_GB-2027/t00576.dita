@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00576">
+	<title>Forward Attention Warning malfunction</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e03681">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e03682">
+								<figgroup>
+									<image href="images/N_QVe27_C00_142_E.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e03683">
+								<li>
+									<p><uicontrol>Check the in-cabin monitoring system.</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When Forward Attention Warning is not working properly, the warning message appears on the instrument cluster for several seconds, the Forward attention warning light (<image href="images/WKIA_353.jpg" scale="15" align="left" placement="inline"/>) and the Master warning light (<image href="images/WKIA_040.jpg" scale="15" align="left" placement="inline"/>) light up on the instrument cluster, and an audible warning sounds once. If this occurs, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00575.dita#t00575" role="parent" scope="local" type="concept">
+				<linktext>Forward Attention Warning malfunction and limitations</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

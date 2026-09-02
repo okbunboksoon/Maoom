@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="t00098">
+	<title>Remote window closing/opening (power window lock button)</title>
+	<shortdesc/>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0" id="e00504">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e00505">
+								<figgroup>
+									<image href="images/N_SP3i26_B04_047_E.jpg" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e00506">
+								<li>
+									<p>Door lock button <image href="images/WKIA_019.jpg" scale="15" align="left" placement="inline"/></p>
+								</li>
+								<li>
+									<p>Door unlock button <image href="images/WKIA_021.jpg" scale="15" align="left" placement="inline"/></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>You can still control the window’s movement with the engine turned off.</p>
+		<ul id="e00507">
+			<li>
+				<p>Press the door lock button (1) for more than 3 seconds. The window moves up after the doors are locked, as long as you press the door lock button (1).</p>
+				<p>The window movement stops, when you release the door lock button (1).</p>
+			</li>
+		</ul>
+		<ul id="e00508">
+			<li>
+				<p>Press the door unlock button (2) for more than 3 seconds. The window moves down after the doors are unlocked, as long as you press the door unlock button (2).</p>
+				<p>The window movement stops, when you release the door unlock button (2).</p>
+			</li>
+		</ul>
+		<p>You can activate or deactivate the remote window closing/opening system by selecting <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Door</uicontrol><uicontrol>Remote Window Control</uicontrol></menucascade>.</p>
+		<p>Remote window closing/opening features operate only on seats equipped with auto up and down safety windows.</p>
+		<note type="warning" otherprops="legalnotice_europe-general_egall_2023_20230101_00041" id="e00509">
+			<ul id="e00510">
+				<li>
+					<p>Do not install any accessories in the area of windows. It may impact jam protection.</p>
+				</li>
+				<li>
+					<p>Always check for obstructions before raising any window to avoid injuries or vehicle damage. If an object less than 4 mm (0.16 inches) in diameter is caught between the window glass and the upper window channel, the automatic reverse window may not detect the resistance and will not stop and reverse direction.</p>
+				</li>
+				<li>
+					<p>The automatic reverse feature is not activated whilst resetting power window system. Make sure body parts or other objects are safely out of the way before closing the windows to avoid injuries or vehicle damage.</p>
+				</li>
+				<li>
+					<p>Never leave the keys in your vehicle with unsupervised children, when the vehicle is running.</p>
+				</li>
+				<li>
+					<p>Never leave any child unattended in the vehicle. Even very young children may inadvertently cause the vehicle to move, entangle themselves in the windows, or otherwise injure themselves or others.</p>
+				</li>
+				<li>
+					<p>Always double check to make sure all arms, hands, head and other obstructions are safely out of the way before closing a window.</p>
+				</li>
+				<li>
+					<p>Do not allow children to play with the power windows. Keep the driver’s door power window lock button in the <term translate="no">LOCK</term> position (pressed). Serious injury can result from unintentional window operation by the child.</p>
+				</li>
+				<li>
+					<p>Do not extend heads or any limbs outside the window whilst the vehicle is in motion.</p>
+				</li>
+				<li>
+					<p>Make sure body parts of other objects are safely out of the way before remote closing the windows to avoid injuries or vehicle damage.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution" id="e00511">
+			<ul id="e00512">
+				<li>
+					<p>The remote window closing/opening function may abruptly stop, when you move away from your vehicle during operation. Stay in proximity from your vehicle, while monitoring the window movement.</p>
+				</li>
+				<li>
+					<p>One of the windows may stop operating, when the window is interrupted by certain force.</p>
+					<p>However, the other windows will keep operating.</p>
+					<p>Thus, you should make sure that all windows are closed.</p>
+				</li>
+				<li>
+					<p>Be careful when using the remote window opening function, as the doors will be unlocked.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="tip" id="e00513">
+			<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00097.dita#t00097" role="parent" scope="local" type="concept">
+				<linktext>Power window lock button </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

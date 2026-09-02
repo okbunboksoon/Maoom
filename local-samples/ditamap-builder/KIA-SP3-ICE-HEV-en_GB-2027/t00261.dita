@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00261">
+	<title id="e01697">Air bag inflation conditions </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>air bag
+					<indexterm>inflation conditions</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e01698">
+			<title id="e01699">Front air bags </title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01700">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01701">
+									<image href="images/N_SP3i26_D06_087_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>Front air bags inflate in a frontal collision depending on several factors, including the severity of the impact of the front collision.</p>
+		</section>
+		<section importance="optional" id="e01702">
+			<title id="e01703">Side and curtain air bags and the front center side air bag </title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01704">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01705">
+									<image href="images/N_SP3i26_D06_088_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The actual air bags in the vehicle may differ from the illustration.</p>
+			<p>Side and curtain air bags and the front center side air bag may inflate when side collision sensors detect an impact, depending on several factors, including the severity of the impact from a side collision.</p>
+			<p>The side and curtain air bags inflate when a rollover sensor detects a rollover.</p>
+			<p>Although the front air bags (driver’s and front passenger’s air bags) primarily inflate in frontal collisions, they may inflate in other types of collisions if the front impact sensors detect sufficient frontal force in those impacts.</p>
+			<p>Similarly, although side and curtain air bags inflate in certain side impact collisions, they may also inflate in other types of collisions where sensors detect a side force. For instance, side air bags and/or curtain air bags may inflate if rollover sensors detect the possibility of a rollover (even if none occurs) or in other situations, such as when the vehicle tilts while being towed.</p>
+			<p>Even if side and/or curtain air bags do not provide impact protection in a rollover, they will deploy to prevent ejection of occupants, especially those who are restrained with seat belts.</p>
+			<p>If bumps or objects impact the vehicle chassis on unimproved roads, air bags may deploy. Drive carefully on unimproved roads or surfaces not designed for vehicle traffic to prevent unintended air bag deployment.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00260.dita#t00260" role="parent" scope="local" type="concept">
+				<linktext>Air bag collision sensors </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

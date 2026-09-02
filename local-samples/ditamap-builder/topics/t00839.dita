@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00839">
+	<title id="e05278">Dimensions</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>specifications 
+					<indexterm>dimensions</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<fig id="e05279">
+			<figgroup>
+				<image href="../../images/N_SZe25H001_E.eps" align="center" height="1.740in" placement="break" id="e05280"/>
+			</figgroup>
+		</fig>
+		<table outputclass="formatc" frame="all" rowsep="1" colsep="1" id="e05281">
+			<tgroup align="left" cols="5" colsep="1" rowsep="1">
+				<colspec colname="newCol1" colnum="1" colwidth="1*"/>
+				<colspec colnum="2" colname="col1" colwidth="3.13*"/>
+				<colspec colnum="3" colname="col2" colwidth="2.83*"/>
+				<colspec colnum="4" colname="col3" colwidth="3.25*"/>
+				<colspec colnum="5" colname="col5" colwidth="3.27*"/>
+				<thead>
+					<row rowsep="1">
+						<entry/>
+						<entry align="center" valign="middle" namest="col1" nameend="col3">
+							<p>Item</p>
+						</entry>
+						<entry colname="col5">
+							<p>mm (in)</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry align="center" valign="middle">
+							<p>(1)</p>
+						</entry>
+						<entry namest="col1" nameend="col3" align="left" valign="middle">
+							<p>Overall length</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>4,610 (181.5)</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="center" valign="middle">
+							<p>(2)</p>
+						</entry>
+						<entry align="left" valign="middle" namest="col1" nameend="col3">
+							<p>Overall width</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>1,875 (73.8)</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry morerows="3" align="center" valign="middle">
+							<p>(3)</p>
+						</entry>
+						<entry align="left" valign="middle" morerows="3">
+							<p>Overall height</p>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>Without Roof rack</p>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>Type A</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>1,675 (65.9)</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="left" valign="middle" morerows="2">
+							<p>With Roof rack</p>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>Type A</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>1,680 (66.1)</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle">
+							<p>Type B (GT-line)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>1,680 (66.1)</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle">
+							<p>Type C (GT)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>1,685 (66.3)</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="center" valign="middle" morerows="5">
+							<p>(4)</p>
+						</entry>
+						<entry align="left" valign="middle" morerows="5">
+							<p>Tread</p>
+						</entry>
+						<entry align="left" valign="middle" morerows="2">
+							<p>Front</p>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>235/60 R18</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>1,614 (63.5)</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="left" valign="middle">
+							<p>235/55 R19</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>1,609 (63.3)</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle">
+							<p>255/45 R20</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>1,610 (63.4)</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="left" valign="middle" morerows="2">
+							<p>Rear</p>
+						</entry>
+						<entry align="left" valign="middle">
+							<p>235/60 R18</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>1,615 (63.6)</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry align="left" valign="middle">
+							<p>235/55 R19</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>1,610 (63.4)</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="left" valign="middle">
+							<p>255/45 R20</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>1,611 (63.4)</p>
+						</entry>
+					</row>
+					<row rowsep="0">
+						<entry align="center" valign="middle">
+							<p>(5)</p>
+						</entry>
+						<entry align="left" valign="middle" namest="col1" nameend="col3">
+							<p>Wheelbase</p>
+						</entry>
+						<entry colname="col5" align="center" valign="middle">
+							<p>2,750 (108.3)</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

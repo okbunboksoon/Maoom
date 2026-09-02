@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept otherprops="legalnotice_europe-general_egall_2023_20230101_00052" id="t00097">
+	<title id="e00490">Power window lock button </title>
+	<shortdesc>The driver can disable the power window switches on the rear passengers’ doors by pressing the power window lock button to the lock position (pressed).</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>power window lock button</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00491">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00492">
+								<image href="images/N_SP3i26_B04_008_1_E.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the power window lock button is pressed:</p>
+		<ul id="e00493">
+			<li id="e00494">
+				<p>The front passenger’s control can operate their own power window.</p>
+			</li>
+			<li id="e00495">
+				<p>The rear passengers' controls cannot operate the rear passengers’ power windows.</p>
+			</li>
+		</ul>
+		<note type="note" id="e00496">
+			<ul id="e00497">
+				<li id="e00498">
+					<p>To prevent possible damage to the power window system, do not open or close 2 or more windows at the same time. This will ensure the longevity of the fuse.</p>
+				</li>
+				<li id="e00499">
+					<p>Never try to operate the main switch on the driver’s door and the individual door window switch in opposite directions at the same time. The window will stop and cannot be opened or closed.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="warning" id="e00500">
+			<p>Windows</p>
+			<ul id="e00501">
+				<li id="e00502">
+					<p>Never leave the keys in your vehicle with unsupervised children.</p>
+				</li>
+				<li>
+					<p>Never leave any child unattended in the vehicle. Even very young children may inadvertently cause the vehicle to move, entangle themselves in the windows, or otherwise injure themselves or others.</p>
+				</li>
+				<li>
+					<p>Always double check to make sure all arms, hands, heads and other obstructions are safely out of the way before closing a window.</p>
+				</li>
+				<li>
+					<p>Do not allow children to play with the power windows. Keep the driver’s door power window lock button in the lock position (pressed). Serious injury can result from a child unintentionally operating a window.</p>
+				</li>
+				<li>
+					<p>Do not extend your head or any limbs outside the window while the vehicle is in motion.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00095.dita#t00095" role="parent" scope="local" type="concept">
+				<linktext>Windows </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

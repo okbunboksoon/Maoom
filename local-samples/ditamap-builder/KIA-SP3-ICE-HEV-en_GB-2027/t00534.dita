@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00534">
+	<title>Blind-Spot View Monitor</title>
+	<conbody>
+		<section>
+			<title>Operating conditions</title>
+			<ul>
+				<li>
+					<p>When you turn the left or right turn signal <term translate="no">ON</term>, the rear image of that direction appears on the cluster.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Non-operating conditions</title>
+			<p>Blind-Spot View Monitor turns <term translate="no">OFF</term> under one of the following conditions:</p>
+			<ul>
+				<li>
+					<p>When you turn the turn signal <term translate="no">OFF</term>.</p>
+				</li>
+				<li>
+					<p>When the hazard light is <term translate="no">ON</term>.</p>
+				</li>
+				<li>
+					<p>When the instrument cluster displays another important warning.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00532.dita#t00532" role="parent" scope="local" type="concept">
+				<linktext>Blind-Spot View Monitor operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

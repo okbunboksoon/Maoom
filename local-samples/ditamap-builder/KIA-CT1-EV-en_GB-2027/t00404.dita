@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" base="Anywhere" id="t00404">
+	<title>Cup holders</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features 
+					<indexterm>cup holders</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Cups or small drink cans can be placed in the cup holders.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01656">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01657">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C039.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01658">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C104.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note deliveryTarget="except_print" type="note" id="e01659">
+			<p>When cleaning spilled liquids, do not dry the cup holder at high temperature. This may damage the cup holder.</p>
+		</note>
+	</conbody>
+</concept>

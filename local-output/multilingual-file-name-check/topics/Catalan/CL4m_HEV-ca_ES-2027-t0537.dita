@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0537">
+	<title>Anzeigen des Tempolimits</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054093.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Die Geschwindigkeitsbegrenzungsangabe wird auf dem Kombiinstrument angezeigt.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn die Geschwindigkeitsbegrenzungsangabe an der Straße nicht erkannt werden kann, wird '---' angezeigt. Wenn die Straßenschilder schwer zu erkennen sind, lesen Sie bitte <xref href="CL4m_HEV-ca_ES-2027-t0541.dita#CL4m_HEV-ca_ES-2027-t0541"/>.</p>
+				</li>
+				<li>
+					<p>Der intelligente Geschwindigkeitsbegrenzungsassistent stellt neben dem Tempolimit weitere Informationen zu Verkehrsschildern bereit. Zusätzliche Straßenschildinformationen können je nach Land variieren.</p>
+				</li>
+				<li>
+					<p>Die Bilder und Farben im Kombiinstrument können sich je nach Typ des Kombiinstruments oder des im Einstellungsmenü ausgewählten Themas unterscheiden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0536.dita#CL4m_HEV-ca_ES-2027-t0536" role="parent" scope="local" type="concept">
+				<linktext>Warnung und Kontrolle</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

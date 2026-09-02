@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00628">
+	<title>Forward Attention Warning malfunction and limitations</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>forward attention warning (FAW) 
+					<indexterm>malfunction and limitations</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<note type="note">
+			<ul>
+				<li>
+					<p>The following warning message will appear on the LCD display.</p>
+					<p>For more details, refer to the malfunction and limitations section of the function.</p>
+					<ul>
+						<li>
+							<p> <uicontrol>Check forward attention warning system</uicontrol> </p>
+						</li>
+						<li>
+							<p> <uicontrol>Forward attention warning disabled. Camera obscured</uicontrol> </p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

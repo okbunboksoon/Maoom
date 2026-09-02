@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0561">
+	<title>Warnung vor Müdigkeit am Steuer</title>
+	<conbody>
+		<p>Die Aufmerksamkeitswarnung für Müdigkeit am Steuer überwacht Ihre Augen während der Fahrt. Wenn die Augen des Fahrers ständig geschlossen sind oder er häufig nicht nach vorne schaut, empfiehlt die Müdigkeitswarnung des Fahrers eine Pause, um ein sicheres Fahren zu ermöglichen.</p>
+		<p>Eine Warnmeldung und die Warnleuchte für unaufmerksames Fahren (<image align="left" href="../../images/WKIA_059.eps" scale="15" placement="inline"/>) werden im Kombiinstrument angezeigt und ein akustisches Warnsignal ertönt, bis die Bedingungen zum Ausschalten der Warnung erfüllt sind.</p>
+		<p>Warnmeldung: Ziehen Sie eine Pause in Betracht</p>
+		<section>
+			<title>Betriebsbedingungen</title>
+			<ul>
+				<li>
+					<p>Wenn die Augen des Fahrers über einen längeren Zeitraum geschlossen sind oder sich ständig langsam bewegen.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Ausschalt-Bedingungen</title>
+			<ul>
+				<li>
+					<p>Wenn der Blick des Fahrers 2 Sekunden oder länger auf einen Punkt gerichtet ist</p>
+				</li>
+			</ul>
+			<note type="warning">
+				<p>Wenn die Warnmeldung eines anderen Systems angezeigt oder ein anderer Warnton ausgegeben wird, wird die Warnmeldung des Totwinkel-Erkennungssystems möglicherweise nicht angezeigt und kein Warnton erzeugt.</p>
+			</note>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Das Fahreraufmerksamkeits-Warnsystem kann den Fahrer auch dann warnen, wenn er aufgrund seiner Fahrweise oder seines Fahrverhaltens auf die Straße konzentriert ist.</p>
+					</li>
+					<li>
+						<p>Das Fahreraufmerksamkeits-Warnsystem ist eine Zusatzfunktion und kann nicht feststellen, ob der Fahrer während der Fahrt abgelenkt ist.</p>
+					</li>
+					<li>
+						<p>Der Fahrer ist für ein sicheres Fahren verantwortlich und muss sich auf die Straße konzentrieren.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="tip">
+				<ul>
+					<li>
+						<p>Fahreraufmerksamkeitswarnung vorne überträgt aufgezeichnete Videos nicht außerhalb des Fahrzeugs und speichert sie nicht.</p>
+					</li>
+					<li>
+						<p>Die Warnmethode für das Fahreraufmerksamkeits-Warnsystem kann nicht geändert werden.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0559.dita#CL4m_HEV-ca_ES-2027-t0559" role="parent" scope="local" type="concept">
+				<linktext>Betrieb der Fahreraufmerksamkeitswarnung vorne</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00164">
+	<title id="e00851">Driver Assistance settings (infotainment system) </title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00852">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00853">
+								<figgroup>
+									<image href="images/N_SP3i25_C00_066_IR.jpg" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>select <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol></menucascade> on the infotainment system screen to set the Driver Assistance function.</p>
+		<ul id="e00854">
+			<li>
+				<p>Driver assistance</p>
+				<ul id="e00855">
+					<li>
+						<p>Driving Convenience</p>
+					</li>
+					<li>
+						<p>Driving safety</p>
+					</li>
+					<li>
+						<p>DAW (Driver Attention Warning)</p>
+					</li>
+					<li>
+						<p>Parking safety</p>
+					</li>
+					<li>
+						<p>Warning methods</p>
+					</li>
+				</ul>
+				<note type="tip" id="e00856">
+					<p>The infotainment system may change after software updates. For more information, refer to the manual provided in the infotainment system and the quick reference guide.</p>
+				</note>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00156.dita#t00156" role="parent" scope="local" type="concept">
+				<linktext>LCD display modes </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

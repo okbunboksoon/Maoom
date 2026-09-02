@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00196">
+	<title>Heated washer nozzle</title>
+	<shortdesc>The heated washer nozzle function thaws the washer nozzles in freezing weather.</shortdesc>
+	<conbody>
+		<section id="e00919">
+			<title>Simple operation</title>
+			<p>Turn the vehicle on.</p>
+		</section>
+		<section id="e00920">
+			<title>Operations</title>
+			<p>The heated washer nozzle will turn on and off automatically when the <term translate="no">EV</term> button is in <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> or when the vehicle is running.</p>
+		</section>
+		<section id="e00921">
+			<title>Conditions</title>
+			<ul id="e00922">
+				<li>
+					<p>Turns on when the outside temperature is below 5 °C (41 °F), and <term translate="no">OFF</term> when it is over 10 °C (50 °F).</p>
+				</li>
+				<li>
+					<p>After 20 minutes of operation, the system will turn off automatically to prevent possible battery discharge.</p>
+				</li>
+				<li>
+					<p>After the vehicle is on, the washer fluid will defrost after 5 to 10 minutes.</p>
+				</li>
+				<li>
+					<p>If the vehicle has been started within the operating temperature, the heated nozzle remains on even after 20 minutes.</p>
+				</li>
+			</ul>
+			<note type="note" id="e00923">
+				<ul id="e00924">
+					<li>
+						<p>In below conditions, the heated washer nozzle may not function properly.</p>
+						<ul id="e00925">
+							<li>
+								<p>The washer fluid in the washer reservoir is frozen.</p>
+							</li>
+							<li>
+								<p>Outside temperature sensor is malfunctioning</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>The washer fluid thawing speed may be slower when the <term translate="no">EV</term> button is in <term translate="no">POWER ON</term>, than compared to when the vehicle is running.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning" id="e00926">
+				<p>Do not use the washer in freezing temperatures without first warming the windshield with the defrosters; the washer solution could freeze on the windshield and obscure your vision.</p>
+			</note>
+			<note type="caution" id="e00927">
+				<ul id="e00928">
+					<li>
+						<p>When the <term translate="no">EV</term> button is in <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position and the windshield wiper switch is placed in the <term translate="no">AUTO</term> mode, use caution in the following situations to avoid any injury to the hands or other parts of the body:</p>
+						<ul id="e00929">
+							<li id="e00930">
+								<p>Do not touch the upper end of the windshield glass facing the rain sensor.</p>
+							</li>
+							<li id="e00931">
+								<p>Do not wipe the upper end of the windshield glass with a damp or wet cloth.</p>
+							</li>
+							<li id="e00932">
+								<p>Do not put pressure on the windshield glass.</p>
+							</li>
+						</ul>
+					</li>
+					<li id="e00933">
+						<p>When washing the vehicle, set the wiper switch in the <term translate="no">OFF</term> (0) position to stop the auto wiper operation.</p>
+						<p>The wiper may operate and be damaged if the switch is set in the <term translate="no">AUTO</term> mode while washing the vehicle.</p>
+					</li>
+					<li id="e00934">
+						<p>Do not remove the sensor cover located on the upper end of the windshield glass. Damage to system parts could occur and may not be covered by your vehicle warranty.</p>
+					</li>
+					<li id="e00935">
+						<p>When starting the vehicle in winter, set the wiper switch in the <term translate="no">OFF</term> (0) position. Otherwise, wipers may operate and ice may damage the windshield wiper blades. Always remove all snow and ice and defrost the windshield properly prior to operating the windshield wipers.</p>
+					</li>
+					<li id="e00936">
+						<p>When tinting the windshield, be careful of any fluid getting into the sensor located in the top center of the front windshield. It may damage the related parts.</p>
+					</li>
+					<li>
+						<p>To prevent possible damage to the washer pump, do not operate the washer when the fluid reservoir is empty.</p>
+					</li>
+					<li id="e00937">
+						<p>To prevent possible damage to the wipers or windshield, do not operate the wipers when the windshield is dry.</p>
+					</li>
+					<li id="e00938">
+						<p>To prevent damage to the wiper blades, do not use gasoline, kerosene, paint thinner, or other solvents on or near them.</p>
+					</li>
+					<li id="e00939">
+						<p>To prevent damage to the wiper arms and other components, do not attempt to move the wipers manually.</p>
+					</li>
+					<li id="e00940">
+						<p>To prevent possible damage to the wipers and washer system, use anti-freezing washer fluids in winter or cold weather.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="note" id="e00941">
+				<ul id="e00942">
+					<li>
+						<p>If there is heavy accumulation of snow or ice on the windshield, defrost the windshield for about 10 minutes, or until the snow and/or ice is removed before using the windshield wipers to ensure proper operation. If you do not remove the snow and/or ice before using the wiper and washer, it may damage the wiper and washer system.</p>
+					</li>
+					<li>
+						<p>If you operate the wipers while driving on snowy roads, the wipers may stop due to snow buildup on your windshield. This is normal and not a failure because it is one of our safety features to prevent vehicle accidents and wiper damage from overloading the wiper motor. If the wipers stop, remove snow accumulated on the top or bottom of windshield before using them.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

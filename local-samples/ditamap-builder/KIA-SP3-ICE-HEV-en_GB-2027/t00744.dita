@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00744">
+	<title>Push starting</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>emergency starting
+					<indexterm>push starting</indexterm>
+				</indexterm>
+				<indexterm>push starting</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Vehicles equipped with Automatic Transmission/Dual Clutch Transmission/Intelligent Variable Transmission can only be jump started, not push started.</p>
+		<p>Follow the instructions in this section for <xref href="t00743.dita#t00743"/>.</p>
+		<note type="warning" id="e04513">
+			<p>Tow starting the vehicle</p>
+			<p>Never tow your vehicle to start it. When the vehicle starts, your vehicle can suddenly surge forward and collide with the vehicle towing it.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00739.dita#t00739" role="parent" scope="local" type="concept">
+				<linktext>If the engine does not start</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

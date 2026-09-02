@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0382">
+	<title>Fehlfunktion der EPB</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Bremsanlage
+					<indexterm>Fehlfunktion der EPB</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OMV043026.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn die <term translate="no">EPB</term>-Störungsanzeige ständig leuchtet, zeigt sie an, dass die <term translate="no">EPB</term> möglicherweise defekt ist. In diesem Fall lassen Sie das System von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+		<p>Die <term translate="no">EPB</term>-Fehleranzeige kann erscheinen, wenn die ESC-Anzeige aufleuchtet, um anzuzeigen, dass das ESC nicht ordnungsgemäß funktioniert, sie weist jedoch nicht auf eine Fehlfunktion des <term translate="no">EPB</term> hin.</p>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Die <term translate="no">EPB</term>-Warnleuchte erscheint, wenn der <term translate="no">EPB</term>-Schalter anders als normal reagiert. Schalten Sie den Motor aus und schalten Sie ihn einige Minuten später wieder ein. Die Warnleuchte erlischt und der <term translate="no">EPB</term>-Schalter funktioniert normal. Wenn die Warnleuchte der <term translate="no">EPB</term> jedoch weiter leuchtet, lassen Sie Ihr Fahrzeug von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+				<li>
+					<p>Wenn die Warnleuchte der Feststellbremse nicht erscheint oder blinkt, obwohl der <term translate="no">EPB</term>-Schalter nach oben gezogen wurde, ist die <term translate="no">EPB</term> nicht aktiv. Wenn die Warnleuchte der Feststellbremse blinkt, während die <term translate="no">EPB</term>-Warnleuchte eingeschaltet ist, drücken Sie den Schalter und ziehen Sie ihn dann nach oben. Drücken Sie ihn zurück in die ursprüngliche Position und ziehen Sie ihn wieder nach oben. Wenn die Warnleuchte der <term translate="no">EPB</term> nicht erlischt, lassen Sie Ihr Fahrzeug von einer Fachwerkstatt überprüfen. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0379.dita#CL4m_HEV-ca_ES-2027-t0379" role="parent" scope="local" type="concept">
+				<linktext>Elektronische Feststellbremse (EPB) </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

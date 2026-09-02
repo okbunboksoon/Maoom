@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0587">
+	<title>Intelligente Tempomatsteuerung anschalten</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054007N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Drücken Sie die Fahrassistenz-Taste, um die intelligente Tempomatsteuerung einzuschalten. Die Geschwindigkeit wird auf die aktuelle Geschwindigkeit auf dem Kombiinstrument eingestellt.</p>
+		<ul>
+			<li>
+				<p>Wenn sich kein Fahrzeug vor Ihnen befindet, wird die eingestellte Geschwindigkeit beibehalten.</p>
+			</li>
+			<li>
+				<p>Befindet sich ein Fahrzeug vor Ihnen, kann die Geschwindigkeit angepasst werden, um den Abstand zum vorausfahrenden Fahrzeug einzuhalten. Wenn das Fahrzeug vor Ihnen beschleunigt, beschleunigt Ihr Fahrzeug auf die ausgewählte Geschwindigkeit und fährt dann mit einer konstanten Fahrgeschwindigkeit.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>Wenn die Geschwindigkeit Ihres Fahrzeugs zwischen 0–30 km/h (0–20 mph) liegt und Sie die Fahrassistent-Taste drücken, wird die Geschwindigkeit der intelligenten Tempomatsteuerung auf 30 km/h (20 mph) eingestellt. Wenn der Fahrer in einen niedrigeren Gang schaltet, erreicht die Fahrgeschwindigkeit möglicherweise nicht die eingestellte Geschwindigkeit.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0585.dita#CL4m_HEV-ca_ES-2027-t0585" role="parent" scope="local" type="concept">
+				<linktext>Bedienung der intelligenten Tempomatsteuerung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

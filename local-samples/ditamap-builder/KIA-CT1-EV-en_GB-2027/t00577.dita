@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00577">
+	<title>Safe Exit Warning disabled</title>
+	<conbody>
+		<p>Safe Exit Warning may not operate properly, when the ultrasonic sensor, rear corner radar or surroundings of the rear bumper is covered with foreign material (snow, rain or etc.) or other equipment (trailer, carrier, etc.) attached.</p>
+		<p>If this occurs, the warning message will appear on the cluster, but it is not a failure of Safe Exit Warning.</p>
+		<p>Safe Exit Warning will operate normally when such foreign material or trailer, etc. is removed, and then the vehicle is restarted.</p>
+		<p>If Safe Exit Warning does not operate normally after it is removed, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Even though the warning message does not appear on the cluster, Safe Exit Warning may not properly operate.</p>
+				</li>
+				<li>
+					<p>Safe Exit Warning may not properly operate in an area (e.g., open terrain), where any substance are not detected right after the vehicle is turned on, or when the detecting sensor is blocked with foreign material right after the vehicle is turned on.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<p>Turn off Safe Exit Warning to install a trailer, carrier, etc., or remove the trailer, carrier, etc. to use Safe Exit Warning.</p>
+		</note>
+		<note type="note">
+			<p>You can check it in the service message of the utility information view of the cluster display window.</p>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0646">
+	<title>Lenkradwarnung</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054166N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Halten Sie die Hände am Lenkrad</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn Sie die Hände für einige Sekunden von der Lenkung nehmen, erscheint eine Warnmeldung und es ertönt ein stufenweises akustisches Warnsignal.</p>
+		<ul>
+			<li>
+				<p>Erste Stufe: Warnmeldung</p>
+			</li>
+			<li>
+				<p>Zweite Stufe: Warnmeldung (rotes Lenkrad) und Warnton.</p>
+			</li>
+		</ul>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054174N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: A: Autobahn-Fahrassistent deaktiviert</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wenn der Fahrer nach der Lenkradwarnung immer noch nicht die Hände am Lenkrad hat, erscheint eine Warnmeldung und der Autobahn-Fahrassistent wird automatisch ausgeschaltet.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0642.dita#CL4m_HEV-ca_ES-2027-t0642" role="parent" scope="local" type="concept">
+				<linktext>Autobahn-Fahrassistent</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

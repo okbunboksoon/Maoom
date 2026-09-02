@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0775">
+	<title>Beschreibung des fahrzeugeigenen eCall-Systems</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Europaweites eCall-System
+					<indexterm>Beschreibung des fahrzeugeigenen eCall-Systems</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OSG2PH062013L.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p><term translate="no">SOS</term> Taste</p>
+								</li>
+								<li>
+									<p>Crash-Signal</p>
+								</li>
+								<li>
+									<p>Notrufsystem</p>
+								</li>
+								<li>
+									<p>Antenne</p>
+								</li>
+								<li>
+									<p>MIC</p>
+								</li>
+								<li>
+									<p>Lautsprecher</p>
+								</li>
+								<li>
+									<p>LEDs</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Überblick über das eCall-Bordsystem, seine Bedienung und Funktionen: Siehe dieser Abschnitt. Der eCall-Dienst ist ein allgemein verfügbarer öffentlicher Dienst und kostenlos zugänglich.</p>
+		<p>Das eCall-Bordsystem beginnt mit der kontinuierlichen Überwachung für Notrufe in der Phase <term translate="no">ON</term>. Es wird bei einem schweren Unfall automatisch über fahrzeuginterne Sensoren aktiviert.</p>
+		<p>Es wird auch automatisch ausgelöst, wenn das Fahrzeug mit einem TPS-System ausgestattet ist, das bei einem schweren Unfall nicht funktioniert.</p>
+		<p>Das eCall-Bordsystem kann bei Bedarf auch manuell ausgelöst werden. Anweisungen für die manuelle Aktivierung des Systems: siehe diesen Abschnitt.</p>
+		<p>Bei einem kritischen Systemversagen, das das fahrzeugeigene eCall-System deaktiviert, wird den Insassen des Fahrzeugs die folgende Warnung ausgegeben: siehe diesen Abschnitt.</p>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0774.dita#CL4m_HEV-ca_ES-2027-t0774" role="parent" scope="local" type="concept">
+				<linktext>Europaweites eCall-System</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

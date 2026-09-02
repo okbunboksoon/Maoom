@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0367">
+	<title>Motor mit Start-Stopp-Automatik anhalten</title>
+	<conbody>
+		<p>Für Mildhybrid-Elektrofahrzeuge stehen drei Versionen des Automatik-Stopps zur Verfügung.</p>
+		<section>
+			<title>Schaltgetriebe</title>
+			<ul>
+				<li>
+					<p>Herkömmlicher Automatik-STOPP</p>
+					<ul>
+						<li>
+							<p>Verringern Sie die Geschwindigkeit auf unter ca. 7 km/h (4 mph).</p>
+						</li>
+						<li>
+							<p>Stellen Sie den Wählhebel in die Neutralstellung (N).</p>
+						</li>
+						<li>
+							<p>Lassen Sie das Kupplungspedal los.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Verlängerter Automatik-STOPP</p>
+					<ul>
+						<li>
+							<p>Verringern Sie die Geschwindigkeit auf unter ca. 25 km/h (15 mph).</p>
+						</li>
+						<li>
+							<p>Stellen Sie den Wählhebel in die Neutralstellung (N).</p>
+						</li>
+						<li>
+							<p>Betätigen Sie Kupplungs- und Bremspedal.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Im Ausrollmodus</p>
+					<ul>
+						<li>
+							<p>Sie können den Motor-Aus-Zustand am Auslaufen in den Stillstand hindern, indem Sie das Kupplungspedal und das Bremspedal nahezu gleichzeitig betätigen.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Wenn er letzte eingelegte Gang der 1. Gang ist, wird der Automatik-STOPP nicht aktiviert.</p>
+					</li>
+					<li>
+						<p>Ein Fahrzeug mit Schaltgetriebe oder intelligentem Schaltgetriebe muss eine Geschwindigkeit von mindestens etwa 8 km/h (5 mph) seit dem letzten Automatik-Stopp erreichen.</p>
+					</li>
+					<li>
+						<p>Während des Status ISG STOP können Sie in die Neutralstellung (N) schalten und das Kupplungspedal freigeben. Der Status ISG STOP bleibt dann bei STOP.</p>
+					</li>
+					<li>
+						<p>Erweiterter Automatik-STOPP ist auch über etwa 7 km/h (4 mph) aktiv, wenn die Geschwindigkeitsanforderung in jeder Gangstellung erfüllt ist (z. B. erweiterter Automatik-STOPP ist selbst im 3. Gang aktiv, 30 km/h (20 mph)).</p>
+					</li>
+					<li>
+						<p>Wenn Sie den Sicherheitsgurt lösen oder die Fahrertür (Motorhaube) öffnen, wird das ISG-System deaktiviert.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section>
+			<title>Automatikgetriebe/Doppelkupplungsgetriebe/Intelligentes variables Getriebe</title>
+			<ul>
+				<li>
+					<p>Herkömmlicher Automatik-STOPP</p>
+					<ul>
+						<li>
+							<p>Verringern Sie die Geschwindigkeit auf 0 km/h (0 mph).</p>
+						</li>
+						<li>
+							<p>Treten Sie auf das Bremspedal.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Verlängerter Automatik-STOPP</p>
+					<ul>
+						<li>
+							<p>Verringern Sie die Geschwindigkeit auf unter 25 km/h (15 mph).</p>
+						</li>
+						<li>
+							<p>Treten Sie auf das Bremspedal.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Im Ausrollmodus</p>
+					<ul>
+						<li>
+							<p>Sie können den Motor-Aus-Zustand am Auslaufen in den Stillstand hindern, indem Sie das Bremspedal bei unter 40 km/h (25 mph) betätigen.</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<note type="note">
+				<ul>
+					<li>
+						<p>Ein Fahrzeug mit Automatikgetriebe oder Doppelkupplungsgetriebe muss eine Geschwindigkeit von mindestens 30 km/h (20 mph) für erweiterten Automatik-STOPP oder 5 km/h (3 mph) für herkömmlichen Automatik-STOPP seit dem letzten Automatik-Stopp erreichen.</p>
+					</li>
+					<li>
+						<p>Wenn Sie im Auto-Stopp-Modus bei Stillstand den Sicherheitsgurt lösen oder die Fahrertür (Motorhaube) öffnen, wird das ISG-System deaktiviert.</p>
+					</li>
+					<li>
+						<p>Das ISG-System ist aktiv, wenn das Fahrzeug mit intelligenter Tempomatsteuerung ausgestattet ist und die Betriebsbedingungen erfüllt sind.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0365.dita#CL4m_HEV-ca_ES-2027-t0365" role="parent" scope="local" type="concept">
+				<linktext>Auto-Stopp</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

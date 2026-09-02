@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00279">
+	<title>Warning and indicator lights</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>driving the hybrid/plug-in hybrid vehicle
+					<indexterm>warning and indicator lights</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>READY indicator</title>
+			<sectiondiv>
+				<p>This indicator displays when the vehicle is ready to drive. When it does not display, normal driving is impossible or a problem has occurred. Blinking indicates emergency driving.</p>
+				<p>When the ready indicator does not display or blinks, there is a problem with the system. If this occurs, Kia recommends having your vehicle inspected by an authorized Kia dealer or service partner.</p>
+			</sectiondiv>
+		</section>
+		<section>
+			<title>Service warning light <image href="images/WKIA_267.jpg" scale="15" align="left" placement="inline"/></title>
+			<p>This warning light illuminates:</p>
+			<ul>
+				<li>
+					<p>When you press the <term translate="no">ENGINE START/STOP</term> button in the <term translate="no">ON</term> position, the service warning light illuminates for approximately 3 seconds, then turns off when all checks have been performed.</p>
+				</li>
+				<li>
+					<p>When there is a problem with the hybrid vehicle control system or hardware</p>
+				</li>
+			</ul>
+			<p>If the warning light illuminates while you are driving or does not turn off after you start the vehicle, Kia recommends having the vehicle inspected by an authorized Kia dealer or service partner.</p>
+		</section>
+		<section>
+			<title>EV mode indicator <image href="images/WKIA_268.jpg" scale="15" align="center" placement="inline"/></title>
+			<p>The <term translate="no">EV</term> mode indicator illuminates when the electric motor powers the vehicle.</p>
+			<p>When the <term translate="no">EV</term> indicator light does not illuminate, the gasoline engine powers the vehicle.</p>
+		</section>
+		<section>
+			<title>Regenerative brake warning light <image href="images/WKIA_127.jpg" scale="15" align="center" placement="inline"/> (red) <image href="images/WKIA_127.jpg" scale="15" align="center" placement="inline"/> (yellow)</title>
+			<p>This warning light illuminates when regenerative braking does not operate or perform well. This issue causes the brake warning light (red) and regenerative brake warning light (yellow) to illuminate simultaneously.</p>
+			<p>If the regenerative brake warning light illuminates, drive safely and have your vehicle inspected by an authorized Kia dealer or service partner. Operating the brake pedal might be more difficult than usual, and braking distance might increase.</p>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00268.dita#t00268" role="parent" scope="local" type="concept">
+				<linktext>Driving the hybrid</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

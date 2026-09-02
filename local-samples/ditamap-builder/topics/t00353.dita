@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00353">
+	<title>Canceling/returning automatic defogging logic on automatic climate control system</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>windshield defrosting and defogging 
+					<indexterm>canceling/returning automatic defogging logic on automatic climate control system</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<ol>
+			<li>
+				<p>Turn the <term translate="no">EV</term> button to the <term translate="no">POWER ON</term> or <term translate="no">DRIVE READY</term> position.</p>
+			</li>
+			<li>
+				<p>Touch the defroster icon (<image href="../../images/WKIA_181.eps" align="left" placement="inline" outputclass="nolabel" scale="15"/>).</p>
+			</li>
+			<li>
+				<p>While touching the air conditioning (A/C) icon, touch the air intake control icon at least 5 times within 3 seconds.</p>
+				<p>The recirculation indicator blinks 3 times in 0.5 second of intervals. It indicates that the defogging logic is canceled or returned to the programmed status.</p>
+			</li>
+		</ol>
+		<p>If the battery has been discharged or disconnected, it resets to the defog logic status.</p>
+	</conbody>
+</concept>

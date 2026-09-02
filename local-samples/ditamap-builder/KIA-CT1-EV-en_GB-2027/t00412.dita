@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept deliveryTarget="except_print" base="Anywhere" id="t00412">
+	<title>Floor mat anchors</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features 
+					<indexterm>floor mat anchors</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Make sure the floor mat is attached to the anchors to keep it from sliding forward.</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01693">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e01694">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25C119_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>Do not install after market floor mats that are not capable of being securely attached to the vehicle’s floor mat anchors. Unsecured floor mats can interfere with pedal operation.</p>
+				</li>
+				<li>
+					<p>Use floor mats not too thick and designed to be properly secured on the floor to avoid the interference with pedals. Make sure that installing the floor mats without removing plastic films on carpets may damage or break floor mat fix rings, resulting in the mats to be unsecured. Especially for a driver’s seat, the unsecured mats may cause unintended acceleration/brake. Ensure to remove all the plastic films on the carpets before installing the mats.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

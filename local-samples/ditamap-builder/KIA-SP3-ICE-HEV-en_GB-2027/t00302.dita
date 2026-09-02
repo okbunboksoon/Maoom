@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00302">
+	<title>Interior lights</title>
+	<shortdesc>This vehicle is equipped with lights to illuminate its interior.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior lights</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<note type="warning" id="e01942">
+			<p>Do not use the interior lights when driving in the dark. Accidents could happen because the interior lights may obscure your view.</p>
+		</note>
+		<note type="caution" id="e01943">
+			<p>To avoid 12V battery discharge, do not use the interior lights for extended periods when the vehicle is not running.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00293.dita#t00293" role="parent" scope="local" type="concept">
+				<linktext>Control and Features</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

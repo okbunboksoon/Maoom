@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00753">
+	<title>Jack and tools</title>
+	<shortdesc>Pull the luggage compartment up to reach this equipment:</shortdesc>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04566">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e04567">
+								<image href="images/N_SP3i26_C11_004_1_I.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e04568">
+								<li>
+									<p>Jack handle</p>
+								</li>
+								<li>
+									<p>Jack</p>
+								</li>
+								<li>
+									<p>Wheel lug nut wrench</p>
+								</li>
+								<li>
+									<p>Towing hook</p>
+								</li>
+								<li>
+									<p>Wheel cover remover tool</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The tools for replacing spare tire are stored in the luggage compartment.</p>
+		<section id="e04569">
+			<title>Jacking instructions</title>
+			<p>The provided jack is only for emergency tire changes.</p>
+			<ul id="e04570">
+				<li>
+					<p>Properly store the jack to keep it from rattling when your vehicle is in motion.</p>
+				</li>
+				<li>
+					<p>To reduce the possibility of personal injury, follow the provided jacking instructions.</p>
+				</li>
+			</ul>
+			<note type="warning" id="e04571">
+				<p>Changing tires</p>
+				<ul id="e04572">
+					<li>
+						<p>Never attempt vehicle repairs in the traffic lanes of a public road or highway.</p>
+					</li>
+					<li>
+						<p>Always move the vehicle completely off of the road and onto the shoulder before you change a tire. Use the jack on firm, level ground. If you cannot find a firm, level place off of the road, call a towing services company for assistance.</p>
+					</li>
+					<li>
+						<p>Be sure to use the correct front and rear jacking positions for your vehicle. Never use the bumpers or any other part of the vehicle for jacking support.</p>
+					</li>
+					<li>
+						<p>Your vehicle can roll off of the jack and cause serious injury or death.</p>
+					</li>
+					<li>
+						<p>Do not go underneath a vehicle supported by a jack.</p>
+					</li>
+					<li>
+						<p>Do not start or run the engine while the vehicle is on the jack.</p>
+					</li>
+					<li>
+						<p>Do not allow anyone to remain in the vehicle while it is on the jack.</p>
+					</li>
+					<li>
+						<p>Make sure any children present are in a secure place away from the road and the vehicle.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="warning" id="e04573">
+				<p>Tire jack</p>
+				<p>Never put any part of your body under a vehicle that is only supported by a jack, as the vehicle can easily roll off of the jack. Use vehicle support stands.</p>
+			</note>
+			<note type="warning" id="e04574">
+				<p>Changing tires</p>
+				<p>Never attempt vehicle repairs in the traffic lanes of a public road or highway.</p>
+			</note>
+			<note type="warning" id="e04575">
+				<p>Running vehicle on jack</p>
+				<p>Do not start or run the vehicle while your vehicle is on the jack, as it may cause the vehicle to fall off of the jack.</p>
+			</note>
+			<p>Properly store the jack to keep it from rattling when your vehicle is in motion.</p>
+			<note type="note" id="e04576">
+				<ul id="e04577">
+					<li>
+						<p>Take out the remover tool. Insert the tool to the hole and pull out the wheel cover.</p>
+					</li>
+					<li>
+						<p>When removing the wheel cover, if you use any other tool except the tool provided, the wheel cover may be damaged.</p>
+					</li>
+				</ul>
+				<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e04578">
+					<tgroup cols="2" colsep="1" rowsep="1">
+						<colspec colname="col1" colnum="1" colwidth="50*"/>
+						<colspec colname="col2" colnum="2" colwidth="50*"/>
+						<tbody>
+							<row rowsep="1">
+								<entry colname="col1">
+									<fig id="e04579">
+										<image href="images/N_SP3i26_C11_024_1_I.jpg" scale="95" align="center" placement="break"/>
+									</fig>
+								</entry>
+								<entry colname="col2"/>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</note>
+			<note type="tip" id="e04580">
+				<p>Retreaded tires</p>
+				<p>Substantial design variations and the age of a retreaded tire’s casing structure can limit service life and negatively impact driving safety.</p>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00752.dita#t00752" role="parent" scope="local" type="concept">
+				<linktext>If you have a flat tire (with spare tire)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0897">
+	<title>2. Regelung der Kraftstoffdampfrückführung</title>
+	<conbody>
+		<p>Das Kraftstoffdampfrückführungssystem verhindert, dass Kraftstoffdämpfe in die Umgebungsluft entweichen.</p>
+		<section>
+			<sectiondiv><ph>Aktivkohlebehälter</ph>
+				<p>Kraftstoffdämpfe, die im Kraftstofftank erzeugt werden, werden im Aktivkohlekanister an Bord absorbiert und gespeichert. Bei laufendem Motor werden die Kraftstoffdämpfe aus dem Filterbehälter über ein Spülmagnetventil in den Ansaugtrakt gesaugt.</p>
+			</sectiondiv>
+			<sectiondiv><ph>Spülmagnetventil</ph>
+				<p>Das Spülmagnetventil wird vom Motorsteuermodul (ECM) gesteuert. Bei Leerlaufdrehzahl und niedriger Kühlmitteltemperatur schließt das Spülmagnetventil, so dass kein Kraftstoffdampf in den Motor gelangt. Wenn der Motor Betriebstemperatur erreicht hat, öffnet das Spülmagnetventil, und die Kraftstoffdämpfe werden dem Motor zugeführt.</p>
+			</sectiondiv>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0894.dita#CL4m_HEV-ca_ES-2027-t0894" role="parent" scope="local" type="concept">
+				<linktext>Abgasregelung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" deliveryTarget="except_print" id="t00282">
+	<title>Off-peak time settings</title>
+	<prolog>
+		<metadata>
+			<keywords/>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25Q026_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Start Time</p>
+								</li>
+								<li>
+									<p>End Time</p>
+								</li>
+								<li>
+									<p>Charging options</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol>
+			<li>
+				<p>If selected, starts charging only on the designated off-peak time. If deselected, starts charging only on the scheduled time.</p>
+			</li>
+			<li>
+				<p>Set the most inexpensive time to complete charging.</p>
+				<ul>
+					<li>
+						<p>Off-peak tariffs prioritized: If selected, starts charging at off-peak time (may keep on charging pass off-peak time to charge 100%).</p>
+					</li>
+					<li>
+						<p>Off-peak tariffs only: If selected, charges only within off-peak time (may not charge 100%).</p>
+					</li>
+				</ul>
+			</li>
+		</ol>
+	</conbody>
+</concept>

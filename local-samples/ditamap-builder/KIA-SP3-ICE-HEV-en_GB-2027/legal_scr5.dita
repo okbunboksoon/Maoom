@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00950">
+    <title>Clearing the vehicle-restarting restriction</title>
+    <conbody>
+        <table outputclass="formatd" frame="all" rowsep="1" colsep="1" pgwide="1"
+            id="table_ugl_zy3_pjc">
+            <tgroup cols="2" colsep="1" rowsep="1">
+                <colspec colnum="1" colname="col1" colwidth="2.343*"/>
+                <colspec colnum="2" colname="col2" colwidth="2.343*"/>
+                <thead>
+                    <row rowsep="1">
+                        <entry namest="col1" nameend="col2">
+                            <p>No restart</p>
+                        </entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row rowsep="1">
+                        <entry colname="col1" align="center" valign="middle">
+                            <p>Low urea solution level</p>
+                        </entry>
+                        <entry colname="col2" align="center" valign="middle">
+                            <fig id="fig_vgl_zy3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073035L.jpg" scale="95"
+                                        align="center" placement="break" id="image_wgl_zy3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="col1" align="center" valign="middle">
+                            <p>Urea solution system failure</p>
+                            <p>(= no urea solution injection)</p>
+                        </entry>
+                        <entry colname="col2" align="center" valign="middle">
+                            <fig id="fig_xgl_zy3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073031L.jpg" scale="95"
+                                        align="center" placement="break" id="image_ygl_zy3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                    </row>
+                    <row rowsep="1">
+                        <entry colname="col1" align="center" valign="middle">
+                            <p>Incorrect urea solution detected</p>
+                            <p>(= abnormal urea solution)</p>
+                        </entry>
+                        <entry colname="col2" align="center" valign="middle">
+                            <fig id="fig_zgl_zy3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073036NL.jpg" scale="95"
+                                        align="center" placement="break" id="image_ahl_zy3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                    </row>
+                    <row rowsep="0">
+                        <entry colname="col1" align="center" valign="middle">
+                            <p>Abnormal urea-solution consumption</p>
+                            <p>(= post treatment failure)</p>
+                        </entry>
+                        <entry colname="col2" align="center" valign="middle">
+                            <fig id="fig_bhl_zy3_pjc">
+                                <figgroup>
+                                    <image href="images/OMQ4073031L.jpg" scale="95"
+                                        align="center" placement="break" id="image_chl_zy3_pjc"/>
+                                </figgroup>
+                            </fig>
+                        </entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>Once the inducement system reached to final status and disabled the vehicle restart, it
+            will only be deactivated in case the urea solution tank is replenished, or the
+            malfunctions have been rectified. If the vehicle can't be restarted with "Refill Urea
+            tank or vehicle will not start" message, refill a sufficient amount of urea solution,
+            wait for minutes and try vehicle starting again. If vehicle starting is not possible
+            regardless of urea solution level, have your vehicle inspected by a professional
+            workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+    </conbody>
+</concept>

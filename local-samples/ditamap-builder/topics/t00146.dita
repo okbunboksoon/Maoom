@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00146">
+	<title id="e00998">Air bag warning light <image align="left" height="0.117in" href="../../images/OCV041440L.eps" outputclass="nolabel" placement="inline" width="0.117in" id="e00999"/></title>
+	<conbody>
+		<section deliveryTarget="except_print" id="e01000">
+			<title>Operating conditions</title>
+			<ul id="e01001">
+				<li>
+					<p>When the vehicle is turned to ON, the air bag warning light should appear for approximately 3–6 seconds and go off.</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e01002">
+			<title>Malfunction</title>
+			<ul id="e01003">
+				<li>
+					<p>The air bag warning light does not turn on briefly when the vehicle is turned to ON.</p>
+				</li>
+				<li>
+					<p>The air bag warning light stays on after illuminating for approximately 3–6 seconds.</p>
+				</li>
+				<li>
+					<p>The air bag warning light comes on while the vehicle is moving.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

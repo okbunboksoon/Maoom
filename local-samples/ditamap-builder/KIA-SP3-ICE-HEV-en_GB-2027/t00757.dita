@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00757">
+	<title>Jack label</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>jack label</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<fig id="e04616">
+			<title>Type A</title>
+			<image href="images/OMQ4A065015.jpg" scale="70" align="center" placement="break"/>
+		</fig>
+		<fig id="e04617">
+			<title>Type B</title>
+			<image href="images/OMQ4A065016.jpg" scale="70" align="center" placement="break"/>
+		</fig>
+		<fig id="e04618">
+			<title>Type C</title>
+			<image href="images/OMQ4A065017.jpg" scale="70" align="center" placement="break"/>
+		</fig>
+		<fig id="e04619"><?oxy_comment_start author="june" timestamp="20250825T153208+0900" comment="호주 ONLY"?>
+			<title>Type D</title><?oxy_comment_end?>
+			<image href="images/N_TK25F027_E.jpg" scale="70" align="center" placement="break"/>
+		</fig>
+		<p>The actual jack label in your vehicle may differ from the illustration above. Refer to the jack label in your vehicle for these specifications:</p>
+		<ol outputclass="callout" id="e04620">
+			<li>
+				<p>Model Name</p>
+			</li>
+			<li>
+				<p>Maximum allowable load</p>
+			</li>
+			<li>
+				<p>When using the jack, apply your parking brake</p>
+			</li>
+			<li>
+				<p>When using the jack, stop the engine</p>
+			</li>
+			<li>
+				<p>Do not get under a vehicle that is supported by a jack</p>
+			</li>
+			<li>
+				<p>Use the designated jack locations under the frame</p>
+			</li>
+			<li>
+				<p>When supporting the vehicle, the base plate of the jack must be vertical under the lifting point</p>
+			</li>
+			<li>
+				<p>Shift to P (Park) <?oxy_comment_start author="june" timestamp="20250825T153041+0900" comment="MT ONLY"?> or R (Reverse) for Manual Transmission <?oxy_comment_end?></p>
+			</li>
+			<li>
+				<p>The jack should be used on firm, level ground</p>
+			</li>
+			<li>
+				<p>Jack manufacturer</p>
+			</li>
+			<li>
+				<p>Production date</p>
+			</li>
+			<li>
+				<p>Representative company and address</p>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00752.dita#t00752" role="parent" scope="local" type="concept">
+				<linktext>If you have a flat tire (with spare tire)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

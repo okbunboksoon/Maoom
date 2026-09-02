@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0469">
+	<title>Notlenkung</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054149.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<p><term translate="no">A</term>: Notlenkung</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Um den Fahrer zu warnen, dass die Notlenkung unterstützt wird, blinkt die Warnleuchte für die Notlenkung (<image align="left" href="../../images/WKIA_077.eps" scale="15" placement="inline"/>), eine Warnmeldung erscheint im Kombiinstrument, ein akustisches Warnsignal ertönt und das Lenkrad vibriert (ausstattungsabhängig).</p>
+		<p>Die Warnleuchte im Außenspiegel leuchtet auf, wenn das Fahrzeug auf beiden Fahrspuren von hinten erkannt wird. Die Lenkung wird unterstützt, um eine Kollision zu vermeiden.</p>
+		<p>Die Notlenkung wird unter folgenden Bedingungen aktiviert.</p>
+		<ul>
+			<li>
+				<p>Fahrgeschwindigkeit: Etwa 40-145km/h (25-90 mph)</p>
+			</li>
+			<li>
+				<p>Fahrzeug oder motorisiertes Zweirad auf der nächsten Fahrspur: während der Fahrt</p>
+			</li>
+		</ul>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Die Spurwechselfunktion funktioniert nicht, wenn das von der Vorderseite entgegenkommenden anhält.</p>
+				</li>
+				<li>
+					<p>Diese Funktionen funktionieren nicht, wenn sich ein stillstehendes Auto oder Zweirad neben dem Fahrzeug befindet.</p>
+				</li>
+				<li>
+					<p>Der Erfassungsbereich der seitlichen Front- und Heckradare richtet sich nach der Standard-Fahrbahnbreite gewöhnlicher Straßen. Auf schmalen Straßen können Warnungen durch Fahrzeuge oder motorisierte Zweiräder ausgelöst werden, die auf der benachbarten Spur fahren. Umgekehrt können Radars auf breiten Straßen u.U. Fahrzeuge und motorisierte Zweiräder, die auf der benachbarten Spur fahren, nicht erkennen und keine Warnungen ausgeben.</p>
+				</li>
+				<li>
+					<p>Die Funktion zur Erkennung von sich seitlich nähernden Fahrzeugen wird in den folgenden Situationen deaktiviert:</p>
+					<ul>
+						<li>
+							<p>Wenn Sie einen bestimmten Abstand von der benachbarten Fahrspur nicht einhalten</p>
+						</li>
+						<li>
+							<p>Wenn Sie sich von der Richtung entfernen, in der die Gefahr einer Kollision besteht</p>
+						</li>
+						<li>
+							<p>Wenn das Lenkrad schnell eingeschlagen wird</p>
+						</li>
+						<li>
+							<p>Wenn Sie das Bremspedal betätigen</p>
+						</li>
+						<li>
+							<p>Wenn der Frontalkollisions-Vermeidungsassistent in Betrieb ist</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Achten Sie darauf, nach dem Auslösen der Funktion für die seitliche Annäherung an ein Fahrzeug bzw. nach einem Fahrspurwechsel mittig in der Spur zu fahren. Wenn Sie weiter am Rand der Fahrspur entlangfahren, ohne sich in die Mitte der Fahrspur zu bewegen, wird die Funktion für die seitliche Annäherung des Fahrzeugs deaktiviert.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn aufgrund der Notlenkung ein weiterer Unfall zu erwarten ist, wird lediglich eine Kollisionswarnung ausgegeben, um auf die Gefahr hinzuweisen.</p>
+				</li>
+				<li>
+					<p>Befindet sich der Fahrersitz links, kann beim Linksabbiegen eine Kollisionswarnung ausgegeben werden; befindet sich der Fahrersitz rechts, kann beim Rechtsabbiegen eine Kollisionswarnung ausgegeben werden.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0467.dita#CL4m_HEV-ca_ES-2027-t0467" role="parent" scope="local" type="concept">
+				<linktext>Seitliche Spurwechselassistenzfunktion</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00419">
+	<title>Vehicle Stability Management (VSM)</title>
+	<shortdesc>Vehicle Stability Management (VSM) provides further enhancements to vehicle stability and steering response.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>vehicle safety system 
+					<indexterm>vehicle stability management (VSM)</indexterm>
+				</indexterm>
+				<indexterm>vehicle stability management (VSM)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e03060">
+			<title>Operating conditions</title>
+			<ul id="e03061">
+				<li>
+					<p>Driving on slippery roads</p>
+				</li>
+				<li>
+					<p>Grip change of left and right wheels is detected</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e03062">
+			<title>Non-operating conditions</title>
+			<ul id="e03063">
+				<li>
+					<p>Driving on a gradient or inclined surface</p>
+				</li>
+				<li>
+					<p>Driving in R (Reverse)</p>
+				</li>
+				<li>
+					<p>MDPS warning light (<image align="left" href="../../images/WKIA_031.eps" outputclass="nolabel" placement="inline" scale="15" id="e03064"/>) remains illuminated</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print" id="e03065">
+			<title>VSM malfunction indicator</title>
+			<p>VSM can be deactivated when a malfunction has been detected in the MDPS or VSM. If the ESC indicator light (<image align="left" href="../../images/WKIA_041.eps" outputclass="nolabel" placement="inline" scale="15" id="e03066"/>) or MDPS warning light (<image align="left" href="../../images/WKIA_031.eps" outputclass="nolabel" placement="inline" scale="15" id="e03067"/>) remains on, take your vehicle to a professional workshop and have the system checked. Kia recommends that you visit an authorized Kia dealer/service partner.</p>
+			<note type="warning" id="e03068">
+				<p>When replacing tires and wheels, make sure they are the same size as the original tires and wheels installed. Driving with varying tire or wheel sizes may diminish any supplemental safety benefits of the VSM.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

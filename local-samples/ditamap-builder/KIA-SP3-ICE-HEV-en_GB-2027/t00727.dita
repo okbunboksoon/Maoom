@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00727">
+	<title>Operating order</title>
+	<conbody>
+		<p>Remote Operation operates in the following order:</p>
+		<ol id="e04232">
+			<li>
+				<p>Getting ready to remotely move forward and backward</p>
+			</li>
+			<li>
+				<p>Remotely moving forward and backward</p>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00726.dita#t00726" role="parent" scope="local" type="concept">
+				<linktext>Remote Operation</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

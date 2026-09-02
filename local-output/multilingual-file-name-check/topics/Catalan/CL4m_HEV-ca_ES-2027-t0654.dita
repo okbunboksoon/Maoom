@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0654">
+	<title>Autobahn-Fahrspurwechselhilfe betriebsbereit</title>
+	<conbody>
+		<p>Die Autobahn-Fahrspurwechselhilfe befindet sich im Standby-Zustand, wenn eine der Bedingungen für den Zustand Betriebsbereit nicht erfüllt ist oder wenn Sie in eine der folgenden Straßen einfahren oder auf einer der folgenden Straßen fahren:</p>
+		<ul>
+			<li>
+				<p>Eine Straße in einer bestimmten Entfernung von der Mautstelle auf der Hauptstrecke der Autobahn (oder Fernstraße)</p>
+			</li>
+			<li>
+				<p>Die Straße endet ohne Kreuzung oder Abzweigung</p>
+			</li>
+			<li>
+				<p>Straße mit scharfen Kurven</p>
+			</li>
+			<li>
+				<p>Straße mit engen Spuren</p>
+			</li>
+			<li>
+				<p>Im Baustellenbereich</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0650.dita#CL4m_HEV-ca_ES-2027-t0650" role="parent" scope="local" type="concept">
+				<linktext>Autobahn-Fahrspurwechselhilfe</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="top" id="t00019">
+	<title id="e00038">Tires and wheels</title>
+	<prolog>
+		<metadata>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table otherprops="legal_eu_std_002_03 legal_eu_std_002_02 legal_eu_std_004_02 legal_eu_std_004_03" frame="all" rowsep="1" colsep="1" outputclass="formatc" id="e00039">
+			<tgroup cols="12">
+				<colspec colnum="1" colwidth="1*" colname="col1"/>
+				<colspec colnum="2" colwidth="1*" colname="col2"/>
+				<colspec colnum="3" colwidth="1*" colname="col3"/>
+				<colspec colnum="4" colwidth="1*" colname="col4"/>
+				<colspec colnum="5" colwidth="1*" colname="col5"/>
+				<colspec colnum="6" colwidth="1*" colname="col6"/>
+				<colspec colnum="7" colwidth="1*" colname="col7"/>
+				<colspec colnum="8" colwidth="1.5*" colname="col8"/>
+				<colspec colnum="9" colwidth="1.5*" colname="col9"/>
+				<colspec colnum="10" colwidth="1.5*" colname="col10"/>
+				<colspec colnum="11" colwidth="1.5*" colname="col11"/>
+				<colspec colnum="12" colwidth="1.5*" colname="col12"/>
+				<thead>
+					<row>
+						<entry morerows="2" align="center" valign="middle">
+							<p>Item</p>
+						</entry>
+						<entry morerows="2" align="center" valign="middle">
+							<p>Tire size</p>
+						</entry>
+						<entry morerows="2" align="center" valign="middle">
+							<p>Wheel size</p>
+						</entry>
+						<entry namest="col4" nameend="col5" morerows="1" align="center" valign="middle">
+							<p>Load capacity</p>
+						</entry>
+						<entry namest="col6" nameend="col7" morerows="1" align="center" valign="middle">
+							<p>Speed capacity</p>
+						</entry>
+						<entry namest="col8" nameend="col11" align="center" valign="middle">
+							<p>Inflation pressure [bar (psi, kPa)]</p>
+						</entry>
+						<entry morerows="2" align="center" valign="middle">
+							<p>Wheel lug nut torque kgf·m (lbf·ft, N·m)</p>
+						</entry>
+					</row>
+					<row>
+						<entry namest="col2" nameend="col3" align="center" valign="middle">
+							<p>Normal load</p>
+						</entry>
+						<entry namest="col5" nameend="col6" align="center" valign="middle">
+							<p>Maximum load</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>LI <fn>Load index</fn> </p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>kg</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>SS <fn>Speed symbol</fn> </p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>km/h</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Front</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Rear</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Front</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>Rear</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry morerows="2" align="center" valign="middle">
+							<p>Full size tire</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>215/60 R17</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>7.0J X 17</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>96</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>710</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p> <term translate="no">H</term> </p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>210</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>11–13 (79–94, 107–127)</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>215/50 R19</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>7.5J X 19</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>97</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>730</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p> <term translate="no">H</term> </p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>210</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2WD: 2.5 (36, 250) AWD: 2.7 (39, 270)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2WD: 2.5 (36, 250) AWD: 2.7 (39, 270)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>11–13 (79–94, 107–127)</p>
+						</entry>
+					</row>
+					<row>
+						<entry align="center" valign="middle">
+							<p>245/40 R20</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>8.0J X 20</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>99</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>775</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p> <term translate="no">Y</term> </p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>300</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>2.5 (36, 250)</p>
+						</entry>
+						<entry align="center" valign="middle">
+							<p>14–16 (101-116, 137-157)</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<note type="caution" id="e00040">
+			<p>When replacing tires, use the same size originally supplied with the vehicle. Using tires of a different size can damage the related parts or make it work irregularly.</p>
+		</note>
+		<note type="note" id="e00041">
+			<ul id="e00042">
+				<li id="e00043">
+					<p>We recommend that when replacing tires, use the same originally supplied with the vehicles. If not, that affects driving performance.</p>
+				</li>
+				<li id="e00044">
+					<p>When driving in high altitude grades, it is natural for the atmospheric pressure to decrease. Therefore, please check the tire pressure and add more air when necessary.</p>
+					<ul>
+						<li id="e00045">
+							<p>Additionally, required tire air pressure per km above sea level: 1.5 psi/km</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0675">
+	<title>Kameraeinstellungen</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M054110N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Kameraeinstellungen</p>
+								</li>
+								<li>
+									<p>Anzeigeinhalt</p>
+								</li>
+								<li>
+									<p>Anzeigeeinstellungen</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Wählen Sie bei eingeschaltetem Fahrzeug das Setup-Symbol (<image align="left" href="../../images/WKIA_152.eps" scale="15" placement="inline"/>) auf dem Bildschirm oder <menucascade><uicontrol>Einrichtung</uicontrol><uicontrol>Fahrzeug</uicontrol><uicontrol>Fahrerassistenz</uicontrol><uicontrol>Parksicherheit</uicontrol><uicontrol>Kameraeinstellungen</uicontrol></menucascade> auf dem Bildschirm des Infotainment-Systems, um die Einstellungen für den Umgebungsüberwachungs-Monitor zu ändern.</p>
+		<ul>
+			<li>
+				<p>Anzeigeinhalt: Legen Sie die Informationen fest, die auf dem Bildschirm des Parkassistenten angezeigt werden sollen.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0673.dita#CL4m_HEV-ca_ES-2027-t0673" role="parent" scope="local" type="concept">
+				<linktext>Einstellungen der Umgebungsüberwachung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

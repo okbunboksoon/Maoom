@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00465">
+	<title>Stopping vehicle and ending brake control</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03526">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03527">
+								<figgroup>
+									<image href="../../images/OOV055145L.eps" align="center" height="1.740in" placement="break" id="e03528"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03529">
+								<li>
+									<p> <uicontrol>Drive carefully</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>When the vehicle is stopped due to emergency braking, the warning message will appear on the cluster.</p>
+		<p>For your safety, the driver should depress the brake pedal immediately and check the surroundings.</p>
+		<ul id="e03530">
+			<li>
+				<p>Brake control will end after the vehicle is stopped by emergency braking for approximately 2 seconds</p>
+			</li>
+		</ul>
+		<note type="caution" id="e03531">
+			<ul id="e03532">
+				<li>
+					<p>If your vehicle or the oncoming vehicle is not driving straight, Front Oncoming function warning and control may be late or may not operate</p>
+				</li>
+				<li>
+					<p>When driving at night, the performance of the recognition is decreased, so the Forward Collision-Avoidance Assist system may be temporarily limited or may not work.</p>
+				</li>
+				<li>
+					<p>You can press the hazard warning flasher switch during a collision warning or emergency braking to turn off the warning sound.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00307">
+	<title>Limitations of High Beam Assist</title>
+	<conbody>
+		<p>High Beam Assist may not work properly in the following situations:</p>
+		<ul>
+			<li>
+				<p>Light from a vehicle is not detected because of lamp damage, or because it is hidden from sight, etc.</p>
+			</li>
+			<li>
+				<p>Headlamp of a vehicle is covered with dust, snow or water.</p>
+			</li>
+			<li>
+				<p>A vehicle’s headlamps are off but the fog lamps are on etc.</p>
+			</li>
+			<li>
+				<p>There is a lamp that has a similar shape as a vehicle’s lamp.</p>
+			</li>
+			<li>
+				<p>Headlamps have been damaged or not repaired properly.</p>
+			</li>
+			<li>
+				<p>Headlamps are not aimed properly.</p>
+			</li>
+			<li>
+				<p>Driving on a narrow curved road, rough road, uphill or downhill.</p>
+			</li>
+			<li>
+				<p>Vehicle in front is partially visible on a crossroad or curved road.</p>
+			</li>
+			<li>
+				<p>There is a traffic light, reflecting sign, flashing sign or mirror ahead.</p>
+			</li>
+			<li>
+				<p>There is a temporary reflector or flash ahead (construction area).</p>
+			</li>
+			<li>
+				<p>The road conditions are bad such as being wet, iced or covered with snow.</p>
+			</li>
+			<li>
+				<p>A vehicle suddenly appears from a curve.</p>
+			</li>
+			<li>
+				<p>The vehicle is tilted from a flat tire or is being towed.</p>
+			</li>
+			<li>
+				<p>Light from a vehicle is not detected because of exhaust fume, smoke, fog, snow, etc.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>For more details on the limitations of the front view camera, refer to <xref href="t00446.dita#t00446"/>.</p>
+		</note>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>At times, High Beam Assist may not work properly. The function is for your convenience only. It is the responsibility of the driver for safe driving practices and always check the road conditions for your safety.</p>
+				</li>
+				<li>
+					<p>When High Beam Assist does not operate normally, change the headlamp position manually between high beam and low beam.</p>
+				</li>
+				<li>
+					<p>When starting the vehicle or resetting the front camera, the High Beam Assist may not operate for approximately 15 seconds.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

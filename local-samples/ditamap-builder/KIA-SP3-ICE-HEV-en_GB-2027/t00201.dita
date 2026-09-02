@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task id="t00201">
+	<title id="e01265">Reclining seatback </title>
+	<taskbody>
+		<context>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01266">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01267">
+									<image href="images/N_SP327_B06_004_1.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>To recline the seatback:</p>
+		</context>
+		<steps>
+			<step>
+				<cmd>Lean forward slightly and lift the seatback recliner lever.</cmd>
+			</step>
+			<step>
+				<cmd>Carefully lean back on the seat and adjust the seatback to the desired position.</cmd>
+			</step>
+			<step>
+				<cmd>Release the lever and make sure the seatback is locked in place.</cmd>
+				<info>
+					<p>The lever MUST return to its original position for the seatback to lock.</p>
+					<note type="warning">
+						<p>Reclining seatback</p>
+						<p>Sitting in a reclined position when the vehicle is in motion can be dangerous. Even when buckled up, reclining the seatback greatly reduces the protections of the restraint system (seat belts and air bags).</p>
+						<p>Seat belts must be snug against an occupant’s hips and chest to work properly. When the seatback is reclined, the shoulder belt cannot do its job because it will not be snug against your chest. In an accident, you could be thrown into the seat belt or slide under the seat belt, causing neck, abdominal, spinal, or other injuries.</p>
+						<p>The more the seatback is reclined, the greater chance you hips will slide under the lap belt or your neck will strike the shoulder belt.</p>
+					</note>
+				</info>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00199.dita#t00199" role="parent" scope="local" type="concept">
+				<linktext>Front seat adjustment for manual seat </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

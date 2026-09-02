@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00825">
+	<title>Light position (Front)</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e05180">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e05181">
+								<title>Head lamp – Type A</title>
+								<figgroup>
+									<image href="../../images/OOV075019L.eps" align="center" placement="break" scale="95" id="e05182"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry>
+							<fig id="e05183">
+								<title>Head lamp – Type B</title>
+								<figgroup>
+									<image href="../../images/OOV075020L.eps" align="center" placement="break" scale="95" id="e05184"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e05185">
+			<li>
+				<p>Headlamp (Low) (LED type)</p>
+			</li>
+			<li>
+				<p>Headlamp (High) (LED type)</p>
+			</li>
+			<li>
+				<p>Front turn signal lamp (LED type)</p>
+			</li>
+			<li>
+				<p>Day time running lamp (LED type)</p>
+			</li>
+			<li>
+				<p>Position lamp (LED type)</p>
+			</li>
+			<li>
+				<p importance="optional">Center Position lamp (LED Type)</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

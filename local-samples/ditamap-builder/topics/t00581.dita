@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" importance="optional" id="t00581">
+	<title>Based on driving style</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig>
+								<figgroup>
+									<image href="../../images/N_TK25Z022E.eps" align="center" placement="break" height="1.575in" width="2.244in"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout">
+								<li>
+									<p> <uicontrol outputclass="a1804409">Driver assistance</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1906866">Smart Cruise Control</uicontrol> </p>
+								</li>
+								<li>
+									<p> <uicontrol outputclass="a1906868">Based on driving style</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>With the vehicle on, if <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Driving Convenience</uicontrol><uicontrol>SCC (Smart Cruise Control)</uicontrol><uicontrol>Based on driving style</uicontrol></menucascade> is selected from the infotainment system screen, Smart Cruise Control will operate based on the driver’s driving style, such as vehicle distance, acceleration, reaction speed.</p>
+		<p>The driver’s driving style can be adjusted each driving style manually.</p>
+		<note type="note">
+			<ul>
+				<li>
+					<p>If equipped with Based on Driving Style, Based on driving mode and Based on driving style can be selected from the infotainment system screen by selecting <menucascade><uicontrol>Settings</uicontrol><uicontrol>Vehicle</uicontrol><uicontrol>Driver assistance</uicontrol><uicontrol>Driving convenience</uicontrol><uicontrol>SCC (Smart Cruise Control)</uicontrol></menucascade>.</p>
+				</li>
+				<li>
+					<p>While Smart Cruise Control is operating with Based on driving style selected, if you press and hold the Vehicle Distance (<image href="../../images/WKIA_084.eps" align="center" placement="inline" outputclass="nolabel" scale="15"/>) button, based on driving mode will be disabled. Press and hold the Vehicle Distance (<image href="../../images/WKIA_084.eps" align="center" placement="inline" outputclass="nolabel" scale="15" id="e04222"/>) button to change Smart Cruise Control to Based on driving style mode.</p>
+				</li>
+				<li>
+					<p>Smart Cruise Control learns the driver’s driving styles only when the driver drives the vehicle.</p>
+				</li>
+				<li>
+					<p>When Based on Driving Style is deactivated, the driver’s driving tendency (vehicle distance, acceleration strength, and responsiveness) will remain at the same level as when Based on Driving Style is activated.</p>
+				</li>
+				<li>
+					<p>Even if the levels of driving tendency (vehicle distance, acceleration strength, and responsiveness) displayed are the same regardless of whether Based on Driving Style is activated or deactivated, the actual control characteristics may differ.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

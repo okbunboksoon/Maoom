@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00426">
+	<title>DRIVE MODE</title>
+	<shortdesc>The drive mode may be selected according to the driver’s preference or road condition.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>drive mode integrated control system 
+					<indexterm>DRIVE MODE</indexterm>
+				</indexterm>
+				<indexterm>DRIVE MODE</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table frame="none" outputclass="formatc_none" rowsep="0" colsep="0" id="e03109">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig id="e03110">
+								<title>Type A</title>
+								<figgroup>
+									<image align="center" placement="break" height="1.575in" width="2.244in" href="../../images/OOV045015.eps" id="e03111"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e03112">
+								<title>Type B (GT-line)</title>
+								<figgroup>
+									<image align="center" placement="break" height="1.575in" width="2.244in" href="../../images/OOV045028.eps" id="e03113"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="col1">
+							<fig id="e03114">
+								<title>Type C (GT)</title>
+								<figgroup>
+									<image align="center" placement="break" height="1.575in" width="2.244in" href="../../images/OOVGT045001.eps" id="e03115"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ul id="e03116">
+			<li>
+				<p>Press the <term>DRIVE MODE</term> button.</p>
+			</li>
+			<li>
+				<p> <term>DRIVE MODE</term> will change to <term>NORMAL</term> mode when the vehicle is restarted.</p>
+			</li>
+			<li>Depending on the region, the vehicle switches to <term>ECO</term> mode or <term>NORMAL</term> mode upon restart.</li>
+			<li>
+				<p>Press the <term>GT</term> button to change to <term>GT</term> mode.</p>
+			</li>
+		</ul>
+		<table frame="none" colsep="1" rowsep="1" pgwide="true" outputclass="formatc" id="e03117">
+			<desc>
+				<p importance="default">: for GT</p>
+			</desc>
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="23*"/>
+				<colspec colnum="2" colname="2" colwidth="77*"/>
+				<thead>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p>Mode</p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>Characteristics</p>
+						</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <term translate="no">ECO</term> </p>
+						</entry>
+						<entry colname="2" align="left" valign="middle">
+							<p>Drive motor control to prevent electric economy from deteriorating</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <term translate="no">NORMAL</term> </p>
+						</entry>
+						<entry colname="2" align="left" valign="middle">
+							<p>Typical mode of driving, used for driving on general roads, urban areas and highways.</p>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p> <term translate="no">SPORT</term> </p>
+						</entry>
+						<entry colname="2" align="left" valign="middle">
+							<p>Provides fast and dynamic driving with steering wheel and drive motor control</p>
+						</entry>
+					</row>
+					<row rowsep="1">
+						<entry colname="1" align="center" valign="middle">
+							<p> <term translate="no">SNOW</term> </p>
+						</entry>
+						<entry colname="2" align="left" valign="middle">
+							<p>Control the driven wheel’s driving force on slippery roads such as snow to enable a stable start and suppress tires from slipping.</p>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p> <term translate="no">MY DRIVE</term> </p>
+						</entry>
+						<entry colname="2" align="left" valign="middle">
+							<p>Drive mode selectable for each preferred component within the theme system</p>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" align="center" valign="middle">
+							<p> <term>GT*</term> </p>
+						</entry>
+						<entry colname="2" align="center" valign="middle">
+							<p>Provides sportier and firm riding for maximum performance</p>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

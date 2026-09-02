@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00354">
+	<title>Power outlet</title>
+	<shortdesc>The power outlet provides power for mobile telephones or other devices designed to operate with the vehicle electrical system, or for other devices that are compatible with the power outlet and vehicle electrical system.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features
+					<indexterm>power outlet</indexterm>
+				</indexterm>
+				<indexterm>power outlet</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02264">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02265">
+								<title>Center console</title>
+								<image href="images/N_SP3c27_C08_045_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The devices should draw less than 15A when the vehicle is in <?oxy_comment_start author="june" timestamp="20250901T153649+0900" comment="EV 시동체계 변경 차종
+
+POWER ON or DRIVE READY"?><term translate="no">ON</term><?oxy_comment_end?> position.</p>
+		<note type="warning" id="e02266">
+			<p>Electric shock</p>
+			<p>Do not put a finger or a foreign object (such as a pen) into a power outlet, and do not touch it with a wet hand. You may get an electric shock.</p>
+		</note>
+		<note type="note" id="e02267">
+			<ul id="e02268">
+				<li>
+					<p>Use the power outlet only when the vehicle is in <?oxy_comment_start author="june" timestamp="20250901T153649+0900" comment="EV 시동체계 변경 차종
+
+POWER ON or DRIVE READY"?><term translate="no">ON</term><?oxy_comment_end?> position, and remove the accessory plug after use. Using the accessory plug for prolonged periods of time with the vehicle <term translate="no">OFF</term> could cause the battery to discharge.</p>
+				</li>
+				<li>
+					<p>Only use 12V electric accessories that are less than 15A in electric capacity.</p>
+				</li>
+				<li>
+					<p>Adjust the air conditioner or heater to the lowest level when using the power outlet.</p>
+				</li>
+				<li>
+					<p>Close the cover when not in use.</p>
+				</li>
+				<li>
+					<p>Some electronic devices can cause electronic interference when plugged into a vehicle’s power outlet. These devices may cause excessive audio static and malfunctions in other electronic systems or devices used in your vehicle.</p>
+				</li>
+				<li>
+					<p>Push the plug in as far as it will go. If the plug does not make good contact, it may overheat, and the fuse may open.</p>
+				</li>
+				<li>
+					<p>Plug in battery -equipped electronic devices with reverse current protection. The current from the battery may flow into the vehicle’s electrical system and cause system malfunction.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note" id="e02269">
+			<p>Do not connect another vehicle’s Tire Mobility Kit (TMK) to the power outlet. The unmatched power requirement between the vehicle power outlet and the TMK can cause fire or circuit damage within both the vehicle and the TMK.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00347.dita#t00347" role="parent" scope="local" type="concept">
+				<linktext>Interior features</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

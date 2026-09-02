@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00358">
+	<title>Coat hook</title>
+	<shortdesc>There is a coat hook next to the left rear grab handle.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>interior features
+					<indexterm>coat hook</indexterm>
+				</indexterm>
+				<indexterm>coat hook</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02315">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02316">
+								<image href="images/N_SP3c27_C08_047_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The actual feature may differ from the illustration.</p>
+		<note type="warning" id="e02317">
+			<p>Do not hang objects aside from clothes, such as hangers or hard objects. Do not put heavy, sharp, or breakable objects in the clothing’s pockets. In an accident or when the curtain air bag inflates, it may cause vehicle damage or bodily injury.</p>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02318">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e02319">
+									<image href="images/N_SP327_C08_037.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</note>
+		<note type="note" id="e02320">
+			<p>Hanging clothing</p>
+			<p>Do not hang heavy clothes, as they may damage the hook.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00347.dita#t00347" role="parent" scope="local" type="concept">
+				<linktext>Interior features</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

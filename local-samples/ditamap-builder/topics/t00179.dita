@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00179">
+	<title>How to use the Digital Key 2 (Card Key)</title>
+	<shortdesc/>
+	<conbody>
+		<section id="e01333">
+			<title>Card key touch control</title>
+			<p>The driver can lock and unlock the door by touching the card key on the door handle. Also, the vehicle can be started by placing the card key on the in-vehicle authentication pad (wireless charging pad).</p>
+			<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e01334">
+				<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+					<colspec colnum="1" colname="1" colwidth="50*"/>
+					<colspec colnum="2" colname="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="1" colsep="0">
+								<fig id="e01335">
+									<figgroup>
+										<image href="../../images/OOV035018.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e01336"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="2">
+								<ol outputclass="callout" id="e01337">
+									<li>
+										<p>Door handle authentication pad</p>
+									</li>
+									<li>
+										<p>Card key NFC antenna</p>
+									</li>
+								</ol>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+		<section id="e01338">
+			<title>Locking/Unlocking the doors</title>
+			<ul id="e01339">
+				<li>
+					<p>If the driver touches the NFC antenna of the registered card key 2 on the driver’s or passenger’s door handle authentication pad (1) for more than 2 seconds, the door will lock or unlock.</p>
+				</li>
+				<li>
+					<p>After locking the door, make sure to check its locked state. After unlocking the doors, the doors will automatically re-lock after 30 seconds unless a door is opened.</p>
+				</li>
+				<li>
+					<p>It works only if the center of the NFC card key is accurately touched to the NFC authentication area of the vehicle door handle.</p>
+				</li>
+			</ul>
+			<note type="note" deliveryTarget="except_print" id="e01340">
+				<p>When approaching smartphone NFC antenna to the center of the outside door handle authentication pad, the doors will not lock with a beep sound in following conditions:</p>
+				<ul id="e01341">
+					<li>
+						<p>When the Smart Key is in the vehicle</p>
+					</li>
+					<li>
+						<p>When the EV button is in POWER ON or DRIVE READY position</p>
+					</li>
+					<li>
+						<p>When one or more doors, hoods or tailgate are open</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+		<section id="e01342">
+			<title>Starting the vehicle</title>
+			<p>After placing your registered card key 2 on the in-vehicle authentication pad (wireless charger pad), depress the brake pedal and press the EV button to start the vehicle.</p>
+			<ul id="e01343">
+				<li>
+					<p>Once the vehicle is started, you can remove the card key from the pad.</p>
+				</li>
+			</ul>
+			<p>For more details, refer to <xref href="t00390.dita#t00390"/>.</p>
+			<note type="warning" id="e01344">
+				<p>The vehicle can be started when the registered card key is placed on the in-vehicle authentication pad (wireless charging pad). Therefore, do not leave unsupervised children or people who are not aware of the system since it can result in serious injury or death. In addition, always have the registered card key with you to prevent vehicle theft when leaving the vehicle.</p>
+			</note>
+			<note type="caution" deliveryTarget="except_print" id="e01345">
+				<ul id="e01346">
+					<li>
+						<p>The digital key (card key) may not work under the following conditions:</p>
+						<ul id="e01347">
+							<li>
+								<p>When the digital key (card key) is not touching the center of the door handle authentication pad or in-vehicle authentication pad (wireless charging pad) correctly.</p>
+							</li>
+							<li>
+								<p>When the digital key (card key) is used overlapped with NFC-enabled cards such as credit card or smartphone.</p>
+							</li>
+							<li>
+								<p>If the digital key (card key) does not work, move the card key approximately 10 cm (4 inches) away from the authentication pad and then touch it again.</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>The digital key (card key) can be damaged by impacts. If the digital key (card key) is damaged, replace the digital key (card key) with a new one and register it again.</p>
+					</li>
+					<li>
+						<p>The card key is a general consumable item that is not included in the warranty repair items, so if it is damaged or lost due to customer carelessness, A/S is not available.</p>
+					</li>
+					<li>
+						<p>Long-time exposure to high temperature may cause the card key to malfunction. Be careful not to expose the key to direct sunlight or high temperature.</p>
+					</li>
+					<li>
+						<p>If the digital key (card key) is left on the in-vehicle authentication pad (wireless charging pad) while driving, it may cause malfunction of the digital key (card key). After starting the vehicle, make sure to separate the digital key (card key) from the in-vehicle authentication pad (wireless charging pad).</p>
+					</li>
+					<li>
+						<p>If the digital key (card key) is placed between the in-vehicle authentication pad (wireless charging pad) and the smartphone, and the smartphone is wirelessly charged, it may cause the digital key (card key) to malfunction. For example, it occurs when charging the smartphone while the digital key (card key) is attached to the back of the smartphone case. Make sure to charge the digital key (card key) after removing it from the smartphone.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+</concept>

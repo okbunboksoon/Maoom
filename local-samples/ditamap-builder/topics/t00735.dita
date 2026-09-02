@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00735">
+	<title>Parking function operation status</title>
+	<conbody>
+		<section>
+			<title>The function will pause in the following conditions when:</title>
+			<p>When Parking function is paused, the vehicle will automatically stop. If the condition that made the function to pause disappears, the function may operate again.</p>
+			<ul>
+				<li>
+					<p>Smart Parking</p>
+					<ul>
+						<li>
+							<p>There is a pedestrian, animal or object in the direction the vehicle is moving</p>
+						</li>
+						<li>
+							<p>The door or tailgate is open</p>
+						</li>
+						<li>
+							<p>The driver’s seat belt is not fastened</p>
+						</li>
+						<li>
+							<p>When Parking Collision-Avoidance Assist, Blind-Spot Collision-Avoidance Assist or Rear Cross-Traffic Collision-Avoidance Assist operates</p>
+						</li>
+						<li>
+							<p>The Parking/View button (<image align="left" height="0.117in" href="../../images/WKIA_106.eps" outputclass="nolabel" placement="inline" width="0.117in" id="e04660"/>) is not continuously pressed</p>
+						</li>
+						<li>
+							<p>The vehicle is stopped by depressing the brake pedal</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Remote Parking</p>
+					<ul>
+						<li>
+							<p>There is a pedestrian, animal or object in the direction the vehicle is moving</p>
+						</li>
+						<li>
+							<p>The door or tailgate is open</p>
+						</li>
+						<li>
+							<p>The Forward (<image align="left" height="0.117in" href="../../images/WKIA_109.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) or Backward (<image align="left" height="0.117in" href="../../images/WKIA_110.eps" outputclass="nolabel" placement="inline" width="0.117in"/>) button is not continuously pressed</p>
+						</li>
+						<li>
+							<p>Simultaneously pressing multiple buttons on a smart key</p>
+						</li>
+						<li>
+							<p>The smart key is not operated within 4 m (13 ft.) from the vehicle</p>
+						</li>
+						<li>
+							<p>Button of another smart key is pressed in addition to the operating smart key</p>
+						</li>
+						<li>
+							<p>When Parking Collision-Avoidance Assist, Blind-Spot Collision-Avoidance Assist or Rear Cross-Traffic Collision-Avoidance Assist operates</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>The function will cancel in the following conditions when:</title>
+			<ul>
+				<li>
+					<p>Smart Parking</p>
+					<p>When Smart Parking function is canceled, the vehicle will automatically stop, shift the gear to P (Park) and engage EPB (Electronic Parking Brake).</p>
+					<ul>
+						<li>
+							<p>The steering wheel is steered</p>
+						</li>
+						<li>
+							<p>The gear is shifted while the vehicle is moving</p>
+						</li>
+						<li>
+							<p>Operating EPB while the vehicle is moving</p>
+						</li>
+						<li>
+							<p>The hood is open</p>
+						</li>
+						<li>
+							<p>The driver opens the door with the seatbelt unfastened</p>
+						</li>
+						<li>
+							<p>Rapid acceleration occurs</p>
+						</li>
+						<li>
+							<p>Vehicle skid occurs</p>
+						</li>
+						<li>
+							<p>The wheel is stuck by an obstacle and cannot move</p>
+						</li>
+						<li>
+							<p>There are pedestrians, animals or objects at the front and rear of the vehicle at the same time</p>
+						</li>
+						<li>
+							<p>Approximately 3 minutes and 50 seconds have past after Smart Parking function has started to operate</p>
+						</li>
+						<li>
+							<p>The slope of the road exceeds the operational range</p>
+						</li>
+						<li>
+							<p>The function is paused for more than 1 minute</p>
+						</li>
+						<li>
+							<p>The steering wheel, gearshift, braking, and drive controls are not working normally</p>
+						</li>
+						<li>
+							<p>ABS, TCS or ESC system operates due to slippery road conditions</p>
+						</li>
+						<li>
+							<p>The charging door opens</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Remote Parking</p>
+					<p>When Remote Parking function is canceled, the vehicle will automatically stop, shift the gear to P (Park) and engage EPB (Electronic Parking Brake).</p>
+					<ul>
+						<li>
+							<p>The steering wheel is steered</p>
+						</li>
+						<li>
+							<p>The gear is shifted</p>
+						</li>
+						<li>
+							<p>Operating EPB while the vehicle is moving</p>
+						</li>
+						<li>
+							<p>The hood is open</p>
+						</li>
+						<li>
+							<p>The brake pedal or accelerator pedal is depressed when all the doors are closed</p>
+						</li>
+						<li>
+							<p>The smart key is outside the vehicle when the brake pedal is depressed while the driver’s door is open.</p>
+						</li>
+						<li>
+							<p>Rapid acceleration occurs</p>
+						</li>
+						<li>
+							<p>Vehicle skid occurs</p>
+						</li>
+						<li>
+							<p>The wheel is stuck by an obstacle and cannot move</p>
+						</li>
+						<li>
+							<p>There are pedestrians, animals or objects at the front and rear of the vehicle at the same time</p>
+						</li>
+						<li>
+							<p>Approximately 3 minutes and 50 seconds have past after Remote Parking function has started to operate</p>
+						</li>
+						<li>
+							<p>The slope of the road exceeds the operational range</p>
+						</li>
+						<li>
+							<p>The function is paused for more than 1 minute</p>
+						</li>
+						<li>
+							<p>The steering wheel, gearshift, braking, and drive controls are not working normally</p>
+						</li>
+						<li>
+							<p>There is a problem with the smart key or the smart key battery is low</p>
+						</li>
+						<li>
+							<p>ABS, TCS or ESC system operates due to slippery road conditions</p>
+						</li>
+						<li>
+							<p>The alarm of the Theft Alarm System sounds</p>
+						</li>
+						<li>
+							<p>The charging door opens</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

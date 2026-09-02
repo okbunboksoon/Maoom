@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00470">
+	<title>Collision Warning</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03200">
+			<tgroup cols="2" colsep="1" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e03201">
+								<image href="images/N_SP3i25_C00_013_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout" id="e03202">
+								<li>
+									<p><uicontrol>Collision Warning</uicontrol></p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Collision Warning can alert you with Emergency steering warning light blinking (<image href="images/WKIA_077.jpg" scale="15" align="left" placement="inline"/>), a warning message, an audible warning and steering wheel vibration (if equipped).</p>
+		<p>Collision Warning may be activated under the following conditions:</p>
+		<ul>
+			<li>
+				<p>Your speed is approximately 40-145 km/h (25-90 mph).</p>
+			</li>
+			<li>
+				<p>The oncoming vehicle or motorcyclist speed is above approximately 10 km/h (6 mph).</p>
+			</li>
+			<li>
+				<p>The relative speed is below approximately 200 km/h (124 mph).</p>
+			</li>
+			<li>
+				<p>When your vehicle and the oncoming vehicle or powered two-wheeler are moving in opposite directions.</p>
+			</li>
+			<li>
+				<p>Within a certain period of time after the system determines that the vehicle has departed from the lane.</p>
+			</li>
+			<li>
+				<p>When driving on a straight road.</p>
+			</li>
+			<li>
+				<p>A target enters the operating range of the Lane-Change Oncoming function.</p>
+			</li>
+		</ul>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00469.dita#t00469" role="parent" scope="local" type="concept">
+				<linktext>Lane-Change Oncoming function</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

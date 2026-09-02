@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00594">
+	<title>Temporarily canceling Smart Cruise Control</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e04253">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e04254">
+								<figgroup>
+									<image href="../../images/OOV055202L.eps" align="center" placement="break" height="1.573in" width="2.243in" id="e04255"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<ol outputclass="callout" id="e04256">
+								<li>
+									<p> <uicontrol outputclass="c0036">SCC (Smart Cruise Control) canceled</uicontrol> </p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>If Smart Cruise Control is temporarily canceled automatically, the warning message will appear on the cluster, and an audible warning will sound to warn the driver.</p>
+		<p outputclass="across">Smart Cruise Control will be temporarily canceled automatically when:</p>
+		<ul>
+			<li>
+				<p>Your driving speed is above 180 km/h (110 mph)</p>
+			</li>
+			<li>
+				<p>The vehicle is stopped for a certain period of time</p>
+			</li>
+			<li>
+				<p>The accelerator pedal is continuously depressed for a certain period of time</p>
+			</li>
+			<li>
+				<p>The conditions for the Smart Cruise Control to operate is not satisfied</p>
+			</li>
+			<li>
+				<p>When the gear position is in N (Neutral), R (Reverse), P (Parking) or in a condition where shifting is not possible</p>
+			</li>
+			<li>
+				<p>When the Electronic Stability Control (ESC) system or the ABS system is turned off</p>
+			</li>
+			<li>
+				<p>When the Power down indicator light is illuminated</p>
+			</li>
+		</ul>
+		<note type="note">
+			<p>If Smart Cruise Control is temporarily canceled while the vehicle is at a standstill with the function activated, EPB (Electronic Parking Brake) maybe applied.</p>
+		</note>
+		<note type="warning">
+			<p>When Smart Cruise Control is temporarily canceled, distance with the front vehicle will not be maintained. Always have your eyes on the road while driving, and if necessary, depress the brake pedal to reduce your driving speed in order to maintain a safe distance.</p>
+		</note>
+	</conbody>
+</concept>

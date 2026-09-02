@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" otherprops="legal_gen_std_017_01" id="CL4m_HEV-ca_ES-2027-t0792">
+	<title>ERA-GLONASS-Notruf</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>ERA-GLONASS-Notruf</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M064025.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Verkehrsunfall</p>
+								</li>
+								<li>
+									<p>Kabelloses Netzwerk</p>
+								</li>
+								<li>
+									<p>Notrufzentrale (SDDS)</p>
+								</li>
+								<li>
+									<p>Rettung</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Das Fahrzeug ist mit einer Vorrichtung<fn><p>Wie in der Betriebsanleitung beschrieben, ist im Fahrzeug ein ERA-GLONASS-Gerät installiert, das für die Verbindung mit dem ERA-GLONASS-System geeignet ist.</p></fn>verbunden mit dem ERA-GLONASS-System, um einen Notruf an die Einsatzkräfte abzusetzen. Das ERA-GLONASS-System ist ein automatisches Notrufsystem im Falle eines Verkehrsunfalls oder anderer<fn><p>„Sonstige Unfälle“ sind alle Unfälle auf den Straßen der Russischen Föderation, bei denen Menschen verletzt wurden und/oder Hilfe geleistet werden musste. Im Fall eines Unfalls ist es notwendig, das Fahrzeug anzuhalten und die Taste <term translate="no">SOS</term> zu drücken. Wenn ein Anruf getätigt wird, sammelt das System Informationen über das Fahrzeug (von dem aus ein Anruf getätigt wurde), woraufhin das Fahrzeug mit einem Mitarbeiter des Einzeldienstes verbunden wird, um die Meldung des Grundes für den Notruf zu ermöglichen.</p></fn>Unfälle auf den Straßen der Russischen Föderation.</p>
+		<p>Das System ERA-GLONASS überträgt unter den in der Bedienungsanleitung sowie im Garantie- und Serviceheft angegebenen Bedingungen Daten an die Notrufzentrale, darunter Informationen wie Fahrzeugstandort, Fahrzeugtyp, FIN (Fahrzeugidentifikationsnummer des Autos).</p>
+		<p>Sobald die im ERA-GLONASS-System gespeicherten Daten an die Rettungsleitstelle übermittelt werden, um Fahrer und Beifahrer bei der Rettung zu unterstützen, werden die Daten nach Abschluss der Rettungsmaßnahmen gelöscht.</p>
+		<p>Der Betreiber des Systems ERA-GLONASS (Aktiengesellschaft „GLONASS“) ist für alle Komponenten des Systems ERA-GLONASS (mit Ausnahme der im Fahrzeug installierten Geräte) in Übereinstimmung mit dem föderalen Gesetz „Über das staatliche automatisierte Informationssystem ERA-GLONASS“ verantwortlich # Nr. 395-FZ vom 28.12.2013.</p>
+		<ol>
+			<li>
+				<p>ERA-GLONASS-Gerät bezeichnet in der Bedienungsanleitung ein im Fahrzeug eingebautes Gerät, das eine Verbindung zum ERA-GLONASS-System herstellt.</p>
+			</li>
+			<li>
+				<p>„Sonstige Unfälle“ sind alle Unfälle auf den Straßen der Russischen Föderation, bei denen Menschen verletzt wurden und/oder Hilfe geleistet werden musste. Im Falle der Registrierung eines Unfalls ist es notwendig, ein Fahrzeug zu stoppen, drücken Sie die Taste <term translate="no">SOS</term> (Position der Taste ist auf dem Bild im Kapitel „ERA-GLONASS-NOTRUF (FALLS VORHANDEN)“ des Benutzerhandbuchs). Wenn ein Anruf getätigt wird, sammelt das System Informationen über das Fahrzeug (von dem aus ein Anruf getätigt wurde), woraufhin das Fahrzeug mit einem Mitarbeiter der Notrufzentrale verbunden wird, der über den Grund des Notrufs informiert.</p>
+			</li>
+		</ol>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0732-CH11.dita#CL4m_HEV-ca_ES-2027-t0732-CH11" role="parent" scope="local" type="concept">
+				<linktext>Maßnahmen bei einem Notfall</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

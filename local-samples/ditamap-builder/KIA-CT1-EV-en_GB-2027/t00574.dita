@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00574">
+	<title>Collision warning when exiting vehicle</title>
+	<conbody>
+		<p>The warning light on the outside rearview mirror will blink and the warning message will appear on the cluster, and an audible warning will sound.</p>
+		<p>Warning message: <uicontrol>Collision warning</uicontrol> </p>
+		<ul>
+			<li>
+				<p>Safe Exit Warning will warn under the following circumstances:</p>
+				<ul>
+					<li>
+						<p>Your driving speed: below 3 km/h (2 mph)</p>
+					</li>
+					<li>
+						<p>The speed of the approaching vehicle from the rear: above 6 km/h (4 mph)</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<note type="warning">
+			<ul>
+				<li>
+					<p>For your safety, change the Settings after parking the vehicle at a safe location.</p>
+				</li>
+				<li>
+					<p>If any other function’s warning message is displayed or audible warning is generated, Safe Exit Warning message may not be displayed and audible warning may not be generated.</p>
+				</li>
+				<li>
+					<p>You may not hear the warning sound of Safe Exit Warning if the surrounding is noisy.</p>
+				</li>
+				<li>
+					<p>Safe Exit Warning does not operate in some situations or cannot prevent all collisions.</p>
+				</li>
+				<li>
+					<p>Safe Exit Warning may warn the driver late or may not warn the driver depending on the vehicle and driving conditions. Always check vehicle surroundings.</p>
+				</li>
+				<li>
+					<p>The driver and passengers are responsible for accidents that occur while exiting the vehicle. Always check the surroundings before you exit the vehicle.</p>
+				</li>
+			</ul>
+		</note>
+		<note type="note">
+			<ul>
+				<li>
+					<p>After the vehicle is turned off, Safe Exit Warning operates for approximately 3 minutes, but turns off immediately if the doors are locked.</p>
+				</li>
+				<li>
+					<p>Images or colors may be displayed differently depending on the instrument cluster specifications or theme.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+</concept>

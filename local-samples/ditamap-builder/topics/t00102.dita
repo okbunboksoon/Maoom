@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00102">
+	<title>Operating relaxation comfort seat</title>
+	<shortdesc/>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e00725">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="FormatA">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e00726">
+								<figgroup>
+									<image href="../../images/OOV025081.eps" align="center" placement="break" height="1.575in" width="2.244in" id="e00727"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section deliveryTarget="except_print" id="e00728">
+			<title>Operation</title>
+			<ol id="e00729">
+				<li>
+					<p>Press the rear portion of the relaxation comfort seat switch (1) for more than approximately 1 second to move to the relaxation comfort seat position.</p>
+				</li>
+				<li>
+					<p>If the relaxation comfort seat is operating, press the following buttons to stop the operation.</p>
+					<ul id="e00730">
+						<li>
+							<p>Seat adjustment switch (reclining, cushion height)</p>
+						</li>
+						<li>
+							<p>Relaxation comfort seat switch</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>After operating the relaxation comfort seat, you can adjust it for a more comfortable posture using the seat adjustment switch.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print" id="e00731">
+			<title>Non-operating conditions</title>
+			<ul id="e00732">
+				<li>
+					<p>When the vehicle is in R (Reverse)/N (Neutral)/D (Drive) position</p>
+				</li>
+				<li>
+					<p>When the vehicle speed is above 3 km/h (2 mph)</p>
+				</li>
+				<li>
+					<p>When the driver position memory system needs initialization</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

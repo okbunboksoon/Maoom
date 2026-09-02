@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00734">
+	<title>Driver assistance system limitations</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>driver assistance guide
+					<indexterm>driver assistance system limitations</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>When towing a trailer or using a carrier, the control stability of driver assistance systems may be reduced. In such cases, turn off the driver assistance systems and always drive attentively and safely. Refer to each system’s description for more information.</p>
+		<p>If the vehicle is equipped with proprietary components or functions that can detect trailer attachment, certain driver assistance system functions may be restricted when a trailer is recognized as connected. Check the specifications applied to your vehicle and use them accordingly.</p>
+		<p>The following driver assistance systems may be limited. Be aware of this when driving. For detailed information on each function, refer to the descriptions of the driver assistance systems.</p>
+		<ul id="e04300">
+			<li>
+				<p>Type <term translate="no">A</term>: Trailer kit that automatically recognizes the trailer when the trailer connector is connected.</p>
+			</li>
+			<li>
+				<p>Type <term translate="no">B</term>: Carrier menu applied in the infotainment system.</p>
+			</li>
+		</ul>
+		<section id="e04301">
+			<table frame="all" rowsep="1" colsep="1" outputclass="formatc" pgwide="1" base="Top" id="e04302">
+				<tgroup cols="4">
+					<colspec colname="c1" colnum="1" colwidth="1*"/>
+					<colspec colname="c2" colnum="2" colwidth="1*"/>
+					<colspec colname="c3" colnum="3" colwidth="1*"/>
+					<colspec colname="c4" colnum="4" colwidth="1*"/>
+					<thead>
+						<row>
+							<entry>
+								<p>Function</p>
+							</entry>
+							<entry>
+								<p>Driver assistance system settings and functions</p>
+							</entry>
+							<entry>
+								<p>Type A</p>
+							</entry>
+							<entry>
+								<p>Type B</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry morerows="1" align="center" valign="middle">
+								<p>Forward Collision-Avoidance Assist (FCA)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Forward safety, Forward cross-traffic safety</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>-</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>-</p>
+							</entry>
+						</row>
+						<row valign="middle">
+							<entry valign="middle" align="center">
+								<p>Forward/Side safety</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>Disabled</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>Disabled</p>
+							</entry>
+						</row>
+						<row>
+							<entry valign="middle" align="center">
+								<p>Lane Keeping Assist (LKA)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Lane Safety</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Disabled</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Disabled</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" valign="middle">
+								<p>Blind-Spot Collision-Avoidance Assist (BCA)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Blind-spot safety</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>Disabled</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>Disabled</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" valign="middle">
+								<p>Safe Exit Warning (SEW)</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>Safe exit</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Disabled</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Disabled</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" valign="middle">
+								<p>Lane Following Assist (LFA)</p>
+							</entry>
+							<entry align="center" valign="middle">-</entry>
+							<entry align="center" valign="middle">
+								<p>Disabled</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>Disabled</p>
+							</entry>
+						</row>
+						<row>
+							<entry morerows="1" align="center" valign="middle">
+								<p>Highway Driving Assist (HDA)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Highway Driving Assist</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>Disabled</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Disabled</p>
+							</entry>
+						</row>
+						<row>
+							<entry valign="middle" align="center">
+								<p>Highway Lane Change Assist</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Disabled</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>Disabled</p>
+							</entry>
+						</row>
+						<row>
+							<entry valign="middle" align="center">
+								<p>Rear Cross-Traffic Collision-Avoidance Assist (RCCA)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Rear cross-traffic safety</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>Disabled</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Disabled</p>
+							</entry>
+						</row>
+						<row>
+							<entry morerows="1" align="center" valign="middle">
+								<p>Parking Distance Warning (PDW)</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>Forward/Side Parking Distance Warning</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>-</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>-</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" valign="middle">
+								<p>Reverse Parking Distance Warning</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Disabled</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>-</p>
+								<p>(Trailer/Carrier connected)</p>
+							</entry>
+						</row>
+						<row>
+							<entry valign="middle" align="center">
+								<p>Reverse Parking Collision-Avoidance Assist (PCA)</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Parking safety</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>Disabled</p>
+							</entry>
+							<entry valign="middle" align="center">
+								<p>Disabled</p>
+							</entry>
+						</row>
+						<row>
+							<entry align="center" valign="middle">
+								<p>Remote Smart Parking Assist (RSPA)</p>
+							</entry>
+							<entry align="center" valign="middle">-</entry>
+							<entry align="center" valign="middle">
+								<p>Disabled</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p>Disabled</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<note type="warning" id="e04303">
+				<ul id="e04304">
+					<li>
+						<p>If the trailer connector is not properly connected or the trailer menu is not configured correctly, the control stability of the driver assistance systems may be reduced, which could lead to an accident.</p>
+					</li>
+					<li>
+						<p>The trailer menu settings are retained even after the vehicle is restarted. Always check that the connector is properly connected and the settings are correct before driving carefully.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00442.dita#t00442" role="parent" scope="local" type="concept">
+				<linktext>Driver assistance guide</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

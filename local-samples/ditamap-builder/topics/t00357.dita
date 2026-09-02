@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00357">
+	<title id="e02573">Glove box</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>storage compartment 
+					<indexterm>glove box</indexterm>
+				</indexterm>
+				<indexterm>glove box</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02574">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02575">
+								<figgroup>
+									<image href="../../images/OOV035033.eps" align="center" height="1.740in" placement="break" id="e02576"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To open the glove box:</p>
+		<ul>
+			<li>
+				<p>Pull the handle and the glove box will open automatically.</p>
+			</li>
+		</ul>
+		<p>Close the glove box after use.</p>
+		<note type="warning">
+			<p importance="high">Glove Box</p>
+			<p>To reduce the risk of injury in an accident or sudden stop, always keep the glove box door closed while driving.</p>
+		</note>
+		<note type="caution">
+			<p>Do not keep food in the glove box for a long time.</p>
+		</note>
+	</conbody>
+</concept>

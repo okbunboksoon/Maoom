@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00339">
+	<title>AUTO defogging system</title>
+	<shortdesc>Automatic defogging senses moisture on the inside of the windshield to reduce the likelihood of the windshield fogging up.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>windshield defrosting and defogging
+					<indexterm>AUTO defogging system</indexterm>
+				</indexterm>
+				<indexterm>AUTO defogging system</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02148">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e02149">
+								<image href="images/N_SP327_C08_016_1.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>The <term translate="no">AUTO</term> defogging system operates when the heating or air conditioning (<term translate="no">A/C</term>) is on.</p>
+		<p>The <term translate="no">AUTO</term> defogging indicator will appear when the system is operating.</p>
+		<p>If high humidity is detected inside the vehicle, <term translate="no">AUTO</term> defogging will engage.</p>
+		<p>The following steps are performed automatically:</p>
+		<ol id="e02150">
+			<li>
+				<p>The <term translate="no">A/C</term> icon indicator will turn on.</p>
+			</li>
+			<li>
+				<p>The air intake control changes to external airflow when the outside temperature is low.</p>
+			</li>
+			<li>
+				<p>The climate mode changes to defrost so that airflow is directed to the windshield.</p>
+			</li>
+			<li>
+				<p>The fan speed increases.</p>
+			</li>
+		</ol>
+		<note type="note" id="e02151">
+			<p>Do not remove the sensor cover located at the top of the windshield glass.</p>
+			<p>Damage to system parts could occur and may not be covered by your warranty.</p>
+		</note>
+		<note type="tip" id="e02152">
+			<ul id="e02153">
+				<li>
+					<p>If you try to turn the <term translate="no">A/C</term> OFF when <term translate="no">AUTO</term> defogging is on, the indicator blinks 3 times and the <term translate="no">A/C</term> will not turn <term translate="no">OFF</term>.</p>
+				</li>
+				<li>
+					<p>To maintain the <term translate="no">AUTO</term> defogging system’s effectiveness and efficiency, do not select recirculated air intake while the system is operating.</p>
+				</li>
+				<li>
+					<p>When <term translate="no">AUTO</term> defogging is operating, the fan speed adjustment lever/icon, temperature adjustment lever, and air intake control icon are all disabled.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00336.dita#t00336" role="parent" scope="local" type="concept">
+				<linktext>Windshield defrosting and defogging</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

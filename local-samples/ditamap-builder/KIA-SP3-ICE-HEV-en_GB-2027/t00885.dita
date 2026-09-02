@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task otherprops="legalnotice_europe-general_egall_2023_20230101_0000914" id="t00885">
+	<title>Replacing the front turn signal lamp (Bulb type)</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>replacing the front turn signal lamp (bulb type)</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context id="e05209">
+			<p>To replace the front turn signal lamp (Bulb type), follow these steps:</p>
+		</context>
+		<steps id="e05210">
+			<step>
+				<cmd>Open the hood.</cmd>
+			</step>
+			<step>
+				<cmd>Make sure the vehicle is in the <term translate="no">OFF</term> position and disconnect the negative 12V battery terminal.</cmd>
+			</step>
+			<step>
+				<cmd>Remove the socket from the assembly by turning the socket counterclockwise until the tabs on the socket align with the slots on the assembly.</cmd>
+				<info>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e05211">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e05212">
+											<image href="images/N_SP3i25_B12_031_IR.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>Remove the bulb from the socket by pressing it in and rotating it counterclockwise until the tabs on the bulb align with the slots in the socket. Pull the bulb out of the socket.</cmd>
+			</step>
+			<step>
+				<cmd>Insert a new bulb by inserting it into the socket and rotating it until it locks into place.</cmd>
+			</step>
+			<step>
+				<cmd>Install the socket in the assembly by aligning the tabs on the socket with the slots in the assembly. Push the socket into the assembly and turn the socket clockwise.</cmd>
+			</step>
+		</steps>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00884.dita#t00884" role="parent" scope="local" type="concept">
+				<linktext>Replacing lights (Bulb type)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

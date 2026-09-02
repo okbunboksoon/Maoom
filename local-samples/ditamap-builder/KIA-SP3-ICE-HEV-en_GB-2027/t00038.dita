@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00038">
+	<title>Mechanical key</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>smart key
+					<indexterm>mechanical key</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>When the battery of the smart key is discharged, or the smart key does not operate normally, you can lock or unlock the door using the mechanical key (2).</p>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00187">
+			<tgroup cols="2" colsep="0" rowsep="1">
+				<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+				<tbody>
+					<row rowsep="1">
+						<entry colname="col1">
+							<fig id="e00188">
+								<image href="images/N_SP3i26_B04_049_IR.jpg" scale="95" align="center" placement="break"/>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol dir="-dita-use-conref-target" outputclass="callout" id="e00189">
+								<li>Mechanical key protective cover</li>
+								<li>Mechanical key</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>To remove the mechanical key, pull the mechanical key protective cover (1) off the smart key.</p>
+		<section>
+			<title id="e00190">Smart key precautions </title>
+			<p>The smart key may not operate if any of the following occur:</p>
+			<ul>
+				<li>
+					<p>The smart key is close to a radio transmitter that can interfere with its normal operation, such as a radio station or an airport.</p>
+				</li>
+				<li>
+					<p>The smart key is near a cellular 2-way radio system.</p>
+				</li>
+				<li>
+					<p>The smart key is near a cellular phone, particularly if the phone is being used to make or receive calls or to send or receive messages. Avoid placing the smart key adjacent to a cellular phone.</p>
+				</li>
+				<li>
+					<p>Another vehicle’s smart key is being operated near your vehicle.</p>
+				</li>
+			</ul>
+			<p>When the smart key does not work correctly, try the spare, or open and close the door with the mechanical key. When your smart key does not work correctly, contact a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			<p>If the smart key is near your cell phone or smartphone, the phone could be blocking the smart key’s signal. This is especially likely when the phone is active, such as when making or receiving calls, text messaging, and sending or receiving emails. Avoid placing the smart key and your cell phone or smartphone in the same pants or jacket pocket. Maintain adequate distance between the 2 devices.</p>
+			<p>If you do not move the smart key for some time, its detection function (if equipped) will pause. Lift the smart key to reactivate the detection function.</p>
+			<note type="note">
+				<p>Losing the smart key</p>
+				<p>A maximum of 2 smart keys can be registered to a single vehicle.</p>
+				<p>If you happen to lose both smart keys, you will not be able to start the vehicle. You should immediately contact an authorized Kia dealer or service partner for assistance. Tow the vehicle if necessary to protect it from potential theft.</p>
+			</note>
+			<note type="note">
+				<p>Smart key</p>
+				<p>Keep the remote key away from water or any liquid, as it can become damaged and not function properly.</p>
+			</note>
+			<note type="note">
+				<ul>
+					<li>
+						<p>To prevent magnetic damage to the smart key, do not leave it near the following electrical appliances:</p>
+						<ul>
+							<li>
+								<p>TVs</p>
+							</li>
+							<li>
+								<p>Personal computers</p>
+							</li>
+							<li>
+								<p>Mobile phones, cordless phones, and battery chargers</p>
+							</li>
+							<li>
+								<p>Table lamps</p>
+							</li>
+							<li>
+								<p>Induction cookers</p>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>If you must leave the vehicle’s key with a parking attendant, remove the mechanical key for your own use and provide the attendant with the smart key only.</p>
+					</li>
+					<li>
+						<p>When bringing a smart key onto an airplane, make sure you do not press any button on the key while inside the cabin. If you are carrying the key in your bag or elsewhere, make sure that the buttons cannot be pressed accidentally. If you press a button, the key may emit radio waves that could interfere with aircraft operation.</p>
+					</li>
+					<li>
+						<p>If the smart key is inoperative due to exposure to water or other liquids, it will not be covered by your manufacturer’s vehicle warranty.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00037.dita#t00037" role="parent" scope="local" type="concept">
+				<linktext>Smart key </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

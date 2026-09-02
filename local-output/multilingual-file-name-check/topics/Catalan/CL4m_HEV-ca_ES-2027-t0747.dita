@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task otherprops="legal_eu_std_003_02" id="CL4m_HEV-ca_ES-2027-t0747">
+	<title>TPMS-Reset-Verfahren</title>
+	<taskbody>
+		<context>
+			<p>Sie sollten TPMS in den folgenden Situationen zurücksetzen.</p>
+			<ul>
+				<li>
+					<p>Nach der Reparatur oder dem Austausch von Reifen (oder Rädern)</p>
+				</li>
+				<li>
+					<p>Nach dem Umsetzen eines Reifens oder Rades.</p>
+				</li>
+				<li>
+					<p>Nach der Einstellung des Reifendrucks</p>
+				</li>
+				<li>
+					<p>Wenn die Anzeige für niedrigen Reifendruck leuchtet</p>
+				</li>
+				<li>
+					<p>Nach dem Austausch der Federung oder des ABS/ESC.</p>
+				</li>
+			</ul>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Stellen Sie sicher, dass Sie das Fahrzeug zurücksetzen, nachdem der Luftdruck aller vier Reifen auf den empfohlenen Reifenluftdruck eingestellt wurde. Wenn Sie das Fahrzeug zurücksetzen, ohne den Reifenluftdruck einzustellen, wird der Warnton möglicherweise nicht oder nur unzureichend aktiviert.</p>
+					</li>
+					<li>
+						<p>Wenn der Luftdruck der vier Reifen angepasst wird, muss eine Rückstellung vorgenommen werden. Andernfalls kann es zu einer Fehlfunktion des Systems kommen, und der Warnton wird möglicherweise nicht oder nur unzureichend ausgelöst.</p>
+					</li>
+					<li>
+						<p>Passen Sie den Reifluftdruck an, wenn die Reifen kalt sind. Ein kalter Reifen bedeutet, dass das Fahrzeug 3 Stunden lang nicht gefahren wurde oder weniger als 1,6 km (1 Meile) gefahren wurde.</p>
+					</li>
+				</ul>
+			</note>
+		</context>
+		<steps>
+			<step>
+				<cmd>Stellen Sie den Druck aller Reifen auf den empfohlenen Reifendruck ein.</cmd>
+			</step>
+			<step>
+				<cmd>Drücken Sie bei geparktem Fahrzeug und laufendem Motor die Taste <image align="left" href="../../images/WKIA_001.eps" scale="15" placement="inline"/> am Lenkrad.</cmd>
+				<info>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M034072.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2"/>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step id="e01268">
+				<cmd>Wählen Sie den Reifendruck auf dem Kombiinstrument mit dem Schalter <image align="left" href="../../images/WKIA_024.eps" scale="15" placement="inline"/>, <image align="left" href="../../images/WKIA_025.eps" scale="15" placement="inline"/> (<term translate="no">UP</term>, <term translate="no">DOWN</term>).</cmd>
+			</step>
+			<step>
+				<cmd>Halten Sie die <term translate="no">OK</term>-Taste am Lenkrad etwa 3 Sekunden lang gedrückt, um das TPMS zurückzusetzen. Der Rücksetzvorgang wird automatisch abgeschlossen.</cmd>
+				<info>
+					<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+						<tgroup cols="2" colsep="0" rowsep="0">
+							<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+							<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+							<tbody>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M064035.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<fig>
+											<figgroup>
+												<image align="center" href="../../images/OCL4M064032.eps" scale="95" placement="break"/>
+											</figgroup>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table></info>
+			</step>
+			<step>
+				<cmd>Überprüfen Sie, ob die Meldung auf dem Kombiinstrument erscheint und die Warnleuchte <image align="left" href="../../images/WKIA_035.eps" scale="15" placement="inline"/> etwa 4 Sekunden lang blinkt.</cmd>
+			</step>
+			<step>
+				<cmd>Nach dem Zurücksetzen des TPMS fahren Sie das Fahrzeug ca. 20 Minuten lang, um den neuen Reifendruck im System zu speichern.</cmd>
+				<info>
+					<p/>
+				</info>
+			</step>
+		</steps>
+		<postreq>
+			<note type="caution">
+				<ul>
+					<li>
+						<p>Wenn die Meldung auf dem Kombiinstrument nicht erscheint oder die Warnleuchte <image align="left" href="../../images/WKIA_035.eps" scale="15" placement="inline"/> nicht blinkt, versuchen Sie es erneut ab Schritt 2.</p>
+					</li>
+					<li>
+						<p>Wenn Sie während der Fahrt die <term translate="no">OK</term>-Taste drücken, wird der TPMS-Rücksetzvorgang nicht aktiviert. Sie müssen die <term translate="no">OK</term>-Taste drücken, wenn das Fahrzeug zum Stillstand gekommen ist.</p>
+					</li>
+					<li>
+						<p>Wenn die Meldung auf dem Kombiinstrument erscheint, halten Sie das Fahrzeug an und drücken Sie erneut die <term translate="no">OK</term>-Taste und halten Sie sie gedrückt.</p>
+					</li>
+					<li>
+						<p>Weitere Informationen zum empfohlenen Reifenluftdruck für Ihr Fahrzeug finden Sie unter <xref href="CL4m_HEV-ca_ES-2027-t0019.dita#CL4m_HEV-ca_ES-2027-t0019"/>.</p>
+					</li>
+				</ul>
+			</note>
+		</postreq>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0746.dita#CL4m_HEV-ca_ES-2027-t0746" role="parent" scope="local" type="concept">
+				<linktext>Reifendruck-Überwachungssystem (TPMS) </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

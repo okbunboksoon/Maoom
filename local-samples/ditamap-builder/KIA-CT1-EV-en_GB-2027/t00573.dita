@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00573">
+	<title>Safe Exit Warning operation</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>safe exit warning (SEW) 
+					<indexterm>operation</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e02180">
+			<title>Function warning</title>
+			<note type="note" id="e02181">
+				<ul id="e02182">
+					<li>
+						<p>The following warning message will appear on the LCD display.</p>
+						<p>For more details, refer to the warning and control section of the function. 
+							<ul id="e02183">
+								<li>
+									<p> <uicontrol>Blind spot safety system is Off</uicontrol> </p>
+								</li>
+							</ul> 
+						</p>
+					</li>
+				</ul>
+			</note>
+			<p>Safe Exit Warning warns the following actions.</p>
+			<ul id="e02184">
+				<li>
+					<p>Collision warning when exiting vehicle</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

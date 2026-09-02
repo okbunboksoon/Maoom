@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00890">
+	<title>Driver’s side fuse panel label</title>
+	<conbody>
+		<fig>
+			<figgroup>
+				<image align="center" href="../../images/M_CT27_C12_006.eps" scale="95" placement="break"/>
+			</figgroup>
+		</fig>
+		<section>
+			<title>PDC Junction Block</title>
+			<table colsep="1" frame="none" outputclass="formatc" pgwide="true" rowsep="1" id="e02795">
+				<tgroup cols="4" colsep="1" outputclass="formatc" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="1.12*"/>
+					<colspec colname="col2" colnum="2" colwidth="1*"/>
+					<colspec colname="col3" colnum="3" colwidth="1.16*"/>
+					<colspec colname="col4" colnum="4" colwidth="2.67*"/>
+					<thead>
+						<row rowsep="1">
+							<entry align="center" colname="col1" valign="middle">
+								<p>Fuse Name</p>
+							</entry>
+							<entry align="center" colname="col2">
+								<p>Symbol</p>
+							</entry>
+							<entry align="center" colname="col3" valign="middle">
+								<p>Fuse Rating</p>
+							</entry>
+							<entry align="center" colname="col4" valign="middle">
+								<p>Circuit Protected</p>
+							</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row rowsep="1">
+							<entry>
+								<p>BATTERY MANAGEMENT</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y001.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>15A</p>
+							</entry>
+							<entry>
+								<p>BMS</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>SPARE</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_TK25Y010.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>15A</p>
+							</entry>
+							<entry>
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>A/C2</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0014.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>7.5A</p>
+							</entry>
+							<entry>
+								<p>DATC (Dual Automatic Temperature Control), Front Heater Control, Rear Heater Control</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>BRAKE SWITCH</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0018.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>7.5A</p>
+							</entry>
+							<entry>
+								<p>BDC (Body Domain Controller), Stop Lamp Switch</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>MEMORY1</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0029.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>15A</p>
+							</entry>
+							<entry>
+								<p>DATC (Dual Automatic Temperature Control), Front Heater Control, Rear Heater Control, ADAS Unit (Parking), BDC (Body Domain Controller: Parking Distance Warning Power), Mood Lamp Unit, Console Mood Lamp (Upper/Lower), Driver/Passenger Door Mood Lamp, ADP_CONTROLLER (Acoustic Design Platform), Front/Rear Corner Radar LH/RH, USB JACK</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>A/BAG IND</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0036.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>7.5A</p>
+							</entry>
+							<entry>
+								<p>Overhead Console Lamp</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>E-SHIFTER2</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0041.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>SBW (Shift-by-wire Control Unit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>IG3 10</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0046.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>V2L_SIG (Vehicle to Load signal), ICCU (Integrated Charging Control Unit), VCMS (Vehicle Charge Management System), CCU (Central Communication Unit), Driver Seat Switch (Heater/Ventilation/Integrated memory system), Passenger Seat Switch (Heater/Ventilation), Rear LH/RH Safety Power Window Module</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>MODULE7</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y002.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>Rain Sensor, Active Air Flap Actuator, ICC_UNIT (In Cabin Cam_UNIT), BDC (Body Domain Controller) OBD (On Board Diagnostics), VESS UNIT (Virtual Engine Sound System), REAR HEATED RELAY</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>E-SHIFTER1</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y008.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>SBW (Shift-by-wire Control Unit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>RESERVE</p>
+							</entry>
+							<entry>
+								<p/>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>CCU</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0019.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>CCU (Central Communication Unit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>MEMORY2</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0030.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>7.5A</p>
+							</entry>
+							<entry>
+								<p>CCNC Keyboard Switch, Built In Cam UNIT DATC (Dual Automatic Temperature Control), Instrument Cluster, Head-Up Display, ADP_CONTROLLER (Acoustic Design Platform), BDC (Body Domain Controller), ETCS (Electric Toll Collection System)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>BDC2</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0037.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>7.5A</p>
+							</entry>
+							<entry>
+								<p>BDC (Body Domain Controller)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>MODULE2</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0042.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>CCU (Central Communication Unit), DCU (Data Connectivity Unit), Stop Lamp Switch, Driver Power Window Switch Module</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>IG3 9</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0047.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>DATC (Dual Automatic Temperature Control), CCNC (Connected Car Navigation Cockpit), DATC Control CDU (Climate Display Unit), PTC (Positive Temperature Coefficient) Heater Signal, In-car Particulate Matter Sensor,In-car Temperature Sensor</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>RESERVE</p>
+							</entry>
+							<entry>
+								<p/>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>Wireless DCU</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y009.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>7.5A</p>
+							</entry>
+							<entry>
+								<p>DCU (Data Connectivity Unit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>SPARE</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_TK25Y010.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>15A</p>
+							</entry>
+							<entry>
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>CHILD <term translate="no">LOCK</term> </p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0020.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>15A</p>
+							</entry>
+							<entry>
+								<p>Rear LH/RH Door Power Child Lock/Unlock Motor</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>MULTIMEDIA</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0031.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>25A</p>
+							</entry>
+							<entry>
+								<p>CCNC (Connected Car Navigation Cockpit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>MODULE4</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0038.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>CCNC (Connected Car Navigation Cockpit), ICC_UNIT (In Cabin Cam_UNIT), I_S_MIRR_ECM (Electronic Chromic Mirror), CDU (Climate Display Unit), Front Console (WPC Wireless Power Charger), OBD (On Board Diagnostics), ADP_CONTROLLER (Acoustic Design Processor), Driver Power Seat Module, Passenger Power Seat Module, AMP (Amplifier), Built In Cam UNIT, Head Lamp Module LH/RH</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>CLUSTER</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0043.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>7.5A</p>
+							</entry>
+							<entry>
+								<p>Instrument Cluster, Head-Up Display</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>IG3 8</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0048.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>CCU (Central Communication Unit), Charging Display Lamp</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>SBCM DRV</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y003.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>20A</p>
+							</entry>
+							<entry>
+								<p>Driver Side Body zone Control Module Driver</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>SBCM PASS</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0010.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>20A</p>
+							</entry>
+							<entry>
+								<p>Passenger Side Body zone Control Module</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>MODULE6</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0015.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>7.5A</p>
+							</entry>
+							<entry>
+								<p>Head Lamp Module LH/RH</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>TRUNK OPEN</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0021.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>Trunk Lid Latch</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>SUNROOF</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0032.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>20A</p>
+							</entry>
+							<entry>
+								<p>Sunroof Motor</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>RESERVE</p>
+							</entry>
+							<entry>
+								<p/>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>MDPS2</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0044.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>7.5A</p>
+							</entry>
+							<entry>
+								<p>MDPS (Motor Driven Power Steering) Signal</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>MODULE1</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0049.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>AMP (Amplifier), Built In Cam UNIT, ADP_CONTROLLER (Acoustic Design Processor), BDC (Body Domain Controller), DCU (Data Connectivity Unit), CCU (Central Communication Unit), CCNC (Connected Car Navigation Cockpit), CCNC Keyboard Switch, ADAS Unit (Parking), C/PAD USB Charge_27W, OBD (On Board Diagnostics)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>P/SEAT PASS</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y004.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>30A</p>
+							</entry>
+							<entry>
+								<p>Passenger Power Seat Switch, Passenger Power Seat Module</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>RESERVE</p>
+							</entry>
+							<entry>
+								<p/>
+							</entry>
+							<entry>
+								<p>25A</p>
+							</entry>
+							<entry>
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>WASHER</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0016.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>15A</p>
+							</entry>
+							<entry>
+								<p>Multi Function Switch, Integrated Circuit Module (Washer Front)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>AIR BAG2</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0022.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>ACU (Air bag Control Unit)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>BDC1</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0025.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>BDC (Body Domain Controller), Ultra WideBand &amp; Bluetooth Low Energy MASTER/SLAVE, Ultra WideBand Trunk, Ultra WideBand Front LH/RH, Ultra WideBand Rear LH/RH</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>RESERVE</p>
+							</entry>
+							<entry>
+								<p/>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>WIPER FRT2</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0033.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>7.5A</p>
+							</entry>
+							<entry>
+								<p>BDC (Body Domain Controller), Wiper RLY</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>AIR BAG1</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0045.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>ACU (Air bag Control Unit), ODS (Occupant Detection System)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>USB CHARGER1</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0053.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>15A</p>
+							</entry>
+							<entry>
+								<p>Driver/Passenger Seat USB Charger</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>RESERVE</p>
+							</entry>
+							<entry>
+								<p/>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>ECS</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y005.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>25A</p>
+							</entry>
+							<entry>
+								<p>ECS (Electronically Controlled Suspension)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>P/WINDOW LH</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0011.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>30A</p>
+							</entry>
+							<entry>
+								<p>FRT LH Safety Power Window Module, Rear LH Safety Power Window Module</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>MODULE5</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0017.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>7.5A</p>
+							</entry>
+							<entry>
+								<p>BDC (Body Domain Controller)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>INVERTER2</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0023.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>Rear Inverter</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>S/HEATER FRT</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0026.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>25A</p>
+							</entry>
+							<entry>
+								<p>Driver/Passenger Seat Switch (Heater/Ventilation),</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>S/HEATER RR</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0027.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>25A</p>
+							</entry>
+							<entry>
+								<p>Rear Seat Warmer Control Module</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>USB CHARGER2</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0034.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>20A</p>
+							</entry>
+							<entry>
+								<p>C/PAD USB Charge_100W</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>MODULE3</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0040.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>Front View Camera, ADAS Driving ECU, C/PAD_SW_LWR, ADAS Unit (Parking), ECS (Electronically Controlled Suspension), SCM (Steering Column Module), Rear Inverter, Front/Rear Corner Radar LH/RH</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>P/SEAT DRV</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y006.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>30A</p>
+							</entry>
+							<entry>
+								<p>Driver Power Seat Switch, Driver Power Seat Module</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>P/WINDOW RH</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0012.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>30A</p>
+							</entry>
+							<entry>
+								<p>FRT RH Safety Power Window Module, Rear RH Safety Power Window Module</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>RESERVE</p>
+							</entry>
+							<entry>
+								<p/>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>DOOR <term translate="no">LOCK</term> </p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0024.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>20A</p>
+							</entry>
+							<entry>
+								<p>Driver/Passenger Door Latch Motor, Rear Door Latch Motor, CDM (Charging Door Module)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>RESERVE</p>
+							</entry>
+							<entry>
+								<p/>
+							</entry>
+							<entry>
+								<p>25A</p>
+							</entry>
+							<entry>
+								<p>Not Used</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p>MODULE8</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0028.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>10A</p>
+							</entry>
+							<entry>
+								<p>Driver Power Seat Unit, Driver Power Seat Unit, Power Trunk Lid Module, Driver Power Window Switch Module</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p> <term translate="no">START</term> </p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y0035.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>7.5A</p>
+							</entry>
+							<entry>
+								<p>VPC (Vehicle Platform Controller), BDC (Body Domain Controller)</p>
+							</entry>
+						</row>
+						<row rowsep="1">
+							<entry>
+								<p> <term translate="no">POWER</term> TRUNK</p>
+							</entry>
+							<entry>
+								<p> <image align="center" href="../../images/N_CT25Y007.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>30A</p>
+							</entry>
+							<entry>
+								<p>Power Trunk Lid Module</p>
+							</entry>
+						</row>
+						<row rowsep="0">
+							<entry>
+								<p>AMP</p>
+							</entry>
+							<entry align="center" valign="middle">
+								<p> <image align="center" href="../../images/N_CT25Y0013.eps" scale="30" placement="inline"/> </p>
+							</entry>
+							<entry>
+								<p>25A</p>
+							</entry>
+							<entry>
+								<p>AMP (Amplifier)</p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</section>
+	</conbody>
+</concept>

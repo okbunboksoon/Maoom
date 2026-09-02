@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0266">
+	<title>Aktualisieren der Software</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034158N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ol outputclass="callout">
+								<li>
+									<p>Details</p>
+								</li>
+								<li>
+									<p>Schließen</p>
+								</li>
+							</ol>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Sie können den Fortschritt der Aktualisierung auf dem Bildschirm sehen.</p>
+		<p>Nach Abschluss der Aktualisierung erhalten Sie eine Benachrichtigung auf Ihrem Telefon oder dem Fahrzeugbildschirm, dass die Softwareaktualisierung abgeschlossen ist.</p>
+		<note deliveryTarget="full_only" type="tip">
+			<ul>
+				<li>
+					<p>Der Bildschirm schaltet sich nach 3 Minuten automatisch aus, um die Batterie zu schonen. Wenn sich der Bildschirm automatisch ausschaltet, können Sie den Fortschritt der Aktualisierung überprüfen, indem Sie die Taste <term translate="no">ENGINE START/STOP</term> drücken.</p>
+				</li>
+				<li>
+					<p>Nachdem die Aktualisierung gestartet wurde, können Sie das Fahrzeug verlassen.</p>
+				</li>
+				<li>
+					<p>Die OTA-Software-Aktualisierungsfunktion ist nur für Nutzer des Kia Connect Service verfügbar.</p>
+				</li>
+				<li>
+					<p>Die Details der Aktualisierung können je nach installierter Softwareversion variieren.</p>
+				</li>
+				<li>
+					<p>Prüfen Sie den Hinweis auf das OTA-Software-Update auf der Website der Marke Kia.</p>
+				</li>
+				<li>
+					<p>Wenn das Update fehlschlägt, wird die Update-Wiederherstellung automatisch fortgesetzt. Wenn Sie das Software-Update auch nach einer erfolgreichen Wiederherstellung erneut versuchen möchten, wenden Sie sich an ein autorisiertes Kia-Callcenter.</p>
+				</li>
+				<li>
+					<p>Wenn sowohl das Update als auch die Wiederherstellung fehlschlagen, wenden Sie sich an eine Fachwerkstatt. Kia empfiehlt den Besuch eines autorisierten Kia-Händlers oder Servicepartners.</p>
+				</li>
+				<li>
+					<p>Nachdem das Update abgeschlossen ist, kann es neue Funktionen oder Verbesserungen bieten. Weitere Informationen finden Sie auf der Kia-Website oder scannen Sie den QR-Code auf dem Infotainment-Bildschirm.</p>
+				</li>
+			</ul>
+		</note>
+		<note deliveryTarget="full_only" type="note">
+			<ul>
+				<li>
+					<p>Beachten Sie die folgenden Einschränkungen während des Updates.</p>
+					<ul>
+						<li>
+							<p>Sie können das Fahrzeug während des Updates nicht benutzen. Vergewissern Sie sich, dass Sie genügend Zeit für die Aktualisierung haben und parken Sie das Fahrzeug sicher, bevor Sie das Verfahren starten.</p>
+						</li>
+						<li>
+							<p>Sie können während der Aktualisierung keine Fernbedienungsfunktionen verwenden, einschließlich der Fernstartfunktion.</p>
+						</li>
+						<li>
+							<p>Das Fahrzeug kann nicht aufgeladen werden. Laden Sie Ihr Fahrzeug nach Abschluss der Aktualisierung auf.</p>
+						</li>
+						<li>
+							<p>Die Fahrgastwarnung hinten funktioniert möglicherweise nicht. Überprüfen Sie nach dem Start der Aktualisierung, ob sich ein Insasse auf dem Rücksitz befindet.</p>
+						</li>
+						<li>
+							<p>Wenn die Funktion des Digital-Key in der Aktualisierungshistorie enthalten ist, funktioniert die Türverriegelungs-/-entriegelungsfunktion durch den Digital-Key oder die Fingerabdruckauthentifizierung möglicherweise nicht. Überprüfen Sie den Hinweis und verwenden Sie die Smart-Key-Taste, um die Tür zu ver- oder entriegeln, wenn die digitale Schlüsselfunktion aktualisiert wurde.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Die Aktualisierung wird automatisch abgebrochen, wenn eine der für die Aktualisierung erforderlichen Fahrzeugbedingungen vor dem Start der Aktualisierung geändert wird.</p>
+				</li>
+				<li>
+					<p>Nachdem die Aktualisierung begonnen hat, können Sie sie nicht mehr abbrechen.</p>
+				</li>
+				<li>
+					<p>Sie können die Over-The-Air-Software-Aktualisierungsfunktion nicht verwenden, wenn Sie die Fahrzeugsoftware verändern oder ersetzen.</p>
+				</li>
+				<li>
+					<p>Öffnen Sie während der Aktualisierung nicht die Motorhaube und tauschen Sie nicht die Batterie des Fahrzeugs aus. Die Aktualisierung kann fehlschlagen.</p>
+				</li>
+				<li>
+					<p>Beachten Sie, dass das Hochspannungsmodul zum Laden der 12V-Batterie während der Softwareaktualisierung aktiviert werden kann.</p>
+				</li>
+				<li>
+					<p>Wenn ein Diagnosewerkzeug jeglicher Art mit dem Fahrzeug-OBD-Terminal (On-Board-Diagnose) verbunden ist, kann das Fahrzeug nicht aktualisiert werden. Das Fahrzeug kann aktualisiert werden, indem das mit dem OBD-Terminal verbundene Diagnosewerkzeug entfernt und das Fahrzeug dann neu gestartet wird.</p>
+				</li>
+				<li>
+					<p>Wenn die Aktualisierung nicht erfolgreich abgeschlossen wurde, wenden Sie sich an Kia.</p>
+				</li>
+				<li>
+					<p>Der Empfang des Fahrzeugs muss identifiziert werden, um die heruntergeladene Software sicher zu installieren.</p>
+				</li>
+				<li>
+					<p>Die Signalstärke des Fahrzeugs muss stark sein (über -82 dBm), damit die heruntergeladene Software sicher installiert werden kann.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0262.dita#CL4m_HEV-ca_ES-2027-t0262" role="parent" scope="local" type="concept">
+				<linktext>Over-The-Air Software-Update (ausstattungsabhängig)</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

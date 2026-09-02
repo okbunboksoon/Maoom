@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00145">
+	<title id="e00697">Tachometer/Power gauge </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>gauges
+					<indexterm>tachometer</indexterm>
+				</indexterm>
+				<indexterm>tachometer</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e00698">
+			<title>Tachometer</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00699">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00700">
+									<image href="images/N_SP327_B00_002_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The tachometer displays the approximate number of engine revolutions per minute (rpm).</p>
+			<p>Use the tachometer to select the correct shift points and to prevent lugging or over revving the engine.</p>
+			<note type="note" id="e00701">
+				<p>Do not operate the engine within the tachometer’s RED ZONE. This may cause severe engine damage.</p>
+			</note>
+		</section>
+		<section id="e00702">
+			<title>Power gauge</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e00703">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e00704">
+									<title>Type A</title>
+									<image href="images/N_SP327_B00_005_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<fig id="e00705">
+									<title>Type B</title>
+									<image href="images/N_SP327_B00_006_E.jpg" scale="95" align="center" placement="break"/>
+								</fig>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The hybrid system gauge indicates whether the current driving condition is fuel efficient or not.</p>
+			<ul id="e00706">
+				<li>
+					<p><term translate="no">CHARGE</term>:</p>
+					<p>Shows that the energy made by the vehicle is being converted to electrical energy. (Regenerated energy)</p>
+				</li>
+				<li>
+					<p><term translate="no">ECO</term>:</p>
+					<p>Shows that the vehicle is being driven in an Eco-friendly manner.</p>
+				</li>
+				<li>
+					<p><term translate="no">POWER</term>:</p>
+					<p>Shows that the vehicle is exceeding the Eco-friendly range.</p>
+				</li>
+			</ul>
+			<note type="note" id="e00707">
+				<p>According to the hybrid system gauge area, the “EV” indicator comes on or off.</p>
+				<ul id="e00708">
+					<li>
+						<p>“EV” indicator <term translate="no">ON</term>: Vehicle is driven using the electric motor or the gasoline engine is stopped.</p>
+					</li>
+					<li>
+						<p>“EV” indicator <term translate="no">OFF</term>: Vehicle is driven using the gasoline engine.</p>
+					</li>
+				</ul>
+			</note>
+		</section>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00143.dita#t00143" role="parent" scope="local" type="concept">
+				<linktext>Gauges </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

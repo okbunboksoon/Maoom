@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00565">
+	<title>Forward Attention Warning</title>
+	<conbody>
+		<p outputclass="nolabel">Forward Attention Warning determines whether the driver is focused on the road according to information such as the amount of time the driver is looking elsewhere, the amount of time the eyes are closed, and so on. If it determines the driver is not focused, an audible warning sounds for about 1 second, and the Forward attention warning light (<image href="../../images/WKIA_353.eps" align="center" placement="inline" scale="15"/>) appears on the cluster until the conditions to turn it off are met.</p>
+		<section id="e04179">
+			<title>Operating conditions</title>
+			<ul id="e04180">
+				<li>
+					<p>When the driver’s gaze is not focused on the road continuously for 3 seconds while driving above 20 km/h (12 mph)</p>
+				</li>
+				<li>
+					<p>When glances away from the road total 10 seconds or more within a 30-second time frame in a car traveling at a speed of 20 km/h or more</p>
+				</li>
+				<li>
+					<p>When the driver’s eyes are closed for 2 seconds or more while driving above 10 km/h (6 mph)</p>
+				</li>
+			</ul>
+		</section>
+		<section id="e04181">
+			<title>Off conditions</title>
+			<ul id="e04182">
+				<li>
+					<p>When the driver looks forward continuously for over 1 seconds</p>
+				</li>
+				<li>
+					<p>When the operating conditions are not met</p>
+				</li>
+				<li>
+					<p>When driving below the warning activation speed</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

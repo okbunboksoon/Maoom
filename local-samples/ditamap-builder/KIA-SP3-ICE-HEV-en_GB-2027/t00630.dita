@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="t00630">
+	<title>Navigation-based Smart Cruise Control pause/driver operation</title>
+	<conbody>
+		<p>If Smart Cruise Control cannot operate because Smart Cruise Control is temporarily deactivated or the route is recalculated, etc, the gray (<image href="images/WKIA_151.jpg" scale="15" align="left" placement="inline"/>) indicator appears on the instrument cluster.</p>
+		<p>If you have engaged the accelerator pedal, the white (<image href="images/WKIA_151.jpg" scale="15" align="left" placement="inline"/>) indicator blinks on the instrument cluster.</p>
+		<note type="warning" id="e03895">
+			<ul id="e03896">
+				<li>
+					<p>Before entering a non-highway road or a highway rest area while Navigation-based Smart Cruise Control is operating.</p>
+				</li>
+				<li>
+					<p>A warning message appears when the Navigation-based Smart Cruise Control is not able to slow your vehicle to a safe speed.</p>
+					<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e03897">
+						<tgroup cols="2" colsep="1" rowsep="1">
+							<colspec colname="col1" colnum="1" colwidth="50*"/>
+							<colspec colname="col2" colnum="2" colwidth="50*"/>
+							<tbody>
+								<row rowsep="1">
+									<entry colname="col1">
+										<fig id="e03898">
+											<image href="images/N_SP327_C00_005_E.jpg" scale="95" align="center" placement="break"/>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<ol outputclass="callout" id="e03899">
+											<li>
+												<p><uicontrol>Drive carefully</uicontrol></p>
+											</li>
+										</ol>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</li>
+			</ul>
+		</note>
+		<note type="tip" id="e03900">
+			<p>The images or colors may display differently depending on the specifications of the instrument cluster or theme.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="t00627.dita#t00627" role="parent" scope="local" type="concept">
+				<linktext>Navigation-based Smart Cruise Control display and control</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

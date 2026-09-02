@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00336">
+	<title id="e01426">LCD display messages</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>driving electric vehicle 
+					<indexterm>LCD display messages</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section>
+			<title>Low battery</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q032_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Low battery</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When the high voltage battery level reaches around 25% (20% for extended type battery) or less, this warning message is displayed.</p>
+			<p>The warning light on the instrument cluster (<image align="left" href="../../images/WKIA_314.eps" scale="15" placement="inline"/>) will turn on simultaneously. Charge the battery immediately.</p>
+		</section>
+		<section>
+			<title>Charge immediately. Power limited</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01427">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q033_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Charge immediately. Power limited</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>When the high voltage battery level reaches around 15% (10% for extended type battery) or less, this warning message is displayed.</p>
+			<p>The warning light on the instrument cluster (<image align="left" href="../../images/WKIA_314.eps" scale="15" placement="inline"/>) will turn on simultaneously.</p>
+			<p>The vehicle’s power will be reduced to minimize the energy consumption of the high voltage battery. Charge the battery immediately.</p>
+		</section>
+		<section>
+			<title>Check electric vehicle system</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01428">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q034_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Check electric vehicle system</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This warning message is displayed when there is a problem with the electric vehicle control system.</p>
+			<note type="warning">
+				<p>Refrain from driving when the warning message is displayed.</p>
+				<p>If this occurs, park the vehicle in a safe location. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</note>
+		</section>
+		<section>
+			<title>Power limited</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q035_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Power limited</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>In the following cases, this warning message is displayed when the vehicle’s power is limited for safety.</p>
+			<ul>
+				<li>
+					<p>When the power is limited for the safety of the high-powered parts of an electric vehicle. The power is limited for the following reasons. (Unless both Service Warning Light and Power Down Indicator Light illuminate at the same time, it is not a failure.)</p>
+				</li>
+				<li>
+					<p>The high voltage battery level is too low or voltage is decreasing.</p>
+				</li>
+				<li>
+					<p>The temperature of the high voltage battery is too high or too low.</p>
+				</li>
+				<li>
+					<p>The temperature of the motor is high.</p>
+				</li>
+			</ul>
+			<note type="warning">
+				<p>When this warning message is displayed, do not accelerate or start the vehicle suddenly. Charge the battery immediately when the high voltage battery level is not enough.</p>
+			</note>
+			<note type="note">
+				<p>When the power is limited for the safety of the high-powered parts of an electric vehicle, the power down indicator light illuminates. Your vehicle may not be driven, or may roll back on a slope with the indicator light <term translate="no">ON</term>.</p>
+			</note>
+		</section>
+		<section>
+			<title>Power limited due to low EV battery temperature. Charge battery</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01429">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q036_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Power limited due to low EV battery temperature. Charge battery</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>The warning message is displayed to protect the electric vehicle system when you turn off or turn on the vehicle while outside temperature is low. If the high voltage battery charging level is low and parked outside in low temperature for a long time, vehicle power could be limited. Charging the battery before driving, increases the battery temperature, and helps increase power.</p>
+			<note type="caution">
+				<p>If this warning message is still displayed even when the ambient temperature is sufficiently high, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</note>
+		</section>
+		<section>
+			<title>Battery overheated! Stop safely</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01430">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q037_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Battery Overheated! Stop safely</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This warning message is displayed to protect battery and electric vehicle system when the high voltage battery temperature is too high.</p>
+			<p>Turn off the <term translate="no">EV</term> button and stop the vehicle so that the battery temperature decreases.</p>
+			<note type="warning">
+				<p>If this warning is still displayed even after the <term translate="no">POWER</term> button has been turned off for sufficient time, refrain from driving and have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			</note>
+		</section>
+		<section>
+			<title>Stop safely and check power supply</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01431">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q038_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Stop safely and check power supply</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This warning message is displayed when a failure occurs in the 12 V power supply system.</p>
+			<p>If this occurs, park the vehicle in a safe location. Have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+		<section>
+			<title>Unplug vehicle to start</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01432">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q039_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Unplug vehicle to start</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message is displayed when you start the vehicle, without unplugging the charging cable, and will not shift out of park. Unplug the charging cable, and then turn on the vehicle.</p>
+		</section>
+		<section id="e01433">
+			<title>Charging door open</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01434">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q040_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Charging door open</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message is displayed when the vehicle is driven with the charging door opened. Close the charging door and then start driving.</p>
+		</section>
+		<section>
+			<title>Remaining time</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="1.02*"/>
+					<colspec colname="col2" colnum="2" colwidth="1*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01435">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q029_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Remaining time</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p importance="default">The remaining charging time in the LCD image may differ from actual charging time.</p>
+			<p>This message is displayed to notify the remaining time to charge the battery, to the selected target battery charge level, and the charge voltage level.</p>
+		</section>
+		<section>
+			<title>Charging interrupted. Please check the AC charger/Charging interrupted. Please check the DC charger</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01436">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q041_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Charging interrupted. Please check the AC charger</uicontrol> </p>
+							</entry>
+						</row>
+						<row>
+							<entry colname="col1">
+								<fig id="e01437">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q042_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Charging interrupted. Please check the DC charger</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This warning message is displayed when charging is stopped for the reasons below:</p>
+			<ul>
+				<li>
+					<p>There is a problem with the external AC charger or DC charger.</p>
+				</li>
+				<li>
+					<p>The external AC charger stopped charging</p>
+				</li>
+				<li>
+					<p>The charging cable is damaged.</p>
+				</li>
+			</ul>
+			<p>If this occurs, check whether there is any problem with the external AC or DC charger and charging cable.</p>
+			<p>If the same problem occurs when charging the vehicle with a well-functioning external charger or genuine Kia portable charger, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+		<section id="e01438">
+			<title>Charging interrupted. Please check the cable connection</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01439">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q043_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Charging interrupted. Please check the cable connection</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This warning message is displayed for the reasons below:</p>
+			<ul>
+				<li>
+					<p>The charging connector is not correctly connected to the charging inlet.</p>
+				</li>
+				<li>
+					<p>The charging connector lock release button is pressed.</p>
+				</li>
+			</ul>
+			<p>If this occurs, separate the charging connector and connect it again.</p>
+			<p>Check whether there is any problem (external damage, foreign substances, etc.) with the charging connector and charging inlet.</p>
+			<p>If the same problem occurs when charging the vehicle with a replaced charging cable or genuine Kia portable charger, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+		<section>
+			<title>Check virtual engine sound system</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01440">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q030_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Check virtual engine sound system</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message is displayed when there is a problem with the Virtual Engine Sound System (VESS).</p>
+			<p>In this case, have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+		</section>
+		<section>
+			<title>Check Active Air Flap system</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01441">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Z036_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Check Active Air Flap system</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This warning message is displayed in the following situations:</p>
+			<ul>
+				<li>
+					<p>There is a malfunction with the actuator flap</p>
+				</li>
+				<li>
+					<p>There is a malfunction with the actuator air flap controller</p>
+				</li>
+				<li>
+					<p>The air flap does not open</p>
+				</li>
+			</ul>
+			<p>When all the above conditions are fixed, the warning will disappear.</p>
+		</section>
+		<section>
+			<title>Refill coolant</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+				<tgroup cols="2" colsep="1" rowsep="1">
+					<colspec colname="col1" colnum="1" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q044_E.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2">
+								<p>(A) <uicontrol>Refill coolant</uicontrol> </p>
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<p>This message is displayed when the coolant is low. If the warning message is displayed, stop driving and have your vehicle inspected by a professional workshop. Kia recommends visiting an authorized Kia dealer or service partner. Driving under coolant for a prolonged period of time can cause serious problems with the vehicle’s electrical equipment and make normal driving impossible.</p>
+		</section>
+	</conbody>
+</concept>

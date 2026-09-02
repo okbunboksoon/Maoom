@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00832">
+	<title>Types of data and its recipients</title>
+	<conbody>
+		<p>The eCall in-vehicle system may collect and process only the following data:</p>
+		<ul>
+			<li>
+				<p>Vehicle Identification Number</p>
+			</li>
+			<li>
+				<p>Vehicle type (passenger vehicle or light commercial vehicle)</p>
+			</li>
+			<li>
+				<p>Vehicle propulsion storage type (gasoline/diesel/CNG/LPG/electric/hydrogen)</p>
+			</li>
+			<li>
+				<p otherprops="legal_eu_std_017_04">Vehicle last three locations and direction of travel</p>
+			</li>
+			<li>
+				<p>Log file of the automatic activation of the system and its timestamp</p>
+			</li>
+			<li>
+				<p>Any additional data (if applicable): Not applicable</p>
+			</li>
+		</ul>
+		<p>Recipients of data processed by the eCall in-vehicle system are the relevant public safety answering points designated by the respective public authorities of the country on which territory they are located, to first receive and handle eCalls to the single emergency. Additional information (if available): Not applicable</p>
+	</conbody>
+</concept>

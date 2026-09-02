@@ -1,0 +1,1663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter filename="07_hev.xml" chapnum="07">
+	<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0263-CH08.dita">
+		<concept id="KA4i-ICE-HEV-en_IN-2026-t0263-CH08">
+			<title>Hybrid system overview</title>
+			<related-links>
+				<linkpool>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0264-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0264-CH08" role="child" scope="local" type="concept">
+							<linktext>HEV (Hybrid Electric Vehicle) system</linktext>
+						</link>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0265-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0265-CH08" role="child" scope="local" type="concept">
+							<linktext>Driving the hybrid vehicle</linktext>
+						</link>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0279-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0279-CH08" role="child" scope="local" type="concept">
+							<linktext>Components of the hybrid vehicle</linktext>
+						</link>
+					</linkpool>
+				</linkpool>
+			</related-links>
+		</concept>
+		<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0264-CH08.dita">
+			<concept id="KA4i-ICE-HEV-en_IN-2026-t0264-CH08">
+				<title>HEV (Hybrid Electric Vehicle) system</title>
+				<prolog>
+					<metadata>
+						<keywords>
+							<indexterm>HEV (hybrid electric vehicle) system</indexterm>
+						</keywords>
+					</metadata>
+				</prolog>
+				<conbody>
+					<p>The Kia Hybrid Electric Vehicle (HEV) uses both the petrol engine and the electric motor for power. The electric motor is run by a high-voltage HEV battery.</p>
+					<p>Depending on the driving conditions, the HEV computer selectively operates between the engine and the electric motor or even both at the same time.</p>
+					<p>Fuel efficiency increases when the vehicle is driven by the electric motor with the HEV battery.</p>
+					<p>The HEV battery charge must be maintained, so at times the engine will come on even at idle to act as a generator. Charging also occurs when decelerating or by regenerative braking.</p>
+					<table outputclass="formatd" frame="all" rowsep="1" colsep="1" pgwide="1">
+						<tgroup cols="5" colsep="1" rowsep="1">
+							<colspec colnum="1" colname="col1" colwidth="0.937*"/>
+							<colspec colnum="2" colname="col2" colwidth="0.937*"/>
+							<colspec colnum="3" colname="col3" colwidth="0.937*"/>
+							<colspec colnum="4" colname="col4" colwidth="0.937*"/>
+							<colspec colnum="5" colname="col5" colwidth="0.937*"/>
+							<thead>
+								<row rowsep="1">
+									<entry colname="col1" align="center" valign="middle">
+										<p>Electric motor</p>
+									</entry>
+									<entry colname="col2" align="center" valign="middle">
+										<p>Electric motor + Engine</p>
+									</entry>
+									<entry colname="col3" align="center" valign="middle">
+										<p>Electric motor or Engine</p>
+									</entry>
+									<entry colname="col4" align="center" valign="middle">
+										<p>Charging</p>
+									</entry>
+									<entry colname="col5" align="center" valign="middle">
+										<p>Engine <term translate="no">OFF</term></p>
+									</entry>
+								</row>
+							</thead>
+							<tbody>
+								<row rowsep="1">
+									<entry namest="col1" nameend="col5">
+										<fig>
+											<figgroup>
+												<image align="center" placement="break" href="../../images/N_KA4i27_B08_060.jpg" scale="95"/>
+											</figgroup>
+										</fig>
+									</entry>
+								</row>
+								<row rowsep="1">
+									<entry colname="col1" align="center" valign="middle">
+										<p>1. Startup/Low speed cruise</p>
+									</entry>
+									<entry colname="col2" align="center" valign="middle">
+										<p>2. Acceleration</p>
+									</entry>
+									<entry colname="col3" align="center" valign="middle">
+										<p>3. High speed cruise</p>
+									</entry>
+									<entry colname="col4" align="center" valign="middle">
+										<p>4. Deceleration</p>
+									</entry>
+									<entry colname="col5" align="center" valign="middle">
+										<p>5. Stop</p>
+									</entry>
+								</row>
+								<row rowsep="0">
+									<entry colname="col1">
+										<fig>
+											<figgroup>
+												<image align="center" placement="break" href="../../images/WKIA_275.eps" scale="95"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col2">
+										<fig>
+											<figgroup>
+												<image align="center" placement="break" href="../../images/WKIA_276.eps" scale="95"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col3">
+										<fig>
+											<figgroup>
+												<image align="center" placement="break" href="../../images/WKIA_276.eps" scale="95"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col4">
+										<fig>
+											<figgroup>
+												<image align="center" placement="break" href="../../images/WKIA_278.eps" scale="95"/>
+											</figgroup>
+										</fig>
+									</entry>
+									<entry colname="col5">
+										<fig>
+											<figgroup>
+												<image align="center" placement="break" href="../../images/WKIA_279.eps" scale="95"/>
+											</figgroup>
+										</fig>
+									</entry>
+								</row>
+							</tbody>
+						</tgroup>
+					</table>
+				</conbody>
+				<related-links>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0263-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0263-CH08" role="parent" scope="local" type="concept">
+							<linktext>Hybrid system overview</linktext>
+						</link>
+					</linkpool>
+				</related-links>
+			</concept>
+		</topicref>
+		<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0265-CH08.dita">
+			<concept id="KA4i-ICE-HEV-en_IN-2026-t0265-CH08">
+				<title>Driving the hybrid vehicle</title>
+				<prolog>
+					<metadata>
+						<keywords>
+							<indexterm>driving the hybrid/plug-in hybrid vehicle</indexterm>
+						</keywords>
+					</metadata>
+				</prolog>
+				<related-links>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0263-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0263-CH08" role="parent" scope="local" type="concept">
+							<linktext>Hybrid system overview</linktext>
+						</link>
+					</linkpool>
+				</related-links>
+			</concept>
+			<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0266-CH08.dita">
+				<concept id="KA4i-ICE-HEV-en_IN-2026-t0266-CH08">
+					<title>Starting the vehicle</title>
+					<prolog>
+						<metadata>
+							<keywords>
+								<indexterm>driving the hybrid/plug-in hybrid vehicle 
+									<indexterm>starting the vehicle</indexterm>
+								</indexterm>
+							</keywords>
+						</metadata>
+					</prolog>
+					<related-links>
+						<linkpool>
+							<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0265-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0265-CH08" role="parent" scope="local" type="concept">
+								<linktext>Driving the hybrid vehicle</linktext>
+							</link>
+						</linkpool>
+					</related-links>
+				</concept>
+				<topicref type="task" href="KA4i-ICE-HEV-en_IN-2026-t0267-CH08.dita">
+					<task id="KA4i-ICE-HEV-en_IN-2026-t0267-CH08">
+						<title>Vehicles with smart key system</title>
+						<taskbody>
+							<steps>
+								<step>
+									<cmd>Carry the smart key or leave it inside the vehicle.</cmd>
+								</step>
+								<step>
+									<cmd>Make sure the parking brake is firmly applied.</cmd>
+								</step>
+								<step>
+									<cmd>Place the shift dial in P (Park). With the shift dial in N (Neutral), you cannot start the vehicle.</cmd>
+								</step>
+								<step>
+									<cmd>Depress the brake pedal.</cmd>
+								</step>
+								<step>
+									<cmd>Press the <term translate="no">ENGINE START/STOP</term> button. If the hybrid system starts, the (<term translate="no">READY</term>) indicator will come on.</cmd>
+									<info>
+										<p>Whether the engine is cold or warm, it should be started without depressing the accelerator.</p>
+									</info>
+								</step>
+							</steps>
+							<postreq>
+								<p>After following the start procedures, (<term translate="no">READY</term>) indicator on the instrument cluster will turn on. For more details, please refer to <xref href="KA4i-ICE-HEV-en_IN-2026-t0266-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0266-CH08"/>.</p>
+							</postreq>
+						</taskbody>
+						<related-links>
+							<linkpool>
+								<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0266-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0266-CH08" role="parent" scope="local" type="concept">
+									<linktext>Starting the vehicle</linktext>
+								</link>
+							</linkpool>
+						</related-links>
+					</task>
+					<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0268-CH08.dita">
+						<concept id="KA4i-ICE-HEV-en_IN-2026-t0268-CH08">
+							<title>Economical and safe operation of Hybrid system</title>
+							<conbody>
+								<ul>
+									<li>
+										<p>Drive smoothly. Accelerate at a moderate rate and maintain a steady cruising speed. Do not make "jackrabbit" starts. Do not race between stoplights.</p>
+										<p>Avoid heavy traffic whenever possible. Always maintain a safe distance from other vehicles so you can avoid unnecessary braking. This also reduces brake wear out.</p>
+									</li>
+									<li>
+										<p>The regenerative brake generates energy when the vehicle decelerates.</p>
+									</li>
+									<li>
+										<p>When the hybrid battery power is low, the hybrid system automatically recharges the hybrid battery.</p>
+									</li>
+									<li>
+										<p>When the engine is running with the shift dial in N (Neutral), the hybrid system cannot generate electricity. The hybrid battery cannot recharge with the shift dial in N (Neutral).</p>
+									</li>
+								</ul>
+								<note type="note">
+									<p>In the hybrid system, the engine automatically runs and stops. When the hybrid system operates, the (<term translate="no">READY</term>) indicator is appeared.</p>
+									<p>In the following situation, the engine may operate automatically.</p>
+									<ul>
+										<li>
+											<p>When the engine is ready to run.</p>
+										</li>
+										<li>
+											<p>When the hybrid battery is being charged.</p>
+										</li>
+										<li>
+											<p>Depending on the temperature condition of the hybrid battery.</p>
+										</li>
+									</ul>
+								</note>
+							</conbody>
+							<related-links>
+								<linkpool>
+									<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0267-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0267-CH08" role="parent" scope="local" type="task">
+										<linktext>Vehicles with smart key system</linktext>
+									</link>
+								</linkpool>
+							</related-links>
+						</concept>
+					</topicref>
+				</topicref>
+			</topicref>
+			<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0269-CH08.dita">
+				<concept id="KA4i-ICE-HEV-en_IN-2026-t0269-CH08">
+					<title>Special features</title>
+					<prolog>
+						<metadata>
+							<keywords>
+								<indexterm>driving the hybrid/plug-in hybrid vehicle 
+									<indexterm>special features</indexterm>
+								</indexterm>
+							</keywords>
+						</metadata>
+					</prolog>
+					<conbody>
+						<p>Hybrid vehicles sound different than petrol engine vehicles. When the hybrid system operates, you may hear a sound from the hybrid battery system behind the rear seat. If you apply the accelerator pedal rapidly, you may hear an unconventional sound. When you apply the brake pedal, you may hear a sound from the regenerative brake system. When the hybrid system is turned off or on, you may hear a sound in the engine compartment. If you depress the brake pedal repeatedly when the hybrid system is turned on, you may hear a sound in the engine compartment. None of these sounds indicate a problem. These are normal characteristics of hybrid vehicles.</p>
+						<p>It is a normal condition if you hear a motor sound in the engine compartment in any of the following situations:</p>
+						<ul>
+							<li>
+								<p>The brake pedal is released after turning off the hybrid system.</p>
+							</li>
+							<li>
+								<p>The brake pedal is applied when the hybrid system is turned off.</p>
+							</li>
+							<li>
+								<p>When the driver door is opened.</p>
+							</li>
+						</ul>
+						<p>When the hybrid system is turned <term translate="no">ON</term>, the petrol engine may run or may not. In this situation, you may feel a vibration. This does not indicate a malfunction. When the (<term translate="no">READY</term>) indicator appears, the hybrid system is ready to begin driving. Even if the engine is off, you can operate the vehicle as long as the (<term translate="no">READY</term>) indicator is appeared.</p>
+						<note type="note">
+							<p>The hybrid system contains many electronic components. High voltage components, such as cables and other parts, may emit electromagnetic waves. Even when the electromagnetic cover blocks electromagnetic emissions, electromagnetic waves may have an effect on electronic devices. When your vehicle is not used for a long period of time, the hybrid system will discharge. You need to drive the vehicle several times a month. We recommend driving at least for 1 hour or 16 km. When the hybrid battery is discharged, or when it is impossible to jump start the vehicle, we recommend that you contact your authorised Kia dealer/service partner.</p>
+						</note>
+						<note type="warning">
+							<ul>
+								<li>
+									<p>When you start the hybrid system with the shift dial in P (Parking), the (<term translate="no">READY</term>) indicator appears on the instrument cluster. The driver can drive the vehicle, even when the petrol engine is off.</p>
+								</li>
+								<li>
+									<p>When you leave the vehicle, you should turn <term translate="no">OFF</term> the hybrid system or locate the shift dial in P (Park). When you depress the accelerator pedal by mistake, or when the shift dial is not in P (Park), the vehicle will abruptly move, possibly resulting in serious injury or death.</p>
+								</li>
+							</ul>
+						</note>
+					</conbody>
+					<related-links>
+						<linkpool>
+							<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0265-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0265-CH08" role="parent" scope="local" type="concept">
+								<linktext>Driving the hybrid vehicle</linktext>
+							</link>
+						</linkpool>
+					</related-links>
+				</concept>
+				<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0270-CH08.dita">
+					<concept id="KA4i-ICE-HEV-en_IN-2026-t0270-CH08">
+						<title>Virtual Engine Sound System (VESS)</title>
+						<conbody>
+							<p>Virtual Engine Sound System generates engine sound for pedestrians to hear vehicle sound because there is limited sound whilst motor power is used.</p>
+							<ul>
+								<li>
+									<p>If the vehicle is moving at low speed, the VESS will operate.</p>
+								</li>
+							</ul>
+						</conbody>
+						<related-links>
+							<linkpool>
+								<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0269-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0269-CH08" role="parent" scope="local" type="concept">
+									<linktext>Special features</linktext>
+								</link>
+							</linkpool>
+						</related-links>
+					</concept>
+				</topicref>
+				<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0271-CH08.dita">
+					<concept id="KA4i-ICE-HEV-en_IN-2026-t0271-CH08">
+						<title>What does regenerative braking do?</title>
+						<conbody>
+							<p>It uses an electric motor when decelerating and when braking and transforms kinetic energy to electrical energy in order to charge the high voltage battery.</p>
+						</conbody>
+						<related-links>
+							<linkpool>
+								<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0269-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0269-CH08" role="parent" scope="local" type="concept">
+									<linktext>Special features</linktext>
+								</link>
+							</linkpool>
+						</related-links>
+					</concept>
+				</topicref>
+				<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0272-CH08.dita">
+					<concept id="KA4i-ICE-HEV-en_IN-2026-t0272-CH08">
+						<title>Battery</title>
+						<conbody>
+							<ul>
+								<li>
+									<p>The vehicle is composed of a high voltage battery that drives the motor and air conditioner, and a 12V battery with the HEV battery that drives the lamps, wipers, and audio system.</p>
+								</li>
+								<li>
+									<p>The 12V battery is automatically charged when the vehicle is in the ready (<term translate="no">READY</term>) mode.</p>
+								</li>
+							</ul>
+						</conbody>
+						<related-links>
+							<linkpool>
+								<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0269-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0269-CH08" role="parent" scope="local" type="concept">
+									<linktext>Special features</linktext>
+								</link>
+							</linkpool>
+						</related-links>
+					</concept>
+				</topicref>
+			</topicref>
+			<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0273-CH08.dita">
+				<concept id="KA4i-ICE-HEV-en_IN-2026-t0273-CH08">
+					<title>Hybrid system gauge</title>
+					<prolog>
+						<metadata>
+							<keywords>
+								<indexterm>driving the hybrid/plug-in hybrid vehicle 
+									<indexterm>hybrid system gauge</indexterm>
+								</indexterm>
+							</keywords>
+						</metadata>
+					</prolog>
+					<related-links>
+						<linkpool>
+							<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0265-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0265-CH08" role="parent" scope="local" type="concept">
+								<linktext>Driving the hybrid vehicle</linktext>
+							</link>
+						</linkpool>
+					</related-links>
+				</concept>
+				<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0274-CH08.dita">
+					<concept id="KA4i-ICE-HEV-en_IN-2026-t0274-CH08">
+						<title>Power gauge</title>
+						<conbody>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig id="fig_wxm_v2t_xjc">
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_SP327_B00_005_E.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2"/>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>The hybrid system gauge indicates whether the current driving condition is fuel efficient or not.</p>
+							<ul>
+								<li>
+									<p><term translate="no">CHARGE</term>:</p>
+									<p>Shows that the energy made by the vehicle is being converted to electrical energy. (Regenerated energy)</p>
+								</li>
+								<li>
+									<p><term translate="no">ECO</term>:</p>
+									<p>Shows that the vehicle is being driven in an Eco-friendly manner.</p>
+								</li>
+								<li>
+									<p><term translate="no">POWER</term>:</p>
+									<p>Shows that the vehicle is exceeding the Eco-friendly range.</p>
+								</li>
+							</ul>
+						</conbody>
+						<related-links>
+							<linkpool>
+								<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0273-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0273-CH08" role="parent" scope="local" type="concept">
+									<linktext>Hybrid system gauge</linktext>
+								</link>
+							</linkpool>
+						</related-links>
+					</concept>
+				</topicref>
+				<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0275-CH08.dita">
+					<concept id="KA4i-ICE-HEV-en_IN-2026-t0275-CH08">
+						<title>Hybrid battery SOC (State of Charge) gauge</title>
+						<conbody>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig id="fig_wdg_w2t_xjc">
+													<figgroup>
+														<image align="center" placement="break" href="../../images/P_SP327_B00_002_E.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2"/>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>This gauge indicates the remaining hybrid battery power. If the SOC is near the "L (Low)" level, the vehicle automatically operates the engine to charge the battery.</p>
+							<p>However, if the Service Indicator (<image align="center" placement="inline" href="../../images/WKIA_267.eps" scale="15"/>) and Malfunction Indicator Lamp (MIL) (<image align="left" placement="inline" href="../../images/WKIA_032.eps" scale="15"/>) turn on when the SOC gauge is near the "L (Low)" level, we recommend the vehicle to be checked by an authorised Kia dealer/service partner.</p>
+						</conbody>
+						<related-links>
+							<linkpool>
+								<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0273-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0273-CH08" role="parent" scope="local" type="concept">
+									<linktext>Hybrid system gauge</linktext>
+								</link>
+							</linkpool>
+						</related-links>
+					</concept>
+				</topicref>
+			</topicref>
+			<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0276-CH08.dita">
+				<concept id="KA4i-ICE-HEV-en_IN-2026-t0276-CH08">
+					<title>Warning and indicator lights</title>
+					<prolog>
+						<metadata>
+							<keywords>
+								<indexterm>driving the hybrid/plug-in hybrid vehicle 
+									<indexterm>warning and indicator lights</indexterm>
+								</indexterm>
+							</keywords>
+						</metadata>
+					</prolog>
+					<conbody>
+						<section>
+							<title>Ready indicator READY</title>
+							<sectiondiv><ph>This indicator appears:</ph>
+								<p>When the vehicle is ready to be driven.</p>
+								<ul>
+									<li>
+										<p><term translate="no">ON</term>: Normal driving is possible.</p>
+									</li>
+									<li>
+										<p><term translate="no">OFF</term>: Normal driving is not possible, or a problem has occurred.</p>
+									</li>
+									<li>
+										<p>Blinking: Emergency driving.</p>
+									</li>
+								</ul>
+								<p>When the ready indicator goes <term translate="no">OFF</term> or blinks, there is a problem with the system. If this occurs, we recommend that you have your vehicle inspected by an authorised Kia dealer/service partner.</p>
+							</sectiondiv>
+						</section>
+						<section>
+							<title>Service warning light <image align="left" placement="inline" href="../../images/WKIA_267.eps" scale="15"/></title>
+							<sectiondiv><ph>This warning light appears:</ph>
+								<ul>
+									<li>
+										<p>When you set the <term translate="no">ENGINE START/STOP</term> button to the <term translate="no">ON</term> position.</p>
+										<ul>
+											<li>
+												<p>The service warning light appears for approximately 3 seconds and then turns off when all checks have been performed.</p>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<p>When there is a problem with the hybrid vehicle control system or hardware.</p>
+									</li>
+								</ul>
+								<p>When the warning light appears whilst driving, or does not go <term translate="no">OFF</term> after starting the vehicle, we recommend that you have the vehicle inspected by an authorised Kia dealer/service partner.</p>
+							</sectiondiv>
+						</section>
+						<section>
+							<title>EV mode indicator <image align="center" placement="inline" href="../../images/WKIA_268.eps" scale="15"/></title>
+							<sectiondiv><ph>This indicator appears:</ph>
+								<p>When the vehicle is driven by the electric motor.</p>
+								<ul>
+									<li>
+										<p>"EV" indicator <term translate="no">ON</term>: Vehicle is driven using the electric motor or the petrol engine is stopped.</p>
+									</li>
+									<li>
+										<p>"EV" indicator <term translate="no">OFF</term>: Vehicle is driven using the petrol engine.</p>
+									</li>
+								</ul>
+							</sectiondiv>
+						</section>
+						<section>
+							<title>Regenerative brake warning light <image align="center" placement="inline" href="../../images/WKIA_127.eps" scale="15"/>(red colour) <image align="center" placement="inline" href="../../images/WKIA_127.eps" scale="15"/>(yellow colour)</title>
+							<sectiondiv><ph>This warning light appears:</ph>
+								<p>When the regenerative brake does not operate and the brake does not perform well. This causes the brake warning light (red) and regenerative brake warning light (yellow) to appear simultaneously.</p>
+								<p>If this occurs, drive safely and have your vehicle inspected by an authorised Kia dealer/service partner. The operation of the brake pedal may be more difficult than normal and the braking distance may increase.</p>
+							</sectiondiv>
+						</section>
+					</conbody>
+					<related-links>
+						<linkpool>
+							<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0265-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0265-CH08" role="parent" scope="local" type="concept">
+								<linktext>Driving the hybrid vehicle</linktext>
+							</link>
+						</linkpool>
+					</related-links>
+				</concept>
+			</topicref>
+			<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0277-CH08.dita">
+				<concept id="KA4i-ICE-HEV-en_IN-2026-t0277-CH08">
+					<title>LCD display messages</title>
+					<prolog>
+						<metadata>
+							<keywords>
+								<indexterm>driving the hybrid/plug-in hybrid vehicle 
+									<indexterm>LCD display messages</indexterm>
+								</indexterm>
+							</keywords>
+						</metadata>
+					</prolog>
+					<conbody>
+						<section>
+							<title>Ready to drive</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/OLQ2AH005009.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_ty3_3wt_zjc">
+													<li>
+														<p>Ready to drive</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>This message is displayed when the vehicle is ready to be driven.</p>
+						</section>
+						<section>
+							<title>Check brake system</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/OLQ2AH005010.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_e5w_rwt_zjc">
+													<li>
+														<p>Check brake system</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>This message is displayed when the brake performance is low or the regenerative brake does not work properly due to a failure in the brake system.</p>
+							<p>If this occurs, it may take longer for the brake pedal to operate and the braking distance may become longer.</p>
+						</section>
+						<section>
+							<title>Stop vehicle and check brake system</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/OLQ2AH005011.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_qkr_5wt_zjc">
+													<li>
+														<p>Stop vehicle and check brake system</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>This message is displayed when a failure occurs in the brake system.</p>
+							<p>If this occurs, park the vehicle in a safe location and we recommend that you tow your vehicle to the nearest authorised Kia dealer/service partner and have the vehicle inspected.</p>
+						</section>
+						<section>
+							<title>Check Hybrid system</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/OLQ2AH005012.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry>
+												<ol outputclass="callout" id="ol_y1j_zwt_zjc">
+													<li>
+														<p>Check Hybrid system</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>This message is displayed when there is a problem with the hybrid control system. Refrain from driving when the warning message is displayed.</p>
+							<p>If this occurs, we recommend that you have the vehicle inspected by an authorised Kia dealer/service partner.</p>
+						</section>
+						<section>
+							<title>Check Hybrid system. Stop safely</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/OLQ2AH005013.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_mqc_1xt_zjc">
+													<li>
+														<p>Check Hybrid system. Stop safely</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>This message is displayed when there is a problem with the hybrid control system. The "READY" indicator will blink and a warning chime will sound until the problem is solved. Refrain from driving when the warning message is displayed.</p>
+							<p>If this occurs, we recommend that you have the vehicle inspected by an authorised Kia dealer/service partner.</p>
+						</section>
+						<section>
+							<title>Check Hybrid system. Do not start engine</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/OLQ2AH005014.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_u2r_1xt_zjc">
+													<li>
+														<p>Check Hybrid system. Do not start engine</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>This message is displayed when the hybrid battery power (SOC) level is low. A warning chime will sound until the problem is solved. Refrain from driving when the warning message is displayed.</p>
+							<p>If this occurs, we recommend that you have the vehicle inspected by an authorised Kia dealer/service partner.</p>
+						</section>
+						<section>
+							<title>Stop vehicle and check power supply</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/OLQ2AH005015.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_rvh_bxt_zjc">
+													<li>
+														<p>Stop vehicle and check power supply</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>This message is displayed when a failure occurs in the power supply system.</p>
+							<p>If this occurs, park the vehicle in a safe location and tow your vehicle to the nearest authorised Kia dealer/service partner and have the vehicle inspected.</p>
+						</section>
+						<section>
+							<title>Check Virtual Engine Sound System</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/OLQ2AH005016.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_ekt_bxt_zjc">
+													<li>
+														<p>Check Virtual Engine Sound System</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>This message is displayed when there is a problem with the Virtual Engine Sound System (VESS).</p>
+							<p>If this occurs, we recommend that you have the vehicle inspected by an authorised Kia dealer/service partner.</p>
+						</section>
+						<section>
+							<title>Refill coolant</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/OLQ2AH005017.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_ds3_cxt_zjc">
+													<li>
+														<p>Refill coolant</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>This message is displayed when the inverter coolant is nearly empty.</p>
+							<p>You should refill the inverter coolant.</p>
+						</section>
+						<section>
+							<title>Park with engine On to charge battery</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/OLQ2AH005018.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_r35_cxt_zjc">
+													<li>
+														<p>Park with engine On to charge battery</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>This message is displayed when the hybrid battery power (SOC) level is low.</p>
+							<p>If this occurs, park the vehicle in a safe location and wait until the hybrid battery is charged.</p>
+						</section>
+						<section>
+							<title>Start engine to avoid battery discharge</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/OLQ2AH005019.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_u3g_dxt_zjc">
+													<li>
+														<p>Start engine to avoid battery discharge</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>This message is displayed to inform the driver the 12V battery may be discharged if the <term translate="no">ENGINE START/STOP</term> button is in <term translate="no">ON</term> position (without the <term translate="no">READY</term> indicator <term translate="no">ON</term>).</p>
+							<p>Set the vehicle to the ready (<term translate="no">READY</term>) mode to prevent the 12V battery from being discharged.</p>
+						</section>
+					</conbody>
+					<related-links>
+						<linkpool>
+							<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0265-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0265-CH08" role="parent" scope="local" type="concept">
+								<linktext>Driving the hybrid vehicle</linktext>
+							</link>
+						</linkpool>
+					</related-links>
+				</concept>
+			</topicref>
+			<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0278-CH08.dita">
+				<concept id="KA4i-ICE-HEV-en_IN-2026-t0278-CH08">
+					<title>Energy flow</title>
+					<prolog>
+						<metadata>
+							<keywords>
+								<indexterm>driving the hybrid/plug-in hybrid vehicle 
+									<indexterm>energy flow</indexterm>
+								</indexterm>
+							</keywords>
+						</metadata>
+					</prolog>
+					<conbody>
+						<p>The hybrid system informs the drivers its energy flow in various operating modes. Whilst driving, the current energy flow is specified in 11 modes.</p>
+						<section>
+							<title>Vehicle stop</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B00_098.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_ty3_3wt_zjc">
+													<li>
+														<p>Idle Mode</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>The vehicle is stopped.</p>
+							<p>(No energy flow)</p>
+						</section>
+						<section>
+							<title>EV propulsion</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B00_099.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_spn_2xt_zjc">
+													<li>
+														<p>Electric Mode</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>Only the motor power is used to drive the vehicle.</p>
+							<p>(<menucascade><uicontrol>Battery</uicontrol><uicontrol>Wheel</uicontrol></menucascade>)</p>
+						</section>
+						<section>
+							<title>Power assist</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B00_100.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_egm_fxt_zjc">
+													<li>
+														<p>Hybrid Mode</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>Both the motor and the engine power are used to drive the vehicle.</p>
+							<p>(<menucascade><uicontrol>Battery &amp; Engine</uicontrol><uicontrol>Wheel</uicontrol></menucascade>)</p>
+						</section>
+						<section>
+							<title>Engine only propulsion</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B00_101.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_jj2_gxt_zjc">
+													<li>
+														<p>Engine Mode</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>Only the engine power is used to drive the vehicle.</p>
+							<p>(<menucascade><uicontrol>Engine</uicontrol><uicontrol>Wheel</uicontrol></menucascade>)</p>
+						</section>
+						<section>
+							<title>Engine generation</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B00_102.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_b44_gxt_zjc">
+													<li>
+														<p>Charging</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>When the vehicle is stopped, the high-voltage battery is charged up by the engine.</p>
+							<p>(<menucascade><uicontrol>Engine</uicontrol><uicontrol>Battery</uicontrol></menucascade>)</p>
+						</section>
+						<section>
+							<title>Regeneration</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B00_103.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_a2w_hxt_zjc">
+													<li>
+														<p>Charging</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>The high-voltage battery is charged up by the regenerative brake system.</p>
+							<p>(<menucascade><uicontrol>Wheel</uicontrol><uicontrol>Battery</uicontrol></menucascade>)</p>
+						</section>
+						<section>
+							<title>Engine brake</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B00_104.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_dcb_3xt_zjc">
+													<li>
+														<p>Engine Braking</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>The engine braking is used to decelerate the vehicle.</p>
+							<p>(<menucascade><uicontrol>Wheel</uicontrol><uicontrol>Engine</uicontrol></menucascade>)</p>
+						</section>
+						<section>
+							<title>Power reserve</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B00_105.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_hp2_jxt_zjc">
+													<li>
+														<p>Charging</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>The engine is simultaneously used to drive the vehicle and to charge up the high-voltage battery.</p>
+							<p>(<menucascade><uicontrol>Engine</uicontrol><uicontrol>Wheel &amp; Battery</uicontrol></menucascade>)</p>
+						</section>
+						<section>
+							<title>Engine generation/motor drive</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B00_106.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_nkg_jxt_zjc">
+													<li>
+														<p>Charging</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>The engine charges up the high-voltage battery. The motor power is used to drive the vehicle.</p>
+							<p>(<menucascade><uicontrol>Engine</uicontrol><uicontrol>Battery</uicontrol><uicontrol>Wheel</uicontrol></menucascade>)</p>
+						</section>
+						<section>
+							<title>Engine generation/regeneration</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B00_107.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_pnj_jxt_zjc">
+													<li>
+														<p>Charging</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>The engine and regenerative brake system charges up the high-voltage battery.</p>
+							<p>(<menucascade><uicontrol>Engine &amp; Wheel</uicontrol><uicontrol>Battery</uicontrol></menucascade>)</p>
+						</section>
+						<section>
+							<title>Engine brake/regeneration</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B00_107.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_uml_jxt_zjc">
+													<li>
+														<p>Charging</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>The engine braking is simultaneously used to decelerate the vehicle and to charge up the high-voltage battery.</p>
+							<p>(<menucascade><uicontrol>Wheel</uicontrol><uicontrol>Engine &amp; Battery</uicontrol></menucascade>)</p>
+						</section>
+						<section>
+							<title>Start engine to avoid battery discharge</title>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/OLQ2AH005019.eps" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<ol outputclass="callout" id="ol_z5n_jxt_zjc">
+													<li>
+														<p>Start engine to avoid battery discharge</p>
+													</li>
+												</ol>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>If the engine is not turned on with the <term translate="no">ENGINE START/STOP</term> button in <term translate="no">ACC</term> or <term translate="no">ON</term> for a whilst, the battery can be discharged. Please turn on the engine to prevent 12V battery from discharge.</p>
+						</section>
+					</conbody>
+					<related-links>
+						<linkpool>
+							<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0265-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0265-CH08" role="parent" scope="local" type="concept">
+								<linktext>Driving the hybrid vehicle</linktext>
+							</link>
+						</linkpool>
+					</related-links>
+				</concept>
+			</topicref>
+		</topicref>
+		<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0279-CH08.dita">
+			<concept id="KA4i-ICE-HEV-en_IN-2026-t0279-CH08">
+				<title>Components of the hybrid vehicle</title>
+				<prolog>
+					<metadata>
+						<keywords>
+							<indexterm>components of the hybrid/plug-in hybrid vehicle</indexterm>
+						</keywords>
+					</metadata>
+				</prolog>
+				<conbody>
+					<p>Do not modify your vehicle as it may adversely affect its performance, durability, and safety. Additionally, warranty repairs will not be available for any issues that arise as a result of modifications.</p>
+				</conbody>
+				<related-links>
+					<linkpool>
+						<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0263-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0263-CH08" role="parent" scope="local" type="concept">
+							<linktext>Hybrid system overview</linktext>
+						</link>
+					</linkpool>
+				</related-links>
+			</concept>
+			<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0280-CH08.dita">
+				<concept id="KA4i-ICE-HEV-en_IN-2026-t0280-CH08">
+					<title>Hybrid vehicle components</title>
+					<prolog>
+						<metadata>
+							<keywords>
+								<indexterm>components of the hybrid/plug-in hybrid vehicle 
+									<indexterm>hybrid vehicle components</indexterm>
+								</indexterm>
+								<indexterm>hybrid vehicle components</indexterm>
+							</keywords>
+						</metadata>
+					</prolog>
+					<related-links>
+						<linkpool>
+							<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0279-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0279-CH08" role="parent" scope="local" type="concept">
+								<linktext>Components of the hybrid vehicle</linktext>
+							</link>
+						</linkpool>
+					</related-links>
+				</concept>
+				<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0281-CH08.dita">
+					<concept id="KA4i-ICE-HEV-en_IN-2026-t0281-CH08">
+						<title>High voltage battery system</title>
+						<conbody>
+							<p>This system is composed of HPCU (Hybrid Power Control Unit), High voltage battery system and Drive motor</p>
+							<note type="warning">
+								<p>Never touch orange coloured or high voltage labeled components, including wires, cables, and connections. When the insulators or covers are damaged or removed, severe injury or death from electrocution may occur.</p>
+							</note>
+							<note type="warning">
+								<p>Whilst replacing the fuses in the engine compartment, never touch the HPCU. The HPCU carries high voltage. Touching the HPCU may result in electrocution, serious injury, or death.</p>
+							</note>
+							<note type="warning">
+								<p>In the hybrid system, the hybrid battery uses high voltage to operate the motor and other components. This high voltage hybrid battery system can be very dangerous.</p>
+								<p>Never touch the hybrid system. When you touch the hybrid battery system, serious injury or death may occur.</p>
+							</note>
+							<note type="caution">
+								<ul>
+									<li>
+										<p>Do not pile up any items in an area behind the high voltage battery. In a crash, the battery may become unstable, or its performance may degrade.</p>
+									</li>
+									<li>
+										<p>Do not apply strong force nor pile up any items above the luggage compartment. Such an attempt may distort the high voltage battery case, causing a safety problem or degrading the performance.</p>
+									</li>
+									<li>
+										<p>Be careful when loading flammable liquid in the luggage compartment. It could cause operational and safety degradation if the liquid leaks and flows in the high voltage battery.</p>
+									</li>
+								</ul>
+							</note>
+							<note type="warning">
+								<ul>
+									<li>
+										<p>Do not disassemble the high voltage motor connector. The high voltage motor connector may contain residual high voltage. Coming in contact with high voltage may result in death or serious injury.</p>
+									</li>
+									<li>
+										<p>Your vehicle’s hybrid system should only be inspected or repaired by an authorised Kia dealer/service partner.</p>
+									</li>
+								</ul>
+							</note>
+							<note type="warning">
+								<ul>
+									<li>
+										<p>Do not disassemble or assemble the high voltage battery system. Doing so may result in electric shock, causing death or serious injury.</p>
+									</li>
+									<li>
+										<p>If you disassemble or assemble hybrid system components improperly, it may damage the performance and reliability of your vehicle.</p>
+									</li>
+									<li>
+										<p>If electrolyte comes in contact with your body, clothes or eyes, immediately flush with a large quantity of fresh tap water. Have your eyes examined by a doctor as soon as possible.</p>
+									</li>
+								</ul>
+							</note>
+							<note type="warning">
+								<p>Never assemble or disassemble the high voltage battery system.</p>
+								<ul>
+									<li>
+										<p>If you assemble or disassemble the high voltage battery system, the durability and performance of the vehicle may be damaged.</p>
+									</li>
+									<li>
+										<p>When you want to check the high voltage battery system, have the vehicle inspected by an authorised Kia dealer/service partner.</p>
+									</li>
+									<li>
+										<p>Do not touch the high voltage battery and high voltage cable connected to motor (orange colour). Severe burns and electric shock may occur. For your safety, do not touch the cover of electronic components and electronic cable. Do not remove the cover of electronic components and electronic cable. In particular, never touch the high voltage battery system when the hybrid system in operation. It may result in death or serious injury.</p>
+									</li>
+								</ul>
+							</note>
+							<note type="warning">
+								<ul>
+									<li>
+										<p>Never use the package modules (high voltage battery, inverter and converter) for any other purpose.</p>
+									</li>
+									<li>
+										<p>Do not use an unauthorised battery charger to charge the high voltage battery. Doing so may result in death or serious injury.</p>
+									</li>
+									<li>
+										<p>Never locate the high voltage system near or in a fire.</p>
+									</li>
+									<li>
+										<p>Never drill into or strike the package module. Otherwise, it may be damaged. An electric shock may occur, resulting in serious injury or death.</p>
+									</li>
+								</ul>
+							</note>
+							<note type="note">
+								<ul>
+									<li>
+										<p>When the vehicle is paint baked, do not bake over 30 minutes in 70°C (158°F) or 20 minutes in 80°C (176°F) degree.</p>
+									</li>
+									<li>
+										<p>Do not wash the engine compartment, using water. Water may cause an electric shock and damage the electronic components.</p>
+									</li>
+								</ul>
+							</note>
+							<note type="warning">
+								<p>This hybrid vehicle uses the hybrid battery system inverter and converter to generate high voltage. High voltage in the hybrid battery system is very dangerous and may cause severe burns and electric shock. This may result in serious injury or death.</p>
+								<ul>
+									<li>
+										<p>For your safety, never touch, replace, disassemble or remove the hybrid battery system including components, cables and connectors. Severe burns or electric shock may result in serious injury or death when you fail to follow this warning.</p>
+									</li>
+									<li>
+										<p>When the hybrid battery system operates, the hybrid battery system can be hot. Always be careful because burns or electric shock may be caused by high voltage.</p>
+									</li>
+									<li>
+										<p>Do not spill liquid on the HPCU, HSG, motor and fuses. If the hybrid system components come in contact with liquid, it may result in electric shock.</p>
+									</li>
+								</ul>
+							</note>
+						</conbody>
+						<related-links>
+							<linkpool>
+								<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0280-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0280-CH08" role="parent" scope="local" type="concept">
+									<linktext>Hybrid vehicle components</linktext>
+								</link>
+							</linkpool>
+						</related-links>
+					</concept>
+				</topicref>
+				<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0282-CH08.dita">
+					<concept id="KA4i-ICE-HEV-en_IN-2026-t0282-CH08">
+						<title>Hybrid battery cooling duct (Hybrid vehicle)</title>
+						<conbody>
+							<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+								<tgroup cols="2" colsep="0" rowsep="0">
+									<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+									<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+									<tbody>
+										<row rowsep="0">
+											<entry colname="col1">
+												<fig>
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B08_063.jpg" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+											<entry colname="col2">
+												<fig id="fig_hhs_mjn_xjc">
+													<figgroup>
+														<image align="center" placement="break" href="../../images/N_KA4i27_B08_062.jpg" scale="95"/>
+													</figgroup>
+												</fig>
+											</entry>
+										</row>
+									</tbody>
+								</tgroup>
+							</table>
+							<p>The hybrid battery air intake port is located on the bottom of the front passenger seat, whilst the air exhaust port is located on the bottom of the right side of 2nd row seat. The cooling duct cools down the hybrid battery. When the hybrid battery cooling duct is blocked, the hybrid battery may be overheated.</p>
+							<p>Clean the cooling duct for the hybrid battery with a dry cloth on a regular basis.</p>
+							<note type="warning">
+								<ul>
+									<li>
+										<p>Never clean the cooling duct of the hybrid battery with a wet cloth. If any water enters the cooling duct of the hybrid battery, the hybrid battery may cause an electric shock, resulting in a serious damage, an injury or a death.</p>
+									</li>
+									<li>
+										<p>The hybrid battery is composed of lithium-ion. If the hybrid battery is improperly handled, it is dangerous to the environment. Also it may cause electrical shock and severe burns, resulting in a serious injury or a death.</p>
+									</li>
+									<li>
+										<p>Do not spill liquid over the cooling duct of the hybrid battery. Doing so is very dangerous. It may cause electric shock or serious injury.</p>
+									</li>
+									<li>
+										<p>Do not cover the cooling duct with objects.</p>
+									</li>
+									<li>
+										<p>Do not put any objects into the cooling duct of the hybrid battery. Doing so may cause loss of cooling duct volume to the hybrid battery. When the cooling duct is blocked with any objects, immediately contact your Kia dealer/service partner.</p>
+									</li>
+									<li>
+										<p>Never place a container of liquid on or near the cooling duct. If the liquid spills, the hybrid battery located in the luggage compartment may be damaged.</p>
+									</li>
+									<li>
+										<p>Secure all loads in the luggage compartment to prevent them from being tossed about before driving. When a sharp or heavy load strike with a strong impact or pierce the interior luggage compartment wall, the hybrid battery system may be damaged, deteriorating its performance.</p>
+									</li>
+									<li>
+										<p>Do not obstruct the cooling duct with any other objects.</p>
+									</li>
+								</ul>
+							</note>
+						</conbody>
+						<related-links>
+							<linkpool>
+								<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0280-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0280-CH08" role="parent" scope="local" type="concept">
+									<linktext>Hybrid vehicle components</linktext>
+								</link>
+							</linkpool>
+						</related-links>
+					</concept>
+				</topicref>
+			</topicref>
+			<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0283-CH08.dita">
+				<concept id="KA4i-ICE-HEV-en_IN-2026-t0283-CH08">
+					<title>Service interlock connector</title>
+					<prolog>
+						<metadata>
+							<keywords>
+								<indexterm>components of the hybrid/plug-in hybrid vehicle 
+									<indexterm>service interlock connector</indexterm>
+								</indexterm>
+								<indexterm>service interlock connector</indexterm>
+							</keywords>
+						</metadata>
+					</prolog>
+					<conbody>
+						<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+							<tgroup cols="2" colsep="0" rowsep="0">
+								<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+								<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+								<tbody>
+									<row rowsep="0">
+										<entry colname="col1">
+											<fig>
+												<figgroup>
+													<image align="center" placement="break" href="../../images/N_KA4i27_B08_061_1.jpg" scale="95"/>
+												</figgroup>
+											</fig>
+										</entry>
+										<entry colname="col2"/>
+									</row>
+								</tbody>
+							</tgroup>
+						</table>
+						<p>The service interlock connector, located within the engine compartment, is a safety device that disables the high voltage of the battery. It's for vehicle inspections at a professional workshop. Kia recommends visiting an authorised Kia dealer/service partner.</p>
+						<p>To access the service interlock connector, open the bonnet and remove the engine compartment fuse panel. The service interlock connector is located inside the engine compartment fuse panel. </p>
+						<note type="warning">
+							<ul>
+								<li>
+									<p>Avoid contacting the service interlock connector to prevent severe injury or death from electric shock.</p>
+								</li>
+								<li>
+									<p>If you need to inspect or maintain the service interlock connector, have the vehicle inspected by a professional workshop. Kia recommends visiting an authorised Kia dealer/service partner.</p>
+								</li>
+								<li>
+									<p>Only disconnect or tamper with the service interlock connector in an emergency, as it may cause significant vehicle issues such as failure to start.</p>
+								</li>
+							</ul>
+						</note>
+					</conbody>
+					<related-links>
+						<linkpool>
+							<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0279-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0279-CH08" role="parent" scope="local" type="concept">
+								<linktext>Components of the hybrid vehicle</linktext>
+							</link>
+						</linkpool>
+					</related-links>
+				</concept>
+			</topicref>
+			<topicref type="concept" href="KA4i-ICE-HEV-en_IN-2026-t0284-CH08.dita">
+				<concept id="KA4i-ICE-HEV-en_IN-2026-t0284-CH08">
+					<title>If an accident occurs</title>
+					<prolog>
+						<metadata>
+							<keywords>
+								<indexterm>components of the hybrid/plug-in hybrid vehicle 
+									<indexterm>if an accident occurs</indexterm>
+								</indexterm>
+							</keywords>
+						</metadata>
+					</prolog>
+					<conbody>
+						<note type="warning">
+							<ul>
+								<li>
+									<p>For your safety, do not touch the high voltage cables, connectors and package modules. High voltage components are orange in colour.</p>
+								</li>
+								<li>
+									<p>Exposed cables or wires may be visible inside or outside of the vehicle. Never touch the wires or cables, because an electrical shock, an injury, or a death may occur.</p>
+								</li>
+								<li>
+									<p>Any gas or electrolyte leakage from your vehicle is not only poisonous but also flammable. Upon witnessing one of those, open the windows, and remain a safe distance from the vehicle out of the road.</p>
+									<p>Immediately call an emergency services or contact an authorised Kia dealer and advise them that a hybrid vehicle is involved.</p>
+								</li>
+								<li>
+									<p>When the vehicle is severely damaged, remain a safe distance of 15 metre or more between your vehicle and other vehicles/ flammables.</p>
+								</li>
+							</ul>
+						</note>
+						<note type="warning">
+							<p>If a fire occurs:</p>
+							<ul>
+								<li>
+									<p>If a small scale fire occurs, use a fire extinguisher (ABC, BC) that is meant for electrical fires.</p>
+									<p>If it is impossible to extinguish the fire in the early stage, remain a safe distance from the vehicle and immediately call your local fire emergency responders. Also, advise them that a hybrid vehicle is involved.</p>
+									<p>If the fire spreads to the high voltage battery, large amount of water is needed to put out the fire.</p>
+									<p>Using small amount of water or fire extinguishers not meant for electrical fires could cause serious injury or death from electrical shocks.</p>
+								</li>
+								<li>
+									<p>Upon witnessing any sparks, gases, flames, or fuel leakage of your vehicle, immediately call emergency services or contact an authorised /service partner. Also, advise them that a hybrid vehicle is involved.</p>
+								</li>
+							</ul>
+						</note>
+						<note type="warning">
+							<p>When a submersion in water occurs:</p>
+							<p>When your vehicle is flooded in water, a high-voltage battery may cause shock or fires. Thus, turn the hybrid system <term translate="no">OFF</term>, take the key in your possession and escape to a safe place. Never attempt physical contact with your flooded vehicle.</p>
+							<p>Immediately contact an authorised Kia dealer and advise them that a hybrid vehicle is involved.</p>
+						</note>
+					</conbody>
+					<related-links>
+						<linkpool>
+							<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0279-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0279-CH08" role="parent" scope="local" type="concept">
+								<linktext>Components of the hybrid vehicle</linktext>
+							</link>
+						</linkpool>
+					</related-links>
+				</concept>
+			</topicref>
+			<topicref type="task" href="KA4i-ICE-HEV-en_IN-2026-t0285-CH08.dita">
+				<task id="KA4i-ICE-HEV-en_IN-2026-t0285-CH08">
+					<title>When the hybrid vehicle shuts off</title>
+					<prolog>
+						<metadata>
+							<keywords>
+								<indexterm>components of the hybrid/plug-in hybrid vehicle 
+									<indexterm>when the hybrid vehicle shuts off</indexterm>
+								</indexterm>
+							</keywords>
+						</metadata>
+					</prolog>
+					<taskbody>
+						<context>
+							<p>When the high voltage battery or 12 volt battery is discharged, or when the fuel tank is empty, the hybrid system may not operate whilst driving. When the Hybrid system does not operate, do the followings:</p>
+						</context>
+						<steps>
+							<step>
+								<cmd>Gradually reduce the vehicle speed. Pull over your vehicle off the road in a safe area.</cmd>
+							</step>
+							<step>
+								<cmd>Locate the shift dial in P (Park).</cmd>
+							</step>
+							<step>
+								<cmd>Turn <term translate="no">ON</term> the hazard warning flashers.</cmd>
+							</step>
+							<step>
+								<cmd>Turn <term translate="no">OFF</term> the vehicle, and try to start the hybrid system again, whilst depressing the brake pedal and turning on the <term translate="no">ENGINE START/STOP</term> button.</cmd>
+							</step>
+							<step>
+								<cmd>When the hybrid system still does not operate, refer to <xref href="KA4i-ICE-HEV-en_IN-2026-t0606-CH12.dita#KA4i-ICE-HEV-en_IN-2026-t0606-CH12"/>.</cmd>
+								<info>
+									<p>Before jump-starting the vehicle, check the fuel level and the exact procedure to jump start. When the fuel level is low, do not attempt to drive the vehicle only with the battery power. The high voltage battery may be discharged, and the hybrid system will turn <term translate="no">OFF</term>.</p>
+								</info>
+							</step>
+						</steps>
+						<postreq>
+							<note type="warning">
+								<p>Accident Vehicle</p>
+								<p>Never touch electric wires or cable. If exposed electric wires or cables are visible inside or outside of your vehicle, an electric shock may occur.</p>
+							</note>
+							<note type="warning">
+								<p>Putting out fire</p>
+								<p>Never use a small quantity of water to put out a fire in your vehicle because it could cause serious injuries or death from electrical shocks. If a fire occurs, evacuate the car immediately and contact the fire department.</p>
+							</note>
+						</postreq>
+					</taskbody>
+					<related-links>
+						<linkpool>
+							<link format="dita" href="KA4i-ICE-HEV-en_IN-2026-t0279-CH08.dita#KA4i-ICE-HEV-en_IN-2026-t0279-CH08" role="parent" scope="local" type="concept">
+								<linktext>Components of the hybrid vehicle</linktext>
+							</link>
+						</linkpool>
+					</related-links>
+				</task>
+			</topicref>
+		</topicref>
+	</topicref>
+</chapter>

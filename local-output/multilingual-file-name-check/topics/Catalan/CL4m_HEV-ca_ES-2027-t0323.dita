@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept id="CL4m_HEV-ca_ES-2027-t0323">
+	<title id="e00752">USB-Ladegerät </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Innenausstattung
+					<indexterm>USB-Ladegerät</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<title>Vorn</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034088.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig>
+								<title>Hinten</title>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M034058N.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Mit dem USB-Autoladegerät können Fahrer ihre digitalen Geräte wie Smartphones und Tablets aufladen. Der Ladevorgang beginnt, sobald Sie das Kabel mit dem USB-Anschluss verbinden.</p>
+		<p>Das USB-Auto-Ladegerät ist entweder bei eingeschaltetem <term translate="no">ACC</term>-Zustand oder eingeschalteter Zündung verfügbar. Wir empfehlen jedoch, dass Sie den USB-Anschluss und die digitalen Geräte bei laufendem Motor verbinden. Auf dem Display-Bildschirm des Geräts können Sie sehen, ob der Ladevorgang abgeschlossen ist.</p>
+		<p>Trennen Sie nach der Verwendung das USB-Kabel vom USB-Anschluss. Ihre digitalen Geräte könnten beim Aufladevorgang heiß werden. Aus Sicherheitsgründen kann der Ladevorgang unterbrochen werden, wenn sich die Batterie auf eine Temperatur erwärmt, die sich negativ auf die Geräte auswirken könnte. Die Aufladung bestimmter digitaler Geräte ist dann nicht möglich bzw. erfordert spezielle Adapter, wenn deren Ladeverfahren nicht mit zur Arbeitsweise des USB-Pkw-Ladegeräts passt. Schnelles Laden ist für digitale Geräte verfügbar, die mit Schnellladefunktionen ausgestattet sind. Dazu gehörende folgende Geräte: (https://www.qualcomm.com/documents/quick-charge-device-list)</p>
+		<p>Die digitalen Geräte ohne Schnellladung werden mit normaler Geschwindigkeit geladen.</p>
+		<note type="tip">
+			<ul>
+				<li>
+					<p>Power Delivery 3.0 ist für Smartphones oder Tablets verfügbar, die über die Schnellladefunktion verfügen. Dies gilt für digitale Geräte mit USB-C-Anschluss. Die Ladegeschwindigkeit wird entsprechend der Ladespezifikation des angeschlossenen digitalen Geräts bestimmt.</p>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<p>Nennausgangsleistung: 9,0 V/Max. 3,0 A</p>
+				</li>
+			</ul>
+		</note>
+		<note type="caution">
+			<ul>
+				<li>
+					<p>Benutzen Sie das USB-Pkw-Ladegerät mit eingeschalteter Zündung. Anderenfalls kann die Fahrzeugbatterie entladen werden.</p>
+				</li>
+				<li>
+					<p>Benutzen Sie das offizielle USB-Kabel des Herstellers des Digitalgeräts, das Sie aufladen wollen.</p>
+				</li>
+				<li>
+					<p>Achten Sie darauf, dass weder Fremdkörper noch Getränke und Wasser mit dem USB-Autoladegerät in Berührung kommen. Wasser oder Fremdkörper können das USB-Ladegerät beschädigen.</p>
+				</li>
+				<li>
+					<p>Schließen Sie kein elektrisches Gerät an, das starke elektromagnetische Störungen am USB-Pkw-Anschluss erzeugt. Anderenfalls können beim Einschalten der Audiowiedergabe bzw. AV-Wiedergabe elektronische Geräte des Fahrzeugs gestört oder unterbrochen werden.</p>
+				</li>
+				<li>
+					<p>Wenn das Ladegerät falsch angeschlossen ist, können die Geräte stark beschädigt werden. Beachten Sie, dass Schäden aufgrund falscher Verwendung nicht durch die Gewährleistung abgedeckt sind.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0315.dita#CL4m_HEV-ca_ES-2027-t0315" role="parent" scope="local" type="concept">
+				<linktext>Innenausstattung</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

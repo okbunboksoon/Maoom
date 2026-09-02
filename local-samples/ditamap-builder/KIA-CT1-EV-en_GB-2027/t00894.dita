@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00894">
+	<title>Light position (Front)</title>
+	<conbody>
+		<table frame="none" colsep="1" rowsep="1" outputclass="formatc_none" id="e02804">
+			<tgroup cols="2" colsep="1" rowsep="1" outputclass="formatc">
+				<colspec colnum="1" colname="1" colwidth="50*"/>
+				<colspec colnum="2" colname="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="1" colsep="0">
+							<fig id="e02805">
+								<title>Type A</title>
+								<figgroup>
+									<image href="../../images/N_CT25G024.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2">
+							<fig id="e02806">
+								<title>Type B</title>
+								<figgroup>
+									<image href="../../images/N_CT25G025.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+					<row>
+						<entry colname="1" colsep="0">
+							<fig id="e02807">
+								<title>Type C</title>
+								<figgroup>
+									<image href="../../images/P_CT27_C12_001.eps" scale="95" align="center" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Headlamp (Low) (LED type)</p>
+			</li>
+			<li>
+				<p>Headlamp (High) (LED type)</p>
+			</li>
+			<li>
+				<p>Front turn signal lamp (LED type)</p>
+			</li>
+			<li>
+				<p>Day time running lamp/Position lamp (LED type)</p>
+			</li>
+		</ol>
+	</conbody>
+</concept>

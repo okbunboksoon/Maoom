@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00810">
+	<title>Jump-starting the vehicle</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e02590">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e02591">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25F012_E.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout" id="e02592">
+			<li>
+				<p>Positive (+) terminal of the booster battery</p>
+			</li>
+			<li>
+				<p>Negative (-) terminal of the booster battery</p>
+			</li>
+			<li>
+				<p>Positive (+) terminal of the flat battery</p>
+			</li>
+			<li>
+				<p>Negative (-) terminal of the flat battery</p>
+			</li>
+		</ol>
+		<section>
+			<title>Condition(s)</title>
+			<ul>
+				<li>
+					<p>When the vehicle will not start due to low battery power</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<title>Operation</title>
+			<ol>
+				<li>
+					<p>Connect the jumper cables as shown.</p>
+					<ul>
+						<li>
+							<p>Positive (+) terminal of the flat battery (3) and the booster battery (1).</p>
+						</li>
+						<li>
+							<p>Negative (-) terminal of the flat battery (4) and the Negative (-) terminal of the booster battery (2).</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>Start the vehicle with the booster battery for several minutes.</p>
+				</li>
+				<li>
+					<p>Try to start the vehicle with the flat battery again.</p>
+				</li>
+				<li>
+					<p>If the vehicle starts, disconnect the jumper cables as following:</p>
+					<ul>
+						<li>
+							<p>Negative (-) terminal of the booster battery (2). Positive (+) terminal of the booster battery (1). Flat battery (3, 4)</p>
+						</li>
+					</ul>
+				</li>
+			</ol>
+			<p>If the vehicle still does not start, contact a professional workshop or seek other qualified assistance. Kia recommends visiting an authorized Kia dealer or service partner.</p>
+			<note type="warning">
+				<ul id="e02593">
+					<li id="e02594">
+						<p>Keep all flames or sparks away from the battery. The battery produces hydrogen gas which may explode if exposed to flame or sparks. If these instructions are not followed exactly, serious personal injury and damage to the vehicle may occur! If you are not sure how to follow this procedure, seek qualified assistance. Automobile batteries contain sulfuric acid. This is poisonous and highly corrosive. When jump-starting, wear protective glasses and be careful not to get acid on yourself, your clothing or on the vehicle.</p>
+					</li>
+					<li id="e02595">
+						<p>Do not attempt to jump start the vehicle if the discharged battery is frozen or if the electrolyte level is low; the battery may rupture or explode.</p>
+					</li>
+					<li id="e02596">
+						<p>Do not allow the (+) and (-) jumper cables to touch. It may cause sparks.</p>
+					</li>
+					<li>
+						<p>Never attempt to check the electrolyte level of the battery as this may cause the battery to rupture or explode causing serious injury.</p>
+					</li>
+					<li>
+						<p>The battery may rupture or explode when you jump start with a low or frozen battery.</p>
+					</li>
+					<li>
+						<p>The electrical starting system works with high voltage. NEVER touch these components with the <image align="left" href="../../images/WKIA_326.eps" scale="15" placement="inline"/> indicator <term translate="no">ON</term> or when the <term translate="no">EV</term> button is in the <term translate="no">ON</term> position.</p>
+					</li>
+				</ul>
+			</note>
+			<note type="caution">
+				<p>Use only a 12-volt jumper system. You can damage other electrical parts beyond repair by use of a 24-volt power supply (either two 12-volt batteries in series or a 24-volt motor generator set).</p>
+			</note>
+			<note type="note">
+				<p>Do not connect the jumper cable from the negative terminal of the booster battery to the negative terminal of the discharged battery. This can cause the discharged battery to overheat and crack, releasing battery acid. Make sure to connect one end of the jumper cable to the negative terminal of the booster battery, and the other end to a metallic point, far away from the battery.</p>
+			</note>
+		</section>
+	</conbody>
+</concept>

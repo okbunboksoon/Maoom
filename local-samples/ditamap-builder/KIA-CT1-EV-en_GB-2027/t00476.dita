@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00476">
+	<title>Applying AUTO HOLD</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01935">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig id="e01936">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25D013_1.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<fig id="e01937">
+								<figgroup>
+									<image align="center" href="../../images/N_CT25D010_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<section>
+			<title>Operation</title>
+			<ol>
+				<li>
+					<p>Press the <term translate="no">AUTO HOLD</term> button. The <term translate="no">AUTO HOLD</term> indicator will light up in white.</p>
+				</li>
+				<li>
+					<p>The <term translate="no">AUTO HOLD</term> indicator changes from white to green when the vehicle is stopped.</p>
+				</li>
+				<li>
+					<p> <term translate="no">AUTO HOLD</term> will be released automatically when the accelerator pedal is pressed in D (Drive) or R (Reverse). The <term translate="no">AUTO HOLD</term> indicator will change from green to white.</p>
+				</li>
+				<li>
+					<p>Press the <term translate="no">AUTO HOLD</term> button again while pressing the brake pedal to cancel the <term translate="no">AUTO HOLD</term> operation.</p>
+				</li>
+			</ol>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Operating condition(s)</title>
+			<ul>
+				<li>
+					<p>Brake pedal is depressed after the vehicle has started.</p>
+				</li>
+			</ul>
+		</section>
+		<section deliveryTarget="except_print">
+			<title>Non-operating condition(s)</title>
+			<ul>
+				<li>
+					<p>P (Park) is selected</p>
+				</li>
+				<li>
+					<p>Electronic Parking Brake (<term translate="no">EPB</term>) is applied.</p>
+				</li>
+			</ul>
+		</section>
+	</conbody>
+</concept>

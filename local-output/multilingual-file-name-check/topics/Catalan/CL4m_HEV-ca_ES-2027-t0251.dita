@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept importance="optional" id="CL4m_HEV-ca_ES-2027-t0251">
+	<title id="e00638">Airbags für Fahrer und Beifahrer </title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Airbag
+					<indexterm>Airbags für Fahrer und Beifahrer</indexterm>
+				</indexterm>
+				<indexterm>Airbags für Fahrer und Beifahrer</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OCL4M024048N_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<p>Hinweise auf die Airbag-Ausstattung sind die Wörter AIR BAG auf der Airbagabdeckung im Lenkrad und auf dem Armaturenbrett auf der Beifahrerseite über dem Handschuhfach.</p>
+		<p>Die beiden Airbagmodule befinden sich in der Mitte des Lenkrads und im Armaturenbrett über dem Handschuhfach. Wenn das SRSCM einen ausreichend schweren Frontalaufprall erkennt, löst es automatisch die vorderen Airbags aus.</p>
+		<p>Bei der Auslösung trennen sich Sollrissnähte, die direkt in die Verkleidungen eingearbeitet sind, unter dem Druck der Airbagausdehnung. Die daraufhin entstehenden Öffnungen in den Abdeckungen erlauben die vollständige Ausdehnung der Airbags.</p>
+		<p>Ein vollständig aufgeblasener Airbag verzögert in Verbindung mit einem ordnungsgemäß angelegten Sicherheitsgurt die Vorwärtsbewegung des Fahrers oder Beifahrers und reduziert das Risiko von Kopf- und Brustverletzungen.</p>
+		<p>Nach der vollständigen Ausdehnung lässt der Airbag seinen Druck sofort wieder ab und ermöglicht dem Fahrer freie Sicht nach vorn und die Möglichkeit, die Lenkung und andere Einrichtungen zu bedienen.</p>
+		<note type="note" id="e00639">
+			<p>Siehe WARNUNG, ACHTUNG und HINWEIS von „Airbag-Vorsichtsmaßnahmen“.</p>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0243.dita#CL4m_HEV-ca_ES-2027-t0243" role="parent" scope="local" type="concept">
+				<linktext>Airbag – ergänzendes Rückhaltesystem </linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

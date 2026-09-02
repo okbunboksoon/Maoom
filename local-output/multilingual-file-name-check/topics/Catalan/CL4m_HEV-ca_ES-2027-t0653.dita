@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="CL4m_HEV-ca_ES-2027-t0653">
+	<title>Bedienung der Autobahn-Fahrspurwechselhilfe</title>
+	<conbody>
+		<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+			<tgroup cols="2" colsep="0" rowsep="0">
+				<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+				<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/OMQ4A053019.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2"/>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+		<ol outputclass="callout">
+			<li>
+				<p>Mitte</p>
+			</li>
+		</ol>
+		<p>Die Autobahn-Fahrspurwechselhilfe wird aktiviert, wenn Sie den Blinkerhebel in die Position (A) oder (B) drücken, während die Funktion bereit ist (<image align="center" href="../../images/WKIA_086.eps" scale="15" placement="inline"/>) leuchtet grün), und alle folgenden Bedingungen erfüllt sind:</p>
+		<ul>
+			<li>
+				<p>Ihre Hände liegen auf dem Lenkrad</p>
+			</li>
+			<li>
+				<p>Es besteht kein Kollisionsrisiko in Richtung des Spurwechsels</p>
+			</li>
+			<li>
+				<p>Es handelt sich um eine zweispurige Straße mit gestrichelten Linien in beliebiger Farbe in Richtung des Spurwechsels</p>
+			</li>
+			<li>
+				<p>Es gibt keine Warnhinweise des Frontalkollisions-Vermeidungsassistent und des Totwinkel-Kollisionsvermeidungsassistenten.</p>
+			</li>
+			<li>
+				<p>Sie fahren in der Mitte der Fahrspur (Fahren Sie nicht dicht an einer Seite der Fahrspur)</p>
+			</li>
+			<li>
+				<p>Die Straße, auf der Sie fahren, oder die Straße, auf der Sie die Spur wechseln wollen, unterstützt die Funktion.</p>
+			</li>
+		</ul>
+		<note type="note">
+			<ul>
+				<li>
+					<p>Wenn der Blinkerhebel in eine Position gestellt wird, ist die Spurwechselhilfe auf der Autobahn aktiv. Wenn der Blinkerhebel anschließend in die Neutralstellung gebracht wird, wird die Autobahn-Fahrspurwechselhilfe abgebrochen, bevor in die Spur gewechselt wird.</p>
+					<p>Die Autobahn-Fahrspurwechselhilfe wird nicht nach Auffahren auf die Spur abgebrochen. Wenn der Spurwechsel abgeschlossen ist, wird die Spurwechselhilfe jedoch abgebrochen und das Blinksignal wird ausgeschaltet.</p>
+				</li>
+				<li>
+					<p>Wenn der Blinkerhebel für eine bestimmte Zeit auf Position B steht, erscheint der grüne Pfeil. Auch wenn der Hebel losgelassen wird und in seine ursprüngliche Position zurückkehrt, wird der Spurwechsel weiterhin unterstützt.</p>
+				</li>
+				<li>
+					<p>Während des Spurwechsels blinkt die Blinkeranzeige, auch wenn der Blinkerhebel nicht gedrückt wird. Der Blinker schaltet sich aus, wenn der Spurwechsel abgeschlossen ist.</p>
+				</li>
+			</ul>
+		</note>
+	</conbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0650.dita#CL4m_HEV-ca_ES-2027-t0650" role="parent" scope="local" type="concept">
+				<linktext>Autobahn-Fahrspurwechselhilfe</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</concept>

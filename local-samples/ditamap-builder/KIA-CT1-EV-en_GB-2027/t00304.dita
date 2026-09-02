@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00304">
+	<title>Charging door</title>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>charging electric vehicle 
+					<indexterm>charging door</indexterm>
+				</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<section id="e01352">
+			<title>Opening Charging door</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01353">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01354">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q038.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<sectiondiv><ph>Operation</ph>
+			</sectiondiv>
+			<ol id="e01355">
+				<li>
+					<p>Press the center edge of the charging door.</p>
+					<p importance="default">The charging door will not open if the vehicle doors are locked.</p>
+				</li>
+				<li>
+					<p>Pull the charging door fully open towards the front of the vehicle.</p>
+				</li>
+			</ol>
+		</section>
+		<section id="e01356">
+			<title>Closing Charging door</title>
+			<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1" id="e01357">
+				<tgroup cols="2" colsep="0" rowsep="1">
+					<colspec colname="col1" colnum="1" colsep="0" colwidth="50*"/>
+					<colspec colname="col2" colnum="2" colsep="0" colwidth="50*"/>
+					<tbody>
+						<row rowsep="1">
+							<entry colname="col1">
+								<fig id="e01358">
+									<figgroup>
+										<image align="center" href="../../images/N_CT25Q039.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+			<sectiondiv><ph>Operation</ph>
+			</sectiondiv>
+			<ol id="e01359">
+				<li>
+					<p>Close the charging door and press it lightly to ensure it returns to its original position. Verify that it is securely closed.</p>
+				</li>
+			</ol>
+		</section>
+	</conbody>
+</concept>

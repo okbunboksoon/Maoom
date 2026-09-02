@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 1.3 Concept//EN" "concept.dtd">
+<concept base="Anywhere" id="t00642">
+	<title>Decreasing set speed</title>
+	<conbody>
+		<table colsep="1" frame="none" outputclass="formatc_none" rowsep="1">
+			<tgroup cols="2" colsep="1" outputclass="formatc" rowsep="1">
+				<colspec colname="col1" colnum="1" colwidth="50*"/>
+				<colspec colname="col2" colnum="2" colwidth="50*"/>
+				<tbody>
+					<row rowsep="0">
+						<entry colname="col1" colsep="0">
+							<fig>
+								<figgroup>
+									<image align="center" href="../../images/N_CT25E058_1_2.eps" scale="95" placement="break"/>
+								</figgroup>
+							</fig>
+						</entry>
+						<entry colname="col2">
+							<ul>
+								<li>
+									<p>Push the (<image align="left" href="../../images/WKIA_335.eps" scale="15" placement="inline"/>) switch down and release it immediately. The set speed will decrease by 1 km/h increments.To decrease the set speed quickly, push and hold the (<image align="left" href="../../images/WKIA_335.eps" scale="15" placement="inline"/>) switch. The set speed will decrease in increments of 10.If the cluster speed unit is mph, it will decrease in multiples of 5.</p>
+								</li>
+								<li>
+									<p>You can set a minimum speed of 30 km/h (20 mph).</p>
+								</li>
+							</ul>
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</conbody>
+</concept>

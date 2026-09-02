@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA 1.3 Task//EN" "task.dtd">
+<task importance="optional" id="CL4m_HEV-ca_ES-2027-t0309">
+	<title>Seitliche Gepäckablage</title>
+	<shortdesc>Die seitliche Gepäckablage kann für die Aufbewahrung kleiner Artikel verwendet werden.</shortdesc>
+	<prolog>
+		<metadata>
+			<keywords>
+				<indexterm>Staufach
+					<indexterm>Seitliche Gepäckablage</indexterm>
+				</indexterm>
+				<indexterm>Seitliche Gepäckablage</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context>
+			<table outputclass="formatc_none" frame="none" rowsep="0" colsep="0">
+				<tgroup cols="2" colsep="0" rowsep="0">
+					<colspec colnum="1" colname="col1" colwidth="2.343*" colsep="0"/>
+					<colspec colnum="2" colname="col2" colwidth="2.343*" colsep="0"/>
+					<tbody>
+						<row rowsep="0">
+							<entry colname="col1">
+								<fig>
+									<figgroup>
+										<image align="center" href="../../images/OCL4MW035006L.eps" scale="95" placement="break"/>
+									</figgroup>
+								</fig>
+							</entry>
+							<entry colname="col2"/>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</context>
+		<steps-unordered>
+			<step>
+				<cmd>Zum Öffnen der Abdeckung ziehen Sie am Griff und heben die Abdeckung an.</cmd>
+			</step>
+		</steps-unordered>
+	</taskbody>
+	<related-links>
+		<linkpool>
+			<link format="dita" href="CL4m_HEV-ca_ES-2027-t0303.dita#CL4m_HEV-ca_ES-2027-t0303" role="parent" scope="local" type="concept">
+				<linktext>Staufächer</linktext>
+			</link>
+		</linkpool>
+	</related-links>
+</task>

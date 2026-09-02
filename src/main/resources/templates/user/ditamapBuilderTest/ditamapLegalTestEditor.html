@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>법규용 DITAMAP 편집</title>
+    <link rel="stylesheet" href="/user/css/DitamapBuilder.css?v=legal-editor-5">
+</head>
+<body class="ditamap-view-body legal-editor-body">
+<main class="ditamap-view-wrap legal-editor-wrap">
+    <header class="ditamap-header ditamap-editor-topbar">
+        <div>
+            <h1>법규 DITAMAP 편집</h1>
+            <p id="editorPathText">선택한 기준 topic을 법규 구조에 배치합니다.</p>
+        </div>
+        <div class="ditamap-structure-toolbar"
+             aria-label="법규 DITAMAP 구조 조정">
+            <button id="moveUpButton"
+                    class="ditamap-icon-btn"
+                    type="button"
+                    title="위로 이동">↑</button>
+            <button id="moveDownButton"
+                    class="ditamap-icon-btn"
+                    type="button"
+                    title="아래로 이동">↓</button>
+            <button id="outdentButton"
+                    class="ditamap-icon-btn"
+                    type="button"
+                    title="내어쓰기">←</button>
+            <button id="indentButton"
+                    class="ditamap-icon-btn"
+                    type="button"
+                    title="들여쓰기">→</button>
+            <button id="deleteRowButton"
+                    class="ditamap-icon-btn danger-icon-btn"
+                    type="button"
+                    title="선택 항목 삭제">×</button>
+            <button id="undoEditButton"
+                    class="ditamap-icon-btn"
+                    type="button"
+                    title="편집 내용 되돌리기">↺</button>
+        </div>
+    </header>
+
+    <section class="ditamap-tree-panel legal-editor-panel"
+             aria-label="법규 DITAMAP 편집 트리">
+        <header class="ditamap-tree-header">
+            <div>
+                <h2>법규용 DITAMAP 제작</h2>
+                <p>사용설명서에서 V체크 표시한 내용과 법규 1 ~ 2레벨 타이틀과 조합하여 법규용 DITAMAP 제작합니다.</p>
+            </div>
+        </header>
+        <div class="ditamap-tree-columns law-ditamap-columns">
+            <span>Title</span>
+            <span>파일명</span>
+        </div>
+        <div id="legalEditorTree"
+             class="ditamap-tree law-ditamap-tree legal-editor-tree"></div>
+    </section>
+
+    <footer class="ditamap-view-actions">
+        <button id="cancelButton"
+                class="ditamap-btn secondary-btn"
+                type="button">닫기</button>
+        <button id="saveDraftButton"
+                class="ditamap-btn primary-btn"
+                type="button">저장</button>
+    </footer>
+</main>
+
+<div id="editorConfirmBackdrop"
+     class="legal-progress-backdrop editor-confirm-backdrop"
+     hidden>
+    <div class="legal-progress-dialog editor-confirm-dialog"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="editorConfirmTitle">
+        <strong id="editorConfirmTitle">확인</strong>
+        <p id="editorConfirmText"></p>
+        <div class="editor-confirm-actions">
+            <button id="editorConfirmCancelButton"
+                    class="ditamap-btn secondary-btn"
+                    type="button">취소</button>
+            <button id="editorConfirmOkButton"
+                    class="ditamap-btn primary-btn"
+                    type="button">확인</button>
+        </div>
+    </div>
+</div>
+
+<script>
+const editorTree = document.getElementById('legalEditorTree');
+const editorPathText = document.getElementById('editorPathText');
+const moveUpButton = document.getElementById('moveUpButton');
+const moveDownButton = document.getElementById('moveDownButton');
+const outdentButton = document.getElementById('outdentButton');
+const indentButton = document.getElementById('indentButton');
+const deleteRowButton = document.getElementById('deleteRowButton');
+const undoEditButton = document.getElementById('undoEditButton');
+const saveDraftButton = document.getElementById('saveDraftButton');
+const cancelButton = document.getElementById('cancelButton');
+const editorConfirmBackdrop = document.getElementById('editorConfirmBackdrop');
+const editorConfirmTitle = document.getElementById('editorConfirmTitle');
+const editorConfirmText = document.getElementById('editorConfirmText');
+const editorConfirmOkButton = document.getElementById('editorConfirmOkButton');
+const editorConfirmCancelButton = document.getElementById('editorConfirmCancelButton');
+const params = new URLSearchParams(location.search);
+const draftId = params.get('draft') || '';
+let editorRows = [];
+let initialEditorRows = [];
+let selectedIndex = -1;
+// 이동/들여쓰기 기준은 selectedIndex 하나로 유지하고,
+// Ctrl/Shift 다중 선택 삭제는 selectedIndexes Set으로 별도 관리한다.
+let selectedIndexes = new Set();
+let selectionAnchorIndex = -1;
+let draggingEditorIndex = -1;
+let currentDraft = null;
+
+function cloneRows(rows){
+    return JSON.parse(JSON.stringify(rows || []));
+}
+
+function showEditorConfirm(title, text){
+    return new Promise(resolve => {
+        editorConfirmTitle.textContent = title || '확인';
+        editorConfirmText.innerHTML = String(text || '')
+            .split('\n')
+            .map(line => line.replace(/[&<>"']/g, char => ({
+                '&':'&amp;',
+                '<':'&lt;',
+                '>':'&gt;',
+                '"':'&quot;',
+                "'":'&#39;'
+            }[char])))
+            .join('<br>');
+        editorConfirmBackdrop.hidden = false;
+
+        const close = result => {
+            editorConfirmBackdrop.hidden = true;
+            editorConfirmOkButton.removeEventListener('click', handleOk);
+            editorConfirmCancelButton.removeEventListener('click', handleCancel);
+            editorConfirmBackdrop.removeEventListener('click', handleBackdrop);
+            document.removeEventListener('keydown', handleKeyDown);
+            resolve(result);
+        };
+        const handleOk = () => close(true);
+        const handleCancel = () => close(false);
+        const handleBackdrop = event => {
+            if(event.target === editorConfirmBackdrop){
+                close(false);
+            }
+        };
+        const handleKeyDown = event => {
+            if(event.key === 'Escape'){
+                close(false);
+            }
+        };
+
+        editorConfirmOkButton.addEventListener('click', handleOk);
+        editorConfirmCancelButton.addEventListener('click', handleCancel);
+        editorConfirmBackdrop.addEventListener('click', handleBackdrop);
+        document.addEventListener('keydown', handleKeyDown);
+        editorConfirmOkButton.focus();
+    });
+}
+
+function flattenNodes(nodes, rows){
+    const result = rows || [];
+
+    (nodes || []).forEach(node => {
+        result.push(Object.assign({}, node, {
+            children:null
+        }));
+
+        if(node.children && node.children.length > 0){
+            flattenNodes(node.children, result);
+        }
+    });
+
+    return result;
+}
+
+async function loadEditor(){
+    const stored = localStorage.getItem('ditamapLegalDraft:' + draftId);
+
+    if(!stored){
+        renderEmpty('선택한 기준 topic 정보를 찾지 못했습니다.');
+        return;
+    }
+
+    const draft = JSON.parse(stored);
+    const isOtherpropsMode = draft.compareMode === 'otherprops';
+    currentDraft = draft;
+    editorPathText.textContent = draft.ditamapFile || '';
+    if(draft.crossCheck && Array.isArray(draft.crossCheck.masterRows)){
+        editorRows = draft.crossCheck.masterRows.map(row =>
+                normalizeTestEditorRow(row));
+    }else{
+        const response = await fetch('/api/ditamap-builder/legal-template', {
+            method:'POST',
+            headers:{
+                'Accept':'application/json'
+            }
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        const template = await response.json();
+        editorRows = flattenNodes(template.nodes || []);
+    }
+
+    const checkedTopics = draft.topics || [];
+    if(isOtherpropsMode){
+        applyTestBranchReplacements(draft, checkedTopics);
+        applyTestTopicReplacements(draft, checkedTopics);
+        removeStaleTestMasterRowsForReplacements();
+    }
+    const manualOnlyTopics = checkedTopics
+            .filter(topic => isOtherpropsMode
+                    ? topic.diffStatus === 'manual-only' && !topic.matchType
+                    : !topic.matchType);
+
+    if(manualOnlyTopics.length > 0){
+        appendEditorTopicGroup('미분류', manualOnlyTopics);
+    }
+
+    initialEditorRows = cloneRows(editorRows);
+    renderRows();
+}
+
+function normalizeTestEditorRow(row){
+    return Object.assign({}, row, {
+        originalMasterIndex:Number(row.index),
+        attributeValue:row.attributeValue || '',
+        attributeName:row.attributeName || 'veh-legalid',
+        children:null
+    });
+}
+
+function rowSubtreeEndIndex(rows, rootIndex){
+    const rootLevel = Number(rows[rootIndex] && rows[rootIndex].level || 1);
+    let endIndex = rootIndex + 1;
+
+    while(endIndex < rows.length
+            && Number(rows[endIndex].level || 1) > rootLevel){
+        endIndex++;
+    }
+
+    return endIndex;
+}
+
+function cloneManualRowForEditor(row, levelDelta, replacementSource){
+    return Object.assign({}, row, {
+        level:Math.max(1, Math.min(6, Number(row.level || 1) + levelDelta)),
+        originalMasterIndex:null,
+        attributeValue:row.attributeValue || '',
+        attributeName:row.attributeName || 'veh-legalid',
+        replacementSource:replacementSource || '',
+        children:null
+    });
+}
+
+function findCurrentMasterRowIndex(originalMasterIndex){
+    return editorRows.findIndex(row =>
+            Number(row.originalMasterIndex) === Number(originalMasterIndex));
+}
+
+function applyTestBranchReplacements(draft, checkedTopics){
+    const crossCheck = draft.crossCheck || {};
+    const checkedBranchRoots = new Set(checkedTopics
+            .filter(topic => topic.matchType === 'branch')
+            .map(topic => String(topic.matchedMasterIndex || '')));
+    const branchMatches = (crossCheck.branchMatches || [])
+            .filter(match => checkedBranchRoots.has(String(match.masterIndex)))
+            .sort((left, right) => Number(right.masterIndex) - Number(left.masterIndex));
+
+    branchMatches.forEach(match => {
+        const masterIndex = Number(match.masterIndex);
+        const currentMasterIndex = findCurrentMasterRowIndex(masterIndex);
+
+        if(!Number.isInteger(masterIndex)
+                || currentMasterIndex < 0){
+            return;
+        }
+
+        const manualRows = (match.manualIndexes || [])
+                .map(index => (crossCheck.manualRows || [])[Number(index)])
+                .filter(Boolean);
+
+        if(manualRows.length === 0){
+            return;
+        }
+
+        const endIndex = rowSubtreeEndIndex(editorRows, currentMasterIndex);
+        const levelDelta = Number(editorRows[currentMasterIndex].level || 1)
+                - Number(manualRows[0].level || 1);
+        const replacementRows = manualRows
+                .map(row => cloneManualRowForEditor(
+                        row,
+                        levelDelta,
+                        'cross-check'));
+
+        editorRows.splice(
+                currentMasterIndex,
+                endIndex - currentMasterIndex,
+                ...replacementRows);
+    });
+}
+
+function isInsideReplacedBranch(draft, masterIndex){
+    const crossCheck = draft.crossCheck || {};
+
+    return (crossCheck.branchMatches || []).some(match => {
+        const rootIndex = Number(match.masterIndex);
+
+        if(!Number.isInteger(rootIndex)){
+            return false;
+        }
+
+        const endIndex = rowSubtreeEndIndex(
+                crossCheck.masterRows || [],
+                rootIndex);
+
+        return masterIndex >= rootIndex && masterIndex < endIndex;
+    });
+}
+
+function applyTestTopicReplacements(draft, checkedTopics){
+    checkedTopics
+        .filter(topic => topic.matchType === 'topic')
+        .sort((left, right) =>
+                Number(right.matchedMasterIndex) - Number(left.matchedMasterIndex))
+        .forEach(topic => {
+            const masterIndex = Number(topic.matchedMasterIndex);
+            const currentMasterIndex = findCurrentMasterRowIndex(masterIndex);
+
+            if(!Number.isInteger(masterIndex)
+                    || currentMasterIndex < 0
+                    || isInsideReplacedBranch(draft, masterIndex)){
+                return;
+            }
+
+            editorRows.splice(
+                    currentMasterIndex,
+                    1,
+                    cloneManualRowForEditor(
+                            topic,
+                            Number(editorRows[currentMasterIndex].level || 1)
+                                    - Number(topic.level || 1),
+                            'cross-check'));
+        });
+}
+
+function normalizeEditorFileNameForReplacement(fileName){
+    return (fileName || '').trim().toLowerCase();
+}
+
+function removeStaleTestMasterRowsForReplacements(){
+    const replacementFileNames = new Set(editorRows
+            .filter(row => row.replacementSource === 'cross-check')
+            .map(row => normalizeEditorFileNameForReplacement(row.fileName))
+            .filter(Boolean));
+
+    if(replacementFileNames.size === 0){
+        return;
+    }
+
+    for(let index = editorRows.length - 1; index >= 0; index--){
+        const row = editorRows[index];
+        const fileName = normalizeEditorFileNameForReplacement(row.fileName);
+
+        if(row.replacementSource === 'cross-check'
+                || !replacementFileNames.has(fileName)){
+            continue;
+        }
+
+        editorRows.splice(
+                index,
+                rowSubtreeEndIndex(editorRows, index) - index);
+    }
+}
+
+function appendEditorTopicGroup(title, checkedTopics){
+    editorRows.push({
+        title:'',
+        level:1,
+        editorType:'spacer',
+        attributeValue:'',
+        attributeName:'',
+        fileName:'',
+        filePath:'',
+        sourceFilePath:'',
+        elementPath:'',
+        href:'',
+        children:null
+    });
+    editorRows.push({
+        title:title,
+        level:1,
+        editorType:'unclassified',
+        attributeValue:'',
+        attributeName:'veh-legalid',
+        fileName:'',
+        filePath:'',
+        sourceFilePath:'',
+        elementPath:'',
+        href:'',
+        children:null
+    });
+
+    const minimumCheckedLevel = checkedTopics.length === 0
+        ? 2
+        : Math.min(...checkedTopics.map(topic => Number(topic.level || 1)));
+    const checkedLevelDelta = 2 - minimumCheckedLevel;
+
+    /*
+     * 기준 DITAMAP에서 체크한 topic은 원래 상하위 레벨 차이를 유지해서 가져온다.
+     * 예: 기준 L2와 그 하위 L3를 함께 체크하면 편집창의 사용설명서 그룹 아래에서도 L2/L3로 표시된다.
+     */
+    checkedTopics.forEach(topic => {
+        editorRows.push(Object.assign({}, topic, {
+            level:Math.max(2, Math.min(6, Number(topic.level || 1) + checkedLevelDelta)),
+            attributeValue:topic.attributeValue || '',
+            attributeName:topic.attributeName || 'veh-legalid',
+            children:null
+        }));
+    });
+}
+
+function renderEmpty(text){
+    editorTree.innerHTML = '';
+    const empty = document.createElement('div');
+    empty.className = 'ditamap-tree-empty';
+    empty.textContent = text;
+    editorTree.appendChild(empty);
+}
+
+function renderRows(){
+    editorTree.innerHTML = '';
+    const duplicateFileNameIndexes = getDuplicateEditorFileNameIndexes();
+
+    if(editorRows.length === 0){
+        renderEmpty('표시할 법규 DITAMAP 항목이 없습니다.');
+        return;
+    }
+
+    editorRows.forEach((rowData, index) => {
+        const row = document.createElement('div');
+        row.className = 'ditamap-tree-row law-draggable-row';
+        row.dataset.level = String(Math.max(rowData.level || 1, 1));
+        row.dataset.index = String(index);
+        row.draggable = rowData.editorType !== 'spacer';
+
+        if(rowData.editorType === 'spacer'){
+            row.classList.add('is-editor-spacer');
+            editorTree.appendChild(row);
+            return;
+        }
+
+        if(selectedIndexes.has(index)){
+            row.classList.add('is-selected');
+        }
+
+        if(rowData.editorType === 'unclassified' || rowData.title === '미분류'){
+            row.classList.add('is-editor-unclassified');
+        }else if(!isUnderManualCheckedGroup(index)
+                && Math.max(rowData.level || 1, 1) <= 2){
+            row.classList.add('is-editor-structure-level');
+        }
+
+        const titleCell = document.createElement('div');
+        titleCell.className = 'ditamap-tree-title';
+        titleCell.style.paddingLeft =
+            ((Math.max(rowData.level || 1, 1) - 1) * 24) + 'px';
+
+        const marker = document.createElement('span');
+        marker.className = 'tree-marker';
+        marker.textContent = '-';
+
+        const levelBadge = document.createElement('span');
+        levelBadge.className = 'level-badge';
+        levelBadge.textContent = 'L' + Math.max(rowData.level || 1, 1);
+
+        const title = document.createElement('span');
+        title.className = 'tree-title-text';
+        title.textContent = rowData.title || '(제목 없음)';
+
+        const isDuplicateFileName = duplicateFileNameIndexes.has(index);
+        const fileName = document.createElement('div');
+        fileName.className = 'ditamap-tree-file';
+        // 파일명 아래에 중복 안내 문구를 붙일 수 있도록 텍스트 span을 분리한다.
+        const fileNameText = document.createElement('span');
+        fileNameText.textContent = rowData.fileName || '';
+        fileName.appendChild(fileNameText);
+
+        if(isDuplicateFileName){
+            // 팝업으로 끊지 않고, 저장을 막는 이유를 해당 row에서 바로 보여준다.
+            row.classList.add('has-file-duplicate');
+            const duplicateMessage = document.createElement('span');
+            duplicateMessage.className = 'file-duplicate-message';
+            duplicateMessage.textContent = '파일명이 중복입니다.';
+            fileName.appendChild(duplicateMessage);
+        }
+
+        fileName.title = rowData.fileName
+            ? '더블클릭해서 파일명 수정'
+            : '';
+        fileName.addEventListener('mousedown', event => {
+            /*
+             * row 자체는 드래그 이동 대상이다. 파일명 cell에서 드래그가 시작되면
+             * 브라우저가 더블클릭 대신 dragstart 흐름으로 판단할 수 있으므로,
+             * 파일명 편집 cell에서는 row 드래그/선택으로 이벤트가 올라가지 않게 한다.
+             */
+            event.stopPropagation();
+        });
+        fileName.addEventListener('click', event => {
+            event.stopPropagation();
+        });
+
+        titleCell.appendChild(marker);
+        titleCell.appendChild(levelBadge);
+        titleCell.appendChild(title);
+        row.appendChild(titleCell);
+        row.appendChild(fileName);
+        row.addEventListener('click', event => selectEditorRow(index, event));
+        row.addEventListener('dragstart', handleEditorDragStart);
+        row.addEventListener('dragover', handleEditorDragOver);
+        row.addEventListener('dragleave', clearEditorDropMarkers);
+        row.addEventListener('drop', handleEditorDrop);
+        row.addEventListener('dragend', handleEditorDragEnd);
+        editorTree.appendChild(row);
+    });
+    // 렌더링이 끝날 때마다 저장 버튼 상태를 다시 맞춘다.
+    // 파일명을 고쳐 중복이 사라지는 순간 버튼이 자동으로 살아난다.
+    saveDraftButton.disabled = hasDuplicateEditorFileNames();
+}
+
+function isManualCheckedGroup(row){
+    return row
+        && row.editorType === 'unclassified';
+}
+
+function isUnclassifiedGroup(row){
+    return isManualCheckedGroup(row)
+        && row.title === '미분류';
+}
+
+function isUnderManualCheckedGroup(index){
+    for(let cursor = index - 1; cursor >= 0; cursor--){
+        const row = editorRows[cursor];
+
+        if(isManualCheckedGroup(row)){
+            return true;
+        }
+
+        if((row.level || 1) <= 1){
+            return false;
+        }
+    }
+
+    return false;
+}
+
+function isUnderUnclassifiedGroup(index){
+    for(let cursor = index - 1; cursor >= 0; cursor--){
+        const row = editorRows[cursor];
+
+        if(isUnclassifiedGroup(row)){
+            return true;
+        }
+
+        if((row.level || 1) <= 1){
+            return false;
+        }
+    }
+
+    return false;
+}
+
+function subtreeEnd(startIndex){
+    if(startIndex < 0 || startIndex >= editorRows.length){
+        return startIndex;
+    }
+
+    const selectedLevel = editorRows[startIndex].level || 1;
+    let endIndex = startIndex + 1;
+
+    while(endIndex < editorRows.length
+            && (editorRows[endIndex].level || 1) > selectedLevel){
+        endIndex++;
+    }
+
+    return endIndex;
+}
+
+function selectedBlockEnd(){
+    if(selectedIndex < 0){
+        return selectedIndex;
+    }
+
+    return subtreeEnd(selectedIndex);
+}
+
+function selectEditorRow(index, event){
+    // Shift 클릭은 마지막 기준 row와 현재 row 사이를 범위 선택한다.
+    // Ctrl/Cmd 클릭은 여러 row를 선택하기 위한 토글 동작이다.
+    // 일반 클릭은 편집 대상 row 하나만 남기고 선택 상태를 초기화한다.
+    if(event && event.shiftKey && selectionAnchorIndex >= 0){
+        const start = Math.min(selectionAnchorIndex, index);
+        const end = Math.max(selectionAnchorIndex, index);
+        selectedIndexes = new Set();
+
+        for(let cursor = start; cursor <= end; cursor++){
+            selectedIndexes.add(cursor);
+        }
+
+        selectedIndex = index;
+    }else if(event && (event.ctrlKey || event.metaKey)){
+        if(selectedIndexes.has(index)){
+            selectedIndexes.delete(index);
+            selectedIndex = selectedIndexes.size > 0
+                ? Array.from(selectedIndexes).pop()
+                : -1;
+        }else{
+            selectedIndexes.add(index);
+            selectedIndex = index;
+        }
+        selectionAnchorIndex = index;
+    }else{
+        selectedIndexes = new Set([index]);
+        selectedIndex = index;
+        selectionAnchorIndex = index;
+    }
+
+    renderRows();
+}
+
+function getSelectedEditorDeleteRanges(){
+    const ranges = [];
+    const selectedRows = Array.from(selectedIndexes)
+        .filter(index => index >= 0 && index < editorRows.length)
+        .sort((left, right) => left - right);
+
+    selectedRows.forEach(start => {
+        // 부모 row를 선택하면 하위 row도 같이 삭제된다.
+        // 이미 부모 범위에 포함된 하위 row는 별도 삭제 범위로 만들지 않는다.
+        if(ranges.some(range => start >= range.start && start < range.end)){
+            return;
+        }
+
+        ranges.push({
+            start:start,
+            end:subtreeEnd(start)
+        });
+    });
+
+    return ranges;
+}
+
+function normalizeEditorFileNameForDuplicate(fileName){
+    // 중복 검사는 화면의 파일명 기준이다.
+    // 앞뒤 공백과 대소문자만 다른 값도 같은 파일명으로 본다.
+    return (fileName || '').trim().toLowerCase();
+}
+
+function getDuplicateEditorFileNameIndexes(){
+    const indexesByFileName = new Map();
+    const duplicateIndexes = new Set();
+
+    // 1차로 같은 파일명을 가진 row index들을 모아 둔다.
+    editorRows.forEach((row, index) => {
+        const normalized = normalizeEditorFileNameForDuplicate(row.fileName);
+
+        if(!normalized){
+            return;
+        }
+
+        const indexes = indexesByFileName.get(normalized) || [];
+        indexes.push(index);
+        indexesByFileName.set(normalized, indexes);
+    });
+
+    // 중복이 생긴 경우 첫 번째 항목도 같이 표시한다.
+    // 그래야 화면에서 같은 파일명끼리 모두 눈에 들어온다.
+    indexesByFileName.forEach(indexes => {
+        if(indexes.length > 1){
+            indexes.forEach(index => duplicateIndexes.add(index));
+        }
+    });
+
+    return duplicateIndexes;
+}
+
+function hasDuplicateEditorFileNames(){
+    return getDuplicateEditorFileNameIndexes().size > 0;
+}
+
+function isDuplicateEditorFileName(nextFileName, currentIndex){
+    // 현재 row는 자기 자신과 같은 파일명이므로 비교에서 제외한다.
+    // 다른 row에 같은 정규화 파일명이 있을 때 저장을 막는다.
+    const normalized = normalizeEditorFileNameForDuplicate(nextFileName);
+
+    if(!normalized){
+        return false;
+    }
+
+    return editorRows.some((row, index) =>
+        index !== currentIndex
+            && normalizeEditorFileNameForDuplicate(row.fileName) === normalized);
+}
+
+function replaceHrefFileName(currentHref, nextFileName){
+    // href가 "folder/topic.dita#id" 형태여도 폴더와 fragment는 유지하고
+    // 마지막 파일명만 교체한다.
+    const fileName = (nextFileName || '').trim().replace(/\\/g, '/');
+    const href = (currentHref || '').trim().replace(/\\/g, '/');
+
+    if(!href || href.endsWith('/')){
+        return fileName;
+    }
+
+    const parts = href.split('#');
+    const pathOnly = parts[0];
+    const fragment = parts.length > 1 ? '#' + parts.slice(1).join('#') : '';
+    const slashIndex = pathOnly.lastIndexOf('/');
+
+    if(slashIndex < 0){
+        return fileName + fragment;
+    }
+
+    return pathOnly.slice(0, slashIndex + 1) + fileName + fragment;
+}
+
+function getEditorBaseDitamapFile(){
+    // 팝업 편집기는 draft로 열릴 수 있으므로, draft가 들고 있는 기준 ditamap을
+    // 우선 사용하고 없으면 저장 대상 ditamap 경로를 사용한다.
+    return currentDraft
+        && (currentDraft.baseDitamapFile || currentDraft.ditamapFile)
+        || '';
+}
+
+function startEditorFileNameEdit(cell, index){
+    // 파일명 cell을 input으로 바꾸어 즉시 편집한다.
+    // row 드래그와 선택 이벤트가 input 조작을 방해하지 않도록 전파를 막는다.
+    if(index < 0
+            || index >= editorRows.length
+            || cell.classList.contains('editing')){
+        return;
+    }
+
+    const row = editorRows[index];
+    const input = document.createElement('input');
+    input.className = 'attribute-edit-input';
+    input.type = 'text';
+    input.value = row.fileName || '';
+    input.placeholder = '파일명 입력';
+    input.draggable = false;
+    cell.classList.add('editing');
+    cell.textContent = '';
+    cell.appendChild(input);
+    input.focus();
+    input.select();
+
+    input.addEventListener('click', event => event.stopPropagation());
+    input.addEventListener('mousedown', event => event.stopPropagation());
+    input.addEventListener('dragstart', event => {
+        event.preventDefault();
+        event.stopPropagation();
+    });
+    input.addEventListener('keydown', event => {
+        // Enter는 편집 확정, Escape는 편집 취소로 처리한다.
+        // blur 확정도 있으므로 키보드/마우스 사용 흐름이 모두 맞는다.
+        if(event.key === 'Enter'){
+            event.preventDefault();
+            commitEditorFileNameEdit(cell, index, input.value);
+        }
+
+        if(event.key === 'Escape'){
+            event.preventDefault();
+            cancelEditorFileNameEdit(cell, index);
+        }
+    });
+    input.addEventListener('blur', () => {
+        if(cell.classList.contains('editing')){
+            commitEditorFileNameEdit(cell, index, input.value);
+        }
+    });
+}
+
+function cancelEditorFileNameEdit(cell, index){
+    cell.classList.remove('editing');
+    cell.textContent = editorRows[index] && editorRows[index].fileName || '';
+}
+
+function handleEditorFileNameDoubleClick(event){
+    /*
+     * 더블클릭은 파일명 cell에 직접 걸 수도 있지만, row가 draggable이라
+     * 브라우저/마우스 움직임에 따라 drag 흐름과 섞일 수 있다.
+     * 편집 트리에서 캡처 단계로 먼저 잡아 파일명 cell이면 곧바로 편집을 연다.
+     */
+    const cell = event.target.closest('.ditamap-tree-file');
+
+    if(!cell || !editorTree.contains(cell) || cell.classList.contains('editing')){
+        return;
+    }
+
+    const row = cell.closest('.law-draggable-row');
+    const index = Number(row && row.dataset.index || -1);
+
+    if(index < 0 || index >= editorRows.length){
+        return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+    startEditorFileNameEdit(cell, index);
+}
+
+async function commitEditorFileNameEdit(cell, index, value){
+    const row = editorRows[index];
+    const nextFileName = (value || '').trim();
+
+    if(!row){
+        return;
+    }
+
+    if(nextFileName === (row.fileName || '')){
+        cancelEditorFileNameEdit(cell, index);
+        return;
+    }
+
+    if(isDuplicateEditorFileName(nextFileName, index)){
+        // 중복은 팝업으로 끊지 않고 row 안에 안내 문구를 표시한다.
+        // 사용자가 입력한 값을 유지해야 어떤 파일명이 문제인지 바로 알 수 있다.
+        row.fileName = nextFileName;
+        row.href = replaceHrefFileName(row.href || row.fileName || '', nextFileName);
+        renderRows();
+        return;
+    }
+
+    const baseDitamapFile = getEditorBaseDitamapFile();
+
+    if(!baseDitamapFile){
+        await showEditorConfirm(
+                '파일명 수정 실패',
+                '기준 DITAMAP 경로가 없어 title을 읽을 수 없습니다.');
+        cancelEditorFileNameEdit(cell, index);
+        return;
+    }
+
+    try{
+        // 파일명 변경 후 실제 DITA 파일에서 title만 읽어온다.
+        // ditamap 편집 기능이므로 DITA 파일 자체는 여기서 수정하지 않는다.
+        const nextHref = replaceHrefFileName(row.href || row.fileName || '', nextFileName);
+        // 기존 href를 함께 보내야 서버가 기존 폴더 위치와 #fragment를 보존해
+        // 새 파일명을 실제 파일 경로로 정확히 해석할 수 있다.
+        const response = await fetch('/api/ditamap-builder/topic-title', {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                baseDitamapFile:baseDitamapFile,
+                href:row.href || '',
+                fileName:nextFileName
+            })
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        const result = await response.json();
+        row.fileName = result.fileName || nextFileName;
+        row.href = result.href || nextHref;
+        row.title = result.title || row.title;
+        renderRows();
+    }catch(error){
+        await showEditorConfirm(
+                '파일명 수정 실패',
+                error.message || 'DITA title을 읽지 못했습니다.');
+        cancelEditorFileNameEdit(cell, index);
+    }
+}
+
+function moveEditorBlock(sourceIndex, targetIndex, insertAfter, nextLevel){
+    if(sourceIndex < 0
+            || sourceIndex >= editorRows.length
+            || targetIndex < 0
+            || targetIndex >= editorRows.length){
+        return;
+    }
+
+    const blockEnd = subtreeEnd(sourceIndex);
+
+    if(targetIndex >= sourceIndex && targetIndex < blockEnd){
+        return;
+    }
+
+    const block = editorRows.slice(sourceIndex, blockEnd);
+    const originalLevel = block[0].level || 1;
+    const targetLevel = Math.max(1, Math.min(6, Number(nextLevel || originalLevel)));
+    const levelDelta = targetLevel - originalLevel;
+    editorRows.splice(sourceIndex, block.length);
+
+    let insertIndex = targetIndex;
+
+    if(targetIndex > sourceIndex){
+        insertIndex -= block.length;
+    }
+
+    if(insertAfter){
+        insertIndex++;
+    }
+
+    block.forEach(row => {
+        row.level = Math.max(1, Math.min(6, (row.level || 1) + levelDelta));
+    });
+    editorRows.splice(insertIndex, 0, ...block);
+    selectedIndex = insertIndex;
+    selectedIndexes = new Set([insertIndex]);
+    selectionAnchorIndex = insertIndex;
+    renderRows();
+}
+
+function previousSiblingStart(index){
+    if(index <= 0){
+        return -1;
+    }
+
+    const level = editorRows[index].level || 1;
+    let cursor = index - 1;
+
+    while(cursor >= 0 && (editorRows[cursor].level || 1) > level){
+        cursor--;
+    }
+
+    return cursor;
+}
+
+function addEditorSelectionRange(target, start, end){
+    for(let index = start; index < end; index++){
+        target.add(index);
+    }
+}
+
+function editorRangeContains(ranges, index){
+    return ranges.some(range => index >= range.start && index < range.end);
+}
+
+function mergeEditorAdjacentRanges(ranges){
+    const merged = [];
+
+    ranges.forEach(range => {
+        const previous = merged[merged.length - 1];
+
+        if(previous && range.start <= previous.end){
+            previous.end = Math.max(previous.end, range.end);
+        }else{
+            merged.push({
+                start:range.start,
+                end:range.end
+            });
+        }
+    });
+
+    return merged;
+}
+
+function moveEditorRangesToTarget(ranges, targetIndex, insertAfter, nextLevel){
+    const moveRanges = mergeEditorAdjacentRanges(ranges);
+
+    if(moveRanges.length === 0
+            || targetIndex < 0
+            || targetIndex >= editorRows.length
+            || editorRangeContains(moveRanges, targetIndex)){
+        return false;
+    }
+
+    const movingRows = [];
+    const originalLevel = editorRows[moveRanges[0].start].level || 1;
+    let adjustedTargetIndex = targetIndex;
+
+    moveRanges
+        .slice()
+        .sort((left, right) => right.start - left.start)
+        .forEach(range => {
+            movingRows.unshift(...editorRows.slice(range.start, range.end));
+            editorRows.splice(range.start, range.end - range.start);
+
+            if(range.start < targetIndex){
+                adjustedTargetIndex -= range.end - range.start;
+            }
+        });
+
+    const targetLevel = Math.max(1, Math.min(6, Number(nextLevel || originalLevel)));
+    const levelDelta = targetLevel - originalLevel;
+
+    movingRows.forEach(row => {
+        row.level = Math.max(1, Math.min(6, (row.level || 1) + levelDelta));
+    });
+
+    const insertIndex = Math.max(
+            0,
+            Math.min(
+                    editorRows.length,
+                    adjustedTargetIndex + (insertAfter ? 1 : 0)));
+    editorRows.splice(insertIndex, 0, ...movingRows);
+    selectedIndexes = new Set();
+    addEditorSelectionRange(selectedIndexes, insertIndex, insertIndex + movingRows.length);
+    selectedIndex = insertIndex;
+    selectionAnchorIndex = insertIndex;
+    return true;
+}
+
+function moveSelectedUp(){
+    const moveRanges = mergeEditorAdjacentRanges(getSelectedEditorDeleteRanges());
+
+    if(moveRanges.length === 0){
+        return;
+    }
+
+    const nextSelectedIndexes = new Set();
+    let nextSelectedIndex = selectedIndex;
+    let moved = false;
+
+    moveRanges.forEach(range => {
+        const targetIndex = previousSiblingStart(range.start);
+
+        if(targetIndex < 0 || editorRangeContains(moveRanges, targetIndex)){
+            addEditorSelectionRange(nextSelectedIndexes, range.start, range.end);
+            return;
+        }
+
+        const movingBlock = editorRows.slice(range.start, range.end);
+        const previousBlock = editorRows.slice(targetIndex, range.start);
+        editorRows.splice(
+                targetIndex,
+                range.end - targetIndex,
+                ...movingBlock,
+                ...previousBlock);
+
+        addEditorSelectionRange(
+                nextSelectedIndexes,
+                targetIndex,
+                targetIndex + movingBlock.length);
+        nextSelectedIndex = targetIndex;
+        moved = true;
+    });
+
+    if(!moved){
+        return;
+    }
+
+    selectedIndexes = nextSelectedIndexes;
+    selectedIndex = nextSelectedIndex;
+    selectionAnchorIndex = nextSelectedIndex;
+    renderRows();
+}
+
+function moveSelectedDown(){
+    const moveRanges = mergeEditorAdjacentRanges(getSelectedEditorDeleteRanges());
+
+    if(moveRanges.length === 0){
+        return;
+    }
+
+    const nextSelectedIndexes = new Set();
+    let nextSelectedIndex = selectedIndex;
+    let moved = false;
+
+    moveRanges
+        .slice()
+        .sort((left, right) => right.start - left.start)
+        .forEach(range => {
+            if(range.end >= editorRows.length
+                    || editorRangeContains(moveRanges, range.end)){
+                addEditorSelectionRange(nextSelectedIndexes, range.start, range.end);
+                return;
+            }
+
+            const nextBlockEnd = subtreeEnd(range.end);
+            const movingBlock = editorRows.slice(range.start, range.end);
+            const nextBlock = editorRows.slice(range.end, nextBlockEnd);
+            editorRows.splice(
+                    range.start,
+                    nextBlockEnd - range.start,
+                    ...nextBlock,
+                    ...movingBlock);
+
+            const movedStart = nextBlockEnd - movingBlock.length;
+            addEditorSelectionRange(
+                    nextSelectedIndexes,
+                    movedStart,
+                    movedStart + movingBlock.length);
+            nextSelectedIndex = movedStart;
+            moved = true;
+        });
+
+    if(!moved){
+        return;
+    }
+
+    selectedIndexes = nextSelectedIndexes;
+    selectedIndex = nextSelectedIndex;
+    selectionAnchorIndex = nextSelectedIndex;
+    renderRows();
+}
+
+function clearEditorDropMarkers(){
+    editorTree.querySelectorAll('.law-drop-before, .law-drop-after').forEach(row => {
+        row.classList.remove('law-drop-before', 'law-drop-after');
+        row.removeAttribute('data-drop-level');
+    });
+}
+
+function handleEditorDragStart(event){
+    const row = event.currentTarget;
+    draggingEditorIndex = Number(row.dataset.index || -1);
+
+    if(!selectedIndexes.has(draggingEditorIndex)){
+        selectedIndex = draggingEditorIndex;
+        selectedIndexes = new Set([draggingEditorIndex]);
+        selectionAnchorIndex = draggingEditorIndex;
+    }
+
+    row.classList.add('dragging');
+
+    if(event.dataTransfer){
+        event.dataTransfer.effectAllowed = 'move';
+        event.dataTransfer.setData('text/plain', String(draggingEditorIndex));
+    }
+}
+
+function handleEditorDragOver(event){
+    event.preventDefault();
+
+    if(draggingEditorIndex < 0){
+        return;
+    }
+
+    const row = event.currentTarget;
+    const targetIndex = Number(row.dataset.index || -1);
+
+    if(targetIndex < 0){
+        return;
+    }
+
+    clearEditorDropMarkers();
+    const dropInfo = getEditorDropInfo(row, event);
+    row.classList.add(dropInfo.after ? 'law-drop-after' : 'law-drop-before');
+    row.dataset.dropLevel = String(dropInfo.level);
+}
+
+function handleEditorDrop(event){
+    event.preventDefault();
+
+    if(draggingEditorIndex < 0){
+        return;
+    }
+
+    const row = event.currentTarget;
+    const targetIndex = Number(row.dataset.index || -1);
+    const dropInfo = getEditorDropInfo(row, event);
+    const effectiveTargetIndex = dropInfo.after ? subtreeEnd(targetIndex) - 1 : targetIndex;
+
+    clearEditorDropMarkers();
+    if(moveEditorRangesToTarget(
+            getSelectedEditorDeleteRanges(),
+            effectiveTargetIndex,
+            dropInfo.after,
+            dropInfo.level)){
+        renderRows();
+    }
+    draggingEditorIndex = -1;
+}
+
+function getEditorDropInfo(row, event){
+    const rect = row.getBoundingClientRect();
+    const titleCell = row.querySelector('.ditamap-tree-title');
+    const titleRect = titleCell.getBoundingClientRect();
+    const targetLevel = Number(row.dataset.level || '1');
+    const after = event.clientY > rect.top + rect.height / 2;
+    const targetIndentLeft = titleRect.left + ((targetLevel - 1) * 24);
+    const childDrop = after && event.clientX > targetIndentLeft + 120;
+
+    return {
+        after:after,
+        level:Math.max(1, Math.min(6, childDrop
+            ? targetLevel + 1
+            : targetLevel))
+    };
+}
+
+function handleEditorDragEnd(){
+    draggingEditorIndex = -1;
+    clearEditorDropMarkers();
+    editorTree.querySelectorAll('.dragging').forEach(row => row.classList.remove('dragging'));
+}
+
+function changeSelectedLevel(delta){
+    const changeRanges = getSelectedEditorDeleteRanges();
+
+    if(changeRanges.length === 0){
+        return;
+    }
+
+    let changed = false;
+
+    changeRanges.forEach(range => {
+        const currentLevel = editorRows[range.start].level || 1;
+        const nextLevel = Math.max(1, Math.min(6, currentLevel + delta));
+        const levelDelta = nextLevel - currentLevel;
+
+        if(levelDelta === 0){
+            return;
+        }
+
+        for(let index = range.start; index < range.end; index++){
+            editorRows[index].level = Math.max(
+                    1,
+                    Math.min(6, (editorRows[index].level || 1) + levelDelta));
+        }
+
+        changed = true;
+    });
+
+    if(!changed){
+        return;
+    }
+
+    renderRows();
+}
+
+async function deleteSelectedRow(){
+    const deleteRanges = getSelectedEditorDeleteRanges();
+
+    if(deleteRanges.length === 0){
+        return;
+    }
+
+    const hasChildren = deleteRanges.some(range => range.end > range.start + 1);
+
+    // 선택한 항목 중 하나라도 하위 항목을 포함하면 한 번만 확인한다.
+    // 확인 후에는 각 선택 범위의 하위 항목까지 함께 삭제된다.
+    if(hasChildren && !await showEditorConfirm(
+            '하위 항목 삭제',
+            '선택한 항목에 하위 항목이 있습니다.\n하위 항목까지 전체 삭제하시겠습니까?')){
+        return;
+    }
+
+    // 여러 범위를 삭제할 때는 뒤에서부터 지워야 앞쪽 삭제로 index가 밀리지 않는다.
+    deleteRanges
+        .slice()
+        .sort((left, right) => right.start - left.start)
+        .forEach(range => {
+            editorRows.splice(range.start, range.end - range.start);
+        });
+    selectedIndex = -1;
+    selectedIndexes.clear();
+    selectionAnchorIndex = -1;
+    renderRows();
+}
+
+async function undoEditorChanges(){
+    if(initialEditorRows.length === 0){
+        return;
+    }
+
+    if(!await showEditorConfirm(
+            '편집 내용 되돌리기',
+            '저장 전 편집 내용을 처음 상태로 되돌리시겠습니까?')){
+        return;
+    }
+
+    editorRows = cloneRows(initialEditorRows);
+    // 되돌리기 후 이전 다중 선택 상태가 남아 있으면 삭제/이동 대상이 틀어지므로 초기화한다.
+    selectedIndex = -1;
+    selectedIndexes.clear();
+    selectionAnchorIndex = -1;
+    draggingEditorIndex = -1;
+    renderRows();
+}
+
+function rowsToTree(rows){
+    const roots = [];
+    const parents = [];
+
+    rows.filter(row => row.editorType !== 'spacer')
+            .forEach(row => {
+        const node = Object.assign({}, row, {
+            children:[]
+        });
+        const level = Math.max(1, Number(node.level || 1));
+
+        while(parents.length >= level){
+            parents.pop();
+        }
+
+        if(parents.length === 0){
+            roots.push(node);
+        }else{
+            parents[parents.length - 1].children.push(node);
+        }
+
+        parents.push(node);
+    });
+
+    return roots;
+}
+
+function createSaveRows(rows){
+    return rows.filter((row, index) => row.editorType !== 'spacer'
+            && row.editorType !== 'unclassified'
+            && !isUnderManualCheckedGroup(index));
+}
+
+function hasRemainingUnclassifiedRows(){
+    for(let index = 0; index < editorRows.length; index++){
+        if(editorRows[index].editorType === 'spacer'
+                || editorRows[index].editorType === 'unclassified'){
+            continue;
+        }
+
+        if(isUnderUnclassifiedGroup(index)){
+            return true;
+        }
+    }
+
+    return false;
+}
+
+moveUpButton.addEventListener('click', moveSelectedUp);
+moveDownButton.addEventListener('click', moveSelectedDown);
+outdentButton.addEventListener('click', () => changeSelectedLevel(-1));
+indentButton.addEventListener('click', () => changeSelectedLevel(1));
+deleteRowButton.addEventListener('click', deleteSelectedRow);
+undoEditButton.addEventListener('click', undoEditorChanges);
+cancelButton.addEventListener('click', () => window.close());
+editorTree.addEventListener('dblclick', handleEditorFileNameDoubleClick, true);
+saveDraftButton.addEventListener('click', async function(){
+    // 중복 파일명이 있으면 저장 요청 자체를 보내지 않는다.
+    // renderRows를 다시 호출해 사용자가 문제 row와 메시지를 바로 볼 수 있게 한다.
+    if(hasDuplicateEditorFileNames()){
+        renderRows();
+        return;
+    }
+
+    if(hasRemainingUnclassifiedRows()
+            && !await showEditorConfirm(
+                '남은 row 확인',
+                    '미분류 아래에 아직 남아있는 row가 있습니다.\n남아있는 row는 최종 법규 DITAMAP 저장 대상에서 제외됩니다.\n그래도 저장하시겠습니까?')){
+        return;
+    }
+
+    const baseDitamapFile = currentDraft
+            && (currentDraft.baseDitamapFile || currentDraft.ditamapFile);
+
+    if(!baseDitamapFile){
+        await showEditorConfirm(
+                '저장 실패',
+                '기준 DITAMAP 경로가 없어 저장 위치를 정할 수 없습니다.');
+        return;
+    }
+
+    saveDraftButton.disabled = true;
+
+    try{
+        const response = await fetch('/api/ditamap-builder/legal', {
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify({
+                ditamapFile:'편집 중',
+                baseDitamapFile:baseDitamapFile,
+                rows:createSaveRows(editorRows)
+            })
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        const result = await response.json();
+
+        if(window.opener){
+            window.opener.postMessage({
+                type:'DITAMAP_LEGAL_DRAFT_SAVED',
+                ditamapFile:result.savedDitamapFile || '편집 중',
+                nodes:rowsToTree(createSaveRows(editorRows))
+            }, window.location.origin);
+        }
+
+        if(draftId){
+            localStorage.removeItem('ditamapLegalDraft:' + draftId);
+        }
+
+        await showEditorConfirm(
+                '저장 완료',
+                result.savedDitamapFile || '법규 DITAMAP을 저장했습니다.');
+        window.close();
+    }catch(error){
+        saveDraftButton.disabled = false;
+        await showEditorConfirm(
+                '저장 실패',
+                error.message || '법규 DITAMAP 저장에 실패했습니다.');
+    }
+});
+
+loadEditor().catch(error => {
+    renderEmpty(error.message || '법규 DITAMAP 편집 화면을 불러오지 못했습니다.');
+});
+</script>
+</body>
+</html>
