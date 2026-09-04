@@ -44,6 +44,14 @@
             box-shadow:0 0 0 3px rgba(47,128,237,.12);
         }
 
+        .auto-counting-field-warning{
+            color:#d93025;
+            font-size:12px;
+            font-weight:700;
+            line-height:1.35;
+            min-height:16px;
+        }
+
         .auto-counting-field-grid{
             display:grid;
             grid-template-columns:repeat(4, minmax(0, 1fr));
@@ -74,6 +82,18 @@
             margin-bottom:0;
         }
 
+        .result-panel.is-page-result{
+            max-height:none;
+        }
+
+        .result-panel.is-page-result p{
+            white-space:pre-line;
+        }
+
+        .result-panel.is-counting-result p{
+            white-space:pre-line;
+        }
+
         @media (max-width:680px){
             .auto-counting-field-grid,
             .auto-counting-page-grid{
@@ -99,7 +119,7 @@
     <header class="revision-header">
         <div>
             <h1>인쇄 배열표</h1>
-            <p>AutoCounting DEV의 초판, 개정, 페이지 계산 흐름을 선택합니다.</p>
+            <p>PDF를 인식하여 발주 정보를 입력하고 발주데이터.xlsx를 만듭니다.</p>
         </div>
     </header>
 
@@ -114,7 +134,6 @@
 
         <div class="type-row" role="radiogroup" aria-label="작업 유형">
             <label><input type="radio" name="autoCountingMode" value="first" checked>초판</label>
-            <label><input type="radio" name="autoCountingMode" value="revised">개정</label>
             <label><input type="radio" name="autoCountingMode" value="page">페이지 계산</label>
         </div>
 
@@ -132,7 +151,12 @@
             <div class="auto-counting-field-grid">
                 <div class="path-row full-path-row"><label for="firstVehicle">Vehicle</label><input id="firstVehicle" type="text" autocomplete="off"><span></span><span></span></div>
                 <div class="path-row full-path-row"><label for="firstModel">Model</label><input id="firstModel" type="text" autocomplete="off"><span></span><span></span></div>
-                <div class="path-row full-path-row"><label for="firstLanguage">Language</label><select id="firstLanguage"></select><span></span><span></span></div>
+                <div class="path-row full-path-row">
+                    <label for="firstLanguage">Language</label>
+                    <select id="firstLanguage"></select>
+                    <small id="firstLanguageWarning" class="auto-counting-field-warning" hidden></small>
+                    <span></span>
+                </div>
                 <div class="path-row full-path-row"><label for="firstPubNumber">Pub. Number</label><input id="firstPubNumber" type="text" autocomplete="off"><span></span><span></span></div>
                 <div class="path-row full-path-row"><label for="firstDate">Date</label><input id="firstDate" type="text" autocomplete="off"><span></span><span></span></div>
                 <div class="path-row full-path-row"><label for="firstQuantity">Quantity</label><input id="firstQuantity" type="text" inputmode="numeric" autocomplete="off"><span></span><span></span></div>
@@ -147,15 +171,15 @@
                 <span>3</span>
                 <div>
                     <strong>초판 옵션과 PDF</strong>
-                    <small>PDF 확인은 자동 계산, 실행은 템플릿 엑셀 생성 단계입니다.</small>
+                    <small>PDF를 드래그&드롭으로 넣으면 페이지 계산 및 발주 정보가 입력됩니다.</small>
                 </div>
             </div>
 
             <div class="type-row product-spec-option-row">
                 <strong>옵션</strong>
                 <label class="option-item"><input id="firstFm" type="checkbox">FM</label>
-                <label class="option-item"><input id="firstPack32" type="checkbox">32배수</label>
-                <label class="option-item"><input id="firstNewTemplate" type="checkbox">신규템플릿</label>
+                <label class="option-item"><input id="firstPack32" type="checkbox" checked>32배수</label>
+                <label class="option-item"><input id="firstNewTemplate" type="checkbox" checked>신규템플릿</label>
             </div>
 
             <div class="auto-counting-page-grid">
@@ -229,7 +253,7 @@
                 <span>2</span>
                 <div>
                     <strong>PDF 페이지 계산</strong>
-                    <small>원본 jar에서 이 화면은 PDF 확인으로 챕터 페이지 수만 표시합니다.</small>
+                    <small>PDF를 드래그&드롭으로 넣으면 페이지 계산이 자동으로 됩니다.</small>
                 </div>
             </div>
 
@@ -250,14 +274,14 @@
                 <button id="pageCheckButton" class="action-button primary" type="button">PDF 확인</button>
                 <button class="action-button" type="button" onclick="window.close()">닫기</button>
             </footer>
-        </section>
 
-        <section id="resultPanel" class="result-panel" hidden aria-live="polite">
-            <div class="result-heading">
-                <span id="statusIndicator" class="status-indicator"></span>
-                <strong id="resultTitle">준비 중</strong>
-            </div>
-            <p id="resultMessage"></p>
+            <section id="resultPanel" class="result-panel" hidden aria-live="polite">
+                <div class="result-heading">
+                    <span id="statusIndicator" class="status-indicator"></span>
+                    <strong id="resultTitle">준비 중</strong>
+                </div>
+                <p id="resultMessage"></p>
+            </section>
         </section>
     </section>
 </main>
@@ -270,22 +294,32 @@ const descriptions = {
 };
 const languageOptions = [
     ['',''],
+    ['ar_AA','Arabic (AR)'],
+    ['bg_BG','Bulgarian (BG)'],
+    ['zh_TW','Taiwanese (TW)'],
+    ['hr_HR','Croatian (HR)'],
     ['cs_CZ','Czech (CH)'],
-    ['da_DK','Danish (DA)'],
-    ['de_DE','German (DE)'],
-    ['en_GB','English (EN)'],
-    ['es_ES','Spanish (ES)'],
+    ['da_DK','Danish (DK)'],
+    ['nl_NL','Dutch (HO)'],
+    ['et_EE','Estonian (ET)'],
     ['fi_FI','Finnish (FI)'],
-    ['fr_FR','French (FR)'],
+    ['fr_FR','French (FG)'],
+    ['de_DE','German (GE)'],
+    ['el_GR','Greek (GR)'],
+    ['hu_HU','Hungarian (HU)'],
+    ['is_IS','Icelandic (IC)'],
     ['it_IT','Italian (IT)'],
-    ['ko_KR','Korean (KO)'],
-    ['nl_NL','Dutch (NL)'],
-    ['no_NO','Norwegian (NO)'],
-    ['pl_PL','Polish (PL)'],
-    ['pt_PT','Portuguese (PT)'],
+    ['no_NB','Norwegian (NG)'],
+    ['pl_PL','Polish (PO)'],
+    ['pt_PT','Portuguese (PG)'],
+    ['ro_RO','Romanian (RO)'],
     ['ru_RU','Russian (RU)'],
-    ['sv_SE','Swedish (SV)'],
-    ['tr_TR','Turkish (TR)']
+    ['sk_SK','Slovak (SK)'],
+    ['sl_SL','Slovenian (SV)'],
+    ['es_ES','Spanish (SG)'],
+    ['sv_SE','Swedish (SW)'],
+    ['uk_UK','Ukrainian (UK)'],
+    ['ca_ES','Croatian (HR)']
 ];
 const languageByCode = Object.fromEntries(languageOptions
     .filter(([code]) => code)
@@ -293,6 +327,33 @@ const languageByCode = Object.fromEntries(languageOptions
         [code.toLowerCase(), label],
         [code.replace('_', '-').toLowerCase(), label]
     ]));
+const languageByName = {
+    arabic:'Arabic (AR)',
+    bulgarian:'Bulgarian (BG)',
+    taiwanese:'Taiwanese (TW)',
+    croatian:'Croatian (HR)',
+    czech:'Czech (CH)',
+    danish:'Danish (DK)',
+    dutch:'Dutch (HO)',
+    estonian:'Estonian (ET)',
+    finnish:'Finnish (FI)',
+    french:'French (FG)',
+    german:'German (GE)',
+    greek:'Greek (GR)',
+    hungarian:'Hungarian (HU)',
+    icelandic:'Icelandic (IC)',
+    italian:'Italian (IT)',
+    norwegian:'Norwegian (NG)',
+    polish:'Polish (PO)',
+    portuguese:'Portuguese (PG)',
+    romanian:'Romanian (RO)',
+    russian:'Russian (RU)',
+    slovak:'Slovak (SK)',
+    slovenian:'Slovenian (SV)',
+    spanish:'Spanish (SG)',
+    swedish:'Swedish (SW)',
+    ukrainian:'Ukrainian (UK)'
+};
 const vehicleByModelCode = {
     'CD-ICE':'Ceed',
     'NQ5e-ICE':'Sportage',
@@ -343,6 +404,7 @@ document.querySelectorAll('input[name="autoCountingMode"]').forEach(input => {
     input.addEventListener('change', refreshMode);
 });
 firstFm.addEventListener('change', refreshFirstChapterEditMode);
+document.getElementById('firstLanguage').addEventListener('change', clearLanguageWarning);
 
 document.getElementById('firstCheckButton').addEventListener('click', () => {
     if(firstFm.checked){
@@ -353,11 +415,19 @@ document.getElementById('firstCheckButton').addEventListener('click', () => {
         showResult('error', 'PDF 선택 필요', '초판 PDF 파일을 끌어다 놓아 주세요.');
         return;
     }
+    if(hasLanguageWarning()){
+        showResult('error', '언어코드 확인 필요', 'Language 항목의 언어코드를 먼저 확인해 주세요.');
+        return;
+    }
     analyzePdf('first');
 });
 document.getElementById('firstRunButton').addEventListener('click', () => {
     if(!selectedFiles.firstPdf){
         showResult('error', 'PDF 선택 필요', '초판 배열표 생성에는 PDF 파일이 필요합니다.');
+        return;
+    }
+    if(hasLanguageWarning()){
+        showResult('error', '언어코드 확인 필요', 'Language 항목의 언어코드를 먼저 확인해 주세요.');
         return;
     }
     createFirstEditionWorkbook();
@@ -418,6 +488,7 @@ function refreshMode(){
     revisedPanel.hidden = mode !== 'revised';
     pagePanel.hidden = mode !== 'page';
     resultPanel.hidden = true;
+    moveResultPanelAfterActions();
     scheduleResize();
 }
 
@@ -492,6 +563,7 @@ function setSelectedFile(file, input, extensions, fileKey){
         }
         resultPanel.hidden = true;
         scheduleResize();
+        runAutoPdfCheck(fileKey);
 }
 
 function hasAllowedExtension(fileName, extensions){
@@ -505,6 +577,7 @@ function applyFirstPdfDefaults(fileName){
     document.getElementById('firstRevised').value = 'A';
     document.getElementById('firstQuantity').value = '-';
     document.getElementById('firstTranslation').value = '-';
+    clearLanguageWarning();
     if(parsed.model){
         document.getElementById('firstModel').value = parsed.model;
     }
@@ -513,15 +586,22 @@ function applyFirstPdfDefaults(fileName){
     }
     if(parsed.language){
         document.getElementById('firstLanguage').value = parsed.language;
+    }else if(parsed.languageCode){
+        document.getElementById('firstLanguage').value = '';
+        showLanguageWarning(`언어코드 다시 확인하세요: ${parsed.languageCode}`);
     }
 }
 
 function parseFirstPdfName(fileName){
     const nameWithoutExtension = (fileName || '').replace(/\.[^.]*$/, '');
-    let workingName = nameWithoutExtension.replace(/^KIA[-_]/i, '');
+    let workingName = nameWithoutExtension
+        .replace(/^\d{6}[-_](?=KIA[-_])/i, '')
+        .replace(/^KIA[-_]/i, '');
     const languageMatch = workingName.match(/[-_]([a-z]{2}[-_][a-z]{2})(?=[-_](?:19|20)\d{2})/i);
     const languageCode = languageMatch ? languageMatch[1].replace('-', '_') : '';
-    const language = languageCode ? languageByCode[languageCode.toLowerCase()] || '' : '';
+    const language = languageCode
+        ? languageByCode[languageCode.toLowerCase()] || ''
+        : findLanguageByName(workingName);
 
     workingName = workingName.replace(/[-_][a-z]{2}[-_][a-z]{2}(?=[-_](?:19|20)\d{2})/i, '');
 
@@ -543,6 +623,29 @@ function parseFirstPdfName(fileName){
     };
 }
 
+function showLanguageWarning(message){
+    const warning = document.getElementById('firstLanguageWarning');
+    warning.textContent = message;
+    warning.hidden = false;
+    scheduleResize();
+}
+
+function clearLanguageWarning(){
+    const warning = document.getElementById('firstLanguageWarning');
+    warning.textContent = '';
+    warning.hidden = true;
+}
+
+function hasLanguageWarning(){
+    return !document.getElementById('firstLanguageWarning').hidden;
+}
+
+function findLanguageByName(source){
+    const normalizedSource = (source || '').toLowerCase();
+    return Object.entries(languageByName)
+        .find(([name]) => new RegExp(`(^|[-_\\s])${name}($|[-_\\s])`, 'i').test(normalizedSource))?.[1] || '';
+}
+
 function findVehicleName(model){
     const normalizedModel = (model || '').replace(/_/g, '-');
     return Object.entries(vehicleByModelCode)
@@ -555,6 +658,25 @@ function currentDateText(){
     const month = String(now.getMonth() + 1).padStart(2, '0');
     const day = String(now.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
+}
+
+function runAutoPdfCheck(fileKey){
+    if(fileKey === 'firstPdf' && !firstFm.checked){
+        if(hasLanguageWarning()){
+            showResult('error', '언어코드 확인 필요', 'Language 항목의 언어코드를 먼저 확인해 주세요.');
+            return;
+        }
+        const button = document.getElementById('firstCheckButton');
+        if(!button.disabled){
+            analyzePdf('first');
+        }
+    }
+    if(fileKey === 'pagePdf'){
+        const button = document.getElementById('pageCheckButton');
+        if(!button.disabled){
+            analyzePdf('page');
+        }
+    }
 }
 
 async function analyzePdf(mode){
@@ -581,7 +703,7 @@ async function analyzePdf(mode){
 
         const result = await response.json();
         applyAnalyzeResult(mode, result);
-        showResult('success', `${title} 완료`, formatAnalyzeMessage(result));
+        showResult('success', `${title} 완료`, formatAnalyzeMessage(result, mode));
     }catch(error){
         showResult('error', `${title} 실패`, friendlyFetchError(error, `${title}에 실패했습니다.`));
     }finally{
@@ -688,11 +810,18 @@ function applyAnalyzeResult(mode, result){
     }
 }
 
-function formatAnalyzeMessage(result){
+function formatAnalyzeMessage(result, mode){
+    if(mode === 'first' || mode === 'page'){
+        return [
+            `파일: ${result.fileName || ''}`,
+            `전체 페이지: ${result.totalPages} 실제 페이지 수(Change page): ${result.nonBlankPages} Full page: ${result.fullPages}`
+        ].join('\n');
+    }
+
     const lines = [
         `파일: ${result.fileName || ''}`,
         `전체 페이지: ${result.totalPages}`,
-        `빈 페이지 제외: ${result.nonBlankPages}`,
+        `실제 페이지 수(Change page): ${result.nonBlankPages}`,
         `Full page: ${result.fullPages}`
     ];
     return lines.join('\n');
@@ -714,12 +843,34 @@ function showPending(title){
 }
 
 function showResult(type, title, message){
+    const mode = document.querySelector('input[name="autoCountingMode"]:checked').value;
+    const countingResult = mode === 'page' || title.includes('PDF 확인');
     resultPanel.hidden = false;
+    resultPanel.classList.toggle('is-page-result', mode === 'page');
+    resultPanel.classList.toggle('is-counting-result', countingResult);
     resultPanel.dataset.status = type;
     statusIndicator.classList.toggle('is-running', type === 'running');
     resultTitle.textContent = title;
     resultMessage.textContent = message || '';
+    moveResultPanelAfterActions();
     scheduleResize();
+    if(mode === 'page'){
+        schedulePageResize();
+    }
+}
+
+function moveResultPanelAfterActions(){
+    const mode = document.querySelector('input[name="autoCountingMode"]:checked').value;
+    const panels = {
+        first:firstPanel,
+        revised:revisedPanel,
+        page:pagePanel
+    };
+    const panel = panels[mode];
+    const actions = panel?.querySelector('.popup-actions');
+    if(actions && actions.nextElementSibling !== resultPanel){
+        actions.insertAdjacentElement('afterend', resultPanel);
+    }
 }
 
 function scheduleResize(){
@@ -730,9 +881,22 @@ function scheduleResize(){
     window.setTimeout(resizePopup, 120);
 }
 
+function schedulePageResize(){
+    resizePagePopup();
+    if(window.requestAnimationFrame){
+        window.requestAnimationFrame(resizePagePopup);
+    }
+    window.setTimeout(resizePagePopup, 120);
+    window.setTimeout(resizePagePopup, 320);
+}
+
 function resizePopup(){
     try{
         const mode = document.querySelector('input[name="autoCountingMode"]:checked').value;
+        if(mode === 'page'){
+            resizePagePopup();
+            return;
+        }
         const minimumHeights = {
             first:1400,
             revised:900,
@@ -741,6 +905,19 @@ function resizePopup(){
         const chromeHeight = Math.max(0, window.outerHeight - window.innerHeight);
         const contentHeight = Math.ceil(document.body.scrollHeight + chromeHeight + 36);
         const targetHeight = Math.min(screen.availHeight, Math.max(minimumHeights[mode] || 860, contentHeight));
+        window.resizeTo(900, targetHeight);
+    }catch(error){
+        // 브라우저가 팝업 크기 변경을 막으면 현재 창 크기를 유지한다.
+    }
+}
+
+function resizePagePopup(){
+    try{
+        const contentElement = document.querySelector('.revision-page');
+        const chromeHeight = Math.max(0, window.outerHeight - window.innerHeight);
+        const bottomPadding = resultPanel.hidden ? 16 : 18;
+        const contentHeight = Math.ceil((contentElement?.scrollHeight || document.body.scrollHeight) + chromeHeight + bottomPadding);
+        const targetHeight = Math.min(screen.availHeight, Math.max(520, contentHeight));
         window.resizeTo(900, targetHeight);
     }catch(error){
         // 브라우저가 팝업 크기 변경을 막으면 현재 창 크기를 유지한다.

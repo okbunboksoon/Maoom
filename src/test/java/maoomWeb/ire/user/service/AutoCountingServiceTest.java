@@ -45,6 +45,25 @@ class AutoCountingServiceTest {
     }
 
     @Test
+    void analyzePdfCountsFirstEditionAbbreviationAndIndexLetterBookmarks() throws Exception {
+        MockMultipartFile file = new MockMultipartFile(
+                "file",
+                "manual.pdf",
+                "application/pdf",
+                createLetterSpecialBookmarkPdf());
+
+        AutoCountingAnalyzeResult result = service.analyzePdf(
+                file,
+                "first",
+                false);
+
+        assertThat(result.chapters())
+                .containsEntry("12장", 2)
+                .containsEntry("Abbreviation", 2)
+                .containsEntry("Index", 2);
+    }
+
+    @Test
     void analyzePdfRejectsNonPdfFile() {
         MockMultipartFile file = new MockMultipartFile(
                 "file",
@@ -122,6 +141,29 @@ class AutoCountingServiceTest {
             addBookmark(outline, "1 Introduction", page1);
             addBookmark(outline, "2 Safety", page3);
             addBookmark(outline, "Index", page5);
+            outline.openNode();
+
+            document.save(output);
+            return output.toByteArray();
+        }
+    }
+
+    private byte[] createLetterSpecialBookmarkPdf() throws Exception {
+        try(PDDocument document = new PDDocument();
+                ByteArrayOutputStream output = new ByteArrayOutputStream()){
+
+            PDPage page1 = addPage(document);
+            addPage(document);
+            PDPage page3 = addPage(document);
+            addPage(document);
+            PDPage page5 = addPage(document);
+            addPage(document);
+
+            PDDocumentOutline outline = new PDDocumentOutline();
+            document.getDocumentCatalog().setDocumentOutline(outline);
+            addBookmark(outline, "12 Tarbijateave", page1);
+            addBookmark(outline, "A Lühend", page3);
+            addBookmark(outline, "I Aineloend", page5);
             outline.openNode();
 
             document.save(output);

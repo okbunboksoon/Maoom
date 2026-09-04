@@ -45,6 +45,8 @@ public class AutoCountingService {
     };
     private static final String[] ABBREV_KEYS = {
             "abbreviation",
+            "abbrev",
+            "abbr",
             "약어"
     };
     private static final String[] INDEX_KEYS = {
@@ -711,17 +713,19 @@ public class AutoCountingService {
         if(lower.equals("서문/목차")){
             return "서문";
         }
-        if(lower.matches("^\\d+.*")){
-            return lower.replaceAll("^(\\d+).*", "$1") + "장";
-        }
         if(lower.contains("appendix")){
             return "Appendix";
         }
-        if(lower.contains("abbreviation")){
+        if(containsAny(lower, ABBREV_KEYS)
+                || lower.matches("^a\\b.*")){
             return "Abbreviation";
         }
-        if(lower.contains("index") || lower.contains("색인")){
+        if(containsAny(lower, INDEX_KEYS)
+                || lower.matches("^i\\b.*")){
             return "Index";
+        }
+        if(lower.matches("^\\d+.*")){
+            return lower.replaceAll("^(\\d+).*", "$1") + "장";
         }
         return null;
     }
