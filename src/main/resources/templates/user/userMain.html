@@ -369,15 +369,14 @@ const launcherMenus = [
         icon:'fa-file-signature',
         action:openArtworkRequestPopup
     },
-    /**
+
     {
         title:'인쇄 배열표',
         description:'PDF 페이지 계산 및 발주표 생성',
-        category:'PDF, EXCEL',
-        icon:'fa-table-cells',
+        category:'PDF',
+        icon:'fa-border-all',
         action:openAutoCountingPopup
     },
-        **/
     {
         title:'인쇄데이터 검증',
         description:'인쇄데이터 폴더 검사 및 결과 엑셀 생성',
@@ -933,7 +932,7 @@ function openAutoCountingPopup(){
     openPopupWindow(
         '/pdf/auto-counting',
         'autoCountingPopup',
-        popupWindowOptions(900, 1400, 4)
+        popupWindowOptions(900, 1350, 4)
     );
 }
 
