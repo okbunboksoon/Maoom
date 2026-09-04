@@ -327,16 +327,16 @@ java -cp "%JAVA_CP%" %SAXON_MAIN% ^
     -xsl:"%XSLDIR%\0005-namespace-remove.xsl"
 if errorlevel 1 exit /b 1
 
-java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\14-namespace-removed.xml" -o:"%TEMPDIR%\15-id-cleaned.xml" -xsl:"%XSLDIR%\0006-id-clean_Multilingual.xsl" titleFileNamePrefix=%TITLE_FILE_NAME_PREFIX% langName=%LANG_NAME% mapName="%MAP_NAME%"
+java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\14-namespace-removed.xml" -o:"%TEMPDIR%\15-id-cleaned.xml" -xsl:"%XSLDIR%\0006-id-clean_NotFileNameChange.xsl" titleFileNamePrefix=%TITLE_FILE_NAME_PREFIX% langName=%LANG_NAME% mapName="%MAP_NAME%"
 if errorlevel 1 exit /b 1
 
-java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\15-id-cleaned.xml" -o:"%TEMPDIR%\16-xref-cleaned.xml" -xsl:"%XSLDIR%\0007-xref-clean_Multilingual.xsl" titleFileNamePrefix=%TITLE_FILE_NAME_PREFIX% langName=%LANG_NAME% mapName="%MAP_NAME%"
+java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\15-id-cleaned.xml" -o:"%TEMPDIR%\16-xref-cleaned.xml" -xsl:"%XSLDIR%\0007-xref-clean_NotFileNameChange.xsl" titleFileNamePrefix=%TITLE_FILE_NAME_PREFIX% langName=%LANG_NAME% mapName="%MAP_NAME%"
 if errorlevel 1 exit /b 1
 
 java -cp "%JAVA_CP%" %SAXON_MAIN% ^
     -s:"%TEMPDIR%\16-xref-cleaned.xml" ^
     -o:"%TEMPDIR%\17-related-links.xml" ^
-    -xsl:"%XSLDIR%\0008-related-links_Multilingual.xsl"
+    -xsl:"%XSLDIR%\0008-related-links_NotFileNameChange.xsl"
 if errorlevel 1 exit /b 1
 
 java -cp "%JAVA_CP%" %SAXON_MAIN% ^
@@ -429,13 +429,13 @@ if defined SPECIAL_MERGE_XSL (
 set "BUILD_SOURCE=%TEMPDIR%\20-chapter-merged.xml"
 
 rem Apply title-prefix file naming before topicalize.
-java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%BUILD_SOURCE%" -o:"%TEMPDIR%\21-id-clean-title-prefix.xml" -xsl:"%XSLDIR%\0006-id-clean_Multilingual.xsl" titleFileNamePrefix=Y langName=%LANG_NAME% mapName="%MAP_NAME%"
+java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%BUILD_SOURCE%" -o:"%TEMPDIR%\21-id-clean-title-prefix.xml" -xsl:"%XSLDIR%\0006-id-clean_NotFileNameChange.xsl" titleFileNamePrefix=Y langName=%LANG_NAME% mapName="%MAP_NAME%"
 if errorlevel 1 exit /b 1
 
-java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\21-id-clean-title-prefix.xml" -o:"%TEMPDIR%\22-xref-clean-title-prefix.xml" -xsl:"%XSLDIR%\0007-xref-clean_Multilingual.xsl" titleFileNamePrefix=Y langName=%LANG_NAME% mapName="%MAP_NAME%"
+java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\21-id-clean-title-prefix.xml" -o:"%TEMPDIR%\22-xref-clean-title-prefix.xml" -xsl:"%XSLDIR%\0007-xref-clean_NotFileNameChange.xsl" titleFileNamePrefix=Y langName=%LANG_NAME% mapName="%MAP_NAME%"
 if errorlevel 1 exit /b 1
 
-java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\22-xref-clean-title-prefix.xml" -o:"%TEMPDIR%\23-related-links-title-prefix.xml" -xsl:"%XSLDIR%\0008-related-links_Multilingual.xsl"
+java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\22-xref-clean-title-prefix.xml" -o:"%TEMPDIR%\23-related-links-title-prefix.xml" -xsl:"%XSLDIR%\0008-related-links_NotFileNameChange.xsl"
 if errorlevel 1 exit /b 1
 
 set "BUILD_SOURCE=%TEMPDIR%\23-related-links-title-prefix.xml"
