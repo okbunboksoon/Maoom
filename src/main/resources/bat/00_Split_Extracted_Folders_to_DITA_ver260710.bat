@@ -12,21 +12,28 @@ set "CHAPTERDIR=%BASEDIR%chapter"
 set "XSLDIR=%BASEDIR%xsl"
 set "JAVA_CP=%BASEDIR%lib\saxon-he-12.4.jar;%BASEDIR%lib\xmlresolver-5.2.2.jar"
 set "SAXON_MAIN=net.sf.saxon.Transform"
-set "TITLE_FILE_NAME_PREFIX=Y"
+if not defined TITLE_FILE_NAME_PREFIX set "TITLE_FILE_NAME_PREFIX=Y"
+if not defined MULTILINGUAL_FILE_NAME_CHANGE set "MULTILINGUAL_FILE_NAME_CHANGE=N"
 if not defined MAP_NAME set "MAP_NAME="
 
 :PARSE_OPTIONS
 if "%~1"=="" goto END_PARSE_OPTIONS
 set "ARG=%~1"
 if /I "!ARG!"=="TITLE_FILE_NAME_PREFIX=Y" set "TITLE_FILE_NAME_PREFIX=Y"
+if /I "!ARG!"=="MULTILINGUAL_FILE_NAME_CHANGE=Y" set "MULTILINGUAL_FILE_NAME_CHANGE=Y"
+if /I "!ARG!"=="MULTILINGUAL_FILE_NAME_CHANGE=N" set "MULTILINGUAL_FILE_NAME_CHANGE=N"
 if /I "!ARG:~0,9!"=="MAP_NAME=" set "MAP_NAME=!ARG:~9!"
 shift
 goto PARSE_OPTIONS
 :END_PARSE_OPTIONS
 
+set "FILE_NAME_XSL_SUFFIX=NotFileNameChange"
+if /I "%MULTILINGUAL_FILE_NAME_CHANGE%"=="Y" set "FILE_NAME_XSL_SUFFIX=Multilingual"
+
 echo Please wait a moment!
 echo Processing...
 echo TITLE_FILE_NAME_PREFIX=%TITLE_FILE_NAME_PREFIX%
+echo MULTILINGUAL_FILE_NAME_CHANGE=%MULTILINGUAL_FILE_NAME_CHANGE%
 echo MAP_NAME=%MAP_NAME%
 
 rem 정리할 언어 폴더가 있어야 합니다.
@@ -327,16 +334,16 @@ java -cp "%JAVA_CP%" %SAXON_MAIN% ^
     -xsl:"%XSLDIR%\0005-namespace-remove.xsl"
 if errorlevel 1 exit /b 1
 
-java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\14-namespace-removed.xml" -o:"%TEMPDIR%\15-id-cleaned.xml" -xsl:"%XSLDIR%\0006-id-clean_NotFileNameChange.xsl" titleFileNamePrefix=%TITLE_FILE_NAME_PREFIX% langName=%LANG_NAME% mapName="%MAP_NAME%"
+java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\14-namespace-removed.xml" -o:"%TEMPDIR%\15-id-cleaned.xml" -xsl:"%XSLDIR%\0006-id-clean_%FILE_NAME_XSL_SUFFIX%.xsl" titleFileNamePrefix=%TITLE_FILE_NAME_PREFIX% langName=%LANG_NAME% mapName="%MAP_NAME%"
 if errorlevel 1 exit /b 1
 
-java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\15-id-cleaned.xml" -o:"%TEMPDIR%\16-xref-cleaned.xml" -xsl:"%XSLDIR%\0007-xref-clean_NotFileNameChange.xsl" titleFileNamePrefix=%TITLE_FILE_NAME_PREFIX% langName=%LANG_NAME% mapName="%MAP_NAME%"
+java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\15-id-cleaned.xml" -o:"%TEMPDIR%\16-xref-cleaned.xml" -xsl:"%XSLDIR%\0007-xref-clean_%FILE_NAME_XSL_SUFFIX%.xsl" titleFileNamePrefix=%TITLE_FILE_NAME_PREFIX% langName=%LANG_NAME% mapName="%MAP_NAME%"
 if errorlevel 1 exit /b 1
 
 java -cp "%JAVA_CP%" %SAXON_MAIN% ^
     -s:"%TEMPDIR%\16-xref-cleaned.xml" ^
     -o:"%TEMPDIR%\17-related-links.xml" ^
-    -xsl:"%XSLDIR%\0008-related-links_NotFileNameChange.xsl"
+    -xsl:"%XSLDIR%\0008-related-links_%FILE_NAME_XSL_SUFFIX%.xsl"
 if errorlevel 1 exit /b 1
 
 java -cp "%JAVA_CP%" %SAXON_MAIN% ^
@@ -429,13 +436,13 @@ if defined SPECIAL_MERGE_XSL (
 set "BUILD_SOURCE=%TEMPDIR%\20-chapter-merged.xml"
 
 rem Apply title-prefix file naming before topicalize.
-java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%BUILD_SOURCE%" -o:"%TEMPDIR%\21-id-clean-title-prefix.xml" -xsl:"%XSLDIR%\0006-id-clean_NotFileNameChange.xsl" titleFileNamePrefix=Y langName=%LANG_NAME% mapName="%MAP_NAME%"
+java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%BUILD_SOURCE%" -o:"%TEMPDIR%\21-id-clean-title-prefix.xml" -xsl:"%XSLDIR%\0006-id-clean_%FILE_NAME_XSL_SUFFIX%.xsl" titleFileNamePrefix=Y langName=%LANG_NAME% mapName="%MAP_NAME%"
 if errorlevel 1 exit /b 1
 
-java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\21-id-clean-title-prefix.xml" -o:"%TEMPDIR%\22-xref-clean-title-prefix.xml" -xsl:"%XSLDIR%\0007-xref-clean_NotFileNameChange.xsl" titleFileNamePrefix=Y langName=%LANG_NAME% mapName="%MAP_NAME%"
+java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\21-id-clean-title-prefix.xml" -o:"%TEMPDIR%\22-xref-clean-title-prefix.xml" -xsl:"%XSLDIR%\0007-xref-clean_%FILE_NAME_XSL_SUFFIX%.xsl" titleFileNamePrefix=Y langName=%LANG_NAME% mapName="%MAP_NAME%"
 if errorlevel 1 exit /b 1
 
-java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\22-xref-clean-title-prefix.xml" -o:"%TEMPDIR%\23-related-links-title-prefix.xml" -xsl:"%XSLDIR%\0008-related-links_NotFileNameChange.xsl"
+java -cp "%JAVA_CP%" %SAXON_MAIN% -s:"%TEMPDIR%\22-xref-clean-title-prefix.xml" -o:"%TEMPDIR%\23-related-links-title-prefix.xml" -xsl:"%XSLDIR%\0008-related-links_%FILE_NAME_XSL_SUFFIX%.xsl"
 if errorlevel 1 exit /b 1
 
 set "BUILD_SOURCE=%TEMPDIR%\23-related-links-title-prefix.xml"

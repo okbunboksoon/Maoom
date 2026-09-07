@@ -6,7 +6,7 @@
                 xmlns="urn:schemas-microsoft-com:office:spreadsheet"
                 exclude-result-prefixes="xs">
 
-    <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
+    <xsl:output method="xml" indent="yes" encoding="UTF-8" byte-order-mark="yes"/>
     <xsl:param name="fileNameMode" select="'DEFAULT'"/>
     <xsl:param name="inputType" select="''"/>
     <xsl:param name="outputType" select="''"/>
@@ -146,6 +146,13 @@
                         <xsl:with-param name="keys" select="('refinement-term-translate-no', 'auto-term-translate-no')"/>
                         <xsl:with-param name="change" select="'영문 유지 단어 term translate=no 추가'"/>
                     </xsl:call-template>
+                    <!-- 0120 단계에서 modified="Y"가 붙은 빈 토픽 수를 요약 시트에 표시한다. -->
+                    <xsl:call-template name="modified-row">
+                        <xsl:with-param name="final" select="$final"/>
+                        <xsl:with-param name="label" select="'내용없는 dita 찾기'"/>
+                        <xsl:with-param name="key" select="'Y'"/>
+                        <xsl:with-param name="change" select="'타이틀만 존재하거나 하위에 내용없는 dita 파일'"/>
+                    </xsl:call-template>
                     <xsl:call-template name="summary-row">
                         <xsl:with-param name="label" select="'Simple operation 삭제'"/>
                         <xsl:with-param name="count" select="number((($final/*/@report-simple-operation-removed), 0)[1])"/>
@@ -181,6 +188,32 @@
                         <xsl:with-param name="count" select="count($final//note[@status = 'changed'])"/>
                         <xsl:with-param name="change" select="'note_db 기준으로 type이 변경된 note 수'"/>
                     </xsl:call-template>
+                </Table>
+                <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+                    <Zoom>85</Zoom>
+                </WorksheetOptions>
+            </Worksheet>
+            <Worksheet ss:Name="내용없는 dita">
+                <Table>
+                    <Column ss:Width="180"/>
+                    <Column ss:Width="420"/>
+                    <Row ss:Height="30">
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">파일번호</Data></Cell>
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">타이틀</Data></Cell>
+                    </Row>
+                    <!-- 빈 토픽 상세 목록은 topicref href와 병합된 토픽 title만 별도 시트에 남긴다. -->
+                    <xsl:for-each select="$final//*[local-name() = 'topicref'][some $token in tokenize(@modified, '\s+') satisfies $token = 'Y']">
+                        <Row ss:Height="30">
+                            <Cell ss:StyleID="Center">
+                                <Data ss:Type="String"><xsl:value-of select="@href"/></Data>
+                            </Cell>
+                            <Cell ss:StyleID="Center">
+                                <Data ss:Type="String">
+                                    <xsl:value-of select="normalize-space((*[local-name() = ('topic', 'concept', 'task', 'reference')][1]/*[local-name() = 'title'][1]))"/>
+                                </Data>
+                            </Cell>
+                        </Row>
+                    </xsl:for-each>
                 </Table>
                 <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
                     <Zoom>85</Zoom>

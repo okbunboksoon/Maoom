@@ -21,6 +21,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -67,6 +68,7 @@ public class AdminReplaceDarkSymbolController {
         return service.findAll();
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @PutMapping("/admin/replace-dark-symbol/items")
     @ResponseBody
     public ReplaceDarkSymbolItem saveItem(
@@ -75,6 +77,7 @@ public class AdminReplaceDarkSymbolController {
         return service.save(item);
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @DeleteMapping("/admin/replace-dark-symbol/items/{fromSymbol}")
     @ResponseBody
     public void deleteItem(@PathVariable String fromSymbol) {

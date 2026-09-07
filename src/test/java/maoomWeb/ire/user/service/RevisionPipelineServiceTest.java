@@ -44,7 +44,7 @@ class RevisionPipelineServiceTest {
         assertThat(result.completedOptions())
                 .isEmpty();
         assertThat(result.logs())
-                .anyMatch(log -> log.contains("XML 출력 결과가 없습니다."));
+                .anyMatch(log -> log.contains("정제 배치 실행 실패"));
         assertThat(ResultFolderNames.resolve(input, "revision")
                 .resolve("revision.log"))
                 .exists();

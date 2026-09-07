@@ -21,6 +21,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -62,6 +63,7 @@ public class AdminProjectDbController {
         return adminService.findAll("text");
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @PutMapping("/admin/project-text-db/items")
     @ResponseBody
     public ProjectDbItem saveItem(
@@ -69,6 +71,7 @@ public class AdminProjectDbController {
         return adminService.save("text", item);
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @PostMapping("/admin/project-text-db/import")
     @ResponseBody
     public BerAsisTobeImportResult importExcel(
@@ -91,11 +94,13 @@ public class AdminProjectDbController {
         return adminService.importExcel("text", region, file.getInputStream());
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @GetMapping("/admin/project-text-db/import-popup")
     public String importPopup() {
         return "admin/textDbImportPopup";
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @DeleteMapping("/admin/project-text-db/items/{region}/{hash}")
     @ResponseBody
     public void deleteItem(

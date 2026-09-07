@@ -16,6 +16,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.http.ContentDisposition;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -66,6 +67,7 @@ public class AdminColorCheckController {
     }
 
     /** 관리자 화면에서 견적 항목을 추가하거나 수정한다. */
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @PutMapping("/admin/color-check/items")
     @ResponseBody
     public DrawingColorCheckDto saveColorCheckItem(
@@ -74,6 +76,7 @@ public class AdminColorCheckController {
     }
 
     /** 관리자 화면에서 업로드한 엑셀 내용을 견적 DB에 추가/수정 반영한다. */
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @PostMapping("/admin/color-check/import")
     @ResponseBody
     public DrawingColorCheckImportResult importColorCheckDb(
@@ -89,6 +92,7 @@ public class AdminColorCheckController {
     }
 
     /** 관리자 화면에서 견적 항목을 삭제한다. */
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @DeleteMapping("/admin/color-check/items/{drawingName}")
     @ResponseBody
     public void deleteColorCheckItem(

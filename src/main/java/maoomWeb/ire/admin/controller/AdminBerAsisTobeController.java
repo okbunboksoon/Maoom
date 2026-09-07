@@ -22,6 +22,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -70,6 +71,7 @@ public class AdminBerAsisTobeController {
         return adminService.findAll();
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @PutMapping("/admin/ber-asis-tobe/items")
     @ResponseBody
     public BerAsisTobePair saveItem(
@@ -77,6 +79,7 @@ public class AdminBerAsisTobeController {
         return adminService.save(item);
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @PostMapping("/admin/ber-asis-tobe/import")
     @ResponseBody
     public BerAsisTobeImportResult importExcel(
@@ -90,11 +93,13 @@ public class AdminBerAsisTobeController {
         return adminService.importExcel(file.getInputStream());
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @GetMapping("/admin/ber-asis-tobe/sentence-import-popup")
     public String sentenceImportPopup() {
         return "admin/berSentenceImportPopup";
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @PostMapping("/admin/ber-asis-tobe/sentence-import")
     @ResponseBody
     public ResponseEntity<?> importSentenceExcel(
@@ -119,6 +124,7 @@ public class AdminBerAsisTobeController {
         }
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @DeleteMapping("/admin/ber-asis-tobe/items/{region}/{hash}")
     @ResponseBody
     public void deleteItem(
