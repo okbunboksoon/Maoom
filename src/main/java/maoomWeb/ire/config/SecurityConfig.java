@@ -2,6 +2,7 @@ package maoomWeb.ire.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -9,6 +10,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 
 @Configuration
+@EnableMethodSecurity
 /**
  * 일반 로그인과 인증 예외 경로를 위한 Spring Security 설정.
  */
@@ -39,7 +41,7 @@ public class SecurityConfig {
 	                "/images/**",
 	                "/pdfjs/**"
 	            ).permitAll()
-	            .requestMatchers("/admin/**").hasRole("ADMIN")
+	            .requestMatchers("/admin/**").authenticated()
 	            .anyRequest().authenticated()
 	        )
 	        .logout(logout -> logout

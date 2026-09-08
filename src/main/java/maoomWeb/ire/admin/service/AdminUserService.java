@@ -245,10 +245,12 @@ public class AdminUserService {
             role = "Y";
         }
 
-        if(!"Y".equals(role) && !"ADMIN".equals(role)){
+        if(!"Y".equals(role)
+                && !"DB_EDITOR".equals(role)
+                && !"ADMIN".equals(role)){
             throw new ResponseStatusException(
                     BAD_REQUEST,
-                    "권한은 Y 또는 ADMIN만 입력할 수 있습니다.");
+                    "권한은 Y, DB_EDITOR 또는 ADMIN만 입력할 수 있습니다.");
         }
 
         return role;

@@ -2,6 +2,7 @@ package maoomWeb.ire.admin.controller;
 
 import java.util.List;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,12 +27,14 @@ public class AdminUserController {
         this.userService = userService;
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/admin/users")
     @ResponseBody
     public List<AdminUserDto> getUsers() {
         return userService.findAll();
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/admin/users")
     @ResponseBody
     public AdminUserDto createUser(
@@ -39,6 +42,7 @@ public class AdminUserController {
         return userService.createUser(request);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PatchMapping("/admin/users/{userId}")
     @ResponseBody
     public AdminUserDto updateUser(
@@ -47,6 +51,7 @@ public class AdminUserController {
         return userService.updateUser(userId, request);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/admin/users/{userId}")
     @ResponseBody
     public void deleteUser(@PathVariable String userId) {

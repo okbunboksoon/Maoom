@@ -5,8 +5,10 @@ package maoomWeb.ire.user.dto;
  *
  * @param inputPath 서버 PC에서 접근 가능한 V서버/H서버 입력 경로
  * @param bookmapMapName XML 입력일 때 bookmap.xml 생성에 사용할 ditamap 파일명
+ * @param multilingualFileNameChange 다국어 파일명 변경 XSL 사용 여부
  */
 public record MultilingualRunRequest(
         String inputPath,
-        String bookmapMapName) {
+        String bookmapMapName,
+        boolean multilingualFileNameChange) {
 }

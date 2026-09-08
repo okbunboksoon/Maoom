@@ -60,6 +60,10 @@ const userState = {
     editingCell: null
 };
 
+const adminPermissions = document.body.dataset;
+const canManageUsers = adminPermissions.admin === 'true';
+const canEditAdminDb = adminPermissions.dbEditor === 'true';
+
 const accountBackdrop =
     document.getElementById('accountDialogBackdrop');
 const accountForm =
@@ -415,7 +419,34 @@ function formatRole(value){
     if(normalized === 'Y' || normalized === 'USER' || normalized === 'ROLE_USER'){
         return 'Y';
     }
+    if(normalized === 'DB_EDITOR' || normalized === 'ROLE_DB_EDITOR'){
+        return 'DB 수정';
+    }
     return role;
+}
+
+function applyAdminPermissions(){
+    document.body.classList.toggle('admin-readonly', !canEditAdminDb);
+
+    [
+        editForm,
+        importForm,
+        berAsisTobeImportForm,
+        qsgDbImportForm,
+        ...Object.values(projectDbConfigs).map(config => config.importForm)
+    ].forEach(form => {
+        if(form && !canEditAdminDb){
+            form.hidden = true;
+        }
+    });
+
+    [
+        berSentenceImportToggle
+    ].forEach(button => {
+        if(button && !canEditAdminDb){
+            button.hidden = true;
+        }
+    });
 }
 
 function setImportResult(message, details){
@@ -847,7 +878,7 @@ function renderTable(){
             if(columnIndex === 2){
                 cell.className = 'color-check-value-cell';
                 cell.textContent = value;
-            }else if(columnIndex === 4){
+            }else if(columnIndex === 4 && canEditAdminDb){
                 const actions = document.createElement('div');
                 actions.className = 'admin-row-actions';
                 const editButton = document.createElement('button');
@@ -944,6 +975,10 @@ function resetForm(){
 }
 
 function startEdit(item){
+    if(!canEditAdminDb){
+        return;
+    }
+
     colorCheckState.editingName = item.drawingName || '';
     drawingNameInput.value = item.drawingName || '';
     drawingNameInput.disabled = true;
@@ -954,6 +989,10 @@ function startEdit(item){
 
 async function saveItem(event){
     event.preventDefault();
+    if(!canEditAdminDb){
+        summary.textContent = 'DB 수정 권한이 없습니다.';
+        return;
+    }
     const drawingName = drawingNameInput.value.trim();
     const checkValue = checkValueSelect.value;
 
@@ -988,6 +1027,11 @@ async function saveItem(event){
 }
 
 async function deleteItem(item){
+    if(!canEditAdminDb){
+        summary.textContent = 'DB 수정 권한이 없습니다.';
+        return;
+    }
+
     const drawingName = item.drawingName || '';
 
     if(!drawingName || !confirm(drawingName + ' 항목을 삭제할까요?')){
@@ -1095,17 +1139,21 @@ function renderBerAsisTobeTable(){
                 if(value !== '-'){
                     cell.title = value;
                 }
-                cell.classList.add('admin-editable-cell');
-                cell.title = value === '-'
-                    ? '더블클릭해서 수정'
-                    : value + '\n\n더블클릭해서 수정';
-                cell.addEventListener('dblclick', () => {
-                    startBerAsisTobeCellEdit(
-                            cell,
-                            item,
-                            columnIndex === 3 ? 'oldText' : 'newText');
-                });
-            }else if(columnIndex === 6){
+                if(canEditAdminDb){
+                    cell.classList.add('admin-editable-cell');
+                    cell.title = value === '-'
+                        ? '더블클릭해서 수정'
+                        : value + '\n\n더블클릭해서 수정';
+                    cell.addEventListener('dblclick', () => {
+                        startBerAsisTobeCellEdit(
+                                cell,
+                                item,
+                                columnIndex === 3 ? 'oldText' : 'newText');
+                    });
+                }else{
+                    cell.title = value;
+                }
+            }else if(columnIndex === 6 && canEditAdminDb){
                 const actions = document.createElement('div');
                 actions.className = 'admin-row-actions';
                 const deleteButton = document.createElement('button');
@@ -1131,6 +1179,10 @@ function renderBerAsisTobeTable(){
 }
 
 function startBerAsisTobeCellEdit(cell, item, field){
+    if(!canEditAdminDb){
+        return;
+    }
+
     if(berAsisTobeState.editingCell){
         return;
     }
@@ -1202,6 +1254,10 @@ function restoreBerAsisTobeCell(cell, value){
 }
 
 async function saveBerAsisTobeField(item, field, value){
+    if(!canEditAdminDb){
+        throw new Error('DB 수정 권한이 없습니다.');
+    }
+
     const payload = {
         region:item.region,
         hash:item.hash,
@@ -1293,7 +1349,7 @@ function renderProjectDbTable(dbType){
                 textBox.textContent = value;
                 cell.appendChild(textBox);
                 cell.title = value;
-            }else if(columnIndex === 6){
+            }else if(columnIndex === 6 && canEditAdminDb){
                 const actions = document.createElement('div');
                 actions.className = 'admin-row-actions';
                 const deleteButton = document.createElement('button');
@@ -1354,7 +1410,7 @@ function renderNoteDbTable(){
                     : 'ber-clamped-text';
                 textBox.textContent = value;
                 cell.appendChild(textBox);
-                if(columnIndex === 3){
+                if(columnIndex === 3 && canEditAdminDb){
                     cell.classList.add('admin-editable-cell');
                     cell.title = value === '-'
                         ? '더블클릭해서 수정'
@@ -1369,7 +1425,7 @@ function renderNoteDbTable(){
                 }else{
                     cell.title = value;
                 }
-            }else if(columnIndex === 6){
+            }else if(columnIndex === 6 && canEditAdminDb){
                 const actions = document.createElement('div');
                 actions.className = 'admin-row-actions';
                 const deleteButton = document.createElement('button');
@@ -1402,6 +1458,10 @@ function noteDbText(item){
 }
 
 function startProjectDbCellEdit(dbType, cell, item, field){
+    if(!canEditAdminDb){
+        return;
+    }
+
     const state = projectDbStates[dbType];
     const config = projectDbConfigs[dbType];
     if(state.editingCell){
@@ -1477,6 +1537,10 @@ function restoreProjectDbCell(cell, value){
 }
 
 async function saveProjectDbField(dbType, item, field, value){
+    if(!canEditAdminDb){
+        throw new Error('DB 수정 권한이 없습니다.');
+    }
+
     const config = projectDbConfigs[dbType];
     const payload = dbType === 'note'
         ? {
@@ -1683,13 +1747,17 @@ function renderReplaceDarkSymbolTable(){
                 textBox.className = 'replace-symbol-code-text';
                 textBox.textContent = value;
                 cell.appendChild(textBox);
-                cell.title = value === '-'
-                    ? '더블클릭해서 수정'
-                    : value + '\n\n더블클릭해서 수정';
-                cell.addEventListener('dblclick', () => {
-                    startReplaceDarkSymbolCellEdit(cell, item, field);
-                });
-            }else if(columnIndex === 4){
+                if(canEditAdminDb){
+                    cell.title = value === '-'
+                        ? '더블클릭해서 수정'
+                        : value + '\n\n더블클릭해서 수정';
+                    cell.addEventListener('dblclick', () => {
+                        startReplaceDarkSymbolCellEdit(cell, item, field);
+                    });
+                }else{
+                    cell.title = value;
+                }
+            }else if(columnIndex === 4 && canEditAdminDb){
                 const actions = document.createElement('div');
                 actions.className = 'admin-row-actions';
                 const deleteButton = document.createElement('button');
@@ -1715,6 +1783,10 @@ function renderReplaceDarkSymbolTable(){
 }
 
 function startReplaceDarkSymbolCellEdit(cell, item, field){
+    if(!canEditAdminDb){
+        return;
+    }
+
     if(replaceDarkSymbolState.editingCell){
         return;
     }
@@ -1788,6 +1860,10 @@ function restoreReplaceDarkSymbolCell(cell, value){
 }
 
 async function saveReplaceDarkSymbolField(item, field, value){
+    if(!canEditAdminDb){
+        throw new Error('DB 수정 권한이 없습니다.');
+    }
+
     /*
      * From 자체를 수정할 수도 있으므로 현재 행의 두 값을 모두 보내고,
      * 서버는 새 fromSymbol 기준으로 upsert한다.
@@ -1881,6 +1957,11 @@ async function loadReplaceDarkSymbolItems(){
 }
 
 async function deleteReplaceDarkSymbolItem(item){
+    if(!canEditAdminDb){
+        replaceDarkSymbolSummary.textContent = 'DB 수정 권한이 없습니다.';
+        return;
+    }
+
     const fromSymbol = item.fromSymbol || '';
 
     if(!fromSymbol || !confirm(fromSymbol + ' 항목을 삭제할까요?')){
@@ -1944,6 +2025,10 @@ async function loadQsgDbItems(){
 async function importQsgDbExcel(event){
     if(event){
         event.preventDefault();
+    }
+    if(!canEditAdminDb){
+        setQsgDbImportResult('DB 수정 권한이 없습니다.');
+        return;
     }
 
     const file = qsgDbImportFile.files && qsgDbImportFile.files[0];
@@ -2026,6 +2111,11 @@ async function loadBerAsisTobeItems(){
 }
 
 async function deleteBerAsisTobeItem(item){
+    if(!canEditAdminDb){
+        berAsisTobeSummary.textContent = 'DB 수정 권한이 없습니다.';
+        return;
+    }
+
     const region = item.region || '';
     const hash = item.hash || '';
 
@@ -2089,6 +2179,11 @@ async function loadProjectDbItems(dbType){
 
 async function deleteProjectDbItem(dbType, item){
     const config = projectDbConfigs[dbType];
+    if(!canEditAdminDb){
+        config.summary.textContent = 'DB 수정 권한이 없습니다.';
+        return;
+    }
+
     if(dbType === 'note'){
         const region = item.region || '';
         const hash = item.hash || '';
@@ -2186,6 +2281,10 @@ function setProjectDbImportResult(dbType, message, details){
 async function importProjectDbExcel(dbType, event){
     if(event){
         event.preventDefault();
+    }
+    if(!canEditAdminDb){
+        setProjectDbImportResult(dbType, 'DB 수정 권한이 없습니다.');
+        return;
     }
 
     const config = projectDbConfigs[dbType];
@@ -2285,6 +2384,10 @@ async function importBerAsisTobeExcel(event){
     if(event){
         event.preventDefault();
     }
+    if(!canEditAdminDb){
+        setBerAsisTobeImportResult('DB 수정 권한이 없습니다.');
+        return;
+    }
 
     const file = berAsisTobeImportFile.files
         && berAsisTobeImportFile.files[0];
@@ -2337,6 +2440,11 @@ async function importBerAsisTobeExcel(event){
 }
 
 function openBerSentenceImportPopup(){
+    if(!canEditAdminDb){
+        berAsisTobeSummary.textContent = 'DB 수정 권한이 없습니다.';
+        return;
+    }
+
     const popup = window.open(
         '/admin/ber-asis-tobe/sentence-import-popup',
         'berSentenceImportPopup',
@@ -2349,6 +2457,12 @@ function openBerSentenceImportPopup(){
 }
 
 function openNoteDbImportPopup(){
+    if(!canEditAdminDb){
+        projectDbConfigs.note.summary.textContent =
+            'DB 수정 권한이 없습니다.';
+        return;
+    }
+
     const popup = window.open(
         '/admin/project-note-db/import-popup',
         'noteDbImportPopup',
@@ -2361,6 +2475,12 @@ function openNoteDbImportPopup(){
 }
 
 function openTextDbImportPopup(){
+    if(!canEditAdminDb){
+        projectDbConfigs.text.summary.textContent =
+            'DB 수정 권한이 없습니다.';
+        return;
+    }
+
     const popup = window.open(
         '/admin/project-text-db/import-popup',
         'textDbImportPopup',
@@ -2464,6 +2584,10 @@ async function importColorCheckExcel(event){
     if(event){
         event.preventDefault();
     }
+    if(!canEditAdminDb){
+        setImportResult('DB 수정 권한이 없습니다.');
+        return;
+    }
 
     const file = importFileInput.files && importFileInput.files[0];
     if(!file){
@@ -2532,7 +2656,7 @@ function renderUsers(){
 
         values.forEach(value => {
             const cell = document.createElement('td');
-            if(value.field === 'actions'){
+            if(value.field === 'actions' && canManageUsers){
                 const actions = document.createElement('div');
                 actions.className = 'admin-row-actions';
                 const deleteButton = document.createElement('button');
@@ -2546,7 +2670,7 @@ function renderUsers(){
             }else{
                 cell.textContent = safeText(value.text);
             }
-            if(value.field && value.field !== 'actions'){
+            if(value.field && value.field !== 'actions' && canManageUsers){
                 cell.classList.add('admin-editable-cell');
                 cell.title = '더블클릭해서 수정';
                 cell.addEventListener('dblclick', () => {
@@ -2563,6 +2687,10 @@ function renderUsers(){
 
 async function createUser(event){
     event.preventDefault();
+    if(!canManageUsers){
+        userSummary.textContent = 'ADMIN 권한이 없습니다.';
+        return;
+    }
     const userId = newUserId.value.trim();
     const password = newUserPassword.value.trim();
     const userName = newUserName.value.trim();
@@ -2600,6 +2728,11 @@ async function createUser(event){
 }
 
 async function deleteUser(item){
+    if(!canManageUsers){
+        userSummary.textContent = 'ADMIN 권한이 없습니다.';
+        return;
+    }
+
     const userId = item.userId || '';
 
     if(!userId || !confirm(userId + ' 사용자를 삭제할까요?')){
@@ -2622,6 +2755,10 @@ async function deleteUser(item){
 }
 
 function startUserCellEdit(cell, item, field){
+    if(!canManageUsers){
+        return;
+    }
+
     if(userState.editingCell){
         return;
     }
@@ -2636,14 +2773,17 @@ function startUserCellEdit(cell, item, field){
     editor.className = 'admin-inline-editor';
 
     if(field === 'userRole'){
-        ['Y', 'ADMIN'].forEach(role => {
+        ['Y', 'DB_EDITOR', 'ADMIN'].forEach(role => {
             const option = document.createElement('option');
             option.value = role;
             option.textContent = formatRole(role);
             const currentRole = String(item.userRole || '').toUpperCase();
             option.selected = role === 'ADMIN'
                 ? currentRole.includes('ADMIN')
-                : !currentRole.includes('ADMIN');
+                : role === 'DB_EDITOR'
+                    ? currentRole.includes('DB_EDITOR')
+                    : !currentRole.includes('ADMIN')
+                        && !currentRole.includes('DB_EDITOR');
             editor.appendChild(option);
         });
     }else{
@@ -2717,6 +2857,10 @@ function startUserCellEdit(cell, item, field){
 }
 
 async function saveUserField(userId, field, value){
+    if(!canManageUsers){
+        throw new Error('ADMIN 권한이 없습니다.');
+    }
+
     const response = await fetch('/admin/users/' + encodeURIComponent(userId), {
         method:'PATCH',
         headers:{
@@ -3017,9 +3161,17 @@ window.addEventListener('message', function(event){
         loadProjectDbItems('text');
     }
 });
-userRefresh.addEventListener('click', loadUsers);
-userCreateForm.addEventListener('submit', createUser);
+if(canManageUsers){
+    userRefresh.addEventListener('click', loadUsers);
+    userCreateForm.addEventListener('submit', createUser);
+}
 document.querySelectorAll('[data-admin-view]').forEach(button => {
     button.addEventListener('click', () => switchAdminView(button.dataset.adminView));
 });
-loadUsers();
+applyAdminPermissions();
+const initialAdminViewButton =
+    document.querySelector('[data-admin-view].active')
+    || document.querySelector('[data-admin-view]');
+if(initialAdminViewButton){
+    switchAdminView(initialAdminViewButton.dataset.adminView);
+}

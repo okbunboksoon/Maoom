@@ -3,6 +3,7 @@
 <body>
     <section th:fragment="usersSection" id="userSection"
              class="admin-content"
+             th:hidden="${administrator == false}"
              aria-label="Maoom Portal DB 테이블">
         <header class="admin-content-header">
             <div>
@@ -67,6 +68,7 @@
                                autocomplete="off">
                         <select id="newUserRole">
                             <option value="Y">Y</option>
+                            <option value="DB_EDITOR">DB 수정</option>
                             <option value="ADMIN">관리자</option>
                         </select>
                         <input id="newSlackUserId"

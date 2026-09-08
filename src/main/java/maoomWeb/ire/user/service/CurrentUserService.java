@@ -49,11 +49,23 @@ public class CurrentUserService {
 
     /** ROLE_ADMIN 권한 보유 여부를 반환한다. */
     public boolean isAdministrator(Authentication authentication) {
+        return hasAuthority(authentication, "ROLE_ADMIN");
+    }
+
+    /** 관리자 DB 변경 권한 보유 여부를 반환한다. ADMIN은 항상 포함한다. */
+    public boolean canEditAdminDb(Authentication authentication) {
+        return isAdministrator(authentication)
+                || hasAuthority(authentication, "ROLE_DB_EDITOR");
+    }
+
+    private boolean hasAuthority(
+            Authentication authentication,
+            String authorityName) {
         return authentication != null
                 && authentication.getAuthorities()
                 .stream()
                 .anyMatch(authority ->
-                        "ROLE_ADMIN".equals(
+                        authorityName.equals(
                                 authority.getAuthority()));
     }
 }

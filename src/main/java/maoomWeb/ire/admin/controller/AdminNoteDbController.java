@@ -22,6 +22,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -62,12 +63,14 @@ public class AdminNoteDbController {
         return adminService.findAll();
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @PutMapping("/admin/project-note-db/items")
     @ResponseBody
     public NoteDbItem saveItem(@RequestBody NoteDbItem item) {
         return adminService.save(item);
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @PostMapping("/admin/project-note-db/import")
     @ResponseBody
     public Map<String,Integer> importXml(
@@ -89,11 +92,13 @@ public class AdminNoteDbController {
                 file.getInputStream());
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @GetMapping("/admin/project-note-db/import-popup")
     public String importPopup() {
         return "admin/noteDbImportPopup";
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")
     @DeleteMapping("/admin/project-note-db/items/{region}/{hash}")
     @ResponseBody
     public void deleteItem(

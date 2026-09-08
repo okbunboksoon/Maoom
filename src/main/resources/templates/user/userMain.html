@@ -33,7 +33,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body th:attr="data-admin=${administrator}">
 
 <!-- 이름·비밀번호·프로필 이미지를 변경하는 계정 설정 대화상자. -->
 <div id="accountDialogBackdrop"
@@ -176,10 +176,9 @@
                     <i class="fas fa-chevron-down account-chevron"></i>
                 </button>
                 <a class="admin-page-btn"
-                   th:if="${administrator}"
                    href="/admin/main">
                     <i class="fas fa-tools"></i>
-                    관리자
+                    DB 관리
                 </a>
                 <form class="logout-form" action="/logout" method="post">
                     <button class="logout-btn" type="submit">
@@ -604,7 +603,7 @@ document.getElementById(
 });
 
 function isAdministrator(){
-    return document.querySelector('.admin-page-btn') !== null;
+    return document.body.dataset.admin === 'true';
 }
 
 function renderLauncherMenus(){
@@ -1052,7 +1051,7 @@ function openMultilingualPopup(){
     openPopupWindow(
         '/multilingual/list',
         'multilingualPopup',
-        popupWindowOptions(680, 460, 9)
+        popupWindowOptions(680, 580, 9)
     );
 }
 

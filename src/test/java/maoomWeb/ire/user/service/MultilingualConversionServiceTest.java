@@ -84,4 +84,42 @@ class MultilingualConversionServiceTest {
         assertThat(bookmap)
                 .doesNotContain("filename=\"02_\"");
     }
+
+    @Test
+    void passesMultilingualFileNameChangeToBatchEnvironment()
+            throws Exception {
+
+        Path workspace = tempDirectory.resolve("batch-workspace");
+        Files.createDirectories(workspace);
+        Files.writeString(
+                workspace.resolve("00_Split_Extracted_Folders_to_DITA_ver260710.bat"),
+                "@echo off\r\n"
+                + "echo MULTILINGUAL_FILE_NAME_CHANGE=%MULTILINGUAL_FILE_NAME_CHANGE%\r\n"
+                + "echo TITLE_FILE_NAME_PREFIX=%TITLE_FILE_NAME_PREFIX%\r\n"
+                + "echo MAP_NAME=%MAP_NAME%\r\n"
+                + "exit /b 0\r\n");
+
+        MultilingualConversionService service =
+                new MultilingualConversionService();
+        Method method = MultilingualConversionService.class.getDeclaredMethod(
+                "runBatch",
+                Path.class,
+                List.class,
+                String.class,
+                boolean.class);
+        method.setAccessible(true);
+
+        List<String> logs = new ArrayList<>();
+        method.invoke(
+                service,
+                workspace,
+                logs,
+                "KIA-CL4m_HEV-en_GB-2027.ditamap",
+                true);
+
+        assertThat(logs)
+                .contains("MULTILINGUAL_FILE_NAME_CHANGE=Y")
+                .contains("TITLE_FILE_NAME_PREFIX=Y")
+                .contains("MAP_NAME=KIA-CL4m_HEV-en_GB-2027.ditamap");
+    }
 }

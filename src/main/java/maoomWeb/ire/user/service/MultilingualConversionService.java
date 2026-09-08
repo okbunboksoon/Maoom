@@ -117,7 +117,11 @@ public class MultilingualConversionService {
             logs.add("작업 폴더: " + workspace);
             logs.add("Input 원본: " + input);
             logs.add("배치 실행: " + BATCH_FILE);
-            runBatch(workspace, logs, request.bookmapMapName());
+            runBatch(
+                    workspace,
+                    logs,
+                    request.bookmapMapName(),
+                    request.multilingualFileNameChange());
             validateOutput(workspace.resolve("topics"));
 
             Path runOutput = ResultFolderNames.resolve(
@@ -324,7 +328,11 @@ public class MultilingualConversionService {
                 .replace(">", "&gt;");
     }
 
-    private void runBatch(Path workspace, List<String> logs, String bookmapMapName)
+    private void runBatch(
+            Path workspace,
+            List<String> logs,
+            String bookmapMapName,
+            boolean multilingualFileNameChange)
             throws IOException, InterruptedException {
 
         Path batchFile = workspace.resolve(BATCH_FILE);
@@ -335,9 +343,13 @@ public class MultilingualConversionService {
 
         String command = "call \"" + batchFile.getFileName()
                 + "\" TITLE_FILE_NAME_PREFIX=Y"
+                + " MULTILINGUAL_FILE_NAME_CHANGE="
+                + (multilingualFileNameChange ? "Y" : "N")
                 + buildMapNameArgument(bookmapMapName)
                 + " < nul";
-        logs.add("기본 적용: 파일명 변경(차종-연료타입-언어코드-연식-t00000 형식)");
+        logs.add(multilingualFileNameChange
+                ? "파일명 변경 적용: _Multilingual XSL 사용"
+                : "파일명 변경 미적용: NotFileNameChange XSL 사용");
 
         ProcessBuilder processBuilder = new ProcessBuilder(
                 "cmd.exe",
@@ -347,6 +359,12 @@ public class MultilingualConversionService {
                 .redirectErrorStream(true);
 
         String cleanMapName = cleanMapName(bookmapMapName);
+        processBuilder.environment().put(
+                "TITLE_FILE_NAME_PREFIX",
+                "Y");
+        processBuilder.environment().put(
+                "MULTILINGUAL_FILE_NAME_CHANGE",
+                multilingualFileNameChange ? "Y" : "N");
         if (!cleanMapName.isBlank()) {
             processBuilder.environment().put("MAP_NAME", cleanMapName);
         }

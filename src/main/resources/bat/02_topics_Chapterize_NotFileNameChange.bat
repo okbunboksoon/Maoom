@@ -172,12 +172,21 @@ echo Please wait a moment!
 echo Processing... 
 
 java net.sf.saxon.Transform -catalog:xsl\catalog.xml 	-s:xsl\dummy.xml  										-o:xsl\dummy.xml  										-xsl:xsl\0000-doctype-remove.xsl
+if errorlevel 1 exit /b !errorlevel!
 java net.sf.saxon.Transform 							-s:temp\0000-doctype-removed.xml  					-o:temp\0001-namespace-removed.xml  				-xsl:xsl\0001-namespace-remove.xsl
+if errorlevel 1 exit /b !errorlevel!
 java net.sf.saxon.Transform 							-s:temp\0001-namespace-removed.xml  				-o:temp\0110-svg_update.xml  							-xsl:xsl\0110-svg_update.xsl
+if errorlevel 1 exit /b !errorlevel!
 java net.sf.saxon.Transform 							-s:temp\0110-svg_update.xml    						-o:temp\0002-toc-created.xml  							-xsl:xsl\0002-toc-create.xsl
+if errorlevel 1 exit /b !errorlevel!
 java net.sf.saxon.Transform 							-s:temp\0002-toc-created.xml  							-o:xsl\bookmap.xml  									-xsl:xsl\0003-bookmap-create.xsl
+if errorlevel 1 exit /b !errorlevel!
 java net.sf.saxon.Transform -catalog:xsl\catalog.xml	-s:temp\0002-toc-created.xml  							-o:temp\0004-topic-merged.xml  						-xsl:xsl\0004-topic-merge.xsl
-set "CURRENT_SOURCE=temp\0004-topic-merged.xml"
+if errorlevel 1 exit /b !errorlevel!
+rem 병합된 topicref 안에서 제목만 있거나 본문이 비어 있는 토픽을 리포트용으로 표시한다.
+java net.sf.saxon.Transform 							-s:temp\0004-topic-merged.xml							-o:temp\0120-empty_topic_marked.xml					-xsl:xsl\0120-mark_empty_topic.xsl
+if errorlevel 1 exit /b !errorlevel!
+set "CURRENT_SOURCE=temp\0120-empty_topic_marked.xml"
 if /I "!TEXT_DB_APPLY!"=="Y" (
     java net.sf.saxon.Transform 						-s:!CURRENT_SOURCE!  									-o:temp\0340-kus-db-apply.xml						-xsl:xsl\0340-kus-db-apply.xsl flag=on
     if errorlevel 1 exit /b !errorlevel!
@@ -192,49 +201,71 @@ if /I "!NOTE_DB_APPLY!"=="Y" (
     echo NOTE_DB_APPLY applied: !CURRENT_SOURCE! >> %OPTION_LOG%
 )
 java net.sf.saxon.Transform 							-s:!CURRENT_SOURCE!						-o:temp\0130-merge_tgroup.xml 						-xsl:xsl\0130-merge_tgroup.xsl
+if errorlevel 1 exit /b !errorlevel!
 java net.sf.saxon.Transform 							-s:temp\0130-merge_tgroup.xml						-o:temp\0160-image_attr.xml 							-xsl:xsl\0160-image_attr.xsl
+if errorlevel 1 exit /b !errorlevel!
 java net.sf.saxon.Transform 							-s:temp\0160-image_attr.xml 	 						-o:temp\0170-refinement_tag.xml 						-xsl:xsl\0170-refinement_tag.xsl
+if errorlevel 1 exit /b !errorlevel!
 java net.sf.saxon.Transform 							-s:temp\0170-refinement_tag.xml 						-o:temp\0180-translate_no_tagging.xml					 -xsl:xsl\0180-translate_no_tagging.xsl
+if errorlevel 1 exit /b !errorlevel!
 set "CURRENT_SOURCE=temp\0180-translate_no_tagging.xml"
 if /I "!REMOVE_SIMPLE!"=="Y" (
     java net.sf.saxon.Transform 						-s:!CURRENT_SOURCE!  									-o:temp\0402-remove_simple_operation_deliverytarget.xml	-xsl:xsl\0402-Remove_Simple_Operation_And_DeliveryTarget.xsl removeSimpleOperation=!REMOVE_SIMPLE_OPERATION! removeDeliveryTarget=!REMOVE_DELIVERY_TARGET!
+    if errorlevel 1 exit /b !errorlevel!
     set "CURRENT_SOURCE=temp\0402-remove_simple_operation_deliverytarget.xml"
     echo REMOVE_SIMPLE_OPERATION=!REMOVE_SIMPLE_OPERATION! applied: !CURRENT_SOURCE! >> %OPTION_LOG%
     echo REMOVE_DELIVERY_TARGET=!REMOVE_DELIVERY_TARGET! applied: !CURRENT_SOURCE! >> %OPTION_LOG%
 )
 if /I "!DELETE_DRAFT!"=="Y" (
     java net.sf.saxon.Transform 						-s:!CURRENT_SOURCE!  									-o:temp\0401-remove_review_Delete_Draft_Comment.xml		-xsl:xsl\0401-remove_review_Delete_Draft_Comment.xsl
+    if errorlevel 1 exit /b !errorlevel!
     set "CURRENT_SOURCE=temp\0401-remove_review_Delete_Draft_Comment.xml"
     echo DELETE_DRAFT applied: !CURRENT_SOURCE! >> %OPTION_LOG%
 )
 
 echo REPORT_SOURCE=!CURRENT_SOURCE! >> %OPTION_LOG%
 java net.sf.saxon.Transform 							-s:!CURRENT_SOURCE!									-o:temp\transform_report_excel.xml					-xsl:xsl\0190-make-transform-report-excel.xsl fileNameMode=!FILE_NAME_MODE! inputType=!INPUT_TYPE! outputType=!OUTPUT_TYPE! removeSimple=!REMOVE_SIMPLE_OPERATION! removeDeliveryTarget=!REMOVE_DELIVERY_TARGET! deleteDraft=!DELETE_DRAFT! textDbApply=!TEXT_DB_APPLY! noteDbApply=!NOTE_DB_APPLY!
+if errorlevel 1 exit /b !errorlevel!
 
 java net.sf.saxon.Transform -catalog:xsl\catalog.xml	-s:!CURRENT_SOURCE!  									-o:temp\0400-remove_review.xml  						-xsl:xsl\0400-remove_review.xsl
+if errorlevel 1 exit /b !errorlevel!
 
 java net.sf.saxon.Transform 							-s:temp\0400-remove_review.xml   						-o:temp\0005-namespace-remove.xml  					-xsl:xsl\0005-namespace-remove.xsl
+if errorlevel 1 exit /b !errorlevel!
 if /I "!FILE_NAME_MODE!"=="T00000" (
     java net.sf.saxon.Transform 						-s:temp\0005-namespace-remove.xml  					-o:temp\0006-id-clean.xml  							-xsl:xsl\0006-id-clean.xsl
+    if errorlevel 1 exit /b !errorlevel!
     java net.sf.saxon.Transform 						-s:temp\0006-id-clean.xml  							-o:temp\0007-xref-clean.xml  							-xsl:xsl\0007-xref-clean.xsl
+    if errorlevel 1 exit /b !errorlevel!
     java net.sf.saxon.Transform 						-s:temp\0007-xref-clean.xml  							-o:temp\0008-related-links.xml  						-xsl:xsl\0008-related-links.xsl
+    if errorlevel 1 exit /b !errorlevel!
 ) else if /I "!FILE_NAME_MODE!"=="TITLE_PREFIX" (
     java net.sf.saxon.Transform 						-s:temp\0005-namespace-remove.xml  					-o:temp\0006-id-clean_TitleFileNamePrefix.xml  		-xsl:xsl\0006-id-clean_TitleFileNamePrefix.xsl titleFileNamePrefix=Y
+    if errorlevel 1 exit /b !errorlevel!
     java net.sf.saxon.Transform 						-s:temp\0006-id-clean_TitleFileNamePrefix.xml  		-o:temp\0007-xref-clean_TitleFileNamePrefix.xml  		-xsl:xsl\0007-xref-clean_TitleFileNamePrefix.xsl titleFileNamePrefix=Y
+    if errorlevel 1 exit /b !errorlevel!
     java net.sf.saxon.Transform 						-s:temp\0007-xref-clean_TitleFileNamePrefix.xml  		-o:temp\0008-related-links_TitleFileNamePrefix.xml  	-xsl:xsl\0008-related-links_TitleFileNamePrefix.xsl
+    if errorlevel 1 exit /b !errorlevel!
 ) else (
     java net.sf.saxon.Transform 						-s:temp\0005-namespace-remove.xml  					-o:temp\0006-id-clean_NotFileNameChange.xml  			-xsl:xsl\0006-id-clean_NotFileNameChange.xsl
+    if errorlevel 1 exit /b !errorlevel!
     java net.sf.saxon.Transform 						-s:temp\0006-id-clean_NotFileNameChange.xml  			-o:temp\0007-xref-clean_NotFileNameChange.xml  		-xsl:xsl\0007-xref-clean_NotFileNameChange.xsl
+    if errorlevel 1 exit /b !errorlevel!
     java net.sf.saxon.Transform 						-s:temp\0007-xref-clean_NotFileNameChange.xml  		-o:temp\0008-related-links_NotFileNameChange.xml  		-xsl:xsl\0008-related-links_NotFileNameChange.xsl
+    if errorlevel 1 exit /b !errorlevel!
 )
 if /I "!FILE_NAME_MODE!"=="T00000" (
     java net.sf.saxon.Transform 						-s:temp\0008-related-links.xml  						-o:temp\0009-dita-rebeautify.xml  						-xsl:xsl\0009-dita-rebeautify.xsl
+    if errorlevel 1 exit /b !errorlevel!
 ) else if /I "!FILE_NAME_MODE!"=="TITLE_PREFIX" (
     java net.sf.saxon.Transform 						-s:temp\0008-related-links_TitleFileNamePrefix.xml  	-o:temp\0009-dita-rebeautify.xml  						-xsl:xsl\0009-dita-rebeautify.xsl
+    if errorlevel 1 exit /b !errorlevel!
 ) else (
     java net.sf.saxon.Transform 						-s:temp\0008-related-links_NotFileNameChange.xml  		-o:temp\0009-dita-rebeautify.xml  						-xsl:xsl\0009-dita-rebeautify.xsl
+    if errorlevel 1 exit /b !errorlevel!
 )
 java net.sf.saxon.Transform 							-s:temp\0009-dita-rebeautify.xml 						-o:xsl\dummy.xml										-xsl:xsl\0010-rechapterize.xsl
+if errorlevel 1 exit /b !errorlevel!
 
 if /I "!FORBIDDEN_QC_REPORT!"=="Y" (
     java net.sf.saxon.Transform 						-s:temp\0009-dita-rebeautify.xml						-o:temp\qc-29-kus-text-normalized.xml				-xsl:xsl\29-kus-text-normalize.xsl
@@ -263,8 +294,10 @@ if /I "!FORBIDDEN_QC_REPORT!"=="Y" (
 )
 
 cscript //nologo "%ROOT%xsl\Convert_Xml_To_Excel-revision.vbs"
+if errorlevel 1 exit /b !errorlevel!
 
 copy "%~dp0xsl\bookmap.xml" "%~dp0bookmap.xml" /Y > NUL
+if errorlevel 1 exit /b !errorlevel!
 
 rd /q/s topics
 echo Done.

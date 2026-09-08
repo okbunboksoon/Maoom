@@ -171,16 +171,18 @@ public class UserController {
             Authentication authentication,
             Model model) {
 
-        if(!currentUserService.isAdministrator(authentication)){
-            return "redirect:/main";
-        }
-
         model.addAttribute(
                 "currentUserName",
                 currentUserService.getUserName(authentication));
         model.addAttribute(
                 "currentUserId",
                 currentUserService.getUserId(authentication));
+        model.addAttribute(
+                "administrator",
+                currentUserService.isAdministrator(authentication));
+        model.addAttribute(
+                "adminDbEditor",
+                currentUserService.canEditAdminDb(authentication));
         return "admin/adminMain";
     }
 
