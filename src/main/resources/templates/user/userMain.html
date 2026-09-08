@@ -368,7 +368,15 @@ const launcherMenus = [
         icon:'fa-file-signature',
         action:openArtworkRequestPopup
     },
-
+    /**
+    {
+        title:'협조문 자동 완성',
+        description:'코드작성 중',
+        category:'PDF',
+        icon:'fas fa-times-circle',
+        action:openAutomaticNoticePopup
+    },
+**/
     {
         title:'인쇄 배열표',
         description:'PDF 페이지 계산 및 발주표 생성',
@@ -916,6 +924,22 @@ function openArtworkRequestPopup(){
     openPopupWindow(
         '/pdf/artwork-request',
         'artworkRequestPopup',
+        popupWindowOptions(680, 500, 3)
+    );
+}
+
+/*
+ * 협조문 자동 완성.
+ *
+ * 화면 위치: templates/user/automaticNotice/automaticNotice.html
+ * 호출 URL: GET /pdf/automatic-notice -> UserController.automaticNotice()
+ * 실행 API/Service:
+ * - POST /api/automatic-notice/run -> AutomaticNoticeController.run() -> AutomaticNoticeService
+ */
+function openAutomaticNoticePopup(){
+    openPopupWindow(
+        '/pdf/automatic-notice',
+        'automaticNoticePopup',
         popupWindowOptions(680, 500, 3)
     );
 }

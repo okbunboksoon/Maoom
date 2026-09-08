@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- 협조문 자동 완성: PDF 하나를 받아 설계중점 확인사항 엑셀을 생성한다. -->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>협조문 자동 완성</title>
+    <link rel="stylesheet" href="/user/css/RevisionPopup.css">
+    <link rel="stylesheet" href="/user/css/AutomaticNotice.css?v=20260908-1556">
+</head>
+<body class="ber-popup-body automatic-notice-popup-body">
+<main class="revision-page revision-estimate-page">
+    <header class="revision-header">
+        <div>
+            <h1>협조문 자동 완성</h1>
+            <p>PDF 파일을 선택한 뒤 설계중점 확인사항 엑셀을 생성합니다.</p>
+        </div>
+    </header>
+
+    <section class="revision-panel" aria-label="협조문 자동 완성 실행">
+        <div class="step-title">
+            <span>1</span>
+            <div>
+                <strong>입력 경로 선택</strong>
+                <small>결과 폴더를 만들 서버 PC 경로를 입력하세요.(V서버, H서버)</small>
+            </div>
+        </div>
+
+        <div class="path-row automatic-notice-path-row full-path-row">
+            <label for="inputPath">입력경로</label>
+            <input id="inputPath" type="text"
+                   placeholder="경로를 입력하세요"
+                   autocomplete="off">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="step-divider"></div>
+
+        <div class="step-title">
+            <span>2</span>
+            <div>
+                <strong>PDF 파일 선택</strong>
+                <small>협조문 자동 완성에 사용할 PDF 파일을 아래 입력칸에 끌어다 놓으세요.</small>
+            </div>
+        </div>
+
+        <div id="pdfDropRow" class="path-row automatic-notice-file-row full-path-row">
+            <label for="pdfPath">PDF 파일</label>
+            <input id="pdfPath" type="text"
+                   placeholder="PDF 파일을 여기에 끌어다 놓기"
+                   readonly>
+            <span></span>
+            <span></span>
+        </div>
+
+        <footer class="popup-actions">
+            <button id="runButton" class="action-button primary" type="button">
+                실행
+            </button>
+            <button class="action-button" type="button" onclick="window.close()">
+                취소
+            </button>
+        </footer>
+
+        <section id="resultPanel" class="result-panel" hidden aria-live="polite">
+            <div class="result-heading">
+                <span id="statusIndicator" class="status-indicator"></span>
+                <strong id="resultTitle">적용 준비 중</strong>
+            </div>
+            <p id="resultMessage"></p>
+        </section>
+    </section>
+</main>
+
+<script>
+const pdfDropRow = document.getElementById('pdfDropRow');
+const inputPath = document.getElementById('inputPath');
+const pdfPathInput = document.getElementById('pdfPath');
+const runButton = document.getElementById('runButton');
+const resultPanel = document.getElementById('resultPanel');
+const statusIndicator = document.getElementById('statusIndicator');
+const resultTitle = document.getElementById('resultTitle');
+const resultMessage = document.getElementById('resultMessage');
+let selectedPdfFile = null;
+
+['dragenter', 'dragover'].forEach(eventName => {
+    pdfDropRow.addEventListener(eventName, event => {
+        event.preventDefault();
+        event.stopPropagation();
+        pdfDropRow.classList.add('is-dragging');
+        event.dataTransfer.dropEffect = 'copy';
+    });
+});
+
+['dragleave', 'drop'].forEach(eventName => {
+    pdfDropRow.addEventListener(eventName, event => {
+        event.preventDefault();
+        event.stopPropagation();
+        pdfDropRow.classList.remove('is-dragging');
+    });
+});
+
+pdfDropRow.addEventListener('drop', event => {
+    const file = Array.from(event.dataTransfer.files)
+        .find(item => /\.pdf$/i.test(item.name));
+
+    if(!file){
+        showResult('error', '협조문 자동 완성 실패', 'PDF 파일만 선택할 수 있습니다.');
+        return;
+    }
+
+    setPdfFile(file);
+});
+
+runButton.addEventListener('click', runAutomaticNotice);
+inputPath.addEventListener('keydown', event => {
+    if(event.key === 'Enter'){
+        runAutomaticNotice();
+    }
+});
+
+function setPdfFile(file){
+    selectedPdfFile = file || null;
+    pdfPathInput.value = file ? file.name : '';
+    resultPanel.hidden = true;
+}
+
+async function runAutomaticNotice(){
+    const file = selectedPdfFile;
+    const inputPathValue = inputPath.value.trim();
+
+    if(!inputPathValue){
+        showResult('error', '협조문 자동 완성 실패', '입력 경로를 입력해 주세요.');
+        inputPath.focus();
+        return;
+    }
+
+    if(!file){
+        showResult('error', '협조문 자동 완성 실패', 'PDF 파일을 끌어다 놓아 주세요.');
+        pdfPathInput.focus();
+        return;
+    }
+
+    runButton.disabled = true;
+    inputPath.disabled = true;
+    pdfPathInput.disabled = true;
+    runButton.textContent = '적용중...';
+    showResult('running', '협조문 자동 완성 실행 중 ⏳', '완료될 때까지 창을 닫지 마세요.');
+
+    try{
+        const formData = new FormData();
+        formData.append('inputPath', inputPathValue);
+        formData.append('file', file);
+
+        const response = await fetch('/api/automatic-notice/run', {
+            method:'POST',
+            body:formData
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text() || '협조문 자동 완성에 실패했습니다.');
+        }
+
+        const result = await response.json();
+        showResult(
+            'success',
+            '협조문 자동 완성 완료',
+            result.resultDirectory || result.message || '');
+    }catch(error){
+        showResult(
+            'error',
+            '협조문 자동 완성 실패',
+            friendlyFetchError(error, '협조문 자동 완성에 실패했습니다.'));
+    }finally{
+        runButton.disabled = false;
+        inputPath.disabled = false;
+        pdfPathInput.disabled = false;
+        runButton.textContent = '실행';
+    }
+}
+
+function showResult(type, title, message){
+    resultPanel.hidden = false;
+    resultPanel.dataset.status = type;
+    statusIndicator.classList.toggle('is-running', type === 'running');
+    resultTitle.textContent = title;
+    resultMessage.textContent = message || '';
+    resizeAutomaticNoticePopupForResult();
+}
+
+function resizeAutomaticNoticePopupForResult(){
+    try{
+        const height = Math.min(
+                Math.max(document.body.scrollHeight + 80, 560),
+                screen.availHeight - 80);
+        window.resizeTo(680, height);
+    }catch(error){
+        // 브라우저가 팝업 크기 변경을 막으면 현재 창 크기를 그대로 사용한다.
+    }
+}
+
+function friendlyFetchError(error, fallbackMessage){
+    if(error instanceof TypeError
+            || error.message === 'Failed to fetch'){
+        return '서버와 연결이 끊겼습니다. 서버가 실행 중인지 확인한 뒤 다시 시도해 주세요.';
+    }
+
+    return error.message || fallbackMessage;
+}
+</script>
+</body>
+</html>

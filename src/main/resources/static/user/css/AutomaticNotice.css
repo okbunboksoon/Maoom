@@ -1,0 +1,44 @@
+/*
+ * 협조문 자동 완성 팝업 보조 스타일.
+ *
+ * 적용 화면: templates/user/automaticNotice/automaticNotice.html
+ * 기본 레이아웃은 도안의뢰서 작성과 같은 RevisionPopup.css를 사용한다.
+ */
+
+.automatic-notice-path-row,
+.automatic-notice-file-row{
+    grid-template-columns:1fr;
+    gap:8px;
+}
+
+.automatic-notice-file-row input[type="text"]{
+    cursor:default;
+}
+
+.automatic-notice-file-row.is-dragging{
+    padding:8px;
+    margin:-8px -8px 8px;
+    border:2px dashed #2475d0;
+    border-radius:8px;
+    background:#eef6ff;
+}
+
+.automatic-notice-popup-body .result-panel{
+    margin-top:10px;
+    box-sizing:border-box;
+    height:auto;
+    min-height:0;
+    max-height:none;
+    overflow:visible;
+    padding:12px 14px;
+}
+
+.automatic-notice-popup-body .result-panel[data-status="running"] .result-heading strong::after{
+    content:none;
+}
+
+.automatic-notice-popup-body .result-panel p{
+    margin:8px 0 0;
+    overflow-wrap:anywhere;
+    word-break:break-all;
+}
