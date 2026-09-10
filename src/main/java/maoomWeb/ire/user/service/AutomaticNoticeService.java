@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -22,6 +23,18 @@ public class AutomaticNoticeService {
 
     private static final DateTimeFormatter RUN_INFO_DATE_FORMATTER =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+    private final AutomaticNoticeRuleWorkbookService ruleWorkbookService;
+
+    @Autowired
+    public AutomaticNoticeService(
+            AutomaticNoticeRuleWorkbookService ruleWorkbookService) {
+        this.ruleWorkbookService = ruleWorkbookService;
+    }
+
+    public AutomaticNoticeService() {
+        this.ruleWorkbookService = null;
+    }
 
     public AutomaticNoticeResult create(
             String inputPath,
@@ -41,7 +54,7 @@ public class AutomaticNoticeService {
         Files.createDirectories(resultDirectory);
 
         Path rulesPath = resultDirectory.resolve(rulesFileName);
-        copyBundledRules(rulesFileName, rulesPath);
+        prepareRuntimeRules(market, rulesFileName, rulesPath);
 
         Path resultPath = resultDirectory.resolve(
                 baseName + "_설계중점_확인사항.xlsx");
@@ -125,13 +138,15 @@ public class AutomaticNoticeService {
             if("KO".equalsIgnoreCase(token)){
                 return "KO";
             }
-            if("US".equalsIgnoreCase(token)){
+            if("US".equalsIgnoreCase(token)
+                    || "CA".equalsIgnoreCase(token)
+                    || "MX".equalsIgnoreCase(token)){
                 return "US";
             }
         }
 
         java.util.regex.Matcher matcher = java.util.regex.Pattern
-                .compile("(?i)(?:^|[_\\-\\.])(KO|US)(?:[_\\-\\.]|$)")
+                .compile("(?i)(?:^|[_\\-\\.])(KO|US|CA|MX)(?:[_\\-\\.]|$)")
                 .matcher(normalized);
         if(matcher.find()){
             return matcher.group(1).equalsIgnoreCase("KO") ? "KO" : "US";
@@ -162,6 +177,29 @@ public class AutomaticNoticeService {
                     destination,
                     java.nio.file.StandardCopyOption.REPLACE_EXISTING);
         }
+    }
+
+    private void prepareRuntimeRules(
+            String market,
+            String rulesFileName,
+            Path destination) throws IOException {
+
+        if(ruleWorkbookService != null){
+            try{
+                if(ruleWorkbookService.writeRuntimeRulesWorkbook(
+                        market,
+                        destination)){
+                    return;
+                }
+            }catch(RuntimeException exception){
+                /*
+                 * 룰 DB 이관 초기에는 테이블이 없거나 비어 있을 수 있다.
+                 * 기존 기능이 멈추지 않도록 번들 룰 엑셀로 fallback한다.
+                 */
+            }
+        }
+
+        copyBundledRules(rulesFileName, destination);
     }
 
     private void writeRunInfo(

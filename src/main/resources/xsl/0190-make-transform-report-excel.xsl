@@ -33,14 +33,14 @@
                 <xsl:when test="$fileNameMode = 'TITLE_PREFIX' and $title-prefix-sample != ''">
                     <xsl:value-of select="$title-prefix-sample"/>
                 </xsl:when>
-                <xsl:when test="$fileNameMode = 'T00000'">t00000.dita</xsl:when>
+                <xsl:when test="$fileNameMode = 'T00000'">t0000.dita</xsl:when>
                 <xsl:otherwise>기존 파일명 유지</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
         <xsl:variable name="file-name-mode-label">
             <xsl:choose>
-                <xsl:when test="$fileNameMode = 'TITLE_PREFIX'">차종-연료타입-언어코드-연식-t00000 형식</xsl:when>
-                <xsl:when test="$fileNameMode = 'T00000'">t00000 형식</xsl:when>
+                <xsl:when test="$fileNameMode = 'TITLE_PREFIX'">차종-연료타입-언어코드-연식-t0000 형식</xsl:when>
+                <xsl:when test="$fileNameMode = 'T00000'">t0000 형식</xsl:when>
                 <xsl:otherwise>기존 파일명 유지</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
@@ -198,7 +198,7 @@
                     <Column ss:Width="180"/>
                     <Column ss:Width="420"/>
                     <Row ss:Height="30">
-                        <Cell ss:StyleID="Header"><Data ss:Type="String">파일번호</Data></Cell>
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">기존 파일번호</Data></Cell>
                         <Cell ss:StyleID="Header"><Data ss:Type="String">타이틀</Data></Cell>
                     </Row>
                     <!-- 빈 토픽 상세 목록은 topicref href와 병합된 토픽 title만 별도 시트에 남긴다. -->

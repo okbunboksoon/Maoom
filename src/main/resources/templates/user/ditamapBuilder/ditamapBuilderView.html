@@ -568,7 +568,7 @@ function isLegalResourceHeading(node){
     const level = Number(node.level || 1);
 
     // revision-tool/legal에서 복사되는 legal_*.dita 상위 항목만 구분한다.
-    // 일반 topic(t00000.dita)과 사용자가 추가한 하위 항목은 기존 색상을 유지한다.
+    // 일반 topic(t0000.dita)과 사용자가 추가한 하위 항목은 기존 색상을 유지한다.
     return level <= 2
         && /^legal_[\w-]+\.dita$/.test(fileName);
 }

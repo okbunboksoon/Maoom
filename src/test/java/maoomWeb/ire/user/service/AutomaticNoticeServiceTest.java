@@ -23,6 +23,10 @@ class AutomaticNoticeServiceTest {
 
         assertThat(method.invoke(service, "KIA-CV1a-EV-en-US-2027-OM"))
                 .isEqualTo("US");
+        assertThat(method.invoke(service, "KIA-CV1a-EV-en-CA-2027-OM"))
+                .isEqualTo("US");
+        assertThat(method.invoke(service, "KIA-CV1a-EV-en-MX-2027-OM"))
+                .isEqualTo("US");
         assertThat(method.invoke(service, "KIA_CV1a_EV_KO_2027_OM"))
                 .isEqualTo("KO");
         assertThat(method.invoke(service, "KIA-CV1a-EV-en-GB-2027-OM"))

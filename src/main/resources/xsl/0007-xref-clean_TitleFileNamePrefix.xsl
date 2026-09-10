@@ -77,9 +77,9 @@
 		<xsl:apply-templates select="@* except (@outputclass, @href)"/>
 
 		<xsl:choose>
-			<!-- 수정 1: 외부 경로 (../ 포함) → xref 비우기 -->
+			<!-- 외부 경로(../ 포함)는 자동 수정하지 않고 원본 href를 유지하여 사용자가 리포트에서 확인하도록 한다. -->
 			<xsl:when test="contains($href, '../')">
-				<xsl:text>###</xsl:text>
+				<xsl:attribute name="href" select="$href"/>
 			</xsl:when>
 
 			<!-- 수정 2: fragment 기반 처리 -->

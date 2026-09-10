@@ -99,7 +99,7 @@
                 </ul>
                 <strong>선택 시 적용</strong>
                 <ul>
-                    <li>파일명을 t00000, t00001 형식으로 변경하고 map/dita 내부 참조도 함께 수정</li>
+                    <li>파일명을 t0000, t0001 형식으로 변경하고 map/dita 내부 참조도 함께 수정</li>
                     <li>map title에서 차종/언어코드를 읽어 기존 파일명 앞에 붙이고 내부 참조도 함께 수정</li>
                     <li>deliveryTarget 삭제</li>
                     <li>section title=Simple operation 삭제</li>
@@ -198,8 +198,8 @@ function updateSelectionSummary() {
  */
 function renderOptions(items) {
     const preferredOrder = [
+        'FILE_NAME_T00000',
         'FILE_NAME_KEEP',
-        'TITLE_FILE_NAME_PREFIX',
         'REMOVE_SIMPLE_OPERATION',
         'REMOVE_DELIVERY_TARGET',
         'DELETE_DRAFT_COMMENT',
@@ -208,8 +208,8 @@ function renderOptions(items) {
         'FORBIDDEN_QC_REPORT'
     ];
     const compactLabels = {
-        FILE_NAME_KEEP: '파일명 변경(ex t00000, t00001)',
-        TITLE_FILE_NAME_PREFIX: '파일명 변경(차종-연료타입-언어코드-연식-t00000 형식)',
+        FILE_NAME_T00000: '파일명 변경(ex t0000, t0001)',
+        FILE_NAME_KEEP: '기존 파일명 유지',
         REMOVE_DELIVERY_TARGET: 'deliveryTarget 지우기',
         REMOVE_SIMPLE_OPERATION: 'Simple operation 지우기',
         DELETE_DRAFT_COMMENT: 'Draft Comment, review, hash, modified 지우기',
@@ -224,8 +224,8 @@ function renderOptions(items) {
         'FORBIDDEN_QC_REPORT'
     ]);
     const filenameOptionIds = new Set([
+        'FILE_NAME_T00000',
         'FILE_NAME_KEEP',
-        'TITLE_FILE_NAME_PREFIX'
     ]);
     const byId = new Map(items.map(function(item) {
         return [item.id, item];

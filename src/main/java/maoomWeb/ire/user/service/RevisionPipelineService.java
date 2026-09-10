@@ -581,12 +581,16 @@ public class RevisionPipelineService {
         // 옵션을 BAT 인자로 넘겨 XML/DITA 방향과 선택 기능을 배치 내부 XSL 분기에 전달한다.
         command.add("INPUT_TYPE=" + inputType.value());
         command.add("OUTPUT_TYPE=" + outputType.value());
-        if (selectedOptions.contains(RevisionPipelineCatalog.TITLE_FILE_NAME_PREFIX)) {
-            command.add("TITLE_FILE_NAME_PREFIX=Y");
-            logs.add("옵션 추가: 파일명 변경(차종-연료타입-언어코드-연식-t00000 형식)");
-        } else if (selectedOptions.contains(RevisionPipelineCatalog.FILE_NAME_KEEP)) {
+        if (selectedOptions.contains(RevisionPipelineCatalog.FILE_NAME_T00000)) {
             command.add("FILE_NAME_CHANGE=Y");
-            logs.add("옵션 추가: 파일명 변경");
+            logs.add("옵션 추가: 파일명 변경(t0000, t0001 형식)");
+        } else if (selectedOptions.contains(RevisionPipelineCatalog.FILE_NAME_KEEP)) {
+            command.add("FILE_NAME_CHANGE=N");
+            logs.add("옵션 추가: 기존 파일명 유지");
+        } else if (selectedOptions.contains(RevisionPipelineCatalog.TITLE_FILE_NAME_PREFIX)) {
+            // 이전 클라이언트의 명시적 TITLE_PREFIX 요청은 하위 호환을 위해 계속 지원한다.
+            command.add("TITLE_FILE_NAME_PREFIX=Y");
+            logs.add("옵션 추가: 파일명 변경(차종-연료타입-언어코드-연식-t0000 형식)");
         }
         boolean legacySimpleDeliveryOption = selectedOptions.contains(
                 RevisionPipelineCatalog.REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET);

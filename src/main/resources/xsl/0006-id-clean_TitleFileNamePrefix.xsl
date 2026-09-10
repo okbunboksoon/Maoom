@@ -50,7 +50,8 @@
 		</xsl:call-template>
 		<xsl:copy>
 			<xsl:apply-templates select="@* except @id"/>
-			<xsl:attribute name="nid" select="concat('e', format-number($index, '00000'))"/>
+			<!-- fn은 각주 참조값이므로 기존 id를 유지하고, 그 외 요소만 e00000 형식으로 변경한다. -->
+			<xsl:attribute name="nid" select="if (self::fn) then string(@id) else concat('e', format-number($index, '00000'))"/>
 			<xsl:attribute name="oid" select="@id"/>
 			<xsl:apply-templates select="node()"/>
 			<xsl:call-template name="indentation">
@@ -86,7 +87,7 @@
 		</xsl:copy>
 	</xsl:template>
 -->
-	<!-- topic 계열 요소 : 기존 파일명 또는 title 기반 prefix + t00000 형식 파일명 부여. 1레벨 챕터 topic만 -CH01부터 순번을 붙인다. -->
+	<!-- topic 계열 요소 : 기존 파일명 또는 title 기반 prefix + t0000 형식 파일명 부여. 1레벨 챕터 topic만 -CH01부터 순번을 붙인다. -->
 	<xsl:template match="concept | task | reference">
 	    <xsl:variable name="depth" select="count(ancestor::*)"/>
 		<xsl:variable name="index" select="count(preceding::concept) + count(preceding::task) + count(preceding::reference)"/>

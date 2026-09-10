@@ -86,7 +86,7 @@
 		</xsl:copy>
 	</xsl:template>
 -->
-	<!-- topic 계열 요소 : 기존 파일명 또는 title 기반 prefix + t00000 형식 파일명 부여. 1레벨 챕터 topic만 -CH01부터 순번을 붙인다. -->
+	<!-- topic 계열 요소 : 기존 파일명 또는 title 기반 prefix + t0000 형식 파일명 부여. 1레벨 챕터 topic만 -CH01부터 순번을 붙인다. -->
 	<xsl:template match="concept | task | reference">
 	    <xsl:variable name="depth" select="count(ancestor::*)"/>
 		<xsl:variable name="index" select="count(preceding::concept) + count(preceding::task) + count(preceding::reference)"/>

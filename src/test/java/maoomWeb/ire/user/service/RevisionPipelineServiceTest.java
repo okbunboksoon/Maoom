@@ -44,7 +44,7 @@ class RevisionPipelineServiceTest {
         assertThat(result.completedOptions())
                 .isEmpty();
         assertThat(result.logs())
-                .anyMatch(log -> log.contains("정제 배치 실행 실패"));
+                .anyMatch(log -> log.contains("XML 출력 결과가 없습니다"));
         assertThat(ResultFolderNames.resolve(input, "revision")
                 .resolve("revision.log"))
                 .exists();
@@ -125,7 +125,7 @@ class RevisionPipelineServiceTest {
                 RevisionFormat.DITA,
                 RevisionFormat.XML,
                 Set.of(
-                        RevisionPipelineCatalog.FILE_NAME_KEEP,
+                        RevisionPipelineCatalog.FILE_NAME_T00000,
                         RevisionPipelineCatalog.REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
                         RevisionPipelineCatalog.DELETE_DRAFT_COMMENT),
                 command,
@@ -140,7 +140,7 @@ class RevisionPipelineServiceTest {
                         "REMOVE_SIMPLE_OPERATION=Y",
                         "DELETE_DRAFT=Y");
         assertThat(logs)
-                .contains("옵션 추가: 파일명 변경")
+                .contains("옵션 추가: 파일명 변경(t0000, t0001 형식)")
                 .contains("옵션 추가: deliveryTarget 지우기")
                 .contains("옵션 추가: Simple operation 지우기")
                 .contains("옵션 추가: Draft Comment, review, hash, modified 지우기");

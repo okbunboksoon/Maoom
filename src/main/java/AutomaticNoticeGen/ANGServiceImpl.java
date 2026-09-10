@@ -651,7 +651,9 @@ public class ANGServiceImpl implements ANGService {
     private static String detectMarket(String[] tokens) {
         for (String t : tokens) {
             if ("KO".equalsIgnoreCase(t)) return "KO";
-            if ("US".equalsIgnoreCase(t)) return "US";
+            if ("US".equalsIgnoreCase(t)
+                    || "CA".equalsIgnoreCase(t)
+                    || "MX".equalsIgnoreCase(t)) return "US";
         }
         return "EG";
     }
@@ -661,12 +663,14 @@ public class ANGServiceImpl implements ANGService {
         if (!"EG".equals(tok)) return tok;
 
         String s = baseNoExt == null ? "" : baseNoExt;
-        java.util.regex.Pattern p = java.util.regex.Pattern.compile("(?i)(?:^|[_\\-\\.])(KO|US)(?:[_\\-\\.]|$)");
+        java.util.regex.Pattern p = java.util.regex.Pattern.compile("(?i)(?:^|[_\\-\\.])(KO|US|CA|MX)(?:[_\\-\\.]|$)");
         java.util.regex.Matcher m = p.matcher(s);
         if (m.find()) {
             String g = m.group(1);
             if ("KO".equalsIgnoreCase(g)) return "KO";
-            if ("US".equalsIgnoreCase(g)) return "US";
+            if ("US".equalsIgnoreCase(g)
+                    || "CA".equalsIgnoreCase(g)
+                    || "MX".equalsIgnoreCase(g)) return "US";
         }
         return "EG";
     }

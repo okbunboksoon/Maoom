@@ -32,7 +32,8 @@
 		</xsl:call-template>
 		<xsl:copy>
 			<xsl:apply-templates select="@* except @id"/>
-			<xsl:attribute name="nid" select="concat('e', format-number($index, '00000'))"/>
+			<!-- fn은 각주 참조값이므로 기존 id를 유지하고, 그 외 요소만 e00000 형식으로 변경한다. -->
+			<xsl:attribute name="nid" select="if (self::fn) then string(@id) else concat('e', format-number($index, '00000'))"/>
 			<xsl:attribute name="oid" select="@id"/>
 			<xsl:apply-templates select="node()"/>
 			<xsl:call-template name="indentation">
@@ -49,7 +50,7 @@
 		</xsl:call-template>
 		<xsl:copy>
 			<xsl:apply-templates select="@* except @id"/>
-			<xsl:attribute name="nid" select="concat('t', format-number($index, '00000'))"/>
+			<xsl:attribute name="nid" select="concat('t', format-number($index, '0000'))"/>
 			<xsl:choose>
 				<xsl:when test="@id">
 					<xsl:attribute name="oid" select="@id"/>
