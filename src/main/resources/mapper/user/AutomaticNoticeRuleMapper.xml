@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="maoomWeb.ire.user.mapper.AutomaticNoticeRuleMapper">
+
+    <resultMap id="AutomaticNoticeRuleResultMap"
+            type="maoomWeb.ire.user.dto.AutomaticNoticeRule">
+        <id property="id" column="id"/>
+        <result property="region" column="region"/>
+        <result property="matchType" column="match_type"/>
+        <result property="matchKey" column="match_key"/>
+        <result property="detail" column="detail"/>
+        <result property="teams" column="teams"/>
+        <result property="priority" column="priority"/>
+        <result property="aliasText" column="alias_text"/>
+        <result property="enabled" column="enabled"/>
+        <result property="memo" column="memo"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+    <sql id="columns">
+        id,
+        region,
+        match_type,
+        match_key,
+        detail,
+        teams,
+        priority,
+        alias_text,
+        enabled,
+        memo,
+        created_at,
+        updated_at
+    </sql>
+
+    <select id="findByRegion" resultMap="AutomaticNoticeRuleResultMap">
+        SELECT <include refid="columns"/>
+        FROM tb_automatic_notice_rule
+        WHERE region = #{region}
+        ORDER BY priority ASC, id ASC
+    </select>
+
+    <select id="findEnabledByRegion" resultMap="AutomaticNoticeRuleResultMap">
+        SELECT <include refid="columns"/>
+        FROM tb_automatic_notice_rule
+        WHERE region = #{region}
+          AND enabled = 'Y'
+        ORDER BY priority ASC, id ASC
+    </select>
+
+    <select id="countByRegion" resultType="int">
+        SELECT COUNT(*)
+        FROM tb_automatic_notice_rule
+        WHERE region = #{region}
+    </select>
+
+    <select id="findAll" resultMap="AutomaticNoticeRuleResultMap">
+        SELECT <include refid="columns"/>
+        FROM tb_automatic_notice_rule
+        ORDER BY region, priority ASC, updated_at DESC, id DESC
+    </select>
+
+    <select id="findByRegionTypeAndKey"
+            resultMap="AutomaticNoticeRuleResultMap">
+        SELECT <include refid="columns"/>
+        FROM tb_automatic_notice_rule
+        WHERE region = #{region}
+          AND match_type = #{matchType}
+          AND match_key = #{matchKey}
+    </select>
+
+    <insert id="upsert">
+        INSERT INTO tb_automatic_notice_rule (
+            region,
+            match_type,
+            match_key,
+            detail,
+            teams,
+            priority,
+            alias_text,
+            enabled,
+            memo
+        ) VALUES (
+            #{region},
+            #{matchType},
+            #{matchKey},
+            #{detail},
+            #{teams},
+            #{priority},
+            #{aliasText},
+            #{enabled},
+            #{memo}
+        )
+        ON DUPLICATE KEY UPDATE
+            detail = VALUES(detail),
+            teams = VALUES(teams),
+            priority = VALUES(priority),
+            alias_text = VALUES(alias_text),
+            enabled = VALUES(enabled),
+            memo = VALUES(memo)
+    </insert>
+
+    <delete id="deleteByRegionTypeAndKey">
+        DELETE FROM tb_automatic_notice_rule
+        WHERE region = #{region}
+          AND match_type = #{matchType}
+          AND match_key = #{matchKey}
+    </delete>
+
+</mapper>
