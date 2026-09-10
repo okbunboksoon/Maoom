@@ -196,31 +196,13 @@ java net.sf.saxon.Transform 												-s:temp\0002-toc-created.xml  							-o:
 if errorlevel 1 exit /b !errorlevel!
 java net.sf.saxon.Transform -catalog:xsl\catalog.xml						-s:temp\0002-toc-created.xml  							-o:temp\0004-topic-merged.xml  								-xsl:xsl\0004-topic-merge.xsl
 if errorlevel 1 exit /b !errorlevel!
-rem 병합된 topicref 안에서 제목만 있거나 본문이 비어 있는 토픽을 리포트용으로 표시한다.
-java net.sf.saxon.Transform 												-s:temp\0004-topic-merged.xml						-o:temp\0120-empty_topic_marked.xml							-xsl:xsl\0120-mark_empty_topic.xsl
-if errorlevel 1 exit /b !errorlevel!
-rem 병합된 topicref 안에서 속성과 내용이 모두 없는 빈 태그를 리포트용으로 표시한다.
-java net.sf.saxon.Transform 												-s:temp\0120-empty_topic_marked.xml					 -o:temp\0121-empty_tag_marked.xml							 -xsl:xsl\0121-mark_empty_tag.xsl
-if errorlevel 1 exit /b !errorlevel!
-rem 병합된 li 내부에서 하위 태그로 감싸지 않은 직접 텍스트를 리포트용으로 표시한다.
-java net.sf.saxon.Transform												 -s:temp\0121-empty_tag_marked.xml 					-o:temp\0122-li_direct_text_marked.xml 						-xsl:xsl\0122-mark_li_direct_text.xsl
-if errorlevel 1 exit /b !errorlevel!
 rem 병합된 topicref 안에서 문장의 맨 앞과 맨 뒤 불필요한 공백을 제거한다.
-java net.sf.saxon.Transform												 -s:temp\0122-li_direct_text_marked.xml 				-o:temp\0123-sentence_space_trimmed.xml 					-xsl:xsl\0123-trim_sentence_space.xsl
+java net.sf.saxon.Transform -s:temp\0004-topic-merged.xml -o:temp\0123-sentence_space_trimmed.xml -xsl:xsl\0123-trim_sentence_space.xsl
 if errorlevel 1 exit /b !errorlevel!
 rem placement=break이고 align이 left 또는 right인 image를 찾아 align=center로 변경하고 리포트용으로 표시한다.
-java net.sf.saxon.Transform 												-s:temp\0123-sentence_space_trimmed.xml 				-o:temp\0124-break_image_centered.xml 						-xsl:xsl\0124-center_break_image.xsl
+java net.sf.saxon.Transform -s:temp\0123-sentence_space_trimmed.xml -o:temp\0124-break_image_centered.xml -xsl:xsl\0124-center_break_image.xsl
 if errorlevel 1 exit /b !errorlevel!
-rem http 또는 https 서버 형태의 image href는 수정하지 않고 리포트용으로 표시한다.
-java net.sf.saxon.Transform 												-s:temp\0124-break_image_centered.xml 				-o:temp\0125-image_server_href_marked.xml 					-xsl:xsl\0125-mark_image_server_href.xsl
-if errorlevel 1 exit /b !errorlevel!
-rem .dita# 참조 중 파일명.dita#단일ID 형식이 아닌 xref를 수정하지 않고 리포트용으로 표시한다.
-java net.sf.saxon.Transform 												-s:temp\0125-image_server_href_marked.xml 			-o:temp\0126-invalid_xref_href_marked.xml 						-xsl:xsl\0126-mark_invalid_xref_href.xsl
-if errorlevel 1 exit /b !errorlevel!
-rem Detect image href values whose extension is not .eps without modifying the href.
-rem java net.sf.saxon.Transform 												-s:temp\0126-invalid_xref_href_marked.xml 				-o:temp\0127-non_eps_image_href_marked.xml 					-xsl:xsl\0127-mark_non_eps_image_href.xsl
-rem if errorlevel 1 exit /b !errorlevel!
-set "CURRENT_SOURCE=temp\0126-invalid_xref_href_marked.xml"
+set "CURRENT_SOURCE=temp\0124-break_image_centered.xml"
 if /I "!TEXT_DB_APPLY!"=="Y" (
     java net.sf.saxon.Transform 											-s:!CURRENT_SOURCE!  									-o:temp\0340-kus-db-apply.xml								-xsl:xsl\0340-kus-db-apply.xsl flag=on
     if errorlevel 1 exit /b !errorlevel!
@@ -284,15 +266,28 @@ if /I "!FILE_NAME_MODE!"=="T00000" (
     if errorlevel 1 exit /b !errorlevel!
 )
 if /I "!FILE_NAME_MODE!"=="T00000" (
-    java net.sf.saxon.Transform 											-s:temp\0008-related-links.xml  						-o:temp\0009-dita-rebeautify.xml  								-xsl:xsl\0009-dita-rebeautify.xsl
-    if errorlevel 1 exit /b !errorlevel!
+    set "CURRENT_SOURCE=temp\0008-related-links.xml"
 ) else if /I "!FILE_NAME_MODE!"=="TITLE_PREFIX" (
-    java net.sf.saxon.Transform 											-s:temp\0008-related-links_TitleFileNamePrefix.xml  		-o:temp\0009-dita-rebeautify.xml  								-xsl:xsl\0009-dita-rebeautify.xsl
-    if errorlevel 1 exit /b !errorlevel!
+    set "CURRENT_SOURCE=temp\0008-related-links_TitleFileNamePrefix.xml"
 ) else (
-    java net.sf.saxon.Transform 											-s:temp\0008-related-links_NotFileNameChange.xml  	-o:temp\0009-dita-rebeautify.xml  								-xsl:xsl\0009-dita-rebeautify.xsl
-    if errorlevel 1 exit /b !errorlevel!
+    set "CURRENT_SOURCE=temp\0008-related-links_NotFileNameChange.xml"
 )
+rem ID/XREF/related-links 정리가 끝난 최종 구조를 기준으로 검출 항목을 표시한다.
+java net.sf.saxon.Transform -s:!CURRENT_SOURCE! -o:temp\0120-empty_topic_marked.xml -xsl:xsl\0120-mark_empty_topic.xsl
+if errorlevel 1 exit /b !errorlevel!
+java net.sf.saxon.Transform -s:temp\0120-empty_topic_marked.xml -o:temp\0121-empty_tag_marked.xml -xsl:xsl\0121-mark_empty_tag.xsl
+if errorlevel 1 exit /b !errorlevel!
+java net.sf.saxon.Transform -s:temp\0121-empty_tag_marked.xml -o:temp\0122-li_direct_text_marked.xml -xsl:xsl\0122-mark_li_direct_text.xsl
+if errorlevel 1 exit /b !errorlevel!
+java net.sf.saxon.Transform -s:temp\0122-li_direct_text_marked.xml -o:temp\0125-image_server_href_marked.xml -xsl:xsl\0125-mark_image_server_href.xsl
+if errorlevel 1 exit /b !errorlevel!
+java net.sf.saxon.Transform -s:temp\0125-image_server_href_marked.xml -o:temp\0126-invalid_xref_href_marked.xml -xsl:xsl\0126-mark_invalid_xref_href.xsl
+if errorlevel 1 exit /b !errorlevel!
+rem Detect image href values whose extension is not .eps without modifying the href.
+rem java net.sf.saxon.Transform -s:temp\0126-invalid_xref_href_marked.xml -o:temp\0127-non_eps_image_href_marked.xml -xsl:xsl\0127-mark_non_eps_image_href.xsl
+rem if errorlevel 1 exit /b !errorlevel!
+java net.sf.saxon.Transform -s:temp\0126-invalid_xref_href_marked.xml -o:temp\0009-dita-rebeautify.xml -xsl:xsl\0009-dita-rebeautify.xsl
+if errorlevel 1 exit /b !errorlevel!
 echo REPORT_SOURCE=temp\0009-dita-rebeautify.xml >> %OPTION_LOG%
 java net.sf.saxon.Transform 												-s:temp\0009-dita-rebeautify.xml						-o:temp\transform_report_excel.xml								-xsl:xsl\0190-make-transform-report-excel.xsl fileNameMode=!FILE_NAME_MODE! inputType=!INPUT_TYPE! outputType=!OUTPUT_TYPE! removeSimple=!REMOVE_SIMPLE_OPERATION! removeDeliveryTarget=!REMOVE_DELIVERY_TARGET! deleteDraft=!DELETE_DRAFT! textDbApply=!TEXT_DB_APPLY! noteDbApply=!NOTE_DB_APPLY!
 if errorlevel 1 exit /b !errorlevel!
