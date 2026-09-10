@@ -24,7 +24,7 @@
 	<!-- 작업용 속성 제거
 		modified 속성에 누적된 empty, li-direct-text 등의 리포트용 토큰도
 		Excel 리포트 생성이 끝난 뒤 modified 속성과 함께 모두 제거한다. -->
-	<xsl:template match="@modified | @status | @hash"/>
+	<xsl:template match="@modified | @status | @hash | @report-indexterm-removed"/>
 
 	<!-- hash PI 제거 -->
 	<xsl:template match="processing-instruction('hash')"/>

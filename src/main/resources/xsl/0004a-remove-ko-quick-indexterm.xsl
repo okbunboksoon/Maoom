@@ -16,6 +16,16 @@
 		</xsl:copy>
 	</xsl:template>
 
+	<!-- 삭제 조건과 실제 삭제 개수를 후속 Excel 리포트에서 읽을 수 있도록 map에 기록한다. -->
+	<xsl:template match="map">
+		<xsl:copy>
+			<xsl:apply-templates select="@*"/>
+			<xsl:attribute name="report-indexterm-removed"
+				select="if ($remove-indexterm) then count(.//indexterm) else 0"/>
+			<xsl:apply-templates select="node()"/>
+		</xsl:copy>
+	</xsl:template>
+
 	<xsl:template match="indexterm">
 		<xsl:if test="not($remove-indexterm)">
 			<xsl:copy>
