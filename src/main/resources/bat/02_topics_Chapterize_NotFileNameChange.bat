@@ -196,8 +196,11 @@ java net.sf.saxon.Transform 												-s:temp\0002-toc-created.xml  							-o:
 if errorlevel 1 exit /b !errorlevel!
 java net.sf.saxon.Transform -catalog:xsl\catalog.xml						-s:temp\0002-toc-created.xml  							-o:temp\0004-topic-merged.xml  								-xsl:xsl\0004-topic-merge.xsl
 if errorlevel 1 exit /b !errorlevel!
+rem map title에 ko_KR과 Quick이 모두 있으면 병합된 topic의 indexterm을 삭제한다.
+java net.sf.saxon.Transform -s:temp\0004-topic-merged.xml -o:temp\0004a-ko-quick-indexterm-removed.xml -xsl:xsl\0004a-remove-ko-quick-indexterm.xsl
+if errorlevel 1 exit /b !errorlevel!
 rem 병합된 topicref 안에서 문장의 맨 앞과 맨 뒤 불필요한 공백을 제거한다.
-java net.sf.saxon.Transform -s:temp\0004-topic-merged.xml -o:temp\0123-sentence_space_trimmed.xml -xsl:xsl\0123-trim_sentence_space.xsl
+java net.sf.saxon.Transform -s:temp\0004a-ko-quick-indexterm-removed.xml -o:temp\0123-sentence_space_trimmed.xml -xsl:xsl\0123-trim_sentence_space.xsl
 if errorlevel 1 exit /b !errorlevel!
 rem placement=break이고 align이 left 또는 right인 image를 찾아 align=center로 변경하고 리포트용으로 표시한다.
 java net.sf.saxon.Transform -s:temp\0123-sentence_space_trimmed.xml -o:temp\0124-break_image_centered.xml -xsl:xsl\0124-center_break_image.xsl
