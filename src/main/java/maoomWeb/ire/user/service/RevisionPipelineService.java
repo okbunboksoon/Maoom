@@ -213,7 +213,7 @@ public class RevisionPipelineService {
             } else {
                 Path topicsOutput = runOutput.resolve("topics");
                 replaceDirectoryExcludingThirdParty(
-                        resolvePublishedTopicsSource(workspace),
+                        workspace.resolve("topics"),
                         topicsOutput);
             }
 
@@ -681,15 +681,6 @@ public class RevisionPipelineService {
         }
     }
 
-    /** 금칙어 검사 전 백업이 있으면 최종 결과 topics로 우선 사용한다. */
-    private Path resolvePublishedTopicsSource(Path workspace) {
-        Path beforeForbiddenQc = workspace.resolve(
-                "topics_before_forbidden_qc");
-        if (Files.isDirectory(beforeForbiddenQc)) {
-            return beforeForbiddenQc;
-        }
-        return workspace.resolve("topics");
-    }
 
     private void validateBatchOutput(
             Path workspace,
