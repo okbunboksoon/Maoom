@@ -339,4 +339,39 @@ class RevisionPipelineServiceTest {
         assertThat(target.resolve("sample.dita")).exists();
         assertThat(target.resolve("3rd_party")).doesNotExist();
     }
+
+    @Test
+    void prefersTopicsBackedUpBeforeForbiddenQcForPublishedOutput()
+            throws Exception {
+        Path workspace = Files.createDirectory(
+                tempDirectory.resolve("workspace-with-qc-backup"));
+        Files.createDirectory(workspace.resolve("topics"));
+        Path beforeForbiddenQc = Files.createDirectory(
+                workspace.resolve("topics_before_forbidden_qc"));
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        Method method = RevisionPipelineService.class.getDeclaredMethod(
+                "resolvePublishedTopicsSource",
+                Path.class);
+        method.setAccessible(true);
+
+        assertThat((Path) method.invoke(service, workspace))
+                .isEqualTo(beforeForbiddenQc);
+    }
+
+    @Test
+    void usesTopicsWhenForbiddenQcBackupDoesNotExist() throws Exception {
+        Path workspace = Files.createDirectory(
+                tempDirectory.resolve("workspace-without-qc-backup"));
+        Path topics = Files.createDirectory(workspace.resolve("topics"));
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        Method method = RevisionPipelineService.class.getDeclaredMethod(
+                "resolvePublishedTopicsSource",
+                Path.class);
+        method.setAccessible(true);
+
+        assertThat((Path) method.invoke(service, workspace))
+                .isEqualTo(topics);
+    }
 }

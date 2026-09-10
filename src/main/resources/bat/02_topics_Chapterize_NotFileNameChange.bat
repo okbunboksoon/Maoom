@@ -305,6 +305,10 @@ if errorlevel 1 exit /b !errorlevel!
 
 rem 금칙어 QC 보고서 옵션이 켜진 경우 추가 정규화와 Excel 보고서 병합까지 수행한다.
 if /I "!FORBIDDEN_QC_REPORT!"=="Y" (
+    rem 금칙어 표시용 ph가 삽입되기 전의 최종 topics를 사용자 전달용으로 보관한다.
+    if exist "topics_before_forbidden_qc" rd /q /s "topics_before_forbidden_qc"
+    xcopy "topics\*.*" "topics_before_forbidden_qc\" /E /I /Y > NUL
+    if errorlevel 1 exit /b !errorlevel!
     java net.sf.saxon.Transform 											-s:temp\0400-remove_review.xml						-o:temp\qc-29-kus-text-normalized.xml							-xsl:xsl\29-kus-text-normalize.xsl
     if errorlevel 1 exit /b !errorlevel!
     java net.sf.saxon.Transform 											-s:temp\qc-29-kus-text-normalized.xml					-o:temp\qc-30-kus-inline-normalized.xml						-xsl:xsl\30-kus-inline-normalize.xsl
