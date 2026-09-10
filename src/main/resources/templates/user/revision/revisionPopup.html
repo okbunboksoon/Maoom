@@ -90,17 +90,25 @@
             <div class="change-guide-body">
                 <strong>기본 적용</strong>
                 <ul>
+                    <li>map title 기준으로 파일명을 차종-연료타입-언어코드-연식-t0000 형식으로 변경하고 내부 참조도 함께 수정</li>
                     <li>tgroup이 2개 이상인 table을 하나의 tgroup으로 병합</li>
                     <li>dark_symbol DB 기준으로 image 파일명을 치환</li>
-                    <li>placement=inline인 image에 scale=15를 설정</li>
-                    <li>placement=break인 image에 scale=95를 설정</li>
                     <li>image의 width, height, xoffset, yoffset, id 및 inline image의 outputclass 삭제</li>
                     <li>영문 유지 단어 term translate=no 추가</li>
+                    <li>제목만 존재하거나 본문 내용이 없는 DITA 파일 검출</li>
+                    <li>속성과 내용이 모두 없는 빈 태그 검출</li>
+                    <li>li 내부의 직접 텍스트 및 step 내부의 cmd 누락 검출</li>
+                    <li>p, title, shortdesc, cmd 문장 앞뒤의 불필요한 공백 제거</li>
+                    <li>placement=break이고 align이 left 또는 right인 image를 align=center로 변경</li>
+                    <li>http 또는 https 서버 주소가 사용된 image href 검출</li>
+                    <li>디렉터리 경로가 포함되거나 fragment에 하위 ID가 포함된 xref href 검출</li>
+                    <li>map title에 ko_KR과 Quick이 모두 포함된 경우 indexterm 삭제</li>
+                    <li>선택 옵션과 정제·삭제·검출 결과를 결과 리포트에 기록</li>
                 </ul>
                 <strong>선택 시 적용</strong>
                 <ul>
                     <li>파일명을 t0000, t0001 형식으로 변경하고 map/dita 내부 참조도 함께 수정</li>
-                    <li>map title에서 차종/언어코드를 읽어 기존 파일명 앞에 붙이고 내부 참조도 함께 수정</li>
+                    <li>기존 DITA 파일명을 유지하고 map/dita 내부 참조를 정리</li>
                     <li>deliveryTarget 삭제</li>
                     <li>section title=Simple operation 삭제</li>
                     <li>draft-comment, review/legal outputclass, hash, modified 삭제</li>
