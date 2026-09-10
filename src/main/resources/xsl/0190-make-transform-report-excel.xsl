@@ -269,11 +269,11 @@
                         <xsl:with-param name="change" select="'.dita# 뒤 fragment에 /하위ID가 포함된 xref 검출'"/>
                     </xsl:call-template>
                     <!-- 최종 문서 루트의 report-simple-operation-removed 값을 읽어 삭제된 Simple operation section 수를 표시한다. -->
-                    <xsl:call-template name="summary-row">
-                        <xsl:with-param name="label" select="'indexterm 삭제'"/>
-                        <xsl:with-param name="count" select="number((($final/*/@report-indexterm-removed), 0)[1])"/>
-                        <xsl:with-param name="change" select="'map title에 ko_KR과 Quick이 모두 포함된 경우 삭제한 indexterm 수'"/>
-                    </xsl:call-template>
+                    <Row ss:Height="30">
+                        <Cell ss:StyleID="Center"><Data ss:Type="String">indexterm 삭제 여부</Data></Cell>
+                        <Cell ss:StyleID="Center"><Data ss:Type="String"><xsl:value-of select="(($final/*/@report-indexterm-action), '유지')[1]"/></Data></Cell>
+                        <Cell ss:StyleID="Wrap"><Data ss:Type="String"><xsl:value-of select="if ($final/*/@report-indexterm-action = '삭제') then concat(number((($final/*/@report-indexterm-removed), 0)[1]), '개 삭제') else 'ko_KR + Quick 조건 불일치로 유지'"/></Data></Cell>
+                    </Row>
                     <xsl:call-template name="summary-row">
                         <xsl:with-param name="label" select="'Simple operation 삭제'"/>
                         <xsl:with-param name="count" select="number((($final/*/@report-simple-operation-removed), 0)[1])"/>
@@ -318,7 +318,7 @@
                     </xsl:variable>
                     <xsl:variable name="add-labels" select="('term translate=no 추가')"/>
                     <xsl:variable name="delete-labels" select="(
-                        'image 속성 삭제', 'indexterm 삭제', 'Simple operation 삭제', 'deliveryTarget 속성 삭제',
+                        'image 속성 삭제', 'indexterm 삭제 여부', 'Simple operation 삭제', 'deliveryTarget 속성 삭제',
                         'draft-comment 삭제', 'outputclass=review 삭제', 'outputclass=legal 삭제')"/>
                     <xsl:variable name="detect-labels" select="(
                         '내용없는 dita 찾기', '빈 태그 찾기', 'li 직접 텍스트 찾기', 'step cmd 누락 찾기',

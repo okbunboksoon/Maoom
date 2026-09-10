@@ -22,6 +22,8 @@
 			<xsl:apply-templates select="@*"/>
 			<xsl:attribute name="report-indexterm-removed"
 				select="if ($remove-indexterm) then count(.//indexterm) else 0"/>
+			<xsl:attribute name="report-indexterm-action"
+				select="if ($remove-indexterm) then '삭제' else '유지'"/>
 			<xsl:apply-templates select="node()"/>
 		</xsl:copy>
 	</xsl:template>
