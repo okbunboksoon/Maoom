@@ -171,6 +171,9 @@ body.sidebar-toggled .admin-shell{
 }
 
 .admin-header-import-form{
+    display:flex;
+    align-items:center;
+    gap:8px;
     margin:0;
 }
 
@@ -306,6 +309,17 @@ body.sidebar-toggled .admin-shell{
     align-items:center;
     gap:8px;
     margin:0;
+}
+
+.admin-inline-create-form{
+    display:grid;
+    grid-template-columns:84px 120px minmax(220px, 1fr) 110px 100px max-content;
+    align-items:center;
+    gap:8px;
+    padding:.85rem;
+    border:1px solid #e3e6f0;
+    border-radius:.35rem;
+    background:#f8f9fc;
 }
 
 .admin-edit-panel{
@@ -495,6 +509,35 @@ body.sidebar-toggled .admin-shell{
     text-align:left;
     word-break:break-word;
     white-space:normal;
+}
+
+#automaticNoticeRuleTable{
+    min-width:1520px;
+    table-layout:fixed;
+}
+
+#automaticNoticeRuleTable .ber-long-text-cell{
+    vertical-align:top;
+    text-align:left !important;
+    white-space:normal;
+}
+
+#automaticNoticeRuleTable .ber-clamped-text{
+    line-height:1.5;
+    text-align:left;
+    word-break:break-word;
+    white-space:normal;
+}
+
+#automaticNoticeRuleTable th:nth-child(4),
+#automaticNoticeRuleTable td:nth-child(4),
+#automaticNoticeRuleTable th:nth-child(5),
+#automaticNoticeRuleTable td:nth-child(5),
+#automaticNoticeRuleTable th:nth-child(6),
+#automaticNoticeRuleTable td:nth-child(6),
+#automaticNoticeRuleTable th:nth-child(8),
+#automaticNoticeRuleTable td:nth-child(8){
+    text-align:left !important;
 }
 
 #projectNoteDbTable th:nth-child(5),

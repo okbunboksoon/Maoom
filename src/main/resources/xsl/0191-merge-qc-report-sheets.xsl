@@ -93,7 +93,7 @@
             <xsl:attribute name="ss:Width">
                 <xsl:choose>
                     <xsl:when test="$sheetName = '금칙어' and $columnNo = 1">55</xsl:when>
-                    <xsl:when test="$sheetName = '금칙어' and $columnNo = 2">130</xsl:when>
+                    <xsl:when test="$sheetName = '금칙어' and $columnNo = 2">260</xsl:when>
                     <xsl:when test="$sheetName = '금칙어' and $columnNo = 3">500</xsl:when>
                     <xsl:when test="$sheetName = '금칙어' and $columnNo = 4">90</xsl:when>
                     <xsl:when test="$sheetName = '금칙어' and $columnNo = 5">220</xsl:when>

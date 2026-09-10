@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <section th:fragment="automaticNoticeRuleSection" id="automaticNoticeRuleSection"
+             class="admin-content"
+             aria-label="협조문 자동 완성 룰 DB 테이블"
+             hidden>
+        <header class="admin-content-header">
+            <div>
+                <h1>협조문 룰 DB</h1>
+                <p id="automaticNoticeRuleSummary">데이터를 불러오는 중입니다.</p>
+            </div>
+            <div class="admin-header-actions">
+                <form id="automaticNoticeRuleImportForm" class="admin-header-import-form">
+                    <select id="automaticNoticeRuleImportRegion"
+                            class="form-control form-control-sm">
+                        <option value="KO">KO</option>
+                        <option value="US">US</option>
+                        <option value="EG">EG</option>
+                    </select>
+                    <input id="automaticNoticeRuleImportFile"
+                           type="file"
+                           accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+                           hidden>
+                    <button id="automaticNoticeRuleImportButton"
+                            class="admin-tool-btn primary"
+                            type="button">
+                        <i class="fas fa-upload"></i>
+                        엑셀 업로드
+                    </button>
+                </form>
+
+                <a class="admin-export-btn" href="/admin/automatic-notice-rules/export">
+                    <i class="fas fa-file-excel"></i>
+                    엑셀 내보내기
+                </a>
+            </div>
+        </header>
+
+        <div class="admin-dashboard-cards">
+            <article class="admin-stat-card border-left-primary">
+                <div>
+                    <span>전체 항목</span>
+                    <strong id="automaticNoticeRuleTotalCount">0</strong>
+                </div>
+                <i class="fas fa-database"></i>
+            </article>
+            <article class="admin-stat-card border-left-success">
+                <div>
+                    <span>KO 항목</span>
+                    <strong id="automaticNoticeRuleKoCount">0</strong>
+                </div>
+                <i class="fas fa-language"></i>
+            </article>
+            <article class="admin-stat-card border-left-danger">
+                <div>
+                    <span>US 항목</span>
+                    <strong id="automaticNoticeRuleUsCount">0</strong>
+                </div>
+                <i class="fas fa-flag-usa"></i>
+            </article>
+            <article class="admin-stat-card border-left-warning">
+                <div>
+                    <span>EG 항목</span>
+                    <strong id="automaticNoticeRuleEgCount">0</strong>
+                </div>
+                <i class="fas fa-globe-asia"></i>
+            </article>
+            <article class="admin-stat-card border-left-info">
+                <div>
+                    <span>검색 결과</span>
+                    <strong id="automaticNoticeRuleFilteredCount">0</strong>
+                </div>
+                <i class="fas fa-filter"></i>
+            </article>
+        </div>
+
+        <div class="card shadow mb-4 admin-table-card">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">협조문 자동 완성 룰 목록</h6>
+            </div>
+            <div class="card-body">
+                <div class="admin-table-tools">
+                    <button id="automaticNoticeRuleRefresh"
+                            class="admin-tool-btn"
+                            type="button">
+                        <i class="fas fa-sync-alt"></i>
+                        새로고침
+                    </button>
+                </div>
+
+                <div id="automaticNoticeRuleImportResult"
+                     class="admin-import-result"
+                     hidden></div>
+
+                <div class="table-responsive">
+                    <table id="automaticNoticeRuleTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Region</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Key</th>
+                            <th scope="col">Detail</th>
+                            <th scope="col">Teams</th>
+                            <th scope="col">Priority</th>
+                            <th scope="col">Alias</th>
+                            <th scope="col">사용</th>
+                            <th scope="col">수정일</th>
+                            <th scope="col">관리</th>
+                        </tr>
+                        </thead>
+                        <tbody id="automaticNoticeRuleTableBody">
+                        <tr>
+                            <td colspan="11" class="admin-empty-cell">
+                                데이터를 불러오는 중입니다.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

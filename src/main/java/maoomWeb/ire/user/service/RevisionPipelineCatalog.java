@@ -15,6 +15,7 @@ import maoomWeb.ire.user.dto.RevisionOptionDto;
 final class RevisionPipelineCatalog {
 
     static final String FILE_NAME_KEEP = "FILE_NAME_KEEP";
+    static final String FILE_NAME_T00000 = "FILE_NAME_T00000";
     static final String TITLE_FILE_NAME_PREFIX = "TITLE_FILE_NAME_PREFIX";
     static final String REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET =
             "REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET";
@@ -32,13 +33,13 @@ final class RevisionPipelineCatalog {
     static List<RevisionOptionDto> options() {
         return List.of(
                 new RevisionOptionDto(
-                        FILE_NAME_KEEP,
+                        FILE_NAME_T00000,
                         "파일명 변경",
-                        "Chapter 변환 시 파일명을 t00000, t00001 형식으로 변경합니다."),
+                        "Chapter 변환 시 파일명을 t0000, t0001 형식으로 변경합니다."),
                 new RevisionOptionDto(
-                        TITLE_FILE_NAME_PREFIX,
-                        "파일명 변경",
-                        "Chapter 변환 시 파일명을 차종-연료타입-언어코드-연식-t00000 형식으로 변경합니다."),
+                        FILE_NAME_KEEP,
+                        "기존 파일명 유지",
+                        "기본 파일명 형식 대신 입력 DITA의 기존 파일명을 유지합니다."),
                 new RevisionOptionDto(
                         REMOVE_SIMPLE_OPERATION,
                         "Simple operation 지우기",
@@ -72,6 +73,7 @@ final class RevisionPipelineCatalog {
 
         Set<String> available = Set.of(
                 FILE_NAME_KEEP,
+                FILE_NAME_T00000,
                 TITLE_FILE_NAME_PREFIX,
                 REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
                 REMOVE_SIMPLE_OPERATION,

@@ -7,9 +7,9 @@ set CLASSPATH=%SAXON%lib\xml-resolver-1.2.jar;%CLASSPATH%
 
 if not exist temp mkdir temp
 
-set "FILE_NAME_CHANGE=N"
-set "FILE_NAME_MODE=DEFAULT"
-set "TITLE_FILE_NAME_PREFIX=N"
+set "FILE_NAME_CHANGE=Y"
+set "FILE_NAME_MODE=TITLE_PREFIX"
+set "TITLE_FILE_NAME_PREFIX=Y"
 set "INPUT_TYPE="
 set "OUTPUT_TYPE="
 set "REMOVE_SIMPLE=N"
@@ -20,9 +20,15 @@ set "TEXT_DB_APPLY=N"
 set "NOTE_DB_APPLY=N"
 set "FORBIDDEN_QC_REPORT=N"
 
+echo %* | findstr /I /C:"FILE_NAME_CHANGE=N" >NUL && (
+    set "FILE_NAME_CHANGE=N"
+    set "FILE_NAME_MODE=DEFAULT"
+    set "TITLE_FILE_NAME_PREFIX=N"
+)
 echo %* | findstr /I /C:"FILE_NAME_CHANGE=Y" >NUL && (
     set "FILE_NAME_CHANGE=Y"
     set "FILE_NAME_MODE=T00000"
+    set "TITLE_FILE_NAME_PREFIX=N"
 )
 echo %* | findstr /I /C:"FILE_NAME_CHANGE=TITLE_PREFIX" >NUL && (
     set "FILE_NAME_CHANGE=Y"

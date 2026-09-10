@@ -23,7 +23,7 @@
   </xsl:template>
 
   <!-- ===== 본문 치환: 텍스트는 DB/new, 인라인은 원문 재사용 ===== -->
-  <xsl:template match="p | cmd | title | shortdesc">
+  <xsl:template match="p | cmd | shortdesc">
     <xsl:variable name="current" select="."/>
     <!-- 항상 현재 노드로부터 해시 계산 (매칭 키로만 사용) -->
     <xsl:variable name="hash">

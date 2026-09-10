@@ -358,6 +358,18 @@ public class UserController {
     }
 
     /**
+     * 협조문 자동 완성 카드가 여는 입력 팝업 화면.
+     *
+     * <p>화면 위치: {@code templates/user/automaticNotice/automaticNotice.html}.
+     * 실행 API는 AutomaticNoticeController, PDF 검토표 생성은
+     * AutomaticNoticeService가 담당한다.</p>
+     */
+    @GetMapping("/pdf/automatic-notice")
+    public String automaticNotice() {
+        return "user/automaticNotice/automaticNotice";
+    }
+
+    /**
      * 인쇄데이터 검증 카드가 여는 입력 팝업 화면.
      *
      * <p>화면 위치: {@code templates/user/printCheck/printCheck.html}.

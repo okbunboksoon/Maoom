@@ -12,6 +12,12 @@ const berAsisTobeState = {
     editingCell: null
 };
 
+const automaticNoticeRuleState = {
+    items: [],
+    filteredItems: [],
+    editingCell: null
+};
+
 const projectDbStates = {
     text: {items: [], filteredItems: [], editingCell: null, dataTable: null},
     note: {items: [], filteredItems: [], editingCell: null, dataTable: null}
@@ -98,6 +104,8 @@ const colorCheckSection =
     document.getElementById('colorCheckSection');
 const berAsisTobeSection =
     document.getElementById('berAsisTobeSection');
+const automaticNoticeRuleSection =
+    document.getElementById('automaticNoticeRuleSection');
 // QSG DB 메뉴 클릭 시 보여줄 관리자 섹션. 실제 HTML은 admin/section/qsgDb.html에 있다.
 const qsgDbSection =
     document.getElementById('qsgDbSection');
@@ -147,6 +155,32 @@ const berUsCount =
     document.getElementById('berUsCount');
 const berFilteredCount =
     document.getElementById('berFilteredCount');
+const automaticNoticeRuleTableBody =
+    document.getElementById('automaticNoticeRuleTableBody');
+const automaticNoticeRuleSummary =
+    document.getElementById('automaticNoticeRuleSummary');
+const automaticNoticeRuleRefresh =
+    document.getElementById('automaticNoticeRuleRefresh');
+const automaticNoticeRuleImportForm =
+    document.getElementById('automaticNoticeRuleImportForm');
+const automaticNoticeRuleImportRegion =
+    document.getElementById('automaticNoticeRuleImportRegion');
+const automaticNoticeRuleImportFile =
+    document.getElementById('automaticNoticeRuleImportFile');
+const automaticNoticeRuleImportButton =
+    document.getElementById('automaticNoticeRuleImportButton');
+const automaticNoticeRuleImportResult =
+    document.getElementById('automaticNoticeRuleImportResult');
+const automaticNoticeRuleTotalCount =
+    document.getElementById('automaticNoticeRuleTotalCount');
+const automaticNoticeRuleKoCount =
+    document.getElementById('automaticNoticeRuleKoCount');
+const automaticNoticeRuleUsCount =
+    document.getElementById('automaticNoticeRuleUsCount');
+const automaticNoticeRuleEgCount =
+    document.getElementById('automaticNoticeRuleEgCount');
+const automaticNoticeRuleFilteredCount =
+    document.getElementById('automaticNoticeRuleFilteredCount');
 const projectDbConfigs = {
     text: {
         displayName: 'TEXT DB',
@@ -263,6 +297,7 @@ const userFilteredCount =
     document.getElementById('userFilteredCount');
 let colorCheckDataTable = null;
 let berAsisTobeDataTable = null;
+let automaticNoticeRuleDataTable = null;
 // QSG DB 테이블의 DataTables 인스턴스. 다시 렌더링할 때 destroy 후 새로 만든다.
 let qsgDbDataTable = null;
 let replaceDarkSymbolDataTable = null;
@@ -409,6 +444,11 @@ function formatStatus(value){
     return safeText(value);
 }
 
+function parseAutomaticNoticeRulePriority(value, fallback){
+    const parsed = Number.parseInt(value, 10);
+    return Number.isNaN(parsed) ? fallback : parsed;
+}
+
 function formatRole(value){
     const role = safeText(value);
     const normalized = role.toUpperCase();
@@ -432,6 +472,7 @@ function applyAdminPermissions(){
         editForm,
         importForm,
         berAsisTobeImportForm,
+        automaticNoticeRuleImportForm,
         qsgDbImportForm,
         ...Object.values(projectDbConfigs).map(config => config.importForm)
     ].forEach(form => {
@@ -491,6 +532,7 @@ function setQsgDbImportResult(message){
 function switchAdminView(view){
     const isColorCheckView = view === 'color-check';
     const isBerAsisTobeView = view === 'ber-asis-tobe';
+    const isAutomaticNoticeRuleView = view === 'automatic-notice-rule';
     // 사이드바의 data-admin-view="qsg-db" 버튼과 연결되는 QSG DB 화면 분기.
     const isQsgDbView = view === 'qsg-db';
     const isProjectTextDbView = view === 'project-text-db';
@@ -500,6 +542,7 @@ function switchAdminView(view){
     const isUserView = view === 'users';
     colorCheckSection.hidden = !isColorCheckView;
     berAsisTobeSection.hidden = !isBerAsisTobeView;
+    automaticNoticeRuleSection.hidden = !isAutomaticNoticeRuleView;
     qsgDbSection.hidden = !isQsgDbView;
     projectTextDbSection.hidden = !isProjectTextDbView;
     projectNoteDbSection.hidden = !isProjectNoteDbView;
@@ -516,6 +559,10 @@ function switchAdminView(view){
     }
     if(isBerAsisTobeView && berAsisTobeState.items.length === 0){
         loadBerAsisTobeItems();
+    }
+    if(isAutomaticNoticeRuleView
+            && automaticNoticeRuleState.items.length === 0){
+        loadAutomaticNoticeRuleItems();
     }
     /*
      * QSG DB는 최초 진입 시 한 번만 XML을 읽어 온다.
@@ -594,6 +641,14 @@ function updateBerAsisTobeFilteredCount(){
     updateBerAsisTobeSummary(info.recordsDisplay);
 }
 
+function updateAutomaticNoticeRuleFilteredCount(){
+    if(!automaticNoticeRuleDataTable){
+        return;
+    }
+    const info = automaticNoticeRuleDataTable.page.info();
+    updateAutomaticNoticeRuleSummary(info.recordsDisplay);
+}
+
 function updateProjectDbFilteredCount(dbType){
     const state = projectDbStates[dbType];
     if(!state.dataTable){
@@ -664,6 +719,36 @@ function initBerAsisTobeDataTable(){
         drawCallback: updateBerAsisTobeFilteredCount
     });
     updateBerAsisTobeFilteredCount();
+}
+
+function initAutomaticNoticeRuleDataTable(){
+    if(!window.jQuery || !jQuery.fn || !jQuery.fn.DataTable){
+        updateAutomaticNoticeRuleSummary(
+                automaticNoticeRuleState.filteredItems.length);
+        return;
+    }
+
+    automaticNoticeRuleDataTable = $('#automaticNoticeRuleTable').DataTable({
+        language: dataTableLanguage(),
+        pageLength: 50,
+        autoWidth: false,
+        order: [ [1, 'asc'], [6, 'asc'], [0, 'asc'] ],
+        columnDefs: [
+            {targets: [0, 1, 2, 6, 8, 9, 10], className: 'text-center'},
+            {targets: [10], orderable: false, searchable: false},
+            {targets: [0], width: '70px'},
+            {targets: [1, 2, 8], width: '80px'},
+            {targets: [3], width: '260px'},
+            {targets: [4], width: '340px'},
+            {targets: [5], width: '200px'},
+            {targets: [6], width: '90px'},
+            {targets: [7], width: '140px'},
+            {targets: [9], width: '140px'},
+            {targets: [10], width: '90px'}
+        ],
+        drawCallback: updateAutomaticNoticeRuleFilteredCount
+    });
+    updateAutomaticNoticeRuleFilteredCount();
 }
 
 function initQsgDbDataTable(){
@@ -1306,6 +1391,255 @@ function applyBerAsisTobeFilter(){
     berAsisTobeState.filteredItems = [...berAsisTobeState.items];
     updateBerAsisTobeSummary(berAsisTobeState.filteredItems.length);
     renderBerAsisTobeTable();
+}
+
+function renderAutomaticNoticeRuleTable(){
+    destroyDataTable(automaticNoticeRuleDataTable);
+    automaticNoticeRuleDataTable = null;
+    automaticNoticeRuleTableBody.innerHTML = '';
+
+    automaticNoticeRuleState.filteredItems.forEach((item, index) => {
+        const row = document.createElement('tr');
+        const values = [
+            index + 1,
+            safeText(item.region),
+            safeText(item.matchType),
+            safeText(item.matchKey),
+            safeText(item.detail),
+            safeText(item.teams),
+            safeText(item.priority),
+            safeText(item.aliasText),
+            item.enabled === 'N' ? 'N' : 'Y',
+            formatDate(item.updatedAt),
+            ''
+        ];
+
+        values.forEach((value, columnIndex) => {
+            const cell = document.createElement('td');
+            const editableFields = {
+                4: 'detail',
+                5: 'teams',
+                6: 'priority',
+                7: 'aliasText',
+                8: 'enabled'
+            };
+
+            if(columnIndex === 1 || columnIndex === 2 || columnIndex === 8){
+                cell.className = 'ber-region-cell';
+                cell.textContent = value;
+            }else if(columnIndex === 3 || columnIndex === 4
+                    || columnIndex === 5 || columnIndex === 7){
+                cell.className = 'ber-long-text-cell';
+                const textBox = document.createElement('div');
+                textBox.className = 'ber-clamped-text';
+                textBox.textContent = value;
+                cell.appendChild(textBox);
+                if(value !== '-'){
+                    cell.title = value;
+                }
+            }else if(columnIndex === 10 && canEditAdminDb){
+                const actions = document.createElement('div');
+                actions.className = 'admin-row-actions';
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'admin-icon-btn danger';
+                deleteButton.type = 'button';
+                deleteButton.title = '삭제';
+                deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+                deleteButton.addEventListener(
+                    'click',
+                    () => deleteAutomaticNoticeRuleItem(item));
+                actions.appendChild(deleteButton);
+                cell.appendChild(actions);
+            }else{
+                cell.textContent = value;
+            }
+
+            if(canEditAdminDb && editableFields[columnIndex]
+                    && columnIndex !== 10){
+                cell.classList.add('admin-editable-cell');
+                cell.title = value === '-'
+                    ? '더블클릭해서 수정'
+                    : value + '\n\n더블클릭해서 수정';
+                cell.addEventListener('dblclick', () => {
+                    startAutomaticNoticeRuleCellEdit(
+                            cell,
+                            item,
+                            editableFields[columnIndex]);
+                });
+            }
+
+            row.appendChild(cell);
+        });
+
+        automaticNoticeRuleTableBody.appendChild(row);
+    });
+    initAutomaticNoticeRuleDataTable();
+}
+
+function startAutomaticNoticeRuleCellEdit(cell, item, field){
+    if(!canEditAdminDb || automaticNoticeRuleState.editingCell){
+        return;
+    }
+
+    const originalValue = item[field] === null || item[field] === undefined
+        ? ''
+        : String(item[field]);
+    automaticNoticeRuleState.editingCell = cell;
+    cell.innerHTML = '';
+    cell.title = '';
+
+    const editor = document.createElement(
+            field === 'enabled' ? 'select' : 'textarea');
+    editor.className = field === 'enabled'
+        ? 'form-control form-control-sm'
+        : 'admin-inline-editor ber-inline-editor';
+
+    if(field === 'enabled'){
+        ['Y', 'N'].forEach(value => {
+            const option = document.createElement('option');
+            option.value = value;
+            option.textContent = value;
+            option.selected = value === (originalValue || 'Y');
+            editor.appendChild(option);
+        });
+    }else{
+        editor.value = originalValue;
+    }
+
+    let closed = false;
+    const finish = async shouldSave => {
+        if(closed){
+            return;
+        }
+        closed = true;
+        const value = field === 'enabled' ? editor.value : editor.value;
+
+        if(!shouldSave || value === originalValue){
+            restoreAutomaticNoticeRuleCell(cell, originalValue);
+            automaticNoticeRuleState.editingCell = null;
+            return;
+        }
+
+        try{
+            const updatedItem = await saveAutomaticNoticeRuleField(
+                    item,
+                    field,
+                    value);
+            Object.assign(item, updatedItem);
+            restoreAutomaticNoticeRuleCell(
+                    cell,
+                    updatedItem[field] === null
+                        || updatedItem[field] === undefined
+                        ? ''
+                        : String(updatedItem[field]));
+            updateAutomaticNoticeRuleSummary(
+                    automaticNoticeRuleState.filteredItems.length);
+        }catch(error){
+            restoreAutomaticNoticeRuleCell(cell, originalValue);
+            automaticNoticeRuleSummary.textContent =
+                    error.message || '협조문 룰 항목을 저장하지 못했습니다.';
+        }finally{
+            automaticNoticeRuleState.editingCell = null;
+        }
+    };
+
+    editor.addEventListener('keydown', event => {
+        if(event.key === 'Escape'){
+            event.preventDefault();
+            finish(false);
+        }
+        if((event.ctrlKey || event.metaKey) && event.key === 'Enter'){
+            event.preventDefault();
+            editor.blur();
+        }
+    });
+    editor.addEventListener('blur', () => finish(true));
+    if(field === 'enabled'){
+        editor.addEventListener('change', () => editor.blur());
+    }
+    cell.appendChild(editor);
+    editor.focus();
+    if(editor.select){
+        editor.select();
+    }
+}
+
+function restoreAutomaticNoticeRuleCell(cell, value){
+    cell.innerHTML = '';
+    const displayValue = value || '-';
+    const textBox = document.createElement('div');
+    textBox.className = 'ber-clamped-text';
+    textBox.textContent = displayValue;
+    cell.appendChild(textBox);
+    cell.title = displayValue === '-'
+        ? '더블클릭해서 수정'
+        : displayValue + '\n\n더블클릭해서 수정';
+}
+
+async function saveAutomaticNoticeRuleField(item, field, value){
+    if(!canEditAdminDb){
+        throw new Error('DB 수정 권한이 없습니다.');
+    }
+
+    const payload = {
+        region:item.region,
+        matchType:item.matchType,
+        matchKey:item.matchKey || '',
+        detail:item.detail || '',
+        teams:item.teams || '',
+        priority:item.priority === null || item.priority === undefined
+            ? 100
+            : item.priority,
+        aliasText:item.aliasText || '',
+        enabled:item.enabled || 'Y',
+        memo:item.memo || ''
+    };
+    payload[field] = field === 'priority'
+        ? parseAutomaticNoticeRulePriority(value, 0)
+        : value;
+
+    const response = await fetch('/admin/automatic-notice-rules/items', {
+        method:'PUT',
+        headers:{
+            'Content-Type':'application/json',
+            'Accept':'application/json'
+        },
+        body:JSON.stringify(payload)
+    });
+
+    if(!response.ok){
+        throw new Error(await response.text());
+    }
+
+    return response.json();
+}
+
+function updateAutomaticNoticeRuleSummary(showing){
+    const total = automaticNoticeRuleState.items.length;
+    const koCount = automaticNoticeRuleState.items
+        .filter(item => item.region === 'KO').length;
+    const usCount = automaticNoticeRuleState.items
+        .filter(item => item.region === 'US').length;
+    const egCount = automaticNoticeRuleState.items
+        .filter(item => item.region === 'EG').length;
+
+    automaticNoticeRuleSummary.textContent = total === showing
+        ? '총 ' + total.toLocaleString('ko-KR') + '건'
+        : '총 ' + total.toLocaleString('ko-KR') + '건 중 '
+            + showing.toLocaleString('ko-KR') + '건 표시';
+    automaticNoticeRuleTotalCount.textContent = total.toLocaleString('ko-KR');
+    automaticNoticeRuleKoCount.textContent = koCount.toLocaleString('ko-KR');
+    automaticNoticeRuleUsCount.textContent = usCount.toLocaleString('ko-KR');
+    automaticNoticeRuleEgCount.textContent = egCount.toLocaleString('ko-KR');
+    automaticNoticeRuleFilteredCount.textContent =
+            showing.toLocaleString('ko-KR');
+}
+
+function applyAutomaticNoticeRuleFilter(){
+    automaticNoticeRuleState.filteredItems = [...automaticNoticeRuleState.items];
+    updateAutomaticNoticeRuleSummary(
+            automaticNoticeRuleState.filteredItems.length);
+    renderAutomaticNoticeRuleTable();
 }
 
 function renderProjectDbTable(dbType){
@@ -2141,6 +2475,173 @@ async function deleteBerAsisTobeItem(item){
     }catch(error){
         berAsisTobeSummary.textContent =
             error.message || '삭제하지 못했습니다.';
+    }
+}
+
+async function loadAutomaticNoticeRuleItems(){
+    automaticNoticeRuleRefresh.disabled = true;
+    automaticNoticeRuleSummary.textContent = '협조문 룰 DB를 불러오는 중입니다.';
+
+    try{
+        const response = await fetch('/admin/automatic-notice-rules/items', {
+            headers:{'Accept':'application/json'}
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        automaticNoticeRuleState.items = await response.json();
+        applyAutomaticNoticeRuleFilter();
+    }catch(error){
+        automaticNoticeRuleTableBody.innerHTML = '';
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.colSpan = 11;
+        cell.className = 'admin-empty-cell';
+        cell.textContent = '협조문 룰 DB를 불러오지 못했습니다.';
+        row.appendChild(cell);
+        automaticNoticeRuleTableBody.appendChild(row);
+        automaticNoticeRuleSummary.textContent =
+            error.message || '조회 중 오류가 발생했습니다.';
+    }finally{
+        automaticNoticeRuleRefresh.disabled = false;
+    }
+}
+
+async function deleteAutomaticNoticeRuleItem(item){
+    if(!canEditAdminDb){
+        automaticNoticeRuleSummary.textContent = 'DB 수정 권한이 없습니다.';
+        return;
+    }
+
+    const region = item.region || '';
+    const matchType = item.matchType || '';
+    const matchKey = item.matchKey || '';
+
+    if(!region
+            || !matchType
+            || !matchKey
+            || !confirm(region + ' / ' + matchType + ' / '
+                + matchKey + ' 항목을 삭제할까요?')){
+        return;
+    }
+
+    try{
+        const params = new URLSearchParams({
+            region:region,
+            matchType:matchType,
+            matchKey:matchKey
+        });
+        const response = await fetch(
+            '/admin/automatic-notice-rules/items?' + params.toString(),
+            {method:'DELETE'});
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        await loadAutomaticNoticeRuleItems();
+    }catch(error){
+        automaticNoticeRuleSummary.textContent =
+            error.message || '삭제하지 못했습니다.';
+    }
+}
+
+function setAutomaticNoticeRuleImportResult(message, details){
+    automaticNoticeRuleImportResult.hidden = false;
+    automaticNoticeRuleImportResult.innerHTML = '';
+
+    const summaryLine = document.createElement('div');
+    summaryLine.className = 'admin-import-result-summary';
+    summaryLine.textContent = message;
+    automaticNoticeRuleImportResult.appendChild(summaryLine);
+
+    if(details && details.length > 0){
+        const list = document.createElement('ul');
+        details.slice(0, 5).forEach(detail => {
+            const item = document.createElement('li');
+            item.textContent = '행 '
+                + detail.excelRowNumber
+                + ' - '
+                + safeText(detail.region)
+                + ' / '
+                + safeText(detail.matchType)
+                + ' / '
+                + safeText(detail.matchKey)
+                + ': '
+                + safeText(detail.note || detail.status);
+            list.appendChild(item);
+        });
+
+        if(details.length > 5){
+            const item = document.createElement('li');
+            item.textContent = '외 '
+                + (details.length - 5).toLocaleString('ko-KR')
+                + '건';
+            list.appendChild(item);
+        }
+
+        automaticNoticeRuleImportResult.appendChild(list);
+    }
+}
+
+async function importAutomaticNoticeRuleExcel(event){
+    if(event){
+        event.preventDefault();
+    }
+    if(!canEditAdminDb){
+        setAutomaticNoticeRuleImportResult('DB 수정 권한이 없습니다.');
+        return;
+    }
+
+    const file = automaticNoticeRuleImportFile.files
+        && automaticNoticeRuleImportFile.files[0];
+    if(!file){
+        setAutomaticNoticeRuleImportResult(
+                '업로드할 엑셀 파일을 선택해 주세요.');
+        automaticNoticeRuleImportFile.focus();
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('region', automaticNoticeRuleImportRegion.value);
+    automaticNoticeRuleImportButton.disabled = true;
+    setAutomaticNoticeRuleImportResult('협조문 룰 엑셀을 업로드하는 중입니다.');
+
+    try{
+        const response = await fetch('/admin/automatic-notice-rules/import', {
+            method:'POST',
+            headers:{'Accept':'application/json'},
+            body:formData
+        });
+
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+
+        const result = await response.json();
+        const skippedDetails = (result.details || [])
+            .filter(detail => detail.status === '제외');
+        setAutomaticNoticeRuleImportResult(
+            '업로드 완료: 신규 '
+                + result.insertedCount.toLocaleString('ko-KR')
+                + '건, 수정 '
+                + result.updatedCount.toLocaleString('ko-KR')
+                + '건, 변경 없음 '
+                + result.unchangedCount.toLocaleString('ko-KR')
+                + '건, 제외 '
+                + result.skippedCount.toLocaleString('ko-KR')
+                + '건',
+            skippedDetails);
+        automaticNoticeRuleImportFile.value = '';
+        await loadAutomaticNoticeRuleItems();
+    }catch(error){
+        setAutomaticNoticeRuleImportResult(
+            error.message || '협조문 룰 엑셀 업로드에 실패했습니다.');
+    }finally{
+        automaticNoticeRuleImportButton.disabled = false;
     }
 }
 
@@ -3109,6 +3610,18 @@ berAsisTobeImportFile.addEventListener('change', importBerAsisTobeExcel);
 berSentenceImportToggle.addEventListener(
     'click',
     openBerSentenceImportPopup);
+automaticNoticeRuleRefresh.addEventListener(
+    'click',
+    loadAutomaticNoticeRuleItems);
+automaticNoticeRuleImportForm.addEventListener(
+    'submit',
+    importAutomaticNoticeRuleExcel);
+automaticNoticeRuleImportButton.addEventListener(
+    'click',
+    () => automaticNoticeRuleImportFile.click());
+automaticNoticeRuleImportFile.addEventListener(
+    'change',
+    importAutomaticNoticeRuleExcel);
 qsgDbRefresh.addEventListener('click', loadQsgDbItems);
 qsgDbImportForm.addEventListener('submit', importQsgDbExcel);
 qsgDbImportButton.addEventListener('click', () => qsgDbImportFile.click());

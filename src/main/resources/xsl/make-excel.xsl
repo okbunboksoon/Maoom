@@ -135,7 +135,7 @@
 	</xsl:template>
 	<xsl:template match="span" mode="sentence">
 		<Font xmlns="http://www.w3.org/TR/REC-html40" html:Color="#FF0000">
-			<xsl:apply-templates select="node()" mode="sentence"/>
+			<xsl:value-of select="."/>
 		</Font>
 	</xsl:template>
 </xsl:stylesheet>

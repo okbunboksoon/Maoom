@@ -188,6 +188,12 @@
             </button>
             <button class="admin-db-nav-item"
                     type="button"
+                    data-admin-view="automatic-notice-rule">
+                <i class="fas fa-clipboard-check"></i>
+                협조문 룰 DB
+            </button>
+            <button class="admin-db-nav-item"
+                    type="button"
                     data-admin-view="qsg-db">
                 <i class="fas fa-table"></i>
                 QSG DB
@@ -226,6 +232,7 @@
 
     <th:block th:replace="~{admin/section/colorCheck :: colorCheckSection}"></th:block>
     <th:block th:replace="~{admin/section/berAsisTobe :: berAsisTobeSection}"></th:block>
+    <th:block th:replace="~{admin/section/automaticNoticeRule :: automaticNoticeRuleSection}"></th:block>
     <th:block th:replace="~{admin/section/qsgDb :: qsgDbSection}"></th:block>
     <th:block th:replace="~{admin/section/projectTextDb :: projectTextDbSection}"></th:block>
     <th:block th:replace="~{admin/section/projectNoteDb :: projectNoteDbSection}"></th:block>
