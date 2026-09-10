@@ -319,4 +319,24 @@ class RevisionPipelineServiceTest {
                 "topics"))
                 .isFalse();
     }
+
+    @Test
+    void excludesThirdPartyDirectoryFromPublishedTopics() throws Exception {
+        Path source = Files.createDirectory(tempDirectory.resolve("source-topics"));
+        Path target = tempDirectory.resolve("result-topics");
+        Files.writeString(source.resolve("sample.dita"), "<topic/>");
+        Path thirdParty = Files.createDirectory(source.resolve("3rd_party"));
+        Files.writeString(thirdParty.resolve("extract.xml"), "<extract/>");
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        Method method = RevisionPipelineService.class.getDeclaredMethod(
+                "replaceDirectoryExcludingThirdParty",
+                Path.class,
+                Path.class);
+        method.setAccessible(true);
+        method.invoke(service, source, target);
+
+        assertThat(target.resolve("sample.dita")).exists();
+        assertThat(target.resolve("3rd_party")).doesNotExist();
+    }
 }

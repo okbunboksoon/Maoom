@@ -212,7 +212,9 @@ public class RevisionPipelineService {
                 replaceDirectory(workspace.resolve("chapter"), chapterOutput);
             } else {
                 Path topicsOutput = runOutput.resolve("topics");
-                replaceDirectory(workspace.resolve("topics"), topicsOutput);
+                replaceDirectoryExcludingThirdParty(
+                        workspace.resolve("topics"),
+                        topicsOutput);
             }
 
             copyBookmap(workspace, runOutput, input);
@@ -642,6 +644,41 @@ public class RevisionPipelineService {
         }
         deleteDirectoryQuietly(target);
         copyDirectory(source, target);
+    }
+
+    /** 정제 결과를 내보낼 때 QC 중간 산출물인 topics/3rd_party는 제외한다. */
+    private void replaceDirectoryExcludingThirdParty(
+            Path source,
+            Path target) throws IOException {
+        if (!Files.isDirectory(source)) {
+            throw new IllegalArgumentException(
+                    "결과 폴더가 생성되지 않았습니다: " + source);
+        }
+
+        deleteDirectoryQuietly(target);
+        Files.createDirectories(target);
+
+        try (Stream<Path> paths = Files.walk(source)) {
+            for (Path path : paths.toList()) {
+                Path relative = source.relativize(path);
+                if (relative.getNameCount() > 0
+                        && "3rd_party".equalsIgnoreCase(
+                                relative.getName(0).toString())) {
+                    continue;
+                }
+
+                Path destination = target.resolve(relative);
+                if (Files.isDirectory(path)) {
+                    Files.createDirectories(destination);
+                } else {
+                    Files.createDirectories(destination.getParent());
+                    Files.copy(
+                            path,
+                            destination,
+                            StandardCopyOption.REPLACE_EXISTING);
+                }
+            }
+        }
     }
 
     private void validateBatchOutput(
