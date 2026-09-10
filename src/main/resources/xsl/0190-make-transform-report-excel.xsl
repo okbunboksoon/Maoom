@@ -272,7 +272,7 @@
                     <Row ss:Height="30">
                         <Cell ss:StyleID="Center"><Data ss:Type="String">indexterm 삭제 여부</Data></Cell>
                         <Cell ss:StyleID="Center"><Data ss:Type="String"><xsl:value-of select="(($final/*/@report-indexterm-action), '유지')[1]"/></Data></Cell>
-                        <Cell ss:StyleID="Wrap"><Data ss:Type="String"><xsl:value-of select="if ($final/*/@report-indexterm-action = '삭제') then concat(number((($final/*/@report-indexterm-removed), 0)[1]), '개 삭제') else 'ko_KR + Quick 조건 불일치로 유지'"/></Data></Cell>
+                        <Cell ss:StyleID="Wrap"><Data ss:Type="String">map\title ko_KR + Quick 조건 일치시 삭제</Data></Cell>
                     </Row>
                     <xsl:call-template name="summary-row">
                         <xsl:with-param name="label" select="'Simple operation 삭제'"/>
