@@ -17,8 +17,10 @@
 	<!-- ditamap/title 값 추출. XML 다국어 변환 중간 map에는 title이 없어 mapname을 fallback으로 사용한다. -->
 	<xsl:variable name="map-title" select="if (normalize-space($mapName) != '') then replace(normalize-space($mapName), '\.ditamap$', '') else if (normalize-space(/*/title[1]) != '') then normalize-space(/*/title[1]) else replace(string(/*/@mapname), '\.ditamap$', '')"/>
 	<xsl:variable name="map-title-with-target-lang" select="if ($target-lang-file != '') then replace($map-title, '[a-z]{2}_[A-Z]{2}', $target-lang-file) else $map-title"/>
+	<!-- map 이름 끝의 _Quick은 언어 코드의 밑줄과 구분하여 독립된 파일명 구성요소로 유지한다. -->
+	<xsl:variable name="map-title-with-quick" select="replace($map-title-with-target-lang, '_Quick$', '-Quick', 'i')"/>
 	<!-- title 값을 하이픈 기준 토큰으로 분리 -->
-	<xsl:variable name="map-title-tokens" select="tokenize($map-title-with-target-lang, '-')"/>
+	<xsl:variable name="map-title-tokens" select="tokenize($map-title-with-quick, '-')"/>
 	<!-- 하이픈 또는 밑줄로 구분된 KIA, PE/PE2를 제외하고 LHD/RHD 사양은 파일명에 유지한다. -->
 	<xsl:variable name="excluded-prefix-parts" as="xs:string*" select="('KIA', 'PE', 'PE2')"/>
 	<xsl:variable name="filename-prefix-parts" as="xs:string*">
