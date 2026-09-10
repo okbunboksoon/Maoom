@@ -20,8 +20,16 @@
 	<xsl:variable name="map-title-with-target-lang" select="if ($target-lang-file != '') then replace($map-title, '[a-z]{2}_[A-Z]{2}', $target-lang-file) else $map-title"/>
 	<!-- title 값을 하이픈 기준 토큰으로 분리 -->
 	<xsl:variable name="map-title-tokens" select="tokenize($map-title-with-target-lang, '-')"/>
-	<!-- KIA 토큰과 PE/PE2 토큰을 제외한 title 기반 파일명 prefix 생성 -->
-	<xsl:variable name="filename-prefix-parts" select="$map-title-tokens[normalize-space(.) != '' and not(upper-case(.) = ('KIA', 'PE', 'PE2'))]"/>
+	<!-- 하이픈 또는 밑줄로 구분된 KIA, PE/PE2를 제외하고 LHD/RHD 사양은 파일명에 유지한다. -->
+	<xsl:variable name="excluded-prefix-parts" as="xs:string*" select="('KIA', 'PE', 'PE2')"/>
+	<xsl:variable name="filename-prefix-parts" as="xs:string*">
+		<xsl:for-each select="$map-title-tokens">
+			<xsl:variable name="clean-part" select="string-join(tokenize(., '_')[not(upper-case(.) = $excluded-prefix-parts)], '_')"/>
+			<xsl:if test="normalize-space($clean-part) != ''">
+				<xsl:sequence select="$clean-part"/>
+			</xsl:if>
+		</xsl:for-each>
+	</xsl:variable>
 	<xsl:variable name="filename-prefix" select="if (upper-case($titleFileNamePrefix) = 'Y' and exists($filename-prefix-parts)) then concat(string-join($filename-prefix-parts, '-'), '-') else ''"/>
 
 	<xsl:output method="xml" indent="no" omit-xml-declaration="yes"/>

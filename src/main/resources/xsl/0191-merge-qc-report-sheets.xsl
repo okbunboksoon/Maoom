@@ -100,7 +100,7 @@
                     <xsl:when test="$sheetName = '금칙어' and $columnNo = 6">500</xsl:when>
                     <xsl:when test="$sheetName = '금칙어' and $columnNo = 7">1000</xsl:when>
                     <xsl:when test="$sheetName = '문장 검사' and $columnNo = 1">55</xsl:when>
-                    <xsl:when test="$sheetName = '문장 검사' and $columnNo = 2">130</xsl:when>
+                    <xsl:when test="$sheetName = '문장 검사' and $columnNo = 2">260</xsl:when>
                     <xsl:when test="$sheetName = '문장 검사' and $columnNo = 3">500</xsl:when>
                     <xsl:when test="$sheetName = '문장 검사' and $columnNo = 4">500</xsl:when>
                     <xsl:when test="$sheetName = '문장 검사' and $columnNo = 5">1000</xsl:when>
@@ -128,7 +128,7 @@
                 <xsl:choose>
                     <xsl:when test="$rowNo = 1">Header</xsl:when>
                     <xsl:when test="$sheetName = '금칙어' and $cellNo = (1, 2, 4)">Center</xsl:when>
-                    <xsl:when test="$sheetName = '문장 검사' and $cellNo = 1">Center</xsl:when>
+                    <xsl:when test="$sheetName = '문장 검사' and $cellNo = (1, 2)">Center</xsl:when>
                     <xsl:otherwise>Wrap</xsl:otherwise>
                 </xsl:choose>
             </xsl:attribute>

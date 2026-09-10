@@ -54,6 +54,7 @@
 					)
 				"/>
 			</xsl:attribute>
+			<!--
 			<xsl:choose>
 				<xsl:when test="$pl = 'inline'">
 					<xsl:attribute name="scale">15</xsl:attribute>
@@ -62,6 +63,7 @@
 					<xsl:attribute name="scale">95</xsl:attribute>
 				</xsl:when>
 			</xsl:choose>
+			-->
 			<xsl:apply-templates select="node()"/>
 		</xsl:copy>
 	</xsl:template>
