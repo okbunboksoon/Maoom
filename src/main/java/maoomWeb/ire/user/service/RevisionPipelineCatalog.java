@@ -142,7 +142,8 @@ final class RevisionPipelineCatalog {
         return selectedOptions.contains(REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET)
                 || selectedOptions.contains(REMOVE_DELIVERY_TARGET)
                 || selectedOptions.contains(REMOVE_SIMPLE_OPERATION)
-                || selectedOptions.contains(DELETE_DRAFT_COMMENT);
+                || selectedOptions.contains(DELETE_DRAFT_COMMENT)
+                || selectedOptions.contains(BER_DB_APPLY);
     }
 
     record BatchPlan(List<String> batchFiles) {

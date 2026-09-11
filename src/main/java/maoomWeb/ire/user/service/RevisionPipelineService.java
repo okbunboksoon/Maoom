@@ -116,23 +116,26 @@ public class RevisionPipelineService {
     private final Path toolDirectory;
     private final ReplaceDarkSymbolService replaceDarkSymbolService;
     private final ProjectTextNoteDbXmlService projectTextNoteDbXmlService;
+    private final BerAsisTobeXmlService berAsisTobeXmlService;
 
     /**
      * 클래스패스의 revision-tool을 실행 가능한 로컬 경로로 준비한다.
      * IDE 실행은 원본 폴더를 쓰고, JAR 실행은 임시 폴더에 리소스를 풀어 사용한다.
      */
     public RevisionPipelineService() {
-        this(null, null);
+        this(null, null, null);
     }
 
     @Autowired
     public RevisionPipelineService(
             ReplaceDarkSymbolService replaceDarkSymbolService,
-            ProjectTextNoteDbXmlService projectTextNoteDbXmlService) {
+            ProjectTextNoteDbXmlService projectTextNoteDbXmlService,
+            BerAsisTobeXmlService berAsisTobeXmlService) {
         try {
             this.toolDirectory = prepareToolDirectory();
             this.replaceDarkSymbolService = replaceDarkSymbolService;
             this.projectTextNoteDbXmlService = projectTextNoteDbXmlService;
+            this.berAsisTobeXmlService = berAsisTobeXmlService;
         } catch (IOException exception) {
             throw new IllegalStateException(
                     "정제 도구 리소스를 준비하지 못했습니다.", exception);
@@ -183,6 +186,10 @@ public class RevisionPipelineService {
             writeReplaceDarkSymbolXmlFromDatabase(workspace.resolve("xsl"));
             // TEXT/NOTE DB는 관리자 화면에서 바뀔 수 있으므로 매 실행마다 최신 XML로 덮어쓴다.
             writeProjectTextNoteDbXmlFromDatabase(workspace.resolve("xsl"));
+            // BER 선택 시 관리자 BER DB의 지역별 최신 내용을 실행용 XML로 덮어쓴다.
+            if (selectedOptions.contains(RevisionPipelineCatalog.BER_DB_APPLY)) {
+                writeBerDbXmlFromDatabase(workspace.resolve("xsl"));
+            }
             Files.createDirectories(workspace.resolve("temp"));
             Files.createDirectories(workspace.resolve("topics"));
             Files.createDirectories(workspace.resolve("chapter"));
@@ -624,6 +631,10 @@ public class RevisionPipelineService {
             command.add("TEXT_DB_APPLY=Y");
             logs.add("옵션 추가: TEXT 수정");
         }
+        if (selectedOptions.contains(RevisionPipelineCatalog.BER_DB_APPLY)) {
+            command.add("BER_DB_APPLY=Y");
+            logs.add("옵션 추가: BER 반영");
+        }
         if (selectedOptions.contains(RevisionPipelineCatalog.FORBIDDEN_QC_REPORT)) {
             command.add("FORBIDDEN_QC_REPORT=Y");
             logs.add("옵션 추가: 금칙어 QC 리포트");
@@ -638,6 +649,16 @@ public class RevisionPipelineService {
         }
 
         projectTextNoteDbXmlService.writeXmlFiles(xslDirectory);
+    }
+
+    private void writeBerDbXmlFromDatabase(Path xslDirectory)
+            throws IOException {
+
+        if (berAsisTobeXmlService == null) {
+            return;
+        }
+
+        berAsisTobeXmlService.writeRegionXmlFiles(xslDirectory);
     }
 
     private void replaceDirectory(Path source, Path target)

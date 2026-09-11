@@ -232,6 +232,7 @@ function renderOptions(items) {
         'DELETE_DRAFT_COMMENT',
         'NOTE_DB_APPLY',
         'TEXT_DB_APPLY',
+        'BER_DB_APPLY',
         'FORBIDDEN_QC_REPORT'
     ]);
     const filenameOptionIds = new Set([
@@ -306,7 +307,7 @@ function showResult(type, title, message, logs) {
 }
 
 function resizeRevisionPopup(hasResult) {
-    const targetHeight = hasResult ? 980 : 870;
+    const targetHeight = hasResult ? 1020 : 910;
     const maxHeight = screen.availHeight || targetHeight;
     try {
         window.resizeTo(680, Math.min(maxHeight, targetHeight));

@@ -19,13 +19,28 @@ import maoomWeb.ire.user.dto.RevisionRunResult;
 class RevisionPipelineServiceTest {
 
     @Test
-    void exposesBerApplyAsAnUncheckedSelectableOption() {
+    void exposesBerApplyAsASelectableOption() {
         assertThat(RevisionPipelineCatalog.options())
                 .anyMatch(option -> option.id().equals(
                         RevisionPipelineCatalog.BER_DB_APPLY));
         assertThat(RevisionPipelineCatalog.validateOptions(
                 List.of(RevisionPipelineCatalog.BER_DB_APPLY)))
                 .containsExactly(RevisionPipelineCatalog.BER_DB_APPLY);
+    }
+
+    @Test
+    void runsChapterizeForXmlToDitaWhenOnlyBerIsSelected() {
+        RevisionPipelineCatalog.BatchPlan plan =
+                RevisionPipelineCatalog.createBatchPlan(
+                        RevisionFormat.XML,
+                        RevisionFormat.DITA,
+                        Set.of(RevisionPipelineCatalog.BER_DB_APPLY));
+
+        assertThat(plan.batchFiles())
+                .containsExactly(
+                        "03_chapter_Topicalize.bat",
+                        "02_topics_Chapterize_NotFileNameChange.bat",
+                        "03_chapter_Topicalize.bat");
     }
 
     @TempDir
@@ -163,7 +178,8 @@ class RevisionPipelineServiceTest {
                 Set.of(
                         RevisionPipelineCatalog.FILE_NAME_T00000,
                         RevisionPipelineCatalog.REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
-                        RevisionPipelineCatalog.DELETE_DRAFT_COMMENT),
+                        RevisionPipelineCatalog.DELETE_DRAFT_COMMENT,
+                        RevisionPipelineCatalog.BER_DB_APPLY),
                 command,
                 logs);
 
@@ -174,12 +190,14 @@ class RevisionPipelineServiceTest {
                         "FILE_NAME_CHANGE=Y",
                         "REMOVE_DELIVERY_TARGET=Y",
                         "REMOVE_SIMPLE_OPERATION=Y",
-                        "DELETE_DRAFT=Y");
+                        "DELETE_DRAFT=Y",
+                        "BER_DB_APPLY=Y");
         assertThat(logs)
                 .contains("옵션 추가: 파일명 변경(t0000, t0001 형식)")
                 .contains("옵션 추가: deliveryTarget 지우기")
                 .contains("옵션 추가: Simple operation 지우기")
-                .contains("옵션 추가: Draft Comment, review, hash, modified 지우기");
+                .contains("옵션 추가: Draft Comment, review, hash, modified 지우기")
+                .contains("옵션 추가: BER 반영");
     }
 
     @Test
