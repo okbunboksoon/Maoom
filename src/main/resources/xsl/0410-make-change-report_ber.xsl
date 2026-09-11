@@ -44,17 +44,13 @@
 		<!-- 전체 dealer 문장 수 -->
 		<xsl:variable name="dealer-count" select="count($targets)"/>
 
-		<!-- 
-			changed 개수
-			- 대상 문장 중에서
-			- 자신 또는 상위 노드에 status='changed'가 있는 경우
-		-->
+		<!-- BER DB 적용 과정에서 실제로 변경되어 status='ber_changed'가 표시된 전체 문장 수 -->
 		<xsl:variable name="changed-count"
-			select="count($targets[ancestor-or-self::*[starts-with(@status,'changed')]])"/>
+			select="count(map//*[self::p or self::cmd or self::title or self::shortdesc][@status = 'ber_changed'])"/>
 
 		<!-- 이미 BER 반영된 결과를 다시 돌린 경우: 현재 문장이 DB의 new 문장과 같으면 db 없음에서 제외 -->
 		<xsl:variable name="already-applied-targets" as="element()*">
-			<xsl:for-each select="$targets[not(ancestor-or-self::*[starts-with(@status,'changed')])]">
+			<xsl:for-each select="$targets[not(ancestor-or-self::*[@status = 'ber_changed'])]">
 				<xsl:variable name="targetText" select="replace(normalize-space(string(.)), '\s+', ' ')"/>
 				<xsl:if test="some $newText in $db/pairs/pair/new satisfies $targetText = replace(normalize-space(string($newText)), '\s+', ' ')">
 					<xsl:sequence select="."/>
@@ -189,8 +185,8 @@
 							<Data ss:Type="String">sentence</Data>
 						</Cell>
 					</Row>
-					<!-- <xsl:for-each select="$targets[not(ancestor-or-self::*[starts-with(@status,'changed')])]"> -->
-					<xsl:for-each select="$targets[not(ancestor-or-self::*[starts-with(@status,'changed')]) and not(. intersect $already-applied-targets) and not(ancestor-or-self::*[contains(@outputclass,'exclude')])]">
+					<!-- <xsl:for-each select="$targets[not(ancestor-or-self::*[@status = 'ber_changed'])]"> -->
+					<xsl:for-each select="$targets[not(ancestor-or-self::*[@status = 'ber_changed']) and not(. intersect $already-applied-targets) and not(ancestor-or-self::*[contains(@outputclass,'exclude')])]">
 						<Row>
 							<Cell ss:StyleID="Center">
 								<Data ss:Type="Number">

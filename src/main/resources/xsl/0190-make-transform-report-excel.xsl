@@ -15,6 +15,7 @@
     <xsl:param name="deleteDraft" select="'N'"/>
     <xsl:param name="textDbApply" select="'N'"/>
     <xsl:param name="noteDbApply" select="'N'"/>
+    <xsl:param name="berDbApply" select="'N'"/>
 
     <!-- 상세 리포트용 복사 모드에서는 작업용 modified 속성을 제외한다. -->
     <xsl:mode name="report-clean" on-no-match="shallow-copy"/>
@@ -24,6 +25,13 @@
         <!-- 최종 정제 산출물의 modified/status/report-* 흔적을 읽어 사용자용 요약 엑셀을 만든다. -->
         <xsl:variable name="final" select="/"/>
         <xsl:variable name="map-title" select="normalize-space(/*/title[1])"/>
+        <xsl:variable name="is-ko-kr" select="contains(upper-case($map-title), 'KO_KR')"/>
+        <xsl:variable name="ber-region" select="
+            if ($berDbApply != 'Y') then '미적용'
+            else if ($is-ko-kr) then '제외(ko_KR)'
+            else if (contains(upper-case($map-title), 'US') or contains(upper-case($map-title), 'CA') or contains(upper-case($map-title), 'MX')) then 'NA'
+            else if (contains(upper-case($map-title), 'RG')) then 'EU_RG'
+            else 'EU'"/>
         <xsl:variable name="map-title-tokens" select="tokenize($map-title, '-')"/>
         <xsl:variable name="model-name" select="replace($map-title-tokens[2], '_(ICE|HEV|PHEV|PE2|PE)$', '')"/>
         <xsl:variable name="language-token-underscore" select="($map-title-tokens[matches(., '^[a-z]{2,3}_[A-Z]{2}$')])[1]"/>
@@ -140,6 +148,15 @@
                     <xsl:call-template name="info-row">
                         <xsl:with-param name="label" select="'note type DB 적용 옵션'"/>
                         <xsl:with-param name="value" select="if ($noteDbApply = 'Y') then '적용' else '미적용'"/>
+                    </xsl:call-template>
+                    <!-- BER DB 적용 여부와 실제로 선택된 지역 DB를 표시한다. -->
+                    <xsl:call-template name="info-row">
+                        <xsl:with-param name="label" select="'ber DB 적용 옵션'"/>
+                        <xsl:with-param name="value" select="if ($berDbApply = 'Y' and not($is-ko-kr)) then '적용' else '미적용'"/>
+                    </xsl:call-template>
+                    <xsl:call-template name="info-row">
+                        <xsl:with-param name="label" select="'ber DB 적용 지역'"/>
+                        <xsl:with-param name="value" select="$ber-region"/>
                     </xsl:call-template>
                     <Row ss:Height="30">
                         <Cell ss:StyleID="Header" ss:MergeAcross="2"><Data ss:Type="String">정제 결과</Data></Cell>
@@ -314,6 +331,12 @@
                         <xsl:with-param name="label" select="'note type 변경'"/>
                         <xsl:with-param name="count" select="count($final//note[@status = 'changed'])"/>
                         <xsl:with-param name="change" select="'note_db 기준으로 type이 변경된 note 수'"/>
+                    </xsl:call-template>
+                    <!-- BER 전용 status를 기준으로 BER에서 변경된 문장만 별도로 센다. -->
+                    <xsl:call-template name="summary-row">
+                        <xsl:with-param name="label" select="'ber 문장 변경'"/>
+                        <xsl:with-param name="count" select="if ($is-ko-kr) then 0 else count($final//*[self::p or self::cmd or self::title or self::shortdesc][@status = 'ber_changed'])"/>
+                        <xsl:with-param name="change" select="'BER DB 기준으로 변경된 문장 수'"/>
                     </xsl:call-template>
                     </xsl:variable>
                     <xsl:variable name="add-labels" select="('term translate=no 추가')"/>

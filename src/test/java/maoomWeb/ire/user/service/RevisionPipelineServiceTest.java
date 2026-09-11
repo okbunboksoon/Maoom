@@ -18,6 +18,16 @@ import maoomWeb.ire.user.dto.RevisionRunResult;
 
 class RevisionPipelineServiceTest {
 
+    @Test
+    void exposesBerApplyAsAnUncheckedSelectableOption() {
+        assertThat(RevisionPipelineCatalog.options())
+                .anyMatch(option -> option.id().equals(
+                        RevisionPipelineCatalog.BER_DB_APPLY));
+        assertThat(RevisionPipelineCatalog.validateOptions(
+                List.of(RevisionPipelineCatalog.BER_DB_APPLY)))
+                .containsExactly(RevisionPipelineCatalog.BER_DB_APPLY);
+    }
+
     @TempDir
     Path tempDirectory;
 
@@ -99,6 +109,32 @@ class RevisionPipelineServiceTest {
                 .content(StandardCharsets.UTF_8)
                 .contains("배치 실행: sample.bat")
                 .contains("완료: " + resultFolder);
+    }
+
+    @Test
+    void copiesBerChangeReportToResultFolderWhenCreated() throws Exception {
+        Path source = tempDirectory.resolve("BER_변경_리포트.xlsx");
+        Path result = Files.createDirectory(tempDirectory.resolve("result"));
+        Path target = result.resolve("BER_변경_리포트.xlsx");
+        Files.writeString(source, "ber report", StandardCharsets.UTF_8);
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        Method method = RevisionPipelineService.class.getDeclaredMethod(
+                "copyIfExists",
+                Path.class,
+                Path.class,
+                List.class);
+        method.setAccessible(true);
+        List<String> logs = new ArrayList<>();
+
+        method.invoke(service, source, target, logs);
+
+        assertThat(target)
+                .exists()
+                .content(StandardCharsets.UTF_8)
+                .isEqualTo("ber report");
+        assertThat(logs)
+                .contains("리포트 복사: BER_변경_리포트.xlsx -> BER_변경_리포트.xlsx");
     }
 
     @Test

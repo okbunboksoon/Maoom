@@ -25,6 +25,7 @@ final class RevisionPipelineCatalog {
             "DELETE_DRAFT_COMMENT";
     static final String NOTE_DB_APPLY = "NOTE_DB_APPLY";
     static final String TEXT_DB_APPLY = "TEXT_DB_APPLY";
+    static final String BER_DB_APPLY = "BER_DB_APPLY";
     static final String FORBIDDEN_QC_REPORT = "FORBIDDEN_QC_REPORT";
 
     private RevisionPipelineCatalog() {
@@ -61,6 +62,10 @@ final class RevisionPipelineCatalog {
                         "TEXT 수정",
                         "관리자 TEXT DB 기준으로 문장을 수정합니다."),
                 new RevisionOptionDto(
+                        BER_DB_APPLY,
+                        "BER 반영",
+                        "관리자 BER DB 기준으로 문장을 변경하고 별도 변경 리포트를 생성합니다."),
+                new RevisionOptionDto(
                         FORBIDDEN_QC_REPORT,
                         "금칙어 QC 리포트",
                         "금칙어 DB 기준으로 금칙어를 검출하고 결과 리포트를 생성합니다."));
@@ -81,6 +86,7 @@ final class RevisionPipelineCatalog {
                 DELETE_DRAFT_COMMENT,
                 NOTE_DB_APPLY,
                 TEXT_DB_APPLY,
+                BER_DB_APPLY,
                 FORBIDDEN_QC_REPORT);
 
         for(String option : requestedOptions){

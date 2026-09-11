@@ -227,6 +227,10 @@ public class RevisionPipelineService {
                     runOutput.resolve("결과_리포트.xlsx"),
                     logs);
             copyIfExists(
+                    workspace.resolve("temp/BER_변경_리포트.xlsx"),
+                    runOutput.resolve("BER_변경_리포트.xlsx"),
+                    logs);
+            copyIfExists(
                     workspace.resolve("temp/Forbidden_Report.html"),
                     runOutput.resolve("금칙어_리포트.html"));
             copyIfExists(

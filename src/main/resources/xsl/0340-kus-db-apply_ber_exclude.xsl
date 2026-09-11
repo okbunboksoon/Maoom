@@ -9,6 +9,9 @@
 
 	<!-- ===== 파라미터 / DB 로드 ===== -->
 	<xsl:param name="flag" select="'off'"/>
+	<xsl:variable name="mapTitle" select="normalize-space(string((/map/title)[1]))"/>
+	<!-- 국문 ko_KR 문서는 BER 적용 대상에서 제외한다. -->
+	<xsl:variable name="isKoKr" select="contains(upper-case($mapTitle), 'KO_KR')"/>
 	<xsl:variable name="db" select="document('asis-tobe_exclude.xml')"/>
 
 	<!-- ===== key (성능 개선) ===== -->
@@ -37,7 +40,7 @@
 		<xsl:variable name="pair" select="key('kPair', $hash, $db)"/>
 		<xsl:copy>
 			<xsl:copy-of select="@*"/>
-			<xsl:if test="$pair">
+			<xsl:if test="not($isKoKr) and $pair">
 				<xsl:attribute name="outputclass">
 					<xsl:value-of select="
 						normalize-space(

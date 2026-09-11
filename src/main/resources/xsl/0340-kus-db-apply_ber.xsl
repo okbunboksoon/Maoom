@@ -10,6 +10,8 @@
 	<!-- ===== 파라미터 / DB 로드 ===== -->
 	<xsl:param name="flag" select="'off'"/>
 	<xsl:variable name="mapTitle" select="normalize-space(string((/map/title)[1]))"/>
+	<!-- 국문 ko_KR 문서는 BER 적용 대상에서 제외한다. -->
+	<xsl:variable name="isKoKr" select="contains(upper-case($mapTitle), 'KO_KR')"/>
 	<xsl:variable name="isNA" select="contains(upper-case($mapTitle), 'US') or contains(upper-case($mapTitle), 'CA') or contains(upper-case($mapTitle), 'MX')"/>
 	<xsl:variable name="isRg" select="contains(upper-case($mapTitle), 'RG')"/>
 	<xsl:variable name="dbPath" select="if ($isNA) then 'asis-tobe_us.xml' else if ($isRg) then 'asis-tobe_eu_rg.xml' else 'asis-tobe_eu.xml'"/>
@@ -30,9 +32,9 @@
 	<xsl:template match="/">
 		<xsl:message>
 			<xsl:text>Region=</xsl:text>
-			<xsl:value-of select="if ($isNA) then 'NA' else if ($isRg) then 'EU_RG' else 'EU'"/>
+			<xsl:value-of select="if ($isKoKr) then 'EXCLUDED' else if ($isNA) then 'NA' else if ($isRg) then 'EU_RG' else 'EU'"/>
 			<xsl:text>, DB=</xsl:text>
-			<xsl:value-of select="$dbPath"/>
+			<xsl:value-of select="if ($isKoKr) then 'none' else $dbPath"/>
 			<xsl:text>, map/title="</xsl:text>
 			<xsl:value-of select="$mapTitle"/>
 			<xsl:text>"</xsl:text>
@@ -59,9 +61,9 @@
 			<xsl:copy-of select="@*"/>
 			<xsl:choose>
 				<!-- DB에 <new>가 있으면 치환 + 해시 PI 출력 -->
-				<xsl:when test="$pair/new">
+				<xsl:when test="not($isKoKr) and $pair/new">
 					<xsl:if test="$flag = 'on'">
-						<xsl:attribute name="status">changed</xsl:attribute>
+						<xsl:attribute name="status">ber_changed</xsl:attribute>
 					</xsl:if>
 					<!-- 해시 PI는 '매칭된 경우에만' 출력 -->
 					<xsl:processing-instruction name="hash">

@@ -114,6 +114,7 @@
                     <li>draft-comment, review/legal outputclass, hash, modified 삭제</li>
                     <li>asis-tobe DB 기준으로 텍스트 변경</li>
                     <li>note_db 기준으로 note type 변경</li>
+                    <li>ber DB 기준으로 텍스트 변경</li>
                     <li>금칙어 DB 기준으로 금칙어를 검출하고 결과 리포트 생성</li>
                 </ul>
             </div>
@@ -213,6 +214,7 @@ function renderOptions(items) {
         'DELETE_DRAFT_COMMENT',
         'NOTE_DB_APPLY',
         'TEXT_DB_APPLY',
+        'BER_DB_APPLY',
         'FORBIDDEN_QC_REPORT'
     ];
     const compactLabels = {
@@ -223,6 +225,7 @@ function renderOptions(items) {
         DELETE_DRAFT_COMMENT: 'Draft Comment, review, hash, modified 지우기',
         NOTE_DB_APPLY: 'NOTE DB 반영',
         TEXT_DB_APPLY: '문장 DB 반영',
+        BER_DB_APPLY: 'BER 반영',
         FORBIDDEN_QC_REPORT: '금칙어 QC 리포트'
     };
     const defaultCheckedIds = new Set([
