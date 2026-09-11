@@ -242,6 +242,7 @@ if errorlevel 1 exit /b !errorlevel!
 set "CURRENT_SOURCE=temp\0290-kus-text-normalized.xml"
 rem BER 반영
 if /I "!BER_DB_APPLY!"=="Y" (
+    if exist temp\ber_ko_kr_excluded.flag del /f /q temp\ber_ko_kr_excluded.flag >NUL
     rem BER 제외 DB에 등록된 문장을 찾아 BER 변경 대상에서 제외한다.
     rem 0340-kus-db-apply_ber_exclude.xsl: BER 제외 DB에 등록된 문장을 찾아 BER 변경 대상에서 제외한다.
     java net.sf.saxon.Transform 											-s:!CURRENT_SOURCE! 									-o:temp\0340-kus-db-apply_ber_exclude.xml 					-xsl:xsl\0340-kus-db-apply_ber_exclude.xsl flag=on
@@ -362,6 +363,7 @@ if errorlevel 1 exit /b !errorlevel!
 
 echo REPORT_SOURCE=temp\0009-dita-rebeautify.xml >> %OPTION_LOG%
 if /I "!BER_DB_APPLY!"=="Y" (
+    if not exist temp\ber_ko_kr_excluded.flag (
     rem 검출이 끝난 최종 구조를 기준으로 BER 변경 상세 리포트 XML을 생성한다.
     rem 0410-make-change-report_ber.xsl: 최종 구조와 BER 상태를 기준으로 BER 변경 상세 리포트 XML을 생성한다.
     java net.sf.saxon.Transform 											-s:temp\0009-dita-rebeautify.xml 						-o:temp\excel-change-report.xml 								-xsl:xsl\0410-make-change-report_ber.xsl
@@ -372,6 +374,7 @@ if /I "!BER_DB_APPLY!"=="Y" (
     rem 변환된 Excel 파일을 BER_변경_리포트.xlsx 이름으로 저장한다.
     copy /y temp\excel-change-report.xlsx temp\BER_변경_리포트.xlsx >NUL
     if errorlevel 1 exit /b !errorlevel!
+    )
 )
 
 rem 0190-make-transform-report-excel.xsl: 선택 옵션과 정제·검출 결과를 모아 결과 리포트 XML을 생성한다.

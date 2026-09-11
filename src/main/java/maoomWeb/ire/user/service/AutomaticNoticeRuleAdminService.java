@@ -23,6 +23,7 @@ import maoomWeb.ire.user.dto.AutomaticNoticeRuleImportDetail;
 import maoomWeb.ire.user.dto.AutomaticNoticeRuleImportResult;
 import maoomWeb.ire.user.mapper.AutomaticNoticeRuleMapper;
 
+/** 자동 고지문 생성에 쓰는 지역·유형별 규칙을 검증하고 엑셀로 일괄 등록하는 서비스다. */
 @Service
 public class AutomaticNoticeRuleAdminService {
 

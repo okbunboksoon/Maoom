@@ -23,6 +23,7 @@ import maoomWeb.ire.user.dto.BerAsisTobeImportResult;
 import maoomWeb.ire.user.dto.BerAsisTobePair;
 import maoomWeb.ire.user.mapper.BerAsisTobePairMapper;
 
+/** BER AS-IS/TO-BE 문장 쌍의 검증, 저장, 삭제와 엑셀 일괄 등록을 담당한다. */
 @Service
 public class BerAsisTobeAdminService {
 

@@ -30,6 +30,18 @@
 
 	<!-- ===== 배치 프롬프트 지역/DB 표시 ===== -->
 	<xsl:template match="/">
+		<!-- ko_KR 제외 여부를 BAT가 확인해 BER 상세 리포트 생성을 건너뛸 수 있게 표시한다. -->
+		<xsl:if test="$isKoKr">
+			<xsl:result-document href="ber_ko_kr_excluded.flag" method="text">
+				<xsl:text>ko_KR</xsl:text>
+			</xsl:result-document>
+		</xsl:if>
+		<!-- Java가 실제 적용된 지역 DB 하나만 결과 폴더에 보관할 수 있게 파일명을 남긴다. -->
+		<xsl:if test="not($isKoKr)">
+			<xsl:result-document href="ber_db_used.txt" method="text">
+				<xsl:value-of select="$dbPath"/>
+			</xsl:result-document>
+		</xsl:if>
 		<xsl:message>
 			<xsl:text>Region=</xsl:text>
 			<xsl:value-of select="if ($isKoKr) then 'EXCLUDED' else if ($isNA) then 'NA' else if ($isRg) then 'EU_RG' else 'EU'"/>

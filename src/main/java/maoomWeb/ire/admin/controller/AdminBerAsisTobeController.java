@@ -41,6 +41,10 @@ import maoomWeb.ire.user.dto.BerAsisTobeSentenceImportResult;
 import maoomWeb.ire.user.service.BerAsisTobeAdminService;
 import maoomWeb.ire.user.service.BerAsisTobeSentenceImportService;
 
+/**
+ * 관리자 BER AS-IS/TO-BE 기준 DB의 조회, 편집, 엑셀 입출력을 처리한다.
+ * 문장 단위 가져오기는 별도 팝업과 {@link BerAsisTobeSentenceImportService}에 위임한다.
+ */
 @Controller
 public class AdminBerAsisTobeController {
 

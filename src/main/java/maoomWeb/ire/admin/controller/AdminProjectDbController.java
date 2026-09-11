@@ -37,6 +37,7 @@ import maoomWeb.ire.user.dto.BerAsisTobeImportResult;
 import maoomWeb.ire.user.dto.ProjectDbItem;
 import maoomWeb.ire.user.service.ProjectDbAdminService;
 
+/** 관리자 TEXT 기준 DB의 조회, 편집, XML/엑셀 가져오기와 내보내기 API를 제공한다. */
 @Controller
 public class AdminProjectDbController {
 

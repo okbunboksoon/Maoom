@@ -30,6 +30,10 @@ import maoomWeb.ire.user.dto.BerAsisTobeImportResult;
 import maoomWeb.ire.user.dto.ProjectDbItem;
 import maoomWeb.ire.user.mapper.ProjectDbItemMapper;
 
+/**
+ * 프로젝트 TEXT 기준 DB의 지역별 문장 쌍을 검증하고 CRUD 및 XML/엑셀 등록을 처리한다.
+ * 외부에서 받은 DB 종류는 허용된 테이블 이름으로만 변환해 매퍼에 전달한다.
+ */
 @Service
 public class ProjectDbAdminService {
 

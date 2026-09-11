@@ -153,6 +153,37 @@ class RevisionPipelineServiceTest {
     }
 
     @Test
+    void copiesOnlyBerReferenceXmlSelectedByRegion() throws Exception {
+        Path workspace = Files.createDirectory(tempDirectory.resolve("workspace"));
+        Path temp = Files.createDirectory(workspace.resolve("temp"));
+        Path xsl = Files.createDirectory(workspace.resolve("xsl"));
+        Path result = Files.createDirectory(tempDirectory.resolve("result"));
+        Files.writeString(
+                temp.resolve("ber_db_used.txt"),
+                "asis-tobe_eu.xml",
+                StandardCharsets.UTF_8);
+        Files.writeString(xsl.resolve("asis-tobe_eu.xml"), "EU", StandardCharsets.UTF_8);
+        Files.writeString(xsl.resolve("asis-tobe_us.xml"), "US", StandardCharsets.UTF_8);
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        Method method = RevisionPipelineService.class.getDeclaredMethod(
+                "copyUsedBerReferenceXml",
+                Path.class,
+                Path.class,
+                List.class);
+        method.setAccessible(true);
+        List<String> logs = new ArrayList<>();
+
+        method.invoke(service, workspace, result, logs);
+
+        assertThat(result.resolve("asis-tobe_eu.xml"))
+                .exists()
+                .content(StandardCharsets.UTF_8)
+                .isEqualTo("EU");
+        assertThat(result.resolve("asis-tobe_us.xml")).doesNotExist();
+    }
+
+    @Test
     void appendsChapterizeBatchArgumentsWhenOptionsAreSelected() throws Exception {
         RevisionPipelineService service = new RevisionPipelineService();
         List<String> logs = new ArrayList<>();

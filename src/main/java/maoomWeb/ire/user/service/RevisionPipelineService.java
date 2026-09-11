@@ -237,6 +237,9 @@ public class RevisionPipelineService {
                     workspace.resolve("temp/BER_변경_리포트.xlsx"),
                     runOutput.resolve("BER_변경_리포트.xlsx"),
                     logs);
+            if (selectedOptions.contains(RevisionPipelineCatalog.BER_DB_APPLY)) {
+                copyUsedBerReferenceXml(workspace, runOutput, logs);
+            }
             copyIfExists(
                     workspace.resolve("temp/Forbidden_Report.html"),
                     runOutput.resolve("금칙어_리포트.html"));
@@ -1133,6 +1136,33 @@ public class RevisionPipelineService {
         } else {
             logs.add("리포트 파일 없음: " + source);
         }
+    }
+
+    /** XSL이 기록한 지역을 확인해 실제 BER 적용에 사용된 기준 XML 하나만 보관한다. */
+    private void copyUsedBerReferenceXml(
+            Path workspace,
+            Path runOutput,
+            List<String> logs) throws IOException {
+
+        Path marker = workspace.resolve("temp/ber_db_used.txt");
+        if (!Files.isRegularFile(marker)) {
+            logs.add("BER 기준 XML 정보 없음: " + marker);
+            return;
+        }
+
+        String fileName = Files.readString(marker, StandardCharsets.UTF_8).trim();
+        Set<String> allowedFileNames = Set.of(
+                "asis-tobe_eu.xml",
+                "asis-tobe_eu_rg.xml",
+                "asis-tobe_us.xml");
+        if (!allowedFileNames.contains(fileName)) {
+            throw new IOException("알 수 없는 BER 기준 XML입니다: " + fileName);
+        }
+
+        copyIfExists(
+                workspace.resolve("xsl").resolve(fileName),
+                runOutput.resolve(fileName),
+                logs);
     }
 
     /** 실행 성공·실패와 관계없이 임시 작업 폴더를 뒤에서부터 조용히 제거한다. */
