@@ -41,7 +41,7 @@
 		), ' ')"/>
 
 		<xsl:copy>
-			<xsl:apply-templates select="@* except (@modified | @href | @scale | @width | @height | @xoffset | @yoffset | @id | @outputclass[../@placement = 'inline'])"/>
+			<xsl:apply-templates select="@* except (@modified | @href | @width | @height | @xoffset | @yoffset | @id | @outputclass[../@placement = 'inline'])"/>-->
 			<xsl:if test="normalize-space($modifiedTokens) != ''">
 				<xsl:attribute name="modified" select="normalize-space($modifiedTokens)"/>
 			</xsl:if>
