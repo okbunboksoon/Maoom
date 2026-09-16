@@ -72,24 +72,35 @@
 			</xsl:call-template>
 		</xsl:variable>
 		<xsl:variable name="pair" select="$db/pairs/pair[@hash=$hash]"/>
+		<!-- old/new가 완전히 같은 DB 항목은 검출 제외용이며 실제 변경으로 보지 않는다. -->
+		<xsl:variable name="isNoChangePair"
+			select="exists($pair) and deep-equal($pair/old/node(), $pair/new[last()]/node())"/>
 		<xsl:copy>
 			<xsl:copy-of select="@*"/>
 			<xsl:choose>
 				<!-- DB에 <new>가 있으면 치환 + 해시 PI 출력 -->
 				<xsl:when test="not($isKoKr) and $pair/new">
-					<xsl:if test="$flag = 'on'">
+					<xsl:if test="$flag = 'on' and not($isNoChangePair)">
 						<xsl:attribute name="status">ber_changed</xsl:attribute>
 					</xsl:if>
 					<!-- 해시 PI는 '매칭된 경우에만' 출력 -->
 					<xsl:processing-instruction name="hash">
 						<xsl:value-of select="$hash"/>
 					</xsl:processing-instruction>
-					<!-- DB/new 기반 병합 출력 -->
-					<xsl:for-each select="$pair/new[last()]/node()">
-						<xsl:apply-templates select="." mode="merge">
-							<xsl:with-param name="current" select="$current"/>
-						</xsl:apply-templates>
-					</xsl:for-each>
+					<xsl:choose>
+						<!-- 변경 불필요 문장은 원문을 그대로 유지한다. -->
+						<xsl:when test="$isNoChangePair">
+							<xsl:apply-templates select="node()"/>
+						</xsl:when>
+						<!-- 실제 변경 문장만 DB/new 기반으로 병합 출력한다. -->
+						<xsl:otherwise>
+							<xsl:for-each select="$pair/new[last()]/node()">
+								<xsl:apply-templates select="." mode="merge">
+									<xsl:with-param name="current" select="$current"/>
+								</xsl:apply-templates>
+							</xsl:for-each>
+						</xsl:otherwise>
+					</xsl:choose>
 				</xsl:when>
 				<!-- DB에 없으면 원문 그대로(해시 PI 없음) -->
 				<xsl:otherwise>
