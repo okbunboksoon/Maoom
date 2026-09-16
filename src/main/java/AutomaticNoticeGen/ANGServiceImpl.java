@@ -87,7 +87,7 @@ public class ANGServiceImpl implements ANGService {
 
     private static boolean isSpecialD1(String rawTitle) {
         if (rawTitle == null) return false;
-        String t = normalizeTitle(rawTitle).toLowerCase();
+        String t = stripLeadingChapterNumber(rawTitle).toLowerCase();
         return D1_MERGE_TARGETS.contains(t);
     }
 
@@ -241,7 +241,7 @@ public class ANGServiceImpl implements ANGService {
                     int startIdx0 = 0;                   // 0-based 내부 계산 시작
                     int endIdx0   = forewordEnd - 1;     // 1-based → 0-based 변환
                     if (endIdx0 >= startIdx0) {
-                        frontLabel = labelRange(doc, startIdx0, endIdx0); // 예: "i–xi"
+                        frontLabel = labelRange(doc, startIdx0, endIdx0); // 예: "i~xi"
                     }
                 }
             }
@@ -258,20 +258,98 @@ public class ANGServiceImpl implements ANGService {
             }
 
             // ===== 챕터/섹션 기록 =====
+            ChapterRange koSafetyChapter = null;
+            ChapterRange koFigureContentsChapter = null;
+            ChapterRange koEvFeaturesChapter = null;
+            int[] koSafetyFigureSpan = null;
+            int[] koEvFeaturesSpan = null;
+            if (isKO) {
+                koSafetyChapter = findKoChapter(chapters, "안전 주의 사항");
+                koFigureContentsChapter = findKoChapter(chapters, "그림 목차");
+                koEvFeaturesChapter = findKoChapter(
+                        chapters,
+                        "전기차 전용 기능");
+                if (koSafetyChapter != null
+                        && koFigureContentsChapter != null) {
+                    koSafetyFigureSpan = combinedSectionSpan(
+                            getSections(pdfPath, koSafetyChapter, 0),
+                            getSections(pdfPath, koFigureContentsChapter, 0));
+                }
+                if (koEvFeaturesChapter != null) {
+                    koEvFeaturesSpan = sectionSpan(
+                            getSections(pdfPath, koEvFeaturesChapter, 0));
+                }
+            }
+
+            int koOutputChapterNumber = 1;
+            boolean koSafetyFigureWritten = false;
             for (ChapterRange cr : chapters) {
                 if (shouldSkipChapter(cr.chapterTitle)) continue;
 
                 String chapTitleNorm = normalizeTitle(cr.chapterTitle);
-                String groupLabel = isKO ? (cr.chapterNum + "장") : chapTitleNorm;
+                if (isKO
+                        && koSafetyFigureSpan != null
+                        && (cr == koSafetyChapter
+                                || cr == koFigureContentsChapter)) {
+                    if (!koSafetyFigureWritten) {
+                        Row row = sheet.createRow(r++);
+                        addRow(
+                                row,
+                                centerBody,
+                                leftBody,
+                                koOutputChapterNumber++ + "장",
+                                pageSpan(
+                                        koSafetyFigureSpan[0],
+                                        koSafetyFigureSpan[1]),
+                                "그림 목차 / 안전 주의 사항");
+                        applyAutoFill(row, rules);
+                        koSafetyFigureWritten = true;
+                    }
+                    continue;
+                }
+                if (isKO
+                        && koEvFeaturesSpan != null
+                        && cr == koEvFeaturesChapter) {
+                    Row row = sheet.createRow(r++);
+                    addRow(
+                            row,
+                            centerBody,
+                            leftBody,
+                            koOutputChapterNumber++ + "장",
+                            pageSpan(
+                                    koEvFeaturesSpan[0],
+                                    koEvFeaturesSpan[1]),
+                            "EV가이드");
+                    applyAutoFill(row, rules);
+                    continue;
+                }
+
+                String groupLabel = isKO
+                        ? (koOutputChapterNumber++ + "장")
+                        : chapTitleNorm;
 
                 List<SectionRange> secs = getSections(pdfPath, cr, 0);
                 int groupStartRow = r;
 
                 // [D1_MERGE] US/EG이고 1레벨 제목이 특수 목록이면: 섹션 무시하고 챕터 전체를 한 줄로 출력
                 if (!isKO && isSpecialD1(chapTitleNorm)) {
-                    if (cr.startPage > 0 && cr.endPage > 0) {
+                    int[] specialSpan = sectionSpan(secs);
+                    if (specialSpan != null
+                            || (cr.startPage > 0 && cr.endPage > 0)) {
+                        int startPage = specialSpan != null
+                                ? specialSpan[0]
+                                : cr.startPage;
+                        int endPage = specialSpan != null
+                                ? specialSpan[1]
+                                : cr.endPage;
                         Row dataRow = sheet.createRow(r++);
-                        addRow(dataRow, centerBody, leftBody, groupLabel, pageSpan(cr.startPage, cr.endPage), chapTitleNorm);
+                        addRow(
+                                dataRow,
+                                centerBody,
+                                leftBody,
+                                groupLabel,
+                                pageSpan(startPage, endPage),
+                                stripLeadingChapterNumber(chapTitleNorm));
                         applyAutoFill(dataRow, rules);
                     }
                     safeMergeGroupA(sheet, groupStartRow, r - 1);
@@ -544,6 +622,80 @@ public class ANGServiceImpl implements ANGService {
             || t.contains("table of contents") || t.equals("contents") || t.equals("toc");
     }
 
+    private static ChapterRange findKoChapter(
+            List<ChapterRange> chapters,
+            String expectedTitle) {
+        if (chapters == null || expectedTitle == null) return null;
+
+        String expected = normalizeKoChapterTitle(expectedTitle);
+        for (ChapterRange chapter : chapters) {
+            if (chapter == null) continue;
+            if (normalizeKoChapterTitle(chapter.chapterTitle)
+                    .equals(expected)) {
+                return chapter;
+            }
+        }
+        return null;
+    }
+
+    private static String normalizeKoChapterTitle(String title) {
+        if (title == null) return "";
+        return stripLeadingChapterNumber(title)
+                .replaceAll("\\s+", " ")
+                .trim();
+    }
+
+    private static String stripLeadingChapterNumber(String title) {
+        if (title == null) return "";
+        return Normalizer.normalize(title, Normalizer.Form.NFKC)
+                .replaceFirst("^\\s*\\d+\\s*(?:장)?\\s*", "")
+                .replaceAll("\\s+", " ")
+                .trim();
+    }
+
+    private static int[] combinedSectionSpan(
+            List<SectionRange> firstSections,
+            List<SectionRange> secondSections) {
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+
+        for (List<SectionRange> sections
+                : java.util.Arrays.asList(firstSections, secondSections)) {
+            if (sections == null || sections.isEmpty()) return null;
+            for (SectionRange section : sections) {
+                if (section == null) continue;
+                if (section.startPage > 0) {
+                    min = Math.min(min, section.startPage);
+                }
+                if (section.endPage > 0) {
+                    max = Math.max(max, section.endPage);
+                }
+            }
+        }
+
+        if (min == Integer.MAX_VALUE || max == Integer.MIN_VALUE) return null;
+        return new int[]{min, max};
+    }
+
+    private static int[] sectionSpan(List<SectionRange> sections) {
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        if (sections == null || sections.isEmpty()) return null;
+
+        for (SectionRange section : sections) {
+            if (section == null) continue;
+            if (section.startPage > 0) {
+                min = Math.min(min, section.startPage);
+            }
+            if (section.endPage > 0) {
+                max = Math.max(max, section.endPage);
+            }
+        }
+
+        if (min == Integer.MAX_VALUE || max == Integer.MIN_VALUE) return null;
+        return new int[]{min, max};
+    }
+
     private static String normalizeTitle(String s) {
         if (s == null) return "";
         
@@ -734,7 +886,7 @@ public class ANGServiceImpl implements ANGService {
     private static String labelRange(org.apache.pdfbox.pdmodel.PDDocument doc, int startIndex0, int endIndex0) {
         String a = pageLabel(doc, startIndex0);
         String b = pageLabel(doc, endIndex0);
-        return a.equals(b) ? a : a + "–" + b;
+        return a.equals(b) ? a : a + "~" + b;
     }
 
     // ================================

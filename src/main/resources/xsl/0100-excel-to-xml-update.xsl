@@ -38,16 +38,19 @@
 
     <xsl:choose>
 
-        <!-- 실제 XML 태그 형태일 때만 parse -->
+        <!-- 문장 중간에 인라인 XML 태그가 있어도 fragment로 parse한다. -->
         <xsl:when test="
             matches(
-                normalize-space($s),
-                '^&lt;/?[A-Za-z][A-Za-z0-9:_-]*(\s+[^&gt;]*)?&gt;'
+                $s,
+                '&lt;/?[A-Za-z][A-Za-z0-9:_-]*(\s+[^&gt;]*)?&gt;'
             )
         ">
 
+			<!-- Data 노드에서 이미 디코딩된 일반 & 문자를 다시 escape한다. -->
+			<xsl:variable name="escaped"
+				select="replace($s, '&amp;', '&amp;amp;')"/>
             <xsl:variable name="wrapped"
-                select="concat('&lt;w&gt;', $s, '&lt;/w&gt;')" />
+                select="concat('&lt;w&gt;', $escaped, '&lt;/w&gt;')" />
 
             <xsl:sequence
                 select="saxon:parse($wrapped)/w/node()"/>
@@ -69,7 +72,8 @@
       <title><xsl:value-of select="$TITLE"/></title>
       <conbody>
 
-        <xsl:for-each select="(//ss:Worksheet)[1]//ss:Table/ss:Row">
+        <!-- 첫 행은 as-is/to-be 헤더이므로 변환 대상에서 제외한다. -->
+        <xsl:for-each select="(//ss:Worksheet)[1]//ss:Table/ss:Row[position() gt 1]">
 
           <xsl:variable name="Araw"
             select="string(f:cell-at(.,1)/ss:Data)"/>

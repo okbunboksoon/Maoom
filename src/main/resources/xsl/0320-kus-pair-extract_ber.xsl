@@ -10,21 +10,28 @@
 	<xsl:output method="xml" indent="no" omit-xml-declaration="yes"/>
 	<xsl:strip-space elements="*" />
 
-	<!-- 260406 US EG 분기점 -->
+	<!-- BER 지역 구분: EN_CA_LHD 예외를 북미 판정보다 먼저 확인한다. -->
 	<xsl:template match="map">
 	    <pairs>
 	        <!-- 지역 구분 -->
 	        <xsl:attribute name="region">
 	            <xsl:variable name="title" select="upper-case(normalize-space(title))"/>
 	            <xsl:choose>
-	                <!-- 1순위: US 포함 → US -->
-	                <xsl:when test="contains($title, 'US')">
+	                <xsl:when test="contains($title, 'EN_CA_LHD')">
+	                    <xsl:text>EU</xsl:text>
+	                </xsl:when>
+	                <xsl:when test="contains($title, 'EN_RG')">
+	                    <xsl:text>EU_RG</xsl:text>
+	                </xsl:when>
+	                <xsl:when test="contains($title, 'EN_US')
+	                        or contains($title, 'EN_CA')
+	                        or contains($title, 'EN_MX')">
 	                    <xsl:text>US</xsl:text>
 	                </xsl:when>
 	                <xsl:when test="contains($title, 'EXCLUDE')">
 	                    <xsl:text>exclude</xsl:text>
 	                </xsl:when>
-	                <!-- 나머지 → EU -->
+	                <!-- 그 외 지역 → EU -->
 	                <xsl:otherwise>
 	                    <xsl:text>EU</xsl:text>
 	                </xsl:otherwise>

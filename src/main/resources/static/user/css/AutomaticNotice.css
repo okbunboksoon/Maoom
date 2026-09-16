@@ -33,10 +33,6 @@
     padding:12px 14px;
 }
 
-.automatic-notice-popup-body .result-panel[data-status="running"] .result-heading strong::after{
-    content:none;
-}
-
 .automatic-notice-popup-body .result-panel p{
     margin:8px 0 0;
     overflow-wrap:anywhere;

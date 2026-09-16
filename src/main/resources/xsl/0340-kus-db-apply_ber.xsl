@@ -12,9 +12,12 @@
 	<xsl:variable name="mapTitle" select="normalize-space(string((/map/title)[1]))"/>
 	<!-- 국문 ko_KR 문서는 BER 적용 대상에서 제외한다. -->
 	<xsl:variable name="isKoKr" select="contains(upper-case($mapTitle), 'KO_KR')"/>
-	<xsl:variable name="isNA" select="contains(upper-case($mapTitle), 'US') or contains(upper-case($mapTitle), 'CA') or contains(upper-case($mapTitle), 'MX')"/>
-	<xsl:variable name="isRg" select="contains(upper-case($mapTitle), 'RG')"/>
-	<xsl:variable name="dbPath" select="if ($isNA) then 'asis-tobe_us.xml' else if ($isRg) then 'asis-tobe_eu_rg.xml' else 'asis-tobe_eu.xml'"/>
+	<xsl:variable name="upperMapTitle" select="upper-case($mapTitle)"/>
+	<!-- EN_CA_LHD는 EN_CA보다 먼저 판별해야 EU 예외가 유지된다. -->
+	<xsl:variable name="isCaLhd" select="contains($upperMapTitle, 'EN_CA_LHD')"/>
+	<xsl:variable name="isRg" select="contains($upperMapTitle, 'EN_RG')"/>
+	<xsl:variable name="isNA" select="not($isCaLhd) and (contains($upperMapTitle, 'EN_US') or contains($upperMapTitle, 'EN_CA') or contains($upperMapTitle, 'EN_MX'))"/>
+	<xsl:variable name="dbPath" select="if ($isCaLhd) then 'asis-tobe_eu.xml' else if ($isRg) then 'asis-tobe_eu_rg.xml' else if ($isNA) then 'asis-tobe_us.xml' else 'asis-tobe_eu.xml'"/>
 	<xsl:variable name="db" select="document($dbPath)"/>
 	
 	<!-- ===== 출력 옵션 ===== -->
