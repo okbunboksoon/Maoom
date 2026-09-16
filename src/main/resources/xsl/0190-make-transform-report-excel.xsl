@@ -285,6 +285,13 @@
                         <xsl:with-param name="key" select="'xref-href-element-id-invalid'"/>
                         <xsl:with-param name="change" select="'.dita# 뒤 fragment에 /하위ID가 포함된 xref 검출'"/>
                     </xsl:call-template>
+                    <!-- xref가 참조하는 DITA 파일이 ditamap에 없는 항목 수를 표시한다. -->
+                    <xsl:call-template name="modified-row">
+                        <xsl:with-param name="final" select="$final"/>
+                        <xsl:with-param name="label" select="'미연결 xref 찾기'"/>
+                        <xsl:with-param name="key" select="'xref-target-not-in-map'"/>
+                        <xsl:with-param name="change" select="'xref 대상 DITA가 ditamap에 없음'"/>
+                    </xsl:call-template>
                     <!-- 최종 문서 루트의 report-simple-operation-removed 값을 읽어 삭제된 Simple operation section 수를 표시한다. -->
                     <Row ss:Height="30">
                         <Cell ss:StyleID="Center"><Data ss:Type="String">indexterm 삭제 여부</Data></Cell>
@@ -346,7 +353,7 @@
                     <xsl:variable name="detect-labels" select="(
                         '내용없는 dita 찾기', '빈 태그 찾기', 'li 직접 텍스트 찾기', 'step cmd 누락 찾기',
                         'image 서버 href 검출', 'image 비 EPS 확장자 검출', 'xref href 경로 포함 오류',
-                        'xref href element ID 오류')"/>
+                        'xref href element ID 오류', '미연결 xref 찾기')"/>
                     <Row ss:Height="30"><Cell ss:StyleID="Header" ss:MergeAcross="2"><Data ss:Type="String">추가</Data></Cell></Row>
                     <xsl:sequence select="$result-rows/ss:Row[ss:Cell[1]/ss:Data = $add-labels]"/>
                     <Row ss:Height="30"><Cell ss:StyleID="Header" ss:MergeAcross="2"><Data ss:Type="String">수정</Data></Cell></Row>
@@ -538,6 +545,33 @@
                     <xsl:for-each select="$final//*[local-name() = 'xref'][@modified][some $token in tokenize(@modified, '\s+') satisfies $token = 'xref-href-element-id-invalid']">
                         <xsl:variable name="report-content">
                             <xsl:apply-templates select="parent::*" mode="report-clean"/>
+                        </xsl:variable>
+                        <Row ss:Height="30">
+                            <Cell ss:StyleID="Center">
+                                <Data ss:Type="String"><xsl:value-of select="ancestor::*[local-name() = 'topicref'][1]/@href"/></Data>
+                            </Cell>
+                            <Cell ss:StyleID="Wrap">
+                                <Data ss:Type="String"><xsl:value-of select="serialize($report-content/*, map{'method': 'xml', 'omit-xml-declaration': true()})"/></Data>
+                            </Cell>
+                        </Row>
+                    </xsl:for-each>
+                </Table>
+                <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+                    <Zoom>85</Zoom>
+                </WorksheetOptions>
+            </Worksheet>
+            <Worksheet ss:Name="미연결 xref 찾기">
+                <Table>
+                    <Column ss:Width="250"/>
+                    <Column ss:Width="1000"/>
+                    <Row ss:Height="30">
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">파일명</Data></Cell>
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">xref</Data></Cell>
+                    </Row>
+                    <!-- ditamap에 대상 DITA가 없는 xref의 파일명과 xref 태그를 표시한다. -->
+                    <xsl:for-each select="$final//*[local-name() = 'xref'][@modified][some $token in tokenize(@modified, '\s+') satisfies $token = 'xref-target-not-in-map']">
+                        <xsl:variable name="report-content">
+                            <xsl:apply-templates select="." mode="report-clean"/>
                         </xsl:variable>
                         <Row ss:Height="30">
                             <Cell ss:StyleID="Center">

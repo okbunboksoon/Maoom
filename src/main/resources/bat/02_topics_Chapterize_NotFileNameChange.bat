@@ -207,9 +207,12 @@ if errorlevel 1 exit /b !errorlevel!
 rem 0004-topic-merge.xsl: map의 topicref가 참조하는 DITA 파일을 하나의 XML로 병합한다.
 java net.sf.saxon.Transform -catalog:xsl\catalog.xml						-s:temp\0002-toc-created.xml  							-o:temp\0004-topic-merged.xml  								-xsl:xsl\0004-topic-merge.xsl
 if errorlevel 1 exit /b !errorlevel!
+rem 0004-mark_xref_not_in_map.xsl: xref의 fragment를 제외한 DITA 파일이 map의 topicref 목록에 없으면 리포트용으로 표시한다.
+java net.sf.saxon.Transform 												-s:temp\0004-topic-merged.xml 						-o:temp\0004-xref-not-in-map-marked.xml 				-xsl:xsl\0004-mark_xref_not_in_map.xsl
+if errorlevel 1 exit /b !errorlevel!
 rem map title에 ko_KR과 Quick이 모두 있으면 병합된 topic의 indexterm을 삭제한다.
 rem 0004a-remove-ko-quick-indexterm.xsl: map title에 ko_KR과 Quick이 모두 있으면 모든 indexterm을 삭제한다.
-java net.sf.saxon.Transform 												-s:temp\0004-topic-merged.xml 						-o:temp\0004a-ko-quick-indexterm-removed.xml 				-xsl:xsl\0004a-remove-ko-quick-indexterm.xsl
+java net.sf.saxon.Transform 												-s:temp\0004-xref-not-in-map-marked.xml 						-o:temp\0004a-ko-quick-indexterm-removed.xml 				-xsl:xsl\0004a-remove-ko-quick-indexterm.xsl
 if errorlevel 1 exit /b !errorlevel!
 rem 병합된 topicref 안에서 문장의 맨 앞과 맨 뒤 불필요한 공백을 제거한다.
 rem 0123-trim_sentence_space.xsl: p, title, shortdesc, cmd 문장 맨 앞과 맨 뒤의 불필요한 공백을 제거한다.

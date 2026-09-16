@@ -63,9 +63,10 @@
             margin-left: 6px;
             color: var(--accent);
           }
-          .table-wrap { padding: 14px; }
+          .table-wrap { padding: 14px; overflow-x: auto; }
           table {
             width: 100%;
+            min-width: 1900px;
             border-collapse: collapse;
             table-layout: fixed;
             background: var(--panel);
@@ -77,13 +78,13 @@
             word-break: break-word;
           }
           th {
-            position: sticky;
-            top: 75px;
-            z-index: 10;
+            position: static;
             background: var(--head);
             border-color: var(--line);
-            text-align: left;
+            text-align: center;
             font-weight: 700;
+            color: var(--text);
+            white-space: nowrap;
           }
           tbody tr:nth-child(even) { background: #fafbfc; }
           tbody tr:hover { background: var(--hover); }
@@ -134,11 +135,11 @@
 				<div class="table-wrap">
 					<table>
 						<colgroup>
-							<col style="width:150px"/>
-							<col style="width:260px"/>
+							<col style="width:280px"/>
+							<col style="width:320px"/>
 							<col style="width:95px"/>
-							<col style="width:150px"/>
 							<col style="width:180px"/>
+							<col style="width:320px"/>
 							<col/>
 						</colgroup>
 						<thead>

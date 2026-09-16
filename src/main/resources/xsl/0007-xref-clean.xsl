@@ -27,6 +27,14 @@
 		</xsl:copy>
 	</xsl:template>
 
+	<!-- map에 대상 DITA가 없는 xref는 원본 href를 유지하고 값 변경에서 제외한다. -->
+	<xsl:template match="xref[contains(concat(' ', normalize-space(@modified), ' '), ' xref-target-not-in-map ')]" priority="2">
+		<xsl:copy>
+			<xsl:apply-templates select="@* except @outputclass"/>
+			<xsl:apply-templates select="node()"/>
+		</xsl:copy>
+	</xsl:template>
+
 	<xsl:template match="xref">
 		<xsl:variable name="oid" select="if ( contains(@href, '/') ) then tokenize(@href, '/')[last()] else substring-after(@href, '#')"/>
 		<xsl:copy>
