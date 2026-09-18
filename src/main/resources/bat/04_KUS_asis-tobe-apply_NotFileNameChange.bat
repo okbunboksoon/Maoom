@@ -28,8 +28,7 @@ java net.sf.saxon.Transform 								-s:temp\0000-doctype-removed.xml  			-o:temp
 java net.sf.saxon.Transform 								-s:temp\10-namespace-removed.xml  		-o:temp\11-toc-created.xml  				-xsl:xsl\0002-toc-create.xsl
 java net.sf.saxon.Transform 								-s:temp\11-toc-created.xml  				-o:xsl\bookmap.xml  						-xsl:xsl\0003-bookmap-create.xsl
 java net.sf.saxon.Transform -catalog:xsl\catalog.xml		-s:temp\11-toc-created.xml  				-o:temp\13-topic-merged.xml  				-xsl:xsl\0004-topic-merge.xsl
-java net.sf.saxon.Transform 								-s:temp\13-topic-merged.xml				-o:temp\29-kus-text-normalized.xml		-xsl:xsl\0290-kus-text-normalize.xsl
-java net.sf.saxon.Transform 								-s:temp\29-kus-text-normalized.xml			-o:temp\30-kus-inline-normalized.xml		-xsl:xsl\0300-kus-inline-normalize.xsl
+java net.sf.saxon.Transform 								-s:temp\13-topic-merged.xml			-o:temp\30-kus-inline-normalized.xml		-xsl:xsl\0300-kus-inline-normalize.xsl
 
 rem 260331 eu us 분기 설정 = 34-kus-db-apply.xsl
 java net.sf.saxon.Transform								-s:temp\30-kus-inline-normalized.xml		-o:temp\34-kus-db-applied_exclude.xml  	-xsl:xsl\0340-kus-db-apply_ber_exclude.xsl  flag=on
@@ -52,7 +51,7 @@ java net.sf.saxon.Transform 								-s:temp\17-related-links.xml  				-o:xsl\dum
 cscript //nologo "%ROOT%xsl\Convert_Xml_To_Excel.vbs"
 
 del temp\0000-doctype-removed.xml temp\10-namespace-removed.xml temp\11-toc-created.xml temp\13-topic-merged.xml temp\14-namespace-removed.xml temp\15-id-cleaned.xml temp\34-kus-db-applied_exclude.xml  > NUL
-del temp\16-xref-cleaned.xml temp\17-related-links.xml temp\29-kus-text-normalized.xml temp\30-kus-inline-normalized.xml temp\34-kus-db-applied.xml temp\36-kus-beautified.xml temp\35-remove_tag.xml > NUL
+del temp\16-xref-cleaned.xml temp\17-related-links.xml temp\30-kus-inline-normalized.xml temp\34-kus-db-applied.xml temp\36-kus-beautified.xml temp\35-remove_tag.xml > NUL
 del temp\excel-change-report.xml > NUL
 rem rd /q/s temp
 echo Done.

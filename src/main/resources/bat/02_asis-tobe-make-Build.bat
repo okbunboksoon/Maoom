@@ -82,8 +82,7 @@ java net.sf.saxon.Transform -catalog:xsl\catalog.xml	-s:temp\11-toc-created.xml 
 java net.sf.saxon.Transform 							-s:temp\13-topic-merged.xml				-o:temp\26-kus-1st-grouped.xml			-xsl:xsl\0260-kus-1st-group.xsl
 java net.sf.saxon.Transform 							-s:temp\26-kus-1st-grouped.xml			-o:temp\27-kus-2nd-grouped.xml			-xsl:xsl\0270-kus-2nd-group.xsl
 java net.sf.saxon.Transform 							-s:temp\27-kus-2nd-grouped.xml			-o:temp\28-kus-3rd-grouped.xml			-xsl:xsl\0280-kus-3rd-group.xsl
-java net.sf.saxon.Transform 							-s:temp\28-kus-3rd-grouped.xml			-o:temp\29-kus-text-normalized.xml		-xsl:xsl\0290-kus-text-normalize.xsl
-java net.sf.saxon.Transform 							-s:temp\29-kus-text-normalized.xml			-o:temp\30-kus-inline-normalized.xml		-xsl:xsl\0300-kus-inline-normalize.xsl
+java net.sf.saxon.Transform 							-s:temp\28-kus-3rd-grouped.xml			-o:temp\30-kus-inline-normalized.xml		-xsl:xsl\0300-kus-inline-normalize.xsl
 java net.sf.saxon.Transform 							-s:temp\30-kus-inline-normalized.xml		-o:temp\31-kus-beautified.xml				-xsl:xsl\0310-kus-beautify.xsl
 
 java net.sf.saxon.Transform 							-s:temp\30-kus-inline-normalized.xml		-o:temp\32-kus-pair-extracted.xml			-xsl:xsl\0320-kus-pair-extract_ber.xsl
