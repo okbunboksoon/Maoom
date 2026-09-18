@@ -397,11 +397,8 @@ if errorlevel 1 exit /b !errorlevel!
 
 rem 금칙어 QC 보고서 옵션이 켜진 경우 추가 정규화와 Excel 보고서 병합까지 수행한다.
 if /I "!FORBIDDEN_QC_REPORT!"=="Y" (
-    rem 29-kus-text-normalize.xsl: 금칙어 QC 검사를 위해 문장 텍스트를 검사 기준에 맞게 정규화한다.
-    java net.sf.saxon.Transform 											-s:temp\0400-remove_review.xml						-o:temp\qc-29-kus-text-normalized.xml							-xsl:xsl\29-kus-text-normalize.xsl
-    if errorlevel 1 exit /b !errorlevel!
     rem 30-kus-inline-normalize.xsl: 금칙어 QC 검사를 위해 인라인 요소 앞뒤 공백을 정규화한다.
-    java net.sf.saxon.Transform 											-s:temp\qc-29-kus-text-normalized.xml					-o:temp\qc-30-kus-inline-normalized.xml						-xsl:xsl\30-kus-inline-normalize.xsl
+    java net.sf.saxon.Transform 											-s:temp\0400-remove_review.xml					-o:temp\qc-30-kus-inline-normalized.xml						-xsl:xsl\30-kus-inline-normalize.xsl
     if errorlevel 1 exit /b !errorlevel!
     rem 50-insert-forbidden-ph.xsl: 금칙어 DB와 일치하는 내용을 찾아 QC용 ph 표시를 추가한다.
     java net.sf.saxon.Transform 											-s:temp\qc-30-kus-inline-normalized.xml				-o:temp\qc-50-inserted-forbidden-ph.xml						-xsl:xsl\50-insert-forbidden-ph.xsl
