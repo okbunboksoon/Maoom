@@ -246,10 +246,6 @@ java net.sf.saxon.Transform 												-s:!CURRENT_SOURCE! 							-o:temp\0123-
 if errorlevel 1 exit /b !errorlevel!
 set "CURRENT_SOURCE=temp\0123-sentence_space_trimmed.xml"
 
-rem 0290-kus-text-normalize.xsl: TEXT와 NOTE 반영이 끝난 문서를 기준으로 전체 문장을 정규화한다.
-java net.sf.saxon.Transform 												-s:!CURRENT_SOURCE! 							-o:temp\0290-kus-text-normalized.xml 						-xsl:xsl\0290-kus-text-normalize.xsl
-if errorlevel 1 exit /b !errorlevel!
-set "CURRENT_SOURCE=temp\0290-kus-text-normalized.xml"
 rem BER 반영
 if /I "!BER_DB_APPLY!"=="Y" (
     if exist temp\ber_ko_kr_excluded.flag del /f /q temp\ber_ko_kr_excluded.flag >NUL
