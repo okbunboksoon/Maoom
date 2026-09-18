@@ -23,6 +23,7 @@ import maoomWeb.ire.user.dto.AutomaticNoticeRuleImportDetail;
 import maoomWeb.ire.user.dto.AutomaticNoticeRuleImportResult;
 import maoomWeb.ire.user.mapper.AutomaticNoticeRuleMapper;
 
+/** 자동 고지문 생성에 쓰는 지역·유형별 규칙을 검증하고 엑셀로 일괄 등록하는 서비스다. */
 @Service
 public class AutomaticNoticeRuleAdminService {
 
@@ -46,6 +47,32 @@ public class AutomaticNoticeRuleAdminService {
     @Transactional
     public AutomaticNoticeRule save(AutomaticNoticeRule rule) {
         normalizeAndValidate(rule);
+        if(rule.getId() != null){
+            AutomaticNoticeRule existing = ruleMapper.findById(rule.getId());
+            if(existing == null){
+                throw new IllegalArgumentException(
+                        "수정할 협조문 룰을 찾을 수 없습니다.");
+            }
+            AutomaticNoticeRule duplicate =
+                    ruleMapper.findByRegionTypeAndKey(
+                            rule.getRegion(),
+                            rule.getMatchType(),
+                            rule.getMatchKey());
+            if(duplicate != null
+                    && !rule.getId().equals(duplicate.getId())){
+                throw new IllegalArgumentException(
+                        "같은 Region, Type, Key를 가진 룰이 이미 있습니다.");
+            }
+            ruleMapper.updateById(rule);
+            return ruleMapper.findById(rule.getId());
+        }
+        if(ruleMapper.findByRegionTypeAndKey(
+                rule.getRegion(),
+                rule.getMatchType(),
+                rule.getMatchKey()) != null){
+            throw new IllegalArgumentException(
+                    "같은 Region, Type, Key를 가진 룰이 이미 있습니다.");
+        }
         ruleMapper.upsert(rule);
         return ruleMapper.findByRegionTypeAndKey(
                 rule.getRegion(),
@@ -401,15 +428,7 @@ public class AutomaticNoticeRuleAdminService {
         String normalized = region == null
                 ? ""
                 : region.trim().toUpperCase(Locale.ROOT);
-
-        if(!normalized.equals("KO")
-                && !normalized.equals("US")
-                && !normalized.equals("EG")){
-            throw new IllegalArgumentException(
-                    "region은 KO, US 또는 EG만 사용할 수 있습니다.");
-        }
-
-        return normalized;
+        return normalized.equals("KO") ? "KO" : "EG";
     }
 
     private String normalizeMatchType(String matchType) {

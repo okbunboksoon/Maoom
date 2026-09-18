@@ -19,12 +19,16 @@ public interface AutomaticNoticeRuleMapper {
 
     List<AutomaticNoticeRule> findAll();
 
+    AutomaticNoticeRule findById(@Param("id") Long id);
+
     AutomaticNoticeRule findByRegionTypeAndKey(
             @Param("region") String region,
             @Param("matchType") String matchType,
             @Param("matchKey") String matchKey);
 
     int upsert(AutomaticNoticeRule rule);
+
+    int updateById(AutomaticNoticeRule rule);
 
     int deleteByRegionTypeAndKey(
             @Param("region") String region,

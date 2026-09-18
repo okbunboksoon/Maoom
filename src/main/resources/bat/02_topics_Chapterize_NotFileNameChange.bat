@@ -1,12 +1,14 @@
 @echo off
 setlocal enabledelayedexpansion
 
+rem ¹èÄ¡ ÆÄÀÏ À§Ä¡¸¦ ±âÁØÀ¸·Î Saxon ¶óÀÌºê·¯¸® °æ·Î¸¦ Àâ´Â´Ù.
 set SAXON=%~dp0
 set CLASSPATH=%SAXON%lib\saxon-ee-10.0.jar;%CLASSPATH%
 set CLASSPATH=%SAXON%lib\xml-resolver-1.2.jar;%CLASSPATH%
 
 if not exist temp mkdir temp
 
+rem ±âº» ¿É¼Ç°ªÀÌ´Ù. ¸í·ÉÁÙ ÀÎÀÚ·Î Y ¶Ç´Â ¸ðµå¸¦ ³Ñ±â¸é ¾Æ·¡¿¡¼­ ÇÊ¿äÇÑ °ª¸¸ ¹Ù²Û´Ù.
 set "FILE_NAME_CHANGE=Y"
 set "FILE_NAME_MODE=TITLE_PREFIX"
 set "TITLE_FILE_NAME_PREFIX=Y"
@@ -18,8 +20,11 @@ set "REMOVE_DELIVERY_TARGET=N"
 set "DELETE_DRAFT=N"
 set "TEXT_DB_APPLY=N"
 set "NOTE_DB_APPLY=N"
+rem BER DB ¹Ý¿µ ¿É¼ÇÀÇ ±âº»°ªÀ» ¹ÌÀû¿ëÀ¸·Î ¼³Á¤ÇÑ´Ù.
+set "BER_DB_APPLY=N"
 set "FORBIDDEN_QC_REPORT=N"
 
+rem ¸í·ÉÁÙ ¿É¼ÇÀ» °Ë»çÇÑ´Ù. findstr °á°ú°¡ ¸ÂÀ¸¸é °ü·Ã ÇÃ·¡±×¸¦ ÇÔ²² ÄÒ´Ù.
 echo %* | findstr /I /C:"FILE_NAME_CHANGE=N" >NUL && (
     set "FILE_NAME_CHANGE=N"
     set "FILE_NAME_MODE=DEFAULT"
@@ -60,8 +65,11 @@ echo %* | findstr /I /C:"REMOVE_DELIVERY_TARGET=Y" >NUL && (
 echo %* | findstr /I /C:"DELETE_DRAFT=Y" >NUL && set "DELETE_DRAFT=Y"
 echo %* | findstr /I /C:"TEXT_DB_APPLY=Y" >NUL && set "TEXT_DB_APPLY=Y"
 echo %* | findstr /I /C:"NOTE_DB_APPLY=Y" >NUL && set "NOTE_DB_APPLY=Y"
+rem BER_DB_APPLY=Y ÀÎÀÚ°¡ ÀÖÀ¸¸é BER DB ¹Ý¿µ ¿É¼ÇÀ» Àû¿ëÀ¸·Î ¼³Á¤ÇÑ´Ù.
+echo %* | findstr /I /C:"BER_DB_APPLY=Y" >NUL && set "BER_DB_APPLY=Y"
 echo %* | findstr /I /C:"FORBIDDEN_QC_REPORT=Y" >NUL && set "FORBIDDEN_QC_REPORT=Y"
 
+rem ½ÇÇà ¿É¼ÇÀº temp\option_check.log¿¡ ³²°Ü ¹®Á¦ ÀçÇö ½Ã È®ÀÎÇÒ ¼ö ÀÖ°Ô ÇÑ´Ù.
 set OPTION_LOG=temp\option_check.log
 echo ===== Options ===== > %OPTION_LOG%
 echo RAW_ARGS=%* >> %OPTION_LOG%
@@ -76,6 +84,7 @@ echo REMOVE_DELIVERY_TARGET=!REMOVE_DELIVERY_TARGET! >> %OPTION_LOG%
 echo DELETE_DRAFT=!DELETE_DRAFT! >> %OPTION_LOG%
 echo TEXT_DB_APPLY=!TEXT_DB_APPLY! >> %OPTION_LOG%
 echo NOTE_DB_APPLY=!NOTE_DB_APPLY! >> %OPTION_LOG%
+echo BER_DB_APPLY=!BER_DB_APPLY! >> %OPTION_LOG%
 echo FORBIDDEN_QC_REPORT=!FORBIDDEN_QC_REPORT! >> %OPTION_LOG%
 
 set LOG=temp\filename_check.log
@@ -83,6 +92,7 @@ set ERROR_FOUND=0
 
 echo ===== File Name Check ===== > %LOG%
 
+rem topics Æú´õÀÇ DITA ÆÄÀÏ¸í¿¡ °ø¹éÀÌ³ª Çã¿ëµÇÁö ¾Ê´Â ¹®ÀÚ°¡ ÀÖÀ¸¸é º¯È¯À» Áß´ÜÇÑ´Ù.
 for %%F in (topics\*.dita topics\*.ditamap) do (
     set "fname=%%~nxF"
 
@@ -122,6 +132,7 @@ if /I "!NOTE_DB_APPLY!"=="Y" goto :PREPARE_DB
 goto :DB_READY
 
 :PREPARE_DB
+rem DB Àû¿ë ¿É¼ÇÀÌ ÄÑÁø °æ¿ì ditamap ÆÄÀÏ¸íÀ¸·Î ±¹¹®/¿µ¹® DB¸¦ ÀÚµ¿ ¼±ÅÃÇÑ´Ù.
 set "DITAMAP_NAME="
 for %%F in ("topics\*.ditamap") do (
     if exist "%%~fF" if not defined DITAMAP_NAME set "DITAMAP_NAME=%%~nxF"
@@ -177,128 +188,250 @@ echo NOTE_DB=!NOTE_DB! >> %OPTION_LOG%
 echo Please wait a moment!
 echo Processing... 
 
-java net.sf.saxon.Transform -catalog:xsl\catalog.xml 	-s:xsl\dummy.xml  										-o:xsl\dummy.xml  										-xsl:xsl\0000-doctype-remove.xsl
+rem ¾Æ·¡ º¯È¯ ´Ü°è´Â °¢ XSL °á°ú¸¦ temp Æú´õ¿¡ ¼ø¼­´ë·Î ÀúÀåÇÏ°í ½ÇÆÐ ½Ã Áï½Ã Á¾·áÇÑ´Ù.
+rem 0000-doctype-remove.xsl: ÀÔ·Â ditamap°ú DITAÀÇ DOCTYPEÀ» Á¦°ÅÇØ Ã¹ ¹øÂ° ÀÓ½Ã XMLÀ» »ý¼ºÇÑ´Ù.
+java net.sf.saxon.Transform -catalog:xsl\catalog.xml 						-s:xsl\dummy.xml  										-o:xsl\dummy.xml  												-xsl:xsl\0000-doctype-remove.xsl
 if errorlevel 1 exit /b !errorlevel!
-java net.sf.saxon.Transform 							-s:temp\0000-doctype-removed.xml  					-o:temp\0001-namespace-removed.xml  				-xsl:xsl\0001-namespace-remove.xsl
+rem 0001-namespace-remove.xsl: º´ÇÕ Àü XML¿¡ Æ÷ÇÔµÈ ºÒÇÊ¿äÇÑ namespace¸¦ Á¦°ÅÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0000-doctype-removed.xml  					-o:temp\0001-namespace-removed.xml  						-xsl:xsl\0001-namespace-remove.xsl
 if errorlevel 1 exit /b !errorlevel!
-java net.sf.saxon.Transform 							-s:temp\0001-namespace-removed.xml  				-o:temp\0110-svg_update.xml  							-xsl:xsl\0110-svg_update.xsl
+rem 0110-svg_update.xsl: SVG ÂüÁ¶¿Í °ü·ÃµÈ Á¤º¸¸¦ Á¤Á¦ ±âÁØ¿¡ ¸Â°Ô °»½ÅÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0001-namespace-removed.xml  				-o:temp\0110-svg_update.xml  									-xsl:xsl\0110-svg_update.xsl
 if errorlevel 1 exit /b !errorlevel!
-java net.sf.saxon.Transform 							-s:temp\0110-svg_update.xml    						-o:temp\0002-toc-created.xml  							-xsl:xsl\0002-toc-create.xsl
+rem 0002-toc-create.xsl: ÀÔ·Â mapÀÇ topicref¸¦ ±âÁØÀ¸·Î Á¤Á¦¿ë ¸ñÂ÷ ±¸Á¶¸¦ »ý¼ºÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0110-svg_update.xml    						-o:temp\0002-toc-created.xml  									-xsl:xsl\0002-toc-create.xsl
 if errorlevel 1 exit /b !errorlevel!
-java net.sf.saxon.Transform 							-s:temp\0002-toc-created.xml  							-o:xsl\bookmap.xml  									-xsl:xsl\0003-bookmap-create.xsl
+rem 0003-bookmap-create.xsl: ¸ñÂ÷ Á¤º¸¸¦ ±âÁØÀ¸·Î ÈÄ¼Ó ÆÄÀÏ ºÐ¸®¿¡ »ç¿ëÇÒ bookmap.xmlÀ» »ý¼ºÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0002-toc-created.xml  							-o:xsl\bookmap.xml  											-xsl:xsl\0003-bookmap-create.xsl
 if errorlevel 1 exit /b !errorlevel!
-java net.sf.saxon.Transform -catalog:xsl\catalog.xml	-s:temp\0002-toc-created.xml  							-o:temp\0004-topic-merged.xml  						-xsl:xsl\0004-topic-merge.xsl
+rem 0004-topic-merge.xsl: mapÀÇ topicref°¡ ÂüÁ¶ÇÏ´Â DITA ÆÄÀÏÀ» ÇÏ³ªÀÇ XML·Î º´ÇÕÇÑ´Ù.
+java net.sf.saxon.Transform -catalog:xsl\catalog.xml						-s:temp\0002-toc-created.xml  							-o:temp\0004-topic-merged.xml  								-xsl:xsl\0004-topic-merge.xsl
 if errorlevel 1 exit /b !errorlevel!
-rem ë³‘í•©ëœ topicref ì•ˆì—ì„œ ì œëª©ë§Œ ìžˆê±°ë‚˜ ë³¸ë¬¸ì´ ë¹„ì–´ ìžˆëŠ” í† í”½ì„ ë¦¬í¬íŠ¸ìš©ìœ¼ë¡œ í‘œì‹œí•œë‹¤.
-java net.sf.saxon.Transform 							-s:temp\0004-topic-merged.xml							-o:temp\0120-empty_topic_marked.xml					-xsl:xsl\0120-mark_empty_topic.xsl
+rem 0111-mark_invalid_menucascade.xsl: ºó uicontrol¸¸ ÀÖ°Å³ª uicontrol·Î °¨½ÎÁö ¾ÊÀº Á÷Á¢ ÅØ½ºÆ®°¡ ÀÖ´Â menucascade¸¦ ¸®Æ÷Æ®¿ëÀ¸·Î Ç¥½ÃÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0004-topic-merged.xml 						-o:temp\0111-invalid-menucascade-marked.xml 				-xsl:xsl\0111-mark_invalid_menucascade.xsl
 if errorlevel 1 exit /b !errorlevel!
-set "CURRENT_SOURCE=temp\0120-empty_topic_marked.xml"
+rem 0112-mark_body_direct_text.xsl: conbody, taskbody, refbody, section ¹Ù·Î ¾Æ·¡ÀÇ Á÷Á¢ ÅØ½ºÆ®¸¦ ¸®Æ÷Æ®¿ëÀ¸·Î Ç¥½ÃÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0111-invalid-menucascade-marked.xml 			-o:temp\0112-body-direct-text-marked.xml 					-xsl:xsl\0112-mark_body_direct_text.xsl
+if errorlevel 1 exit /b !errorlevel!
+rem 0113-mark_xref_not_in_map.xsl: xrefÀÇ fragment¸¦ Á¦¿ÜÇÑ DITA ÆÄÀÏÀÌ mapÀÇ topicref ¸ñ·Ï¿¡ ¾øÀ¸¸é ¸®Æ÷Æ®¿ëÀ¸·Î Ç¥½ÃÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0112-body-direct-text-marked.xml 		-o:temp\0113-xref-not-in-map-marked.xml 						-xsl:xsl\0113-mark_xref_not_in_map.xsl
+if errorlevel 1 exit /b !errorlevel!
+rem map title¿¡ ko_KR°ú QuickÀÌ ¸ðµÎ ÀÖÀ¸¸é º´ÇÕµÈ topicÀÇ indextermÀ» »èÁ¦ÇÑ´Ù.
+rem 0114-remove-ko-quick-indexterm.xsl: map title¿¡ ko_KR°ú QuickÀÌ ¸ðµÎ ÀÖÀ¸¸é ¸ðµç indextermÀ» »èÁ¦ÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0113-xref-not-in-map-marked.xml 				-o:temp\0114-ko-quick-indexterm-removed.xml 				-xsl:xsl\0114-remove-ko-quick-indexterm.xsl
+if errorlevel 1 exit /b !errorlevel!
+rem º´ÇÕµÈ topicref ¾È¿¡¼­ ¹®ÀåÀÇ ¸Ç ¾Õ°ú ¸Ç µÚ ºÒÇÊ¿äÇÑ °ø¹éÀ» Á¦°ÅÇÑ´Ù.
+set "CURRENT_SOURCE=temp\0114-ko-quick-indexterm-removed.xml"
+
+rem NOTE ¹Ý¿µ
+if /I "!NOTE_DB_APPLY!"=="Y" (
+    rem 0340-note-db-apply.xsl: ¼±ÅÃÇÑ NOTE DB¸¦ ±âÁØÀ¸·Î note typeÀ» º¯°æÇÏ°í ¸®Æ÷Æ®¿ë »óÅÂ¸¦ Ç¥½ÃÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:!CURRENT_SOURCE!  									-o:temp\0340-note-db-apply.xml								-xsl:xsl\0340-note-db-apply.xsl flag=on
+    if errorlevel 1 exit /b !errorlevel!
+    set "CURRENT_SOURCE=temp\0340-note-db-apply.xml"
+    echo NOTE_DB_APPLY applied: !CURRENT_SOURCE! >> %OPTION_LOG%
+)
+
+rem TEXT ¹Ý¿µ
 if /I "!TEXT_DB_APPLY!"=="Y" (
-    java net.sf.saxon.Transform 						-s:!CURRENT_SOURCE!  									-o:temp\0340-kus-db-apply.xml						-xsl:xsl\0340-kus-db-apply.xsl flag=on
+    rem 0340-kus-db-apply.xsl: ¼±ÅÃÇÑ TEXT DB¸¦ ±âÁØÀ¸·Î ÀÏÄ¡ÇÏ´Â ¹®ÀåÀ» º¯°æÇÏ°í ¸®Æ÷Æ®¿ë »óÅÂ¸¦ Ç¥½ÃÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:!CURRENT_SOURCE!  									-o:temp\0340-kus-db-apply.xml								-xsl:xsl\0340-kus-db-apply.xsl flag=on
     if errorlevel 1 exit /b !errorlevel!
     set "CURRENT_SOURCE=temp\0340-kus-db-apply.xml"
     echo TEXT_DB_APPLY applied: !CURRENT_SOURCE! >> %OPTION_LOG%
 )
 
-if /I "!NOTE_DB_APPLY!"=="Y" (
-    java net.sf.saxon.Transform 						-s:!CURRENT_SOURCE!  									-o:temp\0340-note-db-apply.xml						-xsl:xsl\0340-note-db-apply.xsl flag=on
+rem 0123-trim_sentence_space.xsl: p, title, shortdesc, cmd ¹®Àå ¸Ç ¾Õ°ú ¸Ç µÚÀÇ ºÒÇÊ¿äÇÑ °ø¹éÀ» Á¦°ÅÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:!CURRENT_SOURCE! 							-o:temp\0123-sentence_space_trimmed.xml 					-xsl:xsl\0123-trim_sentence_space.xsl
+if errorlevel 1 exit /b !errorlevel!
+set "CURRENT_SOURCE=temp\0123-sentence_space_trimmed.xml"
+
+rem BER ¹Ý¿µ
+if /I "!BER_DB_APPLY!"=="Y" (
+    if exist temp\ber_ko_kr_excluded.flag del /f /q temp\ber_ko_kr_excluded.flag >NUL
+    rem BER Á¦¿Ü DB¿¡ µî·ÏµÈ ¹®ÀåÀ» Ã£¾Æ BER º¯°æ ´ë»ó¿¡¼­ Á¦¿ÜÇÑ´Ù.
+    rem 0340-kus-db-apply_ber_exclude.xsl: BER Á¦¿Ü DB¿¡ µî·ÏµÈ ¹®ÀåÀ» Ã£¾Æ BER º¯°æ ´ë»ó¿¡¼­ Á¦¿ÜÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:!CURRENT_SOURCE! 									-o:temp\0340-kus-db-apply_ber_exclude.xml 					-xsl:xsl\0340-kus-db-apply_ber_exclude.xsl flag=on
     if errorlevel 1 exit /b !errorlevel!
-    set "CURRENT_SOURCE=temp\0340-note-db-apply.xml"
-    echo NOTE_DB_APPLY applied: !CURRENT_SOURCE! >> %OPTION_LOG%
+    
+    rem Á¦¿ÜµÇÁö ¾ÊÀº ¹®ÀåÀ» Áö¿ªº° BER DB ±âÁØÀ¸·Î º¯°æÇÏ°í status=ber_changed·Î Ç¥½ÃÇÑ´Ù.
+    rem 0340-kus-db-apply_ber.xsl: Á¦¿ÜµÇÁö ¾ÊÀº ¹®ÀåÀ» Áö¿ªº° BER DB ±âÁØÀ¸·Î º¯°æÇÏ°í status=ber_changed·Î Ç¥½ÃÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\0340-kus-db-apply_ber_exclude.xml 			-o:temp\0340-kus-db-apply_ber.xml 							-xsl:xsl\0340-kus-db-apply_ber.xsl flag=on
+    if errorlevel 1 exit /b !errorlevel!
+    set "CURRENT_SOURCE=temp\0340-kus-db-apply_ber.xml"
+    echo BER_DB_APPLY applied: !CURRENT_SOURCE! >> %OPTION_LOG%
 )
-java net.sf.saxon.Transform 							-s:!CURRENT_SOURCE!						-o:temp\0130-merge_tgroup.xml 						-xsl:xsl\0130-merge_tgroup.xsl
+
+rem placement=breakÀÌ°í alignÀÌ left ¶Ç´Â rightÀÎ image¸¦ Ã£¾Æ align=center·Î º¯°æÇÏ°í ¸®Æ÷Æ®¿ëÀ¸·Î Ç¥½ÃÇÑ´Ù.
+rem 0124-center_break_image.xsl: placement=breakÀÌ°í alignÀÌ left ¶Ç´Â rightÀÎ image¸¦ align=center·Î º¯°æÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:!CURRENT_SOURCE! 									-o:temp\0124-break_image_centered.xml						 -xsl:xsl\0124-center_break_image.xsl
 if errorlevel 1 exit /b !errorlevel!
-java net.sf.saxon.Transform 							-s:temp\0130-merge_tgroup.xml						-o:temp\0160-image_attr.xml 							-xsl:xsl\0160-image_attr.xsl
+set "CURRENT_SOURCE=temp\0124-break_image_centered.xml"
+rem 0130-merge_tgroup.xsl: tgroupÀÌ 2°³ ÀÌ»óÀÎ tableÀÇ tgroupÀ» ÇÏ³ª·Î º´ÇÕÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:!CURRENT_SOURCE!									-o:temp\0130-merge_tgroup.xml 								-xsl:xsl\0130-merge_tgroup.xsl
 if errorlevel 1 exit /b !errorlevel!
-java net.sf.saxon.Transform 							-s:temp\0160-image_attr.xml 	 						-o:temp\0170-refinement_tag.xml 						-xsl:xsl\0170-refinement_tag.xsl
+rem 0160-image_attr.xsl: image href¿Í scaleÀ» Á¤¸®ÇÏ°í ºÒÇÊ¿äÇÑ image ¼Ó¼ºÀ» »èÁ¦ÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0130-merge_tgroup.xml						-o:temp\0160-image_attr.xml 									-xsl:xsl\0160-image_attr.xsl
 if errorlevel 1 exit /b !errorlevel!
-java net.sf.saxon.Transform 							-s:temp\0170-refinement_tag.xml 						-o:temp\0180-translate_no_tagging.xml					 -xsl:xsl\0180-translate_no_tagging.xsl
+rem 0170-refinement_tag.xsl: ¹®¼­ÀÇ ¿ä¼Ò¿Í ¼Ó¼º¿¡ Á¤Á¦ ±ÔÄ¢À» Àû¿ëÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0160-image_attr.xml 	 						-o:temp\0170-refinement_tag.xml 								-xsl:xsl\0170-refinement_tag.xsl
 if errorlevel 1 exit /b !errorlevel!
+rem 0180-translate_no_tagging.xsl: ¿µ¹® À¯Áö ´ë»ó term¿¡ translate=no ¼Ó¼ºÀ» Ãß°¡ÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0170-refinement_tag.xml 						-o:temp\0180-translate_no_tagging.xml							-xsl:xsl\0180-translate_no_tagging.xsl
+if errorlevel 1 exit /b !errorlevel!
+
 set "CURRENT_SOURCE=temp\0180-translate_no_tagging.xml"
 if /I "!REMOVE_SIMPLE!"=="Y" (
-    java net.sf.saxon.Transform 						-s:!CURRENT_SOURCE!  									-o:temp\0402-remove_simple_operation_deliverytarget.xml	-xsl:xsl\0402-Remove_Simple_Operation_And_DeliveryTarget.xsl removeSimpleOperation=!REMOVE_SIMPLE_OPERATION! removeDeliveryTarget=!REMOVE_DELIVERY_TARGET!
+    rem 0402-Remove_Simple_Operation_And_DeliveryTarget.xsl: ¼±ÅÃ ¿É¼Ç¿¡ µû¶ó Simple operation°ú deliveryTargetÀ» »èÁ¦ÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:!CURRENT_SOURCE!  									-o:temp\0402-remove_simple_operation_deliverytarget.xml		-xsl:xsl\0402-Remove_Simple_Operation_And_DeliveryTarget.xsl		removeSimpleOperation=!REMOVE_SIMPLE_OPERATION! removeDeliveryTarget=!REMOVE_DELIVERY_TARGET!
     if errorlevel 1 exit /b !errorlevel!
     set "CURRENT_SOURCE=temp\0402-remove_simple_operation_deliverytarget.xml"
     echo REMOVE_SIMPLE_OPERATION=!REMOVE_SIMPLE_OPERATION! applied: !CURRENT_SOURCE! >> %OPTION_LOG%
     echo REMOVE_DELIVERY_TARGET=!REMOVE_DELIVERY_TARGET! applied: !CURRENT_SOURCE! >> %OPTION_LOG%
 )
 if /I "!DELETE_DRAFT!"=="Y" (
-    java net.sf.saxon.Transform 						-s:!CURRENT_SOURCE!  									-o:temp\0401-remove_review_Delete_Draft_Comment.xml		-xsl:xsl\0401-remove_review_Delete_Draft_Comment.xsl
+    rem 0401-remove_review_Delete_Draft_Comment.xsl: ¼±ÅÃ ¿É¼Ç¿¡ µû¶ó draft-comment¿Í review °ü·Ã ÀÛ¾÷ Á¤º¸¸¦ »èÁ¦ÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:!CURRENT_SOURCE!  									-o:temp\0401-remove_review_Delete_Draft_Comment.xml		-xsl:xsl\0401-remove_review_Delete_Draft_Comment.xsl
     if errorlevel 1 exit /b !errorlevel!
     set "CURRENT_SOURCE=temp\0401-remove_review_Delete_Draft_Comment.xml"
     echo DELETE_DRAFT applied: !CURRENT_SOURCE! >> %OPTION_LOG%
 )
 
-echo REPORT_SOURCE=!CURRENT_SOURCE! >> %OPTION_LOG%
-java net.sf.saxon.Transform 							-s:!CURRENT_SOURCE!									-o:temp\transform_report_excel.xml					-xsl:xsl\0190-make-transform-report-excel.xsl fileNameMode=!FILE_NAME_MODE! inputType=!INPUT_TYPE! outputType=!OUTPUT_TYPE! removeSimple=!REMOVE_SIMPLE_OPERATION! removeDeliveryTarget=!REMOVE_DELIVERY_TARGET! deleteDraft=!DELETE_DRAFT! textDbApply=!TEXT_DB_APPLY! noteDbApply=!NOTE_DB_APPLY!
-if errorlevel 1 exit /b !errorlevel!
-
-java net.sf.saxon.Transform -catalog:xsl\catalog.xml	-s:!CURRENT_SOURCE!  									-o:temp\0400-remove_review.xml  						-xsl:xsl\0400-remove_review.xsl
-if errorlevel 1 exit /b !errorlevel!
-
-java net.sf.saxon.Transform 							-s:temp\0400-remove_review.xml   						-o:temp\0005-namespace-remove.xml  					-xsl:xsl\0005-namespace-remove.xsl
+rem ÆÄÀÏ¸í º¯°æ ¸ðµå¿¡ µû¶ó ID/XREF¸¦ Á¤¸®ÇÑ ÈÄ ÃÖÁ¾ ÆÄÀÏ¸íÀ¸·Î º¸°í¼­¸¦ »ý¼ºÇÑ´Ù.	
+rem 0005-namespace-remove.xsl: DB¿Í ±âº» Á¤Á¦°¡ ³¡³­ º´ÇÕ XMLÀÇ namespace¸¦ ´Ù½Ã Á¤¸®ÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:!CURRENT_SOURCE!   								-o:temp\0005-namespace-remove.xml  							-xsl:xsl\0005-namespace-remove.xsl
 if errorlevel 1 exit /b !errorlevel!
 if /I "!FILE_NAME_MODE!"=="T00000" (
-    java net.sf.saxon.Transform 						-s:temp\0005-namespace-remove.xml  					-o:temp\0006-id-clean.xml  							-xsl:xsl\0006-id-clean.xsl
+    rem 0006-id-clean.xsl: t0000 ÆÄÀÏ¸í º¯°æ ¸ðµå¿¡ ¸ÂÃç ¿ä¼Ò ID¿Í ÆÄÀÏ ÂüÁ¶¿ë ID¸¦ Á¤¸®ÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\0005-namespace-remove.xml  					-o:temp\0006-id-clean.xml  									-xsl:xsl\0006-id-clean.xsl
     if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform 						-s:temp\0006-id-clean.xml  							-o:temp\0007-xref-clean.xml  							-xsl:xsl\0007-xref-clean.xsl
+    rem 0007-xref-clean.xsl: t0000 ÆÄÀÏ¸í º¯°æ ¸ðµå¿¡ ¸ÂÃç xref href¸¦ Á¤¸®ÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\0006-id-clean.xml  							-o:temp\0007-xref-clean.xml  									-xsl:xsl\0007-xref-clean.xsl
     if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform 						-s:temp\0007-xref-clean.xml  							-o:temp\0008-related-links.xml  						-xsl:xsl\0008-related-links.xsl
+    rem 0008-related-links.xsl: t0000 ÆÄÀÏ¸í º¯°æ °á°ú¸¦ ±âÁØÀ¸·Î related-links¸¦ »ý¼ºÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\0007-xref-clean.xml  							-o:temp\0008-related-links.xml  								-xsl:xsl\0008-related-links.xsl
     if errorlevel 1 exit /b !errorlevel!
 ) else if /I "!FILE_NAME_MODE!"=="TITLE_PREFIX" (
-    java net.sf.saxon.Transform 						-s:temp\0005-namespace-remove.xml  					-o:temp\0006-id-clean_TitleFileNamePrefix.xml  		-xsl:xsl\0006-id-clean_TitleFileNamePrefix.xsl titleFileNamePrefix=Y
+    rem 0006-id-clean_TitleFileNamePrefix.xsl: Á¦¸ñ ±â¹Ý ÆÄÀÏ¸í ¸ðµå¿¡ ¸ÂÃç ¿ä¼Ò ID¿Í ÆÄÀÏ ÂüÁ¶¿ë ID¸¦ Á¤¸®ÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\0005-namespace-remove.xml  					-o:temp\0006-id-clean_TitleFileNamePrefix.xml  					-xsl:xsl\0006-id-clean_TitleFileNamePrefix.xsl titleFileNamePrefix=Y
     if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform 						-s:temp\0006-id-clean_TitleFileNamePrefix.xml  		-o:temp\0007-xref-clean_TitleFileNamePrefix.xml  		-xsl:xsl\0007-xref-clean_TitleFileNamePrefix.xsl titleFileNamePrefix=Y
+    rem 0007-xref-clean_TitleFileNamePrefix.xsl: Á¦¸ñ ±â¹Ý ÆÄÀÏ¸í ¸ðµå¿¡ ¸ÂÃç xref href¸¦ Á¤¸®ÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\0006-id-clean_TitleFileNamePrefix.xml  			-o:temp\0007-xref-clean_TitleFileNamePrefix.xml  				-xsl:xsl\0007-xref-clean_TitleFileNamePrefix.xsl titleFileNamePrefix=Y
     if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform 						-s:temp\0007-xref-clean_TitleFileNamePrefix.xml  		-o:temp\0008-related-links_TitleFileNamePrefix.xml  	-xsl:xsl\0008-related-links_TitleFileNamePrefix.xsl
+    rem 0008-related-links_TitleFileNamePrefix.xsl: Á¦¸ñ ±â¹Ý ÆÄÀÏ¸í º¯°æ °á°ú¸¦ ±âÁØÀ¸·Î related-links¸¦ »ý¼ºÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\0007-xref-clean_TitleFileNamePrefix.xml  		-o:temp\0008-related-links_TitleFileNamePrefix.xml  			-xsl:xsl\0008-related-links_TitleFileNamePrefix.xsl
     if errorlevel 1 exit /b !errorlevel!
 ) else (
-    java net.sf.saxon.Transform 						-s:temp\0005-namespace-remove.xml  					-o:temp\0006-id-clean_NotFileNameChange.xml  			-xsl:xsl\0006-id-clean_NotFileNameChange.xsl
+    rem 0006-id-clean_NotFileNameChange.xsl: ±âÁ¸ ÆÄÀÏ¸íÀ» À¯ÁöÇÏ¸é¼­ ¿ä¼Ò ID¿Í ÆÄÀÏ ÂüÁ¶¿ë ID¸¦ Á¤¸®ÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\0005-namespace-remove.xml  					-o:temp\0006-id-clean_NotFileNameChange.xml  				-xsl:xsl\0006-id-clean_NotFileNameChange.xsl
     if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform 						-s:temp\0006-id-clean_NotFileNameChange.xml  			-o:temp\0007-xref-clean_NotFileNameChange.xml  		-xsl:xsl\0007-xref-clean_NotFileNameChange.xsl
+    rem 0007-xref-clean_NotFileNameChange.xsl: ±âÁ¸ ÆÄÀÏ¸íÀ» À¯ÁöÇÏ¸é¼­ xref href¸¦ Á¤¸®ÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\0006-id-clean_NotFileNameChange.xml  		-o:temp\0007-xref-clean_NotFileNameChange.xml  				-xsl:xsl\0007-xref-clean_NotFileNameChange.xsl
     if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform 						-s:temp\0007-xref-clean_NotFileNameChange.xml  		-o:temp\0008-related-links_NotFileNameChange.xml  		-xsl:xsl\0008-related-links_NotFileNameChange.xsl
+    rem 0008-related-links_NotFileNameChange.xsl: ±âÁ¸ ÆÄÀÏ¸íÀ» À¯ÁöÇÑ °á°ú¸¦ ±âÁØÀ¸·Î related-links¸¦ »ý¼ºÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\0007-xref-clean_NotFileNameChange.xml  		-o:temp\0008-related-links_NotFileNameChange.xml  			-xsl:xsl\0008-related-links_NotFileNameChange.xsl
     if errorlevel 1 exit /b !errorlevel!
 )
+
 if /I "!FILE_NAME_MODE!"=="T00000" (
-    java net.sf.saxon.Transform 						-s:temp\0008-related-links.xml  						-o:temp\0009-dita-rebeautify.xml  						-xsl:xsl\0009-dita-rebeautify.xsl
-    if errorlevel 1 exit /b !errorlevel!
+    set "CURRENT_SOURCE=temp\0008-related-links.xml"
 ) else if /I "!FILE_NAME_MODE!"=="TITLE_PREFIX" (
-    java net.sf.saxon.Transform 						-s:temp\0008-related-links_TitleFileNamePrefix.xml  	-o:temp\0009-dita-rebeautify.xml  						-xsl:xsl\0009-dita-rebeautify.xsl
-    if errorlevel 1 exit /b !errorlevel!
+    set "CURRENT_SOURCE=temp\0008-related-links_TitleFileNamePrefix.xml"
 ) else (
-    java net.sf.saxon.Transform 						-s:temp\0008-related-links_NotFileNameChange.xml  		-o:temp\0009-dita-rebeautify.xml  						-xsl:xsl\0009-dita-rebeautify.xsl
-    if errorlevel 1 exit /b !errorlevel!
+    set "CURRENT_SOURCE=temp\0008-related-links_NotFileNameChange.xml"
 )
-java net.sf.saxon.Transform 							-s:temp\0009-dita-rebeautify.xml 						-o:xsl\dummy.xml										-xsl:xsl\0010-rechapterize.xsl
+
+rem ID/XREF/related-links Á¤¸®°¡ ³¡³­ ÃÖÁ¾ ±¸Á¶¸¦ ±âÁØÀ¸·Î °ËÃâ Ç×¸ñÀ» Ç¥½ÃÇÑ´Ù.
+rem 0120-mark_empty_topic.xsl: title¸¸ ÀÖ°Å³ª ÇÏÀ§ ³»¿ëÀÌ ¾ø´Â DITA¸¦ Ã£¾Æ ¸®Æ÷Æ®¿ëÀ¸·Î Ç¥½ÃÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:!CURRENT_SOURCE! 									-o:temp\0120-empty_topic_marked.xml 						-xsl:xsl\0120-mark_empty_topic.xsl
+if errorlevel 1 exit /b !errorlevel!
+rem 0121-mark_empty_tag.xsl: ¼Ó¼º°ú ³»¿ëÀÌ ¸ðµÎ ¾ø´Â ºó ÅÂ±×¸¦ Ã£¾Æ ¸®Æ÷Æ®¿ëÀ¸·Î Ç¥½ÃÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0120-empty_topic_marked.xml 					-o:temp\0121-empty_tag_marked.xml 							-xsl:xsl\0121-mark_empty_tag.xsl
+if errorlevel 1 exit /b !errorlevel!
+rem 0122-mark_li_direct_text.xsl: li Á÷Á¢ ÅØ½ºÆ®¿Í step ³»ºÎ cmd ´©¶ôÀ» Ã£¾Æ ¸®Æ÷Æ®¿ëÀ¸·Î Ç¥½ÃÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0121-empty_tag_marked.xml 					-o:temp\0122-li_direct_text_marked.xml 						-xsl:xsl\0122-mark_li_direct_text.xsl
+if errorlevel 1 exit /b !errorlevel!
+rem 0125-mark_image_server_href.xsl: http ¶Ç´Â https ¼­¹ö ÁÖ¼Ò¸¦ »ç¿ëÇÏ´Â image href¸¦ Ã£¾Æ ¸®Æ÷Æ®¿ëÀ¸·Î Ç¥½ÃÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0122-li_direct_text_marked.xml					 -o:temp\0125-image_server_href_marked.xml					 -xsl:xsl\0125-mark_image_server_href.xsl
+if errorlevel 1 exit /b !errorlevel!
+rem 0126-mark_invalid_xref_href.xsl: °æ·Î³ª ÇÏÀ§ element ID°¡ Æ÷ÇÔµÈ ºñÁ¤»ó xref href¸¦ Ã£¾Æ ¸®Æ÷Æ®¿ëÀ¸·Î Ç¥½ÃÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0125-image_server_href_marked.xml 			-o:temp\0126-invalid_xref_href_marked.xml 						-xsl:xsl\0126-mark_invalid_xref_href.xsl
 if errorlevel 1 exit /b !errorlevel!
 
+rem Detect image href values whose extension is not .eps without modifying the href.
+rem 0127-mark_non_eps_image_href.xsl: È®ÀåÀÚ°¡ eps°¡ ¾Æ´Ñ image href¸¦ Ã£¾Æ ¸®Æ÷Æ®¿ëÀ¸·Î Ç¥½ÃÇÑ´Ù(ÇöÀç ¹Ì½ÇÇà).
+rem java net.sf.saxon.Transform -s:temp\0126-invalid_xref_href_marked.xml -o:temp\0127-non_eps_image_href_marked.xml -xsl:xsl\0127-mark_non_eps_image_href.xsl
+rem if errorlevel 1 exit /b !errorlevel!
+
+rem 0009-dita-rebeautify.xsl: °ËÃâ Á¤º¸°¡ Æ÷ÇÔµÈ º´ÇÕ XMLÀ» ÃÖÁ¾ ¸®Æ÷Æ®¿Í ÆÄÀÏ ºÐ¸®¿¡ ÀûÇÕÇÏ°Ô Á¤·ÄÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0126-invalid_xref_href_marked.xml				 -o:temp\0009-dita-rebeautify.xml 								-xsl:xsl\0009-dita-rebeautify.xsl
+if errorlevel 1 exit /b !errorlevel!
+
+echo REPORT_SOURCE=temp\0009-dita-rebeautify.xml >> %OPTION_LOG%
+if /I "!BER_DB_APPLY!"=="Y" (
+    if not exist temp\ber_ko_kr_excluded.flag (
+    rem °ËÃâÀÌ ³¡³­ ÃÖÁ¾ ±¸Á¶¸¦ ±âÁØÀ¸·Î BER º¯°æ »ó¼¼ ¸®Æ÷Æ® XMLÀ» »ý¼ºÇÑ´Ù.
+    rem 0410-make-change-report_ber.xsl: ÃÖÁ¾ ±¸Á¶¿Í BER »óÅÂ¸¦ ±âÁØÀ¸·Î BER º¯°æ »ó¼¼ ¸®Æ÷Æ® XMLÀ» »ý¼ºÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\0009-dita-rebeautify.xml 						-o:temp\excel-change-report.xml 								-xsl:xsl\0410-make-change-report_ber.xsl
+    if errorlevel 1 exit /b !errorlevel!
+    rem BER º¯°æ »ó¼¼ ¸®Æ÷Æ® XMLÀ» Excel ÆÄÀÏ·Î º¯È¯ÇÑ´Ù.
+    cscript //nologo "%ROOT%xsl\Convert_Xml_To_Excel.vbs"
+    if errorlevel 1 exit /b !errorlevel!
+    rem º¯È¯µÈ Excel ÆÄÀÏÀ» BER_º¯°æ_¸®Æ÷Æ®.xlsx ÀÌ¸§À¸·Î ÀúÀåÇÑ´Ù.
+    copy /y temp\excel-change-report.xlsx temp\BER_º¯°æ_¸®Æ÷Æ®.xlsx >NUL
+    if errorlevel 1 exit /b !errorlevel!
+    )
+)
+
+rem 0190-make-transform-report-excel.xsl: ¼±ÅÃ ¿É¼Ç°ú Á¤Á¦¡¤°ËÃâ °á°ú¸¦ ¸ð¾Æ °á°ú ¸®Æ÷Æ® XMLÀ» »ý¼ºÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0009-dita-rebeautify.xml						-o:temp\transform_report_excel.xml								-xsl:xsl\0190-make-transform-report-excel.xsl		fileNameMode=!FILE_NAME_MODE! inputType=!INPUT_TYPE! outputType=!OUTPUT_TYPE! removeSimple=!REMOVE_SIMPLE_OPERATION! removeDeliveryTarget=!REMOVE_DELIVERY_TARGET! deleteDraft=!DELETE_DRAFT! textDbApply=!TEXT_DB_APPLY! noteDbApply=!NOTE_DB_APPLY! berDbApply=!BER_DB_APPLY!
+if errorlevel 1 exit /b !errorlevel!
+
+rem 0400-remove_review.xsl: ¸®Æ÷Æ® »ý¼ºÀÌ ³¡³­ XML¿¡¼­ modified, status, hash µî ÀÛ¾÷¿ë Á¤º¸¸¦ »èÁ¦ÇÑ´Ù.
+java net.sf.saxon.Transform -catalog:xsl\catalog.xml						-s:temp\0009-dita-rebeautify.xml						-o:temp\0400-remove_review.xml  								-xsl:xsl\0400-remove_review.xsl
+if errorlevel 1 exit /b !errorlevel!
+	
+rem 0010-rechapterize.xsl: Á¤Á¦°¡ ³¡³­ º´ÇÕ XMLÀ» ÃÖÁ¾ ditamap°ú °³º° DITA ÆÄÀÏ·Î ´Ù½Ã ºÐ¸®ÇÑ´Ù.
+java net.sf.saxon.Transform 												-s:temp\0400-remove_review.xml 						-o:xsl\dummy.xml												-xsl:xsl\0010-rechapterize.xsl
+if errorlevel 1 exit /b !errorlevel!
+
+rem ±ÝÄ¢¾î QC º¸°í¼­ ¿É¼ÇÀÌ ÄÑÁø °æ¿ì Ãß°¡ Á¤±ÔÈ­¿Í Excel º¸°í¼­ º´ÇÕ±îÁö ¼öÇàÇÑ´Ù.
 if /I "!FORBIDDEN_QC_REPORT!"=="Y" (
-    java net.sf.saxon.Transform 						-s:temp\0009-dita-rebeautify.xml						-o:temp\qc-29-kus-text-normalized.xml				-xsl:xsl\29-kus-text-normalize.xsl
+    rem 29-kus-text-normalize.xsl: ±ÝÄ¢¾î QC °Ë»ç¸¦ À§ÇØ ¹®Àå ÅØ½ºÆ®¸¦ °Ë»ç ±âÁØ¿¡ ¸Â°Ô Á¤±ÔÈ­ÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\0400-remove_review.xml						-o:temp\qc-29-kus-text-normalized.xml							-xsl:xsl\29-kus-text-normalize.xsl
     if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform 						-s:temp\qc-29-kus-text-normalized.xml					-o:temp\qc-30-kus-inline-normalized.xml				-xsl:xsl\30-kus-inline-normalize.xsl
+    rem 30-kus-inline-normalize.xsl: ±ÝÄ¢¾î QC °Ë»ç¸¦ À§ÇØ ÀÎ¶óÀÎ ¿ä¼Ò ¾ÕµÚ °ø¹éÀ» Á¤±ÔÈ­ÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\qc-29-kus-text-normalized.xml					-o:temp\qc-30-kus-inline-normalized.xml						-xsl:xsl\30-kus-inline-normalize.xsl
     if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform 						-s:temp\qc-30-kus-inline-normalized.xml					-o:temp\qc-50-inserted-forbidden-ph.xml				-xsl:xsl\50-insert-forbidden-ph.xsl
+    rem 50-insert-forbidden-ph.xsl: ±ÝÄ¢¾î DB¿Í ÀÏÄ¡ÇÏ´Â ³»¿ëÀ» Ã£¾Æ QC¿ë ph Ç¥½Ã¸¦ Ãß°¡ÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\qc-30-kus-inline-normalized.xml				-o:temp\qc-50-inserted-forbidden-ph.xml						-xsl:xsl\50-insert-forbidden-ph.xsl
     if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform 						-s:temp\qc-50-inserted-forbidden-ph.xml					-o:temp\qc-31-kus-beautified.xml					-xsl:xsl\31-kus-beautify2.xsl
+    rem 31-kus-beautify2.xsl: ±ÝÄ¢¾î Ç¥½Ã°¡ Ãß°¡µÈ XMLÀÇ ¿ä¼Ò¿Í °ø¹éÀ» QC Ã³¸®¿¡ ¸Â°Ô Á¤·ÄÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\qc-50-inserted-forbidden-ph.xml				-o:temp\qc-31-kus-beautified.xml								-xsl:xsl\31-kus-beautify2.xsl
     if errorlevel 1 exit /b !errorlevel!
     del /q topics\*.dita 2>nul
-    java net.sf.saxon.Transform 						-s:temp\qc-31-kus-beautified.xml						-o:xsl\dummy.xml									-xsl:xsl\21-topicalize.xsl
+    rem 21-topicalize.xsl: ±ÝÄ¢¾î QC¿ë º´ÇÕ XMLÀ» °Ë»ç °¡´ÉÇÑ °³º° DITA ±¸Á¶·Î ºÐ¸®ÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\qc-31-kus-beautified.xml						-o:xsl\dummy.xml												-xsl:xsl\21-topicalize.xsl
+    if errorlevel 1 exit /b !errorlevel!	
+    rem 51-collect-forbidden.xsl: Ç¥½ÃµÈ ±ÝÄ¢¾î¸¦ ¼öÁýÇØ 3rd_party °Ë»ç ÀÚ·á¸¦ »ý¼ºÇÑ´Ù.
+    java net.sf.saxon.Transform 			-catalog:xsl\catalog.xml			-s:temp\qc-31-kus-beautified.xml						-o:xsl\dummy.xml												-xsl:xsl\51-collect-forbidden.xsl
+    if errorlevel 1 exit /b !errorlevel!	
+    rem 52-excel-for-3rd-party.xsl: ¼öÁýÇÑ ±ÝÄ¢¾î °á°ú¸¦ Excel¿ë XML ¸®Æ÷Æ®·Î º¯È¯ÇÑ´Ù.
+    java net.sf.saxon.Transform 			-catalog:xsl\catalog.xml			-s:topics\3rd_party\extract.xml							-o:temp\Forbidden_Report.xml									-xsl:xsl\52-excel-for-3rd-party.xsl
     if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform -catalog:xsl\catalog.xml	-s:temp\qc-31-kus-beautified.xml						-o:xsl\dummy.xml									-xsl:xsl\51-collect-forbidden.xsl
-    if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform -catalog:xsl\catalog.xml	-s:topics\3rd_party\extract.xml						-o:temp\Forbidden_Report.xml						-xsl:xsl\52-excel-for-3rd-party.xsl
-    if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform -catalog:xsl\catalog.xml	-s:topics\3rd_party\extract.xml						-o:temp\Forbidden_Report.html						-xsl:xsl\check_forbidden_make_html.xsl
+    rem check_forbidden_make_html.xsl: ¼öÁýÇÑ ±ÝÄ¢¾î °á°ú¸¦ È®ÀÎ¿ë HTML ¸®Æ÷Æ®·Î º¯È¯ÇÑ´Ù.
+    java net.sf.saxon.Transform 			-catalog:xsl\catalog.xml			-s:topics\3rd_party\extract.xml							-o:temp\Forbidden_Report.html									-xsl:xsl\check_forbidden_make_html.xsl
     if errorlevel 1 exit /b !errorlevel!
     java -jar lib\ant-launcher.jar -lib lib -f build_qc_lint.xml excel-report
     if errorlevel 1 exit /b !errorlevel!
-    java net.sf.saxon.Transform 						-s:temp\transform_report_excel.xml					-o:temp\transform_report_excel_merged.xml			-xsl:xsl\0191-merge-qc-report-sheets.xsl forbiddenReport=../temp/Forbidden_Report.xml qcLintReport=../temp/QC_LINT_Report.xml
+    rem 0191-merge-qc-report-sheets.xsl: ±ÝÄ¢¾î¿Í ¹®Àå QC °á°ú ½ÃÆ®¸¦ ±âÁ¸ °á°ú ¸®Æ÷Æ®¿¡ º´ÇÕÇÑ´Ù.
+    java net.sf.saxon.Transform 											-s:temp\transform_report_excel.xml						-o:temp\transform_report_excel_merged.xml					-xsl:xsl\0191-merge-qc-report-sheets.xsl		forbiddenReport=../temp/Forbidden_Report.xml qcLintReport=../temp/QC_LINT_Report.xml
     if errorlevel 1 exit /b !errorlevel!
     copy /y temp\transform_report_excel_merged.xml temp\transform_report_excel.xml >NUL
     if errorlevel 1 exit /b !errorlevel!
 )
 
+rem º¯È¯ °á°ú º¸°í¼­¸¦ Excel ÆÄÀÏ·Î ¸¸µé°í ÃÖÁ¾ bookmap.xmlÀ» ÀÛ¾÷ Æú´õ·Î º¹»çÇÑ´Ù.
 cscript //nologo "%ROOT%xsl\Convert_Xml_To_Excel-revision.vbs"
 if errorlevel 1 exit /b !errorlevel!
 
@@ -306,5 +439,11 @@ copy "%~dp0xsl\bookmap.xml" "%~dp0bookmap.xml" /Y > NUL
 if errorlevel 1 exit /b !errorlevel!
 
 rd /q/s topics
+
+if exist "topics_2" (
+    if not exist "topics" mkdir "topics"
+    xcopy "topics_2\*.*" "topics\" /E /I /Y > NUL
+)
+
 echo Done.
 pause

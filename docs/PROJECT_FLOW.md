@@ -28,7 +28,7 @@
   MyBatis XML mapper와 연결되는 DB 접근 인터페이스다.
 - `src/main/java/maoomWeb/ire/admin/controller`  
   관리자 화면에서 호출하는 REST API 진입점이다.
-- `src/main/java/maoomWeb/ire/admin/service`  [userMain.html](../src/main/resources/templates/user/userMain.html)
+- `src/main/java/maoomWeb/ire/admin/service`
   관리자 화면에서 쓰는 DB 조회/수정 서비스와 DTO가 있다.
 - `src/main/resources/mapper`  
   MyBatis SQL XML이다. DB 테이블과 Java DTO 필드 연결이 여기에 있다.
@@ -85,6 +85,33 @@ index.html
 
 사용자는 DITA 작업 폴더를 입력하고, 서버 PC는 해당 경로 아래에서 Index 검토용 엑셀을
 생성한다. 입력 경로는 브라우저 PC가 아니라 서버 PC 기준으로 접근 가능해야 한다.
+
+## 자동 카운팅 흐름
+
+```text
+autoCounting.html
+  -> AutoCountingController
+  -> AutoCountingService
+  -> PDF 목차/본문 분석 또는 초도 견적 엑셀 템플릿 작성
+  -> JSON 분석 결과 / xlsx 다운로드
+```
+
+업로드 PDF는 서버 메모리에서 분석한다. 카운팅 모드와 32페이지 제본 옵션에 따라
+집계 규칙이 달라지며, 초도 견적 엑셀 생성은 화면에서 전달한 필드와 프로젝트 내부
+템플릿을 함께 사용한다.
+
+## 자동 고지문 생성 흐름
+
+```text
+automaticNotice.html
+  -> AutomaticNoticeController
+  -> AutomaticNoticeService
+  -> AutomaticNoticeGen 모듈 / 고지문 규칙 DB
+  -> 생성 결과 파일
+```
+
+고지문 규칙은 관리자 화면에서 `AdminAutomaticNoticeRuleController`와
+`AutomaticNoticeRuleAdminService`를 통해 조회·수정하거나 엑셀로 일괄 등록한다.
 
 ## 견적 흐름
 
@@ -143,6 +170,14 @@ printCheck.html
 오류가 날 때는 Excel 프로세스, 파일 권한, 네트워크 드라이브 접근 권한, XSL/VBS 자원
 복사 여부를 같이 확인해야 한다.
 
+Revision은 화면에서 입력/출력 형식과 정제 옵션을 선택한다. 옵션 검증과 배치 조합은
+`RevisionPipelineCatalog`, 작업 폴더 준비와 배치 실행은 `RevisionPipelineService`가
+담당한다. NOTE/TEXT/BER DB 반영 옵션은 실행 시점의 관리자 기준 DB를 XML 자원으로
+내보내 정제 파이프라인에 전달한다. BER 반영 결과에는 변경 리포트와 함께 실제 적용
+지역의 AS-IS/TO-BE XML 한 개도 복사한다(EU는 `asis-tobe_eu.xml`, EU_RG는
+`asis-tobe_eu_rg.xml`, US/CA/MX는 `asis-tobe_us.xml`). 원본과 출력 경로가 겹치면
+실행하지 않는다.
+
 ## DITAMAP Builder 흐름
 
 ```text
@@ -179,6 +214,9 @@ pdfview.html
 PDF 화면의 실시간 협업은 `PdfCollaborationHandler` 웹소켓 핸들러가 담당한다.
 DB 저장은 REST API, 사용자 간 화면 동기화는 웹소켓으로 나뉜다.
 
+PDF 목록의 사용자별 즐겨찾기는 `PdfFavoriteService`와 `PdfFavoriteMapper`가 처리한다.
+즐겨찾기 대상은 PDF와 폴더를 구분해 저장하며, 같은 항목을 다시 선택하면 해제된다.
+
 ## 관리자 화면 흐름
 
 ```text
@@ -186,6 +224,11 @@ adminMain.html
   -> /admin/color-check/items
   -> /admin/project-logs
   -> /admin/users
+  -> /admin/automatic-notice-rules/items
+  -> /admin/ber-asis-tobe/items
+  -> /admin/project-note-db/items
+  -> /admin/project-text-db/items
+  -> /admin/qsg-db/items
 ```
 
 관리자 화면은 한 HTML 안에서 탭을 바꿔가며 DataTables를 초기화한다. 탭별 데이터는
@@ -194,6 +237,15 @@ adminMain.html
 - 견적 탭: `AdminColorCheckController`
 - 실행 로그 탭: `AdminProjectExecutionLogController`
 - 사용자 탭: `AdminUserController`
+- 자동 고지문 규칙 탭: `AdminAutomaticNoticeRuleController`
+- BER AS-IS/TO-BE 탭: `AdminBerAsisTobeController`
+- NOTE 기준 DB 탭: `AdminNoteDbController`
+- TEXT 기준 DB 탭: `AdminProjectDbController`
+- QSG 기준 DB 탭: `AdminQsgDbController`
+
+기준 DB 편집 API는 조회를 제외한 변경 작업에 `ADMIN` 또는 `DB_EDITOR` 권한을
+요구한다. 엑셀/XML 가져오기는 서비스에서 행별 값을 검증하고, 지역과 hash 조합을
+기준으로 신규 등록 또는 갱신한다.
 
 ## 서버 경로 설정 방법
 

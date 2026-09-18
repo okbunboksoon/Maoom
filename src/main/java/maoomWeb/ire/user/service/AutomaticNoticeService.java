@@ -138,26 +138,17 @@ public class AutomaticNoticeService {
             if("KO".equalsIgnoreCase(token)){
                 return "KO";
             }
-            if("US".equalsIgnoreCase(token)
-                    || "CA".equalsIgnoreCase(token)
-                    || "MX".equalsIgnoreCase(token)){
-                return "US";
-            }
         }
 
         java.util.regex.Matcher matcher = java.util.regex.Pattern
-                .compile("(?i)(?:^|[_\\-\\.])(KO|US|CA|MX)(?:[_\\-\\.]|$)")
+                .compile("(?i)(?:^|[_\\-\\.])KO(?:[_\\-\\.]|$)")
                 .matcher(normalized);
-        if(matcher.find()){
-            return matcher.group(1).equalsIgnoreCase("KO") ? "KO" : "US";
-        }
-        return "EG";
+        return matcher.find() ? "KO" : "EG";
     }
 
     private String rulesFileName(String market) {
         return switch(market){
             case "KO" -> "ANG_ko_rules.xlsx";
-            case "US" -> "ANG_us_rules.xlsx";
             default -> "ANG_eg_rules.xlsx";
         };
     }

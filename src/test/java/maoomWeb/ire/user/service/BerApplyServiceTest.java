@@ -52,4 +52,45 @@ class BerApplyServiceTest {
                 .contains("an authorized Kia dealer 또는 an authorised Kia dealer가 포함된 전체 문장");
     }
 
+    @Test
+    void usesSameSpecificRegionTokensAcrossBerStylesheets()
+            throws Exception {
+
+        for(String fileName : new String[]{
+                "0320-kus-pair-extract_ber.xsl",
+                "0340-kus-db-apply_ber.xsl",
+                "0410-make-change-report_ber.xsl"}){
+            String xsl = Files.readString(
+                    Path.of("src/main/resources/xsl", fileName),
+                    StandardCharsets.UTF_8);
+
+            assertThat(xsl)
+                    .contains("EN_CA_LHD")
+                    .contains("EN_RG")
+                    .contains("EN_US")
+                    .contains("EN_CA")
+                    .contains("EN_MX");
+        }
+
+        String applyXsl = Files.readString(
+                Path.of(
+                        "src/main/resources/xsl/0340-kus-db-apply_ber.xsl"),
+                StandardCharsets.UTF_8);
+        String reportXsl = Files.readString(
+                Path.of(
+                        "src/main/resources/xsl/0410-make-change-report_ber.xsl"),
+                StandardCharsets.UTF_8);
+
+        assertThat(applyXsl)
+                .contains("if ($isCaLhd) then 'asis-tobe_eu.xml'");
+        assertThat(reportXsl)
+                .contains("if ($isCaLhd) then 'asis-tobe_eu.xml'")
+                .contains("$candidate-targets[not(descendant::* intersect $candidate-targets)]")
+                .contains("select=\"count($targets[@status = 'ber_changed'])\"")
+                .contains("select=\"count($unchanged-targets)\"")
+                .contains("<xsl:for-each select=\"$unchanged-targets\">")
+                .contains("not(descendant-or-self::*[@status = 'ber_changed'])")
+                .doesNotContain("contains(upper-case($mapTitle), 'IN')");
+    }
+
 }

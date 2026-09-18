@@ -18,6 +18,31 @@ import maoomWeb.ire.user.dto.RevisionRunResult;
 
 class RevisionPipelineServiceTest {
 
+    @Test
+    void exposesBerApplyAsASelectableOption() {
+        assertThat(RevisionPipelineCatalog.options())
+                .anyMatch(option -> option.id().equals(
+                        RevisionPipelineCatalog.BER_DB_APPLY));
+        assertThat(RevisionPipelineCatalog.validateOptions(
+                List.of(RevisionPipelineCatalog.BER_DB_APPLY)))
+                .containsExactly(RevisionPipelineCatalog.BER_DB_APPLY);
+    }
+
+    @Test
+    void runsChapterizeForXmlToDitaWhenOnlyBerIsSelected() {
+        RevisionPipelineCatalog.BatchPlan plan =
+                RevisionPipelineCatalog.createBatchPlan(
+                        RevisionFormat.XML,
+                        RevisionFormat.DITA,
+                        Set.of(RevisionPipelineCatalog.BER_DB_APPLY));
+
+        assertThat(plan.batchFiles())
+                .containsExactly(
+                        "03_chapter_Topicalize.bat",
+                        "02_topics_Chapterize_NotFileNameChange.bat",
+                        "03_chapter_Topicalize.bat");
+    }
+
     @TempDir
     Path tempDirectory;
 
@@ -102,6 +127,63 @@ class RevisionPipelineServiceTest {
     }
 
     @Test
+    void copiesBerChangeReportToResultFolderWhenCreated() throws Exception {
+        Path source = tempDirectory.resolve("BER_변경_리포트.xlsx");
+        Path result = Files.createDirectory(tempDirectory.resolve("result"));
+        Path target = result.resolve("BER_변경_리포트.xlsx");
+        Files.writeString(source, "ber report", StandardCharsets.UTF_8);
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        Method method = RevisionPipelineService.class.getDeclaredMethod(
+                "copyIfExists",
+                Path.class,
+                Path.class,
+                List.class);
+        method.setAccessible(true);
+        List<String> logs = new ArrayList<>();
+
+        method.invoke(service, source, target, logs);
+
+        assertThat(target)
+                .exists()
+                .content(StandardCharsets.UTF_8)
+                .isEqualTo("ber report");
+        assertThat(logs)
+                .contains("리포트 복사: BER_변경_리포트.xlsx -> BER_변경_리포트.xlsx");
+    }
+
+    @Test
+    void copiesOnlyBerReferenceXmlSelectedByRegion() throws Exception {
+        Path workspace = Files.createDirectory(tempDirectory.resolve("workspace"));
+        Path temp = Files.createDirectory(workspace.resolve("temp"));
+        Path xsl = Files.createDirectory(workspace.resolve("xsl"));
+        Path result = Files.createDirectory(tempDirectory.resolve("result"));
+        Files.writeString(
+                temp.resolve("ber_db_used.txt"),
+                "asis-tobe_eu.xml",
+                StandardCharsets.UTF_8);
+        Files.writeString(xsl.resolve("asis-tobe_eu.xml"), "EU", StandardCharsets.UTF_8);
+        Files.writeString(xsl.resolve("asis-tobe_us.xml"), "US", StandardCharsets.UTF_8);
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        Method method = RevisionPipelineService.class.getDeclaredMethod(
+                "copyUsedBerReferenceXml",
+                Path.class,
+                Path.class,
+                List.class);
+        method.setAccessible(true);
+        List<String> logs = new ArrayList<>();
+
+        method.invoke(service, workspace, result, logs);
+
+        assertThat(result.resolve("asis-tobe_eu.xml"))
+                .exists()
+                .content(StandardCharsets.UTF_8)
+                .isEqualTo("EU");
+        assertThat(result.resolve("asis-tobe_us.xml")).doesNotExist();
+    }
+
+    @Test
     void appendsChapterizeBatchArgumentsWhenOptionsAreSelected() throws Exception {
         RevisionPipelineService service = new RevisionPipelineService();
         List<String> logs = new ArrayList<>();
@@ -127,7 +209,8 @@ class RevisionPipelineServiceTest {
                 Set.of(
                         RevisionPipelineCatalog.FILE_NAME_T00000,
                         RevisionPipelineCatalog.REMOVE_SIMPLE_OPERATION_DELIVERY_TARGET,
-                        RevisionPipelineCatalog.DELETE_DRAFT_COMMENT),
+                        RevisionPipelineCatalog.DELETE_DRAFT_COMMENT,
+                        RevisionPipelineCatalog.BER_DB_APPLY),
                 command,
                 logs);
 
@@ -138,12 +221,14 @@ class RevisionPipelineServiceTest {
                         "FILE_NAME_CHANGE=Y",
                         "REMOVE_DELIVERY_TARGET=Y",
                         "REMOVE_SIMPLE_OPERATION=Y",
-                        "DELETE_DRAFT=Y");
+                        "DELETE_DRAFT=Y",
+                        "BER_DB_APPLY=Y");
         assertThat(logs)
                 .contains("옵션 추가: 파일명 변경(t0000, t0001 형식)")
                 .contains("옵션 추가: deliveryTarget 지우기")
                 .contains("옵션 추가: Simple operation 지우기")
-                .contains("옵션 추가: Draft Comment, review, hash, modified 지우기");
+                .contains("옵션 추가: Draft Comment, review, hash, modified 지우기")
+                .contains("옵션 추가: BER 반영");
     }
 
     @Test
@@ -319,4 +404,25 @@ class RevisionPipelineServiceTest {
                 "topics"))
                 .isFalse();
     }
+
+    @Test
+    void excludesThirdPartyDirectoryFromPublishedTopics() throws Exception {
+        Path source = Files.createDirectory(tempDirectory.resolve("source-topics"));
+        Path target = tempDirectory.resolve("result-topics");
+        Files.writeString(source.resolve("sample.dita"), "<topic/>");
+        Path thirdParty = Files.createDirectory(source.resolve("3rd_party"));
+        Files.writeString(thirdParty.resolve("extract.xml"), "<extract/>");
+
+        RevisionPipelineService service = new RevisionPipelineService();
+        Method method = RevisionPipelineService.class.getDeclaredMethod(
+                "replaceDirectoryExcludingThirdParty",
+                Path.class,
+                Path.class);
+        method.setAccessible(true);
+        method.invoke(service, source, target);
+
+        assertThat(target.resolve("sample.dita")).exists();
+        assertThat(target.resolve("3rd_party")).doesNotExist();
+    }
+
 }

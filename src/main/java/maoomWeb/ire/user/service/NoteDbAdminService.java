@@ -29,6 +29,9 @@ import jakarta.annotation.PostConstruct;
 import maoomWeb.ire.user.dto.NoteDbItem;
 import maoomWeb.ire.user.mapper.NoteDbItemMapper;
 
+/**
+ * NOTE 기준 DB의 스키마 호환성을 보정하고 지역별 항목의 CRUD와 XML/엑셀 등록을 처리한다.
+ */
 @Service
 public class NoteDbAdminService {
 

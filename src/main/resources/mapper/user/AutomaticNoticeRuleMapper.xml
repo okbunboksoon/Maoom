@@ -62,6 +62,12 @@
         ORDER BY region, priority ASC, updated_at DESC, id DESC
     </select>
 
+    <select id="findById" resultMap="AutomaticNoticeRuleResultMap">
+        SELECT <include refid="columns"/>
+        FROM tb_automatic_notice_rule
+        WHERE id = #{id}
+    </select>
+
     <select id="findByRegionTypeAndKey"
             resultMap="AutomaticNoticeRuleResultMap">
         SELECT <include refid="columns"/>
@@ -101,6 +107,20 @@
             enabled = VALUES(enabled),
             memo = VALUES(memo)
     </insert>
+
+    <update id="updateById">
+        UPDATE tb_automatic_notice_rule
+        SET region = #{region},
+            match_type = #{matchType},
+            match_key = #{matchKey},
+            detail = #{detail},
+            teams = #{teams},
+            priority = #{priority},
+            alias_text = #{aliasText},
+            enabled = #{enabled},
+            memo = #{memo}
+        WHERE id = #{id}
+    </update>
 
     <delete id="deleteByRegionTypeAndKey">
         DELETE FROM tb_automatic_notice_rule

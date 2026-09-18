@@ -363,6 +363,83 @@ body.sidebar-toggled .admin-shell{
     color:#858796;
 }
 
+.automatic-rule-create-form{
+    display:grid;
+    grid-template-columns:70px 110px 260px 260px 220px 75px 160px 90px max-content;
+    grid-template-areas:
+        "region type key detail teams priority alias enabled actions";
+    gap:8px;
+    align-items:center;
+    width:max-content;
+}
+
+.automatic-rule-create-guide{
+    position:relative;
+    margin-left:auto;
+}
+
+.automatic-rule-create-guide summary{
+    color:#4e73df;
+    font-size:.75rem;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.automatic-rule-create-guide-content{
+    position:absolute;
+    z-index:30;
+    top:calc(100% + 8px);
+    right:0;
+    width:560px;
+    max-width:80vw;
+    padding:.8rem 1rem;
+    border:1px solid #d1d3e2;
+    border-radius:.35rem;
+    background:#fff;
+    box-shadow:0 .3rem 1rem rgba(58,59,69,.18);
+}
+
+.automatic-rule-create-guide-content p{
+    margin:0 0 .35rem;
+    color:#5a5c69;
+    font-size:.78rem;
+    line-height:1.45;
+}
+
+.automatic-rule-create-guide-content p:last-child{
+    margin-bottom:0;
+}
+
+.automatic-rule-create-form input,
+.automatic-rule-create-form select{
+    min-width:0;
+    height:34px;
+    padding:0 .6rem;
+    border:1px solid #d1d3e2;
+    border-radius:.35rem;
+    background:#fff;
+    color:#6e707e;
+    font-size:.875rem;
+}
+
+#automaticNoticeRuleCreateRegion{grid-area:region;}
+#automaticNoticeRuleCreateType{grid-area:type;}
+#automaticNoticeRuleCreateKey{grid-area:key;}
+#automaticNoticeRuleCreateDetail{grid-area:detail;}
+#automaticNoticeRuleCreateTeams{grid-area:teams;}
+#automaticNoticeRuleCreatePriority{grid-area:priority;}
+#automaticNoticeRuleCreateAlias{grid-area:alias;}
+#automaticNoticeRuleCreateEnabled{grid-area:enabled;}
+.automatic-rule-create-actions{
+    grid-area:actions;
+    display:flex;
+    gap:8px;
+}
+
+#automaticNoticeRuleCreatePanel{
+    overflow:visible;
+}
+
 .admin-import-result{
     margin-bottom:.85rem;
     padding:.75rem;

@@ -116,23 +116,26 @@ public class RevisionPipelineService {
     private final Path toolDirectory;
     private final ReplaceDarkSymbolService replaceDarkSymbolService;
     private final ProjectTextNoteDbXmlService projectTextNoteDbXmlService;
+    private final BerAsisTobeXmlService berAsisTobeXmlService;
 
     /**
      * 클래스패스의 revision-tool을 실행 가능한 로컬 경로로 준비한다.
      * IDE 실행은 원본 폴더를 쓰고, JAR 실행은 임시 폴더에 리소스를 풀어 사용한다.
      */
     public RevisionPipelineService() {
-        this(null, null);
+        this(null, null, null);
     }
 
     @Autowired
     public RevisionPipelineService(
             ReplaceDarkSymbolService replaceDarkSymbolService,
-            ProjectTextNoteDbXmlService projectTextNoteDbXmlService) {
+            ProjectTextNoteDbXmlService projectTextNoteDbXmlService,
+            BerAsisTobeXmlService berAsisTobeXmlService) {
         try {
             this.toolDirectory = prepareToolDirectory();
             this.replaceDarkSymbolService = replaceDarkSymbolService;
             this.projectTextNoteDbXmlService = projectTextNoteDbXmlService;
+            this.berAsisTobeXmlService = berAsisTobeXmlService;
         } catch (IOException exception) {
             throw new IllegalStateException(
                     "정제 도구 리소스를 준비하지 못했습니다.", exception);
@@ -183,6 +186,10 @@ public class RevisionPipelineService {
             writeReplaceDarkSymbolXmlFromDatabase(workspace.resolve("xsl"));
             // TEXT/NOTE DB는 관리자 화면에서 바뀔 수 있으므로 매 실행마다 최신 XML로 덮어쓴다.
             writeProjectTextNoteDbXmlFromDatabase(workspace.resolve("xsl"));
+            // BER 선택 시 관리자 BER DB의 지역별 최신 내용을 실행용 XML로 덮어쓴다.
+            if (selectedOptions.contains(RevisionPipelineCatalog.BER_DB_APPLY)) {
+                writeBerDbXmlFromDatabase(workspace.resolve("xsl"));
+            }
             Files.createDirectories(workspace.resolve("temp"));
             Files.createDirectories(workspace.resolve("topics"));
             Files.createDirectories(workspace.resolve("chapter"));
@@ -212,7 +219,9 @@ public class RevisionPipelineService {
                 replaceDirectory(workspace.resolve("chapter"), chapterOutput);
             } else {
                 Path topicsOutput = runOutput.resolve("topics");
-                replaceDirectory(workspace.resolve("topics"), topicsOutput);
+                replaceDirectoryExcludingThirdParty(
+                        workspace.resolve("topics"),
+                        topicsOutput);
             }
 
             copyBookmap(workspace, runOutput, input);
@@ -224,6 +233,13 @@ public class RevisionPipelineService {
                     workspace.resolve("temp/transform_report_excel.xlsx"),
                     runOutput.resolve("결과_리포트.xlsx"),
                     logs);
+            copyIfExists(
+                    workspace.resolve("temp/BER_변경_리포트.xlsx"),
+                    runOutput.resolve("BER_변경_리포트.xlsx"),
+                    logs);
+            if (selectedOptions.contains(RevisionPipelineCatalog.BER_DB_APPLY)) {
+                copyUsedBerReferenceXml(workspace, runOutput, logs);
+            }
             copyIfExists(
                     workspace.resolve("temp/Forbidden_Report.html"),
                     runOutput.resolve("금칙어_리포트.html"));
@@ -618,6 +634,10 @@ public class RevisionPipelineService {
             command.add("TEXT_DB_APPLY=Y");
             logs.add("옵션 추가: TEXT 수정");
         }
+        if (selectedOptions.contains(RevisionPipelineCatalog.BER_DB_APPLY)) {
+            command.add("BER_DB_APPLY=Y");
+            logs.add("옵션 추가: BER 반영");
+        }
         if (selectedOptions.contains(RevisionPipelineCatalog.FORBIDDEN_QC_REPORT)) {
             command.add("FORBIDDEN_QC_REPORT=Y");
             logs.add("옵션 추가: 금칙어 QC 리포트");
@@ -634,6 +654,16 @@ public class RevisionPipelineService {
         projectTextNoteDbXmlService.writeXmlFiles(xslDirectory);
     }
 
+    private void writeBerDbXmlFromDatabase(Path xslDirectory)
+            throws IOException {
+
+        if (berAsisTobeXmlService == null) {
+            return;
+        }
+
+        berAsisTobeXmlService.writeRegionXmlFiles(xslDirectory);
+    }
+
     private void replaceDirectory(Path source, Path target)
             throws IOException {
         if (!Files.isDirectory(source)) {
@@ -643,6 +673,42 @@ public class RevisionPipelineService {
         deleteDirectoryQuietly(target);
         copyDirectory(source, target);
     }
+
+    /** 정제 결과를 내보낼 때 QC 중간 산출물인 topics/3rd_party는 제외한다. */
+    private void replaceDirectoryExcludingThirdParty(
+            Path source,
+            Path target) throws IOException {
+        if (!Files.isDirectory(source)) {
+            throw new IllegalArgumentException(
+                    "결과 폴더가 생성되지 않았습니다: " + source);
+        }
+
+        deleteDirectoryQuietly(target);
+        Files.createDirectories(target);
+
+        try (Stream<Path> paths = Files.walk(source)) {
+            for (Path path : paths.toList()) {
+                Path relative = source.relativize(path);
+                if (relative.getNameCount() > 0
+                        && "3rd_party".equalsIgnoreCase(
+                                relative.getName(0).toString())) {
+                    continue;
+                }
+
+                Path destination = target.resolve(relative);
+                if (Files.isDirectory(path)) {
+                    Files.createDirectories(destination);
+                } else {
+                    Files.createDirectories(destination.getParent());
+                    Files.copy(
+                            path,
+                            destination,
+                            StandardCopyOption.REPLACE_EXISTING);
+                }
+            }
+        }
+    }
+
 
     private void validateBatchOutput(
             Path workspace,
@@ -1070,6 +1136,33 @@ public class RevisionPipelineService {
         } else {
             logs.add("리포트 파일 없음: " + source);
         }
+    }
+
+    /** XSL이 기록한 지역을 확인해 실제 BER 적용에 사용된 기준 XML 하나만 보관한다. */
+    private void copyUsedBerReferenceXml(
+            Path workspace,
+            Path runOutput,
+            List<String> logs) throws IOException {
+
+        Path marker = workspace.resolve("temp/ber_db_used.txt");
+        if (!Files.isRegularFile(marker)) {
+            logs.add("BER 기준 XML 정보 없음: " + marker);
+            return;
+        }
+
+        String fileName = Files.readString(marker, StandardCharsets.UTF_8).trim();
+        Set<String> allowedFileNames = Set.of(
+                "asis-tobe_eu.xml",
+                "asis-tobe_eu_rg.xml",
+                "asis-tobe_us.xml");
+        if (!allowedFileNames.contains(fileName)) {
+            throw new IOException("알 수 없는 BER 기준 XML입니다: " + fileName);
+        }
+
+        copyIfExists(
+                workspace.resolve("xsl").resolve(fileName),
+                runOutput.resolve(fileName),
+                logs);
     }
 
     /** 실행 성공·실패와 관계없이 임시 작업 폴더를 뒤에서부터 조용히 제거한다. */

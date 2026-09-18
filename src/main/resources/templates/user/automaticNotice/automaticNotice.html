@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>협조문 자동 완성</title>
     <link rel="stylesheet" href="/user/css/RevisionPopup.css">
-    <link rel="stylesheet" href="/user/css/AutomaticNotice.css?v=20260908-1556">
+    <link rel="stylesheet" href="/user/css/AutomaticNotice.css?v=20260915-1">
 </head>
 <body class="ber-popup-body automatic-notice-popup-body">
 <main class="revision-page revision-estimate-page">
@@ -146,7 +146,7 @@ async function runAutomaticNotice(){
     inputPath.disabled = true;
     pdfPathInput.disabled = true;
     runButton.textContent = '적용중...';
-    showResult('running', '협조문 자동 완성 실행 중 ⏳', '완료될 때까지 창을 닫지 마세요.');
+    showResult('running', '협조문 자동 완성 실행 중', '완료될 때까지 창을 닫지 마세요.');
 
     try{
         const formData = new FormData();

@@ -36,7 +36,7 @@ java net.sf.saxon.Transform								-s:temp\30-kus-inline-normalized.xml		-o:temp
 java net.sf.saxon.Transform								-s:temp\34-kus-db-applied_exclude.xml		-o:temp\34-kus-db-applied.xml  			-xsl:xsl\0340-kus-db-apply_ber.xsl  flag=on
 
 rem 260331 eu us 분기 설정 = 41-make-change-report.xsl
-java net.sf.saxon.Transform 								-s:temp\34-kus-db-applied_exclude.xml		-o:temp\excel-change-report.xml  			-xsl:xsl\0410-make-change-report_ber.xsl
+java net.sf.saxon.Transform 								-s:temp\34-kus-db-applied.xml		-o:temp\excel-change-report.xml  			-xsl:xsl\0410-make-change-report_ber.xsl
 
 rem 태그 삭제
 java net.sf.saxon.Transform 								-s:temp\34-kus-db-applied.xml				-o:temp\35-remove_tag.xml	  			-xsl:xsl\0400-remove_review.xsl
@@ -48,9 +48,6 @@ java net.sf.saxon.Transform 								-s:temp\15-id-cleaned.xml  				-o:temp\16-xr
 java net.sf.saxon.Transform 								-s:temp\16-xref-cleaned.xml  				-o:temp\17-related-links.xml  				-xsl:xsl\0008-related-links_NotFileNameChange.xsl
 java net.sf.saxon.Transform								-s:temp\17-related-links.xml  				-o:xsl\dummy.xml  							-xsl:xsl\0210-topicalize_2.xsl
 java net.sf.saxon.Transform 								-s:temp\17-related-links.xml  				-o:xsl\dummy.xml  							-xsl:xsl\0240-dita-beautify.xsl
-
-rem 260331 eu us 분기 설정 = 41-make-change-report.xsl
-java net.sf.saxon.Transform 								-s:temp\17-related-links.xml  				-o:temp\excel-change-report.xml  			-xsl:xsl\0410-make-change-report_ber.xsl
 
 cscript //nologo "%ROOT%xsl\Convert_Xml_To_Excel.vbs"
 

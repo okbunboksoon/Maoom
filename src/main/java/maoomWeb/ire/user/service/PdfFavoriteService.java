@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import maoomWeb.ire.user.dto.PdfFavoriteDto;
 import maoomWeb.ire.user.mapper.PdfFavoriteMapper;
 
+/** 로그인 사용자의 PDF·폴더 즐겨찾기 상태를 조회하고 토글하는 서비스다. */
 @Service
 public class PdfFavoriteService {
 

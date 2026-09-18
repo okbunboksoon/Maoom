@@ -37,6 +37,7 @@ import org.springframework.web.multipart.MultipartFile;
 import maoomWeb.ire.user.dto.NoteDbItem;
 import maoomWeb.ire.user.service.NoteDbAdminService;
 
+/** 관리자 NOTE 기준 DB의 조회, 편집, XML/엑셀 가져오기와 내보내기 API를 제공한다. */
 @Controller
 public class AdminNoteDbController {
 

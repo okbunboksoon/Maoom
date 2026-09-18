@@ -163,20 +163,40 @@ const automaticNoticeRuleRefresh =
     document.getElementById('automaticNoticeRuleRefresh');
 const automaticNoticeRuleImportForm =
     document.getElementById('automaticNoticeRuleImportForm');
-const automaticNoticeRuleImportRegion =
-    document.getElementById('automaticNoticeRuleImportRegion');
 const automaticNoticeRuleImportFile =
     document.getElementById('automaticNoticeRuleImportFile');
 const automaticNoticeRuleImportButton =
     document.getElementById('automaticNoticeRuleImportButton');
+const automaticNoticeRuleCreateToggle =
+    document.getElementById('automaticNoticeRuleCreateToggle');
+const automaticNoticeRuleCreatePanel =
+    document.getElementById('automaticNoticeRuleCreatePanel');
+const automaticNoticeRuleCreateForm =
+    document.getElementById('automaticNoticeRuleCreateForm');
+const automaticNoticeRuleCreateCancel =
+    document.getElementById('automaticNoticeRuleCreateCancel');
+const automaticNoticeRuleCreateRegion =
+    document.getElementById('automaticNoticeRuleCreateRegion');
+const automaticNoticeRuleCreateType =
+    document.getElementById('automaticNoticeRuleCreateType');
+const automaticNoticeRuleCreateKey =
+    document.getElementById('automaticNoticeRuleCreateKey');
+const automaticNoticeRuleCreateDetail =
+    document.getElementById('automaticNoticeRuleCreateDetail');
+const automaticNoticeRuleCreateTeams =
+    document.getElementById('automaticNoticeRuleCreateTeams');
+const automaticNoticeRuleCreatePriority =
+    document.getElementById('automaticNoticeRuleCreatePriority');
+const automaticNoticeRuleCreateAlias =
+    document.getElementById('automaticNoticeRuleCreateAlias');
+const automaticNoticeRuleCreateEnabled =
+    document.getElementById('automaticNoticeRuleCreateEnabled');
 const automaticNoticeRuleImportResult =
     document.getElementById('automaticNoticeRuleImportResult');
 const automaticNoticeRuleTotalCount =
     document.getElementById('automaticNoticeRuleTotalCount');
 const automaticNoticeRuleKoCount =
     document.getElementById('automaticNoticeRuleKoCount');
-const automaticNoticeRuleUsCount =
-    document.getElementById('automaticNoticeRuleUsCount');
 const automaticNoticeRuleEgCount =
     document.getElementById('automaticNoticeRuleEgCount');
 const automaticNoticeRuleFilteredCount =
@@ -1417,6 +1437,8 @@ function renderAutomaticNoticeRuleTable(){
         values.forEach((value, columnIndex) => {
             const cell = document.createElement('td');
             const editableFields = {
+                2: 'matchType',
+                3: 'matchKey',
                 4: 'detail',
                 5: 'teams',
                 6: 'priority',
@@ -1488,9 +1510,12 @@ function startAutomaticNoticeRuleCellEdit(cell, item, field){
     cell.innerHTML = '';
     cell.title = '';
 
+    const usesSelect = field === 'enabled' || field === 'matchType';
+    const usesSingleLineInput = field === 'matchKey';
     const editor = document.createElement(
-            field === 'enabled' ? 'select' : 'textarea');
-    editor.className = field === 'enabled'
+            usesSelect ? 'select'
+                : usesSingleLineInput ? 'input' : 'textarea');
+    editor.className = usesSelect || usesSingleLineInput
         ? 'form-control form-control-sm'
         : 'admin-inline-editor ber-inline-editor';
 
@@ -1500,6 +1525,14 @@ function startAutomaticNoticeRuleCellEdit(cell, item, field){
             option.value = value;
             option.textContent = value;
             option.selected = value === (originalValue || 'Y');
+            editor.appendChild(option);
+        });
+    }else if(field === 'matchType'){
+        ['EXACT', 'CONTAINS', 'REGEX'].forEach(value => {
+            const option = document.createElement('option');
+            option.value = value;
+            option.textContent = value;
+            option.selected = value === originalValue;
             editor.appendChild(option);
         });
     }else{
@@ -1552,9 +1585,14 @@ function startAutomaticNoticeRuleCellEdit(cell, item, field){
             event.preventDefault();
             editor.blur();
         }
+        if((field === 'matchType' || field === 'matchKey')
+                && event.key === 'Enter'){
+            event.preventDefault();
+            editor.blur();
+        }
     });
     editor.addEventListener('blur', () => finish(true));
-    if(field === 'enabled'){
+    if(field === 'enabled' || field === 'matchType'){
         editor.addEventListener('change', () => editor.blur());
     }
     cell.appendChild(editor);
@@ -1582,6 +1620,7 @@ async function saveAutomaticNoticeRuleField(item, field, value){
     }
 
     const payload = {
+        id:item.id,
         region:item.region,
         matchType:item.matchType,
         matchKey:item.matchKey || '',
@@ -1614,12 +1653,72 @@ async function saveAutomaticNoticeRuleField(item, field, value){
     return response.json();
 }
 
+function resetAutomaticNoticeRuleCreateForm(){
+    automaticNoticeRuleCreateForm.reset();
+    automaticNoticeRuleCreatePriority.value = '100';
+    automaticNoticeRuleCreateEnabled.value = 'Y';
+}
+
+function closeAutomaticNoticeRuleCreatePanel(){
+    automaticNoticeRuleCreatePanel.hidden = true;
+    resetAutomaticNoticeRuleCreateForm();
+}
+
+async function createAutomaticNoticeRuleItem(event){
+    event.preventDefault();
+    if(!canEditAdminDb){
+        automaticNoticeRuleSummary.textContent = 'DB 수정 권한이 없습니다.';
+        return;
+    }
+
+    const submitButton = automaticNoticeRuleCreateForm.querySelector(
+            'button[type="submit"]');
+    const payload = {
+        region:automaticNoticeRuleCreateRegion.value,
+        matchType:automaticNoticeRuleCreateType.value,
+        matchKey:automaticNoticeRuleCreateKey.value.trim(),
+        detail:automaticNoticeRuleCreateDetail.value,
+        teams:automaticNoticeRuleCreateTeams.value.replace(/\\n/g, '\n'),
+        priority:parseAutomaticNoticeRulePriority(
+                automaticNoticeRuleCreatePriority.value,
+                100),
+        aliasText:automaticNoticeRuleCreateAlias.value,
+        enabled:automaticNoticeRuleCreateEnabled.value,
+        memo:''
+    };
+
+    if(!payload.matchKey){
+        automaticNoticeRuleCreateKey.focus();
+        return;
+    }
+
+    submitButton.disabled = true;
+    try{
+        const response = await fetch('/admin/automatic-notice-rules/items', {
+            method:'PUT',
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            },
+            body:JSON.stringify(payload)
+        });
+        if(!response.ok){
+            throw new Error(await response.text());
+        }
+        closeAutomaticNoticeRuleCreatePanel();
+        await loadAutomaticNoticeRuleItems();
+    }catch(error){
+        automaticNoticeRuleSummary.textContent =
+                error.message || '협조문 룰을 추가하지 못했습니다.';
+    }finally{
+        submitButton.disabled = false;
+    }
+}
+
 function updateAutomaticNoticeRuleSummary(showing){
     const total = automaticNoticeRuleState.items.length;
     const koCount = automaticNoticeRuleState.items
         .filter(item => item.region === 'KO').length;
-    const usCount = automaticNoticeRuleState.items
-        .filter(item => item.region === 'US').length;
     const egCount = automaticNoticeRuleState.items
         .filter(item => item.region === 'EG').length;
 
@@ -1629,7 +1728,6 @@ function updateAutomaticNoticeRuleSummary(showing){
             + showing.toLocaleString('ko-KR') + '건 표시';
     automaticNoticeRuleTotalCount.textContent = total.toLocaleString('ko-KR');
     automaticNoticeRuleKoCount.textContent = koCount.toLocaleString('ko-KR');
-    automaticNoticeRuleUsCount.textContent = usCount.toLocaleString('ko-KR');
     automaticNoticeRuleEgCount.textContent = egCount.toLocaleString('ko-KR');
     automaticNoticeRuleFilteredCount.textContent =
             showing.toLocaleString('ko-KR');
@@ -2606,7 +2704,6 @@ async function importAutomaticNoticeRuleExcel(event){
 
     const formData = new FormData();
     formData.append('file', file);
-    formData.append('region', automaticNoticeRuleImportRegion.value);
     automaticNoticeRuleImportButton.disabled = true;
     setAutomaticNoticeRuleImportResult('협조문 룰 엑셀을 업로드하는 중입니다.');
 
@@ -3622,6 +3719,23 @@ automaticNoticeRuleImportButton.addEventListener(
 automaticNoticeRuleImportFile.addEventListener(
     'change',
     importAutomaticNoticeRuleExcel);
+automaticNoticeRuleCreateToggle.addEventListener('click', () => {
+    if(!canEditAdminDb){
+        automaticNoticeRuleSummary.textContent = 'DB 수정 권한이 없습니다.';
+        return;
+    }
+    automaticNoticeRuleCreatePanel.hidden =
+            !automaticNoticeRuleCreatePanel.hidden;
+    if(!automaticNoticeRuleCreatePanel.hidden){
+        automaticNoticeRuleCreateKey.focus();
+    }
+});
+automaticNoticeRuleCreateCancel.addEventListener(
+    'click',
+    closeAutomaticNoticeRuleCreatePanel);
+automaticNoticeRuleCreateForm.addEventListener(
+    'submit',
+    createAutomaticNoticeRuleItem);
 qsgDbRefresh.addEventListener('click', loadQsgDbItems);
 qsgDbImportForm.addEventListener('submit', importQsgDbExcel);
 qsgDbImportButton.addEventListener('click', () => qsgDbImportFile.click());

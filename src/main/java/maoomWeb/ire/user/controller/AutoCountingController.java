@@ -17,6 +17,10 @@ import maoomWeb.ire.user.dto.AutoCountingAnalyzeResult;
 import maoomWeb.ire.user.service.AutoCountingService;
 import maoomWeb.ire.user.service.AutoCountingService.WorkbookFile;
 
+/**
+ * 자동 카운팅 화면에서 업로드한 PDF를 분석하고 초도 견적 엑셀을 내려주는 REST 진입점이다.
+ * PDF 판별과 집계, 템플릿 작성 규칙은 {@link AutoCountingService}가 담당한다.
+ */
 @RestController
 public class AutoCountingController {
 

@@ -10,9 +10,14 @@
 	<!-- ===== 파라미터 / DB 로드 ===== -->
 	<xsl:param name="flag" select="'off'"/>
 	<xsl:variable name="mapTitle" select="normalize-space(string((/map/title)[1]))"/>
-	<xsl:variable name="isNA" select="contains(upper-case($mapTitle), 'US') or contains(upper-case($mapTitle), 'CA') or contains(upper-case($mapTitle), 'MX')"/>
-	<xsl:variable name="isRg" select="contains(upper-case($mapTitle), 'RG')"/>
-	<xsl:variable name="dbPath" select="if ($isNA) then 'asis-tobe_us.xml' else if ($isRg) then 'asis-tobe_eu_rg.xml' else 'asis-tobe_eu.xml'"/>
+	<!-- 국문 ko_KR 문서는 BER 적용 대상에서 제외한다. -->
+	<xsl:variable name="isKoKr" select="contains(upper-case($mapTitle), 'KO_KR')"/>
+	<xsl:variable name="upperMapTitle" select="upper-case($mapTitle)"/>
+	<!-- EN_CA_LHD는 EN_CA보다 먼저 판별해야 EU 예외가 유지된다. -->
+	<xsl:variable name="isCaLhd" select="contains($upperMapTitle, 'EN_CA_LHD')"/>
+	<xsl:variable name="isRg" select="contains($upperMapTitle, 'EN_RG')"/>
+	<xsl:variable name="isNA" select="not($isCaLhd) and (contains($upperMapTitle, 'EN_US') or contains($upperMapTitle, 'EN_CA') or contains($upperMapTitle, 'EN_MX'))"/>
+	<xsl:variable name="dbPath" select="if ($isCaLhd) then 'asis-tobe_eu.xml' else if ($isRg) then 'asis-tobe_eu_rg.xml' else if ($isNA) then 'asis-tobe_us.xml' else 'asis-tobe_eu.xml'"/>
 	<xsl:variable name="db" select="document($dbPath)"/>
 	
 	<!-- ===== 출력 옵션 ===== -->
@@ -28,11 +33,23 @@
 
 	<!-- ===== 배치 프롬프트 지역/DB 표시 ===== -->
 	<xsl:template match="/">
+		<!-- ko_KR 제외 여부를 BAT가 확인해 BER 상세 리포트 생성을 건너뛸 수 있게 표시한다. -->
+		<xsl:if test="$isKoKr">
+			<xsl:result-document href="ber_ko_kr_excluded.flag" method="text">
+				<xsl:text>ko_KR</xsl:text>
+			</xsl:result-document>
+		</xsl:if>
+		<!-- Java가 실제 적용된 지역 DB 하나만 결과 폴더에 보관할 수 있게 파일명을 남긴다. -->
+		<xsl:if test="not($isKoKr)">
+			<xsl:result-document href="ber_db_used.txt" method="text">
+				<xsl:value-of select="$dbPath"/>
+			</xsl:result-document>
+		</xsl:if>
 		<xsl:message>
 			<xsl:text>Region=</xsl:text>
-			<xsl:value-of select="if ($isNA) then 'NA' else if ($isRg) then 'EU_RG' else 'EU'"/>
+			<xsl:value-of select="if ($isKoKr) then 'EXCLUDED' else if ($isNA) then 'NA' else if ($isRg) then 'EU_RG' else 'EU'"/>
 			<xsl:text>, DB=</xsl:text>
-			<xsl:value-of select="$dbPath"/>
+			<xsl:value-of select="if ($isKoKr) then 'none' else $dbPath"/>
 			<xsl:text>, map/title="</xsl:text>
 			<xsl:value-of select="$mapTitle"/>
 			<xsl:text>"</xsl:text>
@@ -55,24 +72,35 @@
 			</xsl:call-template>
 		</xsl:variable>
 		<xsl:variable name="pair" select="$db/pairs/pair[@hash=$hash]"/>
+		<!-- old/new가 완전히 같은 DB 항목은 검출 제외용이며 실제 변경으로 보지 않는다. -->
+		<xsl:variable name="isNoChangePair"
+			select="exists($pair) and deep-equal($pair/old/node(), $pair/new[last()]/node())"/>
 		<xsl:copy>
 			<xsl:copy-of select="@*"/>
 			<xsl:choose>
 				<!-- DB에 <new>가 있으면 치환 + 해시 PI 출력 -->
-				<xsl:when test="$pair/new">
-					<xsl:if test="$flag = 'on'">
-						<xsl:attribute name="status">changed</xsl:attribute>
+				<xsl:when test="not($isKoKr) and $pair/new">
+					<xsl:if test="$flag = 'on' and not($isNoChangePair)">
+						<xsl:attribute name="status">ber_changed</xsl:attribute>
 					</xsl:if>
 					<!-- 해시 PI는 '매칭된 경우에만' 출력 -->
 					<xsl:processing-instruction name="hash">
 						<xsl:value-of select="$hash"/>
 					</xsl:processing-instruction>
-					<!-- DB/new 기반 병합 출력 -->
-					<xsl:for-each select="$pair/new[last()]/node()">
-						<xsl:apply-templates select="." mode="merge">
-							<xsl:with-param name="current" select="$current"/>
-						</xsl:apply-templates>
-					</xsl:for-each>
+					<xsl:choose>
+						<!-- 변경 불필요 문장은 원문을 그대로 유지한다. -->
+						<xsl:when test="$isNoChangePair">
+							<xsl:apply-templates select="node()"/>
+						</xsl:when>
+						<!-- 실제 변경 문장만 DB/new 기반으로 병합 출력한다. -->
+						<xsl:otherwise>
+							<xsl:for-each select="$pair/new[last()]/node()">
+								<xsl:apply-templates select="." mode="merge">
+									<xsl:with-param name="current" select="$current"/>
+								</xsl:apply-templates>
+							</xsl:for-each>
+						</xsl:otherwise>
+					</xsl:choose>
 				</xsl:when>
 				<!-- DB에 없으면 원문 그대로(해시 PI 없음) -->
 				<xsl:otherwise>

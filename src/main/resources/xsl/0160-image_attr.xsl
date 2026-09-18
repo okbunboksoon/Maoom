@@ -41,7 +41,8 @@
 		), ' ')"/>
 
 		<xsl:copy>
-			<xsl:apply-templates select="@* except (@modified | @href | @scale | @width | @height | @xoffset | @yoffset | @id | @outputclass[../@placement = 'inline'])"/>
+			<!-- 유지할 기존 속성은 자식 노드가 출력되기 전에 속성으로 직접 복사한다. -->
+			<xsl:copy-of select="@* except (@modified | @href | @width | @height | @xoffset | @yoffset | @id | @outputclass[../@placement = 'inline'])"/>
 			<xsl:if test="normalize-space($modifiedTokens) != ''">
 				<xsl:attribute name="modified" select="normalize-space($modifiedTokens)"/>
 			</xsl:if>
@@ -54,6 +55,7 @@
 					)
 				"/>
 			</xsl:attribute>
+			<!--
 			<xsl:choose>
 				<xsl:when test="$pl = 'inline'">
 					<xsl:attribute name="scale">15</xsl:attribute>
@@ -62,6 +64,7 @@
 					<xsl:attribute name="scale">95</xsl:attribute>
 				</xsl:when>
 			</xsl:choose>
+			-->
 			<xsl:apply-templates select="node()"/>
 		</xsl:copy>
 	</xsl:template>

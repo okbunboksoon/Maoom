@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Param;
 
 import maoomWeb.ire.user.dto.NoteDbItem;
 
+/** 지역과 hash를 복합 키로 사용하는 NOTE 기준 DB의 MyBatis 접근 인터페이스다. */
 @Mapper
 public interface NoteDbItemMapper {
 

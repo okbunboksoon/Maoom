@@ -15,18 +15,18 @@ class AutomaticNoticeServiceTest {
     Path tempDirectory;
 
     @Test
-    void detectsKoAndUsMarketFromPdfName() throws Exception {
+    void detectsKoAndTreatsEveryOtherMarketAsEg() throws Exception {
         AutomaticNoticeService service = new AutomaticNoticeService();
         Method method = AutomaticNoticeService.class
                 .getDeclaredMethod("detectMarket", String.class);
         method.setAccessible(true);
 
         assertThat(method.invoke(service, "KIA-CV1a-EV-en-US-2027-OM"))
-                .isEqualTo("US");
+                .isEqualTo("EG");
         assertThat(method.invoke(service, "KIA-CV1a-EV-en-CA-2027-OM"))
-                .isEqualTo("US");
+                .isEqualTo("EG");
         assertThat(method.invoke(service, "KIA-CV1a-EV-en-MX-2027-OM"))
-                .isEqualTo("US");
+                .isEqualTo("EG");
         assertThat(method.invoke(service, "KIA_CV1a_EV_KO_2027_OM"))
                 .isEqualTo("KO");
         assertThat(method.invoke(service, "KIA-CV1a-EV-en-GB-2027-OM"))
@@ -42,8 +42,8 @@ class AutomaticNoticeServiceTest {
                 Path.class);
         method.setAccessible(true);
 
-        Path destination = tempDirectory.resolve("ANG_us_rules.xlsx");
-        method.invoke(service, "ANG_us_rules.xlsx", destination);
+        Path destination = tempDirectory.resolve("ANG_eg_rules.xlsx");
+        method.invoke(service, "ANG_eg_rules.xlsx", destination);
 
         assertThat(Files.exists(destination)).isTrue();
         assertThat(Files.size(destination)).isGreaterThan(0);

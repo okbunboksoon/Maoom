@@ -381,15 +381,16 @@ const launcherMenus = [
         category:'PDF',
         icon:'fa-search',
         action:openPdfPrintCheckPopup
-    }
-    /**
+    },
+
     {
         title:'협조문 자동 완성',
-        description:'코드작성 중',
+        description:'PDF 검토하여 설계중점확인사항 엑셀 생성',
         category:'PDF',
-        icon:'fas fa-times-circle',
+        icon:'fa-file-alt',
         action:openAutomaticNoticePopup
     }
+    /**
     {
         title:'법규ID 반영',
         description:'코드작성 중',
@@ -1054,7 +1055,7 @@ function openRevisionPopup(){
     openPopupWindow(
         '/revision/list',
         'revisionPopup',
-        popupWindowOptions(680, 870, 8)
+        popupWindowOptions(680, 910, 8)
     );
 }
 

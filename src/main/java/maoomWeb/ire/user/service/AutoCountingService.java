@@ -35,6 +35,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import maoomWeb.ire.user.dto.AutoCountingAnalyzeResult;
 
+/**
+ * 업로드 PDF의 목차와 본문을 분석해 페이지·항목 수를 집계하고 초도 견적 엑셀을 만든다.
+ * 화면 모드와 32페이지 제본 옵션에 따른 계산 규칙 및 엑셀 템플릿 채우기를 한곳에서 관리한다.
+ */
 @Service
 public class AutoCountingService {
 

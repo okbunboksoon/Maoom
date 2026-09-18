@@ -8,8 +8,13 @@
 	<!-- map title 추출 -->
 	<xsl:variable name="mapTitle" select="normalize-space(string((/map/title)[1]))"/>
 
-	<!-- 지역 판별 (US 여부) -->
-	<xsl:variable name="isNA" select="contains(upper-case($mapTitle), 'US') or contains(upper-case($mapTitle), 'CA') or contains(upper-case($mapTitle), 'MX')"/>
+	<!-- BER 지역 판별: EN_CA_LHD는 북미 EN_CA보다 먼저 EU로 판별한다. -->
+	<xsl:variable name="upperMapTitle" select="upper-case($mapTitle)"/>
+	<xsl:variable name="isCaLhd" select="contains($upperMapTitle, 'EN_CA_LHD')"/>
+	<xsl:variable name="isEuRg" select="contains($upperMapTitle, 'EN_RG')"/>
+	<xsl:variable name="isNA" select="not($isCaLhd) and (contains($upperMapTitle, 'EN_US') or contains($upperMapTitle, 'EN_CA') or contains($upperMapTitle, 'EN_MX'))"/>
+	<xsl:variable name="dbPath" select="if ($isCaLhd) then 'asis-tobe_eu.xml' else if ($isEuRg) then 'asis-tobe_eu_rg.xml' else if ($isNA) then 'asis-tobe_us.xml' else 'asis-tobe_eu.xml'"/>
+	<xsl:variable name="db" select="document($dbPath)"/>
 
 	<xsl:template match="/">
 
@@ -25,7 +30,7 @@
 			- 텍스트 normalize 및 공백 정규화 1회만 수행
 		-->
 
-		<xsl:variable name="targets" as="element()*">
+		<xsl:variable name="candidate-targets" as="element()*">
 			<xsl:for-each select="map//*[self::p or self::shortdesc or self::cmd]">
 				
 				<xsl:variable name="txt" 
@@ -37,21 +42,33 @@
 
 			</xsl:for-each>
 		</xsl:variable>
+		<!-- 중첩 p 등에서 같은 dealer 문장이 부모/자식으로 이중 집계되지 않게 leaf 대상만 사용한다. -->
+		<xsl:variable name="targets" as="element()*"
+			select="$candidate-targets[not(descendant::* intersect $candidate-targets)]"/>
 
 		<!-- 전체 dealer 문장 수 -->
 		<xsl:variable name="dealer-count" select="count($targets)"/>
 
-		<!-- 
-			changed 개수
-			- 대상 문장 중에서
-			- 자신 또는 상위 노드에 status='changed'가 있는 경우
-		-->
+		<!-- 동일한 dealer 대상 중 실제로 변경된 문장 수 -->
 		<xsl:variable name="changed-count"
-			select="count($targets[ancestor-or-self::*[starts-with(@status,'changed')]])"/>
+			select="count($targets[@status = 'ber_changed'])"/>
 
-		<!-- unchanged 개수 -->
+		<!-- 이미 BER 반영된 결과를 다시 돌린 경우: 현재 문장이 DB의 new 문장과 같으면 db 없음에서 제외 -->
+		<xsl:variable name="already-applied-targets" as="element()*">
+			<xsl:for-each select="$targets[not(ancestor::*[@status = 'ber_changed']) and not(descendant-or-self::*[@status = 'ber_changed'])]">
+				<xsl:variable name="targetText" select="replace(normalize-space(string(.)), '\s+', ' ')"/>
+				<xsl:if test="some $newText in $db/pairs/pair/new satisfies $targetText = replace(normalize-space(string($newText)), '\s+', ' ')">
+					<xsl:sequence select="."/>
+				</xsl:if>
+			</xsl:for-each>
+		</xsl:variable>
+		<xsl:variable name="already-applied-count" select="count($already-applied-targets)"/>
+
+		<!-- 두 번째 시트와 완전히 동일한 조건의 DB 미일치 대상 -->
+		<xsl:variable name="unchanged-targets" as="element()*"
+			select="$targets[not(ancestor::*[@status = 'ber_changed']) and not(descendant-or-self::*[@status = 'ber_changed']) and not(. intersect $already-applied-targets) and not(ancestor-or-self::*[contains(@outputclass,'exclude')])]"/>
 		<xsl:variable name="unchanged-count"
-			select="$dealer-count - $changed-count"/>
+			select="count($unchanged-targets)"/>
 
 		<!-- 변경 비율 계산 -->
 		<xsl:variable name="ratio"
@@ -113,6 +130,23 @@
 						</Cell>
 					</Row>
 
+					<!-- Already applied -->
+					<Row>
+						<Cell ss:StyleID="Center">
+							<Data ss:Type="String">Already applied</Data>
+						</Cell>
+						<Cell>
+							<Data ss:Type="String">이미 DB의 new 문장과 일치해서 db 없는 문장에서 제외한 수</Data>
+						</Cell>
+					</Row>
+					<Row>
+						<Cell ss:StyleID="Center">
+							<Data ss:Type="Number">
+								<xsl:value-of select="$already-applied-count"/>
+							</Data>
+						</Cell>
+					</Row>
+
 					<!-- Unchanged -->
 					<Row>
 						<Cell ss:StyleID="Center">
@@ -158,8 +192,8 @@
 							<Data ss:Type="String">sentence</Data>
 						</Cell>
 					</Row>
-					<!-- <xsl:for-each select="$targets[not(ancestor-or-self::*[starts-with(@status,'changed')])]"> -->
-					<xsl:for-each select="$targets[not(ancestor-or-self::*[starts-with(@status,'changed')]) and not(ancestor-or-self::*[contains(@outputclass,'exclude')])]">
+					<!-- <xsl:for-each select="$targets[not(ancestor-or-self::*[@status = 'ber_changed'])]"> -->
+					<xsl:for-each select="$unchanged-targets">
 						<Row>
 							<Cell ss:StyleID="Center">
 								<Data ss:Type="Number">
