@@ -28,6 +28,76 @@ class AutomaticNoticeRuleAdminServiceTest {
     Path tempDirectory;
 
     @Test
+    void normalizesNonKoRegionToEg() {
+        InMemoryMapper mapper = new InMemoryMapper();
+        AutomaticNoticeRuleAdminService service =
+                new AutomaticNoticeRuleAdminService(mapper);
+
+        service.save(rule(
+                "US",
+                "CONTAINS",
+                "공조 장치용 에어필터 점검",
+                "상세",
+                "팀",
+                100,
+                "Y"));
+
+        assertThat(mapper.findByRegionTypeAndKey(
+                "EG",
+                "CONTAINS",
+                "공조 장치용 에어필터 점검")).isNotNull();
+        assertThat(mapper.findByRegionTypeAndKey(
+                "US",
+                "CONTAINS",
+                "공조 장치용 에어필터 점검")).isNull();
+    }
+
+    @Test
+    void updatesMatchTypeAndKeyByIdWithoutInsertingAnotherRow() {
+        InMemoryMapper mapper = new InMemoryMapper();
+        mapper.upsert(rule(
+                "KO", "EXACT", "에어필터", "상세", "팀", 100, "Y"));
+        AutomaticNoticeRule stored = mapper.findByRegionTypeAndKey(
+                "KO", "EXACT", "에어필터");
+
+        stored.setMatchType("CONTAINS");
+        stored.setMatchKey("공조 장치용 에어필터 점검");
+        AutomaticNoticeRule updated =
+                new AutomaticNoticeRuleAdminService(mapper).save(stored);
+
+        assertThat(updated.getId()).isEqualTo(stored.getId());
+        assertThat(mapper.findAll()).hasSize(1);
+        assertThat(mapper.findByRegionTypeAndKey(
+                "KO", "EXACT", "에어필터")).isNull();
+        assertThat(mapper.findByRegionTypeAndKey(
+                "KO", "CONTAINS", "공조 장치용 에어필터 점검"))
+                .isNotNull();
+    }
+
+    @Test
+    void rejectsDuplicateRuleFromNewItemForm() {
+        InMemoryMapper mapper = new InMemoryMapper();
+        mapper.upsert(rule(
+                "EG", "CONTAINS", "Active Air Flap", "기존", "팀", 100, "Y"));
+
+        org.assertj.core.api.Assertions.assertThatThrownBy(() ->
+                new AutomaticNoticeRuleAdminService(mapper).save(rule(
+                        "EG",
+                        "CONTAINS",
+                        "Active Air Flap",
+                        "신규",
+                        "팀",
+                        100,
+                        "Y")))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("이미 있습니다");
+        assertThat(mapper.findAll()).hasSize(1);
+        assertThat(mapper.findByRegionTypeAndKey(
+                "EG", "CONTAINS", "Active Air Flap").getDetail())
+                .isEqualTo("기존");
+    }
+
+    @Test
     void importsLegacyRulesWorkbookWithDefaultRegion()
             throws Exception {
 
@@ -140,6 +210,7 @@ class AutomaticNoticeRuleAdminServiceTest {
 
         private final Map<String,AutomaticNoticeRule> rows =
                 new LinkedHashMap<>();
+        private long nextId = 1L;
 
         @Override
         public List<AutomaticNoticeRule> findByRegion(String region) {
@@ -169,6 +240,15 @@ class AutomaticNoticeRuleAdminServiceTest {
         }
 
         @Override
+        public AutomaticNoticeRule findById(Long id) {
+            return rows.values().stream()
+                    .filter(item -> id.equals(item.getId()))
+                    .findFirst()
+                    .map(this::copy)
+                    .orElse(null);
+        }
+
+        @Override
         public AutomaticNoticeRule findByRegionTypeAndKey(
                 String region,
                 String matchType,
@@ -178,6 +258,21 @@ class AutomaticNoticeRuleAdminServiceTest {
 
         @Override
         public int upsert(AutomaticNoticeRule rule) {
+            if(rule.getId() == null){
+                rule.setId(nextId++);
+            }
+            rows.put(
+                    key(rule.getRegion(),
+                            rule.getMatchType(),
+                            rule.getMatchKey()),
+                    copy(rule));
+            return 1;
+        }
+
+        @Override
+        public int updateById(AutomaticNoticeRule rule) {
+            rows.entrySet().removeIf(entry ->
+                    rule.getId().equals(entry.getValue().getId()));
             rows.put(
                     key(rule.getRegion(),
                             rule.getMatchType(),
@@ -204,6 +299,7 @@ class AutomaticNoticeRuleAdminServiceTest {
 
         private AutomaticNoticeRule copy(AutomaticNoticeRule source) {
             AutomaticNoticeRule rule = new AutomaticNoticeRule();
+            rule.setId(source.getId());
             rule.setRegion(source.getRegion());
             rule.setMatchType(source.getMatchType());
             rule.setMatchKey(source.getMatchKey());

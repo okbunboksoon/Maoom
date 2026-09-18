@@ -68,8 +68,6 @@ public class AdminAutomaticNoticeRuleController {
     @PostMapping("/admin/automatic-notice-rules/import")
     @ResponseBody
     public AutomaticNoticeRuleImportResult importExcel(
-            @RequestParam(value = "region", required = false)
-            String region,
             @RequestParam("file") MultipartFile file)
             throws IOException {
 
@@ -78,7 +76,15 @@ public class AdminAutomaticNoticeRuleController {
                     "업로드할 엑셀 파일을 선택해 주세요.");
         }
 
+        String region = inferImportRegion(file.getOriginalFilename());
         return adminService.importExcel(region, file.getInputStream());
+    }
+
+    static String inferImportRegion(String fileName) {
+        String normalized = fileName == null
+                ? ""
+                : fileName.toLowerCase(java.util.Locale.ROOT);
+        return normalized.contains("_ko_") ? "KO" : "EG";
     }
 
     @PreAuthorize("hasAnyRole('ADMIN', 'DB_EDITOR')")

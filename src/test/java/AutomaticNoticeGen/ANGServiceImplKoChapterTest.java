@@ -21,7 +21,7 @@ class ANGServiceImplKoChapterTest {
     Path tempDirectory;
 
     @Test
-    void mergesSafetyAndFigureContentsAndRenumbersFollowingChapters()
+    void writesSafetyAndFigureContentsAsSeparateWholeChapterRows()
             throws Exception {
         Path rulesPath = tempDirectory.resolve("ANG_ko_rules.xlsx");
         try(InputStream input = getClass().getResourceAsStream(
@@ -105,24 +105,31 @@ class ANGServiceImplKoChapterTest {
             assertThat(sheet.getRow(5).getCell(0).getStringCellValue())
                     .isEqualTo("1장");
             assertThat(sheet.getRow(5).getCell(1).getStringCellValue())
-                    .isEqualTo("12~54");
+                    .isEqualTo("12~42");
             assertThat(sheet.getRow(5).getCell(2).getStringCellValue())
-                    .isEqualTo("그림 목차 / 안전 주의 사항");
+                    .isEqualTo("안전 주의 사항");
 
             assertThat(sheet.getRow(6).getCell(0).getStringCellValue())
                     .isEqualTo("2장");
             assertThat(sheet.getRow(6).getCell(1).getStringCellValue())
-                    .isEqualTo("56~66");
+                    .isEqualTo("44~54");
             assertThat(sheet.getRow(6).getCell(2).getStringCellValue())
-                    .isEqualTo("차량 제원");
+                    .isEqualTo("그림 목차");
 
             assertThat(sheet.getRow(7).getCell(0).getStringCellValue())
                     .isEqualTo("3장");
             assertThat(sheet.getRow(7).getCell(1).getStringCellValue())
-                    .isEqualTo("243~296");
+                    .isEqualTo("56~66");
             assertThat(sheet.getRow(7).getCell(2).getStringCellValue())
+                    .isEqualTo("차량 제원");
+
+            assertThat(sheet.getRow(8).getCell(0).getStringCellValue())
+                    .isEqualTo("4장");
+            assertThat(sheet.getRow(8).getCell(1).getStringCellValue())
+                    .isEqualTo("243~296");
+            assertThat(sheet.getRow(8).getCell(2).getStringCellValue())
                     .isEqualTo("EV가이드");
-            assertThat(sheet.getLastRowNum()).isEqualTo(7);
+            assertThat(sheet.getLastRowNum()).isEqualTo(8);
         }
     }
 }

@@ -51,7 +51,7 @@ class AutomaticNoticeSampleRunTest {
         Path resultWorkbook = Path.of(result.resultPath());
         Path rulesWorkbook = Path.of(result.rulesPath());
 
-        assertThat(result.market()).isEqualTo("US");
+        assertThat(result.market()).isEqualTo("EG");
         assertThat(resultDirectory.getFileName().toString())
                 .isEqualTo(
                         "KIA-CV1a-EV-en-US-2027-OM_Full-PDF-260730-0.1_web_low_협조문자동완성");
@@ -75,7 +75,7 @@ class AutomaticNoticeSampleRunTest {
     }
 
     @Test
-    void createMergesKoSafetyAndFigureContentsForSamplePdf()
+    void createWritesKoSafetyAndFigureContentsAsSeparateChapters()
             throws Exception {
         Assumptions.assumeTrue(Files.isRegularFile(KO_SAMPLE_PDF));
 
@@ -99,24 +99,27 @@ class AutomaticNoticeSampleRunTest {
             DataFormatter formatter = new DataFormatter();
 
             assertThat(findRow(sheet, formatter,
-                    "1장", "12~54", "그림 목차 / 안전 주의 사항"))
+                    "1장", "12~42", "안전 주의 사항"))
+                    .isGreaterThanOrEqualTo(0);
+            assertThat(findRow(sheet, formatter,
+                    "2장", "44~54", "그림 목차"))
                     .isGreaterThanOrEqualTo(0);
             assertThat(findRowStartingWith(
-                    sheet, formatter, "2장", "차량 제원"))
+                    sheet, formatter, "3장", "차량 제원"))
                     .isGreaterThanOrEqualTo(0);
             assertThat(findRow(
-                    sheet, formatter, "6장", "243~296", "EV가이드"))
+                    sheet, formatter, "7장", "243~296", "EV가이드"))
                     .isGreaterThanOrEqualTo(0);
             assertThat(findReviewItem(
                     sheet, formatter, "전기 자동차 개요"))
                     .isEqualTo(-1);
             assertThat(findRowStartingWith(
-                    sheet, formatter, "11장", "모터룸의 명칭"))
+                    sheet, formatter, "12장", "모터룸의 명칭"))
                     .isGreaterThanOrEqualTo(0);
             assertThat(findReviewItem(sheet, formatter, "그림 목차"))
-                    .isEqualTo(-1);
+                    .isGreaterThanOrEqualTo(0);
             assertThat(findReviewItem(sheet, formatter, "안전 주의 사항"))
-                    .isEqualTo(-1);
+                    .isGreaterThanOrEqualTo(0);
         }
     }
 
@@ -137,7 +140,7 @@ class AutomaticNoticeSampleRunTest {
         AutomaticNoticeResult result =
                 service.create(outputDirectory.toString(), file);
 
-        assertThat(result.market()).isEqualTo("US");
+        assertThat(result.market()).isEqualTo("EG");
         try(Workbook workbook = new XSSFWorkbook(
                 Files.newInputStream(Path.of(result.resultPath())))){
             var sheet = workbook.getSheet("검토표");

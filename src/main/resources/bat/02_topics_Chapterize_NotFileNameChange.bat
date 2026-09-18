@@ -207,19 +207,31 @@ if errorlevel 1 exit /b !errorlevel!
 rem 0004-topic-merge.xsl: map의 topicref가 참조하는 DITA 파일을 하나의 XML로 병합한다.
 java net.sf.saxon.Transform -catalog:xsl\catalog.xml						-s:temp\0002-toc-created.xml  							-o:temp\0004-topic-merged.xml  								-xsl:xsl\0004-topic-merge.xsl
 if errorlevel 1 exit /b !errorlevel!
-rem 0004-mark_xref_not_in_map.xsl: xref의 fragment를 제외한 DITA 파일이 map의 topicref 목록에 없으면 리포트용으로 표시한다.
-java net.sf.saxon.Transform 												-s:temp\0004-topic-merged.xml 						-o:temp\0004-xref-not-in-map-marked.xml 				-xsl:xsl\0004-mark_xref_not_in_map.xsl
+rem 0111-mark_invalid_menucascade.xsl: 빈 uicontrol만 있거나 uicontrol로 감싸지 않은 직접 텍스트가 있는 menucascade를 리포트용으로 표시한다.
+java net.sf.saxon.Transform 												-s:temp\0004-topic-merged.xml 						-o:temp\0111-invalid-menucascade-marked.xml 				-xsl:xsl\0111-mark_invalid_menucascade.xsl
+if errorlevel 1 exit /b !errorlevel!
+rem 0112-mark_body_direct_text.xsl: conbody, taskbody, refbody, section 바로 아래의 직접 텍스트를 리포트용으로 표시한다.
+java net.sf.saxon.Transform 												-s:temp\0111-invalid-menucascade-marked.xml 			-o:temp\0112-body-direct-text-marked.xml 					-xsl:xsl\0112-mark_body_direct_text.xsl
+if errorlevel 1 exit /b !errorlevel!
+rem 0113-mark_xref_not_in_map.xsl: xref의 fragment를 제외한 DITA 파일이 map의 topicref 목록에 없으면 리포트용으로 표시한다.
+java net.sf.saxon.Transform 												-s:temp\0112-body-direct-text-marked.xml 		-o:temp\0113-xref-not-in-map-marked.xml 						-xsl:xsl\0113-mark_xref_not_in_map.xsl
 if errorlevel 1 exit /b !errorlevel!
 rem map title에 ko_KR과 Quick이 모두 있으면 병합된 topic의 indexterm을 삭제한다.
-rem 0004a-remove-ko-quick-indexterm.xsl: map title에 ko_KR과 Quick이 모두 있으면 모든 indexterm을 삭제한다.
-java net.sf.saxon.Transform 												-s:temp\0004-xref-not-in-map-marked.xml 						-o:temp\0004a-ko-quick-indexterm-removed.xml 				-xsl:xsl\0004a-remove-ko-quick-indexterm.xsl
+rem 0114-remove-ko-quick-indexterm.xsl: map title에 ko_KR과 Quick이 모두 있으면 모든 indexterm을 삭제한다.
+java net.sf.saxon.Transform 												-s:temp\0113-xref-not-in-map-marked.xml 				-o:temp\0114-ko-quick-indexterm-removed.xml 				-xsl:xsl\0114-remove-ko-quick-indexterm.xsl
 if errorlevel 1 exit /b !errorlevel!
 rem 병합된 topicref 안에서 문장의 맨 앞과 맨 뒤 불필요한 공백을 제거한다.
-rem 0123-trim_sentence_space.xsl: p, title, shortdesc, cmd 문장 맨 앞과 맨 뒤의 불필요한 공백을 제거한다.
-java net.sf.saxon.Transform 												-s:temp\0004a-ko-quick-indexterm-removed.xml 		-o:temp\0123-sentence_space_trimmed.xml 					-xsl:xsl\0123-trim_sentence_space.xsl
-if errorlevel 1 exit /b !errorlevel!
+set "CURRENT_SOURCE=temp\0114-ko-quick-indexterm-removed.xml"
 
-set "CURRENT_SOURCE=temp\0123-sentence_space_trimmed.xml"
+rem NOTE 반영
+if /I "!NOTE_DB_APPLY!"=="Y" (
+    rem 0340-note-db-apply.xsl: 선택한 NOTE DB를 기준으로 note type을 변경하고 리포트용 상태를 표시한다.
+    java net.sf.saxon.Transform 											-s:!CURRENT_SOURCE!  									-o:temp\0340-note-db-apply.xml								-xsl:xsl\0340-note-db-apply.xsl flag=on
+    if errorlevel 1 exit /b !errorlevel!
+    set "CURRENT_SOURCE=temp\0340-note-db-apply.xml"
+    echo NOTE_DB_APPLY applied: !CURRENT_SOURCE! >> %OPTION_LOG%
+)
+
 rem TEXT 반영
 if /I "!TEXT_DB_APPLY!"=="Y" (
     rem 0340-kus-db-apply.xsl: 선택한 TEXT DB를 기준으로 일치하는 문장을 변경하고 리포트용 상태를 표시한다.
@@ -229,19 +241,14 @@ if /I "!TEXT_DB_APPLY!"=="Y" (
     echo TEXT_DB_APPLY applied: !CURRENT_SOURCE! >> %OPTION_LOG%
 )
 
-rem NOTE 반영
-if /I "!NOTE_DB_APPLY!"=="Y" (
-    rem 0340-note-db-apply.xsl: 선택한 NOTE DB를 기준으로 일치하는 note의 type을 변경하고 리포트용 상태를 표시한다.
-    java net.sf.saxon.Transform 											-s:!CURRENT_SOURCE!  									-o:temp\0340-note-db-apply.xml								-xsl:xsl\0340-note-db-apply.xsl flag=on
-    if errorlevel 1 exit /b !errorlevel!
-    set "CURRENT_SOURCE=temp\0340-note-db-apply.xml"
-    echo NOTE_DB_APPLY applied: !CURRENT_SOURCE! >> %OPTION_LOG%
-)
-rem TEXT/NOTE DB 반영 뒤 전체 문장의 공백과 문장부호 표기를 정규화한다.
-rem 0290-kus-text-normalize.xsl: TEXT/NOTE DB 반영 뒤 전체 문장의 공백과 문장부호 표기를 정규화한다.
-java net.sf.saxon.Transform 												-s:!CURRENT_SOURCE! 									-o:temp\0290-kus-text-normalized.xml 							-xsl:xsl\0290-kus-text-normalize.xsl
+rem 0123-trim_sentence_space.xsl: p, title, shortdesc, cmd 문장 맨 앞과 맨 뒤의 불필요한 공백을 제거한다.
+java net.sf.saxon.Transform 												-s:!CURRENT_SOURCE! 							-o:temp\0123-sentence_space_trimmed.xml 					-xsl:xsl\0123-trim_sentence_space.xsl
 if errorlevel 1 exit /b !errorlevel!
+set "CURRENT_SOURCE=temp\0123-sentence_space_trimmed.xml"
 
+rem 0290-kus-text-normalize.xsl: TEXT와 NOTE 반영이 끝난 문서를 기준으로 전체 문장을 정규화한다.
+java net.sf.saxon.Transform 												-s:!CURRENT_SOURCE! 							-o:temp\0290-kus-text-normalized.xml 						-xsl:xsl\0290-kus-text-normalize.xsl
+if errorlevel 1 exit /b !errorlevel!
 set "CURRENT_SOURCE=temp\0290-kus-text-normalized.xml"
 rem BER 반영
 if /I "!BER_DB_APPLY!"=="Y" (

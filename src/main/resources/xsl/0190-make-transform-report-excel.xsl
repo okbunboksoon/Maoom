@@ -292,6 +292,27 @@
                         <xsl:with-param name="key" select="'xref-target-not-in-map'"/>
                         <xsl:with-param name="change" select="'xref 대상 DITA가 ditamap에 없음'"/>
                     </xsl:call-template>
+                    <!-- 내용이 없는 uicontrol만 존재하는 menucascade 수를 표시한다. -->
+                    <xsl:call-template name="modified-row">
+                        <xsl:with-param name="final" select="$final"/>
+                        <xsl:with-param name="label" select="'빈 menucascade 찾기'"/>
+                        <xsl:with-param name="key" select="'menucascade-empty-uicontrol'"/>
+                        <xsl:with-param name="change" select="'내용이 없는 uicontrol만 존재하는 menucascade 검출'"/>
+                    </xsl:call-template>
+                    <!-- uicontrol로 감싸지 않은 직접 텍스트가 존재하는 menucascade 수를 표시한다. -->
+                    <xsl:call-template name="modified-row">
+                        <xsl:with-param name="final" select="$final"/>
+                        <xsl:with-param name="label" select="'menucascade 직접 텍스트 찾기'"/>
+                        <xsl:with-param name="key" select="'menucascade-direct-text'"/>
+                        <xsl:with-param name="change" select="'uicontrol로 감싸지 않은 텍스트가 존재하는 menucascade 검출'"/>
+                    </xsl:call-template>
+                    <!-- conbody, taskbody, refbody, section 바로 아래의 직접 텍스트를 포함한 요소 수를 표시한다. -->
+                    <xsl:call-template name="modified-row">
+                        <xsl:with-param name="final" select="$final"/>
+                        <xsl:with-param name="label" select="'본문 직접 텍스트 찾기'"/>
+                        <xsl:with-param name="key" select="'body-direct-text'"/>
+                        <xsl:with-param name="change" select="'conbody, taskbody, refbody, section 내부에서 하위 태그로 감싸지 않은 텍스트 검출'"/>
+                    </xsl:call-template>
                     <!-- 최종 문서 루트의 report-simple-operation-removed 값을 읽어 삭제된 Simple operation section 수를 표시한다. -->
                     <Row ss:Height="30">
                         <Cell ss:StyleID="Center"><Data ss:Type="String">indexterm 삭제 여부</Data></Cell>
@@ -353,7 +374,8 @@
                     <xsl:variable name="detect-labels" select="(
                         '내용없는 dita 찾기', '빈 태그 찾기', 'li 직접 텍스트 찾기', 'step cmd 누락 찾기',
                         'image 서버 href 검출', 'image 비 EPS 확장자 검출', 'xref href 경로 포함 오류',
-                        'xref href element ID 오류', '미연결 xref 찾기')"/>
+                        'xref href element ID 오류', '미연결 xref 찾기', '빈 menucascade 찾기',
+                        'menucascade 직접 텍스트 찾기', '본문 직접 텍스트 찾기')"/>
                     <Row ss:Height="30"><Cell ss:StyleID="Header" ss:MergeAcross="2"><Data ss:Type="String">추가</Data></Cell></Row>
                     <xsl:sequence select="$result-rows/ss:Row[ss:Cell[1]/ss:Data = $add-labels]"/>
                     <Row ss:Height="30"><Cell ss:StyleID="Header" ss:MergeAcross="2"><Data ss:Type="String">수정</Data></Cell></Row>
@@ -576,6 +598,76 @@
                         <Row ss:Height="30">
                             <Cell ss:StyleID="Center">
                                 <Data ss:Type="String"><xsl:value-of select="ancestor::*[local-name() = 'topicref'][1]/@href"/></Data>
+                            </Cell>
+                            <Cell ss:StyleID="Wrap">
+                                <Data ss:Type="String"><xsl:value-of select="serialize($report-content/*, map{'method': 'xml', 'omit-xml-declaration': true()})"/></Data>
+                            </Cell>
+                        </Row>
+                    </xsl:for-each>
+                </Table>
+                <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+                    <Zoom>85</Zoom>
+                </WorksheetOptions>
+            </Worksheet>
+            <Worksheet ss:Name="menucascade 구조 오류">
+                <Table>
+                    <Column ss:Width="250"/>
+                    <Column ss:Width="190"/>
+                    <Column ss:Width="1000"/>
+                    <Row ss:Height="30">
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">파일명</Data></Cell>
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">오류 유형</Data></Cell>
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">menucascade 내용</Data></Cell>
+                    </Row>
+                    <xsl:for-each select="$final//*[local-name() = 'menucascade'][@modified][some $token in tokenize(@modified, '\s+') satisfies $token = ('menucascade-empty-uicontrol', 'menucascade-direct-text')]">
+                        <xsl:variable name="report-content">
+                            <xsl:apply-templates select="." mode="report-clean"/>
+                        </xsl:variable>
+                        <Row ss:Height="30">
+                            <Cell ss:StyleID="Center">
+                                <Data ss:Type="String"><xsl:value-of select="ancestor::*[local-name() = 'topicref'][1]/@href"/></Data>
+                            </Cell>
+                            <Cell ss:StyleID="Center">
+                                <Data ss:Type="String"><xsl:value-of select="string-join((
+                                    if (contains-token(@modified, 'menucascade-empty-uicontrol')) then '빈 uicontrol' else (),
+                                    if (contains-token(@modified, 'menucascade-direct-text')) then '직접 텍스트' else ()
+                                ), ', ')"/></Data>
+                            </Cell>
+                            <Cell ss:StyleID="Wrap">
+                                <Data ss:Type="String"><xsl:value-of select="serialize($report-content/*, map{'method': 'xml', 'omit-xml-declaration': true()})"/></Data>
+                            </Cell>
+                        </Row>
+                    </xsl:for-each>
+                </Table>
+                <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+                    <Zoom>85</Zoom>
+                </WorksheetOptions>
+            </Worksheet>
+            <Worksheet ss:Name="본문 직접 텍스트">
+                <Table>
+                    <Column ss:Width="250"/>
+                    <Column ss:Width="130"/>
+                    <Column ss:Width="420"/>
+                    <Column ss:Width="1000"/>
+                    <Row ss:Height="30">
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">파일명</Data></Cell>
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">부모 태그</Data></Cell>
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">직접 텍스트</Data></Cell>
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">전체 내용</Data></Cell>
+                    </Row>
+                    <xsl:for-each select="$final//*[local-name() = ('conbody', 'taskbody', 'refbody', 'section')][@modified][contains-token(@modified, 'body-direct-text')]">
+                        <xsl:variable name="report-content">
+                            <xsl:apply-templates select="." mode="report-clean"/>
+                        </xsl:variable>
+                        <Row ss:Height="30">
+                            <Cell ss:StyleID="Center">
+                                <Data ss:Type="String"><xsl:value-of select="ancestor::*[local-name() = 'topicref'][1]/@href"/></Data>
+                            </Cell>
+                            <Cell ss:StyleID="Center">
+                                <Data ss:Type="String"><xsl:value-of select="local-name()"/></Data>
+                            </Cell>
+                            <Cell ss:StyleID="Wrap">
+                                <Data ss:Type="String"><xsl:value-of select="string-join(text()[normalize-space(.) != ''] ! normalize-space(.), ' ')"/></Data>
                             </Cell>
                             <Cell ss:StyleID="Wrap">
                                 <Data ss:Type="String"><xsl:value-of select="serialize($report-content/*, map{'method': 'xml', 'omit-xml-declaration': true()})"/></Data>

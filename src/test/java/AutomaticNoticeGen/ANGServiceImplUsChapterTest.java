@@ -41,6 +41,8 @@ class ANGServiceImplUsChapterTest {
                 2, "2 Overview", 15, 22);
         ChapterRange specifications = new ChapterRange(
                 3, "3 Specifications", 23, 34);
+        ChapterRange hybridOverview = new ChapterRange(
+                4, "4 Hybrid system overview", 35, 48);
         ChapterRange evGuide = new ChapterRange(
                 7, "7 Electric vehicle guide", 209, 272);
 
@@ -51,6 +53,7 @@ class ANGServiceImplUsChapterTest {
                         introduction,
                         overview,
                         specifications,
+                        hybridOverview,
                         evGuide);
             }
 
@@ -77,6 +80,11 @@ class ANGServiceImplUsChapterTest {
                 }
                 if (chapter == specifications) {
                     return List.of(new SectionRange("Dimensions", 24, 34));
+                }
+                if (chapter == hybridOverview) {
+                    return List.of(
+                            new SectionRange("Hybrid system", 36, 39),
+                            new SectionRange("Energy flow", 45, 48));
                 }
                 if (chapter == evGuide) {
                     return List.of(
@@ -105,6 +113,12 @@ class ANGServiceImplUsChapterTest {
             assertRow(
                     sheet,
                     8,
+                    "4 Hybrid system overview",
+                    "36~48",
+                    "Hybrid system overview");
+            assertRow(
+                    sheet,
+                    9,
                     "7 Electric vehicle guide",
                     "211~272",
                     "Electric vehicle guide");

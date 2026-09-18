@@ -7,17 +7,17 @@
              hidden>
         <header class="admin-content-header">
             <div>
-                <h1>협조문 룰 DB</h1>
+                <h1>협조문 DB</h1>
                 <p id="automaticNoticeRuleSummary">데이터를 불러오는 중입니다.</p>
             </div>
             <div class="admin-header-actions">
+                <button id="automaticNoticeRuleCreateToggle"
+                        class="admin-tool-btn"
+                        type="button">
+                    <i class="fas fa-plus"></i>
+                    신규 추가
+                </button>
                 <form id="automaticNoticeRuleImportForm" class="admin-header-import-form">
-                    <select id="automaticNoticeRuleImportRegion"
-                            class="form-control form-control-sm">
-                        <option value="KO">KO</option>
-                        <option value="US">US</option>
-                        <option value="EG">EG</option>
-                    </select>
                     <input id="automaticNoticeRuleImportFile"
                            type="file"
                            accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
@@ -52,13 +52,6 @@
                 </div>
                 <i class="fas fa-language"></i>
             </article>
-            <article class="admin-stat-card border-left-danger">
-                <div>
-                    <span>US 항목</span>
-                    <strong id="automaticNoticeRuleUsCount">0</strong>
-                </div>
-                <i class="fas fa-flag-usa"></i>
-            </article>
             <article class="admin-stat-card border-left-warning">
                 <div>
                     <span>EG 항목</span>
@@ -75,9 +68,80 @@
             </article>
         </div>
 
+        <div id="automaticNoticeRuleCreatePanel"
+             class="admin-edit-panel"
+             hidden>
+            <div class="admin-edit-panel-title">
+                <strong>협조문 룰 신규 추가</strong>
+                <span>Region, Type, Key를 입력한 뒤 저장하세요.</span>
+                <details class="automatic-rule-create-guide">
+                    <summary>입력항목 안내</summary>
+                    <div class="automatic-rule-create-guide-content">
+                        <p><strong>Region</strong>: KO는 한국어 문서, EG는 KO가 아닌 문서</p>
+                        <p><strong>Type</strong>: EXACT는 전체 일치, CONTAINS는 포함, REGEX는 전체 정규식 패턴 일치 시 매칭</p>
+                        <p><strong>Key</strong>: 협조문 C열에서 매칭할 챕터명 또는 항목명</p>
+                        <p><strong>Detail</strong>: 매칭됐을 때 협조문 D열에 자동 입력할 세부 검토사항</p>
+                        <p><strong>Teams</strong>: 매칭됐을 때 협조문 E열에 자동 입력할 담당팀</p>
+                        <p><strong>Priority</strong>: 숫자가 작을수록 먼저 검사하며 처음 매칭된 규칙만 적용</p>
+                        <p><strong>Alias</strong>: 현재 매칭에는 사용하지 않는 참고 메모</p>
+                        <p><strong>사용</strong>: Y는 자동완성에 사용, N은 DB에만 저장하고 자동완성에서 제외</p>
+                    </div>
+                </details>
+            </div>
+            <form id="automaticNoticeRuleCreateForm"
+                  class="automatic-rule-create-form">
+                <select id="automaticNoticeRuleCreateRegion"
+                        aria-label="Region">
+                    <option value="KO">KO</option>
+                    <option value="EG">EG</option>
+                </select>
+                <select id="automaticNoticeRuleCreateType"
+                        aria-label="Type">
+                    <option value="EXACT">EXACT</option>
+                    <option value="CONTAINS">CONTAINS</option>
+                    <option value="REGEX">REGEX</option>
+                </select>
+                <input id="automaticNoticeRuleCreateKey"
+                       class="automatic-rule-create-key"
+                       type="text"
+                       placeholder="Key (필수)"
+                       required>
+                <input id="automaticNoticeRuleCreateDetail"
+                       type="text"
+                       placeholder="Detail">
+                <input id="automaticNoticeRuleCreateTeams"
+                       type="text"
+                       placeholder="Teams (줄바꿈은 \\n)">
+                <input id="automaticNoticeRuleCreatePriority"
+                       type="number"
+                       value="100"
+                       min="0"
+                       placeholder="Priority">
+                <input id="automaticNoticeRuleCreateAlias"
+                       type="text"
+                       placeholder="Alias">
+                <select id="automaticNoticeRuleCreateEnabled"
+                        aria-label="사용 여부">
+                    <option value="Y">사용 Y</option>
+                    <option value="N">사용 N</option>
+                </select>
+                <div class="automatic-rule-create-actions">
+                    <button class="admin-tool-btn primary" type="submit">
+                        <i class="fas fa-save"></i>
+                        저장
+                    </button>
+                    <button id="automaticNoticeRuleCreateCancel"
+                            class="admin-tool-btn"
+                            type="button">
+                        취소
+                    </button>
+                </div>
+            </form>
+        </div>
+
         <div class="card shadow mb-4 admin-table-card">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">협조문 자동 완성 룰 목록</h6>
+                <h6 class="m-0 font-weight-bold text-primary">협조문 자동 완성 목록</h6>
             </div>
             <div class="card-body">
                 <div class="admin-table-tools">
