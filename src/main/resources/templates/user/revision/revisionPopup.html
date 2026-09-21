@@ -184,21 +184,30 @@ const bookmapCancelButton = document.getElementById('bookmapCancelButton');
 let options = [];
 let pendingBookmapMapName = '';
 let bookmapModalResolver = null;
+// 영문 TEXT DB의 인라인 태그 유실 원인을 수정할 때까지 문장 DB 반영을 임시 중지한다.
+const blockedOptionIds = new Set([
+    'TEXT_DB_APPLY'
+]);
 
 // 현재 체크된 정제 단계 input만 배열로 반환한다.
 function selectedInputs() {
     return Array.from(
-        optionList.querySelectorAll('input[name="revisionOption"]:checked')
+        optionList.querySelectorAll(
+            'input[name="revisionOption"]:checked:not(:disabled)'
+        )
     );
 }
 
 // 전체 단계 수와 선택 수를 안내하고 전체 선택/해제 버튼 문구를 맞춘다.
 function updateSelectionSummary() {
     const selectedCount = selectedInputs().length;
+    const enabledCount = options.filter(function(option) {
+        return !blockedOptionIds.has(option.id);
+    }).length;
     selectionSummary.textContent =
-        `전체 ${options.length}개 중 ${selectedCount}개 선택`;
+        `전체 ${enabledCount}개 중 ${selectedCount}개 선택`;
     toggleAllButton.textContent =
-        selectedCount === options.length ? '전체 해제' : '전체 선택';
+        selectedCount === enabledCount ? '전체 해제' : '전체 선택';
 }
 
 /*
@@ -231,7 +240,6 @@ function renderOptions(items) {
     const defaultCheckedIds = new Set([
         'DELETE_DRAFT_COMMENT',
         'NOTE_DB_APPLY',
-        'TEXT_DB_APPLY',
         'BER_DB_APPLY',
         'FORBIDDEN_QC_REPORT'
     ]);
@@ -265,6 +273,7 @@ function renderOptions(items) {
         checkbox.name = 'revisionOption';
         checkbox.value = option.id;
         checkbox.checked = defaultCheckedIds.has(option.id);
+        checkbox.disabled = blockedOptionIds.has(option.id);
         checkbox.addEventListener('change', function() {
             // 파일명 변경 방식은 동시에 적용할 수 없으므로 마지막 선택값만 유지한다.
             if (checkbox.checked && filenameOptionIds.has(option.id)) {
@@ -284,7 +293,9 @@ function renderOptions(items) {
         name.textContent = option.label;
 
         const description = document.createElement('small');
-        description.textContent = option.description;
+        description.textContent = blockedOptionIds.has(option.id)
+            ? '인라인 태그 유실 점검을 위해 현재 사용할 수 없습니다.'
+            : option.description;
 
         text.append(name, description);
         label.append(checkbox, text);
@@ -381,7 +392,9 @@ function enforceSingleSelection(name) {
 
 toggleAllButton.addEventListener('click', function() {
     const inputs = Array.from(
-        optionList.querySelectorAll('input[name="revisionOption"]')
+        optionList.querySelectorAll(
+            'input[name="revisionOption"]:not(:disabled)'
+        )
     );
     const shouldCheck = selectedInputs().length !== inputs.length;
     inputs.forEach(function(input) {
