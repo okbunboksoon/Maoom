@@ -14,7 +14,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>MaoomTool</artifactId>
-	<version>Release 1.2.5.</version>
+	<version>Release 1.2.7.</version>
 	<name>MaoomTool</name>
 
 	<properties>
@@ -104,6 +104,11 @@
 		    <groupId>com.twelvemonkeys.imageio</groupId>
 		    <artifactId>imageio-jpeg</artifactId>
 		    <version>3.12.0</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.saxon</groupId>
+			<artifactId>Saxon-HE</artifactId>
+			<version>12.4</version>
 		</dependency>
 	</dependencies>
 

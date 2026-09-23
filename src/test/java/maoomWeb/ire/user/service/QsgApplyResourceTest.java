@@ -4,6 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 import java.nio.charset.StandardCharsets;
 
 import org.junit.jupiter.api.Test;
@@ -45,6 +47,29 @@ class QsgApplyResourceTest {
                 xslDirectory.resolve("QSG_DB.xml"),
                 StandardCharsets.UTF_8))
                 .contains("admin-qsg-db-overwrite");
+    }
+
+    @Test
+    void copiesUsedQsgDbAsResultSnapshot() throws Exception {
+        Path workspace = tempDirectory.resolve("workspace");
+        Path xslDirectory = workspace.resolve("xsl");
+        Path resultDirectory = tempDirectory.resolve("result");
+        Files.createDirectories(xslDirectory);
+        Files.createDirectories(resultDirectory);
+        Files.writeString(
+                xslDirectory.resolve("QSG_DB.xml"),
+                "<dictionary><entry hash=\"A\"/></dictionary>");
+        List<String> logs = new ArrayList<>();
+
+        new QsgApplyService().copyQsgDbSnapshot(
+                workspace,
+                resultDirectory,
+                logs);
+
+        assertThat(resultDirectory.resolve("QSG_DB_snapshot.xml"))
+                .hasSameTextualContentAs(xslDirectory.resolve("QSG_DB.xml"));
+        assertThat(logs)
+                .anyMatch(value -> value.startsWith("QSG DB SHA-256: "));
     }
 
     private static class RecordingQsgDbAdminService

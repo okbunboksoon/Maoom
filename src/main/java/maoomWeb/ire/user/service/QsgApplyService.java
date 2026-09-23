@@ -9,6 +9,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -57,6 +59,7 @@ public class QsgApplyService {
     private static final String XSL_ROOT = "xsl";
     private static final String LIB_ROOT = "lib";
     private static final String BATCH_FILE = "02_QSG_apply.bat";
+    private static final String QSG_DB_SNAPSHOT = "QSG_DB_snapshot.xml";
     private final QsgDbAdminService qsgDbAdminService;
 
     public QsgApplyService() {
@@ -112,6 +115,7 @@ public class QsgApplyService {
                     input,
                     "QSG");
             replaceDirectory(workspaceResult, runOutput);
+            copyQsgDbSnapshot(workspace, runOutput, logs);
             logs.add("완료: " + runOutput);
             Files.write(
                     runOutput.resolve("qsg.log"),
@@ -148,6 +152,44 @@ public class QsgApplyService {
     void prepareXslDirectory(Path xslDirectory) throws IOException {
         copySharedXslDirectory(xslDirectory);
         writeQsgDbXmlFromAdmin(xslDirectory);
+    }
+
+    /** 실행에 실제 사용된 QSG DB를 결과 폴더에 검증용 스냅샷으로 보존한다. */
+    void copyQsgDbSnapshot(
+            Path workspace,
+            Path runOutput,
+            List<String> logs) throws IOException {
+
+        Path source = workspace.resolve("xsl").resolve("QSG_DB.xml");
+        if(!Files.isRegularFile(source)){
+            throw new IOException("QSG DB 스냅샷 원본이 없습니다: " + source);
+        }
+
+        Path snapshot = runOutput.resolve(QSG_DB_SNAPSHOT);
+        Files.copy(source, snapshot, StandardCopyOption.REPLACE_EXISTING);
+        logs.add("QSG DB 스냅샷: " + snapshot);
+        logs.add("QSG DB SHA-256: " + sha256(snapshot));
+    }
+
+    private String sha256(Path file) throws IOException {
+        try{
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            try(var input = Files.newInputStream(file)){
+                byte[] buffer = new byte[8192];
+                int length;
+                while((length = input.read(buffer)) >= 0){
+                    digest.update(buffer, 0, length);
+                }
+            }
+
+            StringBuilder value = new StringBuilder();
+            for(byte item : digest.digest()){
+                value.append(String.format("%02x", item));
+            }
+            return value.toString();
+        }catch(NoSuchAlgorithmException exception){
+            throw new IllegalStateException("SHA-256을 사용할 수 없습니다.", exception);
+        }
     }
 
     private void writeQsgDbXmlFromAdmin(Path xslDirectory) throws IOException {
