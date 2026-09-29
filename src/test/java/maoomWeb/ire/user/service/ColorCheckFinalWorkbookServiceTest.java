@@ -346,6 +346,28 @@ class ColorCheckFinalWorkbookServiceTest {
     }
 
     @Test
+    void parsesHyphenLocaleWithUnderscoreBeforeYear()
+            throws Exception {
+
+        Path source = tempDirectory.resolve(
+                "KIA-SP3c-ICE-zh-cn_2027-OM_Full-PDF-"
+                + "260611-1.1_ALL_도안분류용.xlsx");
+        createReviewWorkbook(source);
+        ColorCheckFinalWorkbookService service =
+                new ColorCheckFinalWorkbookService();
+
+        Path output = service.createFinalWorkbook(
+                source,
+                source.getFileName().toString(),
+                tempDirectory);
+
+        assertThat(output.getFileName().toString())
+                .matches(
+                        "\\d{6}_도안발주내역서_"
+                        + "SP3C_ICE_27MY_CN_HTML\\.xlsx");
+    }
+
+    @Test
     void keepsPeModelVariantBeforePowertrain()
             throws Exception {
 

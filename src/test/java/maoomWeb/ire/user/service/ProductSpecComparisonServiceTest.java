@@ -68,11 +68,11 @@ class ProductSpecComparisonServiceTest {
                 new ProductSpecComparisonService();
 
         assertThat(service.toServerInputPath("G:\\project\\spec"))
-                .isEqualTo("\\\\192.168.10.221\\kia_om25\\project\\spec");
+                .isEqualTo("\\\\172.16.10.15\\kia_om25\\project\\spec");
         assertThat(service.toServerInputPath("g:/project/spec"))
-                .isEqualTo("\\\\192.168.10.221\\kia_om25/project/spec");
+                .isEqualTo("\\\\172.16.10.15\\kia_om25/project/spec");
         assertThat(service.toServerInputPath("G:"))
-                .isEqualTo("\\\\192.168.10.221\\kia_om25");
+                .isEqualTo("\\\\172.16.10.15\\kia_om25");
     }
 
     @Test

@@ -13,11 +13,11 @@ class DitamapBuilderServiceTest {
     void treatsMappedDrivePathAsAllowedUncChild() throws Exception {
         DitamapPathService service = new DitamapPathService("");
 
-        cacheMappedDrive(service, "V:", "\\\\192.168.10.221\\QC_Docs");
+        cacheMappedDrive(service, "V:", "\\\\172.16.10.15\\QC_Docs");
 
         assertThat(service.isSameOrChildPath(
                 "V:\\Tools\\test\\BER\\KIA-MV1-EV-en_GB-2027",
-                "\\\\192.168.10.221\\QC_Docs"))
+                "\\\\172.16.10.15\\QC_Docs"))
                 .isTrue();
     }
 
@@ -25,11 +25,11 @@ class DitamapBuilderServiceTest {
     void rejectsMappedDrivePathOutsideAllowedUncRoot() throws Exception {
         DitamapPathService service = new DitamapPathService("");
 
-        cacheMappedDrive(service, "V:", "\\\\192.168.10.221\\QC_Docs");
+        cacheMappedDrive(service, "V:", "\\\\172.16.10.15\\QC_Docs");
 
         assertThat(service.isSameOrChildPath(
                 "V:\\Tools\\test\\BER",
-                "\\\\192.168.10.221\\kia_om26"))
+                "\\\\172.16.10.15\\kia_om26"))
                 .isFalse();
     }
 

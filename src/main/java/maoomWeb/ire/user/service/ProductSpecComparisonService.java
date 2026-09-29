@@ -66,7 +66,7 @@ public class ProductSpecComparisonService {
     private static final Charset BATCH_OUTPUT_CHARSET =
             Charset.forName("MS949");
     private static final String G_SERVER_ROOT =
-            "\\\\192.168.10.221\\kia_om25";
+            "\\\\172.16.10.15\\kia_om25";
     private static final DateTimeFormatter RUN_FORMAT =
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss-SSS");
     private static final Pattern SAFE_FILE_NAME =

@@ -796,8 +796,8 @@ public class ColorCheckFinalWorkbookService {
 
         String normalizedBaseName = baseName.substring(kiaIndex)
                 .replaceFirst(
-                        "(?i)([a-z]{2}_[a-z]{2})_(20\\d{2})",
-                        "$1-$2");
+                        "(?i)([a-z]{2})[-_]([a-z]{2})[-_](20\\d{2})",
+                        "$1_$2-$3");
         String[] tokens = normalizedBaseName.split("-");
         int yearIndex = -1;
 

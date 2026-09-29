@@ -345,13 +345,13 @@ public class ProjectDbAdminService {
                 ProjectDbItem item = new ProjectDbItem();
                 item.setRegion(normalizedRegion);
                 item.setHash(pair.getAttribute("hash"));
-                item.setOldText(textOf(pair, "old", 0));
+                item.setOldText(innerXmlOf(pair, "old", 0));
 
                 NodeList newNodes = pair.getElementsByTagName("new");
                 item.setNewText(newNodes.getLength() == 0
                         ? ""
-                        : newNodes.item(newNodes.getLength() - 1)
-                                .getTextContent());
+                        : BerXmlFragments.innerXml((Element) newNodes.item(
+                                newNodes.getLength() - 1)));
                 try{
                     normalizeAndValidate(item);
                     deduped.put(
@@ -382,12 +382,12 @@ public class ProjectDbAdminService {
         }
     }
 
-    private String textOf(Element parent, String tagName, int index) {
+    private String innerXmlOf(Element parent, String tagName, int index) {
         NodeList nodes = parent.getElementsByTagName(tagName);
         if(nodes.getLength() <= index){
             return "";
         }
-        return nodes.item(index).getTextContent();
+        return BerXmlFragments.innerXml((Element) nodes.item(index));
     }
 
     private Sheet findImportSheet(Workbook workbook) {

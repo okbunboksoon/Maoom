@@ -289,19 +289,19 @@ DITAMAP Builder처럼 허용된 루트 아래 파일만 읽고 쓰는 기능은
 예시:
 
 ```properties
-ditamap.builder.allowed-roots=\\192.168.10.221\QC_Docs;\\192.168.10.221\kia_om26;\\g-server\project
+ditamap.builder.allowed-roots=\\172.16.10.15\QC_Docs;\\172.16.10.15\kia_om26;\\g-server\project
 ```
 
 G서버를 추가하려면 마지막에 `;\\g-server\project`를 붙인다.
 
 ```properties
-ditamap.builder.allowed-roots=\\192.168.10.221\QC_Docs;\\192.168.10.221\kia_om26;\\g-server\project
+ditamap.builder.allowed-roots=\\172.16.10.15\QC_Docs;\\172.16.10.15\kia_om26;\\g-server\project
 ```
 
 G서버를 빼려면 해당 항목만 지운다.
 
 ```properties
-ditamap.builder.allowed-roots=\\192.168.10.221\QC_Docs;\\192.168.10.221\kia_om26
+ditamap.builder.allowed-roots=\\172.16.10.15\QC_Docs;\\172.16.10.15\kia_om26
 ```
 
 수정 후에는 서버를 재시작해야 반영된다.
