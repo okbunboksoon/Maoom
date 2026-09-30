@@ -26,6 +26,9 @@
 		</xsl:copy>
 	</xsl:template>
 
+	<!-- Remove existing related-links before regenerating them below. -->
+	<xsl:template match="related-links"/>
+
 	<xsl:template match="concept | task | reference">
 		<xsl:copy>
 			<xsl:apply-templates select="@* | node()"/>
