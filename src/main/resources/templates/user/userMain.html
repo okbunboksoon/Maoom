@@ -327,6 +327,13 @@ const launcherMenus = [
         action:openBerPopup
     },
     {
+        title:'DITA Validation Check',
+        description:'DITAMAP 연결 문서 Schematron 검사',
+        category:'DITA',
+        icon:'fa-solid fa-check-double',
+        action:openDitaValidationPopup
+    },
+    {
         title:'정제',
         description:'DITA 및 XML 정제',
         category:'DITA, XML',
@@ -995,6 +1002,15 @@ function openBerPopup(){
     openPopupWindow(
         '/pdf/ber',
         'berPopup',
+        popupWindowOptions(680, 350, 5)
+    );
+}
+
+/* DITA Validation Check: BER 반영과 같은 입력 경로 선택 화면으로 시작한다. */
+function openDitaValidationPopup(){
+    openPopupWindow(
+        '/dita-validation',
+        'ditaValidationPopup',
         popupWindowOptions(680, 350, 5)
     );
 }

@@ -37,6 +37,7 @@ class AdminMainTemplateTest {
                 .contains("data-admin-view=\"project-text-db\"")
                 .contains("data-admin-view=\"project-note-db\"")
                 .contains("data-admin-view=\"project-logs\"")
+                .contains("data-admin-view=\"schematron-history\"")
                 .contains("id=\"userTable\"")
                 .contains("id=\"colorCheckTable\"")
                 .contains("id=\"berAsisTobeTable\"")
@@ -51,6 +52,7 @@ class AdminMainTemplateTest {
                 .contains("id=\"projectNoteNoteCount\"")
                 .contains("id=\"projectNoteTipCount\"")
                 .contains("id=\"projectLogTable\"")
+                .contains("id=\"schematronHistoryTable\"")
                 .doesNotContain("onclick=\"location.href='/main'\"");
     }
 }

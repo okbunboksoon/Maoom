@@ -222,6 +222,10 @@
                 <i class="fas fa-clock-rotate-left"></i>
                 실행 로그
             </button>
+            <button class="admin-db-nav-item" type="button" data-admin-view="schematron-history">
+                <i class="fas fa-check-double"></i>
+                Schematron 이력
+            </button>
         </nav>
         <div class="admin-sidebar-toggle">
             <button id="sidebarToggle" type="button" aria-label="사이드바 접기">
@@ -238,6 +242,8 @@
     <th:block th:replace="~{admin/section/projectNoteDb :: projectNoteDbSection}"></th:block>
     <th:block th:replace="~{admin/section/replaceDarkSymbol :: replaceDarkSymbolSection}"></th:block>
     <th:block th:replace="~{admin/section/projectLog :: projectLogSection}"></th:block>
+    <!-- Schematron 실행 이력은 전용 fragment에서 관리하여 기존 프로젝트 로그와 분리한다. -->
+    <th:block th:replace="~{admin/section/schematronHistory :: schematronHistorySection}"></th:block>
     <th:block th:replace="~{admin/section/users :: usersSection}"></th:block>
 </main>
 

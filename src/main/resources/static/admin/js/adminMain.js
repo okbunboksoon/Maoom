@@ -60,6 +60,8 @@ const projectLogState = {
     filteredItems: []
 };
 
+const schematronHistoryState = {items: []};
+
 const userState = {
     items: [],
     filteredItems: [],
@@ -117,12 +119,18 @@ const replaceDarkSymbolSection =
     document.getElementById('replaceDarkSymbolSection');
 const projectLogSection =
     document.getElementById('projectLogSection');
+const schematronHistorySection =
+    document.getElementById('schematronHistorySection');
 const userSection =
     document.getElementById('userSection');
 const projectLogTableBody =
     document.getElementById('projectLogTableBody');
 const projectLogSummary =
     document.getElementById('projectLogSummary');
+const schematronHistoryTableBody =
+    document.getElementById('schematronHistoryTableBody');
+const schematronHistorySummary =
+    document.getElementById('schematronHistorySummary');
 const colorTotalCount =
     document.getElementById('colorTotalCount');
 const colorCheckedCount =
@@ -322,6 +330,7 @@ let automaticNoticeRuleDataTable = null;
 let qsgDbDataTable = null;
 let replaceDarkSymbolDataTable = null;
 let projectLogDataTable = null;
+let schematronHistoryDataTable = null;
 let userDataTable = null;
 
 function profileImageUrl(version){
@@ -559,6 +568,7 @@ function switchAdminView(view){
     const isProjectNoteDbView = view === 'project-note-db';
     const isReplaceDarkSymbolView = view === 'replace-dark-symbol';
     const isLogView = view === 'project-logs';
+    const isSchematronHistoryView = view === 'schematron-history';
     const isUserView = view === 'users';
     colorCheckSection.hidden = !isColorCheckView;
     berAsisTobeSection.hidden = !isBerAsisTobeView;
@@ -568,6 +578,7 @@ function switchAdminView(view){
     projectNoteDbSection.hidden = !isProjectNoteDbView;
     replaceDarkSymbolSection.hidden = !isReplaceDarkSymbolView;
     projectLogSection.hidden = !isLogView;
+    schematronHistorySection.hidden = !isSchematronHistoryView;
     userSection.hidden = !isUserView;
 
     document.querySelectorAll('[data-admin-view]').forEach(button => {
@@ -603,6 +614,9 @@ function switchAdminView(view){
     }
     if(isLogView && projectLogState.items.length === 0){
         loadProjectLogs();
+    }
+    if(isSchematronHistoryView && schematronHistoryState.items.length === 0){
+        loadSchematronHistory();
     }
     if(isUserView && userState.items.length === 0){
         loadUsers();
@@ -3175,6 +3189,50 @@ async function loadProjectLogs(){
         row.appendChild(cell);
         projectLogTableBody.appendChild(row);
         projectLogSummary.textContent = error.message || '조회 중 오류가 발생했습니다.';
+    }
+}
+
+// Schematron 전용 실행 이력을 표로 그리고 성공한 실행만 저장된 HTML 보고서 링크를 제공한다.
+function renderSchematronHistory(){
+    destroyDataTable(schematronHistoryDataTable);
+    schematronHistoryDataTable = null;
+    schematronHistoryTableBody.innerHTML = '';
+    schematronHistoryState.items.forEach(item => {
+        const row = document.createElement('tr');
+        const status = item.status === 'SUCCESS' ? '성공'
+            : item.status === 'FAILED' ? '실패' : '실행 중';
+        [item.id, status, item.triggerUserId || '-', formatDate(item.startedAt),
+            formatElapsed(item.elapsedMs), item.inputSummary || '-'].forEach(value => {
+            const cell = document.createElement('td');cell.textContent = safeText(value);row.appendChild(cell);
+        });
+        const resultCell = document.createElement('td');
+        if(item.reportFileName){
+            const link = document.createElement('a');
+            link.href = '/api/dita-validation/reports/' + encodeURIComponent(item.id);
+            link.target = '_blank';link.rel = 'noopener';link.textContent = 'HTML 보기';
+            resultCell.appendChild(link);
+        }else{resultCell.textContent = item.status === 'FAILED' ? (item.errorMessage || '-') : '-'}
+        row.appendChild(resultCell);schematronHistoryTableBody.appendChild(row);
+    });
+    if(!schematronHistoryState.items.length){
+        schematronHistoryTableBody.innerHTML='<tr><td colspan="7" class="admin-empty-cell">저장된 이력이 없습니다.</td></tr>';
+    }
+    schematronHistorySummary.textContent='전체 '+schematronHistoryState.items.length.toLocaleString('ko-KR')+'건';
+    if(window.jQuery&&jQuery.fn&&jQuery.fn.DataTable&&schematronHistoryState.items.length){
+        schematronHistoryDataTable=$('#schematronHistoryTable').DataTable({language:dataTableLanguage(),pageLength:50,order:[[3,'desc']],columnDefs:[{targets:[0,1,2,3,4,6],className:'text-center'}]});
+    }
+}
+
+// 관리자 화면 진입 시 기존 프로젝트 실행 로그와 별도의 API에서 Schematron 이력을 조회한다.
+async function loadSchematronHistory(){
+    schematronHistorySummary.textContent='실행 이력을 불러오는 중입니다.';
+    try{
+        const response=await fetch('/admin/schematron-history',{headers:{Accept:'application/json'}});
+        if(!response.ok)throw new Error(await response.text());
+        schematronHistoryState.items=await response.json();renderSchematronHistory();
+    }catch(error){
+        schematronHistoryTableBody.innerHTML='<tr><td colspan="7" class="admin-empty-cell">실행 이력을 불러오지 못했습니다.</td></tr>';
+        schematronHistorySummary.textContent=error.message||'조회 중 오류가 발생했습니다.';
     }
 }
 

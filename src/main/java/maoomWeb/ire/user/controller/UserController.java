@@ -333,6 +333,18 @@ public class UserController {
         return "user/ber/ber";
     }
 
+    // Schematron 검사 1단계: 서버가 접근할 입력 폴더를 받는 팝업 화면이다.
+    @GetMapping("/dita-validation")
+    public String ditaValidationInput() {
+        return "user/ditaValidation/input";
+    }
+
+    // Schematron 검사 2단계: ditamap 트리와 검사 범위·유형을 선택하는 화면이다.
+    @GetMapping("/dita-validation/check")
+    public String ditaValidationCheck() {
+        return "user/ditaValidation/check";
+    }
+
     /**
      * 제품사양서 비교 카드가 여는 팝업 화면.
      *

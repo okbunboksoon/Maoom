@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DITA Validation Check</title>
+    <link rel="stylesheet" href="/user/css/RevisionPopup.css">
+</head>
+<body class="ber-popup-body">
+<!-- 1단계: 서버가 접근할 수 있는 작업 폴더를 먼저 검증한 뒤 검사 화면을 별도 팝업으로 연다. -->
+<main class="revision-page revision-estimate-page">
+    <header class="revision-header"><div>
+        <h1>DITA Validation Check</h1>
+        <p>입력 경로의 ditamap과 연결된 DITA 파일을 검사합니다.</p>
+    </div></header>
+    <section class="revision-panel" aria-label="입력 경로 선택">
+        <div class="step-title"><span>1</span><div>
+            <strong>입력 경로 선택</strong>
+            <small>서버 PC에서 접근할 수 있는 경로를 입력하세요.(V서버, H서버)</small>
+        </div></div>
+        <div class="path-row full-path-row">
+            <label for="inputPath">입력경로</label>
+            <input id="inputPath" type="text" placeholder="경로를 입력하세요" autocomplete="off">
+            <span></span><span></span>
+        </div>
+        <footer class="popup-actions">
+            <button id="continueBtn" class="action-button primary" type="button">실행</button>
+            <button class="action-button" type="button" onclick="window.close()">취소</button>
+        </footer>
+        <section id="resultPanel" class="result-panel" hidden><p id="resultMessage"></p></section>
+    </section>
+</main>
+<script>
+const input=document.getElementById('inputPath'),panel=document.getElementById('resultPanel'),message=document.getElementById('resultMessage');
+document.getElementById('continueBtn').onclick=continueToCheck;
+input.addEventListener('keydown',e=>{if(e.key==='Enter')continueToCheck()});
+async function continueToCheck(){
+ const value=input.value.trim();if(!value){show('입력 경로를 입력해 주세요.');input.focus();return}
+ // 사용자 클릭 시 창을 먼저 만들어 비동기 경로 확인 후에도 브라우저 팝업 차단에 걸리지 않게 한다.
+ const checkWindow=window.open('about:blank','ditaValidationCheckPopup','width=1000,height=1200,resizable=yes,scrollbars=yes');
+ if(!checkWindow){show('검사 화면 팝업이 차단되었습니다. 브라우저에서 팝업을 허용해 주세요.');return}
+ const button=document.getElementById('continueBtn');button.disabled=true;button.textContent='확인 중...';
+ try{const response=await fetch('/api/dita-validation/maps',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({inputPath:value})});
+  if(!response.ok)throw new Error(await response.text());const maps=await response.json();if(!maps.length)throw new Error('입력 경로에서 ditamap을 찾지 못했습니다.');
+  checkWindow.location.href='/dita-validation/check?inputPath='+encodeURIComponent(value);checkWindow.focus();
+ }catch(error){checkWindow.close();show(error.message||'입력 경로를 확인하지 못했습니다.')}
+ finally{button.disabled=false;button.textContent='실행'}
+}
+function show(text){panel.hidden=false;message.textContent=text}
+</script>
+</body></html>
