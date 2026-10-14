@@ -57,7 +57,6 @@ class BerApplyServiceTest {
             throws Exception {
 
         for(String fileName : new String[]{
-                "0320-kus-pair-extract_ber.xsl",
                 "0340-kus-db-apply_ber.xsl",
                 "0410-make-change-report_ber.xsl"}){
             String xsl = Files.readString(
@@ -76,6 +75,10 @@ class BerApplyServiceTest {
                 Path.of(
                         "src/main/resources/xsl/0340-kus-db-apply_ber.xsl"),
                 StandardCharsets.UTF_8);
+        String extractXsl = Files.readString(
+                Path.of(
+                        "src/main/resources/xsl/0320-kus-pair-extract_ber.xsl"),
+                StandardCharsets.UTF_8);
         String reportXsl = Files.readString(
                 Path.of(
                         "src/main/resources/xsl/0410-make-change-report_ber.xsl"),
@@ -83,6 +86,11 @@ class BerApplyServiceTest {
 
         assertThat(applyXsl)
                 .contains("if ($isCaLhd) then 'asis-tobe_eu.xml'");
+        assertThat(extractXsl)
+                .contains("<xsl:param name=\"region\"")
+                .contains("('EU', 'EU_RG', 'US')")
+                .contains("select=\"$normalizedRegion\"")
+                .doesNotContain("contains($title");
         assertThat(reportXsl)
                 .contains("if ($isCaLhd) then 'asis-tobe_eu.xml'")
                 .contains("$candidate-targets[not(descendant::* intersect $candidate-targets)]")
@@ -91,6 +99,18 @@ class BerApplyServiceTest {
                 .contains("<xsl:for-each select=\"$unchanged-targets\">")
                 .contains("not(descendant-or-self::*[@status = 'ber_changed'])")
                 .doesNotContain("contains(upper-case($mapTitle), 'IN')");
+    }
+
+    @Test
+    void sentenceImportBatchPassesSelectedRegionToPairExtraction()
+            throws Exception {
+        String batch = Files.readString(
+                Path.of(
+                        "src/main/resources/bat/02_asis-tobe-make-Build.bat"),
+                java.nio.charset.Charset.forName("MS949"));
+
+        assertThat(batch)
+                .contains("0320-kus-pair-extract_ber.xsl\t region=%REGION%");
     }
 
 }

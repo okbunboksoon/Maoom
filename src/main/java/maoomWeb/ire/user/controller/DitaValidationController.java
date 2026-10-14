@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import maoomWeb.ire.user.service.DitaValidationWorkflowService;
 import maoomWeb.ire.user.service.DitaValidationProgressService;
+import maoomWeb.ire.user.service.CurrentUserService;
 import maoomWeb.ire.user.service.SchematronFileService;
 import maoomWeb.ire.user.service.SchematronHistoryService;
 
@@ -29,13 +30,16 @@ public class DitaValidationController {
     private final SchematronHistoryService history;
     private final SchematronFileService schematronFiles;
     private final DitaValidationProgressService progress;
+    private final CurrentUserService currentUserService;
 
     public DitaValidationController(DitaValidationWorkflowService workflow, SchematronHistoryService history,
-                                    SchematronFileService schematronFiles, DitaValidationProgressService progress) {
+                                    SchematronFileService schematronFiles, DitaValidationProgressService progress,
+                                    CurrentUserService currentUserService) {
         this.workflow = workflow;
         this.history = history;
         this.schematronFiles = schematronFiles;
         this.progress = progress;
+        this.currentUserService = currentUserService;
     }
 
     @GetMapping("/api/dita-validation/schematrons")
@@ -70,6 +74,19 @@ public class DitaValidationController {
         Path path = history.reportPath(id);
         return ResponseEntity.ok().contentType(new MediaType("text", "html", StandardCharsets.UTF_8))
                 .body(Files.readAllBytes(path));
+    }
+
+    @GetMapping("/api/dita-validation/reports/{id}/state")
+    public List<ReportStateItem> reportState(@PathVariable Long id) {
+        return history.findReportStates(id);
+    }
+
+    @PostMapping("/api/dita-validation/reports/{id}/state")
+    public ReportStateItem saveReportState(@PathVariable Long id, @RequestBody ReportStateRequest request,
+                                           Authentication authentication) {
+        if (request == null) throw new IllegalArgumentException("저장할 확인 상태가 없습니다.");
+        return history.saveReportState(id, request.issueId(), request.checked(),
+                currentUserService.getUserId(authentication), currentUserService.getUserName(authentication));
     }
 
     @ExceptionHandler({IllegalArgumentException.class, IllegalStateException.class})

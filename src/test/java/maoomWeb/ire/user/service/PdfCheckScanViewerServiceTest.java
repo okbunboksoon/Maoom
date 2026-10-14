@@ -96,7 +96,12 @@ class PdfCheckScanViewerServiceTest {
                         matchTableFile.toAbsolutePath().normalize().toString(),
                         "--out",
                         command.get(5),
+                        "--abstract-out",
+                        command.get(7),
                         "--quiet");
+        org.assertj.core.api.Assertions.assertThat(command.get(7))
+                .startsWith(outputDirectory.toAbsolutePath().normalize().toString())
+                .endsWith("_추가검증목록.xlsx");
     }
 
     @Test
@@ -109,5 +114,17 @@ class PdfCheckScanViewerServiceTest {
 
         org.assertj.core.api.Assertions.assertThat(fileName)
                 .isEqualTo("20260820_153000_인쇄데이터_검증.xlsx");
+    }
+
+    @Test
+    void createsDatedKoreanAbstractOutputFileName() {
+        PdfCheckScanViewerService service =
+                new PdfCheckScanViewerService("", "");
+
+        String fileName = service.createAbstractOutputFileName(
+                LocalDateTime.of(2026, 8, 20, 15, 30, 0));
+
+        org.assertj.core.api.Assertions.assertThat(fileName)
+                .isEqualTo("20260820_153000_추가검증목록.xlsx");
     }
 }

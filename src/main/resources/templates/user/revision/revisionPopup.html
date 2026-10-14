@@ -184,10 +184,7 @@ const bookmapCancelButton = document.getElementById('bookmapCancelButton');
 let options = [];
 let pendingBookmapMapName = '';
 let bookmapModalResolver = null;
-// 영문 TEXT DB의 인라인 태그 유실 원인을 수정할 때까지 문장 DB 반영을 임시 중지한다.
-const blockedOptionIds = new Set([
-    'TEXT_DB_APPLY'
-]);
+const blockedOptionIds = new Set();
 
 // 현재 체크된 정제 단계 input만 배열로 반환한다.
 function selectedInputs() {
@@ -237,9 +234,11 @@ function renderOptions(items) {
         BER_DB_APPLY: 'BER 반영',
         FORBIDDEN_QC_REPORT: '금칙어 QC 리포트'
     };
+    /** 들어가져있으면 기본값 체크 **/
     const defaultCheckedIds = new Set([
         'DELETE_DRAFT_COMMENT',
         'NOTE_DB_APPLY',
+        'TEXT_DB_APPLY',
         'BER_DB_APPLY',
         'FORBIDDEN_QC_REPORT'
     ]);

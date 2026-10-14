@@ -113,7 +113,7 @@ public class DitaValidationWorkflowService {
                     map, snapshot, scope, selected, request.validateMap()),
                     (completed, total, currentFile) -> progressService.update(progressToken, completed, total, currentFile));
             Path report = folder.resolve("schematron-report.html");
-            new HtmlReportWriter().write(result, report, userName, userId);
+            new HtmlReportWriter().write(result, report, historyId, userName, userId);
             historyService.success(historyId, result.validatedFileCount(), result.issues().size(), report, snapshot);
             progressService.complete(progressToken, result.validatedFileCount());
             return new RunResponse(historyId, "SUCCESS", result.validatedFileCount(),

@@ -14,7 +14,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>MaoomTool</artifactId>
-	<version>Release 1.2.8.</version>
+	<version>Release 1.2.10.</version>
 	<name>MaoomTool</name>
 
 	<properties>
@@ -105,6 +105,7 @@
 		    <artifactId>imageio-jpeg</artifactId>
 		    <version>3.12.0</version>
 		</dependency>
+		<!-- Schematron의 XPath 2.0 표현식과 document()/doc() 연결 문서를 실행한다. -->
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
 			<artifactId>Saxon-HE</artifactId>

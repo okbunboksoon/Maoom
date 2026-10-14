@@ -52,6 +52,7 @@ class AdminMainTemplateTest {
                 .contains("id=\"projectNoteNoteCount\"")
                 .contains("id=\"projectNoteTipCount\"")
                 .contains("id=\"projectLogTable\"")
+                .contains("<i class=\"fas fa-history\"></i>")
                 .contains("id=\"schematronHistoryTable\"")
                 .doesNotContain("onclick=\"location.href='/main'\"");
     }

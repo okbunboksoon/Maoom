@@ -10,7 +10,9 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import maoomWeb.ire.user.dto.DitaValidationDtos.ReportStateItem;
 import maoomWeb.ire.user.dto.SchematronHistoryDto;
 
 /** 기존 프로젝트 실행 로그와 분리된 Schematron 실행 이력 및 결과 보고서 경로를 관리한다. */
@@ -102,6 +104,56 @@ public class SchematronHistoryService {
         Path path = Path.of(paths.get(0)).toAbsolutePath().normalize();
         if (!Files.isRegularFile(path)) throw new IllegalArgumentException("저장된 결과 보고서가 없습니다.");
         return path;
+    }
+
+    /** 보고서 항목의 공유 확인 상태를 모두 조회한다. */
+    public List<ReportStateItem> findReportStates(Long historyId) {
+        requireSuccessfulHistory(historyId);
+        return jdbcTemplate.query("""
+                SELECT issue_id, checked, updated_at, confirmer_name
+                FROM tb_schematron_report_issue_state
+                WHERE history_id=? ORDER BY issue_id
+                """, (rs, row) -> new ReportStateItem(
+                rs.getString("issue_id"), rs.getBoolean("checked"),
+                rs.getTimestamp("updated_at") == null ? null : rs.getTimestamp("updated_at").toLocalDateTime(),
+                rs.getString("confirmer_name")), historyId);
+    }
+
+    /** 체크 시각과 확인자는 서버에서 결정하고, 체크 해제 시 두 값을 함께 제거한다. */
+    @Transactional
+    public ReportStateItem saveReportState(Long historyId, String issueId, boolean checked,
+                                           String userId, String userName) {
+        requireSuccessfulHistory(historyId);
+        if (issueId == null || !issueId.matches("[0-9a-f]{32}")) {
+            throw new IllegalArgumentException("올바른 보고서 항목이 아닙니다.");
+        }
+        String confirmer = userName == null || userName.isBlank() ? userId : userName;
+        if (checked && (confirmer == null || confirmer.isBlank())) {
+            throw new IllegalArgumentException("로그인 사용자 정보를 확인할 수 없습니다.");
+        }
+        jdbcTemplate.update("""
+                INSERT INTO tb_schematron_report_issue_state
+                    (history_id, issue_id, checked, updated_at, confirmer_user_id, confirmer_name)
+                VALUES (?, ?, ?, IF(?, CURRENT_TIMESTAMP(6), NULL), IF(?, ?, NULL), IF(?, ?, NULL))
+                ON DUPLICATE KEY UPDATE
+                    checked=VALUES(checked), updated_at=VALUES(updated_at),
+                    confirmer_user_id=VALUES(confirmer_user_id), confirmer_name=VALUES(confirmer_name)
+                """, historyId, issueId, checked, checked, checked, userId, checked, confirmer);
+        return jdbcTemplate.queryForObject("""
+                SELECT issue_id, checked, updated_at, confirmer_name
+                FROM tb_schematron_report_issue_state WHERE history_id=? AND issue_id=?
+                """, (rs, row) -> new ReportStateItem(
+                rs.getString("issue_id"), rs.getBoolean("checked"),
+                rs.getTimestamp("updated_at") == null ? null : rs.getTimestamp("updated_at").toLocalDateTime(),
+                rs.getString("confirmer_name")), historyId, issueId);
+    }
+
+    private void requireSuccessfulHistory(Long historyId) {
+        Integer count = jdbcTemplate.queryForObject("""
+                SELECT COUNT(*) FROM tb_schematron_execution_history
+                WHERE id=? AND status='SUCCESS'
+                """, Integer.class, historyId);
+        if (count == null || count == 0) throw new IllegalArgumentException("결과 보고서를 찾을 수 없습니다.");
     }
 
     private void ensureColumn(String column, String definition) {

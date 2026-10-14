@@ -137,6 +137,74 @@ class BerExcelXmlTransformTest {
         assertThat(second.getTextContent()).isEqualTo(newText);
     }
 
+    @Test
+    void usesExplicitRegionForPairExtraction() throws Exception {
+        for(String region : new String[]{"EU", "EU_RG", "US"}){
+            Document document = extractPairs(region);
+
+            assertThat(document.getDocumentElement().getAttribute("region"))
+                    .isEqualTo(region);
+            assertThat(document.getElementsByTagName("pair").getLength())
+                    .isEqualTo(1);
+        }
+    }
+
+    @Test
+    void rejectsUnsupportedRegionForPairExtraction() throws Exception {
+        Process process = startPairExtraction("UNKNOWN", "invalid-region.xml");
+
+        assertThat(process.waitFor(30, TimeUnit.SECONDS)).isTrue();
+        assertThat(process.exitValue()).isNotZero();
+        assertThat(new String(
+                process.getInputStream().readAllBytes(),
+                StandardCharsets.UTF_8))
+                .contains("잘못된 BER 지역");
+    }
+
+    private Document extractPairs(String region) throws Exception {
+        Path output = tempDirectory.resolve("pairs-" + region + ".xml");
+        Process process = startPairExtraction(region, output.getFileName().toString());
+
+        assertThat(process.waitFor(30, TimeUnit.SECONDS)).isTrue();
+        String processOutput = new String(
+                process.getInputStream().readAllBytes(),
+                StandardCharsets.UTF_8);
+        assertThat(process.exitValue())
+                .withFailMessage(processOutput)
+                .isZero();
+
+        return DocumentBuilderFactory.newInstance()
+                .newDocumentBuilder()
+                .parse(output.toFile());
+    }
+
+    private Process startPairExtraction(String region, String outputName)
+            throws Exception {
+        Path input = tempDirectory.resolve("pair-source.xml");
+        Files.writeString(input, """
+                <?xml version="1.0" encoding="UTF-8"?>
+                <map>
+                  <title>파일명으로 지역을 추측하지 않음</title>
+                  <pair><old>Before</old><new>After</new></pair>
+                </map>
+                """, StandardCharsets.UTF_8);
+
+        return new ProcessBuilder(
+                javaExecutable(),
+                "-cp",
+                Path.of("src/main/resources/lib/saxon-ee-10.0.jar")
+                        .toAbsolutePath().toString(),
+                "net.sf.saxon.Transform",
+                "-s:" + input,
+                "-xsl:" + Path.of(
+                        "src/main/resources/xsl/0320-kus-pair-extract_ber.xsl")
+                        .toAbsolutePath(),
+                "-o:" + tempDirectory.resolve(outputName),
+                "region=" + region)
+                .redirectErrorStream(true)
+                .start();
+    }
+
     private String sha256(String value) throws Exception {
         byte[] digest = MessageDigest.getInstance("SHA-256")
                 .digest(value.getBytes(StandardCharsets.UTF_8));

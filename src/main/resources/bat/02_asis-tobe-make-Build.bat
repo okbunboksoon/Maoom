@@ -85,7 +85,7 @@ java net.sf.saxon.Transform 							-s:temp\27-kus-2nd-grouped.xml			-o:temp\28-k
 java net.sf.saxon.Transform 							-s:temp\28-kus-3rd-grouped.xml			-o:temp\30-kus-inline-normalized.xml		-xsl:xsl\0300-kus-inline-normalize.xsl
 java net.sf.saxon.Transform 							-s:temp\30-kus-inline-normalized.xml		-o:temp\31-kus-beautified.xml				-xsl:xsl\0310-kus-beautify.xsl
 
-java net.sf.saxon.Transform 							-s:temp\30-kus-inline-normalized.xml		-o:temp\32-kus-pair-extracted.xml			-xsl:xsl\0320-kus-pair-extract_ber.xsl
+java net.sf.saxon.Transform 							-s:temp\30-kus-inline-normalized.xml		-o:temp\32-kus-pair-extracted.xml			-xsl:xsl\0320-kus-pair-extract_ber.xsl	 region=%REGION%
 java net.sf.saxon.Transform 							-s:temp\32-kus-pair-extracted.xml			-o:temp\asis-tobe2.xml						-xsl:xsl\0330-kus-db-make_ber.xsl
 
 rem java net.sf.saxon.Transform 						-s:temp\asis-tobe2.xml						-o:temp\multi-case.xml						-xsl:xsl\40-make-multi-case.xsl

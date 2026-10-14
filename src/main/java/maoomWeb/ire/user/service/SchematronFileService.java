@@ -37,7 +37,7 @@ import net.sf.saxon.s9api.Processor;
 public class SchematronFileService {
     private static final String NAMESPACE = "http://purl.oclc.org/dsdl/schematron";
     private static final List<String> DEFAULT_SCHEMAS = List.of(
-            "DOCS_CHECK_v1.0.5.sch", "PUB_CHECK_v1.0.1.sch");
+            "DOCS_CHECK_v1.0.6.sch", "PUB_CHECK_v1.0.1.sch");
     private static final List<SchemaKind> SCHEMA_KINDS = List.of(
             new SchemaKind("DOCS", "원고", Pattern.compile("^DOCS_CHECK_v(\\d+)\\.(\\d+)\\.(\\d+)\\.sch$")),
             new SchemaKind("PUB", "퍼블리싱", Pattern.compile("^PUB_CHECK_v(\\d+)\\.(\\d+)\\.(\\d+)\\.sch$")));

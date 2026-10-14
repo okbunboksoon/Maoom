@@ -19,7 +19,6 @@ class DitaSchematronServiceTest {
 
     @Test
     void validatesAllSelectedAndDescendantScopesAndWritesCollaborativeReport() throws Exception {
-        assertNotNull(getClass().getClassLoader().getResource("schematron/DOCS_CHECK_2026-05-27.sch"));
         Path a = write("a.dita", "<concept id=\"a\"><title>A</title><conbody><p/></conbody></concept>");
         write("b.dita", "<concept id=\"b\"><title>B</title><conbody><p>ok</p></conbody></concept>");
         Path map = write("root.ditamap", "<map><topicref href=\"a.dita\"><topicmeta><navtitle>A</navtitle></topicmeta><topicref href=\"b.dita\"><topicmeta><navtitle>B</navtitle></topicmeta></topicref></topicref></map>");
@@ -48,17 +47,19 @@ class DitaSchematronServiceTest {
         assertEquals(2, descendants.validatedFileCount());
         String html = Files.readString(report, StandardCharsets.UTF_8);
         assertAll(
-                () -> assertTrue(html.contains("상태 JSON 저장")),
-                () -> assertTrue(html.contains("상태 포함 HTML 저장")),
+                () -> assertTrue(html.contains("<button id=\"exportJson\" class=\"hidden\">상태 JSON 저장</button>")),
+                () -> assertTrue(html.contains("<button id=\"importJson\" class=\"hidden\">상태 JSON 불러오기</button>")),
+                () -> assertTrue(html.contains("HTML 로컬 다운")),
                 () -> assertTrue(html.contains("검사 ditamap: <b>root.ditamap</b>")),
                 () -> assertTrue(html.contains("ditamap 경로: " + map)),
                 () -> assertTrue(html.contains("data-issue-id")),
                 () -> assertTrue(html.contains("localStorage.setItem")),
-                () -> assertTrue(html.contains("textContent=checked?new Date().toLocaleString('ko-KR'):''")),
+                () -> assertTrue(html.contains("class=\"confirmer center\"")),
                 () -> assertTrue(html.contains("th{cursor:pointer;background:#26384a;color:white;position:sticky;top:0;z-index:1;text-align:center}")),
                 () -> assertTrue(html.contains("<td class=\"center\">1</td>")),
                 () -> assertTrue(html.contains("<td class=\"center\">a.dita</td>")),
-                () -> assertTrue(html.contains("<th data-type=\"num\">순번</th><th>파일명</th><th>경로</th><th data-type=\"num\">행</th><th>규칙 ID</th><th>심각도</th><th>위치</th><th>메시지</th><th>확인</th><th>수정 시각</th>")),
+                () -> assertTrue(html.contains("<td class=\"updated center\"></td>")),
+                () -> assertTrue(html.contains("<th data-type=\"num\">순번</th><th>파일명</th><th>경로</th><th data-type=\"num\">행</th><th>규칙 ID</th><th>심각도</th><th>위치</th><th>메시지</th><th>확인</th><th>수정 시각</th><th>확인자</th>")),
                 () -> assertTrue(html.contains("data-severity=\"none\">none</td>")),
                 () -> assertTrue(html.contains("data-severity=\"critical\">Critical</td>")),
                 () -> assertTrue(html.contains("data-severity=\"major\">Major</td>")),

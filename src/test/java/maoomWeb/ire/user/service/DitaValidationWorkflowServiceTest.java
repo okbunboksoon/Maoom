@@ -70,6 +70,9 @@ class DitaValidationWorkflowServiceTest {
                 () -> assertNotNull(progress.get("test-progress-1").updatedAt()),
                 () -> assertTrue(reportHtml.contains("완료:")),
                 () -> assertTrue(reportHtml.contains("검사 사용자: <b>테스터</b>")),
+                () -> assertTrue(reportHtml.contains("<body data-history-id=\"7\">")),
+                () -> assertTrue(reportHtml.contains("/api/dita-validation/reports/'+historyId+'/state")),
+                () -> assertTrue(reportHtml.contains("<th>수정 시각</th><th>확인자</th>")),
                 () -> assertFalse(reportHtml.contains("테스터 (tester)")));
         verify(history).success(eq(7L), anyInt(), anyInt(), argThat(Files::isRegularFile),
                 argThat(path -> Files.isRegularFile(path)

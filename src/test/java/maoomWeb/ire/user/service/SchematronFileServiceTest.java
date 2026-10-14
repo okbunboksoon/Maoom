@@ -19,12 +19,12 @@ class SchematronFileServiceTest {
 
         var initial = service.listFiles();
         assertEquals(2, initial.size());
-        assertEquals(java.util.List.of("DOCS_CHECK_v1.0.5.sch", "PUB_CHECK_v1.0.1.sch"),
+        assertEquals(java.util.List.of("DOCS_CHECK_v1.0.6.sch", "PUB_CHECK_v1.0.1.sch"),
                 initial.stream().map(item -> item.fileName()).toList());
         assertTrue(initial.stream().allMatch(item -> item.valid()),
                 () -> initial.toString());
 
-        Files.delete(folder.resolve("DOCS_CHECK_v1.0.5.sch"));
+        Files.delete(folder.resolve("DOCS_CHECK_v1.0.6.sch"));
         Files.delete(folder.resolve("PUB_CHECK_v1.0.1.sch"));
         assertTrue(service.listFiles().isEmpty(), "사용자가 마지막 파일을 삭제하면 자동 복원하지 않아야 합니다.");
     }

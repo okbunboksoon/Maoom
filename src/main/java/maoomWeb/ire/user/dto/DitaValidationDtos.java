@@ -29,4 +29,9 @@ public final class DitaValidationDtos {
                               int issueCount, String reportUrl) { }
     public record ProgressResponse(String status, int completed, int total, String currentFile,
                                    LocalDateTime updatedAt, String message) { }
+    /** 결과 HTML의 항목별 확인 상태를 서버에 저장할 때 사용하는 요청이다. */
+    public record ReportStateRequest(String issueId, boolean checked) { }
+    /** 다른 사용자가 보고서를 열어도 동일하게 보이는 항목별 확인 상태다. */
+    public record ReportStateItem(String issueId, boolean checked, LocalDateTime updatedAt,
+                                  String confirmerName) { }
 }

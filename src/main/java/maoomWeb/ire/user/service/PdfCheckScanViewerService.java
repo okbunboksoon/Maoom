@@ -107,8 +107,12 @@ public class PdfCheckScanViewerService {
         Path outputDirectoryPath = normalizeRequiredPath(
                 outputDirectory,
                 "결과 저장 경로를 입력해 주세요.");
+        LocalDateTime now = LocalDateTime.now();
         Path outputFilePath = outputDirectoryPath
-                .resolve(createOutputFileName(LocalDateTime.now()))
+                .resolve(createOutputFileName(now))
+                .normalize();
+        Path abstractOutputFilePath = outputDirectoryPath
+                .resolve(createAbstractOutputFileName(now))
                 .normalize();
 
         validateDirectory(targetPath, "대상 폴더를 찾을 수 없습니다");
@@ -121,6 +125,8 @@ public class PdfCheckScanViewerService {
                 matchTablePath.toString(),
                 "--out",
                 outputFilePath.toString(),
+                "--abstract-out",
+                abstractOutputFilePath.toString(),
                 "--quiet"));
 
         return new RunContext(exePath, outputFilePath, command);
@@ -128,6 +134,10 @@ public class PdfCheckScanViewerService {
 
     String createOutputFileName(LocalDateTime now) {
         return OUTPUT_FILE_TIMESTAMP.format(now) + "_인쇄데이터_검증.xlsx";
+    }
+
+    String createAbstractOutputFileName(LocalDateTime now) {
+        return OUTPUT_FILE_TIMESTAMP.format(now) + "_추가검증목록.xlsx";
     }
 
     private Path normalizeRequiredPath(

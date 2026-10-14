@@ -9,34 +9,16 @@
 
 	<xsl:output method="xml" indent="no" omit-xml-declaration="yes"/>
 	<xsl:strip-space elements="*" />
+	<xsl:param name="region" as="xs:string"/>
 
-	<!-- BER 지역 구분: EN_CA_LHD 예외를 북미 판정보다 먼저 확인한다. -->
+	<!-- 관리자 화면에서 선택한 BER 지역을 그대로 사용한다. -->
 	<xsl:template match="map">
+	    <xsl:variable name="normalizedRegion" select="upper-case(normalize-space($region))"/>
+	    <xsl:if test="not($normalizedRegion = ('EU', 'EU_RG', 'US'))">
+	        <xsl:message terminate="yes">잘못된 BER 지역: <xsl:value-of select="$region"/></xsl:message>
+	    </xsl:if>
 	    <pairs>
-	        <!-- 지역 구분 -->
-	        <xsl:attribute name="region">
-	            <xsl:variable name="title" select="upper-case(normalize-space(title))"/>
-	            <xsl:choose>
-	                <xsl:when test="contains($title, 'EN_CA_LHD')">
-	                    <xsl:text>EU</xsl:text>
-	                </xsl:when>
-	                <xsl:when test="contains($title, 'EN_RG')">
-	                    <xsl:text>EU_RG</xsl:text>
-	                </xsl:when>
-	                <xsl:when test="contains($title, 'EN_US')
-	                        or contains($title, 'EN_CA')
-	                        or contains($title, 'EN_MX')">
-	                    <xsl:text>US</xsl:text>
-	                </xsl:when>
-	                <xsl:when test="contains($title, 'EXCLUDE')">
-	                    <xsl:text>exclude</xsl:text>
-	                </xsl:when>
-	                <!-- 그 외 지역 → EU -->
-	                <xsl:otherwise>
-	                    <xsl:text>EU</xsl:text>
-	                </xsl:otherwise>
-	            </xsl:choose>
-	        </xsl:attribute>
+	        <xsl:attribute name="region" select="$normalizedRegion"/>
 
 	        <!-- 기존 로직 유지 -->
 	        <xsl:for-each select="//pair">

@@ -26,3 +26,16 @@ CREATE TABLE IF NOT EXISTS tb_schematron_execution_history (
     INDEX idx_schematron_history_status (status),
     INDEX idx_schematron_history_user (trigger_user_id)
 );
+
+-- 결과 HTML의 확인 상태를 실행 이력별로 공유한다.
+-- 확인을 해제하면 updated_at과 confirmer 값은 NULL로 저장된다.
+CREATE TABLE IF NOT EXISTS tb_schematron_report_issue_state (
+    history_id BIGINT NOT NULL,
+    issue_id VARCHAR(32) NOT NULL,
+    checked BOOLEAN NOT NULL DEFAULT FALSE,
+    updated_at DATETIME(6),
+    confirmer_user_id VARCHAR(100),
+    confirmer_name VARCHAR(255),
+    PRIMARY KEY (history_id, issue_id),
+    INDEX idx_schematron_report_state_history (history_id)
+);
