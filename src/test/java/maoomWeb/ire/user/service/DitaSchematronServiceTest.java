@@ -94,6 +94,38 @@ class DitaSchematronServiceTest {
                 && issue.message().equals("육안 확인 필요") && issue.severity().equals("preference")));
     }
 
+    @Test
+    void detectsLinkedFnXrefAndIgnoresXrefsThatDoNotMeetBothConditions() throws Exception {
+        Path invalid = write("invalid.dita", "<concept id=\"invalid\"><title>Invalid</title><conbody><p>"
+                + "<xref type=\"fn\" href=\"target.dita#target\">각주 링크</xref>"
+                + "</p></conbody></concept>");
+        Path noHref = write("no-href.dita", "<concept id=\"no-href\"><title>No href</title><conbody><p>"
+                + "<xref type=\"fn\">각주</xref>"
+                + "</p></conbody></concept>");
+        Path otherType = write("other-type.dita", "<concept id=\"other-type\"><title>Other</title><conbody><p>"
+                + "<xref type=\"concept\" href=\"target.dita#target\">일반 링크</xref>"
+                + "</p></conbody></concept>");
+        write("target.dita", "<concept id=\"target\"><title>Target</title><conbody><p>대상</p></conbody></concept>");
+        Path map = write("xref-fn.ditamap", "<map><topicref href=\"invalid.dita\"/>"
+                + "<topicref href=\"no-href.dita\"/><topicref href=\"other-type.dita\"/></map>");
+        Path schema = Path.of(getClass().getClassLoader()
+                .getResource("schematron/DOCS_CHECK_v1.0.6.sch").toURI());
+
+        ValidationResult result = new DitaSchematronService().validate(
+                new ValidationRequest(map, schema, ValidationScope.ALL, Set.of(), false));
+
+        var fnIssues = result.issues().stream()
+                .filter(issue -> issue.ruleId().equals("xref-fn-element-check"))
+                .toList();
+        assertAll(
+                () -> assertEquals(1, fnIssues.size()),
+                () -> assertEquals(invalid, fnIssues.get(0).file()),
+                () -> assertEquals("<fn> 태그를 사용하여 내용을 입력해야 합니다.", fnIssues.get(0).message()),
+                () -> assertEquals("none", fnIssues.get(0).severity()),
+                () -> assertTrue(fnIssues.stream().noneMatch(issue -> issue.file().equals(noHref))),
+                () -> assertTrue(fnIssues.stream().noneMatch(issue -> issue.file().equals(otherType))));
+    }
+
     private Path write(String name, String content) throws Exception {
         Path file = tempDir.resolve(name);
         Files.writeString(file, "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + content, StandardCharsets.UTF_8);

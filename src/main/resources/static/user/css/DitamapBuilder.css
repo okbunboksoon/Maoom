@@ -462,6 +462,8 @@ body{
 
 .editor-confirm-dialog p{
     white-space:normal;
+    overflow-wrap:anywhere;
+    word-break:break-word;
 }
 
 .editor-confirm-actions{
