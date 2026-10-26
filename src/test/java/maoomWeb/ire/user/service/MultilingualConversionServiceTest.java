@@ -95,6 +95,8 @@ class MultilingualConversionServiceTest {
                 workspace.resolve("00_Split_Extracted_Folders_to_DITA_ver260710.bat"),
                 "@echo off\r\n"
                 + "echo MULTILINGUAL_FILE_NAME_CHANGE=%MULTILINGUAL_FILE_NAME_CHANGE%\r\n"
+                // 261026_DITA전용: 전용 옵션이 배치 환경으로 전달되는지 확인한다.
+                + "echo DITA_ONLY_LANGUAGE_CODE_CHANGE=%DITA_ONLY_LANGUAGE_CODE_CHANGE%\r\n"
                 + "echo TITLE_FILE_NAME_PREFIX=%TITLE_FILE_NAME_PREFIX%\r\n"
                 + "echo MAP_NAME=%MAP_NAME%\r\n"
                 + "exit /b 0\r\n");
@@ -106,6 +108,7 @@ class MultilingualConversionServiceTest {
                 Path.class,
                 List.class,
                 String.class,
+                boolean.class,
                 boolean.class);
         method.setAccessible(true);
 
@@ -115,10 +118,12 @@ class MultilingualConversionServiceTest {
                 workspace,
                 logs,
                 "KIA-CL4m_HEV-en_GB-2027.ditamap",
+                true,
                 true);
 
         assertThat(logs)
                 .contains("MULTILINGUAL_FILE_NAME_CHANGE=Y")
+                .contains("DITA_ONLY_LANGUAGE_CODE_CHANGE=Y")
                 .contains("TITLE_FILE_NAME_PREFIX=Y")
                 .contains("MAP_NAME=KIA-CL4m_HEV-en_GB-2027.ditamap");
     }

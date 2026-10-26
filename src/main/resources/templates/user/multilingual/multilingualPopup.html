@@ -77,6 +77,13 @@
                     <strong>파일명 변경(차종-연료타입-언어코드-연식-t0000 형식)</strong>
                 </span>
             </label>
+            <!-- 261026_DITA전용: DITAMAP 없는 발췌번역 DITA를 기존 파일명 변경 옵션과 분리한다. -->
+            <label class="option-item" for="ditaOnlyLanguageCodeChange">
+                <input type="checkbox" id="ditaOnlyLanguageCodeChange">
+                <span class="option-text">
+                    <strong>DITA파일 언어코드 변경(발췌번역)</strong>
+                </span>
+            </label>
         </div>
 
         <footer class="popup-actions">
@@ -103,6 +110,8 @@
 const inputPath = document.getElementById('inputPath');
 const bookmapMapName = document.getElementById('bookmapMapName');
 const multilingualFileNameChange = document.getElementById('multilingualFileNameChange');
+// 261026_DITA전용: 발췌번역 DITA-only 실행 옵션
+const ditaOnlyLanguageCodeChange = document.getElementById('ditaOnlyLanguageCodeChange');
 const runButton = document.getElementById('runButton');
 const resultPanel = document.getElementById('resultPanel');
 const resultTitle = document.getElementById('resultTitle');
@@ -117,11 +126,16 @@ function showResult(type, title, message) {
 }
 
 function resizeMultilingualPopupForResult() {
-    try {
-        window.resizeTo(680, 730);
-    } catch (error) {
-        // 브라우저가 팝업 크기 변경을 막으면 현재 창 크기를 그대로 사용한다.
-    }
+    requestAnimationFrame(function() {
+        try {
+            // 261026_DITA전용: 완료 경로가 줄바꿈되어도 실제 콘텐츠 높이만큼 자동 확장한다.
+            const browserFrameHeight = Math.max(0, window.outerHeight - window.innerHeight);
+            const requiredOuterHeight = document.documentElement.scrollHeight + browserFrameHeight;
+            window.resizeTo(680, Math.max(770, requiredOuterHeight));
+        } catch (error) {
+            // 브라우저가 팝업 크기 변경을 막으면 현재 창 크기를 그대로 사용한다.
+        }
+    });
 }
 
 runButton.addEventListener('click', async function() {
@@ -150,7 +164,8 @@ runButton.addEventListener('click', async function() {
             body: JSON.stringify({
                 inputPath: path,
                 bookmapMapName: mapName,
-                multilingualFileNameChange: multilingualFileNameChange.checked
+                multilingualFileNameChange: multilingualFileNameChange.checked,
+                ditaOnlyLanguageCodeChange: ditaOnlyLanguageCodeChange.checked
             })
         });
         const result = await response.json();

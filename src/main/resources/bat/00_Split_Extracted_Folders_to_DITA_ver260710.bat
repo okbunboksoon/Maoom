@@ -8,12 +8,17 @@ set "BASEDIR=%~dp0"
 set "TOPICSDIR=%BASEDIR%topics"
 set "TEMPDIR=%BASEDIR%temp"
 set "MAPINPUTDIR=%BASEDIR%temp_map_input"
+rem 261026_DITA전용: DITAMAP 없이 DITA만 들어온 경우의 안전한 입력/출력 분리 폴더
+set "DITAINPUTDIR=%BASEDIR%temp_dita_input"
+set "DITAOUTPUTDIR=%BASEDIR%temp_dita_output"
 set "CHAPTERDIR=%BASEDIR%chapter"
 set "XSLDIR=%BASEDIR%xsl"
 set "JAVA_CP=%BASEDIR%lib\saxon-he-12.4.jar;%BASEDIR%lib\xmlresolver-5.2.2.jar"
 set "SAXON_MAIN=net.sf.saxon.Transform"
 if not defined TITLE_FILE_NAME_PREFIX set "TITLE_FILE_NAME_PREFIX=Y"
 if not defined MULTILINGUAL_FILE_NAME_CHANGE set "MULTILINGUAL_FILE_NAME_CHANGE=N"
+rem 261026_DITA전용: 발췌번역 DITA-only 처리는 별도 화면 옵션으로 제어한다.
+if not defined DITA_ONLY_LANGUAGE_CODE_CHANGE set "DITA_ONLY_LANGUAGE_CODE_CHANGE=N"
 if not defined MAP_NAME set "MAP_NAME="
 
 :PARSE_OPTIONS
@@ -22,6 +27,8 @@ set "ARG=%~1"
 if /I "!ARG!"=="TITLE_FILE_NAME_PREFIX=Y" set "TITLE_FILE_NAME_PREFIX=Y"
 if /I "!ARG!"=="MULTILINGUAL_FILE_NAME_CHANGE=Y" set "MULTILINGUAL_FILE_NAME_CHANGE=Y"
 if /I "!ARG!"=="MULTILINGUAL_FILE_NAME_CHANGE=N" set "MULTILINGUAL_FILE_NAME_CHANGE=N"
+if /I "!ARG!"=="DITA_ONLY_LANGUAGE_CODE_CHANGE=Y" set "DITA_ONLY_LANGUAGE_CODE_CHANGE=Y"
+if /I "!ARG!"=="DITA_ONLY_LANGUAGE_CODE_CHANGE=N" set "DITA_ONLY_LANGUAGE_CODE_CHANGE=N"
 if /I "!ARG:~0,9!"=="MAP_NAME=" set "MAP_NAME=!ARG:~9!"
 shift
 goto PARSE_OPTIONS
@@ -34,6 +41,7 @@ echo Please wait a moment!
 echo Processing...
 echo TITLE_FILE_NAME_PREFIX=%TITLE_FILE_NAME_PREFIX%
 echo MULTILINGUAL_FILE_NAME_CHANGE=%MULTILINGUAL_FILE_NAME_CHANGE%
+echo DITA_ONLY_LANGUAGE_CODE_CHANGE=%DITA_ONLY_LANGUAGE_CODE_CHANGE%
 echo MAP_NAME=%MAP_NAME%
 
 rem 정리할 언어 폴더가 있어야 합니다.
@@ -86,6 +94,9 @@ rem ============================================================
 if exist "%CHAPTERDIR%" rd /s /q "%CHAPTERDIR%" >nul 2>nul
 if exist "%TEMPDIR%" rd /s /q "%TEMPDIR%" >nul 2>nul
 if exist "%MAPINPUTDIR%" rd /s /q "%MAPINPUTDIR%" >nul 2>nul
+rem 261026_DITA전용: DITA-only 처리 임시 폴더도 실행 종료 시 정리한다.
+if exist "%DITAINPUTDIR%" rd /s /q "%DITAINPUTDIR%" >nul 2>nul
+if exist "%DITAOUTPUTDIR%" rd /s /q "%DITAOUTPUTDIR%" >nul 2>nul
 if exist "%TOPICSDIR%\temp_out" rd /s /q "%TOPICSDIR%\temp_out" >nul 2>nul
 
 echo Done.
@@ -201,6 +212,18 @@ if exist "%LANG_DIR%\*.xml" (
     exit /b 0
 )
 
+rem 261026_DITA전용: DITAMAP/XML이 없어도 DITA 파일의 언어 코드를 변환한다.
+if exist "%LANG_DIR%\*.dita" (
+    if /I "%DITA_ONLY_LANGUAGE_CODE_CHANGE%"=="Y" (
+        echo [DITA ONLY PROCESSING] %LANG_NAME%
+        call :PROCESS_DITA_ONLY "%LANG_DIR%" "%LANG_NAME%"
+        if errorlevel 1 exit /b 1
+    ) else (
+        echo [SKIP] %LANG_NAME% - DITA Excerpt translation
+    )
+    exit /b 0
+)
+
 echo [SKIP] %LANG_NAME% - DITA Excerpt translation
 exit /b 0
 
@@ -242,6 +265,57 @@ for %%M in ("%MAPINPUTDIR%\*.ditamap") do (
 
 move "%TEMPDIR%\*.ditamap" "%LANG_DIR%\" >nul
 if exist "%MAPINPUTDIR%" rd /s /q "%MAPINPUTDIR%" >nul 2>nul
+exit /b 0
+
+
+rem ============================================================
+rem 261026_DITA전용: DITAMAP 없이 전달된 DITA 파일의 언어 코드 변환
+rem   - 파일명, 루트 topic ID, href/conref의 파일명과 fragment ID
+rem   - 언어 코드가 없는 값은 유지하고, 없는 xml:lang은 만들지 않는다.
+rem ============================================================
+:PROCESS_DITA_ONLY
+set "LANG_DIR=%~1"
+set "LANG_NAME=%~2"
+
+if exist "%DITAINPUTDIR%" rd /s /q "%DITAINPUTDIR%"
+if exist "%DITAOUTPUTDIR%" rd /s /q "%DITAOUTPUTDIR%"
+mkdir "%DITAINPUTDIR%"
+mkdir "%DITAOUTPUTDIR%"
+
+move "%LANG_DIR%\*.dita" "%DITAINPUTDIR%\" >nul
+
+for %%D in ("%DITAINPUTDIR%\*.dita") do (
+    echo   - PROCESS: %%~nxD
+
+    java -cp "%JAVA_CP%" %SAXON_MAIN% ^
+        -catalog:"%XSLDIR%\catalog.xml" ^
+        -s:"%%~fD" ^
+        -o:"%DITAOUTPUTDIR%\dummy.xml" ^
+        -xsl:"%XSLDIR%\0000-dita-language-code.xsl" ^
+        langName=%LANG_NAME% ^
+        srcFile=%%~nxD
+
+    if errorlevel 1 (
+        echo [ERROR] DITA-only language conversion failed: %%~nxD
+        move /y "%DITAINPUTDIR%\*.dita" "%LANG_DIR%\" >nul 2>nul
+        if exist "%DITAOUTPUTDIR%" rd /s /q "%DITAOUTPUTDIR%" >nul 2>nul
+        if exist "%DITAINPUTDIR%" rd /s /q "%DITAINPUTDIR%" >nul 2>nul
+        exit /b 1
+    )
+)
+
+del "%DITAOUTPUTDIR%\dummy.xml" >nul 2>nul
+move "%DITAOUTPUTDIR%\*.dita" "%LANG_DIR%\" >nul
+if errorlevel 1 (
+    echo [ERROR] DITA-only output was not created: %LANG_NAME%
+    move /y "%DITAINPUTDIR%\*.dita" "%LANG_DIR%\" >nul 2>nul
+    if exist "%DITAOUTPUTDIR%" rd /s /q "%DITAOUTPUTDIR%" >nul 2>nul
+    if exist "%DITAINPUTDIR%" rd /s /q "%DITAINPUTDIR%" >nul 2>nul
+    exit /b 1
+)
+
+if exist "%DITAOUTPUTDIR%" rd /s /q "%DITAOUTPUTDIR%" >nul 2>nul
+if exist "%DITAINPUTDIR%" rd /s /q "%DITAINPUTDIR%" >nul 2>nul
 exit /b 0
 
 

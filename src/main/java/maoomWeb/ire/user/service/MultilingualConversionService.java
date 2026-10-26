@@ -121,7 +121,8 @@ public class MultilingualConversionService {
                     workspace,
                     logs,
                     request.bookmapMapName(),
-                    request.multilingualFileNameChange());
+                    request.multilingualFileNameChange(),
+                    request.ditaOnlyLanguageCodeChange());
             validateOutput(workspace.resolve("topics"));
 
             Path runOutput = ResultFolderNames.resolve(
@@ -332,7 +333,8 @@ public class MultilingualConversionService {
             Path workspace,
             List<String> logs,
             String bookmapMapName,
-            boolean multilingualFileNameChange)
+            boolean multilingualFileNameChange,
+            boolean ditaOnlyLanguageCodeChange)
             throws IOException, InterruptedException {
 
         Path batchFile = workspace.resolve(BATCH_FILE);
@@ -345,11 +347,17 @@ public class MultilingualConversionService {
                 + "\" TITLE_FILE_NAME_PREFIX=Y"
                 + " MULTILINGUAL_FILE_NAME_CHANGE="
                 + (multilingualFileNameChange ? "Y" : "N")
+                // 261026_DITA전용: 기존 파일명 변경 옵션과 발췌번역 처리를 분리한다.
+                + " DITA_ONLY_LANGUAGE_CODE_CHANGE="
+                + (ditaOnlyLanguageCodeChange ? "Y" : "N")
                 + buildMapNameArgument(bookmapMapName)
                 + " < nul";
         logs.add(multilingualFileNameChange
                 ? "파일명 변경 적용: _Multilingual XSL 사용"
                 : "파일명 변경 미적용: NotFileNameChange XSL 사용");
+        logs.add(ditaOnlyLanguageCodeChange
+                ? "DITA파일 언어코드 변경(발췌번역): 적용"
+                : "DITA파일 언어코드 변경(발췌번역): 미적용");
 
         ProcessBuilder processBuilder = new ProcessBuilder(
                 "cmd.exe",
@@ -365,6 +373,10 @@ public class MultilingualConversionService {
         processBuilder.environment().put(
                 "MULTILINGUAL_FILE_NAME_CHANGE",
                 multilingualFileNameChange ? "Y" : "N");
+        // 261026_DITA전용: DITA-only 분기는 전용 화면 옵션으로만 실행한다.
+        processBuilder.environment().put(
+                "DITA_ONLY_LANGUAGE_CODE_CHANGE",
+                ditaOnlyLanguageCodeChange ? "Y" : "N");
         if (!cleanMapName.isBlank()) {
             processBuilder.environment().put("MAP_NAME", cleanMapName);
         }
