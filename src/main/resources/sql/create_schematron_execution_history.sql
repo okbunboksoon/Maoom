@@ -1,5 +1,7 @@
 -- Schematron 검사는 기존 프로젝트 실행 로그와 보관 항목이 달라 전용 이력 테이블을 사용한다.
 -- report_file_path와 schema_snapshot_path는 검사 결과 및 당시 규칙을 다시 열기 위한 서버 경로다.
+-- status는 RUNNING, SUCCESS, FAILED, CANCELLED, INTERRUPTED를 사용한다.
+-- 단일 서버 시작 시 이전 프로세스가 남긴 RUNNING은 INTERRUPTED로 변경한다.
 CREATE TABLE IF NOT EXISTS tb_schematron_execution_history (
     id BIGINT NOT NULL AUTO_INCREMENT,
     status VARCHAR(30) NOT NULL,
@@ -36,6 +38,7 @@ CREATE TABLE IF NOT EXISTS tb_schematron_report_issue_state (
     updated_at DATETIME(6),
     confirmer_user_id VARCHAR(100),
     confirmer_name VARCHAR(255),
+    memo VARCHAR(1000),
     PRIMARY KEY (history_id, issue_id),
     INDEX idx_schematron_report_state_history (history_id)
 );

@@ -60,7 +60,7 @@ const projectLogState = {
     filteredItems: []
 };
 
-const schematronHistoryState = {items: []};
+const schematronHistoryState = {items: [], jobs: []};
 
 const userState = {
     items: [],
@@ -131,6 +131,9 @@ const schematronHistoryTableBody =
     document.getElementById('schematronHistoryTableBody');
 const schematronHistorySummary =
     document.getElementById('schematronHistorySummary');
+const schematronJobTableBody = document.getElementById('schematronJobTableBody');
+const schematronJobSummary = document.getElementById('schematronJobSummary');
+const schematronJobCard = document.getElementById('schematronJobCard');
 const colorTotalCount =
     document.getElementById('colorTotalCount');
 const colorCheckedCount =
@@ -3193,6 +3196,7 @@ async function loadProjectLogs(){
 }
 
 // Schematron 전용 실행 이력을 표로 그리고 성공한 실행만 저장된 HTML 보고서 링크를 제공한다.
+// 서버 시작 시 남은 RUNNING은 INTERRUPTED로 정리되므로 실패·취소·재시작 중단을 구분해 표시한다.
 function renderSchematronHistory(){
     destroyDataTable(schematronHistoryDataTable);
     schematronHistoryDataTable = null;
@@ -3200,7 +3204,9 @@ function renderSchematronHistory(){
     schematronHistoryState.items.forEach(item => {
         const row = document.createElement('tr');
         const status = item.status === 'SUCCESS' ? '성공'
-            : item.status === 'FAILED' ? '실패' : '실행 중';
+            : item.status === 'FAILED' ? '실패'
+            : item.status === 'CANCELLED' ? '취소'
+            : item.status === 'INTERRUPTED' ? '서버 재시작 중단' : '실행 중';
         [item.id, status, item.triggerUserId || '-', formatDate(item.startedAt),
             formatElapsed(item.elapsedMs), item.inputSummary || '-'].forEach(value => {
             const cell = document.createElement('td');cell.textContent = safeText(value);row.appendChild(cell);
@@ -3211,7 +3217,8 @@ function renderSchematronHistory(){
             link.href = '/api/dita-validation/reports/' + encodeURIComponent(item.id);
             link.target = '_blank';link.rel = 'noopener';link.textContent = 'HTML 보기';
             resultCell.appendChild(link);
-        }else{resultCell.textContent = item.status === 'FAILED' ? (item.errorMessage || '-') : '-'}
+        }else{resultCell.textContent = ['FAILED','CANCELLED','INTERRUPTED'].includes(item.status)
+            ? (item.errorMessage || '-') : '-'}
         row.appendChild(resultCell);schematronHistoryTableBody.appendChild(row);
     });
     if(!schematronHistoryState.items.length){
@@ -3227,13 +3234,56 @@ function renderSchematronHistory(){
 async function loadSchematronHistory(){
     schematronHistorySummary.textContent='실행 이력을 불러오는 중입니다.';
     try{
-        const response=await fetch('/admin/schematron-history',{headers:{Accept:'application/json'}});
-        if(!response.ok)throw new Error(await response.text());
-        schematronHistoryState.items=await response.json();renderSchematronHistory();
+        const historyResponse=await fetch('/admin/schematron-history',{headers:{Accept:'application/json'}});
+        if(!historyResponse.ok)throw new Error(await historyResponse.text());
+        schematronHistoryState.items=await historyResponse.json();
+        renderSchematronHistory();
+        // 실행 중인 타 사용자 작업과 취소 기능은 ROLE_ADMIN에게만 제공한다.
+        if(canManageUsers){
+            const jobResponse=await fetch('/admin/schematron-jobs',{headers:{Accept:'application/json'}});
+            if(!jobResponse.ok)throw new Error(await jobResponse.text());
+            schematronHistoryState.jobs=await jobResponse.json();renderSchematronJobs();
+        }else if(schematronJobCard){
+            schematronJobCard.hidden=true;
+        }
     }catch(error){
         schematronHistoryTableBody.innerHTML='<tr><td colspan="7" class="admin-empty-cell">실행 이력을 불러오지 못했습니다.</td></tr>';
         schematronHistorySummary.textContent=error.message||'조회 중 오류가 발생했습니다.';
     }
+}
+
+// 메모리에 유지되는 대기·실행 작업을 소유자와 함께 보여주고 관리자가 중단할 수 있게 한다.
+function renderSchematronJobs(){
+    schematronJobTableBody.innerHTML='';
+    const counts={WAITING:0,RUNNING:0,SUCCESS:0,FAILED:0,CANCELLED:0};
+    schematronHistoryState.jobs.forEach(item=>{
+        counts[item.status]=(counts[item.status]||0)+1;
+        const row=document.createElement('tr');
+        [item.jobId,item.status,item.ownerName||item.ownerUserId||'-',formatDate(item.createdAt),
+            formatDate(item.updatedAt),item.historyId?('이력 '+item.historyId):'-'].forEach(value=>{
+            const cell=document.createElement('td');cell.textContent=safeText(value);row.appendChild(cell);
+        });
+        const action=document.createElement('td');
+        if(item.status==='WAITING'||item.status==='RUNNING'){
+            const button=document.createElement('button');button.type='button';button.className='btn btn-sm btn-outline-danger';
+            button.textContent='취소';button.onclick=()=>cancelSchematronJob(item.jobId,button);action.appendChild(button);
+        }else action.textContent='-';
+        row.appendChild(action);schematronJobTableBody.appendChild(row);
+    });
+    if(!schematronHistoryState.jobs.length)schematronJobTableBody.innerHTML='<tr><td colspan="7" class="admin-empty-cell">현재 보관 중인 작업이 없습니다.</td></tr>';
+    schematronJobSummary.textContent='대기 '+counts.WAITING+'건 · 실행 '+counts.RUNNING+'건 · 완료 '+counts.SUCCESS+'건 · 실패 '+counts.FAILED+'건 · 취소 '+counts.CANCELLED+'건';
+}
+
+async function cancelSchematronJob(jobId,button){
+    button.disabled=true;
+    try{
+        const response=await fetch('/admin/schematron-jobs/'+encodeURIComponent(jobId)+'/cancel',{method:'POST'});
+        if(!response.ok)throw new Error(await response.text());
+        const updated=await response.json();
+        const index=schematronHistoryState.jobs.findIndex(item=>item.jobId===jobId);
+        if(index>=0)schematronHistoryState.jobs[index]={...schematronHistoryState.jobs[index],...updated};
+        renderSchematronJobs();
+    }catch(error){alert(error.message||'작업을 취소하지 못했습니다.');button.disabled=false;}
 }
 
 async function importColorCheckExcel(event){

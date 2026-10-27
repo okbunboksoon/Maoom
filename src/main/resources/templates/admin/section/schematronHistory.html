@@ -2,6 +2,11 @@
 <!-- 기존 프로젝트 실행 로그와 분리하여 Schematron 검사 상태·입력 옵션·HTML 결과를 표시한다. -->
 <section th:fragment="schematronHistorySection" id="schematronHistorySection" class="admin-content" aria-label="Schematron 실행 이력" hidden>
  <header class="admin-content-header"><div><h1>Schematron 실행 이력</h1><p id="schematronHistorySummary">실행 이력을 불러오는 중입니다.</p></div></header>
+ <div id="schematronJobCard" class="card shadow mb-4 admin-table-card"><div class="card-header py-3"><h6 class="m-0 font-weight-bold text-primary">현재 비동기 작업</h6><p id="schematronJobSummary" class="mb-0 mt-2">작업 상태를 불러오는 중입니다.</p></div><div class="card-body"><div class="table-responsive">
+  <table class="table table-bordered admin-data-table" width="100%"><thead><tr>
+   <th class="text-center">작업 ID</th><th class="text-center">상태</th><th class="text-center">사용자</th><th class="text-center">생성</th><th class="text-center">갱신</th><th class="text-center">결과</th><th class="text-center">관리</th>
+  </tr></thead><tbody id="schematronJobTableBody"><tr><td colspan="7" class="admin-empty-cell">작업 상태를 불러오는 중입니다.</td></tr></tbody></table>
+ </div></div></div>
  <div class="card shadow mb-4 admin-table-card"><div class="card-header py-3"><h6 class="m-0 font-weight-bold text-primary">Schematron 이력</h6></div><div class="card-body"><div class="table-responsive">
   <table id="schematronHistoryTable" class="table table-bordered admin-data-table" width="100%" cellspacing="0"><thead><tr>
    <th>No</th><th>상태</th><th>사용자</th><th>시작</th><th>소요</th><th class="text-center">입력</th><th>결과물</th>

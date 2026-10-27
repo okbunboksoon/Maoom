@@ -4,10 +4,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.StringReader;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -22,18 +18,29 @@ import java.util.concurrent.atomic.AtomicInteger;
 public final class MapParser {
     public MapModel parse(Path mapFile) throws Exception {
         Path normalized = mapFile.toAbsolutePath().normalize();
-        return new MapModel(normalized, List.copyOf(parseRoots(normalized, "n", new AtomicInteger(), new HashSet<>())));
+        Document document = parseDocument(normalized);
+        return new MapModel(normalized, mapTitle(document, normalized),
+                List.copyOf(parseRoots(normalized, "n", new AtomicInteger(), new HashSet<>(), document)));
+    }
+
+    private String mapTitle(Document document, Path mapFile) {
+        for (Element child : childElements(document.getDocumentElement())) {
+            String local = child.getLocalName() == null ? child.getTagName() : child.getLocalName();
+            if ("title".equals(local)) return normalizedText(child.getTextContent());
+        }
+        String title = blankToNull(document.getDocumentElement().getAttribute("title"));
+        return title == null ? mapFile.getFileName().toString() : title.trim();
     }
 
     private List<MapNode> parseRoots(Path mapFile, String idPrefix, AtomicInteger order, Set<Path> activeMaps) throws Exception {
+        if (activeMaps.contains(mapFile)) return List.of();
+        return parseRoots(mapFile, idPrefix, order, activeMaps, parseDocument(mapFile));
+    }
+
+    private List<MapNode> parseRoots(Path mapFile, String idPrefix, AtomicInteger order, Set<Path> activeMaps,
+                                     Document document) throws Exception {
         // 같은 map이 현재 재귀 경로에 다시 나타나면 순환 참조이므로 더 내려가지 않는다.
         if (!activeMaps.add(mapFile)) return List.of();
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setNamespaceAware(true);
-        factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
-        var builder = factory.newDocumentBuilder();
-        builder.setEntityResolver((publicId, systemId) -> new InputSource(new StringReader("")));
-        Document document = builder.parse(mapFile.toFile());
         List<MapNode> roots = new ArrayList<>();
         int rootIndex = 0;
         for (Element element : childElements(document.getDocumentElement())) {
@@ -43,6 +50,10 @@ public final class MapParser {
         }
         activeMaps.remove(mapFile);
         return roots;
+    }
+
+    private Document parseDocument(Path mapFile) throws Exception {
+        return SecureXml.newDocumentBuilder().parse(mapFile.toFile());
     }
 
     private MapNode parseNode(Element element, Path map, String id, AtomicInteger order, Set<Path> activeMaps) throws Exception {
@@ -80,10 +91,27 @@ public final class MapParser {
     }
 
     private static String findTitle(Element element) {
-        NodeList navtitles = element.getElementsByTagName("navtitle");
-        if (navtitles.getLength() > 0) return normalizedText(navtitles.item(0).getTextContent());
+        // topicref의 navtitle이 화면용으로 이미 "..." 처리된 경우가 있어 전체 linktext를 먼저 사용한다.
+        String linktext = topicMetaText(element, "linktext");
+        if (linktext != null) return linktext;
+        String navtitleText = topicMetaText(element, "navtitle");
+        if (navtitleText != null) return navtitleText;
         String navtitle = blankToNull(element.getAttribute("navtitle"));
         return navtitle == null ? null : navtitle.trim();
+    }
+
+    private static String topicMetaText(Element topicref, String name) {
+        // 하위 topicref의 메타데이터를 현재 항목의 제목으로 잘못 읽지 않도록 직계 topicmeta만 확인한다.
+        for (Element child : childElements(topicref)) {
+            String local = child.getLocalName() == null ? child.getTagName() : child.getLocalName();
+            if (!"topicmeta".equals(local)) continue;
+            for (Element metadata : childElements(child)) {
+                String metadataName = metadata.getLocalName() == null
+                        ? metadata.getTagName() : metadata.getLocalName();
+                if (name.equals(metadataName)) return normalizedText(metadata.getTextContent());
+            }
+        }
+        return null;
     }
 
     private static boolean isTopicReference(Element element) {

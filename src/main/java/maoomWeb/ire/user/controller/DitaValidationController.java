@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import maoomWeb.ire.user.service.DitaValidationWorkflowService;
 import maoomWeb.ire.user.service.DitaValidationProgressService;
+import maoomWeb.ire.user.service.DitaValidationJobService;
 import maoomWeb.ire.user.service.CurrentUserService;
 import maoomWeb.ire.user.service.SchematronFileService;
 import maoomWeb.ire.user.service.SchematronHistoryService;
@@ -31,15 +32,17 @@ public class DitaValidationController {
     private final SchematronFileService schematronFiles;
     private final DitaValidationProgressService progress;
     private final CurrentUserService currentUserService;
+    private final DitaValidationJobService jobs;
 
     public DitaValidationController(DitaValidationWorkflowService workflow, SchematronHistoryService history,
                                     SchematronFileService schematronFiles, DitaValidationProgressService progress,
-                                    CurrentUserService currentUserService) {
+                                    CurrentUserService currentUserService, DitaValidationJobService jobs) {
         this.workflow = workflow;
         this.history = history;
         this.schematronFiles = schematronFiles;
         this.progress = progress;
         this.currentUserService = currentUserService;
+        this.jobs = jobs;
     }
 
     @GetMapping("/api/dita-validation/schematrons")
@@ -58,14 +61,29 @@ public class DitaValidationController {
     }
 
     @PostMapping("/api/dita-validation/run")
-    public RunResponse run(@RequestBody RunRequest request, Authentication authentication) throws Exception {
-        return workflow.run(request, authentication);
+    public JobAcceptedResponse run(@RequestBody RunRequest request, Authentication authentication) {
+        return jobs.submit(request, authentication);
+    }
+
+    @GetMapping("/api/dita-validation/jobs/{jobId}")
+    public JobStatusResponse job(@PathVariable String jobId, Authentication authentication) {
+        return jobs.get(jobId, authentication);
+    }
+
+    @PostMapping("/api/dita-validation/jobs/{jobId}/cancel")
+    public JobStatusResponse cancelJob(@PathVariable String jobId, Authentication authentication) {
+        return jobs.cancel(jobId, authentication);
     }
 
     @GetMapping("/api/dita-validation/progress/{token}")
-    public ProgressResponse progress(@PathVariable String token) {
+    public ProgressResponse progress(@PathVariable String token, Authentication authentication) {
         // 긴 동기 검사 요청과 별도로 호출되어 현재 처리 파일 수를 화면에 갱신한다.
-        return progress.get(token);
+        return jobs.getProgress(token, authentication);
+    }
+
+    @PostMapping("/api/dita-validation/progress/{token}/cancel")
+    public JobStatusResponse cancel(@PathVariable String token, Authentication authentication) {
+        return jobs.cancel(token, authentication);
     }
 
     @GetMapping(value="/api/dita-validation/reports/{id}", produces=MediaType.TEXT_HTML_VALUE)
@@ -87,6 +105,20 @@ public class DitaValidationController {
         if (request == null) throw new IllegalArgumentException("저장할 확인 상태가 없습니다.");
         return history.saveReportState(id, request.issueId(), request.checked(),
                 currentUserService.getUserId(authentication), currentUserService.getUserName(authentication));
+    }
+
+    @PostMapping("/api/dita-validation/reports/{id}/state/batch")
+    public List<ReportStateItem> saveReportStates(@PathVariable Long id,
+            @RequestBody ReportStateBatchRequest request, Authentication authentication) {
+        if (request == null) throw new IllegalArgumentException("저장할 확인 상태가 없습니다.");
+        return history.saveReportStates(id, request.issueIds(), request.checked(),
+                currentUserService.getUserId(authentication), currentUserService.getUserName(authentication));
+    }
+
+    @PostMapping("/api/dita-validation/reports/{id}/memo")
+    public ReportStateItem saveReportMemo(@PathVariable Long id, @RequestBody ReportMemoRequest request) {
+        if (request == null) throw new IllegalArgumentException("저장할 메모가 없습니다.");
+        return history.saveReportMemo(id, request.issueId(), request.memo());
     }
 
     @ExceptionHandler({IllegalArgumentException.class, IllegalStateException.class})

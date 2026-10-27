@@ -394,20 +394,58 @@ UserMain의 DITA Validation Check 아이콘
 검사 시작 시 선택한 규칙 파일의 스냅샷과 해시를 남겨, 실행 도중 운영 파일이 바뀌어도 한 번의 검사가 동일한 규칙으로 완료되게 한다.
 
 진행 상태는 서버 메모리에 보관하고 화면이 토큰으로 주기적으로 조회한다. 
-`run` 요청이 브라우저 Network 탭에서 `Pending`이면 서버가 검사 요청을 처리 중인 상태이며, 진행률 API의 처리 파일 수와 서버 로그로 실제 진행 여부를 함께 확인할 수 있다. 
+실행 중인 `RUNNING`/`CANCELLING` 상태는 유지하고, `SUCCESS`·`FAILED`·`CANCELLED` 상태는 기본 60분 뒤 주기적으로 제거한다. 
+조회만 하고 실행되지 않은 `WAITING` 응답은 Map에 저장하지 않으며, 비정상 흐름에서 남은 취소 토큰도 함께 정리한다. 
+서버 종료 시에는 등록된 검사 스레드에 취소 표식과 interrupt를 전달한다.
+검사 시작 POST는 `jobId`를 즉시 반환하고 실제 검사는 제한된 백그라운드 작업 풀에서 실행된다. 
+브라우저는 `/api/dita-validation/jobs/{jobId}`와 진행률 API를 조회하며, 브라우저 연결이나 화면이 닫혀도 명시적으로 취소하지 않은 서버 작업은 계속된다. 
+작업 대기열이 가득 차면 새 요청은 명확한 오류로 거부된다.
 서버를 재시작하면 메모리의 진행 상태는 사라지지만 완료된 DB 이력과 HTML 보고서는 유지된다.
+검사 도중 서버 프로세스가 종료되면 종료 처리 코드를 실행할 수 없어 DB에 `RUNNING` 이력이 남을 수 있다. 
+애플리케이션 시작 시 `SchematronHistoryService`는 남아 있는 `RUNNING` 이력을 `INTERRUPTED`로 변경하고, 종료 시각·소요 시간과 `서버 재시작으로 검사가 중단되었습니다.` 메시지를 기록한다. 이전 검사 스레드는 새 서버에서 복구되지 않으므로 중단 이력을 다시 실행하려면 사용자가 새 검사를 시작해야 한다.
+
+Schematron 실행 상태의 의미는 다음과 같다.
+
+| 상태 | 의미 | 종료 정보 |
+|---|---|---|
+| `RUNNING` | 현재 서버에서 검사 실행 중 | 완료 시각 없음 |
+| `SUCCESS` | 검사와 HTML 보고서 생성 완료 | 완료 시각, 파일 수, 결과 수, 보고서 경로 기록 |
+| `FAILED` | 규칙·입력·파일 처리 오류로 실패 | 완료 시각과 오류 메시지 기록 |
+| `CANCELLED` | 사용자 취소 또는 제한 시간 초과 | 완료 시각과 취소 사유 기록 |
+| `INTERRUPTED` | 이전 서버 프로세스가 종료되어 실행 단절 | 서버 시작 시 완료 시각과 중단 사유 기록 |
+
+현재 자동 정리는 단일 애플리케이션 서버 배포를 전제로 한다. 여러 서버가 같은 DB를 사용하는 구성에서는 한 서버의 시작이 다른 서버의 정상 `RUNNING` 작업을 중단 처리하지 않도록 실행 서버 식별값과 마지막 heartbeat 시각을 이력에 추가한 뒤, 해당 서버의 오래된 작업만 정리해야 한다.
 
 결과 HTML에는 검사 DITAMAP, 사용한 Schematron, 검사 범위와 오류 목록을 표시한다.
-오류 목록의 헤더는 가운데 정렬하고, 본문의 순번·파일명·행·심각도는 가운데 정렬한다.
+오류 목록은 `파일명` 바로 뒤에 DITAMAP의 `navtitle`을 사용한 `타이틀`을 표시하고 서버 절대 경로 열은 노출하지 않는다. `심각도` 바로 뒤에는 Schematron의 `maoom:category`를 한글로 변환한 `유형`을 표시한다. 헤더는 모두 가운데 정렬하고, 본문의 순번·파일명·행·심각도·유형은 가운데 정렬한다.
+상단 유형별·심각도별 배지는 클릭 필터로 동작하며 검색어와 `체크 항목 숨기기` 조건에 함께 적용된다. 화면에는 적용 중인 조건과 표시 건수가 함께 나오며 `필터 초기화`로 조건을 한 번에 해제할 수 있다. `전체` 배지 또는 활성 배지를 다시 누르면 해당 필터만 해제된다. 동일 DITA가 여러 위치에서 참조되면 파일 검사는 한 번만 수행하고 첫 Breadcrumb 뒤에 `외 N개 경로`를 표시한다.
+`전체 체크`와 `전체 해제`는 현재 검색·배지·숨김 조건으로 표시된 issue ID만 일괄 API에 한 번 전송한다. 서버는 중복 ID를 제거하고 최대 10,000건을 JDBC batch로 저장하며, 트랜잭션 중 하나라도 실패하면 전체 변경을 롤백한다. 각 issue ID가 실제 해당 이력의 HTML 보고서에 존재하는지도 쓰기 전에 검사하므로 형식만 맞춘 임의 ID로 상태 행을 만들 수 없다.
+
+`현재 결과 CSV`는 검색·유형·심각도·확인 숨김 조건을 모두 적용한 뒤 화면에 남은 행만 UTF-8 CSV로 내려받는다. 확인 완료율은 전체 오류를 기준으로 `확인 건수 / 전체 건수, 비율` 형식으로 실시간 갱신한다. 검색어, 유형, 심각도 및 확인 항목 숨김 조건은 브라우저에 별도로 저장되어 같은 보고서를 다시 열거나 새로고침해도 유지된다.
+
+서버에서 연 보고서는 화면이 보이는 동안 10초마다 공유 확인 상태를 조회한다. 다른 사용자의 체크·해제, 수정 시각 또는 확인자가 달라졌으면 변경 행을 잠시 강조하고 변경 건수를 안내한다. 개별 및 일괄 확인 상태 저장 결과는 화면 오른쪽 아래 토스트로 표시한다. 성공 알림은 짧게 사라지고 실패 알림은 원인을 읽을 수 있도록 더 오래 유지한다. 로컬로 저장한 HTML은 서버 공동 상태를 조회하지 않는다.
+
+파일명은 같은 파일 오류만 보는 필터 버튼으로 동작한다. 선택하면 다른 검색·유형·심각도 조건과 함께 적용되며 `파일 필터 해제` 또는 `필터 초기화`로 해제한다. 파일 필터도 다른 필터 조건과 함께 브라우저에 저장된다.
+
+각 오류 행의 `작업 메모`는 입력이 끝난 뒤 0.5초 후 서버에 저장하며 최대 500자다. 메모는 확인 체크와 독립적이므로 확인·해제나 일괄 저장이 기존 메모를 덮어쓰지 않는다. 서버 보고서는 여러 사용자가 같은 메모를 조회하고 변경할 수 있고, 로컬 HTML은 파일 내부 상태에만 메모를 보관한다. 현재 결과 CSV에도 작업 메모를 포함한다.
+
+검사 시작 API는 즉시 job ID를 반환하고 실제 검사는 제한된 백그라운드 실행기에서 수행한다. job에는 로그인 사용자 ID와 이름을 소유자로 저장하며 일반 사용자는 본인 작업만 조회·취소할 수 있다. 관리자는 관리자 Schematron 이력 화면에서 대기·실행·완료·실패·취소 건수를 확인하고 다른 사용자의 활성 작업을 취소할 수 있다. 같은 사용자가 `WAITING` 또는 `RUNNING` 작업을 가진 동안에는 중복 검사를 시작할 수 없다.
 사용자가 확인 체크를 해제하면 해당 항목의 수정 시각도 제거한다. 
 검사 완료 뒤 화면의 `결과 보기` 버튼을 사용자가 눌러 새 창을 열기 때문에 미리 만든 `about:blank` 창이나 팝업 차단 문제가 발생하지 않는다.
 
-검사 결과 한 건에는 최소한 대상 파일, 행 번호, 규칙 ID, `role` 심각도, XPath 위치와 메시지가 들어간다. 
-규칙 파일의 `<sch:assert>`와 `<sch:report>` 모두 검사 결과를 만들 수 있으므로 새 규칙을 추가할 때 `role`도 같이 지정한다. 
+검사 결과 한 건에는 최소한 대상 파일, DITAMAP 타이틀, 행 번호, 규칙 ID, `role` 심각도, `maoom:category` 유형, XPath 위치와 메시지가 들어간다.
+파일 하나의 XML 파싱·XPath·`doc()` 처리는 기본 120초 제한을 적용한다. 제한을 넘으면 작업 스레드에 취소를 전달하고 `file-timeout` 시스템 결과에 당시 처리 중이던 규칙 ID를 함께 남긴다. 검사 완료 시 서버 로그에는 가장 느린 파일 10개, 규칙별 누적 시간 상위 10개, `doc()` 문서 수와 파싱·평가 실패 수를 기록한다. 이 진단값은 일반 사용자 화면에는 노출하지 않는다.
+규칙 파일의 `<sch:assert>`와 `<sch:report>` 모두 검사 결과를 만들 수 있으므로 새 규칙을 추가할 때 `role`과 `maoom:category`를 같이 지정한다.
+
+규칙 파일은 화면에 노출하거나 실행하기 전에 전용 린트를 통과해야 한다. 린트는 pattern ID 누락·중복, rule 누락, assert/report 누락, context/test XPath 오류, 빈 메시지, role 누락·허용값 오류, category 누락·허용값 오류를 검사한다. `xmlns:maoom="urn:maoom:schematron"`을 선언한 신규 규칙에는 category를 필수로 적용한다. 기존 내장 구버전 중 이 네임스페이스를 선언하지 않은 파일은 배포 호환성을 위해 category 누락을 허용하지만 리포트에는 `미분류`로 표시된다.
+
+허용 role은 `none`, `critical`, `major`, `minor`, `preference`다. 허용 category는 `image`, `xref`, `table`, `ditamap`, `structure`, `whitespace`, `element`, `language`, `unit`, `index`, `system`이다. 목록 밖의 값은 오타로 간주하여 해당 규칙 파일을 실행하지 않는다.
 현재 사용하는 심각도 값은 `none`, `Critical`, `Major`, `Minor`, `Preference`이며, 알 수 없는 값은 임의로 오류로 올리지 않고 원본 값 또는 미지정 상태로 취급한다.
+규칙 유형은 `image`, `xref`, `table`, `ditamap`, `structure`, `whitespace`, `element`, `language`, `unit`, `index` 코드를 사용한다. 리포트에서는 각각 이미지, 상호참조, 표, DITAMAP, 문서 구조, 공백, 태그, 언어·문자, 숫자·단위, 색인으로 표시한다. 이전 규칙처럼 유형 속성이 없으면 검사를 중단하지 않고 `미분류`로 표시한다.
 HTML의 확인 상태, 수정 시각, 확인자는 서버에 저장한다. 확인자에는 체크를 수행한 로그인 사용자의 이름을 기록하므로 다른 사용자가 같은 보고서를 열어도 실제 확인자를 알 수 있다. 
 보고서의 상태 변경 UI를 수정할 때는 체크 → 서버 시각과 확인자 생성, 체크 해제 → 수정 시각과 확인자 제거, 다른 사용자로 보고서 재접속 → 저장 상태 복원의 세 경우를 모두 확인한다. 
 예전에 제공하던 상태 JSON 수동 저장/불러오기 버튼은 서버 저장으로 대체되었으므로 다시 노출하지 않는다.
+다운로드한 HTML을 `file:` 경로로 열었을 때도 확인 체크와 수정 시각 기록은 사용할 수 있다. 로컬 파일에는 로그인 세션이 없으므로 새로 체크한 항목의 확인자 이름은 빈칸으로 두고 서버 상태 API를 호출하지 않는다. 로컬 변경은 원본 파일을 직접 덮어쓰지 않으므로 작업 후 `HTML 로컬 다운`을 다시 눌러 상태가 포함된 새 HTML을 저장해야 한다.
 
 Schematron 실행 이력은 일반 `tb_project_execution_log`에 넣지 않고 전용 이력에 저장한다. 
 관리 화면의 `/admin/schematron-history`에서 순번, 상태, 사용자, 시작 시각, 소요 시간, 입력 조건, 결과물을 확인한다. 
@@ -492,7 +530,7 @@ adminMain.html
 엑셀/XML 가져오기는 서비스에서 행별 값을 검증하고, 지역과 hash 조합을 기준으로 신규 등록 또는 갱신한다.
 
 Replace Dark Symbol은 항목 조회·수정·삭제와 엑셀 내보내기를 지원한다. 
-Schematron 이력은 검사 결과를 조회하고 HTML 보고서를 여는 용도이며, 일반 프로젝트 실행 로그와 분리한다. 
+Schematron 이력은 검사 결과를 조회하고 HTML 보고서를 여는 용도이며, 일반 프로젝트 실행 로그와 분리한다. 같은 화면의 `현재 비동기 작업` 표는 메모리에 보관 중인 job의 상태와 소유자를 보여주며 활성 작업에 관리자 취소 기능을 제공한다.
 새 관리자 탭을 만들 때는 컨트롤러·서비스·DTO/Mapper뿐 아니라 `adminMain.html`의 탭, DataTables 초기화 및 권한별 버튼 표시도 연결해야 한다.
 
 관리자 API의 변경 범위는 다음과 같다.
@@ -509,6 +547,7 @@ Schematron 이력은 검사 결과를 조회하고 HTML 보고서를 여는 용�
 | QSG DB                 | `/admin/qsg-db/items`                     | import/export                              |
 | Replace Dark Symbol    | `/admin/replace-dark-symbol/items`        | 수정, export, 삭제                         |
 | Schematron 이력        | `/admin/schematron-history`               | 전용 실행 이력과 결과 HTML 조회            |
+| Schematron 현재 작업   | `/admin/schematron-jobs`                  | 비동기 작업 상태·소유자 조회 및 관리자 취소 |
 
 관리자 DataTables를 수정할 때는 열 이름과 JSON 필드, 가운데/왼쪽 정렬, 정렬 아이콘, 빈 결과 표시와 권한별 버튼 노출을 함께 확인한다. 
 Import는 HTTP 성공 여부와 함께 신규·갱신·실패 건수 및 실패 행 사유를 확인하고, Export는 현재 DB 내용을 다시 열 수 있는 형식으로 생성되는지 검증한다.
@@ -620,6 +659,14 @@ pdf-check-scan-viewer.match-table-path=D:/maoomtool-config/pdf-check/match-table
 dita.validation.schematron-dir=D:/maoomtool/schematron
 dita.validation.report-dir=D:/maoomtool-results/schematron
 
+# 검사 제한 시간(분)과 완료 상태의 메모리 보관 시간(분), 정리 주기(밀리초).
+dita.validation.timeout-minutes=30
+dita.validation.progress-retention-minutes=60
+dita.validation.progress-cleanup-ms=60000
+dita.validation.file-timeout-seconds=120
+dita.validation.async-threads=2
+dita.validation.async-queue-capacity=20
+
 # 업로드 파일 크기 제한.
 spring.servlet.multipart.max-file-size=100MB
 spring.servlet.multipart.max-request-size=100MB
@@ -644,6 +691,10 @@ Schematron 검사도 같은 원칙으로 배포용 PC가 입력 DITAMAP과 연�
 `.sch` 파일을 추가·삭제할 때는 `dita.validation.schematron-dir`에만 반영하고,
 원고/퍼블리싱 접두사와 버전 형식을 지킨 뒤 화면의 검사 유형에 새 버전이 표시되는지 확인한다. 
 결과 폴더는 애플리케이션 실행 계정에 읽기·쓰기 권한이 있어야 관리자 이력의 결과물 링크가 정상 동작한다.
+
+Schematron의 `doc()`/`document()`는 선택한 입력 프로젝트 루트 내부의 `.xml`, `.dita`, `.ditamap`만 읽을 수 있다. `../`로 프로젝트 밖 파일을 읽거나 HTTP/HTTPS 주소를 호출하면 `Schematron doc() 접근이 차단되었습니다` 시스템 오류가 결과에 기록된다. 공용 기준 XML이 필요하면 임의의 서버 절대 경로나 URL을 규칙에 넣지 말고 별도의 허용 경로 정책을 먼저 추가해야 한다.
+
+DITAMAP, 검사 대상 XML, Schematron 파일 및 `doc()` 연결 XML은 동일한 보안 파서를 사용한다. DITA의 DOCTYPE 선언 자체는 허용하지만 외부 DTD 다운로드, 외부 general/parameter entity, 외부 schema 및 네트워크 URI 접근은 차단한다.
 
 ## 장애 확인 순서
 
@@ -712,6 +763,14 @@ Schematron 변경은 규칙 선택, 실제 검사, 진행률, 이력과 보고�
 
 ```powershell
 .\mvnw.cmd "-Dtest=DitaValidationWorkflowServiceTest,DitaSchematronServiceTest,SchematronFileServiceTest,AdminMainTemplateTest" test
+```
+
+700개 이상 DITA와 오류 1,000건 이상인 실제 프로젝트 성능 시험은 기본 회귀 테스트와 분리한다. 동일 데이터로 반복할 수 있도록 다음처럼 경로를 명시하면 파일 수, 오류 수, 전체 소요 시간과 JVM 사용 메모리 증분이 출력된다. 검색 반응과 일괄 체크 DB 시간은 브라우저·운영 DB 영향이 있으므로 같은 보고서를 운영 화면에서 추가 측정한다.
+
+```powershell
+.\mvnw.cmd "-Dtest=DitaValidationOperationalPerformanceTest" `
+  "-Ddita.performance.map=C:\DITA\project\root.ditamap" `
+  "-Ddita.performance.schema=C:\MaoomTool\schematron\DOCS_CHECK_v1.0.7.sch" test
 ```
 
 문서나 템플릿만 수정했더라도 최소한 다음을 확인한다.

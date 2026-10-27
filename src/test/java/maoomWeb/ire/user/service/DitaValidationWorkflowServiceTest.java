@@ -9,7 +9,10 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Set;
+import java.util.concurrent.CancellationException;
 
+import com.sts.dita.core.ValidationCancellation;
+import com.sts.dita.core.ValidationProgressListener;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 import org.springframework.security.core.Authentication;
@@ -70,7 +73,7 @@ class DitaValidationWorkflowServiceTest {
                 () -> assertNotNull(progress.get("test-progress-1").updatedAt()),
                 () -> assertTrue(reportHtml.contains("완료:")),
                 () -> assertTrue(reportHtml.contains("검사 사용자: <b>테스터</b>")),
-                () -> assertTrue(reportHtml.contains("<body data-history-id=\"7\">")),
+                () -> assertTrue(reportHtml.contains("<body class=\"report-loading\" data-history-id=\"7\" data-map-name=\"root.ditamap\">")),
                 () -> assertTrue(reportHtml.contains("/api/dita-validation/reports/'+historyId+'/state")),
                 () -> assertTrue(reportHtml.contains("<th>수정 시각</th><th>확인자</th>")),
                 () -> assertFalse(reportHtml.contains("테스터 (tester)")));
@@ -78,5 +81,40 @@ class DitaValidationWorkflowServiceTest {
                 argThat(path -> Files.isRegularFile(path)
                         && path.getFileName().toString().equals("DOCS_CHECK_v1.0.0.sch")));
         verify(history, never()).fail(any(), any());
+    }
+
+    @Test
+    void recordsUserCancellationAsCancelledInsteadOfFailed() throws Exception {
+        Path project = Files.createDirectories(tempDir.resolve("cancel-project"));
+        Path map = project.resolve("root.ditamap");
+        Files.writeString(map, "<?xml version=\"1.0\" encoding=\"UTF-8\"?><map/>", StandardCharsets.UTF_8);
+        Path schemaFolder = Files.createDirectories(tempDir.resolve("cancel-schematron"));
+        Files.writeString(schemaFolder.resolve("DOCS_CHECK_v1.0.0.sch"), """
+                <?xml version="1.0" encoding="UTF-8"?>
+                <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
+                  <pattern id="p"><rule context="map"><assert role="none" test="true()">정상</assert></rule></pattern>
+                </schema>
+                """, StandardCharsets.UTF_8);
+        DitaSchematronService validation = mock(DitaSchematronService.class);
+        SchematronHistoryService history = mock(SchematronHistoryService.class);
+        CurrentUserService users = mock(CurrentUserService.class);
+        Authentication authentication = mock(Authentication.class);
+        DitaValidationProgressService progress = new DitaValidationProgressService();
+        when(history.start(any(), any(), any(), any(), any(), any(), any(), any())).thenReturn(8L);
+        when(users.getUserId(authentication)).thenReturn("tester");
+        when(validation.validate(any(com.sts.dita.core.ValidationRequest.class),
+                any(ValidationProgressListener.class), any(ValidationCancellation.class)))
+                .thenThrow(new CancellationException("사용자가 Schematron 검사를 취소했습니다."));
+        DitaValidationWorkflowService service = new DitaValidationWorkflowService(
+                validation, history, new SchematronFileService(schemaFolder.toString()), users, progress,
+                tempDir.resolve("cancel-reports").toString());
+
+        assertThrows(CancellationException.class, () -> service.run(new RunRequest(
+                project.toString(), map.toString(), "DOCS", "ALL", Set.of(), true, "cancel-token"),
+                authentication));
+
+        verify(history).cancel(8L, "사용자가 Schematron 검사를 취소했습니다.");
+        verify(history, never()).fail(any(), any());
+        assertEquals("CANCELLED", progress.get("cancel-token").status());
     }
 }

@@ -5,8 +5,11 @@ import com.sts.dita.core.ValidationEngine;
 import com.sts.dita.core.ValidationRequest;
 import com.sts.dita.core.ValidationResult;
 import com.sts.dita.core.ValidationProgressListener;
+import com.sts.dita.core.ValidationCancellation;
 import com.sts.dita.report.HtmlReportWriter;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.nio.file.Path;
 
@@ -21,6 +24,11 @@ public class DitaSchematronService {
 
     public DitaSchematronService() {
         this(new ValidationEngine(), new HtmlReportWriter());
+    }
+
+    @Autowired
+    public DitaSchematronService(@Value("${dita.validation.file-timeout-seconds:120}") long fileTimeoutSeconds) {
+        this(new ValidationEngine(fileTimeoutSeconds), new HtmlReportWriter());
     }
 
     DitaSchematronService(ValidationEngine validationEngine, HtmlReportWriter reportWriter) {
@@ -38,6 +46,11 @@ public class DitaSchematronService {
 
     public ValidationResult validate(ValidationRequest request, ValidationProgressListener progress) throws Exception {
         return validationEngine.validate(request, progress);
+    }
+
+    public ValidationResult validate(ValidationRequest request, ValidationProgressListener progress,
+                                     ValidationCancellation cancellation) throws Exception {
+        return validationEngine.validate(request, progress, cancellation);
     }
 
     public ValidationResult validateAndWriteReport(ValidationRequest request, Path reportFile) throws Exception {

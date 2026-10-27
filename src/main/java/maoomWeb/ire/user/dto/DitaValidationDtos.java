@@ -27,11 +27,21 @@ public final class DitaValidationDtos {
     }
     public record RunResponse(Long historyId, String status, int validatedFileCount,
                               int issueCount, String reportUrl) { }
+    public record JobAcceptedResponse(String jobId, String status) { }
+    public record JobStatusResponse(String jobId, String status, Long historyId,
+                                    int validatedFileCount, int issueCount,
+                                    String reportUrl, String message) { }
+    /** 관리자 운영 화면에 노출할 비동기 작업의 소유자와 실행 상태다. */
+    public record JobAdminItem(String jobId, String status, String ownerUserId, String ownerName,
+                               LocalDateTime createdAt, LocalDateTime updatedAt, Long historyId,
+                               int validatedFileCount, int issueCount, String message) { }
     public record ProgressResponse(String status, int completed, int total, String currentFile,
                                    LocalDateTime updatedAt, String message) { }
     /** 결과 HTML의 항목별 확인 상태를 서버에 저장할 때 사용하는 요청이다. */
     public record ReportStateRequest(String issueId, boolean checked) { }
+    public record ReportStateBatchRequest(List<String> issueIds, boolean checked) { }
+    public record ReportMemoRequest(String issueId, String memo) { }
     /** 다른 사용자가 보고서를 열어도 동일하게 보이는 항목별 확인 상태다. */
     public record ReportStateItem(String issueId, boolean checked, LocalDateTime updatedAt,
-                                  String confirmerName) { }
+                                  String confirmerName, String memo) { }
 }

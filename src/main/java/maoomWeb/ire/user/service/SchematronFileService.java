@@ -4,20 +4,21 @@ import static maoomWeb.ire.user.dto.DitaValidationDtos.SchematronItem;
 import static maoomWeb.ire.user.dto.DitaValidationDtos.SchematronChoice;
 
 import java.io.InputStream;
-import java.io.StringReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.security.MessageDigest;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HexFormat;
 import java.util.List;
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
@@ -25,7 +26,8 @@ import org.springframework.stereotype.Service;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
+
+import com.sts.dita.core.SecureXml;
 
 import net.sf.saxon.s9api.Processor;
 
@@ -36,6 +38,12 @@ import net.sf.saxon.s9api.Processor;
 @Service
 public class SchematronFileService {
     private static final String NAMESPACE = "http://purl.oclc.org/dsdl/schematron";
+    private static final String MAOOM_NAMESPACE = "urn:maoom:schematron";
+    private static final Set<String> ALLOWED_ROLES = Set.of(
+            "none", "critical", "major", "minor", "preference");
+    private static final Set<String> ALLOWED_CATEGORIES = Set.of(
+            "image", "xref", "table", "ditamap", "structure", "whitespace",
+            "element", "language", "unit", "index", "system");
     private static final List<String> DEFAULT_SCHEMAS = List.of(
             "DOCS_CHECK_v1.0.6.sch", "PUB_CHECK_v1.0.1.sch");
     private static final List<SchemaKind> SCHEMA_KINDS = List.of(
@@ -97,14 +105,8 @@ public class SchematronFileService {
     }
 
     public void validate(Path path) throws Exception {
-        // 외부 엔티티를 끄고 schema 구조와 모든 context/test XPath를 실행 전에 컴파일해 본다.
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setNamespaceAware(true);
-        factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
-        factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
-        factory.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
-        var builder = factory.newDocumentBuilder();
-        builder.setEntityResolver((publicId, systemId) -> new InputSource(new StringReader("")));
+        // 공통 보안 파서로 읽고 구조·메타데이터·모든 context/test XPath를 실행 전에 검사한다.
+        var builder = SecureXml.newDocumentBuilder();
         var document = builder.parse(path.toFile());
         Element root = document.getDocumentElement();
         if (root == null || !NAMESPACE.equals(root.getNamespaceURI()) || !"schema".equals(root.getLocalName())) {
@@ -115,35 +117,59 @@ public class SchematronFileService {
         Processor processor = new Processor(false);
         var xpath = processor.newXPathCompiler();
         int assertionCount = 0;
+        Set<String> patternIds = new HashSet<>();
+        boolean categoryMetadataEnabled = MAOOM_NAMESPACE.equals(root.lookupNamespaceURI("maoom"));
         for (int i = 0; i < patterns.getLength(); i++) {
             Element pattern = (Element) patterns.item(i);
-            if (pattern.getAttribute("id").isBlank()) throw new IllegalArgumentException("pattern id가 비어 있습니다.");
+            String patternId = pattern.getAttribute("id").trim();
+            if (patternId.isBlank()) throw new IllegalArgumentException("pattern id가 비어 있습니다.");
+            if (!patternIds.add(patternId)) throw new IllegalArgumentException("중복 pattern id입니다: " + patternId);
             NodeList rules = pattern.getElementsByTagNameNS(NAMESPACE, "rule");
+            if (rules.getLength() == 0) throw new IllegalArgumentException(
+                    "사용되지 않는 pattern입니다(하위 rule 없음): " + patternId);
             for (int j = 0; j < rules.getLength(); j++) {
                 Element rule = (Element) rules.item(j);
                 String context = rule.getAttribute("context");
                 if (context.isBlank()) throw new IllegalArgumentException("rule context가 비어 있습니다.");
                 xpath.compile("//" + context);
                 NodeList children = rule.getChildNodes();
+                int ruleAssertionCount = 0;
                 for (int k = 0; k < children.getLength(); k++) {
                     Node child = children.item(k);
-                    if (child instanceof Element assertion && NAMESPACE.equals(assertion.getNamespaceURI())
-                            && "assert".equals(assertion.getLocalName())) {
-                        String test = assertion.getAttribute("test");
-                        if (test.isBlank()) throw new IllegalArgumentException("assert test가 비어 있습니다.");
-                        xpath.compile(normalizeXPath(test));
-                        assertionCount++;
-                    } else if (child instanceof Element report && NAMESPACE.equals(report.getNamespaceURI())
-                            && "report".equals(report.getLocalName())) {
-                        String test = report.getAttribute("test");
-                        if (test.isBlank()) throw new IllegalArgumentException("report test가 비어 있습니다.");
-                        xpath.compile(normalizeXPath(test));
-                        assertionCount++;
-                    }
+                    if (!(child instanceof Element assertion) || !NAMESPACE.equals(assertion.getNamespaceURI())
+                            || !("assert".equals(assertion.getLocalName())
+                            || "report".equals(assertion.getLocalName()))) continue;
+                    validateAssertion(patternId, assertion, xpath, categoryMetadataEnabled);
+                    assertionCount++;
+                    ruleAssertionCount++;
                 }
+                if (ruleAssertionCount == 0) throw new IllegalArgumentException(
+                        "사용되지 않는 rule입니다(assert/report 없음): " + patternId + " / " + context);
             }
         }
         if (assertionCount == 0) throw new IllegalArgumentException("Schematron assert가 없습니다.");
+    }
+
+    private void validateAssertion(String patternId, Element assertion,
+                                   net.sf.saxon.s9api.XPathCompiler xpath,
+                                   boolean categoryMetadataEnabled) throws Exception {
+        String elementName = assertion.getLocalName();
+        String test = assertion.getAttribute("test").trim();
+        if (test.isBlank()) throw new IllegalArgumentException(elementName + " test가 비어 있습니다: " + patternId);
+        xpath.compile(normalizeXPath(test));
+        if (assertion.getTextContent() == null || assertion.getTextContent().trim().isBlank()) {
+            throw new IllegalArgumentException(elementName + " 메시지가 비어 있습니다: " + patternId);
+        }
+        String role = assertion.getAttribute("role").trim().toLowerCase(Locale.ROOT);
+        if (role.isBlank()) throw new IllegalArgumentException(elementName + " role이 없습니다: " + patternId);
+        if (!ALLOWED_ROLES.contains(role)) throw new IllegalArgumentException(
+                elementName + " role 허용값이 아닙니다: " + role + " (" + patternId + ")");
+        String category = assertion.getAttributeNS(MAOOM_NAMESPACE, "category")
+                .trim().toLowerCase(Locale.ROOT);
+        if (categoryMetadataEnabled && category.isBlank()) throw new IllegalArgumentException(
+                elementName + " maoom:category가 없습니다: " + patternId);
+        if (!category.isBlank() && !ALLOWED_CATEGORIES.contains(category)) throw new IllegalArgumentException(
+                elementName + " maoom:category 허용값이 아닙니다: " + category + " (" + patternId + ")");
     }
 
     public String sha256(Path path) throws Exception {
@@ -186,31 +212,41 @@ public class SchematronFileService {
     }
 
     private SchematronChoice latestChoice(SchemaKind kind) {
-        // 문자열 정렬이 아니라 major/minor/patch 숫자를 비교하므로 v1.0.10도 올바르게 선택된다.
-        Candidate latest = null;
+        // 높은 버전부터 검사하여 최신 파일이 잘못돼도 바로 이전의 정상 규칙으로 검사를 계속한다.
+        List<Candidate> candidates = new ArrayList<>();
         try (var paths = Files.list(schematronRoot)) {
             for (Path path : paths.filter(Files::isRegularFile).toList()) {
                 Matcher matcher = kind.pattern().matcher(path.getFileName().toString());
                 if (!matcher.matches()) continue;
                 Version version = new Version(Integer.parseInt(matcher.group(1)),
                         Integer.parseInt(matcher.group(2)), Integer.parseInt(matcher.group(3)));
-                if (latest == null || version.compareTo(latest.version()) > 0) latest = new Candidate(path, version);
+                candidates.add(new Candidate(path, version));
             }
         } catch (Exception ex) {
             return new SchematronChoice(kind.type(), kind.label(), null, null, false, message(ex));
         }
-        if (latest == null) {
+        if (candidates.isEmpty()) {
             return new SchematronChoice(kind.type(), kind.label(), null, null, false,
                     kind.pattern().pattern() + " 형식의 파일이 없습니다.");
         }
-        try {
-            validate(latest.path());
-            return new SchematronChoice(kind.type(), kind.label(), latest.path().getFileName().toString(),
-                    latest.version().toString(), true, null);
-        } catch (Exception ex) {
-            return new SchematronChoice(kind.type(), kind.label(), latest.path().getFileName().toString(),
-                    latest.version().toString(), false, message(ex));
+        candidates.sort(Comparator.comparing(Candidate::version).reversed());
+        Candidate newest = candidates.get(0);
+        String newestError = null;
+        for (Candidate candidate : candidates) {
+            try {
+                validate(candidate.path());
+                String notice = candidate == newest ? null
+                        : "최신 " + newest.version() + " 오류로 " + candidate.version() + " 사용 중"
+                        + (newestError == null ? "" : ": " + newestError);
+                return new SchematronChoice(kind.type(), kind.label(), candidate.path().getFileName().toString(),
+                        candidate.version().toString(), true, notice);
+            } catch (Exception ex) {
+                if (candidate == newest) newestError = message(ex);
+            }
         }
+        return new SchematronChoice(kind.type(), kind.label(), newest.path().getFileName().toString(),
+                newest.version().toString(), false,
+                "사용 가능한 정상 파일이 없습니다. 최신 " + newest.version() + " 오류: " + newestError);
     }
 
     private synchronized void initializeDirectory() throws Exception {

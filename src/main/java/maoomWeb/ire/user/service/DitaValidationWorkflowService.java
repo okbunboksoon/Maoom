@@ -8,6 +8,8 @@ import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.CancellationException;
+import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +34,7 @@ public class DitaValidationWorkflowService {
     private final DitaValidationProgressService progressService;
     private final CurrentUserService currentUserService;
     private final Path reportRoot;
+    private final long timeoutNanos;
 
     @Autowired
     public DitaValidationWorkflowService(
@@ -40,20 +43,30 @@ public class DitaValidationWorkflowService {
             SchematronFileService schematronFileService,
             CurrentUserService currentUserService,
             DitaValidationProgressService progressService,
-            @Value("${dita.validation.report-dir}") String reportDir) {
+            @Value("${dita.validation.report-dir}") String reportDir,
+            @Value("${dita.validation.timeout-minutes:30}") long timeoutMinutes) {
         this.validationService = validationService;
         this.historyService = historyService;
         this.schematronFileService = schematronFileService;
         this.currentUserService = currentUserService;
         this.progressService = progressService;
         this.reportRoot = Path.of(reportDir).toAbsolutePath().normalize();
+        this.timeoutNanos = TimeUnit.MINUTES.toNanos(Math.max(1, timeoutMinutes));
+    }
+
+    DitaValidationWorkflowService(DitaSchematronService validationService,
+            SchematronHistoryService historyService, SchematronFileService schematronFileService,
+            CurrentUserService currentUserService, DitaValidationProgressService progressService,
+            String reportDir) {
+        this(validationService, historyService, schematronFileService, currentUserService,
+                progressService, reportDir, 30);
     }
 
     DitaValidationWorkflowService(DitaSchematronService validationService,
             SchematronHistoryService historyService, SchematronFileService schematronFileService,
             CurrentUserService currentUserService, String reportDir) {
         this(validationService, historyService, schematronFileService, currentUserService,
-                new DitaValidationProgressService(), reportDir);
+                new DitaValidationProgressService(), reportDir, 30);
     }
 
     public List<MapItem> findMaps(String inputPath) throws Exception {
@@ -96,6 +109,7 @@ public class DitaValidationWorkflowService {
         String userId = currentUserService.getUserId(authentication);
         String userName = currentUserService.getUserName(authentication);
         progressService.start(progressToken);
+        long deadline = System.nanoTime() + timeoutNanos;
         try {
             historyId = historyService.start(
                     userId, root.toString(), map.toString(),
@@ -110,18 +124,34 @@ public class DitaValidationWorkflowService {
                 throw new IllegalStateException("Schematron 파일이 실행 준비 중 변경되었습니다. 다시 실행해 주세요.");
             }
             ValidationResult result = validationService.validate(new ValidationRequest(
-                    map, snapshot, scope, selected, request.validateMap()),
-                    (completed, total, currentFile) -> progressService.update(progressToken, completed, total, currentFile));
+                    map, snapshot, scope, selected, request.validateMap(), root),
+                    (completed, total, currentFile) -> progressService.update(progressToken, completed, total, currentFile),
+                    () -> checkCancellation(progressToken, deadline));
             Path report = folder.resolve("schematron-report.html");
             new HtmlReportWriter().write(result, report, historyId, userName, userId);
             historyService.success(historyId, result.validatedFileCount(), result.issues().size(), report, snapshot);
             progressService.complete(progressToken, result.validatedFileCount());
             return new RunResponse(historyId, "SUCCESS", result.validatedFileCount(),
                     result.issues().size(), "/api/dita-validation/reports/" + historyId);
+        } catch (CancellationException ex) {
+            historyService.cancel(historyId, ex.getMessage());
+            progressService.cancelled(progressToken, ex.getMessage());
+            throw ex;
         } catch (Exception ex) {
             historyService.fail(historyId, ex);
             progressService.fail(progressToken, ex);
             throw ex;
+        } finally {
+            progressService.finish(progressToken);
+        }
+    }
+
+    private void checkCancellation(String progressToken, long deadline) {
+        if (progressService.isCancellationRequested(progressToken)) {
+            throw new CancellationException("사용자가 Schematron 검사를 취소했습니다.");
+        }
+        if (System.nanoTime() - deadline >= 0) {
+            throw new CancellationException("Schematron 검사 제한 시간을 초과했습니다.");
         }
     }
 

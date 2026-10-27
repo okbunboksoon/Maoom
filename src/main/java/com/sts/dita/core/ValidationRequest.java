@@ -9,5 +9,12 @@ public record ValidationRequest(
         Path schematronFile,
         ValidationScope scope,
         Set<String> selectedNodeIds,
-        boolean validateMap) {
+        boolean validateMap,
+        Path projectRoot) {
+
+    public ValidationRequest(Path mapFile, Path schematronFile, ValidationScope scope,
+                             Set<String> selectedNodeIds, boolean validateMap) {
+        this(mapFile, schematronFile, scope, selectedNodeIds, validateMap,
+                mapFile.toAbsolutePath().normalize().getParent());
+    }
 }

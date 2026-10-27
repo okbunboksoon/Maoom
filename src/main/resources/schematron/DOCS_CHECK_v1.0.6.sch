@@ -328,6 +328,15 @@ V1.0.6 10.13
 		</rule>
 	</pattern>
 
+	<!-- xref에 type="fn"과 href를 함께 사용한 각주 형식 검사 -->
+	<pattern id="xref-fn-element-check">
+		<rule context="xref">
+			<report role="none" test="@type = 'fn' and normalize-space(@href) != ''">
+				&lt;fn&gt; 태그를 사용하여 내용을 입력해야 합니다.
+			</report>
+		</rule>
+	</pattern>
+
 	<!-- 20 -->
 	<!-- 허용된 DITA 태그 검사 (목록 외 태그 사용 시 오류) -->
 	<pattern id="invalid-tag-check">
