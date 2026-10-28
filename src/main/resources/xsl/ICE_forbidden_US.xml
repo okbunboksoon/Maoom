@@ -108,9 +108,12 @@
 	      <item type="금칙어" new="For Australia and New Zealand only">For Australia and New Zealand</item>
 	      <item type="오타" new="is covered in snow. *도안명이 텍스트로 들어가있음">is covered in WKIA_265.</item>
 	      <item type="오타" new="or snow. *도안명이 텍스트로 들어가있음">or WKIA_265.</item>
-	      <item type="오타" new="message *도안명이 텍스트로 들어가있음">massage</item>
+		<item type="오타" new="message *메시지의 오타 / 최근 마사지 기능 있는 시트 사양이 추가되었기 때문에 시트 담당자 확인 후 변경 필요함">massage</item>
 	      <item type="오타" new="If V2L does not operate properly">If V2L does not operate previously</item>
 		  <item type="금칙어" new="&lt;삭제 필요&gt;">professional workshop</item>
+		<item type="용어 변경" new="dealer or service *담당자 검토 필요">dealer/service</item>
+		<item type="용어 변경" new="dealer or service *담당자 검토 필요">dealer /service</item>
+		<item type="용어 변경" new="authorized Kia dealer or service *담당자 검토 필요">authorized /service</item>
 	</forbidden>
 	<exception>
 		<item>AAAAAAA</item>

@@ -198,8 +198,9 @@
 	      <item type="금칙어" new="보조방향지시등">사이드리피터</item>
 	      <item type="금칙어" new="차폭등">포지션램프</item>
 	      <item type="금칙어" new="앞면방향지시등">전면방향지시등</item>
-	      <item type="오타" new="message *도안명이 텍스트로 들어가있음">massage</item>
+		<item type="오타" new="message *메시지의 오타 / 최근 마사지 기능 있는 시트 사양이 추가되었기 때문에 시트 담당자 확인 후 변경 필요함">massage</item>
    		 <item type="용어변경" new="커넥티드 카">텔레매틱스</item>
+		 <item type="오타" new="글로브박스">글러브박스</item>
 	</forbidden>
 	<exception>
 		<item>개패 스위치 본 차량은 오픈소스 라이선스가 적용된 소프트웨어를 포함하고 있습니다.</item>
