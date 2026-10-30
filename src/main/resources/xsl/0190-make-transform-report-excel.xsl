@@ -313,6 +313,20 @@
                         <xsl:with-param name="key" select="'body-direct-text'"/>
                         <xsl:with-param name="change" select="'conbody, taskbody, refbody, section 내부에서 하위 태그로 감싸지 않은 텍스트 검출'"/>
                     </xsl:call-template>
+                    <!-- type이 notice인 note 수를 표시한다. -->
+                    <xsl:call-template name="modified-row">
+                        <xsl:with-param name="final" select="$final"/>
+                        <xsl:with-param name="label" select="'notice note 찾기'"/>
+                        <xsl:with-param name="key" select="'note-type-notice'"/>
+                        <xsl:with-param name="change" select="'type=notice인 note 검출'"/>
+                    </xsl:call-template>
+                    <!-- type 속성이 없거나 값이 비어 있는 note 수를 표시한다. -->
+                    <xsl:call-template name="modified-row">
+                        <xsl:with-param name="final" select="$final"/>
+                        <xsl:with-param name="label" select="'type 없는 note 찾기'"/>
+                        <xsl:with-param name="key" select="'note-type-missing'"/>
+                        <xsl:with-param name="change" select="'type 속성이 없거나 값이 비어 있는 note 검출'"/>
+                    </xsl:call-template>
                     <!-- 최종 문서 루트의 report-simple-operation-removed 값을 읽어 삭제된 Simple operation section 수를 표시한다. -->
                     <Row ss:Height="30">
                         <Cell ss:StyleID="Center"><Data ss:Type="String">indexterm 삭제 여부</Data></Cell>
@@ -375,7 +389,8 @@
                         '내용없는 dita 찾기', '빈 태그 찾기', 'li 직접 텍스트 찾기', 'step cmd 누락 찾기',
                         'image 서버 href 검출', 'image 비 EPS 확장자 검출', 'xref href 경로 포함 오류',
                         'xref href element ID 오류', '미연결 xref 찾기', '빈 menucascade 찾기',
-                        'menucascade 직접 텍스트 찾기', '본문 직접 텍스트 찾기')"/>
+                        'menucascade 직접 텍스트 찾기', '본문 직접 텍스트 찾기',
+                        'notice note 찾기', 'type 없는 note 찾기')"/>
                     <Row ss:Height="30"><Cell ss:StyleID="Header" ss:MergeAcross="2"><Data ss:Type="String">추가</Data></Cell></Row>
                     <xsl:sequence select="$result-rows/ss:Row[ss:Cell[1]/ss:Data = $add-labels]"/>
                     <Row ss:Height="30"><Cell ss:StyleID="Header" ss:MergeAcross="2"><Data ss:Type="String">수정</Data></Cell></Row>
@@ -668,6 +683,54 @@
                             </Cell>
                             <Cell ss:StyleID="Wrap">
                                 <Data ss:Type="String"><xsl:value-of select="string-join(text()[normalize-space(.) != ''] ! normalize-space(.), ' ')"/></Data>
+                            </Cell>
+                            <Cell ss:StyleID="Wrap">
+                                <Data ss:Type="String"><xsl:value-of select="serialize($report-content/*, map{'method': 'xml', 'omit-xml-declaration': true()})"/></Data>
+                            </Cell>
+                        </Row>
+                    </xsl:for-each>
+                </Table>
+                <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+                    <Zoom>85</Zoom>
+                </WorksheetOptions>
+            </Worksheet>
+            <Worksheet ss:Name="note type 확인">
+                <Table>
+                    <Column ss:Width="250"/>
+                    <Column ss:Width="420"/>
+                    <Column ss:Width="150"/>
+                    <Column ss:Width="220"/>
+                    <Column ss:Width="1000"/>
+                    <Row ss:Height="30">
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">파일명</Data></Cell>
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">타이틀</Data></Cell>
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">note type</Data></Cell>
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">검출 내용</Data></Cell>
+                        <Cell ss:StyleID="Header"><Data ss:Type="String">note</Data></Cell>
+                    </Row>
+                    <!-- notice 또는 type 누락 토큰이 붙은 note를 파일명 순서로 표시한다. -->
+                    <xsl:for-each select="$final//*[local-name() = 'note'][@modified][some $token in tokenize(@modified, '\s+') satisfies $token = ('note-type-notice', 'note-type-missing')]">
+                        <xsl:sort select="lower-case(string(ancestor::*[local-name() = 'topicref'][1]/@href))"/>
+                        <xsl:sort select="if (contains-token(@modified, 'note-type-notice')) then 1 else 2" data-type="number"/>
+                        <xsl:variable name="topic" select="ancestor::*[local-name() = ('topic', 'concept', 'task', 'reference')][1]"/>
+                        <xsl:variable name="report-content">
+                            <xsl:apply-templates select="." mode="report-clean"/>
+                        </xsl:variable>
+                        <Row ss:Height="30">
+                            <Cell ss:StyleID="Center">
+                                <Data ss:Type="String"><xsl:value-of select="ancestor::*[local-name() = 'topicref'][1]/@href"/></Data>
+                            </Cell>
+                            <Cell ss:StyleID="Wrap">
+                                <Data ss:Type="String"><xsl:value-of select="normalize-space(string($topic/*[local-name() = 'title'][1]))"/></Data>
+                            </Cell>
+                            <Cell ss:StyleID="Center">
+                                <Data ss:Type="String"><xsl:value-of select="if (@type and normalize-space(@type) != '') then @type else '(없음)'"/></Data>
+                            </Cell>
+                            <Cell ss:StyleID="Center">
+                                <Data ss:Type="String"><xsl:value-of select="string-join((
+                                    if (contains-token(@modified, 'note-type-notice')) then 'type=notice' else (),
+                                    if (contains-token(@modified, 'note-type-missing')) then 'type 없음' else ()
+                                ), ', ')"/></Data>
                             </Cell>
                             <Cell ss:StyleID="Wrap">
                                 <Data ss:Type="String"><xsl:value-of select="serialize($report-content/*, map{'method': 'xml', 'omit-xml-declaration': true()})"/></Data>
