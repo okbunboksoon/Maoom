@@ -207,8 +207,11 @@ if errorlevel 1 exit /b !errorlevel!
 rem 0004-topic-merge.xsl: map의 topicref가 참조하는 DITA 파일을 하나의 XML로 병합한다.
 java net.sf.saxon.Transform -catalog:xsl\catalog.xml						-s:temp\0002-toc-created.xml  							-o:temp\0004-topic-merged.xml  								-xsl:xsl\0004-topic-merge.xsl
 if errorlevel 1 exit /b !errorlevel!
+rem 06-11-mark_invalid_note_type.xsl: mark notice notes and notes without a type for the report.
+java net.sf.saxon.Transform -s:temp\0004-topic-merged.xml -o:temp\06-11-invalid-note-type-marked.xml -xsl:xsl\06-11-mark_invalid_note_type.xsl
+if errorlevel 1 exit /b !errorlevel!
 rem 0111-mark_invalid_menucascade.xsl: 빈 uicontrol만 있거나 uicontrol로 감싸지 않은 직접 텍스트가 있는 menucascade를 리포트용으로 표시한다.
-java net.sf.saxon.Transform 												-s:temp\0004-topic-merged.xml 						-o:temp\0111-invalid-menucascade-marked.xml 				-xsl:xsl\0111-mark_invalid_menucascade.xsl
+java net.sf.saxon.Transform 												-s:temp\06-11-invalid-note-type-marked.xml 						-o:temp\0111-invalid-menucascade-marked.xml 				-xsl:xsl\0111-mark_invalid_menucascade.xsl
 if errorlevel 1 exit /b !errorlevel!
 rem 0112-mark_body_direct_text.xsl: conbody, taskbody, refbody, section 바로 아래의 직접 텍스트를 리포트용으로 표시한다.
 java net.sf.saxon.Transform 												-s:temp\0111-invalid-menucascade-marked.xml 			-o:temp\0112-body-direct-text-marked.xml 					-xsl:xsl\0112-mark_body_direct_text.xsl
