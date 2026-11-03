@@ -361,10 +361,11 @@ DITAMAP Builder는 `ditamap.builder.allowed-roots`에 등록된 작업 루트의
 ```text
 UserMain의 DITA Validation Check 아이콘
   -> 입력 경로 선택 화면
+  -> `로컬경로 실행` 또는 `GOMS 실행` 선택 후 실행
   -> DitaValidationController
-  -> DITAMAP·검사 범위·검사 유형 선택
-  -> DitaValidationService
-  -> SchematronValidationService / com.sts.dita 검사 엔진
+  -> DITAMAP·검사 범위 확인 및 통합 Schematron 자동 선택
+  -> DitaValidationWorkflowService
+  -> DitaSchematronService / com.sts.dita 검사 엔진
   -> HTML 결과 보고서 생성
   -> Schematron 전용 실행 이력 저장
   -> 결과 보기
@@ -373,8 +374,9 @@ UserMain의 DITA Validation Check 아이콘
 검사 화면에서 사용하는 주요 API는 다음과 같다.
 
 - `/api/dita-validation/maps`: 입력 폴더에 있는 DITAMAP 목록을 찾는다.
+- `/api/dita-validation/goms/export`: `연도/프로젝트/언어` 입력을 GOMS EXPORT 설정에 반영하고 배치를 실행한 뒤 V 서버 결과 경로를 반환한다.
 - `/api/dita-validation/tree`: 선택한 DITAMAP의 계층 구조를 읽는다.
-- `/api/dita-validation/schematrons`: 사용 가능한 원고·퍼블리싱 규칙과 선택 버전을 조회한다.
+- `/api/dita-validation/schematrons`: 사용 가능한 통합 원고·퍼블리싱 규칙과 선택 버전을 조회한다.
 - `/api/dita-validation/run`: 검사 요청을 실행하고 HTML 보고서와 이력을 만든다.
 - `/api/dita-validation/progress/{token}`: 현재 처리 파일 수와 진행 단계를 조회한다.
 - `/api/dita-validation/reports/{id}`: 서버에 저장된 결과 HTML을 연다.
@@ -384,12 +386,26 @@ UserMain의 DITA Validation Check 아이콘
 `ditamap 자체 검사` 옵션을 켜면 topic 파일뿐 아니라 DITAMAP 파일도 검사 대상에 포함한다. 
 선택 항목과 모든 자손을 고르면 화면에서도 자손 체크 상태를 같이 표시한다.
 
-검사 유형은 파일명을 고정하지 않고 다음 접두사로 분류한다.
+입력 화면의 실행 방식은 `로컬경로 실행`과 `GOMS 실행`으로 구분한다. 로컬경로 실행은 입력한 서버 접근 가능 경로를 기존 방식대로 바로 조회한다. GOMS 실행은 `2026/NQ5_HEV_PE_27MY/English_LHD`처럼 `연도/프로젝트/언어` 형식으로 입력하며 다음 순서로 처리한다.
 
-- 원고: `DOCS_CHECK_*.sch`
-- 퍼블리싱: `PUB_CHECK_*.sch`
+```text
+common.properties의 EXPORT.TARGET, EXPORT.TARGET_SUB 변경
+  -> C:/MaoomTool/Tools/EXPORT_260626/run.bat 실행
+  -> V:/ValidationCheck/<프로젝트>_<언어> 아래 DITAMAP 확인
+  -> 생성 경로를 기존 DITA Validation Check 입력 경로로 전달
+  -> report 폴더를 제외한 프로젝트 구조를 작업별 로컬 임시 폴더로 복사
+  -> 로컬 복사본에서 기존 Schematron 검사 흐름 실행
+  -> 결과 HTML을 V 서버의 원래 report 폴더에 저장
+  -> 성공·실패·취소 여부와 관계없이 로컬 임시 폴더 삭제
+```
 
-같은 유형의 파일이 여러 개면 `v1.0.10`, `v1.1.1`, `v1.2.5` 같은 숫자 버전을 구성 요소별로 비교하여 가장 높은 버전을 사용한다. 
+GOMS 설정 파일의 기존 인코딩·줄바꿈·다른 속성은 유지하고 두 EXPORT 항목만 원자적으로 변경한다. 같은 설정 파일을 공유하므로 한 애플리케이션에서는 GOMS EXPORT를 한 번에 하나만 실행한다. 배치 종료 코드가 0이 아니거나 결과 폴더에 DITAMAP이 없으면 기존 검사 화면으로 진행하지 않는다. 경로와 제한시간은 `dita.validation.goms-export-root`, `dita.validation.goms-output-root`, `dita.validation.goms-timeout-minutes` 또는 대응 환경변수로 변경한다.
+
+GOMS 검사는 V 서버 파일을 규칙마다 반복해서 읽는 비용을 줄이기 위해 `dita.validation.staging-root` 아래 `history-<이력번호>` 폴더에 프로젝트 구조를 그대로 복사한 뒤 로컬 복사본에서 실행한다. 기존 결과가 누적된 `report` 폴더와 과거 데이터인 `old` 폴더는 복사하지 않는다. `old` 제외는 위치와 대소문자에 관계없이 적용한다. 복사 전에 필요한 용량과 로컬 가용 공간을 비교하고, 심볼릭 링크 또는 V 경로와 겹치는 임시 경로는 안전을 위해 거부한다. 검사 결과의 DITAMAP·오류 파일 경로는 HTML을 만들기 전에 원래 V 서버 경로로 되돌리므로 임시 경로가 리포트나 이력에 남지 않는다. 임시 루트는 `DITA_VALIDATION_STAGING_ROOT` 환경변수로 변경할 수 있다.
+
+검사 화면 진입 시 V 서버 전체를 반복해서 순회하지 않도록 GOMS EXPORT 단계는 생성된 프로젝트 폴더의 존재만 확인한다. 입력 화면의 사전 DITAMAP 조회도 수행하지 않으며, 실제 목록은 검사 화면에서 `/api/dita-validation/maps`를 한 번만 호출하여 가져온다. GOMS 출력 구조는 프로젝트 최상위 또는 바로 아래 `dita` 폴더에 DITAMAP이 생성되므로 최대 한 단계 아래까지만 조회하고 더 깊은 DITA·이미지 폴더는 순회하지 않는다. 이 조회에서도 위치와 대소문자에 관계없이 `old`와 `report` 폴더를 제외한다. 로컬경로 실행은 중첩 DITAMAP 호환성을 위해 기존 재귀 조회를 유지한다. DITAMAP이 없거나 경로를 읽을 수 없으면 검사 화면에서 오류를 표시한다.
+
+검사 규칙은 `DOCS_PUB_CHECK_v<major>.<minor>.<patch>.sch` 형식의 통합 파일 하나를 자동 선택한다. 화면에서는 원고·퍼블리싱 라디오 버튼을 제공하지 않는다. 같은 통합 파일이 여러 개면 `v1.0.10`, `v1.1.1`, `v1.2.5` 같은 숫자 버전을 구성 요소별로 비교하여 가장 높은 정상 버전을 사용한다.
 문자열 사전순 비교를 사용하면 `v1.0.10`을 잘못 고를 수 있으므로 버전 파싱 로직을 거친다. 
 검사 시작 시 선택한 규칙 파일의 스냅샷과 해시를 남겨, 실행 도중 운영 파일이 바뀌어도 한 번의 검사가 동일한 규칙으로 완료되게 한다.
 
@@ -416,7 +432,11 @@ Schematron 실행 상태의 의미는 다음과 같다.
 
 현재 자동 정리는 단일 애플리케이션 서버 배포를 전제로 한다. 여러 서버가 같은 DB를 사용하는 구성에서는 한 서버의 시작이 다른 서버의 정상 `RUNNING` 작업을 중단 처리하지 않도록 실행 서버 식별값과 마지막 heartbeat 시각을 이력에 추가한 뒤, 해당 서버의 오래된 작업만 정리해야 한다.
 
-결과 HTML에는 검사 DITAMAP, 사용한 Schematron, 검사 범위와 오류 목록을 표시한다.
+결과 HTML에는 검사 DITAMAP, 검사 파일 수, 오류 수, `검사 완료 시간`, `QA 테스터`, 사용한 Schematron, 검사 범위와 오류 목록을 표시한다. 로컬경로 실행의 서버 저장 파일명과 `HTML 로컬 다운` 파일명은 검사 완료 시점에 `YYMMDD_HHMM_DITAMAP파일명_SchematronReport.html` 형식으로 한 번 생성하여 동일하게 사용한다. GOMS 실행 결과는 `V:/ValidationCheck/<프로젝트>_<언어>/report/YYMMDD_HHMM_report.html`에 저장하며 로컬 다운로드도 같은 이름을 사용한다. 현재 결과 CSV는 같은 이름의 `.html` 부분을 `_filtered.csv`로 바꿔 저장한다.
+
+리포트 확인 목록에는 각 실행 이력의 검사 범위를 `범위 전체`, `선택한 항목`, `선택항목 및 자손` 중 하나의 간결한 배지로 표시한다. 선택 개수는 목록 폭을 불필요하게 늘리지 않도록 표시하지 않는다.
+
+DITA Validation 입력 화면의 `리포트 리스트 보기`는 `V:/ValidationCheck` 바로 아래 프로젝트 폴더와 각 `report/*.html`을 PDF 리뷰와 같은 폴더 트리로 표시한다. 버튼은 리포트 확인 영역의 회색 구분선 위에 배치한다. `old` 프로젝트 폴더는 제외한다. 프로젝트 폴더는 이름 오름차순, 폴더 안 HTML은 파일명 내림차순으로 정렬하여 최신 리포트를 위에 표시한다. 각 이력 연결 리포트에는 `검사파일`, `오류`, `검사 완료 시간(YYMMDD_HHMM)`, `QA 테스터`, `반영률(검토 완료 건수 / 전체 오류 건수)`을 구분 문자 대신 개별 정보 배지로 한 줄에 표시한다. 목록 창은 1,188px 이하, 흰색 카드는 1,140px로 열며 기존 왼쪽 위치와 회색 여백을 유지한 채 오른쪽만 20px 확장한다. 목록 요약은 보고서마다 개별 조회하지 않고 실행 이력·사용자·확인 상태를 한 번에 집계한다. 실행 이력의 `report_file_path`와 연결된 HTML은 기존 `/api/dita-validation/reports/{id}`로 열어 확인 상태와 메모를 DB에 저장하며, 이력과 연결되지 않은 파일은 서버가 내장 이력 번호를 제거하고 체크 기능을 비활성화한 읽기 전용 HTML로 제공한다.
 오류 목록은 `파일명` 바로 뒤에 DITAMAP의 `navtitle`을 사용한 `타이틀`을 표시하고 서버 절대 경로 열은 노출하지 않는다. `심각도` 바로 뒤에는 Schematron의 `maoom:category`를 한글로 변환한 `유형`을 표시한다. 헤더는 모두 가운데 정렬하고, 본문의 순번·파일명·행·심각도·유형은 가운데 정렬한다.
 상단 유형별·심각도별 배지는 클릭 필터로 동작하며 검색어와 `체크 항목 숨기기` 조건에 함께 적용된다. 화면에는 적용 중인 조건과 표시 건수가 함께 나오며 `필터 초기화`로 조건을 한 번에 해제할 수 있다. `전체` 배지 또는 활성 배지를 다시 누르면 해당 필터만 해제된다. 동일 DITA가 여러 위치에서 참조되면 파일 검사는 한 번만 수행하고 첫 Breadcrumb 뒤에 `외 N개 경로`를 표시한다.
 `전체 체크`와 `전체 해제`는 현재 검색·배지·숨김 조건으로 표시된 issue ID만 일괄 API에 한 번 전송한다. 서버는 중복 ID를 제거하고 최대 10,000건을 JDBC batch로 저장하며, 트랜잭션 중 하나라도 실패하면 전체 변경을 롤백한다. 각 issue ID가 실제 해당 이력의 HTML 보고서에 존재하는지도 쓰기 전에 검사하므로 형식만 맞춘 임의 ID로 상태 행을 만들 수 없다.
@@ -432,20 +452,21 @@ Schematron 실행 상태의 의미는 다음과 같다.
 검사 시작 API는 즉시 job ID를 반환하고 실제 검사는 제한된 백그라운드 실행기에서 수행한다. job에는 로그인 사용자 ID와 이름을 소유자로 저장하며 일반 사용자는 본인 작업만 조회·취소할 수 있다. 관리자는 관리자 Schematron 이력 화면에서 대기·실행·완료·실패·취소 건수를 확인하고 다른 사용자의 활성 작업을 취소할 수 있다. 같은 사용자가 `WAITING` 또는 `RUNNING` 작업을 가진 동안에는 중복 검사를 시작할 수 없다.
 사용자가 확인 체크를 해제하면 해당 항목의 수정 시각도 제거한다. 
 검사 완료 뒤 화면의 `결과 보기` 버튼을 사용자가 눌러 새 창을 열기 때문에 미리 만든 `about:blank` 창이나 팝업 차단 문제가 발생하지 않는다.
+GOMS EXPORT 대기 팝업이 DITA Validation Check 화면으로 전환되면 검사 화면이 준비 완료 신호를 보낸다. 입력 창은 검사 창에 포커스를 넘긴 뒤 자동으로 닫혀 검사 창 앞을 가리지 않는다. 브라우저 정책으로 포커스를 받지 못한 경우 검사 창 제목을 `DITA Validation Check`와 `● 검사 화면이 준비되었습니다`로 800ms마다 전환하며, 사용자가 검사 창을 선택하면 즉시 원래 제목으로 복원한다. 이 동작은 브라우저 창 제목 안내이며 Windows 작업표시줄 강제 점멸 기능은 사용하지 않는다.
 
-검사 결과 한 건에는 최소한 대상 파일, DITAMAP 타이틀, 행 번호, 규칙 ID, `role` 심각도, `maoom:category` 유형, XPath 위치와 메시지가 들어간다.
+검사 결과 한 건에는 최소한 대상 파일, DITAMAP 타이틀, 행 번호, 내부 규칙 ID, `type` 규칙 유형, `role` 심각도, `maoom:category` 유형, XPath 위치와 메시지가 들어간다. 규칙 ID는 오류 식별·성능 진단용 내부 값으로 유지하고 HTML 리포트의 `규칙 유형` 열에는 `type="DOCS"`를 `원고`, `type="PUB"`를 `퍼블리싱`으로 변환해 표시한다. `maoom:level`이 없는 기존 규칙은 모든 DITAMAP 계층에 적용하며, `maoom:level="N"`을 지정한 assert/report는 실제 대상 DITA가 해당 계층일 때만 실행한다. 계층 제한 규칙도 결과 파일은 DITAMAP이 아니라 실제 검사한 DITA로 기록한다.
 파일 하나의 XML 파싱·XPath·`doc()` 처리는 기본 120초 제한을 적용한다. 제한을 넘으면 작업 스레드에 취소를 전달하고 `file-timeout` 시스템 결과에 당시 처리 중이던 규칙 ID를 함께 남긴다. 검사 완료 시 서버 로그에는 가장 느린 파일 10개, 규칙별 누적 시간 상위 10개, `doc()` 문서 수와 파싱·평가 실패 수를 기록한다. 이 진단값은 일반 사용자 화면에는 노출하지 않는다.
-규칙 파일의 `<sch:assert>`와 `<sch:report>` 모두 검사 결과를 만들 수 있으므로 새 규칙을 추가할 때 `role`과 `maoom:category`를 같이 지정한다.
+규칙 파일의 `<sch:assert>`와 `<sch:report>` 모두 검사 결과를 만들 수 있으므로 새 규칙을 추가할 때 `role`과 `maoom:category`를 같이 지정한다. 특정 DITAMAP 계층에만 적용해야 할 때는 선택 속성 `maoom:level`을 사용한다. 예를 들어 L1 Chapter의 내용 있는 shortdesc 금지 규칙은 `context="shortdesc"`, `maoom:level="1"`, `test="normalize-space(.) != ''"`를 사용한다. 따라서 `<shortdesc/>`, 빈 태그, 공백만 있는 태그와 L2 이하의 shortdesc는 검출하지 않는다.
 
-규칙 파일은 화면에 노출하거나 실행하기 전에 전용 린트를 통과해야 한다. 린트는 pattern ID 누락·중복, rule 누락, assert/report 누락, context/test XPath 오류, 빈 메시지, role 누락·허용값 오류, category 누락·허용값 오류를 검사한다. `xmlns:maoom="urn:maoom:schematron"`을 선언한 신규 규칙에는 category를 필수로 적용한다. 기존 내장 구버전 중 이 네임스페이스를 선언하지 않은 파일은 배포 호환성을 위해 category 누락을 허용하지만 리포트에는 `미분류`로 표시된다.
+규칙 파일은 화면에 노출하거나 실행하기 전에 전용 린트를 통과해야 한다. 린트는 pattern ID 누락·중복, rule 누락, assert/report 누락, context/test XPath 오류, 빈 메시지, role 누락·허용값 오류, category 누락·허용값 오류와 `maoom:level` 형식을 검사한다. 통합 `DOCS_PUB_CHECK_v*.sch`의 모든 assert/report에는 `type="DOCS"` 또는 `type="PUB"`가 필수다. `maoom:level`은 생략하거나 1~100 사이의 정수로 지정한다. `xmlns:maoom="urn:maoom:schematron"`을 선언한 신규 규칙에는 category를 필수로 적용한다. 기존 내장 구버전 중 이 네임스페이스를 선언하지 않은 파일은 배포 호환성을 위해 category 누락을 허용하지만 리포트에는 `미분류`로 표시된다.
 
 허용 role은 `none`, `critical`, `major`, `minor`, `preference`다. 허용 category는 `image`, `xref`, `table`, `ditamap`, `structure`, `whitespace`, `element`, `language`, `unit`, `index`, `system`이다. 목록 밖의 값은 오타로 간주하여 해당 규칙 파일을 실행하지 않는다.
 현재 사용하는 심각도 값은 `none`, `Critical`, `Major`, `Minor`, `Preference`이며, 알 수 없는 값은 임의로 오류로 올리지 않고 원본 값 또는 미지정 상태로 취급한다.
 규칙 유형은 `image`, `xref`, `table`, `ditamap`, `structure`, `whitespace`, `element`, `language`, `unit`, `index` 코드를 사용한다. 리포트에서는 각각 이미지, 상호참조, 표, DITAMAP, 문서 구조, 공백, 태그, 언어·문자, 숫자·단위, 색인으로 표시한다. 이전 규칙처럼 유형 속성이 없으면 검사를 중단하지 않고 `미분류`로 표시한다.
-HTML의 확인 상태, 수정 시각, 확인자는 서버에 저장한다. 확인자에는 체크를 수행한 로그인 사용자의 이름을 기록하므로 다른 사용자가 같은 보고서를 열어도 실제 확인자를 알 수 있다. 
+HTML의 확인 상태, 수정 시각, 확인자는 서버 DB에 저장하며 동시에 결과 HTML의 내장 상태 JSON에도 원자적으로 반영한다. 따라서 서버 이력에서 체크·해제·메모를 변경한 뒤 V 서버의 HTML을 `file:` 경로로 직접 열어도 마지막 서버 상태가 표시된다. 기존 보고서도 서버 이력에서 열 때 DB 상태를 HTML에 먼저 동기화한다. 확인자에는 체크를 수행한 로그인 사용자의 이름을 기록하므로 다른 사용자가 같은 보고서를 열어도 실제 확인자를 알 수 있다.
 보고서의 상태 변경 UI를 수정할 때는 체크 → 서버 시각과 확인자 생성, 체크 해제 → 수정 시각과 확인자 제거, 다른 사용자로 보고서 재접속 → 저장 상태 복원의 세 경우를 모두 확인한다. 
 예전에 제공하던 상태 JSON 수동 저장/불러오기 버튼은 서버 저장으로 대체되었으므로 다시 노출하지 않는다.
-다운로드한 HTML을 `file:` 경로로 열었을 때도 확인 체크와 수정 시각 기록은 사용할 수 있다. 로컬 파일에는 로그인 세션이 없으므로 새로 체크한 항목의 확인자 이름은 빈칸으로 두고 서버 상태 API를 호출하지 않는다. 로컬 변경은 원본 파일을 직접 덮어쓰지 않으므로 작업 후 `HTML 로컬 다운`을 다시 눌러 상태가 포함된 새 HTML을 저장해야 한다.
+다운로드하거나 V 서버에서 직접 `file:` 경로로 연 HTML은 읽기 전용이다. 로그인 사용자와 서버 이력을 안전하게 확인할 수 없으므로 확인 체크·일괄 체크는 비활성화한다. 확인 상태나 작업 메모를 변경하려면 Schematron 실행 이력 또는 리포트 리스트에서 이력과 연결된 HTML 보기를 사용해야 한다. 서버에서 변경한 상태는 DB와 HTML 내장 상태 JSON에 함께 저장되므로 로컬 파일을 다시 열면 마지막 동기화 상태를 조회용으로 확인할 수 있다.
 
 Schematron 실행 이력은 일반 `tb_project_execution_log`에 넣지 않고 전용 이력에 저장한다. 
 관리 화면의 `/admin/schematron-history`에서 순번, 상태, 사용자, 시작 시각, 소요 시간, 입력 조건, 결과물을 확인한다. 
@@ -689,7 +710,7 @@ spring.servlet.multipart.max-request-size=100MB
 
 Schematron 검사도 같은 원칙으로 배포용 PC가 입력 DITAMAP과 연결 topic을 읽을 수 있어야 한다. 
 `.sch` 파일을 추가·삭제할 때는 `dita.validation.schematron-dir`에만 반영하고,
-원고/퍼블리싱 접두사와 버전 형식을 지킨 뒤 화면의 검사 유형에 새 버전이 표시되는지 확인한다. 
+`DOCS_PUB_CHECK_v<major>.<minor>.<patch>.sch` 접두사와 버전 형식을 지킨 뒤 화면에 새 통합 버전이 표시되는지 확인한다.
 결과 폴더는 애플리케이션 실행 계정에 읽기·쓰기 권한이 있어야 관리자 이력의 결과물 링크가 정상 동작한다.
 
 Schematron의 `doc()`/`document()`는 선택한 입력 프로젝트 루트 내부의 `.xml`, `.dita`, `.ditamap`만 읽을 수 있다. `../`로 프로젝트 밖 파일을 읽거나 HTTP/HTTPS 주소를 호출하면 `Schematron doc() 접근이 차단되었습니다` 시스템 오류가 결과에 기록된다. 공용 기준 XML이 필요하면 임의의 서버 절대 경로나 URL을 규칙에 넣지 말고 별도의 허용 경로 정책을 먼저 추가해야 한다.
@@ -770,7 +791,7 @@ Schematron 변경은 규칙 선택, 실제 검사, 진행률, 이력과 보고�
 ```powershell
 .\mvnw.cmd "-Dtest=DitaValidationOperationalPerformanceTest" `
   "-Ddita.performance.map=C:\DITA\project\root.ditamap" `
-  "-Ddita.performance.schema=C:\MaoomTool\schematron\DOCS_CHECK_v1.0.7.sch" test
+  "-Ddita.performance.schema=C:\MaoomTool\schematron\DOCS_PUB_CHECK_v1.0.1.sch" test
 ```
 
 문서나 템플릿만 수정했더라도 최소한 다음을 확인한다.

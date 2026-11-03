@@ -9,6 +9,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 
+import maoomWeb.ire.user.service.DitaValidationAccessService;
+
 @Configuration
 @EnableMethodSecurity
 /**
@@ -24,7 +26,9 @@ public class SecurityConfig {
 
 	/** 공개 리소스와 인증 필요 경로를 설정한다. */
 	@Bean
-	public SecurityFilterChain securityFilterChain(HttpSecurity http)
+	public SecurityFilterChain securityFilterChain(
+			HttpSecurity http,
+			DitaValidationAccessService ditaValidationAccessService)
 			throws Exception {
 
 	    http
@@ -41,6 +45,11 @@ public class SecurityConfig {
 	                "/images/**",
 	                "/pdfjs/**"
 	            ).permitAll()
+	            // 화면에서 버튼을 숨기는 것과 별개로 직접 URL/API 접근도 같은 사용자 목록으로 제한한다.
+	            .requestMatchers("/dita-validation", "/dita-validation/**", "/api/dita-validation/**")
+	            .access((authentication, context) ->
+	                new org.springframework.security.authorization.AuthorizationDecision(
+	                    ditaValidationAccessService.isAllowed(authentication.get())))
 	            .requestMatchers("/admin/**").authenticated()
 	            .anyRequest().authenticated()
 	        )

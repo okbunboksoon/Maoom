@@ -33,7 +33,7 @@ import net.sf.saxon.s9api.Processor;
 
 /**
  * 배포 PC의 외부 Schematron 폴더를 관리한다.
- * DOCS/PUB 접두사의 가장 높은 숫자 버전을 선택하고 실행 전에 XML·XPath 유효성을 검사한다.
+ * DOCS_PUB_CHECK 접두사의 가장 높은 숫자 버전을 선택하고 실행 전에 XML·XPath 유효성을 검사한다.
  */
 @Service
 public class SchematronFileService {
@@ -44,11 +44,11 @@ public class SchematronFileService {
     private static final Set<String> ALLOWED_CATEGORIES = Set.of(
             "image", "xref", "table", "ditamap", "structure", "whitespace",
             "element", "language", "unit", "index", "system");
+    private static final Set<String> ALLOWED_RULE_TYPES = Set.of("DOCS", "PUB");
     private static final List<String> DEFAULT_SCHEMAS = List.of(
-            "DOCS_CHECK_v1.0.6.sch", "PUB_CHECK_v1.0.1.sch");
+            "DOCS_PUB_CHECK_v1.0.1.sch");
     private static final List<SchemaKind> SCHEMA_KINDS = List.of(
-            new SchemaKind("DOCS", "원고", Pattern.compile("^DOCS_CHECK_v(\\d+)\\.(\\d+)\\.(\\d+)\\.sch$")),
-            new SchemaKind("PUB", "퍼블리싱", Pattern.compile("^PUB_CHECK_v(\\d+)\\.(\\d+)\\.(\\d+)\\.sch$")));
+            new SchemaKind("DOCS_PUB", "통합", Pattern.compile("^DOCS_PUB_CHECK_v(\\d+)\\.(\\d+)\\.(\\d+)\\.sch$")));
     private static final DateTimeFormatter MODIFIED_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     private final Path schematronRoot;
@@ -73,17 +73,19 @@ public class SchematronFileService {
         return SCHEMA_KINDS.stream().map(this::latestChoice).toList();
     }
 
-    public Path resolveLatest(String type) throws Exception {
-        if (type == null || type.isBlank()) throw new IllegalArgumentException("검사 유형을 선택해 주세요.");
-        SchemaKind kind = SCHEMA_KINDS.stream()
-                .filter(value -> value.type().equalsIgnoreCase(type.trim()))
-                .findFirst().orElseThrow(() -> new IllegalArgumentException("올바른 검사 유형이 아닙니다."));
+    public Path resolveLatest() throws Exception {
+        SchemaKind kind = SCHEMA_KINDS.get(0);
         SchematronChoice choice = latestChoice(kind);
         if (!choice.available()) {
             throw new IllegalArgumentException(kind.label() + " Schematron을 사용할 수 없습니다. "
                     + choice.validationMessage());
         }
         return resolveAndValidate(choice.fileName());
+    }
+
+    /** 기존 API 요청의 유형값은 무시하고 통합 Schematron의 최신 정상 버전을 선택한다. */
+    public Path resolveLatest(String ignoredType) throws Exception {
+        return resolveLatest();
     }
 
     public Path resolveAndValidate(String fileName) throws Exception {
@@ -119,6 +121,7 @@ public class SchematronFileService {
         int assertionCount = 0;
         Set<String> patternIds = new HashSet<>();
         boolean categoryMetadataEnabled = MAOOM_NAMESPACE.equals(root.lookupNamespaceURI("maoom"));
+        boolean ruleTypeRequired = SCHEMA_KINDS.get(0).pattern().matcher(path.getFileName().toString()).matches();
         for (int i = 0; i < patterns.getLength(); i++) {
             Element pattern = (Element) patterns.item(i);
             String patternId = pattern.getAttribute("id").trim();
@@ -139,7 +142,7 @@ public class SchematronFileService {
                     if (!(child instanceof Element assertion) || !NAMESPACE.equals(assertion.getNamespaceURI())
                             || !("assert".equals(assertion.getLocalName())
                             || "report".equals(assertion.getLocalName()))) continue;
-                    validateAssertion(patternId, assertion, xpath, categoryMetadataEnabled);
+                    validateAssertion(patternId, assertion, xpath, categoryMetadataEnabled, ruleTypeRequired);
                     assertionCount++;
                     ruleAssertionCount++;
                 }
@@ -152,7 +155,8 @@ public class SchematronFileService {
 
     private void validateAssertion(String patternId, Element assertion,
                                    net.sf.saxon.s9api.XPathCompiler xpath,
-                                   boolean categoryMetadataEnabled) throws Exception {
+                                   boolean categoryMetadataEnabled,
+                                   boolean ruleTypeRequired) throws Exception {
         String elementName = assertion.getLocalName();
         String test = assertion.getAttribute("test").trim();
         if (test.isBlank()) throw new IllegalArgumentException(elementName + " test가 비어 있습니다: " + patternId);
@@ -170,6 +174,17 @@ public class SchematronFileService {
                 elementName + " maoom:category가 없습니다: " + patternId);
         if (!category.isBlank() && !ALLOWED_CATEGORIES.contains(category)) throw new IllegalArgumentException(
                 elementName + " maoom:category 허용값이 아닙니다: " + category + " (" + patternId + ")");
+        String ruleType = assertion.getAttribute("type").trim().toUpperCase(Locale.ROOT);
+        if (ruleTypeRequired && ruleType.isBlank()) throw new IllegalArgumentException(
+                elementName + " type이 없습니다: " + patternId);
+        if (!ruleType.isBlank() && !ALLOWED_RULE_TYPES.contains(ruleType)) throw new IllegalArgumentException(
+                elementName + " type 허용값이 아닙니다: " + ruleType + " (" + patternId + ")");
+        // 계층 제한은 선택 사항이며, 지정할 때만 실제 DITAMAP 계층으로 사용할 양의 정수를 허용한다.
+        String level = assertion.getAttributeNS(MAOOM_NAMESPACE, "level").trim();
+        if (!level.isBlank() && (!level.matches("[1-9]\\d*") || Integer.parseInt(level) > 100)) {
+            throw new IllegalArgumentException(
+                    elementName + " maoom:level은 1~100 사이의 정수여야 합니다: " + level + " (" + patternId + ")");
+        }
     }
 
     public String sha256(Path path) throws Exception {

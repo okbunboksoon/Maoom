@@ -1,9 +1,11 @@
-<schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
+<schema xmlns="http://purl.oclc.org/dsdl/schematron"
+		xmlns:maoom="urn:maoom:schematron"
+		queryBinding="xslt2">
 
 <!--
-V1.0.2 10.02
+V1.0.2 10.02 
 	정수부가 없는 소수 검사 추가
-V1.0.3 10.03
+V1.0.3 10.03 
 	1. height, width, scale 속성이 모두 없는 경우 검출
 	2. height, width, scale 속성이 모두 있는 경우 검출
 	3. scale 속성이 없고, height와 width 중 하나만 있는 경우 검출
@@ -13,34 +15,51 @@ V1.0.6 10.13
 	1. image placement 속성 누락 검사 추가 - 28
 	2. DITAMAP topicmeta image data의 href 누락 검사 추가 - 29
 	3. DITAMAP topicmeta image data의 SVG 확장자 검사 추가 - 30
+V1.0.7 10.14
+	xref에 type="fn"과 href를 함께 사용한 각주 형식 검사 - 31
+V1.0.8 10.16
+	role 속성값 추가
+V1.0.9 10.16
+	concept, task, reference, section의 title을 제외하고 xref의 href는 topic ID까지만 사용할 수 있습니다. # 뒤에 element ID(/e00000 형태)는 사용할 수 없습니다. 추가 - 19
+V1.0.10 10.30
+	Kia 표기 대소문자 검사 - 32
+V1.0.12 11.02
+	1. 문장 기호가 2개 이상 연속된 경우 검사 - 35
+	2. 문장 기호 앞뒤에 공백이 있는 경우 검사 - 36
+	마침표 앞 공백 검사 - 33
+V1.0.11 11.02
+	L1 Chapter DITA 파일에 내용이 있는 shortdesc가 있으면 검출 - 34
+
+V1.0.1 11.02
+	운영 원고 스키마트론 하나로 합침
 -->
 
 	<!-- 1 -->
 	<!-- scale=15 이미지 placement inline 검사 -->
 	<pattern id="inline-image-check">
 		<rule context="image[@scale='15']">
-			<assert role="none" test="@placement = 'inline'">
+			<assert type="DOCS" role="minor" maoom:category="image" test="@placement = 'inline'">
 				@scale이 'inline'인 image의 @placement 속성값은 "inline" 이어야 합니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 2 -->
 	<!-- image 크기 속성 조합 검사 10.03 -->
 	<pattern id="image-size-attribute-check">
 		<rule context="image">
 			<!-- height, width, scale 속성이 모두 없는 경우 -->
-			<assert role="none" test="@height or @width or @scale">
+			<assert type="DOCS" role="minor" maoom:category="image" test="@height or @width or @scale">
 				image에 height, width, scale 속성이 모두 없습니다.
 			</assert>
 
 			<!-- height, width, scale 속성이 모두 있는 경우 -->
-			<assert role="none" test="not(@height and @width and @scale)">
+			<assert type="DOCS" role="minor" maoom:category="image" test="not(@height and @width and @scale)">
 				image에 height, width, scale 속성을 모두 함께 사용할 수 없습니다.
 			</assert>
 
 			<!-- scale이 없고 height와 width 중 하나만 있는 경우 -->
-			<assert role="none" test="not(not(@scale) and ((@height and not(@width)) or (@width and not(@height))))">
+			<assert type="DOCS" role="minor" maoom:category="image" test="not(not(@scale) and ((@height and not(@width)) or (@width and not(@height))))">
 				image에 scale 속성이 없을 때는 height와 width 중 하나만 사용할 수 없습니다.
 			</assert>
 		</rule>
@@ -51,7 +70,7 @@ V1.0.6 10.13
 	<!--
 	<pattern id="image-placement-check">
 	  <rule context="fig/figgroup/image[not(ancestor::table and @scale='15')]">
-	    <assert role="none" test="@placement = 'break'">
+	    <assert type="DOCS" role="minor" test="@placement = 'break'">
 	      figgroup 내부의 image 요소는 @placement 속성값이 "break" 이어야 합니다.
 	    </assert>
 	  </rule>
@@ -60,77 +79,77 @@ V1.0.6 10.13
 
 	<pattern id="image-placement-check">
 		<rule context="fig/figgroup/image[not(ancestor::table and @scale='15') and not(contains(@href, 'WKIA'))]">
-			<assert role="none" test="@placement = 'break'">
+			<assert type="DOCS" role="minor" maoom:category="image" test="@placement = 'break'">
 				figgroup 내부의 image 요소는 @placement 속성값이 "break" 이어야 합니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 4 -->
 	<!-- image scale 허용값 검사 -->
 	<pattern id="image-scale-check">
 		<rule context="image[@scale]">
-			<assert role="none" test="@scale='95' or @scale='70' or @scale='50' or @scale='30' or @scale='15'">
+			<assert type="DOCS" role="minor" maoom:category="image" test="@scale='95' or @scale='70' or @scale='50' or @scale='30' or @scale='15'">
 				image의 기본 scale 속성값은 95, 70, 50, 30, 15 이외 값으로 지정 되었습니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 5 -->
 	<!-- table tgroup 1개만 허용 -->
 	<pattern id="single-tgroup-check">
 		<rule context="table">
-			<assert role="none" test="count(tgroup) = 1">
+			<assert type="DOCS" role="critical" maoom:category="table" test="count(tgroup) = 1">
 				table은 반드시 하나의 tgroup만을 가져야 합니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 6 -->
 	<!-- image data 경로 오류 검사 -->
 	<pattern id="image-path-check">
 		<rule context="data[@name='image']">
-			<assert role="none" test="not(@format='svg' and @href = './oxygen-webhelp/template/images/')">
+			<assert type="DOCS" role="major" maoom:category="ditamap" test="not(@format='svg' and @href = './oxygen-webhelp/template/images/')">
 				DITAMAP의 SVG 잘못된 image 경로가 사용되었습니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 7 -->
 	<!-- topicref에 topicmeta 필수 검사 -->
 	<pattern id="topicref-topicmeta-check">
 		<rule context="map/topicref[not(@type='subjectScheme')]">
-			<assert role="none" test="topicmeta">
+			<assert type="DOCS" role="major" maoom:category="ditamap" test="topicmeta">
 				DITAMAP의 1레벨 topicref에는 topicmeta가 있어야 합니다.(forword 제외)
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 8 -->
 	<!-- topicmeta에 navtitle 필수 검사 -->
 	<pattern id="topicmeta-navtitle-check">
 		<rule context="map/topicref/topicmeta">
-			<assert role="none" test="navtitle">
+			<assert type="DOCS" role="major" maoom:category="ditamap" test="navtitle">
 				topicmeta에는 navtitle이 있어야 합니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 9 -->
 	<!-- image href 경로 형식 검사 -->
 	<pattern id="image-href-format-check">
 		<rule context="image[@href]">
-			<assert role="none" test=" starts-with(@href, '../../images/')">
+			<assert type="DOCS" role="major" maoom:category="image" test=" starts-with(@href, '../../images/')">
 				image의 href는 반드시 '../../images/' 경로를 사용해야 합니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 10 -->
 	<!-- xref href 금지 문자 (%) 검사 -->
 	<pattern id="xref-invalid-char-check">
 		<rule context="xref[@href]">
-			<assert role="none" test="not(contains(@href, '%'))">
+			<assert type="DOCS" role="major" maoom:category="xref" test="not(contains(@href, '%'))">
 				xref의 href에 '%' 문자가 포함되면 안됩니다.
 			</assert>
 		</rule>
@@ -142,7 +161,7 @@ V1.0.6 10.13
 		<rule context="*[not(ancestor-or-self::map) and not(self::xref) and not(self::image) and not(self::colspec) and not(self::entry) and not(self::tm)
 							and not(self::related-links) and not(self::linkpool) and not(self::linkpool) and not(self::xref)
 							and not(self::image) and not(self::indexterm)]">
-			<assert role="none" test="normalize-space(.) != '' or *">내용이 없는 빈 태그 &lt;<name/>/&gt;는 사용할 수 없습니다.</assert>
+			<assert type="DOCS" role="major" maoom:category="element" test="normalize-space(.) != '' or *">내용이 없는 빈 태그 &lt;<name/>/&gt;는 사용할 수 없습니다.</assert>
 		</rule>
 	</pattern>
 
@@ -150,7 +169,7 @@ V1.0.6 10.13
 	<!-- 요소 시작 공백 검사 -->
 	<pattern id="trim-leading-whitespace-check">
 		<rule context="p | ph | title | shortdesc">
-			<assert role="none" test="not(text()[1][normalize-space(.) != '' and starts-with(., ' ') and not(preceding-sibling::*)])">
+			<assert type="DOCS" role="minor" maoom:category="whitespace" test="not(text()[1][normalize-space(.) != '' and starts-with(., ' ') and not(preceding-sibling::*)])">
 				문장 앞에 불필요한 공백이 있습니다.
 			</assert>
 		</rule>
@@ -162,7 +181,7 @@ V1.0.6 10.13
 		<rule context="p | title | shortdesc">
 
 			<!-- 마지막 노드가 내용이 있는 텍스트이고 공백으로 끝나는 경우 -->
-			<assert role="none" test="not(
+			<assert type="DOCS" role="minor" maoom:category="whitespace" test="not(
 				node()[last()]
 					[self::text()]
 					[normalize-space(.) != '']
@@ -172,7 +191,7 @@ V1.0.6 10.13
 			</assert>
 
 			<!-- 인라인 태그 뒤에 공백만 있는 텍스트가 남은 경우 -->
-			<assert role="none" test="not(
+			<assert type="DOCS" role="minor" maoom:category="whitespace" test="not(
 				node()[last()]
 					[self::text()]
 					[normalize-space(.) = '']
@@ -229,7 +248,7 @@ V1.0.6 10.13
 		">
 
 			<!-- 마지막 노드가 내용이 있는 텍스트이고 공백으로 끝나는 경우 -->
-			<assert role="none" test="not(
+			<assert type="DOCS" role="minor" maoom:category="whitespace" test="not(
 				node()[last()]
 					[self::text()]
 					[normalize-space(.) != '']
@@ -239,7 +258,7 @@ V1.0.6 10.13
 			</assert>
 
 			<!-- 인라인 태그 뒤에 공백만 있는 텍스트가 남은 경우 -->
-			<assert role="none" test="not(
+			<assert type="DOCS" role="minor" maoom:category="whitespace" test="not(
 				node()[last()]
 					[self::text()]
 					[normalize-space(.) = '']
@@ -274,76 +293,83 @@ V1.0.6 10.13
 	<!-- ul아래 p 사용 금지 -->
 	<pattern id="ul-direct-p-check">
 		<rule context="ul">
-			<assert role="none" test="not(p)">
-				ul 바로 아래에 p 태그를 직접 사용할 수 없습니다.
+			<assert type="DOCS" role="critical" maoom:category="structure" test="not(p)">
+				ul 바로 아래에 p 태그를 직접 사용할 수 없습니다. 
 				li를 사용해야 합니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 16 -->
 	<!-- li 내부 직접 텍스트 사용 금지 -->
 	<pattern id="li-direct-text-check">
 		<rule context="li">
-			<assert role="none" test="not(text()[normalize-space()])">
-				li 안에 텍스트를 직접 작성할 수 없습니다.
+			<assert type="DOCS" role="critical" maoom:category="structure" test="not(text()[normalize-space()])">
+				li 안에 텍스트를 직접 작성할 수 없습니다. 
 				p 태그로 감싸야 합니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 17 -->
 	<!-- step 내부 직접 텍스트 사용 금지 -->
 	<pattern id="step-cmd-check">
 		<rule context="step">
-			<assert role="none" test="cmd">
+			<assert type="DOCS" role="critical" maoom:category="structure" test="cmd">
 				step에는 cmd가 반드시 있어야 합니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 18 -->
 	<!-- 블록 요소 내부 직접 텍스트 금지 -->
 	<pattern id="mixed-text-block-check">
 		<rule context="conbody | taskbody | refbody | section">
-			<assert role="none" test="not(text()[normalize-space()])">
+			<assert type="DOCS" role="critical" maoom:category="structure" test="not(text()[normalize-space()])">
 				블록 요소 외에 불필요한 텍스트가 포함되어 있습니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 19 -->
 	<!-- xref 형식 체크 -->
 	<pattern id="xref-format-check">
 		<rule context="xref[@href][not(@format='html')]">
 			<!-- # 포함 필수 -->
-			<assert role="none" test="contains(@href, '#')">
+			<assert type="DOCS" role="critical" maoom:category="xref" test="contains(@href, '#')">
 				xref는 반드시 '#id' 형식을 포함해야 합니다.
 			</assert>
-			<!-- # 이후 / 금지 -->
-			<assert role="none" test="not(contains(substring-after(@href, '#'), '/'))">
-				xref의 href는 topic ID까지만 사용할 수 있습니다.
-				# 뒤에 element ID(/e00000 형태)는 사용할 수 없습니다.
+			<!-- element ID 참조는 concept/task/reference/section의 직계 title만 허용 -->
+			<assert type="DOCS" role="minor" maoom:category="xref" test="for $href in string(@href) return (
+				not(contains(substring-after($href, '#'), '/'))
+				or
+				(if (substring-before($href, '#') = '') then
+					exists(root(.)//*[self::title]
+						[@id = substring-after(substring-after($href, '#'), '/')]
+						[parent::concept or parent::task or parent::reference or parent::section]
+						[ancestor::*[self::concept or self::task or self::reference]
+							[@id = substring-before(substring-after($href, '#'), '/')]])
+				else
+					if (doc-available(resolve-uri(substring-before($href, '#'), base-uri(.)))) then
+						exists(doc(resolve-uri(substring-before($href, '#'), base-uri(.)))
+							//*[self::title]
+							[@id = substring-after(substring-after($href, '#'), '/')]
+							[parent::concept or parent::task or parent::reference or parent::section]
+							[ancestor::*[self::concept or self::task or self::reference]
+								[@id = substring-before(substring-after($href, '#'), '/')]])
+					else false()))">
+				concept, task, reference, section의 title을 제외하고 xref의 href는 topic ID까지만 사용할 수 있습니다. # 뒤에 element ID(/e00000 형태)는 사용할 수 없습니다.
 			</assert>
 		</rule>
 	</pattern>
-
-	<!-- xref에 type="fn"과 href를 함께 사용한 각주 형식 검사 -->
-	<pattern id="xref-fn-element-check">
-		<rule context="xref">
-			<report role="none" test="@type = 'fn' and normalize-space(@href) != ''">
-				&lt;fn&gt; 태그를 사용하여 내용을 입력해야 합니다.
-			</report>
-		</rule>
-	</pattern>
-
+	
 	<!-- 20 -->
 	<!-- 허용된 DITA 태그 검사 (목록 외 태그 사용 시 오류) -->
 	<pattern id="invalid-tag-check">
 		<rule context="*[not(
 				  self::concept or self::task or self::reference or
 				  self::conbody or self::taskbody or self::refbody or
-				  self::title or self::shortdesc or self::p or
+				  self::title or self::shortdesc or self::p or self::titlealts or
 				  self::ul or self::ol or self::li or
 				  self::steps or self::step or self::cmd or self::substeps or self::substep or self::info or self::context or self::steps-unordered or
 				  self::section or self::sectiondiv or self::div or
@@ -360,27 +386,27 @@ V1.0.6 10.13
 				  self::postreq or self::stepresult or self::sub or self::sup or self::stepsection or self::steps-unordered or
 				  self::metadata or self::data or self::prolog or self::keywords or self::indexterm
 				)]">
-			<assert role="none" test="false()">
+			<assert type="DOCS" role="critical" maoom:category="element" test="false()">
 				허용되지 않은 태그가 사용되었습니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 21 -->
 	<!-- section 내부 indexterm 금지 -->
 	<pattern id="section-indexterm-check">
 		<rule context="section/indexterm">
-			<assert role="none" test="false()">
+			<assert type="DOCS" role="major" maoom:category="index" test="false()">
 				section 내부에는 indexterm을 사용할 수 없습니다.
 			</assert>
 		</rule>
 	</pattern>
-
+	
 	<!-- 22 -->
 	<!-- 빈 indexterm 금지 -->
 	<pattern id="empty-indexterm-check">
 		<rule context="indexterm">
-			<assert role="none" test="normalize-space(.) != ''">
+			<assert type="DOCS" role="critical" maoom:category="index" test="normalize-space(.) != ''">
 				비어있는 indexterm은 사용할 수 없습니다.
 			</assert>
 		</rule>
@@ -392,7 +418,7 @@ V1.0.6 10.13
 
 		<rule context=" title | p | shortdesc | entry[not(descendant::p)] | li[not(descendant::p)]">
 
-	        <assert role="none" test="not(matches(normalize-unicode(., 'NFD'), '\p{M}'))">
+	        <assert type="DOCS" role="major" maoom:category="language" test="not(matches(normalize-unicode(., 'NFD'), '\p{M}'))">
 	            영어가 아닌 다른 언어로 된 문장이 포함되어 있을 수 있습니다.
 	        </assert>
 	    </rule>
@@ -403,7 +429,7 @@ V1.0.6 10.13
 	<pattern id="unit-space-check">
 		<rule context="p | cmd | shortdesc | title">
 			<!-- 숫자 + 단위 공백 누락 검사 -->
-			<assert role="none" test="
+			<assert type="DOCS" role="major" maoom:category="unit" test="
 				not(
 
 				contains(., '0mph') or contains(., '1mph') or contains(., '2mph') or contains(., '3mph') or contains(., '4mph') or contains(., '5mph') or contains(., '6mph') or contains(., '7mph') or contains(., '8mph') or contains(., '9mph')
@@ -467,7 +493,7 @@ V1.0.6 10.13
 	<!-- placement="break" 이미지 align 검사 -->
 	<pattern id="image-break-align-check">
 	    <rule context="image[@placement='break']">
-	        <assert role="none" test="@align='center'">
+	        <assert type="DOCS" role="major" maoom:category="image" test="@align='center'">
 	            placement="break" 이미지는 align="center" 정렬을 사용해야 합니다.
 	        </assert>
 	    </rule>
@@ -477,7 +503,7 @@ V1.0.6 10.13
 	<!-- WKIA_ 이미지 placement 검사 -->
 	<pattern id="wkia-inline-placement-check">
 	    <rule context="image[contains(@href, 'WKIA_')]">
-	        <assert role="none" test="@placement='inline'">
+	        <assert type="DOCS" role="major" maoom:category="image" test="@placement='inline'">
 	            WKIA_ 이미지는 placement="inline" 속성을 사용해야 합니다.
 	        </assert>
 	    </rule>
@@ -487,13 +513,13 @@ V1.0.6 10.13
 	    <rule context="image[@href]">
 
 	        <!-- 공백 검사 -->
-	        <assert role="none" test="not(matches(@href, '\s'))">
+	        <assert type="DOCS" role="major" maoom:category="image" test="not(matches(@href, '\s'))">
 	            이미지명에 공백이 포함되어 있습니다:
 	            <value-of select="@href"/>
 	        </assert>
 
 	        <!-- eps 확장자 검사 -->
-	        <assert role="none" test="
+	        <assert type="DOCS" role="major" maoom:category="image" test="
 	            matches(
 	                normalize-space(@href),
 	                '\.eps$',
@@ -512,7 +538,7 @@ V1.0.6 10.13
 	<!-- 정수부가 없는 소수 검사 -->
 	<pattern id="decimal-leading-zero-check">
 		<rule context="p | cmd | shortdesc | title">
-			<assert role="none" test="not(matches(
+			<assert type="DOCS" role="critical" maoom:category="unit" test="not(matches(
 				.,
 				'(^|[^0-9])\.[0-9]+\s*(mph|km/h|bar|kPa|psi|lbf·ft|kgf·m|ft|m|in|cm|inches|mm|sm|miles|km|mi|lb\.|kg|lbs\.|gallons|liters|°F|°C)'
 			))">
@@ -525,7 +551,7 @@ V1.0.6 10.13
 	<!-- image placement 속성 필수 검사 -->
 	<pattern id="image-placement-required-check">
 		<rule context="image">
-			<assert role="none" test="@placement">
+			<assert type="DOCS" role="major" maoom:category="image" test="@placement">
 				image에는 placement 속성이 있어야 합니다.
 			</assert>
 		</rule>
@@ -535,7 +561,7 @@ V1.0.6 10.13
 	<!-- DITAMAP topicmeta image data의 href 필수 검사 -->
 	<pattern id="topicmeta-image-href-required-check">
 		<rule context="map//topicmeta//data[@name='image']">
-			<assert role="none" test="@href and normalize-space(@href) != ''">
+			<assert type="DOCS" role="major" maoom:category="ditamap" test="@href and normalize-space(@href) != ''">
 				DITAMAP topicmeta의 image data에는 href 속성값이 있어야 합니다.
 			</assert>
 		</rule>
@@ -545,9 +571,209 @@ V1.0.6 10.13
 	<!-- DITAMAP topicmeta image data의 SVG 확장자 검사 -->
 	<pattern id="topicmeta-image-svg-extension-check">
 		<rule context="map//topicmeta//data[@name='image'][@href and normalize-space(@href) != '']">
-			<assert role="none" test="matches(lower-case(normalize-space(@href)), '\.svg$')">
+			<assert type="DOCS" role="major" maoom:category="ditamap" test="matches(lower-case(normalize-space(@href)), '\.svg$')">
 				DITAMAP topicmeta의 image data href에는 SVG 파일만 사용할 수 있습니다.
 			</assert>
+		</rule>
+	</pattern>
+
+	<!-- 31 -->
+	<!-- xref에 type="fn"과 href를 함께 사용한 각주 형식 검사 -->
+	<pattern id="xref-fn-element-check">
+		<rule context="xref">
+			<report type="DOCS" role="minor" maoom:category="xref" test="@type = 'fn' and normalize-space(@href) != ''">
+				&lt;fn&gt;태그를 사용하여 내용을 입력해야 하는지 확인하세요.
+			</report>
+		</rule>
+	</pattern>
+
+	<!-- 32 -->
+	<!-- Kia 표기 대소문자 검사 -->
+	<pattern id="kia-capitalization-check">
+		<rule context="p | cmd | shortdesc | title | entry[not(descendant::p)] | li[not(descendant::p)]">
+			<assert type="DOCS" role="major" maoom:category="language" test="not(matches(replace(., '(https?://|www\.)[^\s]+|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', '', 'i'), '(^|[^A-Za-z])(kia|KIA)([^A-Za-z]|$)'))">
+				kia 또는 KIA는 Kia로 표기해야 합니다.
+			</assert>
+		</rule>
+	</pattern>
+
+	<!-- 33 -->
+	<!-- 마침표 앞 공백 검사 -->
+	<pattern id="space-before-period-check">
+		<rule context="p | cmd | shortdesc | title | entry[not(descendant::p)] | li[not(descendant::p)]">
+			<assert type="DOCS" role="minor" maoom:category="whitespace" test="not(.//text()[matches(., '\s+\.$|\s+\.[^A-Za-z0-9]')])">
+				마침표 앞에 불필요한 공백이 있습니다.
+			</assert>
+		</rule>
+	</pattern>
+
+	<!-- 34 -->
+	<!-- DITAMAP L1 Chapter DITA 파일의 shortdesc 사용 금지 -->
+	<pattern id="chapter-level1-shortdesc-check">
+		<rule context="shortdesc">
+			<report type="DOCS" role="critical" maoom:category="structure" maoom:level="1" test="normalize-space(.) != ''">
+				Chapter 레벨 dita 파일에는 &lt;shortdesc&gt; 태그를 추가할 수 없습니다.
+			</report>
+		</rule>
+	</pattern>
+
+	<!-- 35 -->
+	<!-- 문장 기호가 2개 이상 연속된 경우 검사 -->
+	<pattern id="consecutive-sentence-punctuation-check">
+		<rule context="p | cmd | shortdesc | title | entry[not(descendant::p)] | li[not(descendant::p)]">
+			<assert type="DOCS" role="minor" maoom:category="whitespace" test="not(matches(string(.), '[.!?。！？]{2,}'))">
+				문장 기호를 2개 이상 연속해서 사용할 수 없습니다.
+			</assert>
+		</rule>
+	</pattern>
+
+	<!-- 36 -->
+	<!-- 문장 기호 앞뒤 공백 검사 -->
+	<pattern id="space-around-sentence-punctuation-check">
+		<rule context="p | cmd | shortdesc | title | entry[not(descendant::p)] | li[not(descendant::p)]">
+			<!-- 인라인 요소 경계를 string(.)으로 합치면 정상적인 <xref/>, <xref/>도
+			     공백-쉼표-공백처럼 보이므로 실제 텍스트 노드 내부만 검사한다.
+			     배터리 극성의 '- 단자'와 방향·위치를 나타내는 '- 측'의 앞뒤 공백은 정상 표기로 허용한다. -->
+			<assert type="DOCS" role="minor" maoom:category="whitespace" test="not(.//text()[matches(replace(., '\s+-\s+(단자|측)', ''), '\s+[-.,!?;:。！？，；：]+\s+')])">
+				문장 기호 앞뒤에 불필요한 공백이 있습니다.
+			</assert>
+		</rule>
+	</pattern>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- 운영 스키마트론 -->
+
+	<!-- 독일어 특이사항 -->
+	<pattern id="de-vorwort-check">
+		<rule context="map[@xml:lang='de-DE' or contains(title, 'de_DE')]">
+			<assert type="PUB" role="critical" maoom:category="language" test="some $t in topicref/@href
+	            satisfies
+	            exists(
+	                document(resolve-uri($t, base-uri(.)))
+	                //concept[
+	                    upper-case(normalize-space(title))='VORWORT'
+	                    and
+	                    contains(
+	                        normalize-space(string(.)),
+	                        'Ihr Kia-Fahrzeug ist mit einem SRS-Airbagsystem und Gurtstraffern ausgestattet.'
+	                    )
+	                ]
+	            )
+	        ">
+	            독일어 전용 서문이 없습니다.
+	        </assert>
+		</rule>
+	</pattern>
+
+
+
+	<!-- 캐나다 불어 특이사항 -->
+	<pattern id="fr-tc-check">
+		<rule context="map[contains(title,'fr_CA')]">
+			<assert type="PUB" role="critical" maoom:category="language" test="some $t in .//topicref/@href satisfies exists(document(resolve-uri($t, base-uri(.)))//concept[normalize-space(title)='Signalement des défauts de sécurité' and contains(normalize-space(string(.)),'Si vous croyez que votre véhicule présente un défaut qui pourrait provoquer un accident ou causer des')])">
+	            캐나다 불어 TC가 없습니다.
+	        </assert>
+		</rule>
+	</pattern>
+
+
+
+	<!-- 러시아 특이사항 -->
+	<pattern id="ru-era-glonass-check">
+		<rule context="map[@xml:lang='ru-RU' or contains(title,'ru_RU')]">
+			<assert type="PUB" role="critical" maoom:category="language" test="exists(.//topicref[@href='RU_Intro.dita'])">
+	            러시아어 Introduction챕터 러시아 ERA-GLONASS 무단 개조 경고 관련 내용의 DITA파일이 없습니다.
+	        </assert>
+		</rule>
+	</pattern>
+	<pattern id="ru-era-glonass-image-check">
+		<rule context="map[@xml:lang='ru-RU' or contains(title,'ru_RU')]">
+			<report type="PUB" role="critical" maoom:category="language" test="true()">
+	            Emergency 챕터 ERA-GLONASS 내용 중 맵 램프와 차량 형상이 해당 차종 형상이 맞는지 확인 필요합니다.
+	        </report>
+		</rule>
+	</pattern>
+	<pattern id="ru-appendix-check">
+		<rule context="map[@xml:lang='ru-RU' or contains(title,'ru_RU')]">
+			<assert type="PUB" role="critical" maoom:category="language" test="exists(.//topicref[@href='OM_14_3_Appendix_RU.dita'])">
+	            러시아 전용 Abbreviation이 없습니다.
+	        </assert>
+			<assert type="PUB" role="critical" maoom:category="language" test="exists(.//topicref[@href='OM_14_4_Appendix_RU.dita'])">
+	            러시아 전용 Abbreviation이 없습니다.
+	        </assert>
+			<assert type="PUB" role="critical" maoom:category="language" test="exists(.//topicref[@href='OM_14_5_Appendix_RU.dita'])">
+	            러시아 전용 Abbreviation이 없습니다.
+	        </assert>
+		</rule>
+	</pattern>
+
+
+
+	<!-- 멕시코 스페인어 특이사항 -->
+	<pattern id="es-mx-warning-check">
+		<rule context="map[contains(title,'es_MX')]">
+			<assert type="PUB" role="critical" maoom:category="language" test="some $t in .//topicref/@href satisfies exists(document(resolve-uri($t, base-uri(.)))//concept[normalize-space(string(title))='Vista general' and .//note[@type='warning']/p[contains(normalize-space(string(.)),'No abrir, retirar ni colocar en otro vehículo.')]])">
+	           에어백 관련 경고 문구 노트가 없습니다.
+	        </assert>
+		</rule>
+	</pattern>
+	<pattern id="es-mx-airbag-warning-check">
+		<rule context="map[contains(title,'es_MX')]">
+			<assert type="PUB" role="critical" maoom:category="language" test="some $t in .//topicref/@href satisfies exists(document(resolve-uri($t, base-uri(.)))//*[contains(normalize-space(string(.)),'Las etiquetas de advertencia del airbag están adheridas para alertar a los pasajeros del riesgo potencial del sistema de airbags.')])">
+	            에어백 라벨 관련 경고 문구 수정해야합니다.
+	        </assert>
+		</rule>
+	</pattern>
+	<pattern id="es-mx-retire-lentamente-check">
+		<rule context="map[contains(title,'es_MX')]">
+			<assert type="PUB" role="critical" maoom:category="language" test="some $t in .//topicref/@href satisfies exists(document(resolve-uri($t, base-uri(.)))//p[normalize-space(string(.))='Retire lentamente.'])">
+	            연료 주입구 관련 노트 문구 변경해야합니다.
+	        </assert>
+		</rule>
+	</pattern>
+	<pattern id="es-mx-brica-lentamente-check">
+		<rule context="map[contains(title,'es_MX')]">
+			<report type="PUB" role="critical" maoom:category="language" test="some $t in .//topicref/@href satisfies exists(document(resolve-uri($t, base-uri(.)))//p[contains(translate(normalize-space(string(.)),'&#160;',' '),'técnicos capacitados en fábrica')])">
+				Foreword의 BER문구 변경해야합니다.
+			</report>
+		</rule>
+	</pattern>
+	<pattern id="es-mx-fuel-additive-check">
+		<rule context="map[contains(title,'es_MX')]">
+			<assert type="PUB" role="critical" maoom:category="language" test="some $t in .//topicref/@href satisfies exists(document(resolve-uri($t, base-uri(.)))//section[normalize-space(string(title))='Aditivos para combustible' and .//p[contains(normalize-space(string(.)),'Los aditivos están disponibles en uno de sus concesionarios autorizados Kia autorizado por Kia')]])">
+				Introduction 챕터의 Fuel Additives 내용 (스페인어:Aditivos del combustible) ber문구 변경해야합니다.
+			</assert>
+		</rule>
+	</pattern>
+
+
+
+	<!-- 세르비아 특이사항 -->
+	<pattern id="sr-latn-precomposed-c-check">
+	    <rule context="p[contains(., '&#x0301;')]">
+	        <report type="PUB" role="critical" maoom:category="language" test="true()">
+	            세르비아어 조합형 문자(c + U+0301) 사용됨 다시 배치돌려야합니다.
+	        </report>
+	    </rule>
+	</pattern>
+
+
+
+	<!-- 하이픈(Non-Breaking Hyphen) 특이사항 -->
+	<pattern id="non-breaking-hyphen-check">
+		<rule context="p[contains(., '&#x2011;')]">
+			<report type="PUB" role="critical" maoom:category="language" test="true()">
+				Non-Breaking Hyphen(U+2011) 사용됨 다시 배치돌려야합니다.
+			</report>
 		</rule>
 	</pattern>
 

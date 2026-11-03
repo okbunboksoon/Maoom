@@ -18,65 +18,57 @@ class SchematronFileServiceTest {
         SchematronFileService service = new SchematronFileService(folder.toString());
 
         var initial = service.listFiles();
-        assertEquals(2, initial.size());
-        assertEquals(java.util.List.of("DOCS_CHECK_v1.0.6.sch", "PUB_CHECK_v1.0.1.sch"),
+        assertEquals(1, initial.size());
+        assertEquals(java.util.List.of("DOCS_PUB_CHECK_v1.0.1.sch"),
                 initial.stream().map(item -> item.fileName()).toList());
         assertTrue(initial.stream().allMatch(item -> item.valid()),
                 () -> initial.toString());
 
-        Files.delete(folder.resolve("DOCS_CHECK_v1.0.6.sch"));
-        Files.delete(folder.resolve("PUB_CHECK_v1.0.1.sch"));
+        Files.delete(folder.resolve("DOCS_PUB_CHECK_v1.0.1.sch"));
         assertTrue(service.listFiles().isEmpty(), "사용자가 마지막 파일을 삭제하면 자동 복원하지 않아야 합니다.");
     }
 
     @Test
-    void currentProjectSchemasPassLintAndProvideBothChoices() throws Exception {
+    void currentProjectSchemaPassesLintAndProvidesSingleChoice() throws Exception {
         SchematronFileService service = new SchematronFileService(Path.of("schematron").toString());
         var choices = service.latestChoices();
         assertAll(
-                () -> assertTrue(choices.stream().filter(choice -> choice.type().equals("DOCS"))
-                        .findFirst().orElseThrow().available(), () -> choices.toString()),
-                () -> assertTrue(choices.stream().filter(choice -> choice.type().equals("PUB"))
-                        .findFirst().orElseThrow().available(), () -> choices.toString()));
+                () -> assertEquals(1, choices.size()),
+                () -> assertEquals("DOCS_PUB", choices.get(0).type()),
+                () -> assertTrue(choices.get(0).available(), () -> choices.toString()));
     }
 
     @Test
-    void selectsLatestDocsAndPublishingVersionsNumerically() throws Exception {
+    void selectsLatestCombinedVersionNumerically() throws Exception {
         Path folder = Files.createDirectories(tempDir.resolve("versioned-schemas"));
         SchematronFileService service = new SchematronFileService(folder.toString());
-        Files.writeString(folder.resolve("DOCS_CHECK_v1.0.9.sch"), validSchema("docs-109"), StandardCharsets.UTF_8);
-        Files.writeString(folder.resolve("DOCS_CHECK_v1.0.10.sch"), validSchema("docs-1010"), StandardCharsets.UTF_8);
-        Files.writeString(folder.resolve("PUB_CHECK_v2.1.0.sch"), validSchema("pub-210"), StandardCharsets.UTF_8);
+        Files.writeString(folder.resolve("DOCS_PUB_CHECK_v1.0.9.sch"), validSchema("combined-109"), StandardCharsets.UTF_8);
+        Files.writeString(folder.resolve("DOCS_PUB_CHECK_v1.0.10.sch"), validSchema("combined-1010"), StandardCharsets.UTF_8);
         Files.writeString(folder.resolve("DOCS_CHECK_backup.sch"), validSchema("ignored"), StandardCharsets.UTF_8);
 
         var choices = service.latestChoices();
-        assertEquals("DOCS_CHECK_v1.0.10.sch", choices.stream()
-                .filter(choice -> choice.type().equals("DOCS")).findFirst().orElseThrow().fileName());
-        assertEquals("PUB_CHECK_v2.1.0.sch", choices.stream()
-                .filter(choice -> choice.type().equals("PUB")).findFirst().orElseThrow().fileName());
-        assertEquals("DOCS_CHECK_v1.0.10.sch", service.resolveLatest("DOCS").getFileName().toString());
-        assertEquals("PUB_CHECK_v2.1.0.sch", service.resolveLatest("PUB").getFileName().toString());
+        assertEquals("DOCS_PUB_CHECK_v1.0.10.sch", choices.get(0).fileName());
+        assertEquals("DOCS_PUB_CHECK_v1.0.10.sch", service.resolveLatest("DOCS_PUB").getFileName().toString());
     }
 
     @Test
     void fallsBackToThePreviousValidVersionWhenTheNewestFileIsInvalid() throws Exception {
         Path folder = Files.createDirectories(tempDir.resolve("fallback-schemas"));
         SchematronFileService service = new SchematronFileService(folder.toString());
-        Files.writeString(folder.resolve("PUB_CHECK_v1.0.1.sch"), validSchema("pub-101"), StandardCharsets.UTF_8);
-        Files.writeString(folder.resolve("PUB_CHECK_v1.0.2.sch"),
+        Files.writeString(folder.resolve("DOCS_PUB_CHECK_v1.0.1.sch"), validSchema("combined-101"), StandardCharsets.UTF_8);
+        Files.writeString(folder.resolve("DOCS_PUB_CHECK_v1.0.2.sch"),
                 "<schema xmlns=\"http://purl.oclc.org/dsdl/schematron\"><pattern id=\"empty\"/></schema>",
                 StandardCharsets.UTF_8);
 
-        var publishing = service.latestChoices().stream()
-                .filter(choice -> choice.type().equals("PUB")).findFirst().orElseThrow();
+        var combined = service.latestChoices().get(0);
 
         assertAll(
-                () -> assertTrue(publishing.available()),
-                () -> assertEquals("PUB_CHECK_v1.0.1.sch", publishing.fileName()),
-                () -> assertEquals("v1.0.1", publishing.version()),
-                () -> assertTrue(publishing.validationMessage().startsWith(
+                () -> assertTrue(combined.available()),
+                () -> assertEquals("DOCS_PUB_CHECK_v1.0.1.sch", combined.fileName()),
+                () -> assertEquals("v1.0.1", combined.version()),
+                () -> assertTrue(combined.validationMessage().startsWith(
                         "최신 v1.0.2 오류로 v1.0.1 사용 중")),
-                () -> assertEquals("PUB_CHECK_v1.0.1.sch", service.resolveLatest("PUB").getFileName().toString()));
+                () -> assertEquals("DOCS_PUB_CHECK_v1.0.1.sch", service.resolveLatest("DOCS_PUB").getFileName().toString()));
     }
 
     @Test
@@ -152,6 +144,18 @@ class SchematronFileServiceTest {
                 () -> service.validate(missingCategory));
         assertTrue(categoryError.getMessage().contains("maoom:category"));
 
+        Path missingType = folder.resolve("DOCS_PUB_CHECK_v1.0.1.sch");
+        Files.writeString(missingType, """
+                <schema xmlns="http://purl.oclc.org/dsdl/schematron"
+                        xmlns:maoom="urn:maoom:schematron" queryBinding="xslt2">
+                  <pattern id="p"><rule context="concept">
+                    <assert role="major" maoom:category="structure" test="title">메시지</assert>
+                  </rule></pattern>
+                </schema>
+                """, StandardCharsets.UTF_8);
+        assertTrue(assertThrows(IllegalArgumentException.class,
+                () -> service.validate(missingType)).getMessage().contains("type이 없습니다"));
+
         Path emptyRule = folder.resolve("empty-rule.sch");
         Files.writeString(emptyRule, """
                 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -160,6 +164,18 @@ class SchematronFileServiceTest {
                 """, StandardCharsets.UTF_8);
         assertTrue(assertThrows(IllegalArgumentException.class,
                 () -> service.validate(emptyRule)).getMessage().contains("사용되지 않는 rule"));
+
+        Path invalidLevel = folder.resolve("invalid-level.sch");
+        Files.writeString(invalidLevel, """
+                <schema xmlns="http://purl.oclc.org/dsdl/schematron"
+                        xmlns:maoom="urn:maoom:schematron" queryBinding="xslt2">
+                  <pattern id="p"><rule context="shortdesc">
+                    <report role="critical" maoom:category="structure" maoom:level="0" test="true()">메시지</report>
+                  </rule></pattern>
+                </schema>
+                """, StandardCharsets.UTF_8);
+        assertTrue(assertThrows(IllegalArgumentException.class,
+                () -> service.validate(invalidLevel)).getMessage().contains("maoom:level"));
     }
 
     private static String validSchema(String id) {
@@ -168,7 +184,7 @@ class SchematronFileServiceTest {
                 <schema xmlns="http://purl.oclc.org/dsdl/schematron"
                         xmlns:maoom="urn:maoom:schematron" queryBinding="xslt2">
                   <pattern id="%s"><rule context="concept">
-                    <assert role="Major" maoom:category="structure" test="title">title이 필요합니다.</assert>
+                    <assert type="DOCS" role="Major" maoom:category="structure" test="title">title이 필요합니다.</assert>
                   </rule></pattern>
                 </schema>
                 """.formatted(id);

@@ -1,0 +1,18 @@
+@import url("/user/css/Font.css");
+*{box-sizing:border-box}
+html,body{margin:0;min-width:1188px;height:100%}
+body{padding:24px;overflow:hidden;background:#f3f5f8;color:#25282c;font-family:var(--app-font)}
+.dita-report-page{display:flex;flex-direction:column;width:1140px;max-width:100%;height:calc(100vh - 48px);margin:0 auto;padding:24px;overflow:hidden;border:1px solid #dce1e7;border-radius:14px;background:#fff;box-shadow:0 8px 24px rgba(31,41,55,.08)}
+.dita-report-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #e5e8ec}
+.dita-report-header h1{margin:0;font-size:21px}.dita-report-header p{margin:5px 0 0;color:#737980;font-size:12px}
+.dita-report-refresh{height:30px;padding:0 11px;border:1px solid #cbd4df;border-radius:7px;background:#fff;color:#4c5967;font:inherit;font-size:11px;font-weight:700;cursor:pointer}
+.dita-report-refresh:hover{border-color:#8fa4ba;background:#f5f8fb}.dita-report-refresh:disabled{opacity:.6;cursor:wait}
+.dita-report-tree-section{min-height:0;overflow:auto;padding-bottom:8px}#reportTree,#reportTree ul{margin:0;padding:0;list-style:none}
+#reportTree ul{margin:3px 0 3px 15px;padding-left:20px;border-left:1px solid #dfe4ea}.dita-report-project{margin:2px 0}
+.dita-report-folder{display:flex;align-items:center;gap:8px;width:100%;min-height:40px;padding:7px 10px;border:0;border-radius:7px;background:transparent;color:#33383e;font:inherit;font-size:13px;font-weight:700;text-align:left;cursor:pointer}
+.dita-report-folder:hover,.dita-report-file:hover{background:#f0f5fb;color:#1267b1}.dita-report-folder::before{content:"";flex:0 0 8px;width:8px;height:8px;border-right:2px solid #68717b;border-bottom:2px solid #68717b;transform:rotate(-45deg);transition:transform .15s ease}.dita-report-folder.expanded::before{transform:rotate(45deg) translate(-2px,-2px)}
+.dita-report-folder-name{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dita-report-count{flex:0 0 auto;margin-left:auto;color:#7a838d;font-size:11px;font-weight:600}
+.dita-report-file-row{margin:2px 0}.dita-report-file{display:flex;align-items:center;gap:9px;width:100%;min-height:38px;padding:7px 10px 7px 27px;border-radius:7px;color:#33383e;font-size:12px;text-decoration:none}.dita-report-file::before{content:"HTML";flex:0 0 34px;padding:2px 3px;border:1px solid #3978d1;border-radius:3px;color:#2866bd;font-size:8px;font-weight:800;text-align:center}
+.dita-report-file-name{flex:0 0 auto;min-width:0;max-width:420px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dita-report-summary{display:flex;flex:0 0 auto;align-items:center;gap:5px;color:#596675;font-size:11px;white-space:nowrap}.dita-report-meta-item{display:inline-flex;align-items:center;gap:4px;padding:4px 7px;border:1px solid #e0e6ed;border-radius:6px;background:#f7f9fb;color:#697583}.dita-report-meta-item strong{color:#2f3b48;font-weight:700}.dita-report-meta-item.unavailable{color:#8a9096}.dita-report-badge{flex:0 0 auto;margin-left:0;padding:3px 7px;border-radius:999px;background:#eef2f6;color:#64748b;font-size:10px;font-weight:700}.dita-report-badge.editable{background:#e7f1ff;color:#1769aa}.dita-report-badge.in-progress{background:#fff1d6;color:#9a5b00}.dita-report-badge.complete,.dita-report-badge.no-issues{background:#e7f7ed;color:#18733b}
+.dita-report-message,.dita-report-empty{padding:13px;border-radius:7px;color:#8a9096;font-size:12px}.dita-report-message{background:#f5f7f9}.dita-report-message.error{background:#fff3f3;color:#b42318}
+@media(max-width:1187px){body{padding:12px}.dita-report-page{height:calc(100vh - 24px);padding:18px 14px;border-radius:10px}}

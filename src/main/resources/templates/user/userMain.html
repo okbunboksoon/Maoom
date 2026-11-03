@@ -33,7 +33,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
 </head>
 
-<body th:attr="data-admin=${administrator}">
+<body th:attr="data-admin=${administrator},data-dita-validation-allowed=${ditaValidationAllowed}">
 
 <!-- 이름·비밀번호·프로필 이미지를 변경하는 계정 설정 대화상자. -->
 <div id="accountDialogBackdrop"
@@ -404,6 +404,7 @@ const launcherMenus = [
         description:'DITAMAP 연결 문서 Schematron 검사',
         category:'DITA',
         icon:'fa-solid fa-check-double',
+        ditaValidationOnly:true,
         action:openDitaValidationPopup
     },
     {
@@ -622,6 +623,10 @@ function isAdministrator(){
     return document.body.dataset.admin === 'true';
 }
 
+function isDitaValidationAllowed(){
+    return document.body.dataset.ditaValidationAllowed === 'true';
+}
+
 function renderLauncherMenus(){
     const grid =
         document.getElementById('menuGrid');
@@ -646,6 +651,10 @@ function renderLauncherMenus(){
      */
     const visibleMenus = launcherMenus.filter(menu => {
         if(menu.adminOnly && !administrator){
+            return false;
+        }
+
+        if(menu.ditaValidationOnly && !isDitaValidationAllowed()){
             return false;
         }
 
@@ -1034,7 +1043,7 @@ function openDitaValidationPopup(){
     openPopupWindow(
         '/dita-validation',
         'ditaValidationPopup',
-        popupWindowOptions(680, 350, 5)
+        popupWindowOptions(680, 378, 5)
     );
 }
 

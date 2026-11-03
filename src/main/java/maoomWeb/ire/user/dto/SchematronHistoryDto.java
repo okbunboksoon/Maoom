@@ -7,6 +7,7 @@ public record SchematronHistoryDto(
         Long id,
         String status,
         String triggerUserId,
+        String mapFileName,
         LocalDateTime startedAt,
         LocalDateTime finishedAt,
         Long elapsedMs,

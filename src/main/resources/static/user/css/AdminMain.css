@@ -557,6 +557,58 @@ body.sidebar-toggled .admin-shell{
     background:#f8f9fc;
 }
 
+#schematronHistoryTable{
+    min-width:1180px;
+    table-layout:fixed;
+}
+
+#schematronHistoryTable th:nth-child(1),
+#schematronHistoryTable td:nth-child(1){
+    width:5% !important;
+}
+
+#schematronHistoryTable th:nth-child(2),
+#schematronHistoryTable td:nth-child(2){
+    width:7% !important;
+}
+
+#schematronHistoryTable th:nth-child(3),
+#schematronHistoryTable td:nth-child(3){
+    width:8% !important;
+}
+
+#schematronHistoryTable th:nth-child(4),
+#schematronHistoryTable td:nth-child(4){
+    width:22% !important;
+}
+
+#schematronHistoryTable th:nth-child(5),
+#schematronHistoryTable td:nth-child(5){
+    width:12% !important;
+}
+
+#schematronHistoryTable th:nth-child(6),
+#schematronHistoryTable td:nth-child(6){
+    width:7% !important;
+}
+
+#schematronHistoryTable th:nth-child(7),
+#schematronHistoryTable td:nth-child(7){
+    width:28% !important;
+}
+
+#schematronHistoryTable th:nth-child(8),
+#schematronHistoryTable td:nth-child(8){
+    width:11% !important;
+}
+
+#schematronHistoryTable .schematron-input-cell{
+    overflow:hidden;
+    text-align:left;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
 #berAsisTobeTable{
     min-width:1630px;
     table-layout:fixed;

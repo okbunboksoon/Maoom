@@ -21,6 +21,11 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import org.xml.sax.InputSource;
 
+/**
+ * Schematron의 context/test XPath를 미리 컴파일하여 DITA 파일별로 실행한다.
+ * 표준 role과 maoom:category 외에 maoom:level을 지원하며, level이 없는 기존 규칙은
+ * 모든 계층에 그대로 적용하고 level이 있는 규칙만 DITAMAP 계층과 일치할 때 실행한다.
+ */
 public final class SchematronValidator {
     private static final String MAOOM_NAMESPACE = "urn:maoom:schematron";
     private final Processor processor = new Processor(false);
@@ -113,13 +118,15 @@ public final class SchematronValidator {
                     if (!(item instanceof XdmNode node)) continue;
                     for (CompiledAssertion assertion : rule.assertions()) {
                         cancellation.check();
+                        // maoom:level이 지정된 규칙은 DITAMAP에서 계산한 해당 계층의 파일에만 적용한다.
+                        if (assertion.requiredLevel() > 0 && assertion.requiredLevel() != level) continue;
                         XPathSelector test = assertion.test().load();
                         test.setContextItem(node);
                         boolean matched = test.effectiveBooleanValue();
                         // assert는 false일 때, report는 true일 때 결과 항목으로 기록한다.
                         if ((!assertion.report() && !matched) || (assertion.report() && matched)) {
                             issues.add(new ValidationIssue(file, reportTitle, parentTitles, node.getLineNumber(),
-                                    assertion.severity(), assertion.category(), rule.id(), nodePath(node),
+                                    assertion.severity(), assertion.category(), rule.id(), assertion.ruleType(), nodePath(node),
                                     assertion.message(), mapOrder, level));
                         }
                     }
@@ -132,7 +139,7 @@ public final class SchematronValidator {
             cancellation.check();
             parseFailureCount.incrementAndGet();
             issues.add(new ValidationIssue(file, displayTitle(title, file), parentTitles, -1, "error", "system",
-                    "document-parse-error", "", ex.getMessage() == null ? ex.toString() : ex.getMessage(), mapOrder, level));
+                    "document-parse-error", "", "", ex.getMessage() == null ? ex.toString() : ex.getMessage(), mapOrder, level));
         }
         return issues;
     }
@@ -164,8 +171,10 @@ public final class SchematronValidator {
                                 xpath.compile(normalizeXPath(element.getAttribute("test"))),
                                 severity(element.getAttribute("role")),
                                 category(element),
+                                ruleType(element.getAttribute("type")),
                                 message(element),
-                                "report".equals(element.getLocalName())));
+                                "report".equals(element.getLocalName()),
+                                requiredLevel(element)));
                     }
                 }
                 XPathExecutable context = xpath.compile("//" + ruleElement.getAttribute("context"));
@@ -197,6 +206,16 @@ public final class SchematronValidator {
         String category = assertion.getAttributeNS(MAOOM_NAMESPACE, "category");
         if (category == null || category.isBlank()) category = assertion.getAttribute("category");
         return category == null || category.isBlank() ? "uncategorized" : category.trim().toLowerCase();
+    }
+
+    private static String ruleType(String type) {
+        return type == null ? "" : type.trim().toUpperCase();
+    }
+
+    private static int requiredLevel(Element assertion) {
+        // 빈 값은 기존 규칙과 동일한 전 계층 적용을 뜻한다.
+        String value = assertion.getAttributeNS(MAOOM_NAMESPACE, "level").trim();
+        return value.isBlank() ? 0 : Integer.parseInt(value);
     }
 
     private static String displayTitle(String title, Path file) {
@@ -247,5 +266,6 @@ public final class SchematronValidator {
 
     private record CompiledRule(String id, XPathExecutable context, List<CompiledAssertion> assertions) { }
     private record CompiledAssertion(
-            XPathExecutable test, String severity, String category, String message, boolean report) { }
+            XPathExecutable test, String severity, String category, String ruleType, String message, boolean report,
+            int requiredLevel) { }
 }

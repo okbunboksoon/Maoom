@@ -52,6 +52,13 @@ public class DitaValidationProgressService {
                 currentFile == null ? "" : currentFile.getFileName().toString(), LocalDateTime.now(), ""));
     }
 
+    /** GOMS 원본을 로컬 검사 폴더로 복사하는 단계를 일반 검사 진행률과 구분한다. */
+    public void updateStaging(String token, int completed, int total, Path currentFile) {
+        if (valid(token)) progress.put(token, new ProgressResponse("RUNNING", completed, total,
+                currentFile == null ? "" : currentFile.getFileName().toString(), LocalDateTime.now(),
+                "V 서버 파일을 로컬로 복사하고 있습니다."));
+    }
+
     public void complete(String token, int total) {
         if (valid(token)) progress.put(token, new ProgressResponse("SUCCESS", total, total, "", LocalDateTime.now(), ""));
     }

@@ -39,6 +39,7 @@ CREATE TABLE IF NOT EXISTS tb_schematron_report_issue_state (
     confirmer_user_id VARCHAR(100),
     confirmer_name VARCHAR(255),
     memo VARCHAR(1000),
+    false_positive BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY (history_id, issue_id),
     INDEX idx_schematron_report_state_history (history_id)
 );

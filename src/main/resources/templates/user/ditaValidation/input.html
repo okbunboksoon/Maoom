@@ -6,7 +6,7 @@
     <title>DITA Validation Check</title>
     <link rel="stylesheet" href="/user/css/RevisionPopup.css">
 </head>
-<body class="ber-popup-body">
+<body class="ber-popup-body dita-validation-input-body">
 <!-- 1단계: 서버가 접근할 수 있는 작업 폴더를 먼저 검증한 뒤 검사 화면을 별도 팝업으로 연다. -->
 <main class="revision-page revision-estimate-page">
     <header class="revision-header"><div>
@@ -15,9 +15,22 @@
     </div></header>
     <section class="revision-panel" aria-label="입력 경로 선택">
         <div class="step-title"><span>1</span><div>
-            <strong>입력 경로 선택</strong>
-            <small>서버 PC에서 접근할 수 있는 경로를 입력하세요.(V서버, H서버)</small>
+            <strong>작업 선택</strong>
+            <small>GOMS 검사 경로를 입력하세요.</small>
         </div></div>
+        <!-- 실행 방식은 GOMS로 고정하되 기존 실행 로직이 값을 읽을 수 있도록 입력 요소는 유지한다. -->
+        <div class="execution-mode-options"
+             aria-label="실행 방식"
+             th:hidden="${!executionModeVisible}">
+            <label for="gomsMode">
+                <input id="gomsMode" name="executionMode" type="radio" value="GOMS" checked>
+                <span>GOMS 실행</span>
+            </label>
+            <label for="localPathMode">
+                <input id="localPathMode" name="executionMode" type="radio" value="LOCAL_PATH">
+                <span>로컬경로 실행</span>
+            </label>
+        </div>
         <div class="path-row full-path-row">
             <label for="inputPath">입력경로</label>
             <input id="inputPath" type="text" placeholder="경로를 입력하세요" autocomplete="off">
@@ -28,24 +41,64 @@
             <button class="action-button" type="button" onclick="window.close()">취소</button>
         </footer>
         <section id="resultPanel" class="result-panel" hidden><p id="resultMessage"></p></section>
+        <div class="dita-report-entry" aria-label="리포트 확인">
+        <div class="step-title"><span>2</span><div>
+            <strong>리포트 확인</strong>
+            <small>V 서버에 저장된 GOMS 검사 결과를 확인합니다.</small>
+        </div></div>
+        <div class="dita-report-entry-action">
+            <button id="reportListBtn" class="action-button" type="button">리포트 리스트 보기</button>
+        </div>
+        </div>
     </section>
 </main>
 <script>
-const input=document.getElementById('inputPath'),panel=document.getElementById('resultPanel'),message=document.getElementById('resultMessage');
+const input=document.getElementById('inputPath'),executionModes=[...document.querySelectorAll('input[name="executionMode"]')],panel=document.getElementById('resultPanel'),message=document.getElementById('resultMessage');
 document.getElementById('continueBtn').onclick=continueToCheck;
+document.getElementById('reportListBtn').onclick=()=>{const previousWidth=1168,width=Math.min(1188,screen.availWidth-24),left=Math.max(0,Math.round((screen.availWidth-Math.min(previousWidth,width))/2));window.open('/dita-validation/reports','ditaValidationReportList','width='+width+',height=700,left='+left+',resizable=yes,scrollbars=yes')};
 input.addEventListener('keydown',e=>{if(e.key==='Enter')continueToCheck()});
+window.addEventListener('load',fitPopupToContent);
 async function continueToCheck(){
  const value=input.value.trim();if(!value){show('입력 경로를 입력해 주세요.');input.focus();return}
+ const selectedMode=document.querySelector('input[name="executionMode"]:checked');
+ if(!selectedMode){show('실행 방식을 선택해 주세요.');executionModes[0].focus();return}
  // 사용자 클릭 시 창을 먼저 만들어 비동기 경로 확인 후에도 브라우저 팝업 차단에 걸리지 않게 한다.
- const checkWindow=window.open('about:blank','ditaValidationCheckPopup','width=1000,height=1200,resizable=yes,scrollbars=yes');
+ const popupName='ditaValidationCheckPopup_'+Date.now();
+ const checkWindow=window.open('',popupName,'width=540,height=205,resizable=yes,scrollbars=no');
  if(!checkWindow){show('검사 화면 팝업이 차단되었습니다. 브라우저에서 팝업을 허용해 주세요.');return}
- const button=document.getElementById('continueBtn');button.disabled=true;button.textContent='확인 중...';
- try{const response=await fetch('/api/dita-validation/maps',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({inputPath:value})});
-  if(!response.ok)throw new Error(await response.text());const maps=await response.json();if(!maps.length)throw new Error('입력 경로에서 ditamap을 찾지 못했습니다.');
-  checkWindow.location.href='/dita-validation/check?inputPath='+encodeURIComponent(value);checkWindow.focus();
- }catch(error){checkWindow.close();show(error.message||'입력 경로를 확인하지 못했습니다.')}
- finally{button.disabled=false;button.textContent='실행'}
+ const focusReadyWindow=event=>{if(event.origin!==location.origin||event.source!==checkWindow||event.data!=='dita-validation-ready')return;window.removeEventListener('message',focusReadyWindow);checkWindow.focus();setTimeout(()=>{checkWindow.focus();window.close()},100)};
+ window.addEventListener('message',focusReadyWindow);
+ showCheckWindowWaiting(checkWindow,'입력 경로를 확인하고 있습니다.');
+ const button=document.getElementById('continueBtn');button.disabled=true;input.disabled=true;executionModes.forEach(mode=>mode.disabled=true);button.textContent='확인 중...';
+ try{
+  let resolvedPath=value;
+  if(selectedMode.value==='GOMS'){
+   show('GOMS EXPORT를 실행하고 있습니다. 완료될 때까지 기다려 주세요.');
+   showCheckWindowWaiting(checkWindow,'GOMS EXPORT를 실행하고 있습니다.');
+   const exportResponse=await fetch('/api/dita-validation/goms/export',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({inputPath:value})});
+   if(!exportResponse.ok)throw new Error(await exportResponse.text());
+   resolvedPath=(await exportResponse.json()).inputPath;
+  }
+  // DITAMAP 목록은 다음 검사 화면에서 한 번만 조회하여 V 서버 중복 순회를 막는다.
+  checkWindow.resizeTo(1000,1200);checkWindow.location.href='/dita-validation/check?inputPath='+encodeURIComponent(resolvedPath)+'&executionMode='+encodeURIComponent(selectedMode.value);checkWindow.focus();
+ }catch(error){window.removeEventListener('message',focusReadyWindow);checkWindow.close();show(error.message||'입력 경로를 확인하지 못했습니다.')}
+ finally{button.disabled=false;input.disabled=false;executionModes.forEach(mode=>mode.disabled=false);button.textContent='실행'}
 }
-function show(text){panel.hidden=false;message.textContent=text}
+function showCheckWindowWaiting(checkWindow,text){
+ checkWindow.document.title='DITA Validation Check - 실행 중';
+ checkWindow.document.body.style.margin='0';
+ checkWindow.document.documentElement.style.height='100%';
+ checkWindow.document.documentElement.style.overflow='hidden';
+ checkWindow.document.body.style.height='100%';
+ checkWindow.document.body.style.overflow='hidden';
+ checkWindow.document.body.innerHTML='<main style="height:100%;box-sizing:border-box;display:flex;align-items:center;justify-content:center;padding:10px;background:#f6f8fb;font-family:Segoe UI,Malgun Gothic,sans-serif;color:#172033"><section style="box-sizing:border-box;width:100%;max-width:500px;padding:14px 16px;border:1px solid #dce4ee;border-radius:8px;background:#fff;box-shadow:0 4px 14px rgba(15,23,42,.1);text-align:center"><div style="width:20px;height:20px;margin:0 auto 9px;border:3px solid #dbeafe;border-top-color:#3978d1;border-radius:50%;animation:dita-wait-spin .8s linear infinite"></div><h1 style="margin:0 0 6px;font-size:12px;white-space:nowrap">'+text+'</h1><p style="margin:0;color:#64748b;font-size:8px;line-height:1.4">처리 대상에 따라 시간이 걸릴 수 있습니다.</p><style>@keyframes dita-wait-spin{to{transform:rotate(360deg)}}</style></section></main>';
+}
+function fitPopupToContent(){
+ requestAnimationFrame(()=>{
+  const page=document.querySelector('.revision-page'),targetInnerHeight=Math.ceil(page.getBoundingClientRect().bottom),heightDelta=targetInnerHeight-window.innerHeight;
+  if(Math.abs(heightDelta)>1)window.resizeBy(0,heightDelta);
+ });
+}
+function show(text){panel.hidden=false;message.textContent=text;fitPopupToContent()}
 </script>
 </body></html>

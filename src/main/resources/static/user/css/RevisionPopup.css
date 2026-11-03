@@ -141,6 +141,36 @@ body{
     box-shadow:0 0 0 3px rgba(47,128,237,.12);
 }
 
+.execution-mode-options{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:0 0 18px;
+}
+
+/* 설정에서 실행 방식 선택을 숨기면 display:flex보다 hidden 상태를 우선한다. */
+.execution-mode-options[hidden]{
+    display:none;
+}
+
+.execution-mode-options label{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:#26313d;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.execution-mode-options input[type="radio"]{
+    width:16px;
+    height:16px;
+    margin:0;
+    accent-color:#3978d1;
+    cursor:pointer;
+}
+
 .file-name-row{
     display:grid;
     grid-template-columns:minmax(0, 1fr) auto;
@@ -430,6 +460,38 @@ button:disabled{
 
 .ber-popup-body .revision-page{
     padding-bottom:20px;
+}
+
+/* DITA Validation 작업 선택 행이 추가되어도 좌우와 같은 24px 하단 여백을 유지한다. */
+.dita-validation-input-body .revision-page{
+    padding-bottom:24px;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+}
+
+.dita-report-entry{
+    margin-top:18px;
+    padding-top:18px;
+    border-top:1px solid #e2e8f0;
+}
+
+.dita-report-entry-action{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:14px;
+    padding-bottom:14px;
+    border-bottom:1px solid #e2e8f0;
+}
+
+.dita-report-entry-action .action-button{
+    min-width:142px;
+    border-color:#3978d1;
+    color:#2866bd;
+}
+
+.dita-report-entry-action .action-button:hover{
+    background:#eff6ff;
 }
 
 .ber-popup-body .result-panel{

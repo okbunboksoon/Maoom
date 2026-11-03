@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DITA 리포트 확인</title>
+    <link rel="stylesheet" href="/user/css/DitaReportList.css">
+</head>
+<body>
+<main class="dita-report-page">
+    <header class="dita-report-header">
+        <div><h1>리포트 확인</h1><p>V 서버에 저장된 검사 결과를 선택하세요.</p></div>
+        <button id="refreshBtn" class="dita-report-refresh" type="button">새로고침</button>
+    </header>
+    <section class="dita-report-tree-section" aria-label="GOMS 리포트 목록">
+        <ul id="reportTree"><li class="dita-report-message">리포트 목록을 불러오는 중입니다.</li></ul>
+    </section>
+</main>
+<script>
+const tree=document.getElementById('reportTree'),refreshButton=document.getElementById('refreshBtn');
+refreshButton.onclick=loadReports;
+loadReports();
+async function loadReports(){
+ refreshButton.disabled=true;tree.innerHTML='<li class="dita-report-message">리포트 목록을 불러오는 중입니다.</li>';
+ try{const response=await fetch('/api/dita-validation/goms/reports',{cache:'no-store'});if(!response.ok)throw new Error(await response.text()||'리포트 목록을 불러오지 못했습니다.');renderProjects(await response.json())}
+ catch(error){tree.innerHTML='';const item=document.createElement('li');item.className='dita-report-message error';item.textContent=error.message||'리포트 목록을 불러오지 못했습니다.';tree.appendChild(item)}
+ finally{refreshButton.disabled=false}
+}
+function renderProjects(projects){
+ tree.innerHTML='';if(!projects.length){const empty=document.createElement('li');empty.className='dita-report-message';empty.textContent='저장된 GOMS 리포트가 없습니다.';tree.appendChild(empty);return}
+ const fragment=document.createDocumentFragment();projects.forEach(project=>fragment.appendChild(projectNode(project)));tree.appendChild(fragment)
+}
+function projectNode(project){
+ const item=document.createElement('li'),button=document.createElement('button'),name=document.createElement('span'),count=document.createElement('span'),children=document.createElement('ul');
+ item.className='dita-report-project';button.type='button';button.className='dita-report-folder';name.className='dita-report-folder-name';name.textContent=project.projectName;count.className='dita-report-count';count.textContent=(project.reports?.length||0)+'건';button.append(name,count);children.className='dita-report-files';children.hidden=true;
+ button.onclick=()=>{const expanded=button.classList.toggle('expanded');children.hidden=!expanded;button.setAttribute('aria-expanded',String(expanded))};button.setAttribute('aria-expanded','false');
+ if(!project.reports?.length){const empty=document.createElement('li');empty.className='dita-report-empty';empty.textContent='이 폴더에는 리포트가 없습니다.';children.appendChild(empty)}
+ else project.reports.forEach(report=>children.appendChild(reportNode(report)));
+ item.append(button,children);return item
+}
+function reportNode(report){
+ const item=document.createElement('li'),link=document.createElement('a'),name=document.createElement('span'),summary=document.createElement('span'),badge=document.createElement('span');item.className='dita-report-file-row';link.className='dita-report-file';link.href=report.url;link.target='_blank';link.rel='noopener';link.title=report.fileName;name.className='dita-report-file-name';name.textContent=report.fileName;summary.className='dita-report-summary';if(report.historyId){const metadata=[ ['검사파일',report.validatedFileCount+'건'], [null,scopeLabel(report.scopeType)], ['오류',report.issueCount+'건'], ['검사 완료 시간',report.finishedAt], ['QA 테스터',report.testerName||'-'], ['반영률',report.appliedCount+' / '+report.issueCount] ];metadata.forEach(([label,value])=>{const meta=document.createElement('span'),valueNode=document.createElement('strong');meta.className='dita-report-meta-item'+(label?'':' scope');if(label){const labelNode=document.createElement('span');labelNode.textContent=label;meta.appendChild(labelNode)}valueNode.textContent=value;meta.appendChild(valueNode);summary.appendChild(meta)})}else{const meta=document.createElement('span');meta.className='dita-report-meta-item unavailable';meta.textContent='실행 이력 정보 없음';summary.appendChild(meta)}const status=reportStatus(report);badge.className='dita-report-badge '+status.className;badge.textContent=status.label;link.append(name,summary,badge);item.appendChild(link);return item
+}
+function scopeLabel(scopeType){return scopeType==='ALL'?'범위 전체':scopeType==='SELECTED_ONLY'?'선택한 항목':scopeType==='SELECTED_WITH_DESCENDANTS'?'선택항목 및 자손':'범위 미확인'}
+function reportStatus(report){
+ if(!report.editable)return{label:'읽기 전용',className:'readonly'};
+ const issueCount=Number(report.issueCount)||0,appliedCount=Number(report.appliedCount)||0;
+ if(issueCount===0)return{label:'오류 없음',className:'no-issues'};
+ if(appliedCount>=issueCount)return{label:'수정 완료',className:'complete'};
+ if(appliedCount>0)return{label:'수정 중',className:'in-progress'};
+ return{label:'수정 가능',className:'editable'}
+}
+</script>
+</body>
+</html>

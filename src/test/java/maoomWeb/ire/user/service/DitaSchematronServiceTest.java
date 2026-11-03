@@ -20,16 +20,109 @@ class DitaSchematronServiceTest {
     @TempDir Path tempDir;
 
     @Test
+    void ignoresNormalPunctuationAroundInlineElementsButDetectsWhitespaceOnBothSides() throws Exception {
+        Path normal = write("normal-xref.dita", """
+                <concept id="normal"><title>Normal</title><conbody>
+                  <p>휠/타이어 <xref href="target.dita#target/e00446"/>, <xref href="target.dita#target/e00050"/></p>
+                </conbody></concept>
+                """);
+        Path normalImage = write("normal-image.dita", """
+                <concept id="normal-image"><title>Normal image</title><conbody>
+                  <p>이동 다이얼 <image align="center" placement="inline" scale="15" href="../../images/WKIA_024.eps"/>, <image align="center" placement="inline" scale="15" href="../../images/WKIA_025.eps"/>: 모드 내 항목 이동</p>
+                </conbody></concept>
+                """);
+        Path invalid = write("invalid-space.dita", """
+                <concept id="invalid"><title>Invalid</title><conbody><p>문장 , 다음</p></conbody></concept>
+                """);
+        Path normalTerminal = write("normal-terminal.dita", """
+                <concept id="normal-terminal"><title>Normal terminal</title><conbody>
+                  <p>배터리의 + 단자와 - 단자를 반대로 연결 시 장치에 손상을 줄 수 있습니다.</p>
+                </conbody></concept>
+                """);
+        Path normalSide = write("normal-side.dita", """
+                <concept id="normal-side"><title>Normal side</title><conbody>
+                  <p>운전석 - 측 도어의 잠금 상태를 확인하십시오.</p>
+                </conbody></concept>
+                """);
+        Path invalidWithTerminal = write("invalid-with-terminal.dita", """
+                <concept id="invalid-with-terminal"><title>Invalid with terminal</title><conbody>
+                  <p>+ 단자와 - 단자를 확인하고 내용 , 오류를 수정하십시오.</p>
+                </conbody></concept>
+                """);
+        write("target.dita", "<concept id=\"target\"><title>Target</title><conbody><p id=\"e00446\">A</p><p id=\"e00050\">B</p></conbody></concept>");
+        Path map = write("punctuation-map.ditamap",
+                "<map><topicref href=\"normal-xref.dita\"/><topicref href=\"normal-image.dita\"/>"
+                        + "<topicref href=\"normal-terminal.dita\"/><topicref href=\"invalid-space.dita\"/>"
+                        + "<topicref href=\"normal-side.dita\"/><topicref href=\"invalid-with-terminal.dita\"/></map>");
+        Path schema = Path.of(getClass().getClassLoader()
+                .getResource("schematron/DOCS_PUB_CHECK_v1.0.1.sch").toURI());
+
+        ValidationResult result = new DitaSchematronService().validate(
+                new ValidationRequest(map, schema, ValidationScope.ALL, Set.of(), false));
+        var issues = result.issues().stream()
+                .filter(issue -> "space-around-sentence-punctuation-check".equals(issue.ruleId())).toList();
+
+        assertAll(
+                () -> assertEquals(2, issues.size()),
+                () -> assertTrue(issues.stream().anyMatch(issue -> issue.file().equals(invalid))),
+                () -> assertTrue(issues.stream().anyMatch(issue -> issue.file().equals(invalidWithTerminal))),
+                () -> assertTrue(issues.stream().noneMatch(issue -> issue.file().equals(normal))),
+                () -> assertTrue(issues.stream().noneMatch(issue -> issue.file().equals(normalImage))),
+                () -> assertTrue(issues.stream().noneMatch(issue -> issue.file().equals(normalTerminal))),
+                () -> assertTrue(issues.stream().noneMatch(issue -> issue.file().equals(normalSide))));
+    }
+
+    @Test
+    void appliesLevelRestrictedRuleToLevelOneTopicOnly() throws Exception {
+        Path levelOne = write("level1.dita",
+                "<concept id=\"l1\"><title>L1</title><shortdesc>금지</shortdesc><conbody/></concept>");
+        Path levelTwo = write("level2.dita",
+                "<concept id=\"l2\"><title>L2</title><shortdesc>허용</shortdesc><conbody/></concept>");
+        Path emptyLevelOne = write("empty-level1.dita",
+                "<concept id=\"empty\"><title>Empty L1</title><shortdesc/> <conbody/></concept>");
+        Path whitespaceLevelOne = write("whitespace-level1.dita",
+                "<concept id=\"space\"><title>Whitespace L1</title><shortdesc>   </shortdesc><conbody/></concept>");
+        Path map = write("level-map.ditamap",
+                "<map><topicref href=\"level1.dita\"><topicref href=\"level2.dita\"/></topicref>"
+                        + "<topicref href=\"empty-level1.dita\"/><topicref href=\"whitespace-level1.dita\"/></map>");
+        Path schema = write("level.sch", """
+                <schema xmlns="http://purl.oclc.org/dsdl/schematron"
+                        xmlns:maoom="urn:maoom:schematron" queryBinding="xslt2">
+                  <pattern id="chapter-level1-shortdesc-check"><rule context="shortdesc">
+                    <report role="critical" maoom:category="structure" maoom:level="1" test="normalize-space(.) != ''">
+                      Chapter 레벨 dita 파일에는 &lt;shortdesc&gt; 태그를 추가할 수 없습니다.
+                    </report>
+                  </rule></pattern>
+                </schema>
+                """);
+
+        ValidationResult result = new DitaSchematronService().validate(
+                new ValidationRequest(map, schema, ValidationScope.ALL, Set.of(), false));
+        var issues = result.issues().stream()
+                .filter(issue -> "chapter-level1-shortdesc-check".equals(issue.ruleId())).toList();
+
+        assertAll(
+                () -> assertEquals(1, issues.size()),
+                () -> assertEquals(levelOne, issues.get(0).file()),
+                () -> assertEquals("/concept[1]/shortdesc[1]", issues.get(0).location()),
+                () -> assertEquals("critical", issues.get(0).severity()),
+                () -> assertEquals("structure", issues.get(0).category()),
+                () -> assertTrue(issues.stream().noneMatch(issue -> issue.file().equals(levelTwo))),
+                () -> assertTrue(issues.stream().noneMatch(issue -> issue.file().equals(emptyLevelOne))),
+                () -> assertTrue(issues.stream().noneMatch(issue -> issue.file().equals(whitespaceLevelOne))));
+    }
+
+    @Test
     void validatesAllSelectedAndDescendantScopesAndWritesCollaborativeReport() throws Exception {
         Path a = write("a.dita", "<concept id=\"a\"><title>A</title><conbody><p/></conbody></concept>");
         write("b.dita", "<concept id=\"b\"><title>B</title><conbody><p>ok</p></conbody></concept>");
         Path map = write("root.ditamap", "<map><topicref href=\"a.dita\"><topicmeta><navtitle>A...</navtitle><linktext>A linktext</linktext></topicmeta><topicref href=\"b.dita\"><topicmeta><navtitle>B...</navtitle><linktext>B linktext</linktext></topicmeta></topicref></topicref></map>");
         Path sch = write("check.sch", "<schema xmlns=\"http://purl.oclc.org/dsdl/schematron\" xmlns:maoom=\"urn:maoom:schematron\" queryBinding=\"xslt2\"><pattern id=\"empty\"><rule context=\"p\">"
-                + "<assert role=\"none\" maoom:category=\"image\" test=\"normalize-space(.) != ''\">빈 문장</assert>"
-                + "<assert role=\"critical\" test=\"normalize-space(.) != ''\">Critical 검사</assert>"
-                + "<assert role=\"major\" test=\"normalize-space(.) != ''\">Major 검사</assert>"
-                + "<assert role=\"minor\" test=\"normalize-space(.) != ''\">Minor 검사</assert>"
-                + "<assert role=\"preference\" test=\"normalize-space(.) != ''\">Preference 검사</assert>"
+                + "<assert type=\"DOCS\" role=\"none\" maoom:category=\"image\" test=\"normalize-space(.) != ''\">빈 문장</assert>"
+                + "<assert type=\"PUB\" role=\"critical\" test=\"normalize-space(.) != ''\">Critical 검사</assert>"
+                + "<assert type=\"DOCS\" role=\"major\" test=\"normalize-space(.) != ''\">Major 검사</assert>"
+                + "<assert type=\"DOCS\" role=\"minor\" test=\"normalize-space(.) != ''\">Minor 검사</assert>"
+                + "<assert type=\"DOCS\" role=\"preference\" test=\"normalize-space(.) != ''\">Preference 검사</assert>"
                 + "</rule></pattern></schema>");
         DitaSchematronService service = new DitaSchematronService();
         MapModel model = service.loadMap(map);
@@ -60,11 +153,19 @@ class DitaSchematronServiceTest {
                 () -> assertTrue(html.contains("data-category=\"uncategorized\">미분류 <b>4</b></button>")),
                 () -> assertTrue(html.contains("심각도별")),
                 () -> assertTrue(html.contains("data-severity=\"none\">none <b>1</b></button>")),
+                () -> assertTrue(html.contains("class=\"category-chip severity-chip-false\" data-severity=\"false\">False <b>0</b>건</button>")),
+                () -> assertTrue(html.indexOf("심각도별") < html.indexOf("severity-chip-false")),
+                () -> assertTrue(html.contains("function updateFalseSeverityCount()")),
+                () -> assertTrue(html.contains("function rowMatchesSeverity(r)")),
+                () -> assertTrue(html.contains("if(severityFilter==='false')return falsePositive")),
                 () -> assertTrue(html.contains("/state/batch")),
                 () -> assertTrue(html.contains(".summary{gap:10px 24px;padding:16px 18px")),
                 () -> assertTrue(html.contains(".category-chip-total{border-color:#9fc1ee")),
                 () -> assertTrue(html.contains("data-map-name=\"root.ditamap\"")),
-                () -> assertTrue(html.contains("return date+'-'+time+'-'+mapName+'-SchematronReport.html'")),
+                () -> assertTrue(html.contains("data-report-file-name=\"")),
+                () -> assertTrue(html.contains("_SchematronReport.html\"")),
+                () -> assertTrue(html.contains("return document.body.dataset.reportFileName||'schematron-report.html'")),
+                () -> assertTrue(html.contains("_filtered.csv")),
                 () -> assertTrue(html.contains("download(reportDownloadName()")),
                 () -> assertTrue(html.contains("ditamap 경로: " + map)),
                 () -> assertTrue(html.contains("data-issue-id")),
@@ -73,7 +174,10 @@ class DitaSchematronServiceTest {
                 () -> assertTrue(html.contains("localStorage.setItem")),
                 () -> assertTrue(html.contains("isLocalFile=location.protocol==='file:'")),
                 () -> assertTrue(html.contains("historyId&&!isLocalFile")),
-                () -> assertTrue(html.contains("확인자 이름은 기록되지 않습니다")),
+                () -> assertTrue(html.contains("function makeLocalFileReadOnly()")),
+                () -> assertTrue(html.contains("checkbox.disabled=true")),
+                () -> assertTrue(html.contains("['checkAll','uncheckAll']")),
+                () -> assertTrue(html.contains("V 서버에서 직접 연 HTML은 읽기 전용입니다.")),
                 () -> assertTrue(html.contains("class=\"confirmer center\"")),
                 () -> assertTrue(html.contains(".table-wrap{overflow:auto;border:1px solid #cfd8e3")),
                 () -> assertTrue(html.contains("tbody tr:hover td{background:#edf5ff}")),
@@ -85,7 +189,18 @@ class DitaSchematronServiceTest {
                 () -> assertTrue(html.contains("th:nth-child(3),td:nth-child(3){width:20%}")),
                 () -> assertTrue(html.contains("th:nth-child(9),td:nth-child(9){width:25%}")),
                 () -> assertTrue(html.contains(".report-title,.location-cell,.report-message{overflow-wrap:anywhere")),
+                () -> assertTrue(html.contains(".file-filter{max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:break-word}")),
+                () -> assertTrue(html.contains("Array.isArray(value)?new Date(value[0],value[1]-1")),
                 () -> assertTrue(html.contains("<div class=\"search-tools\">")),
+                () -> assertTrue(html.contains("<details class=\"map-tree-filter\"><summary>DITAMAP 트리 필터")),
+                () -> assertTrue(html.contains("<script id=\"mapTreeData\" type=\"application/json\">")),
+                () -> assertTrue(html.contains("data-map-paths=\"n0\"")),
+                () -> assertTrue(html.contains("function renderMapTree()")),
+                () -> assertTrue(html.contains("ul.className='map-tree-children collapsed'")),
+                () -> assertTrue(html.contains("toggle.textContent=children.length?'▶':''")),
+                () -> assertTrue(html.contains("function rowMatchesMapNode(r)")),
+                () -> assertTrue(html.contains("mapNodeFilter,mapNodeLabel")),
+                () -> assertTrue(html.contains("id=\"clearMapNodeFilter\"")),
                 () -> assertTrue(html.contains("<div class=\"table-wrap\"><table id=\"result\">")),
                 () -> assertTrue(html.contains("table.querySelectorAll('.report-title,.location-cell,.report-message')")),
                 () -> assertTrue(html.contains("function prepareSearchIndex()")),
@@ -98,8 +213,16 @@ class DitaSchematronServiceTest {
                 () -> assertTrue(html.contains("function showToast(message,error=false)")),
                 () -> assertTrue(html.contains("확인 상태를 저장했습니다.")),
                 () -> assertTrue(html.contains("setInterval(()=>{if(!document.hidden)loadServerState(true)")),
-                () -> assertTrue(html.contains("<td class=\"updated center\"></td>")),
-                () -> assertTrue(html.contains("<th data-type=\"num\">순번</th><th>파일명</th><th class=\"report-title\">타이틀</th><th data-type=\"num\">행</th><th>규칙 ID</th><th>심각도</th><th>유형</th><th>위치</th><th class=\"report-message\">메시지</th><th>작업 메모</th><th>확인</th><th>수정 시각</th><th>확인자</th>")),
+                () -> assertTrue(html.contains("class=\"false-positive\" type=\"checkbox\"")),
+                () -> assertTrue(html.contains("<td class=\"confirmer center\"></td><td class=\"updated center\"></td>")),
+                () -> assertTrue(html.contains("<th data-type=\"num\">순번</th><th>파일명</th><th class=\"report-title\">타이틀</th><th data-type=\"num\">행</th><th>규칙 유형</th><th>심각도</th><th>유형</th><th>위치</th><th class=\"report-message\">메시지</th><th>작업 메모</th><th>검토여부</th><th>예외여부</th><th>확인자</th><th>수정 시각</th>")),
+                () -> assertTrue(html.contains("<td class=\"center\">원고</td>")),
+                () -> assertTrue(html.contains("<td class=\"center\">퍼블리싱</td>")),
+                () -> assertTrue(html.contains("'작업 메모','검토여부','False','확인자','수정 시각'")),
+                () -> assertTrue(html.contains("th:nth-child(11),td:nth-child(11),th:nth-child(12),td:nth-child(12){width:56px}th:nth-child(13),td:nth-child(13){width:90px}th:nth-child(14),td:nth-child(14){width:145px}")),
+                () -> assertTrue(html.contains("tbody tr.false-positive-row td{background:#e5e7eb!important")),
+                () -> assertTrue(html.contains("falsePositive?'False':r.dataset.originalSeverityLabel")),
+                () -> assertTrue(html.contains("/false-positive',{method:'POST'")),
                 () -> assertTrue(html.contains("/memo',{method:'POST'")),
                 () -> assertTrue(html.contains("id=\"clearFileFilter\"")),
                 () -> assertTrue(html.contains(".memo-cell{box-sizing:border-box;padding:5px 7px}")),
@@ -230,7 +353,11 @@ class DitaSchematronServiceTest {
                 new ValidationRequest(map, schema, ValidationScope.ALL, Set.of(), false), report);
 
         assertEquals(1, result.validatedFileCount());
-        assertTrue(Files.readString(report).contains("외 1개 경로"));
+        String html = Files.readString(report);
+        assertAll(
+                () -> assertTrue(html.contains("외 1개 경로")),
+                () -> assertTrue(html.contains("data-map-paths=\"n0/n0.0;n1/n1.0\""))
+        );
     }
 
     @Test
@@ -248,7 +375,7 @@ class DitaSchematronServiceTest {
         Path map = write("xref-fn.ditamap", "<map><topicref href=\"invalid.dita\"/>"
                 + "<topicref href=\"no-href.dita\"/><topicref href=\"other-type.dita\"/></map>");
         Path schema = Path.of(getClass().getClassLoader()
-                .getResource("schematron/DOCS_CHECK_v1.0.6.sch").toURI());
+                .getResource("schematron/DOCS_PUB_CHECK_v1.0.1.sch").toURI());
 
         ValidationResult result = new DitaSchematronService().validate(
                 new ValidationRequest(map, schema, ValidationScope.ALL, Set.of(), false));
@@ -259,8 +386,8 @@ class DitaSchematronServiceTest {
         assertAll(
                 () -> assertEquals(1, fnIssues.size()),
                 () -> assertEquals(invalid, fnIssues.get(0).file()),
-                () -> assertEquals("<fn> 태그를 사용하여 내용을 입력해야 합니다.", fnIssues.get(0).message()),
-                () -> assertEquals("none", fnIssues.get(0).severity()),
+                () -> assertEquals("<fn>태그를 사용하여 내용을 입력해야 하는지 확인하세요.", fnIssues.get(0).message()),
+                () -> assertEquals("minor", fnIssues.get(0).severity()),
                 () -> assertTrue(fnIssues.stream().noneMatch(issue -> issue.file().equals(noHref))),
                 () -> assertTrue(fnIssues.stream().noneMatch(issue -> issue.file().equals(otherType))));
     }

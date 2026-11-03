@@ -7,6 +7,7 @@ import java.util.Map;
 
 import jakarta.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.http.CacheControl;
 import org.springframework.http.MediaType;
@@ -34,6 +35,7 @@ import maoomWeb.ire.user.service.UserService;
 import maoomWeb.ire.user.dto.User;
 import maoomWeb.ire.user.dto.UserAccountUpdateDto;
 import maoomWeb.ire.user.service.CurrentUserService;
+import maoomWeb.ire.user.service.DitaValidationAccessService;
 import maoomWeb.ire.user.service.UserProfileImageService;
 
 /**
@@ -53,18 +55,25 @@ public class UserController {
 
     private final UserService userService;
 	private final CurrentUserService currentUserService;
+	private final DitaValidationAccessService ditaValidationAccessService;
 	private final UserProfileImageService userProfileImageService;
     private final ColorCheckOutputPathService colorCheckOutputPathService;
+	private final boolean ditaValidationExecutionModeVisible;
 	
     public UserController(
             UserService userService,
             CurrentUserService currentUserService,
+            DitaValidationAccessService ditaValidationAccessService,
             UserProfileImageService userProfileImageService,
-            ColorCheckOutputPathService colorCheckOutputPathService) {
+            ColorCheckOutputPathService colorCheckOutputPathService,
+            @Value("${dita.validation.execution-mode-visible:false}")
+            boolean ditaValidationExecutionModeVisible) {
         this.userService = userService;
         this.currentUserService = currentUserService;
+        this.ditaValidationAccessService = ditaValidationAccessService;
         this.userProfileImageService = userProfileImageService;
         this.colorCheckOutputPathService = colorCheckOutputPathService;
+        this.ditaValidationExecutionModeVisible = ditaValidationExecutionModeVisible;
     }
 	
     /** 이미 로그인한 사용자는 메인으로 보내고, 그 외에는 기본 로그인 화면을 표시한다. */
@@ -157,6 +166,9 @@ public class UserController {
         model.addAttribute(
                 "administrator",
                 currentUserService.isAdministrator(authentication));
+        model.addAttribute(
+                "ditaValidationAllowed",
+                ditaValidationAccessService.isAllowed(authentication));
         return "user/userMain";
     }
 
@@ -335,14 +347,23 @@ public class UserController {
 
     // Schematron 검사 1단계: 서버가 접근할 입력 폴더를 받는 팝업 화면이다.
     @GetMapping("/dita-validation")
-    public String ditaValidationInput() {
+    public String ditaValidationInput(Model model) {
+        model.addAttribute(
+                "executionModeVisible",
+                ditaValidationExecutionModeVisible);
         return "user/ditaValidation/input";
     }
 
-    // Schematron 검사 2단계: ditamap 트리와 검사 범위·유형을 선택하는 화면이다.
+    // Schematron 검사 2단계: ditamap 트리와 검사 범위를 선택하고 통합 규칙 파일을 확인하는 화면이다.
     @GetMapping("/dita-validation/check")
     public String ditaValidationCheck() {
         return "user/ditaValidation/check";
+    }
+
+    /** V 서버의 GOMS HTML 결과를 프로젝트 폴더 트리로 조회하는 팝업 화면이다. */
+    @GetMapping("/dita-validation/reports")
+    public String ditaValidationReports() {
+        return "user/ditaValidation/reportList";
     }
 
     /**

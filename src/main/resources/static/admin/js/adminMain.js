@@ -3207,9 +3207,11 @@ function renderSchematronHistory(){
             : item.status === 'FAILED' ? '실패'
             : item.status === 'CANCELLED' ? '취소'
             : item.status === 'INTERRUPTED' ? '서버 재시작 중단' : '실행 중';
-        [item.id, status, item.triggerUserId || '-', formatDate(item.startedAt),
-            formatElapsed(item.elapsedMs), item.inputSummary || '-'].forEach(value => {
-            const cell = document.createElement('td');cell.textContent = safeText(value);row.appendChild(cell);
+        [item.id, status, item.triggerUserId || '-', item.mapFileName || '-', formatDate(item.startedAt),
+            formatElapsed(item.elapsedMs), item.inputSummary || '-'].forEach((value, index) => {
+            const cell = document.createElement('td');cell.textContent = safeText(value);
+            if(index === 6){cell.className = 'schematron-input-cell';cell.title = safeText(value)}
+            row.appendChild(cell);
         });
         const resultCell = document.createElement('td');
         if(item.reportFileName){
@@ -3222,11 +3224,11 @@ function renderSchematronHistory(){
         row.appendChild(resultCell);schematronHistoryTableBody.appendChild(row);
     });
     if(!schematronHistoryState.items.length){
-        schematronHistoryTableBody.innerHTML='<tr><td colspan="7" class="admin-empty-cell">저장된 이력이 없습니다.</td></tr>';
+        schematronHistoryTableBody.innerHTML='<tr><td colspan="8" class="admin-empty-cell">저장된 이력이 없습니다.</td></tr>';
     }
     schematronHistorySummary.textContent='전체 '+schematronHistoryState.items.length.toLocaleString('ko-KR')+'건';
     if(window.jQuery&&jQuery.fn&&jQuery.fn.DataTable&&schematronHistoryState.items.length){
-        schematronHistoryDataTable=$('#schematronHistoryTable').DataTable({language:dataTableLanguage(),pageLength:50,order:[[3,'desc']],columnDefs:[{targets:[0,1,2,3,4,6],className:'text-center'}]});
+        schematronHistoryDataTable=$('#schematronHistoryTable').DataTable({language:dataTableLanguage(),pageLength:50,order:[[4,'desc']],columnDefs:[{targets:[0,1,2,3,4,5,7],className:'text-center'}]});
     }
 }
 
@@ -3247,7 +3249,7 @@ async function loadSchematronHistory(){
             schematronJobCard.hidden=true;
         }
     }catch(error){
-        schematronHistoryTableBody.innerHTML='<tr><td colspan="7" class="admin-empty-cell">실행 이력을 불러오지 못했습니다.</td></tr>';
+        schematronHistoryTableBody.innerHTML='<tr><td colspan="8" class="admin-empty-cell">실행 이력을 불러오지 못했습니다.</td></tr>';
         schematronHistorySummary.textContent=error.message||'조회 중 오류가 발생했습니다.';
     }
 }

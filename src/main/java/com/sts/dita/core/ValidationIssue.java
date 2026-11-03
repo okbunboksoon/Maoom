@@ -3,7 +3,7 @@ package com.sts.dita.core;
 import java.nio.file.Path;
 import java.util.List;
 
-/** Schematron 위반 한 건을 HTML 보고서에 필요한 문서 제목·위치·규칙·심각도·유형과 함께 전달한다. */
+/** Schematron 위반 한 건을 HTML 보고서에 필요한 문서 제목·규칙 ID·규칙 유형·심각도·분류와 함께 전달한다. */
 public record ValidationIssue(
         Path file,
         String title,
@@ -12,6 +12,7 @@ public record ValidationIssue(
         String severity,
         String category,
         String ruleId,
+        String ruleType,
         String location,
         String message,
         int mapOrder,

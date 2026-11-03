@@ -15,11 +15,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import maoomWeb.ire.user.service.DitaValidationWorkflowService;
 import maoomWeb.ire.user.service.DitaValidationProgressService;
 import maoomWeb.ire.user.service.DitaValidationJobService;
+import maoomWeb.ire.user.service.GomsExportService;
 import maoomWeb.ire.user.service.CurrentUserService;
 import maoomWeb.ire.user.service.SchematronFileService;
 import maoomWeb.ire.user.service.SchematronHistoryService;
@@ -33,16 +35,19 @@ public class DitaValidationController {
     private final DitaValidationProgressService progress;
     private final CurrentUserService currentUserService;
     private final DitaValidationJobService jobs;
+    private final GomsExportService gomsExport;
 
     public DitaValidationController(DitaValidationWorkflowService workflow, SchematronHistoryService history,
                                     SchematronFileService schematronFiles, DitaValidationProgressService progress,
-                                    CurrentUserService currentUserService, DitaValidationJobService jobs) {
+                                    CurrentUserService currentUserService, DitaValidationJobService jobs,
+                                    GomsExportService gomsExport) {
         this.workflow = workflow;
         this.history = history;
         this.schematronFiles = schematronFiles;
         this.progress = progress;
         this.currentUserService = currentUserService;
         this.jobs = jobs;
+        this.gomsExport = gomsExport;
     }
 
     @GetMapping("/api/dita-validation/schematrons")
@@ -53,6 +58,31 @@ public class DitaValidationController {
     @PostMapping("/api/dita-validation/maps")
     public List<MapItem> maps(@RequestBody PathRequest request) throws Exception {
         return workflow.findMaps(request == null ? null : request.inputPath());
+    }
+
+    @PostMapping("/api/dita-validation/goms/export")
+    public GomsExportResponse exportGoms(@RequestBody GomsExportRequest request) throws Exception {
+        return gomsExport.export(request == null ? null : request.inputPath());
+    }
+
+    @GetMapping("/api/dita-validation/goms/reports")
+    public List<GomsReportProject> gomsReports() throws Exception {
+        return workflow.findGomsReports();
+    }
+
+    @GetMapping(value="/api/dita-validation/goms/reports/file", produces=MediaType.TEXT_HTML_VALUE)
+    public ResponseEntity<byte[]> gomsReportFile(@RequestParam String project,
+            @RequestParam String file) throws Exception {
+        Path path = workflow.resolveGomsReport(project, file);
+        String html = Files.readString(path, StandardCharsets.UTF_8);
+        html = html.replaceAll("data-history-id=\"[^\"]*\"", "data-history-id=\"\"")
+                .replace("isLocalFile=location.protocol==='file:'", "isLocalFile=true");
+        String readOnlyScript = """
+                <script>addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.done').forEach(x=>x.disabled=true);['checkAll','uncheckAll'].forEach(id=>{let b=document.getElementById(id);if(b)b.disabled=true});let n=document.getElementById('stateNotice');if(n)n.textContent='DB 이력과 연결되지 않은 리포트이므로 읽기 전용입니다.'});</script>
+                """;
+        html = html.replace("</body>", readOnlyScript + "</body>");
+        return ResponseEntity.ok().contentType(new MediaType("text", "html", StandardCharsets.UTF_8))
+                .body(html.getBytes(StandardCharsets.UTF_8));
     }
 
     @PostMapping("/api/dita-validation/tree")
@@ -89,6 +119,8 @@ public class DitaValidationController {
     @GetMapping(value="/api/dita-validation/reports/{id}", produces=MediaType.TEXT_HTML_VALUE)
     public ResponseEntity<byte[]> report(@PathVariable Long id) throws Exception {
         // 브라우저가 서버 파일 경로에 직접 접근하지 않도록 이력 번호를 통해 HTML을 전달한다.
+        // 기존 보고서도 서버에서 열 때 DB 확인 상태를 원본 HTML에 먼저 반영한다.
+        history.synchronizeReportFile(id);
         Path path = history.reportPath(id);
         return ResponseEntity.ok().contentType(new MediaType("text", "html", StandardCharsets.UTF_8))
                 .body(Files.readAllBytes(path));
@@ -119,6 +151,14 @@ public class DitaValidationController {
     public ReportStateItem saveReportMemo(@PathVariable Long id, @RequestBody ReportMemoRequest request) {
         if (request == null) throw new IllegalArgumentException("저장할 메모가 없습니다.");
         return history.saveReportMemo(id, request.issueId(), request.memo());
+    }
+
+    @PostMapping("/api/dita-validation/reports/{id}/false-positive")
+    public ReportStateItem saveFalsePositive(@PathVariable Long id, @RequestBody ReportFalseRequest request,
+                                             Authentication authentication) {
+        if (request == null) throw new IllegalArgumentException("저장할 False 상태가 없습니다.");
+        return history.saveFalsePositive(id, request.issueId(), request.falsePositive(),
+                currentUserService.getUserId(authentication), currentUserService.getUserName(authentication));
     }
 
     @ExceptionHandler({IllegalArgumentException.class, IllegalStateException.class})

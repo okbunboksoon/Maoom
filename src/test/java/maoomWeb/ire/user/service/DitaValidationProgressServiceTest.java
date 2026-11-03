@@ -7,6 +7,16 @@ import java.time.LocalDateTime;
 
 class DitaValidationProgressServiceTest {
     @Test
+    void showsAUserFriendlyMessageWhileCopyingGomsFiles() {
+        DitaValidationProgressService service = new DitaValidationProgressService();
+
+        service.updateStaging("staging-token", 1, 3, java.nio.file.Path.of("topic.dita"));
+
+        assertEquals("V 서버 파일을 로컬로 복사하고 있습니다.",
+                service.get("staging-token").message());
+    }
+
+    @Test
     void cancellationInterruptsTheRunningRequestAndKeepsCancelledStatus() {
         DitaValidationProgressService service = new DitaValidationProgressService();
         String token = "cancel-test-token";

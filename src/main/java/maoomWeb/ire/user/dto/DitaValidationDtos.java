@@ -9,6 +9,16 @@ public final class DitaValidationDtos {
     private DitaValidationDtos() { }
 
     public record PathRequest(String inputPath) { }
+    public record GomsExportRequest(String inputPath) { }
+    public record GomsExportResponse(String inputPath, String projectName, String targetSub) { }
+    public record GomsReportSummary(Long historyId, int validatedFileCount, int issueCount,
+                                    String finishedAt, String testerName, int appliedCount,
+                                    String scopeType) { }
+    public record GomsReportFile(String fileName, Long historyId, boolean editable,
+                                 String url, long modifiedAt, Integer validatedFileCount,
+                                 Integer issueCount, String finishedAt, String testerName,
+                                 Integer appliedCount, String scopeType) { }
+    public record GomsReportProject(String projectName, List<GomsReportFile> reports) { }
     public record MapRequest(String mapPath) { }
     public record MapItem(String name, String path) { }
     public record SchematronItem(String fileName, long size, String modifiedAt,
@@ -18,11 +28,17 @@ public final class DitaValidationDtos {
     public record TreeNode(String id, String title, String href, List<TreeNode> children) { }
     public record MapTree(String mapPath, List<TreeNode> roots) { }
     public record RunRequest(String inputPath, String mapPath, String schematronType, String scope,
-                             Set<String> selectedNodeIds, boolean validateMap, String progressToken) {
+                             Set<String> selectedNodeIds, boolean validateMap, String progressToken,
+                             String executionMode) {
+        public RunRequest(String inputPath, String mapPath, String schematronType, String scope,
+                          Set<String> selectedNodeIds, boolean validateMap, String progressToken) {
+            this(inputPath, mapPath, schematronType, scope, selectedNodeIds, validateMap,
+                    progressToken, "LOCAL_PATH");
+        }
         // 독립 테스트와 기존 호출부가 진행 토큰 없이도 동일한 검사 API를 사용할 수 있게 유지한다.
         public RunRequest(String inputPath, String mapPath, String schematronType, String scope,
                           Set<String> selectedNodeIds, boolean validateMap) {
-            this(inputPath, mapPath, schematronType, scope, selectedNodeIds, validateMap, null);
+            this(inputPath, mapPath, schematronType, scope, selectedNodeIds, validateMap, null, "LOCAL_PATH");
         }
     }
     public record RunResponse(Long historyId, String status, int validatedFileCount,
@@ -41,7 +57,8 @@ public final class DitaValidationDtos {
     public record ReportStateRequest(String issueId, boolean checked) { }
     public record ReportStateBatchRequest(List<String> issueIds, boolean checked) { }
     public record ReportMemoRequest(String issueId, String memo) { }
+    public record ReportFalseRequest(String issueId, boolean falsePositive) { }
     /** 다른 사용자가 보고서를 열어도 동일하게 보이는 항목별 확인 상태다. */
     public record ReportStateItem(String issueId, boolean checked, LocalDateTime updatedAt,
-                                  String confirmerName, String memo) { }
+                                  String confirmerName, String memo, boolean falsePositive) { }
 }
