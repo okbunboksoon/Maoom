@@ -56,7 +56,7 @@ public class DitaValidationProgressService {
     public void updateStaging(String token, int completed, int total, Path currentFile) {
         if (valid(token)) progress.put(token, new ProgressResponse("RUNNING", completed, total,
                 currentFile == null ? "" : currentFile.getFileName().toString(), LocalDateTime.now(),
-                "V 서버 파일을 로컬로 복사하고 있습니다."));
+                "백그라운드 작업을 준비하고 있습니다."));
     }
 
     public void complete(String token, int total) {
