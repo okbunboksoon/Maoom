@@ -159,7 +159,7 @@ V1.0.1 11.02
 	<!-- 빈 태그 금지 검사 (특정 태그 제외) -->
 	<pattern id="empty-element-check">
 		<rule context="*[not(ancestor-or-self::map) and not(self::xref) and not(self::image) and not(self::colspec) and not(self::entry) and not(self::tm)
-							and not(self::related-links) and not(self::linkpool) and not(self::linkpool) and not(self::xref)and not(self::titlealts) and not(self:keywords)
+							and not(self::related-links) and not(self::linkpool) and not(self::linkpool) and not(self::xref)and not(self::titlealts) and not(self::keywords)
 							and not(self::image) and not(self::indexterm)]">
 			<assert type="DOCS" role="major" maoom:category="element" test="normalize-space(.) != '' or *">내용이 없는 빈 태그 &lt;<name/>/&gt;는 사용할 수 없습니다.</assert>
 		</rule>
