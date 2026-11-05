@@ -114,15 +114,15 @@ class DitaSchematronServiceTest {
 
     @Test
     void validatesAllSelectedAndDescendantScopesAndWritesCollaborativeReport() throws Exception {
-        Path a = write("a.dita", "<concept id=\"a\"><title>A</title><conbody><p/></conbody></concept>");
+        Path a = write("a.dita", "<concept id=\"a\"><title>A</title><conbody><p>이동 다이얼 <image placement=\"inline\" href=\"icon.svg\"/> : 모드 내 항목 이동</p></conbody></concept>");
         write("b.dita", "<concept id=\"b\"><title>B</title><conbody><p>ok</p></conbody></concept>");
         Path map = write("root.ditamap", "<map><topicref href=\"a.dita\"><topicmeta><navtitle>A...</navtitle><linktext>A linktext</linktext></topicmeta><topicref href=\"b.dita\"><topicmeta><navtitle>B...</navtitle><linktext>B linktext</linktext></topicmeta></topicref></topicref></map>");
-        Path sch = write("check.sch", "<schema xmlns=\"http://purl.oclc.org/dsdl/schematron\" xmlns:maoom=\"urn:maoom:schematron\" queryBinding=\"xslt2\"><pattern id=\"empty\"><rule context=\"p\">"
-                + "<assert type=\"DOCS\" role=\"none\" maoom:category=\"image\" test=\"normalize-space(.) != ''\">빈 문장</assert>"
-                + "<assert type=\"PUB\" role=\"critical\" test=\"normalize-space(.) != ''\">Critical 검사</assert>"
-                + "<assert type=\"DOCS\" role=\"major\" test=\"normalize-space(.) != ''\">Major 검사</assert>"
-                + "<assert type=\"DOCS\" role=\"minor\" test=\"normalize-space(.) != ''\">Minor 검사</assert>"
-                + "<assert type=\"DOCS\" role=\"preference\" test=\"normalize-space(.) != ''\">Preference 검사</assert>"
+        Path sch = write("check.sch", "<schema xmlns=\"http://purl.oclc.org/dsdl/schematron\" xmlns:maoom=\"urn:maoom:schematron\" queryBinding=\"xslt2\"><pattern id=\"empty\"><rule context=\"p[image]\">"
+                + "<assert type=\"DOCS\" role=\"none\" maoom:category=\"image\" test=\"false()\">빈 문장</assert>"
+                + "<assert type=\"PUB\" role=\"critical\" test=\"false()\">Critical 검사</assert>"
+                + "<assert type=\"DOCS\" role=\"major\" test=\"false()\">Major 검사</assert>"
+                + "<assert type=\"DOCS\" role=\"minor\" test=\"false()\">Minor 검사</assert>"
+                + "<assert type=\"DOCS\" role=\"preference\" test=\"false()\">Preference 검사</assert>"
                 + "</rule></pattern></schema>");
         DitaSchematronService service = new DitaSchematronService();
         MapModel model = service.loadMap(map);
@@ -202,7 +202,7 @@ class DitaSchematronServiceTest {
                 () -> assertTrue(html.contains("mapNodeFilter,mapNodeLabel")),
                 () -> assertTrue(html.contains("id=\"clearMapNodeFilter\"")),
                 () -> assertTrue(html.contains("<div class=\"table-wrap\"><table id=\"result\">")),
-                () -> assertTrue(html.contains("table.querySelectorAll('.report-title,.location-cell,.report-message')")),
+                () -> assertTrue(html.contains("table.querySelectorAll('.report-title,.location-cell,.detected-content,.report-message')")),
                 () -> assertTrue(html.contains("function prepareSearchIndex()")),
                 () -> assertTrue(html.contains("let title=r.cells[2]?.dataset.searchTitle||''")),
                 () -> assertTrue(html.contains("searchTimer=setTimeout(filterRows,180)")),
@@ -215,7 +215,10 @@ class DitaSchematronServiceTest {
                 () -> assertTrue(html.contains("setInterval(()=>{if(!document.hidden)loadServerState(true)")),
                 () -> assertTrue(html.contains("class=\"false-positive\" type=\"checkbox\"")),
                 () -> assertTrue(html.contains("<td class=\"confirmer center\"></td><td class=\"updated center\"></td>")),
-                () -> assertTrue(html.contains("<th data-type=\"num\">순번</th><th>파일명</th><th class=\"report-title\">타이틀</th><th data-type=\"num\">행</th><th>규칙 유형</th><th>심각도</th><th>유형</th><th>위치</th><th class=\"report-message\">메시지</th><th>작업 메모</th><th>검토여부</th><th>예외여부</th><th>확인자</th><th>수정 시각</th>")),
+                () -> assertTrue(html.contains("<th data-type=\"num\">순번</th><th>파일명</th><th class=\"report-title\">타이틀</th><th data-type=\"num\">행</th><th>규칙 유형</th><th>심각도</th><th>유형</th><th>위치</th><th class=\"detected-content\">검출 내용</th><th class=\"report-message\">메시지</th><th>작업 메모</th><th>검토여부</th><th>예외여부</th><th>확인자</th><th>수정 시각</th>")),
+                () -> assertTrue(html.contains("<td class=\"detected-content\">이동 다이얼 &lt;image/&gt; : 모드 내 항목 이동</td>")),
+                () -> assertTrue(html.contains("id=\"memoOnly\" type=\"checkbox\"> 작업 메모 있음")),
+                () -> assertTrue(html.contains("if(memoOnly)conditions.push('작업 메모 있음')")),
                 () -> assertTrue(html.contains("<td class=\"center\">원고</td>")),
                 () -> assertTrue(html.contains("<td class=\"center\">퍼블리싱</td>")),
                 () -> assertTrue(html.contains("'작업 메모','검토여부','False','확인자','수정 시각'")),

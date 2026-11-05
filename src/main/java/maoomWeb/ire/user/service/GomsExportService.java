@@ -21,9 +21,9 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import maoomWeb.ire.user.config.DitaValidationProperties;
 
 /** GOMS EXPORT 설정 변경과 배치 실행을 직렬화하고 생성된 ValidationCheck 경로를 반환한다. */
 @Service
@@ -37,11 +37,9 @@ public class GomsExportService {
     private final ReentrantLock exportLock = new ReentrantLock();
 
     @Autowired
-    public GomsExportService(
-            @Value("${dita.validation.goms-export-root:C:/MaoomTool/Tools/EXPORT_260626}") String exportRoot,
-            @Value("${dita.validation.goms-output-root:V:/ValidationCheck}") String outputRoot,
-            @Value("${dita.validation.goms-timeout-minutes:30}") long timeoutMinutes) {
-        this(Path.of(exportRoot), Path.of(outputRoot), Duration.ofMinutes(Math.max(1, timeoutMinutes)),
+    public GomsExportService(DitaValidationProperties properties) {
+        this(Path.of(properties.getGomsExportRoot()), Path.of(properties.getGomsOutputRoot()),
+                Duration.ofMinutes(Math.max(1, properties.getGomsTimeoutMinutes())),
                 GomsExportService::runBatch);
     }
 

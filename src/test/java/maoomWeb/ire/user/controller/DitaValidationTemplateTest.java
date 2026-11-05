@@ -78,6 +78,7 @@ class DitaValidationTemplateTest {
                 .contains("GOMS 실행")
                 .contains("showCheckWindowWaiting(checkWindow,'입력 경로를 확인하고 있습니다.')")
                 .contains("showCheckWindowWaiting(checkWindow,'GOMS EXPORT를 실행하고 있습니다.')")
+                .contains("input.disabled=true;executionModes.forEach(mode=>mode.disabled=true)")
                 .contains("function showCheckWindowWaiting(checkWindow,text)")
                 .contains("width=540,height=205")
                 .contains("const popupName='ditaValidationCheckPopup_'+Date.now()")
@@ -122,16 +123,26 @@ class DitaValidationTemplateTest {
         assertThat(html.indexOf("id=\"localPathMode\"")).isLessThan(html.indexOf("id=\"inputPath\""));
         String checkHtml = new ClassPathResource("templates/user/ditaValidation/check.html")
                 .getContentAsString(StandardCharsets.UTF_8);
-        assertThat(checkHtml).contains("post('/api/dita-validation/maps',{inputPath})");
+        String checkCss = new ClassPathResource("static/user/css/DitaValidationCheck.css")
+                .getContentAsString(StandardCharsets.UTF_8);
+        String checkJs = new ClassPathResource("static/user/js/DitaValidationCheck.js")
+                .getContentAsString(StandardCharsets.UTF_8);
         assertThat(checkHtml)
+                .contains("/user/css/DitaValidationCheck.css")
+                .contains("/user/js/DitaValidationCheck.js")
+                .doesNotContain("<style>")
+                .doesNotContain("<script>\n");
+        assertThat(checkJs).contains("post('/api/dita-validation/maps',{inputPath})");
+        assertThat(checkJs)
                 .contains("window.addEventListener('load',focusCheckWindowAfterLoad)")
-                .contains(".validation-grid>label:not([for]){display:flex;align-items:center;gap:6px;min-height:36px}")
-                .contains(".schematron-options{display:flex;align-items:center;min-width:0;min-height:36px}")
                 .contains("window.opener.postMessage('dita-validation-ready',location.origin)")
                 .contains("if(!document.hasFocus())startTitleBlink()")
                 .contains("'● 검사 화면이 준비되었습니다'")
                 .contains("window.addEventListener('focus',stopTitleBlink)")
                 .contains("document.title=checkWindowTitle");
+        assertThat(checkCss)
+                .contains(".validation-grid>label:not([for]){display:flex;align-items:center;gap:6px;min-height:36px}")
+                .contains(".schematron-options{display:flex;align-items:center;min-width:0;min-height:36px}");
         assertThat(userMain).contains("'ditaValidationPopup',\n        popupWindowOptions(680, 378, 5)");
         assertThat(userMain)
                 .contains("data-dita-validation-allowed=${ditaValidationAllowed}")
@@ -187,9 +198,12 @@ class DitaValidationTemplateTest {
     void startsAndCancelsAnIndependentBackgroundJob() throws Exception {
         String html = new ClassPathResource("templates/user/ditaValidation/check.html")
                 .getContentAsString(StandardCharsets.UTF_8);
+        String javascript = new ClassPathResource("static/user/js/DitaValidationCheck.js")
+                .getContentAsString(StandardCharsets.UTF_8);
 
         assertThat(html)
-                .contains("id=\"cancelBtn\"")
+                .contains("id=\"cancelBtn\"");
+        assertThat(javascript)
                 .contains("/api/dita-validation/jobs/'+encodeURIComponent(currentProgressToken)+'/cancel")
                 .contains("/api/dita-validation/jobs/'+encodeURIComponent(jobId)")
                 .contains("const detail=progress.message?progress.message:progress.completed+' / '+progress.total+'개 검사 완료'+current+updated")

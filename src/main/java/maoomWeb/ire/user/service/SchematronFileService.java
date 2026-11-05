@@ -20,7 +20,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Element;
@@ -28,6 +28,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import com.sts.dita.core.SecureXml;
+import maoomWeb.ire.user.config.DitaValidationProperties;
 
 import net.sf.saxon.s9api.Processor;
 
@@ -53,7 +54,12 @@ public class SchematronFileService {
 
     private final Path schematronRoot;
 
-    public SchematronFileService(@Value("${dita.validation.schematron-dir:./schematron}") String directory) {
+    @Autowired
+    public SchematronFileService(DitaValidationProperties properties) {
+        this(properties.getSchematronDir());
+    }
+
+    SchematronFileService(String directory) {
         this.schematronRoot = Path.of(directory).toAbsolutePath().normalize();
     }
 

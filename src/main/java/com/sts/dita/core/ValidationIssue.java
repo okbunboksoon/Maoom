@@ -14,6 +14,7 @@ public record ValidationIssue(
         String ruleId,
         String ruleType,
         String location,
+        String detectedContent,
         String message,
         int mapOrder,
         int level) {

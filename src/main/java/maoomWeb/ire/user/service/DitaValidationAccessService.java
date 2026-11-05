@@ -5,9 +5,10 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
+import maoomWeb.ire.user.config.DitaValidationProperties;
 
 /** DITA Validation 기능을 사용할 수 있는 로그인 ID를 관리한다. */
 @Service
@@ -16,8 +17,12 @@ public class DitaValidationAccessService {
     private final Set<String> allowedUserIds;
     private final boolean allowAllAuthenticatedUsers;
 
-    public DitaValidationAccessService(
-            @Value("${dita.validation.allowed-users:admin,hkim}") String allowedUsers) {
+    @Autowired
+    public DitaValidationAccessService(DitaValidationProperties properties) {
+        this(properties.getAllowedUsers());
+    }
+
+    DitaValidationAccessService(String allowedUsers) {
         this.allowedUserIds = Arrays.stream(allowedUsers.split(","))
                 .map(String::trim)
                 .filter(value -> !value.isEmpty())

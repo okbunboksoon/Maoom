@@ -49,7 +49,7 @@ public final class ValidationEngine {
             progress.onProgress(completed, targets.size(), target);
             if (!Files.isRegularFile(target)) {
                 issues.add(new ValidationIssue(target, entry.getValue().title(), entry.getValue().reportParentTitles(), -1, "error", "system",
-                        "missing-reference", "", "", "참조 파일이 존재하지 않습니다.", entry.getValue().order(),
+                        "missing-reference", "", "", "", "참조 파일이 존재하지 않습니다.", entry.getValue().order(),
                         entry.getValue().level()));
             } else {
                 long fileStarted = System.nanoTime();
@@ -66,7 +66,7 @@ public final class ValidationEngine {
                 } catch (TimeoutException ex) {
                     future.cancel(true);
                     issues.add(new ValidationIssue(target, entry.getValue().title(), entry.getValue().reportParentTitles(),
-                            -1, "error", "system", "file-timeout", "", "",
+                            -1, "error", "system", "file-timeout", "", "", "",
                             "파일 처리 제한 시간 " + fileTimeoutSeconds + "초를 초과했습니다."
                                     + (validator.currentRuleId().isBlank() ? "" : " 처리 중 규칙: " + validator.currentRuleId()),
                             entry.getValue().order(), entry.getValue().level()));

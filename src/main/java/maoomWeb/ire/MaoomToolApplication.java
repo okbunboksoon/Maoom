@@ -3,10 +3,12 @@ package maoomWeb.ire;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @MapperScan("maoomWeb.ire.user.mapper")
 @SpringBootApplication(scanBasePackages = "maoomWeb.ire")
+@ConfigurationPropertiesScan(basePackages = "maoomWeb.ire")
 @EnableScheduling
 /**
  * MAOOM 웹 애플리케이션의 실행 진입점.

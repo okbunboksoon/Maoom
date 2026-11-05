@@ -1,0 +1,15 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>DITA Schematron 검사 결과</title>
+
+
+<style>{{REPORT_CSS}}</style></head>
+
+
+<body class="report-loading" data-history-id="{{HISTORY_ID}}" data-map-name="{{MAP_NAME}}" data-report-file-name="{{REPORT_FILE_NAME}}"><h1>DITA Schematron 검사 결과</h1><div class="summary"><span>검사 ditamap: <b>{{MAP_NAME}}</b></span><span>검사 파일: <b>{{FILE_COUNT}}</b></span><span>오류: <b id="total">{{ISSUE_COUNT}}</b></span><span>검사 완료 시간: <b id="total">{{FINISHED}}</b></span>{{USER_SUMMARY}}<div class="category-summary">{{CATEGORY_SUMMARY}}</div><div class="category-summary severity-summary">{{SEVERITY_SUMMARY}}</div><span class="map-path hidden">ditamap 경로: {{MAP_PATH}}</span></div>
+<details class="map-tree-filter"><summary>DITAMAP 트리 필터 <span id="selectedMapNode">전체</span></summary><div class="map-tree-filter-body"><button id="clearMapNodeFilter" type="button">전체 보기</button><div id="mapTree"></div></div></details>
+<div class="toolbar"><button id="saveHtml">HTML 로컬 다운</button><button id="exportCsv">현재 결과 CSV</button><button id="checkAll">전체 체크</button><button id="uncheckAll">전체 해제</button><label><input id="hideDone" type="checkbox"> 체크 항목 숨기기</label><label><input id="memoOnly" type="checkbox"> 작업 메모 있음</label><span id="completion" class="completion"></span><button id="exportJson" class="hidden">상태 JSON 저장</button><button id="importJson" class="hidden">상태 JSON 불러오기</button><button id="resetState" class="hidden">상태 초기화</button><input id="jsonFile" type="file" accept="application/json,.json" hidden></div>
+<div class="search-tools"><input id="search" class="search" placeholder="파일, 타이틀, 규칙, 유형, 검출 내용, 메시지 검색"><span id="shown"></span><button id="clearFileFilter" type="button" hidden>파일 필터 해제</button><button id="resetFilters" type="button">필터 초기화</button><span id="activeFilters" class="notice"></span></div><div id="stateNotice" class="notice">확인 상태와 작업 메모는 서버에 저장되어 모든 작업자에게 공유됩니다.</div><div id="collaborationNotice" class="collaboration-notice" hidden></div>
+<div id="reportLoadingNotice" class="report-loading-notice">보고서 상태를 불러오는 중입니다.</div><div class="table-wrap"><table id="result"><thead><tr><th data-type="num">순번</th><th>파일명</th><th class="report-title">타이틀</th><th data-type="num">행</th><th>규칙 유형</th><th>심각도</th><th>유형</th><th>위치</th><th class="detected-content">검출 내용</th><th class="report-message">메시지</th><th>작업 메모</th><th>검토여부</th><th>예외여부</th><th>확인자</th><th>수정 시각</th></tr></thead><tbody>{{ROWS}}</tbody></table></div><div id="toast" role="status" aria-live="polite"></div>
+
+
+<script id="mapTreeData" type="application/json">{{MAP_TREE_JSON}}</script><script id="embeddedState" type="application/json">{}</script>
+<script>{{REPORT_JS}}</script></body></html>

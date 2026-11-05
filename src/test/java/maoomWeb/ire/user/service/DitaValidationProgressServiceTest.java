@@ -12,7 +12,7 @@ class DitaValidationProgressServiceTest {
 
         service.updateStaging("staging-token", 1, 3, java.nio.file.Path.of("topic.dita"));
 
-        assertEquals("V 서버 파일을 로컬로 복사하고 있습니다.",
+        assertEquals("백그라운드 작업을 준비하고 있습니다.",
                 service.get("staging-token").message());
     }
 

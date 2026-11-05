@@ -9,7 +9,7 @@ import com.sts.dita.core.ValidationCancellation;
 import com.sts.dita.report.HtmlReportWriter;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import maoomWeb.ire.user.config.DitaValidationProperties;
 
 import java.nio.file.Path;
 
@@ -27,8 +27,8 @@ public class DitaSchematronService {
     }
 
     @Autowired
-    public DitaSchematronService(@Value("${dita.validation.file-timeout-seconds:120}") long fileTimeoutSeconds) {
-        this(new ValidationEngine(fileTimeoutSeconds), new HtmlReportWriter());
+    public DitaSchematronService(DitaValidationProperties properties) {
+        this(new ValidationEngine(properties.getFileTimeoutSeconds()), new HtmlReportWriter());
     }
 
     DitaSchematronService(ValidationEngine validationEngine, HtmlReportWriter reportWriter) {

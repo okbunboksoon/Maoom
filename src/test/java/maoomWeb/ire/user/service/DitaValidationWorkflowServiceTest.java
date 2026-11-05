@@ -250,7 +250,7 @@ class DitaValidationWorkflowServiceTest {
                     assertFalse(Files.exists(stagedRequest.projectRoot().resolve("OLD")));
                     ValidationIssue issue = new ValidationIssue(stagedRequest.projectRoot().resolve("topic.dita"),
                             "Topic", List.of(), 1, "minor", "whitespace", "test-rule", "DOCS",
-                            "/concept[1]/conbody[1]/p[1]", "테스트 오류", 0, 1);
+                            "/concept[1]/conbody[1]/p[1]", "테스트 내용", "테스트 오류", 0, 1);
                     return new ValidationResult(stagedRequest.mapFile(), finishedAt.minusSeconds(10), finishedAt,
                             2, List.of(issue));
                 });

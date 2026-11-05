@@ -7,13 +7,13 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.stereotype.Service;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 
 import jakarta.annotation.PreDestroy;
 
 import maoomWeb.ire.user.dto.DitaValidationDtos.ProgressResponse;
+import maoomWeb.ire.user.config.DitaValidationProperties;
 
 /** 긴 동기 검사 중에도 별도 HTTP 요청으로 파일 단위 진행 상태를 조회할 수 있게 보관한다. */
 @Service
@@ -29,8 +29,11 @@ public class DitaValidationProgressService {
     }
 
     @Autowired
-    public DitaValidationProgressService(
-            @Value("${dita.validation.progress-retention-minutes:60}") long retentionMinutes) {
+    public DitaValidationProgressService(DitaValidationProperties properties) {
+        this(properties.getProgressRetentionMinutes());
+    }
+
+    DitaValidationProgressService(long retentionMinutes) {
         this.retentionMinutes = Math.max(1, retentionMinutes);
     }
 

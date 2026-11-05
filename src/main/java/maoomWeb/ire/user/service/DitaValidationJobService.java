@@ -11,13 +11,14 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PreDestroy;
+import maoomWeb.ire.user.config.DitaValidationProperties;
 
 /** HTTP 연결과 분리된 Schematron 백그라운드 작업의 수명 주기를 관리한다. */
 @Service
@@ -29,12 +30,21 @@ public class DitaValidationJobService {
     private final Map<String, Job> jobs = new ConcurrentHashMap<>();
     private final long retentionMinutes;
 
+    @Autowired
     public DitaValidationJobService(DitaValidationWorkflowService workflow,
             DitaValidationProgressService progress,
             CurrentUserService currentUserService,
-            @Value("${dita.validation.async-threads:2}") int threads,
-            @Value("${dita.validation.async-queue-capacity:20}") int queueCapacity,
-            @Value("${dita.validation.progress-retention-minutes:60}") long retentionMinutes) {
+            DitaValidationProperties properties) {
+        this(workflow, progress, currentUserService, properties.getAsyncThreads(),
+                properties.getAsyncQueueCapacity(), properties.getProgressRetentionMinutes());
+    }
+
+    DitaValidationJobService(DitaValidationWorkflowService workflow,
+            DitaValidationProgressService progress,
+            CurrentUserService currentUserService,
+            int threads,
+            int queueCapacity,
+            long retentionMinutes) {
         this.workflow = workflow;
         this.progress = progress;
         this.currentUserService = currentUserService;

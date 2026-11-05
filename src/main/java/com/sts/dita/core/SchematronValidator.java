@@ -17,6 +17,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import org.xml.sax.InputSource;
@@ -28,6 +29,10 @@ import org.xml.sax.InputSource;
  */
 public final class SchematronValidator {
     private static final String MAOOM_NAMESPACE = "urn:maoom:schematron";
+    private static final Set<String> INLINE_ELEMENTS = Set.of(
+            "image", "xref", "uicontrol", "menucascade", "wintitle", "filepath", "userinput",
+            "systemoutput", "cmdname", "varname", "term", "keyword", "ph", "b", "i", "u",
+            "sup", "sub", "tt", "q", "cite", "codeph");
     private final Processor processor = new Processor(false);
     private final List<CompiledRule> rules;
     private final Path allowedProjectRoot;
@@ -127,7 +132,7 @@ public final class SchematronValidator {
                         if ((!assertion.report() && !matched) || (assertion.report() && matched)) {
                             issues.add(new ValidationIssue(file, reportTitle, parentTitles, node.getLineNumber(),
                                     assertion.severity(), assertion.category(), rule.id(), assertion.ruleType(), nodePath(node),
-                                    assertion.message(), mapOrder, level));
+                                    detectedContent(node), assertion.message(), mapOrder, level));
                         }
                     }
                 }
@@ -139,7 +144,7 @@ public final class SchematronValidator {
             cancellation.check();
             parseFailureCount.incrementAndGet();
             issues.add(new ValidationIssue(file, displayTitle(title, file), parentTitles, -1, "error", "system",
-                    "document-parse-error", "", "", ex.getMessage() == null ? ex.toString() : ex.getMessage(), mapOrder, level));
+                    "document-parse-error", "", "", "", ex.getMessage() == null ? ex.toString() : ex.getMessage(), mapOrder, level));
         }
         return issues;
     }
@@ -262,6 +267,60 @@ public final class SchematronValidator {
             current = current.getParent();
         }
         return "/" + String.join("/", parts);
+    }
+
+    /**
+     * XPath가 가리킨 요소의 내용을 리포트용 한 줄로 만든다.
+     * 문단 같은 블록의 바깥 태그와 속성은 숨기고, image/xref/uicontrol 등의 인라인 태그만 남긴다.
+     */
+    private static String detectedContent(XdmNode node) {
+        StringBuilder content = new StringBuilder();
+        String nodeName = localName(node);
+        if (INLINE_ELEMENTS.contains(nodeName)) appendInlineElement(content, node);
+        else appendChildren(content, node);
+        String normalized = content.toString().replaceAll("\\s+", " ").trim();
+        if (!normalized.isBlank()) return normalized;
+        return nodeName.isBlank() ? "" : "<" + nodeName + "/>";
+    }
+
+    private static void appendChildren(StringBuilder content, XdmNode parent) {
+        XdmSequenceIterator<XdmNode> children = parent.axisIterator(Axis.CHILD);
+        while (children.hasNext()) {
+            XdmNode child = children.next();
+            if (child.getNodeKind() == XdmNodeKind.TEXT) content.append(child.getStringValue());
+            else if (child.getNodeKind() == XdmNodeKind.ELEMENT) {
+                if (INLINE_ELEMENTS.contains(localName(child))) appendInlineElement(content, child);
+                else appendChildren(content, child);
+            }
+        }
+    }
+
+    private static void appendInlineElement(StringBuilder content, XdmNode element) {
+        String name = localName(element);
+        XdmSequenceIterator<XdmNode> children = element.axisIterator(Axis.CHILD);
+        List<XdmNode> childNodes = new ArrayList<>();
+        while (children.hasNext()) childNodes.add(children.next());
+        boolean hasContent = childNodes.stream().anyMatch(child -> child.getNodeKind() == XdmNodeKind.ELEMENT
+                || (child.getNodeKind() == XdmNodeKind.TEXT && !child.getStringValue().isBlank()));
+        content.append('<').append(name);
+        if (!hasContent) {
+            content.append("/>");
+            return;
+        }
+        content.append('>');
+        for (XdmNode child : childNodes) {
+            if (child.getNodeKind() == XdmNodeKind.TEXT) content.append(child.getStringValue());
+            else if (child.getNodeKind() == XdmNodeKind.ELEMENT) {
+                if (INLINE_ELEMENTS.contains(localName(child))) appendInlineElement(content, child);
+                else appendChildren(content, child);
+            }
+        }
+        content.append("</").append(name).append('>');
+    }
+
+    private static String localName(XdmNode node) {
+        QName name = node.getNodeName();
+        return name == null ? "" : name.getLocalName();
     }
 
     private record CompiledRule(String id, XPathExecutable context, List<CompiledAssertion> assertions) { }
