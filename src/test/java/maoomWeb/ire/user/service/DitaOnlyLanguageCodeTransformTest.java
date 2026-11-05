@@ -93,6 +93,43 @@ class DitaOnlyLanguageCodeTransformTest {
                 .exists();
     }
 
+    @Test
+    void changesLanguageCodesInAllDitaAttributes()
+            throws Exception {
+
+        Path inputDirectory = tempDirectory.resolve("input-zh");
+        Files.createDirectories(inputDirectory);
+        Path input = inputDirectory.resolve(
+                "OVc-EV-en_CN-2026-t0001.dita");
+        Files.writeString(input, """
+                <?xml version="1.0" encoding="utf-8"?>
+                <concept id="OVc-EV-en_CN-2026-t0001" xml:lang="en-US">
+                    <title>中文</title>
+                    <conbody>
+                        <p id="OVc-EV-en_GB-2026-p1">
+                            <image href="images/OVc-EV-en_US-2026.png"/>
+                        </p>
+                    </conbody>
+                </concept>
+                """);
+
+        transform(input, "Chinese");
+
+        Path result = tempDirectory.resolve(
+                "OVc-EV-zh_CN-2026-t0001.dita");
+        assertThat(result).exists();
+
+        String xml = Files.readString(result);
+        assertThat(xml)
+                .contains("xml:lang=\"zh-CN\"")
+                .contains("id=\"OVc-EV-zh_CN-2026-t0001\"")
+                .contains("id=\"OVc-EV-zh_CN-2026-p1\"")
+                .contains("href=\"images/OVc-EV-zh_CN-2026.png\"")
+                .doesNotContain("en_CN")
+                .doesNotContain("en_GB")
+                .doesNotContain("en_US");
+    }
+
     private void transform(Path input, String languageName)
             throws Exception {
 

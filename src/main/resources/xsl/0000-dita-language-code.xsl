@@ -60,22 +60,18 @@
         </xsl:result-document>
     </xsl:template>
 
-    <!-- 261026_DITA전용: 루트 topic ID에 실제로 언어 코드가 있을 때만 바꾼다. -->
-    <xsl:template match="/*/@id">
-        <xsl:attribute name="id" select="f:replace-file-language(string(.))"/>
-    </xsl:template>
-
-    <!-- 261026_DITA전용: DITA 파일명과 # 뒤 topic ID를 포함한 참조를 함께 맞춘다. -->
-    <xsl:template match="@href | @conref">
-        <xsl:attribute name="{name()}" select="f:replace-file-language(string(.))"/>
+    <!-- 261104_발췌번역: ID, 파일 참조 등 모든 속성 안의 언어 코드를 함께 맞춘다. -->
+    <xsl:template match="@*">
+        <xsl:attribute name="{name()}" namespace="{namespace-uri()}"
+            select="f:replace-file-language(string(.))"/>
     </xsl:template>
 
     <!-- 261026_DITA전용: 기존 xml:lang만 갱신하며 없는 속성은 새로 만들지 않는다. -->
-    <xsl:template match="@xml:lang">
+    <xsl:template match="@xml:lang" priority="2">
         <xsl:attribute name="xml:lang" select="$langCode"/>
     </xsl:template>
 
-    <xsl:template match="@* | node()">
+    <xsl:template match="node()">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>

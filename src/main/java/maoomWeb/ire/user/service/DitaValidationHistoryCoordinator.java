@@ -14,9 +14,11 @@ public class DitaValidationHistoryCoordinator {
     }
 
     Long start(String userId, Path root, Path map, Path schema, String schemaHash,
-            String scope, String selectedNodeIds, String summary) {
+            String scope, String selectedNodeIds, String summary, String requestedInputPath,
+            String executionMode) {
         return historyService.start(userId, root.toString(), map.toString(),
-                schema.getFileName().toString(), schemaHash, scope, selectedNodeIds, summary);
+                schema.getFileName().toString(), schemaHash, scope, selectedNodeIds, summary,
+                requestedInputPath, executionMode);
     }
 
     void success(Long historyId, int fileCount, int issueCount, Path report, Path snapshot) {

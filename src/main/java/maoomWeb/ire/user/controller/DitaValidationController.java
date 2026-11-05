@@ -65,6 +65,12 @@ public class DitaValidationController {
         return gomsExport.export(request == null ? null : request.inputPath());
     }
 
+    @GetMapping("/api/dita-validation/recent-input-paths")
+    public List<String> recentInputPaths(@RequestParam String executionMode,
+                                         Authentication authentication) {
+        return history.findRecentInputPaths(currentUserService.getUserId(authentication), executionMode, 10);
+    }
+
     @GetMapping("/api/dita-validation/goms/reports")
     public List<GomsReportProject> gomsReports() throws Exception {
         return workflow.findGomsReports();

@@ -68,6 +68,15 @@ class DitaValidationTemplateTest {
                 .contains("class=\"ber-popup-body dita-validation-input-body\"")
                 .contains("<strong>작업 선택</strong>")
                 .contains("id=\"inputPath\"")
+                .contains("id=\"recentPathList\"")
+                .contains("/api/dita-validation/recent-input-paths?executionMode=")
+                .contains("input.addEventListener('focus',loadRecentPaths)")
+                .contains("if(document.activeElement!==input)return;if(recentPathList.hidden)loadRecentPaths();else closeRecentPaths()")
+                .contains("if(requestId===recentPathRequest)renderRecentPaths(paths)")
+                .contains("function closeRecentPaths(){recentPathRequest++")
+                .contains("input.value=path;input.focus();closeRecentPaths()")
+                .contains("if(e.key==='Escape')")
+                .contains("requestedInputPath='+encodeURIComponent(value)")
                 .contains("id=\"localPathMode\"")
                 .contains("id=\"gomsMode\"")
                 .contains("class=\"execution-mode-options\"")
@@ -132,7 +141,9 @@ class DitaValidationTemplateTest {
                 .contains("/user/js/DitaValidationCheck.js")
                 .doesNotContain("<style>")
                 .doesNotContain("<script>\n");
-        assertThat(checkJs).contains("post('/api/dita-validation/maps',{inputPath})");
+        assertThat(checkJs).contains("post('/api/dita-validation/maps',{inputPath})")
+                .contains("requestedInputPath=query.get('requestedInputPath')||inputPath")
+                .contains("progressToken,executionMode,requestedInputPath");
         assertThat(checkJs)
                 .contains("window.addEventListener('load',focusCheckWindowAfterLoad)")
                 .contains("window.opener.postMessage('dita-validation-ready',location.origin)")
@@ -141,6 +152,7 @@ class DitaValidationTemplateTest {
                 .contains("window.addEventListener('focus',stopTitleBlink)")
                 .contains("document.title=checkWindowTitle");
         assertThat(checkCss)
+                .contains(".validation-panel .validation-grid select{height:38px;padding:0 10px;line-height:normal}")
                 .contains(".validation-grid>label:not([for]){display:flex;align-items:center;gap:6px;min-height:36px}")
                 .contains(".schematron-options{display:flex;align-items:center;min-width:0;min-height:36px}");
         assertThat(userMain).contains("'ditaValidationPopup',\n        popupWindowOptions(680, 378, 5)");

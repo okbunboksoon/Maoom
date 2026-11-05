@@ -23,6 +23,26 @@ class SchematronHistoryServiceTest {
     private static final String ISSUE_ID = "0123456789abcdef0123456789abcdef";
 
     @Test
+    void returnsAtMostTenRecentInputPathsForTheSameUserAndExecutionMode() {
+        JdbcTemplate jdbc = mock(JdbcTemplate.class);
+        SchematronHistoryService service = new SchematronHistoryService(jdbc);
+        List<String> paths = List.of("2026/PU_ICE_27MY/Korean", "2026/GL3_ICE_PE_27MY/Korean");
+        when(jdbc.queryForList(contains("GROUP BY requested_input_path"), eq(String.class),
+                eq("hkim"), eq("GOMS"), eq(10))).thenReturn(paths);
+
+        assertEquals(paths, service.findRecentInputPaths("hkim", "goms", 50));
+        verify(jdbc).queryForList(contains("ORDER BY MAX(started_at) DESC"), eq(String.class),
+                eq("hkim"), eq("GOMS"), eq(10));
+    }
+
+    @Test
+    void rejectsUnknownExecutionModeWhenLoadingRecentPaths() {
+        SchematronHistoryService service = new SchematronHistoryService(mock(JdbcTemplate.class));
+        assertThrows(IllegalArgumentException.class,
+                () -> service.findRecentInputPaths("hkim", "UNKNOWN", 10));
+    }
+
+    @Test
     void aggregatesGomsReportListSummaryAndReviewCount() throws Exception {
         JdbcTemplate jdbc = mock(JdbcTemplate.class);
         SchematronHistoryService service = new SchematronHistoryService(jdbc);

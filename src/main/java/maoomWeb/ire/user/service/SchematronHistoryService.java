@@ -56,6 +56,8 @@ public class SchematronHistoryService {
         // 기존 DB를 사용하는 서버도 재배포만으로 규칙 해시와 스냅샷 경로를 기록할 수 있게 한다.
         ensureColumn("schema_hash", "VARCHAR(64)");
         ensureColumn("schema_snapshot_path", "VARCHAR(1000)");
+        ensureColumn("requested_input_path", "VARCHAR(1000)");
+        ensureColumn("execution_mode", "VARCHAR(30)");
         ensureReportStateColumn("memo", "VARCHAR(1000)");
         ensureReportStateColumn("false_positive", "BOOLEAN NOT NULL DEFAULT FALSE");
         interruptRunningHistories();
@@ -76,15 +78,16 @@ public class SchematronHistoryService {
     }
 
     public Long start(String userId, String inputPath, String mapPath, String schemaName, String schemaHash,
-                      String scope, String selectedNodes, String summary) {
+                      String scope, String selectedNodes, String summary, String requestedInputPath,
+                      String executionMode) {
         // 실제 검사를 시작하기 전에 RUNNING 이력을 만들어 장시간 검사도 관리자 화면에서 확인 가능하게 한다.
         GeneratedKeyHolder keys = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
             PreparedStatement statement = connection.prepareStatement("""
                     INSERT INTO tb_schematron_execution_history
                     (status, trigger_user_id, started_at, input_path, map_path, schema_name, schema_hash,
-                     scope_type, selected_nodes, input_summary, created_at)
-                    VALUES ('RUNNING', ?, CURRENT_TIMESTAMP(6), ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP(6))
+                     scope_type, selected_nodes, input_summary, requested_input_path, execution_mode, created_at)
+                    VALUES ('RUNNING', ?, CURRENT_TIMESTAMP(6), ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP(6))
                     """, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, userId);
             statement.setString(2, inputPath);
@@ -94,11 +97,36 @@ public class SchematronHistoryService {
             statement.setString(6, scope);
             statement.setString(7, selectedNodes);
             statement.setString(8, summary);
+            statement.setString(9, requestedInputPath);
+            statement.setString(10, normalizeExecutionMode(executionMode));
             return statement;
         }, keys);
         Number key = keys.getKey();
         if (key == null) throw new IllegalStateException("Schematron 이력 번호를 생성하지 못했습니다.");
         return key.longValue();
+    }
+
+    /** 로그인 사용자와 실행 방식이 같은 최근 입력 경로를 중복 없이 반환한다. */
+    public List<String> findRecentInputPaths(String userId, String executionMode, int limit) {
+        if (userId == null || userId.isBlank()) return List.of();
+        int safeLimit = Math.min(Math.max(limit, 1), 10);
+        return jdbcTemplate.queryForList("""
+                SELECT requested_input_path
+                FROM tb_schematron_execution_history
+                WHERE trigger_user_id=? AND execution_mode=?
+                  AND requested_input_path IS NOT NULL AND TRIM(requested_input_path)<>''
+                GROUP BY requested_input_path
+                ORDER BY MAX(started_at) DESC, MAX(id) DESC
+                LIMIT ?
+                """, String.class, userId, normalizeExecutionMode(executionMode), safeLimit);
+    }
+
+    private String normalizeExecutionMode(String executionMode) {
+        String normalized = executionMode == null ? "LOCAL_PATH" : executionMode.trim().toUpperCase(Locale.ROOT);
+        if (!Set.of("GOMS", "LOCAL_PATH").contains(normalized)) {
+            throw new IllegalArgumentException("지원하지 않는 실행 방식입니다.");
+        }
+        return normalized;
     }
 
     public void success(Long id, int fileCount, int issueCount, Path report, Path schemaSnapshot) {

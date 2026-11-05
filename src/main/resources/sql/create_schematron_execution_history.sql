@@ -10,6 +10,8 @@ CREATE TABLE IF NOT EXISTS tb_schematron_execution_history (
     finished_at DATETIME(6),
     elapsed_ms BIGINT,
     input_path VARCHAR(1000),
+    requested_input_path VARCHAR(1000),
+    execution_mode VARCHAR(30),
     map_path VARCHAR(1000),
     schema_name VARCHAR(255),
     schema_hash VARCHAR(64),

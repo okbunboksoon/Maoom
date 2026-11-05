@@ -166,7 +166,7 @@ public class DitaValidationJobService {
         try {
             RunResponse result = workflow.run(new RunRequest(request.inputPath(), request.mapPath(),
                     request.schematronType(), request.scope(), request.selectedNodeIds(),
-                    request.validateMap(), job.id, request.executionMode()), authentication);
+                    request.validateMap(), job.id, request.executionMode(), request.requestedInputPath()), authentication);
             job.result = result;
             job.status = "SUCCESS";
         } catch (java.util.concurrent.CancellationException ex) {

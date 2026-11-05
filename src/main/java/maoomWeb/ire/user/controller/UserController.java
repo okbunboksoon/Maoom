@@ -7,7 +7,6 @@ import java.util.Map;
 
 import jakarta.servlet.http.HttpServletRequest;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.http.CacheControl;
 import org.springframework.http.MediaType;
@@ -37,6 +36,7 @@ import maoomWeb.ire.user.dto.UserAccountUpdateDto;
 import maoomWeb.ire.user.service.CurrentUserService;
 import maoomWeb.ire.user.service.DitaValidationAccessService;
 import maoomWeb.ire.user.service.UserProfileImageService;
+import maoomWeb.ire.user.config.DitaValidationProperties;
 
 /**
  * 로그인 처리, 주요 화면 이동과 사용자 계정·프로필 API를 담당한다.
@@ -66,14 +66,13 @@ public class UserController {
             DitaValidationAccessService ditaValidationAccessService,
             UserProfileImageService userProfileImageService,
             ColorCheckOutputPathService colorCheckOutputPathService,
-            @Value("${dita.validation.execution-mode-visible:false}")
-            boolean ditaValidationExecutionModeVisible) {
+            DitaValidationProperties properties) {
         this.userService = userService;
         this.currentUserService = currentUserService;
         this.ditaValidationAccessService = ditaValidationAccessService;
         this.userProfileImageService = userProfileImageService;
         this.colorCheckOutputPathService = colorCheckOutputPathService;
-        this.ditaValidationExecutionModeVisible = ditaValidationExecutionModeVisible;
+        this.ditaValidationExecutionModeVisible = properties.isExecutionModeVisible();
     }
 	
     /** 이미 로그인한 사용자는 메인으로 보내고, 그 외에는 기본 로그인 화면을 표시한다. */

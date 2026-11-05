@@ -33,7 +33,11 @@
         </div>
         <div class="path-row full-path-row">
             <label for="inputPath">입력경로</label>
-            <input id="inputPath" type="text" placeholder="경로를 입력하세요" autocomplete="off">
+            <div class="recent-path-field">
+                <input id="inputPath" type="text" placeholder="경로를 입력하세요" autocomplete="off"
+                       aria-autocomplete="list" aria-controls="recentPathList" aria-expanded="false">
+                <div id="recentPathList" class="recent-path-list" role="listbox" hidden></div>
+            </div>
             <span></span><span></span>
         </div>
         <footer class="popup-actions">
@@ -53,11 +57,25 @@
     </section>
 </main>
 <script>
-const input=document.getElementById('inputPath'),executionModes=[...document.querySelectorAll('input[name="executionMode"]')],panel=document.getElementById('resultPanel'),message=document.getElementById('resultMessage');
+const input=document.getElementById('inputPath'),recentPathList=document.getElementById('recentPathList'),executionModes=[...document.querySelectorAll('input[name="executionMode"]')],panel=document.getElementById('resultPanel'),message=document.getElementById('resultMessage');let recentPathRequest=0;
 document.getElementById('continueBtn').onclick=continueToCheck;
 document.getElementById('reportListBtn').onclick=()=>{const previousWidth=1168,width=Math.min(1188,screen.availWidth-24),left=Math.max(0,Math.round((screen.availWidth-Math.min(previousWidth,width))/2));window.open('/dita-validation/reports','ditaValidationReportList','width='+width+',height=700,left='+left+',resizable=yes,scrollbars=yes')};
-input.addEventListener('keydown',e=>{if(e.key==='Enter')continueToCheck()});
+input.addEventListener('pointerdown',()=>{if(document.activeElement!==input)return;if(recentPathList.hidden)loadRecentPaths();else closeRecentPaths()});
+input.addEventListener('focus',loadRecentPaths);
+input.addEventListener('keydown',e=>{if(e.key==='Escape'){closeRecentPaths();return}if(e.key==='Enter'){closeRecentPaths();continueToCheck()}});
+executionModes.forEach(mode=>mode.addEventListener('change',()=>{closeRecentPaths();if(document.activeElement===input)loadRecentPaths()}));
+document.addEventListener('click',e=>{if(!e.target.closest('.recent-path-field'))closeRecentPaths()});
 window.addEventListener('load',fitPopupToContent);
+async function loadRecentPaths(){
+ const selectedMode=document.querySelector('input[name="executionMode"]:checked');if(!selectedMode)return;
+ const requestId=++recentPathRequest;
+ try{const response=await fetch('/api/dita-validation/recent-input-paths?executionMode='+encodeURIComponent(selectedMode.value),{cache:'no-store'});if(!response.ok)throw new Error(await response.text());const paths=await response.json();if(requestId===recentPathRequest)renderRecentPaths(paths)}catch(e){if(requestId===recentPathRequest)closeRecentPaths()}
+}
+function renderRecentPaths(paths){
+ recentPathList.innerHTML='';paths.forEach(path=>{const option=document.createElement('button');option.type='button';option.className='recent-path-option';option.setAttribute('role','option');option.textContent=path;option.title=path;option.onclick=()=>{input.value=path;input.focus();closeRecentPaths()};recentPathList.appendChild(option)});
+ recentPathList.hidden=!paths.length;input.setAttribute('aria-expanded',String(!!paths.length));
+}
+function closeRecentPaths(){recentPathRequest++;recentPathList.hidden=true;input.setAttribute('aria-expanded','false')}
 async function continueToCheck(){
  const value=input.value.trim();if(!value){show('입력 경로를 입력해 주세요.');input.focus();return}
  const selectedMode=document.querySelector('input[name="executionMode"]:checked');
@@ -80,7 +98,7 @@ async function continueToCheck(){
    resolvedPath=(await exportResponse.json()).inputPath;
   }
   // DITAMAP 목록은 다음 검사 화면에서 한 번만 조회하여 V 서버 중복 순회를 막는다.
-  checkWindow.resizeTo(1000,1200);checkWindow.location.href='/dita-validation/check?inputPath='+encodeURIComponent(resolvedPath)+'&executionMode='+encodeURIComponent(selectedMode.value);checkWindow.focus();
+  checkWindow.resizeTo(1000,1200);checkWindow.location.href='/dita-validation/check?inputPath='+encodeURIComponent(resolvedPath)+'&requestedInputPath='+encodeURIComponent(value)+'&executionMode='+encodeURIComponent(selectedMode.value);checkWindow.focus();
  }catch(error){window.removeEventListener('message',focusReadyWindow);checkWindow.close();show(error.message||'입력 경로를 확인하지 못했습니다.')}
  finally{button.disabled=false;input.disabled=false;executionModes.forEach(mode=>mode.disabled=false);button.textContent='실행'}
 }

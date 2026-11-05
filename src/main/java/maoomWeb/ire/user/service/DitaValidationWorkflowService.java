@@ -181,7 +181,8 @@ public class DitaValidationWorkflowService {
         long stageStarted = System.nanoTime();
         try {
             context.historyId(historyCoordinator.start(userId, root, map, schema, schemaHash,
-                    scope.name(), String.join(",", selected), summary));
+                    scope.name(), String.join(",", selected), summary,
+                    request.requestedInputPath(), request.executionMode()));
             logStage(context, "HISTORY", stageStarted);
             stageStarted = System.nanoTime();
             Path historyFolder = reportWriterService.historyFolder(context.historyId());

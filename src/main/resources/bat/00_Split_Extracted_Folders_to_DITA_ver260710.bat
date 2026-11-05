@@ -8,6 +8,7 @@ set "BASEDIR=%~dp0"
 set "TOPICSDIR=%BASEDIR%topics"
 set "TEMPDIR=%BASEDIR%temp"
 set "MAPINPUTDIR=%BASEDIR%temp_map_input"
+set "MAPOUTPUTDIR=%BASEDIR%temp_map_output"
 rem 261026_DITA전용: DITAMAP 없이 DITA만 들어온 경우의 안전한 입력/출력 분리 폴더
 set "DITAINPUTDIR=%BASEDIR%temp_dita_input"
 set "DITAOUTPUTDIR=%BASEDIR%temp_dita_output"
@@ -94,6 +95,7 @@ rem ============================================================
 if exist "%CHAPTERDIR%" rd /s /q "%CHAPTERDIR%" >nul 2>nul
 if exist "%TEMPDIR%" rd /s /q "%TEMPDIR%" >nul 2>nul
 if exist "%MAPINPUTDIR%" rd /s /q "%MAPINPUTDIR%" >nul 2>nul
+if exist "%MAPOUTPUTDIR%" rd /s /q "%MAPOUTPUTDIR%" >nul 2>nul
 rem 261026_DITA전용: DITA-only 처리 임시 폴더도 실행 종료 시 정리한다.
 if exist "%DITAINPUTDIR%" rd /s /q "%DITAINPUTDIR%" >nul 2>nul
 if exist "%DITAOUTPUTDIR%" rd /s /q "%DITAOUTPUTDIR%" >nul 2>nul
@@ -189,18 +191,27 @@ set "LANG_DIR=%~1"
 set "LANG_NAME=%~2"
 
 if exist "%LANG_DIR%\*.ditamap" (
-    echo [DITAMAP PROCESSING] %LANG_NAME%
-    call :PROCESS_DITAMAPS "%LANG_DIR%" "%LANG_NAME%"
-    if errorlevel 1 exit /b 1
+    if /I "%DITA_ONLY_LANGUAGE_CODE_CHANGE%"=="Y" (
+        echo [DITAMAP + DITA LANGUAGE CODE PROCESSING] %LANG_NAME%
+        call :PROCESS_DITAMAP_LANGUAGE_CODE "%LANG_DIR%" "%LANG_NAME%"
+        if errorlevel 1 exit /b 1
 
-    set "SPECIAL_MERGE_XSL="
-    if /I "%LANG_NAME%"=="German" set "SPECIAL_MERGE_XSL=0201-chapter-merge_DE.xsl"
-    if /I "%LANG_NAME%"=="Serbian" set "SPECIAL_MERGE_XSL=0202-chapter-merge_SL.xsl"
-    if /I "%LANG_NAME%"=="Russian" set "SPECIAL_MERGE_XSL=0203-chapter-merge_ru.xsl"
-    if /I "%LANG_NAME%"=="French_Canada" set "SPECIAL_MERGE_XSL=0204-chapter-merge_fr_ca.xsl"
+        call :PROCESS_DITA_ONLY "%LANG_DIR%" "%LANG_NAME%"
+        if errorlevel 1 exit /b 1
+    ) else (
+        echo [DITAMAP PROCESSING] %LANG_NAME%
+        call :PROCESS_DITAMAPS "%LANG_DIR%" "%LANG_NAME%"
+        if errorlevel 1 exit /b 1
 
-    call :REPLACE_SPECIAL_DITA "%LANG_DIR%" "%LANG_NAME%" "%SPECIAL_MERGE_XSL%"
-    if errorlevel 1 exit /b 1
+        set "SPECIAL_MERGE_XSL="
+        if /I "%LANG_NAME%"=="German" set "SPECIAL_MERGE_XSL=0201-chapter-merge_DE.xsl"
+        if /I "%LANG_NAME%"=="Serbian" set "SPECIAL_MERGE_XSL=0202-chapter-merge_SL.xsl"
+        if /I "%LANG_NAME%"=="Russian" set "SPECIAL_MERGE_XSL=0203-chapter-merge_ru.xsl"
+        if /I "%LANG_NAME%"=="French_Canada" set "SPECIAL_MERGE_XSL=0204-chapter-merge_fr_ca.xsl"
+
+        call :REPLACE_SPECIAL_DITA "%LANG_DIR%" "%LANG_NAME%" "%SPECIAL_MERGE_XSL%"
+        if errorlevel 1 exit /b 1
+    )
 
     exit /b 0
 )
@@ -264,6 +275,57 @@ for %%M in ("%MAPINPUTDIR%\*.ditamap") do (
 )
 
 move "%TEMPDIR%\*.ditamap" "%LANG_DIR%\" >nul
+if exist "%MAPINPUTDIR%" rd /s /q "%MAPINPUTDIR%" >nul 2>nul
+exit /b 0
+
+
+rem ============================================================
+rem 발췌번역 DITAMAP 언어 코드 변환
+rem   - DITAMAP 파일명과 내부 속성/참조의 언어 코드를 함께 변경한다.
+rem   - 전체 DITA 병합/재생성은 수행하지 않는다.
+rem ============================================================
+:PROCESS_DITAMAP_LANGUAGE_CODE
+set "LANG_DIR=%~1"
+set "LANG_NAME=%~2"
+
+if exist "%MAPINPUTDIR%" rd /s /q "%MAPINPUTDIR%"
+if exist "%MAPOUTPUTDIR%" rd /s /q "%MAPOUTPUTDIR%"
+mkdir "%MAPINPUTDIR%"
+mkdir "%MAPOUTPUTDIR%"
+
+move "%LANG_DIR%\*.ditamap" "%MAPINPUTDIR%\" >nul
+
+for %%M in ("%MAPINPUTDIR%\*.ditamap") do (
+    echo   - PROCESS: %%~nxM
+
+    java -cp "%JAVA_CP%" %SAXON_MAIN% ^
+        -catalog:"%XSLDIR%\catalog.xml" ^
+        -s:"%%~fM" ^
+        -o:"%MAPOUTPUTDIR%\dummy.xml" ^
+        -xsl:"%XSLDIR%\0000-ditamap-language-code.xsl" ^
+        langName=%LANG_NAME% ^
+        srcFile=%%~nxM
+
+    if errorlevel 1 (
+        echo [ERROR] DITAMAP language conversion failed: %%~nxM
+        move /y "%MAPINPUTDIR%\*.ditamap" "%LANG_DIR%\" >nul 2>nul
+        if exist "%MAPOUTPUTDIR%" rd /s /q "%MAPOUTPUTDIR%" >nul 2>nul
+        if exist "%MAPINPUTDIR%" rd /s /q "%MAPINPUTDIR%" >nul 2>nul
+        exit /b 1
+    )
+)
+
+del "%MAPOUTPUTDIR%\dummy.xml" >nul 2>nul
+move "%MAPOUTPUTDIR%\*.ditamap" "%LANG_DIR%\" >nul
+if errorlevel 1 (
+    echo [ERROR] DITAMAP language output was not created: %LANG_NAME%
+    move /y "%MAPINPUTDIR%\*.ditamap" "%LANG_DIR%\" >nul 2>nul
+    if exist "%MAPOUTPUTDIR%" rd /s /q "%MAPOUTPUTDIR%" >nul 2>nul
+    if exist "%MAPINPUTDIR%" rd /s /q "%MAPINPUTDIR%" >nul 2>nul
+    exit /b 1
+)
+
+if exist "%MAPOUTPUTDIR%" rd /s /q "%MAPOUTPUTDIR%" >nul 2>nul
 if exist "%MAPINPUTDIR%" rd /s /q "%MAPINPUTDIR%" >nul 2>nul
 exit /b 0
 

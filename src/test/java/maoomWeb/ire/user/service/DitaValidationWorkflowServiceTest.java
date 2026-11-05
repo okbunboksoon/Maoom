@@ -127,7 +127,7 @@ class DitaValidationWorkflowServiceTest {
         SchematronHistoryService history = mock(SchematronHistoryService.class);
         CurrentUserService users = mock(CurrentUserService.class);
         Authentication authentication = mock(Authentication.class);
-        when(history.start(any(), any(), any(), any(), any(), any(), any(), any())).thenReturn(7L);
+        when(history.start(any(), any(), any(), any(), any(), any(), any(), any(), any(), any())).thenReturn(7L);
         when(users.getUserId(authentication)).thenReturn("tester");
         when(users.getUserName(authentication)).thenReturn("테스터");
         Path schemaFolder = Files.createDirectories(tempDir.resolve("schematron"));
@@ -193,7 +193,7 @@ class DitaValidationWorkflowServiceTest {
         CurrentUserService users = mock(CurrentUserService.class);
         Authentication authentication = mock(Authentication.class);
         DitaValidationProgressService progress = new DitaValidationProgressService();
-        when(history.start(any(), any(), any(), any(), any(), any(), any(), any())).thenReturn(8L);
+        when(history.start(any(), any(), any(), any(), any(), any(), any(), any(), any(), any())).thenReturn(8L);
         when(users.getUserId(authentication)).thenReturn("tester");
         when(validation.validate(any(com.sts.dita.core.ValidationRequest.class),
                 any(ValidationProgressListener.class), any(ValidationCancellation.class)))
@@ -236,7 +236,7 @@ class DitaValidationWorkflowServiceTest {
         CurrentUserService users = mock(CurrentUserService.class);
         Authentication authentication = mock(Authentication.class);
         DitaValidationProgressService progress = new DitaValidationProgressService();
-        when(history.start(any(), any(), any(), any(), any(), any(), any(), any())).thenReturn(9L);
+        when(history.start(any(), any(), any(), any(), any(), any(), any(), any(), any(), any())).thenReturn(9L);
         when(users.getUserId(authentication)).thenReturn("tester");
         when(users.getUserName(authentication)).thenReturn("테스터");
         Instant finishedAt = Instant.parse("2026-10-29T05:35:00Z");
@@ -290,7 +290,7 @@ class DitaValidationWorkflowServiceTest {
         SchematronHistoryService history = mock(SchematronHistoryService.class);
         CurrentUserService users = mock(CurrentUserService.class);
         Authentication authentication = mock(Authentication.class);
-        when(history.start(any(), any(), any(), any(), any(), any(), any(), any())).thenReturn(10L);
+        when(history.start(any(), any(), any(), any(), any(), any(), any(), any(), any(), any())).thenReturn(10L);
         when(users.getUserId(authentication)).thenReturn("tester");
         when(users.getUserName(authentication)).thenReturn("테스터");
         when(validation.validate(any(com.sts.dita.core.ValidationRequest.class),

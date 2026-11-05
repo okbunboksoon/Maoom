@@ -29,16 +29,26 @@ public final class DitaValidationDtos {
     public record MapTree(String mapPath, List<TreeNode> roots) { }
     public record RunRequest(String inputPath, String mapPath, String schematronType, String scope,
                              Set<String> selectedNodeIds, boolean validateMap, String progressToken,
-                             String executionMode) {
+                             String executionMode, String requestedInputPath) {
+        public RunRequest {
+            if (requestedInputPath == null || requestedInputPath.isBlank()) requestedInputPath = inputPath;
+        }
+        public RunRequest(String inputPath, String mapPath, String schematronType, String scope,
+                          Set<String> selectedNodeIds, boolean validateMap, String progressToken,
+                          String executionMode) {
+            this(inputPath, mapPath, schematronType, scope, selectedNodeIds, validateMap,
+                    progressToken, executionMode, inputPath);
+        }
         public RunRequest(String inputPath, String mapPath, String schematronType, String scope,
                           Set<String> selectedNodeIds, boolean validateMap, String progressToken) {
             this(inputPath, mapPath, schematronType, scope, selectedNodeIds, validateMap,
-                    progressToken, "LOCAL_PATH");
+                    progressToken, "LOCAL_PATH", inputPath);
         }
         // 독립 테스트와 기존 호출부가 진행 토큰 없이도 동일한 검사 API를 사용할 수 있게 유지한다.
         public RunRequest(String inputPath, String mapPath, String schematronType, String scope,
                           Set<String> selectedNodeIds, boolean validateMap) {
-            this(inputPath, mapPath, schematronType, scope, selectedNodeIds, validateMap, null, "LOCAL_PATH");
+            this(inputPath, mapPath, schematronType, scope, selectedNodeIds, validateMap,
+                    null, "LOCAL_PATH", inputPath);
         }
     }
     public record RunResponse(Long historyId, String status, int validatedFileCount,
