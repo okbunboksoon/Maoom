@@ -70,12 +70,14 @@
 	</xsl:template>
 
 	<!-- 5개 속성 제거 -->
+	<!--
 	<xsl:template
 		match="image/@width
 		     | image/@height
 		     | image/@xoffset
 		     | image/@yoffset
 		     | image/@id"/>
+	-->
 
 	<!-- inline image outputclass 제거 -->
 	<xsl:template match="image[@placement = 'inline']/@outputclass"/>
