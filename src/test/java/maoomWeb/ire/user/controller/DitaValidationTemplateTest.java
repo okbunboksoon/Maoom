@@ -203,7 +203,9 @@ class DitaValidationTemplateTest {
                 .doesNotContain("['검사 범위',scopeLabel(report.scopeType)]");
         assertThat(reportCss)
                 .contains("html,body{margin:0;min-width:1188px;height:100%}")
+                .contains("body{padding:24px;overflow:hidden")
                 .contains(".dita-report-page{display:flex;flex-direction:column;width:100%")
+                .contains("height:calc(100vh - 48px)")
                 .contains(".dita-report-folder::before")
                 .contains("border-left:1px solid #dfe4ea")
                 .contains(".dita-report-summary")
