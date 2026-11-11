@@ -25,6 +25,7 @@ import maoomWeb.ire.user.service.GomsExportService;
 import maoomWeb.ire.user.service.CurrentUserService;
 import maoomWeb.ire.user.service.SchematronFileService;
 import maoomWeb.ire.user.service.SchematronHistoryService;
+import maoomWeb.ire.user.service.DitaValidationRecentPathService;
 
 /** 검사 화면의 ditamap 조회, 실행, 진행 조회 및 HTML 보고서 열기를 제공한다. */
 @RestController
@@ -36,11 +37,12 @@ public class DitaValidationController {
     private final CurrentUserService currentUserService;
     private final DitaValidationJobService jobs;
     private final GomsExportService gomsExport;
+    private final DitaValidationRecentPathService recentPaths;
 
     public DitaValidationController(DitaValidationWorkflowService workflow, SchematronHistoryService history,
                                     SchematronFileService schematronFiles, DitaValidationProgressService progress,
                                     CurrentUserService currentUserService, DitaValidationJobService jobs,
-                                    GomsExportService gomsExport) {
+                                    GomsExportService gomsExport, DitaValidationRecentPathService recentPaths) {
         this.workflow = workflow;
         this.history = history;
         this.schematronFiles = schematronFiles;
@@ -48,6 +50,7 @@ public class DitaValidationController {
         this.currentUserService = currentUserService;
         this.jobs = jobs;
         this.gomsExport = gomsExport;
+        this.recentPaths = recentPaths;
     }
 
     @GetMapping("/api/dita-validation/schematrons")
@@ -68,18 +71,33 @@ public class DitaValidationController {
     @GetMapping("/api/dita-validation/recent-input-paths")
     public List<String> recentInputPaths(@RequestParam String executionMode,
                                          Authentication authentication) {
-        return history.findRecentInputPaths(currentUserService.getUserId(authentication), executionMode, 10);
+        return recentPaths.findRecent(currentUserService.getUserId(authentication), executionMode, 10);
+    }
+
+    @PostMapping("/api/dita-validation/recent-input-paths")
+    public void saveRecentInputPath(@RequestBody RecentInputPathRequest request,
+                                    Authentication authentication) {
+        if (request == null) throw new IllegalArgumentException("저장할 입력 경로가 없습니다.");
+        recentPaths.save(currentUserService.getUserId(authentication), request.executionMode(), request.inputPath());
+    }
+
+    @PostMapping("/api/dita-validation/recent-input-paths/delete")
+    public void deleteRecentInputPath(@RequestBody RecentInputPathRequest request,
+                                      Authentication authentication) {
+        if (request == null) throw new IllegalArgumentException("삭제할 입력 경로가 없습니다.");
+        recentPaths.delete(currentUserService.getUserId(authentication), request.executionMode(), request.inputPath());
     }
 
     @GetMapping("/api/dita-validation/goms/reports")
-    public List<GomsReportProject> gomsReports() throws Exception {
+    public List<GomsReportYear> gomsReports() throws Exception {
         return workflow.findGomsReports();
     }
 
     @GetMapping(value="/api/dita-validation/goms/reports/file", produces=MediaType.TEXT_HTML_VALUE)
-    public ResponseEntity<byte[]> gomsReportFile(@RequestParam String project,
+    public ResponseEntity<byte[]> gomsReportFile(@RequestParam String year,
+            @RequestParam String project, @RequestParam String language,
             @RequestParam String file) throws Exception {
-        Path path = workflow.resolveGomsReport(project, file);
+        Path path = workflow.resolveGomsReport(year, project, language, file);
         String html = Files.readString(path, StandardCharsets.UTF_8);
         html = html.replaceAll("data-history-id=\"[^\"]*\"", "data-history-id=\"\"")
                 .replace("isLocalFile=location.protocol==='file:'", "isLocalFile=true");

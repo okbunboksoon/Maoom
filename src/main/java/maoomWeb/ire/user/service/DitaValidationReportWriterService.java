@@ -45,7 +45,9 @@ public class DitaValidationReportWriterService {
 
     Path write(ValidationResult result, Path sourceRoot, boolean gomsExecution,
             Path historyFolder, Long historyId, String userName, String userId) throws Exception {
-        Path folder = gomsExecution ? sourceRoot.resolve("report") : historyFolder;
+        Path folder = gomsExecution
+                ? sourceRoot.getParent().resolve("report")
+                : historyFolder;
         Files.createDirectories(folder);
         Path report = folder.resolve(gomsExecution
                 ? HtmlReportWriter.gomsReportFileName(result)

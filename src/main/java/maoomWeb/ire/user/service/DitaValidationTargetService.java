@@ -31,7 +31,8 @@ public class DitaValidationTargetService {
 
     public List<MapItem> findMaps(String inputPath) throws Exception {
         Path root = validDirectory(inputPath);
-        int maxDepth = root.startsWith(gomsOutputRoot) && !root.equals(gomsOutputRoot) ? 2 : Integer.MAX_VALUE;
+        int maxDepth = root.startsWith(gomsOutputRoot) && !root.equals(gomsOutputRoot)
+                ? 1 : Integer.MAX_VALUE;
         return walkProjectEntries(root, maxDepth).stream()
                 .filter(Files::isRegularFile)
                 .filter(path -> path.getFileName().toString().toLowerCase().endsWith(".ditamap"))

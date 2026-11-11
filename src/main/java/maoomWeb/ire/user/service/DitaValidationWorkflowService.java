@@ -134,12 +134,13 @@ public class DitaValidationWorkflowService {
     }
 
     /** GOMS 결과 루트의 프로젝트별 report HTML을 최신 파일명 내림차순으로 반환한다. */
-    public List<GomsReportProject> findGomsReports() throws Exception {
+    public List<GomsReportYear> findGomsReports() throws Exception {
         return reportService.findGomsReports();
     }
 
-    public Path resolveGomsReport(String projectName, String fileName) {
-        return reportService.resolveGomsReport(projectName, fileName);
+    public Path resolveGomsReport(String yearName, String projectName,
+            String languageName, String fileName) {
+        return reportService.resolveGomsReport(yearName, projectName, languageName, fileName);
     }
 
     public MapTree loadTree(String mapPath) throws Exception {

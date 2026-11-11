@@ -72,7 +72,7 @@ public final class MapParser {
         if (href != null && isSubmap(element, href)) {
             // mapref/ditamap topicref의 자식 구조도 현재 트리 아래에 이어 붙인다.
             Path submap = map.getParent().resolve(href.split("#", 2)[0]).normalize().toAbsolutePath();
-            if (java.nio.file.Files.isRegularFile(submap)) {
+            if (!containsOldDirectory(submap) && java.nio.file.Files.isRegularFile(submap)) {
                 for (MapNode child : parseRoots(submap, id + ".m", order, activeMaps)) result.addChild(child);
             }
         }
@@ -82,6 +82,13 @@ public final class MapParser {
     private static boolean isSubmap(Element element, String href) {
         String format = element.getAttribute("format");
         return "ditamap".equalsIgnoreCase(format) || href.toLowerCase().split("#", 2)[0].endsWith(".ditamap");
+    }
+
+    private static boolean containsOldDirectory(Path path) {
+        for (Path part : path) {
+            if ("old".equalsIgnoreCase(part.toString())) return true;
+        }
+        return false;
     }
 
     private static boolean isRemote(String href) {

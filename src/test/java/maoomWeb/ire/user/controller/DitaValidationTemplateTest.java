@@ -59,12 +59,15 @@ class DitaValidationTemplateTest {
     void selectsLocalPathModeBeforeOpeningTheExistingCheckScreen() throws Exception {
         String html = new ClassPathResource("templates/user/ditaValidation/input.html")
                 .getContentAsString(StandardCharsets.UTF_8);
+        String inputJs = new ClassPathResource("static/user/js/DitaValidationInput.js")
+                .getContentAsString(StandardCharsets.UTF_8);
+        String inputFeatureSource = html + inputJs;
         String userMain = new String(new ClassPathResource("templates/user/userMain.html")
                 .getInputStream().readAllBytes(), StandardCharsets.ISO_8859_1).replace("\r\n", "\n");
         String css = new String(new ClassPathResource("static/user/css/RevisionPopup.css")
                 .getInputStream().readAllBytes(), StandardCharsets.ISO_8859_1).replace("\r\n", "\n");
 
-        assertThat(html)
+        assertThat(inputFeatureSource)
                 .contains("class=\"ber-popup-body dita-validation-input-body\"")
                 .contains("<strong>작업 선택</strong>")
                 .contains("id=\"inputPath\"")
@@ -75,7 +78,7 @@ class DitaValidationTemplateTest {
                 .contains("if(requestId===recentPathRequest)renderRecentPaths(paths)")
                 .contains("function closeRecentPaths(){recentPathRequest++")
                 .contains("input.value=path;input.focus();closeRecentPaths()")
-                .contains("if(e.key==='Escape')")
+                .contains("if(event.key==='Escape')")
                 .contains("requestedInputPath='+encodeURIComponent(value)")
                 .contains("id=\"localPathMode\"")
                 .contains("id=\"gomsMode\"")
@@ -87,7 +90,7 @@ class DitaValidationTemplateTest {
                 .contains("GOMS 실행")
                 .contains("showCheckWindowWaiting(checkWindow,'입력 경로를 확인하고 있습니다.')")
                 .contains("showCheckWindowWaiting(checkWindow,'GOMS EXPORT를 실행하고 있습니다.')")
-                .contains("input.disabled=true;executionModes.forEach(mode=>mode.disabled=true)")
+                .contains("setControlsDisabled(button,true)")
                 .contains("function showCheckWindowWaiting(checkWindow,text)")
                 .contains("width=540,height=205")
                 .contains("const popupName='ditaValidationCheckPopup_'+Date.now()")
@@ -103,9 +106,9 @@ class DitaValidationTemplateTest {
                 .contains("font-size:8px;line-height:1.4")
                 .contains("처리 대상에 따라 시간이 걸릴 수 있습니다.")
                 .contains("/api/dita-validation/goms/export")
-                .contains("selectedMode.value==='GOMS'")
+                .contains("mode.value==='GOMS'")
                 .contains("resolvedPath=(await exportResponse.json()).inputPath")
-                .contains("'&executionMode='+encodeURIComponent(selectedMode.value)")
+                .contains("'&executionMode='+encodeURIComponent(mode.value)")
                 .contains("input[name=\"executionMode\"]:checked")
                 .contains("실행 방식을 선택해 주세요.")
                 .contains("function fitPopupToContent()")
@@ -128,7 +131,11 @@ class DitaValidationTemplateTest {
                 .contains("const previousWidth=1168,width=Math.min(1188,screen.availWidth-24)")
                 .contains("screen.availWidth-Math.min(previousWidth,width)")
                 .contains("window.addEventListener('load',fitPopupToContent)")
+                .contains("/api/dita-validation/recent-input-paths',{method:'POST'")
+                .contains("className='recent-path-delete'")
                 .contains(">실행</button>");
+        assertThat(html).contains("<script src=\"/user/js/DitaValidationInput.js\"></script>")
+                .doesNotContain("<script>\n");
         assertThat(html.indexOf("id=\"localPathMode\"")).isLessThan(html.indexOf("id=\"inputPath\""));
         String checkHtml = new ClassPathResource("templates/user/ditaValidation/check.html")
                 .getContentAsString(StandardCharsets.UTF_8);
@@ -171,6 +178,9 @@ class DitaValidationTemplateTest {
                 .getContentAsString(StandardCharsets.UTF_8);
         assertThat(reportList)
                 .contains("<h1>리포트 확인</h1>")
+                .contains("label.textContent='GOMS 경로:'")
+                .contains("language.gomsPath")
+                .contains("function renderYears(years)")
                 .contains("id=\"refreshBtn\"")
                 .contains("/api/dita-validation/goms/reports")
                 .contains("['검사파일',report.validatedFileCount+'건']")
@@ -193,7 +203,7 @@ class DitaValidationTemplateTest {
                 .doesNotContain("['검사 범위',scopeLabel(report.scopeType)]");
         assertThat(reportCss)
                 .contains("html,body{margin:0;min-width:1188px;height:100%}")
-                .contains(".dita-report-page{display:flex;flex-direction:column;width:1140px")
+                .contains(".dita-report-page{display:flex;flex-direction:column;width:100%")
                 .contains(".dita-report-folder::before")
                 .contains("border-left:1px solid #dfe4ea")
                 .contains(".dita-report-summary")

@@ -14,22 +14,28 @@ class DitaValidationReportServiceTest {
     @TempDir Path tempDir;
 
     @Test
-    void returnsReportsInLatestFileNameOrderAndExcludesOldProject() throws Exception {
-        Path project = Files.createDirectory(tempDir.resolve("project"));
-        Path report = Files.createDirectory(project.resolve("report"));
+    void returnsOnlyNestedReportFoldersInConfiguredOrder() throws Exception {
+        Path language = Files.createDirectories(tempDir.resolve("2026/project/Korean"));
+        Path report = Files.createDirectory(language.resolve("report"));
         Files.writeString(report.resolve("261101_0900_report.html"), "old");
         Files.writeString(report.resolve("261102_0900_report.html"), "new");
-        Path old = Files.createDirectory(tempDir.resolve("old"));
-        Files.createDirectories(old.resolve("report"));
+        Files.writeString(Files.createDirectories(language.resolve("dita/old/report"))
+                .resolve("ignored.html"), "ignored");
+        Files.createDirectories(tempDir.resolve("legacy_flat/report"));
         SchematronHistoryService history = mock(SchematronHistoryService.class);
         when(history.findSuccessfulReportSummaries()).thenReturn(Map.of());
         DitaValidationReportService service = new DitaValidationReportService(history, tempDir);
 
-        var projects = service.findGomsReports();
+        var years = service.findGomsReports();
 
-        assertEquals(1, projects.size());
-        assertEquals("261102_0900_report.html", projects.get(0).reports().get(0).fileName());
-        assertEquals("261101_0900_report.html", projects.get(0).reports().get(1).fileName());
+        assertEquals(1, years.size());
+        assertEquals("2026", years.get(0).year());
+        assertEquals("project", years.get(0).projects().get(0).projectName());
+        var korean = years.get(0).projects().get(0).languages().get(0);
+        assertEquals("Korean", korean.languageName());
+        assertEquals("2026/project/Korean", korean.gomsPath());
+        assertEquals("261102_0900_report.html", korean.reports().get(0).fileName());
+        assertEquals("261101_0900_report.html", korean.reports().get(1).fileName());
     }
 
     @Test
@@ -38,8 +44,8 @@ class DitaValidationReportServiceTest {
                 mock(SchematronHistoryService.class), tempDir);
 
         assertThrows(IllegalArgumentException.class,
-                () -> service.resolveGomsReport("..", "report.html"));
+                () -> service.resolveGomsReport("2026", "..", "Korean", "report.html"));
         assertThrows(IllegalArgumentException.class,
-                () -> service.resolveGomsReport("project", "../report.html"));
+                () -> service.resolveGomsReport("2026", "project", "Korean", "../report.html"));
     }
 }

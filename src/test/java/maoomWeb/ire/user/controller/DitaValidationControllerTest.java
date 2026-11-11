@@ -26,11 +26,13 @@ class DitaValidationControllerTest {
                 <script>const isLocalFile=location.protocol==='file:';</script></body></html>
                 """, StandardCharsets.UTF_8);
         DitaValidationWorkflowService workflow = mock(DitaValidationWorkflowService.class);
-        when(workflow.resolveGomsReport("project", "report.html")).thenReturn(report);
+        when(workflow.resolveGomsReport("2026", "project", "Korean", "report.html"))
+                .thenReturn(report);
         DitaValidationController controller = new DitaValidationController(
-                workflow, null, null, null, null, null, null);
+                workflow, null, null, null, null, null, null, null);
 
-        ResponseEntity<byte[]> response = controller.gomsReportFile("project", "report.html");
+        ResponseEntity<byte[]> response = controller.gomsReportFile(
+                "2026", "project", "Korean", "report.html");
         String html = new String(response.getBody(), StandardCharsets.UTF_8);
 
         assertTrue(html.contains("data-history-id=\"\""));

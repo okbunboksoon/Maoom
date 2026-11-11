@@ -52,12 +52,11 @@ class DitaValidationWorkflowServiceTest {
     @Test
     void limitsGomsDitamapLookupToTheProjectAndItsDirectChildren() throws Exception {
         Path outputRoot = Files.createDirectories(tempDir.resolve("goms-map-root"));
-        Path project = Files.createDirectories(outputRoot.resolve("PU_ICE_27MY_Korean"));
-        Path dita = Files.createDirectories(project.resolve("dita"));
+        Path dita = Files.createDirectories(outputRoot.resolve("2026/PU_ICE_27MY/Korean/dita"));
         Files.writeString(dita.resolve("main.ditamap"), "<map/>", StandardCharsets.UTF_8);
         Files.writeString(Files.createDirectories(dita.resolve("nested")).resolve("ignored.ditamap"),
                 "<map/>", StandardCharsets.UTF_8);
-        Files.writeString(Files.createDirectories(project.resolve("report")).resolve("ignored.ditamap"),
+        Files.writeString(Files.createDirectories(dita.getParent().resolve("report")).resolve("ignored.ditamap"),
                 "<map/>", StandardCharsets.UTF_8);
         Files.writeString(Files.createDirectories(dita.resolve("OLD")).resolve("ignored.ditamap"),
                 "<map/>", StandardCharsets.UTF_8);
@@ -65,7 +64,7 @@ class DitaValidationWorkflowServiceTest {
                 null, null, null, null, new DitaValidationProgressService(),
                 tempDir.resolve("goms-map-reports").toString(), outputRoot.toString());
 
-        List<MapItem> maps = service.findMaps(project.toString());
+        List<MapItem> maps = service.findMaps(dita.toString());
 
         assertEquals(List.of("main.ditamap"), maps.stream().map(MapItem::name).toList());
     }
@@ -73,14 +72,15 @@ class DitaValidationWorkflowServiceTest {
     @Test
     void listsGomsReportsAndConnectsSuccessfulHistory() throws Exception {
         Path outputRoot = Files.createDirectories(tempDir.resolve("report-browser"));
-        Path project = Files.createDirectories(outputRoot.resolve("SP3_ICE_HEV_27MY_Korean_V2_27MY_Update"));
-        Path reportFolder = Files.createDirectories(project.resolve("report"));
+        Path language = Files.createDirectories(outputRoot.resolve(
+                "2026/SP3_ICE_HEV_27MY/Korean_V2_27MY_Update"));
+        Path reportFolder = Files.createDirectories(language.resolve("report"));
         Path editable = Files.writeString(reportFolder.resolve("261030_1146_root_report.html"),
                 "<html></html>", StandardCharsets.UTF_8);
         Files.writeString(reportFolder.resolve("261030_1139_old_report.html"),
                 "<html></html>", StandardCharsets.UTF_8);
-        Files.createDirectories(outputRoot.resolve("EMPTY_PROJECT"));
-        Files.createDirectories(outputRoot.resolve("old").resolve("report"));
+        Files.createDirectories(outputRoot.resolve("2026/EMPTY_PROJECT/English_LHD/dita"));
+        Files.createDirectories(language.resolve("dita/old/report"));
         SchematronHistoryService history = mock(SchematronHistoryService.class);
         when(history.findSuccessfulReportSummaries()).thenReturn(
                 Map.of(SchematronHistoryService.normalizedPathKey(editable),
@@ -90,11 +90,15 @@ class DitaValidationWorkflowServiceTest {
                 null, history, null, null, new DitaValidationProgressService(),
                 tempDir.resolve("central-reports").toString(), outputRoot.toString());
 
-        List<GomsReportProject> projects = service.findGomsReports();
+        List<GomsReportYear> years = service.findGomsReports();
 
-        assertEquals(List.of("EMPTY_PROJECT", "SP3_ICE_HEV_27MY_Korean_V2_27MY_Update"),
-                projects.stream().map(GomsReportProject::projectName).toList());
-        List<GomsReportFile> reports = projects.get(1).reports();
+        assertEquals(List.of("2026"), years.stream().map(GomsReportYear::year).toList());
+        assertEquals(List.of("SP3_ICE_HEV_27MY"), years.get(0).projects().stream()
+                .map(GomsReportProject::projectName).toList());
+        GomsReportLanguage korean = years.get(0).projects().get(0).languages().get(0);
+        assertEquals("Korean_V2_27MY_Update", korean.languageName());
+        assertEquals("2026/SP3_ICE_HEV_27MY/Korean_V2_27MY_Update", korean.gomsPath());
+        List<GomsReportFile> reports = korean.reports();
         assertEquals(2, reports.size());
         assertEquals("261030_1146_root_report.html", reports.get(0).fileName());
         assertTrue(reports.get(0).editable());
@@ -107,10 +111,11 @@ class DitaValidationWorkflowServiceTest {
         assertEquals("SELECTED_WITH_DESCENDANTS", reports.get(0).scopeType());
         assertEquals("261030_1139_old_report.html", reports.get(1).fileName());
         assertFalse(reports.get(1).editable());
-        assertEquals(editable, service.resolveGomsReport(project.getFileName().toString(),
-                editable.getFileName().toString()));
+        assertEquals(editable, service.resolveGomsReport("2026", "SP3_ICE_HEV_27MY",
+                "Korean_V2_27MY_Update", editable.getFileName().toString()));
         assertThrows(IllegalArgumentException.class,
-                () -> service.resolveGomsReport("..", editable.getFileName().toString()));
+                () -> service.resolveGomsReport("2026", "..", "Korean_V2_27MY_Update",
+                        editable.getFileName().toString()));
     }
 
     @Test
@@ -214,13 +219,13 @@ class DitaValidationWorkflowServiceTest {
     @Test
     void writesGomsReportIntoGeneratedValidationFolder() throws Exception {
         Path outputRoot = Files.createDirectories(tempDir.resolve("ValidationCheck"));
-        Path project = Files.createDirectories(outputRoot.resolve("NQ5_HEV_PE_27MY_English_LHD"));
+        Path project = Files.createDirectories(outputRoot.resolve("2026/NQ5_HEV_PE_27MY/English_LHD/dita"));
         Path map = project.resolve("root.ditamap");
         Files.writeString(map, "<map><topicref href=\"topic.dita\"/></map>", StandardCharsets.UTF_8);
         Path topic = project.resolve("topic.dita");
         Files.writeString(topic, "<concept id=\"topic\"><title>Topic</title><conbody><p>내용</p></conbody></concept>",
                 StandardCharsets.UTF_8);
-        Path existingReportFolder = Files.createDirectories(project.resolve("report"));
+        Path existingReportFolder = Files.createDirectories(project.getParent().resolve("report"));
         Files.writeString(existingReportFolder.resolve("existing.html"), "기존 리포트", StandardCharsets.UTF_8);
         Path oldFolder = Files.createDirectories(project.resolve("OLD"));
         Files.writeString(oldFolder.resolve("previous.dita"), "<concept id=\"old\"><title>Old</title><conbody/></concept>",
@@ -262,7 +267,7 @@ class DitaValidationWorkflowServiceTest {
         service.run(new RunRequest(project.toString(), map.toString(), "DOCS", "ALL", Set.of(), true,
                 "goms-token", "GOMS"), authentication);
 
-        Path report = Files.list(project.resolve("report"))
+        Path report = Files.list(project.getParent().resolve("report"))
                 .filter(path -> path.getFileName().toString().matches("\\d{6}_\\d{4}_root_report\\.html"))
                 .findFirst().orElseThrow();
         String html = Files.readString(report, StandardCharsets.UTF_8);
@@ -277,7 +282,7 @@ class DitaValidationWorkflowServiceTest {
     @Test
     void removesGomsStagingFolderWhenValidationFails() throws Exception {
         Path outputRoot = Files.createDirectories(tempDir.resolve("failure-ValidationCheck"));
-        Path project = Files.createDirectories(outputRoot.resolve("FAIL_PROJECT_Korean"));
+        Path project = Files.createDirectories(outputRoot.resolve("2026/FAIL_PROJECT/Korean/dita"));
         Path map = project.resolve("root.ditamap");
         Files.writeString(map, "<map/>", StandardCharsets.UTF_8);
         Path schemaFolder = Files.createDirectories(tempDir.resolve("failure-schematron"));

@@ -15,7 +15,11 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.StandardOpenOption;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.regex.Matcher;
@@ -30,6 +34,7 @@ import maoomWeb.ire.user.config.DitaValidationProperties;
 public class GomsExportService {
     private static final Pattern INPUT_PATTERN = Pattern.compile(
             "^(?<year>\\d{4})/(?<project>[A-Za-z0-9._-]+)/(?<sub>[A-Za-z0-9._-]+)$");
+    private static final DateTimeFormatter OLD_FOLDER_TIME = DateTimeFormatter.ofPattern("yyMMdd_HHmmss");
     private final Path exportRoot;
     private final Path outputRoot;
     private final Duration timeout;
@@ -52,11 +57,11 @@ public class GomsExportService {
 
     public GomsExportResponse export(String inputPath) throws Exception {
         ExportInput input = parse(inputPath);
-        if (!exportLock.tryLock()) {
-            throw new IllegalStateException("다른 GOMS EXPORT가 실행 중입니다. 완료 후 다시 실행해 주세요.");
-        }
+        exportLock.lockInterruptibly();
+        Path staging = null;
+        Path properties = exportRoot.resolve("classes").resolve("common.properties");
+        byte[] originalProperties = null;
         try {
-            Path properties = exportRoot.resolve("classes").resolve("common.properties");
             Path batch = exportRoot.resolve("run.bat");
             if (!Files.isRegularFile(properties)) {
                 throw new IllegalStateException("GOMS 설정 파일을 찾을 수 없습니다: " + properties);
@@ -64,19 +69,31 @@ public class GomsExportService {
             if (!Files.isRegularFile(batch)) {
                 throw new IllegalStateException("GOMS 실행 파일을 찾을 수 없습니다: " + batch);
             }
-            updateProperties(properties, input);
+            originalProperties = Files.readAllBytes(properties);
+            staging = outputRoot.resolve(".goms-export-staging")
+                    .resolve(UUID.randomUUID().toString()).normalize();
+            requireManagedPath(staging);
+            Files.createDirectories(staging);
+            updateProperties(properties, input, staging);
             int exitCode = batchRunner.run(batch, exportRoot, timeout);
             if (exitCode != 0) {
                 throw new IllegalStateException("GOMS EXPORT 실행에 실패했습니다. 종료 코드: " + exitCode);
             }
-            Path generated = outputRoot.resolve(input.project() + "_" + input.sub()).normalize();
-            if (!generated.getParent().equals(outputRoot) || !Files.isDirectory(generated)) {
+            Path generated = staging.resolve(input.project() + "_" + input.sub()).normalize();
+            Path generatedDita = generated.resolve("dita").normalize();
+            if (!generated.getParent().equals(staging) || !Files.isDirectory(generatedDita)) {
                 throw new IllegalStateException("GOMS 결과 폴더를 찾을 수 없습니다: " + generated);
             }
+            Path ditaFolder = promoteGeneratedDita(input, generatedDita);
             // DITAMAP 목록은 검사 화면에서 한 번만 조회한다. 여기서 V 서버 전체를 다시 순회하지 않는다.
-            return new GomsExportResponse(generated.toString(), input.project(), input.sub());
+            return new GomsExportResponse(ditaFolder.toString(), input.project(), input.sub());
         } finally {
-            exportLock.unlock();
+            try {
+                if (originalProperties != null) writeAtomically(properties, originalProperties);
+            } finally {
+                if (staging != null) deleteTree(staging);
+                exportLock.unlock();
+            }
         }
     }
 
@@ -96,13 +113,19 @@ public class GomsExportService {
         return new ExportInput(matcher.group("year"), matcher.group("project"), matcher.group("sub"));
     }
 
-    private static void updateProperties(Path path, ExportInput input) throws Exception {
+    private static void updateProperties(Path path, ExportInput input, Path downloadFolder) throws Exception {
         byte[] original = Files.readAllBytes(path);
         TextFile textFile = decode(original);
         String updated = replaceSetting(textFile.text(), "EXPORT.TARGET",
                 "/Project/" + input.year() + "/" + input.project());
         updated = replaceSetting(updated, "EXPORT.TARGET_SUB", input.sub());
+        updated = replaceSetting(updated, "DOWNLOAD.FOLDER",
+                downloadFolder.toString().replace('\\', '/'));
         byte[] content = encode(updated, textFile);
+        writeAtomically(path, content);
+    }
+
+    private static void writeAtomically(Path path, byte[] content) throws Exception {
         Path temporary = path.resolveSibling(path.getFileName() + ".tmp");
         Files.write(temporary, content, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
         try {
@@ -111,6 +134,101 @@ public class GomsExportService {
             Files.move(temporary, path, StandardCopyOption.REPLACE_EXISTING);
         } finally {
             Files.deleteIfExists(temporary);
+        }
+    }
+
+    private Path promoteGeneratedDita(ExportInput input, Path generatedDita) throws Exception {
+        try (var files = Files.walk(generatedDita)) {
+            if (files.noneMatch(path -> Files.isRegularFile(path)
+                    && path.getFileName().toString().toLowerCase().endsWith(".ditamap"))) {
+                throw new IllegalStateException("GOMS 결과에 DITAMAP이 없습니다: " + generatedDita);
+            }
+        }
+        Path languageRoot = outputRoot.resolve(input.year()).resolve(input.project())
+                .resolve(input.sub()).normalize();
+        requireManagedPath(languageRoot);
+        Files.createDirectories(languageRoot);
+        Files.createDirectories(languageRoot.resolve("report"));
+        String token = UUID.randomUUID().toString();
+        Path current = languageRoot.resolve("dita");
+        Path next = languageRoot.resolve(".dita-next-" + token);
+        Path rollback = languageRoot.resolve(".dita-rollback-" + token);
+        copyTree(generatedDita, next);
+        if (Files.isDirectory(current)) {
+            Path existingOld = current.resolve("old");
+            if (Files.isDirectory(existingOld)) copyTree(existingOld, next.resolve("old"));
+            Path archived = next.resolve("old").resolve(OLD_FOLDER_TIME.format(LocalDateTime.now()));
+            if (Files.exists(archived)) archived = archived.resolveSibling(
+                    archived.getFileName() + "_" + token.substring(0, 8));
+            copyCurrentFiles(current, archived);
+        }
+        boolean currentMoved = false;
+        try {
+            if (Files.exists(current)) {
+                Files.move(current, rollback);
+                currentMoved = true;
+            }
+            Files.move(next, current);
+            if (currentMoved) deleteTree(rollback);
+            return current;
+        } catch (Exception exception) {
+            Exception restoreFailure = null;
+            try {
+                if (!Files.exists(current) && currentMoved && Files.exists(rollback)) {
+                    Files.move(rollback, current);
+                }
+            } catch (Exception restoreException) {
+                restoreFailure = restoreException;
+            }
+            String message = restoreFailure == null
+                    ? "새 GOMS DITA 반영에 실패했습니다. 기존 파일을 복구했습니다."
+                    : "새 GOMS DITA 반영과 기존 파일 복구에 실패했습니다. 관리자 확인이 필요합니다.";
+            IllegalStateException failure = new IllegalStateException(message, exception);
+            if (restoreFailure != null) failure.addSuppressed(restoreFailure);
+            throw failure;
+        } finally {
+            deleteTree(next);
+        }
+    }
+
+    private static void copyCurrentFiles(Path current, Path archive) throws Exception {
+        Files.createDirectories(archive);
+        try (var paths = Files.list(current)) {
+            for (Path path : paths.filter(item -> !"old".equalsIgnoreCase(
+                    item.getFileName().toString())).toList()) {
+                copyTree(path, archive.resolve(path.getFileName()));
+            }
+        }
+    }
+
+    private static void copyTree(Path source, Path target) throws Exception {
+        if (Files.isSymbolicLink(source)) {
+            throw new IllegalStateException("심볼릭 링크는 GOMS 결과에 포함할 수 없습니다: " + source);
+        }
+        if (Files.isDirectory(source)) {
+            Files.createDirectories(target);
+            try (var paths = Files.list(source)) {
+                for (Path child : paths.toList()) copyTree(child, target.resolve(child.getFileName()));
+            }
+        } else if (Files.isRegularFile(source)) {
+            Files.createDirectories(target.getParent());
+            Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING,
+                    StandardCopyOption.COPY_ATTRIBUTES);
+        }
+    }
+
+    private void requireManagedPath(Path path) {
+        if (!path.startsWith(outputRoot) || path.equals(outputRoot)) {
+            throw new IllegalStateException("올바르지 않은 GOMS 저장 경로입니다: " + path);
+        }
+    }
+
+    private static void deleteTree(Path root) {
+        if (root == null || !Files.exists(root)) return;
+        try (var paths = Files.walk(root)) {
+            for (Path path : paths.sorted(Comparator.reverseOrder()).toList()) Files.deleteIfExists(path);
+        } catch (Exception ignored) {
+            // 임시 폴더 정리 실패는 원본 DITA 반영 결과를 되돌리지 않는다.
         }
     }
 

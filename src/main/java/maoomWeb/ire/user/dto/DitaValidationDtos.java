@@ -9,6 +9,7 @@ public final class DitaValidationDtos {
     private DitaValidationDtos() { }
 
     public record PathRequest(String inputPath) { }
+    public record RecentInputPathRequest(String inputPath, String executionMode) { }
     public record GomsExportRequest(String inputPath) { }
     public record GomsExportResponse(String inputPath, String projectName, String targetSub) { }
     public record GomsReportSummary(Long historyId, int validatedFileCount, int issueCount,
@@ -18,7 +19,11 @@ public final class DitaValidationDtos {
                                  String url, long modifiedAt, Integer validatedFileCount,
                                  Integer issueCount, String finishedAt, String testerName,
                                  Integer appliedCount, String scopeType) { }
-    public record GomsReportProject(String projectName, List<GomsReportFile> reports) { }
+    public record GomsReportLanguage(String languageName, String gomsPath,
+                                     List<GomsReportFile> reports) { }
+    public record GomsReportProject(String projectName,
+                                    List<GomsReportLanguage> languages) { }
+    public record GomsReportYear(String year, List<GomsReportProject> projects) { }
     public record MapRequest(String mapPath) { }
     public record MapItem(String name, String path) { }
     public record SchematronItem(String fileName, long size, String modifiedAt,

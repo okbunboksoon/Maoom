@@ -53,13 +53,7 @@ public class SchematronHistoryService {
 
     @PostConstruct
     void initializeHistoryStorage() {
-        // 기존 DB를 사용하는 서버도 재배포만으로 규칙 해시와 스냅샷 경로를 기록할 수 있게 한다.
-        ensureColumn("schema_hash", "VARCHAR(64)");
-        ensureColumn("schema_snapshot_path", "VARCHAR(1000)");
-        ensureColumn("requested_input_path", "VARCHAR(1000)");
-        ensureColumn("execution_mode", "VARCHAR(30)");
-        ensureReportStateColumn("memo", "VARCHAR(1000)");
-        ensureReportStateColumn("false_positive", "BOOLEAN NOT NULL DEFAULT FALSE");
+        // 컬럼과 인덱스 변경은 Flyway 마이그레이션이 담당하고, 실행 상태 복구만 서비스가 처리한다.
         interruptRunningHistories();
     }
 
@@ -467,25 +461,4 @@ public class SchematronHistoryService {
         }
     }
 
-    private void ensureColumn(String column, String definition) {
-        Integer count = jdbcTemplate.queryForObject("""
-                SELECT COUNT(*) FROM information_schema.COLUMNS
-                WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME='tb_schematron_execution_history'
-                  AND COLUMN_NAME=?
-                """, Integer.class, column);
-        if (count != null && count == 0) {
-            jdbcTemplate.execute("ALTER TABLE tb_schematron_execution_history ADD COLUMN "
-                    + column + " " + definition);
-        }
-    }
-
-    private void ensureReportStateColumn(String column, String definition) {
-        Integer count = jdbcTemplate.queryForObject("""
-                SELECT COUNT(*) FROM information_schema.COLUMNS
-                WHERE TABLE_SCHEMA=DATABASE() AND TABLE_NAME='tb_schematron_report_issue_state'
-                  AND COLUMN_NAME=?
-                """, Integer.class, column);
-        if (count != null && count == 0) jdbcTemplate.execute(
-                "ALTER TABLE tb_schematron_report_issue_state ADD COLUMN " + column + " " + definition);
-    }
 }

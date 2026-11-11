@@ -135,7 +135,7 @@ public final class ValidationEngine {
                 || scope == ValidationScope.SELECTED_ONLY && isSelected
                 || scope == ValidationScope.SELECTED_WITH_DESCENDANTS && (isSelected || selectedAncestor);
         Path target = node.resolvedTarget();
-        if (include && target != null && isDita(target)) {
+        if (include && target != null && isDita(target) && !containsOldDirectory(target)) {
             TargetInfo existing = result.get(target);
             if (existing == null) result.put(target, new TargetInfo(node.order(), node.title(), parentTitles, level));
             else existing.addReference();
@@ -152,6 +152,13 @@ public final class ValidationEngine {
     private static boolean isDita(Path path) {
         String name = path.getFileName().toString().toLowerCase(Locale.ROOT);
         return name.endsWith(".dita") || name.endsWith(".ditamap") || name.endsWith(".xml");
+    }
+
+    private static boolean containsOldDirectory(Path path) {
+        for (Path part : path) {
+            if ("old".equalsIgnoreCase(part.toString())) return true;
+        }
+        return false;
     }
 
     private static final class TargetInfo {
