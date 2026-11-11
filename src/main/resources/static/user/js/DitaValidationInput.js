@@ -1,6 +1,6 @@
 const input=document.getElementById('inputPath'),recentPathList=document.getElementById('recentPathList'),executionModes=[...document.querySelectorAll('input[name="executionMode"]')],panel=document.getElementById('resultPanel'),message=document.getElementById('resultMessage');let recentPathRequest=0;
 document.getElementById('continueBtn').onclick=continueToCheck;
-document.getElementById('reportListBtn').onclick=()=>{const previousWidth=1168,width=Math.min(1188,screen.availWidth-24),left=Math.max(0,Math.round((screen.availWidth-Math.min(previousWidth,width))/2));window.open('/dita-validation/reports','ditaValidationReportList','width='+width+',height=700,left='+left+',resizable=yes,scrollbars=yes')};
+document.getElementById('reportListBtn').onclick=()=>{const width=Math.min(1240,screen.availWidth-24),left=Math.max(0,Math.round((screen.availWidth-width)/2));window.open('/dita-validation/reports','ditaValidationReportList','width='+width+',height=700,left='+left+',resizable=yes,scrollbars=yes')};
 input.addEventListener('pointerdown',()=>{if(document.activeElement!==input)return;if(recentPathList.hidden)loadRecentPaths();else closeRecentPaths()});
 input.addEventListener('focus',loadRecentPaths);
 input.addEventListener('keydown',event=>{if(event.key==='Escape')closeRecentPaths();else if(event.key==='ArrowDown'&&!recentPathList.hidden){event.preventDefault();recentPathList.querySelector('.recent-path-option')?.focus()}else if(event.key==='Enter'){closeRecentPaths();continueToCheck()}});

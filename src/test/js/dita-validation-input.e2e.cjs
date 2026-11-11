@@ -19,6 +19,20 @@ const path = require('path');
   await page.$eval('#inputPath', input => input.closest('main').querySelector('.recent-path-field').prepend(input));
   await page.addScriptTag({ path: path.resolve('src/main/resources/static/user/js/DitaValidationInput.js') });
 
+  await page.evaluate(() => {
+    window.open = (url, name, features) => {
+      window.__lastPopup = { url, name, features };
+      return {};
+    };
+  });
+  await page.click('#reportListBtn');
+  const popup = await page.evaluate(() => window.__lastPopup);
+  const expectedPopupWidth = await page.evaluate(() => Math.min(1240, screen.availWidth - 24));
+  if (popup.url !== '/dita-validation/reports'
+      || !popup.features.includes(`width=${expectedPopupWidth}`)) {
+    throw new Error(`리포트 창 너비가 올바르지 않습니다: ${JSON.stringify(popup)}`);
+  }
+
   await page.click('#inputPath');
   await page.waitForFunction(() => document.querySelectorAll('.recent-path-option').length === 2);
   if (await page.$eval('#recentPathList', element => element.hidden)) throw new Error('첫 클릭에서 목록이 열리지 않았습니다.');
