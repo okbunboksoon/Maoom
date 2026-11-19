@@ -22,7 +22,18 @@ body{
 
 .revision-page{
     width:100%;
-    padding:18px 24px 16px;
+    padding:18px 24px 24px;
+}
+
+/* 견적형 시작 화면은 카드 아래 회색 여백을 항상 24px로 유지한다. */
+.revision-estimate-page{
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+.revision-estimate-page > .revision-panel{
+    flex:1;
 }
 
 .revision-header{
@@ -652,6 +663,10 @@ button:disabled{
 @media (max-width:640px){
     .revision-page{
         padding:22px 16px;
+    }
+
+    .revision-estimate-page{
+        padding:22px 24px 24px;
     }
 
     .revision-panel{
