@@ -202,7 +202,7 @@
 							</Cell>
 							<Cell>
 								<Data ss:Type="String">
-									<xsl:value-of select="serialize(node(), map{'method':'xml'})"/>
+									<xsl:value-of select="replace(serialize(node(), map{'method':'xml'}), '&amp;amp;', '&amp;')"/>
 								</Data>
 							</Cell>
 						</Row>
