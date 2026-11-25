@@ -31,7 +31,10 @@
 			else $original
 		"/>
 		<xsl:variable name="pl" select="lower-case(string(@placement))"/>
+		<!--
 		<xsl:variable name="removedAttr" select="@width or @height or @xoffset or @yoffset or @id or (@placement = 'inline' and @outputclass)"/>
+		-->
+		<xsl:variable name="removedAttr" select="@xoffset or @yoffset or @id or (@placement = 'inline' and @outputclass)"/>
 		<xsl:variable name="modifiedTokens" select="string-join((
 			@modified,
 			if ($newName != $original) then 'image-href-renamed' else (),
